@@ -2,12 +2,12 @@
 title: Podstawowe informacje dotyczące transakcji
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
-ms.openlocfilehash: cb5123cbee9245178cac43cfd2388cce3f5d356f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49e44ce1112a44c105f47560017331afe4454a0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076761"
 ---
 # <a name="transaction-fundamentals"></a>Podstawowe informacje dotyczące transakcji
 Transakcje powiązać wielu zadań jednocześnie. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw tworzy nową tabelę w bazie danych. Następnie wywołuje obiekt specjalne do zbierania, formatowania i wstawianie danych w nowej tabeli. Te dwa zadania są powiązane i wzajemnie nawet wtedy, w taki sposób, że ma zostać Unikaj tworzenia nowej tabeli, o ile nie można wypełniać danych. Wykonywanie zadania, zarówno w zakresie pojedynczą transakcję wymusza połączenie między nimi. Jeśli drugie zadanie nie powiedzie się, pierwsze zadanie jest przywrócenie punkt przed utworzeniem nowej tabeli.  
@@ -25,4 +25,5 @@ Transakcje powiązać wielu zadań jednocześnie. Na przykład załóżmy, że a
  Można utworzyć transakcji za pomocą programu ADO.NET, <xref:System.EnterpriseServices>, lub model programowania transakcyjnych udostępnione przez <xref:System.Transactions> przestrzeni nazw. [Funkcje oferowane przez bibliotekę System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) temacie opisano funkcje, których można użyć do zapisania transakcyjnych aplikacji za pomocą <xref:System.Transactions> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje oferowane przez bibliotekę System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074667"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze — Atrybut
 Zestawy <xref:System.Windows.Freezable.IsFrozen%2A> do stanu `true` na zawierający <xref:System.Windows.Freezable> elementu. Domyślne zachowanie dla <xref:System.Windows.Freezable> bez `PresentationOptions:Freeze` określony atrybut jest to, że <xref:System.Windows.Freezable.IsFrozen%2A> jest `false` na czas ładowania, w zależności od ogólnego <xref:System.Windows.Freezable> zachowanie w czasie wykonywania.  
@@ -42,6 +42,7 @@ Zestawy <xref:System.Windows.Freezable.IsFrozen%2A> do stanu `true` na zawieraj�
  Wszystkie wartości `Freeze` atrybutu innego niż `true` (bez uwzględniania wielkości liter) generuje błąd w czasie ładowania. (Określanie `Freeze` atrybutu jako `false` nie jest to błąd, ale która jest już domyślnie to ustawienie `false` nic nie robi).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Freezable>
-- [Przegląd obiektów Freezable](freezable-objects-overview.md)
-- [mc:Ignorable, atrybut](mc-ignorable-attribute.md)
+- [Przegląd Obiekty Freezable](freezable-objects-overview.md)
+- [mc:Ignorable — Atrybut](mc-ignorable-attribute.md)

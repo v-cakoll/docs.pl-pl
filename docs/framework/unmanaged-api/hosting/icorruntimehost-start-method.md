@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 349f71691e166561d677e0ae792fa12fc5bb1fc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e6521f8013bf92f073ab4b6808871c95ac2802b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072860"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start — Metoda
 Uruchamia środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -55,4 +55,5 @@ HRESULT Start ();
  **Wersje programu .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+
+- [ICorRuntimeHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

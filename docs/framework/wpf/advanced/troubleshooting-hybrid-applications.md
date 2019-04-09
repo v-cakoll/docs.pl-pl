@@ -9,18 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079678"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Rozwiązywanie problemów aplikacji hybrydowych
 <a name="introduction"></a> W tym temacie wymieniono niektóre typowe problemy, które mogą wystąpić podczas tworzenia aplikacji hybrydowych, które używają zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] technologii.  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Nakładanie się formantów  
  Kontrolki nie nakładają się, jak można oczekiwać. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] używa oddzielnych HWND dla każdego formantu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa jednego HWND dla całej zawartości na stronie. Różnica ta implementacja powoduje, że nieoczekiwane zachowania nakładających się.  
@@ -115,12 +113,13 @@ ms.locfileid: "57370101"
  Formanty WPF hostowane w <xref:System.Windows.Forms.Integration.ElementHost> aktualnie nie obsługują <xref:System.Windows.Forms.Control.ImeMode%2A> właściwości. Zmienia się na <xref:System.Windows.Forms.Control.ImeMode%2A> zostaną zignorowane przez formanty hostowanej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Współdziałanie w Projektancie WPF](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Architektura danych wejściowych współdziałania dla Windows Forms i WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [Instrukcje: Włączyć style Visual w aplikacji hybrydowej](how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Struktura wejścia ze zdolnością do współpracy Windows Forms i WPF](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [Instrukcje: włączanie styli wizualnych w aplikacji hybrydowej](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [Opcje układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
-- [Błędy czasu projektowania w narzędziu Projektant dla formularzy Windows Forms](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
 - [Migracja i współdziałanie](migration-and-interoperability.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Zmień rozmiar wierszy przy użyciu GridSplitter'
+title: 'Instrukcje: Zmienianie rozmiaru wierszy przy użyciu GridSplitter'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - resizing grid rows [WPF]
 - grid rows [WPF], resizing
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
-ms.openlocfilehash: b05bda6cd33d3cdd0dda6288f30821d290c60cfc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074277"
 ---
-# <a name="how-to-resize-rows-with-a-gridsplitter"></a>Instrukcje: Zmień rozmiar wierszy przy użyciu GridSplitter
+# <a name="how-to-resize-rows-with-a-gridsplitter"></a>Instrukcje: Zmienianie rozmiaru wierszy przy użyciu GridSplitter
 W tym przykładzie pokazano, jak używać poziomej <xref:System.Windows.Controls.GridSplitter> Redystrybucja odstęp między dwa wiersze w <xref:System.Windows.Controls.Grid> bez konieczności zmieniania wymiary <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Przykład  
@@ -37,5 +37,6 @@ W tym przykładzie pokazano, jak używać poziomej <xref:System.Windows.Controls
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireRowPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirerowpart2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [Tematy z instrukcjami](gridsplitter-how-to-topics.md)
+- [— Tematy porad](gridsplitter-how-to-topics.md)

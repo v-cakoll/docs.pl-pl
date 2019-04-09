@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebb95b6131ae28dd453ab79c1c0b7b13fccb8e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072730"
 ---
 # <a name="etw-events-in-the-net-framework"></a>Zdarzenia ETW w programie .NET Framework
 Śledzenie zdarzeń dla Windows (ETW) to system wysokiej wydajności, obciążenie niski, skalowalne śledzenia dostarczone przez systemy operacyjne Windows. Jego uzupełnia profilowanie i debugowanie pomoc techniczna jest świadczona przez program .NET Framework i może służyć do rozwiązywania z różnych scenariuszy.  
@@ -27,6 +27,7 @@ ms.locfileid: "54745938"
  W tym artykule opisano, jak zdarzenia CLR ETW uzupełniają profilowanie i debugowanie pomoc techniczna jest świadczona przez środowisko uruchomieniowe języka wspólnego.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)
 - [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

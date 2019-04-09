@@ -2,12 +2,12 @@
 title: Konfigurowanie własnej aplikacji
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 39d8c73809b8c2695ccebb1d69d1c016fd2313d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087173"
 ---
 # <a name="configuring-your-application"></a>Konfigurowanie własnej aplikacji
 Windows Communication Foundation (WCF) używa systemu konfiguracji platformy .NET i pozwala na skonfigurowanie usługi w zakresie maszyn i aplikacji.  
@@ -30,6 +30,7 @@ Windows Communication Foundation (WCF) używa systemu konfiguracji platformy .NE
 >  Jeśli edytujesz plik konfiguracji projektu usługi sieci Web WCF w programie Visual Studio, klikając go prawym przyciskiem myszy **Eksploratora rozwiązań**, zwróć uwagę, że **Edycja konfiguracji usługi WCF** brakuje w menu kontekstowym. Aby obejść ten problem, kliknij przycisk **narzędzia** menu i wybrać **Edytor konfiguracji usługi WCF**. Po tym, kliknij prawym przyciskiem myszy plik konfiguracji i używać **Edycja konfiguracji usługi WCF** element menu kontekstowego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Konfigurowanie usług](../../../../docs/framework/wcf/configuring-services.md)
 - [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

@@ -2,12 +2,12 @@
 title: ISNULL (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 894d3ab91623aa4246bf7735fb1b7d04e066825a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072639"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (jednostka SQL)
 Określa, czy wyrażenie zapytania o wartości null.  
@@ -66,4 +66,5 @@ select c from LOB.Customer as c where c.DOB is not null
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

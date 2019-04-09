@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdd90e3d10bc5f110622f11fd5bfd17853142ac2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b886bf16e5465d3faac5286457784712ac1b72e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081687"
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 — Interfejs
 Rozszerza [imetadatatables —](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) obejmujący metody do pracy ze strumieniami metadanych.  
@@ -43,5 +43,6 @@ Rozszerza [imetadatatables —](../../../../docs/framework/unmanaged-api/metadat
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+
+- [IMetaDataTables — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

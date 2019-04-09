@@ -1,18 +1,18 @@
 ---
-title: Zatwierdzanie transakcji jednofazowe i wielofazowe
+title: Jednofazowe i wielofazowe zatwierdzanie transakcji
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089564"
 ---
-# <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Zatwierdzanie transakcji jednofazowe i wielofazowe
+# <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>Jednofazowe i wielofazowe zatwierdzanie transakcji
 Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów (MB), w których działania są koordynowany przez Menedżera transakcji (TM). [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) temacie omówiono, jak (lub wiele zasobów) może być zarejestrowany w transakcji. W tym temacie opisano, jak można skoordynowanego między wyświetlone zasoby zobowiązaniom transakcji.  
   
  Na koniec transakcji aplikacji żądań transakcji można zadeklarowane lub wycofana. Menedżer transakcji musi wyeliminowania zagrożeń, takich jak niektórych menedżerów zasobów głosowanie zatwierdzić, podczas gdy inne głosowania można wycofać transakcji.  
@@ -110,5 +110,6 @@ public void InDoubt (Enlistment enlistment)
  Zatwierdź faza pojedynczy protokół jest bardziej wydajne w czasie wykonywania, ponieważ wszystkie aktualizacje są wykonywane bez jawnego koordynacji. Aby uzyskać więcej informacji dotyczących tego protokołu, zobacz [Optymalizacja za pomocą zatwierdzania jednofazowego i awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
 - [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27587c391b1d5cf5f5edb87cf5aa81d227869315
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 69fcc862e98e305105a6f17ca49940bd10cef39c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072561"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains — Metoda
 Pobiera moduł wyliczający dla domen w bieżącym procesie.  
@@ -58,4 +58,5 @@ HRESULT EnumDomains (
  **Wersja programu .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+
+- [ICorRuntimeHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

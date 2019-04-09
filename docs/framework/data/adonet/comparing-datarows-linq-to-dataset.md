@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 546b877dc9eb1e7422505b710690d92937cf2b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659192"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077176"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Porównywanie wierszy danych (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definiuje różne operatory zestawów do porównywania elementów źródła, aby zobaczyć, czy są równe. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] udostępnia następujące operatory zestawów:  
@@ -39,6 +39,7 @@ ms.locfileid: "54659192"
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataRowComparer>
 - [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

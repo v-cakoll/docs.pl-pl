@@ -2,12 +2,12 @@
 title: Typy danych podstawowych
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072886"
 ---
 # <a name="basic-data-types"></a>Typy danych podstawowych
 Ponieważ zapytania LINQ to SQL przełożyć na instrukcji języka Transact-SQL przed są one wykonywane w programie Microsoft SQL Server. LINQ do SQL obsługuje wiele wbudowanych funkcji wykonującej programu SQL Server dla podstawowych typów danych.  
@@ -23,5 +23,6 @@ Ponieważ zapytania LINQ to SQL przełożyć na instrukcji języka Transact-SQL 
 -   Is — operator: `IS` Operator ma obsługiwanych tłumaczeń, gdy jest używane mapowanie dziedziczenia. Może służyć zamiast bezpośrednio testować kolumna dyskryminatora można określić, czy obiekt jest określonego typu i jest tłumaczona na sprawdzenie kolumna dyskryminatora. Aby uzyskać więcej informacji na temat języka Visual Basic i C# jest operatorów, zobacz [operatora Is](~/docs/visual-basic/language-reference/operators/is-operator.md) i [jest](~/docs/csharp/language-reference/keywords/is.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

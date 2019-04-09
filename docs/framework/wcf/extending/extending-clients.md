@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074758"
 ---
 # <a name="extending-clients"></a>Rozszerzanie klientów
 W aplikacji wywołującej jest odpowiedzialny za tłumaczenie wywołań metod w kodzie aplikacji do wiadomości wychodzących, wypychanie ich do bazowego kanałów, tłumaczenie wyników do wartości zwracane i parametry w warstwy modelu usług Kod aplikacji i zwraca wyniki z powrotem do obiektu wywołującego. Rozszerzenia modelu usługi modyfikować ani implementować wykonywania lub zachowanie komunikacji i funkcje, obejmujące funkcje klienta lub dyspozytora, niestandardowe zachowania, wiadomości i przejmowanie parametru i innych funkcji rozszerzalności.  
@@ -115,7 +115,8 @@ W aplikacji wywołującej jest odpowiedzialny za tłumaczenie wywołań metod w 
  Przykłady demonstrujące przejmowanie przez klienta programu WCF można znaleźć [jak: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [Instrukcje: Inspekcja lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [Instrukcje: Inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [Instrukcje: sprawdzanie lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [Instrukcje: sprawdzanie lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

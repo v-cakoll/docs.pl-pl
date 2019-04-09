@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079334"
 ---
 # <a name="defining-and-specifying-faults"></a>Definiowanie i określanie błędów
 Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjny. W tym temacie omówiono, kiedy i jak zdefiniować zawartości niestandardowych błędów i określić, jakie operacje można przywrócić je. Aby uzyskać więcej informacji na temat jak usługi lub dupleks klient może wysyłać te błędy i jak aplikacja klienta lub usługę obsługuje te błędy, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Aby uzyskać omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -88,6 +88,7 @@ End Class
  Podczas uzyskiwania dostępu do innych usług, które generowanie błędów, istnieją pewne ograniczenia. WCF obsługuje tylko błędy z typami szczegółowo opisujący schematu i które są zgodne z kontraktów danych. Na przykład jak wspomniano powyżej, usługi WCF nie obsługuje błędy, które Użyj atrybutów XML w ich typach szczegółów lub błędów przy użyciu więcej niż jeden element najwyższego poziomu w sekcji szczegółów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

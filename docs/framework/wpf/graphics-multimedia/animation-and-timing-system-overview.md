@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079321"
 ---
 # <a name="animation-and-timing-system-overview"></a>Przegląd Animacja i system chronometrażu
 W tym temacie opisano, jak korzysta z system chronometrażu animacji, <xref:System.Windows.Media.Animation.Timeline>, i <xref:System.Windows.Media.Animation.Clock> klasy, aby animować właściwości.  
@@ -83,6 +83,7 @@ A ClockGroup
  Kiedy animujemy właściwość <xref:System.Windows.Media.Animation.AnimationClock> ustawia właściwość *bieżącego* wartość. Podczas pobierania wartości właściwości, za pośrednictwem jego metoda dostępu CLR lub <xref:System.Windows.DependencyObject.GetValue%2A> metoda zwraca dane wyjściowe <xref:System.Windows.Media.Animation.AnimationClock> podczas <xref:System.Windows.Media.Animation.AnimationClock> jest <xref:System.Windows.Media.Animation.ClockState.Active> lub <xref:System.Windows.Media.Animation.ClockState.Filling>. Podstawowa wartość właściwości można pobrać za pomocą <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> metody.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
-- [Zdarzenia chronometrażu — przegląd](timing-events-overview.md)
-- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)
+
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Zdarzenia chronometrażu](timing-events-overview.md)
+- [Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], implementing
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
-ms.openlocfilehash: df4b009ca225b4bf4290398ccd7dd252c9189915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084932"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Instrukcje: Implementowanie interfejsu ITypedList
 Implementowanie <xref:System.ComponentModel.ITypedList> interfejsu, aby włączyć odnajdywanie schematu dla listy może być powiązana.  
@@ -38,7 +38,8 @@ Implementowanie <xref:System.ComponentModel.ITypedList> interfejsu, aby włączy
 -   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)

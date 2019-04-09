@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079646"
 ---
 # <a name="application-settings-attributes"></a>Atrybuty ustawień aplikacji
 Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być stosowane do klasy otoki ustawień aplikacji lub jego poszczególnych właściwości. Te atrybuty są sprawdzane w czasie wykonywania przez infrastrukturę ustawienia aplikacji, często specjalnie Dostawca ustawień, aby dostosować jego funkcjonowania określone potrzeby niestandardowej otoki.  
@@ -38,6 +38,7 @@ Architektura ustawień aplikacji zawiera wiele atrybutów, które mogą być sto
  *Klasa* wskazuje, czy atrybut można stosować tylko do klasy otoki ustawień aplikacji. *Właściwość* wskazuje, czy atrybut może zostać zastosowana tylko właściwości ustawień. *Zarówno* wskazuje, że na tym poziomie można zastosować atrybutu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [Architektura ustawień aplikacji](application-settings-architecture.md)

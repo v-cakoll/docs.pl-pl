@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076682"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są prawidłowe, zanim aplikacja używa go. Może wymagać, że niektóre pola tekstowego jest o zerowej długości, że pole formatowane jako numer telefonu lub innego typu danych sformułowany lub czy ciąg zawiera niebezpiecznych znaków, które mogłyby zostać użyte w celu złamania zabezpieczeń bazy danych. Formularze Windows oferuje kilka sposobów umożliwiające sprawdzanie poprawności danych wejściowych w aplikacji.  
@@ -91,6 +91,7 @@ Gdy użytkownicy wprowadzają dane do aplikacji, można sprawdzić, czy dane są
 >  Jeśli wymusisz formularza, aby zamknąć w ten sposób, wszystkie dane w kontrolek formularza, który nie został już zapisany zostaną utracone. Ponadto formularze modalne nie weryfikują zawartość kontrolki po zamknięciu. Można nadal używać sprawdzania poprawności formantu do blokowania fokus do formantu, ale nie trzeba mieć wątpliwości dotyczące zachowania związanego z zamknięciem formularza.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>

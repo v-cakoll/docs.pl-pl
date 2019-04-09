@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 011183d2f60e4abb967e5381d30a4c28e619e34c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 68fe41afa1999295a32b930b779991e2bbddb19a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117329"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError — Metoda
 Zapewnia powiadomienie błędów występujących podczas scalania metadanych.  
@@ -53,4 +53,5 @@ HRESULT OnError (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IMetaDataError, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)
+
+- [IMetaDataError — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)

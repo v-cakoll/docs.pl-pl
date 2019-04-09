@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolStripContainer control [Windows Forms]
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
-ms.openlocfilehash: d0b8d812fd13be090f42bf4fb3ea84cedd1c07a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082571"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer — Formant
 <xref:System.Windows.Forms.ToolStrip> Formanty funkcji rafting wbudowany (udostępnianie poziomą lub pionową miejsca w obszarze Narzędzia, gdy jest zadokowany) przy użyciu <xref:System.Windows.Forms.ToolStripContainer>.  
@@ -19,13 +19,13 @@ ms.locfileid: "57716858"
  W tematach w tej sekcji opisano pojęć i technik, które służą do tworzenia <xref:System.Windows.Forms.ToolStripContainer> funkcji w aplikacjach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolStripContainer, kontrolka — omówienie](toolstripcontainer-control-overview.md)  
+ [ToolStripContainer — Informacje o formancie](toolstripcontainer-control-overview.md)  
  Zawiera tematy, które opisano przeznaczenie i główne pojęcia formularzy Windows Forms <xref:System.Windows.Forms.ToolStripContainer> kontroli.  
   
- [Instrukcje: Dodawanie elementu ToolStripContainer do formularza](how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Instrukcje: dodawanie elementu ToolStripContainer do formularza](how-to-add-a-toolstripcontainer-to-a-form.md)  
  Pokazuje, dodając <xref:System.Windows.Forms.ToolStripContainer> do aplikacji i dodawanie formantu do określonych panelu <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [Instrukcje: Dodawanie formantu do elementu ToolStripContentPanel](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Pokazuje Dodawanie kontrolki do <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -42,4 +42,5 @@ ms.locfileid: "57716858"
  Zawiera dokumentację referencyjną dla <xref:System.Windows.Forms.ToolStripPanel> kontroli.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)

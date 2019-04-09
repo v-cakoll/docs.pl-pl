@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEval — Interfejs
+title: ICorDebugEval, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEval
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16beff67b4ef918afeb07ce4734fb8d2945e93c8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 745917af176de47999737c87833c23df9c75ea7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080868"
 ---
-# <a name="icordebugeval-interface"></a>ICorDebugEval — Interfejs
+# <a name="icordebugeval-interface"></a>ICorDebugEval, interfejs
 
 Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debugowanego kodu.  
   
@@ -31,7 +31,7 @@ Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debug
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Abort, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Przerywa obliczeń, to `ICorDebugEval` wykonuje obecnie obiektu.|  
+|[Abort — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Przerywa obliczeń, to `ICorDebugEval` wykonuje obecnie obiektu.|  
 |[CallFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Konfiguruje wywołanie do określonej funkcji. (Przestarzałe w wersji 2.0 .NET Framework; użyj [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast.)|  
 |[CreateValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Pobiera wskaźnik interfejsu do określonego typu obiektu "ICorDebugValue" o wartości początkowej zero lub wartość null. (Przestarzałe w programie .NET Framework 2.0; użyj [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) zamiast.)|  
 |[GetResult, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Pobiera wskaźnik interfejsu do `ICorDebugValue` zawierający wyniki obliczeń.|  
@@ -65,6 +65,4 @@ Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debug
   
 ## <a name="see-also"></a>Zobacz także
 
-
-
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

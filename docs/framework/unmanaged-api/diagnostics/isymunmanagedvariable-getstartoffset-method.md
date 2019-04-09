@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196284"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset — Metoda
 Pobiera Przesunięcie początku tej zmiennej w ramach jego elementu nadrzędnego. Jeśli jest to zmienna lokalna w zakresie, Przesunięcie początku będą wchodzić w przesunięcia zdefiniowana dla zakresu.  
@@ -45,5 +45,6 @@ HRESULT GetStartOffset(
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedVariable, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+
+- [ISymUnmanagedVariable — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [GetEndOffset, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

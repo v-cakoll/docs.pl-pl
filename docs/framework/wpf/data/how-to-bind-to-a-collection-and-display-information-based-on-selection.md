@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powiąż z kolekcją i informacją wyświetlaną w oparciu o wybór'
+title: 'Instrukcje: Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188750"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Instrukcje: Powiąż z kolekcją i informacją wyświetlaną w oparciu o wybór
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Instrukcje: Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru
 W prostym scenariuszu wzorzec / szczegół mają powiązane z danymi <xref:System.Windows.Controls.ItemsControl> takich jak <xref:System.Windows.Controls.ListBox>. Na podstawie wyboru użytkownik możesz wyświetlić więcej informacji na temat wybranego elementu. W tym przykładzie pokazano, jak wdrożyć ten scenariusz.  
   
 ## <a name="example"></a>Przykład  
@@ -46,8 +46,9 @@ W prostym scenariuszu wzorzec / szczegół mają powiązane z danymi <xref:Syste
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie wzorca szczegółowego z danymi hierarchicznymi](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Używanie wzorca szczegółowego z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Szablonowanie danych — omówienie](data-templating-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [Przegląd Szablonowanie danych](data-templating-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

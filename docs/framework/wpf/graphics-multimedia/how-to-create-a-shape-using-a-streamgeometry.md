@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz kształt używając StreamGeometry'
+title: 'Instrukcje: Tworzenie kształtu przy użyciu elementu StreamGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: 3273b6f45c367afeb8e572d0f68e6774075890c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108605"
 ---
-# <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Instrukcje: Utwórz kształt używając StreamGeometry
+# <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Instrukcje: Tworzenie kształtu przy użyciu elementu StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> jest alternatywą lekki <xref:System.Windows.Media.PathGeometry> do tworzenia kształtów geometrycznych. Użyj <xref:System.Windows.Media.StreamGeometry> niezbędne, aby opisać złożone typy geometryczne, ale nie chcesz koszty obsługi powiązań danych, animacji lub modyfikacji. Na przykład ze względu na jego wydajność <xref:System.Windows.Media.StreamGeometry> klasy jest dobrym wyborem dla opisu moduły definiowania układu.  
   
 ## <a name="example"></a>Przykład  
@@ -38,8 +38,9 @@ ms.locfileid: "57361022"
  [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryexample.vb#streamgeometryexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.StreamGeometryContext>
 - [Tworzenie kształtu przy użyciu elementu PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
-- [Geometria — przegląd](geometry-overview.md)
+- [Przegląd Geometria](geometry-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079698"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Kontrolki mogą wyświetlać dane w trzech różnych trybach: powiązanej niepowiązanych i wirtualnych. Wybierz najbardziej odpowiedni tryb, w zależności od wymagań.  
@@ -42,14 +42,15 @@ ms.locfileid: "57703082"
  Aby uzyskać więcej informacji na temat trybu wirtualnego zobacz [trybu wirtualnego w formancie DataGridView formularzy Windows](virtual-mode-in-the-windows-forms-datagridview-control.md). Na przykład, który pokazuje, jak używać zdarzenia trybu wirtualnego, zobacz [instruktażu: Implementowanie trybu wirtualnego w Windows formantu DataGridView formularzy](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
-- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Przewodnik: Tworzenie Windows niezwiązanego formantu DataGridView formularzy](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Instrukcje: Powiązanie danych w kontrolce DataGridView formularzy Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
-- [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Typy kolumn w formancie DataGridView formularzy systemu Windows](column-types-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Instrukcje: powiązanie danych z kontrolką DataGridView formularzy systemu Windows](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Tryb wirtualny w formancie DataGridView formularzy systemu Windows](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows](implementing-virtual-mode-wf-datagridview-control.md)

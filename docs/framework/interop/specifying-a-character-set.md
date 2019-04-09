@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a8347eb1-295f-46b9-8a78-63331f9ecc50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0146d3617f5a4aff2a76d2b2f4777b18a0e9c2ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 798fcacab5bd74dbd6569a68a3b598c0bb63a0a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087745"
 ---
 # <a name="specifying-a-character-set"></a>Określanie zestawu znaków
 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> Pole kontroluje kierowanie ciągu i określa, jak wywołanie platformy znajduje nazwy funkcji w bibliotece DLL. W tym temacie opisano obie zachowania.  
@@ -26,11 +26,11 @@ ms.locfileid: "58410822"
   
 -   **MessageBoxA**  
   
-     Zawiera formatowanie ANSI 1-bajtowych wartości znakowych rozróżnianych na podstawie "A", po której dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxA** zawsze sformatować przeprowadzanie marshalingu ciągów ANSI, co jest często spotykane na platformach Windows 95 i Windows 98.  
+     Zawiera formatowanie ANSI 1-bajtowych wartości znakowych rozróżnianych na podstawie "A", po której dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxA** zawsze przeprowadzanie marshalingu ciągów w formacie ANSI.  
   
 -   **MessageBoxW**  
   
-     Zawiera formatowanie 2-bajtowych wartości znakowych Unicode, rozróżnianych na podstawie "W" dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxW** zawsze przeprowadzanie marshalingu ciągów w formacie Unicode, co jest często spotykane na platformach Windows NT, Windows 2000 i Windows XP.  
+     Zawiera formatowanie 2-bajtowych wartości znakowych Unicode, rozróżnianych na podstawie "W" dołączany do wybranej nazwy punktu wejścia. Wywołania **MessageBoxW** zawsze przeprowadzanie marshalingu ciągów w formacie Unicode.  
   
 ## <a name="string-marshaling-and-name-matching"></a>Marshaling ciągów i dopasowywanie nazw  
  `CharSet` Pole akceptuje następujące wartości:  
@@ -149,7 +149,8 @@ extern "C" int MessageBox(
 ```
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Organizowanie danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

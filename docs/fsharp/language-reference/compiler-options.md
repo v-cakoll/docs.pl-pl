@@ -2,22 +2,19 @@
 title: Opcje kompilatora
 description: Użyj F# opcje wiersza polecenia kompilatora do kontrolowania kompilacji usługi F# aplikacji i bibliotek.
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089760"
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
 
 W tym temacie opisano opcje wiersza polecenia kompilatora dla F# kompilatora, fsc.exe. Środowisko kompilacji można także kontrolować przez ustawienie właściwości projektu.
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>Opcje kompilatora w porządku alfabetycznym
 W poniższej tabeli przedstawiono opcje kompilatora w porządku alfabetycznym. Niektóre z F# opcje kompilatora są podobne do C# opcje kompilatora. Jeśli tak jest łącze do C# podano tematu o opcjach kompilatora.
-
-
 
 |— Opcja kompilatora|Opis|
 |---------------|-----------|
@@ -73,5 +70,5 @@ W poniższej tabeli przedstawiono opcje kompilatora w porządku alfabetycznym. N
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Opcje F# Interactive](fsharp-interactive-options.md)|W tym artykule opisano opcje wiersza polecenia obsługiwane przez F# interpreter, fsi.exe.|
+|[Opcje interakcyjne F#](fsharp-interactive-options.md)|W tym artykule opisano opcje wiersza polecenia obsługiwane przez F# interpreter, fsi.exe.|
 |[Odwołanie do właściwości projektu](/visualstudio/ide/reference/project-properties-reference)|W tym artykule opisano interfejs użytkownika dla projektów, w tym stron właściwości projektu, które udostępniają opcje budowania.|

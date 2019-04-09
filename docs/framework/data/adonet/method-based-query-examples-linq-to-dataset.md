@@ -2,18 +2,18 @@
 title: Przykłady zapytań oparte na metodzie (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: d340775c-7f39-4087-a290-5cbec6cfa68e
-ms.openlocfilehash: 1f2b319d313706fa78e52cfd9aff1361455a441e
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9419bd664a0e918b1ed40e5d468d01cf724f054d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139805"
 ---
 # <a name="method-based-query-examples-linq-to-dataset"></a>Przykłady zapytań oparte na metodzie (LINQ to DataSet)
 Ta sekcja zawiera LINQ do zestawu danych, programowaniu przykłady w składni zapytania oparte na metodzie, które używają standardowych operatorów zapytań. <xref:System.Data.DataSet> Używanego w tych przykładach jest wypełniana przy użyciu `FillDataSet` metody, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) lub [standardowe operatory zapytań — Przegląd (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Projekcja](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+ [Rzut](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
  Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Select%2A> i <xref:System.Linq.Enumerable.SelectMany%2A> metod do wykonywania zapytań <xref:System.Data.DataSet>.  
   
  [Partycjonowanie](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
@@ -34,10 +34,11 @@ Ta sekcja zawiera LINQ do zestawu danych, programowaniu przykłady w składni za
  [Operatory agregacji](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
  Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, i <xref:System.Linq.Enumerable.Sum%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> i agregowanie danych.  
   
- [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+ [Łączenie](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
  Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.GroupJoin%2A> i <xref:System.Linq.Enumerable.Join%2A> metod do wykonywania zapytań <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady wyrażeń zapytania](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)
 - [Przykłady operatorów specyficznych dla zestawu danych](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

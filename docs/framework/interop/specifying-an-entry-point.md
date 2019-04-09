@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 787406b1fa7e5beb59ff3f8715c1215a734ed895
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 15a441ea7b0b16c83c590289d04cf0c10623fb85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086068"
 ---
 # <a name="specifying-an-entry-point"></a>Określanie punktu wejścia
 Punkt wejścia określa lokalizację funkcji w bibliotece DLL. W obrębie zarządzanego projektu, oryginalna nazwa lub porządkowy punkt wejścia docelowej funkcji określa tę funkcję wewnątrz międzyoperacyjnej granicy. Co więcej, możesz zmapować punkt wejścia do innej nazwy, efektywnie zmieniając nazwę funkcji.  
@@ -95,7 +95,8 @@ extern "C" int MsgBox(
 ```
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
 - [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)
-- [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)
+- [Organizowanie danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)

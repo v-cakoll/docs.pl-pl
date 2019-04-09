@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: 0d74e94aed00d480459aec3c63d961c82af42ef1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097534"
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się za pośrednictwem jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą i określa adres, gdzie można znaleźć tę usługę. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowany przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera jednolite zasobów identyfikator (URI) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, która reprezentuje tożsamość zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają więcej szczegółowych informacji adresowania, aby zidentyfikować lub nawiązać kontakt z punktem końcowym. Na przykład nagłówków, można wskazać sposób przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania wiadomości przychodzących konkretnego użytkownika, jeśli wiele wystąpień są dostępne.  
@@ -56,9 +56,7 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
   
 ## <a name="endpoint-address-in-metadata"></a>Adres punktu końcowego metadanych  
  Adres punktu końcowego jest reprezentowana w sieci Web Services Description Language (WSDL) jako usługi WS-Addressing `EndpointReference` — element (EPR) wewnątrz odpowiedni punkt końcowy `wsdl:port` elementu. EPR zawiera adres punktu końcowego oraz wszelkie właściwości adresu. Należy pamiętać, że EPR wewnątrz `wsdl:port` zastępuje `soap:Address` jak pokazano w poniższym przykładzie.  
-  
-  
-  
+
 ## <a name="defining-endpoint-addresses-in-code"></a>Definiowanie adresy punktów końcowych w kodzie  
  Adres punktu końcowego można utworzyć w kodzie za pomocą <xref:System.ServiceModel.EndpointAddress> klasy. Adres punktu końcowego określonego identyfikatora URI może być w pełni kwalifikowanej ścieżki lub ścieżki, który jest określany względem adresu podstawowego usługi. Poniższy kod ilustruje sposób tworzenia wystąpienia <xref:System.ServiceModel.EndpointAddress> klasy i dodać go do <xref:System.ServiceModel.ServiceHost> wystąpienie hostujące usługi.  
   
@@ -83,6 +81,7 @@ Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się 
  Jeśli punkty końcowe są podane jawnie, nadal można dodać domyślnych punktów końcowych przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązania i zachowań, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.EndpointAddress>
 - [Uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md)

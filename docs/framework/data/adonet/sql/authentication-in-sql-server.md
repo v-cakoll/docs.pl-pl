@@ -2,12 +2,12 @@
 title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 060d756306226ef34fb968a87425bc0d4ea545f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084040"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows i w trybie mieszanym.  
@@ -79,6 +79,7 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania Windows 
 |[Podmiotów zabezpieczeń](/sql/relational-databases/security/authentication-access/principals-database-engine)|W tym artykule opisano identyfikatory logowania i inne podmioty zabezpieczeń w programie SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)

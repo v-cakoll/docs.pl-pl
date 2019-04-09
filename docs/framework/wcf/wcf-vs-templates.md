@@ -2,12 +2,12 @@
 title: Szablony programu Visual Studio na potrzeby programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130900"
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
 Szablony programu Visual Studio Windows Communication Foundation (WCF) są wstępnie zdefiniowane szablony projektów i elementów, które w programie Visual Studio umożliwia szybkie tworzenie usług WCF i otaczającego aplikacji.  
@@ -83,5 +83,6 @@ Szablony programu Visual Studio Windows Communication Foundation (WCF) są wstę
 >  Usługa WCF obsługująca program Silverlight przedstawia `basicHttpBinding` punktu końcowego bez włączania wszelkich ustawień zabezpieczeń. W związku z tym można uzyskać informacji na temat usługi przez wszystkich klientów łączących się z tej usługi. Komunikatów wymienianych między usługą i klienta również nie jest podpisana lub zaszyfrowana. Aby zabezpieczyć punkt końcowy prawidłowo, należy użyć uwierzytelniania platformy ASP.NET, HTTPS lub innych mechanizmów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

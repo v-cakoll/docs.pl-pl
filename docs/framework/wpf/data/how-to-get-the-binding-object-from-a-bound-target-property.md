@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Pobierz obiekt wiążący z powiązanej własności docelowej'
+title: 'Instrukcje: Pobieranie obiektu wiążącego z powiązanej własności docelowej'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: af18cf3fc155148816690bdd16baa3a2a5515eee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083117"
 ---
-# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Instrukcje: Pobierz obiekt wiążący z powiązanej własności docelowej
+# <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Instrukcje: Pobieranie obiektu wiążącego z powiązanej własności docelowej
 W tym przykładzie pokazano, jak uzyskać obiekt wiążący z właściwością target powiązanych z danymi.  
   
 ## <a name="example"></a>Przykład  
@@ -31,5 +31,6 @@ W tym przykładzie pokazano, jak uzyskać obiekt wiążący z właściwością t
 >  Jeśli Twoje powiązanie <xref:System.Windows.Data.MultiBinding>, użyj <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Jeśli jest <xref:System.Windows.Data.PriorityBinding>, użyj <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Jeśli masz pewności, czy właściwość docelowa jest powiązany, za pomocą <xref:System.Windows.Data.Binding>, <xref:System.Windows.Data.MultiBinding>, lub <xref:System.Windows.Data.PriorityBinding>, możesz użyć <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie powiązania w kodzie](how-to-create-a-binding-in-code.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

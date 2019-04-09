@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
-ms.openlocfilehash: 0b8c473171f86b569f42c75701805818d8b81c42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: ca7e8363497534bd4802dad991f8affb0386334b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094479"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Instrukcje: Wykonywanie zapytania, które zwraca wyniki PrimitiveType
 W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego przy użyciu <xref:System.Data.EntityClient.EntityCommand>oraz jak pobierać <xref:System.Data.Metadata.Edm.PrimitiveType> wyniki za pomocą <xref:System.Data.EntityClient.EntityDataReader>.  
@@ -37,5 +37,6 @@ W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego
  [!code-vb[DP EntityServices Concepts#eSQLPrimitiveTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlprimitivetypes)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

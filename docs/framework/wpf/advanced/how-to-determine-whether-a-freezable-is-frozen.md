@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określ, czy Freezable jest zamrożony'
+title: 'Instrukcje: Określanie, czy obiekt Freezable jest zamrożony'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], determining if frozen
 ms.assetid: 92e58baa-ee12-4a9e-ac3a-ca458807a8b2
-ms.openlocfilehash: 005bb27803830a2e38a7b143d2c4cff669ad1da6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6a63862d35f2c40289ea6445eb3dab8a2abe4a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197064"
 ---
-# <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Instrukcje: Określ, czy Freezable jest zamrożony
+# <a name="how-to-determine-whether-a-freezable-is-frozen"></a>Instrukcje: Określanie, czy obiekt Freezable jest zamrożony
 W tym przykładzie pokazano, jak ustalić, czy <xref:System.Windows.Freezable> obiektu jest zablokowane. Jeśli spróbujesz zmodyfikować zamrożone <xref:System.Windows.Freezable> obiekt, w wyniku weryfikacji zgłasza wyjątek <xref:System.InvalidOperationException>. Aby uniknąć, zostanie zgłoszony wyjątek, należy użyć <xref:System.Windows.Freezable.IsFrozen%2A> właściwość <xref:System.Windows.Freezable> obiektu, aby ustalić, czy jest zablokowane.  
   
 ## <a name="example"></a>Przykład  
@@ -26,7 +26,8 @@ W tym przykładzie pokazano, jak ustalić, czy <xref:System.Windows.Freezable> o
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Freezable> obiekty, zobacz [Przegląd obiektów Freezable](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.IsFrozen%2A>
-- [Przegląd obiektów Freezable](freezable-objects-overview.md)
-- [Tematy z instrukcjami](base-elements-how-to-topics.md)
+- [Przegląd Obiekty Freezable](freezable-objects-overview.md)
+- [— Tematy porad](base-elements-how-to-topics.md)

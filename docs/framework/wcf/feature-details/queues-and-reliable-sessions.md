@@ -2,12 +2,12 @@
 title: Kolejki i sesje niezawodne
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: 2f79e1eac469dc1d9d775cbca0f06046f10dfb20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196830"
 ---
 # <a name="queues-and-reliable-sessions"></a>Kolejki i sesje niezawodne
 Kolejki i sesje niezawodne są funkcje Windows Communication Foundation (WCF), które implementują niezawodną obsługę komunikatów. Tematy zawarte w tej sekcji omówiono w nim niezawodne funkcje obsługi komunikatów WCF.  
@@ -39,6 +39,7 @@ Kolejki i sesje niezawodne są funkcje Windows Communication Foundation (WCF), k
  Oddzielenie połączone z przeniesienia niezawodnych komunikatów między kolejek umożliwia aplikacji, które są luźno powiązane niezawodnie komunikować się. W przeciwieństwie do sesji niezawodnych źródłowym i docelowym nie musi być uruchomiona w tym samym czasie. Dzięki temu niejawnie scenariuszy, w którym kolejki w efekcie służą jako mechanizm wyrównywania obciążenia w przypadku niezgodności między za produkcji wiadomości według źródeł oraz stawkę za użycie komunikatu przez miejsce docelowe. Aby uzyskać więcej informacji na temat kolejek, zobacz [kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Niezawodne sesje](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)

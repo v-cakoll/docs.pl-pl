@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a1129e3778763a4e2cd06759c5a5ad7656244934
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074957"
 ---
 # <a name="handling-user-input"></a>Obsługa danych wejściowych użytkownika
 W tym temacie opisano główne zdarzeń klawiatury oraz myszy dostarczone przez <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Podczas obsługi zdarzenia, autorzy kontrolki powinien przesłonić chronionego `On` *EventName* metody zamiast dołączając delegata do zdarzenia. Aby uzyskać przegląd zdarzeń, zobacz [Raising Events ze składnika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120)).  
@@ -64,7 +64,8 @@ W tym temacie opisano główne zdarzeń klawiatury oraz myszy dostarczone przez 
  Dla pełnego kodu źródłowego dla `FlashTrackBar` przykładowe, zobacz [jak: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia w kontrolkach formularzy Windows Forms](events-in-windows-forms-controls.md)
+
+- [Zdarzenia w formantach formularzy systemu Windows](events-in-windows-forms-controls.md)
 - [Definiowanie zdarzenia](defining-an-event-in-windows-forms-controls.md)
 - [Zdarzenia](../../../standard/events/index.md)
-- [Dane użytkownika w formularzach Windows Forms](../user-input-in-windows-forms.md)
+- [Dane użytkownika w formularzach systemu Windows](../user-input-in-windows-forms.md)

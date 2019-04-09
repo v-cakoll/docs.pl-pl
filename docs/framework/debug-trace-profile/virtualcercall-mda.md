@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4315d6ee5f7b63b21fcdb0f8efc5b2a693a3a2c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2c8712837dab17f70be32617711c1bad9349508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086081"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
 `virtualCERCall` Zarządzanego Asystenta debugowania (MDA) jest uaktywniony jako ostrzeżenie informujące, że witryny wywołania, w ramach wykresu wywołań ograniczonego wykonania region (CER) odwołuje się do docelowego wirtualnego, oznacza to, wywołanie wirtualne metodą wirtualną innego niż końcowa lub za pomocą wywołania interfejs. Środowisko uruchomieniowe języka wspólnego (CLR) nie można przewidzieć metoda przeznaczenia tych wywołań z pośrednich analizy języka i metadanych, które są wyłącznie. W rezultacie drzewo wywołań nie można przygotować jako część wykresu CER i przerwań wątku, w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie MDA ostrzega o przypadkach, gdzie CER może być konieczne można rozszerzyć za pomocą jawnych wywołań <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metoda po dodatkowe informacje wymagane do obliczenia cel wywołania jest znany w czasie wykonywania.  
@@ -97,6 +97,7 @@ void MethodWithCer(MyClass object)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: ae6c8dc3669ed46165f3d78e78735187ebbc3776
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097242"
 ---
 # <a name="merged-resource-dictionaries"></a>Połączone słowniki zasobów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów obsługują funkcję słownika scalonych zasobów. Ta funkcja udostępnia sposób definiowania zasobów część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji poza skompilowana klasa [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji. Następnie mogą udostępniać zasoby w aplikacjach i są również więcej wygodnie izolowane dla lokalizacji.  
@@ -52,7 +52,8 @@ ms.locfileid: "57377063"
  W przypadku zasobów, które mają być lokalizowane izolowane słowników, które została scalona z podstawowego słowników i przechowywane jako luźne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], te pliki, które może być lokalizowana oddzielnie. Ta technika jest uproszczone alternatywą do lokalizowania zestawów zasobów satelickich. Aby uzyskać więcej informacji, zobacz [Przegląd lokalizacja i globalizacja WPF](wpf-globalization-and-localization-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.ResourceDictionary>
 - [Zasoby XAML](xaml-resources.md)
 - [Zasoby i kod](resources-and-code.md)
-- [Zasoby aplikacji WPF, zawartość i pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Zasoby aplikacji WPF, zawartość, pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)

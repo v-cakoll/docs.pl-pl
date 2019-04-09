@@ -11,20 +11,18 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134611"
 ---
 # <a name="wpf-content-model"></a>Model zawartości WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest to platforma prezentacji, która zawiera wiele kontrolek i typy kontroli którego podstawowym celem jest do wyświetlania różnych typów zawartości. Aby określić, które określają, aby używać lub które określają, które ma być z, należy poznać rodzaje obiektów, które najlepiej wyświetlić określonego formantu.  
   
  Ten temat zawiera podsumowanie model zawartości dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontroli i typy kontroli. Model zawartości w tym artykule opisano zawartość, mogą być używane w kontrolce. Ten temat zawiera także właściwości zawartości dla każdego modelu zawartości. Właściwość zawartości ma właściwości, która jest używana do przechowywania zawartości obiektu.  
-  
- 
-  
+
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>Klasy, które zawierają dowolne zawartości  
  Niektóre kontrolki mogą zawierać obiekt dowolnego typu, na przykład ciąg, <xref:System.DateTime> obiektu lub <xref:System.Windows.UIElement> oznacza to kontener dla dodatkowych elementów. Na przykład <xref:System.Windows.Controls.Button> może zawierać obraz i tekst; lub <xref:System.Windows.Controls.CheckBox> może zawierać wartości <xref:System.DateTime.Now%2A?displayProperty=nameWithType>.  
@@ -250,4 +248,5 @@ Blok tekstu, który ma obramowanie
  <xref:System.Windows.Documents.TextElement> i jej klasy pokrewne pozwalają do formatowania tekstu. <xref:System.Windows.Documents.TextElement> obiekty zawierają i formatowanie tekstu w <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów. Dwa podstawowe typy <xref:System.Windows.Documents.TextElement> obiekty są <xref:System.Windows.Documents.Block> elementy i <xref:System.Windows.Documents.Inline> elementów. A <xref:System.Windows.Documents.Block> element reprezentuje blok tekstu, np. akapitu lub listy. <xref:System.Windows.Documents.Inline> Element reprezentuje fragment tekstu w bloku. Wiele <xref:System.Windows.Documents.Inline> klasy określić formatowanie tekstu, do której są stosowane. Każdy <xref:System.Windows.Documents.TextElement> ma swój własny model zawartości. Aby uzyskać więcej informacji, zobacz [omówienie modelu zawartości TextElement](../advanced/textelement-content-model-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zaawansowane](../advanced/index.md)

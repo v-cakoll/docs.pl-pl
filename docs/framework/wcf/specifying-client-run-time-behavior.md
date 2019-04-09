@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164375"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Określanie zachowania klienta w czasie wykonywania
 Klienci Windows Communication Foundation (WCF), podobnie jak usługi Windows Communication Foundation (WCF), można skonfigurować do modyfikowania zachowania w czasie wykonywania do własnych aplikacji klienckiej. Trzy atrybuty są dostępne dla Określanie zachowania klienta w czasie wykonywania. Obiekty klienta dwustronnego wywołania zwrotnego można użyć <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> atrybutów, które mają modyfikowanie ich zachowania w czasie wykonywania. Ten atrybut <xref:System.ServiceModel.Description.ClientViaBehavior>, może służyć do oddzielania logiczne miejsce docelowe z docelowym bezpośredniej sieci. Ponadto klienta dwustronnego wywołania zwrotnego typów mogą korzystać z niektórych zachowań po stronie usługi. Aby uzyskać więcej informacji, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -44,4 +44,5 @@ Klienci Windows Communication Foundation (WCF), podobnie jak usługi Windows Com
  Możesz użyć <xref:System.ServiceModel.Description.ClientViaBehavior> zachowanie, aby określić Uniform Resource Identifier, dla którego należy utworzyć kanał transportu. Należy użyć tego zachowania, gdy docelowy bezpośredniej sieci nie jest zamierzone procesora wiadomość. Dzięki temu konwersacje wielu przeskoków, gdy aplikacja wywołująca nie zna ultimate docelowego lub miejsce docelowe `Via` nagłówka nie jest adresem.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

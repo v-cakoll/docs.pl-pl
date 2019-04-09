@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu'
+title: 'Instrukcje: Określanie w pełni kwalifikowanej nazwy zestawu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32beb648bed37281e798f51e6b4a316197c23845
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097541"
 ---
-# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu
+# <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Instrukcje: Określanie w pełni kwalifikowanej nazwy zestawu
 Aby dowiedzieć się, w pełni kwalifikowana nazwa zestawu w globalnej pamięci podręcznej, użyj Global Assembly Cache Tool ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Zobacz [jak: Wyświetlanie zawartości globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  Dla zestawów, które nie znajdują się w globalnej pamięci podręcznej, można uzyskać w pełni kwalifikowanej nazwy zestawu na kilka sposobów: można użyć kod służący do wypełniania wyjściowego informacji konsoli lub do zmiennej lub można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)zbadać metadanych zestawu, który zawiera w pełni kwalifikowana nazwa.  
@@ -43,6 +43,7 @@ Aby dowiedzieć się, w pełni kwalifikowana nazwa zestawu w globalnej pamięci 
  [!code-vb[Assembly.Fullname#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Assembly.FullName/VB/example2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Nazwy zestawów](../../../docs/framework/app-domains/assembly-names.md)
 - [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

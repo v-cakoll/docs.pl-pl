@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098562"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze Windows <xref:System.Windows.Forms.FontDialog> składnik to wstępnie skonfigurowane okno dialogowe, które jest standardowa Windows **czcionki** okno dialogowe, używany do udostępnienia czcionek, które są aktualnie zainstalowane w systemie. Użycie go w aplikacji opartych na Windows proste rozwiązanie dla wybór czcionki audytów Konfigurowanie własnego okno dialogowe.  
@@ -24,5 +24,6 @@ Formularze Windows <xref:System.Windows.Forms.FontDialog> składnik to wstępnie
  Składnik ma wiele właściwości, które skonfigurować jego wygląd. Ustaw opcje Okno dialogowe właściwości są <xref:System.Windows.Forms.FontDialog.Font%2A> i <xref:System.Windows.Forms.FontDialog.Color%2A>. <xref:System.Windows.Forms.FontDialog.Font%2A> Właściwość ustawia czcionkę, style, rozmiar, skrypt i efektów; na przykład `Arial, 10pt, style=Italic, Strikeout`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog, składnik](fontdialog-component-windows-forms.md)

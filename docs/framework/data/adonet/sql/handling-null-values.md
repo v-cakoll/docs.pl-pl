@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191474"
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie jest nieznany lub Brak. Wartość null nie jest ciągiem pustym (dla typów danych znaku lub daty/godziny) ani wartość zero (w przypadku liczbowych typów danych). Specyfikacji ANSI SQL-92 z informacją o wartości null musi być taka sama dla wszystkich typów danych, tak, aby spójną wszystkie wartości null. <xref:System.Data.SqlTypes> Przestrzeń nazw zawiera semantyka wartości null, implementując <xref:System.Data.SqlTypes.INullable> interfejsu. Typy wszystkich danych w <xref:System.Data.SqlTypes> ma swój własny `IsNull` właściwości i `Null` wartość, którą można przypisać do wystąpienia tego typu danych.  
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Porównanie wartości Null za pomocą SqlTypes i typów CLR  
- Podczas porównywania wartości null, ważne jest, aby zrozumieć różnicę między sposób `Equals` metoda oblicza wartości null w <xref:System.Data.SqlTypes> porównaniu sposób działa z typami CLR. Wszystkie <xref:System.Data.SqlTypes> `Equals` metody korzystają bezpośrednio z semantyki bazy danych do oceny wartości null: Jeśli jeden lub oba wartości ma wartość null, porównanie daje wartość null. Z drugiej strony, przy użyciu środowiska CLR `Equals` metody na dwóch <xref:System.Data.SqlTypes> da wartość true, jeśli oba mają wartość null. Ten sposób odzwierciedlono różnica między metodą wystąpienia, takie jak środowisko CLR `String.Equals` metody i przy użyciu metody statyczne/udostępnione `SqlString.Equals`.  
+ Podczas porównywania wartości null, ważne jest, aby zrozumieć różnicę między sposób `Equals` metoda oblicza wartości null w <xref:System.Data.SqlTypes> porównaniu sposób działa z typami CLR. Wszystkie <xref:System.Data.SqlTypes>`Equals` metody korzystają bezpośrednio z semantyki bazy danych do oceny wartości null: Jeśli jeden lub oba wartości ma wartość null, porównanie daje wartość null. Z drugiej strony, przy użyciu środowiska CLR `Equals` metody na dwóch <xref:System.Data.SqlTypes> da wartość true, jeśli oba mają wartość null. Ten sposób odzwierciedlono różnica między metodą wystąpienia, takie jak środowisko CLR `String.Equals` metody i przy użyciu metody statyczne/udostępnione `SqlString.Equals`.  
   
  Poniższy przykład ilustruje różnicę w wynikach między `SqlString.Equals` metody i `String.Equals` metody, gdy każda jest przekazywany pary wartości null, a następnie para pustych ciągów.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych programu SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097554"
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model szablonowanie danych WPF zapewnia dużą elastyczność, aby zdefiniować prezentację danych. Formanty WPF posiada wbudowanej funkcji obsługującej Dostosowywanie prezentacji danych. W tym temacie najpierw pokazano, jak zdefiniować <xref:System.Windows.DataTemplate> i następnie wprowadza inne funkcje szablonów dane, takie jak wybór szablony na podstawie logiki niestandardowej i pomoc techniczna dotycząca wyświetlania danych hierarchicznych.  
@@ -194,6 +194,7 @@ Zakończenie naszej dyskusji w tym przykładzie. Aby uzyskać pełny przykład, 
  ![Zrzut ekranu przykładu przykładowy obiekt HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)

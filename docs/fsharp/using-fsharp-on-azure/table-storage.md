@@ -3,12 +3,12 @@ title: Rozpoczynanie pracy z usługą Azure Table storage przy użyciuF#
 description: Store ustrukturyzowanych danych w chmurze przy użyciu usługi Azure Table storage lub Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086705"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table storage i Azure Cosmos DB interfejsu API tabel przy użyciu F\#
 
@@ -35,7 +35,6 @@ Ten samouczek przedstawia sposób zapisania F# kod, aby wykonywać niektóre typ
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Aby użyć tego przewodnika, należy najpierw [Tworzenie konta usługi Azure storage](/azure/storage/storage-create-storage-account) lub [konta usługi Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Tworzenie F# skrypt i uruchomić F# interaktywne
 
@@ -128,7 +127,6 @@ Teraz możesz wydrukować wyniki:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Pobieranie zakresu jednostek w partycji
 
 Jeśli nie chcesz wykonywać zapytania dla wszystkich jednostek w partycji, można określić zakres, łącząc filtr klucza partycji z filtrem klucza wiersza. Używamy tutaj dwa filtry do pobrania wszystkich jednostek w partycji "Smith" gdzie klucz wiersza (imię) rozpoczyna się od litery starszych niż "M" alfabetu.
@@ -148,7 +146,6 @@ Można napisać zapytanie w celu pobrania jednej, określonej jednostki. W tym m
 Teraz możesz wydrukować wyniki:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>Zastępowanie jednostki
 

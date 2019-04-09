@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d504e694810bfa1b9f3258f75e307bfb60d4ad7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a340086be042c790ae7bf750759ff80f7c9eaf23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122619"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 — Interfejs
 Tworzy czytnik symbolu dla modułu dynamicznego.  
@@ -43,7 +43,7 @@ interface ICorDebugModule3 : IUnknown
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Tworzy czytnik symbolu (zazwyczaj [isymunmanagedreader — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) dla modułu dynamicznego.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Tworzy czytnik symbolu (zazwyczaj [isymunmanagedreader — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) dla modułu dynamicznego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs rozszerza logicznie interfejsów "ICorDebugModule" i "Icordebugmodule2 —".  
@@ -61,7 +61,8 @@ interface ICorDebugModule3 : IUnknown
  **Wersje programu .NET framework:** 4.5, 4, 3.5 Z DODATKIEM SP1
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugRemoteTarget, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemoteTarget — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

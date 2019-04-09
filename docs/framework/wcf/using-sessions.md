@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442727"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095870"
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
 W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF są inne niż dostępne w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  
@@ -146,5 +146,6 @@ W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wia
 >  MaxConcurrentSessions w tym przypadku przyniosło żadnego skutku, ponieważ istnieje tylko jeden "sesja".  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081492"
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
 Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przeprowadzana migracja istniejącej aplikacji Windows Store, możesz wykonać ten sam zestaw procedur. Aby utworzyć [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji, wykonaj następujące kroki:  
@@ -106,15 +106,16 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
   
  Aby uzyskać kilka przykładów Obsługa wyjątków i inne problemy występujące podczas testowania aplikacji Zobacz:  
   
--   [Przykład: Obsługa wyjątków podczas powiązywania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Przykład: Obsługa wyjątków podczas wiązania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [Wyjątki czasu wykonywania w aplikacjach .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET native instalację i konfigurację.](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [Instalacja i konfiguracja architektury .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [Interfejsy API, które działają na podstawie odbicia](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

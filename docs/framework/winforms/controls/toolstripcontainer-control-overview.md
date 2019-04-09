@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191266"
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer — Informacje o formancie
 A <xref:System.Windows.Forms.ToolStripContainer> ma paneli w lewo, po prawej stronie, górnej i dolne krawędzie, pozycjonowanie i rafting <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.StatusStrip> kontrolki. Wiele <xref:System.Windows.Forms.ToolStrip> kontrolki w pionie stosu umieszczenie w lewo lub w prawo <xref:System.Windows.Forms.ToolStripContainer>. One ułożone poziomo, jeśli umieść je w górę lub w dół <xref:System.Windows.Forms.ToolStripContainer>. Możesz użyć centralnej <xref:System.Windows.Forms.ToolStripContentPanel> z <xref:System.Windows.Forms.ToolStripContainer> do pozycji tradycyjne formanty formularza.  
@@ -33,5 +33,6 @@ A <xref:System.Windows.Forms.ToolStripContainer> ma paneli w lewo, po prawej str
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|Pobiera lub ustawia wartość wskazującą czy górnego panelu <xref:System.Windows.Forms.ToolStripContainer> jest widoczna.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>

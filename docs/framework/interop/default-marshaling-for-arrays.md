@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098224"
 ---
 # <a name="default-marshaling-for-arrays"></a>Organizowanie domyślne dotyczące tablic
 W aplikacji składających się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów. Z kolei Organizator międzyoperacyjny przekazuje tablicę, tak jak parametry domyślne.  
@@ -184,7 +184,7 @@ void New3(ref String ar);
   
 |Zarządzany typ tablicy|Wyeksportowany jako|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ jest dostarczany w podpisie. Ranga ma zawsze numer 1, dolna granica jest zawsze 0. Rozmiar zawsze jest znany w czasie wykonywania.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **. SafeArray (** *typu* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ jest dostarczany w podpisie. Ranga ma zawsze numer 1, dolna granica jest zawsze 0. Rozmiar zawsze jest znany w czasie wykonywania.|  
 |**ELEMENT_TYPE_ARRAY** **\<** *typu* **>** **\<** *ranga* **>**[**\<** *granice* **>**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Granice rangę, typ, znajdują się w podpisie. Rozmiar zawsze jest znany w czasie wykonywania.|  
 |**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> Typ, rangę, granice i rozmiar zawsze są znane w czasie wykonywania.|  
   
@@ -361,6 +361,7 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)
 - [Atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

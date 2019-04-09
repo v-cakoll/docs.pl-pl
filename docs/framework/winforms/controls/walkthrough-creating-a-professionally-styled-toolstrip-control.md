@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie profesjonalnego formantu ToolStrip'
+title: 'Przewodnik: tworzenie profesjonalnej kontrolki ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115794"
 ---
-# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Przewodnik: Tworzenie profesjonalnego formantu ToolStrip
+# <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Przewodnik: tworzenie profesjonalnej kontrolki ToolStrip
 Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profesjonalny wygląd i zachowanie, pisząc własne klasy pochodzącej od <xref:System.Windows.Forms.ToolStripProfessionalRenderer> typu.  
   
  W tym instruktażu przedstawiono sposób użycia <xref:System.Windows.Forms.ToolStrip> formantów, aby utworzyć formant złożony, który przypomina **okienka nawigacji** udostępniane przez Microsoft Outlook®. Następujące zadania są przedstawione w niniejszym przewodniku:  
@@ -185,8 +185,9 @@ Możesz nadać aplikacji <xref:System.Windows.Forms.ToolStrip> kontroluje profes
 -   Tworzenie wielu formularza interfejsu (MDI) dokumentu z dokowanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie formularza MDI za pomocą scalania Menu i formantów ToolStrip](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
-- [Instrukcje: Zapewnianie elementów Menu standardowego dla formularza](how-to-provide-standard-menu-items-to-a-form.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [Instrukcje: zapewnianie elementów menu standardowego dla formularza](how-to-provide-standard-menu-items-to-a-form.md)

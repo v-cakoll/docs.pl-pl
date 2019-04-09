@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b07851a0d26f5bfe7edc2115d7276a8e96ba0917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101331"
 ---
 # <a name="customizing-structure-marshalling"></a>Dostosowywanie struktury kierowania
 
@@ -230,7 +230,6 @@ struct UnicodeString
 ```
 
 Jeśli chcesz kierować swoje ciągi przy użyciu kodowania UTF-8, możesz użyć <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> wartość w swojej <xref:System.Runtime.InteropServices.MarshalAsAttribute>.
-
 
 ```csharp
 public struct UTF8String

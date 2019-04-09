@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Animuj Matrix z wykorzystaniem klatek kluczowych'
+title: 'Instrukcje: Animowanie elementu Matrix przy użyciu klatek kluczowych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], Matrix properties with key frames
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 2c33fa1ebb3c9dd4f05c24db9de42ff47c84f983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107929"
 ---
-# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Instrukcje: Animuj Matrix z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Instrukcje: Animowanie elementu Matrix przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.MatrixTransform.Matrix%2A> właściwość <xref:System.Windows.Media.MatrixTransform> przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -35,7 +35,8 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.MatrixTran
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.MatrixTransform.Matrix%2A>
 - <xref:System.Windows.Media.MatrixTransform>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

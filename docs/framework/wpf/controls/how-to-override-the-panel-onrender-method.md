@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zastąp metodę panela OnRender'
+title: 'Instrukcje: Zastępowanie metody OnRender panelu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OnRender method [WPF], overriding
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
-ms.openlocfilehash: cefeee320e10a9e9de0d38894d4d865ca2e639ec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102534"
 ---
-# <a name="how-to-override-the-panel-onrender-method"></a>Instrukcje: Zastąp metodę panela OnRender
+# <a name="how-to-override-the-panel-onrender-method"></a>Instrukcje: Zastępowanie metody OnRender panelu
 Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.Panel.OnRender%2A> metody <xref:System.Windows.Controls.Panel> celu stosowanie efektów niestandardowych graficznego elementu układu.  
   
 ## <a name="example"></a>Przykład  
@@ -31,7 +31,8 @@ Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.
  [!code-vb[LightWeightCustomPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/LightWeightCustomPanel/visualbasic/offsetpanel.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Panel>
-- [Panele — omówienie](panels-overview.md)
+- [Przegląd Panele](panels-overview.md)
 - [Przykładowe niestandardowe panelu promieniowego](https://go.microsoft.com/fwlink/?LinkID=159982)
-- [Tematy z instrukcjami](panel-how-to-topics.md)
+- [— Tematy porad](panel-how-to-topics.md)

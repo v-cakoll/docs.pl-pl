@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b33750e5792dcc83e261bc9bb8d1c5dbe35808aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104861"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -274,4 +274,5 @@ class Sandboxer : MarshalByRefObject
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

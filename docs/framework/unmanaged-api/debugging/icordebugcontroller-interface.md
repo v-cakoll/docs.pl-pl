@@ -1,5 +1,5 @@
 ---
-title: ICorDebugController — Interfejs
+title: ICorDebugController, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugController
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81b671721e1416ab9717442d4d7fc727b938ee2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7628aa0ad10398f92d475c4c776810e13fac22b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107552"
 ---
-# <a name="icordebugcontroller-interface"></a>ICorDebugController — Interfejs
+# <a name="icordebugcontroller-interface"></a>ICorDebugController, interfejs
 
 Reprezentuje zakres, albo <xref:System.Diagnostics.Process> lub <xref:System.AppDomain>, wykonanie kodu, które mogą być kontrolowane kontekstu.  
   
@@ -58,4 +58,5 @@ Reprezentuje zakres, albo <xref:System.Diagnostics.Process> lub <xref:System.App
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

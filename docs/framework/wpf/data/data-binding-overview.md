@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081271"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takie jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> posiada wbudowanej funkcji, aby umożliwić elastyczne stylu pojedynczymi elementami danych lub kolekcje elementów danych. Sortowanie, filtrowanie i widoki grup mogą być generowane na podstawie danych.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055355"
  Funkcji wiązania danych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma kilka zalet w stosunku do tradycyjnych modeli, w tym szerokiej gamy właściwości, które standardowo obsługuje powiązanie danych, elastyczne [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] reprezentacja danych i czystą separacji działalności biznesowej logiki [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  W tym temacie omówiono najpierw koncepcje podstawowe znaczenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] powiązanie danych i następnie zbliża się do użycia <xref:System.Windows.Data.Binding> klasy i inne funkcje powiązanie danych.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>Co to jest wiązanie danych?  
  Powiązanie danych to proces, który nawiązuje połączenie między aplikacją [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i logiki biznesowej. Jeśli wiązanie ma poprawne ustawienia i dane zapewnia właściwe powiadomienia, następnie, po zmianie danych jego wartości, elementy, które są powiązane z danymi odzwierciedlać zmiany, automatycznie. Powiązanie danych również może oznaczać, że jeśli zmieni się zewnętrznej reprezentacji danych w elemencie danych bazowych można automatycznie zaktualizowane w celu odzwierciedlenia zmiany. Na przykład, jeśli użytkownik edytuje wartość <xref:System.Windows.Controls.TextBox> elementu podstawową wartość danych jest automatycznie aktualizowana w celu odzwierciedlenia tej zmiany.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055355"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Widoki kolekcji  
  Raz swoje <xref:System.Windows.Controls.ItemsControl> jest powiązany do zbierania danych, możesz chcieć sortowanie, filtrowanie lub grupy danych. Aby to zrobić, użyj widoków kolekcji, które są klasami, które implementują <xref:System.ComponentModel.ICollectionView> interfejsu.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>Co to są widoki kolekcji?  
  Widok kolekcji jest warstwą powiązania kolekcji źródłowej, która pozwala na nawigacji i wyświetlania kolekcji źródłowej, na podstawie sortowania, filtrowania i grupy zapytań, bez konieczności zmiany podstawowego kolekcji źródłowej, sam. Widok kolekcji przechowuje także wskaźnik do bieżącego elementu w kolekcji. Jeśli kolekcja źródłowa implementuje <xref:System.Collections.Specialized.INotifyCollectionChanged> interfejsu zmiany wygenerowane przez <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> zdarzeń są propagowane do widoków.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055355"
  Dołączona właściwość można ustawić <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> na obiekt powiązane powiązanie, aby otrzymywać informacje na temat stanu określonego powiązania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Nowości w WPF w wersji 4.5](../getting-started/whats-new.md)
 - [Wiązanie z wynikami zapytania LINQ](how-to-bind-to-the-results-of-a-linq-query.md)

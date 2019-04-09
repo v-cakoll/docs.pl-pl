@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: b5d9c3362ebd69e587d58104e7ebc9d9e96a9020
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073965"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Typy XML i ADO.NET w kontraktach danych
 Model kontraktu danych Windows Communication Foundation (WCF) obsługuje niektóre typy, które reprezentują XML bezpośrednio. Gdy te typy są serializacji XML, serializator dokonuje zapisu zawartość XML na typy bez dalszego przetwarzania. Obsługiwane typy to <xref:System.Xml.XmlElement>, tablice <xref:System.Xml.XmlNode> (, ale nie `XmlNode` wpisz sam), jak również jako typami, które implementują <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> i <xref:System.Data.DataTable> typu, a także typizowanych zestawów danych, są często używane w programowaniu bazy danych. Te typy implementują `IXmlSerializable` interfejsu i w związku z tym możliwy do serializacji w danych są kontraktu modelu. Pewne specjalne zagadnienia dotyczące tych typów są wymienione na końcu tego tematu.  
@@ -203,6 +203,7 @@ Model kontraktu danych Windows Communication Foundation (WCF) obsługuje niektó
  Obsługa typizowanych zestawów danych w modelu danych umowy jest ograniczona. Typizowanych zestawów danych może być serializowany i deserializować i wyeksportować ich schematu. Jednak kontraktu danych, import schematu nie może wygenerować nowe wpisane typy zestawów danych ze schematu, jak tylko można użyć ponownie już istniejących. Możesz wskazać istniejące typizowany zestaw danych za pomocą `/r` Włącz Svcutil.exe. Jeśli spróbujesz użyć Svcutil.exe bez `/r` przełącznika od usługi, która używa typizowany zestaw danych, alternatywnych serializatora (XmlSerializer) to opcja wybrana automatycznie. Jeśli należy użyć elementu DataContractSerializer, należy wygenerować zestawy danych ze schematu można użyć poniższej procedury: generowania typizowanych typy zestawów danych (za pomocą narzędzia Xsd.exe z `/d` przełączyć się na usługę), skompilować typów, a następnie wskaż je przy użyciu `/r` Włącz Svcutil.exe.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>
 - [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

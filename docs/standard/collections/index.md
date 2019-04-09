@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083845"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i modyfikowane jako kolekcję. Możesz użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzenie nazw, do dodawania, usuwania i modyfikowania poszczególnych elementów lub szereg elementów w kolekcji.  
@@ -25,8 +25,7 @@ Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i mod
  Istnieją dwa główne rodzaje kolekcji; kolekcje ogólne i innych niż ogólne kolekcje. Kolekcje ogólne zostały dodane w programie .NET Framework 2.0 i podaj kolekcje, które są bezpieczne w czasie kompilacji. W związku z tym ogólnych kolekcji zwykle zapewniają lepszą wydajność. Kolekcje ogólne zaakceptować parametr typu, gdy są zbudowane i nie wymagają można rzutować do i z <xref:System.Object> wpisz podczas dodawania lub usuwania elementów z kolekcji.  Ponadto większość ogólnych kolekcji są obsługiwane w [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] aplikacji. Inne niż ogólne kolekcje magazynować elementy jako <xref:System.Object>, wymagają rzutowania i większość nie są obsługiwane w przypadku [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] tworzenia aplikacji. Jednak mogą pojawić się innych niż ogólne kolekcje w programie starszego kodu.  
   
  Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], kolekcje w programie <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają efektywne działania wątków do uzyskiwania dostępu do elementów kolekcji z wielu wątków. Klasy kolekcji niezmienialnej w przestrzeni nazw System.Collections.Immutable ([pakietu NuGet](https://www.nuget.org/packages/System.Collections.Immutable)) są założenia metodą o bezpiecznych wątkach, ponieważ operacje są wykonywane na kopię oryginalnego kolekcji i oryginalnej kolekcji Nie można modyfikować.  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>Typowe funkcje zbioru  
  Wszystkie kolekcje zawierają metody dodawania, usuwania i znajdowanie elementów w kolekcji. Ponadto wszystkie kolekcje bezpośrednio lub pośrednio implementują <xref:System.Collections.ICollection> interfejsu lub <xref:System.Collections.Generic.ICollection%601> interfejsu udostępniać te funkcje:  
@@ -80,9 +79,9 @@ Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i mod
 |[Wybieranie klasy kolekcji](../../../docs/standard/collections/selecting-a-collection-class.md)|W tym artykule opisano różne kolekcje, a następnie pomoże Ci wybrać jeden dla danego scenariusza.|  
 |[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|W tym artykule opisano typy powszechnie używane kolekcji rodzajowych i nierodzajowych, takie jak <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
 |[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|Omawia stosowanie rodzajowych typów kolekcji.|  
-|[Porównywanie i sortowanie w ramach kolekcji](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono używanie porównania równości i sortowania porównania w kolekcjach.|  
-|[Sortowane typy kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|Opisuje kolekcje posortowane wydajności i właściwości|  
-|[Typy kolekcji: słownikowy i tabela skrótów](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Opisuje funkcje typów ogólnych i nieogólnych słownika bazujących na skrótach.|  
+|[Porównywanie i sortowanie w kolekcjach](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono używanie porównania równości i sortowania porównania w kolekcjach.|  
+|[Sortowane typów kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|Opisuje kolekcje posortowane wydajności i właściwości|  
+|[Typy kolekcji tablic wartości funkcji mieszającej i słowników](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Opisuje funkcje typów ogólnych i nieogólnych słownika bazujących na skrótach.|  
 |[Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)|Opisuje typy kolekcji, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> obsługujące bezpieczny i skuteczny równoczesny dostęp z wielu wątków.|  
 |System.Collections.Immutable|Wprowadza kolekcje niezmienialne i dostarcza łącza do typów kolekcji.|  
   

@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105485"
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
 Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w swojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i oferuje sugestie, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  
@@ -70,5 +70,6 @@ Poniższe informacje przedstawia niektóre problemy, które mogą wystąpić w s
  Wygenerowana metoda `OnCreated()` jest wywoływana za każdym razem, wywoływany jest konstruktor obiektu, w którym w tym scenariuszu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wywołuje konstruktor kopiowania do oryginalnych wartości. Uwzględnia to zachowanie w przypadku zaimplementowania `OnCreated()` metody w klasie częściowej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obsługa debugowania](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
 - [Często zadawane pytania](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

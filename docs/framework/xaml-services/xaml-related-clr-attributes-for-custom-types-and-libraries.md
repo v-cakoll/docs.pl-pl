@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086214"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek
 W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka wspólnego CLR) języka, które są definiowane przez .NET Framework XAML Services. Omówiono także inne atrybuty CLR zdefiniowane w programie .NET Framework, które mają scenariusz związane z XAML dla aplikacji do zespołów lub typów. Przypisywanie zestawy, typy lub elementy członkowskie z tych atrybutów CLR udostępnia informacje o systemie typu XAML powiązane z typami. Dane mają charakter-klient XAML, który używa usług programu .NET Framework XAML dla przetwarzania strumienia węzłów XAML bezpośrednio lub za pośrednictwem dedykowanej czytniki XAML i moduły zapisujące XAML.  
@@ -269,5 +269,6 @@ W tym temacie opisano wspólne atrybuty środowiska uruchomieniowego (języka ws
 >  .NET framework XAML Services definiuje również atrybut związane z XAML <xref:System.Windows.Markup.RootNamespaceAttribute>. Ten atrybut jest atrybut poziomu zestawu Obsługa systemów projektów i nie jest to istotne dla niestandardowych typów XAML.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Attribute>
 - [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](defining-custom-types-for-use-with-net-framework-xaml-services.md)

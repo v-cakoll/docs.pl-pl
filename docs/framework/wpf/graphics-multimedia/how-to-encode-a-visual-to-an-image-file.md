@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Koduj Visual do pliku obrazu'
+title: 'Instrukcje: Kodowanie wizualizacji do pliku obrazu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096787"
 ---
-# <a name="how-to-encode-a-visual-to-an-image-file"></a>Instrukcje: Koduj Visual do pliku obrazu
+# <a name="how-to-encode-a-visual-to-an-image-file"></a>Instrukcje: Kodowanie wizualizacji do pliku obrazu
 W tym przykładzie pokazano, jak kodować <xref:System.Windows.Media.Visual> obiektu do pliku obrazu przy użyciu <xref:System.Windows.Media.Imaging.RenderTargetBitmap> i <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
 ## <a name="example"></a>Przykład  
@@ -28,7 +28,8 @@ W tym przykładzie pokazano, jak kodować <xref:System.Windows.Media.Visual> obi
  A <xref:System.Windows.Media.Imaging.PngBitmapEncoder> został użyty w tym przykładzie, ale żadnego z pochodnej <xref:System.Windows.Media.Imaging.BitmapEncoder> obiektów można użyć do utworzenia pliku obrazu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.DrawingContext>
-- [Obrazowanie — przegląd](imaging-overview.md)
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Przegląd Obrazowanie](imaging-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
 - [Użycie obiektów DrawingVisual](using-drawingvisual-objects.md)

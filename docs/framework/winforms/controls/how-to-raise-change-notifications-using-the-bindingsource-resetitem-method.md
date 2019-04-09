@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wywoływanie powiadomień o zmianie za BindingSource Resetitem'
+title: 'Instrukcje: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-ms.openlocfilehash: a24adf06999784476cd40b91ed53c068b94819e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 68073f245e1a2eb18a277d7011ca0183dabb3724
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085067"
 ---
-# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Instrukcje: Wywoływanie powiadomień o zmianie za BindingSource Resetitem
+# <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Instrukcje: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem
 Niektóre źródła danych dla kontrolki nie wywoływanie powiadomień o zmianie, gdy elementy są zmieniane, dodawane lub usuwane. Za pomocą <xref:System.Windows.Forms.BindingSource> składnik, można powiązać z takich źródeł danych i zgłosić powiadomienia o zmianach w kodzie.  
   
 ## <a name="example"></a>Przykład  
@@ -37,8 +37,9 @@ Niektóre źródła danych dla kontrolki nie wywoływanie powiadomień o zmianie
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingSource — Składnik](bindingsource-component.md)
+- [Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem](how-to-bind-a-windows-forms-control-to-a-type.md)

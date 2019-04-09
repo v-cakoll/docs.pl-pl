@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142847"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Określa funkcje informacji pomocy i debugowania dla usługi Windows Communication Foundation (WCF).  
@@ -71,6 +71,7 @@ Określa funkcje informacji pomocy i debugowania dla usługi Windows Communicati
  Opcjonalny `httpHelpPageBinding` i `httpHelpPageBinding` atrybutów umożliwiają skonfigurowanie powiązań umożliwiający dostęp do strony sieci web usługi. Jeśli nie są określone, domyślne powiązania (`HttpTransportBindingElement`, w przypadku protokołu HTTP i `HttpsTransportBindingElement`, w przypadku protokołu HTTPS) są używane do dostępu do strony pomocy usługi zgodnie z potrzebami. Należy zauważyć, że nie możesz użyć tych atrybutów z wbudowanych powiązaniami WCF. Tylko powiązania z elementami wewnętrznymi powiązania, które obsługują xref:System.ServiceModel.Channels.IReplyChannel > będą obsługiwane. Ponadto <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> właściwości powiązania musi być <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
 - [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

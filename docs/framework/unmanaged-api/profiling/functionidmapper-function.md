@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0320c831648c15dfec42c1b693be2f13e6888ae9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2de19252b5c978fef38124636e4098ae5ece1b0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097941"
 ---
 # <a name="functionidmapper-function"></a>FunctionIDMapper — Funkcja
 Powiadamia program profilujący, że identyfikator danej funkcji może być ponownie mapowany do alternatywnego Identyfikatora do użycia w [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), i [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md) wywołań zwrotnych tej funkcji. `FunctionIDMapper` Umożliwia także profilującemu wskazanie, czy chce odbierać wywołania zwrotne do tej funkcji.  
@@ -64,9 +64,10 @@ UINT_PTR __stdcall FunctionIDMapper (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [SetFunctionIDMapper, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [FunctionIDMapper2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)
-- [FunctionEnter2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2, funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [FunctionIDMapper2 — Funkcja](../../../../docs/framework/unmanaged-api/profiling/functionidmapper2-function.md)
+- [FunctionEnter2 — Funkcja](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [FunctionLeave2 — Funkcja](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [FunctionTailcall2 — Funkcja](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
 - [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

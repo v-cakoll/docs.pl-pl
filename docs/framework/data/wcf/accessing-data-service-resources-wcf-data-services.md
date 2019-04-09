@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085873"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Uzyskiwanie dostępu do zasobów usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych z zasobami, które są adresowane przez identyfikatory URI. Te zasoby są reprezentowane zgodnie z konwencjami Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). W tym modelu jednostki reprezentują operacyjnej jednostek danych, które są typy danych w domenie aplikacji, takich jak klienci, zamówienia, elementy i produktów. Dane jednostki jest dostępne i zmienić przy użyciu semantyki REST representational state transfer (), w szczególności standardowych poleceń HTTP GET, PUT, POST i DELETE.  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  Identyfikator URI [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zasobów umożliwia utworzenie adresu jednostki danych udostępnianych przez usługę. Po wprowadzeniu identyfikatora URI do pola adresu w przeglądarce sieci Web [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] kanału informacyjnego reprezentacja żądany zasób jest zwracany. Aby uzyskać więcej informacji, zobacz [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Mimo że przeglądarki sieci Web mogą być przydatne do testowania, że zasób usługi danych zwraca oczekiwanych danych, usług danych produkcyjnych, które również można utworzyć, aktualizowanie i usuwanie danych zazwyczaj są używane przez kod aplikacji lub skryptów języków na stronie sieci Web. Aby uzyskać więcej informacji, zobacz [przy użyciu usługi danych w aplikacji klienckiej](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Otwórz witrynę sieci Web protokołu danych](https://go.microsoft.com/fwlink/?LinkID=182204)

@@ -4,12 +4,12 @@ description: Poznaj składniki inżynierów funkcji obsługiwanych w strukturze 
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f7a143fcce23c9043e6cc62ac9986122e71da0b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194776"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Przekształcenia danych - strukturze ML.NET uczenia maszynowego
 
@@ -66,7 +66,6 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Tworzy zbiór liczników ngrams (sekwencji następujących po sobie słowa) w danego tekstu. Robi to, tworząc słownika ngrams i za pomocą identyfikatora w słowniku jako indeks w zbiorze. |
 | <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Tworzy zbiór liczników ngrams (sekwencji kolejnych wyrazów o długości 1-n) w danego tekstu. Robi to przez tworzenie skrótów każdego ngram i przy użyciu wartości skrótu jako indeks w zbiorze. |
 | <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Dzieli tekst na przy użyciu znaków separatora słów. |
-
 
 ## <a name="image-model-featurizers"></a>Featurizers modelu obrazu
 
@@ -126,7 +125,6 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 | <xref:Microsoft.ML.Transforms.SkipTakeFilter> | Umożliwia ograniczenie danych wejściowych do podzestawu wierszy na opcjonalne przesunięcie. Może służyć do implementowania stronicowania danych. Po utworzeniu za pomocą SkipTakeFilter.SkipArguments zachowuje się jak `SkipFilter`.
 | <xref:Microsoft.ML.Transforms.TakeFilter> | Umożliwia ograniczenie danych wejściowych do podzestawu wierszy, wykonując N pierwszych wierszy. |
 
-
 ## <a name="schema"></a>Schemat
 
 | Transformacja | Definicja |
@@ -154,7 +152,7 @@ Poniższe tabele zawierają informacje na temat wszystkich przekształceń danyc
 
 | Transformacja | Definicja |
 | --- | --- |
-| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Przyjmuje średnią ważoną wartości: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.TimeSeriesProcessing.ExponentialAverageTransform> | Przyjmuje średnią ważoną wartości: ExpAvg(y_t) = \* y_t + (1-a) \* ExpAvg(y_(t-1)). |
 | <xref:Microsoft.ML.TimeSeriesProcessing.IidChangePointDetector> | Implementuje przekształcenie zmiany punktu wykrywacz dla i.i.d. Sekwencja (losowej próbki) na podstawie adaptacyjne jądra gęstość szacowania i martingales. |
 | <xref:Microsoft.ML.TimeSeriesProcessing.IidSpikeDetector> | Implementuje wykrywacz kolekcji przekształcania dla i.i.d. Sekwencja (losowej próbki) oparte na szacowania gęstość adaptacyjne jądra. |
 | <xref:Microsoft.ML.TimeSeriesProcessing.MovingAverageTransform> | Zawiera średnią ważoną wartości okna przewijania. |

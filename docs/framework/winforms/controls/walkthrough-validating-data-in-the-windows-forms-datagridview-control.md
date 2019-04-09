@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms'
+title: 'Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127351"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Przewodnik: Sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows
 Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdzanie poprawności danych wprowadzonych do formularza. <xref:System.Windows.Forms.DataGridView> Klasa oferuje wygodny sposób wykonanie sprawdzenia poprawności przed danych jest zaangażowana w magazynie danych. Sprawdzanie poprawności danych obsługi <xref:System.Windows.Forms.DataGridView.CellValidating> zdarzenie, które jest wywoływane przez <xref:System.Windows.Forms.DataGridView> podczas zmiany bieżącej komórki.  
   
  W tym instruktażu będą pobierać wiersze z `Customers` tabeli w bazie danych Northwind i wyświetlaj je w <xref:System.Windows.Forms.DataGridView> kontroli. Po użytkownik edytuje komórkę w `CompanyName` kolumny i próbuje komórka, <xref:System.Windows.Forms.DataGridView.CellValidating> programu obsługi zdarzeń zbada nowy ciąg nazwy firmy, aby upewnić się, to nie jest pusta, jeśli nowa wartość jest ciągiem pustym <xref:System.Windows.Forms.DataGridView> uniemożliwi użytkownika kursora opuszczanie komórki, dopóki nie podano niepustym ciągiem.  
@@ -89,9 +89,10 @@ Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdz
 -   Dostosowywanie wyglądu komórek. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](customize-the-appearance-of-cells-in-the-datagrid.md) i [jak: Ustawianie stylów czcionek i koloru w formancie DataGridView formularzy Windows](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Przewodnik: Obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Wprowadzanie danych w formancie DataGridView formularzy systemu Windows](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md)

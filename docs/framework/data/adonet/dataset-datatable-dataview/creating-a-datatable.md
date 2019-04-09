@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: f40a04156bee5ceee7490cf7bd941dc11a99b880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 272976d3c581d3e8a5860ba5cf3f9695ca370d8c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112388"
 ---
 # <a name="creating-a-datatable"></a>Tworzenie elementu DataTable
 A <xref:System.Data.DataTable>, która reprezentuje jedną tabelę danych relacyjnych w pamięci, mogą być tworzone i używane niezależnie lub mogą być używane przez inne obiekty .NET Framework najczęściej jako członek <xref:System.Data.DataSet>.  
@@ -50,6 +50,7 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataTableCollection>
 - [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)

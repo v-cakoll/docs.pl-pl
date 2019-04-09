@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b065fe488031329815f6ec38da9661fd19700d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129639"
 ---
 # <a name="assembly-location"></a>Lokalizacja zestawu
 Lokalizacja zestawu Określa, czy można wyszukanie w przypadku odwołania do środowiska uruchomieniowego języka wspólnego i można również określić, czy zestaw mogą być współużytkowane z innymi zestawami. Można wdrożyć zestaw w następujących lokalizacjach:  
@@ -30,6 +30,7 @@ Lokalizacja zestawu Określa, czy można wyszukanie w przypadku odwołania do ś
      Zestaw wdrożonych na serwerze HTTP musi mieć silną nazwą; wskaż zestawu w części bazy kodu w pliku konfiguracji aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)
 - [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197389"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
 Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajności na urządzeniu z systemem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>Sprzęt graficzny  
  Dostępne są następujące funkcje, możliwości sprzętu graficznego i że mają największy wpływ na poziom warstwy renderowania:  
@@ -58,7 +56,7 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
   
 |Funkcja|Warstwa 1|Warstwa 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Wersja|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
 |Pamięć RAM wideo|Musi być większa niż lub równy 60MB.|Musi być większa niż lub równy 120MB.|  
 |Program do cieniowania pikseli|Poziom wersji muszą być większa lub równa wersji 2.0.|Poziom wersji muszą być większa lub równa wersji 2.0.|  
 |Program do cieniowania wierzchołków|Nie jest wymagany.|Poziom wersji muszą być większa lub równa wersji 2.0.|  
@@ -130,9 +128,10 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
 Narzędzie diagnostyczne DirectX głównego okna.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
-- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
-- [Ustawienia rejestru renderowania grafiki](../graphics-multimedia/graphics-rendering-registry-settings.md)
-- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)
+- [Pakiet wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [Ustawienie rejestru renderowania grafiki](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Porady i triki animacyjne](../graphics-multimedia/animation-tips-and-tricks.md)

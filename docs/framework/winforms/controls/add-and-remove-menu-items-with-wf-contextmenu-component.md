@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie i usuwanie elementów Menu za pomocą składnika ContextMenu formularzy Windows'
+title: 'Instrukcje: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094466"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Instrukcje: Dodawanie i usuwanie elementów Menu za pomocą składnika ContextMenu formularzy Windows
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>Instrukcje: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows
 Wyjaśnia, jak dodawać i usuwać elementy menu skrótów w formularzach Windows Forms.  
   
  Formularze Windows <xref:System.Windows.Forms.ContextMenu> składnik zapewnia menu często używanych poleceń, które są istotne dla wybranego obiektu. Możesz dodać elementy do menu skrótów, dodając <xref:System.Windows.Forms.MenuItem> obiekty do <xref:System.Windows.Forms.Menu.MenuItems%2A> kolekcji.  
@@ -75,6 +75,7 @@ Wyjaśnia, jak dodawać i usuwać elementy menu skrótów w formularzach Windows
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu, składnik](contextmenu-component-windows-forms.md)
 - [ContextMenu, składnik — omówienie](contextmenu-component-overview-windows-forms.md)

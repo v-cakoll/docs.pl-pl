@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119005"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych
 Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych, które można łatwo ewoluować wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -91,6 +91,7 @@ Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych
  Niektóre z wymienionych w tym miejscu można bezpiecznie zignorować kiedy szczególne okoliczności. Upewnij się, że w pełni zrozumieć serializacji, deserializacji i mechanizmy schematu przed odejście od wytycznych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>

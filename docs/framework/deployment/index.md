@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a8920cabfa753a68a3c55029d16c0d63ed5ffa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ff426f051b37830b0161cd0e0e4368a5750c664
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124778"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Wdrażanie programu .NET Framework i aplikacji
 Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją. Większość informacji jest przeznaczona dla deweloperów, producentów OEM i Administratorzy przedsiębiorstwa. Użytkownicy, którzy chcą zainstalować program .NET Framework na swoich komputerach powinni przeczytać [Instalowanie programu .NET Framework](~/docs/framework/install/index.md).  
@@ -164,7 +164,8 @@ Ten artykuł pomoże rozpocząć wdrażanie programu .NET Framework z aplikacją
 |[Publikowanie aplikacji ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Opis pakietu aplikacji Windows Forms i wdrożyć ją za pomocą technologii ClickOnce do komputerów klienckich w sieci.|  
 |[Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)|W tym artykule opisano model gwiazdy, który używa programu .NET Framework w celu pakowanie i wdrażanie zasobów. opisano konwencje nazewnictwa, proces rezerwowy i alternatywne opakowanie zasobów.|  
 |[Wdrażanie aplikacji międzyoperacyjnych](../../../docs/framework/interop/deploying-an-interop-application.md)|Wyjaśnia, jak dostarczanie i zainstaluj aplikacje współdziałania, obejmujących zazwyczaj zestawie klienta programu .NET Framework jednego lub więcej zestawów międzyoperacyjnych reprezentująca różne biblioteki typów COM, i co najmniej jeden zarejestrowany składnik COM.|  
-|[Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Opisuje sposób dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework podczas wyświetlania własnego widoku postępu instalacji.|  
+|[Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)|Opisuje sposób dyskretnie Uruchom i Śledź proces instalacji programu .NET Framework podczas wyświetlania własnego widoku postępu instalacji.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podręcznik programowania](../../../docs/framework/development-guide.md)

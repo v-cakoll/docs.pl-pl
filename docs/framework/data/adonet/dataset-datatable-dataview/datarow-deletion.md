@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
-ms.openlocfilehash: 69bdf4d23463cc07259a2b1de6b9efaa78f0f0de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196141"
 ---
 # <a name="datarow-deletion"></a>Usuwanie elementu DataRow
 Istnieją dwie metody, które służy do usuwania <xref:System.Data.DataRow> obiektu z <xref:System.Data.DataTable> obiektu: **Usuń** metody <xref:System.Data.DataRowCollection> obiektu i <xref:System.Data.DataRow.Delete%2A> metody **DataRow**obiektu. Natomiast <xref:System.Data.DataRowCollection.Remove%2A> usuwa metoda **DataRow** z **kolekcji DataRowCollection**, <xref:System.Data.DataRow.Delete%2A> metody oznacza tylko wiersz do usunięcia. Rzeczywiste usuwanie występuje, gdy aplikacja wywołuje **AcceptChanges** metody. Za pomocą <xref:System.Data.DataRow.Delete%2A>, można programowo sprawdzić wiersze, które zostały oznaczone do usunięcia przed ich faktycznego usuwania. Jeśli wiersz jest oznaczona do usunięcia, jego <xref:System.Data.DataRow.RowState%2A> właściwość jest ustawiona na <xref:System.Data.DataRow.Delete%2A>.  
@@ -45,8 +45,9 @@ workRow.Delete();
 >  Jeśli **RowState** z **DataRow** jest **dodano**, czyli został właśnie dodany do tabeli, a następnie jest oznaczony jako **usunięte**, jest usunięte z tabeli.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Operowanie na danych w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

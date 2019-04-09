@@ -2,12 +2,12 @@
 title: Zarządzanie kontekstem usługi danych (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: d339826cabc83d2e0cecb5451ba5b950e7f02321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184746"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Zarządzanie kontekstem usługi danych (WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> Klasa hermetyzuje operacje, które są obsługiwane przez usługę określone dane. Mimo że [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usług są bezstanowe, kontekst nie jest. W związku z tym, można użyć <xref:System.Data.Services.Client.DataServiceContext> klasy do zarządzania stanem na kliencie interakcji z usługi danych w celu obsługi funkcji, takich jak zarządzanie zmianami. Ta klasa również zarządza tożsamości i śledzenie zmian.  
@@ -37,6 +37,7 @@ ms.locfileid: "54631795"
  Domyślnie klient przesyła biblioteki tworzenia, odczytu, aktualizacji i usuwania żądań do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi przy użyciu odpowiedniej metody HTTP POST i GET, PUT/scalania/poprawki i usuwania. Podtrzymuje to podstawowe zasady z REST Representational State Transfer (). Jednak nie wszystkie wdrożenia serwera sieci Web obsługuje pełny zestaw metod HTTP. W niektórych przypadkach obsługiwanych metod może być ograniczony do właśnie Pobierz i OPUBLIKUJ. Może to nastąpić, gdy pośrednika, takie jak zapory, blokuje żądań z niektórych metod. Ponieważ metody GET i POST w większości przypadków są obsługiwane, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] określa sposób wykonania żadnych nieobsługiwanych metod HTTP za pomocą żądania POST. Znane jako *metoda tunelowania* lub *KSIĘGUJ tunelowanie*, umożliwia to klientowi wysłanie żądania POST z określonej w niestandardowej metody rzeczywiste `X-HTTP-Method` nagłówka. Aby włączyć KSIĘGUJ tunelowanie żądań, należy ustawić <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> właściwość <xref:System.Data.Services.Client.DataServiceContext> wystąpienia do `true`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
 - [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

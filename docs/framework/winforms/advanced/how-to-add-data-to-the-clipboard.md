@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie danych do Schowka'
+title: 'Instrukcje: Dodawanie danych do schowka'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109099"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Instrukcje: Dodawanie danych do Schowka
+# <a name="how-to-add-data-to-the-clipboard"></a>Instrukcje: Dodawanie danych do schowka
 <xref:System.Windows.Forms.Clipboard> Klasa zawiera metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji używa Schowka jako tymczasowy repozytorium danych. Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania. Schowek jest również przydatne w przypadku przesyłania danych między aplikacjami na inny.  
   
  Po dodaniu danych do Schowka można określić format danych tak, aby inne aplikacje mogą rozpoznaje danych, jeśli używają tego formatu. Możesz również dodać dane do Schowka w wielu różnych formatach, aby zwiększyć liczbę inne aplikacje, które potencjalnie mogą używać danych.  
@@ -61,5 +61,6 @@ ms.locfileid: "57717137"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje przeciągania i upuszczania oraz obsługa schowka](drag-and-drop-operations-and-clipboard-support.md)
-- [Instrukcje: Pobieranie danych ze Schowka](how-to-retrieve-data-from-the-clipboard.md)
+- [Instrukcje: Pobieranie danych ze schowka](how-to-retrieve-data-from-the-clipboard.md)

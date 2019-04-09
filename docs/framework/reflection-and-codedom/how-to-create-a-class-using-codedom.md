@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz klasę za pomocą modelu CodeDOM'
+title: 'Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 99fa1fcb300d523d74a07da09e5a04848364607e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098835"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>Instrukcje: Utwórz klasę za pomocą modelu CodeDOM
+# <a name="how-to-create-a-class-using-codedom"></a>Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM
 Poniższe procedury pokazują, jak utworzyć i skompilować wykresu CodeDOM, który generuje klasę zawierający dwa pola, trzy właściwości, metody, Konstruktor i punktu wejścia.  
   
 1.  Utwórz aplikację konsolową, która będzie używać kodu CodeDOM, aby wygenerować kod źródłowy dla klasy.  
@@ -119,5 +119,6 @@ The object:
 -   Poniższy przykład kodu wymaga `FullTrust` zestawu uprawnień Wykonywanie pomyślnie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie modelu CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

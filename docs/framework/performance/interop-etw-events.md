@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083611"
 ---
 # <a name="interop-etw-events"></a>Zdarzenia ETW międzyoperacyjności
 <a name="top"></a> Zdarzenia międzyoperacyjności przechwytywania informacji na temat generowania szkieletu intermediate language (MSIL) firmy Microsoft i buforowania.  
@@ -84,4 +84,5 @@ ms.locfileid: "54611777"
  [Powrót do początku](#top)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)

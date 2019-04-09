@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące wydajności (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 4b6d3d4dbf801a7b0cc378482ad4d0d29a915be3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087953"
 ---
 # <a name="performance-considerations-entity-framework"></a>Zagadnienia dotyczące wydajności (Entity Framework)
 W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zapewnia pewne kwestie dotyczące poprawy wydajności aplikacji platformy Entity Framework.  
@@ -151,7 +151,8 @@ W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zap
   
 -   [Eksplorowanie wydajność ADO.NET Entity Framework — część 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework Performance Comparison](https://go.microsoft.com/fwlink/?LinkID=123913)  
+-   [Porównanie wydajności programu ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Projektowanie i zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

@@ -1,15 +1,15 @@
 ---
-title: Standardowe operatory zapytań w technologii LINQ do zapytań jednostki
+title: Standardowe operatory zapytań w zapytaniach składnika LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 558ee35c433475bf3b2d5a3cdb4b24b612197c13
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118147"
 ---
-# <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w technologii LINQ do zapytań jednostki
+# <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w zapytaniach składnika LINQ to Entities
 W zapytaniu należy określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje powinny można sortowane, grupowane i kształtowane przed zwróceniem. LINQ zapewnia zestaw metod standardowego zapytania, które można użyć w zapytaniu. Większość z tych metod działają na sekwencje; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcjonalność zapytań operatorów standardowej kwerendy obejmuje filtrowania, projekcji, agregacji, sortowanie, grupowanie, stronicowanie i więcej. Niektórych często używane standardowego zapytania, operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania. Wyrażenie kwerendy jest inny, bardziej czytelny sposób wyrażania kwerendę, niż odpowiednik oparte na metodzie. Klauzule wyrażenia zapytania są tłumaczone na wywołania do metody zapytania w czasie kompilacji. Aby uzyskać listę standardowych operatorów zapytań, które mają klauzule wyrażenia zapytania równoważne, zobacz [standardowe operatory zapytań — Przegląd](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
  Nie wszystkie standardowe operatory zapytań są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Aby uzyskać więcej informacji, zobacz [obsługiwane i nieobsługiwane LINQ metody (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Ten temat zawiera informacje o standardowych operatorów zapytań, które są specyficzne dla [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Aby uzyskać więcej informacji o znanych problemach w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytań, zobacz [znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
@@ -77,5 +77,6 @@ W zapytaniu należy określić informacje, które mają zostać pobrane ze źró
  Wiele metod stronicowania nie są obsługiwane ze względu na z brakiem, aby mapować funkcje do źródła danych lub brak niejawnego porządkowanie zestawów w źródle danych. Metody, które zwracają wartość domyślna jest ograniczony do typów pierwotnych modelu koncepcyjnego i typy odwołań przy użyciu ustawień domyślnych wartości null. Metody stronicowania, które są wykonywane na pustą sekwencją będzie zwracać wartość null.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
+
+- [Obsługiwane i nieobsługiwane metody LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [Standardowe operatory zapytań — przegląd](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

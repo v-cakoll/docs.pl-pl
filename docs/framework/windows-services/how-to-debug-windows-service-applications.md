@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Debugowanie aplikacji usług Windows'
+title: 'Instrukcje: Debugowanie aplikacji usług systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 7782c60832be487a258b51eab0b050e0a850d20d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124582"
 ---
-# <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług Windows
+# <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi jest tak proste jak debugowanie innych typów aplikacji Visual Studio. Aby debugować usługę, należy uruchomić usługę i następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację za pomocą wszystkich standardowych funkcji debugowania programu Visual Studio.  
   
 > [!CAUTION]
@@ -114,6 +114,7 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
  W niektórych przypadkach, np. Jeśli chcesz debugować problem, który występuje tylko podczas uruchamiania systemu należy użyć debugera Windows. [Pobierz zestaw Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) zobaczyć [sposób debugowania usług Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Instrukcje: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Instrukcje: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)

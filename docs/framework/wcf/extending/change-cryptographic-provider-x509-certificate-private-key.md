@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509'
+title: 'Instrukcje: zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 4e11dd90d1cc57f3f2f559c22e1548b8fbcedaea
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 90e26154b4a0a006a4cbb114ec5ddd74a33fc762
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115196"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Instrukcje: Zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Instrukcje: zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509
 W tym temacie pokazano, jak zmienić dostawcy usług kryptograficznych, używane do zapewnienia klucza prywatnego certyfikatu X.509 oraz integrować dostawcę w ramach zabezpieczeń Windows Communication Foundation (WCF). Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Struktura zabezpieczeń programu WCF zapewnia sposób wprowadzenia nowych typów tokenu zabezpieczeń, zgodnie z opisem w [jak: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Użytkownik może również użyć niestandardowy token, aby zamienić istniejący dostarczane przez system typy tokenów.  
@@ -77,13 +77,14 @@ W tym temacie pokazano, jak zmienić dostawcy usług kryptograficznych, używane
      [!code-vb[c_CustomX509Token#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey>
 - <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm>
 - <xref:System.Security.Cryptography.HashAlgorithm>
 - <xref:System.Security.Cryptography.AsymmetricSignatureFormatter>
-- [Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Instrukcje: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Instrukcje: tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

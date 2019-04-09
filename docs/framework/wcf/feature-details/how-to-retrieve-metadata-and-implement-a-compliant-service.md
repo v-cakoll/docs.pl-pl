@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Pobieranie metadanych i implementowanie zgodnej usługi'
+title: 'Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095974"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Instrukcje: Pobieranie metadanych i implementowanie zgodnej usługi
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi
 Tę samą osobę nie często, projektowania i implementacji usługi. W środowiskach, w których ważne aplikacje współpracy kontrakty mogą być zaprojektowana lub opisanego w sieci Web Services Description Language (WSDL) i deweloper musi implementować to usługa, która spełnia podane kontraktu. Można również migrować istniejącą usługę do programu Windows Communication Foundation (WCF), ale zachować format o komunikacji sieciowej. Ponadto kontrakty dwukierunkowe wymaga wywołań zaimplementować kontrakt wywołania zwrotnego, który jest również.  
   
  W takich przypadkach należy użyć [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (lub równoważne narzędzie) do generowania interfejsu kontraktu usługi w języka zarządzanego, który można zaimplementować w celu spełnienia wymagań kontrakt. Zazwyczaj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) służy do uzyskania kontraktu usługi, który jest używany, za pomocą fabryki kanałów lub typ klienta WCF, a także za pomocą pliku konfiguracji klienta, który konfiguruje poprawne powiązanie i adres. Aby użyć pliku wygenerowaną konfigurację, możesz zmienić ją w pliku konfiguracji usługi. Również może być konieczne zmodyfikowanie kontraktu usługi.  
@@ -60,4 +60,5 @@ Tę samą osobę nie często, projektowania i implementacji usługi. W środowis
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

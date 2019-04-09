@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108709"
 ---
 # <a name="framework-property-metadata"></a>Metadane właściwości szablonu
 Opcje metadane właściwości struktury są zgłaszane właściwości elementów obiektu uważane za w ramach WPF poziomie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architektury. Ogólnie rzecz biorąc oznaczenia poziomie struktury WPF pociąga za sobą tej funkcji, np. renderowania wiązania danych, a właściwość systemu uściślenia są obsługiwane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i plików wykonywalnych. Metadane właściwości szablonu zostaje przesłane zapytanie przez te systemy, aby określić właściwości specyficzne dla funkcji właściwości określonego elementu.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że rozumiesz właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy, a po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md). Należy również przeczytanie [metadane zależności właściwości](dependency-property-metadata.md).  
@@ -73,6 +71,7 @@ Opcje metadane właściwości struktury są zgłaszane właściwości elementów
  To zachowanie jest implementowany przez <xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>i może zostać zastąpiona w klasach pochodnych metadanych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [Metadane zależności właściwości](dependency-property-metadata.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)

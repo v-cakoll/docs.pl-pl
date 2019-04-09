@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Powiązanie z danymi w aplikacjach hybrydowych'
+title: 'Przewodnik: wiązanie z danymi w aplikacjach hybrydowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 378ebd5a402006d7e7a88029ced62f812f620aeb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191994"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Przewodnik: Powiązanie z danymi w aplikacjach hybrydowych
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Przewodnik: wiązanie z danymi w aplikacjach hybrydowych
 Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniając użytkownikom dostęp do danych bazowych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym instruktażu przedstawiono sposób korzystania powiązanie danych w aplikacjach hybrydowych, które zawierają zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
   
  Zadania zilustrowane w tym przewodniku obejmują:  
@@ -174,9 +174,10 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
 10. Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Powiązywanie danych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

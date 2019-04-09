@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180404"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport — Interfejs
 Zawiera metody służące do importowania i manipulowanie nimi istniejące metadane z plików przenośnych plików wykonywalnych (PE) lub innego źródła, takich jak biblioteka typów lub dane binarne autonomicznej, czasu wykonywania metadanych.  
@@ -30,9 +30,9 @@ Zawiera metody służące do importowania i manipulowanie nimi istniejące metad
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CloseEnum, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-closeenum-method.md)|Zamyka modułu wyliczającego z określonego dojścia.|  
+|[CloseEnum — Metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-closeenum-method.md)|Zamyka modułu wyliczającego z określonego dojścia.|  
 |[CountEnum, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-countenum-method.md)|Pobiera liczbę elementów w moduł wyliczający z określonego dojścia.|  
-|[EnumCustomAttributes, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)|Wylicza listę tokeny niestandardowe definicja atrybutu skojarzone z określonego typu lub składowej.|  
+|[EnumCustomAttributes — Metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumcustomattributes-method.md)|Wylicza listę tokeny niestandardowe definicja atrybutu skojarzone z określonego typu lub składowej.|  
 |[EnumEvents, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumevents-method.md)|Wylicza tokenów definicji zdarzeń dla określonego tokenu TypeDef.|  
 |[EnumFields, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)|Wylicza FieldDef tokeny dla danego typu odwołuje się określony token TypeDef.|  
 |[EnumFieldsWithName, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfieldswithname-method.md)|Wylicza tokenów FieldDef określonego typu o określonej nazwie.|  
@@ -114,5 +114,6 @@ Zawiera metody służące do importowania i manipulowanie nimi istniejące metad
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

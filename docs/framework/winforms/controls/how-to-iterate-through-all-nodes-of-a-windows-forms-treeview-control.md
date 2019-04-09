@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Iterowanie wszystkich węzłów kontrolki TreeView formularzy Windows'
+title: 'Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199716"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Instrukcje: Iterowanie wszystkich węzłów kontrolki TreeView formularzy Windows
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows
 Czasami jest to przydatne sprawdzić każdy węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> kontroli w celu wykonywania pewnych obliczeń na podstawie wartości węzła. Tę operację można wykonać przy użyciu procedury cykliczne (cykliczne method in Class metoda C# i C++) który iteruje po każdym węźle w każdej kolekcji drzewa.  
   
  Każdy <xref:System.Windows.Forms.TreeNode> obiekt w widoku drzewa ma właściwości, które umożliwiają nawigowanie w widoku drzewa: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, i <xref:System.Windows.Forms.TreeNode.Parent%2A>. Wartość <xref:System.Windows.Forms.TreeNode.Parent%2A> właściwość ma węzła nadrzędnego bieżącego węzła. Węzły podrzędne bieżącego węzła, jeśli istnieją, są wyświetlane w jego <xref:System.Windows.Forms.TreeNode.Nodes%2A> właściwości. <xref:System.Windows.Forms.TreeView> Sama kontrolka ma <xref:System.Windows.Forms.TreeView.TopNode%2A> właściwość, która jest węzeł główny w widok całego drzewa.  
@@ -124,5 +124,6 @@ Czasami jest to przydatne sprawdzić każdy węzeł w formularzach Windows <xref
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [TreeView, kontrolka](treeview-control-windows-forms.md)
+
+- [TreeView — Formant](treeview-control-windows-forms.md)
 - [Procedury rekursywne](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

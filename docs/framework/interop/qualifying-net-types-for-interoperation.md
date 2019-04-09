@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a40b9524990213eaaf2ed78503b6f831776306ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097980"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Kwalifikowanie typów .NET do międzyoperacyjności
 Jeśli zamierzasz ujawnić typy w zestawie, do aplikacji modelu COM, należy wziąć pod uwagę wymagania Usługa międzyoperacyjna modelu COM w czasie projektowania. Typy zarządzane (klasy, interfejsu, struktury i wyliczenia) bezproblemowo integrują się z typów modelu COM podczas przestrzegać następujących wytycznych:  
@@ -48,6 +48,7 @@ Jeśli zamierzasz ujawnić typy w zestawie, do aplikacji modelu COM, należy wzi
  Podczas eksportowania dla modelu COM, jest spłaszczany hierarchii dziedziczenia typu zarządzanego. Przechowywanie wersji różni się między środowiskami zarządzanych i niezarządzanych. Typy widoczne dla modelu COM nie mają takie same charakterystyki przechowywania wersji, jak inne zarządzane typy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.ComVisibleAttribute>
 - [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface)

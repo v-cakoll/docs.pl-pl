@@ -1,18 +1,18 @@
 ---
-title: Mapowanie typu danych bazy danych OLE
+title: Mapowanie typu danych OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 203b017234a98553a053981d8f74b2c419376e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100590"
 ---
-# <a name="ole-db-data-type-mappings"></a>Mapowanie typu danych bazy danych OLE
+# <a name="ole-db-data-type-mappings"></a>Mapowanie typu danych OLE DB
 W poniższej tabeli przedstawiono wywnioskowane [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu dla typów danych od dostawcy danych programu .NET Framework dla ADO i OLE DB (<xref:System.Data.OleDb>). Metody typizowane metody dostępu dla <xref:System.Data.OleDb.OleDbDataReader> są również wymienione.  
   
-|Typ ADO|Typ OLE DB|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typ|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typizowane metody dostępu|  
+|Typ ADO|Typ OLE DB|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] — typ|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typizowane metody dostępu|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
@@ -29,7 +29,7 @@ W poniższej tabeli przedstawiono wywnioskowane [!INCLUDE[dnprdnshort](../../../
 |adDouble|DBTYPE_R8|Double|GetDouble()|  
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DataGodzina|GetDateTime()|  
-|adGUID|DBTYPE_GUID|Identyfikator GUID|GetGuid()|  
+|adGUID|DBTYPE_GUID|Guid|GetGuid()|  
 |adIDispatch|DBTYPE_IDISPATCH *|Obiekt|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
 |adIUnknown|DBTYPE_IUNKNOWN *|Obiekt|GetValue()|  
@@ -50,5 +50,6 @@ W poniższej tabeli przedstawiono wywnioskowane [!INCLUDE[dnprdnshort](../../../
  \* Dla typów OLE DB `DBTYPE_IUNKNOWN` i `DBTYPE_IDISPATCH`, odwołanie do obiektu jest organizowane reprezentacji wskaźnika.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

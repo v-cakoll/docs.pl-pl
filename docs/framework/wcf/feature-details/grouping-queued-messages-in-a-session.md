@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115274"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Grupowanie komunikatów z obsługą kolejek w ramach sesji
 Windows Communication Foundation (WCF) zapewnia sesji, która pozwala grupować zestaw komunikatów powiązane ze sobą do przetworzenia przez aplikację odbierającą jednego. Komunikaty, które są częścią sesji musi być częścią tej samej transakcji. Ponieważ wszystkie komunikaty są częścią tej samej transakcji, jeśli jeden komunikat zakończy się niepowodzeniem do przetworzenia całej sesji jest wycofywana. Sesje mają podobne zachowanie w odniesieniu do kolejki utraconych wiadomości i skażone kolejki. Czas wygaśnięcia (TTL) ustawiona w Zakolejkowane powiązanie skonfigurowane dla sesji jest stosowana do sesji jako całości. Jeśli tylko część wiadomości w sesji są wysyłane przed wygaśnięcia, podczas całej sesji jest umieszczana w kolejce wiadomości utraconych. Podobnie po wiadomości w sesji nie można wysyłać do aplikacji z kolejki aplikacji, podczas całej sesji jest umieszczany w kolejce skażone (jeśli jest dostępny).  
@@ -76,15 +76,12 @@ Windows Communication Foundation (WCF) zapewnia sesji, która pozwala grupować 
 ### <a name="code-for-the-service"></a>Kod usługi  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
  [!code-vb[S_Msmq_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/service.vb#1)]  
-  
-  
-  
+
 ### <a name="code-for-the-client"></a>Kod klienta  
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
-  
-  
-  
+
 ## <a name="see-also"></a>Zobacz także
+
 - [Sesje i kolejki](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)

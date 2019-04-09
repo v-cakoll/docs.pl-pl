@@ -6,18 +6,16 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086731"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Bezpieczne wzorce konstruktora DependencyObjects
 Ogólnie rzecz biorąc Konstruktory klasy nie powinien wywoływać wywołań zwrotnych, takie jak metody wirtualne lub delegatów, ponieważ Konstruktory mogą być wywoływane jako podstawowy inicjowania konstruktora dla klasy pochodnej. Wprowadzanie wirtualnego może odbywać się w stanie inicjowania niekompletne dowolnego danego obiektu. Jednak sam system właściwość wywołania i udostępnia wywołania zwrotne wewnętrznie jako część systemu właściwość zależności. Proste operacji, ponieważ ustawienie wartości właściwości zależności za pomocą <xref:System.Windows.DependencyObject.SetValue%2A> wywołanie potencjalnie zawiera wywołanie zwrotne gdzieś w ustalaniu. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości w treści konstruktora, który może stać się problemem, jeśli danego typu jest używana jako klasa bazowa zależności. Brak określonego wzorca Implementowanie <xref:System.Windows.DependencyObject> konstruktorów, które pozwala uniknąć określonych problemów z stany właściwości zależności i używaniem wywołania zwrotne, które są opisane tutaj.  
-  
- 
-  
+
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Metody wirtualne właściwości systemu  
  Poniższych metod wirtualnych lub wywołań zwrotnych potencjalnie są wywoływane podczas obliczeń z <xref:System.Windows.DependencyObject.SetValue%2A> wywołania, która ustawia wartości właściwości zależności: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Każda z tych metod wirtualnych lub wywołań zwrotnych służy określonego celu rozszerzanie uniwersalność [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości właściwości systemu i zależności. Aby uzyskać więcej informacji na temat korzystania z tych elementów wirtualnych dostosować określenie wartości właściwości, zobacz [zależność wartości wywołania zwrotnego i walidacji](dependency-property-callbacks-and-validation.md).  
@@ -115,6 +113,7 @@ public MyClass : SomeBaseClass {
  Te same wzory zastosowania po ustawieniu właściwości, które nie mają otoki dla wygody ustawienie właściwości i ustaw wartości z <xref:System.Windows.DependencyObject.SetValue%2A>. Wywołania względem <xref:System.Windows.DependencyObject.SetValue%2A> przez parametry konstruktora powinien także wywołać konstruktor domyślny klasy inicjowania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Zabezpieczenia właściwości zależności](dependency-property-security.md)
+- [Zabezpieczenie właściwości zależności](dependency-property-security.md)

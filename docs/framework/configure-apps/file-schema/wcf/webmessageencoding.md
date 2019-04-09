@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191747"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScript (JSON) i "nieprzetworzonej" zawartości binarnej Odczyt i zapis, gdy jest używana w powiązaniu usługi Windows Communication Foundation (WCF).  
@@ -72,6 +72,7 @@ Umożliwia zwykłego tekstu XML, kodowania wiadomości notacji obiektu JavaScrip
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

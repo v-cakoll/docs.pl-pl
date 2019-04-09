@@ -2,12 +2,12 @@
 title: Zabezpieczenia (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
-ms.openlocfilehash: e0b71dd3628e0bbc4c11e7b9f62a4833ce6fa811
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa281cb4d6019ca2df85137eb505724e55b8060a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087341"
 ---
 # <a name="security-linq-to-dataset"></a>Zabezpieczenia (LINQ to DataSet)
 W tym temacie omówiono problemy z zabezpieczeniami w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -23,4 +23,5 @@ W tym temacie omówiono problemy z zabezpieczeniami w [!INCLUDE[linq_dataset](..
  Wszystkie dane wejściowe bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartość, która wykorzystuje składnię języka docelowego w celu wykonywania akcji nieautoryzowanego. Jest to nazywane ataku polegającego na iniekcji SQL, nazwana wzorca ataku, gdzie jest języka Transact-SQL w języku docelowym. Dane wejściowe użytkownika, które są wstrzykiwane bezpośrednio do zapytania służy do porzucić tabeli bazy danych, powodujących typu "odmowa usługi" lub w przeciwnym razie Zmień rodzaj wykonywanej operacji. Mimo że w kompozycją zapytań [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], odbywa się za pośrednictwem interfejsu API modelu obiektu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania nie składają się przy użyciu manipulowanie ciągami lub łączenia, ponieważ znajdują się w instrukcji Transact-SQL i nie są narażone na ataki przez iniekcję SQL w tradycyjnym rozumieniu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

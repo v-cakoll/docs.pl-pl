@@ -5,17 +5,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106669"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Tryb sortowania kolumn w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> kolumny mają trzy tryby sortowania. Tryb sortowania dla każdej kolumny jest określony za pomocą <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> właściwości kolumny, które można ustawić na jeden z następujących <xref:System.Windows.Forms.DataGridViewColumnSortMode> wartości wyliczenia.  
   
-|`DataGridViewColumnSortMode` Wartość|Opis|  
+|`DataGridViewColumnSortMode` value|Opis|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|Domyślny tekst pola kolumn. Chyba, że nagłówki kolumn są używane do wyboru, kliknięcie nagłówka kolumny automatycznie sortuje <xref:System.Windows.Forms.DataGridView> według tej kolumny i wyświetla glif określającą kolejność sortowania.|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|Domyślnie w polu — kolumnach. W tej kolumnie można sortować programowo; jednak go nie ma do sortowania, aby miejsce nie jest zarezerwowana dla symbol sortowania.|  
@@ -59,6 +59,7 @@ ms.locfileid: "57717859"
 >  <xref:System.Windows.Forms.DataGridView.SortCompare> Zdarzenie nie występuje podczas <xref:System.Windows.Forms.DataGridView.DataSource%2A> właściwość jest ustawiona lub jeśli <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> wartość właściwości jest `true`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>
@@ -66,5 +67,5 @@ ms.locfileid: "57717859"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Sortowanie danych w kontrolce DataGridView formularzy Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie trybów sortowania kolumn w kontrolce DataGridView formularzy Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [Instrukcje: Dostosowywanie sortowania w kontrolce DataGridView formularzy Windows Forms](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: ustawianie trybów sortowania kolumn w kontrolce DataGridView formularzy systemu Windows](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Instrukcje: dostosowywanie sortowania w kontrolce DataGridView formularzy systemu Windows](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

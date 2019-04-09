@@ -2,12 +2,12 @@
 title: punkt końcowy skojarzenia
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 7fb9b48c5ed832e83f2a1e344d17d9a9797d393b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108293"
 ---
 # <a name="association-end"></a>punkt końcowy skojarzenia
 *End skojarzenia* identyfikuje [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) na jednym końcu [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) i liczby jednostek typu wystąpienia, które może znajdować się na końcu tego skojarzenia. Skojarzenia są zdefiniowane jako część skojarzenia; Skojarzenie musi mieć dokładnie dwa punkty końcowe skojarzenia. [Właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) umożliwiają nawigacji z elementu end skojarzenia jednego do drugiego.  
@@ -35,5 +35,6 @@ ms.locfileid: "58410332"
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

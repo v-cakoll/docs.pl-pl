@@ -1,13 +1,13 @@
 ---
-title: <iriParsing> — Element (Ustawienia identyfikatora Uri)
+title: <iriParsing> Element (ustawienia identyfikatora Uri)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092503"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing >, Element (ustawienia identyfikatora Uri)
 Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są stosowane do <xref:System.Uri> , czy powinna być stosowana IRI podczas analizowania reguły.  
@@ -80,6 +80,7 @@ Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są sto
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

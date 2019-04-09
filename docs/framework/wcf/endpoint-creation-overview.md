@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0d7baacb9525e0c268ae53b0c3617324ecd0772f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106538"
 ---
 # <a name="endpoint-creation-overview"></a>Przegląd tworzenia punktów końcowych
 Cała komunikacja z usługą Windows Communication Foundation (WCF) odbywa się przez *punktów końcowych* usługi. Punkty końcowe zapewniają klientom dostęp do funkcji, która oferuje usługi WCF. W tej sekcji opisuje strukturę punktu końcowego i opisano sposób definiowania punktu końcowego w konfiguracji i w kodzie.  
@@ -199,4 +199,5 @@ serviceHost.Open()
  Jeśli punkty końcowe są podane jawnie, nadal można dodać domyślnych punktów końcowych przez wywołanie metody <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> na <xref:System.ServiceModel.ServiceHost> przed wywołaniem <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)

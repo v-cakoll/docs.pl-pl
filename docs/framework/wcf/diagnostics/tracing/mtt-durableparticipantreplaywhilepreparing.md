@@ -2,12 +2,12 @@
 title: Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 ms.date: 03/30/2017
 ms.assetid: 10ef3876-6f8e-4d4e-8444-f47847b64795
-ms.openlocfilehash: 3b51a100677221866186b2e24f34396c012d11c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d74d73cc43b500d3920ca03905f4eb7543619a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075538"
 ---
 # <a name="microsofttransactionstransactionbridgedurableparticipantreplaywhilepreparing"></a>Microsoft.Transactions.TransactionBridge.DurableParticipantReplayWhilePreparing
 Usługa protokołu WS-AT odebrała komunikat powtarzania z trwałego uczestnika nie odpowiedział na przygotowanie. W związku z tym transakcja została przerwana.  
@@ -19,6 +19,7 @@ Usługa protokołu WS-AT odebrała komunikat powtarzania z trwałego uczestnika 
  Ten komunikat o błędzie może indiate, że trwałego uczestnika (w tym TransactionManagers podrzędnego) została odzyskana po awarii, chociaż jest on ustalić wyniku transakcji i jego stan żądania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

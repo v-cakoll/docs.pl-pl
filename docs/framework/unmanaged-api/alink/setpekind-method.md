@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e568050a5cc94da865d656adc8a775024dab836c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dec04fa267c61798a3340e9d1e18150b812e9eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092659"
 ---
 # <a name="setpekind-method"></a>SetPEKind — Metoda
 Określa typ przenośnego pliku wykonywalnego, specyficzny dla komputera lub niezależny od maszyny.  
@@ -57,7 +57,8 @@ HRESULT SetPEKind(
  Wymaga alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [GetPEKind, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

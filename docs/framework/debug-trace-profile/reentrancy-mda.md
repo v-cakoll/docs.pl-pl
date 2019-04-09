@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18189ace97238bede9ed18d1dcbae2490956fad8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094219"
 ---
 # <a name="reentrancy-mda"></a>wielobieżność MDA
 `reentrancy` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy podejmowana jest próba przejścia z natywnego do zarządzanego kodu w przypadkach, gdzie wcześniejsze przełącznika z kodu zarządzanego do natywnego nie było wykonywane za pośrednictwem przejścia.  
@@ -105,4 +105,5 @@ public class Reenter
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

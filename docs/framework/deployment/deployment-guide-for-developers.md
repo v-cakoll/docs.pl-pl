@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: 8e696a6add8d5182fbf78cbbab26de47e0c0f684
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097502"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] wraz ze swoimi aplikacjami.
@@ -362,7 +362,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |**/LCID**  `LCID`<br /><br /> gdzie `LCID` Określa identyfikator ustawień regionalnych (zobacz [obsługiwane języki](#supported-languages))|Instaluje pakiet językowy określony przez `LCID` i wymusza wyświetlanie interfejsu użytkownika, które mają być wyświetlane w tym języku, o ile nie jest ustawiony tryb cichy.<br /><br /> Aby uzyskać Instalator sieci web ta opcja instaluje łańcuchowo pakiet językowy z sieci web. **Uwaga:**  Użyj tej opcji tylko w przypadku Instalatora sieci web.|
 |**/ log** `file`&#124; `folder`|Określa lokalizację pliku dziennika. Wartość domyślna to folder tymczasowy dla procesu, a domyślna nazwa pliku opiera się na pakiet. Jeśli rozszerzenie .txt, generowany jest Dziennik tekstowy. Jeśli określisz dowolne inne rozszerzenie lub Brak rozszerzenia, zostanie utworzony dziennik HTML.|
 |**/msioptions**|Określa opcje przekazywane do elementów .msi i .msp; na przykład: `/msioptions "PROPERTY1='Value'"`.|
-|**/ norestart /**|Uniemożliwia automatyczne ponowne uruchomienie programu instalacyjnego. Jeśli używasz tej opcji, aplikacja połączona w łańcuch musi przechwytywać kod powrotny i obsługiwać ponowny rozruch (zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606) w bibliotece MSDN).|
+|**/norestart**|Uniemożliwia automatyczne ponowne uruchomienie programu instalacyjnego. Jeśli używasz tej opcji, aplikacja połączona w łańcuch musi przechwytywać kod powrotny i obsługiwać ponowny rozruch (zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](https://go.microsoft.com/fwlink/?LinkId=179606) w bibliotece MSDN).|
 |**/ passive**|Ustawia tryb pasywny. Wyświetla pasek postępu, aby wskazać, że instalacja jest w toku, ale nie wyświetla żadnych monitów ani komunikatów o błędzie dla użytkownika. W tym trybie, gdy łańcuchowa program instalacyjny jest, pakiet łańcuchowy musi obsłużyć [kody powrotne](#return-codes).|
 |**/pipe**|Tworzy kanał komunikacyjny, aby umożliwić pobieranie danych o postępie przez pakiet łańcuchowy.|
 |**promptrestart**|Tylko tryb pasywny, jeśli program instalacyjny wymaga ponownego uruchomienia, użytkownik jest monitowany. Ta opcja wymaga interakcji użytkownika, jeśli wymagane jest ponowne uruchomienie komputera.|
@@ -403,9 +403,10 @@ W poniższej tabeli wymieniono pakiety językowe .NET Framework, które są dost
 |3082|Hiszpański — Hiszpania (nowoczesny)|es|
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Przewodnik wdrażania dla administratorów](../../../docs/framework/deployment/guide-for-administrators.md)
 - [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)
 - [Instalowanie programu .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
-- [Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

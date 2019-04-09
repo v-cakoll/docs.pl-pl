@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b0bfbc3ad274ba9cb2176ed8a8fd8dac513bfbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7876e21286ee16f16fa51939b09ffd0583b134d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132616"
 ---
 # <a name="deploying-net-framework-applications"></a>Wdrażanie aplikacji .NET Framework
 Ta sekcja dokumentacji .NET Framework zawiera podstawowe informacje dotyczące wdrażania aplikacji .NET Framework, w tym wytyczne dotyczące ładowania zestawów, rozpoznawania odwołań do zestawów i zwiększanie wydajności aplikacji za pomocą generowanie obrazu natywnego.  
@@ -25,4 +25,5 @@ Ta sekcja dokumentacji .NET Framework zawiera podstawowe informacje dotyczące w
  W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i inne błędy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podręcznik programowania](../../../docs/framework/development-guide.md)

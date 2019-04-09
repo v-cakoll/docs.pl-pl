@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz dodatek, który zwraca interfejs użytkownika'
+title: 'Instrukcje: Tworzenie dodatku, który zwraca interfejs użytkownika'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115755"
 ---
-# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Instrukcje: Utwórz dodatek, który zwraca interfejs użytkownika
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Instrukcje: Tworzenie dodatku, który zwraca interfejs użytkownika
 Ten przykład przedstawia sposób tworzenia dodatku, zwracające Windows Presentation Foundation (WPF) do hosta WPF autonomiczną aplikacją.  
   
  Dodatek zwraca interfejs użytkownika, który jest formanty użytkownika WPF. Zawartość kontrolki użytkownika nie ma jednego przycisku, po kliknięciu wyświetla okno komunikatu. Oddzielną aplikację WPF obsługuje dodatku i wyświetla kontrolkę użytkownika (zwrócone przez dodatek) jako zawartość okna głównego aplikacji.  
@@ -31,8 +31,7 @@ Ten przykład przedstawia sposób tworzenia dodatku, zwracające Windows Present
   
 ## <a name="example"></a>Przykład  
  Aby utworzyć dodatek, który zwraca interfejs użytkownika WPF wymaga określonego kodu dla każdy z segmentów potoku dodatku i aplikacji hosta.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementowanie segmentów potoku kontraktu  
  Metoda musi być określona przez umowę do zwracania interfejsu użytkownika, a jego wartość zwracana musi być typu <xref:System.AddIn.Contract.INativeHandleContract>. Wskazuje na `GetAddInUI` metody `IWPFAddInContract` Umowę w poniższym kodzie.  
@@ -90,5 +89,6 @@ Ten przykład przedstawia sposób tworzenia dodatku, zwracające Windows Present
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Dodatki WPF — omówienie](wpf-add-ins-overview.md)
+- [Przegląd Dodatki WPF](wpf-add-ins-overview.md)

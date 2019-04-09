@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193918"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy jest połączenie w ramach ograniczonego wykonania wykres region (CER) do metody, która ma umowy niezawodność lub kontrakt zbyt słabe. Słabe kontrakt jest kontraktu, który oświadcza, że najgorszy uszkodzenie stan przypadku zakresu większą niż wystąpienie podawaną do wywołania, czyli <xref:System.AppDomain> lub stan procesu może ulec uszkodzeniu lub jego wynik nie jest zawsze obliczana w sposób deterministyczny gdy jest wywoływany w CER.  
@@ -55,6 +55,7 @@ ms.locfileid: "54614786"
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Określ FillBehavior dla przedziału czasowego, który osiągnął koniec swojego okresu aktywności'
+title: 'Instrukcje: Określanie elementu FillBehavior dla osi czasu, która osiągnęła koniec swojego okresu aktywności'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FillBehavior property for inactive timelines [WPF]
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
-ms.openlocfilehash: 1d6a3ec38a6488d997ce5a4734cc095446354070
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091129"
 ---
-# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Instrukcje: Określ FillBehavior dla przedziału czasowego, który osiągnął koniec swojego okresu aktywności
+# <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>Instrukcje: Określanie elementu FillBehavior dla osi czasu, która osiągnęła koniec swojego okresu aktywności
 W tym przykładzie pokazano, jak określić <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> dla nieaktywnych <xref:System.Windows.Media.Animation.Timeline> właściwości animowany.  
   
 ## <a name="example"></a>Przykład  
@@ -27,11 +27,12 @@ W tym przykładzie pokazano, jak określić <xref:System.Windows.Media.Animation
  Aby uzyskać pełny przykład, zobacz [galerii przykład animacji](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.DoubleAnimation>
 - <xref:System.Windows.FrameworkElement.Width%2A>
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
 - <xref:System.Windows.Media.Animation.FillBehavior.Stop>
 - <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>
-- [Animacja — przegląd](animation-overview.md)
-- [Animacja i chronometraż tematy porad](animation-and-timing-how-to-topics.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Animacja i chronometraż Tematy porad](animation-and-timing-how-to-topics.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cddb7985c8763e5c18ecca0255f4f3556e03719e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: d05c128910915419821fc44ca7894cd5f63c032d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116002"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Praca programistyczna z plikami .resx
 Ponieważ pliki zasobów (.resx) XML musi zawierać dobrze zdefiniowanych XML, w tym nagłówek, który musi być zgodny ze schematem określonego następuje dane w pary nazwa/wartość może się okazać, że ręcznego tworzenia tych plików jest podatne na błędy. Jako alternatywę pliki resx można utworzyć programowo, przy użyciu typów i elementów członkowskich w bibliotece klas programu .NET. Biblioteki klas platformy .NET umożliwia również pobrać zasoby, które są przechowywane w plikach resx. W tym temacie wyjaśniono, jak można używać typów i członków w <xref:System.Resources> przestrzeni nazw do pracy z plikami .resx.
@@ -86,6 +86,7 @@ Nie można osadzić pliku resx w pliku wykonywalnym środowiska uruchomieniowego
  **Al** *resourcesFilename* **-out:** *assemblyFilename*
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Resgen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (Konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)

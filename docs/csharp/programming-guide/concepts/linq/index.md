@@ -2,16 +2,16 @@
 title: Zapytanie o języku zintegrowanym (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: 108dc60285e51ab4cd703e668127a4ffd5fc1c74
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186631"
 ---
-# <a name="language-integrated-query-linq"></a>Zapytanie o języku zintegrowanym (LINQ)
+# <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
-Language-Integrated Query (LINQ) to nazwa zestawu technologii, w oparciu o integrację możliwości zapytania bezpośrednio w języku C#. Tradycyjne zapytania dotyczące danych są wyrażane jako zwykłe ciągi bez typu sprawdzania w kompilacji czasu lub obsługę funkcji IntelliSense. Ponadto, trzeba się język różnych zapytań dla każdego typu źródła danych: SQL bazy danych, dokumentów XML, różnych usług sieci Web i tak dalej. Za pomocą LINQ kwerenda jest staje się konstrukcją języka, podobnie jak klasy, metody i zdarzenia.
+Language-Integrated Query (LINQ) to nazwa zestawu technologii, w oparciu o integrację możliwości zapytania bezpośrednio w języku C#. Tradycyjne zapytania dotyczące danych są wyrażane jako zwykłe ciągi bez typu sprawdzania w kompilacji czasu lub obsługę funkcji IntelliSense. Ponadto konieczne będzie uczenia się języka zapytań różne dla każdego typu źródła danych: Bazy danych SQL, dokumentów XML, różnych usług sieci Web i tak dalej. Za pomocą LINQ kwerenda jest staje się konstrukcją języka, podobnie jak klasy, metody i zdarzenia.
 
 Deweloper, który zapisuje zapytania, aby uzyskać najbardziej widoczne części "language-integrated" LINQ jest wyrażenia zapytania. Wyrażenia zapytań są zapisywane w deklaratywne *składni zapytania*. Za pomocą składni zapytań, można wykonać filtrowanie, porządkowanie i operacje do źródeł danych z co najmniej kodu. Używasz tych samych wzorców wyrażeń zapytania podstawowego do wykonywania zapytań i przekształcania danych w bazy danych SQL, ADO .NET w zestawach danych, strumienie i dokumentów XML i kolekcjami .NET.
 
@@ -42,13 +42,10 @@ Poniższy przykład przedstawia pełną operację zapytania. Zakończyć operacj
 Aby dowiedzieć się więcej na temat LINQ, należy rozpocząć od staje się poznać niektóre podstawowe pojęcia związane z [podstawowe informacje o wyrażeniach zapytań](../../../linq/query-expression-basics.md), a następnie zapoznaj się z dokumentacją dla technologii LINQ, w którym interesuje Cię:   
 -   Dokumenty XML: [LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [składnik LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+-   ADO.NET Entity Framework: [Składnik LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   Kolekcje .NET, pliki, ciągi i tak dalej: [LINQ do obiektów](linq-to-objects.md)
+-   Kolekcje .NET, plików, parametry i tak dalej: [LINQ do obiektów](linq-to-objects.md)
 
 Aby uzyskać lepszy opis LINQ ogólnie rzecz biorąc, zobacz [LINQ w C#](../../../linq/linq-in-csharp.md).
 
 Aby rozpocząć pracę z LINQ w C#, zapoznaj się z samouczkiem [Praca z technologią LINQ](../../../tutorials/working-with-linq.md).
-
-
-

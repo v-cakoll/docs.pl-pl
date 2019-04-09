@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej'
+title: 'Instrukcje: konfigurowanie poświadczeń usługi federacyjnej'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 983504993a1252e4345c3c50130a25e25e99446d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112570"
 ---
-# <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej
+# <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: konfigurowanie poświadczeń usługi federacyjnej
 W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa się z następujących procedur głównego:  
   
 1.  Konfigurowanie <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowego powiązania. Aby uzyskać więcej informacji na temat tworzenia odpowiednie powiązanie, zobacz [jak: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
@@ -72,11 +72,12 @@ W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa
  Na przykład ustawienie <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> do <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> będzie uwierzytelnienia wszelkich wystawiony token, którego certyfikat podpisywania jest `TrustedPeople` magazynu certyfikatów. W takim przypadku należy ustawić <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> właściwości albo <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> lub <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Możesz wybrać inne tryby, w tym <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Gdy `Custom` jest zaznaczone, należy przypisać wystąpienie <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> właściwości. Niestandardowego modułu weryfikacji można sprawdzić poprawność certyfikatów przy użyciu dowolnego kryterium, które potrzeby. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Federacja i zaufanie](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
 - [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Instrukcje: Wyłączanie bezpiecznej sesji WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

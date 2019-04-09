@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)'
+title: 'Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188939"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)
 Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> formantu lub pochodny element w <xref:System.Windows.Forms.ListView> kontroli. Tworzenie wartości pochodnych umożliwia Dodaj dowolne pola, które są wymagane, a także niestandardowych metod i konstruktorów do ich obsługi. Jest jedno użycie tej funkcji można dołączyć obiektu klienta do każdego elementu węzła lub listy drzewa. Podane tutaj przykłady dotyczą <xref:System.Windows.Forms.TreeView> kontroli, ale to samo podejście pozwala <xref:System.Windows.Forms.ListView> kontroli.  
   
 ### <a name="to-derive-a-tree-node"></a>Aby uzyskać pochodny węzeł drzewa  
@@ -131,5 +131,6 @@ Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.F
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [TreeView, kontrolka](treeview-control-windows-forms.md)
-- [Kontrolka ListView](listview-control-windows-forms.md)
+
+- [TreeView — Formant](treeview-control-windows-forms.md)
+- [ListView — Formant](listview-control-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116233"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Wstawianie obrazu z pliku
 Możesz napisać duży obiekt binarny (BLOB) do bazy danych jako dane binarne lub znaków, w zależności od typu pola w źródle danych. Obiekt BLOB jest ogólny termin określający, który odwołuje się do `text`, `ntext`, i `image` typy danych, które zwykle zawierają dokumenty i obrazy.  
@@ -131,6 +131,7 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie poleceń do modyfikacji danych](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Pobieranie danych binarnych](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
 - [Dane binarne i dużej wartości w programie SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)

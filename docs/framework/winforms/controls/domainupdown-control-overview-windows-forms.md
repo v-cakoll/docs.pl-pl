@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102859"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.DomainUpDown> formant jest zasadniczo kombinacji pola tekstowego, a parę przycisków przenoszenia w górę lub w dół na liście. Kontrolka Wyświetla i ustawia ciąg tekstowy z listy dostępnych opcji. Użytkownik może wybrać ciąg przez kliknięcie przycisków, aby przejść na liście w górę i w dół, przez naciśnięcie klawiszy strzałek w górę i w dół lub wpisując ciąg, który pasuje do elementu na liście. Jedno możliwe użycie tej kontrolki jest służąca do wybierania elementów z alfabetycznie posortowaną listę nazw.  
@@ -28,5 +28,6 @@ Formularze Windows <xref:System.Windows.Forms.DomainUpDown> formant jest zasadni
  Ta kontrolka wyświetla tylko ciągi tekstowe. Jeśli chcesz, aby formant, który wyświetla wartości liczbowe, użyj <xref:System.Windows.Forms.NumericUpDown> kontroli. Aby uzyskać więcej informacji, zobacz [— informacje o formancie NumericUpDown](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - [DomainUpDown, kontrolka](domainupdown-control-windows-forms.md)

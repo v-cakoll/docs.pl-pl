@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162884"
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źródła śledzenia emitowanie danych śledzenia i zestaw poziomów śledzenia, śledzenie aktywności zestawu oraz propagacji do obsługi śledzenia end-to-end korelacji i ustawić detektorów śledzenia do dostępu do danych śledzenia.  
@@ -181,7 +181,8 @@ W tym temacie opisano, jak możesz włączyć śledzenie, skonfigurować źród�
  Nie można użyć `propagateActivity` atrybut o źródła śledzenia zdefiniowanych przez użytkownika. W przypadku Propagacja Identyfikatora działania kodu użytkownika, upewnij się, nie należy ustawiać elementu ServiceModel `ActivityTracing`, przy zachowaniu ServiceModel `propagateActivity` ustawioną wartość atrybutu `true`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Instrukcje: Tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenia](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [Tworzenie niestandardowych zdarzeń TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107071"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optymalizacja wydajności: Układ i projekt
 Projekt usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji może mieć wpływ na jego wydajność, tworząc niepotrzebne koszty Obliczanie układu i sprawdzanie poprawności odwołania do obiektu. Konstrukcja obiektów, szczególnie w czasie wykonywania, może wpłynąć na charakterystykę wydajności aplikacji.  
@@ -70,6 +70,7 @@ Projekt usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-
  Aby uzyskać więcej informacji na temat drzewa logicznego, zobacz [drzewa w WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
 - [Planowanie wydajności aplikacji](planning-for-application-performance.md)
 - [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)

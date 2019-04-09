@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectValue2 — Interfejs
+title: ICorDebugObjectValue2, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c361b12fdfd30873f8c756e710e6f1a12ade0aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 34c90af296a1c82292a58e8579f028dd45b76f63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080699"
 ---
-# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 — Interfejs
+# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2, interfejs
 
 Umożliwia rozbudowanie interfejsu "ICorDebugObjectValue" do obsługi dziedziczenia i zastępuje.  
   
@@ -48,5 +48,5 @@ Umożliwia rozbudowanie interfejsu "ICorDebugObjectValue" do obsługi dziedzicze
  **NET Framework w wersji:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

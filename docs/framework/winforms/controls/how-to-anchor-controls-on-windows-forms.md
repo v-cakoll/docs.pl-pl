@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zakotwiczenia formantów na formularzach Windows Forms'
+title: 'Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: d3dd413793c8a6da900acbf60cc5a20edf908906
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073000"
 ---
-# <a name="how-to-anchor-controls-on-windows-forms"></a>Instrukcje: Zakotwiczenia formantów na formularzach Windows Forms
+# <a name="how-to-anchor-controls-on-windows-forms"></a>Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows
 W przypadku projektowania formularza, który użytkownik może zmienić rozmiar w czasie wykonywania, kontrolek w formularzu należy zmienić rozmiar i odpowiednio zmienić położenie. Aby zmienić rozmiar kontrolki dynamicznej z formularza, można użyć <xref:System.Windows.Forms.Control.Anchor%2A> właściwości kontrolek formularzy Windows Forms. <xref:System.Windows.Forms.Control.Anchor%2A> Właściwość definiuje pozycji zakotwiczenia dla formantu. Gdy formant jest zakotwiczona do formularza i rozmiarów formularza, formant zachowuje odległość między formantem i pozycji zakotwiczenia. Na przykład, jeśli masz <xref:System.Windows.Forms.TextBox> formant, który jest zakotwiczona lewy, prawy i dolną krawędzią formularza, jak rozmiarów formularza <xref:System.Windows.Forms.TextBox> kontrolować zmiany rozmiaru w poziomie, tak, aby utrzymuje tej samej odległości od lewej i prawej strony formularza. Ponadto kontrolka umieszcza się w pionie tak, aby jego lokalizacja jest zawsze tej samej odległości od dolnej krawędzi formularza. Jeśli formant nie jest zakotwiczona rozmiarów formularza, położenie formantu względem krawędzi formularza jest zmieniany.  
   
  <xref:System.Windows.Forms.Control.Anchor%2A> Właściwość wchodzi w interakcję z <xref:System.Windows.Forms.Control.AutoSize%2A> właściwości. Aby uzyskać więcej informacji, zobacz [AutoSize właściwość — omówienie](autosize-property-overview.md).  
@@ -54,10 +54,11 @@ W przypadku projektowania formularza, który użytkownik może zmienić rozmiar 
  Musi być dziedziczone formantów `Protected` mogli jest zakotwiczona. Aby zmienić poziom dostępu formantu, ustaw jego `Modifiers` właściwość **właściwości** okna.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
-- [AutoSize, właściwość — omówienie](autosize-property-overview.md)
-- [Instrukcje: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)
+
+- [Formanty formularzy systemu Windows](index.md)
+- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
+- [AutoSize — Przegląd właściwości](autosize-property-overview.md)
+- [Instrukcje: dokowanie kontrolek w Formularzach systemu Windows](how-to-dock-controls-on-windows-forms.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)

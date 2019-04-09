@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096995"
 ---
 # <a name="deferred-versus-immediate-loading"></a>Odroczone a bezpośrednie ładowanie
 Po wykonaniu zapytania dotyczącego obiektu, możesz pobrać faktycznie tylko żądanego obiektu. *Powiązane* obiekty nie są automatycznie pobrać w tym samym czasie. (Aby uzyskać więcej informacji, zobacz [zapytań w relacjach](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Nie widzisz, że fakt, że obiekty powiązane nie są już załadowane, ponieważ próba dostępu do nich generuje żądanie, która pobiera je.  
@@ -34,4 +34,5 @@ Po wykonaniu zapytania dotyczącego obiektu, możesz pobrać faktycznie tylko ż
 -   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> Metod w celu Filtruj obiekty pobranych dla określonej relacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

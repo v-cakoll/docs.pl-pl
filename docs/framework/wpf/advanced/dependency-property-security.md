@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077475"
 ---
 # <a name="dependency-property-security"></a>Zabezpieczenie właściwości zależności
 Właściwości zależności powinien ogólnie być uważane właściwości publiczne. Rodzaj [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości zapobiega możliwość zapewnienia gwarancje bezpieczeństwa informacji na temat wartości właściwości zależności.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Dostęp i większe bezpieczeństwo otoki i właściwości zależności  
  Zazwyczaj właściwości zależności są implementowane wraz z "otoki" [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości, które upraszczają pobieranie lub ustawianie właściwości z wystąpienia usługi. Ale otoki metodami naprawdę jedynie jako udogodnienie implementacji podstawowych <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> wywołania statycznych, które są używane podczas interakcji z właściwości zależności. Myśl ją w inny sposób, właściwości są widoczne jako [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości, które odbywa się kopii właściwości zależności, a nie pola prywatnego. Mechanizmy zabezpieczeń stosowane do otoki nie równoległe właściwości zachowania systemu oraz dostępem do właściwości zależności. Umieszczenie żądania zabezpieczeń na otokę tylko uniemożliwi użycie wygodna metoda, ale nie uniemożliwia wywołania <xref:System.Windows.DependencyObject.GetValue%2A> lub <xref:System.Windows.DependencyObject.SetValue%2A>. Podobnie umieszczając chronione lub poziom dostępu prywatnego otoki nie zapewnia żadnych efektywnym elementem systemu zabezpieczeń.  
@@ -40,4 +39,5 @@ Właściwości zależności powinien ogólnie być uważane właściwości publi
  Żądanie do stosowania <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> , a oczekiwano niepowodzenia weryfikacji w przypadku niepowodzenia żądanie, aby uniemożliwić ustawiania właściwości nie jest mechanizm odpowiednie zabezpieczenia. Ustaw wartość unieważniania wymuszane za pośrednictwem <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> również można pominąć przez złośliwe obiekty wywołujące, jeśli działają tych wywołań w domenie aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)

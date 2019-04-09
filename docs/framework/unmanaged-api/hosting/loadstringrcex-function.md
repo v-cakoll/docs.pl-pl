@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c3185bdc0776d6536458ce03c348ed77b8ba0b9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 697557463aa949036acb21e63b9a82b1fb84b415
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105498"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx — Funkcja
 Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określonej kultury.  
@@ -81,6 +81,7 @@ HRESULT LoadStringRCEx (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
-- [LoadStringRC, funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
+- [LoadStringRC — Funkcja](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
 - [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

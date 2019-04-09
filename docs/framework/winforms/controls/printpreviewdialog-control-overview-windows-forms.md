@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188841"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Printpreviewdialog — informacje o formancie (formularze Windows)
 Formularze Windows <xref:System.Windows.Forms.PrintPreviewDialog> sterowania to wstępnie skonfigurowane okno dialogowe umożliwia wyświetlenie jak [PrintDocument](printdocument-component-windows-forms.md) pojawią się po wydrukowaniu. Użyj go w ramach aplikacji opartych na Windows jako proste rozwiązanie zamiast konfigurować własne okno dialogowe. Kontrolka zawiera przyciski do drukowania, powiększania, wyświetlanie jednego lub wielu stronach i zamyka okno dialogowe.  
@@ -52,6 +52,7 @@ Jeśli przełącznik nie jest obecny lub jest ustawiona na jakąkolwiek inną wa
 Jeśli używasz <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> zdarzenie, aby zmodyfikować ustawienia drukarki, wydajność <xref:System.Windows.Forms.PrintPreviewDialog> nie poprawi kontroli, nawet jeśli jest ustawiona na przełącznik konfiguracji optymalizacji.  
 
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl, kontrolka — omówienie](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog, kontrolka](printpreviewdialog-control-windows-forms.md)

@@ -2,12 +2,12 @@
 title: Wskazówki dotyczące migracji
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083169"
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
 W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną systemu Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] został wydany w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywana WF3) i ulepszone w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieje się wraz z technologią przepływu pracy (typy System.Activities.\* obszarów nazw; nazywane WF4). Podczas wybierania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że możesz kontrolować termin.  
@@ -29,10 +29,10 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Micros
  [Migracja programu WF: Najlepsze rozwiązania dotyczące projektowania WF3](https://go.microsoft.com/fwlink/?LinkId=153852)  
  W tym artykule omówiono sposób projektowania WF3 artefaktów, dzięki czemu mogą zostać łatwo zmigrowane do WF4.  
   
- [Wskazówki dotyczące WF: reguły](https://go.microsoft.com/fwlink/?LinkId=153854)  
+ [WF Guidance: reguły](https://go.microsoft.com/fwlink/?LinkId=153854)  
  W tym artykule omówiono sposób dostosowania związane z zasadami inwestować do przodu w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] rozwiązania.  
   
- [Wskazówki dotyczące WF: Automat stanów](https://go.microsoft.com/fwlink/?LinkId=153855)  
+ [WF Guidance: Automat stanów](https://go.microsoft.com/fwlink/?LinkId=153855)  
  W tym artykule omówiono przepływ sterowania WF4 modelowania w przypadku braku działań automatu stanów.  
   
  Należy pamiętać, że te wskazówki dotyczą tylko projekty przepływu pracy, których platformą docelową jest program .NET Framework 4. Przepływy pracy automatu stanów zostały dodane w programie .NET 4.0.1 wraz z wydaniem platformy Update 1, a następnie zostały zawarte w ramach programu .NET Framework 4.5. Aby uzyskać więcej informacji na temat przepływów pracy automatu stanów na platformie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji 4.0.1 funkcje platformy Microsoft .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100)) i [przepływów pracy automatu stanów](state-machine-workflows.md).  
@@ -52,8 +52,9 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Micros
  [Podręcznik migracji WF: Śledzenia przepływu pracy](https://go.microsoft.com/fwlink/?LinkId=275562)  
  Zawiera wskazówki dotyczące zmieniania projektu WF3 śledzenie kodu i konfiguracji za pomocą równoważnej WF4 śledzenie kodu i konfiguracji.  
   
- [Wskazówki dotyczące WF: Usługi przepływu pracy](https://go.microsoft.com/fwlink/?LinkId=275564)  
+ [WF Guidance: Usługi przepływu pracy](https://go.microsoft.com/fwlink/?LinkId=275564)  
  Udostępnia zorientowane na przykład krok po kroku dotyczące zmieniania projektu przepływów pracy, które implementują Windows Communication Foundation (WCF) usługi sieci web (powszechnie znane jako usługi przepływu pracy) utworzone w WF3 na potrzeby WF4, typowe scenariusze dotyczące out-of-box działania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Activities.Statements.Interop>

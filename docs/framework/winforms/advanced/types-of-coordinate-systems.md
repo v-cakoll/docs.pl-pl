@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089305"
 ---
 # <a name="types-of-coordinate-systems"></a>Typy systemów współrzędnych
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] używa trzech przestrzeni współrzędnych: świata, strony i urządzeń. Współrzędne świata są współrzędne używane do modelowania określonego świata graficznego i współrzędne, które są przekazywane do metody w programie .NET Framework. Współrzędne strony można znaleźć w układzie współrzędnych używana przez powierzchnię rysunku, na przykład jako formularz lub formant. Współrzędne urządzenia są współrzędne używane przez urządzenie fizyczne rysowania, takie jak ekran, lub arkusz papieru. Podczas wywoływania `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, punkty, które są przekazywane do <xref:System.Drawing.Graphics.DrawLine%2A> metody —`(0, 0)` i `(160, 80)`— znajdują się w przestrzeni współrzędnych świata. Przed [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można narysować linię na ekranie, współrzędne przechodzą przez sekwencję transformacji. Jeden przekształcenia, nazywane transformacji świata konwertuje współrzędne świata na współrzędne strony, a inny przekształcenia, o nazwie przekształcenie strony konwertuje współrzędne strony współrzędnych urządzenia.  
@@ -95,5 +95,6 @@ ms.locfileid: "57715864"
 |Urządzenie|(192, 48) do (384, 144)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md)
-- [Macierzowe przedstawienie przekształcenia](matrix-representation-of-transformations.md)
+- [Macierzowe przedstawienie transformacji](matrix-representation-of-transformations.md)

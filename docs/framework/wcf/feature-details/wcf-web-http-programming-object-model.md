@@ -2,12 +2,12 @@
 title: Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: e15f616aa7ef9502176c5d508f8d8882e2a5bd47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096013"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Model obiektowy programowania protokołu HTTP sieci Web w programie WCF
 Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie usług Windows Communication Foundation (WCF) w sieci Web za pomocą podstawowego żądania HTTP bez protokołu SOAP. WCF WEB HTTP programowania modelu została stworzona na podstawie istniejącego modelu rozszerzalności programu WCF. Definiuje następujące klasy:  
@@ -100,6 +100,7 @@ Usługi WCF WEB HTTP programowania modelu pozwala deweloperom na Uwidacznianie u
  Ponieważ WCF WEB HTTP modelu programowania nie obsługuje protokołu WS-* protokołów, jedynym sposobem, aby zabezpieczyć usługi sieci Web oparta na sieci WEB HTTP modelu programowania programu WCF jest do udostępnienia usługi za pomocą protokołu SSL. Aby uzyskać więcej informacji o konfigurowaniu protokołu SSL za pomocą [!INCLUDE[iisver](../../../../includes/iisver-md.md)] zobacz [Implementowanie protokołu SSL w usługach IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
 - <xref:System.ServiceModel.Web.WebInvokeAttribute>

@@ -2,12 +2,12 @@
 title: Przykład odnajdywania z zakresami
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122710"
 ---
 # <a name="discovery-with-scopes-sample"></a>Przykład odnajdywania z zakresami
 Ten przykład przedstawia sposób użycia zakresów do kategoryzowania punktów końcowych wykrywalne jako dobrze, jak używać <xref:System.ServiceModel.Discovery.DiscoveryClient> z asynchronicznego wyszukiwania dla punktów końcowych. W usłudze w tym przykładzie pokazano, jak dostosować odnajdywania dla każdego punktu końcowego, dodając zachowanie punktu końcowego odnajdywania i dodawanie przy użyciu jego zakres do punktu końcowego, a także kontrolowanie punktu końcowego odnajdywania. Na komputerze klienckim, przykładzie pokazano, jak klienci mogą tworzyć <xref:System.ServiceModel.Discovery.DiscoveryClient> i dostosowanie parametrów do dołączania zakresów, dodając zakres wyszukiwania <xref:System.ServiceModel.Discovery.FindCriteria>. Niniejszy przykład pokazuje również, jak ograniczyć odpowiedzi przez dodanie kryterium kończenia żądań klientów.  
@@ -36,4 +36,3 @@ Ten przykład przedstawia sposób użycia zakresów do kategoryzowania punktów 
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
-  

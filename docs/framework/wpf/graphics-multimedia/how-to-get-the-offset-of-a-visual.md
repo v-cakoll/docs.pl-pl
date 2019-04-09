@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobierz przesunięcie Visual'
+title: 'Instrukcje: Pobieranie przesunięcia wizualizacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - visual objects [WPF], retrieving offset values from
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
-ms.openlocfilehash: ea03f7b9c3fefde0efa3fa0daaa07a537618f37a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093413"
 ---
-# <a name="how-to-get-the-offset-of-a-visual"></a>Instrukcje: Pobierz przesunięcie Visual
+# <a name="how-to-get-the-offset-of-a-visual"></a>Instrukcje: Pobieranie przesunięcia wizualizacji
 Te przykłady pokazują, jak można pobrać wartości przesunięcia visual obiektu, który jest określana względem jego elementu nadrzędnego lub dowolnego nadrzędnym lub obiekt podrzędny.  
   
 ## <a name="example"></a>Przykład  
@@ -66,6 +66,7 @@ Zagnieżdżone w obrębie dwóch StackPanels TextBlock
  Przesunięcie uwzględnia <xref:System.Windows.FrameworkElement.Margin%2A> wartości dla wszystkich obiektów. W tym przypadku <xref:System.Windows.Vector.X%2A> jest -4, i <xref:System.Windows.Vector.Y%2A> jest -4. Wartości przesunięcia są wartości ujemnych, ponieważ obiekt nadrzędny negatywny jest przesuwane względem jego obiektów podrzędnych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)

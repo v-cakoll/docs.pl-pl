@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 3fc325f1b4bb4eca73e051732810c9d9853ff4d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 911ba1474677f26a773ff63e958ba0ceedbefd0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100980"
 ---
 # <a name="technology-regions-overview"></a>Przegląd Regiony technologiczne
 Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lub DirectX, należy udostępnić obszary renderowania w typowych okien najwyższego poziomu. W tym temacie opisano problemy, które mogą mieć wpływ na prezentacji i danych wejściowych dla aplikacji współdziałanie WPF.  
@@ -61,6 +61,7 @@ Wiele technologii prezentacji są używane w aplikacji, takich jak WPF, Win32 lu
 -   Jeśli aplikacja jest uruchomiona [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], warstwie systemu windows, w górnej części [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] powierzchnie zmieniał kolor po [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] renderuje aplikacji.  (Sekwencji rzeczywiste renderowania jest to, że [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] ukrywa okno warstwowej, następnie [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] rysuje, a następnie [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] przywraca okna warstwowej).  Non -[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwowej windows również ma tego ograniczenia.  
   
 ## <a name="see-also"></a>Zobacz także
-- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
-- [Przewodnik: Hosting zegara WPF w Win32](walkthrough-hosting-a-wpf-clock-in-win32.md)
+
+- [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)
+- [Przewodnik: hostowanie zegara WPF w Win32](walkthrough-hosting-a-wpf-clock-in-win32.md)
 - [Hosting zawartości Win32 w WPF](hosting-win32-content-in-wpf.md)

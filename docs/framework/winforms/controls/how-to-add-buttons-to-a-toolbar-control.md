@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie przycisków do formantu ToolBar'
+title: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085990"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Instrukcje: Dodawanie przycisków do formantu ToolBar
+# <a name="how-to-add-buttons-to-a-toolbar-control"></a>Instrukcje: dodawanie przycisków do kontrolki ToolBar
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
@@ -149,8 +149,9 @@ ms.locfileid: "57713260"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Instrukcje: określanie ikony dla przycisku ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar, kontrolka — omówienie](toolbar-control-overview-windows-forms.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)

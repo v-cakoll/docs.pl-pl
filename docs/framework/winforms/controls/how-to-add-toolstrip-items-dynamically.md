@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dynamiczne dodawanie elementów ToolStrip'
+title: 'Instrukcje: dynamiczne dodawanie elementów ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items dynamically
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
-ms.openlocfilehash: 557d1c11c93a4ebedd7098568eeda4be86951647
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d84b62005554479d227778f513e72594322791a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124933"
 ---
-# <a name="how-to-add-toolstrip-items-dynamically"></a>Instrukcje: Dynamiczne dodawanie elementów ToolStrip
+# <a name="how-to-add-toolstrip-items-dynamically"></a>Instrukcje: dynamiczne dodawanie elementów ToolStrip
 Możesz dynamicznie wypełnić kolekcję elementów menu <xref:System.Windows.Forms.ToolStrip> kontrolować, po otwarciu menu.  
   
 ## <a name="example"></a>Przykład  
@@ -37,10 +37,11 @@ Możesz dynamicznie wypełnić kolekcję elementów menu <xref:System.Windows.Fo
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)

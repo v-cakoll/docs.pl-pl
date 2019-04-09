@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6f8a9c62a1be682d3f0259c27f311e2dcbb2f11
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ac550ee7b1d66612557b30d15c275c90cf09b8af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187350"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress — Metoda
 Pobiera adres tego obiektu "ICorDebugValue", który jest w trakcie debugowania.  
@@ -52,4 +52,3 @@ HRESULT GetAddress (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-

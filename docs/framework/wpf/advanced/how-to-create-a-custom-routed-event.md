@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz niestandardowe zdarzenie trasowane'
+title: 'Instrukcje: Tworzenie niestandardowego zdarzenia trasowanego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091476"
 ---
-# <a name="how-to-create-a-custom-routed-event"></a>Instrukcje: Utwórz niestandardowe zdarzenie trasowane
+# <a name="how-to-create-a-custom-routed-event"></a>Instrukcje: Tworzenie niestandardowego zdarzenia trasowanego
 Do zdarzenia niestandardowe do obsługi routingu zdarzeń, należy zarejestrować <xref:System.Windows.RoutedEvent> przy użyciu <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> metody. W tym przykładzie pokazano tworzenie niestandardowe zdarzenie trasowane.  
   
 ## <a name="example"></a>Przykład  
@@ -35,6 +35,7 @@ Do zdarzenia niestandardowe do obsługi routingu zdarzeń, należy zarejestrowa�
  Aby zobaczyć przykład sposobu propagacji pracy zdarzeń, zobacz [obsłużyć zdarzenie kierowane](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
-- [Przegląd danych wejściowych](input-overview.md)
-- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
+
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Przegląd Dane wejściowe](input-overview.md)
+- [Przegląd Autorstwo formantów](../controls/control-authoring-overview.md)

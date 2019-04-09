@@ -6,18 +6,16 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: a1de1ee80d1f88b0c0a7adfb75b96353b6861d97
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122359"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] struktury obsługuje możliwość definiowania niestandardowej klasy lub struktury w dowolnym [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] języka, a następnie dostęp przy użyciu znaczników XAML. Możesz użyć kombinacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]— określone typy i swoje niestandardowe w ramach tego samego pliku znaczników, zwykle przez mapowanie typów niestandardowych do prefiksu przestrzeni nazw XAML. W tym temacie omówiono wymagania które muszą spełniać klasę niestandardową, może być używany jako XAML element.  
-  
- 
-  
+
 <a name="Custom_Classes_in_Applications_vs__in_Assemblies"></a>   
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Klasy niestandardowe w aplikacji lub zespołów  
  Klasy niestandardowe, które są używane w XAML można zdefiniować na dwa różne sposoby: w związanym z kodem lub innego kodu, który tworzy podstawowy [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji lub jako klasy w oddzielnych zestawu, na przykład pliku wykonywalnego lub biblioteki DLL używane jako bibliotekę klas. Każda z tych metod ma określoną zalety i wady.  
@@ -113,8 +111,9 @@ XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptl
  W przypadku niektórych scenariuszy, na przykład jeśli jesteś autorem formantu, możesz również chcieć zapewnić, że wszelkie reprezentację obiektu, który może być utworzone w XAML może również być Zserializowany do równoważne znaczników XAML. Serializacja wymagania nie zostały opisane w tym temacie. Zobacz [kontrolować Przegląd autorstwa](../controls/control-authoring-overview.md) i [drzewo elementów i serializacja](element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
-- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
-- [Przegląd elementów podstawowych](base-elements-overview.md)
-- [Ładowanie XAML i właściwości zależności](xaml-loading-and-dependency-properties.md)
+- [Przegląd Autorstwo formantów](../controls/control-authoring-overview.md)
+- [Przegląd Elementy bazy](base-elements-overview.md)
+- [Właściwości zależności i ładowania XAML](xaml-loading-and-dependency-properties.md)

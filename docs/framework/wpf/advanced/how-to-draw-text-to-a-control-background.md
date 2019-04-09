@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Rysuj tekst w tle formantu'
+title: 'Instrukcje: Rysowanie tekstu w tle kontrolki'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], drawing text to backgrounds
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - backgrounds [WPF], drawing text to
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
-ms.openlocfilehash: 025b13d83aeb668fa3a9f8af35d7213ae677eefc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 76449c88f9a720741c8ed61255e04a40e6a8613f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128456"
 ---
-# <a name="how-to-draw-text-to-a-controls-background"></a>Instrukcje: Rysuj tekst w tle formantu
+# <a name="how-to-draw-text-to-a-controls-background"></a>Instrukcje: Rysowanie tekstu w tle kontrolki
 Można rysować tekst bezpośrednio do tła kontrolki, dokonując przekonwertowania na ciąg tekstowy <xref:System.Windows.Media.FormattedText> obiektu, a następnie narysować obiekt na formant <xref:System.Windows.Media.DrawingContext>. Można również użyć tej techniki dla rysunku do tła obiekty pochodzące z <xref:System.Windows.Controls.Panel>, takich jak <xref:System.Windows.Controls.Canvas> i <xref:System.Windows.Controls.StackPanel>.  
   
  ![Formanty wyświetlania tekstu jako tło](./media/drawtext2background01.png "DrawText2Background01")  
@@ -29,5 +29,6 @@ Przykład formantów z tła niestandardowego tekstu
  [!code-csharp[DrawTextToControlBackground#DrawTextToControlBackground1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawTextToControlBackground/CSHARP/Window1.xaml.cs#drawtexttocontrolbackground1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.FormattedText>
 - [Rysowanie formatowanego tekstu](drawing-formatted-text.md)

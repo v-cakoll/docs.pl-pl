@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: 678e89eaa240cbe3a396c1ee3d6c18e7ceca17ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130679"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Instrukcje: Ustawianie poziomu dekompresji JPEG
 Można zmodyfikować parametry obrazu podczas zapisywania obrazu na dysku, aby zminimalizować rozmiar pliku lub poprawiać jego jakość. Jakość obrazu JPEG można dostosować, modyfikując jego poziom kompresji. Aby określić poziom kompresji przy zapisywaniu obrazu JPEG, należy utworzyć <xref:System.Drawing.Imaging.EncoderParameters> obiektu i przekazać ją do <xref:System.Drawing.Image.Save%2A> metody <xref:System.Drawing.Image> klasy. Inicjowanie <xref:System.Drawing.Imaging.EncoderParameters> obiektu, tak aby zawiera tablicę, która składa się z jednego <xref:System.Drawing.Imaging.EncoderParameter>. Po utworzeniu <xref:System.Drawing.Imaging.EncoderParameter>, określ <xref:System.Drawing.Imaging.Encoder.Quality> encoder i poziom kompresji żądaną.  
@@ -130,6 +130,7 @@ End Function
 -   Plik obrazu, który nosi nazwę `TestPhoto.jpg` i znajduje się w **c:\\**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Określanie parametrów obsługiwanych przez koder](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [Typy map bitowych](types-of-bitmaps.md)
 - [Używanie kodeków obrazu w zarządzanym GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102352"
 ---
 # <a name="graphics"></a>Grafika
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje zintegrowane obsługę multimedia, grafiki wektorowej, animacji i kompozycji zawartości, dzięki czemu deweloperzy mogą tworzyć interesujące interfejsy użytkownika i zawartości.  
@@ -25,10 +25,11 @@ ms.locfileid: "57361164"
  [Obrazy](images.md)  
  [Kształty](shapes.md)  
  [Przekształcenia](transformations.md)  
- [Ustawienia rejestru renderowania grafiki](graphics-rendering-registry-settings.md)  
- [Tematy z instrukcjami](graphics-how-to-topics.md)  
+ [Ustawienie rejestru renderowania grafiki](graphics-rendering-registry-settings.md)  
+ [— Tematy porad](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
@@ -38,4 +39,4 @@ ms.locfileid: "57361164"
 - <xref:System.Windows.Media.Effects.BitmapEffect>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafika i multimedia](index.md)
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)

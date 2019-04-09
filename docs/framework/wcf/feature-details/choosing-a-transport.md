@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107851"
 ---
 # <a name="choosing-a-transport"></a>Wybieranie transportu
 W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, zawartych w Windows Communication Foundation (WCF): HTTP, TCP i nazwane potoki. Zawiera również WCF transportu MSMQ (MSMQ), ale ten dokument nie obejmuje usługi kolejkowania komunikatów.  
@@ -62,6 +62,7 @@ W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, 
 |Narzędzia|Narzędzia reprezentuje pomocy technicznej dla protokołu dla rozwoju, Diagnostyka, hostowania go i inne działania aplikacji innych firm. Tworzenia, narzędzia i oprogramowanie do pracy z protokołem HTTP oznacza, szczególnie dużych inwestycji.|HTTP|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSDualHttpBinding>
@@ -72,5 +73,5 @@ W tym temacie omówiono kryteria wyboru spośród trzech głównych transportu, 
 - <xref:System.ServiceModel.NetNamedPipeBinding>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - [Powiązania](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Tworzenie powiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
+- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Tworzenie wiązań zdefiniowanych przez użytkownika](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)

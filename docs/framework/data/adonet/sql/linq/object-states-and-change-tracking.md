@@ -2,12 +2,12 @@
 title: Stany obiektów i śledzenie zmian
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191158"
 ---
 # <a name="object-states-and-change-tracking"></a>Stany obiektów i śledzenie zmian
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiekty zawsze wziąć udział w niektórych *stanu*. Na przykład, gdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tworzy nowy obiekt, obiekt jest w `Unchanged` stanu. Nowy obiekt, który samodzielnie tworzenia jest nieznany <xref:System.Data.Linq.DataContext> i znajduje się w `Untracked` stanu. Po pomyślnym wykonaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, wszystkie obiekty znane [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] znajdują się w `Unchanged` stanu. (Jednym wyjątek jest reprezentowany przez te, które zostały pomyślnie usunięte z bazy danych, które znajdują się w `Deleted` stanu i nienadające się do użytku w tym <xref:System.Data.Linq.DataContext> wystąpienia.)  
@@ -63,5 +63,6 @@ ms.locfileid: "54683313"
  Jeśli zaktualizujesz zarówno wymagane odwołania, jak i odpowiedniego klucza obcego, upewnij się, że użytkownik wyrazi zgodę. <xref:System.InvalidOperationException> Wyjątek jest generowany, jeśli dwa nie są zsynchronizowane w czasie, który można wywoływać <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. Mimo, że zmiany wartości klucza obcego są wystarczające do wywierania wpływu na aktualizację wiersz podstawowy, należy zmienić odwołania, który zapewnia łączność obiektu spójności wykresu i dwukierunkowe relacje.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Operacje wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

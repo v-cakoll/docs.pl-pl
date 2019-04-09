@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188529"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Instrukcje: Ładowanie zestawów do domeny aplikacji
 Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną metodą jest użycie `static` (`Shared` w języku Visual Basic) <xref:System.Reflection.Assembly.Load%2A> metody <xref:System.Reflection.Assembly?displayProperty=nameWithType> klasy. Inne sposoby, które zestawy można załadować obejmują:  
@@ -47,9 +47,10 @@ Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)
+- [Programowanie za pomocą domen aplikacji](application-domains.md#programming-with-application-domains)
 - [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
+- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)
 - [Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domeny aplikacji i zestawy](application-domains.md#application-domains-and-assemblies)

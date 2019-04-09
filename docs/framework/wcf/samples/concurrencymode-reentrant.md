@@ -2,12 +2,12 @@
 title: Procedura wielobieżna ConcurrencyMode
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
-ms.openlocfilehash: 2daa802d72a08d31a52a09952d31b718e8a51a90
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 15edc89934bb105772144820a07991e77d15be62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199963"
 ---
 # <a name="concurrencymode-reentrant"></a>Procedura wielobieżna ConcurrencyMode
 Niniejszy przykład pokazuje konieczność i zagadnień dotyczących używania pomocą właściwości ConcurrencyMode.Reentrant od implementacji usługi. Pomocą właściwości ConcurrencyMode.Reentrant oznacza, że usługi (lub wywołania zwrotnego) przetwarza tylko jeden komunikat w danym momencie (odpowiednikiem `ConcurencyMode.Single`). Aby zapewnić bezpieczeństwo wątków, Windows Communication Foundation (WCF) blokuje `InstanceContext` przetwarzania komunikatu, tak aby nie inne komunikaty mogą być przetwarzane. W przypadku trybu współużytkowane `InstanceContext` jest odblokowany, po prostu, zanim usługa wykonuje wywołanie wychodzące, co pozwoli na kolejne wywołanie, (które mogą być współużytkowane, jak pokazano w przykładzie) można pobrać blokady następnym razem, jest dostępna w usłudze. Aby zademonstrować zachowanie, przykład pokazuje, jak klienta i usługi mogą wysyłać między sobą za pomocą kontraktu dwukierunkowego.  
@@ -81,4 +81,3 @@ Pong: Ticks = 1
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Reentrant`  
-  

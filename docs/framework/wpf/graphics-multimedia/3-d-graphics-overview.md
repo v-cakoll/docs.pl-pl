@@ -8,17 +8,16 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: 7f9f3d21d14a8eac862186a41bd8771cffb7375c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087992"
 ---
 # <a name="3-d-graphics-overview"></a>Przegląd Grafika 3-D
 <a name="introduction"></a> [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Funkcji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia deweloperom rysowania, przekształcania i animować grafika 3-D w kodzie znaczników i procedur. Deweloperzy mogą łączyć [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] i [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] grafiki, tworzyć zaawansowane kontrolki, ilustrują złożonych danych i poszerz możliwości użytkownika środowisko interfejsu aplikacji. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Obsługa w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie ma na celu zapewnienie platformy programowania gier w pełni funkcjonalne. Ten temat zawiera omówienie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system grafiki.  
- 
-  
+
 <a name="threed_in_2d"></a>   
 ## <a name="3-d-in-a-2-d-container"></a>3-w w kontenerze 2-D  
  [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Grafika zawartości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są hermetyzowane w elemencie <xref:System.Windows.Controls.Viewport3D>, mogą uczestniczyć w strukturze dwuwymiarową elementu. System grafiki traktuje <xref:System.Windows.Controls.Viewport3D> jako dwuwymiarową elementu wizualnego, takich jak wiele innych osób w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. <xref:System.Windows.Controls.Viewport3D> Funkcje jako okno — okienko ekranu — na scenie trójwymiarowej. Dokładniej, jest powierzchni, na którym [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] jest rzutowany sceny.  
@@ -118,7 +117,7 @@ Perspektywy i prostopadły prognozy
   
 -   <xref:System.Windows.Media.Media3D.PointLight>: Świeci, takich jak pobliskich źródła światła. PointLights stanowiska i rzutowania światła z tej pozycji. W zależności od ich pozycji i odległość względem światła podświetlonych obiektów w scenie. <xref:System.Windows.Media.Media3D.PointLightBase> udostępnia <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> właściwość, która określa odległość, po przekroczeniu których modeli będzie nie być podświetlenie światła. PointLight udostępnia również tłumienie właściwości, które określają, jak zmniejsza się intensywność światła odległości. Można określić stałe liniowej i drugiego stopnia interpolations dla tłumienie światła.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: dziedziczy <xref:System.Windows.Media.Media3D.PointLight>. W dniach oświetlenia, takich jak PointLight i położenie i kierunku. One projektu światła w kształcie stożek ustawionego <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> i <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> określonych w stopniach właściwości.  
+-   <xref:System.Windows.Media.Media3D.SpotLight>: Dziedziczy <xref:System.Windows.Media.Media3D.PointLight>. W dniach oświetlenia, takich jak PointLight i położenie i kierunku. One projektu światła w kształcie stożek ustawionego <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> i <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> określonych w stopniach właściwości.  
   
  Światła są <xref:System.Windows.Media.Media3D.Model3D> obiektów, dzięki czemu może przekształcić i animować właściwości światła, w tym pozycji, kolorów, kierunku i zakresu.  
   
@@ -170,12 +169,13 @@ Perspektywy i prostopadły prognozy
  [!code-xaml[hostingwpfusercontrolinwf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWpfUserControlInWf/CSharp/HostingWpfUserControlInWf/ConeControl.xaml#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Viewport3D>
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [Przekształcenia 3D — przegląd](3-d-transformations-overview.md)
-- [Maksymalizowanie wydajności 3D WPF](maximize-wpf-3d-performance.md)
-- [Tematy z instrukcjami](3-d-graphics-how-to-topics.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Przegląd Przekształcenia 3-D](3-d-transformations-overview.md)
+- [Maksymalizuj wydajność 3D WPF](maximize-wpf-3d-performance.md)
+- [— Tematy porad](3-d-graphics-how-to-topics.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)

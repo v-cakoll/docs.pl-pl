@@ -2,12 +2,12 @@
 title: Wnioskowanie kolumn
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
-ms.openlocfilehash: f3edd09b1fb8169e8f609514de38b3c37574079b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53e77f624c5af8f61a32d5b1399d2728f32011a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107214"
 ---
 # <a name="inferring-columns"></a>Wnioskowanie kolumn
 Po ADO.NET stwierdził z dokumentu XML które elementy, które działają jako tabele <xref:System.Data.DataSet>, następnie wnioskuje kolumn dla tych tabel. ADO.NET w wersji 2.0 wprowadzono nowy aparat wnioskowania schematu, który wnioskuje typ silnie typizowanych danych dla każdego **simpleType** elementu. W poprzednich wersjach, typ danych wnioskowanym **simpleType** element był to zawsze ciąg **element xsd: String**.  
@@ -66,6 +66,7 @@ Po ADO.NET stwierdził z dokumentu XML które elementy, które działają jako t
 |TEXT1|Tekst2|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)

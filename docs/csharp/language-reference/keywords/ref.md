@@ -1,19 +1,19 @@
 ---
 title: REF — słowo kluczowe - C# odwołania
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116259"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -24,10 +24,9 @@ ms.locfileid: "54726653"
 - W treści elementu członkowskiego aby wskazać, że zwracana wartość odwołania są przechowywane lokalnie, jako odwołanie do obiektu wywołującego zamierza zmienić lub ogólnie rzecz biorąc, zmienna lokalna uzyskuje dostęp do innej wartości przez odwołanie. Aby uzyskać więcej informacji, zobacz [zmienne lokalne Ref](#ref-locals).
 - W `struct` deklaracji, aby zadeklarować `ref struct` lub `ref readonly struct`. Aby uzyskać więcej informacji, zobacz [typy struktury ref](#ref-struct-types).
 
-
 ## <a name="passing-an-argument-by-reference"></a>Przekazywanie argumentów poprzez odwołanie
 
-Gdy są używane w liście parametrów metody, `ref` słowo kluczowe wskazuje, że argument jest przekazywany przez odwołanie, nie przez wartość. Przekazywanie poprzez odwołanie powoduje, że każda zmiana argumentu w metodzie wywoływanej jest odzwierciedlana w wywoływania metody. Na przykład jeśli obiekt wywołujący przekazuje wyrażenie lokalnej zmiennej lub wyrażenia dostępu do elementu tablicy, a następnie wywoływana metoda zastępuje obiekt, do którego odwołuje się parametr ref, a następnie obiekt wywołujący użytkownika lokalnego zmienna lub element tablicy teraz odwołuje się do nowego obiektu po Metoda zwraca.
+Gdy są używane w liście parametrów metody, `ref` słowo kluczowe wskazuje, że argument jest przekazywany przez odwołanie, nie przez wartość. `ref` — Słowo kluczowe sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy żadnych operacji na parametr składa się od argumentu. Na przykład jeśli obiekt wywołujący przekazuje wyrażenie lokalnej zmiennej lub wyrażenia dostępu do elementu tablicy, a następnie wywoływana metoda zastępuje obiekt, do którego odwołuje się parametr ref, a następnie obiekt wywołujący użytkownika lokalnego zmienna lub element tablicy teraz odwołuje się do nowego obiektu po Metoda zwraca.
 
 > [!NOTE]
 > Nie należy mylić koncepcji przekazywanie poprzez odwołanie z pojęciem typy odwołań. Dwoma pojęciami nie są takie same. Parametr metody mogą być modyfikowane przez `ref` niezależnie od tego, czy jest typem wartości lub typem referencyjnym. Istnieje nie opakowanie typu wartości, gdy jest przekazywany przez odwołanie.  
@@ -71,7 +70,7 @@ Poprzednie przykłady przekazuj typów wartości przez odwołanie. Można równi
 
 Aby uzyskać więcej informacji dotyczących przekazywania typów referencyjnych według wartości i według odwołania, zobacz [przekazywanie parametrów typu odwołanie](../../programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
-## <a name="reference-return-values"></a>Wartości zwracane odwołanie
+## <a name="reference-return-values"></a>Odwoływanie się do zwracanych wartości
 
 Wartości zwracane odwołanie (lub zwracanych ref) są wartościami, które metoda zwraca wartość przez odwołanie do obiektu wywołującego. Oznacza to obiekt wywołujący, można zmodyfikować wartości zwracanej przez metodę, a ta zmiana jest odzwierciedlana w stan obiektu, który zawiera metodę.
 
@@ -160,6 +159,6 @@ Można połączyć modyfikatorów, aby zadeklarować struktury jako `readonly re
 - [operator przypisania REF](../operators/assignment-operator.md#ref-assignment-operator)
 - [Przekazywanie parametrów](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parametry metody](method-parameters.md)
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi'
+title: 'Wskazówki: tworzenie niestandardowego klienta i poświadczeń usługi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 4a69cf01519ea21f61e0c142039e4d2fe9a3c0e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261543"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191695"
 ---
-# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Przewodnik: Tworzenie niestandardowego klienta i poświadczeń usługi
+# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Przewodnik: tworzenie niestandardowego klienta i poświadczeń usługi
 W tym temacie pokazano, jak zaimplementować niestandardowego klienta i poświadczeń usługi i sposobu użycia niestandardowych poświadczeń w kodzie aplikacji.  
   
 ## <a name="credentials-extensibility-classes"></a>Poświadczenia rozszerzania klasy  
@@ -40,9 +40,9 @@ W tym temacie pokazano, jak zaimplementować niestandardowego klienta i poświad
 ## <a name="first-in-a-series"></a>Pierwszy z serii  
  Tworzenie klasy niestandardowych poświadczeń jest tylko pierwszym krokiem, ponieważ Przyczyna Dostosowywanie poświadczeń jest, aby zmienić zachowanie WCF dotyczące inicjowania obsługi poświadczeń, serializacji tokenu zabezpieczeń lub uwierzytelnianie. Inne tematy w tej sekcji opisano, jak utworzyć serializatorów niestandardowych obiektów i wystawców uwierzytelnienia. W tym zakresie tworzenie niestandardowe poświadczenia klasy jest pierwszym temacie w tej serii. Kolejne czynności (Tworzenie serializatorów niestandardowych obiektów i wystawców uwierzytelnienia) jest możliwe tylko po tworzenie niestandardowych poświadczeń. Dodatkowe tematy, które bazują na w tym temacie obejmują:  
   
--   [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
 -   [Instrukcje: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
@@ -179,12 +179,13 @@ W tym temacie pokazano, jak zaimplementować niestandardowego klienta i poświad
  Dodanie obsługi konfiguracji, korzystając z procedury opisanej wcześniej w procedurze "`To create a configuration handler for custom client credentials`"i"`To register and use a custom client credentials configuration handler in the application configuration`." Jedyną różnicą jest użycie <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> klasy zamiast <xref:System.ServiceModel.Configuration.ClientCredentialsElement> klasy jako klasę bazową dla programu obsługi konfiguracji. Element poświadczeń usługa niestandardowa następnie może być używane wszędzie tam, gdzie dostarczane przez system `<serviceCredentials>` element jest używany.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Security.SecurityCredentialsManager>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [Instrukcje: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [Instrukcje: Tworzenie wystawcy uwierzytelniania tokenu zabezpieczeń niestandardowych](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Instrukcje: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Instrukcje: tworzenie niestandardowego wystawcy uwierzytelniania tokenu zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Instrukcje: tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

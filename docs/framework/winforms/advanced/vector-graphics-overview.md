@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720413"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087966"
 ---
 # <a name="vector-graphics-overview"></a>Przegląd grafiki wektorowej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysuje linie, prostokąty i inne kształty w układzie współrzędnych. Można wybrać spośród różnych systemów współrzędnych, ale w układzie współrzędnych domyślna ma pochodzenia w lewym górnym rogu z osi x, wskazując i prawej osi y skierowany w dół. Jednostka miary w układzie współrzędnych domyślny jest piksela.  
@@ -57,6 +57,7 @@ ms.locfileid: "57720413"
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)

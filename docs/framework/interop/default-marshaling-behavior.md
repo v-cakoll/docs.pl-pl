@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 3c15e24fbe2a131435fe71782c8a55f416f71d62
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129327"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojarzone z parametrami metody zachowuje się jak przekazuje między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolować takie kierowania działań jako przekształcenia typu danych, / / wywoływany można zmienić danych przekazanych do niego i zwracają te zmiany do obiektu wywołującego, a w ramach której okolicznościach Organizator udostępnia optymalizację wydajności.  
@@ -378,9 +378,9 @@ interface _Graphics {
   
 |Typ wartości systemu|Typ pliku IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATA**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**Identyfikator GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Poniższy kod przedstawia definicję typy niezarządzanwe **data**, **GUID**, **dziesiętna**, i **OLE_COLOR** w typie Stdole2 Biblioteka.  
@@ -440,8 +440,9 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)
 - [Kopiowanie i przypinanie](copying-and-pinning.md)
-- [Domyślny marshaling dla tablic](default-marshaling-for-arrays.md)
+- [Organizowanie domyślne dotyczące tablic](default-marshaling-for-arrays.md)
 - [Domyślny marshaling dla obiektów](default-marshaling-for-objects.md)
-- [Domyślny marshaling dla ciągów](default-marshaling-for-strings.md)
+- [Organizowanie domyślne dotyczące ciągów](default-marshaling-for-strings.md)

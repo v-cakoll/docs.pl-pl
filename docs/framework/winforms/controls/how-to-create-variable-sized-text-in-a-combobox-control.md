@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox'
+title: 'Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085613"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox
 W tym przykładzie przedstawiono rysowanie niestandardowego tekstu w <xref:System.Windows.Forms.ComboBox> kontroli. Jeśli element spełnia określone kryteria, jest rysowane w większej czcionki i włączone czerwony.  
   
 ## <a name="example"></a>Przykład  
@@ -68,9 +68,10 @@ End Sub
 -   Odwołuje się do <xref:System.Windows.Forms?displayProperty=nameWithType> i <xref:System.Drawing?displayProperty=nameWithType> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [Kontrolki z wbudowaną obsługą rysowania przez właściciela](controls-with-built-in-owner-drawing-support.md)
+- [Formanty z wbudowaną obsługą rysowania przez właściciela](controls-with-built-in-owner-drawing-support.md)
 - [ListBox, kontrolka](listbox-control-windows-forms.md)
 - [ComboBox, kontrolka](combobox-control-windows-forms.md)

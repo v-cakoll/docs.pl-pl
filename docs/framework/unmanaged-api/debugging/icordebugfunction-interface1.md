@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunction — Interfejs
+title: ICorDebugFunction, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunction
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c2a4dc823768b722e9069c411be787a66989b2a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ca21911f3d16b79887b9d6d8185f8fab17651321
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093218"
 ---
-# <a name="icordebugfunction-interface"></a>ICorDebugFunction — Interfejs
+# <a name="icordebugfunction-interface"></a>ICorDebugFunction, interfejs
 
 Reprezentuje zarządzaną funkcję lub metodę.  
   
@@ -62,4 +62,5 @@ Reprezentuje zarządzaną funkcję lub metodę.
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

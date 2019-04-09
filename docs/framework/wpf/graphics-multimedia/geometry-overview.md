@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180001"
 ---
 # <a name="geometry-overview"></a>Przegląd Geometria
 W tym omówieniu opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> klas do opisania kształtów. W tym temacie uwidocznia także różnice między <xref:System.Windows.Media.Geometry> obiektów i <xref:System.Windows.Shapes.Shape> elementów.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>Co to jest geometrii?  
  <xref:System.Windows.Media.Geometry> Klasy i klas, które dziedziczyć po nim, takie jak <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, i <xref:System.Windows.Media.CombinedGeometry>, umożliwiają opisują geometrii kształtu 2-D. Opisy te geometrycznych mają wiele zastosowań, takich definiowanie kształtu, aby rysować na ekranie lub Definiowanie testowania trafienia i klipu regionów. Geometria umożliwia nawet Definiowanie ścieżką animacji.  
@@ -217,13 +216,14 @@ PathGeometry z wieloma wynikami
  Zobacz <xref:System.Windows.Media.Geometry> klasy, aby uzyskać pełną listę jego metod.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Składnia znacznikowania ścieżki](path-markup-syntax.md)
-- [Tematy z instrukcjami](geometries-how-to-topics.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Składni znacznikowania ścieżki](path-markup-syntax.md)
+- [— Tematy porad](geometries-how-to-topics.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)

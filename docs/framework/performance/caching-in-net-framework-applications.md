@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 39fd5e7bb6e12178df0f75c6dadb575dac82c228
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085783"
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.  
@@ -76,7 +76,8 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
  Aby uzyskać więcej informacji, zobacz wpis [Extensible buforowania danych wyjściowych platformy ASP.NET 4 (VS 2010 i .NET 4.0 seria)](https://go.microsoft.com/fwlink/?LinkId=185772) w blogu Scotta Guthrie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [Przewodnik: Buforowanie danych aplikacji na platformie ASP.NET](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

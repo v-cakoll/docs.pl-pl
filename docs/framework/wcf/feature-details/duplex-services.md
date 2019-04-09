@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110087"
 ---
 # <a name="duplex-services"></a>Usługi dwukierunkowe
 Kontrakt usługi dwustronnej jest wymiany komunikatów, w którym obu punktów końcowych może wysyłać komunikaty do innych niezależnie. Usługi duplex, dlatego wiadomości można wysyłać do punktu końcowego klienta, zapewniając zachowanie podobne zdarzenia. Komunikację dupleksową występuje, gdy klient łączy się z usługą i udostępnia usługi za pomocą kanału, na którym usługa może wysłać wiadomości zwrotnie do klienta. Należy pamiętać, że zachowanie podobne zdarzenia usługi dwukierunkowe działa tylko w ramach sesji.  
@@ -40,9 +40,7 @@ Kontrakt usługi dwustronnej jest wymiany komunikatów, w którym obu punktów k
  Konfiguracji usługi należy skonfigurować umożliwia powiązanie, które obsługuje zarówno sesji komunikacji, jak i komunikację dupleksową. `wsDualHttpBinding` Element obsługuje komunikację sesji i umożliwia komunikację dupleksową, zapewniając dwa połączenia HTTP, jedno dla każdego kierunku.  
   
  Na komputerze klienckim należy skonfigurować adres serwera służy do połączenia z klientem, jak pokazano w poniższym Przykładowa konfiguracja.  
-  
-  
-  
+
 > [!NOTE]
 >  Throw klientów non-duplex, którzy nie próbę uwierzytelnienia przy użyciu bezpiecznej konwersacji zazwyczaj <xref:System.ServiceModel.Security.MessageSecurityException>. Jednak jeśli dwukierunkowego klienta, który używa bezpiecznej konwersacji uwierzytelnianie zakończy się niepowodzeniem, klient odbierze <xref:System.TimeoutException> zamiast tego.  
   
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  Automatycznie dwukierunkowego modelu nie wykrywa usługi lub klienta powoduje zamknięcie kanału. Dlatego jeśli klient zakończy się nieoczekiwanie, domyślnie Usługa nie będzie powiadamiany lub jeśli klient zakończy się nieoczekiwanie, usługa nie będzie powiadamiany. Klienci i usługi mogą implementować własne protokół do siebie powiadomienie, jeśli dokonają takiego wyboru.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)
 - [Określanie zachowania klienta w czasie wykonywania](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

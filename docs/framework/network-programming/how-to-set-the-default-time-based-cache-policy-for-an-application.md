@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji'
+title: 'Instrukcje: określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 - default time-based cache policy
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
-ms.openlocfilehash: d40b0ffbe514429ed24eaa5d0c2ce2d52c80d37d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a50cfd60bb44dc4b4af3ffe8d2fc73f41e645c07
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098607"
 ---
-# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Instrukcje: Określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji
+# <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Instrukcje: określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji
 Domyślne zasady pamięci podręcznej na podstawie czasu umożliwia aplikacji jej zachowanie pamięci podręcznej, zdefiniowany przez nagłówki wysyłane z pamięci podręcznej zasobów i zachowanie pamięci podręcznej, zdefiniowane w sekcji 13 i 14 dokumencie RFC 2616, dostępne pod adresem [(Internet Engineering Task Force IETF)](https://www.ietf.org/) witryny sieci Web. Jest to zachowanie pamięci podręcznej odpowiedniej dla większości aplikacji.  
   
 ### <a name="to-set-the-default-automatic-policy-for-an-application"></a>Aby ustawić domyślną zasadę automatycznego dla aplikacji  
@@ -63,6 +63,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)

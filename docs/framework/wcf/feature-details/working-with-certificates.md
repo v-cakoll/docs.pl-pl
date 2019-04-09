@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115703"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -74,9 +74,9 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
   
  Można również ustawić właściwości, za pomocą konfiguracji. Następujące elementy są używane do określania tryb weryfikacji:  
   
--   [\<Uwierzytelnianie >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
 -   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
@@ -171,6 +171,7 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
  W pierwszej wersji programu WCF mapowanie odbywa się bez konsultacji zasady domeny. W związku z tym jest możliwe, że starsze aplikacje, które dawniej pracowałam podczas uruchamiania w pierwszej wersji zakończy się niepowodzeniem, jeśli mapowanie jest włączona, a certyfikat X.509 nie spełnia warunków zasady domeny.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186670"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip — Architektura formantu
 <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.ToolStripItem> klasy zapewniają elastyczny i rozszerzalny system do wyświetlania elementów paska narzędzi, stanu i menu. Te klasy są zawarte w <xref:System.Windows.Forms> przestrzeni nazw i ich wszystkie nazwy z prefiksem "ToolStrip" (takie jak <xref:System.Windows.Forms.ToolStripOverflow>) lub z sufiksem "Usuń" (takie jak <xref:System.Windows.Forms.MenuStrip>).  
@@ -263,7 +263,7 @@ ms.locfileid: "58654773"
   
 |Zamkniętego elementu|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|Tak|Nie|Nie|Nie|Yes|  
+|<xref:System.Windows.Forms.ToolStripButton>|Yes|Nie|Nie|Nie|Yes|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|Yes|Yes|Yes|Nie|Yes|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Yes|Nie|Nie|Yes|Yes|  
 |<xref:System.Windows.Forms.ToolStripLabel>|Yes|Nie|Nie|Yes|Yes|  
@@ -316,7 +316,7 @@ ms.locfileid: "58654773"
  <xref:System.Windows.Forms.ToolStripMenuItem> jest <xref:System.Windows.Forms.ToolStripDropDownItem> działające z <xref:System.Windows.Forms.ToolStripDropDownMenu> i <xref:System.Windows.Forms.ContextMenuStrip> do obsługi specjalnych rozmieszczenie wyróżniania, układ i kolumny menu.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> wygląda jak <xref:System.Windows.Forms.ToolStripButton>, ale pokazuje obszaru listy rozwijanej, po kliknięciu przez użytkownika. Ukrywanie lub pokazywanie strzałkę listy rozwijanej, ustawiając <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> właściwości. <xref:System.Windows.Forms.ToolStripDropDownButton> hosty <xref:System.Windows.Forms.ToolStripOverflowButton> wyświetlającą elementy, które overflow <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> wygląda jak <xref:System.Windows.Forms.ToolStripButton>, ale pokazuje obszaru listy rozwijanej, po kliknięciu przez użytkownika. Ukrywanie lub pokazywanie strzałkę listy rozwijanej, ustawiając <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> właściwości. <xref:System.Windows.Forms.ToolStripDropDownButton> Hosty <xref:System.Windows.Forms.ToolStripOverflowButton> wyświetlającą elementy, które overflow <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> przycisk łączy i funkcjonalność przycisk listy rozwijanej.  
@@ -377,10 +377,11 @@ ms.locfileid: "58654773"
 -   <xref:System.Windows.Forms.ToolStripPanel> udostępnia miejsce do przenoszenia i rozmieszczanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Jeśli tak, można użyć tylko jeden panelu i <xref:System.Windows.Forms.ToolStripPanel> działa dobrze w scenariuszach MDI.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md)
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [Podsumowanie informacji o technologii formantów ToolStrip](toolstrip-technology-summary.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
 - [MenuStrip, kontrolka](menustrip-control-windows-forms.md)
-- [StatusStrip, kontrolka](statusstrip-control.md)
-- [ContextMenuStrip, kontrolka](contextmenustrip-control.md)
-- [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)
+- [StatusStrip — Formant](statusstrip-control.md)
+- [ContextMenuStrip — Formant](contextmenustrip-control.md)
+- [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md)

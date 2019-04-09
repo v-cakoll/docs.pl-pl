@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kontroluj wypełnienie kształtu złożonego'
+title: 'Instrukcje: Kontrolowanie wypełnienia kształtu złożonego'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084053"
 ---
-# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Instrukcje: Kontroluj wypełnienie kształtu złożonego
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a>Instrukcje: Kontrolowanie wypełnienia kształtu złożonego
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Właściwość <xref:System.Windows.Media.GeometryGroup> lub <xref:System.Windows.Media.PathGeometry>, określa "reguła", który używa kształtu złożonego, aby określić, czy dany punkt znajduje się część geometrii. Istnieją dwa możliwe wartości <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> i <xref:System.Windows.Media.FillRule.Nonzero>. Poniższych sekcjach opisano sposób używania tych dwóch reguł.  
   
  **Wartości EvenOdd:** Ta zasada ustala, czy punkt znajduje się w regionie wypełnienia rysunek promień od tego momentu do nieskończoności w dowolnym kierunku i zliczenie liczby segmentów ścieżki w ramach danego kształtu przecina ten promień. Jeśli ta liczba jest nieparzysta, punkt znajduje się wewnątrz; Jeśli nawet punkt znajduje się poza.  
@@ -62,5 +62,6 @@ ms.locfileid: "57357290"
 ## <a name="example"></a>Przykład  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md)
-- [Geometria — przegląd](geometry-overview.md)
+- [Przegląd Geometria](geometry-overview.md)

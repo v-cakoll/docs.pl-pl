@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095493"
 ---
 # <a name="data-binding-and-windows-forms"></a>Wiązanie danych i formularze systemu Windows
 W formularzach Windows Forms można powiązać źródła danych nie jest po prostu tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Możesz powiązać tablicę wartości, które obliczania w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  
@@ -54,7 +54,8 @@ W formularzach Windows Forms można powiązać źródła danych nie jest po pros
 |Tabela odnośników|Inny typowy scenariusz prezentacji/manipulowanie danych jest tabela odnośników. Często większych wyświetlania danych, w ramach <xref:System.Windows.Forms.ComboBox> formant jest używany do wyświetlania i manipulowania danymi. Klucz jest, że dane wyświetlane w <xref:System.Windows.Forms.ComboBox> kontroli różni się od danych zapisanych w bazie danych. Na przykład, jeśli masz <xref:System.Windows.Forms.ComboBox> kontroli wyświetlanie elementów dostępnych w sklepie połówce, prawdopodobnie chcesz zobaczyć nazwy produktów (chleb, mleka potrawach). Jednak do jej obsługi ułatwiają realizację pobierania informacji w bazie danych i normalizacji bazy danych, będzie prawdopodobnie przechowujesz dane dla określonych elementów w podanej kolejności jako elementu liczby (#501, #603 i tak dalej). W związku z tym, ma niejawne połączenia między "Przyjazna nazwa" w elemencie połówce <xref:System.Windows.Forms.ComboBox> kontrolkę w formularzu i liczbę elementów pokrewnych, który znajduje się w kolejności. Jest to kwintesencja działania wyszukiwania tabeli. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy Windows](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Binding>
-- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
-- [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [BindingSource, składnik](./controls/bindingsource-component.md)
+- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
+- [Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [BindingSource — Składnik](./controls/bindingsource-component.md)

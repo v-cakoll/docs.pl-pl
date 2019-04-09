@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Zachowaj format obrazu użytego jako tło'
+title: 'Instrukcje: Zachowywanie formatu obrazu użytego jako tło'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083248"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Instrukcje: Zachowaj format obrazu użytego jako tło
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Instrukcje: Zachowywanie formatu obrazu użytego jako tło
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TileBrush.Stretch%2A> właściwość <xref:System.Windows.Media.ImageBrush> Aby zachować współczynnik proporcji obrazu.  
   
  Domyślnie, gdy używasz <xref:System.Windows.Media.ImageBrush> można malować obszar, jego zawartość zostanie rozciągnięty w celu całkowitego wypełnienia obszaru wyjściowego. Jeśli obszar danych wyjściowych i obraz, który ma różnych współczynnikach proporcji, obraz, który jest zniekształcony to rozciągając.  
@@ -40,5 +40,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TileBrush.S
  Ten przykład kodu jest częścią większego przykładu, który jest udostępniany dla <xref:System.Windows.Media.ImageBrush> klasy. Aby uzyskać pełny przykład, zobacz [przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.TileBrush>
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)

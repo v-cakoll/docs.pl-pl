@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c29cbfbd1c84d267e129bf97d4e9126c772d06d6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094492"
 ---
 # <a name="property-element-net-native"></a>\<Właściwość > (architektura .NET Native)
 Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.  
@@ -54,7 +54,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -100,6 +100,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

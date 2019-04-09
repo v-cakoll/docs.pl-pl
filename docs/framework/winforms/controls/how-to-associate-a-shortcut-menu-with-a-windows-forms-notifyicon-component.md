@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kojarzenie Menu skrótów za pomocą składnika NotifyIcon formularzy Windows'
+title: 'Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097993"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Instrukcje: Kojarzenie Menu skrótów za pomocą składnika NotifyIcon formularzy Windows
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows
 > [!NOTE]
 >  Mimo że <xref:System.Windows.Forms.MenuStrip> i <xref:System.Windows.Forms.ContextMenuStrip> Zastąp i dodawania funkcjonalności do <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> kontrolki z poprzednich wersji <xref:System.Windows.Forms.MainMenu> i <xref:System.Windows.Forms.ContextMenu> zostaną zachowane dla zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
@@ -127,8 +127,9 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Instrukcje: Dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon, składnik](notifyicon-component-windows-forms.md)
 - [NotifyIcon, składnik — omówienie](notifyicon-component-overview-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET'
+title: 'Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086757"
 ---
-# <a name="com-interop-sample-com-client-and-net-server"></a>Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET
+# <a name="com-interop-sample-com-client-and-net-server"></a>Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET
 W tym przykładzie przedstawiono współdziałanie z [klient modelu COM](#cpconcominteropsamplecomclientnetserveranchor1) i [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) wykonująca hipoteczny obliczeń. W tym przykładzie tworzy klienta, a wywołuje wystąpienie zarządzane `Loan` klasy, przekazuje cztery argumenty (jedna z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Przykłady kodu, w tym przykładzie są wyświetlane w tej sekcji.  
   
 <a name="cpconcominteropsamplecomclientnetserveranchor1"></a>   
@@ -390,4 +390,5 @@ namespace LoanLib {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

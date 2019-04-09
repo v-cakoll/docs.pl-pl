@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098965"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 <a name="introduction"></a> A <xref:System.Windows.Controls.ControlTemplate> określa struktury wizualnej i zachowanie visual kontrolki. Można dostosować wygląd kontrolki, zapewniając it nowej <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wyglądu istniejącej kontrolki bez zmiany jego działanie. Na przykład, można zwiększyć przycisków w aplikacji round zamiast domyślnego prostokątnego kształtu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
@@ -31,8 +31,7 @@ Przycisk, który używa szablonu kontrolki niestandardowej
   
  ![Przycisk z ciemnoczerwonym obramowaniem. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Przycisk, który używa szablonu kontrolki niestandardowej, a ma wskaźnik myszy nad nią  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że rozumiesz, jak utworzyć i korzystać z formantów i stylów, zgodnie z opisem w [formantów](index.md). Kwestie omówione w tym temacie dotyczą elementów, które dziedziczą z <xref:System.Windows.Controls.Control> klasy, z wyjątkiem <xref:System.Windows.Controls.UserControl>. Nie można zastosować <xref:System.Windows.Controls.ControlTemplate> do <xref:System.Windows.Controls.UserControl>.  
@@ -257,9 +256,10 @@ Przycisk, który używa szablonu kontrolki niestandardowej w stanie po naciśni�
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Kompletny przykład  
- W poniższym przykładzie pokazano pełne <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , opisanej w tym temacie.  
+ W poniższym przykładzie pokazano pełne <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> , opisanej w tym temacie.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie szablonów i stylów](styling-and-templating.md)

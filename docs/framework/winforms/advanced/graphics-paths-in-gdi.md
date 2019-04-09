@@ -10,12 +10,12 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140507"
 ---
 # <a name="graphics-paths-in-gdi"></a>Ścieżki grafiki w GDI+
 Ścieżki są tworzone przez łączenie linii, prostokąty i krzywych proste. Jak pamiętamy z artykułu [Przegląd grafiki wektorowej](vector-graphics-overview.md) czy następujących podstawowych bloków konstrukcyjnych okazały się być najbardziej przydatne do rysowania obrazów:  
@@ -67,6 +67,7 @@ ms.locfileid: "57720426"
  ![Ścieżki](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)

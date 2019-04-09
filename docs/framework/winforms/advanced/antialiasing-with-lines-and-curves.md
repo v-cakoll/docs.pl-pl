@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: 6ea49c591b43d3f70bfd39058fd5ee256c537ec2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078501"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Stosowanie antyaliasingu do linii i krzywych
 Kiedy używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Aby narysować linię, podaj punkt początkowy i końcowy punkt wiersza, ale nie należy podać wszystkie informacje dotyczące poszczególnych pikseli w wierszu. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] działa w połączeniu z oprogramowanie sterownik ekranu w celu ustalenia, które piksele zostanie włączona, aby wyświetlić wiersz na urządzeniu określonego.  
@@ -45,6 +45,7 @@ Kiedy używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md
  [!code-vb[LinesCurvesAndShapes#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)
 - [Instrukcje: Stosowanie antyaliasingu do tekstu](how-to-use-antialiasing-with-text.md)

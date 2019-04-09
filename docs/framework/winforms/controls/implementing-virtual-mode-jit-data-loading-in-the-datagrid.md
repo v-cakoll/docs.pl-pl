@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088655"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows
 Jednym z powodów Implementowanie trybu wirtualnego w <xref:System.Windows.Forms.DataGridView> formant jest pobrać dane tylko wtedy, gdy jest to konieczne. Jest to nazywane *ładowania danych just-in-time*.  
@@ -71,10 +71,11 @@ Jednym z powodów Implementowanie trybu wirtualnego w <xref:System.Windows.Forms
  Aby poprawić wydajność aplikacji, można zwiększyć ilość danych przechowywanych lokalnie. Jednak aby poprawić czas uruchamiania, należy unikać, początkowo ładowania zbyt dużej ilości danych. Możesz chcieć zmodyfikować `Cache` klasy, aby zwiększyć liczbę stron danych, które mogą być przechowywane. Za pomocą więcej stron danych może zwiększyć wydajność przewijania, ale musisz określić idealne liczba wierszy na stronie danych w zależności od dostępnej przepustowości i opóźnień serwera. Za pomocą mniejszej stron serwera uzyskuje się częściej, ale trwa krócej, aby zwrócić żądanych danych. Jeśli opóźnienie jest więcej niż przepustowość problemu, można używać większej stron danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Tryb wirtualny w kontrolce DataGridView formularzy Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Instrukcje: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Tryb wirtualny w formancie DataGridView formularzy systemu Windows](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows](implementing-virtual-mode-wf-datagridview-control.md)
+- [Instrukcje: implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy systemu Windows](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

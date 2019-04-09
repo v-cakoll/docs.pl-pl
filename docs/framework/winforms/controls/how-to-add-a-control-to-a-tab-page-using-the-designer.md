@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Dodawanie kontrolki do karty przy użyciu narzędzia Projektant'
+title: 'Instrukcje: dodawanie kontrolki do strony karty przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TabPage control
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 21db54ac178ef6e10a03c2917886ffa7e5d84a41
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132715"
 ---
-# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Instrukcje: Dodawanie kontrolki do karty przy użyciu narzędzia Projektant
+# <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Instrukcje: dodawanie kontrolki do strony karty przy użyciu narzędzia Projektant
 Użyj formularzy Windows Forms <xref:System.Windows.Forms.TabControl> jest wyświetlenie innych kontrolek w sposób zorganizowany. Te instrukcje służy do wyświetlania obrazu w głównej części strony karty. Aby dowiedzieć się, jak dodawanie ikony etykieta części karty, zobacz [jak: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
   
  Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.TabControl> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -28,8 +28,9 @@ Użyj formularzy Windows Forms <xref:System.Windows.Forms.TabControl> jest wyśw
 2.  Narysuj kontrolkę w strony karty.  
   
 ## <a name="see-also"></a>Zobacz także
-- [TabControl, kontrolka](tabcontrol-control-windows-forms.md)
+
+- [TabControl — Formant](tabcontrol-control-windows-forms.md)
 - [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)
-- [Instrukcje: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Instrukcje: Wyłączanie kart](how-to-disable-tab-pages.md)
-- [Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Instrukcje: wyłączanie kart](how-to-disable-tab-pages.md)
+- [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy systemu Windows](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182471"
 ---
 # <a name="path-animations-overview"></a>Przegląd Animacja ścieżki
 <a name="introduction"></a> W tym temacie przedstawiono animacje ścieżki, które pozwalają na potrzeby generowania danych wyjściowych wartości ścieżki geometrycznej. Animacje ścieżki są przydatne w przypadku przenoszenia i obracanie obiekty wzdłuż ścieżek złożonych.  
@@ -90,8 +90,9 @@ ms.locfileid: "57367859"
  Aby uzyskać więcej informacji na temat składni ścieżki, który jest używany w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przykład zobacz [składni znacznikowania ścieżki](path-markup-syntax.md) Przegląd.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Składnia znacznikowania ścieżki](path-markup-syntax.md)
-- [Animacja ścieżki — tematy z instrukcjami](path-animation-how-to-topics.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)
+- [Składni znacznikowania ścieżki](path-markup-syntax.md)
+- [Animacja ścieżki Tematy Pomocy](path-animation-how-to-topics.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)

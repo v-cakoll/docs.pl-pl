@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikacji .NET C
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8255a901c706e55e143cdf23dda0eb9bc79d245d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 518a2228bb23569689d56577f83b066a5d518be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58844952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186930"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie .NET Core aplikacji
 
@@ -25,8 +25,6 @@ W tym samouczku dowiesz się jak:
 > * Wdrażanie na platformie Azure
 
 W tym samouczku pokazano Docker kontenera, twórz i wdrażaj zadania dla aplikacji .NET Core. [Platforma Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) używa [aparat platformy Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) umożliwiają szybkie tworzenie i pakowanie aplikacji jako [obrazów platformy Docker](https://docs.docker.com/glossary/?term=image). Te obrazy są zapisywane [pliku Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) format zostaną wdrożone i uruchomione [warstwie kontenerów](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
-
-
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: Najprostszym sposobem na rozpoczęcie pracy
 
@@ -283,7 +281,7 @@ Następujące obrazy platformy Docker są używane w tym przykładzie
 * [Przykłady Docker w programie .NET core](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Plik Dockerfile kontenerów Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Przykłady Docker w programie .NET framework](https://github.com/Microsoft/dotnet-framework-docker-samples)
-* [ASP.NET Core on DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/)
+* [Platforma ASP.NET Core w witrynie DockerHub](https://hub.docker.com/r/microsoft/aspnetcore/)
 * [Przekształcać aplikacji .NET Core — samouczek platformy Docker](https://docs.docker.com/engine/examples/dotnetcore/)
 * [Praca z narzędzia Docker programu Visual Studio](https://docs.microsoft.com/aspnet/core/publishing/visual-studio-tools-for-docker)
 * [Wdrażanie obrazów platformy Docker z rejestru kontenerów platformy Azure w usłudze Azure Container Instances](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)

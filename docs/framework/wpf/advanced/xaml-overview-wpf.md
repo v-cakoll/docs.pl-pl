@@ -19,18 +19,16 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102833"
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
 W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML można zapisać [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie opisano szczegółowo XAML jako implementowany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML, sama jest pojęciem języka większych niż [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
-  
-  
+
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>Co to jest XAML?  
  XAML jest deklaratywnym językiem znaczników. Jakie mają zastosowanie do modelu programowania .NET Framework, XAML upraszcza tworzenie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dla aplikacji .NET Framework. Można tworzyć widoczne [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów w oznaczeniu deklaracyjnym XAML, a następnie oddzielne [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] definicji od logiki czasu wykonywania przy użyciu plików z kodem, przyłączone do znaczników za pomocą częściowych definicji klasy. XAML reprezentuje bezpośrednio utworzyć wystąpienia obiektów w określonych typów zdefiniowanych w zestawach kopii. Jest to w przeciwieństwie do większości innych znaczników języków, które są zazwyczaj interpretowanych języka, bez bezpośredniego tie systemu typów zapasowy. XAML włącza przepływ pracy, w którym osobnych stron może pracować nad [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i logikę aplikacji, za pomocą różnych narzędzi.  
@@ -328,9 +326,10 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
  [Przegląd właściwości zależności](dependency-properties-overview.md) daje więcej informacji na temat wszechstronności odpowiedniej właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i pojęcia związane z właściwości zależności.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)
 - [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)
-- [Namespace XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Przestrzeń nazw XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
-- [Przegląd elementów podstawowych](base-elements-overview.md)
+- [Przegląd Elementy bazy](base-elements-overview.md)
 - [Drzewa w WPF](trees-in-wpf.md)

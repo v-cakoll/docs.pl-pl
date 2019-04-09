@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF, using transactions
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
-ms.openlocfilehash: 51dffe626aa873e4dc737d21946b61ea00eb5202
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074121"
 ---
 # <a name="transactions-in-wcf"></a>Transakcje w programie WCF
 Funkcja transakcji Windows Communication Foundation (WCF) umożliwia kilka składników, jednocześnie uczestniczyć w operacji danych. Tematy w tej sekcji Sprawdź funkcji szczegółowo.  
@@ -34,4 +34,5 @@ Funkcja transakcji Windows Communication Foundation (WCF) umożliwia kilka skła
  [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie sesji niezawodnych](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

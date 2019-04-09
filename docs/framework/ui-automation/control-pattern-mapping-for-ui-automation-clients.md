@@ -1,16 +1,16 @@
 ---
-title: Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika
+title: Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika
 ms.date: 03/30/2017
 helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679583"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101136"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -77,4 +77,5 @@ ms.locfileid: "57679583"
 >  Jeśli typ kontrolki ma nie wzorce obsługiwanych kontrolki, na liście, ale ma jeden lub kilka wzorców kontrolki warunkowo obsługiwane, a następnie będą jedną z tych wzorców kontrolek warunkowego obsługiwane na wszystkich razy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

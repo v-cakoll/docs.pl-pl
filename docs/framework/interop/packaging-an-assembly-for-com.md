@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097268"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Pakowanie zestawu dla modelu COM
 COM, deweloperzy mogą korzystać z następujące informacje na temat typów zarządzanych, ich planowanie, które należy uwzględnić w swoich aplikacji:  
@@ -81,12 +81,13 @@ COM, deweloperzy mogą korzystać z następujące informacje na temat typów zar
  [Narzędzie instalacji usług .NET (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) dodaje klas zarządzanych do usługi składników systemu Windows 2000 i łączy kilka zadań w ramach jednego narzędzia. Oprócz ładowania i zarejestrowaniu zestawu, Regsvcs.exe wygenerować, rejestrowanie i zainstalować biblioteki typów do istniejącej aplikacji COM + 1.0.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
 - [Kwalifikowanie typów .NET do międzyoperacyjności](qualifying-net-types-for-interoperation.md)
 - [Wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface)
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../app-domains/assembly-security-considerations.md)
-- [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbexp.exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
 - [Instrukcje: Osadzanie bibliotek typu jako zasobów Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

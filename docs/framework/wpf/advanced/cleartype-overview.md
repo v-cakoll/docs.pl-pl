@@ -5,17 +5,16 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085197"
 ---
 # <a name="cleartype-overview"></a>ClearType — Przegląd
 Ten temat zawiera omówienie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] technologii znaleziony w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowanie opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] który poprawia czytelność tekstu na istniejące LCD (należy zmienić.), takie jak ekranów komputerów przenośnych, ekrany Pocket PC i monitory płaskie.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] działa, uzyskując dostęp do poszczególnych kolor pionowych elementy usługi stripe w każdy piksel ekran LCD. Przed [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], najmniejszy poziom szczegółowości, który można wyświetlić komputera został piksela, ale z [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] uruchamiania monitora LCD, można jest teraz wyświetlany funkcji tekst tak małej, jako ułamek pikseli szerokości. Dodatkowe rozwiązanie zwiększa ostrość niewielki Szczegóły sposobu wyświetlania tekstu, znacznie ułatwiając przeczytaniu długim czasie trwania.  
@@ -67,4 +66,5 @@ Tekst z antialiasingu kierunku y ClearType
  [PowerToy ClearType Tuner](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Ustawienia rejestru ClearType](cleartype-registry-settings.md)

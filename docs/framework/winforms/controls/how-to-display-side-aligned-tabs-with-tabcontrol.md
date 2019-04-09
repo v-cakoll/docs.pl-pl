@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie wyrównanych poziomo kart przy użyciu formantu TabControl'
+title: 'Instrukcje: wyświetlanie wyrównanych poziomo kart przy użyciu kontrolki TabControl'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: 8715cb1a1f0d5795afc4003afcecdb3fb89912c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ce0c7d48f053094d0026348fea8221ea80ccca59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142899"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Instrukcje: Wyświetlanie wyrównanych poziomo kart przy użyciu formantu TabControl
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Instrukcje: wyświetlanie wyrównanych poziomo kart przy użyciu kontrolki TabControl
 <xref:System.Windows.Forms.TabControl.Alignment%2A> Właściwość <xref:System.Windows.Forms.TabControl> obsługuje wyświetlanie kart w pionie (wzdłuż lewej lub prawej krawędzi formantu), w przeciwieństwie do poziomo (wzdłuż górnej i dolnej części kontrolki). Domyślnie ta pionowe wyświetlanie elementu powoduje niską komfortu ponieważ <xref:System.Windows.Forms.TabPage.Text%2A> właściwość <xref:System.Windows.Forms.TabPage> obiektu nie jest wyświetlane w karcie po włączeniu funkcji stylów wizualnych. Istnieje również ma bezpośredniego sposobu, aby kontrolować kierunek tekstu na karcie. Możesz użyć właściciela rysować na <xref:System.Windows.Forms.TabControl> się udoskonalić to środowisko pracy.  
   
  Poniższa procedura przedstawia sposób renderowania kart wyrównany do prawej, z tekstem kartę uruchomione od lewej do prawej, korzystając z funkcji "draw właściciela".  
@@ -41,4 +41,5 @@ ms.locfileid: "57705193"
      [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [TabControl, kontrolka](tabcontrol-control-windows-forms.md)
+
+- [TabControl — Formant](tabcontrol-control-windows-forms.md)

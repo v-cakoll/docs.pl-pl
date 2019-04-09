@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8fa603381bec9d352eff705116c6dfc31380d523
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f7b435c6050cbb73abab3cb5980632be55dd08d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118017"
 ---
 # <a name="mitigation-product-versioning"></a>Środki zaradcze: Wersjonowanie produktu
 W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i nowszych wersji produktu została zmieniona z poprzednich wersji programu .NET Framework (.NET Framework 4, 4.5, 4.5.1 i 4.5.2).  
@@ -40,5 +40,5 @@ W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i nowszych wersji produkt
 -   Aby uzyskać wersję środowiska CLR, należy wywołać <xref:System.Runtime.InteropServices.RuntimeEnvironment.GetSystemVersion%2A?displayProperty=nameWithType> metody.   Dla programu .NET Framework 4 i jego punktu zwalnia (.NET Framework 4.5, 4.5.1, 4.5.2, i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1 i 4.6.2, 4.7), zwraca ciąg `v4.0.30319`.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
 
+- [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

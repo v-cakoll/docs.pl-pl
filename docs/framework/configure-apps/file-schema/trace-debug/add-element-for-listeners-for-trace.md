@@ -1,5 +1,5 @@
 ---
-title: <add> — Element do <listeners> dla <trace>
+title: <add> Element <listeners> dla <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <add> element for <listeners>
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
-ms.openlocfilehash: 31ab58d6817c6c5064182ab5ef8b9595e92bef7d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089585"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<Dodaj >, Element dla \<odbiorników > dla \<śledzenia >
 Dodaje odbiornik do **odbiorników** kolekcji.  
@@ -39,9 +39,9 @@ Dodaje odbiornik do **odbiorników** kolekcji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**type**|Atrybut wymagany.<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**— typ**|Atrybut wymagany.<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy.|  
-|**Nazwa**|Atrybut opcjonalny.<br /><br /> Określa nazwę odbiornika.|  
+|**nazwa**|Atrybut opcjonalny.<br /><br /> Określa nazwę odbiornika.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -102,10 +102,11 @@ Dodaje odbiornik do **odbiorników** kolekcji.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Obiekty nasłuchujące śledzenia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

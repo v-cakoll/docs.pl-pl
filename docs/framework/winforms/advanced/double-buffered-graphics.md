@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103444"
 ---
 # <a name="double-buffered-graphics"></a>Podwójnie buforowana grafika
 Migotania jest to powszechny problem, podczas programowania grafiki. Operacje graficzne, wymagających wielu operacji malowania złożonych może spowodować renderowanych obrazów wydaje się zmieniał kolor lub masz wystąpienie w przeciwnym razie nie do przyjęcia. Aby rozwiązać te problemy, .NET Framework zapewnia dostęp do podwójnego buforowania.  
@@ -33,10 +33,11 @@ Migotania jest to powszechny problem, podczas programowania grafiki. Operacje gr
  Aby uzyskać więcej informacji na temat korzystania z <xref:System.Drawing.BufferedGraphics> klasy, zobacz [ręczne renderowanie buforowana grafika](how-to-manually-render-buffered-graphics.md). Aby uzyskać więcej informacji na temat renderowania grafiki, zobacz [grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
 - [Instrukcje: Ręczne renderowanie buforowanej grafiki](how-to-manually-render-buffered-graphics.md)
 - [Instrukcje: Zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
 - [Instrukcje: Ręczne zarządzanie buforowaną grafiką](how-to-manually-manage-buffered-graphics.md)
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)

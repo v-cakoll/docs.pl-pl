@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie przycisków przełączania w formantach ToolStrip'
+title: 'Instrukcje: tworzenie przycisków przełączania w kontrolkach ToolStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: a059726ea410e88121a0b755295c3c492c11962a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091255"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Instrukcje: Tworzenie przycisków przełączania w formantach ToolStrip
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>Instrukcje: tworzenie przycisków przełączania w kontrolkach ToolStrip
 Gdy użytkownik kliknie przycisk przełączania, pojawi się wklęsłą i zachowuje wklęsłą wygląd, dopóki użytkownik kliknie przycisk ponownie.  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>Aby utworzyć toggling element ToolStripButton  
@@ -36,5 +36,6 @@ Gdy użytkownik kliknie przycisk przełączania, pojawi się wklęsłą i zachow
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStripButton>
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)

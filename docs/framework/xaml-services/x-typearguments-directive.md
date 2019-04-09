@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085808"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments — dyrektywa
 Przebiegi, ograniczając wpisz argumenty ogólne do konstruktora typu ogólnego.  
@@ -82,7 +82,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  Na platformie WPF i przeznaczonych dla [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć XAML 2009 — funkcje wraz z `x:TypeArguments` , ale tylko w przypadku luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009. Jeśli potrzebujesz do znaczników kompilacji XAML, musi działać w ramach ograniczenia, o których wspomniano w sekcji "XAML 2006 i WPF ogólny XAML użycia".  
   
 ## <a name="see-also"></a>Zobacz także
-- [x:Class, dyrektywa](x-class-directive.md)
-- [x:Type, rozszerzenie znaczników](x-type-markup-extension.md)
+
+- [x:Class — dyrektywa](x-class-directive.md)
+- [x:Type — Rozszerzenie znaczników](x-type-markup-extension.md)
 - [Typy wbudowane dla wspólnych elementów podstawowych języka XAML](built-in-types-for-common-xaml-language-primitives.md)
 - [Typy ogólne w XAML](generics-in-xaml.md)

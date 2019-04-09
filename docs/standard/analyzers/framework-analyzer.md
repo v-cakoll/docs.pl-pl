@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 562d85d47791ca253655dd05a1c9a268767ba949
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: cbd9bcdb12a423f54aa4ff82d88f07c20023c48f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197656"
 ---
 # <a name="the-net-framework-analyzer"></a>Analizator struktury platformy .NET
 
@@ -114,7 +114,6 @@ Jeśli używasz niezabezpieczone <xref:System.Xml.XmlReaderSettings.DtdProcessin
 
 Informacje dodatkowe: [A3075: DTD niezabezpieczone przetwarzanie w formacie XML](/visualstudio/code-quality/ca2237-mark-iserializable-types-with-serializableattribute)
 
-
 ### <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: Nie używaj słabych algorytmów kryptograficznych
 
 Algorytmy kryptograficzne zmniejsza się wraz z upływem czasu, jak ataki stają się bardziej zaawansowane. W zależności od typu i aplikacji to algorytmów kryptograficznych, dalsze degradacji jego sile szyfrowania może umożliwić atakującemu odczytywanie komunikatów z enciphered, manipulowanie enciphered wiadomości, forge podpisów cyfrowych, manipulowanie skrótu zawartości lub w przeciwnym razie naruszenia wszelkich cryptosystem, w oparciu o ten algorytm. Dla celów szyfrowania, Użyj algorytmu szyfrowania AES (AES-256, AES-192 i AES-128 są dopuszczalne) z kluczem o długości, większa niż lub równy 128 bitów. Do tworzenia skrótów, użyj funkcji skrótu z rodziny SHA-2, np. 512 SHA-2, SHA-2-384 lub 256 SHA-2.
@@ -134,5 +133,3 @@ Istnieje atak, dzięki czemu można przerwać ten algorytm wykonalne. Pozwala to
 **Ważność:** Ostrzeżenie
 
 Aby uzyskać dodatkowe informacje: [CA5351: Nie używaj uszkodzonych algorytmów kryptograficznych](/visualstudio/code-quality/ca5351-do-not-use-broken-cryptographic-algorithms)
-
-

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189316"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -140,6 +140,7 @@ Poniższa ilustracja przedstawia obiektów uwzględnionych w formancie DataGrid.
  Oprócz typowe kontrolować zdarzenia takie jak <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>, i <xref:System.Windows.Forms.DataGrid.Scroll>, <xref:System.Windows.Forms.DataGrid> kontrolka obsługuje zdarzenia związane z edycji i nawigacji w obrębie siatki. <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Właściwość określa komórki, która jest zaznaczone. <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Zdarzenie jest wywoływane, gdy użytkownik przechodzi do nowej komórki. Gdy użytkownik przechodzi do nowej tabeli za pomocą relacji nadrzędny/podrzędny <xref:System.Windows.Forms.DataGrid.Navigate> zdarzenie jest wywoływane. <xref:System.Windows.Forms.DataGrid.BackButtonClick> Zdarzenie jest wywoływane, gdy użytkownik kliknie przycisk Wstecz, gdy użytkownik przegląda tabeli podrzędnej i <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> zdarzenie jest wywoływane po kliknięciu ikonę Pokaż/Ukryj nadrzędnego wierszy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
 - [Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

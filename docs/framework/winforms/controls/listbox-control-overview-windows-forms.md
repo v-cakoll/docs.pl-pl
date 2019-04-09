@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104204"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.ListBox> kontrolka Wyświetla listę, z którego użytkownik może wybrać co najmniej jeden element. Jeśli łączna liczba elementów przekracza liczbę, która może być wyświetlana, pasek przewijania jest automatycznie dodawany do <xref:System.Windows.Forms.ListBox> kontroli. Gdy <xref:System.Windows.Forms.ListBox.MultiColumn%2A> właściwość jest ustawiona na `true`, elementy w polu listy są wyświetlane w wielu kolumnach i zostanie wyświetlony pasek przewijania poziomego. Gdy <xref:System.Windows.Forms.ListBox.MultiColumn%2A> właściwość jest ustawiona na `false`, elementy w polu listy są wyświetlane w jednej kolumnie, i zostanie wyświetlony pasek przewijania pionowego. Gdy <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> ustawiono `true`, niezależnie od liczby elementów zostanie wyświetlony pasek przewijania. <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Właściwość określa, ile elementów listy można wybrać w danym momencie.  
@@ -23,11 +23,12 @@ Formularze Windows <xref:System.Windows.Forms.ListBox> kontrolka Wyświetla list
  Aby dodać lub usunąć elementy w <xref:System.Windows.Forms.ListBox> kontrolować, należy użyć <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> lub <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> metody. Alternatywnie, można dodać elementy do listy przy użyciu <xref:System.Windows.Forms.ListBox.Items%2A> właściwości w czasie projektowania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ListBox>
-- [Instrukcje: Dodawanie i usuwanie elementów z Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](add-and-remove-items-from-a-wf-combobox.md)
-- [Instrukcje: Sortowanie zawartości Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Instrukcje: Powiąż Windows Forms kontrolki ComboBox lub ListBox z danymi](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows](add-and-remove-items-from-a-wf-combobox.md)
+- [Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Instrukcje: powiązanie kontrolki ComboBox lub ListBox (Formularze systemu Windows) z danymi](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [ComboBox, kontrolka — omówienie](combobox-control-overview-windows-forms.md)
 - [CheckedListBox, kontrolka — omówienie](checkedlistbox-control-overview-windows-forms.md)
-- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)
-- [Instrukcje: Tworzenie tabeli wyszukiwania dla Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Formanty formularzy systemu Windows używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)
+- [Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy systemu Windows](create-a-lookup-table-for-a-wf-combobox-listbox.md)

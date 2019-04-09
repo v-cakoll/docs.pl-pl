@@ -2,12 +2,12 @@
 title: Przechowywanie wersji usługi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122411"
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usługi (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub inne rozwiązania problemy. Każda zmiana wprowadza nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywanie wersji w Windows Communication Foundation (WCF).  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  Kontrakt usługi zostałaby zaktualizowana w celu uwzględnienia nowych operacji, które są zapisywane w `PurchaseOrderV2`. Istniejącej logiki biznesowej, zapisane pod względem `IPurchaseOrderV1` będzie w dalszym ciągu działać w przypadku `PurchaseOrderV2` i nowej logiki biznesowej, który wymaga `OrderDate` właściwości powinny być zapisane w `IPurchaseOrderV2`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

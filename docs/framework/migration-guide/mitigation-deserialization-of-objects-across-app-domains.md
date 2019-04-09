@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5424eac20992d87542bd8a9a27d5775483d64a60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bbb123ccdf29143d53317bd709da7c1e5959d917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118043"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Środki zaradcze: Deserializacja obiektów między domenami aplikacji
 W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby domen aplikacji z różnymi bazami aplikacji, próba deserializacji obiektów w logicznym kontekście wywołań między różnymi domenami aplikacji zgłasza wyjątek.  
@@ -49,4 +49,5 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zmiany środowiska uruchomieniowego](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

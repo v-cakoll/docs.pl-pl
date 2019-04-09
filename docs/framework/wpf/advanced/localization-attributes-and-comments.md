@@ -5,18 +5,16 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092919"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów, które zapewniają reguły i wskazówki dla lokalizacji. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Lokalizacja komentarzy zawierają dwa zestawy danych: atrybuty przeglądu możliwości lokalizacji i komentarze w dowolnej lokalizacji. Możliwości zlokalizowania atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacji interfejsu API, aby wskazać, które zasoby mają być lokalizowany. Wszystkie informacje, które aplikacja chce, aby uwzględnić znajdują się w dowolnej postaci komentarze.  
-  
 
-  
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Lokalizacja komentarzy  
  Jeśli autorzy aplikacji znaczników mają wymagania dotyczące określonych elementów w [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], takie jak ograniczenia dotyczące długość tekstu rodzinę czcionek i rozmiar czcionki, ich przekazywanie tych informacji do lokalizatorzy z komentarzami w [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kodu. Proces dodawania komentarzy do kodu źródłowego jest w następujący sposób:  
@@ -25,7 +23,7 @@ ms.locfileid: "57377103"
   
 2.  Podczas procesu kompilacji można określić w pliku .proj czy zamieszczać komentarze dowolnej lokalizacji w zestawie, pasek się częścią komentarze lub pasek się wszystkie komentarze. Komentarze usunięta, a limit są umieszczane w oddzielnym pliku. Określ, przy użyciu opcji `LocalizationDirectivesToLocFile` tagu, na przykład:  
   
-     `<LocalizationDirectivesToLocFile>` *Wartość* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
   
 3.  Wartości, które mogą być przypisane są następujące:  
   
@@ -100,6 +98,7 @@ ms.locfileid: "57377103"
  Localization.Comments zawiera ciągów dotyczące wartości docelowej. Deweloperzy aplikacji mogą dodawać informacje, aby zapewnić lokalizatorzy wskazówek na temat sposób przekształcania tekstu aplikacji. Format komentarze może być dowolnym ciągiem, ujęte w "()". Użyj "\\" jako znak ucieczki dla znaków.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Globalizacja dla WPF](globalization-for-wpf.md)
 - [Używanie automatycznego układu do utworzenia przycisku](how-to-use-automatic-layout-to-create-a-button.md)
 - [Używanie siatki do automatycznego układu](how-to-use-a-grid-for-automatic-layout.md)

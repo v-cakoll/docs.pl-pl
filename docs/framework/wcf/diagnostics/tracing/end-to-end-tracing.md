@@ -2,12 +2,12 @@
 title: Kompleksowe śledzenie
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
-ms.openlocfilehash: 4ffa97b2aa7b934a15ea676f28e527f4b8fbc8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092142"
 ---
 # <a name="end-to-end-tracing"></a>Kompleksowe śledzenie
 Kompleksowe śledzenie (e2e) umożliwia deweloperom wykonaj wykonywanie kodu w infrastrukturze usługi Windows Communication Foundation (WCF), aby zbadać, dlaczego ścieżka kodu nie powiodło się lub w celu udostępnienia szczegółowego śledzenia pojemności planowanie i analiza wydajności. Windows Communication Foundation (WCF) udostępnia trzy mechanizmy korelacji, aby pomóc w zdiagnozowaniu przyczyny błędu: działań, transfery i propagacji.  
@@ -26,6 +26,7 @@ Kompleksowe śledzenie (e2e) umożliwia deweloperom wykonaj wykonywanie kodu w i
  Zawiera podsumowanie wszystkich działań typu śledzenia  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

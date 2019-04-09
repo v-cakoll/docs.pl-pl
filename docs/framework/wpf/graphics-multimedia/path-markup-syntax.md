@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], PathGeometry class
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
-ms.openlocfilehash: 65a86b82af9269d1af7198b8106ad478e88f3691
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082493"
 ---
 # <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki
 Ścieżki są omówione w [kształty i podstawowe Rysowanie w WPF — Przegląd](shapes-and-basic-drawing-in-wpf-overview.md) i [Przegląd Geometria](geometry-overview.md), jednak w tym temacie opisano szczegółowo zaawansowanych i złożonych mini języka można użyć do określenia ścieżki Więcej bardziej kompaktowy przy użyciu geometrii [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -57,7 +57,7 @@ ms.locfileid: "57379162"
   
 |Termin|Opis|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Określa, czy <xref:System.Windows.Media.StreamGeometry> używa <xref:System.Windows.Media.FillRule.EvenOdd> lub <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Określa <xref:System.Windows.Media.FillRule.EvenOdd> reguły wypełniania.<br />-   `F1` Określa <xref:System.Windows.Media.FillRule.Nonzero> reguły wypełniania.<br /><br /> Jeżeli pominięto tego polecenia, ścieżka podrzędna używa zachowanie domyślne, czyli <xref:System.Windows.Media.FillRule.EvenOdd>. Jeśli określisz tego polecenia, należy go najpierw umieścić.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Określa, czy <xref:System.Windows.Media.StreamGeometry> używa <xref:System.Windows.Media.FillRule.EvenOdd> lub <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Określa <xref:System.Windows.Media.FillRule.EvenOdd> reguły wypełniania.<br />-   `F1` Określa <xref:System.Windows.Media.FillRule.Nonzero> reguły wypełniania.<br /><br /> Jeżeli pominięto tego polecenia, ścieżka podrzędna używa zachowanie domyślne, czyli <xref:System.Windows.Media.FillRule.EvenOdd>. Jeśli określisz tego polecenia, należy go najpierw umieścić.|  
 |*figureDescription*|Rysunek, składające się z poleceniem przenoszenia narysuj poleceń i opcjonalnie polecenie Zamknij.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Polecenie przenoszenia, która określa punkt początkowy liczby. Zobacz [polecenie Przenieś](#themovecommand) sekcji.|  
 |*drawCommands*|Co najmniej jeden polecenia rysowania, które opisują rysunek zawartość. Zobacz [polecenia rysowania](#drawcommands) sekcji.|  
@@ -99,7 +99,6 @@ Wielkie litery `L` wskazuje, że `endPoint` jest wartością bezwzględną; mał
 ### <a name="horizontal-line-command"></a>Polecenie Linia pozioma  
  Tworzy linii poziomej pomiędzy bieżącym punktem a określonym współrzędną x. `H 90` znajduje się przykład polecenia prawidłowy linii poziomej.
 
-  
 |Składnia|  
 |------------|  
 |`H`  *x*<br /><br /> - lub -<br /><br /> `h`  *x*|  
@@ -113,14 +112,13 @@ Wielkie litery `H` wskazuje, że `x` jest wartością bezwzględną; małymi lit
 ### <a name="vertical-line-command"></a>Polecenie linii pionowej  
  Tworzy linię pionowy pomiędzy bieżącym punktem a określonym współrzędną y. `v 90` znajduje się przykład polecenia prawidłowy pionowym wierszem.
 
-  
 |Składnia|  
 |------------|  
-|`V`  *y*<br /><br /> - lub -<br /><br /> `v`  *y*|  
+|`V`  *t*<br /><br /> - lub -<br /><br /> `v`  *t*|  
   
 |Termin|Opis|  
 |----------|-----------------|  
-|*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna y punktu końcowego linii.|  
+|*t*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna y punktu końcowego linii.|  
 
 Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi literami `v` wskazuje, że `y` to przesunięcie do wcześniejszego punktu lub (0,0), jeśli żaden nie istnieje.  
     
@@ -202,7 +200,7 @@ Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi lit
   
 |Składnia|  
 |------------|  
-|`x` `,` `y`<br /><br /> - lub -<br /><br /> `x``y`|  
+|`x` `,` `y`<br /><br /> - lub -<br /><br /> `x` `y`|  
   
 |Termin|Opis|  
 |----------|-----------------|  
@@ -225,10 +223,11 @@ Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi lit
  Można także użyć notacji wykładniczej. Na przykład `+1.e17` jest prawidłową wartością.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Geometria — przegląd](geometry-overview.md)
-- [Tematy z instrukcjami](geometries-how-to-topics.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Geometria](geometry-overview.md)
+- [— Tematy porad](geometries-how-to-topics.md)

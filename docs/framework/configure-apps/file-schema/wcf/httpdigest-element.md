@@ -1,13 +1,13 @@
 ---
-title: <httpDigest>, element
+title: <httpDigest> Element
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: c930efbc2cd7a6dc12795d5ac1c26ea92fc36599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165324"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest> Element
 Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta do usługi.  
@@ -49,6 +49,7 @@ Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta
  Ta funkcja wymaga włączenia w usłudze Active Directory, Windows i Internet Information Services (IIS). Aby uzyskać więcej informacji, zobacz [uwierzytelnianie szyfrowane w usługach IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88443).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -56,6 +57,6 @@ Określa szyfrowany typ poświadczenia używany podczas uwierzytelniania klienta
 - <xref:System.ServiceModel.Configuration.HttpDigestClientElement>
 - <xref:System.ServiceModel.Security.HttpDigestClientCredential>
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Zabezpieczanie klientów [WCF]](../../../../../docs/framework/wcf/securing-clients.md)
 - [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

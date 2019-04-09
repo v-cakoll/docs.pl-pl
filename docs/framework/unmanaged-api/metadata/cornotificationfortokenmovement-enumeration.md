@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 745ba18fd1a36789f06bcd3dd4d183c9b28b9875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c5e8b34f2748868611bd7dc47ef73c491b1338
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189433"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement — Wyliczenie
 Określa powiadomień, które będą wysyłane do klienta metadanych interfejsu API, gdy wystąpi tokenu ponowne mapowanie.  
@@ -100,4 +100,5 @@ typedef enum CorNotificationForTokenMovement {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wyliczenia metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

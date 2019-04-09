@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Włączanie zmiany układu kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant'
+title: 'Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: a08c15e4fea76d8f6e97db6d463c4141b7d13b4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194971"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: Włączanie zmiany układu kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Podczas przeglądania danych wyświetlanych w formularzach Windows <xref:System.Windows.Forms.DataGridView> kontrolki, użytkownicy czasami chcesz porównać wartości w określonych kolumnach. Może to być niewygodne, jeśli kolumny są znacznie oddalonych od siebie w kontrolce, zwłaszcza, jeśli użytkownicy muszą być i z powrotem przewijane w poziomie, aby zobaczyć wszystkie kolumny, które są zainteresowani. Można tworzyć zadania porównanie wartości kolumny jest łatwiejsze, aby umożliwić użytkownikom zmienianie kolejności kolumn. Włączenie zmiany kolejności kolumn, użytkownicy mogą przechodzić do nowej pozycji kolumny przez przeciągnięcie nagłówka kolumny za pomocą myszy.  
   
  Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.DataGridView> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -27,8 +27,9 @@ Podczas przeglądania danych wyświetlanych w formularzach Windows <xref:System.
 -   Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym rogu <xref:System.Windows.Forms.DataGridView> sterowania, a następnie wybierz **Włącz zmienianie kolejności kolumn**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [Instrukcje: Blokowanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](freeze-columns-in-the-datagrid-using-the-designer.md)
 - [Instrukcje: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)

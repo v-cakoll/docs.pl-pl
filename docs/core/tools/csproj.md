@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 ms.date: 09/22/2017
-ms.openlocfilehash: c6127d20e71328733eb1fe8a21a7fa7a9735d5a2
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: f6b57164086efa357c70f55a9b9ac16b680c8f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085795"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -71,7 +71,13 @@ Ustawienie tej właściwości na `false` spowoduje wyłączenie włączenia niej
 
 Ta zmiana nie powoduje modyfikacji głównego zawiera mechanika innych. Jednak jeśli chcesz określić, na przykład, niektóre pliki na publikowaniu z Twoją aplikacją, nadal można znanych mechanizmów w *csproj* do tego (na przykład `<Content>` elementu).
 
-`<EnableDefaultCompileItems>` powoduje wyłączenie tylko `Compile` elementy globalne, ale nie ma wpływu na inne elementy globalne, takich jak niejawny `None` glob, która ma zastosowanie również do \*.cs elementów. Z tego powodu **Eksploratora rozwiązań** będą nadal show \*.cs elementy w ramach projektu, dołączone jako `None` elementów. W podobny sposób można użyć `<EnableDefaultNoneItems>` wyłączyć niejawny `None` glob.
+`<EnableDefaultCompileItems>` powoduje wyłączenie tylko `Compile` elementy globalne, ale nie ma wpływu na inne elementy globalne, takich jak niejawny `None` glob, która ma zastosowanie również do \*.cs elementów. Z tego powodu **Eksploratora rozwiązań** będą nadal show \*.cs elementy w ramach projektu, dołączone jako `None` elementów. W podobny sposób można ustawić `<EnableDefaultNoneItems>` wartość false, aby wyłączyć niejawny `None` glob w następujący sposób:
+
+```xml
+<PropertyGroup>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+</PropertyGroup>
+```
 
 Aby wyłączyć **wszystkie niejawne elementy globalne**, można ustawić `<EnableDefaultItems>` właściwość `false` jak w poniższym przykładzie:
 
@@ -277,7 +283,6 @@ Należy upewnić się, że plik licencji jest pakowany, jawnie dodając ją do p
 
 Adres URL licencji, która ma zastosowanie do pakietu. (_przestarzały począwszy od programu Visual Studio 15.9.4, zestaw SDK platformy .NET 2.1.502 i 2.2.101_)
 
-
 ### <a name="packageiconurl"></a>PackageIconUrl
 
 Adres URL obrazu 64 x 64 z przezroczystym tłem do użycia jako ikona dla pakietu wyświetlania w interfejsie użytkownika.
@@ -377,7 +382,7 @@ Każdy atrybut ma właściwości, które sterują jej zawartość i innej, aby w
 Uwagi:
 
 * `AssemblyVersion` i `FileVersion` domyślny ma wartość `$(Version)` bez sufiksu. Na przykład jeśli `$(Version)` jest `1.2.3-beta.4`, a następnie wartość będzie wynosić `1.2.3`.
-* `InformationalVersion` Wartość domyślna to wartość `$(Version)`.
+* `InformationalVersion` Wartością domyślną jest wartość `$(Version)`.
 * `InformationalVersion` ma `$(SourceRevisionId)` dołączona, jeśli właściwość jest obecny. Można je wyłączyć, używając `IncludeSourceRevisionInInformationalVersion`.
 * `Copyright` i `Description` właściwości są używane również do metadanych NuGet.
 * `Configuration` jest współużytkowany z procesu kompilacji i ustawić za pomocą `--configuration` parametru `dotnet` poleceń.

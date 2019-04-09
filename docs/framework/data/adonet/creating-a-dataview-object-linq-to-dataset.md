@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 3f53c9889e1fdae6c582e8d4a17f640e425e6594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121657"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Tworzenie obiektu widoku danych (LINQ to DataSet)
 Istnieją dwa sposoby tworzenia <xref:System.Data.DataView> w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kontekstu. Możesz utworzyć <xref:System.Data.DataView> z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytanie dotyczące <xref:System.Data.DataTable>, lub możesz je utworzyć z kontrolą typów lub bez <xref:System.Data.DataTable>. W obu przypadkach należy utworzyć <xref:System.Data.DataView> przy użyciu jednej z <xref:System.Data.DataTableExtensions.AsDataView%2A> metody rozszerzenia; <xref:System.Data.DataView> nie jest bezpośrednio konstrukcyjną w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kontekstu.  
@@ -71,6 +71,7 @@ Istnieją dwa sposoby tworzenia <xref:System.Data.DataView> w [!INCLUDE[linq_dat
  Istnieje jednak straty wydajności, dostarczanego razem z ustawieniem <xref:System.Data.DataView.RowFilter%2A> lub <xref:System.Data.DataView.Sort%2A> właściwości po <xref:System.Data.DataView> została utworzona na podstawie zapytania, ponieważ <xref:System.Data.DataView> tworzy indeks do obsługi operacji filtrowania i sortowania. Ustawienie <xref:System.Data.DataView.RowFilter%2A> lub <xref:System.Data.DataView.Sort%2A> właściwość odbudowania indeksu dla danych, obciążenie dodawanie do aplikacji i zmniejszenie wydajności. Jeśli to możliwe, zaleca się określenie filtrowanie i sortowanie informacji podczas pierwszego tworzenia <xref:System.Data.DataView> i należy unikać modyfikowania go później.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
-- [Sortowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Filtrowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
+- [Sortowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

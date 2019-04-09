@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116483"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Typy migrowane z WPF do System.Xaml
 W [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] i [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], zarówno [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] i implementacji języka XAML w pakiecie Windows Workflow Foundation. Istnieje wiele typów publicznych, które dostarczane rozszerzalności dla implementacji WPF XAML w zestawach WindowsBase PresentationCore i PresentationFramework. Podobnie typów publicznych, które podano rozszerzalności dla programu Windows Workflow Foundation XAML istniał w zestawie System.Workflow.ComponentModel. W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], niektóre typy związane z XAML są migrowane do System.Xaml zestawu. Typową implementację usługi języka XAML .NET Framework umożliwia obsługę wielu scenariuszy rozszerzalności XAML, zostały pierwotnie zdefiniowana przez implementację XAML określonym środowiskiem, które są teraz częścią ogólnych [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] obsługę języka XAML. Ten temat zawiera listę typów, które są migrowane ale w tym artykule omówiono zagadnienia związane z migracją.  
@@ -126,4 +126,5 @@ W [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] i [!INCLUDE[net
  Jeśli łącznie z odwołań do System.Xaml i WPF zestawów, a także używają `include` instrukcje dla obu <xref:System.Windows.Markup> i <xref:System.Xaml> przestrzeni nazw, może być konieczne pełnej kwalifikacji wywołań do tych interfejsów API, aby rozwiązać typów bez niejednoznaczności.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi XAML](index.md)

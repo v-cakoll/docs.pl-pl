@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykryj czy zadanie drukowania może zostać zrealizowane o tej porze dnia'
+title: 'Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099862"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykryj czy zadanie drukowania może zostać zrealizowane o tej porze dnia
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład, aby zarezerwować drukarki do wyłącznego użytku określony dział po 17: 00. Takim wydziale musi innej kolejki drukarki niż innych działów obsługi użycia. Kolejka dla innych działów będzie miał ustawienie będzie niedostępna po 17: 00, podczas gdy kolejka dla działu favored mógł zostać ustawiony jako dostępny przez cały czas.  
   
  Ponadto można ustawić zadania drukowania, samodzielnie do druku tylko w obrębie określonego zakresu czasu.  
@@ -75,8 +75,9 @@ Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właści
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd drukowania](printing-overview.md)
+- [Przegląd Drukowanie](printing-overview.md)

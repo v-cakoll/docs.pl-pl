@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms'
+title: 'Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717729"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105030"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Instrukcje: Zmienianie wyglądu kontrolki LinkLabel formularzy Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy systemu Windows
 Możesz zmienić tekst wyświetlany przez <xref:System.Windows.Forms.LinkLabel> kontroli dostosowanych do różnych celów. Na przykład jest powszechną praktyką, aby poinformować użytkownika, czy tekst można kliknąć, ustawiając tekst wyświetlany w kolorze określonej za pomocą podkreślenia. Po kliknięciu tego tekstu zmienia kolor na inny kolor. Aby kontrolować to zachowanie, należy ustawić pięć różnych właściwości: <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, i <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwości.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Aby zmienić wygląd formantu LinkLabel  
@@ -122,10 +122,11 @@ Możesz zmienić tekst wyświetlany przez <xref:System.Windows.Forms.LinkLabel> 
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [LinkLabel, kontrolka — omówienie](linklabel-control-overview-windows-forms.md)
-- [Instrukcje: Łączenie do obiektu lub strony za pomocą formantu LinkLabel formularzy Windows w sieci Web](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Instrukcje: łączenie z obiektem lub stroną sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel, kontrolka](linklabel-control-windows-forms.md)

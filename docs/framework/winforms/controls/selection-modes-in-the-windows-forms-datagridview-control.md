@@ -5,12 +5,12 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 931df04bbe6b8448030e26cd2cc2c904865ac0d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097281"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyboru w formancie DataGridView formularzy systemu Windows
 Czasami aplikacja do wykonania akcji, w zależności od wyborów użytkownika w ramach <xref:System.Windows.Forms.DataGridView> kontroli. W zależności od akcji można ograniczyć rodzajów wyboru, które są możliwe. Na przykład załóżmy, że aplikację można wydrukować raport dla obecnie wybranego rekordu. W takich przypadkach możesz chcieć skonfigurować <xref:System.Windows.Forms.DataGridView> kontrolki tak, aby klikanie wiersz zawsze wybiera cały wiersz, i tak aby tylko jeden wiersz jednocześnie można wybrać.  
@@ -45,9 +45,10 @@ Czasami aplikacja do wykonania akcji, w zależności od wyborów użytkownika w 
 >  Przykładowy kod, który demonstruje użycie programowe zaznaczonych komórek można znaleźć w <xref:System.Windows.Forms.DataGridView> klasa — Przegląd.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
-- [Wybór i używanie schowka za pomocą kontrolki DataGridView formularzy Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie trybu zaznaczania kontrolki DataGridView formularzy Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

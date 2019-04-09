@@ -8,17 +8,16 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101370"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual. Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.  
-  
-  
+
 <a name="role_of_visual_object"></a>   
 ## <a name="role-of-the-visual-object"></a>Rola obiekt wizualny  
  <xref:System.Windows.Media.Visual> Klasa jest podstawowe abstrakcji, z których każdy <xref:System.Windows.FrameworkElement> pochodzi z obiektu. Służy również jako punkt wejścia dla zapisywania nowych kontrolek [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], a na wiele sposobów można traktować jako uchwyt okna (HWND) w modelu aplikacji Win32.  
@@ -249,11 +248,12 @@ Grafika i tekstowych w miejscach występowania różne ustawienia DPI
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)
+- [Test trafienia w warstwie Visual](hit-testing-in-the-visual-layer.md)
 - [Użycie obiektów DrawingVisual](using-drawingvisual-objects.md)
-- [Samouczek: Hosting obiektów Visual w aplikacji Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Samouczek: hosting obiektów Visual w aplikacji Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
 - [Optymalizacja wydajności aplikacji WPF](../advanced/optimizing-wpf-application-performance.md)

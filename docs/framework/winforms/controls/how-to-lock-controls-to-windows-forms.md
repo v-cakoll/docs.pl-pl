@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Blokowanie kontrolek do formularzy Windows Forms'
+title: 'Instrukcje: blokowanie kontrolek do formularzy systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117926"
 ---
-# <a name="how-to-lock-controls-to-windows-forms"></a>Instrukcje: Blokowanie kontrolek do formularzy Windows Forms
+# <a name="how-to-lock-controls-to-windows-forms"></a>Instrukcje: blokowanie kontrolek do formularzy systemu Windows
 Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można zablokować kontrolki po znajdują się one poprawnie, tak aby wątkami aby przypadkowo nie przenosić lub zmieniać ich rozmiar przy ustawianiu inne właściwości.  
   
  Ponadto można zablokować i odblokować wszystkie formanty w formularzu jednocześnie, co jest przydatne w przypadku formularzy z wieloma formantami, albo można odblokować pojedynczych formantów. Po umieszczeniu wszystkich kontrolek odpowiednie miejsca w formularzu, należy zablokować je w miejscu, aby uniknąć przenoszenia błędne.  
@@ -47,8 +47,9 @@ Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można z
 1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `false`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
-- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
-- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
+
+- [Formanty formularzy systemu Windows](index.md)
+- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)

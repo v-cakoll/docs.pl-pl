@@ -2,12 +2,12 @@
 title: Klasa XMLSerializer — przykład
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: 12d11bc0da231f78909b79376cb51e7ab12fe2cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: eb422e937eb0aeffbaa1ec4288001c5bdb2bdda6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088642"
 ---
 # <a name="xmlserializer-sample"></a>Klasa XMLSerializer — przykład
 W tym przykładzie pokazano, jak do serializacji i deserializacji typów, które są zgodne z <xref:System.Xml.Serialization.XmlSerializer>. Domyślny element formatujący Windows Communication Foundation (WCF) jest <xref:System.Runtime.Serialization.DataContractSerializer> klasy. <xref:System.Xml.Serialization.XmlSerializer> Klasa może być używana do serializacji i deserializacji typów, kiedy <xref:System.Runtime.Serialization.DataContractSerializer> klasa nie może być używana. To sytuacja często dotyczy gdy precyzyjną kontrolę nad tym kod XML jest wymagany — na przykład, jeśli element danych musi być atrybut XML i nie zawiera elementu XML. Ponadto <xref:System.Xml.Serialization.XmlSerializer> często pobiera wybierana podczas tworzenia klientów usług WCF nie.  
@@ -133,4 +133,3 @@ Press <ENTER> to terminate client.
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
-  

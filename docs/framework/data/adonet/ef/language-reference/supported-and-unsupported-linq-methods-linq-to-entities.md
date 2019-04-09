@@ -1,21 +1,21 @@
 ---
-title: Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
+title: Obsługiwane i nieobsługiwane metody LINQ (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077078"
 ---
-# <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
+# <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Obsługiwane i nieobsługiwane metody LINQ (LINQ to Entities)
 Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych operatorów zapytań, które są obsługiwane lub nieobsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Wiele LINQ standardowych operatorów zapytań ma przeciążona wersja, która akceptuje argument liczby całkowitej. Argument liczby całkowitej odpowiada liczony od zera indeks w sekwencji, sprawdzonych, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. O ile nie określono inaczej, te przeciążone wersje LINQ standardowe operatory zapytań nie są obsługiwane, a próby ich wykorzystania spowoduje zgłoszenie wyjątku.  
   
 ## <a name="projection-and-restriction-methods"></a>Projekcja i metod ograniczenia  
  Większość metod projekcji i ograniczeń LINQ są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, z wyjątkiem tych, które akceptują argument pozycyjny. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę obsługiwanych i nieobsługiwanych metod Prognoza i ograniczeń.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Select%2A>|Obsługiwane|`Function Select(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Select<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TResult>> selector )`|  
 |<xref:System.Linq.Queryable.Select%2A>|Nieobsługiwane|`Function Select(Of TSource, TResult) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Integer, TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Select<TSource, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, int, TResult>> selector )`|  
@@ -29,7 +29,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="join-methods"></a>Dołącz do metody  
  Metody sprzężenia LINQ są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują `IEqualityComparer` , ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych sprzężenia.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.GroupJoin%2A>|Obsługiwane|`Function GroupJoin(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, IEnumerable(Of TInner), TResult)) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupJoin<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func<TOuter, TKey>> outerKeySelector, Expression<Func<TInner, TKey>> innerKeySelector, Expression<Func<TOuter, IEnumerable<TInner>, TResult>> resultSelector )`|  
 |<xref:System.Linq.Queryable.GroupJoin%2A>|Nieobsługiwane|`Function GroupJoin(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, IEnumerable(Of TInner), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupJoin\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func<TOuter, IEnumerable<TInner>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
@@ -39,7 +39,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="set-methods"></a>Ustaw metody  
  Większość zestawu LINQ, które metody są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, z wyjątkiem tych, które używają <xref:System.Collections.Generic.EqualityComparer%601>. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych zestawu.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.All%2A>|Obsługiwane|`Function All(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Boolean)) _ ) As Boolean`|`bool All<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, bool>> predicate )`|  
 |<xref:System.Linq.Queryable.Any%2A>|Obsługiwane|`Function Any(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As Boolean`|`bool Any<TSource>( this IQueryable<TSource> source )`|  
@@ -61,7 +61,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="ordering-methods"></a>Metody sortowania  
  Większość LINQ metody sortowania są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują <xref:System.Collections.Generic.IComparer%601>, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono obsługiwane i nieobsługiwane, metody sortowania.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.OrderBy%2A>|Obsługiwane|`Function OrderBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> OrderBy<TSource, TKey>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.OrderBy%2A>|Nieobsługiwane|`Function OrderBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IComparer(Of TKey) _ ) As IOrderedQueryable(Of TSource)`|`IOrderedQueryable<TSource> OrderBy\<TSource, TKey>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IComparer<TKey> comparer )`|  
@@ -76,7 +76,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="grouping-methods"></a>Grupowanie metody  
  Większość metod LINQ grupowania są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], z wyjątkiem tych, które akceptują <xref:System.Collections.Generic.IEqualityComparer%601>, ponieważ nie można przetłumaczyć modułu porównującego do źródła danych. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod obsługiwanych i nieobsługiwanych grupowania.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|Obsługiwane|`Function GroupBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)) _ ) As IQueryable(Of IGrouping(Of TKey, TSource))`|`IQueryable<IGrouping<TKey, TSource>> GroupBy<TSource, TKey>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector )`|  
 |<xref:System.Linq.Queryable.GroupBy%2A>|Nieobsługiwane|`Function GroupBy(Of TSource, TKey) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of IGrouping(Of TKey, TSource))`|`IQueryable<IGrouping\<TKey, TSource>> GroupBy\<TSource, TKey>( this IQueryable<TSource> source, Expression<Func\<TSource, TKey>> keySelector, IEqualityComparer<TKey> comparer )`|  
@@ -90,7 +90,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="aggregate-methods"></a>Metody agregacji  
  Większość metod agregacji, które akceptują pierwotne typy danych są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). W poniższej tabeli wymieniono metody agregacji obsługiwane i nieobsługiwane.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|Nieobsługiwane|`Function Aggregate(Of TSource) ( _ source As IQueryable(Of TSource), _ func As Expression(Of Func(Of TSource, TSource, TSource)) _ ) As TSource`|`TSource Aggregate<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, TSource, TSource>> func )`|  
 |<xref:System.Linq.Queryable.Aggregate%2A>|Nieobsługiwane|`Function Aggregate(Of TSource, TAccumulate) ( _ source As IQueryable(Of TSource), _ seed As TAccumulate, _ func As Expression(Of Func(Of TAccumulate, TSource, TAccumulate)) _ ) As TAccumulate`|`TAccumulate Aggregate<TSource, TAccumulate>( this IQueryable<TSource> source, TAccumulate seed, Expression<Func<TAccumulate, TSource, TAccumulate>> func )`|  
@@ -147,7 +147,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="type-methods"></a>Typ metody  
  LINQ standardowych operatorów zapytań, które zajmuje się konwersji typu CLR i testowania są obsługiwane w programie Entity Framework. W składniku LINQ to Entities są obsługiwane tylko te typy CLR, mapowane na typy modelu koncepcyjnego. Aby uzyskać listę typów modelu koncepcyjnego, zobacz [koncepcyjny modelu typy (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Poniższa tabela zawiera listę metod typu obsługiwane i nieobsługiwane.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.Cast%2A>|Obsługiwane dla typów pierwotnych modelu EDM|`Function Cast(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Cast<TResult>( this IQueryable source )`|  
 |<xref:System.Linq.Queryable.OfType%2A>|Obsługiwane w przypadku <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
@@ -155,7 +155,7 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 ## <a name="paging-methods"></a>Metody stronicowania  
  Wiele metod stronicowania LINQ nie są obsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Aby uzyskać więcej informacji, zobacz [standardowych operatorów zapytań w technologii LINQ do zapytań jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Poniższa tabela zawiera listę metod stronicowanie obsługiwane i nieobsługiwane.  
   
-|Metoda|Obsługa|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
+|Metoda|Pomoc techniczna|Sygnatura funkcji w języku Visual Basic|Podpis metody języka C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
 |<xref:System.Linq.Queryable.ElementAt%2A>|Nieobsługiwane|`Function ElementAt(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAt<TSource>( this IQueryable<TSource> source, int index )`|  
 |<xref:System.Linq.Queryable.ElementAtOrDefault%2A>|Nieobsługiwane|`Function ElementAtOrDefault(Of TSource) ( _ source As IQueryable(Of TSource), _ index As Integer _ ) As TSource`|`TSource ElementAtOrDefault<TSource>( this IQueryable<TSource> source, int index )`|  
@@ -179,4 +179,5 @@ Ta sekcja zawiera informacje o Language-Integrated Query (LINQ) standardowych op
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Nieobsługiwane|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Standardowe operatory zapytań w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

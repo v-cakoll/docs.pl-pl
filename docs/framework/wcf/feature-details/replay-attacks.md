@@ -2,12 +2,12 @@
 title: Ataki oparte na metodzie powtórzeń
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186761"
 ---
 # <a name="replay-attacks"></a>Ataki oparte na metodzie powtórzeń
 A *powtarzania atak* występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery, które podlegają ataku przetwarzania strumienia jako wiarygodnego wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówienia elementu.  
@@ -37,7 +37,8 @@ A *powtarzania atak* występuje, gdy osoba atakująca kopiuje strumienia komunik
 -   Skonfiguruj usługę do użycia zabezpieczenia na poziomie transportu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+
+- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

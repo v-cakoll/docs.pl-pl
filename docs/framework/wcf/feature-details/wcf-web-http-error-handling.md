@@ -2,12 +2,12 @@
 title: Obsługa błędów protokołu HTTP sieci Web w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: c331d70a69740a9830cafb5cafdfcf1de14b541b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152701"
 ---
 # <a name="wcf-web-http-error-handling"></a>Obsługa błędów protokołu HTTP sieci Web w programie WCF
 Obsługa błędów protokołu HTTP sieci Web Windows Communication Foundation (WCF) pozwala zwrócić błędy z usług WCF Web HTTP, które określić kod stanu HTTP i zwraca szczegóły błędu przy użyciu tego samego formatu co operacji (na przykład XML lub JSON).  
@@ -50,8 +50,9 @@ Public string Operation2()
  <xref:System.ServiceModel.Web.WebFaultException> jest <xref:System.ServiceModel.FaultException> i dlatego może służyć jako model programowania wyjątków błędów dla usług, które uwidaczniają punkty końcowe protokołu SOAP, a także punktów końcowych HTTP w sieci web.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Formatowanie kodu HTTP dla sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
+- [Formatowanie internetowego kodu HTTP w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)
 - [Definiowanie i określanie błędów](../../../../docs/framework/wcf/defining-and-specifying-faults.md)
 - [Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [Wysyłanie i odbieranie błędów](../../../../docs/framework/wcf/sending-and-receiving-faults.md)

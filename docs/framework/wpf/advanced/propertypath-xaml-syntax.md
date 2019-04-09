@@ -5,17 +5,16 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122918"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 <xref:System.Windows.PropertyPath> Obiekt obsługuje złożone wbudowane [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składnię ustawiania różne właściwości, które przyjmują <xref:System.Windows.PropertyPath> typ jako ich wartość. Ten temat dokumenty <xref:System.Windows.PropertyPath> składni, jakie mają zastosowanie do powiązania i animacji składni.  
-    
-  
+
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>Gdy jest używany atrybut PropertyPath  
  <xref:System.Windows.PropertyPath> jest wspólne obiekt, który jest używany w kilku [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funkcji. Pomimo przy użyciu wspólnej <xref:System.Windows.PropertyPath> w celu przekazania informacji o ścieżce właściwości, metody użycia dla każdego obszaru funkcji gdzie <xref:System.Windows.PropertyPath> jest używany jako typ różnią się. Dlatego jest praktyczniejsze w dokumencie składni na podstawie poszczególnych funkcji.  
@@ -197,6 +196,7 @@ or
  Ogólnie rzecz biorąc <xref:System.Windows.PropertyPath> jest przeznaczony do stosowania dwa różne konstruktory, jeden dla powiązań i najprostszą zastosowania animacji i jeden dla użycia złożonej animacji. Użyj <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> podpisu dla powiązania użycia, gdy obiekt jest ciąg. Użyj <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> podpis dla jednoetapowy Animacja ścieżki, w którym obiekt jest <xref:System.Windows.DependencyProperty>. Użyj <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> podpis dla złożonych animacji. Ten konstruktor ostatnie używa ciąg tokenu dla pierwszego parametru i tablicę obiektów, które wypełniają pozycji w ciąg tokenu, aby zdefiniować relację ścieżki właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.PropertyPath>
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
-- [Scenorysy — przegląd](../graphics-multimedia/storyboards-overview.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Przegląd Scenorysy](../graphics-multimedia/storyboards-overview.md)

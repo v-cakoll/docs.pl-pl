@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187645"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Zapytania Jednotabelowe (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] zapytania pracować nad źródeł danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. <xref:System.Data.DataTable> Klasa nie implementuje albo interfejsu, więc należy wywołać <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metody, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania.  
@@ -31,6 +31,7 @@ ms.locfileid: "54637262"
  Należy zauważyć, że typ danych określony przez parametr ogólny `T` z <xref:System.Data.DataRowExtensions.Field%2A> metody i <xref:System.Data.DataRowExtensions.SetField%2A> metoda musi odpowiadać typowi podstawowej wartości lub <xref:System.InvalidCastException> zostanie zgłoszony. Określona nazwa kolumny musi być również zgodna nazwa kolumny w <xref:System.Data.DataSet> lub <xref:System.ArgumentException> zostanie zgłoszony. W obu przypadkach wyjątek jest generowany na wyliczenie danych w czasie wykonywania, podczas wykonywania zapytania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
 - [Wykonywanie zapytania do typizowanych zestawów danych](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [Pole ogólne i metody SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+- [Field i SetField, metody ogólne](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

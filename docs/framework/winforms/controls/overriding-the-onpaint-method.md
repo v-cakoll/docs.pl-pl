@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124309"
 ---
 # <a name="overriding-the-onpaint-method"></a>Zastępowanie metody OnPaint
 Podstawowe kroki zastąpienie dowolnego zdarzenia, zdefiniowany w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] są identyczne i są podsumowane w poniższej liście.  
@@ -87,6 +87,7 @@ public class PaintEventArgs : EventArgs {
  Kontrolki wywołuje jego <xref:System.Windows.Forms.Control.OnPaint%2A> metody zawsze wtedy, gdy trzeba zmienić jego wizualizacji do wyświetlenia. Z kolei wywołuje tę metodę <xref:System.Windows.Forms.Control.Paint> zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zdarzenia](../../../standard/events/index.md)
-- [Renderowanie kontrolki formularzy Windows Forms](rendering-a-windows-forms-control.md)
+- [Renderowanie formantu formularzy systemu Windows](rendering-a-windows-forms-control.md)
 - [Definiowanie zdarzenia](defining-an-event-in-windows-forms-controls.md)

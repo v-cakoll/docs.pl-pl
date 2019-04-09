@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów z aplikacją za pomocą śledzenia
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 6aa4c91014987d0d671e1fb3727cceeafa5bdd6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072756"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Rozwiązywanie problemów z aplikacją za pomocą śledzenia
 Ta sekcja zawiera różne tematy, które opisują, jak umożliwia śledzenie rozwiązywać problemy z aplikacją.  
@@ -32,6 +32,7 @@ Ta sekcja zawiera różne tematy, które opisują, jak umożliwia śledzenie roz
  Opisuje sposób emitowanie danych śledzenia w kodzie użytkownika, tak, aby aktywnie można utworzyć danych instrumentacji do użycia później w celu diagnostyki i w korelacji ze śledzenia WCF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

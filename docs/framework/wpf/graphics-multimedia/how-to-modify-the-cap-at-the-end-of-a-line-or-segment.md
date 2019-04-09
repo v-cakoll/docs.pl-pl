@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Modyfikuj zakończenie na końcu linii lub segmentu'
+title: 'Instrukcje: Modyfikowanie zakończenia na końcu linii lub segmentu'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Shape elements [WPF], ends
 - Shape elements [WPF], caps
 - graphics [WPF], Shape caps
 ms.assetid: f4bf3416-b3d8-4568-b98e-3eda8f6dbf7a
-ms.openlocfilehash: ba61b30b4ff575bb504f792f8990bbfc64a6c33e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 462e32520393a1c23809cce8eb3c130c13bc882f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091307"
 ---
-# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Instrukcje: Modyfikuj zakończenie na końcu linii lub segmentu
+# <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Instrukcje: Modyfikowanie zakończenia na końcu linii lub segmentu
 W tym przykładzie przedstawiono sposób modyfikowania kształt na początku lub końcu otwartą <xref:System.Windows.Shapes.Shape> elementu. Aby zmienić limit na początku otwartą <xref:System.Windows.Shapes.Shape>, użyj jej <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> właściwości. Aby zmienić limit na końcu otwartą <xref:System.Windows.Shapes.Shape>, użyj jej <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> właściwości. Aby wyświetlić caps dostępnego wiersza, zobacz <xref:System.Windows.Media.PenLineCap> wyliczenia.  
   
 > [!NOTE]
@@ -27,5 +27,6 @@ W tym przykładzie przedstawiono sposób modyfikowania kształt na początku lub
  W tym przykładzie jest częścią większego przykładu; Aby uzyskać pełny przykład, zobacz [przykładowe elementy kształtu](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Media.PenLineCap>

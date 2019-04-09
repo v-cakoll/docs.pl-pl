@@ -1,15 +1,15 @@
 ---
-title: Niestandardowi projektanci złożonych — Prezenter elementu przepływu pracy
+title: Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: d201dad45f4ed31d7c06f3302a9cdfbb01647722
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089201"
 ---
-# <a name="custom-composite-designers---workflow-item-presenter"></a>Niestandardowi projektanci złożonych — Prezenter elementu przepływu pracy
+# <a name="custom-composite-designers---workflow-item-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemPresenter> Typ klucza w WF projektanta modelu programowania umożliwiający tworzenie "strefy listy" gdzie można umieścić dowolne działanie. W tym przykładzie przedstawiono sposób tworzenia projektanta działań, który uwypukli najistotniejsze takiej "listy strefy."
 
  W tym przykładzie przedstawiono:
@@ -81,5 +81,6 @@ ms.locfileid: "54731013"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Activities.Presentation.WorkflowItemPresenter>
-- [Tworzenie aplikacji przy użyciu Projektanta przepływu pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Tworzenie aplikacji za pomocą projektanta przepływów pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

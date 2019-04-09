@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194815"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -187,5 +187,6 @@ ms.locfileid: "58410164"
  Ponadto ulepszone współbieżności sekwencji pobierania ClickOnce poprawia czas rozpoczęcia przez maksymalnie 10 procent. Po ClickOnce pliki do pobrania i sprawdza poprawność manifestów, uruchamiania pobierania aplikacji i pasek postępu rozpoczyna się do aktualizacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)

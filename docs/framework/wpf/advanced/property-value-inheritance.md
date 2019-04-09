@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186832"
 ---
 # <a name="property-value-inheritance"></a>Przejęcie wartości właściwości
 Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości systemu. Dziedziczenie wartości właściwości umożliwia elementy podrzędne w drzewie elementów, aby uzyskać wartość określonej właściwości z obiektu nadrzędnego elementom dziedziczenie tę wartość, jak go w dowolnym miejscu została ustawiona w najbliższym elemencie nadrzędnym. Element nadrzędny może także uzyskać wartość poprzez dziedziczenie wartości właściwości, więc system potencjalnie recurses aż do głównej strony. Dziedziczenie wartości właściwości nie jest to domyślne zachowanie systemu właściwości; Właściwość, należy ustanowić z ustawieniem określonego metadanych aby spowodować, że tę właściwość można zainicjować dziedziczenie wartości właściwości dla elementów podrzędnych.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>Dziedziczenie wartości właściwości jest dziedziczenie zawierania  
  "Dziedziczenie" jako termin w tym miejscu nie jest dość identyczne z koncepcją dziedziczenia w kontekście typów i ogólne obiektowy programowania, w którym klasy pochodne dziedziczą definicje elementów członkowskich z ich klasami podstawowymi. Znaczenie dziedziczenia również jest aktywny w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: właściwości zdefiniowane w różnych klas bazowych są widoczne jako atrybuty dla pochodne [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] klasy używane jako elementy, gdy dostępne jako elementy członkowskie dla kodu. Dziedziczenie wartości właściwości jest szczególnie o jak wartości właściwości może dziedziczyć z jednego elementu do innej na podstawie relacji nadrzędny podrzędny w drzewie elementów. Tego drzewa elementów jest najbardziej bezpośrednio widoczne podczas zagnieżdżania elementy wewnątrz innych elementów, jak zdefiniować aplikacje w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników. Drzewa obiektów można również utworzyć programowo przez dodawanie obiektów do wyznaczonej kolekcji innych obiektów, a dziedziczenie wartości właściwości działa tak samo w drzewie zakończone w czasie wykonywania.  
@@ -42,6 +40,7 @@ Dziedziczenie wartości właściwości jest funkcją [!INCLUDE[TLA#tla_winclient
  Dziedziczenie właściwości polega na przechodzić przez drzewo elementów. To drzewo stanowi często zbliżony do drzewa logicznego. Jednak zawsze, gdy dołączysz obiektem poziomu core WPF w znaczniku, który definiuje obrębu drzewa, takie jak <xref:System.Windows.Media.Brush>, utworzono nieciągły drzewo logiczne. Wartość true drzewo logiczne nie obejmuje koncepcyjnie za pośrednictwem <xref:System.Windows.Media.Brush>, ponieważ drzewo logiczne jest pojęciem poziomie struktury WPF. Widać to odzwierciedlone w wynikach, korzystając z metody <xref:System.Windows.LogicalTreeHelper>. Jednak dziedziczenie wartości właściwości można wypełnić tę lukę w drzewie logicznym i nadal można przekazać wartości odziedziczone przez, tak długo, jak właściwości dziedziczonych został zarejestrowany jako dołączoną właściwość i nie zamierzonego granic blokowanie dziedziczenia (takie jak <xref:System.Windows.Controls.Frame>) zostanie osiągnięty.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Metadane zależności właściwości](dependency-property-metadata.md)
-- [Przegląd właściwości dołączonych](attached-properties-overview.md)
-- [Następstwo wartości właściwości zależności](dependency-property-value-precedence.md)
+- [Przegląd Właściwości dołączone](attached-properties-overview.md)
+- [Następstwo zależności wartości właściwości](dependency-property-value-precedence.md)

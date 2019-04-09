@@ -2,12 +2,12 @@
 title: Operatory sekwencji
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113688"
 ---
 # <a name="sequence-operators"></a>Operatory sekwencji
 Ogólnie rzecz biorąc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje operatory sekwencji, które mają co najmniej jedną z następujących właściwości:  
@@ -46,4 +46,5 @@ Ogólnie rzecz biorąc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdli
  Wszystkie obsługiwane pracy operatory sekwencji zgodnie z oczekiwaniami w środowisku uruchomieniowym języka (wspólnego CLR), z wyjątkiem `Average`. `Average` Zwraca wartość taki sam typ co typ uśrednione, natomiast w CLR `Average` zawsze zwraca albo <xref:System.Double> lub <xref:System.Decimal>. Jeśli argument źródła jest jawnie Rzutowanie na podwójne / dziesiętną lub selektor rzutuje double / dziesiętną, wynikowa instrukcja SQL ma też taka konwersja i wynik będzie zgodnie z oczekiwaniami.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

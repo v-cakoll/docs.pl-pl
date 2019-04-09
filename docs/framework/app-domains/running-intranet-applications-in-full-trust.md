@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca1ddd1c7f13dd1ed00d06c30aa7e91acfc43ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8731e90a66c20f06e8afcd7458349cbc0b93484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084107"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Uruchamianie aplikacji intranetowych w trybie pełnego zaufania
 Począwszy od .NET Framework w wersji 3.5 z dodatkiem Service Pack 1 (SP1), aplikacje i ich zestawy biblioteki może działać jako zestawów pełnego zaufania z udziału sieciowego. <xref:System.Security.SecurityZone.MyComputer> dowód strefy jest automatycznie dodawany do zestawów, które są ładowane z udziału w sieci intranet. Dowód ten zapewnia te zestawy, takie same udzielić zestaw (co jest zazwyczaj pełne zaufanie) jako zestawy, które znajdują się na komputerze. Ta funkcja nie ma zastosowania do aplikacji ClickOnce lub aplikacje, które są przeznaczone do uruchamiania na hoście.  
@@ -35,4 +35,5 @@ Począwszy od .NET Framework w wersji 3.5 z dodatkiem Service Pack 1 (SP1), apli
 -   Na komputerach 64-bitowych, utwórz podklucz w obszarze HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework klucz w rejestrze systemowym. Nazwa klucza LegacyMyComputerZone za pomocą wartość DWORD na 1. Utwórz ten sam go w obszarze HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. Klucz NETFramework.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

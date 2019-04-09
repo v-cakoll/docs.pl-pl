@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ff0e51ad0d0e12c944c996a4262541fb980efe05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138011"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikację, aby wyświetlić ciągi, obrazy i inne dane w przez użytkownika języka i kultury, a także do dostarczania danych alternatywnego, jeśli nie są dostępne zasoby dotyczące języka przez użytkownika lub kultury. .NET Framework wykorzystuje model Gwiazda — w celu zlokalizowania i pobrania zlokalizowanych zasobów. Piasta to główny zestaw, który zawiera niemożliwe do zlokalizowania kodu wykonywalnego i zasoby dla jednej kultury, które jest wywoływane zero lub kultury domyślnej. Domyślną kulturę używaną jest rezerwowego kulturą aplikacji; jest używany, gdy nie zlokalizowane zasoby są dostępne. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wyznaczyć kultury aplikacji domyślnej kultury. Każdej szprysze nawiązuje połączenie z zestawem satelickim, który zawiera zasoby dla pojedynczej zlokalizowanej kultury, ale nie zawiera żadnego kodu. Ponieważ zestawy satelickie nie są częścią zestawu głównego, można łatwo zaktualizować lub zastąpić zasoby, które odpowiadają określonej kultury bez zastępowania głównym zestawie aplikacji.  
@@ -309,9 +309,10 @@ gacutil -i:StringLibrary.resources.dll
 14. Uruchom Example.exe.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Al.exe (Konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Sn.exe (Narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [Gacutil.exe (Narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
 - [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Podstawowe i uwierzytelnianie szyfrowane
+title: Uwierzytelnianie podstawowe i szyfrowane
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - network resources, authentication
 - user authentication, digest
 ms.assetid: 8cce2742-8d52-4643-9dd2-64ddf38aa878
-ms.openlocfilehash: 2c764909514eac74cb930df055cdb846bab7b249
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f70d2aef3bb064a3df9db9c87671040776332a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089825"
 ---
-# <a name="basic-and-digest-authentication"></a>Podstawowe i uwierzytelnianie szyfrowane
+# <a name="basic-and-digest-authentication"></a>Uwierzytelnianie podstawowe i szyfrowane
 <xref:System.Net> Wdrożenia podstawowe i uwierzytelnianie szyfrowane jest zgodny z RFC2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane (dostępne na [World Wide Web Consortium](https://www.w3.org) witryny sieci Web).  
   
  Aby użyć podstawowa i uwierzytelnianie szyfrowane, aplikacji należy podać nazwę użytkownika i hasło w <xref:System.Net.WebRequest.Credentials%2A> właściwość <xref:System.Net.WebRequest> obiektu, który używa żądanie danych z Internetu, jak pokazano w poniższym przykładzie.  
@@ -47,5 +47,6 @@ WReq.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword);
 >  Wysyłane podstawowe i uwierzytelnianie szyfrowane dane nie są szyfrowane, dzięki czemu dane są widoczne przez osobę atakującą. Ponadto poświadczenia uwierzytelniania podstawowego (nazwa użytkownika i hasło) są wysyłane jako niezaszyfrowane i mogą zostać przechwycone.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Uwierzytelnianie internetowe](../../../docs/framework/network-programming/internet-authentication.md)

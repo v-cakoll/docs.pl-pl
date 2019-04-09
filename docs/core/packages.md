@@ -4,12 +4,12 @@ description: Dowiedz się, terminologia dotycząca pakiety, metapakiety i strukt
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090501"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapakiety i struktury
 
@@ -97,7 +97,6 @@ Jest to przydatne porównać dwa pierwsze z tych środowisk, ponieważ są one p
 Istnieje dwukierunkowa relacja platform i pakietów. Pierwsza część jest zdefiniowanie interfejsami API dostępnymi dla danej platformy, na przykład `netstandard1.3`. Pakiety przeznaczone `netstandard1.3` (lub zgodny platform, na przykład `netstandard1.0`) definiowanie interfejsów API dostępna dla `netstandard1.3`. Które stwierdzenie może wydawać się podobnie jak definicję cykliczną, ale nie jest. Bycia "pakiet" na podstawie definicji interfejsu API dla framework pochodzą z pakietów. Framework sam w sobie nie definiuje żadnych interfejsów API.
 
 Druga część relacji to wybór trwały. Pakiety mogą zawierać zasoby dla wielu platform. Podane odwołanie do zestawu pakiety i/lub metapakiety, struktura jest potrzebne do określenia, którego należy wybrać, na przykład `net46` lub `netstandard1.3`. Należy wybrać prawidłowy zasób. Na przykład `net46` zasobów nie jest prawdopodobne były zgodne z .NET Framework 4.0 lub platformy .NET Core 1.0.
-
 
 Możesz zobaczyć tę relację na poniższej ilustracji. *API* jest przeznaczony dla i definiuje *framework*. *Framework* służy do *wybór zasobów*. *Zasobów* zapewnia interfejs API.
 

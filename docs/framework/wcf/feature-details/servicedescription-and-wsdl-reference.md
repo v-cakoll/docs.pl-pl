@@ -2,12 +2,12 @@
 title: Odwołania do elementu ServiceDescription i kodu WSDL
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182887"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>Odwołania do elementu ServiceDescription i kodu WSDL
 W tym temacie opisano, jak Windows Communication Foundation (WCF) mapuje dokumentów sieci Web Services Description Language (WSDL), do i z <xref:System.ServiceModel.Description.ServiceDescription> wystąpień.  
@@ -152,4 +152,5 @@ W tym temacie opisano, jak Windows Communication Foundation (WCF) mapuje dokumen
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Użyty do wyprowadzenia `wsdl:message` /@name wartość komunikat o błędzie.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description>

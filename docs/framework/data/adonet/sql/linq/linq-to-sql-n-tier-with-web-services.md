@@ -1,15 +1,15 @@
 ---
-title: LINQ to SQL N-warstwowa przy użyciu usługi sieci Web
+title: N-warstwowa LINQ to SQL z użyciem usług internetowych
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107409"
 ---
-# <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL N-warstwowa przy użyciu usługi sieci Web
+# <a name="linq-to-sql-n-tier-with-web-services"></a>N-warstwowa LINQ to SQL z użyciem usług internetowych
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przeznaczone dla użycia w warstwie środkowej luźno powiązane warstwie dostępu do danych (DAL) takich jak usługi sieci Web. Jeśli Warstwa prezentacji jest to strona sieci Web platformy ASP.NET, a następnie używasz <xref:System.Web.UI.WebControls.LinqDataSource> formant serwera do zarządzania przesyłaniem danych między interfejsu użytkownika sieci Web i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w warstwie środkowej. Jeśli Warstwa prezentacji nie jest to strona programu ASP.NET, następnie warstwy środkowej i warstwy prezentacji należy wykonać wykonania dodatkowych czynności, aby zarządzać serializacji i deserializacji obiektu danych.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Konfigurowanie składnika LINQ to SQL w warstwie środkowej  
@@ -37,5 +37,6 @@ ms.locfileid: "56092725"
  Aby uzyskać więcej informacji, zobacz [pobierania danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Omówienie kontrolki serwera sieci Web kontrolka LinqDataSource](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

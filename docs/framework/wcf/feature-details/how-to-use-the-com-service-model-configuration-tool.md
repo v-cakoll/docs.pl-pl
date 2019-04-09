@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Używanie narzędzia konfiguracji modelu usług COM+'
+title: 'Instrukcje: używanie narzędzia konfiguracji modelu usług COM+'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196895"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Instrukcje: Używanie narzędzia konfiguracji modelu usług COM+
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>Instrukcje: używanie narzędzia konfiguracji modelu usług COM+
 Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które będą dostępne jako usługi sieci Web za pomocą narzędzia wiersza polecenia w konfiguracji modelu usług COM + (ComSvcConfig.exe).  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd integrowania z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

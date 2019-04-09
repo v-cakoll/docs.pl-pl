@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b72667101575aebea9b60a41979e374004b541
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3c262e8a20eb9a805f6c64cac412f0d0fd6eeb80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109983"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego
 Przekazywanie dalej typu umożliwia przeniesienie typu do innego zestawu bez konieczności ponownego kompilowania aplikacji, które używają oryginalnego zestawu.  
@@ -47,6 +47,7 @@ Przekazywanie dalej typu umożliwia przeniesienie typu do innego zestawu bez kon
 4.  Zestaw, gdzie typ używany w zlokalizowanym z odwołania do zestawu, który teraz zawiera typ należy ponownie skompilować. Na przykład, jeśli kompilujesz z pliku C# z wiersza polecenia, użyj [/Reference (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) opcję, aby określić zestaw, który zawiera typu. W języku C++, użyj [#using](/cpp/preprocessor/hash-using-directive-cpp) dyrektywy w pliku źródłowym, aby określić zestaw, który zawiera typu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>
 - [Przekazywanie dalej typu (C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)
 - [#using — dyrektywa](/cpp/preprocessor/hash-using-directive-cpp)

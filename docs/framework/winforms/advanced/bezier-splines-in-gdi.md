@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107331"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier krzywe w GDI +
 Krzywej Beziera jest określony przez cztery punkty krzywej: dwa punkty końcowe (p1 i p2) i punkty kontrolne dwóch (c1 i c2). Krzywa rozpoczyna się od p1 i kończy się na p2. Krzywa nie przechodzi przez punkty kontrolne, ale punktów kontrolnych pełnić rolę pól, ściągając krzywej w niektórych kierunkach i wywieranie wpływu na sposób, w jaki załamania krzywej. Poniższa ilustracja przedstawia krzywej Beziera, wraz z jej punktów końcowych i punkty kontrolne.  
@@ -38,6 +38,7 @@ Krzywej Beziera jest określony przez cztery punkty krzywej: dwa punkty końcowe
  ![Paths](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)

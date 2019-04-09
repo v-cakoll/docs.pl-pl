@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166208"
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] definiuje kilka zdarzeń, które są wywoływane w odpowiedzi na zmianę wartości właściwości. Często właściwość jest właściwość zależności. Samego zdarzenia jest czasami zdarzenia trasowanego i czasami jest to standard [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Definicja zdarzenia różni się zależnie od scenariusza, ponieważ niektóre zmiany właściwości bardziej odpowiednie są przesyłane za pośrednictwem drzewo elementów, natomiast inne zmiany właściwości są zwykle tylko z kwestią do obiektu, gdy zmianie właściwości.  
@@ -62,5 +62,6 @@ ms.locfileid: "57351999"
  Aby dowiedzieć się więcej na temat wyzwalaczy właściwości, zobacz [Tworzenie szablonów i stylów](../controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)

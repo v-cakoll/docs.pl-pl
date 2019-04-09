@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj testowania trafień za pomocą obszaru'
+title: 'Instrukcje: Stosowanie testowania trafień za pomocą obszaru'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150504"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Instrukcje: Użyj testowania trafień za pomocą obszaru
+# <a name="how-to-use-hit-testing-with-a-region"></a>Instrukcje: Stosowanie testowania trafień za pomocą obszaru
 Testowanie trafień ma na celu określenia, czy kursor znajduje się za pośrednictwem danego obiektu, takie jak ikony lub przycisku.  
   
 ## <a name="example"></a>Przykład  
@@ -28,6 +28,7 @@ Testowanie trafień ma na celu określenia, czy kursor znajduje się za pośredn
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Region>
 - [Regiony w GDI+](regions-in-gdi.md)
 - [Instrukcje: Stosowanie przycinania za pomocą obszaru](how-to-use-clipping-with-a-region.md)

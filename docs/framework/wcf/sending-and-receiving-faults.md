@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195062"
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
 Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a w przypadku dwukierunkowego od klienta do usługi w sposób interoperacyjny. Zazwyczaj usługa definiuje zawartość błędów niestandardowych i określa, jakie operacje można przywrócić je. (Aby uzyskać więcej informacji, zobacz [definiowanie i określanie błędów](../../../docs/framework/wcf/defining-and-specifying-faults.md).) W tym temacie omówiono, jak usługi lub klienta dwukierunkowego może wysyłać te błędy Jeśli nastąpiła odpowiadającego warunku błędu i jak klient lub aplikacja usługi obsługuje te błędy. Aby uzyskać omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -105,8 +105,9 @@ Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a 
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Oczekiwane wyjątki](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Zwalnianie zasobów klienta programu WCF za pomocą poleceń Zamknij i Przerwij](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

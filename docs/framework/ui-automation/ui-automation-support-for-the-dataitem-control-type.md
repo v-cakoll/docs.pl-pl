@@ -1,17 +1,17 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataItem
+title: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, Data Item control type
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: ebc5f9a5b50766b9a49a9772469f8ae731f3aa4c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125214"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "57679401"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] kontrolować wzorców, wymagane są obsługiwane przez wszystkie kontrolki elementu danych. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element danych można można rozwijać i zwijać by pokazać lub ukryć informacje, wzorzec Rozwiń Zwiń muszą być obsługiwane.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Elementy danych będzie obsługiwać wzorzec elementu siatki, gdy kolekcja elementów danych jest dostępna w kontenerze, który może być przestrzennie nawigować pozycji na pozycję.|  
@@ -76,7 +76,7 @@ ms.locfileid: "57679401"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie kontrolki elementu danych. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -107,6 +107,7 @@ ms.locfileid: "57679401"
  Jeśli siatki reprezentuje listę elementów możliwych do wybrania, odpowiednie elementy interfejsu użytkownika można ujawnić z typem kontroli wyszczególnij zamiast typu formantu elementu danych. W poprzednim przykładzie można zwiększyć, udostępnianie je jako typy kontroli wyszczególnij, ponieważ ten typ obsługuje już wzorca kontrolki SelectionItem dla elementów DataItem ("Kont Receivable.doc" i "Kont Payable.doc") w grupie ("Contoso").  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

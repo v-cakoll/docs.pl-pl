@@ -1,15 +1,15 @@
 ---
-title: Architektura i projektowanie
+title: Architektura i projekt
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096140"
 ---
-# <a name="architecture-and-design"></a>Architektura i projektowanie
+# <a name="architecture-and-design"></a>Architektura i projekt
 Moduł generowania SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) jest implementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażeń.  
   
  Węzły drzewa są przetwarzane od dołu w górę. Po pierwsze jest generowany strukturę pośredniego: SqlSelectStatement lub SqlBuilder, zarówno ISqlFragment implementującej. Następnie ciąg instrukcja SQL jest generowany z tej struktury. Istnieją dwa powody, dla struktury pośredniego:  
@@ -415,4 +415,5 @@ IsEmpty(inut) = Not Exists(input)
  Aby tworzyć unikatowe nazwy dla zakresu aliasów i kolumn, należy użyć _n < existing_name >, gdzie n to najmniejsza alias, który nie został jeszcze użyty. Globalną listę wszystkie aliasy podkreśla konieczność kaskadowych zmienia nazwę.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Generowanie kodu SQL w dostawcy próbki](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

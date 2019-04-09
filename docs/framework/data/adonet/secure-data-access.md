@@ -2,12 +2,12 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137257"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostępnych w podstawowym magazynie danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które Twoja aplikacja może zawierać.  
@@ -56,7 +56,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Podstawowe założenia obsługi wyjątków](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|W tym artykule opisano podstawowe rodzaje try/catch/finally strukturalna Obsługa wyjątków.|  
-|[Najlepsze rozwiązania dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
+|[Najlepsze praktyki dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Ochrona programu Microsoft Access i źródła danych programu Excel  
  Program Microsoft Access i Microsoft Excel może działać jako magazyn danych na potrzeby aplikacji ADO.NET, gdy wymagania dotyczące zabezpieczeń są minimalne lub nie istnieje. Ich funkcje bezpieczeństwa, zostaną zastosowane na przed intruzami, ale nie należy polegać na więcej niż zniechęcić meddling przez użytkowników w organizacji uninformed. Pliki danych fizycznych dostępu i programu Excel istnieje w systemie plików, a musi być dostępna dla wszystkich użytkowników. To sprawia, że ich narażone na ataki, mogącymi skutkować kradzieżą lub utraty danych, ponieważ pliki można łatwo skopiować lub zmodyfikować. Gdy wymagana jest niezawodne zabezpieczenia, użyj programu SQL Server lub innej bazy danych, które są oparte na serwerze plików danych fizycznych których nie można odczytać z systemu plików.  
@@ -88,6 +88,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 |[Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Zawiera tematy zaawansowane, takie jak podstawowe zestawy międzyoperacyjne, wątków i przekazywanie niestandardowe.|
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Zalecenia dotyczące strategii dostępu do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))

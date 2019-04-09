@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie tabeli wyszukiwania dla Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka'
+title: 'Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125986"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: Tworzenie tabeli wyszukiwania dla Windows Forms ComboBox, ListBox lub CheckedListBox, kontrolka
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy systemu Windows
 Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formularzu Windows, ale przechowywać dane w formacie, który jest bardziej zrozumiały dla programu. Na przykład formularz zamówienia ds może wyświetlić elementy menu według nazwy w polu listy. Jednak w tabeli danych rejestrowania kolejność zawierałoby unikatowe numery identyfikacyjne reprezentujący żywności. W poniższej tabeli przedstawiono przykład sposobu przechowywania i wyświetlania danych w formularzu zamówienia ds.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -33,7 +33,7 @@ Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formular
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|Nazwa|  
+|Identyfikator|Nazwa|  
 |--------|----------|  
 |12|Ziemniaczanej|  
 |13|Kurczaka|  
@@ -71,8 +71,9 @@ Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formular
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wiązanie danych i formularzy Windows Forms](../data-binding-and-windows-forms.md)
+
+- [Wiązanie danych i formularze systemu Windows](../data-binding-and-windows-forms.md)
 - [ListBox, kontrolka — omówienie](listbox-control-overview-windows-forms.md)
 - [ComboBox, kontrolka — omówienie](combobox-control-overview-windows-forms.md)
 - [CheckedListBox, kontrolka — omówienie](checkedlistbox-control-overview-windows-forms.md)
-- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)
+- [Formanty formularzy systemu Windows używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)

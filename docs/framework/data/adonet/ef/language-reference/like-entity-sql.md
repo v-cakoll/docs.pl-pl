@@ -2,12 +2,12 @@
 title: Podobnie jak (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197714"
 ---
 # <a name="like-entity-sql"></a>Podobnie jak (jednostka SQL)
 Określa, czy określony znak `String` pasuje do określonego wzorca.  
@@ -57,13 +57,13 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  Może używać właściwe dla dostawcy rozszerzeń, jeśli platformą docelową jest program określonego dostawcy. Jednak takie konstrukcje mogą być traktowane inaczej przez innych dostawców, na przykład. SqlServer obsługuje [pierwszego do ostatniego] i [^ pierwszej i ostatniej] wzorców, jeśli pierwsza odpowiada dokładnie jeden znak między pierwszym i ostatnim i ostatniego dopasowania dokładnie jeden znak, który nie jest między pierwszym i ostatnim.  
   
 ### <a name="escape"></a>Escape  
- Za pomocą klauzuli UCIECZKI, można wyszukiwać ciągi znaków, które zawierają jeden lub więcej specjalnych symboli wieloznacznych opisano w tabeli w poprzedniej sekcji. Załóżmy na przykład, kilku dokumentów zawierają literału "100%" w tytule i chcesz wyszukać wszystkie te dokumenty. Ponieważ znak procentu (%) jest symbolem wieloznacznym, musisz wyjść z niego przy użyciu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] klauzuli UCIECZKI, aby pomyślnie wykonać wyszukiwanie. Oto przykład tego filtru.  
+ Za pomocą klauzuli UCIECZKI, można wyszukiwać ciągi znaków, które zawierają jeden lub więcej specjalnych symboli wieloznacznych opisano w tabeli w poprzedniej sekcji. Załóżmy na przykład, kilku dokumentów zawierają literału "100%" w tytule i chcesz wyszukać wszystkie te dokumenty. Ponieważ procentu (%) znak jest symbolem wieloznacznym, musisz wyjść z niego przy użyciu [!INCLUDE[esql](../../../../../../includes/esql-md.md)] klauzuli UCIECZKI, aby pomyślnie wykonać wyszukiwanie. Oto przykład tego filtru.  
   
 ```  
 "title like '%100!%%' escape '!'"  
 ```  
   
- W tym wyrażeniu wyszukiwania znaku wieloznacznego procentu (%), bezpośrednio po znaku wykrzyknika (!) jest traktowany jako literał, a nie jako symbolu wieloznacznego. Można użyć dowolnego znaku z wyjątkiem znaku ucieczki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] symboli wieloznacznych i kwadrat dopasowywanie (`[ ]`) znaków. W poprzednim przykładzie znak wykrzyknika (!) jest znakiem ucieczki.  
+ W tym wyrażeniu wyszukiwania znaku wieloznacznego procentu (%) bezpośrednio po znaku wykrzyknika (!) jest traktowany jako literał, a nie jako symbolu wieloznacznego. Można użyć dowolnego znaku z wyjątkiem znaku ucieczki [!INCLUDE[esql](../../../../../../includes/esql-md.md)] symboli wieloznacznych i kwadrat dopasowywanie (`[ ]`) znaków. W poprzednim przykładzie znak wykrzyknika (!) jest znakiem ucieczki.  
   
 ## <a name="example"></a>Przykład  
  Następujące dwa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytań użyj LIKE i operatory UCIECZKI, aby określić, czy dany ciąg znaków jest zgodny ze wzorcem określonym. Wyszukuje pierwsze zapytanie `Name` , rozpoczyna się od znaków `Down_`. To zapytanie używa opcji ANULOWANIA, ponieważ znak podkreślenia (`_`) jest symbolem wieloznacznym. Bez określania opcji ANULOWANIA, zapytanie będzie wyszukiwać `Name` wartości rozpoczynających się od słowa `Down` następuje dowolny pojedynczy znak inny niż znak podkreślenia. Zapytania są oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

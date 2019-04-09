@@ -2,12 +2,12 @@
 title: Zapytania LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: 1390ca36ce9071a16ef21e32dfd7f7a6211644f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076188"
 ---
 # <a name="linq-to-sql-queries"></a>Zapytania LINQ to SQL
 Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytań przy użyciu tej samej składni, tak jak w [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Jedyna różnica polega na tym, że obiekty, do którego odwołuje się zapytania są mapowane do elementów w bazie danych. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -19,7 +19,7 @@ Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
   
  W poniższej tabeli przedstawiono podobieństwa i różnice między [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania elementów.  
   
-|Element|Zapytania LINQ|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Query|  
+|Element|Zapytania LINQ|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Zapytanie|  
 |----------|----------------|----------------------------------------------------------------------|  
 |Zwracany typ zmiennej lokalnej, która przechowuje zapytanie (dla zapytań, które zwracają sekwencje)|Ogólny `IEnumerable`|Ogólny `IQueryable`|  
 |Określanie źródła danych|Używa `From` (Visual Basic) lub `from` (C#) — klauzula|Ten sam|  
@@ -32,7 +32,8 @@ Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 |Przesyłanie strumieniowe w stosunku do pamięci podręcznej zapytań|Nieobsługiwane w przypadku pamięci lokalnej||  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
+
+- [Wprowadzenie do kwerend LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
 - [Podstawowe operacje zapytań LINQ](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [Relacje typów w operacjach zapytań LINQ](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)
 - [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

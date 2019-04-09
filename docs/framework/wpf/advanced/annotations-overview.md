@@ -9,19 +9,18 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122450"
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
 Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie powszechnie używane czynnością, firma Microsoft niemal Zrób to dla przyznane. Te informacje o lub komentarze są "adnotacje" dodajemy do dokumentu do informacji lub aby wyróżnić elementy do późniejszego wykorzystania. Chociaż zapisywania notatki na drukowanych dokumentów jest proste i powszechnie używane, możliwość dodawania swoje komentarze do dokumentów elektronicznych zwykle jest bardzo ograniczona, jeśli jest dostępny w wszystkich.  
   
  W tym temacie przeglądy kilka często spotykanych rodzajów adnotacji, w szczególności karteczki i wyróżnienia i przedstawiono sposób, w jaki [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] ułatwia tego rodzaju adnotacji w aplikacjach za pomocą dokumentu Windows Presentation Foundation (WPF) Wyświetlanie kontrolki.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Formanty wyświetlania dokumentu, które obsługuje adnotacji obejmują <xref:System.Windows.Controls.FlowDocumentReader> i <xref:System.Windows.Controls.FlowDocumentScrollViewer>, jak również formanty pochodne <xref:System.Windows.Controls.Primitives.DocumentViewerBase> takich jak <xref:System.Windows.Controls.DocumentViewer> i <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
-  
-  
+
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Notatki  
  Typowej notatkę zawiera informacje zapisane w niewielkim fragmentem kolorowego papieru, następnie "zatrzymane" w dokumencie. Cyfrowych notatek zapewniają podobne funkcje dla dokumentów elektronicznych, ale z dodatkową elastyczność obejmujący wiele innych typów zawartości, takie jak tekst, ręcznie sporządzanych notatek (na przykład [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)] "pisma odręcznego" pociągnięć), lub linków sieci Web.  
@@ -65,6 +64,7 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
  Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacje i notatki między czytnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tych aplikacji, można przejść czytelnika na stronie zawierającej adnotacji, są wymieniane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
@@ -72,7 +72,7 @@ Zapisywanie notatki lub komentarze dotyczące dokumentów dokument jest takie po
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Schemat adnotacji](annotations-schema.md)
-- [ContextMenu — przegląd](../controls/contextmenu-overview.md)
-- [Przegląd poleceń](commanding-overview.md)
-- [Przegląd dokumentu przepływu](flow-document-overview.md)
+- [ContextMenu — Przegląd](../controls/contextmenu-overview.md)
+- [Przegląd Polecenia](commanding-overview.md)
+- [Przegląd Dokument przepływu](flow-document-overview.md)
 - [Instrukcje: Dodawanie polecenia do element MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

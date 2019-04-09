@@ -1,34 +1,33 @@
 ---
 title: w modyfikator parametru - C# odwołania
 ms.custom: seodec18
-ms.date: 02/12/2019
+ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 5a765a330e4d9efe22943538503c0822e1c9dfdb
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112648"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
-`in` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Jest on podobny do [ref](ref.md) lub [się](out-parameter-modifier.md) słów kluczowych, poza tym, że `in` argumentów nie można zmodyfikować przez metodę o nazwie. Natomiast `ref` argumentów może być modyfikowany, `out` argumenty muszą zostać zmodyfikowane przez metodę o nazwie, a te zmiany są obserwowalnymi w kontekst wywołania.
+`in` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. To sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy żadnych operacji na parametr składa się od argumentu. Jest on podobny do [ref](ref.md) lub [się](out-parameter-modifier.md) słów kluczowych, poza tym, że `in` argumentów nie można zmodyfikować przez metodę o nazwie. Natomiast `ref` argumentów może być modyfikowany, `out` argumenty muszą zostać zmodyfikowane przez metodę o nazwie, a te zmiany są obserwowalnymi w kontekst wywołania.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
 Poprzedni przykład pokazuje, że `in` modyfikator jest zazwyczaj zbędna w witrynie wywołania. Jest wymagany tylko w deklaracji metody.
 
-
 > [!NOTE] 
 > `in` — Słowo kluczowe można również za pomocą parametru typu ogólnego do określenia, czy parametr typu jest kontrawariantny, jako część `foreach` instrukcji, lub jako część `join` klauzuli w zapytaniu LINQ. Aby uzyskać więcej informacji na temat użytkowania `in` Zobacz — słowo kluczowe w tych kontekstach [w](in.md), który zawiera łącza do wszystkich tych zastosowań.
   
- Zmienne są przekazywane jako `in` argumentów musi zostać zainicjowany przed przesłaniem w wywołaniu metody. Jednak wywoływanej metody nie może przypisać wartość lub zmodyfikuj argumentu.  
+Zmienne są przekazywane jako `in` argumentów musi zostać zainicjowany przed przesłaniem w wywołaniu metody. Jednak wywoływanej metody nie może przypisać wartość lub zmodyfikuj argumentu.  
 
 `in` Modyfikator parametru jest dostępna w C# wersji 7.2 lub nowszy. Poprzednie wersje wygenerować błąd kompilatora `CS8107` ("Funkcja"odwołań tylko do odczytu"nie jest dostępna w C# 7.0. Użyj języka w wersji 7.2 lub większą.") Aby skonfigurować wersji kompilatora języka, zobacz [wybierz C# wersji językowej](../configure-language-version.md).
 
- Mimo że `in`, `ref`, i `out` słowa kluczowe powodować różne zachowanie w czasie wykonywania, ich nie są uważane za część podpisu metody w czasie kompilacji. W związku z tym, nie mogą być przeciążone metody, jeśli jedyna różnica polega na to, że jedna metoda przyjmuje strukturę `ref` lub `in` argument i drugie `out` argumentu. Poniższy kod, na przykład, nie zostanie skompilowany:  
+`in`, `ref`, I `out` słowa kluczowe nie są uważane za część podpisu metody na potrzeby rozwiązania przeciążenia. W związku z tym, nie mogą być przeciążone metody, jeśli jedyna różnica polega na to, że jedna metoda przyjmuje strukturę `ref` lub `in` argument i drugie `out` argumentu. Poniższy kod, na przykład, nie zostanie skompilowany:  
   
 ```csharp
 class CS0663_Example
@@ -124,7 +123,7 @@ Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodza
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Parametry metody](method-parameters.md)

@@ -1,15 +1,15 @@
 ---
-title: Prywatność i bezpieczeństwo danych
+title: Bezpieczeństwo danych i poufności informacji
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081855"
 ---
-# <a name="privacy-and-data-security"></a>Prywatność i bezpieczeństwo danych
+# <a name="privacy-and-data-security"></a>Bezpieczeństwo danych i poufności informacji
 Zabezpieczenia i zarządzanie nimi poufnych informacji w aplikacji ADO.NET zależy od bazowego produkty i technologie używane do jego utworzenia. ADO.NET nie są bezpośrednio dostępne usługi dla zabezpieczenia i szyfrowanie danych.  
   
 ## <a name="cryptography-and-hash-codes"></a>Kryptografii i kodów skrótów  
@@ -28,6 +28,7 @@ Zabezpieczenia i zarządzanie nimi poufnych informacji w aplikacji ADO.NET zale�
  <xref:System.Security.SecureString> Klasa dostarcza metody do szyfrowania tekstu w pamięci przy użyciu interfejsu API ochrony danych (DPAPI). Ten ciąg jest usuwany z pamięci, gdy nie jest już potrzebny. Istnieje nie `ToString` metodę, aby szybko zapoznać się zawartość <xref:System.Security.SecureString>. Można zainicjować nowe wystąpienie klasy `SecureString` bez wartości lub przez przekazanie jej wskaźnik do tablicy <xref:System.Char> obiektów. Można następnie użyć różnych metod klasy do pracy z ciągu. Aby uzyskać więcej informacji, Pobierz [SecureString przykładowej aplikacji](https://go.microsoft.com/fwlink/?LinkId=120418), który demonstruje sposób skorzystania `SecureString` klasy z.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

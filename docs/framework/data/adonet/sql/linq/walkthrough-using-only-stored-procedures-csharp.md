@@ -1,15 +1,15 @@
 ---
-title: 'Przewodnik: Przy użyciu wyłącznie procedur składowanych (C#)'
+title: 'Przewodnik: Używanie tylko procedur składowanych (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098172"
 ---
-# <a name="walkthrough-using-only-stored-procedures-c"></a>Przewodnik: Przy użyciu wyłącznie procedur składowanych (C#)
+# <a name="walkthrough-using-only-stored-procedures-c"></a>Przewodnik: Używanie tylko procedur składowanych (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz do uzyskiwania dostępu do danych, wykonując procedury składowane tylko. To podejście jest często używana przez administratorów baz danych, aby ograniczyć sposób dostępu do magazynu danych.  
   
 > [!NOTE]
@@ -188,5 +188,6 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
  Ten projekt można zwiększyć, dokonując pewnych zmian. Na przykład możesz wyświetlić listę dostępnych procedur składowanych w polu listy i użytkownik powinien wybrać, które procedury musisz wykonać. Można również przesyłać strumieniowo dane wyjściowe raportów do pliku tekstowego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

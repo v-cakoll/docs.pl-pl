@@ -2,13 +2,19 @@
 title: Administracja i diagnostyka
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092283"
 ---
 # <a name="administration-and-diagnostics"></a>Administracja i diagnostyka
 Windows Communication Foundation (WCF) zapewnia bogaty zestaw funkcji, które mogą ułatwić monitorowanie różnych etapach cyklu życia aplikacji. Na przykład można użyć konfiguracji do skonfigurowania usług i klientów we wdrożeniu. Usługi WCF zawierają duży zestaw liczników wydajności, aby ułatwić mierzyć wydajność aplikacji. Usługa WCF umożliwia również dane inspekcji usługi w czasie wykonywania za pośrednictwem dostawcy Instrumentacji zarządzania Windows (WMI) WCF. Podczas ulegnie awarii lub rozpoczyna się nieprawidłowo działających aplikacji, można użyć w dzienniku zdarzeń, aby zobaczyć, czy ma żadnych znaczących wystąpił. Aby zobaczyć, jakie zdarzenia są występuje end-to-end w aplikacji, można użyć rejestrowania komunikatów i śledzenia. Funkcje te pomagają zarówno deweloperów i specjalistów IT, aby rozwiązywać problemy z aplikacją usługi WCF, gdy go nie zachowuje się poprawnie.  
@@ -34,9 +40,10 @@ Windows Communication Foundation (WCF) zapewnia bogaty zestaw funkcji, które mo
  Usługi WCF zawiera także kilka narzędzi graficzny interfejs użytkownika i wiersza polecenia, aby ułatwić umożliwiające tworzenie, wdrażanie i zarządzanie aplikacjami usługi WCF. Aby uzyskać więcej informacji, zobacz [narzędzia programu Windows Communication Foundation](../../../../docs/framework/wcf/tools.md). Na przykład, można użyć [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) można tworzyć i edytować ustawienia konfiguracji programu WCF za pomocą kreatora, a nie bezpośrednio edycji XML. Można również użyć [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) do wyświetlania, grupy i filtrować komunikaty śledzenia, dzięki czemu możesz zdiagnozować, naprawy i sprawdź problemów w przypadku usług WCF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie własnej aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [Wdrażanie usług](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
-- [Dokumentacja wyjątków](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
+- [Informacje o wyjątkach](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [Rejestrowanie zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)

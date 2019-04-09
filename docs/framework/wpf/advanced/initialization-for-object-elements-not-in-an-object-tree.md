@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108969"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicjalizacja elementów obiektu poza drzewem obiektu
 Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] inicjowania mają być opóźniane do procesów, które są zwykle oparte na ten element jest podłączony do drzewa logicznego lub drzewa wizualnego. W tym temacie opisano kroki, które mogą być wymagane, aby zainicjować element, który nie jest podłączony do obu drzewa.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Elementy i drzewo logiczne  
  Po utworzeniu wystąpienia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy w kodzie, należy pamiętać, że różne aspekty tego obiektu inicjowanie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klasy celowo nie są częścią kodu, który jest wykonywany podczas wywoływania konstruktora klasy. Szczególnie w przypadku klasy kontrolki większość wizualnej reprezentacji tej kontrolki nie jest zdefiniowany przez konstruktora. Wizualna reprezentacja jest zdefiniowany przez szablon kontrolki. Szablon potencjalnie pochodzą z różnych źródeł, ale w większości przypadków szablonu są uzyskiwane ze stylów motywu. Szablony są wydajnie późnego wiązania; niezbędne szablonu nie jest dołączony do danego kontroli, aż formant będzie gotowa do układu. I kontrolki nie jest gotowa do układu, dopóki nie jest on dołączony do drzewa logicznego, który nawiązuje połączenie z powierzchnię renderowania w katalogu głównym. Jest ten element poziomu głównego, który inicjuje wszystkie jego elementy podrzędne renderowania, zgodnie z definicją w drzewie logicznym.  
   
@@ -43,6 +41,7 @@ Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Drzewa w WPF](trees-in-wpf.md)
-- [Renderowanie grafiki WPF — przegląd](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd Renderowanie grafiki WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)

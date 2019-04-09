@@ -2,12 +2,12 @@
 title: Transakcje rozproszone
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150205"
 ---
 # <a name="distributed-transactions"></a>Transakcje rozproszone
 Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (zatwierdzenie) albo kończy się niepowodzeniem (przerwanie) jako jednostki, między innymi. A *transakcja rozproszona* jest transakcji, która ma wpływ na kilka zasobów. Dla rozproszonych można zatwierdzić transakcji wszyscy uczestnicy należy zagwarantować, że wszelkie zmiany danych będą trwałe. Zmiany muszą zostać zachowane niezależnie awarie systemu lub inne nieprzewidziane zdarzenia. Jeśli pojedynczego uczestnika nie powiedzie się gwarancji, cała transakcja nie powiedzie się, a wszelkie zmiany danych w zakresie transakcji zostaną przywrócone.  
@@ -48,6 +48,7 @@ Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (z
  Może być konieczne Włączanie MS DTC za pośrednictwem sieci, aby można było używać transakcji rozproszonych. Jeśli masz Windows włączona zapora, musisz zezwolić na usługę MS DTC, aby używała sieci ani nie otwieraj portu MS DTC.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: 513d68f49e4182979b492fa67e65860aee96e09a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ea30c2e9593f289c91a47cc082becf47dedc450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072788"
 ---
 # <a name="federation-and-issued-tokens"></a>Federacja i wystawione tokeny
 Za pomocą Windows Communication Foundation (WCF), możesz utworzyć klientów, które komunikują się bezpiecznie z usługami, które implementują specyfikacji WS-Federation i WS-Trust. Specyfikacje umożliwia XML protokołu SOAP i sieci Web Services Description Language (WSDL) zapewniają mechanizmy, które umożliwiają uwierzytelnianie i autoryzacja w obszarach różnych zaufania.  
@@ -23,25 +23,25 @@ Za pomocą Windows Communication Foundation (WCF), możesz utworzyć klientów, 
  [Federacja i zaufanie](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  Wyświetla listę problemów projektowych pod uwagę podczas tworzenia federacyjne usług lub klientów.  
   
- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  W tym artykule opisano tworzenie klienta federacyjnego z programem WCF.  
   
- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  W tym artykule opisano kroki tworzenia usługi federacyjnej.  
   
- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  W tym artykule opisano jak skonfigurować klientów i usług, które używają `WSFederationHttpBinding`.  
   
- [Instrukcje: Tworzenie usługi tokenów zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Instrukcje: tworzenie usługi tokenów zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  W tym artykule opisano kroki tworzenia usługi tokenów zabezpieczeń.  
   
  [Tokeny i oświadczenia języka SAML (Security Assertions Markup Language)](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  W tym artykule opisano tokenów zabezpieczeń potwierdzenia Markup Language (SAML), czyli rozszerzalne i włącz możliwość tworzenia zaawansowanych typów oświadczeń.  
   
- [Instrukcje: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Instrukcje: konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  W tym artykule opisano sposób tworzenia lokalnego wystawcy tokenów zabezpieczających.  
   
- [Instrukcje: Wyłączanie bezpiecznej sesji WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Opisuje sposób wyłączanie bezpiecznej sesji na `WSFederationHttpBinding`. Wyłączanie bezpiecznej sesji jest niezbędne, podczas tworzenia kolektywu serwerów sieci Web, która wymaga sesji dla każdego klienta.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -62,6 +62,7 @@ Za pomocą Windows Communication Foundation (WCF), możesz utworzyć klientów, 
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Tokeny niestandardowe](../../../../docs/framework/wcf/extending/custom-tokens.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

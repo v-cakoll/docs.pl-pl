@@ -1,15 +1,15 @@
 ---
-title: Za pomocą języka XML w zestawie danych
+title: Używanie języka XML w elemencie DataSet
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
-ms.openlocfilehash: 245e893d052a67e79396fb3d9fc7062eea426215
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e586ff0c6f28dd5919bc8b1bc640389a5cad610
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087422"
 ---
-# <a name="using-xml-in-a-dataset"></a>Za pomocą języka XML w zestawie danych
+# <a name="using-xml-in-a-dataset"></a>Używanie języka XML w elemencie DataSet
 Za pomocą narzędzia ADO.NET można wypełnić <xref:System.Data.DataSet> ze strumienia XML lub dokumentu. Można użyć strumień XML lub dokument Dostarcz je do <xref:System.Data.DataSet> danych, informacje o schemacie lub obu. Informacje dostarczone z strumień XML lub dokumentu może być łączone z istniejące dane lub informacje o schemacie już istnieje w <xref:System.Data.DataSet>.  
   
  ADO.NET umożliwia również tworzenie Reprezentacja XML <xref:System.Data.DataSet>, z lub bez jego schematu, aby przetransportować <xref:System.Data.DataSet> między HTTP do użycia przez inną aplikację lub włączone XML platformy. W Reprezentacja XML <xref:System.Data.DataSet>, dane są zapisywane w pliku XML i schematu, jeśli jest wbudowane w reprezentacji, są zapisywane przy użyciu języka definicji schematu XML (XSD). XML i schematu XML zapewniają wygodny format przesyłania zawartości <xref:System.Data.DataSet> do i z klientów zdalnych.  
@@ -47,5 +47,6 @@ Za pomocą narzędzia ADO.NET można wypełnić <xref:System.Data.DataSet> ze st
  W tym artykule opisano ADO.NET architektura i składniki i sposób ich użycia, dostęp do istniejących źródeł danych oraz do zarządzania danymi w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92528a2cf2227520327b9be2dca70be4c238ff61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9ea2e274bbcd17bcc129de46c753f091501d4c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184291"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 `openGenericCERCall` Zarządzany Asystent debugowania jest aktywowana Aby ostrzeżenie, że wykres ograniczonego wykonania region (CER) za pomocą zmiennych typu rodzajowego w metodzie głównej jest przetwarzany na kompilację JIT lub obrazu macierzystego czas generowania i co najmniej jeden z ogólnych zmienne typu jest typu odwołanie do obiektu.  
@@ -107,6 +107,7 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

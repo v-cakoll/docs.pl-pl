@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz niestandardowy tryb widoku dla ListView'
+title: 'Instrukcje: Tworzenie niestandardowego trybu widoku dla kontrolki ListView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092893"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Instrukcje: Utwórz niestandardowy tryb widoku dla ListView
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Instrukcje: Tworzenie niestandardowego trybu widoku dla kontrolki ListView
 W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.Controls.ListView.View%2A> tryb <xref:System.Windows.Controls.ListView> kontroli.  
   
 ## <a name="example"></a>Przykład  
@@ -43,8 +43,9 @@ W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.
  Aby uzyskać pełny przykład, zobacz [ListView przy użyciu wielu widoków (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) lub [ListView przy użyciu wielu Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Tematy z instrukcjami](listview-how-to-topics.md)
-- [ListView — omówienie](listview-overview.md)
-- [GridView — omówienie](gridview-overview.md)
+- [— Tematy porad](listview-how-to-topics.md)
+- [ListView — Przegląd](listview-overview.md)
+- [GridView — Przegląd](gridview-overview.md)

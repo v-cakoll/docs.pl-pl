@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Hosting kontrolki Win32 w WPF'
+title: 'Przewodnik: hostowanie kontrolki Win32 w WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160696"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Przewodnik: Hosting kontrolki Win32 w WPF
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Przewodnik: hostowanie kontrolki Win32 w WPF
 Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje w kodzie Win32, może być bardziej efektywne ponownie użyć przynajmniej część tego kodu w aplikacji WPF, a nie jego przepisania całkowicie. WPF zapewnia prosty mechanizm do obsługi oknie Win32, na stronie programu WPF.  
   
  Ten temat przeprowadzi Cię przez aplikację, [Hosting kontrolki ListBox Win32 w przykładzie WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), aby kontrolować Win32 pole listy hostów. Ta procedura ogólne można rozszerzyć z hostingiem dowolne Win32 okno.  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
  W tym temacie założono podstawowe umiejętność programowania WPF i Windows API. Aby uzyskać podstawowe wprowadzenie do programowania WPF, zobacz [wprowadzenie](../getting-started/index.md). Wprowadzenie do programowania interfejsu API Windows, zobacz dowolny wiele książek na ten temat, w szczególności *programowania Windows* przez Charles Petzold.  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworze
  Wreszcie, ustaw `handled` do `true` do wskazania obsługiwania wiadomości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Interop.HwndHost>
-- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
-- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)
+- [Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

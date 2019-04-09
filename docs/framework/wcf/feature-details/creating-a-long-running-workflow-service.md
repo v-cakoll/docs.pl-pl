@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109658"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. Długotrwałe usług przepływu pracy może działać przez dłuższy czas. W pewnym momencie przepływu pracy może być bezczynny, oczekiwanie na kilku dodatkowych informacji. W takim przypadku przepływ pracy jest trwały do usługi SQL database i zostanie usunięty z pamięci. Po udostępnieniu dodatkowych informacji wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku wdrażania bardzo uproszczony system zamawiania.  Klient wysyła pierwszy komunikat do usługi przepływu pracy, aby rozpocząć kolejności. Zwraca identyfikator zamówienia dla klienta. W tym momencie Usługa przepływu pracy oczekuje na inny komunikat z klienta i przechodzi w stan bezczynności i jest umieszczone w bazie danych programu SQL Server.  Gdy klient wysyła następnej wiadomości w celu uporządkowania elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg z informacją, że element został dodany do zamówienia. Przykładowy kod nie jest przeznaczona do rzeczywistej aplikacji w technologii, ale raczej prosty przykład ilustrujący długo działającej usługi przepływu pracy. W tym temacie założono, że wiesz, jak tworzyć projekty programu Visual Studio 2012 i rozwiązań.
@@ -199,4 +199,5 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
     ```
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)

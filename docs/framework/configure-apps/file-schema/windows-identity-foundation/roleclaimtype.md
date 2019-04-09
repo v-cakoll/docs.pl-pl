@@ -3,12 +3,12 @@ title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 812d44ef947d27b0f73d9dc2172494e89ee56d72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8c7b7c9b42ac72b878aed4e12298dc3655f1e707
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115599"
 ---
 # <a name="roleclaimtype"></a>\<roleClaimType>
 Określa typ oświadczenia, który definiuje typ oświadczenia roli w kolekcji <xref:System.Security.Claims.ClaimsIdentity> obiektów zwróconych przez <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> metodę programu obsługi tokenów.  
@@ -69,4 +69,5 @@ Określa typ oświadczenia, który definiuje typ oświadczenia roli w kolekcji <
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustaw wyrównanie TileBrush w poziomie i pionie'
+title: 'Instrukcje: Ustawianie wyrównania elementu TileBrush w poziomie i pionie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - aligning [WPF], TileBrushes
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
-ms.openlocfilehash: d18e4a9fe4f99c1947402c252082e1580a0b22cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149191"
 ---
-# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Instrukcje: Ustaw wyrównanie TileBrush w poziomie i pionie
+# <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Instrukcje: Ustawianie wyrównania elementu TileBrush w poziomie i pionie
 W tym przykładzie pokazano, jak kontrolować wyrównanie poziome i pionowe zawartości we fragmencie. Aby kontrolować wyrównanie poziome i pionowe <xref:System.Windows.Media.TileBrush>, użyj jej <xref:System.Windows.Media.TileBrush.AlignmentX%2A> i <xref:System.Windows.Media.TileBrush.AlignmentY%2A> właściwości.  
   
  <xref:System.Windows.Media.TileBrush.AlignmentX%2A> i <xref:System.Windows.Media.TileBrush.AlignmentY%2A> właściwości <xref:System.Windows.Media.TileBrush> są używane podczas jest spełniony jeden z następujących warunków:  
@@ -73,7 +73,8 @@ Wzorzec kafelka z zawartością wyrównany do prawej dolnej w podstawowy Kafelek
  W przykładach użyto <xref:System.Windows.Media.DrawingBrush> obiektów, aby zademonstrować sposób, w jaki <xref:System.Windows.Media.TileBrush.AlignmentX%2A> i <xref:System.Windows.Media.TileBrush.AlignmentY%2A> właściwości są używane. Właściwości te zachowują się identycznie, w przypadku wszystkich pędzli kafelka: <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.ImageBrush>, i <xref:System.Windows.Media.VisualBrush>. Aby uzyskać więcej informacji na temat pędzle kafelka zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.VisualBrush>
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)

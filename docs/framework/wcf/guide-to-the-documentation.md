@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d7ca994b185c39ac43cb6643098de602692842
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119603"
 ---
 # <a name="guide-to-the-documentation"></a>Przewodnik po dokumentacji
 Podane poniżej przedstawiono wskazówki dotyczące dokumentacji usług Windows Communication Foundation (WCF). Połączone dokumenty zaleca się, że punkty początkowe pogrupowane według określonych zainteresowań i poziomami wiedzy na temat.  
@@ -62,6 +62,7 @@ Podane poniżej przedstawiono wskazówki dotyczące dokumentacji usług Windows 
  Aby wyświetlić listę protokołów obsługiwanych w powiązania dostarczane przez system, zobacz [Web Services protokoły obsługiwane przez wiązania współdziałania System-Provided](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md). Aby wyświetlić listę powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Windows Communication Foundation — przykłady](../../../docs/framework/wcf/samples/index.md)
 - [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)
 - [Wskazówki i najlepsze rozwiązania](../../../docs/framework/wcf/guidelines-and-best-practices.md)

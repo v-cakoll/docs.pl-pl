@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyczyść powiązania'
+title: 'Instrukcje: Czyszczenie powiązań'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - clearing bindings [WPF]
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
-ms.openlocfilehash: 8bffc34864a2bf929bcbed09f16eac282e1ba2a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101422"
 ---
-# <a name="how-to-clear-bindings"></a>Instrukcje: Wyczyść powiązania
+# <a name="how-to-clear-bindings"></a>Instrukcje: Czyszczenie powiązań
 W tym przykładzie pokazano, jak wyczyścić powiązania z obiektu.  
   
 ## <a name="example"></a>Przykład  
@@ -30,6 +30,7 @@ W tym przykładzie pokazano, jak wyczyścić powiązania z obiektu.
  Aby wyczyścić powiązania ze wszystkich możliwych właściwości do obiektu, należy użyć <xref:System.Windows.Data.BindingOperations.ClearAllBindings%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Data.BindingOperations>
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

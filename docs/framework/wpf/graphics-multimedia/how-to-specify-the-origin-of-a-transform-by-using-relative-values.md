@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Określ źródło przekształcenia przy użyciu wartości względnych'
+title: 'Instrukcje: Określanie źródła przekształcenia przy użyciu wartości względnych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - origins of Transforms [WPF]
 - Transforms [WPF], origins of
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
-ms.openlocfilehash: bdcc17e2d9bf68170c10dd8e35670f3e072a527c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082961"
 ---
-# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Instrukcje: Określ źródło przekształcenia przy użyciu wartości względnych
+# <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Instrukcje: Określanie źródła przekształcenia przy użyciu wartości względnych
 Ten przykład pokazuje, jak określić źródło przy użyciu wartości względnych <xref:System.Windows.UIElement.RenderTransform%2A> mający zastosowanie do <xref:System.Windows.FrameworkElement>.  
   
  Kiedy należy obrócić, skalowania lub pochylania <xref:System.Windows.FrameworkElement> przy użyciu <xref:System.Windows.UIElement.RenderTransform%2A> właściwość, domyślne ustawienie ma zastosowanie transformacji do lewego górnego rogu elementu. Jeśli chcesz obrócić, skalowania lub pochylić z Centrum elementu można kompensacji, ustawiając środek przekształcenia do środka elementu. Rozwiązanie wymaga jednak, że znasz rozmiar elementu. Łatwiejszy sposób stosowania transformacji do środka elementu jest określenie jego <xref:System.Windows.UIElement.RenderTransformOrigin%2A> właściwości (0,5, 0,5), zamiast ustawiać wartość center na przekształcenie, sam.  
@@ -40,6 +40,7 @@ Ten przykład pokazuje, jak określić źródło przy użyciu wartości względn
  Aby uzyskać więcej informacji na temat przekształcania <xref:System.Windows.FrameworkElement> obiekty, zobacz [przekształca Przegląd](transforms-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Transform>
-- [Przekształcenia — przegląd](transforms-overview.md)
-- [Tematy z instrukcjami](transformations-how-to-topics.md)
+- [Przegląd Przekształcenia](transforms-overview.md)
+- [— Tematy porad](transformations-how-to-topics.md)

@@ -1,19 +1,19 @@
 ---
 title: out — modyfikator parametrów - C# odwołania
 ms.custom: seodec18
-ms.date: 03/06/2018
+ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 8aebe0492728f3ef87256f5d8c4859220d9106cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125756"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out — Modyfikator parametrów (odwołanie w C#)
-`out` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. Jest on podobny do [ref](ref.md) — słowo kluczowe, chyba że `ref` wymaga zainicjowanej zmiennej przed przekazaniem jej. Jest również, jak [w](in-parameter-modifier.md) — słowo kluczowe, chyba że `in` nie zezwala na o nazwie metody zmodyfikować wartość argumentu. Aby użyć `out` jawnie użyć parametru, zarówno definicję metody, jak i wywoływania metody `out` — słowo kluczowe. Na przykład:  
+`out` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. To sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy żadnych operacji na parametr składa się od argumentu. Jest on podobny do [ref](ref.md) — słowo kluczowe, chyba że `ref` wymaga zainicjowanej zmiennej przed przekazaniem jej. Jest również, jak [w](in-parameter-modifier.md) — słowo kluczowe, chyba że `in` nie zezwala na o nazwie metody zmodyfikować wartość argumentu. Aby użyć `out` jawnie użyć parametru, zarówno definicję metody, jak i wywoływania metody `out` — słowo kluczowe. Na przykład:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
@@ -22,7 +22,7 @@ ms.locfileid: "54660011"
   
 Zmienne są przekazywane jako `out` argumentów nie muszą być zainicjowane przed przesłaniem w wywołaniu metody. Metoda wywoływana jest jednak wymagana do przypisania wartości przed powrotem z metody.  
   
-Mimo że `in`, `ref`, i `out` słowa kluczowe powodować różne zachowanie w czasie wykonywania, ich nie są uważane za część podpisu metody w czasie kompilacji. W związku z tym, nie mogą być przeciążone metody, jeśli jedyna różnica polega na to, że jedna metoda przyjmuje strukturę `ref` lub `in` argument i drugie `out` argumentu. Poniższy kod, na przykład, nie zostanie skompilowany:  
+`in`, `ref`, I `out` słowa kluczowe nie są uważane za część podpisu metody na potrzeby rozwiązania przeciążenia. W związku z tym, nie mogą być przeciążone metody, jeśli jedyna różnica polega na to, że jedna metoda przyjmuje strukturę `ref` lub `in` argument i drugie `out` argumentu. Poniższy kod, na przykład, nie zostanie skompilowany:  
   
 ```csharp
 class CS0663_Example
@@ -48,14 +48,12 @@ Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodza
   
 -   Metody iteratora, które obejmują [yield return](../../../csharp/language-reference/keywords/yield.md) lub `yield break` instrukcji.  
 
-## <a name="declaring-out-arguments"></a>Deklarowanie `out` argumentów   
+## <a name="declaring-out-parameters"></a>Deklarowanie `out` parametrów   
 
- Deklarowanie metody z `out` argumentów jest przydatne w przypadku, gdy chcesz, aby metoda zwracanie wielu wartości. W poniższym przykładzie użyto `out` do zwrócenia trzech zmiennych z pojedynczym wywołaniu metody. Należy pamiętać, że trzeci argument jest przypisany do wartości null. Umożliwia to metody zwrócić wartości opcjonalnie.  
+Deklarowanie metody z `out` argumentów jest klasycznego obejście zwracanie wielu wartości. Począwszy od C# 7.0, należy wziąć pod uwagę [krotek](../../tuples.md) dla podobnych scenariuszy. W poniższym przykładzie użyto `out` do zwrócenia trzech zmiennych z pojedynczym wywołaniu metody. Należy pamiętać, że trzeci argument jest przypisany do wartości null. Umożliwia to metody zwrócić wartości opcjonalnie.  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- [Wzorzec spróbuj](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods) obejmuje zwracanie `bool` aby wskazać, czy operacji zakończonych powodzeniem lub niepowodzeniem i zwracania wartości generowane przez operację w `out` argumentu. Liczba analizowania metod, takich jak [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)) metody, użyj tego wzorca.
-   
 ## <a name="calling-a-method-with-an-out-argument"></a>Wywołanie metody z `out` argumentu
 
 W języku C# 6 i starszych musi zadeklarować zmienną w osobnych instrukcji, następnie przekazać go jako `out` argumentu. Poniższy przykład deklaruje zmienną o nazwie `number` przed przekazaniem jej do [Int32.TryParse](xref:System.Int32.TryParse(System.String,System.Int32@)) metody, która stara się przekonwertować ciąg na liczbę.
@@ -75,7 +73,7 @@ W poprzednim przykładzie `number` zmienna jest silnie typizowane jako `int`. Mo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Odwołanie w C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [Parametry metody](../../../csharp/language-reference/keywords/method-parameters.md)

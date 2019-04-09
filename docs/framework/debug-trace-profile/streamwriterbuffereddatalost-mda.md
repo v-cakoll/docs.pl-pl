@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b35e6ab4de699126b4b3b5f74d7a9a8dacfa4a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117394"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
 `streamWriterBufferedDataLost` Zarządzanego Asystenta debugowania (MDA) jest aktywowany po <xref:System.IO.StreamWriter> są zapisywane, ale <xref:System.IO.StreamWriter.Flush%2A> lub <xref:System.IO.StreamWriter.Close%2A> metoda nie jest później wywoływana przed wystąpieniem programu <xref:System.IO.StreamWriter> zostanie zniszczony. Gdy to zdarzenie MDA jest włączona, środowisko wykonawcze określa, czy wszystkie buforowane dane nadal istnieje w ramach <xref:System.IO.StreamWriter>. Jeśli istnieje buforowane dane, to zdarzenie MDA jest aktywowane. Wywoływanie <xref:System.GC.Collect%2A> i <xref:System.GC.WaitForPendingFinalizers%2A> metod można wymusić finalizatory do uruchomienia. Finalizatory w przeciwnym razie zostanie uruchomiony w czasie pozornie dowolnego i prawdopodobnie w ogóle nie będzie na zakończenie procesu. Jawnie uruchamianie finalizatorów z tego MDA włączona ma na celu bardziej niezawodnie odtworzyć ten typ problemu.  
@@ -105,5 +105,6 @@ static WriteToFile()
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IO.StreamWriter>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

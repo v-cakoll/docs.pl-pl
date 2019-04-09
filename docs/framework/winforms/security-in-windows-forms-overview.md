@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 8a1a7fe9f7b356f318a99dfecb425a66c1f70bd6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193722"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
 Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], cały kod uruchomiony na koncie użytkownika na komputerze miał tych samych praw i uprawnień dostępu do zasobów, których użytkownik komputera. Na przykład jeśli użytkownik był dozwolony dostęp do systemu plików, kod zezwolono na dostęp do systemu plików; Jeśli użytkownik zezwolono na dostęp do bazy danych, kod mógł uzyskiwać dostęp do tej bazy. Mimo że te prawa lub uprawnienia można zaakceptować dla kodu w plikach wykonywalnych, który użytkownik jawnie zainstalowany na komputerze lokalnym, nie może być możliwa do kod potencjalnie złośliwy, pochodzące z Internetu lub lokalny Intranet. Ten kod nie należy uzyskiwać dostęp do zasobów komputera użytkownika bez uprawnień.  
@@ -83,9 +83,10 @@ Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ca�
  Jeśli wdrożono aplikację Windows Forms przy użyciu programu Visual Studio, możesz włączyć debugowanie w częściowej relacji zaufania lub z ograniczonym zestawem uprawnień ze środowiska projektowego.  Zobacz też [jak: Debugowanie aplikacji ClickOnce z ograniczonymi uprawnieniami](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
+
+- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
 - [Podstawy zabezpieczeń dostępu kodu](../misc/code-access-security-basics.md)
-- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Przegląd wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview)
-- [Mage.exe (narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (narzędzie generowania i edytowania manifestu, klient z interfejsem graficznym)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (Narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

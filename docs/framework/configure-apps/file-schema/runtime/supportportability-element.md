@@ -1,5 +1,5 @@
 ---
-title: <supportPortability>, element
+title: <supportPortability> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1e1c3236ed2d79592bca46e925c9f67e5ac9c51
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183949"
 ---
 # <a name="supportportability-element"></a>\<supportPortability> Element
 Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różnych implementacjach systemu .NET Framework, wyłączając zachowania domyślne, które traktuje zestawy za równorzędne do celów przenoszenia aplikacji.  
@@ -79,5 +79,6 @@ Określa, czy aplikacja może odwołać się tego samego zestawu w dwóch różn
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [/ AppConfig (opcje kompilatora C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [Przegląd ujednolicenia zestawów programu .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+
+- [/appconfig (opcje kompilatora C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [Przegląd ujednolicenia zestawów programu .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konfigurowanie lokalnego wystawcy'
+title: 'Instrukcje: konfigurowanie lokalnego wystawcy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 3fb4577e6a79bc6b42cb0ef6f24648d1b016214f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095558"
 ---
-# <a name="how-to-configure-a-local-issuer"></a>Instrukcje: Konfigurowanie lokalnego wystawcy
+# <a name="how-to-configure-a-local-issuer"></a>Instrukcje: konfigurowanie lokalnego wystawcy
 W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokalnego dla wystawionych tokenów.  
   
  Często gdy klient komunikuje się z usługi federacyjnej, usługi Określa adres zabezpieczeń, które usługi tokenu, który oczekuje się, aby wystawić token klient użyje do samodzielnego uwierzytelnienia usługi federacyjnej. W niektórych przypadkach klient może być skonfigurowany do użycia *wystawcy lokalnego*.  
@@ -75,6 +75,7 @@ W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokal
  Należy pamiętać, że jeśli wystawcy adres i powiązanie są określone dla danego powiązania, wystawcy lokalnego nie jest używany dla punktów końcowych, korzystające z tego wiązania. Klienci, którzy oczekują zawsze używaj wystawcy lokalnego należy upewnić się, że nie używaj takiego powiązania lub mogą modyfikować powiązania tak, aby adres wystawcy jest `null`.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+
+- [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

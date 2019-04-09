@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103418"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Wprowadzenie do aplikacji usług systemu Windows
 Usługi Microsoft Windows, znana wcześniej jako usługi NT, umożliwiają tworzenie długotrwałych wykonywalny aplikacji, które działają w ich własnych sesjach Windows. Te usługi mogą być uruchamiane automatycznie podczas rozruchu komputera, mogą być wstrzymywane i ponownie uruchomiony i nie wyświetlają żadnego interfejsu użytkownika. Te funkcje idealnym rozwiązaniem usługi do użycia na serwerze lub w przypadku, gdy potrzebujesz długo działających funkcji, które nie kolidują z innymi użytkownikami pracującymi na tym samym komputerze. Można również uruchomić usługi w kontekście zabezpieczeń konta określonego użytkownika, który jest inny niż zalogowany użytkownik lub domyślne konto komputera. Aby uzyskać więcej informacji o usługach i sesjach Windows zobacz dokumentację zestawu Windows SDK.  
@@ -81,11 +81,12 @@ Usługi Microsoft Windows, znana wcześniej jako usługi NT, umożliwiają tworz
 -   Projekty zawierające usług Windows muszą mieć składniki instalacyjne dla projektu i jego usług. Można to łatwo zrobić z **właściwości** okna. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Aplikacje usług systemu Windows](../../../docs/framework/windows-services/index.md)
 - [Architektura programowania aplikacji usług](../../../docs/framework/windows-services/service-application-programming-architecture.md)
-- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Instrukcje: Tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Instrukcje: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Instrukcje: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Instrukcje: Debugowanie aplikacji usług Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Instrukcje: Debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
 - [Przewodnik: Tworzenie aplikacji usługi Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 - [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

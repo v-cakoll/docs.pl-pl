@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182302"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja z opóźnieniem* obiektu oznacza, że jego utworzenia jest odroczone do czasu jej pierwszym użyciu. (W tym temacie warunki *inicjowania z opóźnieniem* i *wystąpienia z opóźnieniem* oznaczają to samo.) Inicjalizacja z opóźnieniem służy głównie do zwiększenia wydajności, należy unikać marnotrawstwa obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Poniżej przedstawiono najbardziej typowych scenariuszy:  
@@ -75,7 +75,7 @@ ms.locfileid: "54492952"
   
  Niektóre <xref:System.Lazy%601> mają konstruktory <xref:System.Threading.LazyThreadSafetyMode> parametr o nazwie `mode`. Te konstruktory zapewniają tryb awaryjny wątku dodatkowe. W poniższej tabeli przedstawiono, jak bezpieczeństwo wątku <xref:System.Lazy%601> obiektu jest zależna od parametry konstruktora, które określają bezpieczeństwo wątkowe. Każdy Konstruktor ma co najwyżej jeden taki parametr.  
   
-|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode` `mode` Parametr|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
+|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode` `mode` parametr|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |W pełni wątkowo; tylko jeden wątek jednocześnie próbuje zainicjować wartości.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Tak.|  
 |Nie metodą o bezpiecznych wątkach.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nie dotyczy.|  
@@ -101,7 +101,7 @@ ms.locfileid: "54492952"
 |Konstruktor|Tryb awaryjny wątku|Używa metody inicjującej|Wyjątki są buforowane.|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
-|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Tak|  
+|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Yes|Tak|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
 |Lazy(T)(FUNC(T), atrybut typu wartość logiczna)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Tak|  
 |Lazy(T)(LazyThreadSafetyMode)|Określone przez użytkownika|Nie|Nie|  
@@ -153,7 +153,8 @@ ms.locfileid: "54492952"
  W tym przykładzie należy zauważyć, że procedura inicjowania została wywołana w każdej iteracji pętli. W scenariuszach wielowątkowych pierwszym wątku do wywołania procedury inicjowania jest ten, którego wartość jest widoczna dla wszystkich wątków. Nowsze wątków także wywoływać procedury inicjowania, ale jego wyniki nie są używane. Jeśli tego rodzaju potencjalnych sytuacji wyścigu nie jest dopuszczalne, użyj przeciążenia <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> która przyjmuje argument logiczny i obiekt synchronizacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
 - [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Instrukcje: Wykonywanie Incjalizacji obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj obiekt na ścieżce (animacja Matrix)'
+title: 'Instrukcje: Animowanie obiektu na ścieżce (animacja Matrix)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: c0c4f1fad5ab6b8d30e6809aa866b4629d08af23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190928"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Instrukcje: Animuj obiekt na ścieżce (animacja Matrix)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Instrukcje: Animowanie obiektu na ścieżce (animacja Matrix)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> klasy animowanie obiektu na ścieżce, który jest definiowany przez <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Przykład  
@@ -35,6 +35,7 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.M
  Aby uzyskać pełny przykład, zobacz [przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028). Aby uzyskać więcej informacji na temat ścieżek geometrycznych zobacz [Przegląd Geometria](geometry-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
+
+- [Przegląd Animacja](animation-overview.md)
 - [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Animacja ścieżki — tematy z instrukcjami](path-animation-how-to-topics.md)
+- [Animacja ścieżki Tematy Pomocy](path-animation-how-to-topics.md)

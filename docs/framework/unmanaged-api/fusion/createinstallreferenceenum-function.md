@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6296a5c80587a6fd1a7b03e20ffdf7fd1316e9d2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d7820b33dcfacae5ede5235607e40d95940fc474
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092828"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum — Funkcja
 Pobiera wskaźnik do [iinstallreferenceenum —](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) wystąpienia, która reprezentuje listę aplikacji odwołania do określonego zestawu.  
@@ -62,6 +62,7 @@ HRESULT CreateInstallReferenceEnum (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IInstallReferenceEnum, interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
-- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+
+- [IInstallReferenceEnum — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [IAssemblyName — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
 - [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

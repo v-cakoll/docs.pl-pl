@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 1caf81df5998e5aaef4ad011a399d70aff43ca9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101539"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Instrukcje: Bezpośrednie wykonywanie zapytań SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przekłada zapytania, napisany w sparametryzowane zapytania SQL (w postaci tekstu), a następnie wysyła je do programu SQL server dla przetwarzania.  
@@ -36,5 +36,6 @@ ms.locfileid: "54634461"
  Parametry są wyrażone w tekst zapytania przy użyciu takiej samej notacji nawiasów posługują się `Console.WriteLine()` i `String.Format()`. W rzeczywistości `String.Format()` faktycznie jest wywoływana w ciągu zapytania zostaną podane, zastępując nawiasów parametrów nawiasach z wygenerowanych takich jak nazwy parametrów @p0, @p1 ..., @p(n).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099771"
 ---
 # <a name="queues-overview"></a>Omówienie kolejek
 W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących komunikacji. Kolejne sekcje przejść do szczegółów dotyczących sposobu kolejkowania pojęcia opisane w tym miejscu są dyskowe widoczne w Windows Communication Foundation (WCF).  
@@ -74,6 +74,7 @@ W tej sekcji przedstawiono ogólne i podstawowe pojęcia związane oczekujących
  Po powoduje komunikat do kolejki docelowej, usługa wielokrotnie może zakończyć się niepowodzeniem przetworzyć komunikatu. Na przykład aplikacja czytania wiadomości z kolejki w ramach transakcji i aktualizowanie bazy danych może się okazać bazy danych, tymczasowo odłączone. W tym przypadku transakcja zostanie wycofana, utworzono nową transakcję i komunikat jest ponownie Pobierz z kolejki. Druga próba może powodzenie lub niepowodzenie. W niektórych przypadkach w zależności od przyczyny tego błędu komunikat wielokrotnie mogą nie działać dostarczania aplikacji. W takich przypadkach komunikat jest uznawany za jako "poison." Takie wiadomości są przenoszone do kolejki skażone, który może zostać odczytany przez aplikację do obsługi poison.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sesje i kolejki](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Kolejki utraconych komunikatów](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows'
+title: 'Instrukcje: Tworzenie prostej kontrolki powiązanej na formularzu Windows Form'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094083"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Instrukcje: Tworzenie prostego formantu powiązanego na formularzu Windows
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Instrukcje: Tworzenie prostej kontrolki powiązanej na formularzu Windows Form
 Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, takiego jak wartość kolumny z tabeli zestawu danych w formancie. Użytkownik może prosty wiązania dowolnej właściwości kontrolki z wartością danych.  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, ta
     >  Ponieważ formanty powiązane z prostego pokazać tylko danych jednego elementu, to bardzo typowy do uwzględnienia nawigacji logiki w formularzu Windows za pomocą formantów powiązanych z prostego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Binding>
-- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
-- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
+- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)

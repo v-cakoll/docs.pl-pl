@@ -2,10 +2,16 @@
 title: Śledzenie analityczne za pomocą funkcji ETW
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'diagnostics [WCF], analytic tracing'
-  - 'administration [WCF], analytic tracing'
-  - 'analytic tracing [WCF]'
+- diagnostics [WCF], analytic tracing
+- administration [WCF], analytic tracing
+- analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
+ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193729"
 ---
 # <a name="analytic-tracing-with-etw"></a>Śledzenie analityczne za pomocą funkcji ETW
 Śledzenie danych analitycznych usługi Windows Communication Foundation (WCF) oferuje możliwość przechwytywania informacji diagnostycznych podczas wykonywania usługi WCF. Zdarzenia śledzenia danych analitycznych programu WCF są emitowane w kluczowych punktach stos WCF, aby umożliwić Rozwiązywanie problemów z usług WCF w środowisku produkcyjnym. Śledzenie danych analitycznych do usługi WCF ma minimalny wpływ na wydajność serwera produktu obsługujący [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług WCF, ponieważ te zdarzenia są bardzo wydajny sposób emitowane do sesji zdarzeń śledzenia dla Windows (ETW).  
@@ -24,5 +30,6 @@ ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
  Przedstawia tabelę identyfikatory zdarzeń, ich poziomy zdarzenia, komunikaty o zdarzeniach i słów kluczowych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi i śledzenie zdarzeń programu WCF dla systemu Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)
 - [Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows](../../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)

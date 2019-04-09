@@ -2,12 +2,12 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094505"
 ---
 # <a name="facet"></a>facet
 A *aspekt* służy do dodawania szczegółów do definicji właściwości typu pierwotnego. A [właściwość](../../../../docs/framework/data/adonet/property.md) definicja zawiera informacje o typie właściwości, ale często konieczne jest bardziej szczegółowo. Na przykład typ jednostki w modelu koncepcyjnym może mieć właściwości typu `String` wartości, których nie można ustawić na wartość null. Aspekty umożliwiają określenie tego poziomu szczegółowości.  
@@ -35,5 +35,6 @@ A *aspekt* służy do dodawania szczegółów do definicji właściwości typu p
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

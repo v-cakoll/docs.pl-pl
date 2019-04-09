@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14eac92a2f3e5ed5d93f4e608f7d42b13849036e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100226"
 ---
 # <a name="directives-element-net-native"></a>\<Dyrektywy > (architektura .NET Native)
 Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platformy .NET Native.  
@@ -35,7 +35,7 @@ Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platf
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, w których typy podrzędne i elementy członkowskie typu wymagają metadanych w czasie wykonywania.|  
+|[\<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, w których typy podrzędne i elementy członkowskie typu wymagają metadanych w czasie wykonywania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Każdy plik dyrektywy środowiska uruchomieniowego może zawierać tylko jeden `<Directives>` elementu.  
@@ -43,5 +43,6 @@ Element główny w każdym pliku dyrektyw środowiska uruchomieniowego dla platf
  `<Directives>` Element może zawierać zero lub jeden [ \<aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) elementu, a wartość zero, co najmniej jeden [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

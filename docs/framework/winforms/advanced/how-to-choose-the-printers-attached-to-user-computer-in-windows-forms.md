@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wybieranie drukarek podłączonych do komputera użytkownika w formularzach Windows Forms'
+title: 'Instrukcje: Wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184031"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Instrukcje: Wybieranie drukarek podłączonych do komputera użytkownika w formularzach Windows Forms
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Instrukcje: Wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika
 Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do użytkowników. Można udostępnić użytkownikom wybór drukarek spośród aktualnie zainstalowane za pomocą <xref:System.Windows.Forms.PrintDialog> składnika. Za pomocą <xref:System.Windows.Forms.PrintDialog> składnika <xref:System.Windows.Forms.DialogResult> z <xref:System.Windows.Forms.PrintDialog> składnik jest przechwytywane i umożliwia wybranie drukarki.  
   
  W poniższej procedurze wybrano plik tekstowy, ma zostać wydrukowany zostanie użyta drukarka domyślna. <xref:System.Windows.Forms.PrintDialog> Następnie utworzyć wystąpienia klasy.  
@@ -107,4 +107,5 @@ Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do u�
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
+
+- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)

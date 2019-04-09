@@ -1,18 +1,18 @@
 ---
-title: Nesting DataRelations
+title: Zagnieżdżanie elementów DataRelation
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 5fc987e37d9b33cd1640bb32423f62a7e74937f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7975e17bd957a822bf3d60d487eb928cee84bd28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117212"
 ---
-# <a name="nesting-datarelations"></a>Nesting DataRelations
+# <a name="nesting-datarelations"></a>Zagnieżdżanie elementów DataRelation
 W relacyjnej reprezentację danych poszczególne tabele zawierają wiersze, które są powiązane ze sobą za pomocą kolumny lub zestaw kolumn. W ADO.NET <xref:System.Data.DataSet>, relacje między tabelami jest implementowany przy użyciu <xref:System.Data.DataRelation>. Po utworzeniu **DataRelation**, relacji nadrzędny podrzędny kolumn odbywa się wyłącznie za pośrednictwem relacji. Tabele i kolumny są osobne jednostki. W hierarchiczną reprezentację XML udostępnia dane relacji nadrzędny podrzędny są reprezentowane przez elementy nadrzędne, które zawierają elementy zagnieżdżonych elementów podrzędnych.  
   
  Aby ułatwić zagnieżdżania obiektów podrzędnych podczas **zestawu danych** jest zsynchronizowany z <xref:System.Xml.XmlDataDocument> lub zapisywane w postaci danych XML przy użyciu **WriteXml**, **DataRelation** udostępnia **zagnieżdżone** właściwości. Ustawienie **zagnieżdżone** właściwość **DataRelation** do **true** powoduje, że element podrzędny wiersze w relacji do być zagnieżdżony w kolumnie nadrzędnej przy zapisywaniu danych XML lub synchronizowane z **XmlDataDocument**. **Zagnieżdżone** właściwość **DataRelation** jest **false**, domyślnie.  
@@ -132,6 +132,7 @@ customerOrders.Nested = true;
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [Dodawanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)

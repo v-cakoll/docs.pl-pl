@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych'
+title: 'Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - forms [Windows Forms], creating resizable
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
-ms.openlocfilehash: 57c6d30b63b15f5e57e813c1deb90d3da5a5ba35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ebccad248927d8a201bd5758e5ddf2d5414455f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189686"
 ---
-# <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Instrukcje: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych
+# <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych
 Dobre układ odpowiada również zmiany w wymiarach jego formularza nadrzędnego. Możesz użyć <xref:System.Windows.Forms.TableLayoutPanel> kontroli do układu formularza w taki sposób, aby zmienić rozmiar i położenie formantów w spójny sposób zmianami Wymiary formularza. <xref:System.Windows.Forms.TableLayoutPanel> Kontroli jest również przydatne w przypadku gdy zmienia się w zawartości kontrolki Przyczyna zmiany w układzie. Proces omówione w tej procedurze, możesz to zrobić w środowisku Visual Studio.  Zobacz też [instruktażu: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)).  
   
 ## <a name="example"></a>Przykład  
@@ -36,8 +36,9 @@ Dobre układ odpowiada również zmiany w wymiarach jego formularza nadrzędnego
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
 - [Środowisko użytkownika Microsoft Windows, oficjalnych wytycznych dotyczących projektanci i deweloperzy interfejsu użytkownika. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)

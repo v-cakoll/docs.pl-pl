@@ -1,15 +1,15 @@
 ---
-title: Izolacja sieci dla aplikacji Windows Store
+title: Izolacja sieci dla aplikacji ze sklepu Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0209bd57bfa98fec8a3057490502081c4c20554f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cb6dc6e3bede88cc6b33632d7fc8f6f19034a9c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190265"
 ---
-# <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji Windows Store
+# <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji ze sklepu Windows Store
 Klasy w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzeni nazw może służyć do tworzenia aplikacji Windows Store lub aplikacjami pulpitu. W przypadku użycia w aplikacji Windows Store, klas w tych obszarach nazw dotyczy izolacji sieci, częścią modelu zabezpieczeń aplikacji, które są używane przez [!INCLUDE[win8](../../../includes/win8-md.md)]. Możliwości odpowiedniej sieci musi być włączony w manifeście aplikacji dla aplikacji Windows Store dla systemu zezwolić na dostęp do sieci.  
   
 ## <a name="checklist-for-network-isolation"></a>Lista kontrolna na potrzeby izolacji sieciowej  
@@ -26,6 +26,7 @@ Klasy w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Heade
  Aby uzyskać bardziej szczegółowe informacje dotyczące sposobu konfigurowania funkcji sieciowych i izolacji narzędzi używanych do rozwiązywania problemów izolacji sieci, zobacz [sposobu konfigurowania możliwości izolacji sieci](https://go.microsoft.com/fwlink/?LinkID=228265) w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] dla deweloperów dokumentacja.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Łączenie z usługą sieci web](https://go.microsoft.com/fwlink/?LinkID=245696)
 - [Wskazówki i listy kontrolne do izolacji sieci](https://go.microsoft.com/fwlink/?LinkID=228265)
 - [Szybki start: Łączenie za pomocą elementu HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)

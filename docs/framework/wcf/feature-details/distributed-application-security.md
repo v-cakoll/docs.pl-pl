@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132063"
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na trzy główne obszary funkcjonalne: transfer zabezpieczeń, kontroli dostępu i inspekcji. Bezpieczeństwie transferu zapewnia integralność, poufności i uwierzytelniania. Zabezpieczenia transferu za pomocą jednej z następujących czynności: zabezpieczenia, zabezpieczenia komunikatów transportu lub `TransportWithMessageCredential`.  
@@ -95,7 +95,8 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
  Tryb zabezpieczeń wiadomości umożliwia wykonywanie bezpieczeństwie transferu, dzięki czemu poświadczenia usługi są wymieniane przy użyciu klienta w ramach początkowego negocjowania. Aby włączyć negocjacji, ustaw <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> właściwość `true`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

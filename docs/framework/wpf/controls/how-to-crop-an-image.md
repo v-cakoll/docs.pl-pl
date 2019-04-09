@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przytnij obraz'
+title: 'Instrukcje: Przycinanie obrazu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [WPF], cropping
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
-ms.openlocfilehash: f4c1a735ac102b3f6d81b5253bc15a5d1893075c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e672c7e24ec4db2d6424fa0b611cb1c135cf8eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195556"
 ---
-# <a name="how-to-crop-an-image"></a>Instrukcje: Przytnij obraz
+# <a name="how-to-crop-an-image"></a>Instrukcje: Przycinanie obrazu
 W tym przykładzie pokazano, jak przyciąć obraz przy użyciu <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
   
  <xref:System.Windows.Media.Imaging.CroppedBitmap> jest używany głównie podczas kodowania przycięty wersję obrazu można zapisać się do pliku. Aby przyciąć obraz do wyświetlania celów zobacz [jak: Utwórz obszar przycinania](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90)) tematu.  
@@ -40,4 +40,5 @@ W tym przykładzie pokazano, jak przyciąć obraz przy użyciu <xref:System.Wind
  [!code-vb[imageelementexample#CroppedCSharp2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample/VB/CroppedImageExample.xaml.vb#croppedcsharp2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Utwórz obszar przycinania](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms746710(v=vs.90))

@@ -1,18 +1,18 @@
 ---
-title: SQL Server Express User Instances
+title: Wystąpienia użytkownika programu SQL Server Express
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111153"
 ---
-# <a name="sql-server-express-user-instances"></a>SQL Server Express User Instances
+# <a name="sql-server-express-user-instances"></a>Wystąpienia użytkownika programu SQL Server Express
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparatu bazy danych generowanych przez wystąpienie nadrzędne. Wystąpienia użytkownika umożliwiają użytkownikom niebędącym administratorami na swoich komputerach lokalnych do dołączenia i nawiązać połączenie z SQL Server Express bazy danych. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika, na podstawie jednego wystąpienia na użytkownika.  
   
 ## <a name="user-instance-capabilities"></a>Możliwości wystąpienia użytkownika  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  Protokół sieciowy do wystąpień użytkownika musi być lokalny nazwanych potoków. Nie można uruchomić wystąpienia użytkownika na zdalnym wystąpieniu programu SQL Server i logowania do programu SQL Server nie są dozwolone.  
   
 ## <a name="connecting-to-a-user-instance"></a>Nawiązywanie połączenia z wystąpieniem użytkownika  
- `User Instance` i `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Zezwalaj słowa kluczowe <xref:System.Data.SqlClient.SqlConnection> do połączenia z wystąpieniem użytkownika. Wystąpienia użytkownika są również obsługiwane przez <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` i `AttachDBFilename` właściwości.  
+ `User Instance` i `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Zezwalaj słowa kluczowe <xref:System.Data.SqlClient.SqlConnection> do połączenia z wystąpieniem użytkownika. Wystąpienia użytkownika są również obsługiwane przez <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` i `AttachDBFilename` właściwości.  
   
  Należy pamiętać o następujących dotyczących przykładowe parametry połączenia, pokazano poniżej:  
   
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> i <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> właściwości do tworzenia parametrów połączenia w czasie wykonywania.  
+>  Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> i <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> właściwości do tworzenia parametrów połączenia w czasie wykonywania.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Za pomocą &#124;DataDirectory&#124; ciąg podstawienia  
  `AttachDbFileName` został rozszerzony ADO.NET w wersji 2.0 wraz z wprowadzeniem `|DataDirectory|` (ujęty w symbole potoku) ciąg podstawienia. `DataDirectory` jest używana w połączeniu z `AttachDbFileName` wskaż ścieżkę względną do pliku danych, co pozwoli deweloperom na tworzenie parametrów połączenia, które są oparte na ścieżkę względną do źródła danych, zamiast trzeba określić pełną ścieżkę.  
@@ -151,6 +151,7 @@ private static void OpenSqlConnection()
 -   W wersji dedykowanej przy użyciu uwierzytelniania Windows hostingu platformy ASP.NET. Pojedyncze wystąpienie programu SQL Server Express, mogą być hostowane w sieci intranet. Aplikacja nawiązuje połączenie, za pomocą konta Windows ASPNET, nie za pomocą personifikacji. Wystąpienia użytkownika nie powinien służyć do innych firm lub udostępnione hostingu scenariuszach, gdzie wszystkie aplikacje będą współużytkują to samo wystąpienie użytkownika i nie jest już pozostać odizolowane od siebie nawzajem.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Nawiązywanie połączenia ze źródłem danych](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)

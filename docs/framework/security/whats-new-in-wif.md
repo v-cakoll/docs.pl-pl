@@ -1,16 +1,16 @@
 ---
-title: What's New in Windows Identity Foundation 4.5
+title: Co nowego w programie Windows Identity Foundation 4.5
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 9009f3bd6e782aefdeca0f071dc70d6247c3987b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195530"
 ---
-# <a name="whats-new-in-windows-identity-foundation-45"></a>What's New in Windows Identity Foundation 4.5
+# <a name="whats-new-in-windows-identity-foundation-45"></a>Co nowego w programie Windows Identity Foundation 4.5
 Pierwsza wersja środowiska Windows Identity Foundation (WIF) była dostarczana jako autonomiczny pakiet do pobrania. Jest znana pod nazwą WIF 3.5, ponieważ została wprowadzona mniej więcej w tym samym czasie co platforma .NET 3.5 z dodatkiem SP1. Począwszy od wersji .NET 4.5 środowisko WIF jest częścią oprogramowania .NET Framework. Klasy programu WIF bezpośrednio dostępne w ramach pozwala na znacznie głębszą integrację tożsamości opartej na oświadczeniach na platformie .NET, ułatwiając korzystanie z oświadczeń. Aplikacje napisane dla środowiska WIF 3.5 należy można zmodyfikować, aby można było korzystać z zalet nowego modelu; Aby uzyskać informacje, zobacz [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
   
  Poniżej zasygnalizowano kilka najważniejszych zmian.  
@@ -57,6 +57,7 @@ Pierwsza wersja środowiska Windows Identity Foundation (WIF) była dostarczana 
      Kiedy używasz **narzędzie tożsamości i dostępu dla programu Visual Studio 2012** (zobacz **zmieni się na środowisko programu Visual Studio** powyżej), narzędzie automatycznie dodaje `<serviceCredentials>` element z `useIdentityConfiguration` ustawioną wartość atrybutu plik konfiguracji dla Ciebie. Ponadto dodaje odnośny [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) element, który zawiera ustawienia konfiguracji programu WIF i dodaje powiązanie i inne ustawienia, które są wymagane w celu oddelegowania procesów uwierzytelniania do wybranej usługi STS.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą programu WIF 3.5 do wersji WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 - [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
 - [Dokumentacja interfejsu API programu WIF](../../../docs/framework/security/wif-api-reference.md)

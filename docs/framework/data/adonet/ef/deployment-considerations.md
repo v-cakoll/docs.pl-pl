@@ -2,12 +2,12 @@
 title: Deployment Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
-ms.openlocfilehash: 683f5e9b43bceb09d6354079fd9f7fcb7ed09eac
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199599"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Deployment Considerations (Entity Framework)
 Ten temat zawiera informacje dotyczące wdrażania aplikacji, które używają ADO.NET Entity Framework, aby uzyskać dostęp do danych. Aby uzyskać więcej informacji na temat programu Entity Framework, zobacz [wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
@@ -29,5 +29,6 @@ Ten temat zawiera informacje dotyczące wdrażania aplikacji, które używają A
 -   Ponieważ platforma Entity Framework jest składnikiem programu .NET Framework, można redystrybuować z aplikacją, zgodnie z umową licencyjną .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Projektowanie i zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

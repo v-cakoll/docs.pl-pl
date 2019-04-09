@@ -1,18 +1,18 @@
 ---
-title: Niestandardowi projektanci złożonych — Prezenter elementy przepływu pracy
+title: Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 13d1a76779877bc2ab6d1cbd9c892bf14781e788
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118108"
 ---
-# <a name="custom-composite-designers---workflow-items-presenter"></a>Niestandardowi projektanci złożonych — Prezenter elementy przepływu pracy
+# <a name="custom-composite-designers---workflow-items-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Typ klucza w WF projektanta model programowania, który umożliwia edytowanie kolekcję elementów zawartych. Niniejszy przykład pokazuje sposób kompilowania, Projektant działań, która udostępnia można edytować kolekcji.
 
  W tym przykładzie przedstawiono:
@@ -158,5 +158,6 @@ End Sub
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
-- [Tworzenie aplikacji przy użyciu Projektanta przepływu pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Tworzenie aplikacji za pomocą projektanta przepływów pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

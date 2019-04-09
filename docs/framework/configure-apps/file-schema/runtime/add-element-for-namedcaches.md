@@ -1,16 +1,16 @@
 ---
-title: <add> — Element do <namedCaches>
+title: <add> element dla <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
-ms.openlocfilehash: cbe7c98e9603e51aa381f07ea35ffe46e6d3adfb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9a7e370f9cce0e9ddf6dbe49984b7597e041eb84
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257362"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094531"
 ---
 # <a name="add-element-for-namedcaches"></a>\<add> Element for \<namedCaches>
 Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.  
@@ -77,4 +77,5 @@ Dodaje `namedCache` wpis `namedCaches` kolekcji w pamięci podręcznej.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<namedCaches >, Element (ustawienia pamięci podręcznej)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

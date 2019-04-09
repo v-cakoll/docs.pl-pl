@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f1f4734b6cb5b214b219742a6cac1c50220b96e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125940"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset — Metoda
 Dla określonego przesunięcia języka Pośredniego pobiera natywne przesunięcia, w której punkt przerwania powinien znajdować się tak, że debugger może uzyskać wartość zwracaną przez funkcję.  
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  Funkcja zwraca `HRESULT` wartości podanych w poniższej tabeli.  
   
-|`HRESULT` Wartość|Opis|  
+|`HRESULT` value|Opis|  
 |---------------------|-----------------|  
 |`S_OK`|Powodzenie.|  
 |`CORDBG_E_INVALID_OPCODE`|Podanego przesunięcia IL nie jest instrukcją call, lub funkcja zwraca `void`.|  
@@ -79,5 +79,6 @@ HRESULT GetReturnValueLiveOffset(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [GetReturnValueForILOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [ICorDebugCode3 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

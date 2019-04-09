@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073601"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Instrukcje: Ustawienie obrazów w czasie wykonywania (formularze Windows)
 Możesz programowo ustawić obrazu wyświetlanego przez formularze Windows <xref:System.Windows.Forms.PictureBox> kontroli.  
@@ -98,9 +98,10 @@ Możesz programowo ustawić obrazu wyświetlanego przez formularze Windows <xref
      Ten kod będzie Wyczyść obraz, nawet wtedy, gdy grafiki została załadowana do formantu w czasie projektowania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [PictureBox, kontrolka — omówienie](picturebox-control-overview-windows-forms.md)
-- [Instrukcje: Zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Instrukcje: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox, kontrolka](picturebox-control-windows-forms.md)

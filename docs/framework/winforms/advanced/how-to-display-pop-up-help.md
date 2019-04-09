@@ -11,12 +11,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 875ed49e3a7dbe7205abb47ee1f2012d82826416
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f6b6fa0c111783dcdad0387aed7d40fb54fa7b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078372"
 ---
 # <a name="how-to-display-pop-up-help"></a>Instrukcje: Wyświetlanie pomocy podręcznej
 Jest jednym ze sposobów, aby wyświetlić Pomoc na formularzach Windows Forms **pomocy** przycisk znajdujący się po prawej stronie paska tytułu, dostępne za pośrednictwem <xref:System.Windows.Forms.Form.HelpButton%2A> właściwości. Ten typ ekranu Pomocy jest dobrze nadaje się do użytku z okien dialogowych. Okna dialogowe wyświetlane w trybie modalnym (przy użyciu <xref:System.Windows.Forms.Form.ShowDialog%2A> metoda) mają problemy z wyświetlania zewnętrzna Pomoc systemów, ponieważ modalnych okien dialogowych, które muszą zostać zamknięte przed fokus można przejść do innego okna. Ponadto za pomocą **pomocy** przycisk wymaga, że istnieje nie **Minimalizuj** przycisk lub **Maksymalizuj** przycisk na pasku tytułu. To Konwencji standardowe okno dialogowe, formularze, zwykle mają **Minimalizuj** i **Maksymalizuj** przycisków.  
@@ -43,6 +43,7 @@ Jest jednym ze sposobów, aby wyświetlić Pomoc na formularzach Windows Forms *
 6.  Naciśnij klawisz **pomocy** znajdujący się na pasku tytułu, a następnie kliknij przycisk kontrolki, na którym można ustawić parametrów pomocy.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Pomoc do kontrolek przy użyciu etykietek narzędzi](control-help-using-tooltips.md)
-- [Integrowanie pomocy użytkownika z formularzami Windows Forms](integrating-user-help-in-windows-forms.md)
+
+- [Pomoc w kontroli przy użyciu ToolTips](control-help-using-tooltips.md)
+- [Integrowanie pomocy użytkownika z formularzami systemu Windows](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

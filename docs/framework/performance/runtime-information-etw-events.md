@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb213ef4a335cf6784c2889cd9cf0214a1411da2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117407"
 ---
 # <a name="runtime-information-etw-events"></a>Informacje o zdarzeniach ETW środowiska uruchomieniowego
 Te zdarzenia ETW rejestrować informacje o środowisku uruchomieniowym jednostki SKU i numer wersji, w taki sposób, w którym został aktywowany środowiska uruchomieniowego, w tym parametry wiersza polecenia, który został uruchomiony przy użyciu identyfikatora GUID (jeśli dotyczy) oraz inne istotne informacje. Jeśli wielu modułów wykonawczych są wykonywane w ramach procesu, informacji dostarczonych przez te zdarzenia (ClrInstanceID) pomaga odróżnić środowiska uruchomieniowego.  
@@ -45,4 +45,5 @@ Te zdarzenia ETW rejestrować informacje o środowisku uruchomieniowym jednostki
 |RuntimeDLLPath|win:UnicodeString|Ścieżka do pliku .dll CLR, który został załadowany do procesu.|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)
+
+- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 115960c076e8bf1692bcd4bd158407e719608740
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085132"
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do typizowanych elementów DataSet
 Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.Data.DataSet> bez modyfikowania schemat źródłowy. Modyfikowanie nazwy elementów w schemacie bazowego spowodowałoby wpisanego **DataSet** do odwoływania się do obiektów, które nie istnieją w źródle danych, a także stracić odwołania do obiektów, które istnieją w źródle danych.  
@@ -64,12 +64,12 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
   
 |Obiekt lub metoda/zdarzenia|Domyślny|Adnotacja|  
 |---------------------------|-------------|----------------|  
-|**Elementu DataTable**|TableNameDataTable|typedPlural|  
+|**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** metody|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|Właściwość TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
+|**Właściwość**|PropertyName|typedName|  
 |**Podrzędne** metody dostępu|GetChildTableNameRows|typedChildren|  
 |**Nadrzędny** metody dostępu|TableNameRow|typedParent|  
 |**Zestaw danych** zdarzenia|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
@@ -223,6 +223,7 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataSet>
 - [Typizowane elementy DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)

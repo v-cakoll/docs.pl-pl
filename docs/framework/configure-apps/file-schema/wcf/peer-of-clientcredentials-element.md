@@ -2,12 +2,12 @@
 title: <peer> z <clientCredentials> — Element
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 8bdb52ccaaa8b41b3321447d2d68f9021a093481
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7074ee992755557d7e5503035c89bdbefd678792
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107240"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<elementu równorzędnego > z \<clientCredentials > Element
 Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer.  
@@ -39,8 +39,8 @@ Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<certyfikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Określa certyfikat X.509 do podpisywania i szyfrowania wiadomości dla klientów peer-to-peer. .|  
-|[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|Określa opcje uwierzytelniania dla klientów typu peer.|  
+|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Określa certyfikat X.509 do podpisywania i szyfrowania wiadomości dla klientów peer-to-peer. .|  
+|[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|Określa opcje uwierzytelniania dla klientów typu peer.|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)|Określa opcje uwierzytelnienia dla nadawców wiadomości.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -53,6 +53,7 @@ Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer
  Ten element konfiguracji Określa poświadczenia używane przez węzeł równorzędny uwierzytelnienie na innych węzłach w sieci, a także ustawienia uwierzytelniania, używanych przez węzeł równorzędny do uwierzytelniania innych węzłów elementów równorzędnych. Aby uzyskać więcej informacji, zobacz [uwierzytelniania wiadomości kanał elementu równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90)) i [zabezpieczanie aplikacji kanałów równorzędnych](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
@@ -61,7 +62,7 @@ Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer
 - <xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>
 - <xref:System.ServiceModel.Security.PeerCredential>
 - [Sieci równorzędne](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Zabezpieczanie klientów [WCF]](../../../../../docs/framework/wcf/securing-clients.md)
 - [Uwierzytelnianie wiadomości z kanału równorzędnego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [Kanał elementu równorzędnego uwierzytelniania niestandardowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

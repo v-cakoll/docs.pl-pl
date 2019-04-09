@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162283"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009— Funkcje językowe
 XAML 2009 jest terminem skrót dla nowych funkcji języka XAML, które rozszerzają istniejących specyfikacji języka XAML. XAML 2009 wprowadza kilka nowych dyrektyw i konstrukcji. Obejmują one [x: Arguments — dyrektywa](x-arguments-directive.md); [x: FactoryMethod — dyrektywa](x-factorymethod-directive.md); [x: Reference — rozszerzenie znaczników](x-reference-markup-extension.md); [x: typearguments — dyrektywa ](x-typearguments-directive.md); i typy wbudowane dla wspólnych elementów podstawowych języka (na przykład `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 jest terminem skrót dla nowych funkcji języka XAML, które rozszerza
  Atrybuty, które są oparte na obiektach zdarzeń XAML 2006 zakłada, że kompilacji znaczników jest zaangażowane i przesyła zdarzeń do kompilacji kodu znaczników. XAML 2009 obsługuje kod znaczników podobny rozszerzenie znaczników, który odracza okablowania zdarzeń aż do czasu wykonywania, analizowania i ładowanie XAML. Jednak aplikacje WPF i XAML scenariuszy dla WPF UI zazwyczaj nie należy używać tej funkcji. WPF i jego wdrożenie XAML 2006 używa kombinacji okablowania procedury obsługi zdarzeń dla zdarzenia trasowane zdefiniowany z numerem <xref:System.Windows.UIElement> poziom i jego kompilator znaczników krok znacznie jej przetwarzanie atrybutu zdarzeń. Kompilator znaczników również wstępnie przetwarza wszelkie atrybuty zdarzeń, w której akcje kompilacji zadeklarować, że używany jest kompilator znaczników XAML.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

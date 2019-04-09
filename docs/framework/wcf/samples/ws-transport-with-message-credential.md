@@ -2,12 +2,12 @@
 title: Transport WS z poświadczeniami komunikatu
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3afa13b90bc4ad85eed818212d8e307fb2c5fa68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172461"
 ---
 # <a name="ws-transport-with-message-credential"></a>Transport WS z poświadczeniami komunikatu
 Niniejszy przykład pokazuje korzystanie z zabezpieczeń transportu protokołu SSL w połączeniu z poświadczeniami klienta, które są przenoszone w komunikacie. W tym przykładzie użyto `wsHttpBinding` powiązania.  
@@ -96,4 +96,3 @@ Press <ENTER> to terminate client.
 3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

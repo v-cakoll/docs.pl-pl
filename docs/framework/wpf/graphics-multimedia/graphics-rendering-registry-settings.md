@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135541"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Ustawienie rejestru renderowania grafiki
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] renderującego ustawień rejestru, które wpływają na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>Kiedy należy używać ustawień rejestru renderowania grafiki  
  Te ustawienia są dostarczane dla rozwiązywania problemów, debugowania i do celów obsługi produktu. Ponieważ zmiany w rejestrze mają wpływ na wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, Twoja aplikacja nigdy nie powinien alter tych kluczy rejestru, automatycznie, lub podczas instalacji.  
@@ -98,5 +96,6 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  **Za pomocą opcji rasteryzatora odwołanie** przyjmuje wartość typu DWORD. Wartość 0 wskazuje, że rasteryzatora odwołania nie jest używany. Inne siły wartość niezerową [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używać rasteryzatora odwołania.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Warstwy renderowania grafiki](../advanced/graphics-rendering-tiers.md)
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+
+- [Poziomy zmiany grafiki](../advanced/graphics-rendering-tiers.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)

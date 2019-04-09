@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: 0f2e7626cb0526ac897853374b483ad09c20d368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f198de20a3fa788fb8d5f2dc4ebf799989814756
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184005"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Niestandardowi dostawcy usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje zestaw dostawcy, która pozwala na zdefiniowanie modelu danych na podstawie typów danych z późnym wiązaniem.  
@@ -25,6 +25,7 @@ ms.locfileid: "54712620"
  Aby uzyskać więcej informacji, zobacz artykuł [dostawcy usługi danych niestandardowych](https://go.microsoft.com/fwlink/?LinkID=186850) i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Toolkit dostawcy w [OData SDK](https://go.microsoft.com/fwlink/?LinkId=186069).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)
 - [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)

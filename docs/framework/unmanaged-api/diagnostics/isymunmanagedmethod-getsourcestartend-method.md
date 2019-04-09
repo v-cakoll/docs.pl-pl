@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d9a02ea338dd2c1366256434eacda51327b7d5f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d32e3ac0ff3179a9bb32f82e5ca33fd89c4ec410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151193"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd — Metoda
 Pobiera położenie dokumentu rozpoczęcia i zakończenia dla źródłowej, tej metody. Na pierwszym miejscu tablicy jest początek, a na drugim miejscu tablicy jest zakończenia.  
@@ -57,4 +57,5 @@ HRESULT GetSourceStartEnd(
  **Nagłówek:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [ISymUnmanagedMethod, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+
+- [ISymUnmanagedMethod — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

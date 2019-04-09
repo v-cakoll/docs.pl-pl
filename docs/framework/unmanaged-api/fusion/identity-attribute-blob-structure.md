@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb2c560f8f906f20de752e5dfad995e2082caaea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102989"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB — Struktura
 Zawiera informacje o jeden atrybut w zestawie i składa się z trzech `DWORD`s. Każdy `DWORD` to przesunięcie buforu znaków, utworzona przez testowany `CurrentIntoBuffer` metody [ienumidentity_attribute —](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfejsu  
@@ -243,7 +243,8 @@ Exit:
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
-- [IEnumIDENTITY_ATTRIBUTE, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
-- [IDENTITY_ATTRIBUTE, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
-- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+
+- [IReferenceIdentity — Interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE — Interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE — Struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)
+- [Łączenie — Struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

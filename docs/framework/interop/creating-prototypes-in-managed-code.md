@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168171"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Tworzenie prototypów w kodzie zarządzanym
 W tym temacie opisano, jak dostęp do funkcji niezarządzanych i wprowadza kilka pól atrybutów, które dodawać adnotacje do definicji metody w kodzie zarządzanym. Aby uzyskać przykłady pokazujące, jak utworzyć. Na podstawie NET deklaracje do użycia z platformą wywołania, zobacz [Marshaling danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
@@ -111,7 +111,7 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Przykłady wywołań platformy  
  Wywołanie platformy próbek w tej sekcji pokazują korzystanie z `RegistryPermission` atrybutu z modyfikatorów przeszukiwania stosu.  
   
- W poniższym przykładzie kodu <xref:System.Security.Permissions.SecurityAction> `Assert`, `Deny`, i `PermitOnly` Modyfikatory są ignorowane.  
+ W poniższym przykładzie kodu <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny`, i `PermitOnly` Modyfikatory są ignorowane.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -235,6 +235,7 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)
 - [Określanie punktu wejścia](specifying-an-entry-point.md)
 - [Określanie zestawu znaków](specifying-a-character-set.md)

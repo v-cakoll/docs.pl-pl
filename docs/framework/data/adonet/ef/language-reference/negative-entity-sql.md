@@ -2,12 +2,12 @@
 title: '- (Negatywna) (Jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: 208e54ef-4741-4ec5-89d6-6ff700863cb0
-ms.openlocfilehash: f33b672ecd635234b8a8859651d117aabdaf14d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 343f53b2a6fc54a5be6f8673348384567b48262b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102846"
 ---
 # <a name="--negative-entity-sql"></a>-(Ujemnej) (jednostka SQL)
 Zwraca wartość ujemną wartość wyrażenia liczbowego.  
@@ -38,4 +38,5 @@ Zwraca wartość ujemną wartość wyrażenia liczbowego.
  [!code-csharp[DP EntityServices Concepts 2#NEGATIVE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#negative)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

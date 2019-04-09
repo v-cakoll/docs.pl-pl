@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086445"
 ---
 # <a name="windows-forms-control-development-basics"></a>Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows
 Formant programu Windows Forms jest klasa, która pochodzi bezpośrednio lub pośrednio z <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Na poniższej liście opisano typowe scenariusze dotyczące tworzenia kontrolek formularzy Windows Forms:  
@@ -31,7 +31,8 @@ Formant programu Windows Forms jest klasa, która pochodzi bezpośrednio lub po�
  Klasa bazowa dla kontrolek Windows Forms, <xref:System.Windows.Forms.Control>, zapewnia podstawami wymagane dla wizualizacji do wyświetlenia w aplikacji klienta Windows. <xref:System.Windows.Forms.Control> zapewnia uchwyt okna, obsługuje routing komunikatów i udostępnia zdarzenia interfejsu zdarzeń klawiatury oraz myszy, a także wiele innych użytkowników. Zapewnia zaawansowane układ i zawiera właściwości specyficzne dla wizualizacji do wyświetlenia, takie jak <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>i wiele innych. Ponadto udostępnia zabezpieczenia, wątki, pomocy technicznej i współdziałania z kontrolki ActiveX. Ponieważ tak wiele infrastruktury jest dostarczany przez klasę bazową, jest stosunkowo łatwa do opracowywania własnych kontrolek Windows Forms.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie kontrolki formularzy Windows prosty](how-to-develop-a-simple-windows-forms-control.md)
-- [Opracowywanie złożonej kontrolki formularzy Windows Forms](developing-a-composite-windows-forms-control.md)
-- [Instrukcje: Utwórz formant programu Windows Forms pokazującej postęp](how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
+
+- [Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows](how-to-develop-a-simple-windows-forms-control.md)
+- [Opracowywanie złożonego formantu formularzy systemu Windows](developing-a-composite-windows-forms-control.md)
+- [Instrukcje: tworzenie kontrolki formularzy systemu Windows pokazującego postęp](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)

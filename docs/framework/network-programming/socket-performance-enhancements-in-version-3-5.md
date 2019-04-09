@@ -2,12 +2,12 @@
 title: Ulepszenia wydajności gniazda w wersji 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
-ms.openlocfilehash: 590caba9080119386454671e2cab597a22e4d49b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6c638791c9e5dc9e1e1fbd8b6db36c60df5bfcd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171980"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Ulepszenia wydajności gniazda w wersji 3.5
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje, które używają sieci asynchronicznych operacji We/Wy, aby osiągnąć najwyższą wydajność. Szereg nowych klas zostały dodane jako część zbioru ulepszeń klasy <xref:System.Net.Sockets.Socket> klasy, która zapewnia alternatywny wzorzec asynchroniczny, które mogą być używane przez aplikacje specjalistyczne gniazda o wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla sieci serwer aplikacji, które wymagają wysokiej wydajności. Aplikację można użyć wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowej gorąca obszarów aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  
@@ -34,6 +34,7 @@ ms.locfileid: "54587768"
  Okres istnienia nowy obiekt kontekstu operację asynchronicznego gniazda zależy od odwołania w kodzie aplikacji i odwołania do asynchronicznego We/Wy. Nie jest wymagane dla aplikacji, aby zachować odwołanie do obiektu kontekstu operację asynchronicznego gniazda dopiero po przesłaniu go jako parametr do jednej z metod operację asynchronicznego gniazda. Pozostanie on odwołania do momentu ukończenia wywołania zwrotnego zwraca. Jednak jest korzystna dla aplikacji, aby zachować odwołanie do obiektu context, dzięki czemu mogą być ponownie używane dla operacji przyszłych asynchronicznego gniazda.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.Sockets.Socket?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>

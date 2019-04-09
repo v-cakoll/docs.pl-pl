@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost'
+title: 'Instrukcje: konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164024"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Instrukcje: Konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Instrukcje: konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost
 Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi być wznowione przez niektóre bodziec zewnętrznych, na przykład gdy wystąpienie przepływu pracy oczekuje na być dostarczane za pomocą wiadomości <xref:System.ServiceModel.Activities.Receive> działania. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> jest to zachowanie, która umożliwia określenie czasu między gdy wystąpienie usługi wprowadzona bezczynności i gdy wystąpienie jest utrwalona lub zwolnione. Zawiera ona dwie właściwości, które umożliwiają skonfigurowanie tych okresów. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Określa przedział czasu między podczas bezczynności przechodzi wystąpienie usługi przepływu pracy, a gdy wystąpienie usługi przepływu pracy jest trwały. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Określa przedział czasu między wystąpieniem usługi przepływu pracy przechodzi bezczynności i gdy wystąpienie usługi przepływu pracy jest zwalniana, gdzie zwolnienie oznacza, że utrwalanie wystąpienia magazyn wystąpienia i usunięcie go z pamięci. W tym temacie opisano sposób konfigurowania <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> w pliku konfiguracji.  
   
 ### <a name="to-configure-workflowidlebehavior"></a>Aby skonfigurować WorkflowIdleBehavior  
@@ -42,6 +42,7 @@ Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi by
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rozszerzalność hosta usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
 - [Uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)

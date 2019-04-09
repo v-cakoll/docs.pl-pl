@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, asynchronous client sockets
 ms.assetid: d4ac53a0-b50b-4232-9726-d47d25fcc38a
-ms.openlocfilehash: cf34b32a9d159c193f9ea1319afec073d62e8ca4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 736deb1a0c360163521b866a788f1ac077f74508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172097"
 ---
 # <a name="asynchronous-client-socket-example"></a>Przykład asynchronicznego gniazda klienta
 Poniższy przykład program tworzy klienta, który nawiązuje połączenie z serwerem. Klient jest tworzone za pomocą asynchronicznego gniazda, dzięki czemu wykonanie aplikacji klienta nie jest wstrzymany, podczas gdy serwer zwraca odpowiedź. Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwracany przez serwer w konsoli.  
@@ -322,6 +322,7 @@ public class AsynchronousClient {
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
 - [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)

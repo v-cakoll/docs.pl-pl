@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Rozwiązywanie konfliktów, scalając wartości bazy danych'
+title: 'Instrukcje: Rozwiązywanie konfliktów ze scaleniem wartości bazy danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1988b79c-3bfc-4c5c-a08a-86cf638bbe17
-ms.openlocfilehash: 2b6daa28c23c74eaea21f1f3d499a2e206252abd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 429bca7501bd58440ee894345855141a2a2ed12c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130211"
 ---
-# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Instrukcje: Rozwiązywanie konfliktów, scalając wartości bazy danych
+# <a name="how-to-resolve-conflicts-by-merging-with-database-values"></a>Instrukcje: Rozwiązywanie konfliktów ze scaleniem wartości bazy danych
 Aby uzgodnić różnice między wartościami oczekiwanymi i rzeczywistymi bazy danych, zanim spróbujesz ponownie prześlij zmiany, możesz użyć <xref:System.Data.Linq.RefreshMode.KeepChanges> scalić wartości bazy danych przy użyciu bieżących wartości elementu członkowskiego klienta. Aby uzyskać więcej informacji, zobacz [optymistycznej współbieżności: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
 > [!NOTE]
@@ -41,6 +41,7 @@ Aby uzgodnić różnice między wartościami oczekiwanymi i rzeczywistymi bazy d
  [!code-vb[System.Data.Linq.RefreshMode#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Rozwiązywanie konfliktów, zastępując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
-- [Instrukcje: Rozwiązywanie konfliktów, zachowując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
+
+- [Instrukcje: Rozwiązywanie konfliktów z zastąpieniem wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md)
+- [Instrukcje: Rozwiązywanie konfliktów z zachowaniem wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md)
 - [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

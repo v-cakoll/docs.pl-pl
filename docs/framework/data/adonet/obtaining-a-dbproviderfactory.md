@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 1099d8ec8e9d516b2269232857c695f9ff04d99c
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097411"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Uzyskiwanie DbProviderFactory
 Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> polega na przekazywanie informacji o dostawcy danych do <xref:System.Data.Common.DbProviderFactories> klasy. Na podstawie tych informacji <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> metoda tworzy fabrykę dostawcy silnie typizowanych. Na przykład, aby utworzyć <xref:System.Data.SqlClient.SqlClientFactory>, można przekazać `GetFactory` ciąg zawierający nazwę dostawcy, określony jako "System.Data.SqlClient". Inne przeciążenia `GetFactory` przyjmuje <xref:System.Data.DataRow>. Po utworzeniu fabryki dostawców, następnie umożliwia jej metod do tworzenia obiektów dodatkowych. Niektóre metody `SqlClientFactory` obejmują <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A>, i <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -43,7 +43,7 @@ Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> polega na przekaz
 |--------------------|-----------------|--------------------|-----------------|  
 |0|**Nazwa**|Dostawca danych SqlClient|Czytelna nazwa dostawcy danych|  
 |1|**Opis**|.NET framework Data Provider Pro SqlServer|Czytelny opis dostawcy danych|  
-|2|**Invatiantname**|System.Data.SqlClient|Nazwy, które umożliwiają programowe do odwoływania się do dostawcy danych|  
+|2|**InvariantName**|System.Data.SqlClient|Nazwy, które umożliwiają programowe do odwoływania się do dostawcy danych|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|W pełni kwalifikowana nazwa klasy fabryki, która zawiera wystarczająco dużo informacji, aby utworzyć wystąpienie obiektu|  
   
  To `DataTable` może służyć do włączyć użytkownikowi na wybranie <xref:System.Data.DataRow> w czasie wykonywania. Wybrane `DataRow` mogą być następnie przekazywany do <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> metodę, aby utworzyć silnie typizowaną <xref:System.Data.Common.DbProviderFactory>. Wybrane <xref:System.Data.DataRow> mogą być przekazywane do `GetFactory` metodę, aby utworzyć żądany `DbProviderFactory` obiektu.  
@@ -96,6 +96,7 @@ Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> polega na przekaz
  [!code-vb[DataWorks DbProviderFactories.GetFactory#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.GetFactory/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/ms228063(v=vs.100))

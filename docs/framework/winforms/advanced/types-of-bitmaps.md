@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089174"
 ---
 # <a name="types-of-bitmaps"></a>Typy map bitowych
 Mapy bitowej jest tablicą bitów, które określają kolor każdego piksela prostokątny tablicy pikseli. Liczba bitów przeznaczone danego piksela określa liczbę kolorów, które mogą być przypisane do tego pikseli. Na przykład, jeśli każdego piksela jest reprezentowany przez 4 bity, następnie piksela podanego można przypisać jedną 16 różnych kolorach (2 ^ 4 = 16). W poniższej tabeli przedstawiono kilka przykładów liczbę kolorów, które mogą zostać przypisani do piksela, reprezentowane przez daną liczbę bitów.  
@@ -86,6 +86,7 @@ Mapy bitowej jest tablicą bitów, które określają kolor każdego piksela pro
  TIFF jest elastyczna i rozszerzalna formatu, który jest obsługiwany przez szerokiej gamy platform i aplikacji przetwarzania obrazów. TIFF, pliki można przechowywać obrazy z dowolnej liczby bitów na piksel i mogą stosować różne algorytmy kompresji. Kilka obrazów mogą być przechowywane w pliku TIFF pojedynczy, wielu stron. Informacje dotyczące obrazu (skanera upewnij, komputerze-hoście, typ kompresji, orientacji, próbki na pikseli i tak dalej), można przechowywane w pliku i uporządkowane przy użyciu tagów. Może być rozszerzona formacie TIFF, zgodnie z potrzebami, zatwierdzenia i dodawania nowych znaczników.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>

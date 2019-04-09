@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164791"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
 <xref:System.CodeDom.Compiler> Przestrzeń nazw zawiera interfejsy do generowania kodu źródłowego z wykresu obiektu CodeDOM i zarządzania kompilacji za pomocą obsługiwane kompilatory. Dostawcy kodu może wygenerować kod źródłowy w języku programowania określonym zgodnie z wykresu CodeDOM. Klasa, która pochodzi od klasy <xref:System.CodeDom.Compiler.CodeDomProvider> zazwyczaj może zapewnić metody dla Generowanie i kompilowanie kodu dla języka dostawca obsługuje.  
@@ -94,6 +94,7 @@ ms.locfileid: "56219528"
  Program .NET Framework oferuje kompilatory kodu i generatorów kodu w następujących językach: C#, Visual Basic, C++ i JScript. Obsługa codeDOM można rozszerzyć do innych języków, implementowanie generatorów kodu specyficznego dla języka i kompilatory kodu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

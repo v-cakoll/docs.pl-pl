@@ -1,18 +1,18 @@
 ---
-title: 'Przewodnik: Hosting zawartości Direct3D9 w WPF'
+title: 'Przewodnik: hostowanie zawartości Direct3D9 w WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: e588118e995694ea899b73d238e00f63e92feea4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145915"
 ---
-# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Przewodnik: Hosting zawartości Direct3D9 w WPF
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Przewodnik: hostowanie zawartości Direct3D9 w WPF
 Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF).  
   
  W tym przewodniku należy wykonać następujące zadania:  
@@ -72,5 +72,6 @@ Ten poradnik pokazuje jak do hostowania zawartości Direct3D9 w aplikacji Window
      Zawartości Direct3D9 pojawia się w obrębie aplikacji WPF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Zagadnienia dotyczące współdziałania Direct3D9 i WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

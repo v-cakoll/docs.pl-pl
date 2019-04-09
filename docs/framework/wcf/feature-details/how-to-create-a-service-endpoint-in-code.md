@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie punktu końcowego w kodzie'
+title: 'Instrukcje: tworzenie punktu końcowego w kodzie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
-ms.openlocfilehash: 143a43545646e180bcfdedb60c64bbbb7c83ac2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0b51018a5940e01b38b00addb762fa6504495a4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517477"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139870"
 ---
-# <a name="how-to-create-a-service-endpoint-in-code"></a>Instrukcje: Tworzenie punktu końcowego w kodzie
+# <a name="how-to-create-a-service-endpoint-in-code"></a>Instrukcje: tworzenie punktu końcowego w kodzie
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest zdefiniowana w kodzie, w której jest określony, że należy używać usługa programu <xref:System.ServiceModel.BasicHttpBinding> klasy.  
   
  Jest zwykle najlepszym rozwiązaniem jest, aby określić powiązanie i informacje o adresie deklaratywnie w konfiguracji, a nie obowiązkowo w kodzie. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie sporządzana. Ogólnie rzecz biorąc zachowanie wiązania i adresowanie z kodu pozwala na zmianę bez konieczności ponownego kompilowania lub ponownego wdrażania aplikacji.  
@@ -47,4 +47,5 @@ W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkula
      Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [uproszczona konfiguracja](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Określanie wiązań usługi w kodzie](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+
+- [Instrukcje: Określanie powiązań usługi w kodzie](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

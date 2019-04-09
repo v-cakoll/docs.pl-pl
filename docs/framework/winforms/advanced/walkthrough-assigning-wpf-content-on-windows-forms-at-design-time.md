@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania'
+title: 'Przewodnik: Przypisywanie zawartości WPF na formularzach systemu Windows w czasie projektowania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108683"
 ---
-# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Przypisywanie zawartości WPF na formularzach Windows Forms w czasie projektowania
+# <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Przypisywanie zawartości WPF na formularzach systemu Windows w czasie projektowania
 W tym instruktażu dowiesz się, jak wybrać typy kontrolek Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Możesz wybrać wszystkie typy kontrolek WPF, które są zawarte w projekcie.
 
  W tym przewodniku należy wykonać następujące zadania:
@@ -97,8 +97,9 @@ W tym instruktażu dowiesz się, jak wybrać typy kontrolek Windows Presentation
 9. `elementHost2` Kontroli teraz udostępnia wystąpienie `UserControl1` typu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)
-- [Korzystanie z kontrolek WPF](using-wpf-controls.md)
+- [Korzystanie z formantów WPF](using-wpf-controls.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów'
+title: 'Instrukcje: tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119629"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Instrukcje: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Instrukcje: tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów
 W tym temacie pokazano, jak zaimplementować niestandardowego modułu weryfikacji certyfikatów i sposób konfigurowania poświadczeń klienta lub usługę w celu zastąpienia domyślnej logiki weryfikacji certyfikatu za pomocą niestandardowego modułu weryfikacji certyfikatów.  
   
  Jeśli certyfikat X.509 jest używany do uwierzytelniania klienta lub usługę, Windows Communication Foundation (WCF) domyślnie używa magazynu certyfikatów Windows i interfejsu API szyfrowania na potrzeby weryfikacji certyfikatu i upewnij się, że jest zaufana. Czasami certyfikatu wbudowanych funkcji sprawdzania poprawności nie jest wystarczająco i musi zostać zmienione. Usługi WCF zapewnia prosty sposób zmienić logikę weryfikacji, pozwalając użytkownikom na dodawanie niestandardowego modułu weryfikacji certyfikatów. Jeśli określono niestandardowego modułu weryfikacji certyfikatów, usługi WCF nie używa logikę weryfikacji certyfikatu wbudowanych, ale opiera się na niestandardowego modułu weryfikacji.  
@@ -130,4 +130,5 @@ W tym temacie pokazano, jak zaimplementować niestandardowego modułu weryfikacj
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>

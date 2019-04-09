@@ -1,16 +1,16 @@
 ---
-title: Program WIF i farmy serwerów sieci Web
+title: Program WIF i farmy serwerów internetowych
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135359"
 ---
-# <a name="wif-and-web-farms"></a>Program WIF i farmy serwerów sieci Web
+# <a name="wif-and-web-farms"></a>Program WIF i farmy serwerów internetowych
 Korzystając z programu Windows Identity Foundation (WIF) można zabezpieczyć zasobów jednostki uzależnionej aplikacji innych firm (RP), które zostało wdrożone w ramach farmy sieci web, należy wykonać określone kroki, aby upewnić się, że program WIF może przetwarzać tokenów z wystąpień aplikacji jednostki Uzależnionej, uruchomione na różnych komputery z farmy. Proces przetwarzania obejmuje sprawdzanie podpisów tokenów sesji, szyfrowania i odszyfrowywania tokenów sesji, buforowanie tokenów sesji i wykrywanie powtórzone tokenów zabezpieczających.  
   
  W typowych przypadkach stosowania programu WIF do zabezpieczania zasobów aplikacji jednostki Uzależnionej — czy punktu przywracania jest uruchomiona na tym samym komputerze lub w ramach farmy sieci web — ustanowiono połączenie z klientem, oparte na token zabezpieczający, który został uzyskany z usługi tokenu zabezpieczającego (STS). Pozwoli to uniknąć, wymuszając od klienta do uwierzytelniania w STS dla każdego zasobu aplikacji, która jest zabezpieczony za pomocą programu WIF. Aby uzyskać więcej informacji na temat obsługi sesjami programu WIF, zobacz [Zarządzanie sesjami programu WIF](../../../docs/framework/security/wif-session-management.md).  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

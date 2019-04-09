@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69864e647a7cf4e6193f4eb76ce2b7bc93b09404
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ed5ef0ced0497895e8688bdb27c6f7f378d7cd3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189667"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Instrukcje: Badanie i tworzenie wystąpień typów ogólnych za pomocą odbicia
 Informacje o typach ogólnych jest uzyskane w ten sam sposób jak informacje o innych typach:, sprawdzając <xref:System.Type> obiekt, który reprezentuje typ ogólny. Główna różnica polega na tym, typu ogólnego zawiera listę <xref:System.Type> obiekty reprezentujące jego parametrów typu rodzajowego. Pierwsza procedura w tej sekcji sprawdza typów ogólnych.  
@@ -124,6 +124,7 @@ Informacje o typach ogólnych jest uzyskane w ten sam sposób jak informacje o i
 -   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
 - [Odbicie i typy ogólne](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)

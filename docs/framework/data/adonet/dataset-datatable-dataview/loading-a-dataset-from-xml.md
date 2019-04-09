@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099901"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Ładowanie elementu DataSet z pliku XML
 Zawartość ADO.NET <xref:System.Data.DataSet> można tworzyć na podstawie strumień XML lub dokumentu. Ponadto, za pomocą programu .NET Framework masz dużą elastyczność w informacjach jest ładowany z pliku XML i w jaki sposób schematu lub relacyjnej struktury elementu <xref:System.Data.DataSet> zostanie utworzony.  
@@ -25,7 +25,7 @@ Zawartość ADO.NET <xref:System.Data.DataSet> można tworzyć na podstawie stru
 |**ReadSchema**|Odczytuje schemat w tekście i ładuje schemat i dane.<br /><br /> Jeśli <xref:System.Data.DataSet> już zawiera schemat, nowe tabele są dodawane od wbudowanego schematu do istniejącego schematu w <xref:System.Data.DataSet>. Jeśli wszystkie tabele w wbudowanego schematu jest już istnieją w <xref:System.Data.DataSet>, zgłaszany jest wyjątek. Nie można zmodyfikować schemat z istniejącej tabeli przy użyciu **XmlReadMode.ReadSchema**.<br /><br /> Jeśli <xref:System.Data.DataSet> nie zawiera schematu i istnieje żaden schemat wbudowany, nie są odczytywane dane.<br /><br /> Schemat w tekście można zdefiniować przy użyciu schematu języka (XSD) definicji schematu XML. Aby uzyskać informacje na temat pisania wbudowanego schematu XML Schema zobacz [elementu pochodnego dla zestawu danych relacyjnej struktury z schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Ignoruje wszelkie wbudowanego schematu i ładuje dane do istniejącego <xref:System.Data.DataSet> schematu. Wszelkie dane, które nie jest zgodny ze schematem istniejących jest odrzucany. Jeśli żaden schemat nie istnieje w <xref:System.Data.DataSet>, nie dane są ładowane.<br /><br /> Jeśli dane są w formacie DiffGram, **IgnoreSchema** ma taką samą funkcjonalność jak **w formacie DiffGram** *.*|  
 |**InferSchema**|Ignoruje wszelkie wbudowanego schematu i wnioskuje schemat na strukturę danych XML, a następnie ładuje dane.<br /><br /> Jeśli <xref:System.Data.DataSet> już zawiera schemat bieżącego schemat został rozszerzony, dodając kolumny do istniejących tabel. Dodatkowe tabele nie zostanie dodany, jeśli nie istnieją tabele. Wyjątek jest generowany, jeśli wywnioskowane tabela już istnieje z innej przestrzeni nazw lub wywnioskowane kolumn w konflikcie z istniejących kolumn.<br /><br /> Aby uzyskać szczegółowe informacje o tym, jak **ReadXmlSchema** wnioskuje schemat z dokumentu XML, zobacz [wnioskowanie zestawu danych relacyjnej struktury z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
-|**DiffGram**|Odczytuje element w formacie DiffGram i dodaje je do bieżącego schematu. **Format DiffGram** scala nowych wierszy przy użyciu istniejących wierszy, jeśli są takie same wartości unikatowego identyfikatora. Zobacz "Scalania danych z pliku XML" na końcu tego tematu. Aby uzyskać więcej informacji na temat DataSets zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**Format DiffGram**|Odczytuje element w formacie DiffGram i dodaje je do bieżącego schematu. **Format DiffGram** scala nowych wierszy przy użyciu istniejących wierszy, jeśli są takie same wartości unikatowego identyfikatora. Zobacz "Scalania danych z pliku XML" na końcu tego tematu. Aby uzyskać więcej informacji na temat DataSets zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
 |**Fragment**|Nadal odczytywanie wiele fragmenty XML, aż do osiągnięcia końca strumienia. Liczba fragmentów, które pasują do <xref:System.Data.DataSet> schematu są dołączane do odpowiednich tabel. Fragmenty, które nie odpowiadają <xref:System.Data.DataSet> schematu są odrzucane.|  
   
 > [!NOTE]
@@ -116,6 +116,7 @@ foreach (DataTable dataTable in dataSet.Tables)
  Jeśli <xref:System.Data.DataSet> zawiera już dane, nowe dane z pliku XML jest dodawany do danych już istnieje w <xref:System.Data.DataSet>. **ReadXml** scalać z pliku XML do <xref:System.Data.DataSet> dowolny wiersz informacji ze zgodnymi kluczami podstawowymi. Aby zastąpić istniejące informacje wiersza przy użyciu nowych informacji z pliku XML, należy użyć **ReadXml** do tworzenia nowego <xref:System.Data.DataSet>, a następnie <xref:System.Data.DataSet.Merge%2A> nowy <xref:System.Data.DataSet> się z istniejącymi <xref:System.Data.DataSet>. Należy pamiętać, że załadowanie w formacie DiffGram przy użyciu **ReadXML** z **XmlReadMode** z **w formacie DiffGram** spowoduje scalenie wierszy, które mają taki sam Unikatowy identyfikator.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
 - [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [Elementy DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)

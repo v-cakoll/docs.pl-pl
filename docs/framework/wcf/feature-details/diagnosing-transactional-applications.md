@@ -2,12 +2,12 @@
 title: Diagnozowanie aplikacji transakcyjnych
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: f4cc42e7ac6847d8320b96fce5198d55df303de2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101715"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
 W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy użyciu funkcji diagnostyki i zarządzania usługi Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy uż
 |-------------------------|-----------------|  
 |Przepływ transakcji|Liczba transakcji przekazanych do operacji w tej usłudze. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do usługi.|  
 |Przepływ transakcji na sekundę|Liczba transakcji przekazanych do operacji w tej usłudze w ciągu każdej sekundy. Ten licznik jest zwiększany każdym razem, gdy transakcja jest w wiadomości, które są wysyłane do usługi.|  
-|Zatwierdzone operacje transakcyjne|Liczba operacji transakcyjnych, wykonywane, którego transakcja została ukończona z wynik w tej usłudze. Praca wykonana w takich operacji jest w pełni zatwierdzić. Zasoby są aktualizowane zgodnie z pracy wykonanej w ramach operacji.|  
+|Potwierdzone operacje transakcyjne|Liczba operacji transakcyjnych, wykonywane, którego transakcja została ukończona z wynik w tej usłudze. Praca wykonana w takich operacji jest w pełni zatwierdzić. Zasoby są aktualizowane zgodnie z pracy wykonanej w ramach operacji.|  
 |Zatwierdzone operacje transakcyjne na sekundę|Liczba operacji transakcyjnych, wykonywane, którego transakcja została ukończona z wyniku zatwierdzone w tej usłudze w ciągu każdej sekundy. Praca wykonana w takich operacji jest w pełni zatwierdzić. Zasoby są aktualizowane zgodnie z pracy wykonanej w ramach operacji.|  
 |Przerwane operacje transakcyjne|Liczba operacji transakcyjnych wykonać, którego transakcja została ukończona z wyniku zostało przerwane w tej usłudze. Praca wykonana w takich operacji jest wycofywana. Zasoby są przywracane do poprzedniego stanu.|  
 |Przerwane operacje transakcyjne na sekundę|Liczba operacji transakcyjnych wykonać, którego transakcja została ukończona z wyniku zostało przerwane w tej usłudze w ciągu każdej sekundy. Praca wykonana w takich operacji jest wycofywana. Zasoby są przywracane do poprzedniego stanu.|  
@@ -95,7 +95,7 @@ W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy uż
   
      Śledzenie WS-AtomicTransaction można włączyć za pomocą [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w systemie. Umożliwia również wewnętrznego śledzenia Model usług, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucz rejestru prawidłową wartością <xref:System.Diagnostics.SourceLevels> wyliczenia. Można włączyć rejestrowanie w taki sam sposób jak inne aplikacje WCF komunikatów.  
   
--   `System.Transactions` Śledzenie  
+-   `System.Transactions` śledzenie  
   
      Podczas korzystania z protokołu OleTransactions, komunikatach protokołów nie może być śledzony. Obsługa śledzenia <xref:System.Transactions> zapewnia infrastrukturę (które wykorzystuje OleTransactions) pozwala użytkownikom na wyświetlanie zdarzeń, które nastąpiły w transakcji. Aby włączyć śledzenie dla <xref:System.Transactions> aplikacji, zawrzyj następujący kod w `App.config` pliku konfiguracji.  
   
@@ -121,6 +121,7 @@ W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy uż
      Umożliwia także śledzenie programu WCF, jak również korzysta z usługi WCF <xref:System.Transactions> infrastruktury.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Administracja i diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)
 - [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

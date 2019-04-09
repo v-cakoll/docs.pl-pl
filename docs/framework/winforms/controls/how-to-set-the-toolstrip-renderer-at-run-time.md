@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawienie modułu renderowania ToolStrip w czasie wykonywania'
+title: 'Instrukcje: ustawienie modułu renderowania ToolStrip w czasie wykonywania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
-ms.openlocfilehash: 2ad175f5f290fd709636e12caf0ebd0a34c0052f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f0e8668ef46de8cc073663786bcd43b740a1b2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138589"
 ---
-# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Instrukcje: Ustawienie modułu renderowania ToolStrip w czasie wykonywania
+# <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Instrukcje: ustawienie modułu renderowania ToolStrip w czasie wykonywania
 Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> kontroli, tworząc niestandardowe `ProfessionalColorTable` klasy.  
   
 ## <a name="example"></a>Przykład  
@@ -51,9 +51,10 @@ Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> kontrol
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.ProfessionalColorTable>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)

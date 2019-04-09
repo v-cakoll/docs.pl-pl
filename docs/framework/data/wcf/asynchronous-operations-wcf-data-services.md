@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 1aa51d07be6073a75ef40ade83eba13371db3a69
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ef41b458a3f5b977eaaff523413c1a8d3b1982a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094155"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126646"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operacje asynchroniczne (WCF Data Services)
 Aplikacje sieci Web musi obsługiwać większych opóźnień między klientem i serwerem niż aplikacji działających w sieciach wewnętrznych. Aby zoptymalizować wydajność i środowisko użytkownika aplikacji, firma Microsoft zaleca używanie metod asynchronicznych z <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601> klasy podczas uzyskiwania dostępu do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] serwerów w sieci Web.  
@@ -37,4 +37,5 @@ Aplikacje sieci Web musi obsługiwać większych opóźnień między klientem i 
  W przypadku aplikacji wielowątkowych, delegat, który jest zarejestrowany jako wywołanie zwrotne dla operacji asynchronicznej nie jest zawsze wywoływany w tym samym wątku, który został użyty do wywołania *rozpocząć* metody, która tworzy wstępne żądanie. W aplikacji, gdy wywołanie zwrotne musi być wywoływany w określonym wątku, musisz jawnie zarządzać wykonywania *zakończenia* metody, która obsługuje odpowiedzi, do żądanego wątku. Na przykład w aplikacji Windows Presentation Foundation WPF i aplikacji opartych na technologii Silverlight odpowiedzi musi być organizowany powrotem do wątku interfejsu użytkownika przy użyciu <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metody <xref:System.Windows.Threading.Dispatcher> obiektu. Aby uzyskać więcej informacji, zobacz [zapytań usługi danych (WCF Data Services/Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

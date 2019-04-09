@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf7e1b0c3ef3c1e1c26e4dd308ae2326777b38da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e88ba4260e9deaf53ae828f222d32f8ece61ffa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151037"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
 Wykonaj te ogólne wytyczne do tworzenia aplikacji zarządzanych lub składników przeznaczonych do wykonywania side-by-side:  
@@ -63,5 +63,6 @@ Wykonaj te ogólne wytyczne do tworzenia aplikacji zarządzanych lub składnikó
  [Narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) pozwala zastąpić zestawu, jeśli numer wersji pliku jest nowsza. Instalator ogólnie nie można zainstalować za pośrednictwem zestawu, chyba że numer wersji zestawu jest większa.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykonywanie równoczesne](../../../docs/framework/deployment/side-by-side-execution.md)
 - [Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

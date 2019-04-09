@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172058"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Style dla Fokusu w formantach i FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia dwa mechanizmy równoległe zmieniać wygląd kontrolki, gdy otrzymuje fokus klawiatury. Pierwszy mechanizm jest używać metod ustawiających właściwości dla właściwości, takich jak <xref:System.Windows.UIElement.IsKeyboardFocused%2A> w stylu lub szablonu, która jest stosowana do formantu. Mechanizm drugi ma na celu dostarczenie oddzielne styl jako wartość <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości "skupić stylu wizualnego" tworzy osobne drzewo wizualne dla moduł definiowania układu, który rysuje na górze kontrolki, zamiast zmieniania drzewie wizualnym kontrolki lub innego interfejsu użytkownika element przez zastąpienie. W tym temacie opisano scenariusze, w których każdy z tych mechanizmów jest właściwe.  
-   
-  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>Celem styl wizualny fokusu  
  Funkcja styl wizualny fokusu zapewnia typowe "object model" wprowadzenie do visual opinii klientów oparte na nawigacji za pomocą klawiatury do dowolnego elementu interfejsu użytkownika. Jest to możliwe bez zastosowania nowego szablonu do formantu lub wiedząc kompozycji określonego szablonu.  
@@ -77,7 +76,8 @@ ms.locfileid: "57377050"
  Jeśli chcesz, aby wszystkie możliwe przyczyny zmieniania fokusu do tworzenia wizualnych zachowanie, podstawowej metody ustawiającej lub Wyzwalaj w momencie <xref:System.Windows.UIElement.IsFocused%2A> właściwość zależności lub alternatywnie w <xref:System.Windows.UIElement.GotFocus> lub <xref:System.Windows.UIElement.LostFocus> zdarzenia używane do <xref:System.Windows.EventSetter>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Przegląd fokusu](focus-overview.md)
-- [Przegląd danych wejściowych](input-overview.md)
+- [Przegląd Fokus](focus-overview.md)
+- [Przegląd Dane wejściowe](input-overview.md)

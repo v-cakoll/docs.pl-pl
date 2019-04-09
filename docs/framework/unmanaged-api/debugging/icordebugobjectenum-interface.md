@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectEnum — Interfejs
+title: ICorDebugObjectEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 452216a2ba4e8013d107977d82eae1508b2aba78
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0144539987f14bed83bfc9eab2f5ca26d2a609ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157776"
 ---
-# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum — Interfejs
+# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum, interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice obiektów według ich względnych adresów wirtualnych (RVA).  
   
@@ -48,4 +48,5 @@ Implementuje metody ICorDebugEnum i wylicza tablice obiektów według ich wzglę
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

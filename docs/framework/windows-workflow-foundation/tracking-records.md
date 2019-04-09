@@ -2,12 +2,12 @@
 title: Rekordy śledzenia
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163920"
 ---
 # <a name="tracking-records"></a>Rekordy śledzenia
 Środowisko wykonawcze przepływów pracy został zinstrumentowany aby emitować rekordów śledzenia z wykonywania wystąpienia przepływu pracy.  
@@ -61,5 +61,6 @@ ms.locfileid: "54676110"
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Wskazuje, że przepływ pracy jest kończonych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Windows Server AppFabric monitorowania](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Monitorowanie aplikacji przy użyciu rozwiązania AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

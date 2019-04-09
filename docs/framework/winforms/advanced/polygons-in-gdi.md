@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-ms.openlocfilehash: cffbee5f73b9fe92e2f1f3c7eff2f2336d9123a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132629"
 ---
 # <a name="polygons-in-gdi"></a>Wielokąty w GDI+
 Wielokąt jest kształt zamknięty przy użyciu co najmniej trzech stronach proste. Na przykład trójkąt jest Wielokąt przy użyciu trzech stronach prostokątowi Wielokąt przy użyciu czterech bokach i pięciobok jest wielokąta z pięciu stron. Poniższa ilustracja przedstawia kilka wielokątów.  
@@ -32,6 +32,7 @@ Wielokąt jest kształt zamknięty przy użyciu co najmniej trzech stronach pros
  ![Polygon](./media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)

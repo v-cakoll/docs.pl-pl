@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
 ms.date: 03/30/2017
 ms.assetid: 0d5be591-9a7b-4a6f-a906-95d3abafe8db
-ms.openlocfilehash: 85b0f95606e1ca3d52d8c79dbe0042c51ce3f36e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2244ba42b1cf95f77424d32a19ebe11dd3a2a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148710"
 ---
 # <a name="security-considerations-for-secure-sessions"></a>Zagadnienia dotyczące zabezpieczeń bezpiecznych sesji
 Należy rozważyć następujące elementy, które dotyczą zabezpieczeń podczas implementowania bezpiecznej sesji. Aby uzyskać więcej informacji na temat zagadnień dotyczących zabezpieczeń, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) i [najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
@@ -21,6 +21,7 @@ Należy rozważyć następujące elementy, które dotyczą zabezpieczeń podczas
  Oznacza to, że chcącym niestandardowy token pochodzić powinna opakować typ klauzuli w `SecurityTokenReference` elementu. Istnieje możliwość wyłączyć pochodnym, ale wartość domyślna to do tworzenia kluczy. Jeśli nie opakuj klucz, serializacji pochodny token klucza zakończy się pomyślnie, ale zgłasza wyjątek, próba deserializacji go.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Wyłączanie bezpiecznej sesji WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+
+- [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Najlepsze rozwiązania dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)

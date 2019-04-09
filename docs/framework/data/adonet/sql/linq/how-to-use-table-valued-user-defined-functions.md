@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Używanie wartościami przechowywanymi w tabeli funkcji zdefiniowanych przez użytkownika'
+title: 'Instrukcje: Używanie funkcji tabelarycznej zdefiniowanej przez użytkownika'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5a4ae2b4-3290-4aa1-bc95-fc70c51b54cf
-ms.openlocfilehash: 03ed780cfba006f43f957dadf449cb4a369cbc96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eedc2e9b997e91ed9fe0038f260aa475d23a0627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186839"
 ---
-# <a name="how-to-use-table-valued-user-defined-functions"></a>Instrukcje: Używanie wartościami przechowywanymi w tabeli funkcji zdefiniowanych przez użytkownika
+# <a name="how-to-use-table-valued-user-defined-functions"></a>Instrukcje: Używanie funkcji tabelarycznej zdefiniowanej przez użytkownika
 Funkcja z wartościami przechowywanymi w tabeli zwraca pojedynczy zestaw wierszy (w przeciwieństwie do procedur przechowywanych, które mogą zwrócić wielu kształtów wyników). Ponieważ zwracany typ funkcji z wartościami przechowywanymi w tabeli jest `Table`, można użyć funkcji zwracającej tabelę dowolne miejsce w języku SQL, można użyć tabeli. Można również traktować funkcji zwracającej tabelę, tak samo jak tabeli.  
   
 ## <a name="example"></a>Przykład  
@@ -48,4 +48,5 @@ AS p1 INNER JOIN Products AS p2 ON p1.ProductID = p2.ProductID
  [!code-vb[DLinqUDFS#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqUDFS/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

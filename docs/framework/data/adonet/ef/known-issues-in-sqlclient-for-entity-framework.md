@@ -1,15 +1,15 @@
 ---
-title: Znane problemy w SqlClient programu Entity Framework
+title: Znane problemy klienta SQL dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073809"
 ---
-# <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy w SqlClient programu Entity Framework
+# <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy klienta SQL dla programu Entity Framework
 W tej sekcji opisano znane problemy związane z .NET Framework Data Provider for SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Końcowe spacje w funkcje ciągów  
@@ -60,5 +60,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serwera wartości generowanych przez identyfikator GUID typu tożsamości, ale dostawca musi obsługiwać, zwracając wartość, tożsamością wygenerowaną przez serwer po wstawieniu wiersza. Począwszy od programu SQL Server 2005, może zwrócić typ identyfikator GUID generowany przez serwer w bazie danych programu SQL Server za pośrednictwem [klauzuli OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Element SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
-- [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [Znane problemy i zagadnienia dotyczące składnika LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

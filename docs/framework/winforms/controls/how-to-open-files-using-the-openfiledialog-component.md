@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: 5781543a61d77ef8f0658e95759c57fdb77cfc4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f4e96f1714a182647665f12e29d38f2b8037478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159110"
 ---
 # <a name="how-to-open-files-with-the-openfiledialog"></a>Instrukcje: Pliki otwarte z OpenFileDialog 
 
@@ -41,5 +41,6 @@ W poniższym przykładzie użyto <xref:System.Windows.Forms.Button> kontrolki <x
  [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [Openfiledialog — składnik](openfiledialog-component-windows-forms.md)
+- [OpenFileDialog — składnik](openfiledialog-component-windows-forms.md)

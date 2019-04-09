@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0eeaf0bd347b7aa6fe47387282a5237cf91a5f59
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137855"
 ---
 # <a name="assembly-element-net-native"></a>\<Zestaw > (architektura .NET Native)
 Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruchomieniowego.  
@@ -65,8 +65,8 @@ Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruch
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Ma zastosowanie zasad odbicia do wszystkich typów w podrzędnej przestrzeni nazw.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Zastosowanie zasad odbicia do typu.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Ma zastosowanie zasad odbicia do wszystkich typów w podrzędnej przestrzeni nazw.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Zastosowanie zasad odbicia do typu.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -74,7 +74,7 @@ Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruch
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) element może mieć zero, co najmniej jeden `<Assembly>` elementów.|  
-|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć zero lub jeden `<Assembly>` elementu.|  
+|[\<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć zero lub jeden `<Assembly>` elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<Assembly>` Element definiuje zasad środowiska uruchomieniowego dla wszystkich typów w zestawie. Różni się od [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element, który określa bibliotekę, ale zależy od jego elementów podrzędnych do definiowania zasad odbicia środowiska uruchomieniowego. `<Assembly>` Element ma zastosowanie do wszystkich typów w zestawie, chyba że zostaną zastąpione przez element podrzędny.  
@@ -92,6 +92,7 @@ Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruch
  `Activate`, `Browse`, `Dynamic`, I `Serialize` atrybuty są wszystkie opcjonalne. Jednak `<Assembly>` musi zawierać co najmniej jeden z tych atrybutów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

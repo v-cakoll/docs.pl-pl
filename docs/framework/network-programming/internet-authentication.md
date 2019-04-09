@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 9ec1a003d981db99bec20778790fa4a3507ad0b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 10d9c976a9294bffd85791b222dfededd0fc9256
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155925"
 ---
 # <a name="internet-authentication"></a>Uwierzytelnianie internetowe
 <xref:System.Net> Klasy obsługi różnych mechanizmów uwierzytelniania klienta, w tym standardowa Internet metod uwierzytelniania, podstawowe, szyfrowane, negocjowania NTLM, a uwierzytelnianie Kerberos, a także niestandardowych metod, które można utworzyć.  
@@ -40,6 +40,7 @@ ms.locfileid: "54587963"
  Niektóre schematy uwierzytelniania można uwierzytelnić użytkownika bez wcześniejszego utworzenia żądania dla zasobu. Aplikację można zaoszczędzić czas i preauthenticating użytkownika z zasobem, eliminując co najmniej jedną rundę do serwera. Lub, aby później można zwiększyć szybkość reakcji użytkownika może wykonywać uwierzytelnianie podczas uruchamiania programu. Schematy uwierzytelniania, które można użyć uwierzytelniania wstępnego zestawu <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> właściwości **true**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uwierzytelnianie podstawowe i szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)
 - [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)

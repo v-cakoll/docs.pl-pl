@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF'
+title: 'Instrukcje: tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania internetowego protokołu HTTP w programie WCF'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157486"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania internetowego protokołu HTTP w programie WCF
 Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacja usługi musi zwrócić dane w formacie nie jest obsługiwane przez architekturę WCF. W tym temacie omówiono tworzenie takiej usługi przy użyciu programu WCF WEB HTTP modelu programowania. Ta usługa ma jedną operację, która zwraca strumienia.  
   
 ### <a name="to-implement-the-service-contract"></a>Aby zaimplementować kontrakt usługi  
@@ -176,4 +176,5 @@ namespace RawImageService
 -   Podczas kompilowania kodu przykładowej odniesienia System.ServiceModel.dll i System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

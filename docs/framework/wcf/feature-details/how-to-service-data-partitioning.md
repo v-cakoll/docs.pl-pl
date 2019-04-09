@@ -2,12 +2,12 @@
 title: 'Instrukcje: Partycjonowanie danych usługi'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150101"
 ---
 # <a name="how-to-service-data-partitioning"></a>Instrukcje: Partycjonowanie danych usługi
 W tym temacie przedstawiono podstawowe kroki wymagane do partycji wiadomości na wiele wystąpień tej samej usługi docelowej. Partycjonowanie danych usługi jest zazwyczaj używany w przypadku konieczności skalowania usługi w celu zapewnienia lepszej jakości usługi, lub gdy potrzebujesz do obsługi żądań od innych klientów w określony sposób. Na przykład wiadomości od wysokiej wartości lub klientów "Złota" może być konieczne do przetworzenia na wyższy priorytet niż wiadomości od standardowego klienta.  
@@ -174,4 +174,5 @@ W tym temacie przedstawiono podstawowe kroki wymagane do partycji wiadomości na
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi routingu](../../../../docs/framework/wcf/samples/routing-services.md)

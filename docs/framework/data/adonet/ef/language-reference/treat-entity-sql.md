@@ -2,12 +2,12 @@
 title: TRAKTUJ (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 1a65c73b8c6013c2b78343224c5bbb925101f9f3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077345"
 ---
 # <a name="treat-entity-sql"></a>TRAKTUJ (jednostka SQL)
 Traktuje obiektu określonego typu podstawowego, jako obiekt określonego typu pochodnego.  
@@ -67,5 +67,6 @@ WHERE p IS OF (NamespaceName.Employee)
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Typy strukturalne dopuszczające wartości Null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

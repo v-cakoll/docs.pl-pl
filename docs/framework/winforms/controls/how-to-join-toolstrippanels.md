@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Łączenie kontrolek ToolStripPanel'
+title: 'Instrukcje: łączenie ToolStripPanels'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], joining together
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
-ms.openlocfilehash: 297e3bfec9bb24fb2c06e903a5f32410618812d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f73c13c4aac1abef70a2ceb0a30c3e46d8664748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161008"
 ---
-# <a name="how-to-join-toolstrippanels"></a>Instrukcje: Łączenie kontrolek ToolStripPanel
+# <a name="how-to-join-toolstrippanels"></a>Instrukcje: łączenie ToolStripPanels
 Możesz dołączyć <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel> w czasie wykonywania, który zapewnia elastyczność aplikacji interfejsu wielu dokumentów (MDI).  
   
 ## <a name="example"></a>Przykład  
@@ -32,6 +32,7 @@ Możesz dołączyć <xref:System.Windows.Forms.ToolStrip> mające na celu <xref:
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Instrukcje: Używanie elementu ToolStripPanels dla MDI](how-to-use-toolstrippanels-for-mdi.md)
+- [Instrukcje: używanie elementu ToolStripPanels dla MDI](how-to-use-toolstrippanels-for-mdi.md)

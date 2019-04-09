@@ -16,17 +16,16 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: dee88ceb82528955d8809214bff474b92233d28c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199430"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation (WPF). Obejmuje większość najważniejszych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]oraz opis sposobu interakcji. Szczegóły również niektóre wybory dokonane przez architektów z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
-  
-  
+
 <a name="System_Object"></a>   
 ## <a name="systemobject"></a>System.Object  
  Podstawowy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] model programowania jest dostępna za pośrednictwem kodu zarządzanego. Na wczesnym etapie fazy projektowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wiele debatach o gdzie wiersz ma być rysowany między składniki zarządzane systemu i te niezarządzane. [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Oferuje pewną liczbę funkcji, które dzięki niej programowanie i bardziej wydajna niezawodna (w tym zarządzanie pamięcią, obsługa błędów, wspólny system typów, itp.), ale wiąże się to kosztem.  
@@ -142,6 +141,7 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
  Po rozpoczęciu tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje, powinien czuć się bardzo podobnie do funkcji. Można ustawić właściwości, użyj obiektów i powiązanie danych w taki sam sposób można utworzyć za pomocą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA#tla_aspnet](../../../../includes/tlasharptla-aspnet-md.md)]. Za pomocą głębszego zbadania do architektury [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], przekonasz się, że możliwość istnieje do tworzenia aplikacji znacznie bogatsze całkowicie traktować dane ponieważ sterownik podstawowych aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.Input.ICommand>
@@ -149,6 +149,6 @@ Ten temat zawiera przewodnik po hierarchii klas Windows Presentation Foundation 
 - <xref:System.Windows.Threading.DispatcherObject>
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Controls.Control>
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
 - [Układ](layout.md)
-- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
+- [Przegląd Animacja](../graphics-multimedia/animation-overview.md)

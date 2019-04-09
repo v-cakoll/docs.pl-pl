@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie elementów Menu do paska ContextMenuStrip'
+title: 'Instrukcje: dodawanie elementów menu do paska ContextMenuStrip'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: a12a201ac73c86bf391d39f47baa47c87bf96095
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 534bbd2c2edb68dca0f2a1c2997ff1ba762ef07c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135086"
 ---
-# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Instrukcje: Dodawanie elementów Menu do paska ContextMenuStrip
+# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>Instrukcje: dodawanie elementów menu do paska ContextMenuStrip
 Można dodać element menu tylko jeden lub kilka elementów, które znajdują się w czasie <xref:System.Windows.Forms.ContextMenuStrip>.  
   
 ### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>Aby dodać pojedynczy element menu do paska ContextMenuStrip  
@@ -48,4 +48,5 @@ Można dodać element menu tylko jeden lub kilka elementów, które znajdują si
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [ContextMenuStrip, kontrolka](contextmenustrip-control.md)
+
+- [ContextMenuStrip — Formant](contextmenustrip-control.md)

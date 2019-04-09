@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167170"
 ---
 # <a name="timing-events-overview"></a>Przegląd Zdarzenia chronometrażu
 W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów.  
@@ -56,7 +56,7 @@ W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostęp
   
 |Zdarzenie|Wyzwalanie operacji interaktywne|Inne wyzwalacze|  
 |-----------|--------------------------------------|--------------------|  
-|**Ukończone**|Przejdź do wypełnienia|Zegar zostanie ukończone.|  
+|**Zakończone**|Przejdź do wypełnienia|Zegar zostanie ukończone.|  
 |**CurrentGlobalSpeedInvalidated**|Wstrzymywanie, wznawianie, wyszukiwania, ustawić szybkość współczynnik, od razu przejść do wypełnienia, Zatrzymaj|Zegar odwraca, przyspieszają działanie, uruchomienia lub zatrzymania.|  
 |**CurrentStateInvalidated**|Rozpocząć, przejdź do wypełnienia, Zatrzymaj|Zegar uruchamia, zatrzymuje, lub wypełnia.|  
 |**CurrentTimeInvalidated**|Rozpocznij, wyszukiwania, przejdź do wypełnienia, Zatrzymaj|Przeprowadzaj zegara.|  
@@ -77,6 +77,7 @@ W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostęp
  Podczas rejestrowania się <xref:System.Windows.Media.Animation.Timeline.Completed> zdarzeń na osi czasu, na przykład, możesz teraz faktycznie informuje system rejestracji <xref:System.Windows.Media.Animation.Clock.Completed> zdarzenia każdego zegara, który jest tworzony dla osi czasu. W kodzie, należy zarejestrować dla tego zdarzenia przed <xref:System.Windows.Media.Animation.Clock> jest tworzona dla tej osi czasu; w przeciwnym razie nie będziesz otrzymywać powiadomienia. Dzieje się to automatycznie w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; analizator automatycznie rejestruje zdarzenia przed <xref:System.Windows.Media.Animation.Clock> zostanie utworzony.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
-- [Animacja — przegląd](animation-overview.md)
-- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)
+
+- [Przegląd Animacja i system chronometrażu](animation-and-timing-system-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)

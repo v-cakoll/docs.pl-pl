@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 2e818f3d5a7dfa85bf361d7de0cbd5bcb2dfe63b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c63dd07686463c652c27dea8473b4d8cbe2dab71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137673"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materializacja obiektu (WCF Data Services)
 Kiedy używasz **Dodaj odwołanie do usługi** okno dialogowe, aby używać [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w aplikacji klienta opartego na programie .NET Framework, klas danych równoważne są generowane dla każdego typu jednostki w modelu danych udostępnianych przez źródło danych. Aby uzyskać więcej informacji, zobacz [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Jednostki danych zwracanych przez zapytanie jest zmaterializowany do wystąpienia jednego z tych klas usługi danych wygenerowanego klienta. Aby uzyskać informacji na temat opcji scalania i rozwiązanie tożsamości dla śledzonych obiektów, zobacz [zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
@@ -47,5 +47,6 @@ Kiedy używasz **Dodaj odwołanie do usługi** okno dialogowe, aby używać [!IN
 5.  Biblioteka klienta dołącza obiekt do <xref:System.Data.Services.Client.DataServiceContext>. Obiekt nie jest dołączony, kiedy <xref:System.Data.Services.Client.MergeOption> jest <xref:System.Data.Services.Client.MergeOption.NoTracking>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)

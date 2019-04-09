@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Przeprowadzanie operacji w tle'
+title: 'Przewodnik: uruchamianie operacji w tle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149087"
 ---
-# <a name="walkthrough-running-an-operation-in-the-background"></a>Przewodnik: Przeprowadzanie operacji w tle
+# <a name="walkthrough-running-an-operation-in-the-background"></a>Przewodnik: uruchamianie operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować opóźnienia w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby uruchomić operację na inny wątek.  
   
  Aby uzyskać pełną listę kod używany w tym przykładzie, zobacz [jak: Uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md).  
@@ -34,8 +34,8 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
   
     |Przycisk|Nazwa|Tekst|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Start**|  
-    |`button2`|`cancelBtn`|**Anulowanie**|  
+    |`button1`|`startBtn`|**Uruchamianie**|  
+    |`button2`|`cancelBtn`|**Anuluj**|  
   
 2.  Otwórz **przybornika**, kliknij przycisk **składniki** kartę, a następnie przeciągnij <xref:System.ComponentModel.BackgroundWorker> składnika do formularza.  
   
@@ -101,8 +101,9 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
 -   Implementuje klasę, która obsługuje wzorca asynchronicznego dla składników. Aby uzyskać więcej informacji, zobacz [implementacja wzorca asynchronicznego opartego na zdarzeniach](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Instrukcje: Uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
-- [BackgroundWorker, składnik](backgroundworker-component.md)
+- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Instrukcje: uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
+- [BackgroundWorker — Składnik](backgroundworker-component.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF'
+title: 'Instrukcje: tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144082"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Instrukcje: Tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Instrukcje: tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF
 Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacja usługi musi zwracać dane w formacie nieobsługiwane byWCF. W tym temacie omówiono, aby utworzyć usługę, która odbiera dowolne dane za pomocą modelu programowania REST programu WCF.  
   
 ### <a name="to-implement-the-service-contract"></a>Aby zaimplementować kontrakt usługi  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   Podczas kompilowania kodu odwołanie System.ServiceModel.dll i System.ServiceModel.Web.dll  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Klasy UriTemplate i UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

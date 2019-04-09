@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170316"
 ---
 # <a name="binding-markup-extension"></a>Rozszerzenie znaczników powiązania
 Różni się wartość właściwości wartość powiązanych z danymi, tworzenie obiektu będącego wyrażeniem pośrednich i interpretowanie kontekst danych, która ma zastosowanie do elementu i jego powiązania w czasie wykonywania.  
@@ -123,7 +123,8 @@ Różni się wartość właściwości wartość powiązanych z danymi, tworzenie
  `Binding` to rozszerzenie znaczników nietypowe, w tym <xref:System.Windows.Data.Binding> klasę, która implementuje funkcje rozszerzenia dla implementacji XAML w WPF implementuje również kilka innych metod i właściwości, które nie są związane z XAML. Inni członkowie mają na celu wprowadzić <xref:System.Windows.Data.Binding> bardziej wszechstronna, niezależna klasę, która może rozwiązać wiele scenariusze powiązania danych oprócz działa jako rozszerzenie znaczników XAML.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Data.Binding>
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)

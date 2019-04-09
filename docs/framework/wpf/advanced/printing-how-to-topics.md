@@ -5,12 +5,12 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: b17ebd3d9128bff40274d905606f1265afd0207d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170186"
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do funkcji zarządzania drukowaniem systemu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oraz nowe [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ścieżka wydruku.  
@@ -44,9 +44,10 @@ Tematy w tej sekcji przedstawiają sposoby użycia poligrafii i dołączone do f
  Instrukcje dotyczące sprawdzania, czy bilet wydruku jest prawidłowa i czy nie żąda wszystko, co nie jest obsługiwana przez drukarki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Printing>
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.Interop>
-- [Przegląd drukowania](printing-overview.md)
+- [Przegląd Drukowanie](printing-overview.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [XPS Documents](/windows/desktop/printdocs/documents)
+- [Dokumenty XPS](/windows/desktop/printdocs/documents)

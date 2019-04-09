@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03f3ce51eaab9e08d5f05932d9360adc4fd2110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113779"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Bezpieczeństwo i publiczne pola tablicy tylko do odczytu
 Nigdy nie używaj tylko do odczytu publiczne pola tablicy z zarządzanych bibliotek do definiowania zachowania granic lub bezpieczeństwem Twoich aplikacji, ponieważ tylko do odczytu publiczne pola tablicy można modyfikować.  
@@ -26,4 +26,5 @@ Nigdy nie używaj tylko do odczytu publiczne pola tablicy z zarządzanych biblio
  Należy pamiętać, że typów programu .NET Framework nie należy używać pola publiczne do definiowania typów granic wewnętrznie.  Zamiast programu .NET Framework używa oddzielnych pól prywatnych.  Zmiana wartości te pola publiczne nie zmienia zachowanie typów programu .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

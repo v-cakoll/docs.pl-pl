@@ -2,12 +2,12 @@
 title: Ochrona informacji o połączeniu
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184447"
 ---
 # <a name="protecting-connection-information"></a>Ochrona informacji o połączeniu
 Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podczas zabezpieczania aplikacji. Parametry połączenia przedstawia informacje o potencjalnych luk w zabezpieczeniach, jeśli nie jest zabezpieczony. Przechowywanie informacji o połączeniu w postaci zwykłego tekstu lub utrwalanie go w pamięci ryzyko obniżania całego systemu. Parametry połączenia osadzone w kodzie źródłowym, może zostać odczytany przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić składnię języka Microsoft intermediate language (MSIL) w skompilowanym zestawie.  
@@ -40,6 +40,7 @@ Ochrona dostępu do źródła danych jest jednym z najważniejszych celów podcz
  Można również przechowywać parametry połączenia w plikach konfiguracji, więc nie trzeba ich osadzać w kodzie twojej aplikacji. Pliki konfiguracyjne są standardowymi plikami XML, dla których programu .NET Framework został zdefiniowany zestaw wspólnych elementów. Parametry połączenia w plikach konfiguracji są zazwyczaj przechowywane wewnątrz  **\<connectionStrings >** element **app.config** dla aplikacji Windows, lub  **plik Web.config** plików dla aplikacji ASP.NET. Aby uzyskać więcej informacji na temat przechowywania, pobieranie i szyfrowania parametrów połączenia z plików konfiguracji, zobacz [parametry połączenia i pliki konfiguracyjne](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Szyfrowanie przy użyciu konfiguracji chronionych informacji o konfiguracji](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [Zabezpieczenia w .NET](../../../standard/security/index.md)

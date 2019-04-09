@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie TraceSource i filtrów z obiektów nasłuchujących śledzenia'
+title: 'Instrukcje: Użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d51092aebad340a7549acef248d009518314505d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157472"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Instrukcje: Użycie TraceSource i filtrów z obiektów nasłuchujących śledzenia
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Instrukcje: Użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia
 Jedną z nowych funkcji programu .NET Framework w wersji 2.0 to system rozszerzone śledzenie. Podstawowe założenia pozostaje niezmieniony: komunikaty śledzenia są wysyłane za pośrednictwem przełączników do odbiorników, które wysyłają raporty danych średni skojarzone dane wyjściowe. Główną różnicą w wersji 2.0 to, że ślady mogą być inicjowane za pośrednictwem wystąpień <xref:System.Diagnostics.TraceSource> klasy. <xref:System.Diagnostics.TraceSource> jest przeznaczony do działania jako system rozszerzone śledzenie i mogą być używane zamiast metod statycznych starszej wersji <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy śledzenia. Znanej <xref:System.Diagnostics.Trace> i <xref:System.Diagnostics.Debug> klasy nadal istnieje, ale zalecaną praktyką jest użycie <xref:System.Diagnostics.TraceSource> klasy do śledzenia.  
   
  W tym temacie opisano korzystanie z <xref:System.Diagnostics.TraceSource> połączone z pliku konfiguracji aplikacji.  Jest to możliwe, chociaż nie jest to zalecane, do śledzenia przy użyciu <xref:System.Diagnostics.TraceSource> bez użycia pliku konfiguracji. Aby uzyskać informacji na temat śledzenia bez pliku konfiguracji, zobacz [jak: Tworzenie i Inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
@@ -164,9 +164,10 @@ Jedną z nowych funkcji programu .NET Framework w wersji 2.0 to system rozszerzo
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Instrukcje: Tworzenie i inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)

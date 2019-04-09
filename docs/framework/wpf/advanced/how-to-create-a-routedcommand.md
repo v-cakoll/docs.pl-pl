@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie RoutedCommand'
+title: 'Instrukcje: Tworzenie elementu RoutedCommand'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109047"
 ---
-# <a name="how-to-create-a-routedcommand"></a>Instrukcje: Tworzenie RoutedCommand
+# <a name="how-to-create-a-routedcommand"></a>Instrukcje: Tworzenie elementu RoutedCommand
 W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.Input.RoutedCommand> i jak implementować polecenia niestandardowego przez utworzenie <xref:System.Windows.Input.ExecutedRoutedEventHandler> i <xref:System.Windows.Input.CanExecuteRoutedEventHandler> i dołączania ich do <xref:System.Windows.Input.CommandBinding>.  Aby uzyskać więcej informacji na temat polecenia, zobacz [polecenia Przegląd](commanding-overview.md).  
   
 ## <a name="example"></a>Przykład  
@@ -48,5 +48,6 @@ W tym przykładzie pokazano, jak utworzyć niestandardową <xref:System.Windows.
  Po kliknięciu przycisku <xref:System.Windows.Input.RoutedCommand.Execute%2A> metody na niestandardowej <xref:System.Windows.Input.RoutedCommand> jest wywoływana.  <xref:System.Windows.Input.RoutedCommand> Zgłasza <xref:System.Windows.Input.CommandManager.PreviewExecuted> i <xref:System.Windows.Input.CommandManager.Executed> zdarzeń.  Te zdarzenia przechodzić przez drzewo elementów, wyszukiwanie <xref:System.Windows.Input.CommandBinding> dla tego określonego polecenia.  Jeśli <xref:System.Windows.Input.CommandBinding> zostanie znaleziony, <xref:System.Windows.Input.ExecutedRoutedEventHandler> skojarzony <xref:System.Windows.Input.CommandBinding> jest wywoływana.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Input.RoutedCommand>
-- [Przegląd poleceń](commanding-overview.md)
+- [Przegląd Polecenia](commanding-overview.md)

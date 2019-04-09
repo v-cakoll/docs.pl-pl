@@ -10,17 +10,16 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169614"
 ---
 # <a name="documents-in-wpf"></a>Dokumenty w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje szeroką gamę funkcji dokumentu, które umożliwiają tworzenie zawartości o wysokiej wierności, która została zaprojektowana jako łatwiej uzyskuje się dostęp i odczytu niż w poprzednich generacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] również udostępnia zintegrowane usługi do wyświetlania dokumentu, pakowania i zabezpieczeń. Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów dokumentów i pakowania w usłudze dokumentu.  
-  
-  
+
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>Typy dokumentów  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dokumenty są podzielone na dwie szerokie kategorie, w oparciu o ich przeznaczenie; te kategorie dokumentu są określane jako "Naprawiono dokumenty" i "dokumenty przepływu."  
@@ -135,6 +134,7 @@ ms.locfileid: "57361372"
 -   Routing bezpośrednio do dokumentów [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnych drukarek.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
@@ -142,7 +142,7 @@ ms.locfileid: "57361372"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](optimizing-performance-text.md)
-- [Przegląd dokumentu przepływu](flow-document-overview.md)
-- [Przegląd drukowania](printing-overview.md)
+- [Tekst](optimizing-performance-text.md)
+- [Przegląd Dokument przepływu](flow-document-overview.md)
+- [Przegląd Drukowanie](printing-overview.md)
 - [Serializacja dokumentu i przechowywanie](document-serialization-and-storage.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111413"
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują poprawy jakości i wydajności renderowania tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii obsługi rozszerzonego tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -149,11 +149,12 @@ Tekst z antialiasingu kierunku y ClearType
  Aby uzyskać więcej informacji na temat tworzenia układu niestandardowego tekstu, zobacz [zaawansowane formatowanie tekstu](advanced-text-formatting.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
-- [ClearType — przegląd](cleartype-overview.md)
-- [Funkcje czcionki OpenType](opentype-font-features.md)
+- [ClearType — Przegląd](cleartype-overview.md)
+- [OpenType funkcje czcionki](opentype-font-features.md)
 - [Rysowanie formatowanego tekstu](drawing-formatted-text.md)
 - [Zaawansowane formatowanie tekstu](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [Tekst](optimizing-performance-text.md)
 - [Microsoft Typography](https://docs.microsoft.com/typography/)

@@ -2,12 +2,12 @@
 title: Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151635"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzie konfiguracji WS-AtomicTransaction (wsatConfig.exe) i zalecane akcje do wykonania.  
@@ -68,4 +68,5 @@ W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzi
 |56|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesję śledzenia funkcji ETW.|Kontakt z firmą Microsoft.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

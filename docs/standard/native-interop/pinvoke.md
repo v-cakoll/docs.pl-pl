@@ -4,12 +4,12 @@ description: Dowiedz się, jak wywoływać funkcje natywne za pośrednictwem met
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9602b9c8649b97a8be1c26a202a0a910a1547877
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149698"
 ---
 # <a name="platform-invoke-pinvoke"></a>Wywołanie platformy (P/Invoke)
 
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 Zarówno poprzednich przykładach są zależne od parametrów, a w obu przypadkach parametry są podane jako typami zarządzanymi. Środowisko uruchomieniowe wykonuje "dobre" i przetwarza je na ich odpowiedniki po drugiej stronie. Dowiedz się więcej o jak typy są skierowany do kodu natywnego w naszej strony na [kierowania typu](type-marshalling.md).
-
 
 ## <a name="more-resources"></a>Inne zasoby
 

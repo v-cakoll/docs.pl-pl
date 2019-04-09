@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms'
+title: 'Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189030"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Przewodnik: Wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows
 Wykonywanie operacji przeciągania i upuszczania w aplikacji systemu Windows musi obsługiwać szereg zdarzeń, głównie <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, i <xref:System.Windows.Forms.Control.DragDrop> zdarzenia. Praca z dostępnych informacji w zdarzeniu argumenty te zdarzenia, można łatwo ułatwić operacji przeciągania i upuszczania.  
   
 ## <a name="dragging-data"></a>Przeciąganie danych  
@@ -107,6 +107,7 @@ Wykonywanie operacji przeciągania i upuszczania w aplikacji systemu Windows mus
     >  Ponadto można pracować z <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> właściwość tak, aby w zależności od klucze obniżone podczas operacji przeciągania i upuszczania pewne efekty wystąpić (na przykład jest standard, aby skopiować dane przeciąganego, po naciśnięciu klawisza CTRL).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Dodawanie danych do Schowka](how-to-add-data-to-the-clipboard.md)
-- [Instrukcje: Pobieranie danych ze Schowka](how-to-retrieve-data-from-the-clipboard.md)
+
+- [Instrukcje: Dodawanie danych do schowka](how-to-add-data-to-the-clipboard.md)
+- [Instrukcje: Pobieranie danych ze schowka](how-to-retrieve-data-from-the-clipboard.md)
 - [Operacje przeciągania i upuszczania oraz obsługa schowka](drag-and-drop-operations-and-clipboard-support.md)

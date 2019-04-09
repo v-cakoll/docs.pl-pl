@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: fa99806510bac8102478cc21e0782067f7bdff86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129314"
 ---
 # <a name="time-based-cache-policies"></a>Zasady pamięci podręcznej oparte na czasie
 Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z pamięci podręcznej przy użyciu czas pobrania zasobu nagłówki zwrócony z zasobem, a bieżąca godzina. Podczas ustawiania zasad pamięci podręcznej na podstawie czasu, można użyć <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oparte na czasie zasady lub tworzenie niestandardowych zasad opartych na czasie. W przypadku używania zasad na podstawie czasu domyślnego dla zasobów pobranych przy użyciu protokołu HTTP (Hypertext Transfer), zachowanie dokładnie pamięci podręcznej jest określana przez nagłówki dołączone w odpowiedzi z pamięci podręcznej i zachowań określonych w sekcjach 13 i 14 dokumencie RFC 2616 dostępne pod adresem [Internet Engineering Task Force (IETF)](https://www.ietf.org/) witryny sieci Web. Aby uzyskać przykładowy kod, który demonstruje, ustawiania zasad na podstawie czasu domyślnego dla zasobów HTTP, zobacz [jak: Określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Aby uzyskać przykłady kodu, które pokazują tworzenie i używanie zasad buforowania, zobacz [Konfigurowanie buforowanie w aplikacjach sieci](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -62,6 +62,7 @@ Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z 
 -   [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)

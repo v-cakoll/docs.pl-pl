@@ -1,18 +1,18 @@
 ---
-title: Stronicowanie wyników zapytania
+title: Stronicowanie za pośrednictwem wyniku zapytania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 11bf7e1021c3bb65e4d736e83d2631ae05c274f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 023efcc15d7080afc1583f4ad8984e152b86cf23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140325"
 ---
-# <a name="paging-through-a-query-result"></a>Stronicowanie wyników zapytania
+# <a name="paging-through-a-query-result"></a>Stronicowanie za pośrednictwem wyniku zapytania
 Stronicowanie za pośrednictwem wyników z zapytania jest proces zwracania wyników zapytania w mniejszy podzbiór danych lub strony. Jest to powszechną praktyką do wyświetlania wyników użytkownikowi we fragmentach małe, łatwy w zarządzaniu.  
   
  **DataAdapter** przewiduje zwracanie tylko strony danych za pomocą przeciążenia funkcji **wypełnienia** metody. Jednak może to nie być najlepszym wyborem dla stronicowanie wyników dużych zapytania, ponieważ mimo że **DataAdapter** wypełnia obiekt docelowy <xref:System.Data.DataTable> lub <xref:System.Data.DataSet> tylko żądane rekordy zasobów do zwrócenia całe zapytanie są nadal używane. Aby przywrócić strony danych ze źródła danych bez użycia zasobów, aby zwrócić całe zapytanie, określić dodatkowe kryteria dla zapytania, które zmniejszają wierszy zwracanych do tylko wymaganych.  
@@ -124,5 +124,6 @@ adapter.Fill(dataSet, "Orders");
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

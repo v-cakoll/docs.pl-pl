@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Konfigurowanie automatycznego scalania Menu dla aplikacji MDI'
+title: 'Instrukcje: konfigurowanie automatycznego scalania menu dla aplikacji MDI'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 17edde6e3968823abc915eb5faed6d2751ed9393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129359"
 ---
-# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Instrukcje: Konfigurowanie automatycznego scalania Menu dla aplikacji MDI
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>Instrukcje: konfigurowanie automatycznego scalania menu dla aplikacji MDI
 Poniższa procedura zawiera podstawowe kroki konfiguracji automatycznego scalenia w aplikacji interfejsu wielu dokumentów (MDI) za pomocą <xref:System.Windows.Forms.MenuStrip>.  
   
 ### <a name="to-set-up-automatic-menu-merging"></a>Aby skonfigurować automatycznego scalania menu  
@@ -32,6 +32,7 @@ Poniższa procedura zawiera podstawowe kroki konfiguracji automatycznego scaleni
 7.  Użyj <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> właściwości w menu elementów w formularzu podrzędnym <xref:System.Windows.Forms.MenuStrip> do kontrolowania, jak scalania do formularza nadrzędnego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip, kontrolka — omówienie](menustrip-control-overview-windows-forms.md)

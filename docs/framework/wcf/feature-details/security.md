@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9827d14a1e64b6111c6c3c9cf53a49170f1a9077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118199"
 ---
 # <a name="windows-communication-foundation-security"></a>Zabezpieczenia programu WCF (Windows Communication Foundation)
 Tematy w tej sekcji opisano funkcje zabezpieczeń usługi Windows Communication Foundation (WCF) i jak z nich korzystać, aby ułatwić zabezpieczonych wiadomości.  
@@ -31,7 +31,7 @@ Tematy w tej sekcji opisano funkcje zabezpieczeń usługi Windows Communication 
  [Zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Zawiera omówienie zachowania usługi WCF, które mają wpływ na zabezpieczenia, takie jak Ustawianie poświadczeń.  
   
- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  Widok związanych z zabezpieczeniami powiązania, łącznie z tematów, które pokazują, jak utworzyć niestandardowe zabezpieczeń powiązania.  
   
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
@@ -70,4 +70,5 @@ Tematy w tej sekcji opisano funkcje zabezpieczeń usługi Windows Communication 
  [Omówienie pojęć](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie własnej aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

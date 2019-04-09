@@ -1,15 +1,15 @@
 ---
-title: Typ złożony
+title: typ złożony
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 4e18ecf18399f57769dcdfc77192e72ec47f5df3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160813"
 ---
-# <a name="complex-type"></a>Typ złożony
+# <a name="complex-type"></a>typ złożony
 A *typu złożonego* jest szablon służący do definiowania właściwości zaawansowane, ze strukturą na [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) lub na inne typy złożone. Każdy szablon zawiera następujące informacje:  
   
 -   Unikatowa nazwa. (Wymagane)  
@@ -38,5 +38,6 @@ A *typu złożonego* jest szablon służący do definiowania właściwości zaaw
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

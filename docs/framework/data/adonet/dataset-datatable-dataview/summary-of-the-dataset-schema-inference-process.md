@@ -1,15 +1,15 @@
 ---
-title: Podsumowanie procesu wnioskowania schematu zestawu danych
+title: Podsumowanie procesu wnioskowania schematu elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 1eb12fd9c983bc0013b5dc528e0b3389250bdbe2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 272e5762b7afd9f3ab24cbdec5f31bb120364815
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116067"
 ---
-# <a name="summary-of-the-dataset-schema-inference-process"></a>Podsumowanie procesu wnioskowania schematu zestawu danych
+# <a name="summary-of-the-dataset-schema-inference-process"></a>Podsumowanie procesu wnioskowania schematu elementu DataSet
 Procesu wnioskowania najpierw określi, z dokumentu XML, które elementy zostanie wywnioskowany, jako tabele. Z pozostałych pliku XML procesu wnioskowania Określa kolumny dla tych tabel. W przypadku zagnieżdżonych tabel generuje procesu wnioskowania zagnieżdżonych <xref:System.Data.DataRelation> i <xref:System.Data.ForeignKeyConstraint> obiektów.  
   
  Poniżej przedstawiono krótkie podsumowanie reguły wnioskowania:  
@@ -31,6 +31,7 @@ Procesu wnioskowania najpierw określi, z dokumentu XML, które elementy zostani
 -   Dla elementów, które są wnioskowane jako tabele i który zawiera tekst, ale mieć żadnych elementów podrzędnych, nową kolumnę o nazwie **TableName_Text** jest tworzona dla poszczególnych elementów tekstu. Jeśli element jest wnioskowany w postaci tabeli i zawiera tekst, ale ma również elementy podrzędne, tekst zostanie zignorowany.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)

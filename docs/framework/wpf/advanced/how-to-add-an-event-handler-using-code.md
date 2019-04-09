@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodaj obsługę zdarzeń z użyciem kodu'
+title: 'Instrukcje: Dodawanie obsługi zdarzeń z użyciem kodu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129366"
 ---
-# <a name="how-to-add-an-event-handler-using-code"></a>Instrukcje: Dodaj obsługę zdarzeń z użyciem kodu
+# <a name="how-to-add-an-event-handler-using-code"></a>Instrukcje: Dodawanie obsługi zdarzeń z użyciem kodu
 W tym przykładzie przedstawiono sposób dodawania programu obsługi zdarzeń do elementu przy użyciu kodu.  
   
  Jeśli chcesz dodać program obsługi zdarzeń do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementu, a na stronie znaczników, który zawiera element został już załadowany, należy dodać program obsługi przy użyciu kodu. Alternatywnie jeśli są tworzone w górę drzewa elementów, aplikacji całkowicie przy użyciu kodu i nie deklarując wszelkie elementy przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], można wywołać konkretnych metod, aby dodać procedury obsługi zdarzeń do drzewa element skonstruowany.  
@@ -38,5 +38,6 @@ W tym przykładzie przedstawiono sposób dodawania programu obsługi zdarzeń do
 >  Dodawanie obsługi zdarzeń w początkowo przeanalizowany [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony jest znacznie prostsza. W elemencie obiektu, którym chcesz dodać program obsługi zdarzeń należy dodać atrybut, który jest zgodna z nazwą zdarzenia, które mają być obsługiwane. Następnie określ wartość tego atrybutu jako nazwę metody obsługi zdarzeń, które zdefiniowane w pliku związanym z kodem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony. Aby uzyskać więcej informacji, zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md) lub [Przegląd zdarzeń kierowane](routed-events-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
-- [Tematy z instrukcjami](events-how-to-topics.md)
+
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [— Tematy porad](events-how-to-topics.md)

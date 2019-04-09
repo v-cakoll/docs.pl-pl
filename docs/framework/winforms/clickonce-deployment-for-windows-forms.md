@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072847"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Wdrożenie ClickOnce w przypadku formularzy systemu Windows
 W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], technologia używana w łatwy sposób wdrażania aplikacji Windows Forms na komputerach klienckich.  
@@ -44,10 +44,10 @@ W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndpteccl
  [Instrukcje: Dodawanie zaufanego wydawcy do komputera klienckiego dla aplikacji ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Pokazuje jednorazowej konfiguracji komputerów klienckich, wymagane do wdrażania zaufanych aplikacji.  
   
- [Instrukcje: Określanie alternatywnej lokalizacji aktualizacji wdrożenia](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ [Instrukcje: Określanie alternatywnej lokalizacji aktualizacji wdrażania](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Pokazuje Konfigurowanie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacji przy użyciu narzędzi zestawu SDK, aby sprawdzić inną lokalizację dla nowych wersji aplikacji.  
   
- [Przewodnik: Pobieranie zestawów na żądanie przy użyciu interfejsu API wdrażania ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [Przewodnik: Pobieranie zestawów na żądanie przy użyciu wdrażania interfejsu API ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Demonstruje użycie wywołań interfejsu API do pobierania czasu zestawu pierwsza aplikacja próbuje załadować go.  
   
  [Instrukcje: Pobieranie informacji o ciągu zapytania w aplikacji ClickOnce w trybie online](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  
@@ -63,6 +63,7 @@ W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndpteccl
  Pokazuje, jak oznaczyć plik, aby była dostępna w [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] katalog danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd ustawień aplikacji](./advanced/application-settings-overview.md)
 - [Publikowanie aplikacji ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)
 - [Tworzenie aplikacji ClickOnce z wiersza poleceń](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)

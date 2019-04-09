@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: a93fb708ed6b1790027b1e3a2fc74ca8c5ff2024
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129938"
 ---
 # <a name="using-data-contracts"></a>Używanie kontraktów danych
 A *kontraktu danych* jest formalną umowę między usługą i klienta, który opisuje abstrakcyjnie danych wymienianych. Oznacza to, do komunikowania się, klienta i usługi nie muszą udostępniać te same typy tylko tych samych kontraktów danych. Dokładnie definiuje kontraktu danych, dla każdego parametr lub zwracany typ danych jest serializowana (przekształcane w XML) do wymiany.  
@@ -67,6 +67,7 @@ A *kontraktu danych* jest formalną umowę między usługą i klienta, który op
  Aby uzyskać kompletny przykład kodu usługi WCF, który definiuje kontrakt danych zobacz [podstawowego kontraktu danych](../../../../docs/framework/wcf/samples/basic-data-contract.md) próbki.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Typy z możliwością serializowania](../../../../docs/framework/wcf/feature-details/serializable-types.md)
@@ -79,4 +80,4 @@ A *kontraktu danych* jest formalną umowę między usługą i klienta, który op
 - [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Domyślne wartości elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
 - [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [Instrukcje: Tworzenie podstawowego kontraktu danych dla klasy lub struktury](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [Instrukcje: tworzenie podstawowego kontraktu danych dla klasy lub struktury](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

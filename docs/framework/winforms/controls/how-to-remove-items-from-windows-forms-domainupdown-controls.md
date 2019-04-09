@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Usuwanie elementów z kontrolki DomainUpDown formularzy Windows'
+title: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: 58c93f478414d24c2fdda0f9662936a8b520e381
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0c07365f5be2e419b4049a466949fed2d884d897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131407"
 ---
-# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Instrukcje: Usuwanie elementów z kontrolki DomainUpDown formularzy Windows
+# <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown
 Możesz usunąć elementy z formularzy Windows <xref:System.Windows.Forms.DomainUpDown> kontroli przez wywołanie metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> lub <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> klasy. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> Metoda usuwa określony element, podczas gdy <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> metoda usuwa element według ich pozycji.  
   
 ### <a name="to-remove-an-item"></a>Aby usunąć element  
@@ -55,6 +55,7 @@ Możesz usunąć elementy z formularzy Windows <xref:System.Windows.Forms.Domain
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>

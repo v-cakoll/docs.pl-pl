@@ -2,12 +2,12 @@
 title: Mechanizmy rozpoznawania elementów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: f7d7b055312fe82bd628f8b07304dc9bb188fffb
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: de19e08c1c001076c56e26020584d17079f1a45f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151622"
 ---
 # <a name="peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych
 Aby można było nawiązać siatki, węzeł równorzędny wymaga adresów IP innych węzłów. Adresy IP są pobierane, kontaktując się z usługi rozpoznawania nazw, która przyjmuje identyfikator siatki i zwraca listę adresów odpowiadającego do węzłów zarejestrowanych za pomocą tego identyfikatora określonej siatki. Mechanizm rozpoznawania przechowuje listę zarejestrowanych adresów, które tworzy się przez każdy węzeł w siatce, rejestracji w usłudze.  
@@ -35,9 +35,10 @@ Aby można było nawiązać siatki, węzeł równorzędny wymaga adresów IP inn
  Implementacji niestandardowego mechanizmu demonstracyjne, zobacz [elementu równorzędnego kanału niestandardowego elementu równorzędnego programu rozpoznawania nazw](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90)).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Usługi custompeerresolverservice: Rejestracje klienta](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
+ [Szczegóły usługi CustomPeerResolverService: Rejestracje klienta](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pojęcia kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [Zabezpieczenia kanału równorzędnego](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)
 - [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

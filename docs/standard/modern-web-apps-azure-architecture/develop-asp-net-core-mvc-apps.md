@@ -4,12 +4,12 @@ description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128391"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
 
@@ -426,14 +426,13 @@ Można utworzyć usługi uwierzytelniania, integracja z usługą Azure AD i OAut
 
 Ostrożnie szczególnie "Uaktualnianie własnych" implementację kryptografii, członkostwa użytkownika lub generowania tokenów systemu. Istnieje wiele komercyjnych i open-source alternatywy dostępne, które prawie na pewno lepsze zabezpieczenia niż implementację niestandardową.
 
-
 > ### <a name="references--security"></a>Odwołania — zabezpieczenia
 >
 > - **Omówienie zabezpieczeń usługi Docs**  
 >   https://docs.microsoft.com/aspnet/core/security/
 > - **Wymuszanie protokołu SSL w aplikacji ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **Wprowadzenie do tożsamości**  
+> - **Wprowadzenie do systemu Identity**  
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Wprowadzenie do autoryzacji**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
@@ -500,9 +499,9 @@ Należy rozważyć sposobów w których Twoje aplikacje komunikują się bezpoś
 
 > ### <a name="references--client-communication"></a>Odwołania — komunikacja z klientem
 >
-> - **ASP.NET Core SignalR**  
+> - **SignalR platformy ASP.NET Core**  
 >   <https://github.com/aspnet/SignalR>
-> - **WebSocket Manager**  
+> - **Menedżer WebSocket**  
 >   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Projektowanie oparte na domenie — powinien zastosowania?

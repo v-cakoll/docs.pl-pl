@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169744"
 ---
 # <a name="application-settings-for-custom-controls"></a>Ustawienia aplikacji dotyczące kontrolek niestandardowych
 Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawienia aplikacji, gdy kontrolki znajdują się w aplikacji innych firm Kontrolki niestandardowe.  
@@ -46,6 +46,7 @@ Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawi
  Wszystkie wystąpienia formant, który nie zostanie podana wartość <xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A> współużytkują te same ustawienia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [Architektura ustawień aplikacji](application-settings-architecture.md)

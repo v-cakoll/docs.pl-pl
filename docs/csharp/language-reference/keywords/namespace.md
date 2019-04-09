@@ -1,6 +1,6 @@
 ---
 title: słowo kluczowe przestrzeni nazw - C# odwołania
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148762"
 ---
 # <a name="namespace-c-reference"></a>namespace (odwołanie w C#)
 
@@ -32,7 +32,7 @@ W przestrzeni nazw można zadeklarować zero lub więcej z następujących typó
 
 - [interface](interface.md)
 
-- [struct](struct.md)
+- [struktura ](struct.md)
 
 - [enum](enum.md)
 
@@ -56,11 +56,11 @@ Poniższy przykład pokazuje sposób wywołania metody statycznej w zagnieżdżo
 
 Aby uzyskać więcej informacji o korzystaniu z przestrzeni nazw zobacz następujące tematy:
 
-- [Przestrzenie nazw](../../programming-guide/namespaces/index.md)
+- [Namespaces](../../programming-guide/namespaces/index.md)
 
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Instrukcje: Użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Instrukcje: Użycie globalnych aliasów przestrzeni nazw](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -68,8 +68,9 @@ Aby uzyskać więcej informacji o korzystaniu z przestrzeni nazw zobacz następu
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
+- [Odwołanie w C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Słowa kluczowe przestrzeni nazw](namespace-keywords.md)
-- [using](using.md)
+- [korzystanie](using-directive.md)
+- [Przy użyciu statycznej](using-static.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111660"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter> Element (.NET Native)
 Stosuje zasady do typu parametru typu ogólnego lub metody.  
@@ -69,7 +69,7 @@ Stosuje zasady do typu parametru typu ogólnego lub metody.
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Ma zastosowanie zasad odbicia środowiska uruchomieniowego do konstruktora lub metody.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia środowiska uruchomieniowego do określonego typu, takie jak klasy lub struktury.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<GenericParameter>` Element jest elementem podrzędnym jednej [ \<metody >](../../../docs/framework/net-native/method-element-net-native.md) lub [ \<typ >](../../../docs/framework/net-native/type-element-net-native.md) elementu i jest używana do stosowania zasad do parametru określonego typu ogólnego, który jest określony przez jego nazwę w podpisie ogólnego typu lub metody.  
@@ -87,6 +87,7 @@ Stosuje zasady do typu parametru typu ogólnego lub metody.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<Metoda > Element](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Typ > Element](../../../docs/framework/net-native/type-element-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi'
+title: 'Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156497"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obsługuje model extensible autoryzacji opartej na oświadczeniach. Oświadczenia są wyodrębniane z tokenów i opcjonalnie przetwarzane przy użyciu zasad autoryzacji niestandardowej i następnie umieszczać w <xref:System.IdentityModel.Policy.AuthorizationContext>. Menedżer autoryzacji sprawdza, czy oświadczenia w <xref:System.IdentityModel.Policy.AuthorizationContext> do podejmowania decyzji dotyczących autoryzacji.  
   
  Domyślnie decyzji dotyczących autoryzacji są wykonywane przez <xref:System.ServiceModel.ServiceAuthorizationManager> klasy; jednak te decyzje może być zastąpiona przez tworzenie Menedżera autoryzacji niestandardowej. Tworzenie niestandardowej autoryzacji manager, należy utworzyć klasę, która pochodzi od klasy <xref:System.ServiceModel.ServiceAuthorizationManager> i zaimplementować <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody. Decyzji dotyczących autoryzacji są dokonywane w <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody, która zwraca `true` gdy dostęp jest udzielany i `false` kiedy odmowa dostępu.  
@@ -118,5 +118,6 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obs�
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Zasady autoryzacji](../../../../docs/framework/wcf/samples/authorization-policy.md)

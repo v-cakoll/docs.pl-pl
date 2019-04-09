@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms'
+title: 'Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7bbf8a87f2f72a23199ce4d18cc50fbccd9b6af2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127052"
 ---
-# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms
+# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows
 Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych w <xref:System.Windows.Forms.DataGridView> kontrolki, można ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwość `true` i jawnie zarządzać kontrolki interakcji z jej magazynem danych. Dzięki temu można dostosowywać wydajność kontrolki w tej sytuacji.  
   
  <xref:System.Windows.Forms.DataGridView> Kontrola zapewnia kilka zdarzeń, które może obsłużyć do interakcji z niestandardowego magazynu danych. Ten przewodnik przeprowadzi Cię przez proces implementowania tych programów obsługi zdarzeń. W przykładzie kodu, w tym temacie korzysta z źródła danych bardzo prosty w celach ilustracyjnych. W środowisku produkcyjnym zazwyczaj załaduje tylko tych wierszy, które są potrzebne do wyświetlania w pamięci podręcznej i obsługiwać <xref:System.Windows.Forms.DataGridView> zdarzenia w interakcję i zaktualizuj pamięć podręczną. Aby uzyskać więcej informacji, zobacz [Implementowanie trybu wirtualnego przy użyciu ładowanie danych just in time w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
@@ -126,6 +126,7 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
  Aby uzyskać więcej informacji na temat buforowania wartości z zewnętrznej bazy danych, zobacz [jak: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w Windows formantu DataGridView formularzy](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>
@@ -135,7 +136,7 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Instrukcje: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Instrukcje: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

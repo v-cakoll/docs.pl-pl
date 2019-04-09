@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Implementuj walidację za pomocą formantu DataGrid'
+title: 'Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086810"
 ---
-# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Instrukcje: Implementuj walidację za pomocą formantu DataGrid
+# <a name="how-to-implement-validation-with-the-datagrid-control"></a>Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid
 <xref:System.Windows.Controls.DataGrid> Control umożliwia wykonywanie walidacji na poziomie komórki i wierszy. Z weryfikacją poziomie komórki sprawdzania poprawności poszczególnych właściwości powiązany obiekt danych po użytkownik aktualizuje wartość. Z weryfikacją na poziomie wiersza Sprawdź wszystkie dane obiektów po użytkownik zatwierdzenia zmian w wierszu. Można również przekazać niestandardowe wizualną opinię błędy sprawdzania poprawności lub użyć domyślnej wizualną opinię, <xref:System.Windows.Controls.DataGrid> zawiera formant.  
   
  W poniższych procedurach opisano sposób zastosowania reguły sprawdzania poprawności <xref:System.Windows.Controls.DataGrid> powiązania i dostosowywanie wizualną opinię.  
@@ -91,8 +91,9 @@ ms.locfileid: "57371089"
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Powiązanie danych](../data/data-binding-wpf.md)
-- [Implementowanie powiązanej walidacji](../data/how-to-implement-binding-validation.md)
-- [Implementowanie logiki walidacji w obiektach niestandardowych](../data/how-to-implement-validation-logic-on-custom-objects.md)
+- [Implementowanie weryfikacji wiązania](../data/how-to-implement-binding-validation.md)
+- [Implementowanie logiki weryfikacji w obiektach niestandardowych](../data/how-to-implement-validation-logic-on-custom-objects.md)

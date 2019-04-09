@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: a0160b1b-3d9c-4cc8-8391-cb0986a60a41
-ms.openlocfilehash: 3344088aeb948edac3d3f439d729dc9d45b8b79b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a870eb0c85fa6ed208341a3ac10dce8bb0724bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164427"
 ---
 # <a name="data-services-providers-wcf-data-services"></a>Data Services — dostawcy (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obsługuje wiele modeli dostawcy do udostępniania danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ten temat zawiera informacje umożliwiające wybranie najlepszej [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dostawcy dla źródła danych.  
@@ -31,6 +31,7 @@ ms.locfileid: "54537923"
 |Dostawca przesyłania strumieniowego|Ten dostawca umożliwia udostępnianie duży obiekt binarny typy danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Dostawca przesyłania strumieniowego jest tworzony przez zaimplementowanie <xref:System.Data.Services.Providers.IDataServiceStreamProvider> interfejsu. Ten dostawca może być implementowany wraz z dowolnego dostawcy źródła danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)
 - [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

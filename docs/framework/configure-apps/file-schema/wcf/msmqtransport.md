@@ -2,12 +2,12 @@
 title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
-ms.openlocfilehash: 7f60fd43cb05749bf4b6ce31d4571e120c498235
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9bdaccd6183bc4ea58ed610b58aceddcb6ba0351
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106577"
 ---
 # <a name="msmqtransport"></a>\<msmqTransport>
 Powoduje, że kanał przenosi wiadomości w usłudze transportowej MSMQ gdy jest włączony do niestandardowego powiązania.  
@@ -87,6 +87,7 @@ Powoduje, że kanał przenosi wiadomości w usłudze transportowej MSMQ gdy jest
  Stanem tego elementu powiązania jest domyślny element powiązania, używany przez powiązanie standardowe usługi kolejkowania komunikatów (`netMsmqBinding`).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.MsmqTransportElement>
 - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

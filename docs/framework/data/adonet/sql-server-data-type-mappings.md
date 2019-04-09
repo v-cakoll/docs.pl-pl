@@ -2,12 +2,12 @@
 title: Mapowanie typu danych serwera SQL
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: 6a718421e7a9b77bcea6b0c4ad502e8335984e27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164310"
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapowanie typu danych serwera SQL
 Program SQL Server i .NET Framework są oparte na systemach innego typu. Na przykład, .NET Framework <xref:System.Decimal> struktura ma maksymalną skalę wynoszącą 28, typów danych dziesiętnych i numeric programu SQL Server ma maksymalną skalę wynoszącą 38. Aby zachować spójność danych podczas odczytywania i zapisywania danych <xref:System.Data.SqlClient.SqlDataReader> ujawnia specyficzne dla programu SQL Server typizowane metody dostępu, które zwracają obiekty <xref:System.Data.SqlTypes> oraz metody dostępu, które zwracają .NET Framework typy. Typy programu SQL Server i typów programu .NET Framework są również jest reprezentowanych przez wyliczenia w <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> klasy, które można używać podczas określania <xref:System.Data.SqlClient.SqlParameter> typów danych.  
@@ -41,7 +41,7 @@ Program SQL Server i .NET Framework są oparte na systemach innego typu. Na przy
 |smallmoney|Dziesiętna|<xref:System.Data.SqlDbType.SmallMoney>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlMoney%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
 |sql_variant|Obiekt <sup>2</sup>|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> <sup>2</sup>|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> <sup>2</sup>|  
 |tekst|String<br /><br /> CHAR]|<xref:System.Data.SqlDbType.Text>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|czas<br /><br /> (SQL Server 2008 i nowsze wersje)|Przedział czasu|<xref:System.Data.SqlDbType.Time>|brak|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|czas<br /><br /> (SQL Server 2008 i nowsze wersje)|TimeSpan|<xref:System.Data.SqlDbType.Time>|brak|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |znacznik czasu|Byte[]|<xref:System.Data.SqlDbType.Timestamp>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |tinyint|Bajt|<xref:System.Data.SqlDbType.TinyInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlByte%2A>|<xref:System.Data.DbType.Byte>|<xref:System.Data.SqlClient.SqlDataReader.GetByte%2A>|  
 |uniqueidentifier|Identyfikator GUID|<xref:System.Data.SqlDbType.UniqueIdentifier>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlGuid%2A>|<xref:System.Data.DbType.Guid>|<xref:System.Data.SqlClient.SqlDataReader.GetGuid%2A>|  
@@ -57,6 +57,7 @@ Program SQL Server i .NET Framework są oparte na systemach innego typu. Na przy
 Aby uzyskać więcej informacji na temat typów danych programu SQL Server, zobacz [typy danych (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych programu SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [Dane binarne i dużej wartości w programie SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)

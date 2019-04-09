@@ -1,5 +1,5 @@
 ---
-title: Powiązania i zabezpieczenia
+title: Wiązania i zabezpieczenia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], security
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122151"
 ---
-# <a name="bindings-and-security"></a>Powiązania i zabezpieczenia
+# <a name="bindings-and-security"></a>Wiązania i zabezpieczenia
 Powiązania dostarczane przez system, dołączone za pomocą programu Windows Communication Foundation (WCF) oferują szybki sposób program aplikacji WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. W tym temacie pomaga wybrać odpowiednie powiązanie dla wymagania w zakresie zabezpieczeń.  
   
  Aby uzyskać omówienie zabezpieczeń programu WCF, zobacz [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md). Aby uzyskać więcej informacji na temat programowania za pomocą powiązań WCF zobacz [programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
@@ -188,7 +188,7 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
  W poniższej tabeli wymieniono powiązania, które obsługują różne ustawienia trybu. Wybierz powiązanie z tabeli, aby użyć do utworzenia punktu końcowego usługi.  
   
-|Powiązanie|Obsługa trybu transportu|Obsługa trybu wiadomości|Obsługa TransportWithMessageCredential|  
+|Wiązanie|Obsługa trybu transportu|Obsługa trybu wiadomości|Obsługa TransportWithMessageCredential|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
 |`BasicHttpBinding`|Tak|Yes|Yes|  
 |`WSHttpBinding`|Yes|Yes|Yes|  
@@ -197,7 +197,7 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
 |`NetNamedPipeBinding`|Yes|Nie|Nie|  
 |`NetMsmqBinding`|Yes|Yes|Nie|  
 |`MsmqIntegrationBinding`|Yes|Nie|Nie|  
-|`wsFederationHttpBinding`|Nie|Yes|Tak|  
+|`wsFederationHttpBinding`|Nie|Yes|Yes|  
   
 ## <a name="transport-credentials-in-bindings"></a>Transport poświadczenia w powiązaniach  
  W poniższej tabeli wymieniono dostępne typy poświadczeń klienta przy użyciu `BasicHttpBinding` lub `WSHttpBinding` w trybie zabezpieczeń transportu.  
@@ -224,9 +224,10 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
 |IssuedToken|Umożliwia usłudze Użyj usługi tokenu zabezpieczającego, aby określić niestandardowy token.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - changing selections in a text box [WPF]
 - changing selections in a RichTextBox [WPF]
 ms.assetid: f1213205-1ad7-4cd2-b115-460173cc5aa3
-ms.openlocfilehash: a85dc4baa8a59d25f577996c541a422bbe2af24e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8acfe7cde1fe5dae96cd6324f75c5b146be9ec9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096229"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a>Zmień wybór RichTextBox za pomocą programowania
 W tym przykładzie przedstawiono sposób programowego modyfikowania bieżące zaznaczenie w <xref:System.Windows.Controls.RichTextBox>. Zaznacz to pole wyboru jest taki sam, jakby wybrany przez użytkownika ma zawartość za pomocą interfejsu użytkownika.  
@@ -30,5 +30,6 @@ W tym przykładzie przedstawiono sposób programowego modyfikowania bieżące za
  [!code-vb[RichTextBoxMiscSnippets_snip#ChangeSelectionProgrammaticalyCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/ChangeSelectionProgrammaticaly.xaml.vb#changeselectionprogrammaticalycodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [RichTextBox — omówienie](richtextbox-overview.md)
-- [TextBox — omówienie](textbox-overview.md)
+
+- [RichTextBox — Przegląd](richtextbox-overview.md)
+- [TextBox — Przegląd](textbox-overview.md)

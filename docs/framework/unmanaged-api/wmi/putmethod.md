@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74654cf18d87fed8ad5ce9a4cd4249d56fdb4343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152506"
 ---
 # <a name="putmethod-function"></a>PutMethod — funkcja
 Tworzy metodę.
@@ -60,7 +60,6 @@ HRESULT PutMethod (
 
 `pSignatureOut`  
 [in]  Wskaźnik do kopię [klasy systemu __Parameters](/windows/desktop/WmiSdk/--parameters) zawierający `out` parametrów dla metody. Ten parametr jest ignorowany, jeśli ustawiono `null`.
- 
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -102,4 +101,5 @@ Aby uzyskać przykład, zobacz [IWbemClassObject::PutMethod](/windows/desktop/ap
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

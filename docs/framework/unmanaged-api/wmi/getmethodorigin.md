@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 76f449e52168001a2aaac6cbc3707361cf7f809a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 193caa894b8697a65e8821c01a63dde9cc5b5ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153715"
 ---
-# <a name="getmethodorigin-function"></a>Funkcja GetMethodOrigin
+# <a name="getmethodorigin-function"></a>GetMethodOrigin, funkcja
 Określa klasę, w którym zadeklarowany jest metodą.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -79,4 +79,5 @@ Ponieważ klasa może dziedziczyć metody z jednego lub więcej klas bazowych, d
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

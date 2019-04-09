@@ -2,12 +2,12 @@
 title: Propagacja
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154040"
 ---
 # <a name="propagation"></a>Propagacja
 W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows Communication Foundation (WCF).  
@@ -77,6 +77,7 @@ W tym temacie opisano Propagacja działania w modelu śledzenia usług Windows C
  Aby zsynchronizować zdarzenia różnych punktów końcowych, które działają na różnych maszynach, CorrelationId jest dodawany do nagłówka ActivityId, która jest propagowana do wiadomości. Narzędzia można użyć tego Identyfikatora synchronizacji zdarzeń na komputerach z rozbieżność zegara. W szczególności narzędzia przeglądarki danych śledzenia usługi używa tego Identyfikatora do wyświetlania komunikatu przepływów między punktami końcowymi.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Scenariusze kompleksowego śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: bb82921070cb5040cd279830bafd3d0e718d1374
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131024"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Tworzenie formantu, którego wygląd można dostosować
 <a name="introduction"></a>
@@ -121,7 +121,7 @@ Niestandardowy formant NumericUpDown
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Użyj VisualStateManager do zarządzania Stanami  
  <xref:System.Windows.VisualStateManager> Śledzi stanów kontrolki i wykonuje logikę niezbędną do przejścia między stanami. Po dodaniu <xref:System.Windows.VisualState> obiekty do <xref:System.Windows.Controls.ControlTemplate>, dodać je do <xref:System.Windows.VisualStateGroup> i Dodaj <xref:System.Windows.VisualStateGroup> do <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> dołączona właściwość tak, aby <xref:System.Windows.VisualStateManager> dostępu do nich.  
   
- Poniższy przykład jest powtarzany poprzedniego przykładu, który pokazuje <xref:System.Windows.VisualState> obiektów, które odpowiada `Positive` i `Negative` stanów kontrolki. <xref:System.Windows.Media.Animation.Storyboard> w `Negative` <xref:System.Windows.VisualState> włącza <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> czerwony.   Gdy `NumericUpDown` kontrolka znajduje się w `Negative` stan scenorysu w `Negative` rozpoczyna się w stanie.  A następnie <xref:System.Windows.Media.Animation.Storyboard> w `Negative` stanu zatrzymuje, gdy sterowanie powraca do `Positive` stanu.  `Positive` <xref:System.Windows.VisualState> Nie musi zawierać <xref:System.Windows.Media.Animation.Storyboard> ponieważ gdy <xref:System.Windows.Media.Animation.Storyboard> dla `Negative` zatrzymaniu <xref:System.Windows.Controls.TextBlock.Foreground%2A> powróci do oryginalnego koloru.  
+ Poniższy przykład jest powtarzany poprzedniego przykładu, który pokazuje <xref:System.Windows.VisualState> obiektów, które odpowiada `Positive` i `Negative` stanów kontrolki. <xref:System.Windows.Media.Animation.Storyboard> w `Negative`<xref:System.Windows.VisualState> włącza <xref:System.Windows.Controls.TextBlock.Foreground%2A> z <xref:System.Windows.Controls.TextBlock> czerwony.   Gdy `NumericUpDown` kontrolka znajduje się w `Negative` stan scenorysu w `Negative` rozpoczyna się w stanie.  A następnie <xref:System.Windows.Media.Animation.Storyboard> w `Negative` stanu zatrzymuje, gdy sterowanie powraca do `Positive` stanu.  `Positive`<xref:System.Windows.VisualState> Nie musi zawierać <xref:System.Windows.Media.Animation.Storyboard> ponieważ gdy <xref:System.Windows.Media.Animation.Storyboard> dla `Negative` zatrzymaniu <xref:System.Windows.Controls.TextBlock.Foreground%2A> powróci do oryginalnego koloru.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ Niestandardowy formant NumericUpDown
   
  W przypadku przekazania nazwę stanu, aby <xref:System.Windows.VisualStateManager.GoToState%2A> gdy kontrolka jest już w tym stanie <xref:System.Windows.VisualStateManager.GoToState%2A> nie działa, więc nie trzeba sprawdzić bieżący stan kontrolki.  Na przykład jeśli `Value` zmieni się z jednego ujemna inną liczbę ujemną scenorys dla `Negative` stanu nie zostało przerwane i użytkownik nie będzie widział zmian w formancie.  
   
- <xref:System.Windows.VisualStateManager> Używa <xref:System.Windows.VisualStateGroup> obiektów, aby określić, których stan, aby zakończyć pracę podczas wywoływania <xref:System.Windows.VisualStateManager.GoToState%2A>. Kontrolka jest zawsze w jednym stanie dla każdego <xref:System.Windows.VisualStateGroup> zdefiniowanego w jego <xref:System.Windows.Controls.ControlTemplate> i pozostawia stan tylko, gdy przejdzie do innego stanu z tej samej <xref:System.Windows.VisualStateGroup>. Na przykład <xref:System.Windows.Controls.ControlTemplate> z `NumericUpDown` definiuje kontroli `Positive` i `Negative` <xref:System.Windows.VisualState> obiekty w jednym <xref:System.Windows.VisualStateGroup> i `Focused` i `Unfocused` <xref:System.Windows.VisualState> obiektów w innej. (Możesz zobaczyć `Focused` i `Unfocused` <xref:System.Windows.VisualState> zdefiniowane w [kompletny przykład](#complete_example) w tym temacie, gdy kontrolka przechodzi z `Positive` do stanu `Negative` stanu, lub na odwrót formant pozostanie w jednym `Focused` lub `Unfocused` stanu.  
+ <xref:System.Windows.VisualStateManager> Używa <xref:System.Windows.VisualStateGroup> obiektów, aby określić, których stan, aby zakończyć pracę podczas wywoływania <xref:System.Windows.VisualStateManager.GoToState%2A>. Kontrolka jest zawsze w jednym stanie dla każdego <xref:System.Windows.VisualStateGroup> zdefiniowanego w jego <xref:System.Windows.Controls.ControlTemplate> i pozostawia stan tylko, gdy przejdzie do innego stanu z tej samej <xref:System.Windows.VisualStateGroup>. Na przykład <xref:System.Windows.Controls.ControlTemplate> z `NumericUpDown` definiuje kontroli `Positive` i `Negative`<xref:System.Windows.VisualState> obiekty w jednym <xref:System.Windows.VisualStateGroup> i `Focused` i `Unfocused`<xref:System.Windows.VisualState> obiektów w innej. (Możesz zobaczyć `Focused` i `Unfocused`<xref:System.Windows.VisualState> zdefiniowane w [kompletny przykład](#complete_example) w tym temacie, gdy kontrolka przechodzi z `Positive` do stanu `Negative` stanu, lub na odwrót, formant pozostanie w albo `Focused` lub `Unfocused` stanu.  
   
  Istnieją trzy typowe miejsca, gdzie mogą ulec zmianie stanu formantu:  
   
@@ -238,5 +238,6 @@ Niestandardowy formant NumericUpDown
  [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+
+- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)

@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100083"
 ---
 # <a name="application-management-overview"></a>Przegląd Zarządzanie aplikacjami
 Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które mają zastosowanie do wdrożenia aplikacji i zarządzania. Ten temat zawiera omówienie funkcji w <xref:System.Windows.Application> klasa do tworzenia aplikacji i zarządzaniem nimi.  
-   
-  
+
 ## <a name="the-application-class"></a>Klasa aplikacji  
  W środowisku WPF typowych funkcji o zakresie aplikacji jest hermetyzowany w <xref:System.Windows.Application> klasy. <xref:System.Windows.Application> Klasa zawiera następujące funkcje:  
   
@@ -106,7 +105,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Pobieranie bieżącej aplikacji  
- Ponieważ funkcje <xref:System.Windows.Application> klasy są współdzielone przez aplikację, może istnieć tylko jedno wystąpienie <xref:System.Windows.Application> klasy na <xref:System.AppDomain>. Do wyegzekwowania tego, <xref:System.Windows.Application> klasy jest implementowany jako klasa pojedyncza (zobacz [wdrażanie pojedynczego wystąpienia w języku C#](https://go.microsoft.com/fwlink/?LinkId=100567)), który tworzy pojedyncze wystąpienie sam i zapewnia udostępniony dostęp do niego za pomocą `static` <xref:System.Windows.Application.Current%2A> Właściwość.  
+ Ponieważ funkcje <xref:System.Windows.Application> klasy są współdzielone przez aplikację, może istnieć tylko jedno wystąpienie <xref:System.Windows.Application> klasy na <xref:System.AppDomain>. Do wyegzekwowania tego, <xref:System.Windows.Application> klasy jest implementowany jako klasa pojedyncza (zobacz [Implementowanie wzorzec Singleton w C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), który tworzy pojedyncze wystąpienie sam i zapewnia udostępniony dostęp do niego za pomocą `static`<xref:System.Windows.Application.Current%2A> właściwości.  
   
  Poniższy kod pokazuje, jak można uzyskać odwołanie do <xref:System.Windows.Application> obiektu dla bieżącego <xref:System.AppDomain>.  
   
@@ -125,8 +124,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>Okres istnienia aplikacji  
  Okres istnienia aplikacji WPF jest oznaczona przez kilka zdarzeń, które są wywoływane przez <xref:System.Windows.Application> informacją o tym, kiedy aplikacja została uruchomiona, zostało aktywowane i dezaktywowane i została zamknięta.  
-  
-  
+
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>Ekran powitalny  
  Począwszy od [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], można określić obrazu do użycia w oknie uruchamiania lub *ekran powitalny*. <xref:System.Windows.SplashScreen> Klasy można łatwo wyświetlać okno uruchamiania podczas ładowania aplikacji. <xref:System.Windows.SplashScreen> Okna jest tworzony i wyświetlany przed <xref:System.Windows.Application.Run%2A> jest wywoływana. Aby uzyskać więcej informacji, zobacz [czas uruchamiania aplikacji](../advanced/application-startup-time.md) i [dodać ekran powitalny do aplikacji WPF](how-to-add-a-splash-screen-to-a-wpf-application.md).  
@@ -357,10 +355,11 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
  ![XBAP &#45; zdarzenia obiektu aplikacji](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Application>
-- [Okna WPF — omówienie](wpf-windows-overview.md)
-- [Nawigacja — omówienie](navigation-overview.md)
-- [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)
-- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
-- [Model aplikacji: Tematy porad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Przegląd Okna WPF](wpf-windows-overview.md)
+- [Przegląd Nawigacja](navigation-overview.md)
+- [Zasoby aplikacji WPF, zawartość, pliki danych](wpf-application-resource-content-and-data-files.md)
+- [Pakuj URI w WPF](pack-uris-in-wpf.md)
+- [Application Model: — Tematy porad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Projektowanie aplikacji](index.md)

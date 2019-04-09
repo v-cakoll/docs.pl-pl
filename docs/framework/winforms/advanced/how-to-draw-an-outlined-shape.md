@@ -19,12 +19,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192210"
 ---
 # <a name="how-to-draw-an-outlined-shape"></a>Instrukcje: Rysowanie konturu kształtu
 W tym przykładzie rysuje wielokropek schemat i prostokąty w formularzu.  
@@ -41,9 +41,10 @@ W tym przykładzie rysuje wielokropek schemat i prostokąty w formularzu.
  Zawsze powinna wywołać <xref:System.IDisposable.Dispose%2A> na wszystkie obiekty, których wartość użycia zasobów systemowych, takich jak <xref:System.Drawing.Pen> i <xref:System.Drawing.Graphics> obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
 - [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)
 - [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)

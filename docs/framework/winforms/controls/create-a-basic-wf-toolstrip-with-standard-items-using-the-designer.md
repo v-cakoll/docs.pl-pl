@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 4c93db7b333f231bc328b3a16d51cfb5243ba098
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119291"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Instrukcje: Tworzenie podstawowy Windows Forms ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant
 Poniższa procedura przedstawia sposób tworzenia <xref:System.Windows.Forms.ToolStrip> i Dodaj siedem <xref:System.Windows.Forms.ToolStripButton> formantów, które reprezentują typowych zadań.  
@@ -29,8 +29,9 @@ Poniższa procedura przedstawia sposób tworzenia <xref:System.Windows.Forms.Too
 3.  W **ToolStrip — zadania** okienku wybierz **Wstaw elementy standardowe**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
-- [ToolStrip, kontrolka — architektura](toolstrip-control-architecture.md)
-- [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [ToolStrip — Architektura formantu](toolstrip-control-architecture.md)
+- [Podsumowanie informacji o technologii formantów ToolStrip](toolstrip-technology-summary.md)

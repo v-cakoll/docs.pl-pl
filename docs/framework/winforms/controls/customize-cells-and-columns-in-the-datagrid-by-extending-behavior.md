@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostosowywanie komórek i kolumn w kontrolce DataGridView formularzy Windows Forms przez rozszerzanie ich zachowania i wyglądu'
+title: 'Instrukcje: dostosowywanie komórek i kolumn w kontrolce DataGridView (Formularze systemu Windows) przez rozszerzanie ich zachowania i wyglądu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 7ea684fd0a3f23005e70594bf1870851a3708a8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c68327bb0fb747cdf38d61e944401db9f3af22a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130692"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Instrukcje: Dostosowywanie komórek i kolumn w kontrolce DataGridView formularzy Windows Forms przez rozszerzanie ich zachowania i wyglądu
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Instrukcje: dostosowywanie komórek i kolumn w kontrolce DataGridView (Formularze systemu Windows) przez rozszerzanie ich zachowania i wyglądu
 <xref:System.Windows.Forms.DataGridView> Control oferuje wiele sposobów, aby dostosować wygląd i zachowanie za pomocą właściwości, zdarzenia oraz klasy pomocnika. Od czasu do czasu może mieć wymagania dla Twojego komórek, które wykraczają poza co te funkcje umożliwiają. Możesz utworzyć własną niestandardową <xref:System.Windows.Forms.DataGridViewCell> Aby klasa zapewniała rozszerzoną funkcjonalność.  
   
  Utwórz niestandardową <xref:System.Windows.Forms.DataGridViewCell> przy pochodząca od <xref:System.Windows.Forms.DataGridViewCell> klasy bazowej lub jedna z jej klas pochodnych. Mimo że dowolny typ komórki można wyświetlić w dowolnej typ kolumny, zazwyczaj także utworzysz niestandardowego <xref:System.Windows.Forms.DataGridViewColumn> klasy przeznaczone do wyświetlania typu komórki. Kolumna klasy pochodzić od <xref:System.Windows.Forms.DataGridViewColumn> lub jeden z jego typów pochodnych.  
@@ -71,10 +71,11 @@ ms.locfileid: "57721271"
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Dostosowywanie formantu DataGridView formularzy systemu Windows](customizing-the-windows-forms-datagridview-control.md)
 - [DataGridView, kontrolka — architektura](datagridview-control-architecture-windows-forms.md)
-- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Typy kolumn w formancie DataGridView formularzy systemu Windows](column-types-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md)

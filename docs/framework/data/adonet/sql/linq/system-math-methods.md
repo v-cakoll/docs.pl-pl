@@ -1,15 +1,15 @@
 ---
-title: Metody System.Math
+title: System.Math, metody
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
-ms.openlocfilehash: 45a674c86fc2f19f3e273834b8cb9d6adee5b3ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1dae31b30962505c07c198f3bd35fceb8f400efb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141716"
 ---
-# <a name="systemmath-methods"></a>Metody System.Math
+# <a name="systemmath-methods"></a>System.Math, metody
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje następujących <xref:System.Math> metody.  
   
 -   <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
@@ -26,4 +26,5 @@ ms.locfileid: "54576866"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Przechodzi do bazy danych SQL `ROUND` semantyki i nie podejmuje próby wykonania zaokrąglenie kwot.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

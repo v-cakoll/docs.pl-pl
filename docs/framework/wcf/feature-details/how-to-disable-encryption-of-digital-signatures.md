@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Wyłączanie szyfrowania podpisów cyfrowych'
+title: 'Instrukcje: wyłączanie szyfrowania podpisów cyfrowych'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
-ms.openlocfilehash: 360d939db1c7e75cea1b6f3c6a013f214564a717
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f5004224f66f2961efc3ee920989487273c3eff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192124"
 ---
-# <a name="how-to-disable-encryption-of-digital-signatures"></a>Instrukcje: Wyłączanie szyfrowania podpisów cyfrowych
+# <a name="how-to-disable-encryption-of-digital-signatures"></a>Instrukcje: wyłączanie szyfrowania podpisów cyfrowych
 Domyślnie wiadomość jest podpisany i podpisu cyfrowego są szyfrowane. Jest to kontrolowane przez tworzenie niestandardowego powiązania za pomocą wystąpienia <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> i ustawienie `MessageProtectionOrder` właściwości każdej klasy, aby <xref:System.ServiceModel.Security.MessageProtectionOrder> wartość wyliczenia. Wartość domyślna to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Ten proces zużywa do 30 procent więcej czasu niż po prostu podpisywania i szyfrowania oparte na całkowity rozmiar komunikatu (mniejszy komunikat o błędzie, tym większy wpływ na wydajność). Wyłączanie szyfrowania podpisów, jednak mogą umożliwić osobie atakującej do odgadnięcia treści komunikatu. Jest to możliwe, ponieważ element podpis zawiera skrótu zwykły tekst każdej części podpisanych wiadomości. Na przykład mimo, że treść komunikatu jest domyślne szyfrowanie przekazywanego materiału, niezaszyfrowane podpis zawiera skrótu przed szyfrowania treści wiadomości. Jeśli zestaw możliwych wartości dla części podpisane i zaszyfrowane jest mały, osoba atakująca może być zawartość, analizując wartość skrótu. Szyfrowanie podpis zmniejsza zagrożenie tego ataku.  
   
  W związku z tym należy wyłączyć szyfrowanie podpisu, tylko wtedy, gdy wartość zawartości jest niski lub zestaw możliwych wartości zawartości jest duży i niedeterministyczne i przyrost wydajności jest ważniejsza niż ograniczanie ryzyka ataków opisanych powyżej.  
@@ -26,4 +26,5 @@ Domyślnie wiadomość jest podpisany i podpisu cyfrowego są szyfrowane. Jest t
 3.  Ustaw <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>, lub ustawić <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A?displayProperty=nameWithType> właściwość <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncrypt>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+
+- [Możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

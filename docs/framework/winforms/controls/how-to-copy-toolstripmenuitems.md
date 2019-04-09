@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Kopiowanie kontrolki ToolStripMenuItems'
+title: 'Instrukcje: kopiowanie ToolStripMenuItems'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - menu items [Windows Forms], copying and pasting
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116353"
 ---
-# <a name="how-to-copy-toolstripmenuitems"></a>Instrukcje: Kopiowanie kontrolki ToolStripMenuItems
+# <a name="how-to-copy-toolstripmenuitems"></a>Instrukcje: kopiowanie ToolStripMenuItems
 W czasie projektowania, możesz skopiować cały menu najwyższego poziomu i ich elementów podmenu w inne miejsce na <xref:System.Windows.Forms.MenuStrip>. Możesz również skopiować poszczególnych elementów menu między menu najwyższego poziomu lub zmiana położenia elementów menu w menu.  
   
 ### <a name="to-copy-a-top-level-menu-and-its-submenu-items-to-another-top-level-location"></a>Aby skopiować menu najwyższego poziomu i jego elementów podmenu do innej lokalizacji najwyższego poziomu  
@@ -43,6 +43,7 @@ W czasie projektowania, możesz skopiować cały menu najwyższego poziomu i ich
      Element podmenu, który został skopiowany jest wstawiany przed elementem wybranym podmenu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip, kontrolka — omówienie](menustrip-control-overview-windows-forms.md)

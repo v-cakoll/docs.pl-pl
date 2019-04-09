@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie niestandardowych zasad autoryzacji'
+title: 'Instrukcje: tworzenie niestandardowych zasad autoryzacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115391"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Instrukcje: Tworzenie niestandardowych zasad autoryzacji
+# <a name="how-to-create-a-custom-authorization-policy"></a>Instrukcje: tworzenie niestandardowych zasad autoryzacji
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obsługuje model na podstawie oświadczeń autoryzacji. Wyodrębnione z tokenów, opcjonalnie przetwarzane przez niestandardowych zasad autoryzacji i następnie umieszczać w oświadczeń <xref:System.IdentityModel.Policy.AuthorizationContext> , następnie można zbadać do podejmowania decyzji dotyczących autoryzacji. Zasady niestandardowe może służyć do przekształcania oświadczeń przychodzących tokenów oświadczeń oczekiwane przez aplikację. W ten sposób warstwy aplikacji mogą być izolowane dane na różne oświadczenia, obsługiwane przez różne typy tokenów, które obsługuje usługi WCF. W tym temacie pokazano, jak zaimplementować niestandardowych zasad autoryzacji oraz sposób dodawania tej zasady do kolekcji zasad używanych przez usługę.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>Aby zaimplementować niestandardowych zasad autoryzacji  
@@ -76,7 +76,8 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obs�
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Instrukcje: Porównywanie oświadczeń](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Instrukcje: porównywanie oświadczeń](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Zasady autoryzacji](../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
-ms.openlocfilehash: d430c0c38f5f363b386102d21a172df6c812da21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fa5842040876754d5f0d358258f1eab7d09d79c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111582"
 ---
 # <a name="how-to-use-a-bitmapimage"></a>Instrukcje: Używanie elementu BitmapImage
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Imaging.BitmapImage> jako źródło <xref:System.Windows.Controls.Image> w kontrolce [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -25,4 +25,5 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Imaging.Bit
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obrazowanie — przegląd](imaging-overview.md)
+
+- [Przegląd Obrazowanie](imaging-overview.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100174"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Przeciąganie i upuszczanie Tematy porad
 Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework przeciągania i upuszczania.  
@@ -25,4 +25,5 @@ Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLU
  [Przechowanie wielu formatów danych w obiekcie danych](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd przeciągania i upuszczania](drag-and-drop-overview.md)
+
+- [Przegląd Przeciąganie i upuszczanie](drag-and-drop-overview.md)

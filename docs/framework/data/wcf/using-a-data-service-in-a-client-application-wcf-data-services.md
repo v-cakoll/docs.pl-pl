@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155938"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Używanie usługi danych w aplikacji klienckiej (WCF Data Services)
 Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kanału informacyjnego, podając identyfikator URI do przeglądarki sieci Web. Identyfikator URI dostarcza adres zasobu, a żądania są wysyłane do tych adresów na dostęp lub zmienić danych bazowych, który reprezentuje zasobu. Przeglądarka wydaje polecenie HTTP GET i zwraca żądany zasób jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -52,5 +52,6 @@ Uzyskaniem dostępu do usług, który udostępnia [!INCLUDE[ssODataFull](../../.
  Brak biblioteki programistyczne, które są dostępne, której można używać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w innych rodzajów aplikacji klienckich. Aby uzyskać więcej informacji, zobacz [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

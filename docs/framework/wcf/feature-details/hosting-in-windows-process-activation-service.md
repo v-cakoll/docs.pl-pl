@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082989"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Hosting w Usłudze aktywacji procesów systemu Windows
 Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia procesów roboczych, które zawierają aplikacji zawierających usługi Windows Communication Foundation (WCF). Stanowi uogólnienie modelu procesów WAS [!INCLUDE[iis601](../../../../includes/iis601-md.md)] model procesów dla serwera HTTP przez usunięcie zależności od protokołu HTTP. Dzięki temu usługi WCF do użycia protokołów HTTP i protokołów innych niż HTTP, np. Net.TCP, w środowisku macierzystym, który obsługuje aktywację w oparciu o wiadomości i oferuje możliwość hostowania wielu aplikacji na danym komputerze.  
@@ -52,8 +52,9 @@ Windows Process Activation Service (WAS) zarządza aktywacji i okresem istnienia
  Aplikacje są zorganizowane w witrynach na potrzeby adresowania i zarządzania. W czasie wykonywania aplikacje są również grupowane w pulach aplikacji. Pula aplikacji mogą znajdować się wiele różnych aplikacji pochodzących od wielu witryn. Wszystkie aplikacje w puli aplikacji korzystają ze wspólnego zestawu, właściwości środowiska wykonawczego. Na przykład wszystkie działają w ramach tej samej wersji środowiska uruchomieniowego języka wspólnego (CLR), a wszystkie mają wspólną tożsamość procesu. Każda pula aplikacji odnosi się do wystąpienia procesu roboczego (w3wp.exe). Każdej zarządzanej aplikacji, które działają w ramach puli aplikacji udostępnionej jest odizolowana od innych aplikacji za pomocą CLR AppDomain.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Architektura aktywacji WAS](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [Konfigurowanie usługi WAS do użycia z programem WCF](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [Instrukcje: Hostowanie usługi WCF w WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102781"
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli zapewnia sposób wyświetlania zawartości w oddzielnym oknie, który pojawia się za pośrednictwem bieżącego okna aplikacji względem wyznaczonego współrzędne elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i zawiera informacje dotyczące jego użycia.  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>Co to jest okna podręcznego?  
  A <xref:System.Windows.Controls.Primitives.Popup> kontrolka Wyświetla zawartość w osobnym oknie względem elementu lub na ekranie. Gdy <xref:System.Windows.Controls.Primitives.Popup> jest widoczny, <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> właściwość jest ustawiona na `true`.  
@@ -89,6 +87,7 @@ ms.locfileid: "57358473"
  <xref:System.Windows.Controls.Primitives.Popup> Kontroli obsługuje odwołania do jego <xref:System.Windows.Controls.Primitives.Popup.Child%2A> zawartość jako podrzędnych logicznego. Podczas tworzenia nowego okna, zawartość <xref:System.Windows.Controls.Primitives.Popup> staje się podrzędną visual okna, a pozostaje logiczne podrzędnym <xref:System.Windows.Controls.Primitives.Popup>. Z drugiej strony <xref:System.Windows.Controls.Primitives.Popup> pozostaje logiczne nadrzędnym jego <xref:System.Windows.Controls.Primitives.Popup.Child%2A> zawartości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>
@@ -96,5 +95,5 @@ ms.locfileid: "57358473"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Tematy z instrukcjami](popup-how-to-topics.md)
-- [Tematy z instrukcjami](tooltip-how-to-topics.md)
+- [— Tematy porad](popup-how-to-topics.md)
+- [— Tematy porad](tooltip-how-to-topics.md)

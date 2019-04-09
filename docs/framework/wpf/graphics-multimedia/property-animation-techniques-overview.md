@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165441"
 ---
 # <a name="property-animation-techniques-overview"></a>Przegląd Techniki animacji właściwości
 W tym temacie opisano różne metody animowania właściwości: scenorysów, lokalnego animacji, zegary i animacje w poszczególnych klatkach.  
@@ -31,7 +31,7 @@ W tym temacie opisano różne metody animowania właściwości: scenorysów, lok
   
 |Techniki animacji|Scenariusze|Obsługa w XAML|Interaktywnie kontrolowania|  
 |-------------------------|---------------|-------------------|--------------------------------|  
-|Animacja scenorysu|Na wystąpienie <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Tak|Tak|  
+|Animacja scenorysu|Na wystąpienie <xref:System.Windows.Style>, <xref:System.Windows.Controls.ControlTemplate>, <xref:System.Windows.DataTemplate>|Yes|Yes|  
 |Lokalna Animacja|Na wystąpienie|Nie|Nie|  
 |Animacja zegara|Na wystąpienie|Nie|Tak|  
 |Animacja ramki|Na wystąpienie|Nie|Brak|  
@@ -59,7 +59,7 @@ W tym temacie opisano różne metody animowania właściwości: scenorysów, lok
 |<xref:System.Windows.Media.Animation.BeginStoryboard> i <xref:System.Windows.EventTrigger>|Tak|Yes|Yes|Tak|[Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> i właściwości <xref:System.Windows.Trigger>|Nie|Yes|Yes|Tak|[Wyzwalanie animacji w przypadku zmiany wartości właściwości](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> a <xref:System.Windows.DataTrigger>|Nie|Yes|Yes|Tak|[Instrukcje: Wyzwalanie animacji w przypadku zmiany danych](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — Metoda|Tak|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> — metoda|Yes|Nie|Nie|Nie|[Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Animation.Storyboard> obiekty, zobacz [Przegląd Scenorysy](storyboards-overview.md).  
   
@@ -122,7 +122,8 @@ W tym temacie opisano różne metody animowania właściwości: scenorysów, lok
  Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.CompositionTarget.Rendering> strony.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
-- [Scenorysy — przegląd](storyboards-overview.md)
-- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
+
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Scenorysy](storyboards-overview.md)
+- [Przegląd Animacja i system chronometrażu](animation-and-timing-system-overview.md)
 - [Przegląd właściwości zależności](../advanced/dependency-properties-overview.md)

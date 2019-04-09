@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powtórz animację'
+title: 'Instrukcje: Powtarzanie animacji'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RepeatBehavior property of timelines [WPF]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a098c912289f59f8be48edeec0f066b7f94b9fda
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150543"
 ---
-# <a name="how-to-repeat-an-animation"></a>Instrukcje: Powtórz animację
+# <a name="how-to-repeat-an-animation"></a>Instrukcje: Powtarzanie animacji
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> właściwość <xref:System.Windows.Media.Animation.Timeline> w celu sterowania zachowaniem Powtórz animację.  
   
 ## <a name="example"></a>Przykład  
@@ -29,8 +29,9 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.T
  Aby uzyskać pełny przykład, zobacz [przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Gromadzenie wartości animacji podczas cykli powtórzeń](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Określanie, czy oś czasu ma być automatycznie odtwarzana od końca](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Animacja i chronometraż tematy porad](animation-and-timing-how-to-topics.md)
-- [Animacja — przegląd](animation-overview.md)
+- [Animacja i chronometraż Tematy porad](animation-and-timing-how-to-topics.md)
+- [Przegląd Animacja](animation-overview.md)
 - [Przykład zachowania chronometrażu animacji](https://go.microsoft.com/fwlink/?LinkID=159970)

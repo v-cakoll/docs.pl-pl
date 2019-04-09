@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zablokuj kolumny w kontrolce DataGridView formularzy Windows Forms'
+title: 'Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 640b6a9128758edfc22b5c9be971034c9e45fc70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187430"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: Zablokuj kolumny w kontrolce DataGridView formularzy Windows Forms
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows
 Gdy użytkownicy wyświetlają dane wyświetlane w formularzach Windows <xref:System.Windows.Forms.DataGridView> kontrolki, czasami muszą odwoływać się do pojedynczej kolumny lub zestaw kolumn, często. Na przykład wyświetlając tabelę informacje o kliencie, który zawiera wiele kolumn, jest przydatne do wyświetlania nazwy klientów przez cały czas podczas włączania innych kolumn w celu przewiń poza regionem widoczne.  
   
  Aby uzyskać takie zachowanie, można zablokować kolumn w formancie. Po zablokowaniu kolumny, również są zablokowane wszystkie kolumny po lewej stronie (lub po jego prawej stronie skrypty języka od prawej do lewej). Zamrożone kolumny pozostaną w miejscu, a wszystkie pozostałe kolumny można przewijać.  
@@ -43,7 +43,8 @@ Gdy użytkownicy wyświetlają dane wyświetlane w formularzach Windows <xref:Sy
 -   Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
-- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Instrukcje: Włączanie zmiany układu kolumn w kontrolce DataGridView formularzy Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

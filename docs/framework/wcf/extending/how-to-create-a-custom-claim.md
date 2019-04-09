@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie oświadczenia niestandardowego'
+title: 'Instrukcje: tworzenie oświadczenia niestandardowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464310"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167430"
 ---
-# <a name="how-to-create-a-custom-claim"></a>Instrukcje: Tworzenie oświadczenia niestandardowego
+# <a name="how-to-create-a-custom-claim"></a>Instrukcje: tworzenie oświadczenia niestandardowego
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) zapewnia zestaw typów wbudowanych oświadczeń i uprawnień przy użyciu funkcji pomocnika dla tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w typy poświadczeń klienta, które obsługuje WCF domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenia składa się z typu oświadczenia, zasobów, dla której oświadczenia ma zastosowanie do i potwierdzone praw za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Aby utworzyć oświadczenia niestandardowego, który jest oparty na typie danych pierwotnych  
@@ -75,6 +75,7 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) zape
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>

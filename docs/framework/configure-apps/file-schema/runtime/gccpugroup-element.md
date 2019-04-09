@@ -1,5 +1,5 @@
 ---
-title: <GCCpuGroup>, element
+title: <GCCpuGroup> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GCCpuGroup element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7998275ae1e80a87354dd5b3a8b0a1aa73b3b987
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 85cfe57f7a3b8cfecfae4c4ae00efaea464e6120
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090345"
 ---
 # <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup CPU.  
@@ -73,6 +73,7 @@ Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup CPU.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych](gcconcurrent-element.md#to-disable-background-garbage-collection)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 6d7a2e52177c05ead6300e775021572f3a64340a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 456dbdab3070e88fe0bc6572c998ce54e3c19c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166957"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Instrukcje: Wyślij dane przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura jest często używane dane do strony sieci Web. 
@@ -153,8 +153,8 @@ Poniższy przykład kodu pokazuje, jak wysyłać dane do serwera sieci web i odc
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-  
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie żądań internetowych](creating-internet-requests.md)
 - [Stosowanie strumieni w sieci](using-streams-on-the-network.md)
 - [Dostęp do Internetu za pośrednictwem serwera proxy](accessing-the-internet-through-a-proxy.md)

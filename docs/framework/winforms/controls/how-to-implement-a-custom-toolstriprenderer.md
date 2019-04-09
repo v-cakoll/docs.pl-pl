@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Implementowanie niestandardowego elementu ToolStripRenderer'
+title: 'Instrukcje: implementowanie niestandardowego elementu ToolStripRenderer'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: c66fd3f7-2377-4553-8f1b-006527f08f32
-ms.openlocfilehash: c6150b23cf8390a31c6b77ae3c56cfb898eded4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0d0a0bdba779fad7bd9b19acb2ea09408dea60a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151921"
 ---
-# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Instrukcje: Implementowanie niestandardowego elementu ToolStripRenderer
+# <a name="how-to-implement-a-custom-toolstriprenderer"></a>Instrukcje: implementowanie niestandardowego elementu ToolStripRenderer
 Można dostosować wygląd <xref:System.Windows.Forms.ToolStrip> kontroli poprzez implementację klasy, która pochodzi od klasy <xref:System.Windows.Forms.ToolStripRenderer>. Daje to możliwość tworzenia wrażenie, że różni się od wyglądem, pod warunkiem <xref:System.Windows.Forms.ToolStripProfessionalRenderer> i <xref:System.Windows.Forms.ToolStripSystemRenderer> klasy.  
   
 ## <a name="example"></a>Przykład  
@@ -27,7 +27,7 @@ Można dostosować wygląd <xref:System.Windows.Forms.ToolStrip> kontroli poprze
   
 -   <xref:System.Windows.Forms.ToolStripButton> Obramowanie  
   
--   <xref:System.Windows.Forms.ToolStripButton> Obraz  
+-   <xref:System.Windows.Forms.ToolStripButton> obraz  
   
  [!code-csharp[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/CS/GridStrip.cs#1)]
  [!code-vb[System.Windows.Forms.ToolStrip.GridStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.GridStrip/VB/GridStrip.vb#1)]  
@@ -40,10 +40,11 @@ Można dostosować wygląd <xref:System.Windows.Forms.ToolStrip> kontroli poprze
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.StatusStrip>
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)

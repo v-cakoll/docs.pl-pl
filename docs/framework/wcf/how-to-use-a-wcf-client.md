@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
-ms.openlocfilehash: 4d883277f795ea84c59aee91ffcb9b9802b0933b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: fa9aa3612a8dc72623fc4ea4b1ea337ac773fa26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169978"
 ---
 # <a name="tutorial-use-a-windows-communication-foundation-client"></a>Samouczek: Używanie klienta programu Windows Communication Foundation
 
@@ -193,4 +193,3 @@ Jeśli masz problemy lub błędy w jednym z kroków, wykonaj kroki w artykule ro
 
 > [!div class="nextstepaction"]
 > [Rozwiązywanie problemów z Get pracę z samouczków usługi WCF](troubleshooting-the-getting-started-tutorial.md)
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125746"
 ---
 # <a name="xshared-attribute"></a>x:Shared — Atrybut
 Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania zasobu atrybutami Utwórz nowe wystąpienie dla każdego żądania zamiast udostępnianie tego samego wystąpienia dla wszystkich żądań.  
@@ -50,6 +50,7 @@ Po ustawieniu `false`, modyfikuje zachowanie pobierania zasobów WPF żądania z
 -   <xref:System.Windows.ResourceDictionary> Zawiera elementy nie może być zagnieżdżony w innym <xref:System.Windows.ResourceDictionary>. Na przykład nie można użyć `x:Shared` dla elementów w <xref:System.Windows.ResourceDictionary> znajduje się w <xref:System.Windows.Style> jest już <xref:System.Windows.ResourceDictionary> elementu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.ResourceDictionary>
 - [Zasoby XAML](../wpf/advanced/xaml-resources.md)
-- [Elementy podstawowe](../wpf/advanced/base-elements.md)
+- [Elementy bazy](../wpf/advanced/base-elements.md)

@@ -2,12 +2,12 @@
 title: 'Dostosowywanie operacji: Omówienie'
 ms.date: 03/30/2017
 ms.assetid: a3546296-1443-4b88-aa6e-d41011041ba7
-ms.openlocfilehash: 4f13bed76ad2814d669f487b57ae9acbdc08eb74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29fb75271b7bc324d462078e94e4a28534986fba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075980"
 ---
 # <a name="customizing-operations-overview"></a>Dostosowywanie operacji: Omówienie
 Domyślnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generuje dynamiczny język SQL insert, update i operacje usuwania na podstawie mapowania. Jednak w praktyce zazwyczaj chcesz dodać własną logiką biznesową w celu zapewnienia bezpieczeństwa, weryfikacji i tak dalej.  
@@ -24,4 +24,5 @@ Domyślnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] g
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje korzystanie z procedur składowanych i funkcji zdefiniowanych przez użytkownika. Procedury składowane są często używane do dostosowywania operacji. Aby uzyskać więcej informacji, zobacz [procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

@@ -2,12 +2,12 @@
 title: Strumieniowy transfer komunikatów
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136880"
 ---
 # <a name="streaming-message-transfer"></a>Strumieniowy transfer komunikatów
 Transportów Windows Communication Foundation (WCF) obsługuje dwa tryby do przesyłania komunikatów:  
@@ -47,4 +47,5 @@ Transportów Windows Communication Foundation (WCF) obsługuje dwa tryby do prze
  Tryb transferu z buforowanego do strumieniowego również zmiana kształtu natywnych kanału TCP i transportu nazwanego potoku. Buforowanego transferu jest kształtu kanału natywnych <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. W przypadku transferów przesyłane strumieniowo są natywne kanały <xref:System.ServiceModel.Channels.IRequestChannel> i <xref:System.ServiceModel.Channels.IReplyChannel>. Zmienianie trybu transferu w istniejącej aplikacji, która wykorzystuje te służy do transportu bezpośrednio (oznacza to, nie za pośrednictwem umowy serwisowej) wymaga zmiany kształtu kanału oczekiwany dla fabryki kanałów i odbiorników.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Instrukcje: włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

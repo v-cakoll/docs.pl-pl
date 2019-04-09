@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania'
+title: 'Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139792"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. Windows Forms Designer udostępnia wiele narzędzi układu, w tym celu. Jednym z najważniejszych jest <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji.  
   
  Linii przyciągania Pokaż dokładnie, gdzie wyrównać formanty z innymi formantami. Również pokazują zalecane odległości marginesy między kontrolkami, zgodnie z wytycznymi interfejsu użytkownika Windows. Aby uzyskać więcej informacji, zobacz [projektowania interfejsu użytkownika i rozwoju](https://go.microsoft.com/FWLink/?LinkId=83878).  
@@ -240,8 +240,9 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
  Aby uzyskać informacji na temat projektowania interfejsu użytkownika Windows, zobacz podręcznik *środowisko użytkownika systemu Microsoft Windows, oficjalne wskazówki dla deweloperów interfejsu użytkownika i projektantów* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)
+- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)

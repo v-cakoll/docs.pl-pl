@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: 84dcc6471ad37bfda90f58c748c99ff514f7eb3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168314"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanie lub pomijanie elementów w sekwencji
 Użyj <xref:System.Linq.Queryable.Take%2A> operatora zwracają danej liczby elementów w sekwencji, a następnie pominąć resztę.  
@@ -79,5 +79,6 @@ ORDER BY [t0].[CustomerID]
  Do nieujemnej wartości, stałe argumentów całkowitych na podstawie SQL specyfikacji, zarówno <xref:System.Linq.Queryable.Take%2A> i <xref:System.Linq.Queryable.Skip%2A> są dobrze zdefiniowane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [Translacja standardowego operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

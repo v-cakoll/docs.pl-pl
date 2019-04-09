@@ -1,15 +1,15 @@
 ---
-title: Funkcje serwera SQL i ADO.NET
+title: Funkcje Serwera SQL i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107526"
 ---
-# <a name="sql-server-features-and-adonet"></a>Funkcje serwera SQL i ADO.NET
+# <a name="sql-server-features-and-adonet"></a>Funkcje Serwera SQL i ADO.NET
 W tematach w tej sekcji omówiono funkcje w programie SQL Server, które są przeznaczone do tworzenia aplikacji bazy danych za pomocą platformy ADO.NET.  
   
  Aby uzyskać więcej informacji zobacz dokumentację SQL Server — książki Online dla wersji programu SQL Server, którego używasz, zgodnie z opisem w poniższej tabeli.  
@@ -47,8 +47,9 @@ W tematach w tej sekcji omówiono funkcje w programie SQL Server, które są prz
  W tym artykule opisano Obsługa SqlClient dla bazy danych LocalDB.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje danych serwera SQL w ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125307"
 ---
 # <a name="tilebrush-overview"></a>TileBrush — Przegląd
 <xref:System.Windows.Media.TileBrush> obiekty umożliwiają z dużym stopniem kontrolę nad jak obszar jest malowane z obrazem, <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>. W tym temacie opisano sposób użycia <xref:System.Windows.Media.TileBrush> funkcje, aby uzyskać większą kontrolę nad jak <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, lub <xref:System.Windows.Media.VisualBrush> Malowanie obszaru.  
-  
-  
+
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby zrozumieć, w tym temacie, warto zrozumieć sposób korzystania z podstawowych funkcji <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, lub <xref:System.Windows.Media.VisualBrush> klasy. Aby zapoznać się z wprowadzeniem do tych typów, zobacz [malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md).  
@@ -122,12 +121,13 @@ Składniki TileBrush z TileMode kafelka
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
-- [Tematy z instrukcjami](brushes-how-to-topics.md)
-- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
-- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [— Tematy porad](brushes-how-to-topics.md)
+- [Przegląd Obiekty Freezable](../advanced/freezable-objects-overview.md)
+- [ImageBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

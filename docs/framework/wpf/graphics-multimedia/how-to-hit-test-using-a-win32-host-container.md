@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadź test trafień za pomocą konteneru hosta Win32'
+title: 'Instrukcje: Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Win32 host containers [WPF], hit tests using
 ms.assetid: 9491f7f3-d8ba-4573-a888-2f064d1349dc
-ms.openlocfilehash: 19526c064efefd80c17fdb4f544b65fcda872bf7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac5cae5bcd94dc8bf80ff95b8971914e1fa5ba2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081466"
 ---
-# <a name="how-to-hit-test-using-a-win32-host-container"></a>Instrukcje: Przeprowadź test trafień za pomocą konteneru hosta Win32
+# <a name="how-to-hit-test-using-a-win32-host-container"></a>Instrukcje: Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32
 Można utworzyć obiektów wizualnych w ramach [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] okna, zapewniając hosta okna kontener dla obiektów wizualnych. Zapewnienie obsługi dla zawartych obiektów wizualnych zdarzeń można przetwarzać komunikaty przesyłane do kontenera okna hosta pętli komunikatów dla filtru. Zapoznaj się [samouczka: Hosting obiektów Visual w aplikacji Win32](tutorial-hosting-visual-objects-in-a-win32-application.md) Aby uzyskać więcej informacji na temat sposobu obsługi obiektów wizualnych w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
   
 ## <a name="example"></a>Przykład  
@@ -35,6 +35,7 @@ Można utworzyć obiektów wizualnych w ramach [!INCLUDE[TLA#tla_win32](../../..
  Aby uzyskać pełny przykład testowania trafień obiektów za pomocą konteneru hosta Win32, zobacz [Test trafień Win32 — współdziałanie przykład](https://go.microsoft.com/fwlink/?LinkID=159995).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Interop.HwndSource>
-- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)
-- [Samouczek: Hosting obiektów Visual w aplikacji Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)
+- [Test trafienia w warstwie Visual](hit-testing-in-the-visual-layer.md)
+- [Samouczek: hosting obiektów Visual w aplikacji Win32](tutorial-hosting-visual-objects-in-a-win32-application.md)

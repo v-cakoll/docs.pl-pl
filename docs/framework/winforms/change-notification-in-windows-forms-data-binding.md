@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: cea6cab76a12d6dbfdc741b426b67859e0e5141e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097580"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
 Jednym z najważniejszych pojęć powiązanie danych formularzy Windows jest *powiadomienie o zmianie*. Aby upewnij się, że źródło danych i formanty powiązane zawsze najnowsze dane, należy dodać powiadomienia o zmianie dla powiązania danych. Aby mieć pewność, że formanty powiązane są powiadamiani o zmianach wprowadzonych do swojego źródła danych i źródła danych jest powiadamiany o zmianach wprowadzonych do powiązanych właściwości kontrolki.  
@@ -33,9 +33,10 @@ Jednym z najważniejszych pojęć powiązanie danych formularzy Windows jest *po
  Na koniec po stronie sterowania należy ujawnić *PropertyName*zmieniono zdarzenia dla każdej właściwości, które mają być powiązane z danymi. Zmiany właściwości kontrolki, następnie są propagowane do źródła powiązane dane. Aby uzyskać więcej informacji, zobacz [jak: Stosowanie wzorca PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>
 - <xref:System.ComponentModel.BindingList%601>
-- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
-- [Źródła danych obsługiwane przez formularze Windows Forms](data-sources-supported-by-windows-forms.md)
-- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
+- [Źródła danych obsługiwane przez formularze systemu Windows](data-sources-supported-by-windows-forms.md)
+- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)

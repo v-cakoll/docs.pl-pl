@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum — Interfejs
+title: ICorDebugEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38aaa21b655136c63a45a7d36c097769882d8c37
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9afaeebfdb98a404ea53b0b5ec147f8c8104e14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148814"
 ---
-# <a name="icordebugenum-interface"></a>ICorDebugEnum — Interfejs
+# <a name="icordebugenum-interface"></a>ICorDebugEnum, interfejs
 
 Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używane przez aplikację do debugowania.  
   
@@ -94,4 +94,5 @@ Służy jako abstrakcyjny interfejs podstawowy dla wyliczenia, które są używa
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

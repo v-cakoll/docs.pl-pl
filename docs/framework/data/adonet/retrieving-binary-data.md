@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085977"
 ---
 # <a name="retrieving-binary-data"></a>Pobieranie danych binarnych
 Domyślnie **DataReader** ładuje przychodzących danych jako wiersz, jak tylko cały wiersz danych jest dostępna. Duże obiekty binarne (BLOB) muszą jednak różnego traktowania, ponieważ zawierają one gigabajtów danych, który nie może się znajdować w jednym wierszu. **Command.ExecuteReader** metoda ma przeciążenia, które będą miały <xref:System.Data.CommandBehavior> argumentu, aby zmodyfikować domyślne zachowanie **DataReader**. Możesz przekazać <xref:System.Data.CommandBehavior.SequentialAccess> do **ExecuteReader** metodę, aby zmodyfikować domyślne zachowanie **DataReader** tak, aby zamiast ładowania wierszy danych, będzie on ładować dane sekwencyjnie po otrzymaniu. Jest to idealne rozwiązanie w przypadku ładowania obiektów blob lub innych struktur dużych ilości danych. Należy pamiętać, że takie zachowanie może zależeć od źródła danych. Na przykład zwracając obiekt BLOB z programu Microsoft Access załaduje cały obiekt BLOB ładowany do pamięci, a nie po kolei, gdy są odbierane.  
@@ -154,5 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dane binarne i dużej wartości w programie SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

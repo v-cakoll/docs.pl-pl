@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171161"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje zdarzenia trasowane terminologii, w tym artykule opisano sposób zdarzenia trasowane są przesyłane za pośrednictwem drzewa elementów, podsumowano, jak obsługiwać zdarzenia trasowane i wyjaśniono, jak tworzyć własne niestandardowe zdarzenia trasowane.
@@ -245,12 +245,13 @@ Dane wejściowe zdarzenia Propagacja i tunelowanie
  W tym temacie omówiono przede wszystkim zdarzeń trasowanych z punktu widzenia zawierająca opis podstawowych pojęć i podzielimy się wskazówkami na temat i odpowiedzieć na zdarzenia trasowane, które są już obecne w różnych elementów podstawowych i kontrolek. Jednak można utworzyć własne zdarzenia trasowanego na klasę niestandardową oraz niezbędne wsparcie, takie jak klas danych zdarzeń wyspecjalizowanych i delegatów. Właściciel zdarzenia trasowanego może być dowolną klasę, ale zdarzenia trasowane musi być wywołane przez i obsługiwane przez <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> klasy pochodne była użyteczna. Aby uzyskać więcej informacji na temat zdarzeń niestandardowych, zobacz [Utwórz niestandardowe zdarzenie kierowane](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
-- [Przegląd danych wejściowych](input-overview.md)
-- [Przegląd poleceń](commanding-overview.md)
+- [Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
+- [Przegląd Dane wejściowe](input-overview.md)
+- [Przegląd Polecenia](commanding-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Drzewa w WPF](trees-in-wpf.md)
 - [Słabe wzorce zdarzeń](weak-event-patterns.md)

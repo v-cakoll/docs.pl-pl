@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bfe84ccb30b13b8232172749454bf8f3625269ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716130"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139207"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Instrukcje: Tworzenie List okien MDI za pomocą elementu MenuStrip (formularze Windows)
 Umożliwia tworzenie aplikacji, które można otworzyć kilku dokumentów, w tym samym czasie i kopiowania i wklejania zawartości z jednego dokumentu do innego interfejsu wielu dokumentów (MDI).  
@@ -30,11 +30,11 @@ Umożliwia tworzenie aplikacji, które można otworzyć kilku dokumentów, w tym
   
 4.  Dodaj element podmenu do `&File` element menu i ustaw jego <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość `&Open`.  
   
-5.  Ustaw <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwość <xref:System.Windows.Forms.MenuStrip> do `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+5.  Ustaw <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> właściwość <xref:System.Windows.Forms.MenuStrip> do `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 6.  Dodawanie formularza do projektu i kontrolka ma do niej dodać, takich jak innego <xref:System.Windows.Forms.MenuStrip>.  
   
-7.  Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia `&New` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+7.  Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 8.  W ramach programu obsługi zdarzeń, Wstaw kod podobne do następujących czynności, aby utworzyć i wyświetlić nowe wystąpienia `Form2` jako elementy podrzędne MDI `Form1`.  
   
@@ -61,7 +61,7 @@ Umożliwia tworzenie aplikacji, które można otworzyć kilku dokumentów, w tym
     }  
     ```  
   
-9. Umieść kod następujący w `&New` <xref:System.Windows.Forms.ToolStripMenuItem> zarejestrować program obsługi zdarzeń.  
+9. Umieść kod następujący w `&New`<xref:System.Windows.Forms.ToolStripMenuItem> zarejestrować program obsługi zdarzeń.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -82,6 +82,7 @@ Umożliwia tworzenie aplikacji, które można otworzyć kilku dokumentów, w tym
 -   Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Instrukcje: Tworzenie formularzy podrzędnych MDI](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip, kontrolka](menustrip-control-windows-forms.md)

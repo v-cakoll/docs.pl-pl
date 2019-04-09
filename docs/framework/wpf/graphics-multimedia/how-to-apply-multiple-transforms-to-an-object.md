@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zastosuj wiele przekształceń do obiektu'
+title: 'Instrukcje: Stosowanie wielu przekształceń do obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - graphics [WPF], grouping Transform objects
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
-ms.openlocfilehash: 19fc87f04ca111f1fd0b6d7a4784fd96b464eb22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26dcd4a64fc7aa2c3cb9cc599ceaef292efb1b6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192767"
 ---
-# <a name="how-to-apply-multiple-transforms-to-an-object"></a>Instrukcje: Zastosuj wiele przekształceń do obiektu
+# <a name="how-to-apply-multiple-transforms-to-an-object"></a>Instrukcje: Stosowanie wielu przekształceń do obiektu
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TransformGroup> do grupy co najmniej dwóch <xref:System.Windows.Media.Transform> obiektów do pojedynczego złożonego <xref:System.Windows.Media.Transform>.  
   
 ## <a name="example"></a>Przykład  
@@ -29,7 +29,8 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TransformGr
  [!code-vb[Transforms_Procedural_snip#MultipleTransformsCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Transforms_Procedural_snip/VisualBasic/MultipleTransformsExample.vb#multipletransformscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
-- [Przekształcenia — przegląd](transforms-overview.md)
+- [Przegląd Przekształcenia](transforms-overview.md)
 - [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)

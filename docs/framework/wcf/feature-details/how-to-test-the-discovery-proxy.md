@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Testowanie serwera proxy odnajdywania'
+title: 'Instrukcje: testowanie serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 3c159481813266386706b34d172bbf9614a8253d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 13d2e8ca46e634e3b27c8eb967d89d860df1c72d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176283"
 ---
-# <a name="how-to-test-the-discovery-proxy"></a>Instrukcje: Testowanie serwera proxy odnajdywania
+# <a name="how-to-test-the-discovery-proxy"></a>Instrukcje: testowanie serwera proxy odnajdywania
 Jest to czwarta cztery tematy, pokazujący sposób wdrażania serwera proxy odnajdywania. W poprzednim temacie [jak: Wdrażanie aplikacji klienta, który używa serwera Proxy odnajdywania można znaleźć usługi](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), zaimplementować aplikację kliencką usługi WCF, która używa serwera proxy odnajdywania można znaleźć usługi, a następnie wywołuje usługę. W tym temacie opisano sposób weryfikacji serwera proxy odnajdywania, usługi i klienta aplikacji działają zgodnie z oczekiwaniami.  
   
 ### <a name="run-the-discovery-proxy"></a>Uruchamianie serwera Proxy odnajdywania  
@@ -51,7 +51,8 @@ Jest to czwarta cztery tematy, pokazujący sposób wdrażania serwera proxy odna
 3.  Zamknij serwera proxy odnajdywania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Instrukcje: Wdrażanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Instrukcje: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [Instrukcje: Wdrażanie aplikacji klienta, który używa serwera Proxy odnajdywania można znaleźć usługi](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [Instrukcje: wdrażanie serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Instrukcje: implementowanie odnajdywanej usługi rejestrowanej za pomocą serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

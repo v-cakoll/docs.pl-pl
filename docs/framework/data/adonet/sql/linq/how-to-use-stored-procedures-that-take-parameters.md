@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181769"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Instrukcje: Używanie procedur składowanych, które przyjmują parametry
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje parametry wyjściowe można odwoływać się do parametrów, a dla typów wartości deklaruje parametr jako dopuszczającego wartość null.  
@@ -40,7 +40,8 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Używanie typów dopuszczających wartości null](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Typy wartości dopuszczających wartości null](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Używanie typów dopuszczających wartości zerowe](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Typy o wartości zerowalnej](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

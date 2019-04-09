@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087277"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Systemy Pomocy w aplikacjach formularzy systemu Windows
 Jeden najważniejszych courtesies, zgodnie z deweloperem aplikacji, mogą dostarczyć użytkownikom jest właściwy system pomocy. Jest to, gdzie spowoduje wyłączenie, gdy stają się mylić lub disoriented. Zapewnianie system pomocy w aplikacji z systemem Windows można łatwo przeprowadzić za pomocą [HelpProvider, składnik](../controls/helpprovider-component-windows-forms.md).  
@@ -24,8 +24,9 @@ Jeden najważniejszych courtesies, zgodnie z deweloperem aplikacji, mogą dostar
  Można wygenerować plików 1.x pomocy HTML za pomocą HTML Help Workshop. Aby uzyskać więcej informacji na temat Pomocy HTML zobacz "HTML Help Workshop" lub w innych tematach "HTML Help" w bibliotece MSDN.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Integrowanie pomocy użytkownika z formularzami Windows Forms](integrating-user-help-in-windows-forms.md)
+
+- [Integrowanie pomocy użytkownika z formularzami systemu Windows](integrating-user-help-in-windows-forms.md)
 - [HelpProvider, składnik](../controls/helpprovider-component-windows-forms.md)
-- [ToolTip, składnik](../controls/tooltip-component-windows-forms.md)
-- [Windows Forms — omówienie](../windows-forms-overview.md)
+- [ToolTip — Składnik](../controls/tooltip-component-windows-forms.md)
+- [Formularze systemu Windows — Omówienie](../windows-forms-overview.md)
 - [Windows Forms](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj SystemParameters'
+title: 'Instrukcje: Używanie elementu SystemParameters'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199859"
 ---
-# <a name="how-to-use-systemparameters"></a>Instrukcje: Użyj SystemParameters
+# <a name="how-to-use-systemparameters"></a>Instrukcje: Używanie elementu SystemParameters
 W tym przykładzie pokazano, jak uzyskać dostęp do właściwości <xref:System.Windows.SystemParameters> do nadawania stylu lub dostosować przycisku.  
   
 ## <a name="example"></a>Przykład  
@@ -32,8 +32,9 @@ W tym przykładzie pokazano, jak uzyskać dostęp do właściwości <xref:System
  [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.SystemParameters>
 - [Malowanie obszaru pędzlem systemowym](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Używanie elementu SystemFonts](how-to-use-systemfonts.md)
 - [Używanie kluczy parametrów systemowych](how-to-use-system-parameters-keys.md)
-- [Tematy z instrukcjami](resources-how-to-topics.md)
+- [— Tematy porad](resources-how-to-topics.md)

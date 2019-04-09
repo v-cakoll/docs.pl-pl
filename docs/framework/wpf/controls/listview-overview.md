@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186501"
 ---
 # <a name="listview-overview"></a>ListView — Przegląd
 <xref:System.Windows.Controls.ListView> Control oferuje infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków. Na przykład użytkownik może być do wyświetlenia elementów danych w tabeli, a także do sortowania kolumn.  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>Co to jest ListView?  
  <xref:System.Windows.Controls.ListView> Formant jest <xref:System.Windows.Controls.ItemsControl> , jest tworzony na podstawie <xref:System.Windows.Controls.ListBox>. Zwykle, jego elementy są członkami kolekcji danych i są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów. A <xref:System.Windows.Controls.ListViewItem> jest <xref:System.Windows.Controls.ContentControl> i może zawierać tylko jeden typ elementów podrzędnych. Jednak ten element podrzędny może mieć każdy element wizualny.  
@@ -82,10 +81,11 @@ ms.locfileid: "58186120"
  Dostosowane widoki, takich jak <xref:System.Windows.Controls.GridView> są uzyskiwane z <xref:System.Windows.Controls.ViewBase> abstrakcyjnej klasy, która udostępnia narzędzia umożliwiające wyświetlanie elementów danych, które są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów.    
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
-- [GridView — omówienie](gridview-overview.md)
-- [Tematy z instrukcjami](listview-how-to-topics.md)
-- [Kontrolki](../advanced/optimizing-performance-controls.md)
+- [GridView — Przegląd](gridview-overview.md)
+- [— Tematy porad](listview-how-to-topics.md)
+- [Formanty](../advanced/optimizing-performance-controls.md)

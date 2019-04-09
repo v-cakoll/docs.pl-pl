@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828202"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074979"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Instrukcje: Ustawianie szerokości i wyrównania pióra
 Po utworzeniu <xref:System.Drawing.Pen>, szerokość pióra można podać jako jeden z argumentów do konstruktora. Możesz również zmienić szerokość z <xref:System.Drawing.Pen.Width%2A> właściwość <xref:System.Drawing.Pen> klasy.  
@@ -58,5 +58,6 @@ Po utworzeniu <xref:System.Drawing.Pen>, szerokość pióra można podać jako j
      ![Prostokąt z czarnym wiersze z szerokiego zieloną linią wewnątrz.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)

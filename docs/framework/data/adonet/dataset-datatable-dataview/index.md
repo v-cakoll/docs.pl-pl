@@ -2,12 +2,12 @@
 title: Elementy DataSet, DataTable i DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 098dc3ec198edc84b67ae3ed9d2610b2386a3205
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105732"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
 ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia spójny model programowania relacyjnych niezależnie od źródła danych zawiera dane. A <xref:System.Data.DataSet> przedstawia kompletny zestaw danych w tym tabel, które zawierają, kolejność i Zachowaj dane, jak również relacje między tabelami.  
@@ -72,12 +72,13 @@ ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia sp�
  [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Zawiera opis sposobu ładowania **DataSet** z danymi ze źródła danych.  
   
- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Aktualizowanie źródeł danych za pomocą elementów DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Opisuje sposób rozwiązywania zmiany z danymi w **DataSet** wstecz do źródła danych.  
   
  [Dodawanie istniejących ograniczeń do zestawu danych](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Zawiera opis sposobu wypełniania **DataSet** o informacje o kluczu podstawowym ze źródła danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

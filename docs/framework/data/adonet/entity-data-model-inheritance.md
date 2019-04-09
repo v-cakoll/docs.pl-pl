@@ -2,12 +2,12 @@
 title: 'Model danych jednostki: Dziedziczenie'
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
-ms.openlocfilehash: bc0467ea1b242c13e00e115f07ccbc5c840df936
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083819"
 ---
 # <a name="entity-data-model-inheritance"></a>Model danych jednostki: Dziedziczenie
 Entity Data Model (EDM) obsługuje dziedziczenie [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md). Dziedziczenie w EDM jest podobny do dziedziczenia klas w językach programowania obiektowego. Tak jak w przypadku klas w językach obiektowych w modelu koncepcyjnym można zdefiniować typ jednostki ( *typu pochodnego*) który dziedziczy z innego typu jednostki ( *typ podstawowy*). Jednak w odróżnieniu od klas w programowanie zorientowane obiektowo, w modelu koncepcyjnym Typ pochodny zawsze dziedziczy wszystkie [właściwości](../../../../docs/framework/data/adonet/property.md) i [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) typu podstawowego. Nie można zastąpić właściwości dziedziczonych w typie pochodnym.  
@@ -27,5 +27,6 @@ Na poniższym diagramie przedstawiono model koncepcyjny przy użyciu czterech ty
  [!code-xml[EDM_Example_Model#DerivedType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books5.edmx#derivedtype)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

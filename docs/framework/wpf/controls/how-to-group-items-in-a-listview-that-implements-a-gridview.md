@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Grupuj elementy w ListView, który implementuje GridView'
+title: 'Instrukcje: Grupowanie elementów w kontrolce ListView z implementacją GridView'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], grouping items with GridViews
 - grouping items in ListViews implementing GridViews [WPF]
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
-ms.openlocfilehash: 3989f0fcdaf2e3d3003aca9feb27cbf02f949389
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b3dd6891976a942b299c87fca25e430e9ee59a51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177674"
 ---
-# <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Instrukcje: Grupuj elementy w ListView, który implementuje GridView
+# <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Instrukcje: Grupowanie elementów w kontrolce ListView z implementacją GridView
 W tym przykładzie przedstawiono sposób wyświetlania grup elementów na liście <xref:System.Windows.Controls.GridView> tryb widoku <xref:System.Windows.Controls.ListView> kontroli.  
   
 ## <a name="example"></a>Przykład  
@@ -27,8 +27,9 @@ W tym przykładzie przedstawiono sposób wyświetlania grup elementów na liści
 [!code-xaml[GridViewWithGroups#ListViewEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/GridViewWithGroups/CS/Window1.xaml#listviewend)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Tematy z instrukcjami](listview-how-to-topics.md)
-- [ListView — omówienie](listview-overview.md)
-- [GridView — omówienie](gridview-overview.md)
+- [— Tematy porad](listview-how-to-topics.md)
+- [ListView — Przegląd](listview-overview.md)
+- [GridView — Przegląd](gridview-overview.md)

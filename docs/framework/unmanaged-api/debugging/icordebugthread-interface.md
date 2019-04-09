@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread — Interfejs
+title: ICorDebugThread, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f2223230b18f175427bfbfeaa46bf1406d8c7e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: db322bbdc7293410968542d0d22c572edb87795a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184707"
 ---
-# <a name="icordebugthread-interface"></a>ICorDebugThread — Interfejs
+# <a name="icordebugthread-interface"></a>ICorDebugThread, interfejs
 Reprezentuje wątek w procesie. Okres istnienia `ICorDebugThread` wystąpienie jest taki sam, jak okres istnienia wątku, który reprezentuje.  
   
 ## <a name="methods"></a>Metody  
@@ -41,7 +41,7 @@ Reprezentuje wątek w procesie. Okres istnienia `ICorDebugThread` wystąpienie j
 |[GetDebugState, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getdebugstate-method.md)|Pobiera wartość cordebugthreadstate —, który opisuje bieżący stan debugowania tego `ICorDebugThread`.|  
 |[GetHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-gethandle-method.md)|Pobiera bieżący uchwytu dla części active `ICorDebugThread`.|  
 |[GetID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getid-method.md)|Pobiera identyfikator bieżącego systemu operacyjnego części active `ICorDebugThread`.|  
-|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getobject-method.md)|Pobiera wskaźnik interfejsu do wspólnym mianownikiem języka wspólnego (CLR).|  
+|[GetObject — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getobject-method.md)|Pobiera wskaźnik interfejsu do wspólnym mianownikiem języka wspólnego (CLR).|  
 |[GetProcess, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getprocess-method.md)|Pobiera wskaźnik interfejsu do procesu, którego należy to `ICorDebugThread` część stanowi.|  
 |[GetRegisterSet, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getregisterset-method.md)|Pobiera wskaźnik interfejsu do zestawu rejestru skojarzonych z tym `ICorDebugThread`.|  
 |[GetUserState, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)|Pobiera bitowa kombinacja wartości cordebuguserstate —, które opisują bieżący stan to `ICorDebugThread`.|  
@@ -62,4 +62,5 @@ Reprezentuje wątek w procesie. Okres istnienia `ICorDebugThread` wystąpienie j
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

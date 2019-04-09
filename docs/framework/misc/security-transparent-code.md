@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075941"
 ---
 # <a name="security-transparent-code"></a>Kod o przezroczystym poziomie bezpieczeństwa
 <a name="top"></a>
@@ -107,5 +107,6 @@ ms.locfileid: "54510120"
  Zasady przezroczystości nie są wymuszane aż do wyliczenia przezroczystości. W tym czasie <xref:System.InvalidOperationException> jest generowany, jeśli zostanie naruszona zasada przejrzystości. Czas, który przezroczystości zależy od wielu czynników i nie można przewidzieć. Jest ona obliczana jak najpóźniej. W [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], obliczenia przejrzystości na poziomie zestawu odbywa się szybciej niż w programie .NET Framework 2.0. Jedyną gwarancją jest to, że obliczenia przejrzystości nastąpi przez razem, gdy jest to konieczne. Jest to podobne do jak kompilator just-in-time (JIT) może zmienić punkt gdy metoda jest kompilowana, a wykryto jakieś błędy w tej metodzie. Obliczanie przezroczystości jest niewidoczne, jeśli kod nie ma błędów przezroczystości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kod o przezroczystym poziomie bezpieczeństwa, poziom 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Kod o przezroczystym poziomie bezpieczeństwa, poziom 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

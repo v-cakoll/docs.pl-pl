@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Twórz tabele za pomocą programowania'
+title: 'Instrukcje: Programowe tworzenie tabeli'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-ms.openlocfilehash: 3848032bf527f64ce591eb2cda98028c835d79f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172630"
 ---
-# <a name="how-to-build-a-table-programmatically"></a>Instrukcje: Twórz tabele za pomocą programowania
+# <a name="how-to-build-a-table-programmatically"></a>Instrukcje: Programowe tworzenie tabeli
 W poniższych przykładach pokazano, jak programowo utworzyć <xref:System.Windows.Documents.Table> i wypełnianie jej zawartości. Zawartość tej tabeli są rozdzielone na pięć wierszy (reprezentowane przez <xref:System.Windows.Documents.TableRow> obiektów zawartych w <xref:System.Windows.Documents.Table.RowGroups%2A> obiekt) i 6 kolumn (reprezentowane przez <xref:System.Windows.Documents.TableColumn> obiektów). Wiersze są używane do celów innej prezentacji, w tym wiersz tytułu przeznaczone do tytułu całą tabelę, wiersz nagłówka do opisania kolumn danych w tabeli i wiersz stopki z podsumowaniem.  Należy pamiętać, że pojęcie "title", "header" i "stopka" wierszy nie są wbudowane w tabeli; są to po prostu wiersze o różnej charakterystyce. Komórki tabeli zawierają rzeczywistej zawartości może składać się z tekstu, obrazów lub niemal każdy inny [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] elementu.  
   
 ## <a name="example"></a>Przykład  
@@ -57,4 +57,5 @@ W poniższych przykładach pokazano, jak programowo utworzyć <xref:System.Windo
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd tabeli](table-overview.md)
+
+- [Przegląd Tabela](table-overview.md)

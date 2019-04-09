@@ -2,12 +2,12 @@
 title: Interfejs API sieci Web programu WCF i platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192007"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>Interfejs API sieci Web programu WCF i platformy ASP.NET
 Usługi WCF jest jednolity model programowania firmy Microsoft do budowania aplikacji usługowych. Umożliwia deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjnych, które integrują się na platformach oraz współpraca z istniejących inwestycji. [ASP.NET Web API](https://www.asp.net/web-api) to struktura, która ułatwia tworzenie usług HTTP, docierających do szerokiej gamy klientów, w tym przeglądarek i urządzeń przenośnych. Web API platformy ASP.NET jest idealną platformą do tworzenia aplikacji typu RESTful na .NET Framework. W tym temacie przedstawiono wskazówki pomagające w podjęciu decyzji, technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  
@@ -27,5 +27,6 @@ Usługi WCF jest jednolity model programowania firmy Microsoft do budowania apli
  Użyj usługi WCF do tworzenia usług niezawodnej, bezpiecznej sieci web, które są dostępne za pośrednictwem różnych transportów. Do tworzenia usług opartych na protokole HTTP, które są dostępne z szerokiej gamy klientów, należy użyć interfejsu API sieci Web platformy ASP.NET. Jeśli tworzenie i projektowanie nowych usług opartego na interfejsie REST, należy użyć interfejsu API sieci Web platformy ASP.NET. Chociaż WCF niektóre pomocy technicznej dotyczące pisania usługi typu REST, obsługa PRZECHOWYWANYCH na interfejs API sieci Web platformy ASP.NET jest bardziej szczegółowy, a wszystkie przyszłe ulepszenia funkcji REST, które zostaną wprowadzone w Web API platformy ASP.NET. Jeśli masz istniejącą usługę WCF i chcesz udostępnić dodatkowe punkty końcowe REST, należy użyć programu WCF i <xref:System.ServiceModel.WebHttpBinding>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
 - [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

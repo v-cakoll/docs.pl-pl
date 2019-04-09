@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109801"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowane zasoby w aplikacjach pulpitu .NET Framework, należy najlepiej pakietów zasobów dla kultury neutralnej lub domyślne przy użyciu zestawu głównego i utworzyć zestaw satelicki osobne dla każdego języka lub kultury, którą obsługuje aplikacja. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli nie chcesz osadzić zasobów w głównym zestawie i zestawy satelickie, można również przejść binarnych plików Resources bezpośrednio, zgodnie z opisem w sekcji [pobieranie zasobów z plików Resources](#from_file) później w tym artykuł.  Aby pobrać zasoby w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów Windows.  
@@ -202,6 +202,7 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Resources.ResourceManager>
 - [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
 - [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

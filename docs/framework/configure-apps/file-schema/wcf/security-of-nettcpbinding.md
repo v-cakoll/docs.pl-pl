@@ -2,12 +2,12 @@
 title: <security> z <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: be3417296a401c002e59487cd4903e15e6301a63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199079"
 ---
 # <a name="security-of-nettcpbinding"></a>\<Zabezpieczenia > z \<netTcpBinding >
 Definiuje ustawienia zabezpieczeń dla powiązania.  
@@ -68,6 +68,7 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
  Ten element konfiguracji zawiera specyfikacje zabezpieczeń `netTcpBinding`. Jest to bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami. Domyślnie generuje stosu komunikacji środowiska uruchomieniowego obsługi protokołu TCP dla dostarczania wiadomości i zabezpieczeń Windows dla zabezpieczenia wiadomości i każde uwierzytelnienie, WS-ReliableMessaging, niezawodność i kodowania komunikatu binarnego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.NetTcpSecurity>
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>
@@ -75,5 +76,5 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

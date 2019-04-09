@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174814"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -31,8 +31,9 @@ ms.locfileid: "57708850"
  <xref:System.Windows.Forms.ToolBar> Kontroli pozwala na tworzenie pasków narzędzi, dodając <xref:System.Windows.Forms.Button> obiekty do <xref:System.Windows.Forms.ToolBar.Buttons%2A> kolekcji. Edytor kolekcji można użyć, aby dodać przyciski do <xref:System.Windows.Forms.ToolBar> formantu; każdy <xref:System.Windows.Forms.Button> obiektu powinien mieć tekst lub obraz, który został przypisany, chociaż można przypisać obu. Obraz, który jest dostarczany przez skojarzony [ImageList](imagelist-component-windows-forms.md) składnika. W czasie wykonywania, można dodawać i usuwać przycisków z <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> przy użyciu <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> i <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> metody. Program przycisków <xref:System.Windows.Forms.ToolBar>, Dodaj kod, aby <xref:System.Windows.Forms.ToolBar.ButtonClick> zdarzenia <xref:System.Windows.Forms.ToolBar>przy użyciu <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> właściwość <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> klasę, aby określić, której przycisk został kliknięty.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolBar>
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
-- [Instrukcje: Dodawanie przycisków do formantu ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
-- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)
+- [Instrukcje: dodawanie przycisków do kontrolki ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Instrukcje: określanie ikony dla przycisku ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)

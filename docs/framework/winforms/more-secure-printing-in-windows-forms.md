@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: 2fd61ea1c56ee2dbe7ff725d9f9f79df6b6cdfd8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5ee170980ed02d90606c774e2a7055f047292e33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197363"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Bezpieczniejsze drukowanie w formularzach systemu Windows
 Aplikacje Windows Forms często zawierają możliwości drukowania. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa <xref:System.Drawing.Printing.PrintingPermission> klasy, aby kontrolować dostęp do możliwości drukowania oraz skojarzonych z nimi <xref:System.Drawing.Printing.PrintingPermissionLevel> wartości wyliczenia, aby wskazać poziom dostępu. Domyślnie program drukowania jest domyślnie włączone w strefy Lokalny Intranet i Internet poziom dostępu jest jednak ograniczone obie strefy. Czy aplikację można wydrukować, wymaga interakcji z użytkownikiem lub nie wydruku zależy od wartości uprawnienia nadane aplikacji. Domyślnie, otrzymuje lokalnej strefy intranetowej <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> otrzymuje dostęp i w strefie intranetowej <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> dostępu.  
@@ -27,7 +27,8 @@ Aplikacje Windows Forms często zawierają możliwości drukowania. [!INCLUDE[dn
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|Uniemożliwia dostęp do drukarki. <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> jest podzbiorem <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>.|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Bezpieczniejszy dostęp do plików i danych w formularzach Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
-- [Dodatkowe zagadnienia z zakresu zabezpieczeń dotyczące formularzy Windows Forms](additional-security-considerations-in-windows-forms.md)
-- [Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)
-- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
+
+- [Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows](more-secure-file-and-data-access-in-windows-forms.md)
+- [Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows](additional-security-considerations-in-windows-forms.md)
+- [Przegląd zabezpieczeń w formularzach systemu Windows](security-in-windows-forms-overview.md)
+- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)

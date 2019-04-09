@@ -1,18 +1,18 @@
 ---
-title: Elementy DataRow i Datarowview
+title: Elementy DataRow i DataRowView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: b7f92c0341a63df6bb5553d656469b374755aae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096358"
 ---
-# <a name="datarows-and-datarowviews"></a>Elementy DataRow i Datarowview
+# <a name="datarows-and-datarowviews"></a>Elementy DataRow i DataRowView
 A <xref:System.Data.DataView> udostępnia wyliczalny zbiór <xref:System.Data.DataRowView> obiektów. **DataRowView** obiektów Uwidacznianie wartości jako tablice obiektów, które są indeksowane według nazwy lub odwołania porządkowego kolumny w tabeli podstawowej. Możesz uzyskać dostęp <xref:System.Data.DataRow> , jest uwidaczniany przez **DataRowView** przy użyciu <xref:System.Data.DataRowView.Row%2A> właściwość **DataRowView**.  
   
  Podczas wyświetlania wartości przy użyciu **DataRowView**, <xref:System.Data.DataView.RowStateFilter%2A> właściwość **DataView** Określa, którą wersję wiersza elementu bazowego **DataRow** jest widoczna. Uzyskać informacji na temat uzyskiwania dostępu do wersji innego wiersza przy użyciu **DataRow**, zobacz [stany wiersza i wersje wiersza](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
@@ -60,6 +60,7 @@ public static void WriteView(DataView thisDataView)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>

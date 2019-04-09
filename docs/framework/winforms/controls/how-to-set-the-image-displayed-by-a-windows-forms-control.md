@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie obrazu wyświetlanego przez kontrolki formularzy Windows Forms'
+title: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085093"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Instrukcje: Ustawianie obrazu wyświetlanego przez kontrolki formularzy Windows Forms
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows
 Kilka kontrolek Windows Forms można wyświetlać obrazy. Obrazy te można ikony, które wyjaśnienie przeznaczenia kontrolki, takie jak ikonę dyskietki na przycisku określające elementy **Zapisz** polecenia. Alternatywnie ikony może być obrazów tła do zapewnienia kontroli, wygląd i zachowanie, które chcesz.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Aby ustawić obrazu wyświetlanego przez kontrolkę  
@@ -57,6 +57,7 @@ Kilka kontrolek Windows Forms można wyświetlać obrazy. Obrazy te można ikony
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

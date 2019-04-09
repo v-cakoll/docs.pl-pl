@@ -2,12 +2,12 @@
 title: ANYELEMENT (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 475a9ad6-8c8d-4f49-9970-af273e5360f1
-ms.openlocfilehash: 16dbccf66413776af73f0b84463f9a56d2cee360
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4dcbb80a9a850d193bfa88265a27a43c26869afe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196160"
 ---
 # <a name="anyelement-entity-sql"></a>ANYELEMENT (jednostka SQL)
 Wyodrębnia element z kolekcji wielowartościowych.  
@@ -42,5 +42,6 @@ ANYELEMENT(Customers)
  [!code-csharp[DP EntityServices Concepts 2#ANYELEMENT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#anyelement)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Typy strukturalne dopuszczające wartości Null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)

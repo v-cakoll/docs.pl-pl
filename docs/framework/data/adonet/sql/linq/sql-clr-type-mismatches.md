@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700952"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172890"
 ---
 # <a name="sql-clr-type-mismatches"></a>Niezgodność typu SQL CLR
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatyzuje większość tłumaczenie między model obiektu i programu SQL Server. Niemniej jednak czasami uniemożliwić dokładnego tłumaczenia. Tych kluczy niezgodności między wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) typów i typów bazy danych programu SQL Server są podsumowywane w poniższych sekcjach. Można znaleźć więcej szczegółów na temat mapowania określony typ i funkcję tłumaczenia w [mapowanie typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) i [typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
@@ -59,7 +59,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
  Poniższe podsekcje ilustrują niezgodność między najwyraźniej podobne wyrażenia. Może być można wygenerować wyrażenia SQL, które są semantycznie równoważne z danego wyrażenia CLR. Jednak nie jest jasne czy semantyczne różnice między najwyraźniej podobne wyrażenia są widoczne dla użytkownika CLR i w związku z tym tego, czy zmiany, które są wymagane dla semantyki równoważności mają czy nie. Jest to problem szczególnie istotne, gdy wyrażenie jest obliczane dla zestawu wartości. Wgląd w różnicy może zależeć od danych — i być trudne do zidentyfikowania się podczas kodowania i debugowania.  
   
-### <a name="null-semantics"></a>Semantyka wartości null  
+### <a name="null-semantics"></a>Semantyka wartości Null  
  Wyrażenia SQL Podaj przechowywanymi w trzech logiki dla wyrażeń logicznych. Wynik może być wartość true, false lub wartość null. Z drugiej strony CLR określa przechowywanymi w dwóch logiczną wynik porównania używające wartości null. Rozważmy poniższy kod:  
   
  [!code-csharp[DLinqMismatch#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#2)]
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  Oprócz semantyczne różnice należy wziąć pod uwagę wpływ na wydajność przy przekraczaniu między programu SQL Server i systemów typu CLR. Dla dużych zestawów danych takie problemy z wydajnością można określić, czy aplikacja ma do wdrożenia.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

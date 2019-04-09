@@ -2,12 +2,12 @@
 title: Dynamiczne włączanie śledzenia danych analitycznych
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: 42d238c704910c2406eb580c2ce102e5e84ed0f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197480"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Dynamiczne włączanie śledzenia danych analitycznych
 Za pomocą narzędzia, które są dostarczane z systemem operacyjnym Windows, można włączyć lub wyłączyć śledzenie dynamicznie przy użyciu śledzenie zdarzeń dla Windows (ETW). Dla wszystkich [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] usług Windows Communication Foundation (WCF), może być śledzenie danych analitycznych, włączone i wyłączone dynamicznie bez modyfikowania pliku Web.config aplikacji i ponowne uruchomienie usługi. Umożliwia to aplikacji, który emituje zdarzenia śledzenia, aby zachować prawidłowe.  
@@ -20,7 +20,7 @@ Za pomocą narzędzia, które są dostarczane z systemem operacyjnym Windows, mo
   
 -   **Monitora wydajności** — narzędzie do zarządzania w trybie graficznym Windows, które używa liczników, liczniki śledzenia monitora i efekty śledzenia na wydajność. Aby uzyskać więcej informacji, zobacz [danych moduł zbierający zestawu ręcznie utworzyć](https://go.microsoft.com/fwlink/?LinkId=165429).  
   
-### <a name="keywords"></a>Słowa kluczowe  
+### <a name="keywords"></a>słowa kluczowe  
  Korzystając z <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> klasy .NET Framework komunikaty śledzenia zazwyczaj są filtrowane według poziom ważności (na przykład błędu, ostrzeżenia i informacje). ETW obsługuje pojęcie poziom ważności, ale wprowadza mechanizm filtrowania nowego, elastycznego za pomocą słów kluczowych. Słowa kluczowe są dowolne wartości tekstowej, umożliwiających zdarzenia śledzenia zapewnić dodatkowy kontekst informacji na temat znaczenia tego zdarzenia.  
   
  Śledzenie danych analitycznych programu WCF, każde zdarzenie śledzenia ma dwa typy słów kluczowych. Po pierwsze każde zdarzenie ma jeden lub więcej słów kluczowych scenariusza. Te słowa kluczowe oznaczają scenariusze, to zdarzenie jest przeznaczony do obsługi. Istnieją trzy scenariusz słów kluczowych, każdy tak zaprojektowany w określonym celu, jak pokazano w poniższej tabeli. Filtrowanie przy użyciu słów kluczowych można zmienić dynamicznie bez zakłócania działania usługi WCF. Oznacza to, że będzie można dynamicznie zmieniać Twojego bieżącego scenariusza śledzenia i ilość informacji śledzenia, które zostały zebrane. Na przykład można zmienić `HealthMonitoring` do `Troubleshooting` i zwiększenie szczegółowości śledzenia zdarzeń.  
@@ -41,4 +41,5 @@ Za pomocą narzędzia, które są dostarczane z systemem operacyjnym Windows, mo
 |`WCFMessageLogging`|Zdarzenia rejestrowania komunikatów WCF.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi i śledzenie zdarzeń programu WCF dla systemu Windows](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)

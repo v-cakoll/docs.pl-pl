@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc58e5b7902195860505399b8222afc068fbfc23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 200da8b87b52a29c2b075d1e06929031d3f588b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174229"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager — Interfejs
 Udostępnia metody, które umożliwiają środowisko uruchomieniowe języka wspólnego (CLR) do tworzenia podstawowych synchronizacji przez wywołanie metody hosta, zamiast korzystać z funkcji synchronizacji systemu Win32.  
@@ -53,5 +53,6 @@ Udostępnia metody, które umożliwiają środowisko uruchomieniowe języka wsp�
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICLRSyncManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [ICLRSyncManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustaw właściwość po zanimowaniu jej za pomocą scenorysu'
+title: 'Instrukcje: Ustawianie właściwości po zanimowaniu jej za pomocą scenorysu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-ms.openlocfilehash: 1f66c79f18fd02327c0c1f4f20787e566437f20f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359435"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188321"
 ---
-# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Instrukcje: Ustaw właściwość po zanimowaniu jej za pomocą scenorysu
+# <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Instrukcje: Ustawianie właściwości po zanimowaniu jej za pomocą scenorysu
 W niektórych przypadkach może pojawić się, nie można zmienić wartości właściwości po ma zostać animowany.  
   
 ## <a name="example"></a>Przykład  
@@ -63,8 +63,9 @@ W niektórych przypadkach może pojawić się, nie można zmienić wartości wł
  Ta metoda działa również w animacji nie scenorys.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>
 - <xref:System.Windows.Media.Animation.Storyboard.Remove%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.Animation.RemoveStoryboard>
-- [Animacja — przegląd](animation-overview.md)
-- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)

@@ -2,12 +2,12 @@
 title: Walidacja klienta
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
-ms.openlocfilehash: b033695065dfeb130f041563909704acb84bb3be
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 637b6bd26407feb3213503310396a20bf1c8bdcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177336"
 ---
 # <a name="client-validation"></a>Walidacja klienta
 Usługi często Publikowanie metadanych, aby włączyć automatyczne generowanie i konfigurowanie typów serwera proxy klienta. Jeśli usługa nie jest zaufany, aplikacje klienckie należy zweryfikować, że metadane odpowiada aplikacji klienta zasady dotyczące zabezpieczeń, transakcje, typ kontraktu usługi i tak dalej. W poniższym przykładzie pokazano, jak napisać klienta zachowanie punktu końcowego, która weryfikuje punktu końcowego usługi, aby upewnić się, że punkt końcowy usługi jest bezpieczny w użyciu.  
@@ -64,4 +64,5 @@ Usługi często Publikowanie metadanych, aby włączyć automatyczne generowanie
     >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Jeśli uruchamiasz przykłady WCF, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople przechowywania. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie godziny za pomocą formantu DateTimePicker'
+title: 'Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: a88b93dfe5296873fa3503fbeb020118f2606859
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5163ca3eb04732152960c86c9a7428d87c6280f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083040"
 ---
-# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Instrukcje: Wyświetlanie godziny za pomocą formantu DateTimePicker
+# <a name="how-to-display-time-with-the-datetimepicker-control"></a>Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker
 Jeśli chcesz, aby umożliwić użytkownikom wybranie daty i godziny, do wyświetlenia tej daty i godziny w określonym formacie, należy użyć aplikacji <xref:System.Windows.Forms.DateTimePicker> kontroli. Poniższa procedura przedstawia sposób użycia <xref:System.Windows.Forms.DateTimePicker> formantu, aby wyświetlić czas.  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>Aby wyświetlić czas za pomocą formantu DateTimePicker  
@@ -45,4 +45,5 @@ Jeśli chcesz, aby umożliwić użytkownikom wybranie daty i godziny, do wyświe
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DateTimePicker, kontrolka](datetimepicker-control-windows-forms.md)

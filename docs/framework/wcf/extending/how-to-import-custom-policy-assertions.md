@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Importowanie niestandardowych asercji zasad'
+title: 'Instrukcje: importowanie niestandardowych asercji zasad'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073627"
 ---
-# <a name="how-to-import-custom-policy-assertions"></a>Instrukcje: Importowanie niestandardowych asercji zasad
+# <a name="how-to-import-custom-policy-assertions"></a>Instrukcje: importowanie niestandardowych asercji zasad
 Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usługi.  Klient aplikacje mogą używać asercji zasad w metadanych usługi, aby skonfigurować klienta powiązanie lub dostosować kontraktu usługi dla punktu końcowego usługi.  
   
  Niestandardowych asercji zasad są importowane przez zaimplementowanie <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interfejsu i przekazanie tego obiektu, do systemu metadanych lub przez rejestrowanie wykonania typu w pliku konfiguracyjnym aplikacji.  Implementacje <xref:System.ServiceModel.Description.IPolicyImportExtension> interfejs musi dostarczyć konstruktora domyślnego.  
@@ -64,6 +64,7 @@ Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usł
 1.  Dodaj importera <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> właściwości (na przykład, jeśli używasz <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>) przed zaimportowaniem metadanych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e382dbadc3acf6ca4bc7cad2ca37d58125a82be2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c7acf08262c73df00a96cfb5c244cdfc352e51ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080484"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>Metoda ICorDebugDataTarget2::GetImageLocation
 Zwraca ścieżkę modułu z adresu podstawowego modułu.  
@@ -52,5 +52,6 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
  **Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugDataTarget2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Interfejs ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

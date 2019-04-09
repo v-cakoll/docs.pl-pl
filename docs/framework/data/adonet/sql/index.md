@@ -2,12 +2,12 @@
 title: SQL Server i ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: c9b935e6a8c86c5c8f31a856b2bd4af04b9455fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f30d9d715a2d94deee788f92cfc8eed0cba706de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743585"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172773"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server i ADO.NET
 W tej sekcji opisano funkcji i zachowań, które są specyficzne dla dostawcy danych programu .NET Framework dla programu SQL Server (<xref:System.Data.SqlClient>).  
@@ -33,7 +33,7 @@ W tej sekcji opisano funkcji i zachowań, które są specyficzne dla dostawcy da
  [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  W tym artykule opisano funkcje programu SQL Server, które są przydatne dla deweloperów aplikacji ADO.NET.  
   
- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  W tym artykule opisano podstawowe bloki konstrukcyjne, procesów i technik wymagane do utworzenia LINQ do SQL aplikacji.  
   
  Aby uzyskać pełną dokumentację aparatu bazy danych programu SQL Server zobacz programu SQL Server — książki Online dla wersji programu SQL Server, którego używasz.  
@@ -41,6 +41,7 @@ W tej sekcji opisano funkcji i zachowań, które są specyficzne dla dostawcy da
  [SQL Server Books Online](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Mapowanie typu danych w ADO.NET](../../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)

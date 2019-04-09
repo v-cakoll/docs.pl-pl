@@ -3,12 +3,12 @@ title: Dopasowanie wzorca — Przewodnik po języku C#
 description: Dowiedz się więcej o wyrażeniach w języku C# dopasowania do wzorca
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: eccc982c94a1f124d7250e1795a44d696e43a53c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3bd5144d2ecb65c762dfa81e205982b99d901022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191604"
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca
 
@@ -135,4 +135,3 @@ Jest jednym z przykładów których warto wziąć pod uwagę `var` zamierzone, Z
 Dopasowywanie wzorca działa z dowolnego typu danych. Pisanie wyrażeń, które zbadać obiektu i decyzje dotyczące kontroli przepływu na podstawie tych warunków.
 
 Porównać kod z tego przykładu z projekt, który z tworzenia hierarchii klas dla abstrakcyjną `Shape` i określonych pochodne kształty o zapewniali własną implementację metody wirtualnej do obliczenia. Często okazuje wzorzec dopasowania wyrażenia może być bardzo przydatne narzędzie podczas pracy z danymi i chcesz oddzielić dotyczy magazynu danych od wątpliwości zachowanie.
-

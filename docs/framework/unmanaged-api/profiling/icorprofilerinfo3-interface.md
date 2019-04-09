@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57caee7a0da019fc45bd35b7b81f8d066991081b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178766"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 — Interfejs
 Zawiera metody, które profilery kodu używają do komunikacji z środowisko uruchomieniowe języka wspólnego (CLR) do kontrolowania, monitorowanie zdarzeń i żądania informacji. `ICorProfilerInfo3` Interfejs jest rozszerzeniem [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) interfejsu. Zapewnia nowe metody obsługiwane w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] i nowszych wersjach.  
@@ -60,5 +60,6 @@ Zawiera metody, które profilery kodu używają do komunikacji z środowisko uru
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: Typizowanych elementów DataSet
+title: Typizowane elementy DataSet
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
-ms.openlocfilehash: 3a61005f0064ec9ba0bbe70b759394d3691018de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92ed3f8fd392238785fd2d205668f14fe477f2b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098660"
 ---
-# <a name="typed-datasets"></a>Typizowanych elementów DataSet
+# <a name="typed-datasets"></a>Typizowane elementy DataSet
 Wraz z dostępu do wartości za pomocą ze słabą kontrolą typów zmiennych <xref:System.Data.DataSet> zapewnia dostęp do danych za pośrednictwem metaphor silnie typizowanych. Tabele i kolumny, które są częścią **DataSet** można uzyskać dostęp za pomocą nazw przyjaznych dla użytkownika i silnie typizowane zmiennych.  
   
  Wpisane **DataSet** to klasa, która jest pochodną **zestawu danych**. W efekcie dziedziczy wszystkie metody, zdarzenia i właściwości **zestawu danych**. Ponadto wpisane **DataSet** udostępnia silnie typizowane metody, zdarzenia i właściwości. Oznacza to, że ma dostęp do tabel i kolumn, według nazwy, zamiast korzystać z metody oparte na kolekcji. Oprócz lepszej czytelności kodu z kontrolą typów **DataSet** umożliwia także kodu programu Visual Studio .NET automatycznego zakończenia wierszy podczas wpisywania w edytorze.  
@@ -24,5 +24,6 @@ Wraz z dostępu do wartości za pomocą ze słabą kontrolą typów zmiennych <x
  Opisuje, jak dodawać adnotacje do schematu języka (XSD) definicji schematu XML, używany do generowania silnie typizowanej **zestawu danych**, aby zapewnić **zestawu danych** przyjaznych nazw elementów bez zmiany podstawowego schematu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

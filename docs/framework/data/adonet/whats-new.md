@@ -1,15 +1,15 @@
 ---
-title: What's New in ADO.NET
+title: Nowości w programie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191465"
 ---
-# <a name="whats-new-in-adonet"></a>What's New in ADO.NET
+# <a name="whats-new-in-adonet"></a>Nowości w programie ADO.NET
 Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>Dostawca danych SqlClient  
@@ -51,6 +51,7 @@ Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../..
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Dodaje interfejsów API, które umożliwiają obsługę nowych scenariuszy podczas pracy z programu Entity Framework 5.0. Aby uzyskać więcej informacji na temat usprawnień i nowych funkcji, które zostały dodane do programu Entity Framework 5.0 zobacz następujące tematy: [What's New](https://go.microsoft.com/fwlink/?LinkID=251106) i [Entity Framework w wersji oraz zarządzanie ich wersjami](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)

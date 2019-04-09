@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Definiuj prostokąt przy użyciu RectangleGeometry'
+title: 'Instrukcje: Definiowanie prostokąta przy użyciu elementu RectangleGeometry'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-ms.openlocfilehash: bd42aca2541d67469173f63655ada18a12eb692c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075799"
 ---
-# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Instrukcje: Definiuj prostokąt przy użyciu RectangleGeometry
+# <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>Instrukcje: Definiowanie prostokąta przy użyciu elementu RectangleGeometry
 W tym przykładzie przedstawiono sposób użycia <xref:System.Windows.Media.RectangleGeometry> klasę do opisania prostokąta.  
   
 ## <a name="example"></a>Przykład  
@@ -34,6 +34,7 @@ RectangleGeometry
  Inne klasy geometrii proste obejmują <xref:System.Windows.Media.LineGeometry> i <xref:System.Windows.Media.EllipseGeometry>. Te geometrii, a także bardziej złożonych te można również utworzyć przy użyciu <xref:System.Windows.Media.PathGeometry> lub <xref:System.Windows.Media.StreamGeometry>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Geometria — przegląd](geometry-overview.md)
+
+- [Przegląd Geometria](geometry-overview.md)
 - [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md)
 - [Tworzenie kształtu przy użyciu elementu PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

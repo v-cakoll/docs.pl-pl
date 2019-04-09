@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Użyj wzorca szczegółowego z danymi hierarchicznymi'
+title: 'Instrukcje: Używanie wzorca szczegółowego z danymi hierarchicznymi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082662"
 ---
-# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Instrukcje: Użyj wzorca szczegółowego z danymi hierarchicznymi
+# <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Instrukcje: Używanie wzorca szczegółowego z danymi hierarchicznymi
 W tym przykładzie pokazano, jak można implementować scenariusza wzorzec / szczegół.  
   
 ## <a name="example"></a>Przykład  
@@ -34,8 +34,9 @@ W tym przykładzie pokazano, jak można implementować scenariusza wzorzec / szc
  Technika jest nieco inne w przypadku, gdy używasz [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych. Aby uzyskać przykład, zobacz [Użyj wzorca szczegółowego z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Szablonowanie danych — omówienie](data-templating-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [Przegląd Szablonowanie danych](data-templating-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

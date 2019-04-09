@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj obiektu ThicknessConverter'
+title: 'Instrukcje: Używanie obiektu ThicknessConverter'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 7dcac523ad105f074df11cdd74126536a60497b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebfb8642a01f6d602f4e5ffa58fde6a8ee0b4e1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075954"
 ---
-# <a name="how-to-use-a-thicknessconverter-object"></a>Instrukcje: Użyj obiektu ThicknessConverter
+# <a name="how-to-use-a-thicknessconverter-object"></a>Instrukcje: Używanie obiektu ThicknessConverter
 ## <a name="example"></a>Przykład  
  W tym przykładzie przedstawiono sposób tworzenia wystąpienia <xref:System.Windows.ThicknessConverter> i korzystać z niego zmiany grubości obramowania.  
   
@@ -27,9 +27,10 @@ ms.locfileid: "57350704"
  [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Thickness>
 - <xref:System.Windows.ThicknessConverter>
 - <xref:System.Windows.Controls.Border>
 - [Instrukcje: Zmień wartość właściwości marginesów](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
 - [Instrukcje: Konwertowanie elementu ListBoxItem na nowy typ danych](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
-- [Panele — omówienie](../controls/panels-overview.md)
+- [Przegląd Panele](../controls/panels-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#'
+title: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [C#]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 48d29c12407f7364794040f4fccd351156244a69
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2f8c295e961fdf62a14b7e63ab990e8f99379cfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177384"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Przewodnik: Tworzenie formantu złożonego za pomocą Visual C\#
 Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy graficzne można tworzyć i ponownie używane. Formant złożony jest zasadniczo składnika za pomocą wizualnej reprezentacji. W efekcie może składać się z co najmniej Windows Forms formantów, składników lub bloki kodu, które mogą rozszerzyć funkcjonalność, sprawdzanie poprawności danych wejściowych użytkownika, modyfikując właściwości wyświetlania lub wykonywania innych zadań wymaganych przez autora. Formanty złożone można umieścić na formularzach Windows Forms w taki sam sposób jak inne kontrolki. W pierwszej części tego przewodnika, tworzenie prostego formantu złożonego o nazwie `ctlClock`. W drugiej części tego przewodnika, możesz rozszerzyć funkcjonalność `ctlClock` poprzez dziedziczenie.  
@@ -55,7 +55,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Zmień na|  
     |--------------|---------------|  
     |**Nazwa**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**Tekst**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -248,7 +248,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
     |**Nazwa**|`lblAlarm`|  
-    |**Text**|**Alarm!**|  
+    |**Tekst**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Widoczne**|`false`|  
   
@@ -320,7 +320,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Wartość|  
     |--------------|-----------|  
     |**Nazwa**|`btnAlarmOff`|  
-    |**Text**|**Wyłącz alarmów**|  
+    |**Tekst**|**Wyłącz alarmów**|  
   
 3.  W projektancie, kliknij dwukrotnie **btnAlarmOff**.  
   
@@ -367,7 +367,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
     |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
+    |`label1`|**Tekst**|`(blank space)`|  
     ||**Nazwa**|`lblTest`|  
     |`dateTimePicker1`|**Nazwa**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -405,6 +405,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
      W tym przewodniku ma obejmujący wiele kluczowych założeń. Wiesz, że tworzenie formantu złożonego, łącząc w kontenerze kontrolek złożonych kontrolek i składników. Wiesz, można dodać właściwości do kontrolki, a następnie napisać kod do implementacji funkcji niestandardowych. W ostatniej sekcji pokazano, aby rozszerzyć funkcjonalność danej kontrolki złożonej za pomocą dziedziczenia i zmieniać funkcje metod hosta przez zastąpienie tych metod.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+
+- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
+- [Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows formantu z Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091411"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource — Rozszerzenie znaczników
 Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] właściwości atrybutu przez tę wartość jako odwołanie do zasobu zdefiniowanego opóźnienie. Zachowanie wyszukiwania dla tego zasobu jest analogiczne do wyszukiwania w czasie wykonywania.  
@@ -73,10 +73,11 @@ Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
  `DynamicResource` jest rozszerzeniem znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Użyj {i} znaków w składni swoich atrybutów, które jest do Konwencja, za pomocą którego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora rozpoznaje, że rozszerzenie znacznika musi wykonać przetwarzanie atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zasoby XAML](xaml-resources.md)
 - [Zasoby i kod](resources-and-code.md)
-- [x:Key, dyrektywa](../../xaml-services/x-key-directive.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [StaticResource, rozszerzenie znaczników](staticresource-markup-extension.md)
-- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [x:Key — dyrektywa](../../xaml-services/x-key-directive.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [StaticResource — Rozszerzenie znaczników](staticresource-markup-extension.md)
+- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)

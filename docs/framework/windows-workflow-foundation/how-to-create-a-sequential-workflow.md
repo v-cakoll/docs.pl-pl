@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189303"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Instrukcje: Tworzenie sekwencyjnego przepływu pracy
 Przepływy pracy można skonstruować z wbudowanych działań, a także z działań niestandardowych. Ten temat prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowanych działań, takich jak <xref:System.Activities.Statements.Sequence> działanie i działań niestandardowych z poprzedniego [jak: Utwórz działanie](how-to-create-an-activity.md) tematu. Przepływ pracy modeli gra odgadnięcia liczb.  
@@ -158,10 +158,11 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
      Aby uzyskać instrukcje na temat sposobu uruchamiania przepływu pracy, zobacz następny temat, [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md). Jeśli wykonano już [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md) kroku przy użyciu innego stylu przepływu pracy, a chcesz uruchomić go za pomocą sekwencyjnego przepływu pracy, w tym kroku, przejdź do sekcji [Aby skompilować i uruchomić aplikację](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) części [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Programowanie w programie Windows Workflow Foundation](programming.md)
 - [Projektowanie przepływów pracy](designing-workflows.md)
 - [Wprowadzenie — samouczek](getting-started-tutorial.md)
-- [Instrukcje: Utwórz działanie](how-to-create-an-activity.md)
+- [Instrukcje: Tworzenie działania](how-to-create-an-activity.md)
 - [Instrukcje: Uruchamianie przepływu pracy](how-to-run-a-workflow.md)

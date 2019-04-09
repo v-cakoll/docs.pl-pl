@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 208841d880ffcbfb2bbeb9e235cc8cdf0fa2f041
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185539"
 ---
 # <a name="hosting-services"></a>Usługi hostingowe
 Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, tworzy go, która określa jego kontekstu i okresu istnienia. Usługi Windows Communication Foundation (WCF) są przeznaczone do uruchamiania w każdym procesie Windows obsługuje kodu zarządzanego.  
@@ -55,17 +55,18 @@ Stanie się aktywna, usługa musi być hostowany w środowisku uruchomieniowym, 
 |-------------------------|---------------------------|--------------------------|-------------------------------------|  
 |Aplikacje zarządzane ("może być samodzielnie hostowane")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Nie|  
 |Usługi Windows (znana wcześniej jako usługi NT)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Nie|  
-|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Tak|  
-|[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Tak|  
-|Usługa aktywacji procesów systemu Windows (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Tak|  
+|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Yes|  
+|[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Yes|  
+|Usługa aktywacji procesów systemu Windows (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP,<br /><br /> NET.TCP,<br /><br /> NET.pipe,<br /><br /> net.msmq|Yes|  
   
  Należy zauważyć, że uruchomiona usługa lub dowolnego rozszerzenia z hosta niezaufanego naruszeń zabezpieczeń. Ponadto należy pamiętać, że podczas otwierania <xref:System.ServiceModel.ServiceHost> w ramach personifikacji, aplikacja musi zapewnić, że użytkownik nie zaloguje się off, na przykład, buforując <xref:System.Security.Principal.WindowsIdentity> użytkownika.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wymagania systemowe](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [Instrukcje: Hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Instrukcje: Hostowanie usługi WCF w WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [Instrukcje: Hostowanie usługi WCF w usłudze Windows zarządzanych](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Instrukcje: hostowanie usługi WCF w usługach IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [Instrukcje: hostowanie usługi WCF w usłudze zarządzanej systemu Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

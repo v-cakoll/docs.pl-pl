@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy Windows Forms'
+title: 'Instrukcje: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181483"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Instrukcje: Tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Instrukcje: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows
 Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która wyświetla dane z rekordów w powiązanej tabeli. W poniższych procedurach <xref:System.Windows.Forms.ComboBox> formantu służy do wyświetlania pól z relacji klucza obcego z obiektu nadrzędnego do tabeli podrzędnej.  
   
  Aby wizualizować tymi dwiema tabelami i tę relację, Oto przykład tabeli nadrzędnej i podrzędnej:  
@@ -92,7 +92,8 @@ Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która
 8.  Powiązywanie kontrolek innych niż <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.BindingNavigator> kontrolki pola informacji z tabeli podrzędnej <xref:System.Windows.Forms.BindingSource> (na przykład `OrdersBindingSource`), którą chcesz wyświetlić.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource, składnik](bindingsource-component.md)
+- [BindingSource — Składnik](bindingsource-component.md)
 - [ComboBox, kontrolka](combobox-control-windows-forms.md)
-- [Wiązanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+- [Powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

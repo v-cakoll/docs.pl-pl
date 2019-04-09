@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kontroluj zegar interaktywnie'
+title: 'Instrukcje: Interakcyjne sterowanie zegarem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controlling clocks interactively [WPF]
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
-ms.openlocfilehash: 6d3dbc8c39e63b46871b0cc88fbe8d5d51b63463
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186592"
 ---
-# <a name="how-to-interactively-control-a-clock"></a>Instrukcje: Kontroluj zegar interaktywnie
+# <a name="how-to-interactively-control-a-clock"></a>Instrukcje: Interakcyjne sterowanie zegarem
 A <xref:System.Windows.Media.Animation.Clock> obiektu <xref:System.Windows.Media.Animation.ClockController> Właściwość pozwala interaktywnie Uruchom, wstrzymać, wznowić, wyszukiwanie, przejdź zegar okresu wypełnienia i zatrzymać zegara. Tylko zegara głównego drzewa chronometrażu mogą być kontrolowane interaktywnie.  
   
 > [!NOTE]
@@ -28,5 +28,6 @@ A <xref:System.Windows.Media.Animation.Clock> obiektu <xref:System.Windows.Media
  [!code-vb[timingbehaviors_procedural_snip#GraphicsMMClockControllerExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/clockcontrollerexample.vb#graphicsmmclockcontrollerexample)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Animacja — przegląd](animation-overview.md)
+- [Przegląd Animacja](animation-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: aa91646a46807f26053b3d0df28c412bcc5a2f21
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180729"
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu ADO.NET
 Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy użyciu następujących technologii ADO.NET:
@@ -27,13 +27,13 @@ Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy uży
 
 - ADO.NET Entity Framework:
 
-  - [LINQ to Entities](#linq-to-entities)
+  - [LINQ do Jednostek](#linq-to-entities)
 
   - [Typizowany obiekt ObjectQuery](#typed-objectquery)
 
   - [Dostawca EntityClient](#entityclient) (`System.Data.EntityClient`)
 
-- [LINQ to SQL](#linq-to-sql)
+- [LINQ do SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>Przykłady dostawcy danych ADO.NET
 Następujące fragmentów kodu pokazują, jak pobierać dane z bazy danych przy użyciu dostawcy danych ADO.NET. Dane są zwracane w `DataReader`. Aby uzyskać więcej informacji, zobacz [podczas pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
@@ -344,9 +344,10 @@ End Class
 ```
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Tworzenie aplikacji do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Tworzenie aplikacji danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
 - [Wykonywanie zapytań z modelem EDM (Entity Framework zadania)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
 - [Instrukcje: Wykonywanie zapytania, które zwraca obiekty typu anonimowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

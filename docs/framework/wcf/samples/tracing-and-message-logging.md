@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5cd0e9620250b410e60c1fd378e7525bb2917756
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ba4428bad6662928ddc1830c8998dd5f5b6b9bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186579"
 ---
 # <a name="tracing-and-message-logging"></a>Śledzenie i rejestrowanie komunikatów
 Niniejszy przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunikatów. Wynikowy ślady i dzienniki komunikatów są wyświetlane przy użyciu [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -133,5 +133,6 @@ Niniejszy przykład pokazuje, jak włączyć śledzenie i rejestrowanie komunika
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Śledzenie](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -1,21 +1,24 @@
 ---
 title: Wyłącz rozpoznawanie DPI w programie Visual Studio
 description: W tym artykule omówiono ograniczenia Windows Forms Designer na monitorach HDPI oraz sposobu uruchamiania programu Visual Studio jako proces świadomości DPI.
-ms.date: 03/19/2019
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181386"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Wyłącz rozpoznawanie DPI w programie Visual Studio
 
 Program Visual Studio jest kropki na aplikację świadomą CAL (DPI), co oznacza automatycznie skaluje ekran. Jeśli aplikacja stwierdzający, że nie jest obsługującą ustawienia DPI, systemu operacyjnego można skalować aplikację jako mapę bitową. To zachowanie jest również nazywany wirtualizacji DPI. Aplikacji nadal sądzą, że działa on w 100%, skalowanie lub rozdzielczości 96 dpi.
+
+W tym artykule omówiono ograniczenia Windows Forms Designer na monitorach HDPI oraz sposobu uruchamiania programu Visual Studio jako proces świadomości DPI.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>Windows Forms Designer na monitorach HDPI
 
@@ -32,11 +35,15 @@ Odczytuje komunikat **skalowanie na ekranie głównym jest ustawiona na 200% (19
 > [!NOTE]
 > Ten pasek informacyjny została wprowadzona w Visual Studio 2017 w wersji 15.8.
 
-Jeśli nie działają w projektancie, a nie trzeba dostosować układ formularza, można zignorować pasek informacyjny i kontynuować pracę w edytorze kodu lub w innych typach projektantów. (Możesz również [wyłączyć powiadomienia](#disable-notifications) tak, aby pasek informacyjny nie w dalszym ciągu są wyświetlane.) Tylko **Windows Forms Designer** dotyczy problem. Jeśli musisz pracować w **Windows Forms Designer**, następna sekcja pomoże Ci [stwierdzenie](#to-resolve-the-problem).
+Jeśli nie działają w projektancie, a nie trzeba dostosować układ formularza, można zignorować pasek informacyjny i kontynuować pracę w edytorze kodu lub w innych typach projektantów. (Możesz również [wyłączyć powiadomienia](#disable-notifications) tak, aby pasek informacyjny nie w dalszym ciągu są wyświetlane.) Tylko **Windows Forms Designer** dotyczy problem. Jeśli musisz pracować w **Windows Forms Designer**, następna sekcja pomoże Ci [stwierdzenie](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Aby rozwiązać ten problem
+## <a name="to-resolve-the-display-problem"></a>Aby rozwiązać problem z wyświetlaniem
 
-Istnieją trzy opcje, aby rozwiązać problem z wyświetlaniem.
+Istnieją trzy opcje, aby rozwiązać problem z wyświetlaniem:
+
+1. [Uruchom program Visual Studio jako proces świadomości DPI](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Należy dodać wpis rejestru](#add-a-registry-entry)
+3. [Ustaw skalowanie ustawienie do 100%](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Uruchom program Visual Studio jako proces świadomości DPI
 

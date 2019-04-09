@@ -1,5 +1,5 @@
 ---
-title: Uwierzytelnianie NTLM i uwierzytelniania Kerberos
+title: Uwierzytelnianie NTLM i uwierzytelnianie Kerberos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: 4b93bce3560aaf5e0c888324e74129b5cb62262e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2efb2d25e1b7566e3405a699be1795b37d549091
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183368"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a>Uwierzytelnianie NTLM i uwierzytelniania Kerberos
+# <a name="ntlm-and-kerberos-authentication"></a>Uwierzytelnianie NTLM i uwierzytelnianie Kerberos
 Domyślne uwierzytelnianie NTLM i uwierzytelnianie Kerberos należy użyć poświadczeń użytkownika systemu Microsoft Windows NT, które są skojarzone z aplikacji wywołującej prób uwierzytelniania z serwerem. Korzystając z uwierzytelniania NTLM innych niż domyślne, aplikacja ustawia typ uwierzytelniania NTLM i używa <xref:System.Net.NetworkCredential> obiekt, aby przekazać nazwę użytkownika, hasło i domenę na hoście, jak pokazano w poniższym przykładzie.  
   
 ```vb  
@@ -63,5 +63,6 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
 >  Uwierzytelnianie NTLM nie działa za pośrednictwem serwera proxy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uwierzytelnianie podstawowe i szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)
 - [Uwierzytelnianie internetowe](../../../docs/framework/network-programming/internet-authentication.md)

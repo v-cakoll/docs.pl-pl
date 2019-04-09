@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185058"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Instrukcje: Określanie typu poświadczeń klienta
 Po ustawieniu trybu zabezpieczeń (transportu lub wiadomości), istnieje możliwość ustawienia typu poświadczeń klienta. Ta właściwość określa, jakiego typu poświadczeń klienta należy podać usługi na potrzeby uwierzytelniania. Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń (niezbędne krok przed ustawieniem typu poświadczeń klienta), zobacz [jak: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -58,5 +58,6 @@ Po ustawieniu trybu zabezpieczeń (transportu lub wiadomości), istnieje możliw
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)
 - [Instrukcje: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

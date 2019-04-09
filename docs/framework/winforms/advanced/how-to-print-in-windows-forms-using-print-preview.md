@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Drukowanie w formularzach Windows Forms przy użyciu podglądu wydruku'
+title: 'Instrukcje: Drukowanie w formularzach systemu Windows przy użyciu podglądu wydruku'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 11f5583cc181904b17c378ac7ead4f35c539aeed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 48391465bf199f8a212a575c64227958385eeae8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073614"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Instrukcje: Drukowanie w formularzach Windows Forms przy użyciu podglądu wydruku
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>Instrukcje: Drukowanie w formularzach systemu Windows przy użyciu podglądu wydruku
 Często zdarza się w formularzach Windows programowania do zaoferowania podglądu wydruku oprócz usług drukowania. Łatwe dodawanie usług podglądu wydruku do aplikacji jest użycie <xref:System.Windows.Forms.PrintPreviewDialog> kontroli w połączeniu z <xref:System.Drawing.Printing.PrintDocument.PrintPage> logikę obsługi zdarzeń do drukowania pliku.  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>Aby wyświetlić podgląd dokument tekstowy o PrintPreviewDialog, kontrolka  
@@ -65,6 +65,7 @@ Często zdarza się w formularzach Windows programowania do zaoferowania podglą
 -   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Podglądu wydruku w formularzach Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
-- [Bezpieczniejsze drukowanie w formularzach Windows Forms](../more-secure-printing-in-windows-forms.md)
+
+- [Instrukcje: Wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)
+- [Bezpieczniejsze drukowanie w formularzach systemu Windows](../more-secure-printing-in-windows-forms.md)

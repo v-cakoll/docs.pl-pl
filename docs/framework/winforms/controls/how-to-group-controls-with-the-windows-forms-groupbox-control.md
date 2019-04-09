@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Grupowanie formantów za pomocą formantu GroupBox formularzy Windows'
+title: 'Instrukcje: grupowanie kontrolek za pomocą kontrolki GroupBox formularzy systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179635"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Instrukcje: Grupowanie formantów za pomocą formantu GroupBox formularzy Windows
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>Instrukcje: grupowanie kontrolek za pomocą kontrolki GroupBox formularzy systemu Windows
 Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do grupowania innych kontrolek. Istnieją trzy powody do formantów grupy:  
   
 -   Aby utworzyć wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne.  
@@ -33,5 +33,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> formantów służą do grupow
 3.  Ustaw <xref:System.Windows.Forms.GroupBox.Text%2A> właściwości, pola grupy odpowiedni podpis.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox, kontrolka](groupbox-control-windows-forms.md)

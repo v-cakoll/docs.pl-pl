@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 459691354ec12f61c7ab321fe832d8fc802a36d9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cad7b319a20bce09779821af6f50aea086880c26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187349"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager — Metoda
 Pobiera wskaźnik interfejsu do implementacji interfejsu hosta z określonym `IID`.  
@@ -59,7 +59,7 @@ HRESULT GetHostManager (
 ## <a name="remarks"></a>Uwagi  
  Środowisko CLR wykonuje kwerendę hostowi na określenie, czy obsługuje co najmniej jeden z poniższych interfejsów:  
   
--   [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+-   [Ihostmemorymanager —](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
 -   [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
   
@@ -91,4 +91,5 @@ HRESULT GetHostManager (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+
+- [IHostControl — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

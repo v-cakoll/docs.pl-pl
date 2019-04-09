@@ -1,5 +1,5 @@
 ---
-title: Protokół internetowy w wersji 6
+title: Protokół IPv6
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IPv6, improvements
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-ms.openlocfilehash: 6cd35ae50d76ec2276fdd08760d088cf6be1658e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135d87f126dcdb9689c23adbaaa4786bc69a3e09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182328"
 ---
-# <a name="internet-protocol-version-6"></a>Protokół internetowy w wersji 6
+# <a name="internet-protocol-version-6"></a>Protokół IPv6
 Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protokołów służący do warstwy sieci Internet. Protokół IPv6 pozwala rozwiązać wiele problemów w bieżącej wersji pakietu Internet Protocol (nazywane IPv4) w odniesieniu do adresów wyczerpanie, zabezpieczeń, konfiguracji automatycznego, rozszerzalność i tak dalej. Protokół IPv6 rozszerza możliwości Internetu, aby włączyć nowych rodzajów aplikacji, w tym aplikacji peer-to-peer i na urządzeniach przenośnych. Oto główne kwestie bieżącego protokołu IPv4:  
   
 -   Szybkie wyczerpania przestrzeni adresowej.  
@@ -58,6 +58,7 @@ Protokołu internetowego w wersji 6 (IPv6) to nowy zestaw standardowych protoko�
  Można również znaleźć informacje dotyczące protokołu IPv6 na [adresów IP w wersji 6 (IPv6)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykładowe gniazda IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)
 - [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Gniazda](../../../docs/framework/network-programming/sockets.md)

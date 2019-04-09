@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie kontraktu dwukierunkowego'
+title: 'Instrukcje: tworzenie kontraktu dwukierunkowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 8cc53f6842d55892ae178e22e2835555a132778b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 002c94f2cb69e330e8d2796a9f93d977b10f53f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078177"
 ---
-# <a name="how-to-create-a-duplex-contract"></a>Instrukcje: Tworzenie kontraktu dwukierunkowego
+# <a name="how-to-create-a-duplex-contract"></a>Instrukcje: tworzenie kontraktu dwukierunkowego
 W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu dwukierunkowego (dwukierunkowe). Kontrakt dupleksowy umożliwia klientów i serwerów komunikować się ze sobą niezależnie, aby albo może zainicjować wywołania do drugiego. Kontraktu dwukierunkowego jest jednym z trzech wzorców komunikat dostępne dla usług Windows Communication Foundation (WCF). Komunikat innych dwa wzorce są jednokierunkowe, a "żądanie-odpowiedź". Kontrakt dupleksowy składa się z dwóch jednokierunkowe umów między klientem a serwerem i nie wymaga, aby zostać skorelowane wywołania metody. Należy użyć tego rodzaju kontraktu, podczas usługi musi zapytania klienta, aby uzyskać więcej informacji lub jawnie wywoływać zdarzenia, na komputerze klienckim. Aby uzyskać więcej informacji na temat tworzenia aplikacji klienckiej kontrakt dupleksowy, zobacz [jak: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Przykładowy pracy [dwukierunkowego](../../../../docs/framework/wcf/samples/duplex.md) próbki.  
   
 ### <a name="to-create-a-duplex-contract"></a>Tworzenie kontraktu dwukierunkowego  
@@ -68,9 +68,10 @@ W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używ
 -   Udostępnianie usługi dwukierunkowe punkty końcowe muszą być zabezpieczone. Gdy usługa odbiera komunikat dwukierunkowego, analizuje ReplyTo w tej wiadomości przychodzących, aby określić, gdzie wysyłać odpowiedzi. Jeśli kanał nie jest zabezpieczony, niezaufanego klienta można wysyłanie wiadomości złośliwego z ReplyTo maszynę docelową, co prowadzi do typu "odmowa usługi maszyny docelowej". Przy użyciu komunikatów regularne "żądanie-odpowiedź" to nie jest problemem, ponieważ ReplyTo jest ignorowana, a odpowiedź jest wysyłana na kanale, który oryginalnego komunikatu materiał na.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [Dupleks](../../../../docs/framework/wcf/samples/duplex.md)
 - [Projektowanie i implementowanie usług](../../../../docs/framework/wcf/designing-and-implementing-services.md)
 - [Instrukcje: Definiowanie kontraktu usługi](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)

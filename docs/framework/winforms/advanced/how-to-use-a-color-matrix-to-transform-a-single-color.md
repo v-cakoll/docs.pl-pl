@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Stosowanie macierzy kolorów do przekształcenia pojedynczego koloru'
+title: 'Instrukcje: Stosowanie macierzy kolorów do transformacji pojedynczego koloru'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075185"
 ---
-# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Instrukcje: Stosowanie macierzy kolorów do przekształcenia pojedynczego koloru
+# <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Instrukcje: Stosowanie macierzy kolorów do transformacji pojedynczego koloru
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów przechowywać kolor każdego piksela jako wartość liczby 32-bitowej: 8 bitów na każdy czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, od 0, reprezentujących natężenie i 255 reprezentujący pełnej intensywności. Składnik alfa określa Przezroczystość koloru: 0 jest w pełni przezroczyste, a 255 jest całkowicie nieprzezroczyste.  
   
  Wektor kolorów jest 4-krotka formularza (czerwony, zielony, niebieski, alfa). Na przykład wektor kolorów (0, 255, 0, 255) reprezentuje nieprzezroczyste kolor, który nie ma czerwony lub niebieski, ale ma kolor zielony w pełnej intensywności.  
@@ -64,5 +64,6 @@ ms.locfileid: "57705600"
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Ponowne kolorowanie obrazów](recoloring-images.md)
 - [Systemy i przekształcenia współrzędnych](coordinate-systems-and-transformations.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odpowiadanie na kliknięcia w kontrolce DataGrid formularzy Windows Forms'
+title: 'Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191903"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Instrukcje: Odpowiadanie na kliknięcia w kontrolce DataGrid formularzy Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -141,5 +141,6 @@ ms.locfileid: "57708217"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [Instrukcje: Zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy systemu Windows](change-displayed-data-at-run-time-wf-datagrid-control.md)

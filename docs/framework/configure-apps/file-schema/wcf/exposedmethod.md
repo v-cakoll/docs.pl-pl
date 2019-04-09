@@ -2,12 +2,12 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 151929cd99df08b705bee94eb6fd6f10c254a660
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174515"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod>
 Reprezentuje metodę COM +, która jest widoczna gdy interfejs składnika COM + jest widoczny jako usługi sieci Web.  
@@ -69,8 +69,9 @@ Reprezentuje metodę COM +, która jest widoczna gdy interfejs składnika COM + 
  Podczas inicjowania usługi, środowisko uruchomieniowe spróbuje go wygenerować kontraktu usługi odzwierciedlający za pośrednictwem i dodając tylko te metody, które są uwzględnione na liście [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementów. Śledzenie jest tworzony dla każdej metody interfejsu, który nie znajduje się na kontrakt usługi.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [Współdziałanie z aplikacjami COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Instrukcje: konfigurowanie ustawień usługi COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

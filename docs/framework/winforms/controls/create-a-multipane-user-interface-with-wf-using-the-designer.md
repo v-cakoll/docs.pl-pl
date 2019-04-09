@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant'
+title: 'Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user interface [Windows Forms], multipane
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082935"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Instrukcje: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
   
  Po zadokowaniu kontrolkę, należy określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany na prawej krawędzi kontrolki nadrzędnej. Ponadto aby pasował do jego kontrolki kontenera zmieniany jest zadokowany krawędzią formantu. Aby uzyskać więcej informacji o tym, jak <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość znaleźć [jak: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md).  
@@ -47,5 +47,6 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
      W tym momencie podczas tworzenia aplikacji ma specjalnie interfejsu użytkownika zaawansowane. Następnym krokiem jest przejściem z programowaniem aplikacji, być może, łącząc <xref:System.Windows.Forms.TreeView> kontroli i <xref:System.Windows.Forms.ListView> kontrolki do pewnego rodzaju źródła danych. Aby uzyskać więcej informacji na temat kontrolek o łączeniu z danymi, zobacz [powiązanie danych i formularze Windows](../data-binding-and-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer, kontrolka](splitcontainer-control-windows-forms.md)

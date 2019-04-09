@@ -6,17 +6,16 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 0a2db2392c2380a397da42474a311449c8fdf9fb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199040"
 ---
 # <a name="sample-opentype-font-pack"></a>Przykład pakietu czcionek OpenType
 Ten temat zawiera omówienie przykładu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek, które są dystrybuowane za pomocą [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Rozszerzono obsługę czcionki przykładowe [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] funkcje, które mogą być używane przez [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>Czcionki w pakietu czcionek OpenType  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Udostępnia zestaw przykładowych [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionek, które można użyć podczas tworzenia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Czcionki próbki są dostarczane w ramach licencji Wydłużenie górne Corporation. Te czcionki zaimplementować tylko podzbiór łączna liczba funkcji zdefiniowanych przez [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] formatu. W poniższej tabeli wymieniono nazwy próbki [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki.  
@@ -53,6 +52,7 @@ Wyświetlanie Czcionka Lindsey
  Istnieją dwa sposoby, że można używać czcionek w aplikacji. Możesz dodać czcionki do aplikacji jako elementy zawartości, które nie są osadzane jako zasoby w zestawie projektu. Alternatywnie możesz dodać czcionki do aplikacji jako elementy zasobów projektu, które są osadzone w ramach plików zestawu aplikacji. Aby uzyskać więcej informacji, zobacz [pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Documents.Typography>
-- [Funkcje czcionki OpenType](opentype-font-features.md)
+- [OpenType funkcje czcionki](opentype-font-features.md)
 - [Pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md)

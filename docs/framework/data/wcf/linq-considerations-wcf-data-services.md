@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a41eb4b5df7786558a73d5a195d57c9f30e9235d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192956"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ Considerations (WCF Data Services)
 Ten temat zawiera informacje o sposobie w LINQ, które zapytania są składa się i są stosowane podczas korzystania z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] klienta i ograniczeń za pomocą LINQ do zapytań usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Aby uzyskać więcej informacji na temat tworzenia i wykonywanie zapytań względem [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi, zobacz [zapytań usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -112,8 +112,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 [!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqselectmethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqselectmethodspecific)]         
- 
-  
+
 > [!NOTE]
 >  `$select` Stosowanie opcji zapytania nie można dodać do zapytania identyfikatora URI za pomocą <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metody. Firma Microsoft zaleca, aby używać programu LINQ <xref:System.Linq.Enumerable.Select%2A> metoda klienta Generowanie `$select` zapytania opcji w identyfikatorze URI żądania.  
   
@@ -150,8 +149,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 [!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryexpandmethodspecific)]       
 [!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryexpandmethodspecific)]       
-  
-  
+
  Zarówno poprzednich przykładach są tłumaczone na zapytania identyfikatora URI: `http://localhost:12345/northwind.svc/Orders()?$filter=CustomerID eq 'ALFKI'&$expand=Order_Details`.  
   
 <a name="unsupportedMethods"></a>   
@@ -213,6 +211,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Klient może być również mogli oceniać zestaw dodatkowych funkcji CLR na komputerze klienckim. Element <xref:System.NotSupportedException> jest wywoływane na dowolne wyrażenie, które nie może być ocenione na komputerze klienckim i nie można przekształcić na prawidłowy identyfikator URI żądania w wersji ewaluacyjnej na serwerze.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Projekcje zapytania](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
 - [Materializacja obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)

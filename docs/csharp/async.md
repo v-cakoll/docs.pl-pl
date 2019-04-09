@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 8570692c02855cda7a1990f10ef97590449baccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184669"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -64,7 +64,6 @@ private DamageResult CalculateDamageDone()
     // Does an expensive calculation and returns
     // the result of that calculation.
 }
-
 
 calculateButton.Clicked += async (o, e) =>
 {

@@ -2,12 +2,12 @@
 title: Niestandardowe elementy formatujące komunikaty
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612782"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196245"
 ---
 # <a name="custom-message-formatters"></a>Niestandardowe elementy formatujące komunikaty
 Zawartość komunikatu jest często w formacie XML, który zwykle nie jest to wygodne format dla aplikacji. Aplikacje manipulowania obiektami, pobierania i ustawiania ich właściwości. Windows Communication Foundation (WCF) używa *kontraktu danych* przekonwertować <xref:System.ServiceModel.Channels.Message> obiektu do obiektu może z łatwością obsłużyć przez aplikację. Procesy te są nazywane serializacji i deserializacji. Należy pamiętać, że tych samych warunkach są używane do opisywania serializacji i deserializacji, wykonywane przez warstwy transportowej do i z formatu o komunikacji sieciowej komunikat, który jest procesem niepowiązanych.  
@@ -33,6 +33,7 @@ Zawartość komunikatu jest często w formacie XML, który zwykle nie jest to wy
  Aby wstawić niestandardowego elementu formatującego do aplikacji usługi, należy przypisać <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> obiekt <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> właściwości przy użyciu operacji zachowanie. Aby uzyskać informacje na temat działania, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
 - [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

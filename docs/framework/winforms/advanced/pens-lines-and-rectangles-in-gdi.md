@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078229"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Pióra, linie i prostokąty w GDI+
 Rysowanie linii za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , musisz utworzyć <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Obiektu zawiera metody, które w rzeczywistości korzystają rysowania, i <xref:System.Drawing.Pen> obiekt przechowuje atrybutów, takich jak kolor linii, szerokość i stylu.  
@@ -68,9 +68,10 @@ Rysowanie linii za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecg
  A <xref:System.Drawing.Rectangle> obiekt ma metody i właściwości do manipulowania i zbierania informacji o prostokąta. Na przykład <xref:System.Drawing.Rectangle.Inflate%2A> i <xref:System.Drawing.Rectangle.Offset%2A> metody zmieniać rozmiar i położenie prostokąta. <xref:System.Drawing.Rectangle.IntersectsWith%2A> Metoda informuje, czy prostokąt przecina inny podany prostokąt i <xref:System.Drawing.Rectangle.Contains%2A> metoda informuje, czy dany punkt znajduje się wewnątrz prostokąta.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
 - [Instrukcje: Tworzenie pióra](how-to-create-a-pen.md)
-- [Instrukcje: Rysuj linię w formularzu Windows](how-to-draw-a-line-on-a-windows-form.md)
+- [Instrukcje: Rysowanie linii w formularzu systemu Windows](how-to-draw-a-line-on-a-windows-form.md)
 - [Instrukcje: Rysowanie konturu kształtu](how-to-draw-an-outlined-shape.md)

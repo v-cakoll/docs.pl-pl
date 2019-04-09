@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105277"
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
 Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zależy od tego, powiązania i transport używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport, jest protokół HTTP i zabezpieczanie transportu przy użyciu podstawowego mechanizmu jest Secure Sockets Layer (SSL) przy użyciu protokołu HTTP, często nazywane protokołu HTTPS. W tym temacie opisano mechanizmy zabezpieczeń transportu głównych używanych w WCF powiązania dostarczane przez system.  
@@ -121,4 +121,5 @@ Mechanizmy zabezpieczeń transportu w Windows Communication Foundation (WCF) zal
  Wyczerpujące omówienie transportu zabezpieczeń za pomocą usługi kolejkowania komunikatów (nazywanymi wcześniej MSMQ), zobacz [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Programowanie zabezpieczeń WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

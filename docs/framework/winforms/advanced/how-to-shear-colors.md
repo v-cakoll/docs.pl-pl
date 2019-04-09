@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076253"
 ---
 # <a name="how-to-shear-colors"></a>Instrukcje: Zmienianie kolorów
 Pochylanie zwiększa lub zmniejsza składnika koloru o kwotę proporcjonalną do innego składnika koloru. Na przykład należy wziąć pod uwagę transformacji, w której składnik czerwony jest zwiększana o połowę wartość składnik niebieski. W obszarze takie przekształcenia kolorów (0,2, 0,5, 1) staną się (0,7, 0,5, 1). Nowy składnik czerwony jest wymagane 0,2 + (1/2)(1) = 0,7.  
@@ -38,10 +38,11 @@ Pochylanie zwiększa lub zmniejsza składnika koloru o kwotę proporcjonalną do
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Zastąp `ColorBars.bmp` przy użyciu nazwy obrazu i ścieżki prawidłowy w tym systemie.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs>`e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Zastąp `ColorBars.bmp` przy użyciu nazwy obrazu i ścieżki prawidłowy w tym systemie.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)
 - [Ponowne kolorowanie obrazów](recoloring-images.md)

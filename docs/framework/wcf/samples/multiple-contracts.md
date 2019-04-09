@@ -2,12 +2,12 @@
 title: Wiele kontraktów
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: 5e52c83d69c15ca5c407240a8971248205fef832
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 320bfe2f2a290131fcbcef64992a58fa1e6e07d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073432"
 ---
 # <a name="multiple-contracts"></a>Wiele kontraktów
 Wiele kontraktów w przykładzie pokazano, jak zaimplementować więcej niż jednego kontraktu usługi i sposobie konfigurowania punktów końcowych do komunikowania się z każdym zaimplementowane kontrakty. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa została zmodyfikowana, aby zdefiniować dwa kontrakty `ICalculator` kontraktu i `ICalculatorSession` kontraktu.  
@@ -62,4 +62,3 @@ Wiele kontraktów w przykładzie pokazano, jak zaimplementować więcej niż jed
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
-  

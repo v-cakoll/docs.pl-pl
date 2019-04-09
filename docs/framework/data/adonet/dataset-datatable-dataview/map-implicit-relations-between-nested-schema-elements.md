@@ -2,12 +2,12 @@
 title: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3b17b7f76870c64a9c4332dd99a71fcd8ea6b6e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 076e3ec6e5a00fd294fa3c6d7998cfab3a136240
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182078"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnieżdżone wewnątrz siebie nawzajem. W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące <xref:System.Data.DataSet>:  
@@ -98,6 +98,7 @@ Schemat języka (XSD) definicji schematu XML może mieć typy złożone, zagnie�
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

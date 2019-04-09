@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapisywanie plików za pomocą składnika SaveFileDialog'
+title: 'Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176803"
 ---
-# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Instrukcje: Zapisywanie plików za pomocą składnika SaveFileDialog
+# <a name="how-to-save-files-using-the-savefiledialog-component"></a>Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog
 <xref:System.Windows.Forms.SaveFileDialog> Składnik umożliwia użytkownikom Przeglądaj system plików i wybierz pliki do zapisania. Okno dialogowe zwraca ścieżkę i nazwę pliku, który został wybrany przez użytkownika w oknie dialogowym. Jednak należy napisać kod, aby faktycznie zapisywać pliki na dysku.  
   
 ### <a name="to-save-a-file-using-the-savefiledialog-component"></a>Aby zapisać plik za pomocą składnika SaveFileDialog  
@@ -178,5 +178,6 @@ ms.locfileid: "57719432"
     >  Niektóre kontrolki, takie jak <xref:System.Windows.Forms.RichTextBox> sterowania, ma możliwość zapisywania plików. Aby uzyskać więcej informacji, zobacz sekcję "Savefiledialog — składnik" artykułu technicznego bibliotece MSDN Online [Essential kodu dla Windows okna dialogowe w formularzach](https://go.microsoft.com/fwlink/?LinkID=102575).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog, składnik](savefiledialog-component-windows-forms.md)

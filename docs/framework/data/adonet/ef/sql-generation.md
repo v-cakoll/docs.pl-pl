@@ -2,12 +2,12 @@
 title: Generowanie kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
-ms.openlocfilehash: 1eb2830d96000e61d62b2fc934cd246df3ad3e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180579"
 ---
 # <a name="sql-generation"></a>Generowanie kodu SQL
 Podczas wpisywania dostawcę dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], musi przetłumaczyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] polecenia drzewa w SQL Server, który może zrozumieć konkretnej bazy danych, takich jak języka Transact-SQL dla programu SQL Server lub PL/SQL dla bazy danych Oracle. W tej sekcji dowiesz sposobu tworzenia składnika generowania SQL (dla zapytań SELECT) dla [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy. Dla informacji na temat wstawiania, aktualizacji i usuwanie zapytań, zobacz [modyfikowanie generowania kodu SQL](../../../../../docs/framework/data/adonet/ef/modification-sql-generation.md).  
@@ -27,4 +27,5 @@ Podczas wpisywania dostawcę dla [!INCLUDE[adonet_ef](../../../../../includes/ad
  [Generowanie kodu SQL w dostawcy próbki](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

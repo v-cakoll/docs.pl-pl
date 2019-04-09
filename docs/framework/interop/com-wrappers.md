@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce15e0535bbd6bc67054c651a518f11cf9dd2ae1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b633239be85a66c5bba54132c3732357967eb177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182939"
 ---
 # <a name="com-wrappers"></a>Otoki COM
 COM różni się od modelu obiektów programu .NET Framework na kilka sposobów ważne:  
@@ -34,6 +34,7 @@ COM różni się od modelu obiektów programu .NET Framework na kilka sposobów 
  W większości przypadków standard RCW lub CCW generowane przez środowisko wykonawcze zapewnia odpowiednie kierowanie wywołań, które przekraczają granicę między COM i .NET Framework. Za pomocą atrybutów niestandardowych, można opcjonalnie dostosować sposób, środowisko uruchomieniowe reprezentuje kodem zarządzanym i niezarządzanym.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zaawansowane współdziałanie modeli COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md)
 - [Wywoływana otoka COM](com-callable-wrapper.md)

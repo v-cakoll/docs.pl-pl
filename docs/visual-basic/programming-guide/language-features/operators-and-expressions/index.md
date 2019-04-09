@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 8de4eeaa22f83392bcb6bb79a1fea327281dfec9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073653"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operatory i wyrażenia w Visual Basic
 *Operator* jest element kodu, który wykonuje operację na elementy kodu, które zawierają wartości. Elementy wartości obejmują zmienne, stałe, literały, właściwości, zwraca z `Function` i `Operator` procedur i wyrażeń.  
@@ -61,8 +61,7 @@ ms.locfileid: "58843750"
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
  W powyższym przykładzie Visual Basic wykonuje operacje w wyrażeniu po prawej stronie operatora przypisania (`=`), następnie przypisuje wynikowej wartości do zmiennej `x` po lewej stronie. Nie ma żadnego limitu praktyczne liczby operatorów, które mogą być połączone w wyrażeniu, ale zrozumienie [pierwszeństwo operatorów w języku Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) jest niezbędne do zapewnienia, że otrzymujesz oczekiwanych wyników.  
-  
-  
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory](../../../../visual-basic/language-reference/operators/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b3bbe330e71c30e9e92fdd107a59f78fee31ecc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111569"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże się do zestawów, które składają się na aplikację. Domyślnie środowisko uruchomieniowe podejmuje próbę powiązania z dokładną wersją zestawu, który aplikacja została skompilowana przy użyciu. To zachowanie domyślne można przesłonić, ustawień pliku konfiguracji.  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Na przykład, jeśli odwołuje się Assembly1 Assembly2 i Assembly1 została pobrana z `http://www.code.microsoft.com/utils`, czy lokalizacja jest uważany za wskazówkę o tym, gdzie można znaleźć Assembly2.dll. Środowisko uruchomieniowe, a następnie sondy dla zestawu w `http://www.code.microsoft.com/utils/Assembly2.dll` i `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Jeśli Assembly2 nie zostanie znaleziony w jednej z tych lokalizacji, środowisko uruchomieniowe wysyła zapytanie do Instalatora Windows.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
-- [Wdrażanie](../../../docs/framework/deployment/index.md)
+- [wdrażania](../../../docs/framework/deployment/index.md)

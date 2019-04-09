@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101301"
 ---
 # <a name="auditing-security-events"></a>Inspekcja zdarzeń dotyczących zabezpieczeń
 Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń związanych z zabezpieczeniami (Powodzenie, Niepowodzenie lub obie) za pomocą funkcji inspekcji. Zdarzenia są zapisywane w dzienniku zdarzeń systemu Windows i można zbadać za pomocą Podglądu zdarzeń.  
@@ -88,7 +88,7 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
 |System|Dziennik aplikacji|Dziennik zabezpieczeń|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] lub nowszy|Obsługiwane|Nieobsługiwane|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] i [!INCLUDE[wv](../../../../includes/wv-md.md)]|Obsługiwane|Kontekst wątku musi posiadać `SeAuditPrivilege`|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] and [!INCLUDE[wv](../../../../includes/wv-md.md)]|Obsługiwane|Kontekst wątku musi posiadać `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Inne czynniki  
  Oprócz systemu operacyjnego w poniższej tabeli opisano inne ustawienia regulujące włączenie rejestrowania.  
@@ -99,11 +99,12 @@ Aplikacje utworzone przy użyciu programu Windows Communication Foundation (WCF)
 |Domyślne środowisko użytkownika|Wszystkim uwierzytelnionym użytkownikom można napisać w dzienniku aplikacji, dzięki czemu nie dodatkowe uprawnienia krok jest niezbędny do procesów aplikacji.|Proces aplikacji (kontekstu) musi mieć `SeAuditPrivilege`.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Instrukcje: Inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Instrukcje: inspekcja zdarzeń zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

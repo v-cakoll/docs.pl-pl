@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia'
+title: 'Instrukcje: Tworzenie i inicjowanie źródeł śledzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194893"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia
+# <a name="how-to-create-and-initialize-trace-sources"></a>Instrukcje: Tworzenie i inicjowanie źródeł śledzenia
 <xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które pozwalają na łatwe śledzenie zdarzeń, dane śledzenia i ślady informacyjne problemu. Dane wyjściowe śledzenia z <xref:System.Diagnostics.TraceSource> mogą być tworzone i inicjowane z użyciem lub bez korzystania z plików konfiguracji. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się używać plików konfiguracyjnych ułatwiających rekonfigurację śladów produkowanych przez źródła śledzenia w czasie wykonywania.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Aby utworzyć i zainicjować źródło śledzenia przy użyciu pliku konfiguracji  
@@ -79,6 +79,7 @@ ms.locfileid: "54570099"
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>

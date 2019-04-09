@@ -2,12 +2,12 @@
 title: Duże ilości danych i przesyłanie strumieniowe
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176335"
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
 Windows Communication Foundation (WCF) to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML zwykle jest zakodowane w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), połączone systemy, deweloperów i architektów są zazwyczaj zajmującym się ochroną zużycie o komunikacji sieciowej (lub rozmiar) komunikaty wysyłane między sieć i kodowanie oparte na tekście XML stanowi szczególne wyzwanie wydajny transfer danych binarnych.  
@@ -173,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -239,4 +239,5 @@ public class UploadStreamMessage
 >  Decyzja dotycząca użycia buforowanego lub przesyłane strumieniowo transferu jest decyzja lokalnego punktu końcowego. Dla transportu HTTP tryb transferu nie propagować przez połączenie lub serwery proxy i innych pośredników. Ustawianie trybu transferu nie zostaną uwzględnione w opisie interfejsu usługi. Po wygenerowaniu klienta programu WCF do usługi, możesz edytować plik konfiguracji usługi przeznaczone do użycia w przypadku transferów przesyłane strumieniowo można ustawić trybu. Dla protokołu TCP i rodzajów transportu nazwanego potoku tryb transferu jest propagowany jako potwierdzenie zasad.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Instrukcje: włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

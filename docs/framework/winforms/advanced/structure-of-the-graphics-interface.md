@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106785"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Struktura interfejsu grafiki
 Interfejs klasy zarządzanej do [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera klasy około 60, 50 wyliczeń i struktur 8. <xref:System.Drawing.Graphics> Klasa jest sercem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funkcjonalności; jest to klasa, która faktycznie rysuje linie, krzywe, rysunki, obrazów i tekstu.  
@@ -23,6 +23,7 @@ Interfejs klasy zarządzanej do [!INCLUDE[ndptecgdiplus](../../../../includes/nd
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definiuje kilka wyliczenia, które są kolekcjami pokrewnych stałych. Na przykład <xref:System.Drawing.Drawing2D.LineJoin> wyliczenia zawiera elementy <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, i <xref:System.Drawing.Drawing2D.LineJoin.Round>, które określą style, które mogą służyć do dołączenia do dwóch wierszy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Grafika — omówienie](graphics-overview-windows-forms.md)
 - [Informacje o kodzie zarządzanym GDI+](about-gdi-managed-code.md)
 - [Używanie zarządzanych klas grafiki](using-managed-graphics-classes.md)

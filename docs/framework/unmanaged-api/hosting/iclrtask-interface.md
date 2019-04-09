@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d5f0bb07498203d3db57ac3948efddce4f050a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1baeac5db41aa64380d694ebab5419229d8adb4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088213"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask — Interfejs
 Udostępnia metody, które umożliwiają hosta propozycji dotyczących środowiska uruchomieniowego języka wspólnego (CLR) lub w celu udostępnienia powiadomienia do CLR o skojarzone zadanie.  
@@ -30,7 +30,7 @@ Udostępnia metody, które umożliwiają hosta propozycji dotyczących środowis
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Abort, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Żądania, że środowisko CLR przerwać zadanie, bieżący `ICLRTask` wystąpienie reprezentuje.|  
+|[Abort — Metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-abort-method.md)|Żądania, że środowisko CLR przerwać zadanie, bieżący `ICLRTask` wystąpienie reprezentuje.|  
 |[ExitTask, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)|Powiadamia CLR, który zadanie skojarzone z bieżącym `ICLRTask` wystąpienia kończy się i próbuje przeprowadzić zamknięcie zadania.|  
 |[GetMemStats, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-getmemstats-method.md)|Pobiera informacje statystyczne dotyczące użycia zasobów pamięci przez zadanie, reprezentowane przez bieżącą `ICLRTask` wystąpienia.|  
 |[LocksHeld, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrtask-locksheld-method.md)|Pobiera liczbę blokad znajdujących się obecnie w zadania.|  
@@ -57,8 +57,9 @@ Udostępnia metody, które umożliwiają hosta propozycji dotyczących środowis
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICLRTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ICLRTask2, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)
+
+- [ICLRTaskManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [IHostTask — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [IHostTaskManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ICLRTask2 — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Waliduj i scalaj PrintTickets'
+title: 'Instrukcje: Weryfikowanie i scalanie elementów PrintTickets'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199950"
 ---
-# <a name="how-to-validate-and-merge-printtickets"></a>Instrukcje: Waliduj i scalaj PrintTickets
+# <a name="how-to-validate-and-merge-printtickets"></a>Instrukcje: Weryfikowanie i scalanie elementów PrintTickets
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Schematu drukowania](https://go.microsoft.com/fwlink/?LinkId=186397) obejmuje elastyczna i rozszerzalna <xref:System.Printing.PrintCapabilities> i <xref:System.Printing.PrintTicket> elementów. Pierwsza wyszczególniono możliwości drukarki, a jego Określa, jak urządzenia powinny używać tych możliwości w odniesieniu do określonej sekwencji dokumentów, dokument lub pojedynczej strony.  
   
  Typowe sekwencji zadań dla aplikacji, która obsługuje drukowanie byłoby w następujący sposób.  
@@ -57,6 +57,7 @@ ms.locfileid: "57355171"
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
@@ -65,5 +66,5 @@ ms.locfileid: "57355171"
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd drukowania](printing-overview.md)
+- [Przegląd Drukowanie](printing-overview.md)
 - [Drukuj schematu](https://go.microsoft.com/fwlink/?LinkId=186397)

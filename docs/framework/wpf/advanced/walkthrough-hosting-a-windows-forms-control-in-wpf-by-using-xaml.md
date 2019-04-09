@@ -1,22 +1,22 @@
 ---
-title: 'Przewodnik: Hosting kontrolki Windows Forms w WPF przy użyciu XAML'
+title: 'Przewodnik: hostowanie kontrolki Windows Forms w WPF z wykorzystaniem języka XAML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
-ms.openlocfilehash: 1566f27703e2603a5d70cf8cfc7a01a08c407f6a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61a234a679d9937cb38a753a3d73f2ecc9ec891a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190371"
 ---
-# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Przewodnik: Hosting kontrolki Windows Forms w WPF przy użyciu XAML
+# <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Przewodnik: hostowanie kontrolki Windows Forms w WPF z wykorzystaniem języka XAML
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wiele kontrolek z rozbudowanym zestawie funkcji. Jednak czasami warto użyć [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów na Twoje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stron. Na przykład może mieć znaczne inwestycje w istniejących [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów, lub może być [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant, który oferuje unikatową funkcję.  
   
  W tym instruktażu dowiesz się, jak hostować formularzy Windows <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> kontrolować na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
- Aby uzyskać kompletny kod listę zadań przedstawione w niniejszym instruktażu, zobacz [Hosting kontrolki Windows Forms w WPF próbki przy użyciu XAML](https://go.microsoft.com/fwlink/?LinkID=160000).  
+ Aby uzyskać kompletny kod listę zadań przedstawione w niniejszym instruktażu, zobacz [Hosting kontrolki Windows Forms w WPF próbki przy użyciu XAML](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWpfWithXaml).
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
 
@@ -51,11 +51,12 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 6.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Kontrolki formularzy Windows Forms i równoważne kontrolki WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
+- [Przewodnik: hostowanie kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Kontrolki Windows Forms i ekwiwalentne kontrolki WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
 - [Hosting kontrolki Windows Forms w WPF za pomocą przykładowych XAML](https://go.microsoft.com/fwlink/?LinkID=160000)

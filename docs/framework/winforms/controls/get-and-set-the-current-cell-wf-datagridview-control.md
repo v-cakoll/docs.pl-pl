@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy Windows Forms'
+title: 'Instrukcje: pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: 712340e6fbc081cbac9ecfb516bffb7a58bf0c12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096982"
 ---
-# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Instrukcje: Pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy Windows Forms
+# <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Instrukcje: pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy systemu Windows
 Interakcja z <xref:System.Windows.Forms.DataGridView> często wymaga się, że programowo odkryjesz komórki, która jest obecnie aktywna. Również może być konieczna zmiana bieżącej komórki. Możesz wykonywać te zadania za pomocą <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> właściwości.  
   
 > [!NOTE]
@@ -48,7 +48,8 @@ Interakcja z <xref:System.Windows.Forms.DataGridView> często wymaga się, że p
 -   Odwołuje się do <xref:System?displayProperty=nameWithType> i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>
-- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Tryby wyboru w kontrolce DataGridView formularzy Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Tryby wyboru w formancie DataGridView formularzy systemu Windows](selection-modes-in-the-windows-forms-datagridview-control.md)

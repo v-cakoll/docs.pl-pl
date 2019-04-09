@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6feee7c5137501dbaf1c8cf8d097dfbf06071906
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b04c0453d9ff8545f79f235e7d73095c55203e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083286"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
 Powoduje, że środowisko uruchomieniowe, aby odłączyć profiler.  
@@ -67,6 +67,7 @@ HRESULT RequestProfilerDetach(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+
+- [ICorProfilerInfo3 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilowanie](../../../../docs/framework/unmanaged-api/profiling/index.md)

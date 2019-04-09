@@ -2,12 +2,12 @@
 title: <msmqTransportSecurity>
 ms.date: 03/30/2017
 ms.assetid: 092e911b-ab1b-4069-a26e-6134c3299e06
-ms.openlocfilehash: a5832d0117c6560d527706443d4966ce34bb3748
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fece74e76f879eff51f154eab8c8edea2c27119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180131"
 ---
 # <a name="msmqtransportsecurity"></a>\<msmqTransportSecurity>
 Określa ustawienia zabezpieczenia transportu MSMQ dla niestandardowego powiązania.  
@@ -55,6 +55,7 @@ Określa ustawienia zabezpieczenia transportu MSMQ dla niestandardowego powiąza
  Aby uzyskać więcej informacji na temat zabezpieczeń transportu, zobacz [Transport Security](../../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity>
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

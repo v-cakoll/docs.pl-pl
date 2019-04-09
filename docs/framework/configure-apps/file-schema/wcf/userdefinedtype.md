@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: a69571f5d34c2f844662f3d70ca67a2fb8ed0291
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182143"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 Reprezentuje użytkownika zdefiniowany typ (UDT), które ma być zawarty w kontrakcie usługi.  
@@ -91,9 +91,10 @@ Reprezentuje użytkownika zdefiniowany typ (UDT), które ma być zawarty w kontr
  Podczas inicjowania usługi integration runtime odwołuje się do określonych typów i dodaje je do kolekcji znanych typów dla określonej umowy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [Współdziałanie z aplikacjami COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Instrukcje: konfigurowanie ustawień usługi COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

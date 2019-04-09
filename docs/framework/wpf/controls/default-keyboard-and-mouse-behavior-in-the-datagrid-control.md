@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083325"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Domyślne zachowanie myszy i klawiatury w formancie DataGrid
 W tym temacie opisano, jak użytkownicy mogą korzystać z <xref:System.Windows.Controls.DataGrid> kontroli przy użyciu klawiatury i myszy.  
@@ -97,5 +97,6 @@ W tym temacie opisano, jak użytkownicy mogą korzystać z <xref:System.Windows.
  Aby wybrać niesąsiadujące zakresy sąsiadujące można łączyć CTRL + SHIFT. Aby to zrobić, wybierz pierwszy zakres, korzystając z klawisza SHIFT + kliknij zgodnie z wcześniejszym opisem. Po wybraniu pierwszego zakres wierszy należy użyj kombinacji klawisza CTRL i kliknij, aby zaznaczyć pierwszy wiersz w zakresie dalej, a następnie kliknij ostatni wiersz w zakresie dalej przytrzymaj klawisze CTRL + SHIFT.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

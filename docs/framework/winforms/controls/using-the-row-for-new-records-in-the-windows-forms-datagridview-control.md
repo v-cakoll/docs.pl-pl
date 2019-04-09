@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184824"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
 Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplikacji, często można zapewnić użytkownikom możliwość dodawania nowych wierszy danych w magazynie danych. <xref:System.Windows.Forms.DataGridView> Kontrolka obsługuje tę funkcję, zapewniając wiersza dla nowych rekordów, który jest zawsze wyświetlany jako ostatni wiersz. Jest ona oznaczona symbolem gwiazdki (*) w jej nagłówku wiersza. W poniższych sekcjach omówiono niektóre czynności, należy rozważyć, gdy program za pomocą wiersza dla nowych rekordów jest włączona.  
@@ -58,7 +58,8 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
  Jeśli są Implementowanie trybu wirtualnego, należy śledzić razie wiersza dla nowych rekordów w modelu danych i kiedy należy wycofać dodanie wiersza. Dokładna implementację tej funkcji zależy od implementacji modelu danych i jego semantyki transakcji na przykład, czy zakres zatwierdzenia znajduje się na poziomie wiersza lub komórki. Aby uzyskać więcej informacji, zobacz [trybu wirtualnego w formancie DataGridView formularzy Windows](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Wprowadzanie danych w formancie DataGridView formularzy systemu Windows](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy systemu Windows](specify-default-values-for-new-rows-in-the-datagrid.md)

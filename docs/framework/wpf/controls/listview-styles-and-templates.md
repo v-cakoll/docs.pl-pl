@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ListView [WPF], styles and templates
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
-ms.openlocfilehash: 1171140da352f0f5eb93832a3b6b3557e34d6904
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 813e7425b944ce9a7480cc45ab7d1f61cc0dc6d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188789"
 ---
 # <a name="listview-styles-and-templates"></a>ListView — Style i szablony
 W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ListView> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -65,9 +65,10 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ListView> 
  Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony kontrolek](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Style i szablony formantu](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

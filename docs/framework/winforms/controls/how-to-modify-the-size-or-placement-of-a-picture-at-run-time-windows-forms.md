@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178831"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania (formularze Windows)
 Jeśli używasz formularzy Windows <xref:System.Windows.Forms.PictureBox> formantu w formularzu, można ustawić <xref:System.Windows.Forms.PictureBox.SizeMode%2A> właściwości na niej w celu:  
@@ -83,8 +83,9 @@ Jeśli używasz formularzy Windows <xref:System.Windows.Forms.PictureBox> forman
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.PictureBox>
-- [Instrukcje: Zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [PictureBox, kontrolka — omówienie](picturebox-control-overview-windows-forms.md)
-- [Instrukcje: Ustawienie obrazów w czasie wykonywania](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Instrukcje: ustawienie obrazów w czasie wykonywania](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox, kontrolka](picturebox-control-windows-forms.md)

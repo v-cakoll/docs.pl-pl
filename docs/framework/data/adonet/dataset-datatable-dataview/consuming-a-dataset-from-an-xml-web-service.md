@@ -1,18 +1,18 @@
 ---
-title: Korzystanie z zestawu danych z usługi sieci Web XML
+title: Korzystanie z elementu DataSet w usłudze internetowej XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: dbb45b890ddfab3f771d4b4a8932f970036b346d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180248"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci Web XML
+# <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z elementu DataSet w usłudze internetowej XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodne transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji", może być określony jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez pisania dodatkowe wymagane do przesyłania strumieniowego zawartości **DataSet** z usługi XML sieci Web do klientów i z powrotem. **DataSet** niejawnie konwertowane na strumień XML przy użyciu formatu w formacie DiffGram, wysyłane przez sieć i następnie odtworzone strumień XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny metody przesyłania i zwraca dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu w formacie DiffGram zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
   
  Poniższy przykład przedstawia sposób tworzenia usługi XML sieci Web i klienta, który używał **DataSet** do przesyłania danych relacyjnych (w tym zmodyfikowanych danych) i rozwiązać wszelkie aktualizacje z powrotem do oryginalnego źródła danych.  
@@ -260,11 +260,12 @@ ms.locfileid: "55828296"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Aktualizowanie źródeł danych za pomocą elementów DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Parametry elementu DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
 - [Narzędzia języka opisu usługi sieci Web (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v=vs.100))
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186878"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Określanie zachowania środowiska uruchomieniowego usługi
 Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji środowisko wykonawcze usług. Ten temat zawiera omówienie usług dostarczanych przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas gdy niektóre zachowania są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. Aby uzyskać więcej informacji na temat konfigurowania aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
@@ -121,5 +121,6 @@ Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../.
 -   <xref:System.ServiceModel.TransactionFlowAttribute>. Określa poziom, w którym operacji usługi akceptuje Nagłówek transakcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md)
 - [Instrukcje: Tworzenie wystąpienia usługi kontroli](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

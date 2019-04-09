@@ -4,12 +4,12 @@ description: Dowiedz się, jak zdefiniować i zastosować zwracane ref i wartoś
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081850"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
@@ -59,7 +59,6 @@ Odwołania zwracana wartość jest alias do innej zmiennej w zakresie wywoływan
 - Jeśli przywrócić go *przez odwołanie*, alias jest zwracany do tej samej zmiennej.
 - W przypadku przekazania do innej metody *przez odwołanie*, kończy się sukcesem odwołania do zmiennej go aliasów.
 - Po ustawieniu [odwołanie lokalne](#ref-locals) alias, należy wprowadzić nowy alias tę samą zmienną.
-
 
 ## <a name="ref-locals"></a>Zmienne lokalne REF
 
@@ -124,5 +123,5 @@ Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenarius
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ref keyword](../../language-reference/keywords/ref.md)
+- [REF — słowo kluczowe](../../language-reference/keywords/ref.md)
 - [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)

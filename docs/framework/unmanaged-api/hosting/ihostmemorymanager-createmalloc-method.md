@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18c6390e0874dfe658911b4e9ce55527b2558bc2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 194e9b73610ccb7282babf266eea2968a4f035ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179130"
 ---
 # <a name="ihostmemorymanagercreatemalloc-method"></a>IHostMemoryManager::CreateMAlloc — Metoda
 Pobiera wskaźnik interfejsu do [ihostmalloc —](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md) wystąpienie, które służy do wysyłania żądań alokacji ze stosu, utworzone przez hosta.  
@@ -68,5 +68,6 @@ HRESULT CreateMalloc (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IHostMalloc, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
-- [IHostMemoryManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+
+- [IHostMalloc — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)
+- [IHostMemoryManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

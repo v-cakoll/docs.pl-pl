@@ -1,18 +1,18 @@
 ---
-title: LINQ to SQL Model obiektów
+title: Model obiektu LINQ to SQL
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110796"
 ---
-# <a name="the-linq-to-sql-object-model"></a>LINQ to SQL Model obiektów
+# <a name="the-linq-to-sql-object-model"></a>Model obiektu LINQ to SQL
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], na model obiektów wyrażony w języku programowania, który jest mapowany na model danych relacyjnej bazy danych. Operacje na danych, następnie są przeprowadzane zgodnie z modelem obiektów.  
   
  W tym scenariuszu nie wydaje polecenia bazy danych (na przykład `INSERT`) w bazie danych. Zamiast tego zmienić wartości i wykonywanie metod w modelu obiektu. Gdy chcesz wykonać zapytanie w bazie danych lub zmienia się, Wyślij [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy żądania na prawidłowe polecenia SQL, a następnie wysyła te polecenia w bazie danych.  
@@ -81,5 +81,6 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], na model 
  Aby uzyskać więcej informacji, zobacz sekcje atrybut funkcji, przechowywane procedury atrybut i atrybut Parameter [mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) i [procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

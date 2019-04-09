@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powiązanie obiektów do kontrolek DataGridView formularzy Windows Forms'
+title: 'Instrukcje: powiązanie obiektów z kontrolkami DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], object binding
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
-ms.openlocfilehash: 9f3ce61b3692f0b83298bdf9a19cb98fb5d5ab7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 02c4f94eddfcf782d7d2323787d9b6a9b18db2d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180261"
 ---
-# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Instrukcje: Powiązanie obiektów do kontrolek DataGridView formularzy Windows Forms
+# <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Instrukcje: powiązanie obiektów z kontrolkami DataGridView formularzy systemu Windows
 Poniższy przykład kodu pokazuje, jak powiązać kolekcji obiektów do <xref:System.Windows.Forms.DataGridView> sterowania, aby każdy obiekt jest wyświetlany jako oddzielny wiersz. Ten przykład ilustruje także sposób wyświetlania właściwości dla typu wyliczenia w <xref:System.Windows.Forms.DataGridViewComboBoxColumn> tak, aby listy rozwijanej pola kombi zawiera wartości wyliczenia.  
   
 ## <a name="example"></a>Przykład  
@@ -31,6 +31,7 @@ Poniższy przykład kodu pokazuje, jak powiązać kolekcji obiektów do <xref:Sy
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Uzyskiwanie dostępu do obiektów powiązanych z Windows Forms wierszami formantu DataGridView](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView formularzy systemu Windows](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173033"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegany wartość rzeczywista dla aplikacji Windows Presentation Foundation (WPF).  
@@ -123,10 +123,11 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
  Zamiast przy użyciu XAML, aby ustawić <xref:System.Windows.FrameworkElement.DataContext%2A> deklaratywnie w głównym oknie, warto ustawić programowo w <xref:System.Windows.Application.OnActivated%2A> metody.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
 - [Dodawanie ekranu powitalnego do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
+- [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
 - [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

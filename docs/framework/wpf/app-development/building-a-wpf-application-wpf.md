@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184486"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), biblioteki (.dll) lub jako kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki w procesie kompilacji.  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>Kompilowanie aplikacji WPF  
  Aplikacja WPF można kompilować w następujący sposób:  
@@ -167,7 +166,8 @@ End Sub
 -   Nic nie jest ponownie kompilowany, (Jeśli w projekcie nic się nie zmieniło).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)
 - [Odwołanie do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
-- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
-- [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)
+- [Pakuj URI w WPF](pack-uris-in-wpf.md)
+- [Zasoby aplikacji WPF, zawartość, pliki danych](wpf-application-resource-content-and-data-files.md)

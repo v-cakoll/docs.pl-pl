@@ -2,12 +2,12 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: ef3d92e07aaf4d4ba9d90e381017db104f2cc8fe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356588"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179156"
 ---
 # <a name="transactionflow"></a>\<transactionFlow >
 Określa obsługę przepływu transakcji dla niestandardowego powiązania.  
@@ -49,6 +49,7 @@ Określa obsługę przepływu transakcji dla niestandardowego powiązania.
 >  Korzystając z `OleTransactions` protokołu przepływ transakcji z punktu końcowego do endpoint, limit czasu transakcji mogą zostać utracone, jeśli docelowy punkt końcowy podejmie próbę przepływ ponownie przy użyciu dowolnego protokołu innego niż `OleTransactions`. Może to spowodować wszystkich węzłów niskiego poziomu po przeskoku OleTransactions przekroczenie limitu czasu później niż oczekiwano.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.TransactionFlowElement>
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

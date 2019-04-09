@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177414"
 ---
 # <a name="dialog-boxes-overview"></a>Przegląd okien dialogowych
 Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetlenie danych głównych, względem której aplikacja działa i uwidacznia funkcje przetwarzania tych danych za pośrednictwem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mechanizmów, takich jak pasek menu, paski narzędzi i pasków stanu. — Prosta aplikacja może również wyświetlić dodatkowe okna, wykonaj następujące czynności:  
@@ -33,9 +33,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
  A *niemodalne* okno dialogowe z drugiej strony, nie uniemożliwia użytkownikowi aktywowanie inne okna, gdy jest on otwarty. Na przykład jeśli użytkownik chce wyszukać wystąpienia określonego wyrazu w dokumencie, okno główne często otworzy okno dialogowe, aby poprosić użytkownika programu word, które szukają. Od znajdowanie słowo nie uniemożliwia użytkownikowi edytowania dokumentu, jednak okno dialogowe nie musi być modalne. Co najmniej zapewnia niemodalnego okna dialogowego **Zamknij** przycisk, aby zamknąć okno dialogowe i mogą dostarczać dodatkowych przycisków do wykonania określonych funkcji, takich jak **Znajdź następny** przycisk, aby znaleźć następnego word, który odpowiadającego kryteriom wyszukiwania, wyszukiwania programu word.  
   
  Windows Presentation Foundation (WPF) pozwala utworzyć kilka typów okien dialogowych, w tym okna komunikatów, wspólne okna dialogowe i niestandardowych okien dialogowych. W tym temacie omówiono poszczególnych usług i [przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984) zawiera przykłady dopasowania.  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Okna komunikatów  
  A *okno komunikatu* to okno dialogowe, który może służyć do wyświetlania informacji tekstowych i Zezwalaj użytkownikom na podejmowanie decyzji za pomocą przycisków. Na poniższej ilustracji przedstawiono okno komunikatu, który wyświetla informacje tekstowe, zadaje pytanie i zapewnia użytkownikowi dostęp do trzech przycisków, aby znaleźć odpowiedź na pytanie.  
@@ -47,7 +45,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Aby wyświetlić okno komunikatu, należy wywołać `static` <xref:System.Windows.MessageBox.Show%2A> metody, jak pokazano w poniższym kodzie.  
+ Aby wyświetlić okno komunikatu, należy wywołać `static`<xref:System.Windows.MessageBox.Show%2A> metody, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -345,6 +343,7 @@ Aplikacje autonomiczne zwykle mają okno główne, czy oba powoduje wyświetleni
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Okno podręczne — omówienie](../controls/popup-overview.md)
+
+- [Przegląd Okna podręczne](../controls/popup-overview.md)
 - [Przykładowe okno dialogowe](https://go.microsoft.com/fwlink/?LinkID=159984)
 - [Próbka formantów niestandardowych ColorPicker](https://go.microsoft.com/fwlink/?LinkID=159977)

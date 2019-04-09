@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: c4c6c01839294e134b0961059a4c165a67c1ecf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176933"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtrowanie za pomocą widoku danych (LINQ to DataSet)
 Możliwość filtrowania danych przy użyciu określonych kryteriów, a następnie prezentować dane do klienta za pomocą kontrolki interfejsu użytkownika jest istotnym elementem powiązanie danych. <xref:System.Data.DataView> oferuje kilka sposobów, aby filtrować dane i zwracanie podzbiorów danych wiersze spełniające kryteria filtru określonego. Oprócz parametrów na podstawie funkcji filtrowania <xref:System.Data.DataView> udostępnia również możliwość używania [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażeń do kryteriów filtrowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia pozwalają znacznie bardziej złożone i zaawansowane operacje filtrowania niż filtrowania opartego na ciąg.  
@@ -93,5 +93,6 @@ Możliwość filtrowania danych przy użyciu określonych kryteriów, a następn
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
-- [Sortowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)
+- [Sortowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

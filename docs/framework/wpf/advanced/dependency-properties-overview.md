@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188646"
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
 
@@ -197,7 +197,8 @@ Zazwyczaj nie trzeba będzie style Zawsze stosuj i zasłaniać nawet lokalnie us
 - Właściwości zależności powinien ogólnie być uważany właściwości publiczne, dostępny lub co najmniej wykrywane przez dowolny obiekt wywołujący, który ma dostęp do wystąpienia. Aby uzyskać więcej informacji, zobacz [zabezpieczenia właściwości zależności](dependency-property-security.md).
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Właściwości zależności tylko do odczytu](read-only-dependency-properties.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
 - [Architektura WPF](wpf-architecture.md)

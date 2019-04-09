@@ -9,17 +9,16 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083839"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Właściwości zależności i ładowania XAML
 Bieżący [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementację jej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora jest świadomość właściwość zależności. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Procesor używa metody system właściwości dla właściwości zależności podczas ładowania pliku binarnego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i podczas przetwarzania atrybutów, które są właściwościami zależności. Pomija to skutecznie otoki właściwości. Podczas implementowania niestandardowe właściwości zależności muszą uwzględniać to zachowanie i unikać umieszczania każdy inny kod w swojej otoki właściwość niż metody system właściwości <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A>.  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że zrozumieć właściwości zależności zarówno jako odbiorców i autor i po ich przeczytaniu [Przegląd właściwości zależności](dependency-properties-overview.md) i [niestandardowe właściwości zależności](custom-dependency-properties.md). Należy również przeczytanie [Przegląd XAML (WPF)](xaml-overview-wpf.md) i [składnia XAML w szczegółów](xaml-syntax-in-detail.md).  
@@ -42,9 +41,10 @@ Bieżący [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincli
  [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
 - [Metadane zależności właściwości](dependency-property-metadata.md)
 - [Właściwości zależności typu kolekcji](collection-type-dependency-properties.md)
-- [Zabezpieczenia właściwości zależności](dependency-property-security.md)
-- [Bezpieczne wzorce konstruktora dla obiektów DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
+- [Zabezpieczenie właściwości zależności](dependency-property-security.md)
+- [Bezpieczne wzorce konstruktora DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie atrybutów czcionki dla formantu RichTextBox formularzy Windows'
+title: 'Instrukcje: ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: 92578bd267230f5878bda9533bd117e8f98d8f13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 50a65a6828968f7bd9f1b17f5b8c8b1e4f70d051
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182913"
 ---
-# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Instrukcje: Ustawianie atrybutów czcionki dla formantu RichTextBox formularzy Windows
+# <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Instrukcje: ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele opcji formatowania tekstu, zostanie wyświetlony. Aby włączyć wybranych znaków pogrubienie, podkreślony lub kursywa, przy użyciu <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> właściwości. Ta właściwość umożliwia również zmienić rozmiar i krój czcionki wybranych znaków. <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> Właściwości umożliwia zmianę koloru zaznaczonych znaków.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Aby zmienić wygląd znaków  
@@ -54,6 +54,7 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontrolka ma wiele op
     >  Te właściwości mają wpływ tylko na zaznaczony tekst lub, jeśli nie wybrano tekstu, tekst jest wpisane w bieżącej lokalizacji punktu wstawiania. Aby uzyskać informacji na temat programowy wybór tekstu, zobacz <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)

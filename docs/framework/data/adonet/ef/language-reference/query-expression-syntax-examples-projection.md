@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 3e4b30c5d4d1cd5703ff6ec15a1c3fe32e41f42a
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178038"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Przykłady składni wyrażeń zapytania: Rzut
 Przykłady w tym temacie prezentują sposób użycia `Select` metody i `From … From …` słów kluczowych, aby wysłać zapytanie [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) przy użyciu składni wyrażeń zapytania. `From … From …` jest równoważne z kwerendy na podstawie `SelectMany` metody. Model sprzedaży AdventureWorks używanego w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  
@@ -61,4 +61,5 @@ Przykłady w tym temacie prezentują sposób użycia `Select` metody i `From …
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

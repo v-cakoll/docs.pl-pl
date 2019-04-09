@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 644e180e2f15592db2112a5cd6f5b0130c6abea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073328"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Instrukcje: Rysowanie tekstu za pomocą GDI
 Za pomocą <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method in Class metoda <xref:System.Windows.Forms.TextRenderer> klasy, możesz uzyskać dostęp [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funkcji Rysowanie tekstu na formularz lub formant. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Renderowanie tekstu zwykle zapewnia lepszą wydajność i bardziej precyzyjne tekstu pomiaru niż [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
@@ -34,9 +34,10 @@ Za pomocą <xref:System.Windows.Forms.TextRenderer.DrawText%2A> method in Class 
  Aby uzyskać więcej informacji na temat uzyskiwania <xref:System.Drawing.Graphics>, zobacz [jak: Tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md). Aby uzyskać więcej informacji na temat tworzenia <xref:System.Drawing.Font>, zobacz [jak: Tworzenie rodzin czcionek i czcionek](how-to-construct-font-families-and-fonts.md).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- W poprzednim przykładzie kodu jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+ W poprzednim przykładzie kodu jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs>`e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.TextRenderer>
 - <xref:System.Drawing.Font>
 - <xref:System.Drawing.Color>

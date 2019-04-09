@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczytaj metadane obrazu'
+title: 'Instrukcje: Odczytywanie metadanych obrazu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173618"
 ---
-# <a name="how-to-read-image-metadata"></a>Instrukcje: Odczytaj metadane obrazu
+# <a name="how-to-read-image-metadata"></a>Instrukcje: Odczytywanie metadanych obrazu
 Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, które mogą odczytać w celu określenia producenta i modelu aparatu używane do przechwytywania obrazu. Za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], mogą odczytywać metadane istniejącego i można także zapisać nowe metadane do plików obrazu.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] przechowuje wyraźne metadanych w <xref:System.Drawing.Imaging.PropertyItem> obiektu. Może odczytywać <xref:System.Drawing.Image.PropertyItems%2A> właściwość <xref:System.Drawing.Image> obiekt, aby pobrać wszystkie metadane z pliku. <xref:System.Drawing.Image.PropertyItems%2A> Właściwość zwraca tablicę <xref:System.Drawing.Imaging.PropertyItem> obiektów.  
@@ -40,7 +40,7 @@ Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu okreś
   
 |Wartość liczbowa|Opis|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|ELEMENT `Byte`|  
 |2|Tablica `Byte` obiektów zakodowanymi w formacie ASCII|  
 |3|16-bitową liczbę całkowitą|  
 |4|32-bitowa liczba całkowita|  
@@ -124,5 +124,6 @@ Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu okreś
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Obsługa formularzy <xref:System.Windows.Forms.Control.Paint> zdarzeń i wklej ten kod do obsługi zdarzeń malowania. Należy zastąpić `FakePhoto.jpg` przy użyciu nazwy obrazu i ścieżki prawidłowe dla używanego systemu i importowania `System.Drawing.Imaging` przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
 - [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

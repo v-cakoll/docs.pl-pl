@@ -4,18 +4,18 @@ description: Dowiedz się, najlepsze rozwiązania dotyczące komunikacji z usłu
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196661"
 ---
 # <a name="native-interoperability-best-practices"></a>Współdziałanie natywne najlepszych rozwiązań
 
 .NET zapewnia szereg sposobów dostosowywania kodu interoperacyjności macierzystej. Ten artykuł zawiera wskazówki, które zespoły .NET firmy Microsoft należy wykonać w przypadku interoperacyjności macierzystej.
 
-## <a name="general-guidance"></a>Ogólne wskazówki
+## <a name="general-guidance"></a>Wskazówki ogólne
 
 Wskazówki zawarte w tej sekcji ma zastosowanie do wszystkich scenariuszy międzyoperacyjnego.
 
@@ -187,7 +187,6 @@ Taki sam rozmiar na 32-bitowych i 64-bitowych Windows, niezależnie od ich nazwy
 | 64    | `ULARGE_INTEGER` | `unsigned long long` | `ulong`  |                                      |
 | 32    | `HRESULT`        | `long`               | `int`    |                                      |
 | 32    | `NTSTATUS`       | `long`               | `int`    |                                      |
-
 
 Następujące typy, są wskaźnikami, postępuj zgodnie z szerokość platformy. Użyj `IntPtr` / `UIntPtr` tych.
 

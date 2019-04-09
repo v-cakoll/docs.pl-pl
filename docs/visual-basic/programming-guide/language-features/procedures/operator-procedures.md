@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175022"
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
 Procedury operatora to szereg instrukcji, które definiują zachowanie standardowego operatora (takie jak `*`, `<>`, lub `And`) dla klasy lub struktury, które zostały zdefiniowane. Jest to również nazywane *przeciążenia operatora*.  
@@ -44,7 +44,7 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
 ## <a name="declaration-syntax"></a>Składnia deklaracji  
  Składnia do deklarowania procedury operatora jest następująca:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *typu danych*  
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *typu danych*   
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
   
  `Dim testStruct As`  *structurename*  
   
- `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*  `10`  
+ `Dim testNewStruct As`  *structurename*`= testStruct`*operatorsymbol*   `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołanie  
  Następującą strukturę przechowuje wartość liczby całkowitej ze znakiem 128-bitowego, jako części składowe wyższego rzędu i niskiego rzędu. Definiuje on `+` operatora, aby dodać dwa `veryLong` wartości i generować co `veryLong` wartość.  
@@ -78,8 +78,7 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
  W poniższym przykładzie przedstawiono typowe wywołanie `+` operator wobec `veryLong`.  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedury](./index.md)
@@ -87,7 +86,7 @@ Procedury operatora to szereg instrukcji, które definiują zachowanie standardo
 - [Procedury funkcji](./function-procedures.md)
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator — Instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Instrukcje: Definiowanie operatora](./how-to-define-an-operator.md)
 - [Instrukcje: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
 - [Instrukcje: Wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 24a9c63b8d52ef05c386e5bfefe81e33245ece91
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191279"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Uzyskiwanie elementów automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -97,6 +97,7 @@ ms.locfileid: "57674487"
  Możesz pobrać <xref:System.Windows.Automation.AutomationElement> reprezentujący sterowania ukierunkowane ze statycznej <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Nawigowanie po elementach automatyzacji interfejsu użytkownika przy użyciu opcji TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

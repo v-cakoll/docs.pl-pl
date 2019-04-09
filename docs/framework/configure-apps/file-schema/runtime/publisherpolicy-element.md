@@ -1,5 +1,5 @@
 ---
-title: <publisherPolicy>, element
+title: <publisherPolicy> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076292"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy> Element
 Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.  
@@ -86,6 +86,7 @@ Określa, czy środowisko uruchomieniowe mają zastosowanie zasady wydawcy.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

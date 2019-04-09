@@ -1,15 +1,15 @@
 ---
-title: PNRP Caches
+title: Pamięci podręczne PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 375e193e618366b169d5c84073adb432cea3634c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182484"
 ---
-# <a name="pnrp-caches"></a>PNRP Caches
+# <a name="pnrp-caches"></a>Pamięci podręczne PNRP
 Elementu równorzędnego protokołu PNRP (Name Resolution Protocol) w pamięci podręcznej są kolekcji lokalnych punktów końcowych algorithmically wybranego elementu równorzędnego w elementu równorzędnego.  
   
 ## <a name="pnrp-cache-initialization"></a>PNRP Cache Initialization  
@@ -36,4 +36,5 @@ Elementu równorzędnego protokołu PNRP (Name Resolution Protocol) w pamięci p
  Elementy równorzędne można zarejestrować zainteresowanie odbieranie obiektów z innymi elementami równorzędnymi. Gdy obiekt jest aktualizowany, aplikacji współpracy zostanie wysłane powiadomienie, a nowy obiekt jest przekazywany do wszystkich subskrybentów aplikacji. Na przykład elementu równorzędnego w grupie aplikacji rozmów można zarejestrować zainteresowanie odbieranie informacji o aplikacji, która będzie wysyłać je wszystkie rekordy rozmowy jako dane aplikacji.  Dzięki temu na monitorowanie działania rozmowy w chmurze.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.PeerToPeer>

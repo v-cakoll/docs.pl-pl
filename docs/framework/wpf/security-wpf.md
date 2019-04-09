@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193671"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a> Podczas tworzenia autonomicznego Windows Presentation Foundation (WPF) i aplikacjami hostowanymi w przeglądarce, należy wziąć pod uwagę modelu zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje samodzielne są wykonywane z nieograniczonymi uprawnieniami ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** zestaw uprawnień), czy wdrożyć przy użyciu Instalatora Windows (msi), polecenia XCopy, lub [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Wdrażanie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce jest nieobsługiwany. Jednak utworzyć aplikację hosta pełnego zaufania częściowego zaufania <xref:System.AppDomain> przy użyciu modelu — w programie .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd dodatki WPF](./app-development/wpf-add-ins-overview.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "58654318"
 |Zasób|Pliki, które są dodawane do projektu o typie kompilacji **zasobów**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Zawartość|Pliki, które są dodawane do projektu o typie kompilacji **zawartości**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Witryna pochodzenia|Pliki, które są dodawane do projektu o typie kompilacji **Brak**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Kod aplikacji|Zasoby XAML, które zostały skompilowane kodem.<br /><br /> —lub—<br /><br /> Pliki XAML, które są dodawane do projektu o typie kompilacji **strony**.|`pack://application:,,,/MyResourceFile``.xaml`|  
+|Kod aplikacji|Zasoby XAML, które zostały skompilowane kodem.<br /><br /> —lub—<br /><br /> Pliki XAML, które są dodawane do projektu o typie kompilacji **strony**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 >  Aby uzyskać więcej informacji na temat plików danych aplikacji i dodatkiem Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], zobacz [zasoby aplikacji WPF, zawartość i pliki danych](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -268,14 +268,15 @@ ms.locfileid: "58654318"
 |----------|--------------|  
 |Kod zarządzany|[Wzorce i rozwiązania dotyczące zabezpieczeń dla aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Zabezpieczenia dostępu kodu](../misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
-- [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
-- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
+- [Strategia zabezpieczeń WPF - zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
+- [Strategia zabezpieczeń WPF - projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
 - [Wzorce i rozwiązania dotyczące zabezpieczeń dla aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
-- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Przegląd XAML (WPF)](./advanced/xaml-overview-wpf.md)
+- [Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Omówienie XAML (WPF)](./advanced/xaml-overview-wpf.md)

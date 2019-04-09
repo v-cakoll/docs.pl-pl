@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a93052cba4693e63b3cb702a5ab8f6e15a8d8dec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: accb06421b8a697b0ee89adab0a9dffa23cffb05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193112"
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
 Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia dla aplikacji wymagających większej kontroli nad ładowania zestawu. Obsługa tego zdarzenia, aplikacja może załadowania zestawu w kontekstu ładowania z poza normalny sondowania ścieżek, wybierz której z kilku wersji zestawu do załadowania, emitują zestawu dynamicznego i przywrócić go i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzeń.  
@@ -81,5 +81,6 @@ Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayPro
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
-- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
+- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)

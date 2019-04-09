@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174112"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczeń dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury, dostarczane przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji są wykonywane z uprawnienia użytkownika lub jednostki. W rezultacie systemów komputerowych, może być uszkodzone i prywatnych danych naruszenia zabezpieczeń w przypadku złośliwego lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podwyższonym poziomem uprawnień.  
@@ -195,6 +195,7 @@ Failed, as expected: Request failed.
  .NET Framework obsługuje także zgodności z poprzednimi wersjami istniejących składników COM, zapewniając dostęp za pośrednictwem współdziałania z modelem COM. Za pomocą narzędzia międzyoperacyjności modelu COM do importowania odpowiednich typów modelu COM, można zastosować składników modelu COM w aplikacji .NET Framework. Po zaimportowaniu typy modelu COM są gotowe do użycia. Usługa międzyoperacyjna modelu COM umożliwia również klientów modelu COM uzyskać dostęp do kodu zarządzanego, eksportowanie metadanych zestawu na bibliotekę typów i rejestrując składnik zarządzany jako składnik COM. Aby uzyskać więcej informacji, zobacz [zaawansowane współdziałanie COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Zabezpieczenia w kodzie natywnym i kodzie .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Zabezpieczenia oparte na rolach](../../../../docs/standard/security/role-based-security.md)

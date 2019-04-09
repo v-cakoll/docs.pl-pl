@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 14212c9993d936138df70160e4e49152cd5ff958
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192865"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptory (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] umożliwia aplikacji przechwycenia komunikatów żądań, tak aby dodać logikę niestandardową operacji. Można użyć tej niestandardowej logiki do sprawdzania poprawności danych w wiadomości przychodzących. Można również użyć bardziej ograniczyć zakres żądania zapytania, takie jak wstawić niestandardowych zasad autoryzacji na podstawie danego żądania.  
@@ -49,4 +49,5 @@ ms.locfileid: "54626761"
  Aby uzyskać więcej informacji, zobacz [jak: Przechwytywanie wiadomości usługi danych](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

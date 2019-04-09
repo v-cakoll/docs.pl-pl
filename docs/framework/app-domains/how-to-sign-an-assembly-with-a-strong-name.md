@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 971180465f506fa69ff562ab0fdef56c0a5ec918
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196557"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Instrukcje: Podpisywanie zestawu silną nazwą
 Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:  
@@ -54,13 +54,13 @@ Istnieje kilka metod podpisywania zestawu za pomocą silnej nazwy:
   
      gdzie:  
   
-     *assemblyName*  
+     *nazwaZestawu*  
      Nazwa zestawu podpisanego za pomocą silnej nazwy (plik dll lub exe), który zostanie wyemitowany przez program Assembly Linker.  
   
-     *moduleName*  
+     *{1&gt;nazwaModułu&lt;1}*  
      Nazwa modułu kodu programu .NET Framework (plik netmodule) zawierającego co najmniej jeden typ. Plik netmodule można utworzyć, kompilując kod z `/target:module` przełącznika w języku C# lub Visual Basic.  
   
-     *keyfileName*  
+     *{1&gt;nazwaPlikuKlucza&lt;1}*  
      Nazwa kontenera lub pliku zawierającego parę kluczy. Program Assembly Linker interpretuje ścieżkę względną w odniesieniu do bieżącego katalogu.  
   
  Poniższy przykład podpisuje zestaw `MyAssembly.dll` za pomocą silnej nazwy przy użyciu pliku klucza `sgKey.snk`.  
@@ -101,9 +101,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
-- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
+- [Al.exe (Konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)
-- [Zarządzanie podpisywaniem zestawu i manifestu](/visualstudio/ide/managing-assembly-and-manifest-signing)
+- [Zarządzanie zestawem i podpisywanie manifestu](/visualstudio/ide/managing-assembly-and-manifest-signing)
 - [Strona podpisywania, Projektant projektu](/visualstudio/ide/reference/signing-page-project-designer)

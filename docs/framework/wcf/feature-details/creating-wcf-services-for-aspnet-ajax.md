@@ -2,12 +2,12 @@
 title: Tworzenie usług WCF w technologii AJAX na platformie ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: d6d00b5b8839d519ffa3609eafffd4b086689449
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174151"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Tworzenie usług WCF w technologii AJAX na platformie ASP.NET
 Microsoft ASP.NET AJAX umożliwia szybkie tworzenie strony sieci Web, które zawierają zaawansowany interfejs użytkownika przy użyciu elementów interfejsu użytkownika dynamiczne i dobrze znane. ASP.NET AJAX udostępnia biblioteki skryptu klienta, obejmujące przeglądarek ECMAScript (JavaScript) i dynamiczny technologii HTML (DHTML) i integruje się je z platform programistycznych opartych na serwerze programu ASP.NET 2.0. Za pomocą kodu ASP.NET AJAX, możesz poprawić środowisko użytkownika i wydajność aplikacji sieci Web.  
@@ -58,7 +58,8 @@ Microsoft ASP.NET AJAX umożliwia szybkie tworzenie strony sieci Web, które zaw
  Punktów końcowych AJAX w programie WCF nawet może być używane bez framework ASP.NET AJAX. Wymaga zrozumienia architektury pomocy technicznej Obsługa technologii AJAX w programie WCF. Omówienie tej architektury, zobacz [programowania modelu obiektu WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Dla przykładu kodu, demonstrując tej metody, zobacz [usługa AJAX z formatami JSON i XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
-- [Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [Instrukcje: Wybieranie między żądania HTTP POST i HTTP GET żądań dla punktów końcowych AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [Instrukcje: dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
+- [Instrukcje: dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [Instrukcje: wybieranie między żądaniami HTTP POST i HTTP GET dla punktów końcowych AJAX ASP.NET](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

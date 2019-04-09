@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Wykonywanie zapytania SQL sparametryzowanej jednostki przy użyciu EntityCommand'
+title: 'Instrukcje: Wykonywanie zapytania SQL do sparametryzowanej jednostki przy użyciu EntityCommand'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: e605166fa11fbf6424657e1fefa0a5087a11049c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 252d04ce96e222526bfd3d3e0b798f1c5edd2c8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079711"
 ---
-# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Instrukcje: Wykonywanie zapytania SQL sparametryzowanej jednostki przy użyciu EntityCommand
+# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Instrukcje: Wykonywanie zapytania SQL do sparametryzowanej jednostki przy użyciu EntityCommand
 W tym temacie przedstawiono sposób wykonywania [!INCLUDE[esql](../../../../../includes/esql-md.md)] kwerendę, która ma następujące parametry przy użyciu <xref:System.Data.EntityClient.EntityCommand> obiektu.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Aby uruchomić kod w tym przykładzie  
@@ -31,5 +31,6 @@ W tym temacie przedstawiono sposób wykonywania [!INCLUDE[esql](../../../../../i
  [!code-vb[DP EntityServices Concepts#ParameterizedQueryWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#parameterizedquerywithentitycommand)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Wykonaj zapytanie parametryczne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
-- [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Język Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

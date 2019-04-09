@@ -1,15 +1,15 @@
 ---
-title: N-warstwowe i zdalne aplikacje za pomocą LINQ to SQL
+title: N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 32035720992a679457f11414ab282f949b450082
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075186"
 ---
-# <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-warstwowe i zdalne aplikacje za pomocą LINQ to SQL
+# <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL
 Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Zazwyczaj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kontekst danych, klas jednostek i logiki budowa zapytania znajdują się w warstwie środkowej jako warstwa dostępu do danych (DAL). Logika biznesowa i trwałe dane mogą być implementowane całkowicie w klasy częściowe i metody jednostek i kontekst danych, lub może być implementowana w osobnych klas.
 
  Warstwa prezentacji lub klient wywołuje metody na interfejsie zdalnego warstwy środkowej i warstwy DAL w danej warstwie wykona zapytań lub procedur przechowywanych, które są mapowane do <xref:System.Data.Linq.DataContext> metody. Warstwa środkowa zwraca dane do klientów zwykle jako XML reprezentacje obiektów lub obiekty serwerów proxy.
@@ -32,4 +32,5 @@ Można utworzyć aplikacji n warstwowa lub wielowarstwowa, które używają [!IN
  Aby uzyskać więcej informacji na temat aplikacji n warstwowych, które używają zestawów danych ADO.NET, zobacz [Praca z zestawami danych w aplikacjach n warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications).
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

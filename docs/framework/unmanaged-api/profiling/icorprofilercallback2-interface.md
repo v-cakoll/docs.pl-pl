@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 513fb623e328a8fa3abb1531715026ff9b6bf97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83c72704ccb01baf68a3cacb6252367e07909fa8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179000"
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 — Interfejs
 Udostępnia metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić profiler kodu po wystąpieniu zdarzenia, dla których zostały zasubskrybowane przez profiler. `ICorProfilerCallback2` Interfejs jest rozszerzeniem [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu. Oznacza to udostępnia nowe wywołania zwrotne wprowadzone w programie .NET Framework w wersji 2.0.  
@@ -62,7 +62,8 @@ Udostępnia metody, które są używane przez środowisko uruchomieniowe języka
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)
-- [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback3 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)
+- [ICorProfilerCallback4 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

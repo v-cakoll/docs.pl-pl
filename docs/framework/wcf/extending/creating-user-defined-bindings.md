@@ -1,17 +1,17 @@
 ---
-title: Tworzenie powiązań zdefiniowanych przez użytkownika
+title: Tworzenie wiązań zdefiniowanych przez użytkownika
 ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188724"
 ---
-# <a name="creating-user-defined-bindings"></a>Tworzenie powiązań zdefiniowanych przez użytkownika
+# <a name="creating-user-defined-bindings"></a>Tworzenie wiązań zdefiniowanych przez użytkownika
 Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez system:  
   
 -   Tworzenie niestandardowego powiązania, na podstawie <xref:System.ServiceModel.Channels.CustomBinding> klasy, która jest kontenerem, który można wypełnić elementy powiązania. Niestandardowe powiązanie jest dodawane do punktu końcowego usługi. Można utworzyć niestandardowego powiązania, które albo programowo, albo w konfiguracji aplikacji pliku. Aby użyć elementu powiązania z pliku konfiguracji aplikacji, element powiązania musi rozszerzać <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Aby uzyskać więcej informacji na temat powiązania niestandardowej zobacz [powiązań niestandardowych](../../../../docs/framework/wcf/extending/custom-bindings.md) i <xref:System.ServiceModel.Channels.CustomBinding>.  
@@ -40,7 +40,7 @@ Istnieje kilka sposobów tworzenia powiązania nie został dostarczony przez sys
 |Zabezpieczenia|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|Nie|  
 |Złożone komunikacja dwukierunkowa|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|Nie|  
 |Kodowanie|Tekst, Binary MTOM, niestandardowe|Tak*|  
-|Transport|TCP i nazwane potoki, HTTP, HTTPS, usługa MSMQ, niestandardowe|Tak|  
+|Transport|TCP i nazwane potoki, HTTP, HTTPS, usługa MSMQ, niestandardowe|Yes|  
   
  * Ponieważ jest wymagane kodowanie dla każdego powiązania, jeśli nie określono kodowania, WCF dodaje domyślne kodowanie dla Ciebie. Wartość domyślna to Text/XML binarnej i dla transportu HTTP i HTTPS, w przeciwnym razie.  
   
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  Zamiast tworzenia nowej klasy powiązanie, może być możliwe zwiększenie jeden z istniejących powiązań dostarczanych przez system. Podobnie jak w poprzednim przypadku nr, konieczne jest przesłonięcie <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> metody i <xref:System.ServiceModel.Channels.Binding.Scheme%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)

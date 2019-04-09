@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wybierz atrament w niestandardowej kontrolce'
+title: 'Instrukcje: Wybieranie pisma odręcznego w niestandardowym formancie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ink [WPF], selecting from custom control
 - custom controls [WPF], ink selection
 ms.assetid: 5f3a45c6-6d40-4017-9b47-933f134ceba3
-ms.openlocfilehash: 8517041fd9a1864abfb32851314a2926ddab5a3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c9b2f3d64e4cbb309772d6a1d9fa88f589df84c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173602"
 ---
-# <a name="how-to-select-ink-from-a-custom-control"></a>Instrukcje: Wybierz atrament w niestandardowej kontrolce
+# <a name="how-to-select-ink-from-a-custom-control"></a>Instrukcje: Wybieranie pisma odręcznego w niestandardowym formancie
 Dodając <xref:System.Windows.Ink.IncrementalLassoHitTester> do formantu niestandardowego, można włączyć Twoją kontrolą, dzięki czemu użytkownik może wybrać atrament za pomocą narzędzia lasso, podobnie jak <xref:System.Windows.Controls.InkCanvas> wybiera atrament za pomocą lasso.  
   
  W tym przykładzie przyjęto założenie, że czytelnik zna utworzenie niestandardowej kontrolki z obsługą pisma odręcznego.  Aby utworzyć formant niestandardowy, który akceptuje dane wejściowe pisma odręcznego, zobacz [tworzenia sterowanie wejściem pisma odręcznego](creating-an-ink-input-control.md).  
@@ -87,7 +87,8 @@ Dodając <xref:System.Windows.Ink.IncrementalLassoHitTester> do formantu niestan
  [!code-vb[HowToSelectInk#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToSelectInk/VisualBasic/InkSelector.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Ink.IncrementalLassoHitTester>
 - <xref:System.Windows.Ink.StrokeCollection>
 - <xref:System.Windows.Input.StylusPointCollection>
-- [Tworzenie kontrolki danych wejściowych pisma odręcznego](creating-an-ink-input-control.md)
+- [Tworzenie formantu danych wejściowych atramentu](creating-an-ink-input-control.md)

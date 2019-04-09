@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174372"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>Samouczek: Tworzenie klienta Windows Communication Foundation
 
@@ -30,7 +30,6 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > [!div class="checklist"]
 > - Utwórz i skonfiguruj projekt aplikacji konsoli dla klienta platformy WCF.
 > - Dodaj odwołanie do usługi WCF do generowania plików klasy i konfiguracji serwera proxy usługi.
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>Tworzenie klienta Windows Communication Foundation
 
@@ -67,7 +66,6 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
    3. Wybierz **CalculatorService** aby go rozwinąć i wyświetlić kontraktów usług implementowane przez usługę. Pozostaw wartość domyślną **Namespace** i wybierz polecenie **OK**.
 
       Program Visual Studio dodaje nowy element w obszarze **podłączone usługi** folderu w **GettingStartedClient** projektu. 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>Narzędzie narzędzie metadanych elementu ServiceModel
 
@@ -129,5 +127,3 @@ Przejdź do następnego samouczka, aby dowiedzieć się, jak za pomocą wygenero
 
 > [!div class="nextstepaction"]
 > [Samouczek: Za pomocą klienta WCF](how-to-use-a-wcf-client.md)
-
-

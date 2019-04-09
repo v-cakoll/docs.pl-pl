@@ -1,15 +1,15 @@
 ---
-title: Omówienie jednostki SQL
+title: Przegląd języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 54a3832cffbf3376e6b3ab0826b280b676ccc1a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073473"
 ---
-# <a name="entity-sql-overview"></a>Omówienie jednostki SQL
+# <a name="entity-sql-overview"></a>Przegląd języka Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to język przypominający SQL, który oferuje możliwość zapytań modeli koncepcyjnych w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modeli koncepcyjnych reprezentacja danych jako jednostek i relacji, a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] służy do wykonywania zapytań dotyczących tych jednostek i relacji w formacie, który jest znany do tych, którzy korzystali z programu SQL.  
   
  [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] Pracuje z dostawcami magazynu danych do translacji ogólny [!INCLUDE[esql](../../../../../../includes/esql-md.md)] do zapytań specyficznych dla magazynowania. Dostawca EntityClient dostarcza sposób wykonania [!INCLUDE[esql](../../../../../../includes/esql-md.md)] poleceń względem modelu jednostki i zwracane rozbudowane typy danych w tym wyników skalarne, zestawów danych i wykresów obiektów. Podczas konstruowania <xref:System.Data.EntityClient.EntityCommand> obiektów, można określić nazwę procedury składowanej lub tekst zapytania, przypisując [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ciągu do zapytania jego <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> właściwości. <xref:System.Data.EntityClient.EntityDataReader> Przedstawia wyniki wykonania <xref:System.Data.EntityClient.EntityCommand> względem EDM. Do wykonania polecenia, które zwraca <xref:System.Data.EntityClient.EntityDataReader>, wywołaj <xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A>.  
@@ -19,9 +19,9 @@ ms.locfileid: "54534647"
  Ta sekcja zawiera informacje o pojęciach dotyczących [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Jak jednostka SQL różni się od języka Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+ [Czym język Entity SQL różni się od języka Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
   
- [Szybkie odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
+ [Szybkie odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
   
  [System typów](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "54534647"
   
  [Buforowanie planu zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-plan-caching-entity-sql.md)  
   
- [Przestrzenie nazw](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
+ [Namespaces](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
   
  [Identyfikatory](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
   
@@ -47,21 +47,22 @@ ms.locfileid: "54534647"
   
  [Wejściowy zestaw znaków](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
   
- [Wyrażenia zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
+ [Wyrażenia kwerend](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
   
  [Funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)  
   
- [Pierwszeństwo operatorów](../../../../../../docs/framework/data/adonet/ef/language-reference/operator-precedence-entity-sql.md)  
+ [Kolejność wykonywania działań](../../../../../../docs/framework/data/adonet/ef/language-reference/operator-precedence-entity-sql.md)  
   
  [Stronicowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
   
  [Semantyka porównania](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-semantics-entity-sql.md)  
   
- [Tworzenie zagnieżdżonych zapytań jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
+ [Tworzenie zagnieżdżonych zapytań w języku Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
   
  [Typy strukturalne dopuszczające wartości Null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Jednostki języka SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [Specyfikacje CSDL, SSDL i MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Język Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [CSDL, SSDL i MSL specyfikacji](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

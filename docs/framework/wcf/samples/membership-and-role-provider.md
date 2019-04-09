@@ -2,12 +2,12 @@
 title: Dostawca członkostwa i ról
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: eb2c8a5bbe10d91a29ed040e89163279434c8f8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 195940bea9c0fc8b26b6b49eadc1927ff156c514
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176946"
 ---
 # <a name="membership-and-role-provider"></a>Dostawca członkostwa i ról
 Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawców członkostwa i ról w celu uwierzytelniania i autoryzowania klientów.  
@@ -197,4 +197,3 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
     ```  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
-  

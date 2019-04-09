@@ -5,20 +5,18 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087836"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optymalizacja wydajności: Powiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Ten temat zawiera zalecenia dotyczące wydajności powiązanie danych.  
-  
 
-  
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## <a name="how-data-binding-references-are-resolved"></a>Jak są rozwiązywane odwołania do powiązania danych  
  Przed omówieniem problemy z wydajnością powiązania danych, warto Eksplorowanie sposób, w jaki [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aparat wiązanie danych jest rozpoznawana jako odwołania do obiektu dla powiązania.  
@@ -74,6 +72,7 @@ ms.locfileid: "57352025"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia danych można powiązać [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości; jednak powiązania danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości jest mniejsza niż powiązania danych [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów. Nie można konwertować [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiekt danych do pliku XML, jeśli jedynym celem jest przeznaczony dla wiązania danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
 - [Planowanie wydajności aplikacji](planning-for-application-performance.md)
 - [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)
@@ -81,7 +80,7 @@ ms.locfileid: "57352025"
 - [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
 - [Zachowanie obiektu](optimizing-performance-object-behavior.md)
 - [Zasoby aplikacji](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [Tekst](optimizing-performance-text.md)
 - [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

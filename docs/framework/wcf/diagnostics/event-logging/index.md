@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: d8bc1f06308fba41f622307ff65d8fc3f9720a5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175282"
 ---
 # <a name="event-logging-in-wcf"></a>Rejestrowanie zdarzeń w architekturze WCF
 Windows Communication Foundation (WCF) śledzi wewnętrznego zdarzenia w dzienniku zdarzeń Windows.  
@@ -48,5 +48,6 @@ Windows Communication Foundation (WCF) śledzi wewnętrznego zdarzenia w dzienni
  Po kliknięciu przycisku "informacje dodatkowe" podczas wyświetlania zdarzeń w Podglądzie zdarzeń, w Podglądzie zdarzeń może wysłać informacje przez Internet. Aby uzyskać więcej informacji zobacz Pomoc Podglądu zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

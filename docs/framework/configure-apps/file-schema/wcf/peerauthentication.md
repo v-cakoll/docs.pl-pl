@@ -2,12 +2,12 @@
 title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
-ms.openlocfilehash: 424bc0f223dbdc6dbfc69a6623f86bcc2c71fa88
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b627105dc4aae49557b0a6684569719622e13f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180599"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
 Określa ustawienia uwierzytelniania dla elementów równorzędnych certyfikat używany przez węzeł równorzędny.  
@@ -48,12 +48,13 @@ Określa ustawienia uwierzytelniania dla elementów równorzędnych certyfikat u
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego.|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|Określa bieżące poświadczenia dla węzła równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<authentication>` Element odpowiada <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> klasy. Ten element Określa moduł weryfikacji, który jest wywoływany podczas uwierzytelniania sąsiada sąsiada w siatce. Próba nawiązania połączenia sąsiada przez nowego elementu równorzędnego przekazuje swoje własne poświadczenia dla elementu równorzędnego działa prawidłowo. Modułu sprawdzania poprawności obiektu odpowiadającego jest wywoływana, aby zweryfikować poświadczenia zdalnego innych firm. Zawsze, gdy nawiązaniu połączenia równorzędnego w siatce, zarówno komputery są wzajemnie uwierzytelnione, znaczenie modułów sprawdzania poprawności na obu końcach są wywoływane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.PeerAuthentication%2A>

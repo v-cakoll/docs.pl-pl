@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Używanie krótkiej nazwy z kontraktami wymiany metadanych'
+title: 'Instrukcje: używanie krótkiej nazwy usługi z kontraktami wymiany metadanych'
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
-ms.openlocfilehash: e7c05bb43b7811d4716a225142dd880886586783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: e1d6c6516294d7df7f8c89a3aaddcf2ac3ba0e2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082701"
 ---
-# <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami wymiany metadanych
+# <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: używanie krótkiej nazwy usługi z kontraktami wymiany metadanych
 Po rozwinięciu niektórych nowych usług WCF, może zdecydować, chcesz można było wywołać te usługi z poziomu skryptu lub aplikacji w języku Visual Basic 6.0. Jedną z metod byłoby wygenerować zestaw klienta WCF, zarejestrować zestaw w modelu COM, zainstaluj zestaw w pamięci podręcznej GAC i następnie odwoływać się do typów modelu COM w kodzie języka Visual Basic. Podczas dystrybucji aplikacji, trzeba będzie dystrybuować także zestaw klienta platformy WCF. Użytkownik będzie miał zarejestrowania się zestaw klienta programu WCF za pomocą modelu COM i umieść go w pamięci podręcznej GAC. Usługa międzyoperacyjna modelu COM WCF umożliwia również wykonywanie tych samych wywołań usługi bez polegania na zestaw klienta programu WCF. Monikera programu WCF umożliwia wywoływanie żadnej usługi WCF z dowolnego języka zgodnego z COM. (Visual Basic, VBScript, Visual Basic for Applications (VBA) i tak dalej), określając punkt końcowy metadanych programu exchange (Mex) identyfikator URI, który monikera usługi używany do wyodrębniania typu informacje o usłudze. W tym temacie opisano sposób wywoływania przykładu wprowadzenie usługi WCF, używanie monikera programu WCF, która określa punkt końcowy wymiany metadanych.  
   
 > [!NOTE]
@@ -40,5 +40,6 @@ Po rozwinięciu niektórych nowych usług WCF, może zdecydować, chcesz można 
     >  Jeśli moniker jest źle sformułowany lub jeśli usługa jest niedostępna, wywołanie `GetObject` zwróci błąd informujący o "Nieprawidłową składnię."  Jeśli zostanie wyświetlony ten błąd, upewnij się, moniker elementu, którego używasz jest poprawna i ta usługa jest dostępna.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Użyj monikera usługi Windows Communication Foundation, bez rejestracji](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
-- [Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+
+- [Instrukcje: używanie krótkiej nazwy programu Windows Communication Foundation bez rejestracji](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Instrukcje: używanie krótkiej nazwy usługi z kontraktami WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

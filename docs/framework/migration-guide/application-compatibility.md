@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176257"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Zgodność aplikacji w programie .NET Framework
 
@@ -71,12 +71,11 @@ Każde wydanie obejmuje następujące informacje:
 ## <a name="usage"></a>Użycie
 Aby rozpocząć, wybierz typ zmiany zgodności poniżej:
 
-* [Zmiany retargetingu](./retargeting/index.md)
+* [Zmiany przekierowania](./retargeting/index.md)
 * [Zmiany środowiska uruchomieniowego](./runtime/index.md)
-
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Wersje i zależności](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [Co nowego](../../../docs/framework/whats-new/index.md)
-- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Nowości](../../../docs/framework/whats-new/index.md)
+- [Przestarzałe elementy w bibliotece klas](../../../docs/framework/whats-new/whats-obsolete.md)

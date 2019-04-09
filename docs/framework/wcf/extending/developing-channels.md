@@ -2,12 +2,12 @@
 title: Opracowywanie kanałów
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175204"
 ---
 # <a name="developing-channels"></a>Opracowywanie kanałów
 Tworzenie kanału protokołu lub transportu, który może służyć za pomocą Windows Communication Foundation (WCF) w warstwie aplikacji wymaga wykonania kilku czynności. W tym temacie opisano kroki i kieruje użytkownika do określonych tematów, aby uzyskać więcej informacji. Aby poznać model kanału i różne typy, które są wymienione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md). Transport kompletny przykładowy kanału, [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  
@@ -34,4 +34,5 @@ Tworzenie kanału protokołu lub transportu, który może służyć za pomocą W
 4.  Dodaj sekcję wiązania i element konfiguracji powiązania aby uwidocznić powiązania do systemu konfiguracji. Aby uzyskać więcej informacji, zobacz [Konfiguracja i Obsługa metadanych](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
-ms.openlocfilehash: 245193498478e24b2f0be102ecbbd6f5051167c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176634"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu — Składnik (Formularze systemu Windows)
 > [!NOTE]
@@ -26,5 +26,6 @@ ms.locfileid: "57713010"
  Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

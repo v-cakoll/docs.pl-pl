@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
-ms.openlocfilehash: 0ac595c2fddc6da8eee4d625d418b139a577e4ad
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3b35fcfe2a713b18b25c30690ef012848898b8e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087316"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Przykłady składni zapytania oparte na metodzie: Projekcja (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Select%2A> i <xref:System.Linq.Enumerable.SelectMany%2A> metod do wykonywania zapytań <xref:System.Data.DataSet> za pomocą składni zapytania oparte na metodzie.  
@@ -49,6 +49,7 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
  [!code-vb[DP LINQ to DataSet Examples#SelectManyCompoundFrom2_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectmanycompoundfrom2_mq)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Ładowanie danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [Omówienie operatorów standardowej kwerendy (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

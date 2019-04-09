@@ -9,12 +9,12 @@ helpviewer_keywords:
 - styles [WPF], GroupBox
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
-ms.openlocfilehash: 26a935b40ede80aad533c7951f667afa37c57477
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078996"
 ---
 # <a name="groupbox-styles-and-templates"></a>GroupBox — Style i szablony
 <a name="introduction"></a> W tym temacie opisano, style i szablony <xref:System.Windows.Controls.GroupBox> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -46,9 +46,10 @@ ms.locfileid: "57368967"
  Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony kontrolek](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Style i szablony formantu](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

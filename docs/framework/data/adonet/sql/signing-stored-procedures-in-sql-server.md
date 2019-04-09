@@ -2,12 +2,12 @@
 title: Rejestrowanie procedur składowanych w programie SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094622"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Rejestrowanie procedur składowanych w programie SQL Server
  Podpis cyfrowy jest szyfrowane przy użyciu klucza prywatnego osoby podpisującej podsumowanie danych. Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowe dla jego elementów nośnych lub właściciela. Możesz zarejestrować procedury składowane, funkcje (z wyjątkiem funkcji z wartościami przechowywanymi w tabeli śródwierszowych), wyzwalacze i zestawów.  
@@ -55,6 +55,7 @@ Jeśli moduł wymaga dodatkowych uprawnień na poziomie serwera:
 |[Rejestrowanie procedur składowanych z certyfikatem](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) w SQL Server — książki Online|Zawiera samouczek dla procedury składowanej przy użyciu certyfikatu podpisywania.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Przegląd zabezpieczeń serwera SQL](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

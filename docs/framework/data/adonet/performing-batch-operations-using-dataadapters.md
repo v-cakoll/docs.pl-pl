@@ -1,18 +1,18 @@
 ---
-title: Wykonywanie operacji wsadowych za pomocą elementów DataAdapters
+title: Wykonywanie operacji wsadowych za pomocą elementów DataAdapter
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: ccf730eb85024687285200db8f978291986dcc18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178129"
 ---
-# <a name="performing-batch-operations-using-dataadapters"></a>Wykonywanie operacji wsadowych za pomocą elementów DataAdapters
+# <a name="performing-batch-operations-using-dataadapters"></a>Wykonywanie operacji wsadowych za pomocą elementów DataAdapter
 Umożliwia obsługę usługi Batch w ADO.NET <xref:System.Data.Common.DataAdapter> do grupy operacji INSERT, UPDATE i DELETE z <xref:System.Data.DataSet> lub <xref:System.Data.DataTable> do serwera, zamiast wysyłać jedną operację naraz. Zmniejszenie liczby rund do serwera zwykle powoduje znaczący wzrost wydajności. Aktualizacje usługi Batch są obsługiwane dla dostawcy danych .NET dla programu SQL Server (<xref:System.Data.SqlClient>) i Oracle (<xref:System.Data.OracleClient>).  
   
  Aktualizacja bazy danych za pomocą zmiany z <xref:System.Data.DataSet> w poprzednich wersjach programu ADO.NET, `Update` metody `DataAdapter` wykonywane aktualizacji do bazy danych o jeden wiersz w danym momencie. Jak powtórzyć go za pośrednictwem wierszy w określonym <xref:System.Data.DataTable>, zbadaniu, każdego <xref:System.Data.DataRow> do sprawdzania, czy ma zostać zmodyfikowany. Jeśli wiersz ma zmodyfikowany, wywołuje odpowiednią `UpdateCommand`, `InsertCommand`, lub `DeleteCommand`, w zależności od wartości <xref:System.Data.DataRow.RowState%2A> właściwości dla tego wiersza. Każda aktualizacja wiersza zaangażowane sieci przesłania danych do bazy danych.  
@@ -142,7 +142,8 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  Dostawca danych i serwera wewnętrznej bazy danych należy określić struktur SQL, które są obsługiwane w przypadku wykonywania wsadowego. Nieobsługiwane instrukcji jest przesyłany w celu wykonania może zgłoszony wyjątek.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+
+- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Aktualizowanie źródeł danych za pomocą elementów DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

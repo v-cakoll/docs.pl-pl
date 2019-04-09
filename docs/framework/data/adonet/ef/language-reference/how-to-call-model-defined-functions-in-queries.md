@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Wywoływanie funkcji definiowanych przez Model w zapytaniach'
+title: 'Instrukcje: Wywoływanie funkcji definiowanych przez model w zapytaniach'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: ee0624c7f06fba93f17dc23b63a76e4e8e11a1e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: abab705c7ea83318949cf0d75e491905da7896e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099732"
 ---
-# <a name="how-to-call-model-defined-functions-in-queries"></a>Instrukcje: Wywoływanie funkcji definiowanych przez Model w zapytaniach
+# <a name="how-to-call-model-defined-functions-in-queries"></a>Instrukcje: Wywoływanie funkcji definiowanych przez model w zapytaniach
 W tym temacie opisano sposób wywołania funkcji, które są zdefiniowane w modelu koncepcyjnym z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania.  
   
  Poniższa procedura zawiera WYSOKOPOZIOMOWY zarys wywoływania funkcji definiowanych przez model z poziomu [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. W poniższym przykładzie zapewnia więcej szczegółów na temat czynności opisane w procedurze. W procedurze przyjęto założenie, że zdefiniowano funkcję w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie funkcji niestandardowych w modelu koncepcyjnym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
@@ -43,7 +43,8 @@ W tym temacie opisano sposób wywołania funkcji, które są zdefiniowane w mode
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [Instrukcje: Wywoływanie funkcji definiowanych przez Model jako metod obiektu](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)
+- [Instrukcje: Wywoływanie funkcji definiowanych przez model jako metod obiektu](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)

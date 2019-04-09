@@ -1,18 +1,18 @@
 ---
-title: Trwa ładowanie danych do zestawu danych
+title: Ładowanie danych do zestawu danych
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a53e5dc1-9669-49d4-828d-efa633237066
-ms.openlocfilehash: 0f50638beb50220d06daef7bbd6002b319a92476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb5578d790e5d3f54f75f964bb3288d861c9d7c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074056"
 ---
-# <a name="loading-data-into-a-dataset"></a>Trwa ładowanie danych do zestawu danych
+# <a name="loading-data-into-a-dataset"></a>Ładowanie danych do zestawu danych
 A <xref:System.Data.DataSet> obiektu najpierw muszą być wypełnione, zanim można tworzyć zapytania nad nim za pomocą [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Istnieje kilka różnych sposobów, aby wypełnić <xref:System.Data.DataSet>. Na przykład, można użyć [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] w bazie danych i ładuje wyniki do <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  Inny typowy sposób ładowania danych do <xref:System.Data.DataSet> jest użycie <xref:System.Data.Common.DataAdapter> klasy do pobrania danych z bazy danych. Jest to zilustrowane w poniższym przykładzie.  
@@ -24,6 +24,7 @@ A <xref:System.Data.DataSet> obiektu najpierw muszą być wypełnione, zanim mo�
  [!code-vb[DP LINQ to DataSet Examples#FillDataSet](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#filldataset)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Przykłady LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

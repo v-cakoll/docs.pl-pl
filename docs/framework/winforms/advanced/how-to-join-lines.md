@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Łączenie linii'
+title: 'Instrukcje: Łączenie linii'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: a43cfb8a51435aa0c5c3f7aae673d38d3f7792ab
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174918"
 ---
-# <a name="how-to-join-lines"></a>Porady: Łączenie linii
+# <a name="how-to-join-lines"></a>Instrukcje: Łączenie linii
 Połączenie linii jest wspólne obszar, który jest tworzony przez dwa wiersze, w której kończy się spełniają lub nakładają się na siebie. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia trzy style sprzężenia linii: ostre, faza i zaokrąglenia. Styl łączenia linii jest właściwością <xref:System.Drawing.Pen> klasy. Po określeniu styl łączenia linii <xref:System.Drawing.Pen> obiektu, że zostanie zastosowany styl sprzężenia na połączone linie w dowolnym <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu przy użyciu tego pióra.  
   
  Poniższa ilustracja przedstawia wyniki przykład sprzężenia skośny wiersza.  
@@ -38,4 +38,5 @@ Połączenie linii jest wspólne obszar, który jest tworzony przez dwa wiersze,
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)

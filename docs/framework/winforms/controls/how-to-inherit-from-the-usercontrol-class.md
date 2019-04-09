@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dziedziczenie z klasy UserControl'
+title: 'Instrukcje: dziedziczenie z klasy UserControl'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: b761c6eefcf7c951a19b77966b87b13b1fc0456e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1b5d69bda08b94ae00ce022d0d323ad4561ff6b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174801"
 ---
-# <a name="how-to-inherit-from-the-usercontrol-class"></a>Instrukcje: Dziedziczenie z klasy UserControl
+# <a name="how-to-inherit-from-the-usercontrol-class"></a>Instrukcje: dziedziczenie z klasy UserControl
 Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms za pomocą kodu niestandardowego, można utworzyć *kontrolki użytkownika*. Formanty użytkownika połączyć rozwoju szybkiej kontroli, standardowych formularzy Windows kontrolować funkcjonalność i wszechstronności niestandardowe właściwości i metod. Po rozpoczęciu tworzenia kontrolki użytkownika, są prezentowane za pomocą projektanta widoczne, na którym można umieścić standardowych kontrolek Windows Forms. Te kontrolki zachowuje wszystkie ich używaniem funkcji, a także wygląd i zachowanie (wyglądu i działania) standardowych kontrolek. Gdy te kontrolki są wbudowane w kontrolce użytkownika, jednak nie są już dostępne za pośrednictwem kodu. Kontrolki użytkownika nie swój własny obraz, a także obsługuje wszystkie podstawowe funkcje, które są skojarzone z formantami.  
   
 > [!NOTE]
@@ -35,9 +35,10 @@ Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms za pomocą ko
 5.  Naciśnij klawisz F5, aby skompilować projekt i uruchomić Twoją kontrolą w **UserControl — kontener testowy**. Aby uzyskać więcej informacji, zobacz [jak: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)
-- [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+
+- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
+- [Instrukcje: dziedziczenie z klasy kontrolek](how-to-inherit-from-the-control-class.md)
+- [Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows](how-to-author-controls-for-windows-forms.md)
+- [Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

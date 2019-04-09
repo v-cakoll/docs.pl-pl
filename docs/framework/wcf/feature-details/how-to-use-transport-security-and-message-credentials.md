@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów'
+title: 'Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731871"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186817"
 ---
-# <a name="how-to-use-transport-security-and-message-credentials"></a>Instrukcje: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów
+# <a name="how-to-use-transport-security-and-message-credentials"></a>Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów
 Zabezpieczanie usługi za pomocą transportu i komunikat poświadczeń używa najlepsze tryby zabezpieczeń transportu i komunikatów w Windows Communication Foundation (WCF). W sum zabezpieczeń warstwy transportu zapewnia integralności i poufności, podczas komunikat warstwy zabezpieczeń zawiera szereg poświadczenia, które nie są możliwe za pomocą mechanizmów zabezpieczeń transportu strict. W tym temacie przedstawiono podstawowe kroki implementacji transportu przy użyciu poświadczeń komunikatów za pomocą <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> powiązania. Aby uzyskać więcej informacji na temat ustawiania trybu zabezpieczeń, zobacz [jak: Ustawianie trybu zabezpieczeń](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Podczas ustawiania trybu zabezpieczeń na `TransportWithMessageCredential`, transportu określa konkretny mechanizm, który zapewnia zabezpieczenia na poziomie transportu. Dla protokołu HTTP mechanizm jest Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP (HTTPS); TCP jest protokół SSL za pośrednictwem protokołu TCP lub Windows.  
@@ -161,6 +161,7 @@ Zabezpieczanie usługi za pomocą transportu i komunikat poświadczeń używa na
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Ustawianie trybu zabezpieczeń](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)
 - [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

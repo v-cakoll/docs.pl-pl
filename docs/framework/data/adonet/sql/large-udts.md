@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 259b8e6df9b302ec50fe84a3b57d4597821bdcc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181535"
 ---
 # <a name="large-udts"></a>Duże UDT
 Typy zdefiniowane przez użytkownika (UDTs) umożliwiają deweloperom rozszerzenie serwera typ skalarny systemu, przechowując wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów w bazie danych programu SQL Server. Typów zdefiniowanych przez użytkownika może zawierać wiele elementów i może mieć zachowań, w przeciwieństwie do typów danych tradycyjnych aliasu, które składają się z jednego typu danych systemu programu SQL Server.  
@@ -132,6 +132,7 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Pobieranie informacji o schemacie bazy danych](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [Mapowanie typu danych serwera SQL](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)

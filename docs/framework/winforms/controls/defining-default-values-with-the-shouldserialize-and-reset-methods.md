@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090618"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset
 `ShouldSerialize` i `Reset` metodami Opcjonalnie możesz podać właściwość, jeśli właściwość nie ma wartości domyślnej proste. Jeśli właściwość ma wartość domyślną proste, należy zastosować <xref:System.ComponentModel.DefaultValueAttribute> i zamiast tego Podaj wartość domyślną do konstruktora klasy atrybutu. Jedną z tych mechanizmów zapewnia następujące funkcje w Projektancie:  
@@ -144,6 +144,7 @@ public class MyControl : Control {
  W tym przypadku, nawet wtedy, gdy wartość zmiennej prywatnej uzyskiwał dostęp do `MyFont` właściwość `null`, nie są wyświetlane w przeglądarce właściwości `null`; zamiast tego zostanie wyświetlony <xref:System.Windows.Forms.Control.Font%2A> właściwości elementu nadrzędnego, jeśli nie jest `null`, lub wartość domyślną <xref:System.Windows.Forms.Control.Font%2A> wartość zdefiniowana w <xref:System.Windows.Forms.Control>. Ten sposób wartością domyślną dla `MyFont` nie można po prostu ustawić i <xref:System.ComponentModel.DefaultValueAttribute> nie można zastosować do tej właściwości. Zamiast tego `ShouldSerialize` i `Reset` metody muszą zostać wdrożone dla `MyFont` właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Właściwości kontrolek formularzy Windows Forms](properties-in-windows-forms-controls.md)
+
+- [Właściwości formantów formularzy systemu Windows](properties-in-windows-forms-controls.md)
 - [Definiowanie właściwości](defining-a-property-in-windows-forms-controls.md)
 - [Zdarzenia zmiany właściwości](property-changed-events.md)

@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200370"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Co to jest ML.NET i jak rozumiemy podstawy uczenia maszynowego?
 
@@ -24,7 +24,6 @@ ML.NET to bezpłatna, wieloplatformowa struktura open source do uczenia maszynow
 Uczenie maszynowe to technika badania danych, która dzięki przetwarzaniu istniejących danych jest w stanie przewidzieć przyszłe zachowania, rezultaty i trendy. Za pomocą uczenia maszynowego programy mogą się uczyć, nie będąc jawnie programowane.
 
 Dzięki prognozom uzyskanym za pomocą uczenia maszynowego aplikacje mogą być bardziej inteligentne. Podczas zakupów online uczenie maszynowe może pomóc w rekomendowaniu innych produktów, które mogą Ci się spodobać, na podstawie tych już kupionych. W przypadku użycia karty kredytowej, sztuczna inteligencja porównuje transakcje z bazą danych transakcji i ułatwia wykrycie oszustwa. Kiedy twój robot sprzątający odkurza pomieszczenie, uczenie maszynowe pomaga mu zdecydować, czy zadanie zostało wykonane.
-
 
 ## <a name="short-videos-on-data-science"></a>Krótkie wideo dotyczące analizy danych 
 

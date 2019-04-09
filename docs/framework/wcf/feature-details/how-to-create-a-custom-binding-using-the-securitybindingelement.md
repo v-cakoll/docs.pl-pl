@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement'
+title: 'Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175594"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: Tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
 Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które można skonfigurować, ale nie zapewniają pełną elastyczność podczas konfigurowania wszystkich opcji zabezpieczeń, które obsługuje usługi WCF. W tym temacie pokazano, jak utworzyć niestandardowego powiązania bezpośrednio z poziomu powiązania poszczególnych elementów i opisano niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
@@ -107,9 +107,10 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)

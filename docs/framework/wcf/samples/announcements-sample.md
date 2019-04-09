@@ -2,12 +2,12 @@
 title: Anonse — przykład
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094557"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 W tym przykładzie pokazano, jak korzystać z funkcji ogłoszenie funkcji odnajdywania. Anonse Zezwól usługom do wysłania komunikatów Anons, które zawierają metadane dotyczące usługi. Domyślnie ogłoszenie hello jest wysyłany podczas uruchamiania usługi i ogłoszenie bye jest wysyłana, gdy usługa kończy pracę. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie składa się z dwóch projektów usługi i klienta.  
@@ -86,4 +86,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
-  

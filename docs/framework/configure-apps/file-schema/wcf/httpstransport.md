@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172825"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandardowego powiązania.  
@@ -74,6 +74,7 @@ Określa protokół transportu HTTP przekazywania wiadomości SOAP do niestandar
  `httpsTransport` Element jest punktem wyjścia do tworzenia niestandardowego powiązania, który implementuje protokół transportu HTTPS. Protokół HTTPS jest transportu podstawowego używany w celu bezpiecznej współpracy. Protokół HTTPS jest obsługiwany przez Windows Communication Foundation (WCF) w celu zapewnienia współdziałania z innymi stosów usług sieci Web.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

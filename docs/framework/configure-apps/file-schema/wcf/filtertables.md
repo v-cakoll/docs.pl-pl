@@ -2,12 +2,12 @@
 title: <filterTables>
 ms.date: 03/30/2017
 ms.assetid: 41f1ac35-f559-473a-b2c3-8cc83a6a3831
-ms.openlocfilehash: a54386de369a11a1958e4d81ab01f053a0bc5b36
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c49c7cf3a196595556c2bf1b4ed4365bfe1e4cbf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075733"
 ---
 # <a name="filtertables"></a>\<filterTables>
 Reprezentuje sekcję konfiguracji określającą tabele routingu, które zawierają mapowania między filtrami i docelowymi punktami końcowymi do wysłania wiadomości, gdy filtr dopasowuje wartość.  
@@ -49,8 +49,9 @@ Reprezentuje sekcję konfiguracji określającą tabele routingu, które zawiera
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sekcja konfiguracji, zawierający filtrów routingu i tabele routingu.|  
+|[\<Routing >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sekcja konfiguracji, zawierający filtrów routingu i tabele routingu.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableCollection?displayProperty=nameWithType>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199456"
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas częściowych między znaczników i związane z kodem. Klasy częściowe kod jest zdefiniowany w osobnym pliku kodu w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] języka, natomiast klasy częściowej znaczników jest zwykle tworzony przy generowanie kodu podczas kompilacji XAML.  
@@ -61,7 +61,8 @@ Służy do konfigurowania kompilacji znaczników XAML do dołączenia do klas cz
  `x:Class` dla programu Silverlight jest opisane osobno. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Zobacz także
-- [x:Subclass, dyrektywa](x-subclass-directive.md)
+
+- [x:Subclass — dyrektywa](x-subclass-directive.md)
 - [Klasy XAML i niestandardowe dla WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [x:ClassModifier, dyrektywa](x-classmodifier-directive.md)
+- [x:ClassModifier — dyrektywa](x-classmodifier-directive.md)
 - [Typy migrowane z WPF do System.Xaml](types-migrated-from-wpf-to-system-xaml.md)

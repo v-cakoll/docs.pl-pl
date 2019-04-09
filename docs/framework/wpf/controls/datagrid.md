@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197155"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid> Control umożliwia wyświetlania i edytowania danych z wielu różnych źródeł, takich jak z bazy danych SQL, zapytanie LINQ lub dowolnego innego źródła danych może być powiązana. Aby uzyskać więcej informacji, zobacz [Przegląd wiązanie źródeł](../data/binding-sources-overview.md).  
@@ -49,17 +49,18 @@ ms.locfileid: "57368141"
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Przewodnik: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Opisuje, jak skonfigurować nowy projekt WPF, Dodaj Entity Framework Element, ustaw źródło i wyświetlić dane w <xref:System.Windows.Controls.DataGrid>.|  
-|[Instrukcje: Dodać szczegóły wiersza do formantu DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Opisuje sposób tworzenia szczegóły wiersza dla <xref:System.Windows.Controls.DataGrid>.|  
-|[Instrukcje: Implementuj walidację za pomocą formantu DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|W tym artykule opisano sposób sprawdzania poprawności wartości w <xref:System.Windows.Controls.DataGrid> komórek i wierszy i wyświetlania sprawdzania poprawności opinii.|  
-|[Domyślne zachowanie myszy i klawiatury w kontrolce DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|W tym artykule opisano sposób interakcji z <xref:System.Windows.Controls.DataGrid> kontroli przy użyciu klawiatury i myszy.|  
-|[Instrukcje: Grupować, sortować i filtrować dane w DataGrid kontrolce](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Opisuje sposób wyświetlania danych w <xref:System.Windows.Controls.DataGrid> na różne sposoby grupowania, sortowania i filtrowania danych.|  
-|[Opcje ustalania rozmiaru w kontrolce DataGrid](sizing-options-in-the-datagrid-control.md)|W tym artykule opisano sposób kontrolowania bezwzględne i automatycznego ustalania rozmiaru w <xref:System.Windows.Controls.DataGrid>.|  
+|[Przewodnik: wyświetlanie danych z serwera bazy danych SQL w kontrolce DataGrid](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Opisuje, jak skonfigurować nowy projekt WPF, Dodaj Entity Framework Element, ustaw źródło i wyświetlić dane w <xref:System.Windows.Controls.DataGrid>.|  
+|[Instrukcje: dodawanie szczegółów wiersza do kontrolki DataGrid](how-to-add-row-details-to-a-datagrid-control.md)|Opisuje sposób tworzenia szczegóły wiersza dla <xref:System.Windows.Controls.DataGrid>.|  
+|[Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid](how-to-implement-validation-with-the-datagrid-control.md)|W tym artykule opisano sposób sprawdzania poprawności wartości w <xref:System.Windows.Controls.DataGrid> komórek i wierszy i wyświetlania sprawdzania poprawności opinii.|  
+|[Domyślne zachowanie myszy i klawiatury w formancie DataGrid](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|W tym artykule opisano sposób interakcji z <xref:System.Windows.Controls.DataGrid> kontroli przy użyciu klawiatury i myszy.|  
+|[Instrukcje: grupowanie, sortowanie i filtrowanie danych w kontrolce DataGrid](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|Opisuje sposób wyświetlania danych w <xref:System.Windows.Controls.DataGrid> na różne sposoby grupowania, sortowania i filtrowania danych.|  
+|[Opcje ustalania rozmiaru w formancie DataGrid](sizing-options-in-the-datagrid-control.md)|W tym artykule opisano sposób kontrolowania bezwzględne i automatycznego ustalania rozmiaru w <xref:System.Windows.Controls.DataGrid>.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DataGrid>
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
-- [Szablonowanie danych — omówienie](../data/data-templating-overview.md)
-- [Kontrolki](index.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Przegląd Szablonowanie danych](../data/data-templating-overview.md)
+- [Formanty](index.md)
 - [Model zawartości WPF](wpf-content-model.md)

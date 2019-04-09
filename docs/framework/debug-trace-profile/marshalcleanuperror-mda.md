@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff7286eb104f36ceb5e1d9b30f4a265fb068d3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096592"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 `marshalCleanupError` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko uruchomieniowe języka wspólnego (CLR) napotka błąd podczas próby czyszczenie tymczasowej struktur i pamięci używanej dla marshaling typów danych między granicami kodu natywnego i zarządzanego.  
@@ -48,6 +48,7 @@ ms.locfileid: "54564672"
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 88e703d6cee608676be541961614403cf34a53c7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173098"
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -57,6 +57,7 @@ ms.locfileid: "57674838"
 -   W pewnych okolicznościach ponieważ AutomationID tylko musi być unikatowa wśród elementów równorzędnych, wiele elementy drzewa automatyzacji interfejsu użytkownika mogą mieć identycznych wartości właściwości AutomationID. W takich sytuacjach elementy można unikatowo zidentyfikować oparte na element nadrzędny i, jeśli to konieczne, nadrzędnych. Na przykład deweloperzy mogą korzystać pasek menu z wieloma elementami menu każdego z wiele podrzędnych elementów menu, w którym elementy podrzędne są identyfikowane przez sekwencyjnego AutomationID firmy takie jak "Item1 —", "Item2 —" i tak dalej. Każdy element menu może następnie jednoznacznie zidentyfikować przez jego AutomationID wraz z AutomationID jego elementu nadrzędnego i, jeśli to konieczne, jej nadrzędnych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [Znajdź element automatyzacji interfejsu użytkownika na podstawie warunku właściwości](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)

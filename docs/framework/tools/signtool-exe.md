@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185578"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Narzędzie podpisu)
 Narzędzie podpisywania to narzędzie wiersza polecenia, które cyfrowo podpisuje pliki, weryfikuje podpisy w plikach i oznacza pliki znacznikami czasu.  
@@ -59,7 +59,7 @@ signtool [command] [options] [file_name | ...]
 |Opcja polecenia Catdb|Opis|  
 |------------------|-----------------|  
 |`/d`|Określa, że domyślna baza danych wykazów jest aktualizowana. Jeśli żadna `/d` ani `/g` jest używana opcja, narzędzie podpisywania aktualizuje bazę danych składników i sterowników systemu.|  
-|`/g` *GUID*|Określa, że baza danych wykazu określona przez unikatowy identyfikator globalny *GUID* jest aktualizowana.|  
+|`/g` *Identyfikator GUID*|Określa, że baza danych wykazu określona przez unikatowy identyfikator globalny *GUID* jest aktualizowana.|  
 |`/r`|Usuwa określone wykazy z bazy danych wykazów. Jeśli ta opcja nie jest określona, narzędzie podpisywania dodaje określone wykazy do bazy danych wykazów.|  
 |`/u`|Określa, że dla dodawanych plików wykazów unikatowe nazwy są generowane automatycznie. W razie potrzeby nazwy plików wykazów są zmieniane, aby zapobiec konfliktom nazw z istniejącymi plikami wykazów. Jeśli ta opcja nie jest określona, narzędzie podpisywania zastępuje wszelkie istniejące wykazy, które mają taką samą nazwę jak wykaz dodawany.|  
   
@@ -70,12 +70,12 @@ signtool [command] [options] [file_name | ...]
 |Opcja polecenia Sign|Opis|  
 |-------------------------|-----------------|  
 |`/a`|Automatycznie wybiera najlepszy certyfikat podpisywania. Narzędzie podpisywania znajdzie wszystkie ważne certyfikaty, które spełniają wszystkie określone warunki, i wybierze ten, którego okres ważności jest najdłuższy. Jeśli ta opcja nie jest określona, narzędzie podpisywania spodziewa się znaleźć tylko jeden ważny certyfikat podpisywania.|  
-|`/ac`  *Plik*|Dodaje dodatkowe zaświadczenie z *pliku* do bloku podpisu.|  
+|`/ac`  *plik*|Dodaje dodatkowe zaświadczenie z *pliku* do bloku podpisu.|  
 |`/as`|Dołącza ten podpis. Jeśli nie jest określony podpis podstawowy, ten podpis jest ustawiany jako podpis podstawowy.|  
 |`/c`  *CertTemplateName*|Określa nazwę szablonu certyfikatu (rozszerzenie Microsoft) dla certyfikatu podpisywania.|  
 |`/csp`  *CSPName*|Określa dostawcę usług kryptograficznych (CSP), który zawiera kontener klucza prywatnego.|  
 |`/d`  *desc*|Określa opis podpisanej zawartości.|  
-|`/du`  *ADRES URL*|Określa adres URL (Uniform Resource Locator) rozszerzonego opisu podpisanej zawartości.|  
+|`/du`  *Adres URL*|Określa adres URL (Uniform Resource Locator) rozszerzonego opisu podpisanej zawartości.|  
 |`/f`  *SignCertFile*|Określa certyfikat podpisywania w pliku. Jeśli plik ma format wymiany informacji osobistych (PFX) i chroniony hasłem, użyj `/p` opcję, aby określić hasło. Jeśli plik nie zawiera kluczy prywatnych, użyj `/csp` i `/kc` opcji, aby określić dostawcę CSP i nazwę kontenera kluczy prywatnych.|  
 |`/fd`|Określa algorytm tworzenia skrótu pliku na potrzeby tworzenia podpisów plików. Domyślnie jest to algorytm SHA1.|  
 |`/i`  *IssuerName*|Określa nazwę wystawcy certyfikatu podpisywania. Ta wartość może być podciągiem całej nazwy wystawcy.|  
@@ -83,18 +83,18 @@ signtool [command] [options] [file_name | ...]
 |`/n`  *SubjectName*|Określa nazwę podmiotu certyfikatu podpisywania. Ta wartość może być podciągiem całej nazwy podmiotu.|  
 |`/nph`|Jeśli jest obsługiwana, pomija skróty stron dla plików wykonywalnych. Wartość domyślna jest określana przez zmienną środowiskową SIGNTOOL_PAGE_HASHES i wersję pliku wintrust.dll. Ta opcja jest ignorowana dla plików innych niż PE.|  
 |`/p`  *Hasło*|Określa hasło używane podczas otwierania pliku PFX. (Użyj `/f` opcję, aby określić plik PFX.)|  
-|`/p7` *Path*|Określa, że plik PKCS (Public Key Cryptography Standards) #7 jest generowany dla każdego określonego pliku zawartości. Pliki PKCS #7 są nazwane *ścieżki*\\*filename*.p7.|  
+|`/p7` *Ścieżka*|Określa, że plik PKCS (Public Key Cryptography Standards) #7 jest generowany dla każdego określonego pliku zawartości. Pliki PKCS #7 są nazwane *ścieżki*\\*filename*.p7.|  
 |`/p7ce` *Wartość*|Określa opcje dla podpisanej zawartości PKCS #7. Ustaw *wartość* wartość "Embedded", aby osadzić podpisaną zawartość w pliku PKCS #7, lub wartość "detachedsigneddata", aby wygenerować podpisaną część danych odłączonego pliku PKCS #7. Jeśli `/p7ce` opcja nie jest używana, podpisana zawartość jest osadzona domyślnie.|  
 |`/p7co` *\<OID>*|Określa identyfikator obiektu (OID), który identyfikuje podpisaną zawartość PKCS #7.|  
 |`/ph`|Jeśli jest obsługiwana, generuje skróty stron dla plików wykonywalnych.|  
 |`/r`  *RootSubjectName*|Określa nazwę podmiotu certyfikatu głównego, z którym musi zostać połączony certyfikat podpisywania. Ta wartość może być podciągiem całej nazwy podmiotu certyfikatu głównego.|  
-|`/s`  *storeName*|Określa magazyn otwierany podczas wyszukiwania certyfikatu. Jeśli ta opcja nie jest określona, `My` jest otwierany magazyn.|  
-|`/sha1`  *Hash*|Określa skrót SHA1 certyfikatu podpisywania. Skrót SHA1 jest zazwyczaj określany, jeśli wiele certyfikatów spełnia kryteria określone przez pozostałe przełączniki.|  
+|`/s`  *StoreName*|Określa magazyn otwierany podczas wyszukiwania certyfikatu. Jeśli ta opcja nie jest określona, `My` jest otwierany magazyn.|  
+|`/sha1`  *Skrót*|Określa skrót SHA1 certyfikatu podpisywania. Skrót SHA1 jest zazwyczaj określany, jeśli wiele certyfikatów spełnia kryteria określone przez pozostałe przełączniki.|  
 |`/sm`|Określa, że jest używany magazyn komputera, a nie magazyn użytkownika.|  
-|`/t`  *ADRES URL*|Określa adres URL serwera znaczników czasu. Jeśli ta opcja (lub `/tr`) jest nieobecna, podpisany plik nie będzie z sygnaturą czasową. Jeśli oznaczanie znacznikiem czasu nie powiedzie się, jest generowane ostrzeżenie. Tej opcji nie można używać z `/tr` opcji.|  
+|`/t`  *Adres URL*|Określa adres URL serwera znaczników czasu. Jeśli ta opcja (lub `/tr`) jest nieobecna, podpisany plik nie będzie z sygnaturą czasową. Jeśli oznaczanie znacznikiem czasu nie powiedzie się, jest generowane ostrzeżenie. Tej opcji nie można używać z `/tr` opcji.|  
 |`/td`  *algorytmu podpisu*|Używane z `/tr` opcji do żądania algorytm szyfrowanego używanego przez serwer sygnatury czasu RFC 3161.|  
-|`/tr`  *ADRES URL*|Określa adres URL serwera znaczników czasu RFC 3161. Jeśli ta opcja (lub `/t`) jest nieobecna, podpisany plik nie będzie z sygnaturą czasową. Jeśli oznaczanie znacznikiem czasu nie powiedzie się, jest generowane ostrzeżenie. Tej opcji nie można używać z `/t` opcji.|  
-|`/u`  *Sposób użycia*|Określa rozszerzone użycie klucza (EKU), które musi być obecne w certyfikacie podpisywania. Wartość Usage można określić za pomocą identyfikatora OID lub ciągu. Domyślna wartość Usage to „Code Signing” (1.3.6.1.5.5.7.3.3).|  
+|`/tr`  *Adres URL*|Określa adres URL serwera znaczników czasu RFC 3161. Jeśli ta opcja (lub `/t`) jest nieobecna, podpisany plik nie będzie z sygnaturą czasową. Jeśli oznaczanie znacznikiem czasu nie powiedzie się, jest generowane ostrzeżenie. Tej opcji nie można używać z `/t` opcji.|  
+|`/u`  *Użycie*|Określa rozszerzone użycie klucza (EKU), które musi być obecne w certyfikacie podpisywania. Wartość Usage można określić za pomocą identyfikatora OID lub ciągu. Domyślna wartość Usage to „Code Signing” (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Określa użycie funkcji weryfikacji składników systemu Windows (1.3.6.1.4.1.311.10.3.6).|  
   
  Aby uzyskać przykłady użycia, zobacz [przy użyciu SignTool do podpisania pliku](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file).  
@@ -106,10 +106,10 @@ signtool [command] [options] [file_name | ...]
 |Opcja polecenia TimeStamp|Opis|  
 |----------------------|-----------------|  
 |`/p7`|Oznacza pliki PKCS #7 znacznikami czasu.|  
-|`/t`  *ADRES URL*|Określa adres URL serwera znaczników czasu. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. Albo `/t` lub `/tr` opcja jest wymagana.|  
+|`/t`  *Adres URL*|Określa adres URL serwera znaczników czasu. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. Albo `/t` lub `/tr` opcja jest wymagana.|  
 |`/td`  *algorytmu podpisu*|Żąda algorytmu tworzenia skrótu używanego przez serwer znaczników czasu RFC 3161. `/td` jest używana z `/tr` opcji.|  
-|`/tp` *Indeks*|Sygnatury czasowe podpisu w *indeksu*.|  
-|`/tr`  *ADRES URL*|Określa adres URL serwera znaczników czasu RFC 3161. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. Albo `/tr` lub `/t` opcja jest wymagana.|  
+|`/tp` *indeks*|Sygnatury czasowe podpisu w *indeksu*.|  
+|`/tr`  *Adres URL*|Określa adres URL serwera znaczników czasu RFC 3161. Plik oznaczany znacznikiem czasu musi zostać wcześniej podpisany. Albo `/tr` lub `/t` opcja jest wymagana.|  
   
  Na przykład użycia, zobacz [dodanie sygnatury czasowe wcześniej podpisane pliki](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files).  
   
@@ -210,5 +210,6 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

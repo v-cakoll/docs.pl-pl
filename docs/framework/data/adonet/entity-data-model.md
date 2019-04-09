@@ -2,12 +2,12 @@
 title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904832"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197922"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Entity Data Model (EDM) to zbiór pojęcia, które opisują struktury danych, niezależnie od tego, w postaci przechowywane. EDM obiektowy Model Relacja jednostki, opisanego przez Peter Chen w 1976, ale również jest oparta na modelu jednostki relacji i rozszerza jego tradycyjnych zastosowań.  
@@ -23,7 +23,7 @@ Entity Data Model (EDM) to zbiór pojęcia, które opisują struktury danych, ni
   
  [Model danych jednostki: Namespaces](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Model danych jednostki: Pierwotne typy danych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Model danych jednostki: Typy danych pierwotnych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [Model danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
@@ -47,7 +47,7 @@ Entity Data Model (EDM) to zbiór pojęcia, które opisują struktury danych, ni
   
  [typ jednostki](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [aspekt](../../../../docs/framework/data/adonet/facet.md)  
+ [facet](../../../../docs/framework/data/adonet/facet.md)  
   
  [właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
@@ -57,11 +57,12 @@ Entity Data Model (EDM) to zbiór pojęcia, które opisują struktury danych, ni
   
  [właściwość nawigacji](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [właściwość](../../../../docs/framework/data/adonet/property.md)  
+ [property](../../../../docs/framework/data/adonet/property.md)  
   
  [ograniczenie integralności referencyjnej](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Narzędzia do modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+
+- [Narzędzia ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Omówienie pliku edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Specyfikacja CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

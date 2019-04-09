@@ -2,12 +2,12 @@
 title: Architektura syndykacji
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
-ms.openlocfilehash: b07fc03fd11c794d804b6bcd1813010965365e43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075915"
 ---
 # <a name="architecture-of-syndication"></a>Architektura syndykacji
 Syndykacja interfejs API umożliwiający niezależny od formatu model programowania, który umożliwia syndykowany zawartość do zapisania się do sieci w różnych formatach. Abstrakcyjny model danych zawiera następujące klasy:  
@@ -78,6 +78,7 @@ Syndykacja interfejs API umożliwiający niezależny od formatu model programowa
 -   Kluczową cechą protokołów syndykacji jest rozszerzalności. RSS 2.0 i Atom 1.0 umożliwiają dodawanie atrybuty i elementy do zespolone kanały informacyjne, które nie są zdefiniowane w specyfikacji. Model programowania syndykacji programu WCF zapewnia dwa sposoby pracy z atrybutami niestandardowymi i rozszerzenia: wyprowadzanie nową klasę i typowaniem luźnym dostępu. Aby uzyskać więcej informacji, zobacz [rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Sposób mapowania modelu obiektu syndykacji programu WCF na kanały informacyjne Atom i RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

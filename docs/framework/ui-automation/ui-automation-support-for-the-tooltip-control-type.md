@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-ms.openlocfilehash: fa8ddc3fb8f1f46349eeb1f7dd7af203a7459457
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d2b253a88260ef4e829f3f5022dc7cf76daa5cf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181080"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu ToolTip
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "57680168"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, trzeba być obsługiwana przez formanty etykietek narzędzi. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider>|Zależy od|Etykietki narzędzi, które może zostać zamknięty, klikając element interfejsu użytkownika musi obsługiwać klasę WindowPattern tak, aby ich automatycznie zamknięte.|  
 |<xref:System.Windows.Automation.Provider.ITextProvider>|Zależy od|Aby uzyskać lepszą dostępność formantem etykietki narzędzia może obsługiwać tekstu — wzorzec kontrolki nie jest wymagany. Tekst — wzorzec kontrolki jest przydatne, gdy tekst ma rozbudowane styl i atrybuty (na przykład kolor, pogrubienie i kursywa).|  
@@ -67,7 +67,7 @@ ms.locfileid: "57680168"
   
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty etykietek narzędzi. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|Zależy od|Brak|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|Zależy od|Brak|  
@@ -84,6 +84,7 @@ ms.locfileid: "57680168"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.ToolTip>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

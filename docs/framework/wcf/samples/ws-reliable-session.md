@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
-ms.openlocfilehash: c4e238cbc3b99209e88bb56c73097f25e56ccdfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2af89515ffdf6caa6281082721f713107f08a089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181249"
 ---
 # <a name="ws-reliable-session"></a>Sesja niezawodna WS
 Niniejszy przykład pokazuje użycie niezawodnej sesji. Sesje niezawodnej obsługi niezawodna obsługa komunikatów i sesji. Niezawodna obsługa komunikatów ponawia próbę komunikacji w przypadku niepowodzenia i umożliwia gwarancje dostarczenia, należy określić, takich jak otrzymanie wiadomości w kolejności. Sesje zarządzania stanem dla klientów między wywołaniami. Przykład implementuje sesje dotyczące utrzymania Stan klienta i określa gwarancje dostarczenia w określonej kolejności.  
@@ -84,4 +84,3 @@ Press <ENTER> to terminate client.
 3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

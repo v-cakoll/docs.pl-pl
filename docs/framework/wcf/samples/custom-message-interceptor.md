@@ -2,12 +2,12 @@
 title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 789b3a2003ab96a9658eab7c092067e6110a46cd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181418"
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
 Niniejszy przykład pokazuje użycie kanału modelu rozszerzalności. W szczególności pokazuje sposób implementacji element niestandardowego powiązania, który pokazuje tworzenie fabryki kanałów i odbiorniki kanałów, aby przechwycić wszystkie komunikaty przychodzące i wychodzące w określonym punkcie w stosie czasu wykonywania. Przykład zawiera również klienta i serwera, które przedstawiają korzystanie z tych niestandardowych fabryk.  
@@ -160,4 +160,3 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5.  Uruchom najpierw Service.exe, a następnie uruchom Client.exe się i obejrzyj oba okna konsoli danych wyjściowych.  
-  

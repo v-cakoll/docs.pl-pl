@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 42eb0a417659776b2cd2fffa9d2fd62e58a4a176
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073718"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Element SqlDependency w aplikacji ASP.NET
 W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient.SqlDependency> pośrednio, wykorzystując platformę ASP.NET <xref:System.Web.Caching.SqlCacheDependency> obiektu. <xref:System.Web.Caching.SqlCacheDependency> Obiektu używa <xref:System.Data.SqlClient.SqlDependency> do nasłuchiwania powiadomień i poprawnie zaktualizować pamięci podręcznej.  
@@ -58,5 +58,6 @@ W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient
  Teraz zaktualizować dane w bazie danych, za pomocą polecenia języka Transact-SQL, aktualizacji i Odśwież stronę. Teraz wyświetlany czas wskazuje, że pamięć podręczna została odświeżona przy użyciu nowych danych z bazy danych. Pamiętaj, że mimo, że pamięć podręczna jest aktualizowany, podczas wyświetlania na stronie nie zmienia się, dopóki nie wystąpi zdarzenie ogłaszania wstecznego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Powiadomienia zapytań w programie SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

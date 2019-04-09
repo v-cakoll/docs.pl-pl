@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 89264098ed17b398c83bc2dcddd98d9d8fc958f7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 3ce7bbc0dfccfda7a25dfecf32e93876ddde01f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188295"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 2)
 
@@ -34,7 +34,6 @@ Obsługuje platformy .NET core 3.0 C# 8, a począwszy od platformy .NET Core 3.0
 - [Osiągnij więcej ze wzorców w C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
 - [Wykonaj C# 8.0 dla pokrętła](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
 - [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
-
 
 ### <a name="ranges-and-indices"></a>Zakresy i indeksy
 
@@ -171,7 +170,6 @@ Podczas `dotnet build` lub `dotnet publish`, plik wykonywalny jest tworzony, pod
 
 Istnieją pewne operacje takie jak łączenie i razor strony publikowania, który nadal będzie wymagać publikowania.
 
-
 ## <a name="local-dotnet-tools"></a>Narzędzia do lokalnego dotnet
 
 >[!WARNING]
@@ -179,7 +177,7 @@ Istnieją pewne operacje takie jak łączenie i razor strony publikowania, któr
 >
 >Na komputerze mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->Na Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+>W systemie Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
 >Jeśli ten folder nie zostaną usunięte, zostanie wyświetlony błąd.
 
@@ -484,7 +482,6 @@ Windows oferuje zaawansowane natywne interfejsy API, w postaci prostych interfej
 
 Możesz zobaczyć przykład korzystając z modelu COM za pomocą [kodu źródłowego w wersji demonstracyjnej programu Excel](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
-
 ## <a name="type-sequencereader"></a>Wpisz: SequenceReader
 
 W programie .NET Core 3.0 `System.Buffers.SequenceReader` dodano, który może służyć jako czytnik `ReadOnlySequence<T>`. Umożliwia to łatwe w użyciu o wysokiej wydajności, niski alokacji analizowanie `System.IO.Pipelines` dane, które mogą przechodzić przez kilka buforów zapasowy. 
@@ -773,7 +770,6 @@ Dwa nowe pakiety zostały zwolnione do narzędzia NuGet używanego do programowa
 Pakiety GPIO obejmuje funkcje interfejsu API dla urządzeń z GPIO, SPI, I2C i PWM. Pakiet IoT powiązania obejmuje [powiązania urządzenia](https://github.com/dotnet/iot/blob/master/src/devices/README.md) różne kawałki i czujników, taki sam, te, które są dostępne pod adresem [dotnet/iot-src/urządzeń](https://github.com/dotnet/iot/tree/master/src/devices).
 
 Zaktualizowano portu szeregowego nie należą do tych pakietów interfejsów API, które zostały ogłoszone w ramach platformy .NET Core 3.0 w wersji zapoznawczej 1, ale są dostępne w ramach platformy .NET Core.
-
 
 ## <a name="platform-support"></a>Obsługa platformy
 

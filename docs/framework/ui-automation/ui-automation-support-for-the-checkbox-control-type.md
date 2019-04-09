@@ -1,17 +1,17 @@
 ---
-title: Obsługa automatyzacji interfejsu użytkownika dla typu formantu CheckBox
+title: Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu CheckBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckBox control type
 - control types, CheckBox
 - UI Automation, CheckBox control type
 ms.assetid: 9c2a0e70-3a39-4ba9-96ea-a7fe531fae9f
-ms.openlocfilehash: b997703fced354024fc075dc21df70cfed26d29c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c8fad81e65e5e5e070b011ece1cbbdefa40f4a45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193983"
 ---
 # <a name="ui-automation-support-for-the-checkbox-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu CheckBox
 > [!NOTE]
@@ -54,7 +54,7 @@ ms.locfileid: "57676008"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, wymagane są obsługiwane przez wszystkie formanty pól wyboru. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Wymagane|Umożliwia pole wyboru, aby programowo cyklom za pośrednictwem jego stanów wewnętrznych.|  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57676008"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty pól wyboru. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -76,6 +76,7 @@ ms.locfileid: "57676008"
  Domyślne działanie pole wyboru jest spowodować, że przycisk radiowy, aby stać się fokus i przełączanie bieżącego stanu. Jak wspomniano wcześniej, pola wyboru sieciowych albo przedstawiają dane binarne (tak/nie) (i wyłączanie) decyzja użytkownika lub dodatkowym (On, Off, nieokreślone). Jeśli pole wyboru jest binarny domyślna akcja powoduje, że przestanie "off" stan "on" lub stan "off", aby stać się "on". W polu wyboru stanu trzeciorzędny domyślna akcja przełączanie po kolei stany pole wyboru w tej samej kolejności tak, jakby użytkownik wysłał kolejnych kliknięcia myszą do formantu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.CheckBox>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

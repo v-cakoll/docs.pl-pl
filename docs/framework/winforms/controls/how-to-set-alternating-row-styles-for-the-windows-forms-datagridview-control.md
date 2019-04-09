@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy Windows Forms'
+title: 'Instrukcje: ustawianie alternatywnych stylów wierszy dla kontrolki DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], row styles
 - rows [Windows Forms], data grids
 ms.assetid: 699ef759-458c-426d-ac87-7c7e71b018ae
-ms.openlocfilehash: 56fe5de9c69d14368508a7f6ccdd6c3becd8ff5b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06b93a756b351213a87e1f52bc691aaa27558ac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078593"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Instrukcje: Ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy Windows Forms
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control"></a>Instrukcje: ustawianie alternatywnych stylów wierszy dla kontrolki DataGridView formularzy systemu Windows
 Dane tabelaryczne często jest przesyłany do użytkowników w postaci księgi, gdzie przemienne wiersze mają różnych kolorów tła. Ten format ułatwia użytkownikom Poinformuj komórki, które są w każdym wierszu, szczególnie w przypadku szerokich tabel, które mają wiele kolumn.  
   
  Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolę, można określić dotycząca pełną styl naprzemiennych wierszach. Dzięki temu możesz użyć właściwości stylu, takich jak kolor pierwszego planu i czcionki, oprócz kolor tła do odróżnienia przemienne wiersze.  
@@ -44,11 +44,12 @@ Dane tabelaryczne często jest przesyłany do użytkowników w postaci księgi, 
  W przypadku maksymalnej skalowalności powinny współużytkować <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów między wiele wierszy, kolumny lub komórki, które używają tego samego style, zamiast oddzielnie ustawienie ponownego obliczenia właściwości stylu dla każdego elementu. Aby uzyskać więcej informacji, zobacz [najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Instrukcje: ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy systemu Windows](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)

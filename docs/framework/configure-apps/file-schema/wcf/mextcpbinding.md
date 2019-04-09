@@ -2,12 +2,12 @@
 title: <mexTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 01baba8d-d784-4255-9ea2-7afff1482bf0
-ms.openlocfilehash: 7b351865fde94f9663323af80581dc62bc092e0a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9e76d65a27e7732d1d62c4ba25afac76d73be167
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078892"
 ---
 # <a name="mextcpbinding"></a>\<mexTcpBinding>
 Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-MetadataExchange (WS-MEX) za pośrednictwem protokołu TCP.  
@@ -52,12 +52,13 @@ Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-Metadat
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.MexTcpBindingElement>
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexTcpBinding%2A>
-- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Publikowanie i pobieranie metadanych za pośrednictwem powiązania niestandardowego](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Metadane](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

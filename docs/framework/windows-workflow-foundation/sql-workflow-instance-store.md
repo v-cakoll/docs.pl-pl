@@ -1,15 +1,15 @@
 ---
-title: Store wystąpienia przepływu pracy SQL
+title: Magazyn wystąpień przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: 926b50ee00743f6a84f48c6ccae976daf49b3d9a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8314781f46d9cd4eddd06f6be95f8e952feef1b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086575"
 ---
-# <a name="sql-workflow-instance-store"></a>Store wystąpienia przepływu pracy SQL
+# <a name="sql-workflow-instance-store"></a>Magazyn wystąpień przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z programem SQL Store wystąpienia przepływu pracy, który umożliwia przepływy pracy, aby utrwalić informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest zaimplementowany głównie w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która jest pochodną abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja Store wystąpienia przepływu pracy SQL stanowi dostawcy stanów trwałych programu SQL, który jest konkretną implementację trwałości interfejsu API, który korzysta z hosta do wysyłania poleceń trwałości do magazynu.  
   
  Store wystąpienia przepływu pracy SQL obsługuje zarówno własne przepływy pracy i usług przepływu pracy, które używają <xref:System.Activities.WorkflowApplication> lub <xref:System.ServiceModel.WorkflowServiceHost> oraz usług hostowanych w trybie <xref:System.ServiceModel.WorkflowServiceHost>. Funkcja Store wystąpienia przepływu pracy SQL samodzielnie hostowanej usługi można skonfigurować programowo przy użyciu modelu obiektu udostępnianych przez tę funkcję. Możesz skonfigurować tę funkcję dla usług hostowanych na <xref:System.ServiceModel.WorkflowServiceHost> programowo, za pomocą modelu obiektów, a także przy użyciu pliku konfiguracji XML.  
@@ -37,4 +37,5 @@ ms.locfileid: "57715675"
 -   [Baza danych stanów trwałych programu SQL Server](sql-server-persistence-database.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady trwałości](https://go.microsoft.com/fwlink/?LinkID=177735)

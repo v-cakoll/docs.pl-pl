@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185445"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
 
@@ -800,5 +800,6 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Klucza rejestru działa tylko wobec Win9x, który nie jest obsługiwany przez tę wersję programu .NET Framework. Użyj `PerformanceData` klucz rejestru, który zamiast tego. Ta właściwość zostaną usunięte z przyszłych wersji Framework.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przestarzałe elementy w bibliotece klas](whats-obsolete.md)
 - [Przestarzałe typy](obsolete-types.md)

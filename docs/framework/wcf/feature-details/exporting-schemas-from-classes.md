@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: 320d0ab4f90c446632225f3d3aabbfc2767f19a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185439"
 ---
 # <a name="exporting-schemas-from-classes"></a>Eksportowanie schematów z klas
 Aby wygenerować schematów języka (XSD) definicji schematu XML z klas, które są używane w modelu kontraktu danych, należy użyć <xref:System.Runtime.Serialization.XsdDataContractExporter> klasy. W tym temacie opisano proces tworzenia schematów.  
@@ -59,8 +59,9 @@ Aby wygenerować schematów języka (XSD) definicji schematu XML z klas, które 
  Opcje eksportu mają wpływ na wszystkie te metody.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>
-- [importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
+- [Importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)
 - [Importowanie schematu w celu generowania klas](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powiąż Windows Forms kontrolki ComboBox lub ListBox z danymi'
+title: 'Instrukcje: powiązanie kontrolki ComboBox lub ListBox (Formularze systemu Windows) z danymi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197194"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Instrukcje: Powiąż Windows Forms kontrolki ComboBox lub ListBox z danymi
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Instrukcje: powiązanie kontrolki ComboBox lub ListBox (Formularze systemu Windows) z danymi
 Możesz powiązać <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.ListBox> z danymi w celu wykonania zadania, takie jak przeglądanie danych w bazie danych, wprowadzając nowe dane lub edycji istniejących danych.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Do wiązania kontrolki ComboBox lub ListBox  
@@ -54,8 +54,9 @@ Możesz powiązać <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.F
     >  Jeśli jesteś zobowiązany do źródła danych, który nie implementuje <xref:System.ComponentModel.IBindingList> interfejsu, takich jak <xref:System.Collections.ArrayList>, powiązanej kontrolki danych nie zostanie zaktualizowany, gdy źródło danych zostanie zaktualizowane. Na przykład, jeśli masz pole kombi są powiązane z <xref:System.Collections.ArrayList> i dane są dodawane do <xref:System.Collections.ArrayList>, te nowe elementy nie będą wyświetlane w polu kombi. Jednak można wymusić pola kombi do zaktualizowania przez wywołanie metody <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> i <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> metod w wystąpieniu programu <xref:System.Windows.Forms.BindingContext> klasy, do którego formantem.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)
-- [Wiązanie danych i formularzy Windows Forms](../data-binding-and-windows-forms.md)
-- [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)
+- [Powiązywanie danych formularzy systemu Windows](../windows-forms-data-binding.md)
+- [Wiązanie danych i formularze systemu Windows](../data-binding-and-windows-forms.md)
+- [Formanty formularzy systemu Windows używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)

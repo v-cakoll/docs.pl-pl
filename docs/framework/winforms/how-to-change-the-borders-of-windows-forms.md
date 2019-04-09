@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080114"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Instrukcje: Zmienianie granic formularzy Windows Forms
 Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formularzy Windows. Zmieniając <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwości, można kontrolować zachowanie zmiany rozmiaru formularza. Ponadto, ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> ma wpływ na sposób wyświetlania pasek podpisu oraz jakie przycisków może pojawić się na nim. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.FormBorderStyle>.  
@@ -44,6 +44,7 @@ Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formu
      Ponadto jeśli wybrano opcję Styl obramowania formularza, który zawiera opcjonalne **Minimalizuj** i **Maksymalizuj** przyciski, użytkownik może określić, czy jednego lub obu tych przycisków, aby działała prawidłowo. Przyciski te są przydatne, jeśli chcesz ściśle kontrolować środowiska użytkownika. **Minimalizuj** i **Maksymalizuj** przyciski są domyślnie włączone, a ich funkcjonalność jest przetwarzany przez **właściwości** okna.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)
+- [Wprowadzenie do formularzy systemu Windows](getting-started-with-windows-forms.md)

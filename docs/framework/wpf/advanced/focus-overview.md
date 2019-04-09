@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073887"
 ---
 # <a name="focus-overview"></a>Przegląd Fokus
 W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istnieją dwa główne pojęcia, które odnoszą się do fokus: za pomocą klawiatury fokus i fokus logiczny.  Fokus klawiatury, który odwołuje się do elementu, który odbiera dane wejściowe z klawiatury i fokus logiczny, który odwołuje się do elementu w zakresie fokus, który ma fokus.  Te pojęcia są szczegółowo omówione w tym omówieniu.  Opis różnicy w tych pojęć jest ważna dla tworzenia złożonych aplikacji z wielu regionów, w którym można uzyskać fokus.  
@@ -21,9 +21,7 @@ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
  Główne kategorie, które uczestniczą w funkcje zarządzania są <xref:System.Windows.Input.Keyboard> klasy <xref:System.Windows.Input.FocusManager> klasy i elementu podstawowego klasy takie jak <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>.  Aby uzyskać więcej informacji na temat podstawowych elementów, zobacz [Przegląd elementów podstawowych](base-elements-overview.md).  
   
  <xref:System.Windows.Input.Keyboard> Klasy dotyczy przede wszystkim fokus klawiatury i <xref:System.Windows.Input.FocusManager> dotyczy przede wszystkim z logiczny fokus, ale nie jest to bezwzględny różnica.  Element, który ma fokus klawiatury będą mieć również logiczny fokus, ale element, który ma fokus logiczny nie ma fokus klawiatury.  Jest to jasne w przypadku używania <xref:System.Windows.Input.Keyboard> klasy, aby ustawić element, który ma fokus klawiatury dla niego ustawia również logiczny fokus w elemencie.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Fokus klawiatury  
  Fokus klawiatury odnosi się do elementu, który jest obecnie odbieranie danych wprowadzonych z klawiatury.  Może istnieć tylko jeden element dla całego pulpitu, który ma fokus klawiatury.  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], będzie mieć element, który ma fokus klawiatury <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> równa `true`.  Właściwość statyczna <xref:System.Windows.Input.Keyboard.FocusedElement%2A> na <xref:System.Windows.Input.Keyboard> klasy pobiera element, który aktualnie ma fokus klawiatury.  
@@ -70,7 +68,7 @@ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
  [!code-vb[FocusSnippets#FocusGetSetFocusedElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FocusSnippets/visualbasic/window1.xaml.vb#focusgetsetfocusedelement)]  
   
 <a name="Keyboard_Navigation"></a>   
-## <a name="keyboard-navigation"></a>Nawigowanie przy użyciu klawiatury  
+## <a name="keyboard-navigation"></a>Nawigacja przy użyciu klawiatury  
  <xref:System.Windows.Input.KeyboardNavigation> Klasy jest odpowiedzialny za Implementowanie nawigacji fokus klawiatury domyślne, po kliknięciu jednego z klawiszy nawigacyjnych.  Dostępne są następujące klawisze nawigacji: Klucze karty, SHIFT + TAB, CTRL + TAB, CTRL + SHIFT + TAB, UPARROW, Strzałka w dół, Strzałka w lewo i Strzałka w prawo.  
   
  Zachowania nawigacji kontenera nawigacji można zmienić przez ustawienie dołączonego <xref:System.Windows.Input.KeyboardNavigation> właściwości <xref:System.Windows.Input.KeyboardNavigation.TabNavigation%2A>, <xref:System.Windows.Input.KeyboardNavigation.ControlTabNavigation%2A>, i <xref:System.Windows.Input.KeyboardNavigation.DirectionalNavigation%2A>.  Te właściwości są typu <xref:System.Windows.Input.KeyboardNavigationMode> i możliwe wartości to <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, <xref:System.Windows.Input.KeyboardNavigationMode.Local>, <xref:System.Windows.Input.KeyboardNavigationMode.Contained>, <xref:System.Windows.Input.KeyboardNavigationMode.Cycle>, <xref:System.Windows.Input.KeyboardNavigationMode.Once>, i <xref:System.Windows.Input.KeyboardNavigationMode.None>.  Wartość domyślna to <xref:System.Windows.Input.KeyboardNavigationMode.Continue>, co oznacza, że element nie jest kontenerem nawigacji.  
@@ -118,8 +116,9 @@ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
  Zdarzenia związane z fokus logiczny są <xref:System.Windows.UIElement.GotFocus> i <xref:System.Windows.UIElement.LostFocus>.  Zdarzenia te są definiowane na <xref:System.Windows.Input.FocusManager> jako dołączone zdarzenia, ale <xref:System.Windows.Input.FocusManager> nie ujawnia otoki zdarzeń CLR.  <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement> ułatwia udostępnianie tych zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>
-- [Przegląd danych wejściowych](input-overview.md)
-- [Przegląd elementów podstawowych](base-elements-overview.md)
+- [Przegląd Dane wejściowe](input-overview.md)
+- [Przegląd Elementy bazy](base-elements-overview.md)

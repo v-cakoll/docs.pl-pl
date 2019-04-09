@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF'
+title: 'Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199222"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: instalowanie i konfigurowanie składników aktywacji programu WCF
 W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji procesów systemu Windows (znany także jako WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] do hostowania usług Windows Communication Foundation (WCF) protokołów sieciowych usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano w krokach dla tej konfiguracji:  
   
 -   Zainstalować (lub Potwierdź instalację) składników aktywacji programu WCF.  
@@ -101,6 +101,7 @@ W tym temacie opisano kroki wymagane do skonfigurowania usługi aktywacji proces
     >  To polecenie jest pojedynczy wiersz tekstu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Aktywacja TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Aktywacja usługi MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [Aktywowanie elementu NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

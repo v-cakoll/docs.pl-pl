@@ -2,12 +2,12 @@
 title: A następnie (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 54222642-23c6-4f61-9861-67caca53ac5f
-ms.openlocfilehash: ea4e84ec1c09b0f315694f74f4dc9504672c3896
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d5f9f2b8c9d7397cbcd91fa52a95544fc66e4dce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184598"
 ---
 # <a name="then-entity-sql"></a>A następnie (jednostka SQL)
 Wynik w klauzuli WHEN, gdy daje w wyniku `true`.  
@@ -40,5 +40,6 @@ WHEN when_expression THEN then_expression
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

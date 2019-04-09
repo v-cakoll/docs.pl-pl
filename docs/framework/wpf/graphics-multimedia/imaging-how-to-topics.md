@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183043"
 ---
 # <a name="imaging-how-to-topics"></a>Obrazowanie Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aby można było wyświetlić lub zmienić obrazy mapy bitowej.  
@@ -44,4 +44,5 @@ Tematy w tej sekcji przedstawiają sposoby użycia [!INCLUDE[TLA#tla_winclient](
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obrazowanie — przegląd](imaging-overview.md)
+
+- [Przegląd Obrazowanie](imaging-overview.md)

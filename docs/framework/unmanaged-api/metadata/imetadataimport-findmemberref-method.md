@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a58cba0ce4672a479cf5af9467d024a1b1562fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: abbd35fe390cc09951b762a5fd671d2d34a57c6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177895"
 ---
 # <a name="imetadataimportfindmemberref-method"></a>IMetaDataImport::FindMemberRef — Metoda
 Pobiera wskaźnik do elementu członkowskiego tokenu MemberRef odwołanie to znaczy ujętego w określonym <xref:System.Type> i ma określoną sygnaturą nazwy i metadane.  
@@ -72,5 +72,6 @@ HRESULT FindMemberRef (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IMetaDataImport, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+
+- [IMetaDataImport — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

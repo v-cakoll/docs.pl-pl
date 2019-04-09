@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1e4dacf66cc17182265e8ea9f132938017a54e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fbdc6f795aff5e84debd2e83485a22f1d42b31d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185305"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Windows do przechowywania informacji o zestawie. Zamiast rejestrowanie składników na komputerze podczas wdrażania, utworzysz plik manifestu Win32 stylu w czasie projektowania, które zawierają informacje dotyczące powiązania i aktywacji. Te pliki manifestu, zamiast kluczy rejestru, bezpośrednie aktywacji obiektu.  
@@ -55,4 +55,5 @@ Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Window
     >  Wykonanie Side-by-side jest funkcja .NET Framework, która umożliwia wielu wersji środowiska uruchomieniowego i wiele wersji aplikacji i składników, korzystających z wersji środowiska uruchomieniowego, aby uruchomić na tym samym komputerze, w tym samym czasie. Wykonanie Side-by-side i zestawów side-by-side są różne mechanizmy dostarczanie funkcji side-by-side.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Konfigurowanie składników COM opartych na Framework .NET aktywacji bez rejestracji](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+
+- [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

@@ -2,12 +2,12 @@
 title: Uproszczona konfiguracja
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 22595a3d428da9dbd3cb8b6e67ca8b40bf39d457
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 13cf8bd46ef3aabb011cb2ddd207963235468662
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184057"
 ---
 # <a name="simplified-configuration"></a>Uproszczona konfiguracja
 Konfigurowanie usług Windows Communication Foundation (WCF) może być złożonym zadaniem. Istnieje wiele różnych opcji, a nie zawsze jest łatwo określić, jakie ustawienia są wymagane. Gdy pliki konfiguracyjne zwiększyć elastyczność usługi WCF, są również źródła dla wielu trudno znaleźć problemy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] te problemy zostały rozwiązane i zapewnia sposób, aby zmniejszyć rozmiar i złożoność konfiguracji usługi.  
@@ -114,6 +114,7 @@ Konfigurowanie usług Windows Communication Foundation (WCF) może być złożon
 >  Ta funkcja dotyczy tylko do konfiguracji usługi WCF nie konfiguracji klienta. Większości przypadków Konfiguracja klienta programu WCF będą generowane przez narzędzia, takiego jak svcutil.exe lub dodanie odwołania do usługi w programie Visual Studio. W przypadku ręcznego konfigurowania klienta programu WCF należy dodać \<klienta > element do konfiguracji i określ żadnych punktów końcowych, które chcesz wywołać.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)

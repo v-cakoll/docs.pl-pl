@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property changes (using code)
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
-ms.openlocfilehash: 0ff5b3874d9de169f4a9f1040d601173af352c06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105772"
 ---
 # <a name="property-changed-events"></a>Zdarzenia zmiany właściwości
 Jeśli chcesz, aby Twoją kontrolą w celu wysyłania powiadomień, gdy właściwość o nazwie *PropertyName* zmiany, zdefiniować określone zdarzenie o nazwie *PropertyName* `Changed` i metodę o nazwie `On` *PropertyName* `Changed` który wywołuje zdarzenie. Konwencja nazewnictwa w formularzach Windows Forms to dołączenie wyraz *zmieniono* na nazwę właściwości. Typ delegata skojarzonego zdarzenia dla zdarzenia zmiany właściwości to <xref:System.EventHandler>, a typ danych zdarzenia jest <xref:System.EventArgs>. Klasa bazowa <xref:System.Windows.Forms.Control> definiuje wiele zdarzeń zmiany właściwości, takie jak <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>i innym osobom. Aby uzyskać ogólne informacje o zdarzeniach zobacz [zdarzenia](../../../standard/events/index.md) i [zdarzenia w kontrolkach formularzy Windows Forms](events-in-windows-forms-controls.md).  
@@ -26,6 +26,7 @@ Jeśli chcesz, aby Twoją kontrolą w celu wysyłania powiadomień, gdy właści
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zdarzenia](../../../standard/events/index.md)
-- [Zdarzenia w kontrolkach formularzy Windows Forms](events-in-windows-forms-controls.md)
-- [Właściwości kontrolek formularzy Windows Forms](properties-in-windows-forms-controls.md)
+- [Zdarzenia w formantach formularzy systemu Windows](events-in-windows-forms-controls.md)
+- [Właściwości formantów formularzy systemu Windows](properties-in-windows-forms-controls.md)

@@ -2,12 +2,12 @@
 title: 'Przewodnik: Wykonywanie zapytań w relacjach (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184889"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Przewodnik: Wykonywanie zapytań w relacjach (C#)
 W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
@@ -89,4 +89,5 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
  Następnym instruktażu ([instruktażu: Manipulowanie danych (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) pokazuje, jak wykonywać operacje na danych. Ten przewodnik nie wymaga zapisania dwa przewodniki w tej serii, które zostały już wykonane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

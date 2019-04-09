@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082194"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Przesłanianie tożsamości usługi na potrzeby uwierzytelniania
 Zazwyczaj nie trzeba ustawić tożsamość usługi, ponieważ wybór typu poświadczeń klienta decyduje o rodzaju tożsamości widoczne w metadanych usługi. Na przykład, poniższy kod konfiguracji używa [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu i zestawy `clientCredentialType` atrybutu Windows.  
-  
-  
-  
+
  Poniższy fragment Web Services Description Language (WSDL) zawiera tożsamości dla punkt końcowy wcześniej zdefiniowany. W tym przykładzie usługa jest uruchomiona jako usługa samodzielnie hostowanej w ramach określonego konta użytkownika (username@contoso.com), dlatego tożsamości użytkownika głównej nazwy (UPN) zawiera nazwę konta. Nazwa UPN jest również nazywany nazwy logowania użytkownika w domenie Windows.  
-  
-  
-  
+
  Aby uzyskać przykładową aplikację prezentującą ustawienie tożsamości, zobacz [tożsamość usług — przykład](../../../../docs/framework/wcf/samples/service-identity-sample.md). Aby uzyskać więcej informacji na temat tożsamości usługi zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Uwierzytelnianie Kerberos i tożsamości  
@@ -52,13 +48,9 @@ Zazwyczaj nie trzeba ustawić tożsamość usługi, ponieważ wybór typu poświ
   
 ### <a name="using-the-identity-element-in-configuration"></a>Za pomocą \<tożsamości > Element w konfiguracji  
  Jeśli zmienisz typ poświadczeń klienta w powiązaniu z wcześniejszymi certyfikatem`,` wygenerowanego pliku WSDL zawiera Base64 z serializacji, a następnie certyfikat X.509 dla wartości tożsamości, jak pokazano w poniższym kodzie. Jest to wartość domyślna dla wszystkich typów poświadczeń klienta inne niż Windows.  
-  
-  
-  
+
  Można zmienić wartości domyślnej tożsamości usługi lub zmienić typ tożsamości za pomocą <`identity`> element konfiguracji lub przez ustawienie tożsamości w kodzie. Poniższy kod konfiguracji ustawia tożsamość system (DNS) nazwę domeny, z wartością `contoso.com`.  
-  
-  
-  
+
 ### <a name="setting-identity-programmatically"></a>Programowe Ustawianie tożsamości  
  Usługa nie ma jawnie określić tożsamości, ponieważ automatycznie określa WCF. Jednak WCF można określić tożsamość w punkcie końcowym, jeśli jest to wymagane. Poniższy kod dodaje nowy punkt końcowy usługi w kontekście określonej tożsamości DNS.  
   
@@ -66,5 +58,6 @@ Zazwyczaj nie trzeba ustawić tożsamość usługi, ponieważ wybór typu poświ
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [Instrukcje: tworzenie niestandardowego weryfikatora tożsamości klienta](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

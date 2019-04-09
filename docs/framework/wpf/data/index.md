@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: 26c9297586df18bb89d1f769c5457eae12e3b211
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077735"
 ---
 # <a name="data"></a>Dane
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób w przypadku aplikacji, umożliwiające zaprezentowanie i interakcję z danymi. Elementy może być powiązana z danymi z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera także mechanizm transferu danych za pośrednictwem operacji przeciągania i upuszczania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Powiązanie danych](data-binding-wpf.md)  
- [Przeciąganie i upuszczanie](../advanced/drag-and-drop.md)  
+ [Przeciągnij i opuść](../advanced/drag-and-drop.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Data>  
@@ -32,12 +32,13 @@ ms.locfileid: "57353975"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Kontrolki](../controls/index.md)  
+ [Formanty](../controls/index.md)  
   
  [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)  
   
  [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+
+- [Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

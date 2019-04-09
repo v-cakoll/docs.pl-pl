@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 736542a4d12f96c40e836f84066dbeb8e66b9436
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078027"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Obsługa zdarzeń Visual Basic oraz WPF
 W przypadku języka Microsoft Visual Basic .NET w szczególności można użyć określonego języka `Handles` — słowo kluczowe, aby skojarzyć procedury obsługi zdarzeń z wystąpieniami, zamiast dołączanie procedury obsługi zdarzeń za pomocą atrybutów lub za pomocą <xref:System.Windows.UIElement.AddHandler%2A> metody. Jednak `Handles` technika dołączanie obsługi do instancji mają pewne ograniczenia, ponieważ `Handles` składni nie obsługuje niektóre funkcje określonego zdarzenia trasowane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system zdarzeń.  
@@ -43,7 +43,8 @@ W przypadku języka Microsoft Visual Basic .NET w szczególności można użyć 
 >  W ramach [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], [!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] mogą być prezentowane zakończenia, dla której elementy są dostępne dla `Handles` odwołania na stronie. Jednak może to potrwać jednym przebiegu kompilacji tak, aby wypełnić wszystkie plik pośredni `Friends` odwołania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.UIElement.AddHandler%2A>
-- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)

@@ -2,12 +2,12 @@
 title: Właściwości wykonania przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 96f5057986e256f485f60221d1c6ad3d2494be55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193905"
 ---
 # <a name="workflow-execution-properties"></a>Właściwości wykonania przepływu pracy
 Za pomocą lokalny magazyn wątków (TLS) środowisko CLR utrzymuje kontekst wykonania dla każdego wątku. Ten kontekst wykonywania kontroluje wątku dobrze znane właściwości, takich jak tożsamość wątku otoczenia transakcji, oraz uprawnień bieżącego zestawu właściwości wątków użytkownika, takie jak o nazwie miejsc.  
@@ -162,6 +162,7 @@ End default text.
  Właściwości wykonania przepływu pracy mogą być używane przez autorów niestandardowe działanie oraz zapewniają także przy użyciu mechanizmu zarządzania uchwyt działań takich jak <xref:System.ServiceModel.Activities.CorrelationScope> i <xref:System.Activities.Statements.TransactionScope> działań.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>
 - <xref:System.Activities.RegistrationContext>

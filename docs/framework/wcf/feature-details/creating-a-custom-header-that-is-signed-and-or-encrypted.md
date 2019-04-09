@@ -1,15 +1,15 @@
 ---
-title: Tworzenie niestandardowego nagłówka, który jest podpisany i- lub zaszyfrowany
+title: Tworzenie podpisanego i/lub zaszyfrowanego niestandardowego nagłówka
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
-ms.openlocfilehash: 0f8f86bcb5494cd502d14aff1cf3c4cdf4f8dd33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075650"
 ---
-# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Tworzenie niestandardowego nagłówka, który jest podpisany i- lub zaszyfrowany
+# <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Tworzenie podpisanego i/lub zaszyfrowanego niestandardowego nagłówka
 Podczas wywoływania usługi WCF nie przy użyciu klienta programu WCF czasami jest niezbędne do korzystania z niestandardowych nagłówków protokołu SOAP. W programie WCF, który uniemożliwia Nagłówki niestandardowe, które są podpisane i szyfrowane pracy z usługą WCF nie znajduje się błąd kanoniczną. Przyczyną problemu jest niepoprawna canonicalization domyślnych XML w przestrzeni nazw. Jest to tylko problemy podczas wywoływania usług innych niż WCF za pomocą Nagłówki niestandardowe, które są podpisane i/lub zaszyfrowanego.  Gdy usługa odbiera komunikat zawierający podpisanego i/lub zaszyfrowanego niestandardowego nagłówka nie może zweryfikować podpisu. To rozwiązanie pozwala uniknąć błędów canonicalization, umożliwia współdziałanie z usługami innych WCF, ale nie uniemożliwia współdziałanie z usługami WCF.  
   
 ## <a name="defining-the-custom-header"></a>Definiowanie niestandardowego nagłówka  
@@ -57,6 +57,7 @@ public  class MyMessageContract
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Domyślny kontrakt komunikatów](../../../../docs/framework/wcf/samples/default-message-contract.md)
 - [Kontrakty komunikatów](../../../../docs/framework/wcf/samples/message-contracts.md)
 - [Używanie kontraktów komunikatu](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

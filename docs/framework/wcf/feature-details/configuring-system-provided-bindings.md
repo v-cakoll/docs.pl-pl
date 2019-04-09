@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172812"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurowanie powiązań dostarczanych przez system
 Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i określają, jak połączyć się z punktem końcowym. Powiązania składają się z elementów, które określają, jak kanałów Windows Communication Foundation (WCF) są warstwowe się zapewnienie funkcji na wymaganą komunikację. Powiązanie zawiera trzy rodzaje elementów:  
@@ -30,15 +30,15 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 > [!IMPORTANT]
 >  Nie należy używać kontrakty dwukierunkowe powiązań, które nie obsługują zabezpieczeń lub mają zabezpieczeń wyłączona, chyba że exchange sieci jest zabezpieczony za pomocą innych środków.  
   
-## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
+## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
  Następujące powiązania są dostarczane z programem WCF.  
   
-|Powiązanie|Element konfiguracji|Opis|  
+|Wiązanie|Element konfiguracji|Opis|  
 |-------------|---------------------------|-----------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Powiązania, który nadaje się do komunikowania się z profilu WS-Basic zgodność usług sieci Web, na przykład usługi sieci Web platformy ASP.NET (ASMX)-na podstawie usług. To powiązanie korzysta z protokołu HTTP jako transportu i text/XML jako domyślne kodowanie komunikatu.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex.|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Bezpieczne i interoperacyjne powiązanie, które zapewnia obsługę dla poprawnych wersji <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, i <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementów wiązania.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, umożliwiając organizacjom, które znajdują się w Federacji, aby efektywnie uwierzytelnianie i autoryzowanie użytkowników.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie pochodzi od klasy <xref:System.ServiceModel.WS2007HttpBinding> i obsługuje federacyjnego zabezpieczenia.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między aplikacjami usług WCF.|  
@@ -51,7 +51,7 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 ## <a name="binding-features"></a>Powiązanie funkcji  
  W następnej tabeli przedstawiono niektóre najważniejsze funkcje każdego powiązania dostarczane przez system, pod warunkiem. Powiązania znajdują się w pierwszej kolumnie, a informacje dotyczące funkcji są opisane w tabeli. Poniższa tabela zawiera klucz, wiązanie skrótów używanych. Aby wybrać powiązanie, określić kolumnę, która spełnia wszystkie funkcje wiersza, których potrzebujesz.  
   
-|Powiązanie|Współdziałanie|Tryb zabezpieczeń (ustawienie domyślne)|Sesja<br /><br /> (Domyślnie)|Transakcje|Dupleks|  
+|Wiązanie|Współdziałanie|Tryb zabezpieczeń (ustawienie domyślne)|Sesja<br /><br /> (Domyślnie)|Transakcje|Dupleks|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
 |<xref:System.ServiceModel.BasicHttpBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|Brak, (Brak)|(Brak)|n/d|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
@@ -78,6 +78,7 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 |Przesyłanie strumieniowe|Określa, czy wiadomości, przesyłania strumieniowego jest obsługiwane.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

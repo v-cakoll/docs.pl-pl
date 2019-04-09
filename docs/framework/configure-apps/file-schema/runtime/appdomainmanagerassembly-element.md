@@ -1,5 +1,5 @@
 ---
-title: <appDomainManagerAssembly>, element
+title: <appDomainManagerAssembly> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <appDomainManagerAssembly> element
@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66b2e6a3ef73b70a7ce78e3d6f32ba48f8cba980
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182354"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appdomainmanagerassembly — > Element
 Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.  
@@ -74,9 +74,10 @@ Określa zestaw, który zapewnia Menedżer domeny aplikacji dla domyślnej domen
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerType> Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)
+- [\<appdomainmanagertype — > Element](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagertype-element.md)
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [SetAppDomainManagerType, metoda](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

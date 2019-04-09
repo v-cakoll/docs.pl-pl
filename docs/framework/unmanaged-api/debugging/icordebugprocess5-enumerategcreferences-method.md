@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54e2648765d896c189cc2deb5590a0a2a9b3f410
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d0845165e3200d7a5e14715cbe116ea5255aa021
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178896"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences — Metoda
 Pobiera moduł wyliczający dla wszystkich obiektów, które mają być jesdnostką zbierającą śmieci w procesie.  
@@ -56,5 +56,6 @@ HRESULT EnumerateGCReferences(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugProcess5, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugProcess5 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

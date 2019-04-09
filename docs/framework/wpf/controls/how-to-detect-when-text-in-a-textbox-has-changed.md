@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykryj kiedy tekst w TextBox uległ zmianie'
+title: 'Instrukcje: Wykrywanie momentu zmiany tekstu w kontrolce TextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 72441e53d21df47d34a0600dafdf0b4b04c11cad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091151"
 ---
-# <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Instrukcje: Wykryj kiedy tekst w TextBox uległ zmianie
+# <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Instrukcje: Wykrywanie momentu zmiany tekstu w kontrolce TextBox
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> zdarzenia w celu wykonania metody zawsze wtedy, gdy tekst w <xref:System.Windows.Controls.TextBox> kontrolki została zmieniona.  
   
  W klasie CodeBehind dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zawierający <xref:System.Windows.Controls.TextBox> formant, który chcesz monitorować zmiany, Wstaw metodę do wywołania, gdy <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> generowane zdarzenie.  Ta metoda musi mieć podpisu, który jest zgodny, co jest oczekiwane przez <xref:System.Windows.Controls.TextChangedEventHandler> delegować.  
@@ -43,6 +43,7 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Primitiv
  Komentarze  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [TextBox — omówienie](textbox-overview.md)
-- [RichTextBox — omówienie](richtextbox-overview.md)
+- [TextBox — Przegląd](textbox-overview.md)
+- [RichTextBox — Przegląd](richtextbox-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms'
+title: 'Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094037"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Instrukcje: Kopiowanie pikseli w celi zmniejszenia migotania w formularzach systemu Windows
 Kiedy animujemy grafiki proste, użytkownicy czasami mogą wystąpić migotania lub inne niepożądane efekty wizualne. Jednym ze sposobów ograniczenia tego problemu jest korzystać z procesu "bitblt" na element graficzny. BitBlt jest "blok bitowy transfer" kolorów danych ze źródła prostokąt pikseli do prostokąta docelowego pikseli.  
   
  Za pomocą interfejsu Windows Forms, bitblt odbywa się przy użyciu <xref:System.Drawing.Graphics.CopyFromScreen%2A> metody <xref:System.Drawing.Graphics> klasy. Parametry metody służy do określenia źródła i miejsca docelowego (punkty), rozmiar obszaru do skopiowania i obiekt grafiki, używany do rysowania nowy kształt.  
@@ -63,8 +63,9 @@ private void Form1_Paint(System.Object sender,
  Powyższy kod jest uruchamiane w postaci <xref:System.Windows.Forms.Control.Paint> program obsługi zdarzeń, aby utrwalić grafiki, gdy formularz jest narysowany ponownie. W efekcie nie wywołuj metody dotyczące grafiki <xref:System.Windows.Forms.Form.Load> procedura obsługi zdarzeń, ponieważ rysowane zawartości nie będzie odświeżana, jeśli zmiany rozmiaru lub zasłonięte innej formy formularza.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)
 - [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)

@@ -2,12 +2,12 @@
 title: Migrowanie usług sieci Web programu WSE 3.0 do usługi WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180612"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrowanie usług sieci Web programu WSE 3.0 do usługi WCF
 Zalety migracji usług sieci Web programu WSE 3.0 do usługi Windows Communication Foundation (WCF) obejmują lepszą wydajność i obsługę dodatkowych transportów scenariuszach zapewnienia dodatkowych zabezpieczeń i WS-* specyfikacji. Usługa sieci Web, która jest migrowana z usługami WSE 3.0 do usługi WCF, mogą występować maksymalnie 200 – 400% zwiększenie wydajności. Aby uzyskać więcej informacji na temat transportu obsługiwane przez architekturę WCF, zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać listę scenariuszy obsługiwanych przez architekturę WCF, zobacz [typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Aby uzyskać listę specyfikacje, które są obsługiwane przez architekturę WCF, zobacz [przewodnik dotyczący współpracy protokołów usług sieci Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -123,7 +123,8 @@ Zalety migracji usług sieci Web programu WSE 3.0 do usługi Windows Communicati
  Wielokrotność transportu niestandardowe programu WSE 3.0 w programie WCF jest rozszerzeniem kanału. Aby uzyskać szczegółowe informacje o tworzeniu rozszerzenia kanału, zobacz [rozszerzanie warstwy kanału](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podstawowy cykl życia programowania](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Powiązania niestandardowe](../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Instrukcje: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

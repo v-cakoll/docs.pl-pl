@@ -24,16 +24,15 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 810417529f71ec366f940c062a416a675bfecd2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376822"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090042"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu zapewnia zaawansowany [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] w celu uzyskania danych wejściowych z różnych urządzeń, m.in. myszy, klawiatury, touch i Pióro. W tym temacie opisano usługi świadczone przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę systemów danych wejściowych.
-
 
 <a name="input_api"></a>
 ## <a name="input-api"></a>Dane wejściowe interfejsu API
@@ -288,9 +287,9 @@ ms.locfileid: "57376822"
 
 |Zdarzenie, które anulowanie jest wywoływana w|Zdarzenia myszy, które wystąpiły dla danych wejściowych, które już wystąpiły|
 |----------------------------------------|-----------------------------------------------------------------|
-|<xref:System.Windows.UIElement.ManipulationStarting> i <xref:System.Windows.UIElement.ManipulationStarted>|Wskaźnik myszy w dół do zdarzenia.|
+|<xref:System.Windows.UIElement.ManipulationStarting> and <xref:System.Windows.UIElement.ManipulationStarted>|Wskaźnik myszy w dół do zdarzenia.|
 |<xref:System.Windows.UIElement.ManipulationDelta>|Naciśnięcia przycisku myszy i myszy przesuń zdarzenia.|
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting> i <xref:System.Windows.UIElement.ManipulationCompleted>|Naciśnięcia myszą i myszy zdarzenia przycisku myszy.|
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> and <xref:System.Windows.UIElement.ManipulationCompleted>|Naciśnięcia myszą i myszy zdarzenia przycisku myszy.|
 
  Należy pamiętać, że jeśli wywołasz <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> podczas modyfikowania znajduje się w bezwładności, metoda zwraca `false` i dane wejściowe nie zgłaszać zdarzenia myszy.
 
@@ -391,8 +390,9 @@ ms.locfileid: "57376822"
  Dodatkowe zasoby są dostępne objaśniające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów framework i routingu zdarzeń, bardziej szczegółowo. Omówienia następujących zagadnień, aby uzyskać więcej informacji, zobacz [polecenia Przegląd](commanding-overview.md), [Przegląd fokus](focus-overview.md), [Przegląd elementy bazy](base-elements-overview.md), [drzewa w WPF](trees-in-wpf.md), i [kierowane Przegląd zdarzeń](routed-events-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd fokusu](focus-overview.md)
-- [Przegląd poleceń](commanding-overview.md)
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
-- [Przegląd elementów podstawowych](base-elements-overview.md)
+
+- [Przegląd Fokus](focus-overview.md)
+- [Przegląd Polecenia](commanding-overview.md)
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Przegląd Elementy bazy](base-elements-overview.md)
 - [Właściwości](properties-wpf.md)

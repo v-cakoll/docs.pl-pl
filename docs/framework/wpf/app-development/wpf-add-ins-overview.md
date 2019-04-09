@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091619"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a> Program .NET Framework zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlania interfejsu użytkownika, które są dostarczane przez dodatki. W tym temacie pokazano, jak WPF, rozszerzają model dodatku .NET Framework umożliwiają tych scenariuszy, architektura za go, jego zalety i jego pewne ograniczenia.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Wymagana jest znajomość model dodatku .NET Framework. Aby uzyskać więcej informacji, zobacz [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
@@ -283,9 +281,10 @@ ms.locfileid: "57365844"
  Domyślnie jeśli używanych jest wiele domen aplikacji, różnych zestawów .NET Framework, wymagane przez poszczególne aplikacje są wszystkie ładowane do domeny w tej aplikacji. W rezultacie czas wymagany do tworzenia nowych domen aplikacji i uruchamiania aplikacji w nich może wpłynąć na wydajność. Jednak .NET Framework umożliwia zmniejszenie czasu uruchomienia przez poinstruowanie aplikacjom udostępnianie zestawów w domenach aplikacji, jeśli są już załadowane. Możesz to zrobić przy użyciu <xref:System.LoaderOptimizationAttribute> atrybut, który należy zastosować do metody punktu wejścia (`Main`). W takim przypadku musisz podać tylko kod do implementacji definicji aplikacji (zobacz [Zarządzanie aplikacjami — omówienie](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.LoaderOptimizationAttribute>
 - [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domeny aplikacji](../../app-domains/application-domains.md)
 - [Przegląd komunikacji zdalnej programu .NET framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Tworzenie obiektów może być zastosowana zdalnie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Tematy z instrukcjami](how-to-topics.md)
+- [— Tematy porad](how-to-topics.md)

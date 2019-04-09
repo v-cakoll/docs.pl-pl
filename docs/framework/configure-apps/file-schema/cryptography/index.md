@@ -10,12 +10,12 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - configuration settings [.NET Framework], cryptography
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 2958ab01cb92872026437e31d2225d12d8606e97
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 00b04cc2175f4bb4cc0b74602cd3c26f4a4e342f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184460"
 ---
 # <a name="cryptography-settings-schema"></a>Schemat ustawień kryptografii
 Schemat ustawień kryptografii zawiera elementy, które określają sposób mapowania przyjazne nazwy algorytmu na klasy, które implementują algorytmy kryptograficzne.  
@@ -50,5 +50,6 @@ Schemat ustawień kryptografii zawiera elementy, które określają sposób mapo
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Zawiera identyfikator OID ASN.1 mapowania do klas.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)

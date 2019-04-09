@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows'
+title: 'Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192697"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
   
  Po zadokowaniu kontrolkę, należy określić, które krawędzią kontenera nadrzędnego formantu jest podłączony. W związku z tym Jeśli ustawisz <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Right>, prawą krawędzią kontrolki będzie zadokowany na prawej krawędzi kontrolki nadrzędnej. Ponadto aby pasował do jego kontrolki kontenera zmieniany jest zadokowany krawędzią formantu. Aby uzyskać więcej informacji o tym, jak <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość znaleźć [jak: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md).  
@@ -177,6 +177,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer, kontrolka](splitcontainer-control-windows-forms.md)
-- [Instrukcje: Tworzenie złożonego interfejsu użytkownika za pomocą interfejsu Windows Forms przy użyciu narzędzia Projektant](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant](create-a-multipane-user-interface-with-wf-using-the-designer.md)

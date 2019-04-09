@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 16f087051e438fa0dbe248c46b0ec555c07cc06c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ccc89e0e0c8977398ed162b246ff6cdede3b8351
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177947"
 ---
 # <a name="textbox-styles-and-templates"></a>TextBox — Style i szablony
 W tym temacie opisano, style i szablony <xref:System.Windows.Controls.TextBox> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -53,9 +53,10 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.TextBox> k
  Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony kontrolek](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Style i szablony formantu](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195153"
 ---
 # <a name="configuring-http-and-https"></a>Konfigurowanie protokołów HTTP i HTTPS
 Usługi WCF i klienci mogą komunikować się za pośrednictwem protokołów HTTP i HTTPS. Ustawienia HTTP/HTTPS są skonfigurowane przy użyciu usług Internet Information Services (IIS) lub za pomocą narzędzia wiersza polecenia. Gdy usługa WCF jest hostowana w ustawieniach usług IIS HTTP lub HTTPS można skonfigurować w ramach usług IIS (za pomocą narzędzia inetmgr.exe). Jeśli usługa WCF jest samodzielnie hostowana, ustawienia protokołu HTTP lub HTTPS są konfigurowane za pomocą narzędzia wiersza polecenia.  
@@ -91,5 +91,6 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  Usługi IIS nie obsługuje udostępniania portów na [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Jeśli usługi IIS zostały uruchomione i usługi WCF podejmują próbę użycia przestrzeni nazw za pomocą tego samego portu, usługi WCF nie powiedzie się. Usługi IIS i WCF jest domyślnie przy użyciu portu 80. Zmień przypisania portów dla usług lub użyj adresu IP nasłuchiwania listy, aby przypisać usługi WCF do karty sieciowej nie jest używany przez usługi IIS. Usług IIS 6.0 lub nowszym mają został przeprojektowany w celu użycia interfejsów API serwera HTTP.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [Instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

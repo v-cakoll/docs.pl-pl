@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie ciągu połączenia EntityConnection'
+title: 'Instrukcje: Tworzenie parametrów połączenia EntityConnection'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: 84cef3b874f7deab129fad6dcd363c078153c311
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 19943f44431a50111552f0f60d46af420a7966bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097307"
 ---
-# <a name="how-to-build-an-entityconnection-connection-string"></a>Instrukcje: Tworzenie ciągu połączenia EntityConnection
+# <a name="how-to-build-an-entityconnection-connection-string"></a>Instrukcje: Tworzenie parametrów połączenia EntityConnection
 W tym temacie zawiera przykład sposobu tworzenia <xref:System.Data.EntityClient.EntityConnection>.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Aby uruchomić kod w tym przykładzie  
@@ -31,5 +31,6 @@ W tym temacie zawiera przykład sposobu tworzenia <xref:System.Data.EntityClient
  [!code-vb[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#buildingconnectionstringwithentitycommand)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Obiekt EntityConnection za pomocą kontekstu obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [Dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

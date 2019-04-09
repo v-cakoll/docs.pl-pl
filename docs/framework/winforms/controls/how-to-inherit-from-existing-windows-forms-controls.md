@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dziedzicz Windows istniejących formantów formularzy'
+title: 'Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9b3b5b2420a1121be81bc299dea645051f941cd8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 90008b00c95906ba43364c5a4ae3f85d9fdf0e22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087875"
 ---
-# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Instrukcje: Dziedzicz Windows istniejących formantów formularzy
+# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows
 Jeśli chcesz rozszerzyć funkcjonalność istniejącej kontrolki, można utworzyć formant pochodzące z istniejącej kontrolki przez dziedziczenie. Dziedziczy z istniejącej kontrolki, dziedziczenie, wszystkie funkcje i wizualne właściwości tej kontrolki. Na przykład, jeśli podczas tworzenia formant, który odziedziczone <xref:System.Windows.Forms.Button>nowego formantu będzie wyglądała i act dokładnie tak jak standardowy <xref:System.Windows.Forms.Button> kontroli. Można następnie rozszerzyć lub zmodyfikować funkcje nowego formantu poprzez wdrożenie niestandardowe metody i właściwości. W niektórych kontrolek można zmienić wygląd formantu dziedziczone przez zastąpienie jej <xref:System.Windows.Forms.Control.OnPaint%2A> metody.  
   
 > [!NOTE]
@@ -84,10 +84,11 @@ Jeśli chcesz rozszerzyć funkcjonalność istniejącej kontrolki, można utworz
 11. Zapisz i przetestuj formantu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)
-- [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+
+- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
+- [Instrukcje: dziedziczenie z klasy kontrolek](how-to-inherit-from-the-control-class.md)
+- [Instrukcje: dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows](how-to-author-controls-for-windows-forms.md)
+- [Rozwiązywanie problemów związanych z odziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows formantu z Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

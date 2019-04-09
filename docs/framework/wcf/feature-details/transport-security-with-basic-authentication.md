@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3efe8b8716a264848d07ecc37d4e11d07a8ba0a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172500"
 ---
 # <a name="transport-security-with-basic-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem podstawowym
 Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation (WCF) i klienta. Serwer musi mieć prawidłowy certyfikat X.509, który może służyć do Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatowi serwera. Ponadto usługa sieci Web już implementacją protokołu SSL, który może służyć. Aby uzyskać więcej informacji dotyczących włączania uwierzytelniania podstawowego w Internet Information Services (IIS), zobacz [ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822).  
@@ -23,7 +23,7 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 |Współdziałanie|Za pomocą istniejących klientów usługi sieci Web i usług|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą protokołu HTTPS)<br /><br /> Tak (za pomocą nazwy użytkownika i hasła)|  
 |Integralność|Tak|  
-|Poufność|Tak|  
+|Poufność|Yes|  
 |Transport|HTTPS|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
@@ -111,10 +111,11 @@ Na poniższej ilustracji przedstawiono usługi Windows Communication Foundation 
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Instrukcje: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

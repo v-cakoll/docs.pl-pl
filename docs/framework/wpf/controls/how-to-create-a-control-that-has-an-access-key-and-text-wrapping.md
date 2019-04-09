@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz formant z kluczem dostępu i zwijaniem tekstu'
+title: 'Instrukcje: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - access keys [WPF], control for
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - controls [WPF], access keys
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
-ms.openlocfilehash: e410b92f90f775471ef5d89365549ccd5bb7f085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361905"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174047"
 ---
-# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Instrukcje: Utwórz formant z kluczem dostępu i zwijaniem tekstu
+# <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Instrukcje: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu
 W tym przykładzie pokazano, jak utworzyć formant, który ma klucz dostępu i obsługuje zawijania tekstu. W przykładzie użyto <xref:System.Windows.Controls.Label> kontroli w celu zilustrowania koncepcji te.  
   
 ## <a name="example"></a>Przykład  
@@ -37,4 +37,5 @@ W tym przykładzie pokazano, jak utworzyć formant, który ma klucz dostępu i o
  [!code-xaml[LabelSnippet#4](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#4)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Ustaw właściwość Target etykiety](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90))

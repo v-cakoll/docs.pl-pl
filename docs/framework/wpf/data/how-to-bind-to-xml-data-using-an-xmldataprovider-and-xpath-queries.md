@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Powiąż z danymi XML przy użyciu XMLDataProvider i zapytań XPath'
+title: 'Instrukcje: Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XmlDataProvider [WPF], binding to XML data
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097229"
 ---
-# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Instrukcje: Powiąż z danymi XML przy użyciu XMLDataProvider i zapytań XPath
+# <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Instrukcje: Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath
 W tym przykładzie pokazano, jak powiązać [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] danych przy użyciu <xref:System.Windows.Data.XmlDataProvider>.  
   
  Za pomocą <xref:System.Windows.Data.XmlDataProvider>, bazowych danych, który jest możliwy za pośrednictwem powiązania danych w aplikacji może być dowolnym drzewo [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] węzłów. Innymi słowy <xref:System.Windows.Data.XmlDataProvider> oferuje wygodny sposób, aby użyć dowolnego drzewo [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] węzłów jako źródło wiążące.  
@@ -59,9 +59,10 @@ W tym przykładzie pokazano, jak powiązać [!INCLUDE[TLA#tla_xml](../../../../i
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Data.ObjectDataProvider>
-- [Powiązywanie z dokumentem X, elementem X lub LINQ dla wyników zapytań XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
+- [Wiązanie z elementem XDocument, XElement lub LINQ dla wyników zapytań XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [Używanie wzorca szczegółowego z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Wiązanie źródeł — omówienie](binding-sources-overview.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przegląd Wiązanie źródeł](binding-sources-overview.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

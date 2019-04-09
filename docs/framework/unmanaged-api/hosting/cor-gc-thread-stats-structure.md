@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f453867f6b46265fdbf567b4374ddc64b4efe84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177739"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS — Struktura
 Zawiera statystyki wątku odnoszących się do wyrzucania elementów bezużytecznych.  
@@ -55,5 +55,6 @@ typedef struct _COR_GC_THREAD_STATS {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [IHostTask, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+
+- [Hosting — Struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [IHostTask — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

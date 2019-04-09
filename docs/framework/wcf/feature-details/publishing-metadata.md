@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 1f216fe045dff9eca98c821724372e4426620f47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97836cef12cd1f220e97d2c38d2dca1b878d7484
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183085"
 ---
 # <a name="publishing-metadata"></a>Publikowanie metadanych
 Usługi Windows Communication Foundation (WCF) publikowanie metadanych przez publikowanie punktów końcowych metadanych. Publikowanie metadanych usługi udostępnia metadane za pomocą standardowych protokołów, takich jak żądania WS-MetadataExchange (MEX) i protokołu HTTP/GET. Punkty końcowe metadanych są podobne do innych punktów końcowych usługi, w tym mają adres, powiązanie i kontrakt i można ich dodać do hosta usługi przy użyciu konfiguracji lub kodu imperatywnego.  
@@ -28,10 +28,10 @@ Usługi Windows Communication Foundation (WCF) publikowanie metadanych przez pub
  Aby dodać punkt końcowy metadanych do usługi, który odpowiada na żądania HTTP/GET, należy ustawić <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwość <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> do `true`. Można również skonfigurować punkt końcowy metadanych, który używa protokołu HTTPS, ustawiając <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> właściwość <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> do `true`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
+ [Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)  
  Pokazuje, jak skonfigurować usługę WCF w celu publikowania metadanych, aby klienci mogą pobierać metadane za pomocą usługi WS-MetadataExchange lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania.  
   
- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
+ [Instrukcje: publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)  
  Pokazuje, jak włączyć publikowanie metadanych dla usługi WCF w kodzie, tak aby klienci mogą pobierać metadane za pomocą usługi WS-MetadataExchange lub żądania HTTP/GET przy użyciu `?wsdl` ciągu zapytania.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -44,4 +44,5 @@ Usługi Windows Communication Foundation (WCF) publikowanie metadanych przez pub
  <xref:System.ServiceModel.Description.MetadataExchangeBindings>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Eksportowanie i importowanie metadanych](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

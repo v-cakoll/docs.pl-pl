@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Button control type
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-ms.openlocfilehash: c47c3238904ac407827ce0171e9ceaab1f05a14e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8ab42bc6c7cde50e2e30806b9fab91603580bb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199092"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu przycisk
 > [!NOTE]
@@ -54,7 +54,7 @@ ms.locfileid: "57673694"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, wymagane są obsługiwane przez wszystkie formanty przycisków. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Zobacz uwagi.|Invoke — wzorzec kontrolki lub wzorca kontrolki przełącznika, powinien obsługiwać wszystkie przyciski. Wywołanie jest obsługiwana, gdy przycisk wykonuje polecenie na żądanie użytkownika. To polecenie mapuje do jednej operacji, takich jak Wytnij, Kopiuj, wklej lub Delete.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Zobacz uwagi.|Invoke — wzorzec kontrolki lub wzorca kontrolki przełącznika, powinien obsługiwać wszystkie przyciski. Przełącz jest obsługiwana, gdy przycisk może być cyklom przez szereg maksymalnie trzy stany. Zazwyczaj jest to postrzegane jako wyłącznik dotyczące określonych funkcji.|  
@@ -64,7 +64,7 @@ ms.locfileid: "57673694"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty przycisków. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -76,6 +76,7 @@ ms.locfileid: "57673694"
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> Zdarzenie zmiany właściwości.|Zależy od|Jeśli są obsługiwane przez kontrolkę wzorca kontrolki przełącznika, musi obsługiwać to zdarzenie.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.Button>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

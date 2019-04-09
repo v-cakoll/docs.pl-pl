@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konfigurowanie potwierdzenia sygnatury'
+title: 'Instrukcje: konfigurowanie potwierdzenia sygnatury'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 5163436f75e403ee7f682cdbe378922657116063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176166"
 ---
-# <a name="how-to-set-up-a-signature-confirmation"></a>Instrukcje: Konfigurowanie potwierdzenia sygnatury
+# <a name="how-to-set-up-a-signature-confirmation"></a>Instrukcje: konfigurowanie potwierdzenia sygnatury
 *Potwierdzenie podpisu* jest mechanizm dla inicjatora wiadomości upewnić się, czy odebrano odpowiedź został wygenerowany w odpowiedzi na pierwotny komunikat nadawcy. Potwierdzenie podpisu jest zdefiniowana w specyfikacji WS-Security 1.1. Jeśli punkt końcowy obsługuje WS-Security w wersji 1.0, nie można użyć potwierdzenia podpisu.  
   
  Poniższych procedur Określ sposób umożliwić używanie potwierdzenia podpisu <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Można użyć tej samej procedury z <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>. Procedura opiera się na podstawowe czynności opisane w [jak: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
@@ -67,8 +67,9 @@ ms.locfileid: "54513620"
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Instrukcje: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

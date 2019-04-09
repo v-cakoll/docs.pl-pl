@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Animuj zmiany rozmiaru z wykorzystaniem klatek kluczowych'
+title: 'Instrukcje: Animowanie zmian rozmiaru przy użyciu klatek kluczowych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - key frames [WPF], animating size changes with
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180235"
 ---
-# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Instrukcje: Animuj zmiany rozmiaru z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-size-changes-by-using-key-frames"></a>Instrukcje: Animowanie zmian rozmiaru przy użyciu klatek kluczowych
 Ten przykład pokazuje, jak animować zmiany rozmiaru z wykorzystaniem klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -30,11 +30,12 @@ Ten przykład pokazuje, jak animować zmiany rozmiaru z wykorzystaniem klatek kl
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.ArcSegment.Size%2A>
 - <xref:System.Windows.Media.ArcSegment>
 - <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

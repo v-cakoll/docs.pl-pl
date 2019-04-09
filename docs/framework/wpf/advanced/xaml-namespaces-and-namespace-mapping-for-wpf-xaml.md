@@ -14,17 +14,16 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5921824ddbd52c264affd4822ed626d5d38b80a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176920"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 Dalej w tym temacie opisano obecności i celem dwóch mapowań przestrzeni nazw XAML, jak często występuje w tagu głównego pliku XAML w WPF. On również zawiera opis sposobu tworzenia podobnych mapowania dla za pomocą elementów, które są zdefiniowane we własnym kodzie i/lub w ramach oddzielne zestawy.  
-  
-  
+
 ## <a name="what-is-a-xaml-namespace"></a>Co to jest Namespace XAML?  
  Przestrzeń nazw XAML tak naprawdę to rozszerzenie pojęcia obszar nazw XML. Techniki określania przestrzeni nazw XAML zależą od składni przestrzeni nazw XML Konwencji za pomocą identyfikatorów URI jako identyfikatory przestrzeni nazw, przy użyciu prefiksy zapewnienie sposób odwoływać się wiele przestrzeni nazw z tego samego źródła znaczników i tak dalej. Podstawowe pojęcia, dodane do definicji XAML przestrzeni nazw XML jest nazw XAML oznacza zarówno zakres unikatowości użycia znaczników i również wpływ na sposób jednostek znaczników potencjalnie są wspierane przez określonych przestrzeni nazw CLR i odwołanie do zestawy. Ten ostatni brany pod uwagę także ma wpływ koncepcji kontekst schematu XAML. Ale w celu współdziałania WPF z przestrzeni nazw XAML, można zwykle traktować przestrzeni nazw XAML w kontekście domyślna przestrzeń nazw XAML, przestrzeni nazw języka XAML i wszelkie dodatkowe przestrzenie nazw XAML, ponieważ mapowany przez znaczników XAML bezpośrednio do określonej zapasowego typu CLR przestrzenie nazw i przywoływanych zestawów.  
   
@@ -137,5 +136,6 @@ End Namespace
  Skompilowanych BAML (generowany za pośrednictwem PresentationBuildTask) używa wszystkich kroków, mimo że BAML także nie może zawierać nazwy niekwalifikowanej zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Informacje o przestrzeni nazw XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Omówienie XAML (WPF)](xaml-overview-wpf.md)

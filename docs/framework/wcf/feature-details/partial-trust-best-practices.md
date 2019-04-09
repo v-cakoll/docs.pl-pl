@@ -2,12 +2,12 @@
 title: Najlepsze rozwiązania dotyczące częściowego zaufania
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184083"
 ---
 # <a name="partial-trust-best-practices"></a>Najlepsze rozwiązania dotyczące częściowego zaufania
 W tym temacie opisano najlepsze rozwiązania, podczas uruchamiania usługi Windows Communication Foundation (WCF) w środowisku częściowej relacji zaufania.  
@@ -66,5 +66,6 @@ W tym temacie opisano najlepsze rozwiązania, podczas uruchamiania usługi Windo
  Najlepszym rozwiązaniem należy unikać tworzenia kontekstu uprawnienia właściwe dla wątków, wywołując <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.PermitOnly%2A>, lub <xref:System.Security.PermissionSet.Deny%2A>. Zamiast tego należy udzielić lub odmówić uprawnień do aplikacji, tak aby nie <xref:System.Security.PermissionSet.Assert%2A>, <xref:System.Security.PermissionSet.Deny%2A>, lub <xref:System.Security.PermissionSet.PermitOnly%2A> jest wymagana.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

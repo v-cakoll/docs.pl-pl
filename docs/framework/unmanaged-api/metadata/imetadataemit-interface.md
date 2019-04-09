@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f28facc8acb430de4aa255208a62c5fc61f12cd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184421"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit — Interfejs
 Dostarcza metody do tworzenia, modyfikacji i Zapisz metadane dotyczące zestawu w aktualnie zdefiniowanego zakresu. Metadane może być przechowywany w pamięci lub zapisywany na dysku.  
@@ -90,5 +90,6 @@ Dostarcza metody do tworzenia, modyfikacji i Zapisz metadane dotyczące zestawu 
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [IMetaDataEmit2, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit2 — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

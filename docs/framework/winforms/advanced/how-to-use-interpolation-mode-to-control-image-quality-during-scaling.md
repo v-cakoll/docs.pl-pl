@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 93430f521904d9d38ba98f4055480583fd650114
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080985"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Instrukcje: Używanie trybu interpolacji do sterowania jakością obrazu w czasie skalowania
 Tryb interpolacji <xref:System.Drawing.Graphics> obiekt ma wpływ na sposób [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] obrazów w skali (odcinkach i zmniejsza). <xref:System.Drawing.Drawing2D.InterpolationMode> Wyliczenie definiuje kilka trybów interpolacji, niektóre z nich są wyświetlane na poniższej liście:  
@@ -47,5 +47,6 @@ Tryb interpolacji <xref:System.Drawing.Graphics> obiekt ma wpływ na sposób [!I
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
 - [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

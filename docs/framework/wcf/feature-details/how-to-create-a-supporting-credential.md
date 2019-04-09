@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie poświadczeń pomocniczych'
+title: 'Instrukcje: tworzenie poświadczeń pomocniczych'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093712"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>Instrukcje: Tworzenie poświadczeń pomocniczych
+# <a name="how-to-create-a-supporting-credential"></a>Instrukcje: tworzenie poświadczeń pomocniczych
 Istnieje możliwość schematu niestandardowego zabezpieczeń, która wymaga więcej niż jedno poświadczenie. Na przykład usługa może wymagać od klienta nie tylko nazwę użytkownika i hasło, ale również poświadczeń, który okazał się klienta znajduje się nad niż 18 lat. Drugie poświadczenie jest *obsługi poświadczeń*. W tym temacie wyjaśniono, jak wdrożyć tych poświadczeń w kliencie programu Windows Communication Foundation (WCF).  
   
 > [!NOTE]
@@ -81,4 +81,5 @@ Istnieje możliwość schematu niestandardowego zabezpieczeń, która wymaga wi�
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

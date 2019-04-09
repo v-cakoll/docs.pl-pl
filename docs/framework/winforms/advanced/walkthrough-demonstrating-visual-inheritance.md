@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174606"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
@@ -164,6 +164,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
  Dziedziczenie w przypadku kontrolek użytkownika działa w taki sam sposób. Otwórz nowy projekt biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompiluj projekt. Otwórz inny nowy projekt biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać odziedziczoną kontrolkę (za pośrednictwem **Dodaj nowe elementy** okno dialogowe) do projektu i przy użyciu **selektor dziedziczenia**. Dodaj formant użytkownika, a następnie zmień `Inherits` (`:` w języku Visual C#) instrukcja. Aby uzyskać więcej informacji, zobacz [jak: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
-- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
+
+- [Instrukcje: Dziedziczenie formularzy systemu Windows](how-to-inherit-windows-forms.md)
+- [Formularze systemu Windows — dziedziczenie Visual](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

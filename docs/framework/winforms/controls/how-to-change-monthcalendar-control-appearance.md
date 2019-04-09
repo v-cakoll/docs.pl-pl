@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmienianie wyglądu formantu MonthCalendar formularzy Windows'
+title: 'Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 2e26f7a9db8e19b584000089f99e99aab7c25a32
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199924"
 ---
-# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Instrukcje: Zmienianie wyglądu formantu MonthCalendar formularzy Windows
+# <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia dostosowanie wyglądu kalendarza na wiele sposobów. Na przykład można ustawić schemat kolorów i wybierz opcję wyświetlić lub ukryć numery tygodni i bieżącą datą.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Aby zmienić schemat kolorów kalendarza miesięcznego  
@@ -104,7 +104,8 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [MonthCalendar, kontrolka](monthcalendar-control-windows-forms.md)
-- [Instrukcje: Wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Instrukcje: Wyświetlanie określonych dni pogrubioną czcionką za pomocą Windows formantu MonthCalendar formularzy](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Instrukcje: Wyświetl więcej niż jednego miesiąca w kontrolce MonthCalendar formularzy Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy systemu Windows](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Instrukcje: wyświetlanie określonych dni pogrubioną czcionką za pomocą kontrolki MonthCalendar formularzy systemu Windows](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Instrukcje: wyświetlanie większej niż jeden liczby miesięcy w kontrolce MonthCalendar formularzy systemu Windows](display-more-than-one-month-wf-monthcalendar-control.md)

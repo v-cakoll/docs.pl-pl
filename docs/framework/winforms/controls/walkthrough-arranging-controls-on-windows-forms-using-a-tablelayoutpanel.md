@@ -1,19 +1,19 @@
 ---
-title: 'Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel'
+title: 'Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 8999dba110ee21b735c79ccc10c5af52dbfcdea9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 44ef0b88da5b8990ad9fde921224b6bb7101cbc2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073861"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel
 Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas zmiany rozmiaru formularza lub zawartość zmienia rozmiar formularza. Kiedy należy układ dynamiczny i nie chcesz obsługiwać <xref:System.Windows.Forms.Control.Layout> zdarzenia jawnie w kodzie, należy wziąć pod uwagę przy użyciu panelu układu.  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> Kontroli i <xref:System.Windows.Forms.TableLayoutPanel> kontroli zapewnia intuicyjne, aby rozmieścić formanty w formularzu. Obie umożliwiają automatyczne, można skonfigurować do kontrolowania względne położenie formantów podrzędnych w nich zawarte i obie zapewniają funkcje układ dynamiczny w czasie wykonywania, dzięki czemu mogą zmienić rozmiar i zmienić położenie formantów podrzędnych jako wymiary formularza nadrzędnego Zmiana. Panele układów może być zagnieżdżona w panele układów, umożliwiające realizacji interfejsów użytkowników zaawansowanych.  
@@ -179,15 +179,16 @@ Niektóre aplikacje wymagają układ, który organizuje sam odpowiednio podczas 
 -   Zadokuj <xref:System.Windows.Forms.TableLayoutPanel> formantu do formularza nadrzędnego. Zmień rozmiar formularza i zanotuj wpływa na układ.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Środowisko użytkownika Microsoft Windows, oficjalnych wytycznych dotyczących projektanci i deweloperzy interfejsu użytkownika. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [Przewodnik: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [Przewodnik: Tworzenie formularza Windows Lokalizowalny](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
-- [Najlepsze praktyki dotyczące kontrolki TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
-- [AutoSize, właściwość — omówienie](autosize-property-overview.md)
-- [Instrukcje: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Instrukcje: Zakotwiczenia formantów na formularzach Windows Forms](how-to-anchor-controls-on-windows-forms.md)
-- [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)
+- [Najlepsze praktyki dotyczące formantu TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
+- [AutoSize — Przegląd właściwości](autosize-property-overview.md)
+- [Instrukcje: dokowanie kontrolek w Formularzach systemu Windows](how-to-dock-controls-on-windows-forms.md)
+- [Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows](how-to-anchor-controls-on-windows-forms.md)
+- [Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)

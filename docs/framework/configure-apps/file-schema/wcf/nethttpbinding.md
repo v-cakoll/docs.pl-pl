@@ -2,12 +2,12 @@
 title: <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: b0d81ca0-87c5-4090-8baa-e390fd3656d2
-ms.openlocfilehash: 5af68572b027ac9cd05fa9920280f978d99475aa
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 14c1b6940099fa2b34716ed785bd00756c3e435e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181236"
 ---
 # <a name="nethttpbinding"></a>\<netHttpBinding>
 Reprezentuje powiązanie, używanego przez usługi Windows Communication Foundation (WCF) do konfiguracji i ekspozycji punktów końcowych, które będą mogły obsługiwać komunikację za pośrednictwem protokołu HTTP. W przypadku użycia za pomocą kontraktu dwukierunkowego, gniazda sieci Web, który będzie używany, w przeciwnym razie HTTP będą używane.  
@@ -85,7 +85,7 @@ Reprezentuje powiązanie, używanego przez usługi Windows Communication Foundat
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń dla wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>.|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -174,11 +174,12 @@ Reprezentuje powiązanie, używanego przez usługi Windows Communication Foundat
  Aby uzyskać więcej informacji o domyślnej konfiguracji i powiązania pustego oraz zachowań, zobacz [uproszczona konfiguracja](../../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

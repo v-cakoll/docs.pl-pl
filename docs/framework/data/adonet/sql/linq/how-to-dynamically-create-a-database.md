@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072392"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Instrukcje: Dynamiczne tworzenie bazy danych
 W składniku LINQ to SQL na model obiektów jest mapowany w relacyjnej bazie danych. Mapowanie jest włączane przy użyciu opartych na atrybutach mapowania lub pliku mapowania zewnętrznych do opisania struktury relacyjnej bazy danych. W obu przypadkach jest za mało informacji na temat relacyjnej bazy danych, możesz utworzyć nowe wystąpienie bazy danych przy użyciu <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody.  
@@ -49,6 +49,7 @@ W składniku LINQ to SQL na model obiektów jest mapowany w relacyjnej bazie dan
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187347"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats — Metoda
 Pobiera zestaw statystyk bieżące informacje o systemie kolekcji wyrzucania elementów wykonywalnych języka wspólnego.  
@@ -73,12 +73,13 @@ pCLRGCManager->GetStats(&GCStats);
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Automatyczne zarządzanie pamięcią](../../../../docs/standard/automatic-memory-management.md)
-- [COR_GC_STATS, struktura](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
-- [COR_GC_STAT_TYPES, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
+- [COR_GC_STATS — Struktura](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
+- [COR_GC_STAT_TYPES — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [Odzyskiwanie pamięci](../../../../docs/standard/garbage-collection/index.md)
-- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRGCManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
+- [ICLRControl — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRGCManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [Interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

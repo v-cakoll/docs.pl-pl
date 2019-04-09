@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 2e5671832fa1025c424c746b8c27162d3935fddd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075174"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez protokół Kerberos.  
@@ -28,10 +28,10 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 |Współdziałanie|Tak, WS-Security-Kerberos tokenu profilu zgodnych klientów|  
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|  
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|  
-|Integralność|Tak|  
+|Integralność|Yes|  
 |Poufność|Tak|  
 |Transport|HTTP|  
-|Powiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
+|Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>Usługa  
  Następujący kod i konfiguracji są przeznaczone do uruchamiania niezależnie. Wykonaj jedną z następujących czynności:  
@@ -147,6 +147,7 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

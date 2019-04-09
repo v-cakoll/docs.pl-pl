@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191591"
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
 W tym temacie przedstawiono Animacja kluczowych klatek. Animacje kluczowych klatek — umożliwiają animowanie za pomocą więcej niż dwóch wartości docelowych i kontrolować metodę interpolacji animacji.  
@@ -284,12 +284,13 @@ Kluczowych krzywej składanej kontrolką punkty (0,25, 0,5) i (0,75, 1.0)
 8.  Sortowanie klatek kluczowych w kolejności czas rozwiązania (klucz podstawowy) i kolejności deklaracji (klucz pomocniczy), czyli, użyj stabilne sortowanie oparte na rozwiązany klatek kluczowych <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Przykład animacji klucza z krzywymi składanymi](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Przykład animacji klatki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012)
-- [Animacja — przegląd](animation-overview.md)
-- [Scenorysy — przegląd](storyboards-overview.md)
+- [Przegląd Animacja](animation-overview.md)
+- [Przegląd Scenorysy](storyboards-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)
-- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)
+- [Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)

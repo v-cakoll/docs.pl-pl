@@ -2,12 +2,12 @@
 title: Wymagania systemowe programu .NET Framework Data Provider for Oracle
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: cc3fc61c5adebf67b1203897579b2f959cbc0546
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f8509cce248f6cc0a56900227f9758eb27c4e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111050"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>Wymagania systemowe programu .NET Framework Data Provider for Oracle
 .NET Framework Data Provider for Oracle wymaga programu Microsoft Data Access Components (MDAC) w wersji 2.6 lub nowszej. Zaleca się MDAC 2.8 SP1.  
@@ -38,5 +38,6 @@ Unicode=True
  Ze względu na użyteczność <xref:System.Data.OracleClient.OracleLob> obiekt dziedziczy z klasy .NET Framework Stream i zapewnia **ReadByte** i **Element WriteByte** metody. Implementuje także metod, takich jak **CopyTo** i **wymazać**, które działają na sekcje Oracle **LOB** obiektów. W odróżnieniu od nich oprogramowanie klienckie Oracle oferuje pewną liczbę interfejsów API do pracy ze znakiem **LOB**s (**CLOB** i **NCLOB**). Jednak te interfejsy API pracować na pełnej tylko znaki. Z powodu tej różnicy Data Provider Pro Oracle TFTP implementuje obsługę **odczytu** i **ReadByte** do pracy z danymi UTF-16 w sposób byte-wise. Jednak inne metody **OracleLob** obiektu Zezwalaj tylko na operacje pełnej znaków.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Oracle i ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

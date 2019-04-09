@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic'
+title: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: 5eaa92b6294ebf849f005f6e12d2dacb43fa4d6c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed3a7dc23050412082fb10fabf6b1d5a4507973e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186111"
 ---
-# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic
+# <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic
 Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy graficzne można tworzyć i ponownie używane. Formant złożony jest zasadniczo składnika za pomocą wizualnej reprezentacji. W efekcie może składać się z co najmniej Windows Forms formantów, składników lub bloki kodu, które mogą rozszerzyć funkcjonalność, sprawdzanie poprawności danych wejściowych użytkownika, modyfikując właściwości wyświetlania lub wykonywania innych zadań wymaganych przez autora. Formanty złożone można umieścić na formularzach Windows Forms w taki sam sposób jak inne kontrolki. W pierwszej części tego przewodnika, tworzenie prostego formantu złożonego o nazwie `ctlClock`. W drugiej części tego przewodnika, możesz rozszerzyć funkcjonalność `ctlClock` poprzez dziedziczenie.  
   
 > [!NOTE]
@@ -60,7 +60,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Zmień na|  
     |--------------|---------------|  
     |**Nazwa**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**Tekst**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -245,7 +245,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
     |**Nazwa**|`lblAlarm`|  
-    |**Text**|**Alarm!**|  
+    |**Tekst**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Widoczne**|`False`|  
   
@@ -358,7 +358,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
     |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
+    |`label1`|**Tekst**|`(blank space)`|  
     ||**Nazwa**|`lblTest`|  
     |`dateTimePicker1`|**Nazwa**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -396,6 +396,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
      W tym przewodniku ma obejmujący wiele kluczowych założeń. Wiesz, że tworzenie formantu złożonego, łącząc w kontenerze kontrolek złożonych kontrolek i składników. Wiesz, można dodać właściwości do kontrolki, a następnie napisać kod do implementacji funkcji niestandardowych. W ostatniej sekcji pokazano, aby rozszerzyć funkcjonalność danej kontrolki złożonej za pomocą dziedziczenia i zmieniać funkcje metod hosta przez zastąpienie tych metod.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)
-- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+
+- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
+- [Instrukcje: autoryzowanie kontrolek złożonych](how-to-author-composite-controls.md)
+- [Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

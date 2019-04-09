@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Store i ponowne użycie zapytań'
+title: 'Instrukcje: Przechowywanie i ponowne użycie zapytań'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084197"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Instrukcje: Store i ponowne użycie zapytań
+# <a name="how-to-store-and-reuse-queries"></a>Instrukcje: Przechowywanie i ponowne użycie zapytań
 Jeśli masz aplikację, która wykonuje zapytania strukturalnie podobne wiele razy, często może zwiększyć wydajność, kompilowanie zapytania jeden raz i jej wykonanie kilka razy z różnymi parametrami. Na przykład aplikacja może mieć do pobrania wszystkich klientów, którzy należą do określonego miasta, gdzie to Miasto jest określone w czasie wykonywania przez użytkownika w postaci. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje używanie *skompilowany zapytania* do tego celu.  
   
 > [!NOTE]
@@ -34,6 +34,7 @@ Jeśli masz aplikację, która wykonuje zapytania strukturalnie podobne wiele ra
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.Linq.CompiledQuery>
 - [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+- [wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

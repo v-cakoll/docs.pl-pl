@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173631"
 ---
 # <a name="autosize-property-overview"></a>AutoSize — Przegląd właściwości
 <xref:System.Windows.Forms.Control.AutoSize%2A> Właściwości umożliwia zmianę rozmiaru, jeśli to konieczne osiągnąć wartość określoną przez <xref:System.Windows.Forms.Control.PreferredSize%2A> właściwości. Można dostosować zachowanie zmiany rozmiaru kontrolek, ustawiając `AutoSizeMode` właściwości.  
@@ -67,6 +67,7 @@ ms.locfileid: "54649833"
 >  Aby zmaksymalizować wydajność, cieniami Windows Forms Designer <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość <xref:System.Windows.Forms.Form> klasy. W czasie projektowania formularza zachowuje się tak, jakby <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość jest ustawiona na `false`, niezależnie od jej rzeczywistego ustawienia. W czasie wykonywania, dokonuje się nie specjalne zakwaterowanie i <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość jest stosowana jako określony przez ustawienie właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

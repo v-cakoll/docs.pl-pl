@@ -2,12 +2,12 @@
 title: <transport> z <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: f404782ed54d27d5dcfdfba126f6992d9badf060
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073458"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<transport> of \<msmqIntegrationBinding>
 Definiuje ustawienia zabezpieczeń transport integracji usługi kolejkowania komunikatów.  
@@ -49,12 +49,13 @@ msmqIntegrationBinding
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje ustawienia zabezpieczeń dla powiązanie usługi MSMQ.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element hermetyzuje ustawienia zabezpieczeń transport integracji usługi kolejkowania komunikatów. Ustawienia są takie same, Integracja usługi kolejkowania komunikatów i umieszczonych w kolejce transportów. Umożliwia ustawienie Tryb uwierzytelniania, algorytmów szyfrowania, Secure Hash Algorithm i poziom ochrony.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.MsmqTransportSecurityElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement.Transport%2A>
@@ -62,5 +63,5 @@ msmqIntegrationBinding
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Implementuj powiązaną walidację'
+title: 'Instrukcje: Implementowanie weryfikacji wiązania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - validation of binding [WPF]
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197220"
 ---
-# <a name="how-to-implement-binding-validation"></a>Instrukcje: Implementuj powiązaną walidację
+# <a name="how-to-implement-binding-validation"></a>Instrukcje: Implementowanie weryfikacji wiązania
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> i wyzwalacz stylu, aby przekazać wizualną opinię, aby poinformować użytkownika, gdy wprowadzono nieprawidłową wartość oparte na niestandardowej reguły walidacji.  
   
 ## <a name="example"></a>Przykład  
@@ -38,5 +38,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Controls.Validati
  Należy pamiętać, że jeśli nie podasz niestandardowe <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> domyślnego szablonu błąd wydaje się przekazać wizualną opinię do użytkownika, gdy występuje błąd weryfikacji. Zobacz "Sprawdzanie poprawności danych" w [Przegląd wiązanie danych](data-binding-overview.md) Aby uzyskać więcej informacji. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia wbudowane walidację, który przechwytuje wyjątki, które są generowane podczas aktualizacji właściwości źródła powiązania. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

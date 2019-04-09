@@ -1,15 +1,15 @@
 ---
-title: SQL Server Express Security
+title: Bezpieczeństwo programu SQL Server Express
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174554"
 ---
-# <a name="sql-server-express-security"></a>SQL Server Express Security
+# <a name="sql-server-express-security"></a>Bezpieczeństwo programu SQL Server Express
 Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano tak, aby mniej ważne funkcje i połączenie sieciowe są domyślnie wyłączone. Powoduje to zmniejszenie obszaru powierzchni dostępne ataku przez złośliwego użytkownika.  
   
  SQL Server Express jest zazwyczaj instalowany jako nazwane wystąpienie. Domyślna nazwa wystąpienia to `SQLExpress`. Nazwane wystąpienie jest identyfikowane przez nazwę sieciową komputera, a także nazwę wystąpienia, który jest określany podczas instalacji.  
@@ -36,6 +36,7 @@ Microsoft SQL Server Express Edition, (SQL Server Express) jest oparty na progra
 |[Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|W tym artykule opisano możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje o tym, jak włączyć wystąpienia użytkownika, nawiązać połączenie z wystąpieniem użytkownika za pomocą <xref:System.Data.SqlClient.SqlConnection>, okres istnienia wystąpienia użytkownika i scenariuszy wystąpienia użytkownika.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

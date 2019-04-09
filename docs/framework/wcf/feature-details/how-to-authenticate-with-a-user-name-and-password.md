@@ -1,17 +1,17 @@
 ---
-title: 'Porady: Uwierzytelnianie za pomocą nazwy użytkownika i hasła'
+title: 'Instrukcje: uwierzytelnianie za pomocą nazwy użytkownika i hasła'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174138"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: uwierzytelnianie za pomocą nazwy użytkownika i hasła
 
 W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation (WCF) do uwierzytelniania klienta przy użyciu Windows domena nazwa użytkownika i hasła. Założono, że masz pracy, obsługiwanej samodzielnie usługi WCF. Aby uzyskać przykład tworzenia podstawowych Self-Hosted WCF service, zobacz [Samouczek wprowadzający](../../../../docs/framework/wcf/getting-started-tutorial.md). W tym temacie założono, że usługa jest skonfigurowana w kodzie. Jeśli chcesz zobaczyć przykład konfigurowania podobnej usługi przy użyciu pliku konfiguracji, zobacz [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>

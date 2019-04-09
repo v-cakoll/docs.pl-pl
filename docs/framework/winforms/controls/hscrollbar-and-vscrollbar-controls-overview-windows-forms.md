@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: cba28acf7e8594cd8eef88436ddde86efacada36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097320"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> kontrolki jest używana do udostępniania prostą nawigację w za pośrednictwem długą listę elementów lub dużych ilości informacji, przewijając albo w poziomie lub w pionie w obrębie aplikacja lub formant. Paski przewijania są typowe element interfejsu Windows więc <xref:System.Windows.Forms.ScrollBar> kontroli jest często używana z kontrolkami, które nie pochodzą z <xref:System.Windows.Forms.ScrollableControl> klasy. Podobnie wielu programistów chce zastosować <xref:System.Windows.Forms.ScrollBar> sterowania podczas tworzenia własnej kontrolki użytkownika.  
@@ -36,6 +36,7 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> kontrolki jest używana do u
  Gdy użytkownik naciśnie jeden strzałki kluczy lub kliknie jeden z przycisków paska przewijania, <xref:System.Windows.Forms.ScrollBar.Value%2A> zmiany właściwości zgodnie z wartością <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)

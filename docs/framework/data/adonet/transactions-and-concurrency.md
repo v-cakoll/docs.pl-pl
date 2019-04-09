@@ -2,12 +2,12 @@
 title: Transakcje i współbieżność
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: f5efa8f25e3cd4dedec9e5a9c99db28320a4d93e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174697"
 ---
 # <a name="transactions-and-concurrency"></a>Transakcje i współbieżność
 Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykonywane w pakiecie. Transakcje pozwala połączyć wiele operacji w pojedynczą jednostkę pracy. Jeśli wystąpi awaria w jednym punkcie w transakcji, wszystkie aktualizacje można wycofać do stanu wstępnego transakcji.  
@@ -35,9 +35,10 @@ Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykon
  W tym artykule opisano optymistyczne i pesymistycznej współbieżności i jak można sprawdzić, naruszenia współbieżności.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podstawowe informacje dotyczące transakcji](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
 - [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

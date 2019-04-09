@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077462"
 ---
 # <a name="collection-type-dependency-properties"></a>Właściwości zależności typu kolekcji
 Ten temat zawiera wskazówki i sugerowane wzorce jak implementować właściwość zależności, gdzie typ właściwości jest typem kolekcji.  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Implementowanie właściwości zależności typu kolekcji  
  Dla właściwości zależności ogólnie rzecz biorąc, implementacja wzorzec stosowanej jest zdefiniowanie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] otoki właściwości, w którym ta właściwość jest wspierana przez <xref:System.Windows.DependencyProperty> identyfikatora, a nie pola lub innej konstrukcji. Podczas implementacji właściwości typu kolekcji, stosować tego samego wzorca. Jednak właściwość typu kolekcji wprowadza złożoność wzorca zawsze wtedy, gdy typ, który znajduje się w tej kolekcji sam <xref:System.Windows.DependencyObject> lub <xref:System.Windows.Freezable> klasy pochodnej.  
@@ -57,9 +55,10 @@ Ten temat zawiera wskazówki i sugerowane wzorce jak implementować właściwoś
  Aby włączyć powiązania właściwości podrzędnej w kolekcji obiektów zależności, Utwórz właściwość kolekcji jako typ <xref:System.Windows.FreezableCollection%601>, z ograniczeniem typu dla tej kolekcji do dowolnego <xref:System.Windows.DependencyObject> klasy pochodnej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FreezableCollection%601>
 - [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)
-- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Metadane zależności właściwości](dependency-property-metadata.md)

@@ -2,17 +2,18 @@
 title: Transporty
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
-ms.openlocfilehash: a9d05ff118b44d27db83660f6da057332c7174de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd141ab5f8ea3ae8bafad830777af75a452f4f95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183101"
 ---
 # <a name="transports"></a>Transporty
 Warstwa transportu jest na najniższym poziomie stosu kanału. Główne transportów używane w Windows Communication Foundation (WCF) są HTTP, HTTPS, TCP i nazwanych potoków. Ta sekcja zawiera listę wszystkich elementów konfiguracji, które umożliwiają skonfigurowanie różnych rodzajów transportu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.TransportElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

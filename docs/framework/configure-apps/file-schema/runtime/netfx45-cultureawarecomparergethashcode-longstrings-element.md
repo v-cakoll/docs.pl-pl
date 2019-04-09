@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f38d1-ebc8-44de-aaeb-2929f6e6b48f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11ae76a31480cf63a70738c6e416381fdfddbb78
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 854b58a1f57008326874b5e5ee60cc9e6297960b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085912"
 ---
 # <a name="netfx45cultureawarecomparergethashcodelongstrings-element"></a>\<NetFx45_CultureAwareComparerGetHashCode_LongStrings> Element
 Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obliczania kodów wartości skrótu dla <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> metody.  
@@ -62,6 +62,7 @@ Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obli
 >  `<NetFx45_CultureAwareComparerGetHashCode_LongStrings>` Element nie jest używany w [!INCLUDE[win8](../../../../../includes/win8-md.md)] i nowszych wersjach.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType>
 - [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)

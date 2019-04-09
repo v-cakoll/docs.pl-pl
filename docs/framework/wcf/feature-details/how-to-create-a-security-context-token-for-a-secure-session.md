@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji'
+title: 'Instrukcje: tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 3d37d3894f7e6a1146cc4f04f53512ef06911ac7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b0da7e60cb54a1c3d6eb6d2d557f7312da1e9ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189344"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Instrukcje: Tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>Instrukcje: tworzenie tokenu kontekstu zabezpieczeń dla bezpiecznej sesji
 Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej sesji, sesja może wytrzymać usługi odtwarzania. Na przykład gdy bezstanowe SCT jest używany w ramach bezpiecznej sesji i Internet Information Services (IIS) jest resetowany, następnie dane sesji, który jest skojarzony z usługą jest utracone. Te dane sesji obejmuje pamięci podręcznej SCT tokenu. Tak przy następnym klient wysyła usługi bezstanowej SCT, zwracany jest błąd, ponieważ nie można pobrać klucza, który jest skojarzony z SCT. Jeśli jednak stanowych SCT jest używany, klucz, który jest skojarzony z SCT jest zawarty w SCT. Ponieważ klucz jest zawarty w SCT i dlatego zawarte w wiadomości, bezpiecznej sesji nie występuje w usłudze odtwarzania. Domyślnie program Windows Communication Foundation (WCF) używa SCTs o bezstanowa w ramach bezpiecznej sesji. W tym temacie przedstawiono sposób użycia SCTs stanowych w ramach bezpiecznej sesji.  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ Za pomocą tokenu kontekstu zabezpieczeń stanową (SCT) w ramach bezpiecznej se
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

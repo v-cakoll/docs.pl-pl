@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: cca5bd90798c8879c25b22746c2aac1b3f0b27d3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: c2cc96e575dc85459cf55e30d3cbe54bfb158b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189368"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu ListItem
 > [!NOTE]
@@ -57,9 +57,9 @@ ms.locfileid: "57675852"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, trzeba być obsługiwana przez kontrolki elementu listy. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Kontrolki elementu listy musi implementować ten — wzorzec kontrolki. Dzięki temu listy kontrolek elementów do przekazania, gdy są zaznaczone.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Kontrolki elementu listy musi implementować ten — wzorzec kontrolki. Dzięki temu listy kontrolek elementów do przekazania, gdy są zaznaczone.|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Jeśli element listy znajduje się w kontenerze, który jest przewijany można zaimplementować ten wzorzec kontroli.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Zależy od|Jeśli element listy jest dostępne do kontroli, a akcja nie powoduje wykonania zmiana stanu zaznaczenia można zaimplementować ten wzorzec kontroli.|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element mogą być zmieniane, aby pokazać lub ukryć informacje można zaimplementować ten wzorzec kontroli.|  
@@ -71,7 +71,7 @@ ms.locfileid: "57675852"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie kontrolki elementu listy. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Zależy od|Brak|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Wymagane|Brak|  
@@ -89,6 +89,7 @@ ms.locfileid: "57675852"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.ListItem>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

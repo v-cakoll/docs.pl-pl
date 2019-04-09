@@ -2,12 +2,12 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 746f98b54285f95bb63e15136508909327c0d140
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174931"
 ---
 # <a name="endpointextensions"></a>\<endpointExtensions>
 Ta sekcja rejestruje nowy standardowy punkt końcowy w sekcji rozszerzenia na maszynie lub pliku konfiguracji aplikacji. Standardowy punkt końcowy może dodać do tej kolekcji, używając `add` — słowo kluczowe i ustawienie `type` atrybut elementu do typu punktu końcowego, jak również `name` atrybutu na nazwę standardowego punktu końcowego.  
@@ -44,4 +44,3 @@ Ta sekcja rejestruje nowy standardowy punkt końcowy w sekcji rozszerzenia na ma
   </standardEndpoints>
 </system.serviceModel>
 ```  
-  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: d42e2d4c0bf4c708f2dbb27d14d1adddc3fead41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177297"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0
 Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy niskiego poziomu z rozszerzeń usługi sieci Web w wersji 3.0 dla klientów programu Microsoft .NET (WSE), gdy usług WCF są skonfigurowane do korzystania z sierpnia 2004 wersję specyfikacji WS-Addressing.  
@@ -91,4 +91,5 @@ Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy nis
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Dostosuj powiązania dostarczane przez System](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+
+- [Instrukcje: Dostosowywanie wiązania udostępnionego przez system](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

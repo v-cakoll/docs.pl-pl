@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powiąż dane z formantem MaskedTextBox'
+title: 'Instrukcje: powiązanie danych z kontrolką MaskedTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090605"
 ---
-# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Instrukcje: Powiąż dane z formantem MaskedTextBox
+# <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Instrukcje: powiązanie danych z kontrolką MaskedTextBox
 Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować, jak dowolną inną kontrolką Windows Forms. Jednak jeśli format danych w bazie danych nie jest zgodny z formatu oczekiwanego przez definicję maska sieci, należy ponownie sformatować dane. Poniższa procedura demonstruje, jak to zrobić za pomocą <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia <xref:System.Windows.Forms.Binding> klasy, aby wyświetlić numer telefonu oddzielne i telefonów rozszerzenie pola bazy danych jako pojedyncze pole można edytować.  
   
  Poniższa procedura wymaga, że masz dostęp do bazy danych programu SQL Server za pomocą przykładowej bazy danych Northwind zainstalowane.  
@@ -250,4 +250,5 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować,
 -   Kompilowanie aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Praca z formantem MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Przewodnik: praca z kontrolką MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

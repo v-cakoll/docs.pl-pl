@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: f02e5cf054f8891b134ee914b54e22e975d835a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173501"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
@@ -39,5 +39,6 @@ Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą po
  Ta reguła obowiązuje także w systemie windows, które można otworzyć za pomocą <xref:System.Windows.Forms.HtmlWindow.Open%2A> i <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> metody. Jeśli okno otwierania znajduje się w innej domenie niż strona hostowana w <xref:System.Windows.Forms.WebBrowser> control, nie będzie mógł przenieść to okno, lub przejrzyj jego zawartość. Ograniczenia te są wymuszane również, jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu, aby wyświetlić witrynę sieci Web, która różni się od witryny sieci Web, używane do wdrażania aplikacji opartej na formularzach Windows. Jeśli używasz [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] używać technologii wdrażania, aby zainstalować aplikację z witryny sieci Web A, a <xref:System.Windows.Forms.WebBrowser> Aby wyświetlić witrynę sieci Web B, nie będzie dostępu do witryny sieci Web użytkownika B danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<Ramka > element](https://developer.mozilla.org/docs/Web/HTML/Element/frame)
 - [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](using-the-managed-html-document-object-model.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490d78cbc8724e12dff8ac24c81e499268e4ed6c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d0acb322fa3348f0bb2d819529a370110580343c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178064"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime — Funkcja
 Ładuje środowisko uruchomieniowe języka wspólnego (CLR) do procesu za pomocą informacji o wersji przechowywanych w pliku XML. Format pliku XML jest modelowane pliku konfiguracji standardowej aplikacji. Aby uzyskać więcej informacji na temat plików konfiguracyjnych, zobacz [schemat pliku konfiguracji](../../../../docs/framework/configure-apps/file-schema/index.md).  
@@ -67,9 +67,10 @@ HRESULT CorBindToCurrentRuntime (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [CorBindToRuntime, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
-- [CorBindToRuntimeByCfg, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
-- [CorBindToRuntimeEx, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [CorBindToRuntimeHost, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+
+- [CorBindToRuntime — Funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
+- [CorBindToRuntimeByCfg — Funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
+- [CorBindToRuntimeEx — Funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
+- [CorBindToRuntimeHost — Funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)
+- [ICorRuntimeHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
 - [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

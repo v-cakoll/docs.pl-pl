@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175984"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Wykonywanie zapytań usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka kliencka pozwala na wykonywanie zapytań względem usługi danych przy użyciu dobrze znanych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wzorców programowania, w tym za pomocą zapytanie o języku zintegrowanym (LINQ). Biblioteka klienta tłumaczy kwerendę, która jest zdefiniowana na komputerze klienckim jako wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> klasy do komunikatu żądania HTTP GET. Biblioteka odbiera komunikat odpowiedzi i przekształca je w wystąpieniach klas usługi danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> do której <xref:System.Data.Services.Client.DataServiceQuery%601> należy.  
@@ -134,13 +134,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [Instrukcje: Dodawanie opcji zapytania do zapytania usługi danych](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Instrukcje: Określenie liczby jednostek zwróconych przez zapytanie](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Instrukcje: Określanie liczby jednostek zwróconych przez zapytanie](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Instrukcje: Określanie poświadczeń klienta usługi danych żądania](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Instrukcje: Określanie poświadczeń klienta dla żądania usługi danych](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
  [Instrukcje: Ustawianie nagłówków w żądaniu klienta](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
  [Instrukcje: Projekt wyników zapytania](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

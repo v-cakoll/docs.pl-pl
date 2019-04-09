@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad3f65b559b30be0c619930ed35ddf1d6a251045
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 52354dea37f65ef613d9975222b17004fe2a8bb2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088226"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset — Metoda
 Przenosi kursora na początku tego wyliczenia.  
@@ -46,4 +46,5 @@ HRESULT Reset ();
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorPublishEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+
+- [ICorPublishEnum — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

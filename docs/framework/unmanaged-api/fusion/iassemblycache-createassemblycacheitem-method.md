@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476f28b37efef483b31ad548d3db62c820d536c5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 648b641cbd2ec97305674451df06ce5be6a93a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183693"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem — Metoda
 Pobiera odwołanie do nowego [iassemblycacheitem —](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) obiektu.  
@@ -63,5 +63,6 @@ HRESULT CreateAssemblyCacheItem (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [IAssemblyCacheItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+
+- [IAssemblyCache — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCacheItem — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

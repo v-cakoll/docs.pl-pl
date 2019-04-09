@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181093"
 ---
 # <a name="qualifiersetget-function"></a>QualifierSet_Get — funkcja
 Pobiera określonego nazwanego kwalifikator.  
@@ -83,4 +83,5 @@ Ta funkcja zawija wywołanie do [IWbemQualifierSet::Get](/windows/desktop/api/wb
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

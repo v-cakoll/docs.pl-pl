@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie domyślnych stylów komórek i formatów danych dla formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant'
+title: 'Instrukcje: ustawianie domyślnych stylów komórek i formatów danych dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 44180c1d8e7f6fd29778ef6b9f5bd5e333c3ece2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179897"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: Ustawianie domyślnych stylów komórek i formatów danych dla formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: ustawianie domyślnych stylów komórek i formatów danych dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 <xref:System.Windows.Forms.DataGridView> Dzięki kontroli Określ domyślnych stylów komórek i formatów danych dla całego kontrolki, w określonych kolumnach, dla nagłówków wierszy i kolumn i przemienne wiersze, aby utworzyć efekt księgi komórki. Domyślne style całego formantu są zastępowane przez domyślne style ustawiony dla kolumn i przemienne wiersze. Ponadto style, które można ustawić w kodzie, dla poszczególnych wierszy i komórek zastępują domyślne style.  
   
  Aby uzyskać więcej informacji na temat style komórki zobacz [style komórki w formancie DataGridView formularzy Windows](cell-styles-in-the-windows-forms-datagridview-control.md). Aby ustawić style wierszy zmiennych, zobacz [jak: Ustawianie przemiennych wierszy dla formantu DataGridView, które przy użyciu narzędzia Projektant formularzy Windows](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
@@ -60,13 +60,14 @@ ms.locfileid: "57702350"
 4.  Jeśli dokonywane jest wiązanie <xref:System.Windows.Forms.DataGridView> formant ze źródłem danych, który może zawierać wartości null, wypełnij **wartości Null** pola tekstowego. Ta wartość jest wyświetlana, gdy wartość komórki jest odwołanie o wartości null (`Nothing` w języku Visual Basic) lub <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie przemiennych wierszy dla formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [Instrukcje: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)

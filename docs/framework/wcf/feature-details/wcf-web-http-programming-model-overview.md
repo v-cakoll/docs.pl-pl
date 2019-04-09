@@ -2,12 +2,12 @@
 title: Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577740"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199586"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (WCF) udostępnia podstawowe elementy, które są wymagane do kompilowania usług HTTP w sieci WEB z programem WCF. Usługi WCF WEB HTTP można uzyskać dostęp przez największą liczbę potencjalnych klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  
@@ -20,7 +20,7 @@ Model programowania protokołu HTTP sieci WEB Windows Communication Foundation (
   
  Model programowania protokołu HTTP sieci WEB WCF rozszerza zasięg usługi WCF do scenariuszy komunikacji między stylu sieci Web, które zawierają usług HTTP w sieci WEB, usług AJAX i JSON oraz (ATOM/RSS) zespolone kanały informacyjne. Aby uzyskać więcej informacji na temat usług AJAX i JSON, zobacz [JSON Obsługa integracji AJAX i](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md). Aby uzyskać więcej informacji na temat syndykacji zobacz [omówienie syndykacji WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md).  
   
- Istnieją dodatkowe ograniczenia na typy danych, które mogą być zwrócone z usługi sieci WEB HTTP. Dowolny typ możliwy do serializacji mogą być zwracane z operacji usługi sieci WEB HTTP. Ponieważ operacje usług sieci WEB HTTP może być wywołanie przez przeglądarkę sieci web, który istnieje ograniczenie na danych, jakie typy, które można określić w adresie URL. Aby uzyskać więcej informacji na temat typów są obsługiwane przez domyślny zobacz **adresy URL i parametry ciągu zapytania UriTemplate** poniższej sekcji. Zachowanie domyślne można zmienić, zapewniając Twojej własnej implementacji T:System.ServiceModel.Dispatcher.QueryStringConverter, który określa sposób konwertowania parametrów określonych w adresie URL na typ rzeczywistego parametru. Aby uzyskać więcej informacji zobacz <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+ Istnieją dodatkowe ograniczenia na typy danych, które mogą być zwrócone z usługi sieci WEB HTTP. Dowolny typ możliwy do serializacji mogą być zwracane z operacji usługi sieci WEB HTTP. Ponieważ operacje usług sieci WEB HTTP może być wywołanie przez przeglądarkę sieci web, który istnieje ograniczenie na danych, jakie typy, które można określić w adresie URL. Aby uzyskać więcej informacji na temat typów są obsługiwane przez domyślny zobacz **adresy URL i parametry ciągu zapytania UriTemplate** poniższej sekcji. Zachowanie domyślne można zmienić, zapewniając Twojej własnej implementacji T:System.ServiceModel.Dispatcher.QueryStringConverter, który określa sposób konwertowania parametrów określonych w adresie URL na typ rzeczywistego parametru. Aby uzyskać więcej informacji, zobacz artykuł <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  Usługi napisane przy użyciu modelu programowania protokołu HTTP sieci WEB WCF nie należy używać komunikaty protokołu SOAP. Ponieważ protokołu SOAP nie są używane, nie można użyć funkcjach zabezpieczeń zapewnianych przez architekturę WCF. Można jednak użyć zabezpieczenia na poziomie transportu, udostępniając usługi przy użyciu protokołu HTTPS. Aby uzyskać więcej informacji na temat zabezpieczeń programu WCF zobacz [Omówienie zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -144,6 +144,7 @@ interface ICustomer
  Podczas wywoływania WCF WEB HTTP services przy użyciu <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> próba utworzenia kanału, <xref:System.ServiceModel.Description.WebHttpBehavior> używa <xref:System.ServiceModel.EndpointAddress> ustawione w pliku konfiguracji nawet jeśli inny <xref:System.ServiceModel.EndpointAddress> jest przekazywany do <xref:System.ServiceModel.Channels.ChannelFactoryBase%601>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [Model obiektowy programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

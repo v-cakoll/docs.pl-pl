@@ -2,12 +2,12 @@
 title: DataContract — surogat
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 663f168ebbba2238be814791fd0d75e211a469ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196427"
 ---
 # <a name="datacontract-surrogate"></a>DataContract — surogat
 Niniejszy przykład pokazuje, jak procesy takie jak serializacji, deserializacji, schemat eksportu i importu schematu można dostosować za pomocą kontraktu danych zastępczych klas. W tym przykładzie pokazano, jak używać zastępczy w ramach scenariusza klienta i serwera, gdzie dane są serializacji i przesyłane między klientem usługi Windows Communication Foundation (WCF) i usługi.  
@@ -268,4 +268,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  

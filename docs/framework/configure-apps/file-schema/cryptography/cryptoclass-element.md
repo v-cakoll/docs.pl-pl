@@ -1,5 +1,5 @@
 ---
-title: <cryptoClass>, element
+title: <cryptoClass> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses/cryptoClass
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 161c9212600a417a97fa5a4e0edeac02db0f17a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103821"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass> Element
 Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<nameentry — >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) elementu.  
@@ -76,7 +76,8 @@ Zawiera klasy kryptografii, która ma mapowania do przyjazną nazwę w [ \<namee
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
-- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Konfigurowanie klasy kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

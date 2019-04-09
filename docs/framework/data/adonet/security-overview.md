@@ -2,12 +2,12 @@
 title: Overview2 zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089864"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w której deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje nowe technologie atakom w przyszłości nastąpi. Z drugiej strony po prostu, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub może istnieć. Należy Planowanie zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczenia zostaną zachowane w okresie istnienia aplikacji.  
@@ -102,6 +102,7 @@ Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w któ
 |[Najlepsze rozwiązania dotyczące zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Zawiera łącza, dotyczące administrowania zasadami zabezpieczeń.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Zabezpieczenia w .NET](../../../standard/security/index.md)
 - [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)

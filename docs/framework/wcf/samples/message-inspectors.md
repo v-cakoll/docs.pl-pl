@@ -2,12 +2,12 @@
 title: Inspektorzy komunikatów
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e8afbc1fc85dab18d6fbd5e8d49b10847a7d230f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199807"
 ---
 # <a name="message-inspectors"></a>Inspektorzy komunikatów
 W tym przykładzie pokazano, jak zaimplementować i skonfigurować klienta i usługi inspektorzy komunikatów.  
@@ -412,4 +412,3 @@ catch (Exception e)
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

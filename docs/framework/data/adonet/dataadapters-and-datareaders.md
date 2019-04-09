@@ -1,15 +1,15 @@
 ---
-title: Elementy DataAdapter i DataReaders
+title: Elementy DataAdapter i DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: f4588187aad910d0b50b0c804e6de20a477b567b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189693"
 ---
-# <a name="dataadapters-and-datareaders"></a>Elementy DataAdapter i DataReaders
+# <a name="dataadapters-and-datareaders"></a>Elementy DataAdapter i DataReader
 Możesz użyć ADO.NET **DataReader** można pobrać tylko do odczytu, tylko do przodu strumienia danych z bazy danych. Wyniki są zwracane jako zapytanie wykonuje i są przechowywane w buforze sieci na komputerze klienckim, dopóki ich zażądać przy użyciu **odczytu** metody **DataReader**. Za pomocą **DataReader** może zwiększyć wydajność aplikacji, zarówno przez pobranie danych, jak tylko będzie dostępny, a (domyślnie) przechowywanie tylko jeden wiersz jednocześnie w pamięci, co zmniejsza obciążenie systemu.  
   
  A <xref:System.Data.Common.DataAdapter> służy do pobierania danych ze źródła danych i wypełnianie tabel w ramach <xref:System.Data.DataSet>. `DataAdapter` Rozwiązuje również zmiany wprowadzone do `DataSet` wstecz do źródła danych. `DataAdapter` Używa `Connection` obiekt dostawcy danych .NET Framework, aby nawiązać połączenie źródła danych i używa `Command` obiektów, aby pobrać dane i rozwiązać zmian w źródle danych.  
@@ -35,16 +35,17 @@ Możesz użyć ADO.NET **DataReader** można pobrać tylko do odczytu, tylko do 
  [Stronicowanie za pośrednictwem wyniku zapytania](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Przykład wyświetlania wyników zapytania jako strony danych.  
   
- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Aktualizowanie źródeł danych za pomocą elementów DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Opisuje sposób używania `DataAdapter` rozpoznać zmian w `DataSet` w bazie danych.  
   
  [Obsługa zdarzeń elementu DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  W tym artykule opisano `DataAdapter` zdarzenia i sposobu ich używania.  
   
- [Wykonywanie operacji wsadowych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [Wykonywanie operacji wsadowych za pomocą elementów DataAdapter](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  W tym artykule opisano zwiększanie wydajności aplikacji dzięki zmniejszeniu liczby rund do programu SQL Server podczas stosowania aktualizacji z `DataSet`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Nawiązywanie połączenia ze źródłem danych](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)

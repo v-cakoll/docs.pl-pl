@@ -1,15 +1,15 @@
 ---
-title: 'Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation'
+title: Zadanie 1. Tworzenie nowej aplikacji Windows Presentation Foundation
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dae523714862ed36d36e65b51be62acff9b17f51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193404"
 ---
-# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation
+# <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>Zadanie 1. Tworzenie nowej aplikacji Windows Presentation Foundation
 W tym zadaniu utworzysz pustą aplikację Windows Presentation Foundation (WPF) za pomocą szablonu programu Visual Studio w aplikacji WPF i dodać odwołania do odpowiednich [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zestawy przepływu pracy.  
   
 ### <a name="to-create-the-wpf-application-project"></a>Aby utworzyć projekt aplikacji WPF  
@@ -43,5 +43,6 @@ W tym zadaniu utworzysz pustą aplikację Windows Presentation Foundation (WPF) 
 11. Zobacz [zadanie 2: Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md) Aby dowiedzieć się, jak hostować na kanwie projektanta projektu przepływu pracy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)
 - [Zadanie 2. Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md)

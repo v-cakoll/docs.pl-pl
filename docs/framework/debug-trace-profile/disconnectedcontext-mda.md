@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb42c04df6e02ff43421b7af6bf2d51b53aa3e69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181983"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext MDA
 `disconnectedContext` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko CLR podejmuje próbę przejścia do odłączonego apartamentu lub kontekstu podczas obsługi żądanie dotyczące obiektu COM.  
@@ -47,6 +47,7 @@ ms.locfileid: "54569706"
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykonywanie Incjalizacji obiektów'
+title: 'Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1ddbd9649d82ffe55c16e0657a1c020b50acbb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188966"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a>Instrukcje: Wykonywanie Incjalizacji obiektów
+# <a name="how-to-perform-lazy-initialization-of-objects"></a>Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem
 <xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracę wykonywanie incjalizacji i wystąpienia obiektów. Inicjowanie obiektów w sposób z opóźnieniem, można uniknąć konieczności tworzenia ich w ogóle, jeśli nigdy nie są one potrzebne lub można odroczyć ich inicjowania, aż najpierw są one używane. Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="example"></a>Przykład  
@@ -77,5 +77,6 @@ End Sub
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Inicjowanie z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md)
+- [Inicjalizacja z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md)

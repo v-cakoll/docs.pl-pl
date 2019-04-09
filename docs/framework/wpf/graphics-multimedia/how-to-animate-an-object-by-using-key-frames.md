@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Animuj obiekt z wykorzystaniem klatek kluczowych'
+title: 'Instrukcje: Animowanie obiektu przy użyciu klatek kluczowych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b2b517410c6cbc4f3deca13e5948c8de583fd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177804"
 ---
-# <a name="how-to-animate-an-object-by-using-key-frames"></a>Instrukcje: Animuj obiekt z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-an-object-by-using-key-frames"></a>Instrukcje: Animowanie obiektu przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak animować obiekt, który w tym przykładzie jest <xref:System.Windows.Controls.Page.Background%2A> właściwość <xref:System.Windows.Controls.Page> kontroli przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -34,6 +34,7 @@ W tym przykładzie pokazano, jak animować obiekt, który w tym przykładzie jes
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.Page.Background%2A>
 - <xref:System.Windows.Controls.Page>
@@ -41,5 +42,5 @@ W tym przykładzie pokazano, jak animować obiekt, który w tym przykładzie jes
 - <xref:System.Windows.Media.LinearGradientBrush>
 - <xref:System.Windows.Media.RadialGradientBrush>
 - <xref:System.Windows.Media.DrawingBrush>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

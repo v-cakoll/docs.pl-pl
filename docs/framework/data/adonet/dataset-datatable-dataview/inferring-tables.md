@@ -2,12 +2,12 @@
 title: Wnioskowanie tabel
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: f777b225f9fbf4e8ce38778842d30a0a3054e22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181834"
 ---
 # <a name="inferring-tables"></a>Wnioskowanie tabel
 Podczas wnioskowania schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO.NET najpierw określi, elementy XML, które reprezentują tabele. Następujące struktury XML wynik w tabeli **DataSet** schematu:  
@@ -119,6 +119,7 @@ Podczas wnioskowania schematu dla <xref:System.Data.DataSet> z dokumentu XML ADO
 |Tekst2|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)

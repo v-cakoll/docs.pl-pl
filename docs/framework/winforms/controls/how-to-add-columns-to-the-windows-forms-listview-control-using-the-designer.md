@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows przy użyciu narzędzia Projektant'
+title: 'Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: 725976e0d4b5903659cc264902890329bd13fcad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9ddff31e4d66ffef2600a1246b35c0a66154c341
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190427"
 ---
-# <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows przy użyciu narzędzia Projektant
+# <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetlić wiele kolumn dla każdej listy elementów w **szczegóły** widoku. Kolumny można użyć, aby wyświetlić kilka rodzajów informacji na temat każdego elementu listy. Na przykład można wyświetlić listę plików, nazwy pliku, typu pliku, rozmiar i Data ostatniej modyfikacji pliku. Aby uzyskać informacje o wprowadzaniu kolumny, gdy są one tworzone, zobacz [jak: Wyświetlanie podelementów w kolumnach za pomocą Windows formantu ListView formularzy](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
   
  Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.ListView> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -31,8 +31,9 @@ Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetli
 3.  Użyj **Dodaj** przycisk, aby dodać nowe kolumny. Można wybrać nagłówek kolumny i ustawianie jego tekstu (podpis kolumny), wyrównanie tekstu i szerokość.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie i usuwanie elementów za pomocą formantu ListView formularzy Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy Windows](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Wyświetlanie ikon dla kontrolki ListView formularzy Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Instrukcje: wyświetlanie podelementów w kolumnach za pomocą kontrolki ListView formularzy systemu Windows](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy systemu Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

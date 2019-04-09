@@ -3,12 +3,12 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: fa96cb374204ffbdb4c0fcd353c70b6e27ef7481
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 31490c7425572909cc30fe4237af9309754b68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072248"
 ---
 # <a name="tracking"></a>\<Śledzenie >
 Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usługi przepływu pracy.  
@@ -99,5 +99,6 @@ Reprezentuje sekcję konfiguracji do definiowania ustawień śledzenia dla usłu
  Śledzenie umożliwia należy sprawdzić, czy wykonywania przepływu pracy. Infrastruktura śledzenia przepływu pracy instruments przepływu pracy, aby emitować rekordów odzwierciedlający kluczy zdarzeń podczas wykonywania. Na przykład gdy wystąpienie przepływu pracy rozpoczyna się lub kończy są emitowane rekordów śledzenia. Śledzenie również można wyodrębnić business odpowiednie dane skojarzone z zmienne przepływu pracy. Na przykład jeśli przepływ pracy reprezentuje kolejność przetwarzania systemu identyfikator zamówienia wyodrębniania wraz z rekordem śledzenia. Ogólnie rzecz biorąc włączania WF śledzenia umożliwia wykonywanie operacji diagnostyki lub analiz biznesowych za wykonywanie przepływu pracy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
 - [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

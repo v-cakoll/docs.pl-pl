@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078880"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Przewodnik: Tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy Windows Forms
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Przewodnik: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows
 Jedną z najbardziej typowe scenariusze użycia <xref:System.Windows.Forms.DataGridView> formant jest *wzorzec/szczegół* formularza, w którym jest wyświetlana relacji nadrzędny/podrzędny między dwiema tabelami bazy danych. Wybieranie wierszy w tabeli głównej powoduje, że tabela szczegóły aktualizacji za pomocą odpowiednich danych podrzędnych.  
   
  Implementacja formularza wzorzec/szczegół jest łatwe za pomocą interakcji między <xref:System.Windows.Forms.DataGridView> kontroli i <xref:System.Windows.Forms.BindingSource> składnika. W tym instruktażu utworzysz formularza za pomocą dwóch <xref:System.Windows.Forms.DataGridView> kontrolek i dwóch <xref:System.Windows.Forms.BindingSource> składników. Formularz wyświetli dwa powiązane tabele w przykładowej bazie danych Northwind programu SQL Server: `Customers` i `Orders`. Po zakończeniu będziesz mieć formularz, który pokazuje wszystkich klientów w bazie danych w bazie danych master <xref:System.Windows.Forms.DataGridView> i wszystkich zamówień dla zaznaczonego klienta w szczegółach <xref:System.Windows.Forms.DataGridView>.  
@@ -76,8 +76,9 @@ Jedną z najbardziej typowe scenariusze użycia <xref:System.Windows.Forms.DataG
 -   Dostosowywanie wyglądu komórek. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](customize-the-appearance-of-cells-in-the-datagrid.md) i [jak: Ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy Windows](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
+- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows](create-a-master-detail-form-using-two-datagridviews.md)
 - [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md)

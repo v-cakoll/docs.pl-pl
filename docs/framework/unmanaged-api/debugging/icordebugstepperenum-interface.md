@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepperEnum — Interfejs
+title: ICorDebugStepperEnum, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepperEnum
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad6c48b08fbdc660fdaa7ce5bfda3a6c0529662a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 89552a099241f1bec61f9aa8a8321ef9932e886c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173228"
 ---
-# <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum — Interfejs
+# <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum, interfejs
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugStepper —.  
   
 ## <a name="methods"></a>Metody  
@@ -47,4 +47,5 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugStepper —.
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

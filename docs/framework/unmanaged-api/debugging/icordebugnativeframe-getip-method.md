@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cac53ba77f04141d8d36b270226e97c292399eb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 38f913b742f7ece2f136454f801ae780124aed87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073536"
 ---
 # <a name="icordebugnativeframegetip-method"></a>ICorDebugNativeFrame::GetIP — Metoda
 Pobiera kodu macierzystego przesunięcia lokalizacji, do której jest aktualnie ustawiona wskaźnik instrukcji.  
@@ -52,4 +52,3 @@ HRESULT GetIP (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-

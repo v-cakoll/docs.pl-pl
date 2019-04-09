@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180022"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hostowanie przez Internetowe usługi informacyjne
 Jedną z opcji hostingu usług Windows Communication Foundation (WCF) jest wewnątrz aplikacji usług Internet Information Services (IIS). Ten model obsługi jest podobny do modelu posługują się [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i usługami sieci Web (ASMX) usług sieci Web platformy ASP.NET.  
@@ -57,6 +57,7 @@ Jedną z opcji hostingu usług Windows Communication Foundation (WCF) jest wewn�
  Usługi WCF, mogą być hostowane albo side-by-side przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] lub [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] tryb zgodności, w którym usługi mogą w pełni korzystać z funkcji oferowanych przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] platforma aplikacji sieci Web. Omówienie tych funkcji, zobacz [usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Rozszerzanie hostingu za pomocą elementu ServiceHostFactory](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
 - [Wdrażanie usługi WCF hostowanej przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
 - [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

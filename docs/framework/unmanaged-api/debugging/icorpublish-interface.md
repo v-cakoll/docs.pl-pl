@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1dea8cc54c68db333c409e3bd7b3e4211bd52ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7581d68f5c2b575403ddc84d06147f012e7ab39e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076344"
 ---
 # <a name="icorpublish-interface"></a>ICorPublish — Interfejs
 Służy jako ogólny interfejs do publikowania informacji na temat procesów i informacji na temat domen aplikacji w tych procesów.  
@@ -43,5 +43,6 @@ Służy jako ogólny interfejs do publikowania informacji na temat procesów i i
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish, klasa coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [CorpubPublish — Klasa coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

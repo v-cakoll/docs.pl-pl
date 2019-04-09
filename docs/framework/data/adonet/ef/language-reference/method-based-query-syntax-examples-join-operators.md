@@ -1,18 +1,18 @@
 ---
-title: 'Przykłady składni zapytania oparte na metodzie: Operatory sprzężenia'
+title: 'Przykłady składni zapytania oparte na metodzie: Operatory sprzęgania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 2251279fb5b07d64925c245f537fe040ec78679e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 700c29222d10177774e118e53fb51f177b723679
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826299"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176907"
 ---
-# <a name="method-based-query-syntax-examples-join-operators"></a>Przykłady składni zapytania oparte na metodzie: Operatory sprzężenia
+# <a name="method-based-query-syntax-examples-join-operators"></a>Przykłady składni zapytania oparte na metodzie: Operatory sprzęgania
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Join%2A> i <xref:System.Linq.Enumerable.GroupJoin%2A> metod do wykonywania zapytań [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) za pomocą składni zapytania oparte na metodzie. Model sprzedaży AdventureWorks, używany w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  
   
  Przykłady w tym temacie należy użyć następującego `using` / `Imports` instrukcji:  
@@ -49,4 +49,5 @@ Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerabl
  [!code-vb[DP L2E Examples#JoinWithGroupedResults_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

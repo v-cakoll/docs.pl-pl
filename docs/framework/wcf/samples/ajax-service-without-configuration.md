@@ -2,12 +2,12 @@
 title: Usługa AJAX bez konfiguracji
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
-ms.openlocfilehash: 2ea5c61ea3f0f8adcce6dc14be11a8b098c7ca0f
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 0a8c75136af728c2110affe224fe8bf6c47fc1eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191786"
 ---
 # <a name="ajax-service-without-configuration"></a>Usługa AJAX bez konfiguracji
 W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX) (usługa, której będziesz mieć dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web), bez używania konfiguracji Ustawienia. Usługa używa specjalnej składni w pliku SVC, można automatycznie włączyć punkt końcowy interfejsu AJAX.  
@@ -51,4 +51,5 @@ W tym przykładzie pokazano, jak używać usług Windows Communication Foundatio
 >  Podczas uruchamiania tego przykładu, upewnij się, że uwierzytelnianie anonimowe i uwierzytelnianie Windows nie są włączone jednocześnie dla folderu ServiceModelSamples w usługach IIS. Jeśli tak jest rzeczywiście, Wyłącz uwierzytelnianie Windows. Po uruchomieniu przykładu, włączyć uwierzytelnianie Windows, a następnie uruchom "polecenie iisreset".  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)

@@ -1,18 +1,18 @@
 ---
-title: Dostawcy danych .NET framework
+title: Dostawcy danych .NET Framework
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074030"
 ---
-# <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework
+# <a name="net-framework-data-providers"></a>Dostawcy danych .NET Framework
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danych służy do nawiązywania połączenia z bazą danych, wykonując polecenia i pobierania wyników. Te wyniki są albo przetwarzane bezpośrednio, umieszczone w <xref:System.Data.DataSet> celu uwidocznienie użytkownika zgodnie z potrzebami, połączone z danymi z wielu źródeł lub węzłach między warstwami. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych są uproszczone, tworzenie minimalnej warstwy między źródłem danych i kodu, zwiększenie wydajności bez poświęcania funkcjonalności.  
   
  Poniższa tabela zawiera listę dostawców danych, które są zawarte w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
@@ -158,6 +158,7 @@ using System.Data.OracleClient;
  Dostawca EntityClient jest używany do uzyskiwania dostępu do danych opartych na Entity Data Model (EDM). W przeciwieństwie do innych dostawcy danych .NET Framework nie współdziała bezpośrednio ze źródłem danych. Zamiast tego używa jednostki SQL do komunikowania się z podstawowym dostawcą danych. Aby uzyskać więcej informacji, zobacz [dostawca EntityClient dla programu Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

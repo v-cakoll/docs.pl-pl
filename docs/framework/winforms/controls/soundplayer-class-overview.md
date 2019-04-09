@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195010"
 ---
 # <a name="soundplayer-class-overview"></a>Przegląd klasy SoundPlayer
 <xref:System.Media.SoundPlayer> Klasy umożliwia łatwe uwzględnianie dźwięki w aplikacji.  
@@ -24,16 +24,17 @@ ms.locfileid: "54690695"
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|<xref:System.Media.SoundPlayer.SoundLocation%2A> Właściwość|Ścieżka pliku lub adres internetowy dźwięku. Dopuszczalne wartości mogą być ścieżka UNC lub HTTP.|  
-|<xref:System.Media.SoundPlayer.LoadTimeout%2A> Właściwość|Liczba milisekund oczekiwania program załadować dźwięk przed nią zgłasza wyjątek. Wartość domyślna to 10 sekund.|  
-|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> Właściwość|Wartość logiczna wskazująca, czy dźwięk zakończy ładowanie.|  
-|<xref:System.Media.SoundPlayer.Load%2A> — Metoda|Ładuje dźwięk synchronicznie.|  
-|<xref:System.Media.SoundPlayer.LoadAsync%2A> — Metoda|Rozpoczyna się ładowanie dźwięku asynchronicznie. Po zakończeniu ładowania zgłasza <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> zdarzeń.|  
-|<xref:System.Media.SoundPlayer.Play%2A> — Metoda|Odtwarza dźwięk, określone w <xref:System.Media.SoundPlayer.SoundLocation%2A> lub <xref:System.Media.SoundPlayer.Stream%2A> właściwości nowego wątku.|  
-|<xref:System.Media.SoundPlayer.PlaySync%2A> — Metoda|Odtwarza dźwięk, określone w <xref:System.Media.SoundPlayer.SoundLocation%2A> lub <xref:System.Media.SoundPlayer.Stream%2A> właściwości w bieżącym wątku.|  
-|<xref:System.Media.SoundPlayer.Stop%2A> — Metoda|Zatrzymuje wszystkie obecnie odtwarzanie dźwięku.|  
-|<xref:System.Media.SoundPlayer.LoadCompleted> Zdarzenia|Podniesiony po tym jak obciążenie dźwięku zostanie podjęta.|  
+|<xref:System.Media.SoundPlayer.SoundLocation%2A> property|Ścieżka pliku lub adres internetowy dźwięku. Dopuszczalne wartości mogą być ścieżka UNC lub HTTP.|  
+|<xref:System.Media.SoundPlayer.LoadTimeout%2A> property|Liczba milisekund oczekiwania program załadować dźwięk przed nią zgłasza wyjątek. Wartość domyślna to 10 sekund.|  
+|<xref:System.Media.SoundPlayer.IsLoadCompleted%2A> property|Wartość logiczna wskazująca, czy dźwięk zakończy ładowanie.|  
+|<xref:System.Media.SoundPlayer.Load%2A> — metoda|Ładuje dźwięk synchronicznie.|  
+|<xref:System.Media.SoundPlayer.LoadAsync%2A> — metoda|Rozpoczyna się ładowanie dźwięku asynchronicznie. Po zakończeniu ładowania zgłasza <xref:System.Media.SoundPlayer.OnLoadCompleted%2A> zdarzeń.|  
+|<xref:System.Media.SoundPlayer.Play%2A> — metoda|Odtwarza dźwięk, określone w <xref:System.Media.SoundPlayer.SoundLocation%2A> lub <xref:System.Media.SoundPlayer.Stream%2A> właściwości nowego wątku.|  
+|<xref:System.Media.SoundPlayer.PlaySync%2A> — metoda|Odtwarza dźwięk, określone w <xref:System.Media.SoundPlayer.SoundLocation%2A> lub <xref:System.Media.SoundPlayer.Stream%2A> właściwości w bieżącym wątku.|  
+|<xref:System.Media.SoundPlayer.Stop%2A> — metoda|Zatrzymuje wszystkie obecnie odtwarzanie dźwięku.|  
+|<xref:System.Media.SoundPlayer.LoadCompleted> zdarzenie|Podniesiony po tym jak obciążenie dźwięku zostanie podjęta.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

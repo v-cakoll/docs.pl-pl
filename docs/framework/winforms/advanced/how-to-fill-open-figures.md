@@ -8,12 +8,12 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174567"
 ---
 # <a name="how-to-fill-open-figures"></a>Instrukcje: Wypełnianie otwartych figur
 Możesz wpisać ścieżkę, przekazując <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt <xref:System.Drawing.Graphics.FillPath%2A> metody. <xref:System.Drawing.Graphics.FillPath%2A> Metoda wypełni ścieżkę zgodnie z trybu wypełnienia (alternatywne lub zawijania) ustawione dla ścieżki. Jeśli ścieżka zawiera żadnych otwartych figur, ścieżka jest wypełniony, tak jakby te wartości zostały zamknięte. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zamyka rysunku za pomocą rysowania prostej od punktu końcowego do punktu początkowego.  
@@ -32,5 +32,6 @@ Możesz wpisać ścieżkę, przekazując <xref:System.Drawing.Drawing2D.Graphics
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [Ścieżki grafiki w GDI+](graphics-paths-in-gdi.md)

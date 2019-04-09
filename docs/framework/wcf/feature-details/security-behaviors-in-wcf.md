@@ -2,12 +2,12 @@
 title: Zachowania zabezpieczeń w programie WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180066"
 ---
 # <a name="security-behaviors-in-wcf"></a>Zachowania zabezpieczeń w programie WCF
 W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachowanie w czasie wykonywania na poziomie usługi, lub na poziomie punktu końcowego. (Aby uzyskać więcej informacji na temat zachowań ogólnie rzecz biorąc, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Zachowania zabezpieczeń* umożliwić kontrolę nad poświadczeniami, uwierzytelniania, autoryzacji i dzienniki inspekcji. Można użyć zachowań, programowania lub za pośrednictwem konfiguracji. Ten temat koncentruje się na temat konfigurowania następujące zachowania związane z funkcjami zabezpieczeń:  
@@ -218,5 +218,6 @@ W konsoli Windows Communication Foundation (WCF) zachowania zmodyfikować zachow
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

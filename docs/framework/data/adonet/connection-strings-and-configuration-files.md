@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088837"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego kompilowane do kodu źródłowego aplikacji można przeglądać za pomocą [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli nigdy nie zmieni się parametry połączenia, aplikacji musi być ponownie kompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracji aplikacji.  
@@ -170,6 +170,7 @@ Osadzanie ciągów połączenia w kodzie twojej aplikacji może prowadzić do pr
  Aby uzyskać więcej informacji na temat zabezpieczania aplikacji ASP.NET, zobacz [witryn sieci web ASP.NET Zabezpieczanie](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Przy użyciu klas konfiguracji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms228063(v=vs.90))

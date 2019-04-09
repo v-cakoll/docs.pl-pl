@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms'
+title: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 8ebb39e4e9337ede0dc8c7f5569ea27d8cfafd26
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9bf2077f10648dbe3ebf214bbbf9546cbb398c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096189"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows
 Kontrolek formularzy Windows Forms jest zazwyczaj wyświetlane jakiś tekst, który jest powiązany z podstawową funkcją kontroli. Na przykład <xref:System.Windows.Forms.Button> kontroli zwykle zawiera nagłówek wskazującą, jakie działania będą wykonywane po kliknięciu przycisku. Dla wszystkich kontrolek, możesz ustawić lub zwróć tekst przy użyciu <xref:System.Windows.Forms.Control.Text%2A> właściwości. Czcionkę można zmienić za pomocą <xref:System.Windows.Forms.Control.Font%2A> właściwości. Można również ustawić tekst za pomocą projektanta.  Zobacz też [jak: Tworzenie klawiszy dostępu dla Windows Forms przy użyciu narzędzia Projektant formantów](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [jak: Ustawianie tekstu wyświetlanego przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [jak: Ustawianie obrazu wyświetlanego przez Windows Forms przy użyciu narzędzia Projektant](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>Aby ustawić tekst wyświetlany przez kontrolkę programowe  
@@ -72,6 +72,7 @@ Kontrolek formularzy Windows Forms jest zazwyczaj wyświetlane jakiś tekst, kt�
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows](how-to-respond-to-windows-forms-button-clicks.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy Windows Forms'
+title: 'Instrukcje: użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 3cd1e9af32cb47f5d81abfc92423ea30e2e599cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073062"
 ---
-# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Instrukcje: Użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy Windows Forms
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Instrukcje: użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Kontroli używa szablonu wiersza jako podstawy dla wszystkich wierszy, które są dodawane do formantu za pomocą powiązania danych lub po wywołaniu <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> metody bez określania istniejącego wiersza do użycia.  
   
  Szablon wiersza zapewnia większą kontrolę nad wyglądem i zachowaniem wierszy niż <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> zawiera właściwość. Za pomocą szablonu wiersza można ustawić dowolny <xref:System.Windows.Forms.DataGridViewRow> właściwości, w tym <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
@@ -42,9 +42,10 @@ ms.locfileid: "57707576"
 -   Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, i <xref:System.Windows.Forms?displayProperty=nameWithType> zestawów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>
-- [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 7a772de27583f35b18a4fa5854e61768443e5ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74966dd1661faa43df334987b2e3b0e84eff3446
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074004"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>Instrukcje: Reprezentacja kolumn jako elementów członkowskich klas
 Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby skojarzyć pola lub właściwości z kolumną bazy danych.  
@@ -28,5 +28,6 @@ Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:
  Nie trzeba określać <xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> nazwę można wywnioskować właściwość. Jeśli nie określisz nazwy, nazwa jest uznawana za tę taką samą nazwę jak właściwość lub pole.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

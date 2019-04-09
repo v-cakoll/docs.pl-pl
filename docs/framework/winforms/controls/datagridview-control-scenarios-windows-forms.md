@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175295"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenariusze formantu DataGridView (Formularze systemu Windows)
 Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetlić dane tabelaryczne z różnych źródeł danych. Do prostych zastosowań, możesz ręcznie wypełnić <xref:System.Windows.Forms.DataGridView> i manipulowanie danymi bezpośrednio za pomocą formantu. Zwykle jednak będzie przechowywać dane w zewnętrznym źródle danych i powiązywanie formantu do niego za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika.  
@@ -87,5 +87,6 @@ Za pomocą <xref:System.Windows.Forms.DataGridView> kontrolki, można wyświetli
 -   Można implementować własne klasy komórek i kolumn do kontrolki hosta innych niż udostępniane przez typy wbudowane kolumn. Aby uzyskać więcej informacji, zobacz [jak: Kontrolki hosta w formularzach Windows Forms komórkach DataGridView](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView, kontrolka — omówienie](datagridview-control-overview-windows-forms.md)

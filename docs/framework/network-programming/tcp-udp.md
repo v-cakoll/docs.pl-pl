@@ -16,12 +16,12 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 261350349497168e3f41b2f6887838d167c3e977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172552"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
 Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokołu UDP (User Datagram) za pomocą <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, i <xref:System.Net.Sockets.UdpClient> klasy. W ramach tych zajęć protokołu są wbudowane w górnej części <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy i zadbać o szczegółach transferu danych.  
@@ -33,6 +33,7 @@ Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokołu
  **UdpClient** klasy wykorzystuje tablicę bajtów zawierającą UDP datagram. Możesz użyć <xref:System.Net.Sockets.UdpClient.Send%2A> metodę, aby wysyłać dane do sieci i <xref:System.Net.Sockets.UdpClient.Receive%2A> metodę, aby otrzymywać datagram przychodzących.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Stosowanie usług TCP](../../../docs/framework/network-programming/using-tcp-services.md)
 - [Stosowanie usług UDP](../../../docs/framework/network-programming/using-udp-services.md)
 - [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)

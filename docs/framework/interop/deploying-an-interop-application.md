@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192085"
 ---
 # <a name="deploying-an-interop-application"></a>Wdrażanie aplikacji międzyoperacyjnych
 Aplikacji międzyoperacyjnych zwykle zawiera zestaw klienta platformy .NET, jeden lub więcej zestawów międzyoperacyjnych reprezentująca różne COM wpisz biblioteki i co najmniej jeden zarejestrowany składników COM. Program Visual Studio i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] oferuje narzędzia do importowania i Konwertowanie biblioteki typów na zestaw międzyoperacyjny, zgodnie z opisem w [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md). Istnieją dwa sposoby wdrażania aplikacji międzyoperacyjnych:  
@@ -46,7 +46,8 @@ Aplikacji międzyoperacyjnych zwykle zawiera zestaw klienta platformy .NET, jede
  Zestawy, które są współużytkowane przez wiele aplikacji, należy zainstalować w scentralizowane repozytorium o nazwie w globalnej pamięci podręcznej. Klientów programu .NET można uzyskać dostęp do tej samej kopii zestawu międzyoperacyjnego, który jest podpisany i zainstalowane w globalnej pamięci podręcznej. Aby uzyskać więcej informacji dotyczących tworzenia i używania podstawowych zestawów międzyoperacyjnych, zobacz [podstawowe zestawy międzyoperacyjne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
+
+- [Udostępnianie składników COM programowi.NET Framework](exposing-com-components.md)
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
 - [Używanie typów modelu COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md)

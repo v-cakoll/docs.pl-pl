@@ -2,12 +2,12 @@
 title: Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e5a22e54bf977143b2ae94e678ad5106ec9ed6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191825"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 Narzędzie konfiguracji WS-AtomicTransaction służy do konfigurowania podstawowych ustawień pomocy technicznej WS-AtomicTransaction.  
@@ -50,5 +50,6 @@ wsatConfig [Options]
 |-SerwerWirtualny:\<SerwerWirtualny >|Określa nazwę klastra usługi DTC zasobów.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie elementu WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
 - [Konfigurowanie obsługi protokołu WS-Atomic Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

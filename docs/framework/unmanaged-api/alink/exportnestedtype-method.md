@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ff159cf794d566be6478ef890c769a0ac72c9b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176608"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType — Metoda
 Określa typy zagnieżdżone jako eksportowalny. [Exporttype — metoda](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md) może również typy zagnieżdżone eksportu, ale ta metoda jest szybsza.  
@@ -70,6 +70,7 @@ HRESULT ExportNestedType(
  Wymaga alink.h  
   
 ## <a name="see-also"></a>Zobacz także
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

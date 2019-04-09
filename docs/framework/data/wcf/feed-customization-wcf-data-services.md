@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: cea3d57442d330b662335326c5b8ffd78d276ef2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: dc2fc5de591429d76210b1dacf69485bb3b11b2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189082"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje formaty Atom i JavaScript Object Notation (JSON) dla źródła danych. Gdy używasz źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zapewnia standardową metodę do serializowania danych, takich jak jednostek i relacji w formacie XML, które mogą być zawarte w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje mapowanie właściwości jednostki domyślne między danych, które znajduje się w jednostkach i elementów Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -93,5 +93,6 @@ ms.locfileid: "56093752"
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 572c4427ada06701c5982770ae476bd1c6c2b13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082545"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>Instrukcje: Przesyłanie zmian do bazy danych
 Niezależnie od tego, ile zmiany wprowadzone do obiektów zmiany są wprowadzane tylko do repliki w pamięci. Rzeczywiste dane w bazie danych wprowadzono żadnych zmian. Zmiany nie są przekazywane do serwera, dopóki nie zostanie jawnie wywołana <xref:System.Data.Linq.DataContext.SubmitChanges%2A> na <xref:System.Data.Linq.DataContext>.  
@@ -34,6 +34,7 @@ Niezależnie od tego, ile zmiany wprowadzone do obiektów zmiany są wprowadzane
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Wykrywanie i rozwiązywanie powodujących konflikt przesłań](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
 - [Instrukcje: Zarządzanie konfliktami zmian](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

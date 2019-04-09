@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076163"
 ---
 # <a name="default-marshaling-for-objects"></a>Domyślny marshaling dla obiektów
 Parametry i pola wpisanych w formie <xref:System.Object?displayProperty=nameWithType> mogą łączyć się z kodem niezarządzanym jako jeden z następujących typów:  
@@ -314,6 +314,7 @@ Warianty przekazywane według wartości i według odwołania
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Obiekt REF***o*|Tylko wtedy, gdy typ nie uległ zmianie.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)
 - [Atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

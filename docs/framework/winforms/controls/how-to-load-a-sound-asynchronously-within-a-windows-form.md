@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ładowanie dźwięku asynchronicznie w formularzu Windows'
+title: 'Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185760"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Instrukcje: Ładowanie dźwięku asynchronicznie w formularzu Windows
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows
 Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest odtwarzany w nowym wątku.  
   
 ## <a name="example"></a>Przykład  
@@ -53,7 +53,8 @@ Poniższy przykład kodu asynchronicznego ładuje dźwięku z adresu URL i jest 
  Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `Form1.vb` może nie być plikiem źródłowym programu Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](how-to-play-a-sound-from-a-windows-form.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi'
+title: 'Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - IToolboxService interface
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178792"
 ---
-# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi
+# <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi
 Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie, zostanie automatycznie wyświetlona w **przybornika**, za pomocą trzeba wykonywać żadnych czynności przez użytkownika. Możesz również ręcznie wypełnić **przybornika** za pomocą składników niestandardowych za pomocą [wybierz przybornika dialogowego elementy (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ale **przybornika** uwzględnia elementy w Twoim rozwiązaniu kompilacji danych wyjściowych o następującej charakterystyce:  
   
 -   Implementuje <xref:System.ComponentModel.IComponent>;  
@@ -94,7 +94,8 @@ Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie,
  Ten przewodnik pokazuje, że **przybornika** bierze pod uwagę elementów projektu, ale **przybornika** jest również uwzględnia kontrolki. Poeksperymentuj z Kontrolki niestandardowe, dodając i usuwając kontroli projektów w rozwiązaniu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Ogólne, Windows Forms Designer, okno dialogowe Opcje](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+
+- [Ogólny, narzędzie Projektant formularzy systemu Windows, Okno dialogowe dla opcji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [Instrukcje: Manipulowanie karty przybornika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
 - [Wybierz elementy przybornika, okno dialogowe (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
+- [Umieszczanie formantów na formularzach systemu Windows](putting-controls-on-windows-forms.md)

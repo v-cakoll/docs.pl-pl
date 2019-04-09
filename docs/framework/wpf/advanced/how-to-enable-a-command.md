@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Włącz polecenie'
+title: 'Instrukcje: Włączanie polecenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CommandBindings [WPF]
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
-ms.openlocfilehash: a24a7a31154de58051677ba41496fcf4da3f2568
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181704"
 ---
-# <a name="how-to-enable-a-command"></a>Instrukcje: Włącz polecenie
+# <a name="how-to-enable-a-command"></a>Instrukcje: Włączanie polecenia
 Poniższy przykład ilustruje sposób użycia polecenia w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  W przykładzie pokazano, jak skojarzyć <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Button>, Utwórz <xref:System.Windows.Input.CommandBinding>i utworzyć procedury obsługi zdarzeń, które implementują <xref:System.Windows.Input.RoutedCommand>.  Aby uzyskać więcej informacji na temat polecenia, zobacz [polecenia Przegląd](commanding-overview.md).  
   
 ## <a name="example"></a>Przykład  
@@ -40,4 +40,5 @@ Poniższy przykład ilustruje sposób użycia polecenia w [!INCLUDE[TLA#tla_winc
  [!code-vb[EnableCloseCommand#CloseCommandHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EnableCloseCommand/VisualBasic/Window1.xaml.vb#closecommandhandler)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd poleceń](commanding-overview.md)
+
+- [Przegląd Polecenia](commanding-overview.md)

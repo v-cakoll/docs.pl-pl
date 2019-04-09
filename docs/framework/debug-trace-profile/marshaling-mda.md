@@ -1,5 +1,5 @@
 ---
-title: MDA marshalingu
+title: przekazywanie międzyprocesowe (marshaling) MDA
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37351dadf941e3512249dd8a9f433b63065ae1fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184473"
 ---
-# <a name="marshaling-mda"></a>MDA marshalingu
+# <a name="marshaling-mda"></a>przekazywanie międzyprocesowe (marshaling) MDA
 `marshaling` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko CLR konfiguruje organizowanie informacji dla parametru metody lub pola struktury. To zdarzenie MDA nie działa dla zestawów kompilowanego dokładnie na czas.  
   
 ## <a name="effect-on-the-runtime"></a>Wpływ na środowisko uruchomieniowe  
@@ -51,6 +51,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+- [Organizowanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md)

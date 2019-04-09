@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy Windows'
+title: 'Instrukcje: wyświetlanie podelementów w kolumnach za pomocą kontrolki ListView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding ListSubItems
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
-ms.openlocfilehash: ecdb16087ff5788723b7d562cebd08551df87deb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: defa8aa736927c9076eb2410d6d914a8f7550d03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183721"
 ---
-# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Instrukcje: Wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy Windows
+# <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>Instrukcje: wyświetlanie podelementów w kolumnach za pomocą kontrolki ListView formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetlić dodatkowy tekst lub podrzędnych dla każdego elementu w widoku szczegółów. Pierwsza kolumna Wyświetla tekst elementu, na przykład numer pracownika. Drugi, trzeci i kolejnych kolumn wyświetlany jako pierwszy, drugi i kolejne skojarzone elementy podrzędne.  
   
 ### <a name="to-add-subitems-to-a-list-item"></a>Aby dodać elementy podrzędne elementu listy  
@@ -30,8 +30,9 @@ Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetli
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#61)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie i usuwanie elementów za pomocą formantu ListView formularzy Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Instrukcje: Wyświetlanie ikon dla kontrolki ListView formularzy Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy systemu Windows](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

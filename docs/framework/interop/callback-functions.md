@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 81a502ab3c0f9f2faf4685c5d61c66f2eab83e7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196999"
 ---
 # <a name="callback-functions"></a>Funkcje wywołania zwrotnego
 Funkcja wywołania zwrotnego jest kod w zarządzanej aplikacji, która pomaga niezarządzanych funkcji DLL ukończenia zadania. Wywołania do funkcji wywołania zwrotnego przekazać pośrednio z aplikacji zarządzanych, za pomocą funkcji DLL i z powrotem do zarządzaną implementację. Niektóre z wielu funkcji DLL o nazwie z platformą wywołania wymagają funkcji wywołania zwrotnego w kodzie zarządzanym działać prawidłowo.  
@@ -28,5 +28,6 @@ Funkcja wywołania zwrotnego jest kod w zarządzanej aplikacji, która pomaga ni
  Funkcje wywołania zwrotnego to idealne rozwiązanie w sytuacjach, w których zadanie jest wykonywane wielokrotnie. Inny wspólne użycie jest przy użyciu funkcji wyliczania, takich jak **EnumFontFamilies**, **EnumPrinters**, i **EnumWindows** w interfejsie API Windows. **EnumWindows** funkcja wylicza wszystkie istniejące systemu windows na komputerze, w wywołaniu funkcji wywołania zwrotnego do wykonywania zadań na każde okno. Aby uzyskać instrukcje i przykłady, zobacz [jak: Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/how-to-implement-callback-functions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/how-to-implement-callback-functions.md)
 - [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)

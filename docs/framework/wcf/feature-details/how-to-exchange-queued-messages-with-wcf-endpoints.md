@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi WCF'
+title: 'Instrukcje: wymiana zakolejkowanych komunikatów z punktami końcowymi WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 98cb62c0d3f82a90ee96797a34600473dbe4dc11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179169"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi WCF
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Instrukcje: wymiana zakolejkowanych komunikatów z punktami końcowymi WCF
 Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem a usługą Windows Communication Foundation (WCF), nawet jeśli usługa nie jest dostępna w czasie komunikacji. Poniższe procedury pokazują, jak zapewnić niezawodne komunikacji między klientem a usługą przy użyciu standardu w kolejce wiążące podczas implementowania usługi WCF.  
   
  W tej sekcji wyjaśniono, jak używać <xref:System.ServiceModel.NetMsmqBinding> umieszczonych w kolejce komunikacji między klienta programu WCF i usługi WCF.  
@@ -42,9 +42,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
 5.  Zdefiniuj <xref:System.ServiceModel.Description.ServiceEndpoint> w konfiguracji, który określa adres usługi i używa standardu <xref:System.ServiceModel.NetMsmqBinding> powiązania. Aby uzyskać więcej informacji na temat korzystania z konfiguracji usługi WCF, zobacz [usług WCF Konfigurowanie](../configuring-services.md).  
-  
-  
-  
+
 6.  Tworzenie hosta dla `OrderProcessing` usługi przy użyciu <xref:System.ServiceModel.ServiceHost> która odczytuje komunikaty z kolejki i przetwarza je. Otwórz hosta usługi, aby udostępnić usługę. Wyświetlenie komunikatu, informujący użytkownika, naciśnij dowolny klawisz, aby zakończyć usługi. Wywołaj `ReadLine` oczekiwania klawisz, aby zostać naciśnięte, a następnie Zamknij usługę.  
   
      [!code-csharp[S_Msmq_Transacted#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#6)]
@@ -59,9 +57,7 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
     ```  
   
 2.  Zdefiniuj <xref:System.ServiceModel.Description.ServiceEndpoint> w konfiguracji, który określa adres i używa standardowych <xref:System.ServiceModel.NetMsmqBinding> powiązania, jak pokazano w poniższym przykładzie.  
-  
-  
-  
+
 3.  Tworzenie zakresu transakcji do zapisu do kolejki transakcyjne, wywołanie `SubmitPurchaseOrder` operacji, a następnie Zamknij klienta WCF, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
@@ -75,19 +71,16 @@ Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić mię
   
  [!code-csharp[S_Msmq_Transacted#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#10)]
  [!code-vb[S_Msmq_Transacted#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#10)]  
-  
-  
-  
+
  [!code-csharp[S_Msmq_Transacted#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#12)]
  [!code-vb[S_Msmq_Transacted#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#12)]  
-  
-  
-  
+
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [Transakcyjne powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
 - [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Obsługa kolejek komunikatów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Podglądu wydruku w formularzach Windows Forms'
+title: 'Instrukcje: Wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714141"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192184"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Instrukcje: Podglądu wydruku w formularzach Windows Forms
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Instrukcje: Wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows
 Jest to często stosowane w aplikacjach Windows do drukowania tekstu. <xref:System.Drawing.Graphics> Klasa dostarcza metody do rysowania obiektów (grafiki lub tekst) do urządzenia, takich jak ekranu lub drukarki.  
   
 > [!NOTE]
@@ -61,6 +61,7 @@ Jest to często stosowane w aplikacjach Windows do drukowania tekstu. <xref:Syst
 -   Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
+- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)

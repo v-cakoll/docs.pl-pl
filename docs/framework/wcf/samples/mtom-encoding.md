@@ -2,12 +2,12 @@
 title: Kodowanie MTOM
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: aa24a8f8553ceb035e5fc9c0c6094b1279711674
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6cf9606896b153fea2bc70b4d0b1a04a64ece598
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198104"
 ---
 # <a name="mtom-encoding"></a>Kodowanie MTOM
 Niniejszy przykład pokazuje użycie kodowania za pomocą WSHttpBinding komunikatu komunikat transmisji optymalizacji mechanizm (MTOM). MTOM jest mechanizm przekazywania dużych załączników binarnych za pomocą protokołu SOAP wiadomości jako bajtów raw, pozwalając na mniejsze wiadomości.  
@@ -79,4 +79,3 @@ Press <ENTER> to terminate client.
 3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

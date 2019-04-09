@@ -11,14 +11,14 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182077"
 ---
-# <a name="-escape-sequence--markup-extension"></a>{} Sekwencja unikowa / rozszerzenie znaczników
+# <a name="-escape-sequence--markup-extension"></a>{}, sekwencja ucieczki/rozszerzenie znaczników
 Sekwencja unikowa XAML zawiera wartości atrybutów. Sekwencja unikowa umożliwia kolejnych wartości w atrybucie należy interpretować jako literał.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
@@ -59,5 +59,6 @@ Sekwencja unikowa XAML zawiera wartości atrybutów. Sekwencja unikowa umożliwi
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md)
 - [Jednostki znaków XML i XAML](xml-character-entities-and-xaml.md)

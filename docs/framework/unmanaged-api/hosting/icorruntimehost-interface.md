@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184785"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost — Interfejs
 Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środowisko uruchomieniowe języka wspólnego (CLR) jawnie, aby utworzyć i skonfigurować domeny aplikacji, dostęp do domyślnej domeny i wyliczyć wszystkich domen, uruchomiony w procesie.  
@@ -32,7 +32,7 @@ Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środow
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CloseEnum, metoda](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Resetuje wyliczający domeny do początku listy domen.|  
+|[CloseEnum — Metoda](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-closeenum-method.md)|Resetuje wyliczający domeny do początku listy domen.|  
 |[CreateDomain, metoda](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)|Tworzy domenę aplikacji. Obiekt wywołujący otrzymuje wskaźnik interfejsu typu <xref:System._AppDomain> do wystąpienia typu <xref:System.AppDomain?displayProperty=nameWithType>.|  
 |[CreateDomainEx, metoda](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md)|Tworzy domenę aplikacji. Ta metoda umożliwia obiektowi wywołującemu Przekaż wystąpienie iappdomainsetup — Aby skonfigurować dodatkowe funkcje zwracanego <xref:System._AppDomain> wystąpienia.|  
 |[CreateDomainSetup, metoda](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainsetup-method.md)|Pobiera wskaźnik interfejsu typu `IAppDomainSetup` do <xref:System.AppDomainSetup> wystąpienia. `IAppDomainSetup` udostępnia metody umożliwiające konfigurowanie aspektów domeny aplikacji, zanim zostanie on utworzony.|  
@@ -62,9 +62,10 @@ Udostępnia metody umożliwiające hosta do uruchamiania i zatrzymywania środow
  **Wersje programu .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.AppDomain>
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
-- [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [ICLRRuntimeHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [Hosty środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [CorRuntimeHost, klasa coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost — Klasa coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

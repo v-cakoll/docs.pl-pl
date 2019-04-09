@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3293c3b0d5fa4615c351949afdb1acf8cd560b5e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187294"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress — Metoda
 Zwraca adres stosu ramka wewnętrzna.  
@@ -59,6 +59,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugInternalFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugInternalFrame2 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

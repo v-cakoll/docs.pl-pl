@@ -7,21 +7,22 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF]
 ms.assetid: a177374d-ee54-4d00-aaae-c983481cae9b
-ms.openlocfilehash: e3f2bf274db3a7b14f817dd2dbfffc39d2957ec4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f1e4257804b6ce77eeb1bed7b984e90e90cc2752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374547"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113792"
 ---
-# <a name="richtextbox"></a><span data-ttu-id="97454-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="97454-102">RichTextBox</span></span>
-<span data-ttu-id="97454-103"><xref:System.Windows.Controls.RichTextBox> Element definiuje edycji kontrolki z wbudowaną obsługę funkcji, takich jak Wytnij i Wklej, prezentacji sformatowanego dokumentu i Wybieranie zawartości.</span><span class="sxs-lookup"><span data-stu-id="97454-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
+# <a name="richtextbox"></a><span data-ttu-id="8ea0e-102">RichTextBox</span><span class="sxs-lookup"><span data-stu-id="8ea0e-102">RichTextBox</span></span>
+<span data-ttu-id="8ea0e-103"><xref:System.Windows.Controls.RichTextBox> Element definiuje edycji kontrolki z wbudowaną obsługę funkcji, takich jak Wytnij i Wklej, prezentacji sformatowanego dokumentu i Wybieranie zawartości.</span><span class="sxs-lookup"><span data-stu-id="8ea0e-103">The <xref:System.Windows.Controls.RichTextBox> element defines an editing control with built-in support for features such as cut and paste, rich document presentation, and content selection.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="97454-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="97454-104">In This Section</span></span>  
- [<span data-ttu-id="97454-105">RichTextBox — omówienie</span><span class="sxs-lookup"><span data-stu-id="97454-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
- [<span data-ttu-id="97454-106">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="97454-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8ea0e-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="8ea0e-104">In This Section</span></span>  
+ [<span data-ttu-id="8ea0e-105">RichTextBox — Przegląd</span><span class="sxs-lookup"><span data-stu-id="8ea0e-105">RichTextBox Overview</span></span>](richtextbox-overview.md)  
+ [<span data-ttu-id="8ea0e-106">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="8ea0e-106">How-to Topics</span></span>](richtextbox-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="97454-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="97454-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ea0e-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8ea0e-107">See also</span></span>
+
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="97454-108">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="97454-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="97454-109">Przegląd dokumentu przepływu</span><span class="sxs-lookup"><span data-stu-id="97454-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="8ea0e-108">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="8ea0e-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="8ea0e-109">Przegląd Dokument przepływu</span><span class="sxs-lookup"><span data-stu-id="8ea0e-109">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

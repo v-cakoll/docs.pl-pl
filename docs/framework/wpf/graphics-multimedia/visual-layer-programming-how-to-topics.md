@@ -8,27 +8,28 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142691"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="05fc3-102">Programowanie warstwy Visual Tematy porad</span><span class="sxs-lookup"><span data-stu-id="05fc3-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="05fc3-103">Tematy w tej sekcji przedstawiają sposoby użycia warstwy visual dla składu testowania trafień i niskiego poziomu.</span><span class="sxs-lookup"><span data-stu-id="05fc3-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="9b8bc-102">Programowanie warstwy Visual Tematy porad</span><span class="sxs-lookup"><span data-stu-id="9b8bc-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="9b8bc-103">Tematy w tej sekcji przedstawiają sposoby użycia warstwy visual dla składu testowania trafień i niskiego poziomu.</span><span class="sxs-lookup"><span data-stu-id="9b8bc-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="05fc3-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="05fc3-104">In This Section</span></span>  
- [<span data-ttu-id="05fc3-105">Pobieranie przesunięcia wizualizacji</span><span class="sxs-lookup"><span data-stu-id="05fc3-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="05fc3-106">Wyliczanie zawartości rysowania wizualizacji</span><span class="sxs-lookup"><span data-stu-id="05fc3-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="05fc3-107">Przeprowadzanie testu trafienia geometrii w wizualizacji</span><span class="sxs-lookup"><span data-stu-id="05fc3-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="05fc3-108">Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru</span><span class="sxs-lookup"><span data-stu-id="05fc3-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="05fc3-109">Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32</span><span class="sxs-lookup"><span data-stu-id="05fc3-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="05fc3-110">Renderowanie w interwałach klatek z użyciem elementu CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="05fc3-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9b8bc-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="9b8bc-104">In This Section</span></span>  
+ [<span data-ttu-id="9b8bc-105">Pobieranie przesunięcia wizualizacji</span><span class="sxs-lookup"><span data-stu-id="9b8bc-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="9b8bc-106">Wyliczanie zawartości rysowania wizualizacji</span><span class="sxs-lookup"><span data-stu-id="9b8bc-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="9b8bc-107">Przeprowadzanie testu trafienia geometrii w wizualizacji</span><span class="sxs-lookup"><span data-stu-id="9b8bc-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="9b8bc-108">Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru</span><span class="sxs-lookup"><span data-stu-id="9b8bc-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="9b8bc-109">Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32</span><span class="sxs-lookup"><span data-stu-id="9b8bc-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="9b8bc-110">Renderowanie w interwałach klatek z użyciem elementu CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="9b8bc-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="05fc3-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="05fc3-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9b8bc-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9b8bc-111">See also</span></span>
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="05fc3-112">Renderowanie grafiki WPF — przegląd</span><span class="sxs-lookup"><span data-stu-id="05fc3-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="05fc3-113">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="05fc3-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="9b8bc-112">Przegląd Renderowanie grafiki WPF</span><span class="sxs-lookup"><span data-stu-id="9b8bc-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="9b8bc-113">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="9b8bc-113">Graphics and Multimedia</span></span>](index.md)

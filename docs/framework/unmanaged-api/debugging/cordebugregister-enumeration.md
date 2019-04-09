@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4175cf26b783ab7f19905941e94cfdb15ce69cff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168619"
 ---
-# <a name="cordebugregister-enumeration"></a><span data-ttu-id="cf8d6-102">CorDebugRegister — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="cf8d6-102">CorDebugRegister Enumeration</span></span>
-<span data-ttu-id="cf8d6-103">Określa rejestrów związane z architekturą procesora w danym.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-103">Specifies the registers associated with a given processor architecture.</span></span>  
+# <a name="cordebugregister-enumeration"></a><span data-ttu-id="50a55-102">CorDebugRegister — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="50a55-102">CorDebugRegister Enumeration</span></span>
+<span data-ttu-id="50a55-103">Określa rejestrów związane z architekturą procesora w danym.</span><span class="sxs-lookup"><span data-stu-id="50a55-103">Specifies the registers associated with a given processor architecture.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf8d6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cf8d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50a55-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="50a55-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugRegister {  
@@ -114,100 +114,101 @@ typedef enum CorDebugRegister {
 } CorDebugRegister;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="cf8d6-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="cf8d6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="50a55-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="50a55-105">Members</span></span>  
   
-|<span data-ttu-id="cf8d6-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="cf8d6-106">Member</span></span>|<span data-ttu-id="cf8d6-107">Opis</span><span class="sxs-lookup"><span data-stu-id="cf8d6-107">Description</span></span>|  
+|<span data-ttu-id="50a55-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="50a55-106">Member</span></span>|<span data-ttu-id="50a55-107">Opis</span><span class="sxs-lookup"><span data-stu-id="50a55-107">Description</span></span>|  
 |------------|-----------------|  
-|`REGISTER_INSTRUCTION_POINTER`|<span data-ttu-id="cf8d6-108">Wskaźnik instrukcji rejestrowania na każdy procesor.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-108">An instruction pointer register on any processor.</span></span>|  
-|`REGISTER_STACK_POINTER`|<span data-ttu-id="cf8d6-109">Wskaźnik stosu, zarejestruj się na każdy procesor.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-109">A stack pointer register on any processor.</span></span>|  
-|`REGISTER_FRAME_POINTER`|<span data-ttu-id="cf8d6-110">Wskaźnik ramki, zarejestruj się na każdy procesor.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-110">A frame pointer register on any processor.</span></span>|  
-|`REGISTER_X86_EIP`|<span data-ttu-id="cf8d6-111">Rejestr wskaźnika instrukcji na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-111">The instruction pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ESP`|<span data-ttu-id="cf8d6-112">Rejestr wskaźnika stosu na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-112">The stack pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EBP`|<span data-ttu-id="cf8d6-113">Podstawowy wskaźnik, zarejestruj się na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-113">The base pointer register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EAX`|<span data-ttu-id="cf8d6-114">Rejestr danych A na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-114">The A data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ECX`|<span data-ttu-id="cf8d6-115">Rejestr danych C na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-115">The C data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EDX`|<span data-ttu-id="cf8d6-116">D dane rejestrują się x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-116">The D data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EBX`|<span data-ttu-id="cf8d6-117">Rejestr danych B na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-117">The B data register on the x86 processor.</span></span>|  
-|`REGISTER_X86_ESI`|<span data-ttu-id="cf8d6-118">Źródło indeks rejestru w x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-118">The source index register on the x86 processor.</span></span>|  
-|`REGISTER_X86_EDI`|<span data-ttu-id="cf8d6-119">Rejestr indeksu docelowego na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-119">The destination index register on the x86 processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_0`|<span data-ttu-id="cf8d6-120">Procesor rejestru 0 na x86 zmiennoprzecinkowych (FP) stosu.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-120">The stack register 0 on the x86 floating-point (FP) processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_1`|<span data-ttu-id="cf8d6-121">Stos #1 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-121">The #1 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_2`|<span data-ttu-id="cf8d6-122">Stos #2 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-122">The #2 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_3`|<span data-ttu-id="cf8d6-123">Stos #3 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-123">The #3 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_4`|<span data-ttu-id="cf8d6-124">Stos #4 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-124">The #4 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_5`|<span data-ttu-id="cf8d6-125">Stos #5 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-125">The #5 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_6`|<span data-ttu-id="cf8d6-126">Stos #6 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-126">The #6 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_X86_FPSTACK_7`|<span data-ttu-id="cf8d6-127">Stos #7 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-127">The #7 stack register on the x86 FP processor.</span></span>|  
-|`REGISTER_AMD64_RIP`|<span data-ttu-id="cf8d6-128">Zarejestruj wskaźnik instrukcji w procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-128">The instruction pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RSP`|<span data-ttu-id="cf8d6-129">Wskaźnik stosu, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-129">The stack pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RBP`|<span data-ttu-id="cf8d6-130">Podstawowy wskaźnik, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-130">The base pointer register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RAX`|<span data-ttu-id="cf8d6-131">Rejestr danych A na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-131">The A data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RCX`|<span data-ttu-id="cf8d6-132">Zarejestruj dane C na systemów z procesorem AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-132">The C data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RDX`|<span data-ttu-id="cf8d6-133">Zarejestruj D dane na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-133">The D data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RBX`|<span data-ttu-id="cf8d6-134">Rejestrowanie danych B na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-134">The B data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RSI`|<span data-ttu-id="cf8d6-135">Indeks źródła, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-135">The source index register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_RDI`|<span data-ttu-id="cf8d6-136">Indeksu docelowego, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-136">The destination index register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R8`|<span data-ttu-id="cf8d6-137">Zarejestruj dane #8 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-137">The #8 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R9`|<span data-ttu-id="cf8d6-138">Zarejestruj dane #9 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-138">The #9 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R10`|<span data-ttu-id="cf8d6-139">Zarejestruj dane #10 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-139">The #10 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R11`|<span data-ttu-id="cf8d6-140">Zarejestruj dane #11 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-140">The #11 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R12`|<span data-ttu-id="cf8d6-141">Zarejestruj dane #12 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-141">The #12 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R13`|<span data-ttu-id="cf8d6-142">Zarejestruj dane #13 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-142">The #13 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R14`|<span data-ttu-id="cf8d6-143">Zarejestruj dane #14 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-143">The #14 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_R15`|<span data-ttu-id="cf8d6-144">Zarejestruj dane #15 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-144">The #15 data register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM0`|<span data-ttu-id="cf8d6-145">#0 multimedialnych zarejestrować na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-145">The #0 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM1`|<span data-ttu-id="cf8d6-146">Zarejestruj #1 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-146">The #1 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM2`|<span data-ttu-id="cf8d6-147">Zarejestruj #2 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-147">The #2 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM3`|<span data-ttu-id="cf8d6-148">Zarejestruj #3 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-148">The #3 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM4`|<span data-ttu-id="cf8d6-149">Zarejestruj #4 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-149">The #4 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM5`|<span data-ttu-id="cf8d6-150">Zarejestruj #5 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-150">The #5 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM6`|<span data-ttu-id="cf8d6-151">Zarejestruj #6 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-151">The #6 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM7`|<span data-ttu-id="cf8d6-152">Zarejestruj #7 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-152">The #7 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM8`|<span data-ttu-id="cf8d6-153">Zarejestruj #8 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-153">The #8 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM9`|<span data-ttu-id="cf8d6-154">Zarejestruj #9 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-154">The #9 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM10`|<span data-ttu-id="cf8d6-155">Zarejestruj #10 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-155">The #10 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM11`|<span data-ttu-id="cf8d6-156">Zarejestruj #11 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-156">The #11 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM12`|<span data-ttu-id="cf8d6-157">Zarejestruj #12 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-157">The #12 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM13`|<span data-ttu-id="cf8d6-158">Zarejestruj #13 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-158">The #13 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM14`|<span data-ttu-id="cf8d6-159">Zarejestruj #14 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-159">The #14 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_AMD64_XMM15`|<span data-ttu-id="cf8d6-160">Zarejestruj #15 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-160">The #15 multimedia register on the AMD64 processor.</span></span>|  
-|`REGISTER_IA64_BSP`|<span data-ttu-id="cf8d6-161">Wskaźnik stosu, zarejestruj się na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-161">The stack pointer register on the IA-64 processor.</span></span>|  
-|`REGISTER_IA64_R0`|<span data-ttu-id="cf8d6-162">Zarejestruj dane #0 na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-162">The #0 data register on the IA-64 processor.</span></span>|  
-|`REGISTER_IA64_F0`|<span data-ttu-id="cf8d6-163">Zarejestruj dane FP #0 na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-163">The #0 FP data register on the IA-64 processor.</span></span>|  
-|`REGISTER_ARM_PC`|<span data-ttu-id="cf8d6-164">Licznik programu Zarejestruj (R15) w procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-164">The program counter register (R15) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_SP`|<span data-ttu-id="cf8d6-165">Wskaźnik stosu Zarejestruj (R13) w procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-165">The stack pointer register (R13) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R0`|<span data-ttu-id="cf8d6-166">Data zarejestrowania R0 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-166">Data register R0 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R1`|<span data-ttu-id="cf8d6-167">Data zarejestrowania R1 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-167">Data register R1 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R2`|<span data-ttu-id="cf8d6-168">Data zarejestrowania R2 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-168">Data register R2 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R3`|<span data-ttu-id="cf8d6-169">Data zarejestrowania R3 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-169">Data register R3 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R4`|<span data-ttu-id="cf8d6-170">Zarejestruj R4 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-170">Register R4 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R5`|<span data-ttu-id="cf8d6-171">Zarejestruj R5 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-171">Register R5 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R6`|<span data-ttu-id="cf8d6-172">Zarejestruj R6 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-172">Register R6 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R7`|<span data-ttu-id="cf8d6-173">Zarejestruj R7 (THUMB wskaźnika ramki) na procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-173">Register R7 (the THUMB frame pointer) on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R8`|<span data-ttu-id="cf8d6-174">Zarejestruj R8 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-174">Register R8 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R9`|<span data-ttu-id="cf8d6-175">Zarejestruj R9 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-175">Register R9 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R10`|<span data-ttu-id="cf8d6-176">Zarejestruj R10 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-176">Register R10 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R11`|<span data-ttu-id="cf8d6-177">Wskaźnik ramki procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-177">The frame pointer on the ARM processor.</span></span>|  
-|`REGISTER_ARM_R12`|<span data-ttu-id="cf8d6-178">Zarejestruj R12 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-178">Register R12 on the ARM processor.</span></span>|  
-|`REGISTER_ARM_LR`|<span data-ttu-id="cf8d6-179">Rejestr link (R14) w procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-179">The link register (R14) on the ARM processor.</span></span>|  
+|`REGISTER_INSTRUCTION_POINTER`|<span data-ttu-id="50a55-108">Wskaźnik instrukcji rejestrowania na każdy procesor.</span><span class="sxs-lookup"><span data-stu-id="50a55-108">An instruction pointer register on any processor.</span></span>|  
+|`REGISTER_STACK_POINTER`|<span data-ttu-id="50a55-109">Wskaźnik stosu, zarejestruj się na każdy procesor.</span><span class="sxs-lookup"><span data-stu-id="50a55-109">A stack pointer register on any processor.</span></span>|  
+|`REGISTER_FRAME_POINTER`|<span data-ttu-id="50a55-110">Wskaźnik ramki, zarejestruj się na każdy procesor.</span><span class="sxs-lookup"><span data-stu-id="50a55-110">A frame pointer register on any processor.</span></span>|  
+|`REGISTER_X86_EIP`|<span data-ttu-id="50a55-111">Rejestr wskaźnika instrukcji na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-111">The instruction pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ESP`|<span data-ttu-id="50a55-112">Rejestr wskaźnika stosu na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-112">The stack pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EBP`|<span data-ttu-id="50a55-113">Podstawowy wskaźnik, zarejestruj się na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-113">The base pointer register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EAX`|<span data-ttu-id="50a55-114">Rejestr danych A na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-114">The A data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ECX`|<span data-ttu-id="50a55-115">Rejestr danych C na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-115">The C data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EDX`|<span data-ttu-id="50a55-116">D dane rejestrują się x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-116">The D data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EBX`|<span data-ttu-id="50a55-117">Rejestr danych B na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-117">The B data register on the x86 processor.</span></span>|  
+|`REGISTER_X86_ESI`|<span data-ttu-id="50a55-118">Źródło indeks rejestru w x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-118">The source index register on the x86 processor.</span></span>|  
+|`REGISTER_X86_EDI`|<span data-ttu-id="50a55-119">Rejestr indeksu docelowego na x86 procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-119">The destination index register on the x86 processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_0`|<span data-ttu-id="50a55-120">Procesor rejestru 0 na x86 zmiennoprzecinkowych (FP) stosu.</span><span class="sxs-lookup"><span data-stu-id="50a55-120">The stack register 0 on the x86 floating-point (FP) processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_1`|<span data-ttu-id="50a55-121">Stos #1 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-121">The #1 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_2`|<span data-ttu-id="50a55-122">Stos #2 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-122">The #2 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_3`|<span data-ttu-id="50a55-123">Stos #3 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-123">The #3 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_4`|<span data-ttu-id="50a55-124">Stos #4 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-124">The #4 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_5`|<span data-ttu-id="50a55-125">Stos #5 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-125">The #5 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_6`|<span data-ttu-id="50a55-126">Stos #6 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-126">The #6 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_X86_FPSTACK_7`|<span data-ttu-id="50a55-127">Stos #7 rejestrują się x86 FP procesora.</span><span class="sxs-lookup"><span data-stu-id="50a55-127">The #7 stack register on the x86 FP processor.</span></span>|  
+|`REGISTER_AMD64_RIP`|<span data-ttu-id="50a55-128">Zarejestruj wskaźnik instrukcji w procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-128">The instruction pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RSP`|<span data-ttu-id="50a55-129">Wskaźnik stosu, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-129">The stack pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RBP`|<span data-ttu-id="50a55-130">Podstawowy wskaźnik, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-130">The base pointer register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RAX`|<span data-ttu-id="50a55-131">Rejestr danych A na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-131">The A data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RCX`|<span data-ttu-id="50a55-132">Zarejestruj dane C na systemów z procesorem AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-132">The C data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RDX`|<span data-ttu-id="50a55-133">Zarejestruj D dane na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-133">The D data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RBX`|<span data-ttu-id="50a55-134">Rejestrowanie danych B na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-134">The B data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RSI`|<span data-ttu-id="50a55-135">Indeks źródła, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-135">The source index register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_RDI`|<span data-ttu-id="50a55-136">Indeksu docelowego, zarejestruj się na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-136">The destination index register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R8`|<span data-ttu-id="50a55-137">Zarejestruj dane #8 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-137">The #8 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R9`|<span data-ttu-id="50a55-138">Zarejestruj dane #9 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-138">The #9 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R10`|<span data-ttu-id="50a55-139">Zarejestruj dane #10 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-139">The #10 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R11`|<span data-ttu-id="50a55-140">Zarejestruj dane #11 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-140">The #11 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R12`|<span data-ttu-id="50a55-141">Zarejestruj dane #12 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-141">The #12 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R13`|<span data-ttu-id="50a55-142">Zarejestruj dane #13 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-142">The #13 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R14`|<span data-ttu-id="50a55-143">Zarejestruj dane #14 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-143">The #14 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_R15`|<span data-ttu-id="50a55-144">Zarejestruj dane #15 na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-144">The #15 data register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM0`|<span data-ttu-id="50a55-145">#0 multimedialnych zarejestrować na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-145">The #0 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM1`|<span data-ttu-id="50a55-146">Zarejestruj #1 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-146">The #1 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM2`|<span data-ttu-id="50a55-147">Zarejestruj #2 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-147">The #2 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM3`|<span data-ttu-id="50a55-148">Zarejestruj #3 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-148">The #3 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM4`|<span data-ttu-id="50a55-149">Zarejestruj #4 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-149">The #4 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM5`|<span data-ttu-id="50a55-150">Zarejestruj #5 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-150">The #5 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM6`|<span data-ttu-id="50a55-151">Zarejestruj #6 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-151">The #6 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM7`|<span data-ttu-id="50a55-152">Zarejestruj #7 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-152">The #7 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM8`|<span data-ttu-id="50a55-153">Zarejestruj #8 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-153">The #8 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM9`|<span data-ttu-id="50a55-154">Zarejestruj #9 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-154">The #9 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM10`|<span data-ttu-id="50a55-155">Zarejestruj #10 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-155">The #10 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM11`|<span data-ttu-id="50a55-156">Zarejestruj #11 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-156">The #11 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM12`|<span data-ttu-id="50a55-157">Zarejestruj #12 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-157">The #12 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM13`|<span data-ttu-id="50a55-158">Zarejestruj #13 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-158">The #13 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM14`|<span data-ttu-id="50a55-159">Zarejestruj #14 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-159">The #14 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_AMD64_XMM15`|<span data-ttu-id="50a55-160">Zarejestruj #15 multimedialnych na procesorze AMD64.</span><span class="sxs-lookup"><span data-stu-id="50a55-160">The #15 multimedia register on the AMD64 processor.</span></span>|  
+|`REGISTER_IA64_BSP`|<span data-ttu-id="50a55-161">Wskaźnik stosu, zarejestruj się na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="50a55-161">The stack pointer register on the IA-64 processor.</span></span>|  
+|`REGISTER_IA64_R0`|<span data-ttu-id="50a55-162">Zarejestruj dane #0 na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="50a55-162">The #0 data register on the IA-64 processor.</span></span>|  
+|`REGISTER_IA64_F0`|<span data-ttu-id="50a55-163">Zarejestruj dane FP #0 na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="50a55-163">The #0 FP data register on the IA-64 processor.</span></span>|  
+|`REGISTER_ARM_PC`|<span data-ttu-id="50a55-164">Licznik programu Zarejestruj (R15) w procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-164">The program counter register (R15) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_SP`|<span data-ttu-id="50a55-165">Wskaźnik stosu Zarejestruj (R13) w procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-165">The stack pointer register (R13) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R0`|<span data-ttu-id="50a55-166">Data zarejestrowania R0 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-166">Data register R0 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R1`|<span data-ttu-id="50a55-167">Data zarejestrowania R1 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-167">Data register R1 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R2`|<span data-ttu-id="50a55-168">Data zarejestrowania R2 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-168">Data register R2 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R3`|<span data-ttu-id="50a55-169">Data zarejestrowania R3 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-169">Data register R3 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R4`|<span data-ttu-id="50a55-170">Zarejestruj R4 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-170">Register R4 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R5`|<span data-ttu-id="50a55-171">Zarejestruj R5 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-171">Register R5 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R6`|<span data-ttu-id="50a55-172">Zarejestruj R6 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-172">Register R6 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R7`|<span data-ttu-id="50a55-173">Zarejestruj R7 (THUMB wskaźnika ramki) na procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-173">Register R7 (the THUMB frame pointer) on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R8`|<span data-ttu-id="50a55-174">Zarejestruj R8 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-174">Register R8 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R9`|<span data-ttu-id="50a55-175">Zarejestruj R9 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-175">Register R9 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R10`|<span data-ttu-id="50a55-176">Zarejestruj R10 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-176">Register R10 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R11`|<span data-ttu-id="50a55-177">Wskaźnik ramki procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-177">The frame pointer on the ARM processor.</span></span>|  
+|`REGISTER_ARM_R12`|<span data-ttu-id="50a55-178">Zarejestruj R12 procesora ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-178">Register R12 on the ARM processor.</span></span>|  
+|`REGISTER_ARM_LR`|<span data-ttu-id="50a55-179">Rejestr link (R14) w procesorze ARM.</span><span class="sxs-lookup"><span data-stu-id="50a55-179">The link register (R14) on the ARM processor.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cf8d6-180">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cf8d6-180">Remarks</span></span>  
- <span data-ttu-id="cf8d6-181">Brak rejestrów 128 danych ogólnego przeznaczenia i 128 rejestrów zmiennoprzecinkowych danych na procesorach IA-64 procesora, ale tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0` są dostarczane.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-181">There are 128 general-purpose data registers and 128 floating-point data registers on the IA-64 processor, but only values `REGISTER_IA64_R0` and `REGISTER_IA64_F0` are provided.</span></span> <span data-ttu-id="cf8d6-182">Inne wartości mogą być określane w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="cf8d6-182">The other values can be determined as follows:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50a55-180">Uwagi</span><span class="sxs-lookup"><span data-stu-id="50a55-180">Remarks</span></span>  
+ <span data-ttu-id="50a55-181">Brak rejestrów 128 danych ogólnego przeznaczenia i 128 rejestrów zmiennoprzecinkowych danych na procesorach IA-64 procesora, ale tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0` są dostarczane.</span><span class="sxs-lookup"><span data-stu-id="50a55-181">There are 128 general-purpose data registers and 128 floating-point data registers on the IA-64 processor, but only values `REGISTER_IA64_R0` and `REGISTER_IA64_F0` are provided.</span></span> <span data-ttu-id="50a55-182">Inne wartości mogą być określane w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="50a55-182">The other values can be determined as follows:</span></span>  
   
--   <span data-ttu-id="cf8d6-183">Dodaj numer rejestru w celu `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pośrednictwem `REGISTER_IA64_R127`, które odpowiadają rejestru #1 danych za pośrednictwem rejestru #127 danych w procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-183">Add the register number to `REGISTER_IA64_R0` for values `REGISTER_IA64_R1` through `REGISTER_IA64_R127`, which correspond to the #1 data register through the #127 data register on the IA-64 processor.</span></span>  
+-   <span data-ttu-id="50a55-183">Dodaj numer rejestru w celu `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pośrednictwem `REGISTER_IA64_R127`, które odpowiadają rejestru #1 danych za pośrednictwem rejestru #127 danych w procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="50a55-183">Add the register number to `REGISTER_IA64_R0` for values `REGISTER_IA64_R1` through `REGISTER_IA64_R127`, which correspond to the #1 data register through the #127 data register on the IA-64 processor.</span></span>  
   
--   <span data-ttu-id="cf8d6-184">Dodaj numer rejestru w celu `REGISTER_IA64_F0` wartości `REGISTER_IA64_F1` za pośrednictwem `REGISTER_IA64_F127`, które są zgodne Rejestr danych FP #1 do #127 Rejestr danych FP na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-184">Add the register number to `REGISTER_IA64_F0` for values `REGISTER_IA64_F1` through `REGISTER_IA64_F127`, which correspond to the #1 FP data register through the #127 FP data register on the IA-64 processor.</span></span>  
+-   <span data-ttu-id="50a55-184">Dodaj numer rejestru w celu `REGISTER_IA64_F0` wartości `REGISTER_IA64_F1` za pośrednictwem `REGISTER_IA64_F127`, które są zgodne Rejestr danych FP #1 do #127 Rejestr danych FP na procesorze IA-64.</span><span class="sxs-lookup"><span data-stu-id="50a55-184">Add the register number to `REGISTER_IA64_F0` for values `REGISTER_IA64_F1` through `REGISTER_IA64_F127`, which correspond to the #1 FP data register through the #127 FP data register on the IA-64 processor.</span></span>  
   
- <span data-ttu-id="cf8d6-185">Na przykład, jeśli zachodzi potrzeba Określ rejestr #83 danych w procesorze IA-64, użyj `REGISTER_IA64_R0` + 83.</span><span class="sxs-lookup"><span data-stu-id="cf8d6-185">For example, if you need to specify the #83 data register on the IA-64 processor, use `REGISTER_IA64_R0` + 83.</span></span>  
+ <span data-ttu-id="50a55-185">Na przykład, jeśli zachodzi potrzeba Określ rejestr #83 danych w procesorze IA-64, użyj `REGISTER_IA64_R0` + 83.</span><span class="sxs-lookup"><span data-stu-id="50a55-185">For example, if you need to specify the #83 data register on the IA-64 processor, use `REGISTER_IA64_R0` + 83.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cf8d6-186">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cf8d6-186">Requirements</span></span>  
- <span data-ttu-id="cf8d6-187">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cf8d6-187">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50a55-186">Wymagania</span><span class="sxs-lookup"><span data-stu-id="50a55-186">Requirements</span></span>  
+ <span data-ttu-id="50a55-187">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="50a55-187">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf8d6-188">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf8d6-188">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="50a55-188">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="50a55-188">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cf8d6-189">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf8d6-189">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="50a55-189">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50a55-189">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cf8d6-190">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf8d6-190">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="50a55-190">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="50a55-190">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="cf8d6-191">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cf8d6-191">See also</span></span>
-- [<span data-ttu-id="cf8d6-192">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="cf8d6-192">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="50a55-191">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="50a55-191">See also</span></span>
+
+- [<span data-ttu-id="50a55-192">Debugowanie — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="50a55-192">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

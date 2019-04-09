@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af07df53c094654ab86f5e6531fd78124aded988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162153"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="5177b-102">ICorDebugObjectValue2::GetVirtualMethodAndType — Metoda</span><span class="sxs-lookup"><span data-stu-id="5177b-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="5177b-103">Ta metoda nie została jeszcze zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="5177b-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="dfcd3-102">ICorDebugObjectValue2::GetVirtualMethodAndType — Metoda</span><span class="sxs-lookup"><span data-stu-id="dfcd3-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="dfcd3-103">Ta metoda nie została jeszcze zaimplementowana.</span><span class="sxs-lookup"><span data-stu-id="dfcd3-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5177b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5177b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfcd3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dfcd3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethodAndType (  
@@ -37,9 +37,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="5177b-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="5177b-105">Remarks</span></span>  
- <span data-ttu-id="5177b-106">Pobiera interfejs wskaźniki do wystąpienia "ICorDebugFunction" i "ICorDebugType", które reprezentują najbardziej pochodnej metoda i typ dla odwołania do określonego elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="5177b-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dfcd3-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="dfcd3-105">Remarks</span></span>  
+ <span data-ttu-id="dfcd3-106">Pobiera interfejs wskaźniki do wystąpienia "ICorDebugFunction" i "ICorDebugType", które reprezentują najbardziej pochodnej metoda i typ dla odwołania do określonego elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="dfcd3-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5177b-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5177b-107">See also</span></span>
-
-
+## <a name="see-also"></a><span data-ttu-id="dfcd3-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dfcd3-107">See also</span></span>

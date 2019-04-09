@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 35b99240a99341ddf78ab43c444b503702af66c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 57ddbd8c6935f2c0275c132e30ea175c6f198fac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200093"
 ---
-# <a name="imetadataimportgetmethodsemantics-method"></a><span data-ttu-id="b424a-102">IMetaDataImport::GetMethodSemantics — Metoda</span><span class="sxs-lookup"><span data-stu-id="b424a-102">IMetaDataImport::GetMethodSemantics Method</span></span>
-<span data-ttu-id="b424a-103">Pobiera flagi wskazującą związek między odwołuje się określony token MethodDef oraz sparowany właściwości, metody i zdarzenia odwołuje się określona EventProp token.</span><span class="sxs-lookup"><span data-stu-id="b424a-103">Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.</span></span>  
+# <a name="imetadataimportgetmethodsemantics-method"></a><span data-ttu-id="8b621-102">IMetaDataImport::GetMethodSemantics — Metoda</span><span class="sxs-lookup"><span data-stu-id="8b621-102">IMetaDataImport::GetMethodSemantics Method</span></span>
+<span data-ttu-id="8b621-103">Pobiera flagi wskazującą związek między odwołuje się określony token MethodDef oraz sparowany właściwości, metody i zdarzenia odwołuje się określona EventProp token.</span><span class="sxs-lookup"><span data-stu-id="8b621-103">Gets flags indicating the relationship between the method referenced by the specified MethodDef token and the paired property and event referenced by the specified EventProp token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b424a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b424a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b621-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8b621-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodSemantics (  
@@ -37,28 +37,29 @@ HRESULT GetMethodSemantics (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b424a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b424a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b621-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8b621-105">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="b424a-106">[in] Token MethodDef reprezentujący metodę, które mają być pobrane informacje semantyczne roli.</span><span class="sxs-lookup"><span data-stu-id="b424a-106">[in] A MethodDef token representing the method to get the semantic role information for.</span></span>  
+ <span data-ttu-id="8b621-106">[in] Token MethodDef reprezentujący metodę, które mają być pobrane informacje semantyczne roli.</span><span class="sxs-lookup"><span data-stu-id="8b621-106">[in] A MethodDef token representing the method to get the semantic role information for.</span></span>  
   
  `tkEventProp`  
- <span data-ttu-id="b424a-107">[in] Token reprezentujący par właściwości i zdarzenia, dla którego należy pobrać rolę metody.</span><span class="sxs-lookup"><span data-stu-id="b424a-107">[in] A token representing the paired property and event for which to get the method's role.</span></span>  
+ <span data-ttu-id="8b621-107">[in] Token reprezentujący par właściwości i zdarzenia, dla którego należy pobrać rolę metody.</span><span class="sxs-lookup"><span data-stu-id="8b621-107">[in] A token representing the paired property and event for which to get the method's role.</span></span>  
   
  `pdwSemanticsFlags`  
- <span data-ttu-id="b424a-108">[out] Wskaźnik flagi skojarzone semantyki.</span><span class="sxs-lookup"><span data-stu-id="b424a-108">[out] A pointer to the associated semantics flags.</span></span> <span data-ttu-id="b424a-109">Ta wartość jest z [cormethodsemanticsattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="b424a-109">This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.</span></span>  
+ <span data-ttu-id="8b621-108">[out] Wskaźnik flagi skojarzone semantyki.</span><span class="sxs-lookup"><span data-stu-id="8b621-108">[out] A pointer to the associated semantics flags.</span></span> <span data-ttu-id="8b621-109">Ta wartość jest z [cormethodsemanticsattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="8b621-109">This value is a bitmask from the [CorMethodSemanticsAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md) enumeration.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b424a-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b424a-110">Remarks</span></span>  
- <span data-ttu-id="b424a-111">[IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) metody Ustawia flagi semantyki metody.</span><span class="sxs-lookup"><span data-stu-id="b424a-111">The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8b621-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="8b621-110">Remarks</span></span>  
+ <span data-ttu-id="8b621-111">[IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) metody Ustawia flagi semantyki metody.</span><span class="sxs-lookup"><span data-stu-id="8b621-111">The [IMetaDataEmit::DefineProperty](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md) method sets a method's semantics flags.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b424a-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b424a-112">Requirements</span></span>  
- <span data-ttu-id="b424a-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b424a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b621-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8b621-112">Requirements</span></span>  
+ <span data-ttu-id="8b621-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b621-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b424a-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="b424a-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="8b621-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="8b621-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="b424a-115">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b424a-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="8b621-115">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="8b621-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="b424a-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b424a-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="8b621-116">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="8b621-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="b424a-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b424a-117">See also</span></span>
-- [<span data-ttu-id="b424a-118">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="b424a-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="b424a-119">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="b424a-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8b621-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8b621-117">See also</span></span>
+
+- [<span data-ttu-id="8b621-118">IMetaDataImport — Interfejs</span><span class="sxs-lookup"><span data-stu-id="8b621-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="8b621-119">IMetaDataImport2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="8b621-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli'
+title: 'Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,50 +10,51 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188516"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a><span data-ttu-id="3508e-102">Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli</span><span class="sxs-lookup"><span data-stu-id="3508e-102">How to: Loop a Sound Playing on a Windows Form</span></span>
-<span data-ttu-id="3508e-103">Poniższy przykład kodu odtwarza dźwięk wielokrotnie.</span><span class="sxs-lookup"><span data-stu-id="3508e-103">The following code example plays a sound repeatedly.</span></span> <span data-ttu-id="3508e-104">Gdy kod w `stopPlayingButton_Click` programu obsługi zdarzeń uruchamia wszystkie obecnie odtwarzanie zatrzymuje dźwięku.</span><span class="sxs-lookup"><span data-stu-id="3508e-104">When the code in the `stopPlayingButton_Click` event handler runs, any sound currently playing stops.</span></span> <span data-ttu-id="3508e-105">Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.</span><span class="sxs-lookup"><span data-stu-id="3508e-105">If no sound is playing, nothing happens.</span></span>  
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a><span data-ttu-id="41eba-102">Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows</span><span class="sxs-lookup"><span data-stu-id="41eba-102">How to: Loop a Sound Playing on a Windows Form</span></span>
+<span data-ttu-id="41eba-103">Poniższy przykład kodu odtwarza dźwięk wielokrotnie.</span><span class="sxs-lookup"><span data-stu-id="41eba-103">The following code example plays a sound repeatedly.</span></span> <span data-ttu-id="41eba-104">Gdy kod w `stopPlayingButton_Click` programu obsługi zdarzeń uruchamia wszystkie obecnie odtwarzanie zatrzymuje dźwięku.</span><span class="sxs-lookup"><span data-stu-id="41eba-104">When the code in the `stopPlayingButton_Click` event handler runs, any sound currently playing stops.</span></span> <span data-ttu-id="41eba-105">Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.</span><span class="sxs-lookup"><span data-stu-id="41eba-105">If no sound is playing, nothing happens.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3508e-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="3508e-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="41eba-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="41eba-106">Example</span></span>  
  [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
  [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3508e-107">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="3508e-107">Compiling the Code</span></span>  
- <span data-ttu-id="3508e-108">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="3508e-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="41eba-107">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="41eba-107">Compiling the Code</span></span>  
+ <span data-ttu-id="41eba-108">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="41eba-108">This example requires:</span></span>  
   
--   <span data-ttu-id="3508e-109">Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="3508e-109">References to the System and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="41eba-109">Odwołania do zestawów System i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="41eba-109">References to the System and System.Windows.Forms assemblies.</span></span>  
   
--   <span data-ttu-id="3508e-110">Zastąp nazwę pliku `"c:\Windows\Media\chimes.wav"` z prawidłową nazwą pliku.</span><span class="sxs-lookup"><span data-stu-id="3508e-110">That you replace the file name `"c:\Windows\Media\chimes.wav"` with a valid file name.</span></span>  
+-   <span data-ttu-id="41eba-110">Zastąp nazwę pliku `"c:\Windows\Media\chimes.wav"` z prawidłową nazwą pliku.</span><span class="sxs-lookup"><span data-stu-id="41eba-110">That you replace the file name `"c:\Windows\Media\chimes.wav"` with a valid file name.</span></span>  
   
- <span data-ttu-id="3508e-111">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="3508e-111">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="3508e-112">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="3508e-112">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="41eba-111">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="41eba-111">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="41eba-112">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="41eba-112">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="3508e-113">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="3508e-113">Robust Programming</span></span>  
- <span data-ttu-id="3508e-114">Operacje na plikach powinna zostać ujęta w odpowiednie bloki obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="3508e-114">File operations should be enclosed within appropriate exception-handling blocks.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="41eba-113">Niezawodne programowanie</span><span class="sxs-lookup"><span data-stu-id="41eba-113">Robust Programming</span></span>  
+ <span data-ttu-id="41eba-114">Operacje na plikach powinna zostać ujęta w odpowiednie bloki obsługi wyjątków.</span><span class="sxs-lookup"><span data-stu-id="41eba-114">File operations should be enclosed within appropriate exception-handling blocks.</span></span>  
   
- <span data-ttu-id="3508e-115">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="3508e-115">The following conditions may cause an exception:</span></span>  
+ <span data-ttu-id="41eba-115">Następujące warunki mogą spowodować wyjątek:</span><span class="sxs-lookup"><span data-stu-id="41eba-115">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="3508e-116">Nazwa ścieżki jest nieprawidłowo sformułowany.</span><span class="sxs-lookup"><span data-stu-id="3508e-116">The path name is malformed.</span></span> <span data-ttu-id="3508e-117">Na przykład zawiera znaki, które nie są prawidłowe, lub jest tylko spacją (<xref:System.ArgumentException> klasy).</span><span class="sxs-lookup"><span data-stu-id="3508e-117">For example, it contains characters that are not valid or it is only white space (<xref:System.ArgumentException> class).</span></span>  
+-   <span data-ttu-id="41eba-116">Nazwa ścieżki jest nieprawidłowo sformułowany.</span><span class="sxs-lookup"><span data-stu-id="41eba-116">The path name is malformed.</span></span> <span data-ttu-id="41eba-117">Na przykład zawiera znaki, które nie są prawidłowe, lub jest tylko spacją (<xref:System.ArgumentException> klasy).</span><span class="sxs-lookup"><span data-stu-id="41eba-117">For example, it contains characters that are not valid or it is only white space (<xref:System.ArgumentException> class).</span></span>  
   
--   <span data-ttu-id="3508e-118">Ścieżka jest tylko do odczytu (<xref:System.IO.IOException> klasy).</span><span class="sxs-lookup"><span data-stu-id="3508e-118">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
+-   <span data-ttu-id="41eba-118">Ścieżka jest tylko do odczytu (<xref:System.IO.IOException> klasy).</span><span class="sxs-lookup"><span data-stu-id="41eba-118">The path is read-only (<xref:System.IO.IOException> class).</span></span>  
   
--   <span data-ttu-id="3508e-119">Nazwa ścieżki jest `Nothing` (<xref:System.ArgumentNullException> klasy).</span><span class="sxs-lookup"><span data-stu-id="3508e-119">The path name is `Nothing` (<xref:System.ArgumentNullException> class).</span></span>  
+-   <span data-ttu-id="41eba-119">Nazwa ścieżki jest `Nothing` (<xref:System.ArgumentNullException> klasy).</span><span class="sxs-lookup"><span data-stu-id="41eba-119">The path name is `Nothing` (<xref:System.ArgumentNullException> class).</span></span>  
   
--   <span data-ttu-id="3508e-120">Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException> klasy).</span><span class="sxs-lookup"><span data-stu-id="3508e-120">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
+-   <span data-ttu-id="41eba-120">Nazwa ścieżki jest za długa (<xref:System.IO.PathTooLongException> klasy).</span><span class="sxs-lookup"><span data-stu-id="41eba-120">The path name is too long (<xref:System.IO.PathTooLongException> class).</span></span>  
   
--   <span data-ttu-id="3508e-121">Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException> klasy).</span><span class="sxs-lookup"><span data-stu-id="3508e-121">The path is invalid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
+-   <span data-ttu-id="41eba-121">Ścieżka jest nieprawidłowa (<xref:System.IO.DirectoryNotFoundException> klasy).</span><span class="sxs-lookup"><span data-stu-id="41eba-121">The path is invalid (<xref:System.IO.DirectoryNotFoundException> class).</span></span>  
   
--   <span data-ttu-id="3508e-122">Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException> klasy).</span><span class="sxs-lookup"><span data-stu-id="3508e-122">The path is only a colon ":" (<xref:System.NotSupportedException> class).</span></span>  
+-   <span data-ttu-id="41eba-122">Ścieżka jest tylko dwukropek ":" (<xref:System.NotSupportedException> klasy).</span><span class="sxs-lookup"><span data-stu-id="41eba-122">The path is only a colon ":" (<xref:System.NotSupportedException> class).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="3508e-123">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="3508e-123">.NET Framework Security</span></span>  
- <span data-ttu-id="3508e-124">Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="3508e-124">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="3508e-125">Na przykład plik Form1.vb może nie być plik źródłowy w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3508e-125">For example, the file Form1.vb may not be a Visual Basic source file.</span></span> <span data-ttu-id="3508e-126">Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3508e-126">Verify all inputs before using the data in your application.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="41eba-123">Zabezpieczenia.NET Framework</span><span class="sxs-lookup"><span data-stu-id="41eba-123">.NET Framework Security</span></span>  
+ <span data-ttu-id="41eba-124">Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="41eba-124">Do not make decisions about the contents of the file based on the name of the file.</span></span> <span data-ttu-id="41eba-125">Na przykład plik Form1.vb może nie być plik źródłowy w języku Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="41eba-125">For example, the file Form1.vb may not be a Visual Basic source file.</span></span> <span data-ttu-id="41eba-126">Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="41eba-126">Verify all inputs before using the data in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3508e-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3508e-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="41eba-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="41eba-127">See also</span></span>
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [<span data-ttu-id="3508e-128">Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows</span><span class="sxs-lookup"><span data-stu-id="3508e-128">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)
-- [<span data-ttu-id="3508e-129">SoundPlayer, klasa — omówienie</span><span class="sxs-lookup"><span data-stu-id="3508e-129">SoundPlayer Class Overview</span></span>](soundplayer-class-overview.md)
+- [<span data-ttu-id="41eba-128">Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows</span><span class="sxs-lookup"><span data-stu-id="41eba-128">How to: Play a Sound from a Windows Form</span></span>](how-to-play-a-sound-from-a-windows-form.md)
+- [<span data-ttu-id="41eba-129">Przegląd klasy SoundPlayer</span><span class="sxs-lookup"><span data-stu-id="41eba-129">SoundPlayer Class Overview</span></span>](soundplayer-class-overview.md)

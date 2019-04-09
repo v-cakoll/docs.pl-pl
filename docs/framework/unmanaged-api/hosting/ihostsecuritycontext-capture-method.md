@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92b593248a7a196247a5b4c71a90cd8944665bbe
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e0f6ae812b64080a2c4d236a2be02ad81c4a11b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193307"
 ---
-# <a name="ihostsecuritycontextcapture-method"></a><span data-ttu-id="342fe-102">IHostSecurityContext::Capture — Metoda</span><span class="sxs-lookup"><span data-stu-id="342fe-102">IHostSecurityContext::Capture Method</span></span>
-<span data-ttu-id="342fe-103">Pobiera klon [ihostsecuritycontext —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) wystąpienia zwrócony z wywołania do [ihostsecuritymanager::getsecuritycontext —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span><span class="sxs-lookup"><span data-stu-id="342fe-103">Gets a clone of the [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>  
+# <a name="ihostsecuritycontextcapture-method"></a><span data-ttu-id="3273c-102">IHostSecurityContext::Capture — Metoda</span><span class="sxs-lookup"><span data-stu-id="3273c-102">IHostSecurityContext::Capture Method</span></span>
+<span data-ttu-id="3273c-103">Pobiera klon [ihostsecuritycontext —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) wystąpienia zwrócony z wywołania do [ihostsecuritymanager::getsecuritycontext —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span><span class="sxs-lookup"><span data-stu-id="3273c-103">Gets a clone of the [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) instance returned from a call to [IHostSecurityManager::GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="342fe-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="342fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3273c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3273c-104">Syntax</span></span>  
   
 ```  
 HRESULT Capture (  
@@ -35,33 +35,34 @@ HRESULT Capture (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="342fe-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="342fe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3273c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3273c-105">Parameters</span></span>  
  `ppClonedContext`  
- <span data-ttu-id="342fe-106">[out] Wskaźnik na adres klon `IHostSecurityContext` obiektu do przechwycenia.</span><span class="sxs-lookup"><span data-stu-id="342fe-106">[out] A pointer to the address of a clone of the `IHostSecurityContext` object to be captured.</span></span>  
+ <span data-ttu-id="3273c-106">[out] Wskaźnik na adres klon `IHostSecurityContext` obiektu do przechwycenia.</span><span class="sxs-lookup"><span data-stu-id="3273c-106">[out] A pointer to the address of a clone of the `IHostSecurityContext` object to be captured.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="342fe-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="342fe-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3273c-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3273c-107">Return Value</span></span>  
   
-|<span data-ttu-id="342fe-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="342fe-108">HRESULT</span></span>|<span data-ttu-id="342fe-109">Opis</span><span class="sxs-lookup"><span data-stu-id="342fe-109">Description</span></span>|  
+|<span data-ttu-id="3273c-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3273c-108">HRESULT</span></span>|<span data-ttu-id="3273c-109">Opis</span><span class="sxs-lookup"><span data-stu-id="3273c-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="342fe-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="342fe-110">S_OK</span></span>|<span data-ttu-id="342fe-111">`Capture` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="342fe-111">`Capture` returned successfully.</span></span>|  
-|<span data-ttu-id="342fe-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="342fe-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="342fe-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="342fe-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="342fe-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="342fe-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="342fe-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="342fe-115">The call timed out.</span></span>|  
-|<span data-ttu-id="342fe-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="342fe-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="342fe-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="342fe-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="342fe-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="342fe-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="342fe-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="342fe-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="342fe-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="342fe-120">E_FAIL</span></span>|<span data-ttu-id="342fe-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="342fe-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="342fe-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="342fe-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="342fe-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="342fe-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="3273c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="3273c-110">S_OK</span></span>|`Capture` <span data-ttu-id="3273c-111">pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="3273c-111">returned successfully.</span></span>|  
+|<span data-ttu-id="3273c-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="3273c-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="3273c-113">Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="3273c-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="3273c-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="3273c-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="3273c-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="3273c-115">The call timed out.</span></span>|  
+|<span data-ttu-id="3273c-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="3273c-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="3273c-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="3273c-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="3273c-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="3273c-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="3273c-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="3273c-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="3273c-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="3273c-120">E_FAIL</span></span>|<span data-ttu-id="3273c-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="3273c-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="3273c-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="3273c-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="3273c-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="3273c-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="342fe-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="342fe-124">Remarks</span></span>  
- <span data-ttu-id="342fe-125">Wskaźnik interfejsu, zwrócone w wyniku `Capture` jest klonem kontekście przechwyconym.</span><span class="sxs-lookup"><span data-stu-id="342fe-125">The interface pointer returned from `Capture` is a clone of the captured context.</span></span> <span data-ttu-id="342fe-126">Gdy te informacje są przenoszone między punktem kodu asynchronicznego, jego okres istnienia jest oddzielony od, wskaźnika, względem którego rozmowy.</span><span class="sxs-lookup"><span data-stu-id="342fe-126">When this information is moved across an asynchronous code point, its lifetime is separated from that of the pointer against which the call was made.</span></span> <span data-ttu-id="342fe-127">Oryginalny wskaźnik więc może być zwolnione.</span><span class="sxs-lookup"><span data-stu-id="342fe-127">The original pointer can therefore be released.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3273c-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3273c-124">Remarks</span></span>  
+ <span data-ttu-id="3273c-125">Wskaźnik interfejsu, zwrócone w wyniku `Capture` jest klonem kontekście przechwyconym.</span><span class="sxs-lookup"><span data-stu-id="3273c-125">The interface pointer returned from `Capture` is a clone of the captured context.</span></span> <span data-ttu-id="3273c-126">Gdy te informacje są przenoszone między punktem kodu asynchronicznego, jego okres istnienia jest oddzielony od, wskaźnika, względem którego rozmowy.</span><span class="sxs-lookup"><span data-stu-id="3273c-126">When this information is moved across an asynchronous code point, its lifetime is separated from that of the pointer against which the call was made.</span></span> <span data-ttu-id="3273c-127">Oryginalny wskaźnik więc może być zwolnione.</span><span class="sxs-lookup"><span data-stu-id="3273c-127">The original pointer can therefore be released.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="342fe-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="342fe-128">Requirements</span></span>  
- <span data-ttu-id="342fe-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="342fe-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3273c-128">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3273c-128">Requirements</span></span>  
+ <span data-ttu-id="3273c-129">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3273c-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="342fe-130">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="342fe-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="3273c-130">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="3273c-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="342fe-131">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="342fe-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3273c-131">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="3273c-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="342fe-132">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="342fe-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="3273c-132">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="3273c-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="342fe-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="342fe-133">See also</span></span>
-- [<span data-ttu-id="342fe-134">IHostSecurityContext, interfejs</span><span class="sxs-lookup"><span data-stu-id="342fe-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="342fe-135">IHostSecurityManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="342fe-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3273c-133">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3273c-133">See also</span></span>
+
+- [<span data-ttu-id="3273c-134">IHostSecurityContext — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3273c-134">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="3273c-135">IHostSecurityManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="3273c-135">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

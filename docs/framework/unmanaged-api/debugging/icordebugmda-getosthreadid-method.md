@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c38aa9cc891514a7f37dba47402c168060ec3727
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 51d29fed3d53611daa0042251ce09638399f7ed5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195803"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId — Metoda
 Pobiera identyfikator wątku systemu operacyjnego (OS), na którym zarządzanego Asystenta debugowania (MDA) jest reprezentowane przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) jest wykonywany.  
@@ -52,5 +52,6 @@ HRESULT GetOSThreadId (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebugMDA, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+
+- [ICorDebugMDA — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

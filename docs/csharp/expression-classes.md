@@ -3,12 +3,12 @@ title: Typy platform obsługujące drzewa wyrażeń
 description: Informacje o typach framework obsługuje drzew wyrażeń, tworzenia drzew wyrażeń i technik do pracy z drzewa wyrażeń interfejsów API.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198468"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Typy platform obsługujące drzewa wyrażeń
 
@@ -18,7 +18,7 @@ Istnieje duża lista klas w ramach platformy .NET Core, współpracujących z dr
 Można zobaczyć pełną listę w <xref:System.Linq.Expressions>.
 Zamiast uruchamiania za pośrednictwem z pełną listą, Przyjrzyjmy się, jak zostały zaprojektowane klasy framework.
 
-W projekcie języka wyrażenie jest treść kod, który oblicza i zwraca wartość. Wyrażenia może być bardzo prosta: wyrażenie stałe `1` zwraca stałej wartości 1. Może być bardziej skomplikowane: wyrażenie `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` zwraca jeden certyfikat główny dla równaniu kwadratowym (w przypadku, gdy równanie ma rozwiązania).  
+W projekcie języka wyrażenie jest treść kod, który oblicza i zwraca wartość. Wyrażenia może być bardzo prosta: wyrażenie stałe `1` zwraca stałej wartości 1. Może być bardziej skomplikowane: Wyrażenie `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` zwraca jeden certyfikat główny dla równaniu kwadratowym (w przypadku, gdy równanie ma rozwiązania).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Wszystko zaczyna się od System.Linq.Expression
 
@@ -65,4 +65,3 @@ Istnieją typy węzłów wyrażenie, które mapują na niemal wszystkie elementy
 Można znaleźć więcej jak Przyjrzyj się każdej z tych trzech obszarów. Znajdziesz się niezmiennie, należy podczas uruchamiania przy użyciu jednego z tych trzech kroków.
  
  [Dalej — Wykonywanie drzew wyrażeń](expression-trees-execution.md)
- 

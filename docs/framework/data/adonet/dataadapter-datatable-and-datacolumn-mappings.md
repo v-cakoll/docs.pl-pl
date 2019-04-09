@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: 6aaaa126a0b19300abc2c10b88b0e4ff39a3ad66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54af7c2f449f8eb289841fb3eca357c6916404aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201211"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Element DataAdapter DataTable i mapowania elementu DataColumn
 A **DataAdapter** zawiera zbiór zero lub więcej <xref:System.Data.Common.DataTableMapping> obiekty w jego **TableMappings** właściwości. A **DataTableMapping** zapewnia głównej mapowania między danymi zwrócone przez zapytanie w odniesieniu do źródła danych i <xref:System.Data.DataTable>. **DataTableMapping** nazwa może być przekazywany zamiast **DataTable** nazwy do **wypełnienia** metody **DataAdapter**. Poniższy przykład tworzy **DataTableMapping** o nazwie **AuthorsMapping** dla **autorzy** tabeli.  
@@ -98,6 +98,7 @@ adapter.Fill(customersDataSet, "Customers")
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

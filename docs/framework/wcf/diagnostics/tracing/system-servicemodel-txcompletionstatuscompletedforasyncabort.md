@@ -2,12 +2,12 @@
 title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
-ms.openlocfilehash: 3d43524b7141a134b9560e92da66ef2349b8119a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f84cc9336d6cce7d8c477a1feb6caf45b0662177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631288"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188477"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 Określonej transakcji dla określonej operacji zostało zakończone z powodu przerwania asynchronicznego.  
@@ -19,6 +19,7 @@ Określonej transakcji dla określonej operacji zostało zakończone z powodu pr
  Jeśli to przerwania jest nieoczekiwana, sprawdź wszystkie dzienniki systemu, aby określić rzeczywistą powód przerwania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

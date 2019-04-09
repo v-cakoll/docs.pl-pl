@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190635"
 ---
 # <a name="3-d-transformations-overview"></a>Przegląd Przekształcenia 3-D
 W tym temacie opisano, jak zastosować przekształcenia w modelach 3-D w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system grafiki. Przekształcenia umożliwiają deweloperom zmienić położenie, rozmiar i zmienić orientację modeli bez wprowadzania zmian w podstawowej wartości, które je zdefiniować.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3-przestrzeni współrzędnych  
  Grafika 3-D zawartość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są hermetyzowane w elemencie <xref:System.Windows.Controls.Viewport3D>, mogą uczestniczyć w strukturze dwuwymiarową elementu. System grafiki traktuje Viewport3D jako dwuwymiarową elementu wizualnego, takich jak wiele innych osób w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viewport3D działa jako okno — okienko ekranu — na scenie trójwymiarowej. Dokładniej mówiąc jest powierzchni, w którym przewidywany jest scenę 3-D.  Chociaż Viewport3D można używać z innymi obiektami rysunku 2-D w ten sam wykres scen, nie interpenetrate obiektów 2 D i 3-w Viewport3D. W poniższym dyskusji przestrzeni współrzędnych opisane znajduje się w elemencie Viewport3D.  
   
@@ -106,6 +104,7 @@ Przykład obrotu
  Ponieważ aparaty fotograficzne, są również modeli, jest możliwe jest przekształcenie również właściwości kamery.  Natomiast wygląd sceny można zmienić bez obaw dzięki przekształcaniu odległości lokalizacji lub płaszczyzny aparatu — w efekcie Przekształcanie projekcji całej sceny — należy pamiętać, że wiele efekty osiągnięcia w ten sposób może być bezużyteczny tyle "visual" do podglądu jako przekształcenia stosowane do lokalizacji lub pozycji modeli w scenie.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika 3D — przegląd](3-d-graphics-overview.md)
-- [Przekształcenia — przegląd](transforms-overview.md)
+
+- [Przegląd Grafika 3-D](3-d-graphics-overview.md)
+- [Przegląd Przekształcenia](transforms-overview.md)
 - [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)

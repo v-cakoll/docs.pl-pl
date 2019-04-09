@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GDI+, cloning images
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
-ms.openlocfilehash: 9682c7be5956680556defd698cb97e8f4b1a7f50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188451"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>Rysowanie, pozycjonowanie i klonowanie obrazów w GDI+
 Możesz użyć <xref:System.Drawing.Bitmap> klasy, ładowania oraz wyświetlania obrazów rastrowych, na które mogą używać <xref:System.Drawing.Imaging.Metafile> klasy, ładowania oraz wyświetlania obrazów wektora. <xref:System.Drawing.Bitmap> i <xref:System.Drawing.Imaging.Metafile> klasy dziedziczą <xref:System.Drawing.Image> klasy. Aby wyświetlić obraz wektora, potrzebujesz wystąpienie <xref:System.Drawing.Graphics> klasy i <xref:System.Drawing.Imaging.Metafile>. Aby wyświetlić obraz, potrzebujesz wystąpienie <xref:System.Drawing.Graphics> klasy i <xref:System.Drawing.Bitmap>. Wystąpienie <xref:System.Drawing.Graphics> klasa udostępnia <xref:System.Drawing.Graphics.DrawImage%2A> metody, która odbiera <xref:System.Drawing.Imaging.Metafile> lub <xref:System.Drawing.Bitmap> jako argument.  
@@ -52,6 +52,7 @@ Możesz użyć <xref:System.Drawing.Bitmap> klasy, ładowania oraz wyświetlania
  ![Przycinanie](./media/aboutgdip03-art05.gif "AboutGdip03_Art05")  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Obrazy, mapy bitowe i metapliki](images-bitmaps-and-metafiles.md)
 - [Instrukcje: Tworzenie obiektów graficznych do rysowania](how-to-create-graphics-objects-for-drawing.md)
 - [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](working-with-images-bitmaps-icons-and-metafiles.md)

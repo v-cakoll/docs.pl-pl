@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193073"
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Zapytania skompilowane (LINQ to Entities)
 Jeśli masz aplikację, która wykonuje zapytania strukturalnie podobne wiele razy w programie Entity Framework, często może zwiększyć wydajność, kompilowanie zapytania jeden raz i jej wykonanie kilka razy z różnymi parametrami. Na przykład aplikacja może mieć do pobrania wszystkich klientów określonego miasta; Miasto jest określone w czasie wykonywania przez użytkownika w postaci. Składnik LINQ to Entities obsługuje przy użyciu zapytania skompilowane do tego celu.  
@@ -69,6 +69,7 @@ Jeśli masz aplikację, która wykonuje zapytania strukturalnie podobne wiele ra
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Program Entity Framework na platformie ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ do Jednostek](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [Opcje scalania w ramach jednostki i zapytania skompilowane](https://go.microsoft.com/fwlink/?LinkId=199591)

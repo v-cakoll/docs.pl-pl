@@ -2,12 +2,12 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: c602ea2b708fced37c5b309596fe2312be21e741
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201094"
 ---
 # <a name="contract"></a>Kontrakt
 Kontrakt  
@@ -105,4 +105,5 @@ class Contract
 |Przestrzeń nazw|Zdefiniowane w root\ServiceModel|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.ContractDescription>

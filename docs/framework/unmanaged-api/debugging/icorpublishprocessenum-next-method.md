@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b39e0b85b80618afed80d65430ba18cb1128352d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 169716d1a6d0dd633821cc832de96c9a02958d76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183108"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next — Metoda
 Pobiera określoną liczbę procesów z kolekcji, począwszy od bieżącej pozycji kursora.  
@@ -58,4 +58,5 @@ HRESULT Next (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorPublishProcessEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+
+- [ICorPublishProcessEnum — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

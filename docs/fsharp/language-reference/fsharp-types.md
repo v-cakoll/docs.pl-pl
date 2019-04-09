@@ -2,17 +2,16 @@
 title: Typy F#
 description: Informacje o typach, które są używane w F# i w jaki sposób F# typów o nazwie i opisem.
 ms.date: 05/16/2016
-ms.openlocfilehash: bdbb89dc751970ac31fe102df009f0bff6388e52
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33565592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193593"
 ---
 # <a name="f-types"></a>Typy F#
 
 W tym temacie opisano typy, które są używane w F# i w jaki sposób F# typów o nazwie i opisem.
-
 
 ## <a name="summary-of-f-types"></a>Podsumowanie F# typów
 Niektóre typy są traktowane jako *typów pierwotnych*, takie jak typ Boolean `bool` i typów całkowitych i zmiennoprzecinkowych punkt o różnych rozmiarach, które obejmują typy bajtów i znaków. Te typy są opisane w [typów pierwotnych](primitive-types.md).
@@ -27,26 +26,23 @@ Ponadto F# kodu można zdefiniować aliasy, które noszą nazwy *skróty typów*
 
 F#dostarcza typy przydatne kolekcji, które mają programowania funkcjonalnego, należy pamiętać. Używanie tych typów kolekcji ułatwia pisanie kodu, który jest bardziej funkcjonalnego w stylu. Aby uzyskać więcej informacji, zobacz [ F# typy kolekcji](fsharp-collection-types.md).
 
-
 ## <a name="syntax-for-types"></a>Składnia dla typów
 W F# kodu, często musisz zapisać nazwy typów. Każdy typ ma formę składni i użycia tych formularzy składni w adnotacji typu, deklaracje metody abstrakcyjnej, deklaracje delegatów, sygnatur i innych konstrukcji. Zawsze, gdy należy zadeklarować nową konstrukcję program w interpreter, interpreter Wyświetla nazwę konstrukcja i składnię dla tego typu. Ta składnia może być tylko identyfikator typu zdefiniowanego przez użytkownika lub wbudowane identyfikatora takiego jak w przypadku `int` lub `string`, ale w przypadku bardziej złożonych typów jest bardziej złożona składnia.
 
 W poniższej tabeli przedstawiono aspektów Składnia typu F# typów.
 
-
-
 |Typ|Składnia typu|Przykłady|
 |----|-----------|--------|
 |typ pierwotny|*Nazwa typu*|`int`<br /><br />`float`<br /><br />`string`|
 |odpowiedni typ agregacji (klasy, struktury, Unii, rekord, wyliczenia i tak dalej)|*Nazwa typu*|`System.DateTime`<br /><br />`Color`|
-|— Skrót typu|*Nazwa — skrót typu*|`bigint`|
+|— Skrót typu|*type-abbreviation-name*|`bigint`|
 |w pełni kwalifikowanego typu|*Nazwa Namespaces.Type*<br /><br />lub<br /><br />*Nazwa Modules.Type*<br /><br />lub<br /><br />*Nazwa Namespaces.Modules.Type*|`System.IO.StreamWriter`|
 |tablica|*Nazwa typu*[] lub<br /><br />*Nazwa typu* tablicy|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |dwuwymiarową tablicę|*Nazwa typu*[,]|`int[,]`<br /><br />`float[,]`|
 |tablicy trójwymiarowej|*Nazwa typu*[,]|`float[,,]`|
 |Krotki|*Typ Nazwa1* &#42; *Nazwa2 typu* ...|Na przykład `(1,'b',3)` ma typ `int * char * int`|
-|Typ ogólny|*Parametr typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*Nazwa typu ogólnego*&lt;*lista parametrów typu*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
-|skonstruowany typ (typ ogólny, który został podany argument określonego typu)|*argument typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*Nazwa typu ogólnego*&lt;*lista argumentów typu*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
+|Typ ogólny|*Parametr typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*generic-type-name*&lt;*type-parameter-list*&gt;|`'a list`<br /><br />`list<'a>`<br /><br />`Dictionary<'key, 'value>`|
+|skonstruowany typ (typ ogólny, który został podany argument określonego typu)|*argument typu* *Nazwa typu ogólnego*<br /><br />lub<br /><br />*generic-type-name*&lt;*type-argument-list*&gt;|`int option`<br /><br />`string list`<br /><br />`int ref`<br /><br />`option<int>`<br /><br />`list<string>`<br /><br />`ref<int>`<br /><br />`Dictionary<int, string>`|
 |Typ funkcji, która ma jeden parametr|*Parametr type1*  - &gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i zwraca `string` ma typ `int -> string`|
 |Typ funkcji, która ma wiele parametrów|*Parametr type1*  - &gt; *type2 parametr*  - &gt; ... —&gt; *zwracanego typu*|Funkcja, która przyjmuje `int` i `float` i zwraca `string` ma typ `int -> float -> string`|
 |wyższe funkcji order jako parametr|(*typu funkcji*)|`List.map` ma typ `('a -> 'b) -> 'a list -> 'b list`|
@@ -54,7 +50,6 @@ W poniższej tabeli przedstawiono aspektów Składnia typu F# typów.
 |elastycznym typem|#*Nazwa typu*|`#System.Windows.Forms.Control`<br /><br />`#seq<int>`|
 
 ## <a name="related-topics"></a>Tematy pokrewne
-
 
 |Temat|Opis|
 |-----|-----------|

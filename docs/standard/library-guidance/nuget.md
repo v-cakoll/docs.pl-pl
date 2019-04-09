@@ -4,12 +4,12 @@ description: Zalecane najlepsze dla pakietu nuget biblioteki .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198182"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ Wadą osadzanie plików symboli jest, mogą zwiększyć rozmiar pakietu o około
 > Pakiety symboli (`*.snupkg`) zapewnia deweloperom dobre środowisko debugowania na żądanie pozwoli uniknąć przeładowania rozmiar pakietu głównego i wpływu na przywracania wydajność dla tych, którzy nie zamierzasz debugowanie pakietu NuGet.
 >
 > Zastrzeżenie: to ich potrzebować do znalezienia i skonfigurować serwer symboli NuGet w ich środowisku IDE (jako to jednorazowa Konfiguracja), można pobrać pliki symboli. Visual Studio 2019 r planuje dostarcza do serwera symboli NuGet.org jako jedną z opcji gotowe. 
-
 
 >[!div class="step-by-step"]
 >[Poprzednie](strong-naming.md)

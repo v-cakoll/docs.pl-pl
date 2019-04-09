@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania'
+title: 'Przewodnik: Rozmieszczanie zawartości WPF na formularzach systemu Windows w czasie projektowania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9c549a9014e328e8083704971dfd5323adcea41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193203"
 ---
-# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na formularzach Windows Forms w czasie projektowania
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na formularzach systemu Windows w czasie projektowania
 W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation (WPF).
 
  W tym przewodniku należy wykonać następujące zadania:
@@ -148,11 +148,12 @@ W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularz
      Aby uzyskać więcej informacji, zobacz [jak: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)
-- [Korzystanie z kontrolek WPF](using-wpf-controls.md)
+- [Korzystanie z formantów WPF](using-wpf-controls.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

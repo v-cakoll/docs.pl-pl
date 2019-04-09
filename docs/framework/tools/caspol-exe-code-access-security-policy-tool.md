@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3e6057d1ce6b5d0e961449ef298b1a50c7a407ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200535"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
@@ -55,7 +55,7 @@ caspol [options]
 |**-chgpset** *psfile pset_name* <br /><br /> lub<br /><br /> **-cp** *psfile pset_name*|Zmienia nazwany zestaw uprawnień. *Psfile* argument dostarcza nową definicję zestawu uprawnień; jest to Zserializowany plik zestawu uprawnień w formacie XML. *Pset_name* argument określa nazwę zestawu uprawnień, które chcesz zmienić.|  
 |**-customall** *ścieżki*<br /><br /> lub<br /><br /> **-ca** *ścieżki*|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do zasad komputera, przedsiębiorstwa i określonych niestandardowych zasad użytkownika. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego z *ścieżki* argumentu.|  
 |**-cu**[**stomuser**] *path*|Umożliwia administrację niestandardowymi zasadami użytkownika, które nie należą do użytkownika, w którego imieniu program Caspol.exe jest aktualnie uruchomiony. Należy określić lokalizację pliku konfiguracji zabezpieczeń użytkownika niestandardowego z *ścieżki* argumentu.|  
-|**-enterprise**<br /><br /> lub<br /><br /> **-pl**|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do poziomu zasad przedsiębiorstwa. Użytkownicy, którzy nie są administratorami przedsiębiorstwa, nie posiadają wystarczających praw, aby modyfikować zasady przedsiębiorstwa, jednak mogą je wyświetlać. W scenariuszach bez przedsiębiorstwa zasady te domyślnie nie kolidują z zasadami komputera i użytkownika.|  
+|**-enterprise**<br /><br /> lub<br /><br /> **-en**|Wskazuje, że wszystkie opcje następujące po niej, mają zastosowanie do poziomu zasad przedsiębiorstwa. Użytkownicy, którzy nie są administratorami przedsiębiorstwa, nie posiadają wystarczających praw, aby modyfikować zasady przedsiębiorstwa, jednak mogą je wyświetlać. W scenariuszach bez przedsiębiorstwa zasady te domyślnie nie kolidują z zasadami komputera i użytkownika.|  
 |**-e**[**xecution**] {**na** &#124; **poza**}|Włącza lub wyłącza mechanizm sprawdzający uprawnienia uruchamiania przed rozpoczęciem wykonywania kodu. **Uwaga:**  Ten przełącznik został usunięty w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i nowszych wersjach. Aby uzyskać więcej informacji, zobacz [zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md).|  
 |**-f**[**orce**]|Pomija test samolikwidacji narzędzia i zmienia zasady określone przez użytkownika. Normalnie Caspol.exe sprawdza, czy dowolne zmiany zasad mogą uniemożliwić programowi Caspol.exe poprawne działanie; jeśli tak, Caspol.exe nie zapisze zmian zasad i wyświetli komunikat o błędzie. Aby wymusić Caspol.exe zmianę zasad, nawet jeśli to uniemożliwia Caspol.exe uruchomiona, należy użyć **— wymusić** opcji.|  
 |**-h**[**elp**]|Wyświetla składnię polecenia i opcje programu Caspol.exe.|  
@@ -71,7 +71,7 @@ caspol [options]
 |**-remfulltrust** *assembly_file*<br /><br /> lub<br /><br /> **-rf** *assembly_file*|Usuwa zestaw z listy zestawów o pełnym zaufaniu poziomu zasad. Ta operacja powinna być wykonana, jeśli zestaw uprawnień, który zawiera niestandardowe uprawnienie, nie jest już dłużej używany przez zasady. Jednakże, należy usunąć zestaw, który implementuje niestandardowe uprawnienie z listy o pełnym zaufaniu, tylko wtedy, gdy zestaw nie implementuje żadnych innych niestandardowych uprawnień, które nadal są używane. Po usunięciu zestawu z listy, należy także usunąć wszystkie inne zależne zestawy.|  
 |**-remgroup** {*label &#124;name*}<br /><br /> lub<br /><br /> **-rg** {l*abel &#124; nazwa*}|Usuwa grupę kodu określoną za pomocą nazwy lub etykiety. Jeżeli określona grupa kodu posiada podrzędne grupy kodu, Caspol.exe usunie także wszystkie podrzędne grupy kodu.|  
 |**-rempset** *pset_name*<br /><br /> lub<br /><br /> **-rp** *pset_name*|Usuwa określony zestaw uprawnień z zasad. *Pset_name* argument wskazuje, który zestaw uprawnień do usunięcia. Caspol.exe usuwa zestaw uprawnień tylko wtedy, gdy nie jest skojarzony z żadną grupą kodu. Domyślne (wbudowane) zestawy uprawnień nie mogą zostać usunięte.|  
-|**-resetowania**<br /><br /> lub<br /><br /> **-r**|Przywraca zasadom domyślny stan i zapisuje je na dysku. Jest to użyteczne, gdy zmienione zasady są nie do naprawienia i trzeba rozpocząć od nowa, z domyślnymi ustawieniami instalacji. Resetowanie może być również wygodne, gdy zachodzi potrzeba użycia domyślnych zasad jako punktu początkowego do modyfikacji określonych plików konfiguracji zabezpieczeń. Aby uzyskać więcej informacji, zobacz [ręczna Edycja plików konfiguracji zabezpieczeń](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1).|  
+|**-reset**<br /><br /> lub<br /><br /> **-rs**|Przywraca zasadom domyślny stan i zapisuje je na dysku. Jest to użyteczne, gdy zmienione zasady są nie do naprawienia i trzeba rozpocząć od nowa, z domyślnymi ustawieniami instalacji. Resetowanie może być również wygodne, gdy zachodzi potrzeba użycia domyślnych zasad jako punktu początkowego do modyfikacji określonych plików konfiguracji zabezpieczeń. Aby uzyskać więcej informacji, zobacz [ręczna Edycja plików konfiguracji zabezpieczeń](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1).|  
 |**-resetlockdown**<br /><br /> lub<br /><br /> **-rsld**|Przywraca zasadom bardziej restrykcyjną wersję stanu domyślnego i zapisuje je na dysku Tworzy kopię zapasową poprzednich zasad komputera i zapisuje je w pliku o nazwie `security.config.bac`.  Zablokowane zasady są podobne do zasad domyślnych, z tą różnicą, że zasady nie udzielają uprawnień do kodu z `Local Intranet`, `Trusted Sites`, i `Internet` stref i odpowiadających im grup kodu mają nie podrzędne grupy kodu.|  
 |**-resolvegroup** *assembly_file*<br /><br /> lub<br /><br /> **-rsg**  *assembly_file*|Wyświetla grupy kodu, w których należy określony zestaw (*assembly_file*) należy do. Domyślnie ta opcja wyświetla poziomy zasad komputera, użytkownika i przedsiębiorstwa, do których należy zestaw. Aby wyświetlić tylko jeden poziom zasad, użyj tej opcji z oboma **-maszyny**, **-użytkownika**, lub **— enterprise** opcji.|  
 |**-resolveperm** *assembly_file*<br /><br /> lub<br /><br /> **-rsp** *assembly_file*|Wyświetla wszystkie uprawnienia, które zostaną przydzielone zestawowi, przez określony (lub domyślny) poziom zasad bezpieczeństwa, gdyby zestaw mógł być uruchomiony. *Assembly_file* argument określa zestaw. Jeśli określisz **— wszystkie** opcja, Caspol.exe obliczy uprawnienia dla zestawu, na podstawie zasad użytkownika, komputera i przedsiębiorstwa; w przeciwnym razie zastosować domyślne reguły zachowania.|  
@@ -247,5 +247,6 @@ caspol -all -resolveperm testassembly
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzia](index.md)
 - [Wiersze polecenia](developer-command-prompt-for-vs.md)

@@ -1,17 +1,17 @@
 ---
-title: Kiedy nie należy wdrażać kontenery Windows
+title: Kiedy nie należy wdrażać kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Kiedy nie należy wdrażać kontenery Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200743"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Kiedy nie należy wdrażać kontenery Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Kiedy nie należy wdrażać kontenerów systemu Windows
 
 Niektóre technologie Windows nie są obsługiwane przez kontenery Windows. W takich przypadkach nadal należy przeprowadzić migrację do maszyn wirtualnych standardy, zwykle przy użyciu tylko Windows i usług IIS.
 
@@ -34,7 +34,6 @@ W przypadkach nie jest obsługiwana w kontenerach Windows, począwszy od maja 20
 -   Interfejs użytkownika aplikacji (aplikacje klienckie za pomocą interfejsu użytkownika programu visual) nie są obsługiwane scenariusze.
 
 -   Windows rolami infrastruktury (DNS, DHCP, kontroler domeny, NTP, drukowania, serwer plików, zarządzanie dostępem i Tożsamościami itp.) nie są obsługiwane scenariusze.
-
 
 Dodatkowe scenariusze nieobsługiwane i żądań od społeczności można znaleźć UserVoice forum dla kontenerów Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 

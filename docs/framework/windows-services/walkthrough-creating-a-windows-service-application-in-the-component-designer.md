@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 7952256d1b225fe22cd189833a046590cdf0a9f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200678"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Samouczek: Tworzenie aplikacji usługi Windows
 
@@ -58,7 +58,6 @@ Zmień nazwę usługi z **Service1** do **MyNewService**.
     ![Właściwości usługi](media/windows-service-properties.png "właściwości usługi Windows")
 
 3. Wybierz **Zapisz wszystko** z **pliku** menu.
-
 
 ## <a name="add-features-to-the-service"></a>Dodawanie funkcji do usługi
 
@@ -141,7 +140,6 @@ Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?
 
 2. Dodaj `using` instrukcję, aby **MyNewService.cs**, lub `Imports` instrukcję, aby **MyNewService.vb**, aby uzyskać <xref:System.Timers?displayProperty=nameWithType> przestrzeni nazw:
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +147,6 @@ Aby skonfigurować prosty mechanizm sondowania, użyj <xref:System.Timers.Timer?
    ```vb
    Imports System.Timers
    ```
-
 
 3. W `MyNewService` klasy, Dodaj `OnTimer` metody, aby obsłużyć <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> zdarzeń:
 
@@ -200,13 +197,11 @@ Poniższy kod przedstawia sposób na zastąpienie <xref:System.ServiceProcess.Se
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>Ustaw stan usługi
 
 Usługi raportowania ich stanu do [Menedżera sterowania usługami](/windows/desktop/Services/service-control-manager) , dzięki czemu użytkownik może stwierdzić, czy usługa działa poprawnie. Domyślnie usługa tej, która dziedziczy <xref:System.ServiceProcess.ServiceBase> ograniczony zestaw stan ustawienia, które obejmują SERVICE_STOPPED, SERVICE_PAUSED i SERVICE_RUNNING raportów. Jeśli usługa może trochę mogła się uruchomić, jest przydatne do raportowania stanu SERVICE_START_PENDING. 
 
 Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplementować, dodając kod, który wywołuje Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) funkcji.
-
 
 ### <a name="implement-service-pending-status"></a>Implementowanie usługi w stanie oczekiwania
 
@@ -493,7 +488,6 @@ Każda usługa Windows ma wpis rejestru, w obszarze **HKEY_LOCAL_MACHINE\SYSTEM\
    ```
 
    Zazwyczaj ta wartość zawiera pełną ścieżkę do pliku wykonywalnego dla usługi Windows. Dla usługi została prawidłowo uruchomiona że użytkownik musi podać znaki cudzysłowu dla ścieżki i wszystkich poszczególnych parametrów. Użytkownik może zmienić parametry w **ImagePath** wpis rejestru, aby zmienić parametry uruchamiania usługi Windows. Jednak lepszy sposób jest programowe Zmienianie wartości i udostępniają funkcje w sposób, przyjazny dla użytkownika, takie jak za pomocą narzędzia zarządzania lub konfiguracji.
-
 
 ## <a name="build-the-service"></a>Tworzenie usługi
 

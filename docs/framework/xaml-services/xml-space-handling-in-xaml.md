@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193320"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space — Obsługa w XAML
 `xml:space` Atrybut jest definiowany w języku XML atrybut deklarujący zachowanie przetwarzania odstępu w obrębie elementu obiektu. To zachowanie jest odpowiednie dla całej zawartości (tekst wewnętrzny) zawartych w elemencie gdzie `xml:space` jest zadeklarowana, a także zakresów do elementów podrzędnych.  
@@ -41,5 +41,6 @@ ms.locfileid: "58037053"
  Wyczerpujące omówienie odstępu, przetwarzanie w XAML, zobacz [spacji w XAML na przetworzenie](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Znak odstępu przetwarzanie w XAML](whitespace-processing-in-xaml.md)
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+
+- [Przetwarzanie spacji w XAML](whitespace-processing-in-xaml.md)
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

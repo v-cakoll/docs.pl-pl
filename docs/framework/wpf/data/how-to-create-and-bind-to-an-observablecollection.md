@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz i powiąż z ObservableCollection'
+title: 'Instrukcje: Tworzenie i wiązanie z elementem ObservableCollection'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188438"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Instrukcje: Utwórz i powiąż z ObservableCollection
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Instrukcje: Tworzenie i wiązanie z elementem ObservableCollection
 W tym przykładzie pokazano, jak utworzyć i powiązać z kolekcji, która pochodzi od klasy <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest klasą kolekcji, która zapewnia powiadomienia, gdy elementy Pobierz dodane lub usunięte.  
   
 ## <a name="example"></a>Przykład  
@@ -141,8 +141,9 @@ End Class
  Aby uzyskać więcej informacji, zobacz powiązania w sekcji kolekcje [Przegląd wiązanie danych](data-binding-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Sortowanie danych w widoku](how-to-sort-data-in-a-view.md)
 - [Filtrowanie danych w widoku](how-to-filter-data-in-a-view.md)
 - [Sortowanie i grupowanie danych przy użyciu widoku w XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

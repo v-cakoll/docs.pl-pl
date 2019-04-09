@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 74a8feba14b7e2186fb64729cb915e53132805d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200639"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.TrackBar> kontroli (czasami nazywane "suwaka") jest używany do przechodzenia między dużymi ilościami informacji lub wizualnie dostosowywania liczbowych ustawienie. <xref:System.Windows.Forms.TrackBar> Kontrolka ma dwie części: mówi, znany także jako suwaka i znaczników. Przycisku suwaka jest częścią, którą można dostosować. Jego pozycja odpowiada <xref:System.Windows.Forms.TrackBar.Value%2A> właściwości. Znaczniki są wskaźniki wizualne, które są rozmieszczone w regularnych odstępach czasu. Przenosi pasek śledzenia w przyrostach, które określają i być wyrównane w poziomie lub pionie. Pasek śledzenia może na przykład użyć, aby kontrolować częstotliwość lub myszy migania kursora dla systemu.  
@@ -24,5 +24,6 @@ Formularze Windows <xref:System.Windows.Forms.TrackBar> kontroli (czasami nazywa
  Są dwa inne ważne właściwości <xref:System.Windows.Forms.TrackBar.SmallChange%2A> i <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Wartość <xref:System.Windows.Forms.TrackBar.SmallChange%2A> właściwość jest liczba pozycji przycisku suwaka przenoszone w odpowiedzi na potrzeby naciśniętego klawisza lewo lub Strzałka w prawo. Wartość <xref:System.Windows.Forms.TrackBar.LargeChange%2A> właściwość jest liczba pozycji przycisku suwaka do przenoszenia w odpowiedzi na potrzeby naciśnięto klawisz PAGE UP lub PAGE DOWN, lub w odpowiedzi na myszy kliknie pasek śledzenia na każdej stronie przycisku suwaka.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar, kontrolka](trackbar-control-windows-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - value converters for XAML [XAML Services]
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
-ms.openlocfilehash: 1704a7a86e89685763da7bf49a67c1fe8373124a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200990"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>Typy konwerterów i rozszerzenia znaczników dla XAML
 Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających z systemów typu XAML i moduły zapisujące XAML można wygenerować składniki wykresu obiektu. Mimo że korzystają z niektórych właściwości, typy konwerterów i rozszerzenia znaczników są reprezentowane inaczej w strumień węzłów XAML. W tej dokumentacji zestawu, konwerterów typów, rozszerzenia znaczników i podobne konstrukcje są czasami nazywane zbiorczo konwertery wartości.  
@@ -66,8 +66,9 @@ Typy konwerterów i rozszerzenia znaczników są dwie techniki, korzystających 
  Podczas implementowania konwerter wartości, często wymagany jest dostęp do kontekstu, w której jest stosowany konwertera wartości. Ten kontekst jest określany jako kontekst usługi. Kontekst usługi może zawierać informacje, takie jak active kontekst schematu XAML, dostęp do system mapowania typu, który kontekst schematu XAML i modułu zapisywania obiektu XAML zapewniają i tak dalej. Aby uzyskać więcej informacji na temat konteksty usług dostępne dla konwertera wartości i sposobu uzyskiwania dostępu do usług, które mogą dostarczać kontekstu usługi zobacz [usługi kontekstów dostępne dla typów konwerterów i rozszerzeń znaczników](service-contexts-available-to-type-converters-and-markup-extensions.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
 - [Rozszerzenia znaczników dla przeglądu XAML](markup-extensions-for-xaml-overview.md)
-- [Typy konwerterów dla XAML — omówienie](type-converters-for-xaml-overview.md)
+- [Typy konwerterów dla XAML — Omówienie](type-converters-for-xaml-overview.md)
 - [Konteksty usług dostępne dla typów konwerterów i rozszerzeń znaczników](service-contexts-available-to-type-converters-and-markup-extensions.md)

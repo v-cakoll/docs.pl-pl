@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197844"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> wiersze, kolumny i nagłówki można zmienić rozmiar wyniku wiele różnych wystąpień. W poniższej tabeli przedstawiono te wystąpienia.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717911"
  Wyliczenia używane przez właściwości ustalania rozmiaru i metody mają podobne wartości do ustalania rozmiaru na podstawie zawartości. Te wartości można ograniczyć komórki, które są używane do obliczania preferowany rozmiar. Dla wszystkich rozmiarów wyliczenia wartości z nazwami, które odwołują się do komórek w kolumnie wyświetlane ograniczyć ich obliczeń do komórek w wyświetlanych wierszach. Wykluczanie wierszy jest przydatna, aby uniknąć spadek wydajności, podczas pracy z dużą liczbę wierszy. Można również ograniczyć obliczeń do wartości komórek w nagłówku lub zawierająca komórek.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -154,6 +155,6 @@ ms.locfileid: "57717911"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Tryb wypełniania kolumn w kontrolce DataGridView formularzy Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy systemu Windows](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

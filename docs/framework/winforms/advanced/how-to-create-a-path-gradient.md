@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186098"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Instrukcje: Tworzenie gradientu ścieżki
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasy pozwala dostosować sposób wypełnienia kształtu z stopniowo zmiana kolorów. Na przykład można określić jeden kolor środek ścieżka i innego koloru dla granicy ścieżki. Można również określić różne kolory dla każdego z kilku punktów wzdłuż granic ścieżki.  
@@ -111,4 +111,5 @@ ms.locfileid: "58126230"
  Powyższych przykładach są skonstruowane do użycia za pomocą interfejsu Windows Forms i wymagają one <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie pędzla gradientów do wypełniania kształtów](using-a-gradient-brush-to-fill-shapes.md)

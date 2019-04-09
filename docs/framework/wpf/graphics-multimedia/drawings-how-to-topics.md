@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: b812c78783b2d9ccf6c6e231d5e2a632ccb095f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197740"
 ---
 # <a name="drawings-how-to-topics"></a>Rysowanie Tematy porad
 Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Media.Drawing> obiektów, aby rysować kształty, obrazy i tekst.  
@@ -30,7 +30,8 @@ Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Media.Drawi
   [Używanie rysowania jako źródła obrazu](how-to-use-a-drawing-as-an-image-source.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Drawing>
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafika i multimedia](index.md)

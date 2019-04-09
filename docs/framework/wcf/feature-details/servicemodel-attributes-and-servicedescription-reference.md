@@ -2,12 +2,12 @@
 title: Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
-ms.openlocfilehash: 3b1b10f34e300d77943a93d180b5be9e4a3366c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195348"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
 *Drzewa opis* jest hierarchia typów (począwszy od <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> klasy) ze sobą opisują każdego aspektu usługi. Windows Communication Foundation (WCF) używa drzewa opis do tworzenia środowiska uruchomieniowego prawidłową usługę, do publikowania w sieci Web Services Description Language (WSDL), język definicji schematu XML (XSD) i asercji zasad (metadanymi) o usługę, której klienci mogą używać do Nawiązywanie połączenia i korzystać z niej, a także o generowaniu różnych kodem i konfiguracją pliku reprezentujących wartości drzewa opis.  
@@ -114,4 +114,5 @@ ms.locfileid: "54726630"
  Aby uzyskać więcej informacji na temat sposobu opis wartości drzewa są konwertowane na metadanych, zobacz [ServiceDescription odwołania i kodu WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Odwołania do elementu ServiceDescription i kodu WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], Windows Forms
 - event handlers [Windows Forms], about event handlers
 ms.assetid: 228112e1-1711-42ee-8ffa-ff3555bffe66
-ms.openlocfilehash: 6dbcffadfd484dc33db2fcd3ee3f680dcc0740e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05acbfaf427060d015c2445360a7d73ebe97d070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186085"
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Przegląd obsługi zdarzeń (formularze systemu Windows)
 Program obsługi zdarzeń jest metodą, która jest powiązana ze zdarzeniem. Gdy zdarzenie jest wywoływane, kod wewnątrz procedury obsługi zdarzeń jest wykonywany. Każdy program obsługi zdarzeń zawiera dwa parametry, które pozwalają na poprawnie obsłużyć zdarzenie. W poniższym przykładzie pokazano program obsługi zdarzeń dla <xref:System.Windows.Forms.Button> kontrolki <xref:System.Windows.Forms.Control.Click> zdarzeń.  
@@ -49,5 +49,6 @@ private:
  Umożliwia także tę samą procedurę obsługi zdarzeń do obsługi tego samego zdarzenia dla różnych kontrolkach. Na przykład, jeśli istnieje grupa <xref:System.Windows.Forms.RadioButton> kontrolek w formularzu, można utworzyć jedną procedurą obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzeń i mieć każdy formant <xref:System.Windows.Forms.Control.Click> zdarzenia powiązane z jedną procedurą obsługi zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Łączenie wielu zdarzeń jedną procedurą obsługi zdarzeń w formularzach Windows Forms](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](creating-event-handlers-in-windows-forms.md)
+
+- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](creating-event-handlers-in-windows-forms.md)
 - [Przegląd zdarzeń](events-overview-windows-forms.md)

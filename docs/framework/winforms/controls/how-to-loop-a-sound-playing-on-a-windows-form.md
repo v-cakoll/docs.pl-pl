@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli'
+title: 'Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188516"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Instrukcje: Odtwarzanie w formularzu Windows dźwięku w pętli
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows
 Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingButton_Click` programu obsługi zdarzeń uruchamia wszystkie obecnie odtwarzanie zatrzymuje dźwięku. Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.  
   
 ## <a name="example"></a>Przykład  
@@ -54,6 +54,7 @@ Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingB
  Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb może nie być plik źródłowy w języku Visual Basic. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Instrukcje: Odtwarzanie dźwięku za pomocą formularza Windows](how-to-play-a-sound-from-a-windows-form.md)
-- [SoundPlayer, klasa — omówienie](soundplayer-class-overview.md)
+- [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](how-to-play-a-sound-from-a-windows-form.md)
+- [Przegląd klasy SoundPlayer](soundplayer-class-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zarządzaj przepływem elementów zawartości za pomocą właściwości Inlines'
+title: 'Instrukcje: Zarządzanie przepływem elementów zawartości za pomocą właściwości Inlines'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: 2631d088d677c5edb1ae73a3cb40d15bf4beb71f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186072"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Instrukcje: Zarządzaj przepływem elementów zawartości za pomocą właściwości Inlines
+# <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>Instrukcje: Zarządzanie przepływem elementów zawartości za pomocą właściwości Inlines
 Przykłady te pokazują niektóre bardziej typowe operacje, które mogą być wykonywane na tekście przepływem elementów zawartości (i kontenery takie elementy, takie jak <xref:System.Windows.Controls.TextBlock>) za pośrednictwem **Inlines** właściwości. Ta właściwość jest używana do dodawania i usuwania elementów z <xref:System.Windows.Documents.InlineCollection>. Przepływ zawartości elementów tej funkcji **Inlines** właściwości obejmują:  
   
 -   <xref:System.Windows.Documents.Bold>  
@@ -65,10 +65,11 @@ Przykłady te pokazują niektóre bardziej typowe operacje, które mogą być wy
  [!code-vb[SpanSnippets#_SpanInlinesClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SpanSnippets/visualbasic/window1.xaml.vb#_spaninlinesclear)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>
-- [Przegląd dokumentu przepływu](flow-document-overview.md)
+- [Przegląd Dokument przepływu](flow-document-overview.md)
 - [Zarządzanie parametrem FlowDocument przez właściwość Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Zarządzanie kolumnami tabeli za pomocą właściwości Columns](how-to-manipulate-table-columns-through-the-columns-property.md)
 - [Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 930d56fcfe7cf0d2a128c2068e724b85a224b3fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185929"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem — Struktura
 Opis elementu do dodania do niestandardowych zrzutu w raportowaniu błędów.  
@@ -57,4 +57,5 @@ struct {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+
+- [Hosting — Struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

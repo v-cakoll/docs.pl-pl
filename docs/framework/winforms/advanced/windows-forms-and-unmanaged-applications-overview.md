@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195647"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Przegląd formularzy systemu Windows i niezarządzanych aplikacji
 Aplikacje Windows Forms i formanty może współpracować z niezarządzanych aplikacji za pomocą niektóre zastrzeżenia. Poniżej opisano scenariusze i konfiguracje obsługujące aplikacje i formanty Windows Forms oraz te, które nie obsługują.  
@@ -27,7 +27,7 @@ Aplikacje Windows Forms i formanty może współpracować z niezarządzanych apl
   
  W poniższej tabeli przedstawiono dostępne ActiveX hostingu obsługę kontrolek formularzy Windows Forms.  
   
-|Wersja Windows Forms|Obsługa|  
+|Wersja Windows Forms|Pomoc techniczna|  
 |---------------------------|-------------|  
 |.NET framework w wersji 1.0|Internet Explorer 5.01 i nowsze wersje|  
 |.NET framework w wersji 1.1 lub nowszy|Internet Explorer 5.01 i nowsze wersje<br /><br /> Microsoft Foundation Classes (MFC) 7.0 lub nowszy|  
@@ -56,13 +56,14 @@ Aplikacje Windows Forms i formanty może współpracować z niezarządzanych apl
 -   Wyświetlania każdego formularza Windows w nowym wątku. Aby uzyskać więcej informacji, zobacz [jak: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Formularze Windows Forms i niezarządzane aplikacje](windows-forms-and-unmanaged-applications.md)
-- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
+
+- [Formularze systemu Windows i niezarządzane aplikacje](windows-forms-and-unmanaged-applications.md)
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Przykłady współdziałania COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Udostępnianie składników .NET Framework modelowi COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Pakowanie zestawu dla modelu COM](../../interop/packaging-an-assembly-for-com.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](../../interop/registering-assemblies-with-com.md)
-- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania formularza Windows, za pomocą ShowDialog — metoda](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Instrukcje: Obsługa międzyoperacyjności w modelu COM za pomocą wyświetlania formularzy systemu Windows przy użyciu metody ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza systemu Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

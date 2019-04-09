@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określ niestandardowe położenie okna podręcznego'
+title: 'Instrukcje: Określanie niestandardowego położenia okna podręcznego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
-ms.openlocfilehash: 2ffba3d1a0fee236f803dd5877d541084192418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200587"
 ---
-# <a name="how-to-specify-a-custom-popup-position"></a>Instrukcje: Określ niestandardowe położenie okna podręcznego
+# <a name="how-to-specify-a-custom-popup-position"></a>Instrukcje: Określanie niestandardowego położenia okna podręcznego
 W tym przykładzie pokazano, jak określić niestandardowe położenie <xref:System.Windows.Controls.Primitives.Popup> decyduje o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
   
 ## <a name="example"></a>Przykład  
@@ -33,6 +33,7 @@ W tym przykładzie pokazano, jak określić niestandardowe położenie <xref:Sys
  Aby uzyskać pełny przykład, zobacz [przykładowe położenia okna podręcznego](https://go.microsoft.com/fwlink/?LinkID=160032).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [Okno podręczne — omówienie](popup-overview.md)
-- [Tematy z instrukcjami](popup-how-to-topics.md)
+- [Przegląd Okna podręczne](popup-overview.md)
+- [— Tematy porad](popup-how-to-topics.md)

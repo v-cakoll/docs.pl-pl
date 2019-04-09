@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198572"
 ---
 # <a name="data-member-order"></a>Kolejność elementów członkowskich danych
 W niektórych aplikacjach warto wiedzieć, kolejność, w którym są wysyłane dane z różnych składowych danych, lub powinien być otrzymane (na przykład kolejność, w którym dane są wyświetlane w serializacji XML). Czasami może być konieczna zmiana tej kolejności. W tym temacie opisano reguły sortowania.  
@@ -63,6 +63,7 @@ W niektórych aplikacjach warto wiedzieć, kolejność, w którym są wysyłane 
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

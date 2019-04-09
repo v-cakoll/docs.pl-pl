@@ -2,12 +2,12 @@
 title: <security> z <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 5316060d4122a443dd0223ce1ee9cdd39efac0b8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 75e3910473a353c2ef110106c34b4e92c018b51c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196128"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<Zabezpieczenia > z \<wsFederationHttpBinding >
 Definiuje ustawienia zabezpieczeń [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -108,14 +108,15 @@ Definiuje ustawienia zabezpieczeń [ \<wsFederationHttpBinding >](../../../../..
 |[\<Powiązanie >](../../../../../docs/framework/misc/binding.md)|Definiuje wszystkie możliwości wiązania [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.WSFederationHttpSecurity>
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Wybieranie typu poświadczeń](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

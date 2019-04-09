@@ -1,15 +1,15 @@
 ---
-title: DataSets
+title: Elementy DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198000"
 ---
-# <a name="diffgrams"></a>DataSets
+# <a name="diffgrams"></a>Elementy DiffGram
 Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna wersja elementów danych. <xref:System.Data.DataSet> Używa formatu w formacie DiffGram do ładowania i utrzymują się jego zawartość i do wykonywania serializacji jego zawartość dla transportu połączenia sieciowego. Gdy <xref:System.Data.DataSet> są zapisywane jako element w formacie DiffGram, wypełnia ją w formacie DiffGram wszystkie niezbędne informacje dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, w tym wartości kolumn z obu **oryginalnego** i **bieżącego** wersji wierszy, informacje o błędzie wiersza i kolejności wierszy.  
   
  Jeśli przesyłanie i pobieranie <xref:System.Data.DataSet> z usługi sieci Web XML niejawnie jest używany format w formacie DiffGram. Ponadto podczas ładowania zawartości <xref:System.Data.DataSet> z XML przy użyciu **ReadXml** metodę, lub podczas zapisywania zawartości <xref:System.Data.DataSet> XML przy użyciu **WriteXml** metody, można określić Czy można odczytać lub zapisywane jako element w formacie DiffGram zawartości. Aby uzyskać więcej informacji, zobacz [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) i [zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
@@ -73,7 +73,7 @@ Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna 
  **\<diffgr: przed >**  
  Ten blok format w formacie DiffGram zawiera oryginalną wersję wiersza. Elementy w tym bloku są dopasowywane do elementów w ***DataInstance*** zablokowane, używając **diffgr:id** adnotacji.  
   
- **\<diffgr:errors >**  
+ **\<diffgr:errors>**  
  Ten blok format w formacie DiffGram zawiera informacje o błędzie dla danego wiersza w ***DataInstance*** bloku. Elementy w tym bloku są dopasowywane do elementów w ***DataInstance*** zablokowane, używając **diffgr:id** adnotacji.  
   
 ## <a name="diffgram-annotations"></a>Adnotacje w formacie DiffGram  
@@ -83,18 +83,18 @@ Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna 
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
-|**id**|Używany do pary elementów w  **\<diffgr: przed >** i  **\<diffgr:errors >** bloków do elementów w **\<** ***DataInstance*** **>** bloku. Wartości z **diffgr:id** adnotacji znajdują się w formularzu *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Customers diffgr:id="Customers1">`.|  
+|**identyfikator**|Używany do pary elementów w  **\<diffgr: przed >** i  **\<diffgr:errors >** bloków do elementów w **\<** ***DataInstance*** **>** bloku. Wartości z **diffgr:id** adnotacji znajdują się w formularzu *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Identyfikuje element, który z **\<** ***DataInstance*** **>** bloku jest elementem nadrzędnym bieżącego elementu. Wartości z **diffgr:parentId** adnotacji znajdują się w formularzu *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Orders diffgr:parentId="Customers1">`.|  
-|**hasChanges**|Identyfikuje wiersz w **\<** ***DataInstance*** **>** block zmodyfikowana. **Haschanges —** adnotacji może mieć jedną z dwóch wartości:<br /><br /> **inserted**<br /> Identyfikuje **dodano** wiersza.<br /><br /> **Zmodyfikowane**<br /> Identyfikuje **zmodyfikowane** wiersza, który zawiera **oryginalnego** wersji wierszy w  **\<diffgr: przed >** bloku. Należy pamiętać, że **usunięte** wiersze będą mieć **oryginalnego** wersji wierszy w  **\<diffgr: przed >** blok, ale nie będzie można żaden element adnotacjami w **\<** ***DataInstance*** **>** bloku.|  
+|**hasChanges**|Identyfikuje wiersz w **\<** ***DataInstance*** **>** block zmodyfikowana. **Haschanges —** adnotacji może mieć jedną z dwóch wartości:<br /><br /> **Wstawiono**<br /> Identyfikuje **dodano** wiersza.<br /><br /> **Zmodyfikowane**<br /> Identyfikuje **zmodyfikowane** wiersza, który zawiera **oryginalnego** wersji wierszy w  **\<diffgr: przed >** bloku. Należy pamiętać, że **usunięte** wiersze będą mieć **oryginalnego** wersji wierszy w  **\<diffgr: przed >** blok, ale nie będzie można żaden element adnotacjami w **\<** ***DataInstance*** **>** bloku.|  
 |**hasErrors**|Identyfikuje wiersz w **\<** ***DataInstance*** **>** blokowania z **RowError**. Błąd elementu jest umieszczany w  **\<diffgr:errors >** bloku.|  
-|**Error**|Zawiera tekst **RowError** dla określonego elementu w  **\<diffgr:errors >** bloku.|  
+|**Błąd**|Zawiera tekst **RowError** dla określonego elementu w  **\<diffgr:errors >** bloku.|  
   
  <xref:System.Data.DataSet> Obejmuje dodatkowe adnotacje podczas odczytu lub zapisu jego zawartość jako element w formacie DiffGram. W poniższej tabeli opisano te dodatkowe adnotacje, które są zdefiniowane w przestrzeni nazw **urn: schemas-microsoft-com: XML-msdata**.  
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
 |**RowOrder**|Zachowuje kolejności wierszy oryginalnych danych i identyfikuje indeks wiersza, w szczególności <xref:System.Data.DataTable>.|  
-|**Ukryte**|Identyfikuje kolumny jako posiadające **ColumnMapping** właściwością **MappingType.Hidden**. Ten atrybut jest zapisywany w formacie **msdata: ukryte** *[NazwaKolumny]*= "*wartość*". Na przykład: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Należy pamiętać, że ukryte kolumny są zapisywane tylko jako atrybut format DiffGram jeśli zawierają one dane. W przeciwnym razie są ignorowane.|  
+|**Hidden**|Identyfikuje kolumny jako posiadające **ColumnMapping** właściwością **MappingType.Hidden**. Ten atrybut jest zapisywany w formacie **msdata: ukryte** *[NazwaKolumny]*= "*wartość*". Na przykład: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`.<br /><br /> Należy pamiętać, że ukryte kolumny są zapisywane tylko jako atrybut format DiffGram jeśli zawierają one dane. W przeciwnym razie są ignorowane.|  
   
 ## <a name="sample-diffgram"></a>Przykładowy format DiffGram  
  Poniżej przedstawiono przykład formatu w formacie DiffGram. Ten przykład przedstawia wynik aktualizacji do wiersza w tabeli, aby zmiany zostały zatwierdzone. Wiersz z CustomerID "ALFKI" ma został zmodyfikowany, ale nie zaktualizowano. Co w efekcie występuje **bieżącego** wiersz z **diffgr:id** z "Customers1" w **\<** ***DataInstance*** **>** bloku, a **oryginalnego** wiersz z **diffgr:id** z "Customers1" w  **\<diffgr: przed >** bloku. Zawiera wiersz z CustomerID "ANATR" **RowError**, dlatego jest oznaczona za pomocą `diffgr:hasErrors="true"` i powiązane elementu w  **\<diffgr:errors >** bloku.  
@@ -132,6 +132,7 @@ Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna 
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)

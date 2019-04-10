@@ -2,12 +2,12 @@
 title: Publikowanie usług WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441440"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299725"
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 
@@ -35,13 +35,13 @@ Usługi mogą być publikowane w następujących lokalizacjach docelowych.
 
 Wykonaj poniższe kroki, aby wdrożyć implementacji usługi:
 
-1.  Otwórz program Visual Studio z podwyższonym poziomem uprawnień (kliknij prawym przyciskiem myszy plik wykonywalny, a następnie wybierz **Uruchom jako administrator** aby go otworzyć).  Jeśli używasz usług IIS 7.0 lub nowszym, upewnij się, że zainstalowano składnik "I usług IIS 6 konfiguracji zgodność z metabazą" przy użyciu "Windows Włącz lub wyłącz funkcje" w Panelu sterowania.
+1. Otwórz program Visual Studio z podwyższonym poziomem uprawnień (kliknij prawym przyciskiem myszy plik wykonywalny, a następnie wybierz **Uruchom jako administrator** aby go otworzyć).  Jeśli używasz usług IIS 7.0 lub nowszym, upewnij się, że zainstalowano składnik "I usług IIS 6 konfiguracji zgodność z metabazą" przy użyciu "Windows Włącz lub wyłącz funkcje" w Panelu sterowania.
 
-2.  Otwórz projekt usługi, wybierz opcję **kompilacji** > **Publikuj \<Nazwa projektu >** z menu głównego, lub kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań**i kliknij przycisk **Publikuj**.
+2. Otwórz projekt usługi, wybierz opcję **kompilacji** > **Publikuj \<Nazwa projektu >** z menu głównego, lub kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań**i kliknij przycisk **Publikuj**.
 
-3.  **Publikuj** zostanie wyświetlone okno. Kliknij przycisk **...** . przycisk, aby określić lokalizację docelową, wdrożona usługa. Możesz wybrać, aby wdrożyć aplikację do lokalnych usług IIS, System plików lub witryny FTP. Jeśli wdrożenie aplikacji do lokalnych usług IIS, można wybrać witryny sieci Web i utworzyć aplikację sieci web, znajdujący się w nim, klikając **Tworzenie nowej aplikacji sieci Web** ikonę w prawym górnym rogu.
+3. **Publikuj** zostanie wyświetlone okno. Kliknij przycisk **...** . przycisk, aby określić lokalizację docelową, wdrożona usługa. Możesz wybrać, aby wdrożyć aplikację do lokalnych usług IIS, System plików lub witryny FTP. Jeśli wdrożenie aplikacji do lokalnych usług IIS, można wybrać witryny sieci Web i utworzyć aplikację sieci web, znajdujący się w nim, klikając **Tworzenie nowej aplikacji sieci Web** ikonę w prawym górnym rogu.
 
-4.  Po kliknięciu **Publikuj** w głównym oknie programu Visual Studio wdroży aplikację określona lokalizacja docelowa i kopiuje pliki Web.config, .svc i zestaw do katalogu docelowego. . Nazwa .svc będzie "ProjectName.ServiceName.svc". Po pomyślnym opublikowaniu usługi, możesz znaleźć popularne łącze w oknie programu Visual Studio danych wyjściowych podobny do "łączenie z `http://localhost/WebApplicationFolderName...`". Można nacisnąć klawisz CTRL i kliknij link, aby otworzyć stronę przeglądarki w programie Visual Studio, aby wyświetlić strukturę katalogów usługi.
+4. Po kliknięciu **Publikuj** w głównym oknie programu Visual Studio wdroży aplikację określona lokalizacja docelowa i kopiuje pliki Web.config, .svc i zestaw do katalogu docelowego. . Nazwa .svc będzie "ProjectName.ServiceName.svc". Po pomyślnym opublikowaniu usługi, możesz znaleźć popularne łącze w oknie programu Visual Studio danych wyjściowych podobny do "łączenie z `http://localhost/WebApplicationFolderName...`". Można nacisnąć klawisz CTRL i kliknij link, aby otworzyć stronę przeglądarki w programie Visual Studio, aby wyświetlić strukturę katalogów usługi.
 
      Jeśli nie możesz przejść do witryny, może być, ponieważ katalog przeglądarki nie jest włączone w usługach IIS. Postępuj zgodnie z poradami w sekcji "Rzeczy można spróbować", aby ją włączyć. Alternatywnie, można bezpośrednio wpisać `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` Aby wyświetlić stronę usługi.
 

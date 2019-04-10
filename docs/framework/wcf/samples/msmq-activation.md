@@ -2,12 +2,12 @@
 title: Aktywacja usługi MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162831"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295682"
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 Niniejszy przykład pokazuje, jak hostować aplikacje w Windows Process Activation Service (WAS), które są odczytywane z kolejki komunikatów. W tym przykładzie użyto `netMsmqBinding` i opiera się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji hostowanej w sieci Web w języku klienta i jest samodzielnie hostowana w konsoli, aby obserwować stan zamówienia zakupu przesłane dane wyjściowe.  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jest zainstalowany, ponieważ jest on wymagany do aktywacji WAS.  
+1. Upewnij się, że [!INCLUDE[iisver](../../../../includes/iisver-md.md)] jest zainstalowany, ponieważ jest on wymagany do aktywacji WAS.  
   
-2.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki Aktywacja bez HTTP programu WCF:  
+2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md). Ponadto należy zainstalować składniki Aktywacja bez HTTP programu WCF:  
   
     1.  Z **Start** menu, wybierz **Panelu sterowania**.  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  Rozwiń **Microsoft .NET Framework 3.0** węzła i wyboru **Aktywacja bez HTTP programu Windows Communication Foundation** funkcji.  
   
-3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Uruchom klienta, wykonując client.exe z okna poleceń. To tworzy kolejkę i wysyła komunikat do niego. Pozostaw kliencie z uruchomioną Aby sprawdzić działanie usługi, odczytywanie wiadomości  
+4. Uruchom klienta, wykonując client.exe z okna poleceń. To tworzy kolejkę i wysyła komunikat do niego. Pozostaw kliencie z uruchomioną Aby sprawdzić działanie usługi, odczytywanie wiadomości  
   
-5.  Domyślnie usługę Aktywacja usługi MSMQ jest uruchamiana jako usługa sieciowa. W związku z tym, kolejki, która jest używana do aktywowania aplikacji musi mieć odbieranie i Wybieranie uprawnień dla usługi sieci. To można dodać za pomocą programu MMC usługi kolejkowania komunikatów:  
+5. Domyślnie usługę Aktywacja usługi MSMQ jest uruchamiana jako usługa sieciowa. W związku z tym, kolejki, która jest używana do aktywowania aplikacji musi mieć odbieranie i Wybieranie uprawnień dla usługi sieci. To można dodać za pomocą programu MMC usługi kolejkowania komunikatów:  
   
     1.  Z **Start** menu, kliknij przycisk **Uruchom**, a następnie wpisz `Compmgmt.msc` i naciśnij klawisz ENTER.  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  Na **zabezpieczeń** kliknij pozycję **Dodaj** zapewniają wgląd i otrzymać uprawnienie do usługi sieciowej.  
   
-6.  Skonfiguruj Windows Process Activation Service (WAS) do obsługi aktywacji usługi MSMQ.  
+6. Skonfiguruj Windows Process Activation Service (WAS) do obsługi aktywacji usługi MSMQ.  
   
      Dla wygody poniższe kroki są implementowane w pliku wsadowym, o nazwie AddMsmqSiteBinding.cmd znajduje się w katalogu próbki.  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          To polecenie włącza aplikację /servicemodelsamples można uzyskać za pomocą `http://localhost/servicemodelsamples` i `net.msmq://localhost/servicemodelsamples`.
   
-7.  Jeśli użytkownik nie zostało zrobione wcześniej, upewnij się, że włączono usługę Aktywacja usługi MSMQ. Z **Start** menu, kliknij przycisk **Uruchom**i wpisz `Services.msc`. Wyszukaj listę usług dla **Net.Msmq nasłuchujący**. Kliknij prawym przyciskiem myszy i wybierz **właściwości**. Ustaw **uruchamiana** do **automatyczne**, kliknij przycisk **Zastosuj** i kliknij przycisk **Start** przycisku. Ten krok tylko musi odbywać się jeden raz przed pierwsze użycie usługi Net.Msmq nasłuchujący.  
+7. Jeśli użytkownik nie zostało zrobione wcześniej, upewnij się, że włączono usługę Aktywacja usługi MSMQ. Z **Start** menu, kliknij przycisk **Uruchom**i wpisz `Services.msc`. Wyszukaj listę usług dla **Net.Msmq nasłuchujący**. Kliknij prawym przyciskiem myszy i wybierz **właściwości**. Ustaw **uruchamiana** do **automatyczne**, kliknij przycisk **Zastosuj** i kliknij przycisk **Start** przycisku. Ten krok tylko musi odbywać się jeden raz przed pierwsze użycie usługi Net.Msmq nasłuchujący.  
   
-8.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Ponadto można zmienić kodu na komputerze klienckim, który przesyła zamówienia zakupu w celu odzwierciedlenia nazwy komputera w identyfikatorze URI kolejki podczas przesyłania zamówienia zakupu. Użyj następującego kodu:  
+8. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Ponadto można zmienić kodu na komputerze klienckim, który przesyła zamówienia zakupu w celu odzwierciedlenia nazwy komputera w identyfikatorze URI kolejki podczas przesyłania zamówienia zakupu. Użyj następującego kodu:  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej  
   
-1.  Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu przez ustawienie poziomu uwierzytelniania w trybie i ochrony None, jak pokazano w poniższym Przykładowa konfiguracja.  
+1. Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu przez ustawienie poziomu uwierzytelniania w trybie i ochrony None, jak pokazano w poniższym Przykładowa konfiguracja.  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  Przed uruchomieniem próbki, należy zmienić konfigurację serwera i klienta.  
+2. Przed uruchomieniem próbki, należy zmienić konfigurację serwera i klienta.  
   
     > [!NOTE]
     >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel` i `Message` security `None`.  
   
-3.  Aby włączyć aktywacji na komputerze, który został przyłączony do grupy roboczej, zarówno usługa aktywacji, jak i proces roboczy musi być uruchamiane z określonego konta użytkownika (musi być takie same dla obu) i kolejki musi mieć listy kontroli dostępu dla konta określonego użytkownika.  
+3. Aby włączyć aktywacji na komputerze, który został przyłączony do grupy roboczej, zarówno usługa aktywacji, jak i proces roboczy musi być uruchamiane z określonego konta użytkownika (musi być takie same dla obu) i kolejki musi mieć listy kontroli dostępu dla konta określonego użytkownika.  
   
      Aby zmienić tożsamość, która działa procesu roboczego:  
   
@@ -342,9 +342,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  Kliknij prawym przyciskiem myszy **karty Net.MsmqListener**i wybierz polecenie **właściwości**.  
   
-4.  Zmień konto w **logowania** kartę.  
+4. Zmień konto w **logowania** kartę.  
   
-5.  W grupie roboczej należy również uruchomić usługę przy użyciu tokenu bez ograniczeń. Aby to zrobić, uruchom następujące polecenie w oknie polecenia:  
+5. W grupie roboczej należy również uruchomić usługę przy użyciu tokenu bez ograniczeń. Aby to zrobić, uruchom następujące polecenie w oknie polecenia:  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  

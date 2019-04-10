@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300986"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy systemu Windows
 Pole hasła jest polem tekstowym formularzy Windows, który wyświetla symboli zastępczych, gdy użytkownik wpisze ciąg.  
   
 ### <a name="to-create-a-password-text-box"></a>Aby utworzyć pole tekstowe hasła  
   
-1.  Ustaw <xref:System.Windows.Forms.TextBox.PasswordChar%2A> właściwość <xref:System.Windows.Forms.TextBox> formant do określonego znaku.  
+1. Ustaw <xref:System.Windows.Forms.TextBox.PasswordChar%2A> właściwość <xref:System.Windows.Forms.TextBox> formant do określonego znaku.  
   
      <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Właściwość określa znak wyświetlane w polu tekstowym. Na przykład, jeśli chcesz, aby były wyświetlane w polu hasło gwiazdki, określić * dla <xref:System.Windows.Forms.TextBox.PasswordChar%2A> właściwości w oknie dialogowym właściwości. Następnie niezależnie od tego, jakie znak użytkownik wpisze w polu tekstowym, gwiazdka jest wyświetlana.  
   
-2.  (Opcjonalnie) Ustaw <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> właściwości. Właściwość określa, ile znaków można wpisać w polu tekstowym. Jeśli zostanie przekroczona maksymalna długość, system emituje sygnał dźwiękowy i pole tekstowe nie akceptuje żadnych więcej znaków. Należy pamiętać, że nie możesz to zrobić, ponieważ maksymalna długość hasła może być użytkowania, aby przed hakerami, którzy próby odgadnięcia hasła.  
+2. (Opcjonalnie) Ustaw <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> właściwości. Właściwość określa, ile znaków można wpisać w polu tekstowym. Jeśli zostanie przekroczona maksymalna długość, system emituje sygnał dźwiękowy i pole tekstowe nie akceptuje żadnych więcej znaków. Należy pamiętać, że nie możesz to zrobić, ponieważ maksymalna długość hasła może być użytkowania, aby przed hakerami, którzy próby odgadnięcia hasła.  
   
      W poniższym przykładzie kodu pokazano, jak zainicjować pola tekstowego, które będzie akceptować ciągu maksymalnie 14 znaków i wyświetlić gwiazdki zamiast ciągu. `InitializeMyControl` Procedury nie zostanie wykonany automatycznie; musi zostać wywołana.  
   

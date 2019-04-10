@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303456"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Instrukcje: Określanie powiązań usługi w kodzie
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest zdefiniowana w kodzie, w której jest określony, że należy używać usługa programu <xref:System.ServiceModel.BasicHttpBinding> klasy.  
@@ -21,29 +21,29 @@ W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkula
   
 ### <a name="to-specify-in-code-to-use-the-basichttpbinding-for-the-service"></a>Aby określić w kodzie, aby użyć BasicHttpBinding usługi  
   
-1.  Definiowanie kontraktu usługi dla typu usługi.  
+1. Definiowanie kontraktu usługi dla typu usługi.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_CodeServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#1)]  
   
-2.  Implementowanie kontraktu usługi, w klasie usługi.  
+2. Implementowanie kontraktu usługi, w klasie usługi.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_CodeServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#2)]  
   
-3.  W aplikacji macierzystej Utwórz adres podstawowy dla usługi i powiązania w celu użycia z usługą.  
+3. W aplikacji macierzystej Utwórz adres podstawowy dla usługi i powiązania w celu użycia z usługą.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#3)]
      [!code-vb[C_HowTo_CodeServiceBinding#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#3)]  
   
-4.  Utwórz hosta usługi, Dodaj punkt końcowy, a następnie otwórz hosta.  
+4. Utwórz hosta usługi, Dodaj punkt końcowy, a następnie otwórz hosta.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#4)]
      [!code-vb[C_HowTo_CodeServiceBinding#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#4)]  
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Aby zmodyfikować domyślne wartości właściwości powiązania  
   
-1.  Aby zmodyfikować jedną z domyślnych wartości właściwości z <xref:System.ServiceModel.BasicHttpBinding> klasy, ustaw wartość właściwości w powiązaniu na nową wartość przed utworzeniem hosta. Na przykład aby zmienić domyślne otwierających i zamykających wartości limitu czasu wynoszącym 1 minutę 2 minuty, należy użyć.  
+1. Aby zmodyfikować jedną z domyślnych wartości właściwości z <xref:System.ServiceModel.BasicHttpBinding> klasy, ustaw wartość właściwości w powiązaniu na nową wartość przed utworzeniem hosta. Na przykład aby zmienić domyślne otwierających i zamykających wartości limitu czasu wynoszącym 1 minutę 2 minuty, należy użyć.  
   
      [!code-csharp[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_codeservicebinding/cs/source.cs#5)]
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295799"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Przewodnik: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows
 Jedną z najbardziej typowe scenariusze użycia <xref:System.Windows.Forms.DataGridView> formant jest *wzorzec/szczegół* formularza, w którym jest wyświetlana relacji nadrzędny/podrzędny między dwiema tabelami bazy danych. Wybieranie wierszy w tabeli głównej powoduje, że tabela szczegóły aktualizacji za pomocą odpowiednich danych podrzędnych.  
@@ -33,14 +33,14 @@ Jedną z najbardziej typowe scenariusze użycia <xref:System.Windows.Forms.DataG
   
 #### <a name="to-create-a-masterdetail-form"></a>Aby utworzyć formularza wzorzec/szczegół  
   
-1.  Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera dwa <xref:System.Windows.Forms.DataGridView> kontrolek i dwóch <xref:System.Windows.Forms.BindingSource> składników. Poniższy kod zawiera inicjowanie podstawowej postaci oraz `Main` metody. Tworzenie formularza za pomocą projektanta programu Visual Studio, możesz użyć projektanta wygenerowanego kodu, zamiast tego kodu, ale należy używać nazw wyświetlanych w deklaracjach zmiennych w tym miejscu.  
+1. Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera dwa <xref:System.Windows.Forms.DataGridView> kontrolek i dwóch <xref:System.Windows.Forms.BindingSource> składników. Poniższy kod zawiera inicjowanie podstawowej postaci oraz `Main` metody. Tworzenie formularza za pomocą projektanta programu Visual Studio, możesz użyć projektanta wygenerowanego kodu, zamiast tego kodu, ale należy używać nazw wyświetlanych w deklaracjach zmiennych w tym miejscu.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  W definicji klasy formularza do obsługi szczegółowych informacji o połączenie z bazą danych, należy zaimplementować metodę. W tym przykładzie użyto `GetData` metody, która wypełnia <xref:System.Data.DataSet> obiektów, dodaje <xref:System.Data.DataRelation> obiekt do zestawu danych, a następnie tworzy powiązania <xref:System.Windows.Forms.BindingSource> składników. Pamiętaj ustawić `connectionString` zmiennej na wartość, która jest odpowiednia dla bazy danych.  
+2. W definicji klasy formularza do obsługi szczegółowych informacji o połączenie z bazą danych, należy zaimplementować metodę. W tym przykładzie użyto `GetData` metody, która wypełnia <xref:System.Data.DataSet> obiektów, dodaje <xref:System.Data.DataRelation> obiekt do zestawu danych, a następnie tworzy powiązania <xref:System.Windows.Forms.BindingSource> składników. Pamiętaj ustawić `connectionString` zmiennej na wartość, która jest odpowiednia dla bazy danych.  
   
     > [!IMPORTANT]
     >  Przechowywanie poufnych informacji, takich jak hasła, w ciągu połączenia mogą wpływać na bezpieczeństwo aplikacji. Korzystanie z uwierzytelniania systemu Windows (znanego również jako zabezpieczenia zintegrowane) jest bezpieczniejszym sposobem na kontrolowanie dostępu do bazy danych. Aby uzyskać więcej informacji, zobacz [ochrony informacji o połączeniu](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ Jedną z najbardziej typowe scenariusze użycia <xref:System.Windows.Forms.DataG
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Implementowanie obsługi dla formularza użytkownika <xref:System.Windows.Forms.Form.Load> zdarzeń, która jest powiązywana <xref:System.Windows.Forms.DataGridView> mające na celu <xref:System.Windows.Forms.BindingSource> składników i wywołania `GetData` metody. Poniższy przykład zawiera kod, który zmienia rozmiar <xref:System.Windows.Forms.DataGridView> kolumny, aby dopasować wyświetlanych danych.  
+3. Implementowanie obsługi dla formularza użytkownika <xref:System.Windows.Forms.Form.Load> zdarzeń, która jest powiązywana <xref:System.Windows.Forms.DataGridView> mające na celu <xref:System.Windows.Forms.BindingSource> składników i wywołania `GetData` metody. Poniższy przykład zawiera kod, który zmienia rozmiar <xref:System.Windows.Forms.DataGridView> kolumny, aby dopasować wyświetlanych danych.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

@@ -2,12 +2,12 @@
 title: Obsługa błędów
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300284"
 ---
 # <a name="error-handling"></a>Obsługa błędów
 ## <a name="error-handling-in-windows-communication-foundation"></a>Obsługa błędów w programie Windows Communication Foundation  
@@ -34,15 +34,15 @@ ms.locfileid: "59136438"
   
  Za pomocą IErrorHandler można jawnie kontrolować zachowanie aplikacji, gdy wyjątek jest zgłaszany. Użytkownik może:  
   
-1.  Zdecyduj, czy chce wysłać błędów do klienta  
+1. Zdecyduj, czy chce wysłać błędów do klienta  
   
-2.  Zamień wyjątek po awarii  
+2. Zamień wyjątek po awarii  
   
-3.  Zamień na inną awarię usterki  
+3. Zamień na inną awarię usterki  
   
-4.  Wykonać rejestrowania i śledzenia  
+4. Wykonać rejestrowania i śledzenia  
   
-5.  Wykonaj innych działania niestandardowe  
+5. Wykonaj innych działania niestandardowe  
   
  Jeden można zainstalować obsługi błędów niestandardowych, dodając ją do właściwości ErrorHandlers dyspozytorów kanału dla usługi.  Może mieć więcej niż jedną procedurę obsługi błędów i są one wywoływane w kolejności, w której są dodane do tej kolekcji.  
   

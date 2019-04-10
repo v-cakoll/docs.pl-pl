@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie i uruchamianie długotrwałego uruchamiania przepływu pracy'
+title: 'Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: cbb00797944f63ab695c7af87ac02b49e0ad15fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721167"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320055"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>Instrukcje: Tworzenie i uruchamianie długotrwałego uruchamiania przepływu pracy
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy
 Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w środowisku uruchomieniowym zostaną zachowane, a następnie zwolnij bezczynności przepływy pracy z bazą danych. Kroki opisane w [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące przepływu pracy hostingu, za pomocą aplikacji konsoli. Przykłady zostały przedstawione począwszy od przepływów pracy, przepływ pracy cyklu życia obsługi i wznawianie zakładek. W celu przedstawienia skutecznie trwałość przepływu pracy, wymagane jest bardziej złożone hosta przepływu pracy, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok, w tym samouczku przedstawiono sposób tworzenia hosta formularzy Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, trwałość przepływu pracy i stanowi podstawę dla zaawansowanych funkcji, takich jak śledzenie i przechowywania wersji, które są przedstawione w kolejnych krokach samouczka.  
   
 > [!NOTE]
@@ -45,12 +45,12 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Aby utworzyć bazę danych stanów trwałych  
   
-1.  Otwórz program SQL Server Management Studio i połącz się z serwera lokalnego, na przykład **. \SQLEXPRESS**. Kliknij prawym przyciskiem myszy **baz danych** węzła na serwerze lokalnym, a następnie wybierz **nową bazę danych**. Nadaj nazwę nowej bazy danych **WF45GettingStartedTutorial**, Zaakceptuj pozostałe wartości i wybierz **OK**.  
+1. Otwórz program SQL Server Management Studio i połącz się z serwera lokalnego, na przykład **. \SQLEXPRESS**. Kliknij prawym przyciskiem myszy **baz danych** węzła na serwerze lokalnym, a następnie wybierz **nową bazę danych**. Nadaj nazwę nowej bazy danych **WF45GettingStartedTutorial**, Zaakceptuj pozostałe wartości i wybierz **OK**.  
   
     > [!NOTE]
     >  Upewnij się, że masz **Create Database** uprawnień na serwerze lokalnym przed utworzeniem bazy danych.  
   
-2.  Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do następującego folderu: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do następującego folderu: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
   
      Wybierz następujące dwa pliki, a następnie kliknij przycisk **Otwórz**.  
   
@@ -58,31 +58,31 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
     -   SqlWorkflowInstanceStoreSchema.sql  
   
-3.  Wybierz **SqlWorkflowInstanceStoreSchema.sql** z **okna** menu. Upewnij się, że **WF45GettingStartedTutorial** wybrano **baz danych dostępności** listy rozwijanej i wybierz polecenie **Execute** z **zapytania**menu.  
+3. Wybierz **SqlWorkflowInstanceStoreSchema.sql** z **okna** menu. Upewnij się, że **WF45GettingStartedTutorial** wybrano **baz danych dostępności** listy rozwijanej i wybierz polecenie **Execute** z **zapytania**menu.  
   
-4.  Wybierz **SqlWorkflowInstanceStoreLogic.sql** z **okna** menu. Upewnij się, że **WF45GettingStartedTutorial** wybrano **baz danych dostępności** listy rozwijanej i wybierz polecenie **Execute** z **zapytania**menu.  
+4. Wybierz **SqlWorkflowInstanceStoreLogic.sql** z **okna** menu. Upewnij się, że **WF45GettingStartedTutorial** wybrano **baz danych dostępności** listy rozwijanej i wybierz polecenie **Execute** z **zapytania**menu.  
   
     > [!WARNING]
     >  Należy wykonać dwa poprzednie kroki w odpowiedniej kolejności. Jeśli zapytania są wykonywane poza kolejnością, wystąpią błędy, a baza danych stanów trwałych nie jest poprawnie skonfigurowany.  
   
 ### <a name="BKMK_AddReference"></a> Można dodać odwołania do zestawów DurableInstancing  
   
-1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie**.  
+1. Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie**.  
   
-2.  Wybierz **zestawy** z **Dodaj odwołanie** listy, a typ `DurableInstancing` do **wyszukiwania zestawów** pole. Filtry zestawów i ułatwia wybierz żądane odwołania.  
+2. Wybierz **zestawy** z **Dodaj odwołanie** listy, a typ `DurableInstancing` do **wyszukiwania zestawów** pole. Filtry zestawów i ułatwia wybierz żądane odwołania.  
   
-3.  Zaznacz pole wyboru obok pozycji **System.Activities.DurableInstancing** i **System.Runtime.DurableInstancing** z **wyniki wyszukiwania** listy, a następnie kliknij przycisk **OK**.  
+3. Zaznacz pole wyboru obok pozycji **System.Activities.DurableInstancing** i **System.Runtime.DurableInstancing** z **wyniki wyszukiwania** listy, a następnie kliknij przycisk **OK**.  
   
 ### <a name="BKMK_CreateForm"></a> Aby utworzyć formularz hosta przepływu pracy  
   
 > [!NOTE]
 >  W tej procedurze opisano sposób dodawania i konfigurowania formularza ręcznie. Jeśli to konieczne, można pobrać plików rozwiązania dla tego samouczka i Dodaj wypełniony formularz do projektu. Aby pobrać pliki samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](https://go.microsoft.com/fwlink/?LinkID=248976). Po pobraniu plików, kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** i wybierz polecenie **Dodaj odwołanie**. Dodaj odwołanie do **System.Windows.Forms** i **System.Drawing**. Te odwołania są dodawane automatycznie po dodaniu nowego formularza z **Dodaj**, **nowy element** menu, ale musisz ręcznie dodać podczas importowania formularza. Po dodaniu odwołania, kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **istniejący element**. Przejdź do `Form` folderu w plikach projektu, wybierz opcję **WorkflowHostForm.cs** (lub **WorkflowHostForm.vb**) i kliknij przycisk **Dodaj**. Jeśli decydujesz się zaimportować formularza, a następnie w dół do następnej sekcji, możesz pominąć [można dodać właściwości i metody pomocnicze formularza](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
   
-1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **nowy element**.  
+1. Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **nowy element**.  
   
-2.  W **zainstalowane** szablonów wybierz **formularza Windows**, typ `WorkflowHostForm` w **nazwa** polu, a następnie kliknij przycisk **Dodaj**.  
+2. W **zainstalowane** szablonów wybierz **formularza Windows**, typ `WorkflowHostForm` w **nazwa** polu, a następnie kliknij przycisk **Dodaj**.  
   
-3.  W formularzu, należy skonfigurować następujące właściwości.  
+3. W formularzu, należy skonfigurować następujące właściwości.  
   
     |Właściwość|Wartość|  
     |--------------|-----------|  
@@ -90,7 +90,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     |MaximizeBox|False|  
     |Rozmiar|400, 420|  
   
-4.  Dodaj następujące formanty do formularza w kolejności określonej i skonfigurować właściwości, zgodnie z instrukcją.  
+4. Dodaj następujące formanty do formularza w kolejności określonej i skonfigurować właściwości, zgodnie z instrukcją.  
   
     |formant|Właściwość: Wartość|  
     |-------------|---------------------|  
@@ -115,7 +115,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     |**Przycisk**|Nazwa: QuitGame<br /><br /> Lokalizacja: 274, 42<br /><br /> Rozmiar: 75, 23<br /><br /> Tekst: Zamknij|  
     |**TextBox**|Nazwa: Stan<br /><br /> Lokalizacja: 10, 73<br /><br /> Wiele linii: Prawda<br /><br /> ReadOnly: Prawda<br /><br /> Paski przewijania: W pionie<br /><br /> Rozmiar: 338, 208|  
   
-5.  Ustaw **AcceptButton** właściwości formularza w celu **EnterGuess**.  
+5. Ustaw **AcceptButton** właściwości formularza w celu **EnterGuess**.  
   
  Poniższy przykład ilustruje wypełniony formularz.  
   
@@ -124,9 +124,9 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
 ### <a name="BKMK_AddHelperMethods"></a> Aby dodać właściwości i metody pomocnicze formularza  
  Kroki opisane w tej sekcji Dodaj właściwości i metody pomocnicze do skonfigurowanego interfejsu użytkownika formularza, do obsługi uruchomiona i wznawianie numer odgadnięcia przepływy pracy klasy formularza.  
   
-1.  Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **Wyświetl kod**.  
+1. Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **Wyświetl kod**.  
   
-2.  Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
+2. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports System.Windows.Forms  
@@ -144,7 +144,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     using System.IO;  
     ```  
   
-3.  Dodaj następujące deklaracje elementu członkowskiego do **WorkflowHostForm** klasy.  
+3. Dodaj następujące deklaracje elementu członkowskiego do **WorkflowHostForm** klasy.  
   
     ```vb  
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"  
@@ -161,7 +161,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     > [!NOTE]
     >  Jeśli ciąg połączenia jest inna, zaktualizuj `connectionString` do odwoływania się do bazy danych.  
   
-4.  Dodaj `WorkflowInstanceId` właściwość `WorkflowFormHost` klasy.  
+4. Dodaj `WorkflowInstanceId` właściwość `WorkflowFormHost` klasy.  
   
     ```vb  
     Public ReadOnly Property WorkflowInstanceId() As Guid  
@@ -187,7 +187,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
      `InstanceId` Polu kombi zawiera listę identyfikatorów wystąpień utrwalonych przepływów pracy oraz `WorkflowInstanceId` właściwość zwraca aktualnie wybranego przepływu pracy.  
   
-5.  Dodawanie obsługi dla formularza `Load` zdarzeń. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, kliknij przycisk **zdarzenia** ikonę u góry **właściwości** okna, a następnie kliknij dwukrotnie plik **obciążenia**.  
+5. Dodawanie obsługi dla formularza `Load` zdarzeń. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, kliknij przycisk **zdarzenia** ikonę u góry **właściwości** okna, a następnie kliknij dwukrotnie plik **obciążenia**.  
   
     ```vb  
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load  
@@ -202,7 +202,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-6.  Dodaj następujący kod do `WorkflowHostForm_Load`.  
+6. Dodaj następujący kod do `WorkflowHostForm_Load`.  
   
     ```vb  
     'Initialize the store and configure it so that it can be used for  
@@ -232,7 +232,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
      Podczas ładowania formularza, `SqlWorkflowInstanceStore` jest skonfigurowany, pola kombi typu zakres i przepływu pracy są ustawione wartości domyślne, a wystąpienia utrwalonych przepływu pracy są dodawane do `InstanceId` pola kombi.  
   
-7.  Dodaj `SelectedIndexChanged` Obsługa `InstanceId`. Aby dodać program obsługi, przełącz się do **widoku projektu** w formularzu Wybierz `InstanceId` pola kombi, kliknij przycisk **zdarzenia** ikony w górnej części **właściwości** okna, i Kliknij dwukrotnie **selectedindexchanged**.  
+7. Dodaj `SelectedIndexChanged` Obsługa `InstanceId`. Aby dodać program obsługi, przełącz się do **widoku projektu** w formularzu Wybierz `InstanceId` pola kombi, kliknij przycisk **zdarzenia** ikony w górnej części **właściwości** okna, i Kliknij dwukrotnie **selectedindexchanged**.  
   
     ```vb  
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged  
@@ -247,7 +247,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-8.  Dodaj następujący kod do `InstanceId_SelectedIndexChanged`. Zawsze, gdy użytkownik wybierze przepływu pracy za pomocą pola kombi ten program obsługi aktualizacji w oknie stanu.  
+8. Dodaj następujący kod do `InstanceId_SelectedIndexChanged`. Zawsze, gdy użytkownik wybierze przepływu pracy za pomocą pola kombi ten program obsługi aktualizacji w oknie stanu.  
   
     ```vb  
     If InstanceId.SelectedIndex = -1 Then  
@@ -424,7 +424,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ### <a name="BKMK_ConfigureWorkflowApplication"></a> Aby skonfigurować Magazyn wystąpień przepływu pracy cyklu życia obsługi i rozszerzenia  
   
-1.  Dodaj `ConfigureWorkflowApplication` metodę do klasy formularza.  
+1. Dodaj `ConfigureWorkflowApplication` metodę do klasy formularza.  
   
     ```vb  
     Private Sub ConfigureWorkflowApplication(wfApp As WorkflowApplication)  
@@ -440,7 +440,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
      Ta metoda umożliwia skonfigurowanie `WorkflowApplication`, dodaje rozszerzenia żądaną i dodaje programy obsługi zdarzeń cyklu życia przepływu pracy.  
   
-2.  W `ConfigureWorkflowApplication`, określ `SqlWorkflowInstanceStore` dla `WorkflowApplication`.  
+2. W `ConfigureWorkflowApplication`, określ `SqlWorkflowInstanceStore` dla `WorkflowApplication`.  
   
     ```vb  
     'Configure the persistence store.  
@@ -452,7 +452,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     wfApp.InstanceStore = store;  
     ```  
   
-3.  Następnie należy utworzyć `StringWriter` wystąpienia i dodać go do `Extensions` zbiór `WorkflowApplication`. Gdy `StringWriter` jest dodawany do rozszerzeń przechwytuje wszystkie `WriteLine` wyjście działania. Gdy przepływ pracy staje się nieaktywna, `WriteLine` dane wyjściowe można wyodrębnić z `StringWriter` i wyświetlane w formularzu.  
+3. Następnie należy utworzyć `StringWriter` wystąpienia i dodać go do `Extensions` zbiór `WorkflowApplication`. Gdy `StringWriter` jest dodawany do rozszerzeń przechwytuje wszystkie `WriteLine` wyjście działania. Gdy przepływ pracy staje się nieaktywna, `WriteLine` dane wyjściowe można wyodrębnić z `StringWriter` i wyświetlane w formularzu.  
   
     ```vb  
     'Add a StringWriter to the extensions. This captures the output  
@@ -468,7 +468,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     wfApp.Extensions.Add(sw);  
     ```  
   
-4.  Dodaj następujący program obsługi dla `Completed` zdarzeń. Po pomyślnym ukończeniu przepływu pracy liczba włącza podjęte w celu odgadnięcia, że liczba zostanie wyświetlone okno stanu. Informacje o wyjątku, który spowodował przerwanie jest wyświetlany, jeśli kończy się przepływu pracy. Na koniec obsługi `GameOver` wywoływana jest metoda, która usuwa ukończony przepływ pracy z listy przepływów pracy.  
+4. Dodaj następujący program obsługi dla `Completed` zdarzeń. Po pomyślnym ukończeniu przepływu pracy liczba włącza podjęte w celu odgadnięcia, że liczba zostanie wyświetlone okno stanu. Informacje o wyjątku, który spowodował przerwanie jest wyświetlany, jeśli kończy się przepływu pracy. Na koniec obsługi `GameOver` wywoływana jest metoda, która usuwa ukończony przepływ pracy z listy przepływów pracy.  
   
     ```vb  
     wfApp.Completed = _  
@@ -509,7 +509,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     };  
     ```  
   
-5.  Dodaj następujący kod `Aborted` i `OnUnhandledException` programów obsługi. `GameOver` Metoda nie jest wywoływana z `Aborted` obsługi gdy wystąpienie przepływu pracy zostało przerwane, nie kończy, dlatego można wznowić wystąpienia w późniejszym czasie.  
+5. Dodaj następujący kod `Aborted` i `OnUnhandledException` programów obsługi. `GameOver` Metoda nie jest wywoływana z `Aborted` obsługi gdy wystąpienie przepływu pracy zostało przerwane, nie kończy, dlatego można wznowić wystąpienia w późniejszym czasie.  
   
     ```vb  
     wfApp.Aborted = _  
@@ -547,7 +547,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     };  
     ```  
   
-6.  Dodaj następujący kod `PersistableIdle` programu obsługi. Pobiera ten program obsługi `StringWriter` rozszerzenia, który został dodany, wyodrębnia dane wyjściowe z `WriteLine` działań i wyświetla go w oknie stanu.  
+6. Dodaj następujący kod `PersistableIdle` programu obsługi. Pobiera ten program obsługi `StringWriter` rozszerzenia, który został dodany, wyodrębnia dane wyjściowe z `WriteLine` działań i wyświetla go w oknie stanu.  
   
     ```vb  
     wfApp.PersistableIdle = _  
@@ -694,9 +694,9 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
 ### <a name="BKMK_WorkflowVersionMap"></a> Aby włączyć uruchamianie i wznawianie wielu typów przepływu pracy  
  Aby wznowić działanie wystąpienia przepływu pracy, host musi podać definicję przepływu pracy. W ramach tego samouczka istnieją trzy typy przepływu pracy, a kolejne kroki samouczka wprowadzenie wielu wersji tego typu. `WorkflowIdentity` umożliwia aplikacji hosta skojarzyć informacje identyfikacyjne z istniejącym wystąpieniem przepływu pracy. Kroki opisane w tej sekcji pokazują, jak utworzyć klasę użytkową uzyskanymi mapowania tożsamości przepływu pracy z istniejącym wystąpieniem przepływu pracy do odpowiedniej definicji przepływu pracy. Aby uzyskać więcej informacji na temat `WorkflowIdentity` i przechowywania wersji, zobacz [przy użyciu obiektu WorkflowIdentity i wersjonowanie](using-workflowidentity-and-versioning.md).  
   
-1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `WorkflowVersionMap` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.  
+1. Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `WorkflowVersionMap` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.  
   
-2.  Dodaj następujący kod `using` lub `Imports` instrukcji w górnej części pliku razem z innymi `using` lub `Imports` instrukcji.  
+2. Dodaj następujący kod `using` lub `Imports` instrukcji w górnej części pliku razem z innymi `using` lub `Imports` instrukcji.  
   
     ```vb  
     Imports NumberGuessWorkflowActivities  
@@ -708,7 +708,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     using System.Activities;  
     ```  
   
-3.  Zastąp `WorkflowVersionMap` deklaracji z następującą deklarację klasy.  
+3. Zastąp `WorkflowVersionMap` deklaracji z następującą deklarację klasy.  
   
     ```vb  
     Public Module WorkflowVersionMap  
@@ -810,7 +810,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ### <a name="BKMK_StartWorkflow"></a> Aby uruchomić nowy przepływ pracy  
   
-1.  Dodaj `Click` Obsługa `NewGame`. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, a następnie kliknij dwukrotnie plik `NewGame`. A `NewGame_Click` dodaniu programu obsługi i widoku przełącza do widoku kodu formularza. Gdy użytkownik kliknie ten przycisk Nowy przepływ pracy został uruchomiony.  
+1. Dodaj `Click` Obsługa `NewGame`. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, a następnie kliknij dwukrotnie plik `NewGame`. A `NewGame_Click` dodaniu programu obsługi i widoku przełącza do widoku kodu formularza. Gdy użytkownik kliknie ten przycisk Nowy przepływ pracy został uruchomiony.  
   
     ```vb  
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click  
@@ -825,7 +825,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-2.  Dodaj następujący kod programem obsługi kliknięcia. Ten kod tworzy słownik argumenty wejściowe dla przepływu pracy, kluczach nazwę argumentu. Tego słownika ma jeden wpis, zawierający zakres generowany losowo numer pobierane pole kombi zakresu.  
+2. Dodaj następujący kod programem obsługi kliknięcia. Ten kod tworzy słownik argumenty wejściowe dla przepływu pracy, kluczach nazwę argumentu. Tego słownika ma jeden wpis, zawierający zakres generowany losowo numer pobierane pole kombi zakresu.  
   
     ```vb  
     Dim inputs As New Dictionary(Of String, Object)()  
@@ -837,7 +837,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     inputs.Add("MaxNumber", Convert.ToInt32(NumberRange.SelectedItem));  
     ```  
   
-3.  Następnie dodaj następujący kod, który uruchamia przepływ pracy. `WorkflowIdentity` i definicji przepływu pracy, odpowiadający typowi wybrane przepływu pracy są pobierane przy użyciu `WorkflowVersionMap` Klasa pomocy. Następnie, nowy `WorkflowApplication` przy użyciu definicji przepływu pracy, tworzone jest wystąpienie `WorkflowIdentity`i słownika argumentów wejściowych.  
+3. Następnie dodaj następujący kod, który uruchamia przepływ pracy. `WorkflowIdentity` i definicji przepływu pracy, odpowiadający typowi wybrane przepływu pracy są pobierane przy użyciu `WorkflowVersionMap` Klasa pomocy. Następnie, nowy `WorkflowApplication` przy użyciu definicji przepływu pracy, tworzone jest wystąpienie `WorkflowIdentity`i słownika argumentów wejściowych.  
   
     ```vb  
     Dim identity As WorkflowIdentity = Nothing  
@@ -879,7 +879,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     WorkflowApplication wfApp = new WorkflowApplication(wf, inputs, identity);  
     ```  
   
-4.  Następnie dodaj następujący kod, który dodaje przepływu pracy do listy przepływów pracy i wyświetla informacje o wersji przepływu pracy na formularzu.  
+4. Następnie dodaj następujący kod, który dodaje przepływu pracy do listy przepływów pracy i wyświetla informacje o wersji przepływu pracy na formularzu.  
   
     ```vb  
     'Add the workflow to the list and display the version information.  
@@ -897,7 +897,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     WorkflowStarting = false;  
     ```  
   
-5.  Wywołaj `ConfigureWorkflowApplication` do skonfigurowania obsługi cyklu życia magazynu, rozszerzenia i przepływ pracy wystąpienie tego `WorkflowApplication` wystąpienia.  
+5. Wywołaj `ConfigureWorkflowApplication` do skonfigurowania obsługi cyklu życia magazynu, rozszerzenia i przepływ pracy wystąpienie tego `WorkflowApplication` wystąpienia.  
   
     ```vb  
     'Configure the instance store, extensions, and   
@@ -911,7 +911,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     ConfigureWorkflowApplication(wfApp);  
     ```  
   
-6.  Na koniec Wywołaj `Run`.  
+6. Na koniec Wywołaj `Run`.  
   
     ```vb  
     'Start the workflow.  
@@ -1005,7 +1005,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ### <a name="BKMK_ResumeWorkflow"></a> Aby wznowić przepływ pracy  
   
-1.  Dodaj `Click` Obsługa `EnterGuess`. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, a następnie kliknij dwukrotnie plik `EnterGuess`. Gdy użytkownik kliknie ten przycisk, przepływ pracy zostanie wznowione.  
+1. Dodaj `Click` Obsługa `EnterGuess`. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, a następnie kliknij dwukrotnie plik `EnterGuess`. Gdy użytkownik kliknie ten przycisk, przepływ pracy zostanie wznowione.  
   
     ```vb  
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click  
@@ -1020,7 +1020,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-2.  Dodaj następujący kod, aby upewnić się, że przepływ pracy jest zaznaczony na liście przepływów pracy i że odgadnięcia użytkownika jest prawidłowy.  
+2. Dodaj następujący kod, aby upewnić się, że przepływ pracy jest zaznaczony na liście przepływów pracy i że odgadnięcia użytkownika jest prawidłowy.  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1054,7 +1054,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-3.  Następnie należy pobrać `WorkflowApplicationInstance` z istniejącym wystąpieniem przepływu pracy. A `WorkflowApplicationInstance` reprezentuje utrwalonego wystąpienia przepływu pracy, który nie został jeszcze skojarzony z definicją przepływu pracy. `DefinitionIdentity` z `WorkflowApplicationInstance` zawiera `WorkflowIdentity` z istniejącym wystąpieniem przepływu pracy. W tym samouczku `WorkflowVersionMap` klasy narzędzie służy do mapowania `WorkflowIdentity` do definicji poprawne przepływu pracy. Po pobraniu definicji przepływu pracy `WorkflowApplication` jest tworzony przy użyciu definicji przepływu pracy poprawne.  
+3. Następnie należy pobrać `WorkflowApplicationInstance` z istniejącym wystąpieniem przepływu pracy. A `WorkflowApplicationInstance` reprezentuje utrwalonego wystąpienia przepływu pracy, który nie został jeszcze skojarzony z definicją przepływu pracy. `DefinitionIdentity` z `WorkflowApplicationInstance` zawiera `WorkflowIdentity` z istniejącym wystąpieniem przepływu pracy. W tym samouczku `WorkflowVersionMap` klasy narzędzie służy do mapowania `WorkflowIdentity` do definicji poprawne przepływu pracy. Po pobraniu definicji przepływu pracy `WorkflowApplication` jest tworzony przy użyciu definicji przepływu pracy poprawne.  
   
     ```vb  
     Dim instance As WorkflowApplicationInstance = _  
@@ -1084,7 +1084,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
         new WorkflowApplication(wf, instance.DefinitionIdentity);  
     ```  
   
-4.  Gdy `WorkflowApplication` jest utworzony, skonfiguruj magazyn wystąpień przepływu pracy cyklu życia obsługi i rozszerzeń, wywołując `ConfigureWorkflowApplication`. Te kroki należy wykonać każdym nowej `WorkflowApplication` zostanie utworzony, muszą być wykonywane przed wystąpieniem przepływu pracy jest ładowany do `WorkflowApplication`. Po załadowaniu przepływ pracy zostanie wznowione odgadnięcia użytkownika.  
+4. Gdy `WorkflowApplication` jest utworzony, skonfiguruj magazyn wystąpień przepływu pracy cyklu życia obsługi i rozszerzeń, wywołując `ConfigureWorkflowApplication`. Te kroki należy wykonać każdym nowej `WorkflowApplication` zostanie utworzony, muszą być wykonywane przed wystąpieniem przepływu pracy jest ładowany do `WorkflowApplication`. Po załadowaniu przepływ pracy zostanie wznowione odgadnięcia użytkownika.  
   
     ```vb  
     'Configure the extensions and lifecycle handlers.  
@@ -1112,7 +1112,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     wfApp.ResumeBookmark("EnterGuess", guess);  
     ```  
   
-5.  Na koniec wyczyść pole tekstowe odgadnięcia i przygotować formularz, aby akceptować inny wynik.  
+5. Na koniec wyczyść pole tekstowe odgadnięcia i przygotować formularz, aby akceptować inny wynik.  
   
     ```vb  
     'Clear the Guess textbox.  
@@ -1221,7 +1221,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ### <a name="BKMK_TerminateWorkflow"></a> Aby zakończyć przepływ pracy  
   
-1.  Dodaj `Click` Obsługa `QuitGame`. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, a następnie kliknij dwukrotnie plik `QuitGame`. Gdy użytkownik kliknie ten przycisk aktualnie wybranego przepływu pracy zostało przerwane.  
+1. Dodaj `Click` Obsługa `QuitGame`. Aby dodać program obsługi, przełącz się do **widoku projektu** formularza, a następnie kliknij dwukrotnie plik `QuitGame`. Gdy użytkownik kliknie ten przycisk aktualnie wybranego przepływu pracy zostało przerwane.  
   
     ```vb  
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click  
@@ -1236,7 +1236,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-2.  Dodaj następujący kod do `QuitGame_Click` programu obsługi. Ten kod najpierw sprawdza, upewnij się, że przepływ pracy jest zaznaczony na liście przepływów pracy. A następnie ładuje utrwalonego wystąpienia do `WorkflowApplicationInstance`, używa `DefinitionIdentity` do określenia definicji przepływu pracy poprawne, a następnie inicjuje `WorkflowApplication`. Następnie rozszerzenia i obsługi cyklu życia przepływu pracy są skonfigurowane przy użyciu wywołania do `ConfigureWorkflowApplication`. Raz `WorkflowApplication` jest skonfigurowany, jej załadowaniu, a następnie `Terminate` jest wywoływana.  
+2. Dodaj następujący kod do `QuitGame_Click` programu obsługi. Ten kod najpierw sprawdza, upewnij się, że przepływ pracy jest zaznaczony na liście przepływów pracy. A następnie ładuje utrwalonego wystąpienia do `WorkflowApplicationInstance`, używa `DefinitionIdentity` do określenia definicji przepływu pracy poprawne, a następnie inicjuje `WorkflowApplication`. Następnie rozszerzenia i obsługi cyklu życia przepływu pracy są skonfigurowane przy użyciu wywołania do `ConfigureWorkflowApplication`. Raz `WorkflowApplication` jest skonfigurowany, jej załadowaniu, a następnie `Terminate` jest wywoływana.  
   
     ```vb  
     If WorkflowInstanceId = Guid.Empty Then  
@@ -1295,9 +1295,9 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
   
 ### <a name="BKMK_BuildAndRun"></a> Aby skompilować i uruchomić aplikację  
   
-1.  Kliknij dwukrotnie **Program.cs** (lub **Module1.vb**) w **Eksploratora rozwiązań** Aby wyświetlić kod.  
+1. Kliknij dwukrotnie **Program.cs** (lub **Module1.vb**) w **Eksploratora rozwiązań** Aby wyświetlić kod.  
   
-2.  Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
+2. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports System.Windows.Forms  
@@ -1307,7 +1307,7 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     using System.Windows.Forms;  
     ```  
   
-3.  Usunąć lub skomentować istniejącego przepływu pracy obsługującego kod z [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md)i zastąp go następującym kodem.  
+3. Usunąć lub skomentować istniejącego przepływu pracy obsługującego kod z [jak: Uruchamianie przepływu pracy](how-to-run-a-workflow.md)i zastąp go następującym kodem.  
   
     ```vb  
     Sub Main()  
@@ -1324,14 +1324,14 @@ Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość w
     }  
     ```  
   
-4.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **właściwości**. W **aplikacji** określ **aplikacji Windows** dla **typ danych wyjściowych**. Ten krok jest opcjonalny, ale jeśli go nie zostanie zastosowane oprócz formularzu zostanie wyświetlone okno konsoli.  
+4. Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **właściwości**. W **aplikacji** określ **aplikacji Windows** dla **typ danych wyjściowych**. Ten krok jest opcjonalny, ale jeśli go nie zostanie zastosowane oprócz formularzu zostanie wyświetlone okno konsoli.  
   
-5.  Naciśnij klawisze Ctrl + Shift + B, aby skompilować aplikację.  
+5. Naciśnij klawisze Ctrl + Shift + B, aby skompilować aplikację.  
   
-6.  Upewnij się, że **NumberGuessWorkflowHost** jest ustawiony jako aplikacja do uruchomienia, a następnie naciśnij klawisz Ctrl + F5, aby uruchomić aplikację.  
+6. Upewnij się, że **NumberGuessWorkflowHost** jest ustawiony jako aplikacja do uruchomienia, a następnie naciśnij klawisz Ctrl + F5, aby uruchomić aplikację.  
   
-7.  Wybierz zakres do odgadnięcia gier i typ przepływu pracy, aby rozpocząć, a następnie kliknij przycisk **nowych gier**. Wprowadź odgadnięcia w **odgadnięcia** pole, a następnie kliknij przycisk **Przejdź** przesłać przypuszczenie. Należy pamiętać, że dane wyjściowe z `WriteLine` działania jest wyświetlany w formularzu.  
+7. Wybierz zakres do odgadnięcia gier i typ przepływu pracy, aby rozpocząć, a następnie kliknij przycisk **nowych gier**. Wprowadź odgadnięcia w **odgadnięcia** pole, a następnie kliknij przycisk **Przejdź** przesłać przypuszczenie. Należy pamiętać, że dane wyjściowe z `WriteLine` działania jest wyświetlany w formularzu.  
   
-8.  Uruchom wiele przepływów pracy przy użyciu typów innego przepływu pracy i liczba zakresów, wprowadzić kilka prób i przełączać się między przepływami pracy, wybierając z **identyfikator wystąpienia przepływu pracy** listy.  
+8. Uruchom wiele przepływów pracy przy użyciu typów innego przepływu pracy i liczba zakresów, wprowadzić kilka prób i przełączać się między przepływami pracy, wybierając z **identyfikator wystąpienia przepływu pracy** listy.  
   
      Należy pamiętać, że przełączenie do nowego przepływu pracy liczbę poprzednich prób i postęp przepływu pracy nie są wyświetlane w oknie stanu. Powodów, dla którego stan nie jest dostępna jest, ponieważ nie jest przechwytywane i zapisane w dowolnym miejscu. W następnym kroku samouczka [jak: Tworzenie niestandardowego uczestnika śledzenia](how-to-create-a-custom-tracking-participant.md), Utwórz niestandardowe śledzenia uczestnika, który zapisuje te informacje.

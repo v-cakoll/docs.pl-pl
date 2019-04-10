@@ -2,12 +2,12 @@
 title: Używanie akcji do implementacji zachowania po stronie serwera
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294941"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Używanie akcji do implementacji zachowania po stronie serwera
 
@@ -40,11 +40,11 @@ Akcje protokołu OData umożliwiają implementowanie zachowania, które podejmuj
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Ten interfejs umożliwia wykonywanie akcji usług danych WCF. Podczas implementowania IDataServiceInvokable odpowiedzialność za 3 rzeczy:  
   
-1.  Przechwytywanie i potencjalnie przekazywanie parametrów  
+1. Przechwytywanie i potencjalnie przekazywanie parametrów  
   
-2.  Parametry, aby kod, który faktycznie implementuje akcji, gdy wywoływana jest Invoke() wysyłki  
+2. Parametry, aby kod, który faktycznie implementuje akcji, gdy wywoływana jest Invoke() wysyłki  
   
-3.  Przechowywanie dowolnego wynikiem Invoke(), dzięki czemu mogą być pobierane, za pomocą GetResult()  
+3. Przechowywanie dowolnego wynikiem Invoke(), dzięki czemu mogą być pobierane, za pomocą GetResult()  
   
  Parametry mogą być przekazywane jako tokenów. To dlatego istnieje możliwość zapisu danych dostawcy usług, działająca z tokenów, które reprezentują zasoby, jeśli jest to przypadek, konieczne może być przekonwertować (marshal) tokeny te służą do rzeczywistych zasobów przed wysłaniem do rzeczywistego akcji. Po parametrze został skierowany, tak aby zmiany do zasobu, które występują podczas wywoływania akcji zostaną zapisane i będą zapisane na dysku musi być w stanie edycji.  
   

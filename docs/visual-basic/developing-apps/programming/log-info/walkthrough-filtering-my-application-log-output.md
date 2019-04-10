@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298399"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Przewodnik: Filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
 W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.Application.Log` obiektu, aby kontrolować, jakie informacje są przekazywane z `Log` obiekt do odbiorników i jakie informacje są zapisywane przez odbiorniki. Możesz zmienić sposób rejestrowania, nawet po zakończeniu tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
@@ -21,17 +21,17 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
 #### <a name="to-build-the-sample-application"></a>Do tworzenia przykładowej aplikacji  
   
-1.  Otwórz nowy projekt aplikacji Windows Visual Basic.  
+1. Otwórz nowy projekt aplikacji Windows Visual Basic.  
   
-2.  Dodaj przycisk o nazwie Button1 do formularza Form1.  
+2. Dodaj przycisk o nazwie Button1 do formularza Form1.  
   
-3.  W <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń dla Button1, Dodaj następujący kod:  
+3. W <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń dla Button1, Dodaj następujący kod:  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  Uruchom aplikację w debugerze.  
+4. Uruchom aplikację w debugerze.  
   
-5.  Naciśnij klawisz **Button1**.  
+5. Naciśnij klawisz **Button1**.  
   
      Aplikacja zapisuje następujące informacje do pliku danych wyjściowych i dzienników debugowania aplikacji.  
   
@@ -39,7 +39,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  Zamknij aplikację.  
+6. Zamknij aplikację.  
   
      Aby uzyskać informacje o sposobie wyświetlania okna danych wyjściowych debugowania aplikacji, zobacz [okno danych wyjściowych](/visualstudio/ide/reference/output-window). Aby uzyskać informacje o lokalizacji pliku dziennika aplikacji, zobacz [instruktażu: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).  
   
@@ -71,7 +71,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
 #### <a name="to-log-only-activity-tracing-events"></a>Aby rejestrować zdarzenia śledzenia tylko działania  
   
-1.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz **Otwórz**.  
+1. Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz **Otwórz**.  
   
      —lub—  
   
@@ -83,15 +83,15 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
     3.  Kliknij przycisk **Dodaj**.  
   
-2.  Znajdź `<switches>` sekcji, która znajduje się w `<system.diagnostics>` sekcji, która znajduje się w najwyższego poziomu `<configuration>` sekcji.  
+2. Znajdź `<switches>` sekcji, która znajduje się w `<system.diagnostics>` sekcji, która znajduje się w najwyższego poziomu `<configuration>` sekcji.  
   
-3.  Znajdź element, który dodaje `DefaultSwitch` w kolekcji parametrów. Powinny one wyglądać podobnie do tego elementu:  
+3. Znajdź element, który dodaje `DefaultSwitch` w kolekcji parametrów. Powinny one wyglądać podobnie do tego elementu:  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  Zmień wartość właściwości `value` atrybutu "ActivityTracing".  
+4. Zmień wartość właściwości `value` atrybutu "ActivityTracing".  
   
-5.  Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
+5. Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
     </configuration>  
     ```  
   
-6.  Uruchom aplikację w debugerze.  
+6. Uruchom aplikację w debugerze.  
   
-7.  Naciśnij klawisz **Button1**.  
+7. Naciśnij klawisz **Button1**.  
   
      Aplikacja zapisuje następujące informacje do pliku danych wyjściowych i dzienników debugowania aplikacji:  
   
@@ -130,7 +130,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  Zamknij aplikację.  
+8. Zamknij aplikację.  
   
 9. Zmień wartość właściwości `value` atrybutu "Informacje".  
   
@@ -146,7 +146,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
 #### <a name="to-log-only-activity-tracing-events"></a>Aby rejestrować tylko zdarzenia śledzenie aktywności  
   
-1.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
+1. Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań** i wybierz polecenie **Otwórz**.  
   
      —lub—  
   
@@ -158,11 +158,11 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
     3.  Kliknij przycisk **Dodaj**.  
   
-2.  Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań**. Wybierz **Otwórz**.  
+2. Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań**. Wybierz **Otwórz**.  
   
-3.  Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource", która jest w trakcie `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
+3. Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource", która jest w trakcie `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-4.  Dodaj ten element, aby `<listeners>` sekcji:  
+4. Dodaj ten element, aby `<listeners>` sekcji:  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
     <add name="NewDefault"/>  
     ```  
   
-5.  Znajdź `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
+5. Znajdź `<sharedListeners>` sekcji w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
-6.  Dodaj ten element, do którego `<sharedListeners>` sekcji:  
+6. Dodaj ten element, do którego `<sharedListeners>` sekcji:  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
      <xref:System.Diagnostics.EventTypeFilter> Filtr ma jedną z <xref:System.Diagnostics.SourceLevels> wyliczenia wartości zgodnie z jego `initializeData` atrybutu.  
   
-7.  Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
+7. Zawartość pliku app.config powinien wyglądać podobnie jak następujący kod XML:  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
     </configuration>  
     ```  
   
-8.  Uruchom aplikację w debugerze.  
+8. Uruchom aplikację w debugerze.  
   
 9. Naciśnij klawisz **Button1**.  
   
@@ -249,9 +249,9 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [Przewodnik: Tworzenie odbiorników logu niestandardowego](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [Instrukcje: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Przewodnik: ustalanie lokalizacji, w której element My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Przewodnik: tworzenie odbiorców dzienników niestandardowych](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [Przełączniki śledzenia](../../../../framework/debug-trace-profile/trace-switches.md)
 - [Rejestrowanie informacji z aplikacji](../../../../visual-basic/developing-apps/programming/log-info/index.md)

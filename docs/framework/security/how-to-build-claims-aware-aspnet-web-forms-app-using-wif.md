@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET Web Forms przy użyciu programu WIF'
+title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji formularzy internetowych ASP.NET za pomocą programu WIF'
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302273"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET Web Forms przy użyciu programu WIF
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji formularzy internetowych ASP.NET za pomocą programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® formularzy sieci Web  
+-   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia. On również instrukcje testowania prostą aplikację formularzy sieci Web programu ASP.NET obsługującej oświadczenia dla pomyślnego wdrożenia uwierzytelniania federacyjnego. Niniejszy instruktaż nie zawiera szczegółowych instrukcji tworzenia Usługa tokenu zabezpieczającego (STS), a przyjęto założenie, że zostały już skonfigurowane usługi tokenu Zabezpieczającego.  
@@ -51,18 +51,18 @@ ms.locfileid: "47207157"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
+1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
-2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
+2. W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
-3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+3. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>Krok 2 — Konfigurowanie aplikacji formularzy sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
  W tym kroku dodasz wpisy konfiguracji *Web.config* pliku konfiguracji aplikacji ASP.NET Web Forms się obsługujących oświadczenia.  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Aby skonfigurować aplikację ASP.NET do uwierzytelniania opartego na oświadczeniach  
   
-1.  Dodaj następujące wpisy konfiguracji w sekcji, aby *Web.config* plik konfiguracyjny natychmiast po  **\<konfiguracji >** otwarcia elementu:  
+1. Dodaj następujące wpisy konfiguracji w sekcji, aby *Web.config* plik konfiguracyjny natychmiast po  **\<konfiguracji >** otwarcia elementu:  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207157"
     </configSections>  
     ```  
   
-2.  Dodaj  **\<lokalizacja >** elementu, który umożliwia dostęp do metadanych Federacji aplikacji:  
+2. Dodaj  **\<lokalizacja >** elementu, który umożliwia dostęp do metadanych Federacji aplikacji:  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207157"
     </location>  
     ```  
   
-3.  Dodaj następujące wpisy konfiguracji w ramach  **\<system.web >** elementy, aby odmówić użytkownikom, Wyłącz uwierzytelnianie natywnych i włączanie programu WIF zarządzać uwierzytelnianiem.  
+3. Dodaj następujące wpisy konfiguracji w ramach  **\<system.web >** elementy, aby odmówić użytkownikom, Wyłącz uwierzytelnianie natywnych i włączanie programu WIF zarządzać uwierzytelnianiem.  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207157"
     <authentication mode="None" />  
     ```  
   
-4.  Dodaj  **\<system.webServer >** element, który definiuje modułów dla uwierzytelniania federacyjnego. Należy pamiętać, że *PublicKeyToken* atrybut musi być taka sama jak *PublicKeyToken* atrybutu dla  **\<configSections >** wpisy dodano wcześniej:  
+4. Dodaj  **\<system.webServer >** element, który definiuje modułów dla uwierzytelniania federacyjnego. Należy pamiętać, że *PublicKeyToken* atrybut musi być taka sama jak *PublicKeyToken* atrybutu dla  **\<configSections >** wpisy dodano wcześniej:  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207157"
     </system.webServer>  
     ```  
   
-5.  Dodaj następujące Windows Identity Foundation powiązane wpisy konfiguracji i upewnij się, że adres URL aplikacji ASP.NET i numer portu pasuje do wartości w  **\<audienceUris >** wpisu **obszaru**  atrybutu  **\<wsFederation >** elementu, a **odpowiedzi** atrybutu  **\<wsFederation >** elementu. Ponadto upewnij się, że **wystawcy** pasuje do wartości adresu URL Usługa tokenu zabezpieczającego (STS).  
+5. Dodaj następujące Windows Identity Foundation powiązane wpisy konfiguracji i upewnij się, że adres URL aplikacji ASP.NET i numer portu pasuje do wartości w  **\<audienceUris >** wpisu **obszaru**  atrybutu  **\<wsFederation >** elementu, a **odpowiedzi** atrybutu  **\<wsFederation >** elementu. Ponadto upewnij się, że **wystawcy** pasuje do wartości adresu URL Usługa tokenu zabezpieczającego (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207157"
     </system.identityModel.services>  
     ```  
   
-6.  Dodaj odwołanie do <xref:System.IdentityModel> zestawu.  
+6. Dodaj odwołanie do <xref:System.IdentityModel> zestawu.  
   
-7.  Skompiluj rozwiązanie, aby upewnić się, że nie ma żadnych błędów.  
+7. Skompiluj rozwiązanie, aby upewnić się, że nie ma żadnych błędów.  
   
 ## <a name="step-3--test-your-solution"></a>Krok 3 — Przetestowanie rozwiązania  
  W tym kroku przetestujesz aplikację ASP.NET Web Forms skonfigurowany do uwierzytelniania opartego na oświadczeniach. Aby wykonać podstawowy test, należy dodać kod, który przedstawia oświadczenia w tokenie, wystawiony przez Usługa tokenu zabezpieczającego (STS).  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>Aby przetestować aplikację formularza sieci Web platformy ASP.NET dla uwierzytelniania opartego na oświadczeniach  
   
-1.  Otwórz **Default.aspx** plik **TestApp** projektu i zastąp jego znaczników istniejący następującym kodem:  
+1. Otwórz **Default.aspx** plik **TestApp** projektu i zastąp jego znaczników istniejący następującym kodem:  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207157"
     </html>  
     ```  
   
-2.  Zapisz **Default.aspx**, a następnie otwórz jego kod związany z pliku o nazwie **Default.aspx.cs**.  
+2. Zapisz **Default.aspx**, a następnie otwórz jego kod związany z pliku o nazwie **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** może być ukryty pod **Default.aspx** w Eksploratorze rozwiązań. Jeśli **Default.aspx.cs** nie jest widoczny, rozwiń węzeł **Default.aspx** , klikając trójkąta obok niej.  
   
-3.  Zastąp istniejący kod w **Page_Load** metody **Default.aspx.cs** następującym kodem:  
+3. Zastąp istniejący kod w **Page_Load** metody **Default.aspx.cs** następującym kodem:  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207157"
     }  
     ```  
   
-4.  Zapisz **Default.aspx.cs**i Skompiluj rozwiązanie.  
+4. Zapisz **Default.aspx.cs**i Skompiluj rozwiązanie.  
   
-5.  Uruchom rozwiązanie, naciskając klawisz **F5** klucza.  
+5. Uruchom rozwiązanie, naciskając klawisz **F5** klucza.  
   
-6.  Powinno zostać wyświetlone ze stroną, które zostaną wyświetlone oświadczenia w tokenie, który został wystawiony przez usługę tokenu zabezpieczającego.
+6. Powinno zostać wyświetlone ze stroną, które zostaną wyświetlone oświadczenia w tokenie, który został wystawiony przez usługę tokenu zabezpieczającego.

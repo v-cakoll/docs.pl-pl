@@ -2,12 +2,12 @@
 title: Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166533"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300648"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows
 W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy Windows Workflow Foundation (WF) i emitować zdarzenia śledzenia w śledzenie zdarzeń dla Windows (ETW). Aby emitować śledzenia rekordów do ETW przepływu pracy, w przykładzie użyto uczestnika śledzenia zdarzeń systemu Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -39,33 +39,33 @@ W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy 
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania EtwTrackingParticipantSample.sln.
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania EtwTrackingParticipantSample.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
      Domyślnie usługa nasłuchuje na porcie 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4.  Za pomocą [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], otwórz klienta testowego WCF.
+4. Za pomocą [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], otwórz klienta testowego WCF.
 
      Testowy klient WCF (WcfTestClient.exe) znajduje się w \<folder instalacji programu Visual Studio 2010 > \Common7\IDE\ folderu.
 
      Domyślny folder instalacji programu Visual Studio 2010 to C:\Program Files\Microsoft Visual Studio 10.0.
 
-5.  W kliencie testowym WCF, wybierz **Dodaj usługę** z **pliku** menu.
+5. W kliencie testowym WCF, wybierz **Dodaj usługę** z **pliku** menu.
 
      W polu wejściowym, należy dodać adres punktu końcowego. Wartość domyślna to `http://localhost:53797/SampleWorkflowService.xamlx`.
 
-6.  Otwórz aplikację Podgląd zdarzeń.
+6. Otwórz aplikację Podgląd zdarzeń.
 
      Przed wywołaniem usługi, Uruchom Podgląd zdarzeń z **Start** menu, wybierz opcję **Uruchom** i wpisz w polu `eventvwr.exe`. Upewnij się, czy w dzienniku zdarzeń nasłuchuje dla śledzenia zdarzeń wysyłanego z usługi przepływu pracy.
 
-7.  W widoku drzewa w Podglądzie zdarzeń przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, i **Microsoft**. Kliknij prawym przyciskiem myszy **Microsoft** i wybierz **widoku** i następnie **Pokaż analityczne i debugowania dzienniki** Włącz analityczne i debugowania dzienniki
+7. W widoku drzewa w Podglądzie zdarzeń przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, i **Microsoft**. Kliknij prawym przyciskiem myszy **Microsoft** i wybierz **widoku** i następnie **Pokaż analityczne i debugowania dzienniki** Włącz analityczne i debugowania dzienniki
 
      Upewnij się, że **Pokaż analityczne i debugowania dzienniki** opcja jest zaznaczona.
 
-8.  W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**,  **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik** umożliwiające **analityczne** dziennika.
+8. W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**,  **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik** umożliwiające **analityczne** dziennika.
 
 9. Testowanie usługę za pomocą klienta testowego WCF, klikając dwukrotnie plik `GetData`.
 
@@ -123,13 +123,13 @@ W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy 
 
 #### <a name="to-clean-up-optional"></a>Aby wyczyścić (opcjonalnie)
 
-1.  Otwórz Podgląd zdarzeń.
+1. Otwórz Podgląd zdarzeń.
 
-2.  Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.
+2. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.
 
-3.  Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.
+3. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.
 
-4.  Wybierz **wyczyść** możliwość wyczyszczenia zdarzeń.
+4. Wybierz **wyczyść** możliwość wyczyszczenia zdarzeń.
 
 ## <a name="known-issue"></a>Znany problem
 

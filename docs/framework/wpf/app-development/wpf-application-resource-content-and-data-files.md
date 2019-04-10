@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211929"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplikacje często są zależne od plików, które zawierają dane niewykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. Windows Presentation Foundation (WPF) oferuje specjalne obsługę konfigurowania, identyfikowania i stosowania tych typów plików danych, które są wywoływane, pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu typów plików danych aplikacji, w tym:  
@@ -38,8 +38,7 @@ ms.locfileid: "57379201"
  Aby odwołać się do plików danych aplikacji Windows Presentation Foundation (WPF) korzysta z pakietu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] schemat, który jest szczegółowo opisane w [pakiet URI w WPF](pack-uris-in-wpf.md)).  
   
  W tym temacie opisano sposób konfigurowania i korzystania z plików danych aplikacji.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Pliki zasobów  
  Jeśli plik danych aplikacji musi być zawsze dostępny do aplikacji, jedynym sposobem zagwarantowania dostępności dotyczy wkompilować ją w głównym zestawie pliku wykonywalnego aplikacji lub jednej z jego przywoływanych zestawach. Ten typ pliku danych aplikacji jest znany jako *pliku zasobów*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379201"
  Należy używać plików zawartości, jeśli aplikacja wymaga określonego zestawu plików danych aplikacji, które można zaktualizować bez konieczności ponownego kompilowania zestawu, który je wykorzystuje.  
   
 ### <a name="configuring-content-files"></a>Konfigurowanie plików zawartości  
- Aby dodać zawartość pliku do projektu, może być dołączony jako pliku danych aplikacji `Content` elementu. Ponadto, ponieważ plik zawartości nie jest kompilowana bezpośrednio do zestawu, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` elementu metadanych, aby określić, że plik zawartości jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw. Jeśli chcesz, aby zasób był kopiowany do folderu wyjściowego kompilacji każdym razem, gdy projekt jest kompilowany, możesz ustawić `CopyToOutputDirectory` elementu metadanych z `Always` wartości. W przeciwnym razie należy zapewnić, że tylko najnowszą wersję zasobu jest kopiowany do folderu danych wyjściowych kompilacji za pomocą `PreserveNewest` wartości.  
+ Aby dodać zawartość pliku do projektu, może być dołączony jako pliku danych aplikacji `Content` elementu. Ponadto, ponieważ plik zawartości nie jest kompilowana bezpośrednio do zestawu, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` elementu metadanych, aby określić, że plik zawartości jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw. Jeśli chcesz, aby zasób był kopiowany do folderu wyjściowego kompilacji każdym razem, gdy projekt jest kompilowany, możesz ustawić `CopyToOutputDirectory` elementu metadanych z `Always` wartości. W przeciwnym razie należy zapewnić, że tylko najnowszą wersję zasobu jest kopiowany do folderu danych wyjściowych kompilacji za pomocą `PreserveNewest` wartości.  
   
  Poniżej przedstawiono plik, który jest skonfigurowany jako wyjścia w zawartości pliku, który jest kopiowany do kompilacji folderu tylko wtedy, gdy nowa wersja zasobu jest dodawany do projektu.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379201"
 ### <a name="configuring-site-of-origin-files"></a>Konfigurowanie witryny pochodzenia plików  
  W przypadku witryny pochodzenia plików nie istnieje lub jest nieznany w czasie kompilacji, należy użyć wdrażania tradycyjnych mechanizmów zapewniających wymagane pliki są dostępne w czasie wykonywania, w tym za pomocą `XCopy` wiersza polecenia programu lub [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Jeśli wiesz, w czasie kompilacji plików, które będą znajdować się w witrynie źródła, takich jak, ale mimo to chcesz uniknąć jawne zależności, można dodać te pliki [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] projektu jako `None` elementu. Jak w przypadku plików zawartości, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` atrybutu, aby określić, czy witryna pochodzenia pliku jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw, określając opcję `Always` wartość lub `PreserveNewest` wartość.  
+ Jeśli wiesz, w czasie kompilacji plików, które będą znajdować się w witrynie źródła, takich jak, ale mimo to chcesz uniknąć jawne zależności, można dodać te pliki [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] projektu jako `None` elementu. Jak w przypadku plików zawartości, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` atrybutu, aby określić, czy witryna pochodzenia pliku jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw, określając opcję `Always` wartość lub `PreserveNewest` wartość.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379201"
  Po zmianie typu kompilacji pliku danych aplikacji, należy ponownie skompilować całej aplikacji, aby upewnić się, że te zmiany zostaną zastosowane. Jeśli tworzysz tylko aplikacji, zmiany nie są stosowane.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
+
+- [Pakuj URI w WPF](pack-uris-in-wpf.md)

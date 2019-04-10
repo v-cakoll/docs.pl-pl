@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300310"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset — Metoda
 Informuje środowisko uruchomieniowe języka wspólnego (CLR), hosta zostało zakończone zadania i umożliwia CLR do ponownego użycia bieżącego [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) wystąpienia do reprezentowania inne zadanie.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Uwagi  
  Środowisko CLR można odzyskać utworzone wcześniej `ICLRTask` wystąpienia, aby uniknąć zadań wielokrotnie tworzenia nowych wystąpień za każdym razem, gdy potrzebuje zadanie od nowa. Host oferuje tę funkcję, wywołując `ICLRTask::Reset` zamiast [iclrtask::exittask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) po zakończeniu zadania. Poniższa lista zawiera podsumowanie cyklu życia normalne `ICLRTask` wystąpienie:  
   
-1.  Środowisko uruchomieniowe tworzy nową `ICLRTask` wystąpienia.  
+1. Środowisko uruchomieniowe tworzy nową `ICLRTask` wystąpienia.  
   
-2.  Środowisko uruchomieniowe wywołuje [ihosttaskmanager::getcurrenttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) można pobrać odwołania do bieżącego zadania hosta.  
+2. Środowisko uruchomieniowe wywołuje [ihosttaskmanager::getcurrenttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) można pobrać odwołania do bieżącego zadania hosta.  
   
-3.  Środowisko uruchomieniowe wywołuje [ihosttask::setclrtask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) Aby skojarzyć nowe wystąpienie z zadaniem hosta.  
+3. Środowisko uruchomieniowe wywołuje [ihosttask::setclrtask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) Aby skojarzyć nowe wystąpienie z zadaniem hosta.  
   
-4.  Zadanie wykonuje i kończy.  
+4. Zadanie wykonuje i kończy.  
   
-5.  Host niszczy zadania, wywołując `ICLRTask::ExitTask`.  
+5. Host niszczy zadania, wywołując `ICLRTask::ExitTask`.  
   
  `Reset` Zmienia tego scenariusza na dwa sposoby. W kroku 5 powyżej wywołania hosta `Reset` zresetować zadania do stanu czystego i następnie oddziela `ICLRTask` wystąpienia związanych z nią [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) wystąpienia. Jeśli to konieczne, można buforować hosta `IHostTask` wystąpienia do ponownego wykorzystania. W kroku 1 powyżej, środowisko uruchomieniowe ściąga odtwarzania `ICLRTask` z pamięci podręcznej, zamiast tworzenia nowego wystąpienia.  
   

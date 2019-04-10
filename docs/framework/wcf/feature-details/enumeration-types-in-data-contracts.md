@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309644"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Typy wyliczeniowe w kontraktach danych
 Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedstawiono kilka przykładów, które opisują modelu programowania.  
@@ -79,11 +79,11 @@ Wyliczenia mogą być wyrażone w modelu kontraktu danych. W tym temacie przedst
   
  Poniższe kroki dotyczą wysyłania wartość wyliczenia flag:  
   
-1.  Próba odnalezienia elementu członkowskiego wyliczenia (przy użyciu <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowany) która jest mapowana na wartość liczbową. Jeśli znaleziono, wysłać listę, która zawiera tylko ten element członkowski.  
+1. Próba odnalezienia elementu członkowskiego wyliczenia (przy użyciu <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowany) która jest mapowana na wartość liczbową. Jeśli znaleziono, wysłać listę, która zawiera tylko ten element członkowski.  
   
-2.  Próbują przerwać wartość liczbowa do sumy w taki sposób, że istnieją elementy członkowskie wyliczenia (każdy z <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowany) mapowania każda część sumy. Wysyłanie listy wszystkich tych elementów członkowskich. Należy pamiętać, że *zachłanne algorytm* jest używana do znajdowania to suma, i w związku z tym nie ma żadnej gwarancji, który takiej sumy zostanie znaleziony, nawet jeśli jest obecny. Aby uniknąć tego problemu, upewnij się, czy uprawnień z dwóch wartości liczbowych elementów członkowskich wyliczenia.  
+2. Próbują przerwać wartość liczbowa do sumy w taki sposób, że istnieją elementy członkowskie wyliczenia (każdy z <xref:System.Runtime.Serialization.EnumMemberAttribute> zastosowany) mapowania każda część sumy. Wysyłanie listy wszystkich tych elementów członkowskich. Należy pamiętać, że *zachłanne algorytm* jest używana do znajdowania to suma, i w związku z tym nie ma żadnej gwarancji, który takiej sumy zostanie znaleziony, nawet jeśli jest obecny. Aby uniknąć tego problemu, upewnij się, czy uprawnień z dwóch wartości liczbowych elementów członkowskich wyliczenia.  
   
-3.  Jeśli dwa poprzednie kroki zakończyć się niepowodzeniem, a wartość liczbowa jest różna od zera, throw <xref:System.Runtime.Serialization.SerializationException>. Jeśli wartość liczbowa jest wartość zero, należy wysłać pustej listy.  
+3. Jeśli dwa poprzednie kroki zakończyć się niepowodzeniem, a wartość liczbowa jest różna od zera, throw <xref:System.Runtime.Serialization.SerializationException>. Jeśli wartość liczbowa jest wartość zero, należy wysłać pustej listy.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie wyliczenie może służyć w ramach operacji flagi.  

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835287"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303094"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Instrukcje: Przypisywanie tablicy do innej tablicy (Visual Basic)
 Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania, podobnie jak inne typy obiektów. Zmienną tablicową mieści wskaźnik do danych stanowiące elementów tablicy i informacji Ranga i długość i przypisania kopiuje tylko ten wskaźnik.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Aby przypisać jednej tablicy do innej tablicy  
   
-1.  Upewnij się, że dwie tablice mają tę samą rangę (liczba wymiarów) i typy danych zgodne elementu.  
+1. Upewnij się, że dwie tablice mają tę samą rangę (liczba wymiarów) i typy danych zgodne elementu.  
   
-2.  Używać instrukcji przypisania standardowych można przypisać tablica źródłowa do tablicy docelowej. Nie wykonuj obu nazwa tablicy za pomocą nawiasów.  
+2. Używać instrukcji przypisania standardowych można przypisać tablica źródłowa do tablicy docelowej. Nie wykonuj obu nazwa tablicy za pomocą nawiasów.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -46,5 +46,5 @@ Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania
 
 - [Tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Rozwiązywanie problemów związanych z tablicami](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
-- [Enum, instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Enum — Instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

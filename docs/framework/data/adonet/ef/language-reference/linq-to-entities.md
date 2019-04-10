@@ -2,25 +2,25 @@
 title: LINQ do Jednostek
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129691"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304587"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), która umożliwia programistom pisanie kwerend modelu koncepcyjnego Entity Framework przy użyciu języka Visual Basic lub Visual C#. Zapytania dotyczące programu Entity Framework są reprezentowane przez zapytania w drzewie poleceń, których wykonanie względem kontekst. Składnik LINQ to Entities konwertuje zapytań Language-Integrated zapytania (LINQ) z poleceniem Drzewo zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty używane przez Entity Framework i LINQ. Poniżej przedstawiono proces tworzenia i wykonywanie w zapytaniu składnika LINQ to Entities:  
   
-1.  Konstruowania <xref:System.Data.Objects.ObjectQuery%601> wystąpienia z <xref:System.Data.Objects.ObjectContext>.  
+1. Konstruowania <xref:System.Data.Objects.ObjectQuery%601> wystąpienia z <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Za pomocą narzędzia Compose zapytaniu składnika LINQ to Entities w języku C# lub Visual Basic <xref:System.Data.Objects.ObjectQuery%601> wystąpienia.  
+2. Za pomocą narzędzia Compose zapytaniu składnika LINQ to Entities w języku C# lub Visual Basic <xref:System.Data.Objects.ObjectQuery%601> wystąpienia.  
   
-3.  Konwertuj operatorów standardowej kwerendy LINQ i wyrażeń na drzew poleceń.  
+3. Konwertuj operatorów standardowej kwerendy LINQ i wyrażeń na drzew poleceń.  
   
-4.  Wykonanie kwerendy, w reprezentacji drzewa poleceń względem źródła danych. Wyjątki zgłaszane w źródle danych w czasie wykonywania są przekazywane bezpośrednio do klienta.  
+4. Wykonanie kwerendy, w reprezentacji drzewa poleceń względem źródła danych. Wyjątki zgłaszane w źródle danych w czasie wykonywania są przekazywane bezpośrednio do klienta.  
   
-5.  Zwraca wyniki zapytania do klienta.  
+5. Zwraca wyniki zapytania do klienta.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Utworzenie wystąpienia obiektu ObjectQuery  
  <xref:System.Data.Objects.ObjectQuery%601> Klasa ogólna reprezentuje zapytanie, które zwraca kolekcję zero lub więcej z kontrolą typów jednostek. Zapytanie obiekt jest zwykle konstruowane na podstawie istniejącego kontekstu obiektu, zamiast ręcznie budowany i zawsze należy do tego obiektu kontekstu. Ten kontekst udostępnia połączenia i informacje o metadanych, który jest wymagany do tworzenia i wykonywanie zapytania. <xref:System.Data.Objects.ObjectQuery%601> Implementuje klasy ogólnej <xref:System.Linq.IQueryable%601> ogólny interfejs, w której metody konstruktora włączenia zapytań LINQ do zbudowania przyrostowo. Można także pozwolić kompilatorowi wydedukować typ. jednostek przy użyciu języka C# `var` — słowo kluczowe (`Dim` w Visual Basic, wnioskowanie o typie lokalnym włączona).  

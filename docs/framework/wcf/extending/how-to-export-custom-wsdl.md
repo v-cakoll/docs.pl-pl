@@ -2,21 +2,21 @@
 title: 'Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL'
 ms.date: 03/30/2017
 ms.assetid: 5c1e4b58-b76b-472b-9635-2f80d42a0734
-ms.openlocfilehash: 16f34a71882587bbd9782d7a9ea807faa72e8238
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 725e1b27f36716002ad7cd05183181da9e05fa65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296423"
 ---
 # <a name="how-to-export-custom-wsdl"></a>Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL
 W tym temacie opisano sposób eksportowania niestandardowych informacji WSDL. W tym celu zdefiniujemy nowy atrybut kodu o nazwie `WsdlDocumentationAttribute` , spowoduje to dodanie niestandardowych informacji w pliku WSDL, generowane przez usługę.  
   
 ### <a name="to-export-custom-wsdl-information"></a>Aby wyeksportować informacje o niestandardowych WSDL  
   
-1.  Implementowanie <xref:System.ServiceModel.Description.IWsdlExportExtension> interfejsu. Można zaimplementować ten interfejs dla klasy, która implementuje dowolne z poniższych interfejsów: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, lub <xref:System.ServiceModel.Description.IEndpointBehavior>. Może też być implementowany na klasę pochodną <xref:System.ServiceModel.Channels.BindingElement>. Implementuje w tym przykładzie <xref:System.ServiceModel.Description.IWsdlExportExtension> klasy atrybutu, który implementuje <xref:System.ServiceModel.Description.IContractBehavior>.  
+1. Implementowanie <xref:System.ServiceModel.Description.IWsdlExportExtension> interfejsu. Można zaimplementować ten interfejs dla klasy, która implementuje dowolne z poniższych interfejsów: <xref:System.ServiceModel.Description.IOperationBehavior>, <xref:System.ServiceModel.Description.IContractBehavior>, lub <xref:System.ServiceModel.Description.IEndpointBehavior>. Może też być implementowany na klasę pochodną <xref:System.ServiceModel.Channels.BindingElement>. Implementuje w tym przykładzie <xref:System.ServiceModel.Description.IWsdlExportExtension> klasy atrybutu, który implementuje <xref:System.ServiceModel.Description.IContractBehavior>.  
   
-2.  <xref:System.ServiceModel.Description.IWsdlExportExtension> definiuje dwie metody <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> i <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Te metody umożliwiają modyfikowanie lub Dodawanie (lub obu modyfikować i dodawać) dodatkowe informacje do <xref:System.ServiceModel.Description.WsdlContractConversionContext>. To przykładowe w <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> metody pobiera kolekcję <xref:System.ServiceModel.Description.OperationDescription> obiektów, a następnie iteruje po kolekcji sprawdzania pod kątem `WsdlDocumentationAttribute`. Jeśli został znaleziony, tekst skojarzony z atrybutem został wyodrębniony, generowany jest summary element i podsumowanie element zostanie dodany do `DocumentationElement` operacji.  
+2. <xref:System.ServiceModel.Description.IWsdlExportExtension> definiuje dwie metody <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlEndpointConversionContext%29> i <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>. Te metody umożliwiają modyfikowanie lub Dodawanie (lub obu modyfikować i dodawać) dodatkowe informacje do <xref:System.ServiceModel.Description.WsdlContractConversionContext>. To przykładowe w <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> metody pobiera kolekcję <xref:System.ServiceModel.Description.OperationDescription> obiektów, a następnie iteruje po kolekcji sprawdzania pod kątem `WsdlDocumentationAttribute`. Jeśli został znaleziony, tekst skojarzony z atrybutem został wyodrębniony, generowany jest summary element i podsumowanie element zostanie dodany do `DocumentationElement` operacji.  
   
     ```  
             public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

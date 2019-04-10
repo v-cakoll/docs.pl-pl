@@ -2,12 +2,12 @@
 title: Pojęcia zabezpieczeń użyte dla programu WCF
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142223"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295552"
 ---
 # <a name="security-concepts-used-in-wcf"></a>Pojęcia zabezpieczeń użyte dla programu WCF
 Zabezpieczenia usług Windows Communication Foundation (WCF) jest utworzonych na podstawie pojęcia już w użyciu i wdrożone w różnych infrastrukturach zabezpieczeń.  
@@ -34,15 +34,15 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest utworzonych na
 ## <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu  
  Usługi WCF zapewnia szereg sposobów kontrolowania dostępu do usługi lub operacji. Między nimi są  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  Dostawcy członkostwa platformy ASP.NET  
+2. Dostawcy członkostwa platformy ASP.NET  
   
-3.  Dostawcy ról ASP.NET  
+3. Dostawcy ról ASP.NET  
   
-4.  Menedżer autoryzacji  
+4. Menedżer autoryzacji  
   
-5.  Modelu tożsamości  
+5. Modelu tożsamości  
   
  Aby uzyskać więcej informacji na temat, zobacz następujące tematy [mechanizmy kontroli dostępu](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

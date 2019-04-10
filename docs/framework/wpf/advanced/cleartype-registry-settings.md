@@ -5,17 +5,16 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079997"
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
-Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] ustawień rejestru, które są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
-  
-  
+Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] ustawień rejestru, które są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje, które renderują tekst do korzystania z urządzenia wyświetlaną [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funkcji w celu zapewnienia rozszerzonego czytanie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] jest to technologia oprogramowanie opracowane przez [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] który poprawia czytelność tekstu na istniejące LCD (należy zmienić.), takie jak ekranów komputerów przenośnych, ekrany Pocket PC i monitory płaskie. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] działa, uzyskując dostęp do poszczególnych kolor pionowych elementy usługi stripe w każdy piksel ekran LCD. Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], zobacz [ClearType — Przegląd](cleartype-overview.md).  
@@ -37,12 +36,12 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
 |Struktura pikseli|W tym artykule opisano rozmieszczenie pikseli do wyświetlania na urządzeniach.|  
 |Poziom kontrast tekstu|W tym artykule opisano poziom kontrastu wyświetlanego tekstu.|  
   
- Te ustawienia można uzyskać przez narzędzie do konfiguracji zewnętrznego, który wie, jak odwoływać się do wskazywanego przez nią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawień rejestru. Te ustawienia można również utworzone lub zmodyfikowane, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Edytora rejestru.  
+ Te ustawienia można uzyskać przez narzędzie do konfiguracji zewnętrznego, który wie, jak odwoływać się do wskazywanego przez nią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawień rejestru. Te ustawienia można również utworzone lub zmodyfikowane, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Edytora rejestru.  
   
- Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia rejestru nie są ustawione (co jest domyślnym stanem), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapytania aplikacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informacje o systemie parametrów do wygładzania ustawienia czcionek.  
+ Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia rejestru nie są ustawione (co jest domyślnym stanem), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapytania aplikacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informacje o systemie parametrów do wygładzania ustawienia czcionek.  
   
 > [!NOTE]
->  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
+>  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Poziom ClearType  
@@ -90,7 +89,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  Struktura pikseli odpowiada na wartość całkowitą z zakresu od 0 do 2. Domyślny poziom to 0, co oznacza struktury płaskiej pikseli.  
   
 > [!NOTE]
->  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
+>  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
   
 ### <a name="registry-setting"></a>Ustawienia rejestru  
  Ustawienia lokalizacji dla struktury pikseli rejestru jest ustawienie komputera lokalnego, który odpowiada nazwę wyświetlaną określonego urządzenia:  
@@ -115,5 +114,6 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  ![ClearType ustawień w Edytorze rejestru.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Zobacz także
-- [ClearType — przegląd](cleartype-overview.md)
+
+- [ClearType — Przegląd](cleartype-overview.md)
 - [Antyaliasing ClearType](/windows/desktop/gdi/cleartype-antialiasing)

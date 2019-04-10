@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295383"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Instrukcje: tworzenie oświadczenia niestandardowego
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) zapewnia zestaw typów wbudowanych oświadczeń i uprawnień przy użyciu funkcji pomocnika dla tworzenia <xref:System.IdentityModel.Claims.Claim> wystąpień z tych typów i praw. Te wbudowane oświadczenia są przeznaczone do informacji o modelu znaleziono w typy poświadczeń klienta, które obsługuje WCF domyślnie. W wielu przypadkach wbudowanych oświadczenia są wystarczające; Jednak niektóre aplikacje mogą wymagać oświadczenia niestandardowe. Oświadczenia składa się z typu oświadczenia, zasobów, dla której oświadczenia ma zastosowanie do i potwierdzone praw za pośrednictwem tego zasobu. W tym temacie opisano tworzenie oświadczenia niestandardowego.  
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-primitive-data-type"></a>Aby utworzyć oświadczenia niestandardowego, który jest oparty na typie danych pierwotnych  
   
-1.  Tworzenie oświadczenia niestandardowego, przekazując typ oświadczenia, wartość zasobu i po prawej stronie, aby <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
+1. Tworzenie oświadczenia niestandardowego, przekazując typ oświadczenia, wartość zasobu i po prawej stronie, aby <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
   
     1.  Decyzję w sprawie unikatową wartość dla typu oświadczenia.  
   
@@ -40,7 +40,7 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) zape
   
 ### <a name="to-create-a-custom-claim-that-is-based-on-a-non-primitive-data-type"></a>Aby utworzyć oświadczenia niestandardowego, który jest oparty na typie danych niepodstawowe  
   
-1.  Tworzenie oświadczenia niestandardowego, przekazując typ oświadczenia, wartość zasobu i po prawej stronie, aby <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
+1. Tworzenie oświadczenia niestandardowego, przekazując typ oświadczenia, wartość zasobu i po prawej stronie, aby <xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> konstruktora.  
   
     1.  Decyzję w sprawie unikatową wartość dla typu oświadczenia.  
   

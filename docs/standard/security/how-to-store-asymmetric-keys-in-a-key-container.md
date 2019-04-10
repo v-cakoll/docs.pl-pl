@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy'
+title: 'Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326193"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: Store kluczy asymetrycznych w kontenerze kluczy
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy
 Klucze asymetryczne prywatnej nigdy nie powinny być przechowywane, verbatim lub w postaci zwykłego tekstu, na komputerze lokalnym. Jeśli musisz przechować klucz prywatny, należy użyć kontenera kluczy. Aby uzyskać więcej informacji na temat kontenerów kluczy, zobacz [kontenery kluczy RSA poziomie użytkownika i na poziomie maszyny opis](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Aby utworzyć to klucz asymetryczny i zapisać ją w kontenerze kluczy  
   
-1.  Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters> klasy i przekazywać nazwę jednostki, którą chcesz wywołać kontener klucza do <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> pola.  
+1. Utwórz nowe wystąpienie klasy <xref:System.Security.Cryptography.CspParameters> klasy i przekazywać nazwę jednostki, którą chcesz wywołać kontener klucza do <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> pola.  
   
-2.  Utwórz nowe wystąpienie klasy, która jest pochodną <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasy (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż utworzony wcześniej  **CspParameters** obiektu dla jego konstruktora.  
+2. Utwórz nowe wystąpienie klasy, która jest pochodną <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasy (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż utworzony wcześniej  **CspParameters** obiektu dla jego konstruktora.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>Aby usunąć klucz przy użyciu kontenera kluczy  
   
-1.  Utwórz nowe wystąpienie klasy **CspParameters** klasy i przekazywać nazwę jednostki, którą chcesz wywołać kontener klucza do **CspParameters.KeyContainerName** pola.  
+1. Utwórz nowe wystąpienie klasy **CspParameters** klasy i przekazywać nazwę jednostki, którą chcesz wywołać kontener klucza do **CspParameters.KeyContainerName** pola.  
   
-2.  Utwórz nowe wystąpienie klasy, która jest pochodną **AsymmetricAlgorithm** klasy (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż utworzone wcześniej **CspParameters** obiektu dla jego konstruktora.  
+2. Utwórz nowe wystąpienie klasy, która jest pochodną **AsymmetricAlgorithm** klasy (zazwyczaj **RSACryptoServiceProvider** lub **DSACryptoServiceProvider**) i przekaż utworzone wcześniej **CspParameters** obiektu dla jego konstruktora.  
   
-3.  Ustaw **PersistKeyInCSP** właściwość klasy, która pochodzi od klasy **AsymmetricAlgorithm** do **false** (**False** w języku Visual Basic).  
+3. Ustaw **PersistKeyInCSP** właściwość klasy, która pochodzi od klasy **AsymmetricAlgorithm** do **false** (**False** w języku Visual Basic).  
   
-4.  Wywołaj **wyczyść** metody klasy, która pochodzi od klasy **AsymmetricAlgorithm**. Ta metoda zwalnia wszystkie zasoby klasy i czyści kontenera kluczy.  
+4. Wywołaj **wyczyść** metody klasy, która pochodzi od klasy **AsymmetricAlgorithm**. Ta metoda zwalnia wszystkie zasoby klasy i czyści kontenera kluczy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak utworzyć klucza asymetrycznego, zapisz go w kontenerze kluczy, pobieranie klucza w późniejszym czasie i Usuń klucz z kontenera.  

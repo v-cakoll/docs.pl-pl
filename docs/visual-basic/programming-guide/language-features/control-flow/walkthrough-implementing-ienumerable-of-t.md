@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819505"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302585"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Przewodnik: Implementowanie IEnumerable(Of T) w języku Visual Basic
 <xref:System.Collections.Generic.IEnumerable%601> Interfejs jest implementowany przez klasy, które mogą zwracać sekwencję wartości jeden element w danym momencie. Zaletą zwracający dane, jeden element w danym momencie to, że nie masz załadować kompletny zestaw danych do pamięci z nią pracować. Musisz użyć wystarczającą ilość pamięci do załadowania pojedynczy element z danych. Klasy, które implementują `IEnumerable(T)` interfejsu może być używany z `For Each` pętli lub zapytań LINQ.  
@@ -29,13 +29,13 @@ ms.locfileid: "58819505"
   
 **Utwórz projekt wyliczalny klas**
 
-1.  W języku Visual Basic na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**.
+1. W języku Visual Basic na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**.
 
-1.  W **nowy projekt** dialogowym **typów projektów** okienka, upewnij się, że **Windows** jest zaznaczone. Wybierz **biblioteki klas** w **szablony** okienka. W **nazwa** wpisz `StreamReaderEnumerable`, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.
+1. W **nowy projekt** dialogowym **typów projektów** okienka, upewnij się, że **Windows** jest zaznaczone. Wybierz **biblioteki klas** w **szablony** okienka. W **nazwa** wpisz `StreamReaderEnumerable`, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.
 
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik Class1.vb i kliknij przycisk **Zmień nazwę**. Zmień nazwę pliku do `StreamReaderEnumerable.vb` i naciśnij klawisz ENTER. Zmiana nazwy pliku spowoduje również zmianę nazwy klasy, która ma `StreamReaderEnumerable`. Ta klasa wdroży `IEnumerable(Of String)` interfejsu.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy plik Class1.vb i kliknij przycisk **Zmień nazwę**. Zmień nazwę pliku do `StreamReaderEnumerable.vb` i naciśnij klawisz ENTER. Zmiana nazwy pliku spowoduje również zmianę nazwy klasy, która ma `StreamReaderEnumerable`. Ta klasa wdroży `IEnumerable(Of String)` interfejsu.
 
-1.  Kliknij prawym przyciskiem myszy projekt StreamReaderEnumerable, wskaż opcję **Dodaj**, a następnie kliknij przycisk **nowy element**. Wybierz **klasy** szablonu. W **nazwa** wpisz `StreamReaderEnumerator.vb` i kliknij przycisk **OK**.
+1. Kliknij prawym przyciskiem myszy projekt StreamReaderEnumerable, wskaż opcję **Dodaj**, a następnie kliknij przycisk **nowy element**. Wybierz **klasy** szablonu. W **nazwa** wpisz `StreamReaderEnumerator.vb` i kliknij przycisk **OK**.
 
  Pierwszą klasą w tym projekcie jest klasą wyliczalny i wdroży `IEnumerable(Of String)` interfejsu. Implementuje ten interfejs ogólny <xref:System.Collections.IEnumerable> interfejsu i gwarantuje, że osoby korzystające z tej klasy mają dostęp do wartości wpisanych jako `String`.  
   
@@ -98,4 +98,4 @@ ms.locfileid: "58819505"
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Przepływ sterowania](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [For Each...Next, instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [For Each...Next — Instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

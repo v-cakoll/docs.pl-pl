@@ -2,12 +2,12 @@
 title: Obsługa zapytań
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307954"
 ---
 # <a name="support-for-queries"></a>Obsługa zapytań
 Store wystąpienia przepływu pracy SQL rejestruje zestaw właściwości dobrze znane w magazynie. Użytkownicy mogą wyszukiwać wystąpień na podstawie tych właściwości. Poniższa lista zawiera niektóre z tych znanych właściwości:  
@@ -39,21 +39,21 @@ Store wystąpienia przepływu pracy SQL rejestruje zestaw właściwości dobrze 
 ### <a name="the-instances-view"></a>Wyświetl wystąpienia  
  Widok wystąpień zawiera następujące pola:  
   
-1.  **Identyfikator**  
+1. **Id**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ Store wystąpienia przepływu pracy SQL rejestruje zestaw właściwości dobrze 
 ### <a name="the-servicedeployments-view"></a>Widok ServiceDeployments  
  Widok ServiceDeployments zawiera następujące pola:  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Widok InstancePromotedProperties  
  Widok InstancePromotedProperties zawiera następujące pola. Aby uzyskać więcej informacji na temat właściwości o podwyższonym poziomie, zobacz [rozszerzalności Store](store-extensibility.md) tematu.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Wartość #** (zakres pola z **wartość1** do **Value64**).
+4. **Wartość #** (zakres pola z **wartość1** do **Value64**).

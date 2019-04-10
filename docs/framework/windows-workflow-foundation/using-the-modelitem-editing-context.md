@@ -1,38 +1,38 @@
 ---
-title: Za pomocą kontekstu edycyjnego ModelItem
+title: Używanie kontekstu edycyjnego ModelItem
 ms.date: 03/30/2017
 ms.assetid: 7f9f1ea5-0147-4079-8eca-be94f00d3aa1
-ms.openlocfilehash: d8d2e7d055099a6aedd13dd48dd78403cdff2a50
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: a2628bbbf2f6684e5d484b05cd5a2ac622f3b664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846275"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296892"
 ---
-# <a name="using-the-modelitem-editing-context"></a>Za pomocą kontekstu edycyjnego ModelItem
+# <a name="using-the-modelitem-editing-context"></a>Używanie kontekstu edycyjnego ModelItem
 <xref:System.Activities.Presentation.Model.ModelItem> Kontekstu do edycji jest obiekt, który aplikacja hosta używa do komunikowania się za pomocą projektanta. <xref:System.Activities.Presentation.EditingContext> udostępnia dwie metody <xref:System.Activities.Presentation.EditingContext.Items%2A> i <xref:System.Activities.Presentation.EditingContext.Services%2A>, których można używać  
   
 ## <a name="the-items-collection"></a>Kolekcja elementów  
  <xref:System.Activities.Presentation.EditingContext.Items%2A> Kolekcji umożliwia dostęp do danych, który jest udostępniany między hostem a projektanta lub danych, która jest dostępna dla wszystkich projektantów. Ta kolekcja zawiera następujące funkcje, dostępne za pośrednictwem <xref:System.Activities.Presentation.ContextItemManager> klasy:  
   
-1.  <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
+1. <xref:System.Activities.Presentation.ContextItemManager.GetValue%2A>  
   
-2.  <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ContextItemManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ContextItemManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
+4. <xref:System.Activities.Presentation.ContextItemManager.SetValue%2A>  
   
 ## <a name="the-services-collection"></a>Kolekcja usług  
  <xref:System.Activities.Presentation.EditingContext.Services%2A> Kolekcji umożliwia dostęp do usług używanych przez projektanta do interakcji z hostem lub usług korzystających z wszystkich projektantów. Ta kolekcja zawiera następujących metod Uwaga:  
   
-1.  <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
+1. <xref:System.Activities.Presentation.ServiceManager.Publish%2A>  
   
-2.  <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
+2. <xref:System.Activities.Presentation.ServiceManager.Subscribe%2A>  
   
-3.  <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
+3. <xref:System.Activities.Presentation.ServiceManager.Unsubscribe%2A>  
   
-4.  <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
+4. <xref:System.Activities.Presentation.ServiceManager.GetService%2A>  
   
 ## <a name="assigning-a-designer-an-activity"></a>Przypisywanie projektanta działań  
  Aby określić projektanta, który używa działania, atrybut projektanta jest używany.  

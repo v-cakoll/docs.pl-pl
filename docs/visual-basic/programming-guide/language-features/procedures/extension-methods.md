@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296241"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 Metody rozszerzające umożliwiają programistom dodawanie niestandardowych funkcji do typów danych, które są już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzające umożliwiają napisanie metody, która może być wywoływany tak, jakby jego była wystąpieniem metody istniejącego typu.  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Pierwszeństwo metody rozszerzającej  
  Gdy dwie metody rozszerzające, posiadające identyczne oznaczenie są z zakresie oraz są dostępne, co o wyższym priorytecie zostanie wywołany. Pierwszeństwo metody rozszerzenia opiera się na mechanizmie zastosowanym w celu dostosowania metody do zakresu. Na poniższej liście przedstawiono hierarchię pierwszeństwa, od najwyższego do najniższego.  
   
-1.  Metody rozszerzające zdefiniowane wewnątrz bieżącego modułu.  
+1. Metody rozszerzające zdefiniowane wewnątrz bieżącego modułu.  
   
-2.  Metody rozszerzające zdefiniowane wewnątrz typów danych w bieżącej przestrzeni nazw lub jednego z elementów nadrzędnych za pomocą podrzędne przestrzenie nazw mającą wyższy priorytet niż nadrzędna przestrzeń nazw.  
+2. Metody rozszerzające zdefiniowane wewnątrz typów danych w bieżącej przestrzeni nazw lub jednego z elementów nadrzędnych za pomocą podrzędne przestrzenie nazw mającą wyższy priorytet niż nadrzędna przestrzeń nazw.  
   
-3.  Metody rozszerzające zdefiniowane wewnątrz dowolnego typu importu w bieżącym pliku.  
+3. Metody rozszerzające zdefiniowane wewnątrz dowolnego typu importu w bieżącym pliku.  
   
-4.  Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej przestrzeni nazw w bieżącym pliku.  
+4. Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej przestrzeni nazw w bieżącym pliku.  
   
-5.  Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej typu na poziomie projektu.  
+5. Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej typu na poziomie projektu.  
   
-6.  Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej przestrzeni nazw na poziomie projektu.  
+6. Metody rozszerzające zdefiniowane wewnątrz dowolnej importowanej przestrzeni nazw na poziomie projektu.  
   
  Jeśli pierwszeństwo nie rozwiązuje niejasności, można użyć w pełni kwalifikowana nazwa, aby określić metodę, którą wywołujesz. Jeśli `Print` metoda we wcześniejszym przykładzie jest zdefiniowana w module o nazwie `StringExtensions`, w pełni kwalifikowana nazwa to `StringExtensions.Print(example)` zamiast `example.Print()`.  
   
@@ -179,9 +179,9 @@ End Module
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Metody rozszerzeń](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [Instrukcja Module](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Module — Instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Parametry opcjonalne](./optional-parameters.md)
-- [Tablice parametrów](./parameter-arrays.md)
+- [Parameter — Tablice](./parameter-arrays.md)
 - [Omówienie atrybuty](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

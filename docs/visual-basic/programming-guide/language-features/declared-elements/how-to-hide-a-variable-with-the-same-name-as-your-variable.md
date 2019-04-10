@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296189"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika (Visual Basic)
 Można ukryć zmiennej przez *przesłanianie* go, oznacza to poprzez zmianę definicji go ze zmienną o takiej samej nazwie. Można w tle zmienną, którą chcesz ukryć na dwa sposoby:  
@@ -30,7 +30,7 @@ Można ukryć zmiennej przez *przesłanianie* go, oznacza to poprzez zmianę def
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Aby ukryć zmiennej przez przesłanianie go przy użyciu zakresu  
   
-1.  Określić region Definiowanie zmiennej, którą chcesz ukryć i określ Podobszar, w której ma zostać przedefiniować go za pomocą zmiennej.  
+1. Określić region Definiowanie zmiennej, którą chcesz ukryć i określ Podobszar, w której ma zostać przedefiniować go za pomocą zmiennej.  
   
     |Region zmiennej|Dozwolone Podobszar dla ponownego definiowania go|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ Można ukryć zmiennej przez *przesłanianie* go, oznacza to poprzez zmianę def
   
      Nie można przedefiniować procedury zmiennej w bloku, w ramach tej procedury, na przykład w `If`... `End If` konstrukcji lub `For` pętli.  
   
-2.  Utwórz regionu, jeśli jeszcze nie istnieje.  
+2. Utwórz regionu, jeśli jeszcze nie istnieje.  
   
-3.  W regionie zapisu [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) zadeklarowanie zmiennej przesłaniania.  
+3. W regionie zapisu [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) zadeklarowanie zmiennej przesłaniania.  
   
      Gdy kod wewnątrz regionu odwołuje się do nazwy zmiennej, kompilator rozpoznaje odwołanie do zmiennej przesłaniania.  
   
@@ -73,11 +73,11 @@ Można ukryć zmiennej przez *przesłanianie* go, oznacza to poprzez zmianę def
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Aby ukryć zmiennej przez przesłanianie go poprzez dziedziczenie  
   
-1.  Upewnij się, że zmiennej, którą chcesz ukryć jest zadeklarowana w klasie i na poziomie klasy (poza dowolnej procedury). W przeciwnym razie nie można go cienia poprzez dziedziczenie.  
+1. Upewnij się, że zmiennej, którą chcesz ukryć jest zadeklarowana w klasie i na poziomie klasy (poza dowolnej procedury). W przeciwnym razie nie można go cienia poprzez dziedziczenie.  
   
-2.  Zdefiniuj klasę pochodną klasy zmiennej, jeśli już nie istnieje.  
+2. Zdefiniuj klasę pochodną klasy zmiennej, jeśli już nie istnieje.  
   
-3.  W klasie pochodnej zapisu `Dim` instrukcji deklarowania zmiennej. Obejmują [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md) — słowo kluczowe w deklaracji.  
+3. W klasie pochodnej zapisu `Dim` instrukcji deklarowania zmiennej. Obejmują [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md) — słowo kluczowe w deklaracji.  
   
      Gdy kod w klasie pochodnej odwołuje się do nazwy zmiennej, kompilator rozpoznaje odwołanie do zmiennej.  
   
@@ -107,9 +107,9 @@ Można ukryć zmiennej przez *przesłanianie* go, oznacza to poprzez zmianę def
 
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Różnice między przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
+- [Różnice między zasłanianiem i przesłanianiem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Instrukcje: Ukrywanie dziedziczonej zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [Instrukcje: Dostęp do zmiennej ukrytej przez klasę pochodną](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Me, My, MyBase, i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -2,12 +2,12 @@
 title: Podobnie jak (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302260"
 ---
 # <a name="like-entity-sql"></a>Podobnie jak (jednostka SQL)
 Określa, czy określony znak `String` pasuje do określonego wzorca.  
@@ -68,9 +68,9 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Przykład  
  Następujące dwa [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytań użyj LIKE i operatory UCIECZKI, aby określić, czy dany ciąg znaków jest zgodny ze wzorcem określonym. Wyszukuje pierwsze zapytanie `Name` , rozpoczyna się od znaków `Down_`. To zapytanie używa opcji ANULOWANIA, ponieważ znak podkreślenia (`_`) jest symbolem wieloznacznym. Bez określania opcji ANULOWANIA, zapytanie będzie wyszukiwać `Name` wartości rozpoczynających się od słowa `Down` następuje dowolny pojedynczy znak inny niż znak podkreślenia. Zapytania są oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   

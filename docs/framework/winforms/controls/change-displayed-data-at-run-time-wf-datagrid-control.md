@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315858"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy systemu Windows
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175607"
   
 ### <a name="to-change-data-programmatically"></a>Programowe zmienianie danych  
   
-1.  Określ odpowiednią tabelę z <xref:System.Data.DataSet> obiektu i żądany wiersz pola z tabeli i Ustawianie nowej wartości komórki.  
+1. Określ odpowiednią tabelę z <xref:System.Data.DataSet> obiektu i żądany wiersz pola z tabeli i Ustawianie nowej wartości komórki.  
   
     > [!NOTE]
     >  Aby określić pierwszy spis <xref:System.Data.DataSet> lub pierwszy wiersz w tabeli, użyj wartości 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175607"
   
 ### <a name="to-change-the-datasource-programmatically"></a>Aby programowo zmienić źródło danych  
   
-1.  Ustaw <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę, aby nazwa źródła danych i chcesz powiązać z tabeli.  
+1. Ustaw <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metodę, aby nazwa źródła danych i chcesz powiązać z tabeli.  
   
      Poniższy przykład pokazuje, jak zmienić źródło daty przy użyciu <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] formant danych (adoPubsAuthors), który jest połączony z tabelą autorów w bazie danych Pubs.  
   

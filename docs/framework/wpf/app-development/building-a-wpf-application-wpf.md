@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300960"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), biblioteki (.dll) lub jako kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki w procesie kompilacji.  
@@ -57,11 +57,11 @@ Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!IN
   
  W tym kroku następujące działania wykonane każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku `Page` kompilacji elementu:  
   
-1.  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Przez kompilator znaczników jest analizowany plik.  
+1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Przez kompilator znaczników jest analizowany plik.  
   
-2.  Reprezentację skompilowanego jest tworzony w tym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i skopiowany do folderu obj\Release.  
+2. Reprezentację skompilowanego jest tworzony w tym [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i skopiowany do folderu obj\Release.  
   
-3.  CodeDOM reprezentacja klasę częściową jest utworzony i skopiowany do folderu obj\Release.  
+3. CodeDOM reprezentacja klasę częściową jest utworzony i skopiowany do folderu obj\Release.  
   
  Ponadto, generowany jest plik kodu języka specyficznego dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku. Na przykład dla strony Page1.xaml w projektach Visual Basic, generowane jest Page1.g.vb; na stronie Page1.xaml w projektach C# Page1.g.cs jest generowany. ".G" w nazwie pliku wskazuje na to, jest on generowany kod, który zawiera deklarację klasy częściowej najwyższego poziomu elementu pliku znaczników (takie jak `Page` lub `Window`). Klasa jest zadeklarowana za pomocą `partial` modyfikator w języku C# (`Extends` w języku Visual Basic) do wskazania, istnieje inny deklaracji klasy, gdzie indziej, zazwyczaj w związanym z kodem pliku Page1.xaml.cs.  
   

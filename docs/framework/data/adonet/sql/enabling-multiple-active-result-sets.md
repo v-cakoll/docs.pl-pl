@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304405"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Włączanie wielu aktywnych zestawów wyników
 Wiele aktywnych zestawów wyników (MARS) jest funkcją, która współdziała z programem SQL Server, aby umożliwić wykonywanie wielu instancji na pojedyncze połączenie. Po włączeniu MARS do użytku z programem SQL Server każdego obiektu polecenia używane dodaje sesji połączenia.  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Dostępne są trzy opcje do obsługi tego scenariusza:  
   
-1.  Uruchomić transakcję po utworzeniu czytnika, tak aby nie jest częścią transakcji. Każda aktualizacja staje się własną transakcji.  
+1. Uruchomić transakcję po utworzeniu czytnika, tak aby nie jest częścią transakcji. Każda aktualizacja staje się własną transakcji.  
   
-2.  Zatwierdź całą pracę po czytnik jest zamykany. To może potencjalnie znaczny partii aktualizacji.  
+2. Zatwierdź całą pracę po czytnik jest zamykany. To może potencjalnie znaczny partii aktualizacji.  
   
-3.  Nie używaj MARS; Zamiast tego użyć osobnego połączenia dla każdego obiektu polecenia, podobnie jak przed MARS.  
+3. Nie używaj MARS; Zamiast tego użyć osobnego połączenia dla każdego obiektu polecenia, podobnie jak przed MARS.  
   
 ### <a name="detecting-mars-support"></a>Wykrywanie MARS pomocy technicznej  
  Aplikację można sprawdzić MARS pomocy technicznej, czytając `SqlConnection.ServerVersion` wartość. Numer główny powinna być 9 dla programu SQL Server 2005 i 10 programu SQL Server 2008.  

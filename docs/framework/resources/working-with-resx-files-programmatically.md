@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d05c128910915419821fc44ca7894cd5f63c032d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18a8748c3175ec7e251116f478069d313ab28d7c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116002"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299244"
 ---
 # <a name="working-with-resx-files-programmatically"></a>Praca programistyczna z plikami .resx
 Ponieważ pliki zasobów (.resx) XML musi zawierać dobrze zdefiniowanych XML, w tym nagłówek, który musi być zgodny ze schematem określonego następuje dane w pary nazwa/wartość może się okazać, że ręcznego tworzenia tych plików jest podatne na błędy. Jako alternatywę pliki resx można utworzyć programowo, przy użyciu typów i elementów członkowskich w bibliotece klas programu .NET. Biblioteki klas platformy .NET umożliwia również pobrać zasoby, które są przechowywane w plikach resx. W tym temacie wyjaśniono, jak można używać typów i członków w <xref:System.Resources> przestrzeni nazw do pracy z plikami .resx.
@@ -23,17 +23,17 @@ Ponieważ pliki zasobów (.resx) XML musi zawierać dobrze zdefiniowanych XML, w
  Należy pamiętać, że w tym artykule omówiono Praca z danymi XML (resx) plików, które zawierają zasoby. Aby uzyskać informacje na temat pracy z plikami zasobów binarnych, które zostały osadzone w zestawach, zobacz <xref:System.Resources.ResourceManager> tematu.
 
 > [!WARNING]
-> Istnieją również sposoby pracy z plikami .resx innych niż programowo. Po dodaniu pliku zasobu do [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) projektu, Visual Studio udostępnia interfejs do tworzenia i obsługi plików resx i automatycznie służy do konwertowania pliku ResX na plik Resources w czasie kompilacji. Umożliwia także edytora tekstu do modyfikowania pliku ResX bezpośrednio. Jednak aby uniknąć uszkodzenia pliku, należy zachować ostrożność nie należy modyfikować informacje binarne, które są przechowywane w pliku.
+> Istnieją również sposoby pracy z plikami .resx innych niż programowo. Po dodaniu pliku zasobu do [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) projektu, Visual Studio udostępnia interfejs do tworzenia i obsługi plików resx i automatycznie służy do konwertowania pliku ResX na plik Resources w czasie kompilacji. Umożliwia także edytora tekstu do modyfikowania pliku ResX bezpośrednio. Jednak aby uniknąć uszkodzenia pliku, należy zachować ostrożność nie należy modyfikować informacje binarne, które są przechowywane w pliku.
 
 ## <a name="create-a-resx-file"></a>Utwórz plik Resx
 
 Możesz użyć <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> klasy w celu utworzenia pliku ResX programowo, wykonując następujące czynności:
 
-1.  Utwórz wystąpienie <xref:System.Resources.ResXResourceWriter> obiektu przez wywołanie metody <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> metody i podając nazwę pliku resx. Nazwa pliku musi zawierać rozszerzenie resx. W przypadku tworzenia wystąpienia <xref:System.Resources.ResXResourceWriter> obiektu `using` bloku, nie masz jawnie wywołać <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> metody w kroku 3.
+1. Utwórz wystąpienie <xref:System.Resources.ResXResourceWriter> obiektu przez wywołanie metody <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> metody i podając nazwę pliku resx. Nazwa pliku musi zawierać rozszerzenie resx. W przypadku tworzenia wystąpienia <xref:System.Resources.ResXResourceWriter> obiektu `using` bloku, nie masz jawnie wywołać <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> metody w kroku 3.
 
-2.  Wywołaj <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> metody dla każdego zasobu, które chcesz dodać do pliku. Użyj przeciążenia tej metody, aby dodać ciąg, obiekt i danych binarnych (tablicę bajtów). Jeśli zasób jest obiektem, muszą podlegać serializacji.
+2. Wywołaj <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> metody dla każdego zasobu, które chcesz dodać do pliku. Użyj przeciążenia tej metody, aby dodać ciąg, obiekt i danych binarnych (tablicę bajtów). Jeśli zasób jest obiektem, muszą podlegać serializacji.
 
-3.  Wywołaj <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> metody, aby wygenerować plik zasobów i zwolnić wszystkie zasoby. Jeśli <xref:System.Resources.ResXResourceWriter> obiekt został utworzony w ramach `using` bloku zasobów są zapisywane w pliku ResX i zasoby używane przez <xref:System.Resources.ResXResourceWriter> obiektu są wydawane na końcu `using` bloku.
+3. Wywołaj <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> metody, aby wygenerować plik zasobów i zwolnić wszystkie zasoby. Jeśli <xref:System.Resources.ResXResourceWriter> obiekt został utworzony w ramach `using` bloku zasobów są zapisywane w pliku ResX i zasoby używane przez <xref:System.Resources.ResXResourceWriter> obiektu są wydawane na końcu `using` bloku.
 
 Wynikowy plik Resx zawiera odpowiedniego nagłówka i `data` tag dla każdego zasobu dodane przez <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> metody.
 
@@ -46,7 +46,7 @@ Poniższy przykład tworzy plik Resx, o nazwie CarResources.resx, która przecho
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> Można również użyć [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) do tworzenia plików resx. W czasie kompilacji program Visual Studio używa [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) Aby przekonwertować plik Resx na zasób binarny (.resources) pliku, a także osadzenie go w zestawie aplikacji lub zestawu satelickiego.
+> Można również użyć [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) do tworzenia plików resx. W czasie kompilacji program Visual Studio używa [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) Aby przekonwertować plik Resx na zasób binarny (.resources) pliku, a także osadzenie go w zestawie aplikacji lub zestawu satelickiego.
 
 Nie można osadzić pliku resx w pliku wykonywalnym środowiska uruchomieniowego lub wkompilować ją w zestawie satelickim. Należy przekonwertować plik Resx do pliku binarnego (.resources) przy użyciu [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md). Wynikowy plik Resources, następnie mogą być osadzone w zestawie aplikacji lub zestawu satelickiego. Aby uzyskać więcej informacji, zobacz [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).
 

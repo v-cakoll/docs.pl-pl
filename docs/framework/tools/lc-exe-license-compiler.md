@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 87d8ac8384fd491b92b59ea8f014b3a521707825
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298971"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Kompilator licencji)
 Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowaniu i tworzy plik binarny, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
@@ -52,19 +52,19 @@ Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowan
   
 ## <a name="example"></a>Przykład  
   
-1.  Jeśli używasz licencjonowany formant `MyCompany.Samples.LicControl1` zawarte w `Samples.DLL` w aplikacji o nazwie `HostApp.exe` *,* można utworzyć `HostAppLic.txt` zawiera następujące czynności.  
+1. Jeśli używasz licencjonowany formant `MyCompany.Samples.LicControl1` zawarte w `Samples.DLL` w aplikacji o nazwie `HostApp.exe` *,* można utworzyć `HostAppLic.txt` zawiera następujące czynności.  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  Utwórz plik licenses o nazwie `HostApp.exe.licenses` przy użyciu następującego polecenia.  
+2. Utwórz plik licenses o nazwie `HostApp.exe.licenses` przy użyciu następującego polecenia.  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  Tworzenie `HostApp.exe` dołączając plik licenses jako zasób. W przypadku kompilowania aplikacji w języku C# należy użyć następującego polecenia, aby skompilować aplikację.  
+3. Tworzenie `HostApp.exe` dołączając plik licenses jako zasób. W przypadku kompilowania aplikacji w języku C# należy użyć następującego polecenia, aby skompilować aplikację.  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  

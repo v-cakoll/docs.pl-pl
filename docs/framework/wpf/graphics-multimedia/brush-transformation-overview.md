@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169575"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298334"
 ---
 # <a name="brush-transformation-overview"></a>Przegląd Przekształcanie pędzla
 Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Windows.Media.Brush.Transform%2A> i <xref:System.Windows.Media.Brush.RelativeTransform%2A>. Właściwości umożliwiają obracanie, skalowanie, pochylanie i tłumaczenie zawartość pędzla. W tym temacie opisano różnice między te dwie właściwości i przykłady ich użycia.  
@@ -29,15 +29,15 @@ Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Window
   
  Jeżeli zastosujesz przekształcenia pędzla <xref:System.Windows.Media.Brush.RelativeTransform%2A> właściwości tej transformacji jest stosowany do pędzla, przed jego danych wyjściowych jest mapowany do malowanego obszaru. Poniższa lista zawiera opis kolejności, w którym przetwarzane i przekształcić pędzel zawartość.  
   
-1.  Przetwarzanie zawartości pędzla. Aby uzyskać <xref:System.Windows.Media.GradientBrush>, oznacza to, że określenie obszaru gradientu. Aby uzyskać <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> jest mapowany na <xref:System.Windows.Media.TileBrush.Viewport%2A>. Ten staje się dane wyjściowe pędzla.  
+1. Przetwarzanie zawartości pędzla. Aby uzyskać <xref:System.Windows.Media.GradientBrush>, oznacza to, że określenie obszaru gradientu. Aby uzyskać <xref:System.Windows.Media.TileBrush>, <xref:System.Windows.Media.TileBrush.Viewbox%2A> jest mapowany na <xref:System.Windows.Media.TileBrush.Viewport%2A>. Ten staje się dane wyjściowe pędzla.  
   
-2.  Projekt pędzel danych wyjściowych na prostokąt przekształcenia 1 x 1.  
+2. Projekt pędzel danych wyjściowych na prostokąt przekształcenia 1 x 1.  
   
-3.  Stosowanie pędzla <xref:System.Windows.Media.Brush.RelativeTransform%2A>, jeśli taki istnieje.  
+3. Stosowanie pędzla <xref:System.Windows.Media.Brush.RelativeTransform%2A>, jeśli taki istnieje.  
   
-4.  Projekt przekształcone dane wyjściowe do obszaru do malowania.  
+4. Projekt przekształcone dane wyjściowe do obszaru do malowania.  
   
-5.  Stosowanie pędzla <xref:System.Windows.Media.Transform>, jeśli taki istnieje.  
+5. Stosowanie pędzla <xref:System.Windows.Media.Transform>, jeśli taki istnieje.  
   
  Ponieważ <xref:System.Windows.Media.Brush.RelativeTransform%2A> jest stosowany, natomiast pędzla danych wyjściowych jest mapowany do prostokąta 1 x 1, przekształcenie Centrum wartości przesunięcia wydaje się być względny. Na przykład, jeśli użyto <xref:System.Windows.Media.RotateTransform> celu Obróć pędzel danych wyjściowych 45 stopni, o jej środka, można udzielić <xref:System.Windows.Media.RotateTransform> <xref:System.Windows.Media.RotateTransform.CenterX%2A> wynosi 0,5 i <xref:System.Windows.Media.RotateTransform.CenterY%2A> wynosi 0,5.  
   
@@ -61,19 +61,19 @@ Klasa pędzla udostępnia dwie właściwości transformacji: <xref:System.Window
   
  Należy zauważyć, że obraz jest zniekształcony, nawet jeśli pędzla <xref:System.Windows.Media.TileBrush.Stretch%2A> została ustawiona na <xref:System.Windows.Media.Stretch.UniformToFill>. To dlatego przekształcenie względne są stosowane po pędzla <xref:System.Windows.Media.TileBrush.Viewbox%2A> jest mapowany na jego <xref:System.Windows.Media.TileBrush.Viewport%2A>. Na poniższej liście opisano każdy etap procesu:  
   
-1.  Projekt pędzla zawartość (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) na jego podstawowy Kafelek (<xref:System.Windows.Media.TileBrush.Viewport%2A>) przy użyciu pędzli <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienie.  
+1. Projekt pędzla zawartość (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) na jego podstawowy Kafelek (<xref:System.Windows.Media.TileBrush.Viewport%2A>) przy użyciu pędzli <xref:System.Windows.Media.TileBrush.Stretch%2A> ustawienie.  
   
      ![Rozciąganie Viewbox, aby dopasować okienka ekranu](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  Projekt podstawowy Kafelek na prostokąt przekształcenia 1 x 1.  
+2. Projekt podstawowy Kafelek na prostokąt przekształcenia 1 x 1.  
   
      ![Okienko ekranu mapy na prostokąt przekształcenia](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  Zastosuj <xref:System.Windows.Media.RotateTransform>.  
+3. Zastosuj <xref:System.Windows.Media.RotateTransform>.  
   
      ![Zastosuj przekształcenie względne](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  Projekt po przekształceniu podstawowy Kafelek do obszaru do malowania.  
+4. Projekt po przekształceniu podstawowy Kafelek do obszaru do malowania.  
   
      ![Projekt po przekształceniu pędzla do obszaru wyjściowego](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

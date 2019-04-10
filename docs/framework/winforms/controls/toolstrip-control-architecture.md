@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296215"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip — Architektura formantu
 <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.ToolStripItem> klasy zapewniają elastyczny i rozszerzalny system do wyświetlania elementów paska narzędzi, stanu i menu. Te klasy są zawarte w <xref:System.Windows.Forms> przestrzeni nazw i ich wszystkie nazwy z prefiksem "ToolStrip" (takie jak <xref:System.Windows.Forms.ToolStripOverflow>) lub z sufiksem "Usuń" (takie jak <xref:System.Windows.Forms.MenuStrip>).  
@@ -121,19 +121,19 @@ ms.locfileid: "59186670"
 #### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer — Obsługa dziedziczenia  
  <xref:System.Windows.Forms.ToolStripContainer> Kontrolka obsługuje ograniczonej liczbie scenariuszy dziedziczone, podobny do poniższego przykładu:  
   
-1.  Tworzenie nowej aplikacji Windows Forms.  
+1. Tworzenie nowej aplikacji Windows Forms.  
   
-2.  Dodaj <xref:System.Windows.Forms.ToolStripContainer> do formularza.  
+2. Dodaj <xref:System.Windows.Forms.ToolStripContainer> do formularza.  
   
-3.  Ustaw modyfikator dostępu elementu <xref:System.Windows.Forms.ToolStripContainer> do `public` lub `protected`.  
+3. Ustaw modyfikator dostępu elementu <xref:System.Windows.Forms.ToolStripContainer> do `public` lub `protected`.  
   
-4.  Dodaj dowolną kombinację <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.ContextMenuStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel> regionów <xref:System.Windows.Forms.ToolStripContainer>.  
+4. Dodaj dowolną kombinację <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, i <xref:System.Windows.Forms.ContextMenuStrip> mające na celu <xref:System.Windows.Forms.ToolStripPanel> regionów <xref:System.Windows.Forms.ToolStripContainer>.  
   
-5.  Skompiluj projekt.  
+5. Skompiluj projekt.  
   
-6.  Dodaj formularz, który dziedziczy z pierwszego formularza.  
+6. Dodaj formularz, który dziedziczy z pierwszego formularza.  
   
-7.  Wybierz dziedziczonego <xref:System.Windows.Forms.ToolStripContainer> w formularzu.  
+7. Wybierz dziedziczonego <xref:System.Windows.Forms.ToolStripContainer> w formularzu.  
   
 #### <a name="inherited-behavior-of-child-controls"></a>Zachowanie dziedziczonego formantów podrzędnych  
  Po wykonaniu poprzednich kroków spowoduje następujące dziedziczone zachowanie:  

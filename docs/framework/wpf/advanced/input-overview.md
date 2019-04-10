@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: d8eb22c4de9dc28f332b220dd4703b0c681904f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320018"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu zapewnia zaawansowany [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] w celu uzyskania danych wejściowych z różnych urządzeń, m.in. myszy, klawiatury, touch i Pióro. W tym temacie opisano usługi świadczone przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę systemów danych wejściowych.
@@ -217,15 +217,15 @@ ms.locfileid: "59090042"
 
  Poniższa lista zawiera opis sekwencji zdarzeń na poprzedniej ilustracji.
 
-1.  <xref:System.Windows.UIElement.TouchEnter> Jeden raz po użytkownik umieszcza palcem w elemencie wystąpi zdarzenie.
+1. <xref:System.Windows.UIElement.TouchEnter> Jeden raz po użytkownik umieszcza palcem w elemencie wystąpi zdarzenie.
 
-2.  <xref:System.Windows.UIElement.TouchDown> Zdarzenie wystąpi jeden raz.
+2. <xref:System.Windows.UIElement.TouchDown> Zdarzenie wystąpi jeden raz.
 
-3.  <xref:System.Windows.UIElement.TouchMove> Zdarzeń powtarza się wielokrotnie, gdy użytkownik przesuwa palca w elemencie.
+3. <xref:System.Windows.UIElement.TouchMove> Zdarzeń powtarza się wielokrotnie, gdy użytkownik przesuwa palca w elemencie.
 
-4.  <xref:System.Windows.UIElement.TouchUp> Zdarzenie wystąpi jeden raz po użytkownik wind palcem z elementu.
+4. <xref:System.Windows.UIElement.TouchUp> Zdarzenie wystąpi jeden raz po użytkownik wind palcem z elementu.
 
-5.  <xref:System.Windows.UIElement.TouchLeave> Zdarzenie wystąpi jeden raz.
+5. <xref:System.Windows.UIElement.TouchLeave> Zdarzenie wystąpi jeden raz.
 
  W przypadku używania więcej niż dwóch palców wystąpienia zdarzenia, dla każdej linii papilarnych.
 
@@ -269,17 +269,17 @@ ms.locfileid: "59090042"
 
  Poniższa lista zawiera opis sekwencji zdarzeń na poprzedniej ilustracji.
 
-1.  <xref:System.Windows.UIElement.ManipulationStarting> Zdarzenie występuje, gdy użytkownik umieści palcem na obiekcie. Między innymi, to zdarzenie pozwala na ustawienie <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> właściwości. W ramach kolejnych zdarzeń będzie pozycja operowanie atrybutami względem <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. W zdarzeniach innych niż <xref:System.Windows.UIElement.ManipulationStarting>, ta właściwość jest tylko do odczytu, więc <xref:System.Windows.UIElement.ManipulationStarting> zdarzenie jest jedyną sytuacją, którego można ustawić tej właściwości.
+1. <xref:System.Windows.UIElement.ManipulationStarting> Zdarzenie występuje, gdy użytkownik umieści palcem na obiekcie. Między innymi, to zdarzenie pozwala na ustawienie <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> właściwości. W ramach kolejnych zdarzeń będzie pozycja operowanie atrybutami względem <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A>. W zdarzeniach innych niż <xref:System.Windows.UIElement.ManipulationStarting>, ta właściwość jest tylko do odczytu, więc <xref:System.Windows.UIElement.ManipulationStarting> zdarzenie jest jedyną sytuacją, którego można ustawić tej właściwości.
 
-2.  <xref:System.Windows.UIElement.ManipulationStarted> Następne wystąpienie zdarzenia. To zdarzenie raporty pochodzenia operowanie atrybutami.
+2. <xref:System.Windows.UIElement.ManipulationStarted> Następne wystąpienie zdarzenia. To zdarzenie raporty pochodzenia operowanie atrybutami.
 
-3.  <xref:System.Windows.UIElement.ManipulationDelta> Zdarzenie występuje wiele razy, ile przenoszenie palców użytkowników na ekranie dotykowym. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Właściwość <xref:System.Windows.Input.ManipulationDeltaEventArgs> klasa raportuje, czy operowanie jest interpretowany jako przepływu, rozszerzenia lub tłumaczenia. Jest to, gdzie wykonać większość zadań wykonywania operacji na obiekcie.
+3. <xref:System.Windows.UIElement.ManipulationDelta> Zdarzenie występuje wiele razy, ile przenoszenie palców użytkowników na ekranie dotykowym. <xref:System.Windows.Input.ManipulationDeltaEventArgs.DeltaManipulation%2A> Właściwość <xref:System.Windows.Input.ManipulationDeltaEventArgs> klasa raportuje, czy operowanie jest interpretowany jako przepływu, rozszerzenia lub tłumaczenia. Jest to, gdzie wykonać większość zadań wykonywania operacji na obiekcie.
 
-4.  <xref:System.Windows.UIElement.ManipulationInertiaStarting> Zdarzenie występuje, gdy palców użytkownika utracą połączenie z obiektem. To zdarzenie umożliwia określenie spowolnieniu manipulacje podczas bezwładności. Jest to więc obiektu może emulować różnych fizycznego miejsca do magazynowania lub atrybutów, jeśli wybierzesz. Na przykład załóżmy, że Twoja aplikacja ma dwa obiekty, które reprezentują elementy w świecie fizycznym, a jedna jest większe niż ten drugi. Można wprowadzić obiekt większych zwalnianie szybciej niż jaśniejsze obiektu.
+4. <xref:System.Windows.UIElement.ManipulationInertiaStarting> Zdarzenie występuje, gdy palców użytkownika utracą połączenie z obiektem. To zdarzenie umożliwia określenie spowolnieniu manipulacje podczas bezwładności. Jest to więc obiektu może emulować różnych fizycznego miejsca do magazynowania lub atrybutów, jeśli wybierzesz. Na przykład załóżmy, że Twoja aplikacja ma dwa obiekty, które reprezentują elementy w świecie fizycznym, a jedna jest większe niż ten drugi. Można wprowadzić obiekt większych zwalnianie szybciej niż jaśniejsze obiektu.
 
-5.  <xref:System.Windows.UIElement.ManipulationDelta> Zdarzeń powtarza się wielokrotnie, ponieważ występuje bezwładności. Należy pamiętać, że to zdarzenie występuje podczas palców użytkownika poruszają się ekran dotykowy i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] symuluje bezwładności. Innymi słowy <xref:System.Windows.UIElement.ManipulationDelta> występuje przed i po nim <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzeń. <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Raportów właściwości czy <xref:System.Windows.UIElement.ManipulationDelta> zdarzenie występuje w ciągu bezwładności, aby można było sprawdzić właściwości i wykonywania różnych akcji, w zależności od jego wartość.
+5. <xref:System.Windows.UIElement.ManipulationDelta> Zdarzeń powtarza się wielokrotnie, ponieważ występuje bezwładności. Należy pamiętać, że to zdarzenie występuje podczas palców użytkownika poruszają się ekran dotykowy i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] symuluje bezwładności. Innymi słowy <xref:System.Windows.UIElement.ManipulationDelta> występuje przed i po nim <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzeń. <xref:System.Windows.Input.ManipulationDeltaEventArgs.IsInertial%2A?displayProperty=nameWithType> Raportów właściwości czy <xref:System.Windows.UIElement.ManipulationDelta> zdarzenie występuje w ciągu bezwładności, aby można było sprawdzić właściwości i wykonywania różnych akcji, w zależności od jego wartość.
 
-6.  <xref:System.Windows.UIElement.ManipulationCompleted> Wystąpi zdarzenie zakończenia manipulacji i bezwładności wszystkie. Oznacza to, że po wszystkich <xref:System.Windows.UIElement.ManipulationDelta> wystąpieniu zdarzenia, <xref:System.Windows.UIElement.ManipulationCompleted> wystąpi zdarzenie do sygnalizowania, że operowanie została zakończona.
+6. <xref:System.Windows.UIElement.ManipulationCompleted> Wystąpi zdarzenie zakończenia manipulacji i bezwładności wszystkie. Oznacza to, że po wszystkich <xref:System.Windows.UIElement.ManipulationDelta> wystąpieniu zdarzenia, <xref:System.Windows.UIElement.ManipulationCompleted> wystąpi zdarzenie do sygnalizowania, że operowanie została zakończona.
 
  <xref:System.Windows.UIElement> Definiuje również <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> zdarzeń. To zdarzenie występuje, gdy <xref:System.Windows.Input.ManipulationDeltaEventArgs.ReportBoundaryFeedback%2A> metoda jest wywoływana w <xref:System.Windows.UIElement.ManipulationDelta> zdarzeń. <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> Zdarzeń umożliwia aplikacji lub składników przekazać wizualną opinię, gdy obiekt osiągnie granicę. Na przykład <xref:System.Windows.Window> klasy obsługuje <xref:System.Windows.UIElement.ManipulationBoundaryFeedback> zdarzenie, aby spowodować, że okno nieco przenieść po napotkaniu jego krawędzi.
 

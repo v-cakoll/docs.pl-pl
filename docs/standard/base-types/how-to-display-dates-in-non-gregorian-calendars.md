@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyświetlanie dat w kalendarzach innych niż gregoriański'
+title: 'Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313310"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Porady: wyświetlanie dat w kalendarzach innych niż gregoriański
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański
 <xref:System.DateTime> i <xref:System.DateTimeOffset> typy pełnić ich kalendarza domyślnego kalendarza gregoriańskiego. Oznacza to, że wywołanie wartości daty i godziny `ToString` metoda Wyświetla reprezentację ciągu tego dnia i godzina w kalendarzu gregoriańskim, nawet jeśli ta data i godzina utworzenia przy użyciu innego kalendarza. Jest to zilustrowane w poniższym przykładzie, który używa dwa różne sposoby tworzenia wartości daty i godziny przy użyciu kalendarz perski, ale nadal wyświetlana tych wartości daty i godziny w kalendarzu gregoriańskim, gdy wywołuje <xref:System.DateTime.ToString%2A> metody. W tym przykładzie odzwierciedla dwie techniki często używane, ale niepoprawny do wyświetlania datę w określonym kalendarzu.  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -30,26 +30,26 @@ ms.locfileid: "44079464"
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>Aby wyświetlić datę domyślnego kalendarza kultury  
   
-1.  Tworzenie wystąpień obiektów kalendarza pochodną <xref:System.Globalization.Calendar> klasę, która reprezentuje kalendarz, który ma być używany.  
+1. Tworzenie wystąpień obiektów kalendarza pochodną <xref:System.Globalization.Calendar> klasę, która reprezentuje kalendarz, który ma być używany.  
   
-2.  Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt reprezentujący kulturę, której formatowanie będzie służyć do wyświetlania daty.  
+2. Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt reprezentujący kulturę, której formatowanie będzie służyć do wyświetlania daty.  
   
-3.  Wywołaj <xref:System.Array.Exists%2A?displayProperty=nameWithType> metodę pozwala ustalić, czy obiekt Kalendarz jest elementem członkowskim tablicy zwracane przez <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> właściwości. Oznacza to, że kalendarz może służyć jako kalendarz domyślny dla <xref:System.Globalization.CultureInfo> obiektu. Jeśli nie jest elementem członkowskim tablicy, postępuj zgodnie z instrukcjami w sekcji "Do wyświetlania datę w dowolny kalendarz".  
+3. Wywołaj <xref:System.Array.Exists%2A?displayProperty=nameWithType> metodę pozwala ustalić, czy obiekt Kalendarz jest elementem członkowskim tablicy zwracane przez <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> właściwości. Oznacza to, że kalendarz może służyć jako kalendarz domyślny dla <xref:System.Globalization.CultureInfo> obiektu. Jeśli nie jest elementem członkowskim tablicy, postępuj zgodnie z instrukcjami w sekcji "Do wyświetlania datę w dowolny kalendarz".  
   
-4.  Przypisz obiekt kalendarza do <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> właściwość <xref:System.Globalization.DateTimeFormatInfo> obiektu zwróconego przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości.  
+4. Przypisz obiekt kalendarza do <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> właściwość <xref:System.Globalization.DateTimeFormatInfo> obiektu zwróconego przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości.  
   
     > [!NOTE]
     >  <xref:System.Globalization.CultureInfo> Ma również klasy <xref:System.Globalization.CultureInfo.Calendar%2A> właściwości. Jednak jest tylko do odczytu i stałe; nie zmienia się w celu odzwierciedlenia nowego kalendarz domyślny przypisany do <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> właściwości.  
   
-5.  Wywołaj opcję <xref:System.DateTime.ToString%2A> lub <xref:System.DateTime.ToString%2A> metody i przekazać go <xref:System.Globalization.CultureInfo> obiektu, którego kalendarz domyślny został zmodyfikowany w poprzednim kroku.  
+5. Wywołaj opcję <xref:System.DateTime.ToString%2A> lub <xref:System.DateTime.ToString%2A> metody i przekazać go <xref:System.Globalization.CultureInfo> obiektu, którego kalendarz domyślny został zmodyfikowany w poprzednim kroku.  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>Aby wyświetlić datę w dowolnym kalendarzu  
   
-1.  Tworzenie wystąpień obiektów kalendarza pochodną <xref:System.Globalization.Calendar> klasę, która reprezentuje kalendarz, który ma być używany.  
+1. Tworzenie wystąpień obiektów kalendarza pochodną <xref:System.Globalization.Calendar> klasę, która reprezentuje kalendarz, który ma być używany.  
   
-2.  Określić, które daty i czasu elementy powinien pojawić się w ciąg reprezentujący wartość daty i godziny.  
+2. Określić, które daty i czasu elementy powinien pojawić się w ciąg reprezentujący wartość daty i godziny.  
   
-3.  Dla każdego elementu daty i godziny, który chcesz wyświetlić, należy wywołać obiekt kalendarza `Get`... Metoda. Dostępne są następujące metody:  
+3. Dla każdego elementu daty i godziny, który chcesz wyświetlić, należy wywołać obiekt kalendarza `Get`... Metoda. Dostępne są następujące metody:  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>, aby wyświetlać rok w kalendarzu odpowiednie.  
   

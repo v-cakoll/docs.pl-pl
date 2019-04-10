@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: ac02e825218f14f8479e67a79da0c86e1c9ffe11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301701"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Instrukcje: blokowanie kontrolek do formularzy systemu Windows
 Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można zablokować kontrolki po znajdują się one poprawnie, tak aby wątkami aby przypadkowo nie przenosić lub zmieniać ich rozmiar przy ustawianiu inne właściwości.  
@@ -22,7 +22,7 @@ Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można z
   
 ### <a name="to-lock-a-control"></a>Aby zablokować kontrolki  
   
-1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `true`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
+1. W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `true`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
   
      Alternatywnie, kliknij prawym przyciskiem myszy formant i wybierz **formantów blokady**.  
   
@@ -31,20 +31,20 @@ Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można z
   
 ### <a name="to-lock-all-the-controls-on-a-form"></a>Aby zablokować wszystkie formanty w formularzu  
   
-1.  Z **Format** menu, wybierz **formantów blokady**.  
+1. Z **Format** menu, wybierz **formantów blokady**.  
   
     > [!NOTE]
     >  To polecenie umożliwia zablokowanie rozmiar formularza, ponieważ kontrolki formularza.  
   
 ### <a name="to-unlock-all-locked-controls-on-a-form"></a>Aby odblokować wszystkie zablokowane kontrolek w formularzu  
   
-1.  Z **Format** menu, wybierz **formantów blokady**.  
+1. Z **Format** menu, wybierz **formantów blokady**.  
   
      Wszystkie uprzednio zablokowaną kontrolki w formularzu są teraz odblokowane.  
   
 ### <a name="to-unlock-locked-controls-individually"></a>Aby odblokować zablokowany formantów indywidualnie  
   
-1.  W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `false`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
+1. W **właściwości** okna, kliknij przycisk **zablokowany** właściwości i wybierz pozycję `false`. (Dwukrotne kliknięcie nazwy Przełącza ustawienie właściwości).  
   
 ## <a name="see-also"></a>Zobacz także
 

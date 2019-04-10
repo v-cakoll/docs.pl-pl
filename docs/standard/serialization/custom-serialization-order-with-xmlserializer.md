@@ -1,15 +1,15 @@
 ---
-title: Kolejność serializacji niestandardowej przy użyciu elementu XmlSerializer
+title: Kolejność serializacji niestandardowej (XmlSerializer)
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-ms.openlocfilehash: 159e8e278d7212e5f798f559dc1b51f71f74b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f63d460163c33c4253cf565a5755babc1030164f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295040"
 ---
-# <a name="custom-serialization-order-with-xmlserializer"></a>Kolejność serializacji niestandardowej przy użyciu elementu XmlSerializer
+# <a name="custom-serialization-order-with-xmlserializer"></a>Kolejność serializacji niestandardowej (XmlSerializer)
 [Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
   
  Niniejszy przykład pokazuje, jak kontrolować kolejność elementów serializacji i zdeserializowany do serializacji XML.  
@@ -18,19 +18,19 @@ ms.locfileid: "54718952"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Aby skompilować przykład za pomocą wiersza polecenia  
   
-1.  Otwórz okno wiersza polecenia i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
+1. Otwórz okno wiersza polecenia i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
   
-2.  Typ **msbuild CustomOrder.sln** w wierszu polecenia.  
+2. Typ **msbuild CustomOrder.sln** w wierszu polecenia.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Aby skompilować przykład za pomocą programu Visual Studio  
   
-1.  Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
+1. Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
   
-2.  Kliknij dwukrotnie ikonę CustomOrder.sln do otwierania tego PLiku w programie Visual Studio.  
+2. Kliknij dwukrotnie ikonę CustomOrder.sln do otwierania tego PLiku w programie Visual Studio.  
   
-3.  W **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.  
+3. W **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.  
   
-4.  Przykładowa aplikacja jest wliczony w podkatalogu \bin lub \bin\Debug domyślny.  
+4. Przykładowa aplikacja jest wliczony w podkatalogu \bin lub \bin\Debug domyślny.  
   
 ## <a name="see-also"></a>Zobacz także
 

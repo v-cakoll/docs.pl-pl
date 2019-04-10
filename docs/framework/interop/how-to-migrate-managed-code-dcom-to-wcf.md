@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4f944ddb86e93f4a97c924bc5323e52214455bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307720"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF
 Windows Communication Foundation (WCF) jest rozwiązaniem zalecane i bezpieczne za pośrednictwem rozproszonych Component Object Model (DCOM) dla kodu zarządzanego wywołań między serwerami i klientami w środowisku rozproszonym. W tym artykule pokazano, jak można przeprowadzić migrację kodu z modelu DCOM do WCF w następujących scenariuszach.  
@@ -325,9 +325,9 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Krok 3. Konfigurowanie i uruchamianie usług WCF  
  Aby zapewnić obsługę tych usług, należy wprowadzić następujące dodatki do pliku konfiguracji serwera (web.config).  
   
-1.  Dodaj `<client>` sekcja, która opisuje punktu końcowego dla obiektu sesji.  W tym scenariuszu serwer działa jako klient i musi być skonfigurowany, aby włączyć tę opcję.  
+1. Dodaj `<client>` sekcja, która opisuje punktu końcowego dla obiektu sesji.  W tym scenariuszu serwer działa jako klient i musi być skonfigurowany, aby włączyć tę opcję.  
   
-2.  W `<services>` sekcji, Zadeklaruj punktów końcowych usługi dla obiektu ustawień fabrycznych i sessionful.  Dzięki temu klient do komunikacji z punktami końcowymi usługi, uzyskiwanie <xref:System.ServiceModel.EndpointAddress10> i utworzyć kanału sesji.  
+2. W `<services>` sekcji, Zadeklaruj punktów końcowych usługi dla obiektu ustawień fabrycznych i sessionful.  Dzięki temu klient do komunikacji z punktami końcowymi usługi, uzyskiwanie <xref:System.ServiceModel.EndpointAddress10> i utworzyć kanału sesji.  
   
  Poniżej przedstawiono przykładowy plik konfiguracji przy użyciu tych ustawień:  
   
@@ -390,13 +390,13 @@ sessionBoundServiceHost.Open();
   
  Aby wywołać usługę, Dodaj kod do klienta, aby wykonać następujące czynności:  
   
-1.  Utwórz kanał `ISessionBoundFactory` usługi.  
+1. Utwórz kanał `ISessionBoundFactory` usługi.  
   
-2.  Wywoływanie przy użyciu kanału `ISessionBoundFactory` usługi Uzyskaj <xref:System.ServiceModel.EndpointAddress10> obiektu.  
+2. Wywoływanie przy użyciu kanału `ISessionBoundFactory` usługi Uzyskaj <xref:System.ServiceModel.EndpointAddress10> obiektu.  
   
-3.  Użyj <xref:System.ServiceModel.EndpointAddress10> próba utworzenia kanału do uzyskiwania obiektu sesji.  
+3. Użyj <xref:System.ServiceModel.EndpointAddress10> próba utworzenia kanału do uzyskiwania obiektu sesji.  
   
-4.  Wywołaj `SetCurrentValue` i `GetCurrentValue` używane w wielu wywołań metody, aby zademonstrować, pozostaje on tego samego wystąpienia obiektu.  
+4. Wywołaj `SetCurrentValue` i `GetCurrentValue` używane w wielu wywołań metody, aby zademonstrować, pozostaje on tego samego wystąpienia obiektu.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  

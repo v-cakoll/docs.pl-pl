@@ -2,12 +2,12 @@
 title: 'Instrukcje: Weryfikacja DBML i zewnętrznych plików mapowania'
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 83a26f22495c849aa00143ca36b63fa147120c28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078736"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310242"
 ---
 # <a name="how-to-validate-dbml-and-external-mapping-files"></a>Instrukcje: Weryfikacja DBML i zewnętrznych plików mapowania
 Mapowanie zewnętrzne pliki i pliki dbml zmodyfikujesz musi być weryfikowany pod kątem ich definicji schematu odpowiednich. Ten temat zawiera użytkowników programu Visual Studio wykonując kroki do zaimplementowania procesu weryfikacji.  
@@ -16,31 +16,31 @@ Mapowanie zewnętrzne pliki i pliki dbml zmodyfikujesz musi być weryfikowany po
   
 ### <a name="to-validate-a-dbml-or-xml-file"></a>Aby sprawdzić poprawność dbml lub plik XML  
   
-1.  W programie Visual Studio **pliku** menu wskaż **Otwórz**, a następnie kliknij przycisk **pliku**.  
+1. W programie Visual Studio **pliku** menu wskaż **Otwórz**, a następnie kliknij przycisk **pliku**.  
   
-2.  W **Otwórz plik** okna dialogowego kliknij dbml lub plik mapowania XML, który chcesz zweryfikować.  
+2. W **Otwórz plik** okna dialogowego kliknij dbml lub plik mapowania XML, który chcesz zweryfikować.  
   
      Plik zostanie otwarty w **edytora XML**.  
   
-3.  Kliknij prawym przyciskiem myszy okno, a następnie kliknij przycisk **właściwości**.  
+3. Kliknij prawym przyciskiem myszy okno, a następnie kliknij przycisk **właściwości**.  
   
-4.  W **właściwości** okna, kliknij przycisk wielokropka dla **schematów** właściwości.  
+4. W **właściwości** okna, kliknij przycisk wielokropka dla **schematów** właściwości.  
   
      **Schematów XML** zostanie otwarte okno dialogowe.  
   
-5.  Należy zauważyć definicji schematu odpowiednie do określonych celów.  
+5. Należy zauważyć definicji schematu odpowiednie do określonych celów.  
   
     -   DbmlSchema.xsd jest definicja schematu dla sprawdzanie poprawności pliku dbml. Aby uzyskać więcej informacji, zobacz [generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
     -   LinqToSqlMapping.xsd jest definicja schematu dla weryfikowania plik mapowania XML. Aby uzyskać więcej informacji, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
-6.  W **użyj** kolumnę żądany schemat definicji wiersza, kliknij, aby otworzyć pole listy rozwijanej, a następnie kliknij przycisk **używają tego schematu**.  
+6. W **użyj** kolumnę żądany schemat definicji wiersza, kliknij, aby otworzyć pole listy rozwijanej, a następnie kliknij przycisk **używają tego schematu**.  
   
      Plik definicji schematu jest teraz skojarzone z Twojej DBML lub mapowania pliku XML.  
   
      Upewnij się, że nie zaznaczono żadnych definicji schematu.  
   
-7.  Na **widoku** menu, kliknij przycisk **lista błędów**.  
+7. Na **widoku** menu, kliknij przycisk **lista błędów**.  
   
      Ustal, czy zostały wygenerowane błędy, ostrzeżenia lub komunikaty. Jeśli nie, plik XML jest nieprawidłowa względem definicji schematu.  
   
@@ -49,26 +49,26 @@ Mapowanie zewnętrzne pliki i pliki dbml zmodyfikujesz musi być weryfikowany po
   
 #### <a name="to-copy-a-schema-definition-file-from-a-help-topic"></a>Aby skopiować plik definicji schematu z tematu Pomocy.  
   
-1.  Lokalizowanie tematu pomocy, który zawiera definicję schematu, zgodnie z opisem we wcześniejszej części tego tematu.  
+1. Lokalizowanie tematu pomocy, który zawiera definicję schematu, zgodnie z opisem we wcześniejszej części tego tematu.  
   
     -   W przypadku plików dbml, zobacz [generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md).  
   
     -   Aby uzyskać zewnętrznych plików mapowania, zobacz [mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
-2.  Kliknij przycisk **Kopiuj kod** można skopiować pliku kod do Schowka.  
+2. Kliknij przycisk **Kopiuj kod** można skopiować pliku kod do Schowka.  
   
-3.  Uruchom program Notatnik, aby utworzyć nowy plik.  
+3. Uruchom program Notatnik, aby utworzyć nowy plik.  
   
-4.  Wklej kod ze Schowka do Notatnika.  
+4. Wklej kod ze Schowka do Notatnika.  
   
-5.  W programie Notatnik **pliku** menu, kliknij przycisk **Zapisz jako**.  
+5. W programie Notatnik **pliku** menu, kliknij przycisk **Zapisz jako**.  
   
-6.  W **kodowanie** wybierz opcję **Unicode**.  
+6. W **kodowanie** wybierz opcję **Unicode**.  
   
     > [!IMPORTANT]
     >  Wybranie tej opcji gwarantuje, że znacznika kolejności bajtów Unicode-16 (`FFFE`) jest dołączony do pliku tekstowego.  
   
-7.  W **nazwy pliku** Utwórz nazwę pliku z rozszerzeniem xsd.  
+7. W **nazwy pliku** Utwórz nazwę pliku z rozszerzeniem xsd.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294681"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Procedura lub funkcja nie jest zdefiniowana
 A `Sub` lub `Function` muszą być zdefiniowane w celu wywołana. Możliwe przyczyny tego błędu:  
@@ -24,15 +24,15 @@ A `Sub` lub `Function` muszą być zdefiniowane w celu wywołana. Możliwe przyc
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Upewnij się, że poprawna nazwa procedury.  
+1. Upewnij się, że poprawna nazwa procedury.  
   
-2.  Znajdowanie nazwy do projektu zawierającego procedury, aby wywołać w **odwołania** okno dialogowe. Jeśli nie zostanie wyświetlony, kliknij przycisk **Przeglądaj** przycisk, aby ją wyszukać. Zaznacz pole wyboru po lewej stronie nazwy projektu, a następnie kliknij przycisk **OK**.  
+2. Znajdowanie nazwy do projektu zawierającego procedury, aby wywołać w **odwołania** okno dialogowe. Jeśli nie zostanie wyświetlony, kliknij przycisk **Przeglądaj** przycisk, aby ją wyszukać. Zaznacz pole wyboru po lewej stronie nazwy projektu, a następnie kliknij przycisk **OK**.  
   
-3.  Sprawdź nazwę procedury.  
+3. Sprawdź nazwę procedury.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Error — Typy](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)
-- [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub — Instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function — Instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)

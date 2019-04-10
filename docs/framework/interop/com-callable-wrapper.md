@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355054"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309488"
 ---
 # <a name="com-callable-wrapper"></a>Wywoływana otoka COM
 
@@ -27,7 +27,7 @@ Gdy klient modelu COM wywołuje obiekt środowiska .NET, środowisko uruchomieni
 
 Środowisko uruchomieniowe tworzy dla obiektu zarządzanego dokładnie jedną otokę CCW, niezależnie od liczby klientów modelu COM żądających jego usług. Jak pokazano na poniższej ilustracji, wielu klientów modelu COM może zawierać odwołanie do otoki CCW, która udostępnia interfejs INew. Z kolei otoka CCW zawiera jedno odwołanie do obiektu zarządzanego, który implementuje interfejs i podlega działaniu modułu odśmiecania pamięci. Klienci modelu COM i środowiska .NET mogą wykonywać żądania do tego samego zarządzanego obiektu równocześnie.
 
-![Wywoływana otoka COM](./media/ccw.gif "ccw") uzyskiwania dostępu do obiektów platformy .NET za pomocą wywoływana otoka COM
+![Wielu klientów modelu COM, zawierający odwołanie do otoki CCW, która udostępnia INew.](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 Otoki wywoływane z modelu COM są niewidoczne dla innych klas uruchomionych w środowisku .NET Framework. Ich głównym celem jest kierowanie wywołań między kodem zarządzanym i niezarządzanym. Otoki CCW mogą jednak również zarządzać tożsamościami i okresem istnienia zarządzanych obiektów, które opakowują.
 
@@ -43,9 +43,9 @@ W odróżnieniu od klienta środowiska .NET, którego opakowuje, otoka CCW podle
 
 CCW uwidacznia wszystkie publiczne, interfejsach widocznych dla modelu COM, typy danych i wartości zwracane do klientów modelu COM w sposób, który jest zgodny z modelu COM wymuszania interakcji z interfejsu. Klient modelu COM wywoływanie metod dla obiektu .NET Framework jest taka sama jak wywoływanie metod na obiekt COM.
 
-Aby utworzyć to bezproblemowe podejście, CCW są produkowane tradycyjnych interfejsów COM, takich jak **IUnknown** i **IDispatch**. Jak pokazano na poniższej ilustracji, CCW zachowuje jedno odwołanie obiektu platformy .NET, która je otacza. Zarówno klient modelu COM, jak i obiektu platformy .NET ze sobą współdziałać za pośrednictwem serwera proxy i klasy zastępczej konstrukcja CCW.
+Aby utworzyć to bezproblemowe podejście, CCW są produkowane tradycyjnych interfejsów COM, takich jak **IUnknown** i **IDispatch**. Jak pokazano na poniższej ilustracji, CCW zachowuje jedno odwołanie obiektu platformy .NET, która je otacza. Zarówno klient modelu COM, jak i obiektu .NET ze sobą współdziałać za pośrednictwem serwera proxy i klasy zastępczej konstrukcja CCW.
 
-![Interfejsy modelu COM](./media/ccwwithinterfaces.gif "ccwwithinterfaces") interfejsów COM i wywoływana otoka COM
+![Diagram, który pokazuje, jak CCW produkuje interfejsy COM.](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 Oprócz udostępnianie interfejsów, które są jawnie implementowane przez klasy w środowisku zarządzanym, .NET Framework dostarcza implementacji interfejsów COM, wymienione w poniższej tabeli w imieniu obiektu. Klasa platformy .NET można zastąpić domyślne zachowanie, podając własną implementację tych interfejsów. Środowisko uruchomieniowe zawsze zapewnia jednak wykonania na **IUnknown** i **IDispatch** interfejsów.
 

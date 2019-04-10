@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299309"
 ---
 # <a name="transport-quotas"></a>Przydziały dla transportu
 Przydziały dla transportu to mechanizm zasad dotyczących decydowania, gdy połączenie jest korzystanie z zasobów. Przydział to stały limit, który uniemożliwia korzystanie z dodatkowych zasobów, po przekroczeniu wartości limitu przydziału. Przydziały dla transportu uniemożliwia złośliwym lub przypadkowe atakom typu odmowa usługi.  
@@ -100,9 +100,9 @@ Przydziały dla transportu to mechanizm zasad dotyczących decydowania, gdy poł
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  `MaxBufferSize` Przydziału transportu jest dostępna tylko na `BasicHttp` powiązania. `WSHttp` Powiązania są dla scenariuszy, które nie obsługują przesyłane strumieniowo transportu.  
+1. `MaxBufferSize` Przydziału transportu jest dostępna tylko na `BasicHttp` powiązania. `WSHttp` Powiązania są dla scenariuszy, które nie obsługują przesyłane strumieniowo transportu.  
   
-2.  Przydziały dla transportu `MaxPendingConnections` i `MaxOutboundConnectionsPerEndpoint` są łączone w pojedynczy transportu przydziału o nazwie `MaxConnections`.  
+2. Przydziały dla transportu `MaxPendingConnections` i `MaxOutboundConnectionsPerEndpoint` są łączone w pojedynczy transportu przydziału o nazwie `MaxConnections`.  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>Kontrolowanie przydziały dla transportu z konfiguracji  
  Konfiguracja aplikacji można ustawić tej samej przydziały dla transportu jako bezpośredni dostęp do właściwości w powiązaniu. W plikach konfiguracyjnych Nazwa przydziału transportu zawsze rozpoczyna się od małej litery. Na przykład `CloseTimeout` właściwość w powiązaniu odpowiada `closeTimeout` ustawieniu konfiguracji i `MaxConnections` właściwość w powiązaniu odpowiada `maxConnections` ustawieniu konfiguracji.  

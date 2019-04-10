@@ -1,15 +1,15 @@
 ---
-title: Metody stosowane CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
+title: Stosowanie zasad CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Poznaj sposób, w jaki sposób jest implementowany CQRS szeregowania mikrousługi w ramach aplikacji eShopOnContainers.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 198e7df6e3bdc88d699c396ce8ac97f8a74066d6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b33f49bdeb20176b711d6dc50a247e131f9de9d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462711"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309839"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Stosowanie podejścia CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
 
@@ -56,9 +56,6 @@ Istnieje tylko jedna aplikacja architektury: Architektura aplikacji system lub e
   [http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
 - **Udi Dahan. Sklarowanego CQRS** \
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
-
-- **CQRS** \
   [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 - **Określanie źródła zdarzeń (ES)** \

@@ -2,12 +2,12 @@
 title: Architektura i projekt
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307577"
 ---
 # <a name="architecture-and-design"></a>Architektura i projekt
 Moduł generowania SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) jest implementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażeń.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  Odwiedzenie tych węzłów jest zgodny ze wzorcem następujące:  
   
-1.  Odwiedź stronę relacyjnych danych wejściowych i pobieranie wynikowy SqlSelectStatement. Dane wejściowe do relacyjnych węzła może być jedną z następujących czynności:  
+1. Odwiedź stronę relacyjnych danych wejściowych i pobieranie wynikowy SqlSelectStatement. Dane wejściowe do relacyjnych węzła może być jedną z następujących czynności:  
   
     -   Relacyjne węzła, w tym zakresie (przykład DbScanExpression). Odwiedzający takim węzłem zwraca SqlSelectStatement.  
   
     -   Operacja wyrażenie (UNION ALL, na przykład). Wynik zawiera opakowane w nawiasach kwadratowych i umieścić w klauzuli FROM SqlSelectStatement nowe.  
   
-2.  Sprawdź, czy bieżący węzeł może być dodany do SqlSelectStatement produkowane przez danych wejściowych. Sekcji wyrażenia grupowania na instrukcje w tym artykule opisano to. W przeciwnym razie  
+2. Sprawdź, czy bieżący węzeł może być dodany do SqlSelectStatement produkowane przez danych wejściowych. Sekcji wyrażenia grupowania na instrukcje w tym artykule opisano to. W przeciwnym razie  
   
     -   POP bieżący obiekt SqlSelectStatement.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Umieścić nowy obiekt na górze stosu.  
   
-3.  Przekierowanie powiązania wyrażenia wejściowego do poprawne symboli z danych wejściowych. Te informacje są przechowywane w obiekcie SqlSelectStatement.  
+3. Przekierowanie powiązania wyrażenia wejściowego do poprawne symboli z danych wejściowych. Te informacje są przechowywane w obiekcie SqlSelectStatement.  
   
-4.  Dodaj nowy zakres SymbolTable.  
+4. Dodaj nowy zakres SymbolTable.  
   
-5.  Odwiedź stronę bez wprowadzania część wyrażenia (na przykład, rzutowania i predykatu).  
+5. Odwiedź stronę bez wprowadzania część wyrażenia (na przykład, rzutowania i predykatu).  
   
-6.  Wyświetl wszystkie obiekty, które są dodawane do globalnego stosów.  
+6. Wyświetl wszystkie obiekty, które są dodawane do globalnego stosów.  
   
  DbSkipExpression ma bezpośredni odpowiednik w języku SQL. Logicznie jest tłumaczony na:  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  Po drugie przetwarzać dane wejściowe co jednocześnie. Dla każdego dane wejściowe:  
   
-1.  Można znaleźć w danych wejściowych.  
+1. Można znaleźć w danych wejściowych.  
   
-2.  Proces wpis wynik odwiedzający danych wejściowych, wywołując ProcessJoinInputResult, który jest odpowiedzialny za prowadzenie tabeli symboli po odwiedzający element podrzędny w wyrażeniu join i prawdopodobnie zakończeniem SqlSelectStatement produkowane przez dziecko. Wynik elementu podrzędnego, może być jedną z następujących czynności:  
+2. Proces wpis wynik odwiedzający danych wejściowych, wywołując ProcessJoinInputResult, który jest odpowiedzialny za prowadzenie tabeli symboli po odwiedzający element podrzędny w wyrażeniu join i prawdopodobnie zakończeniem SqlSelectStatement produkowane przez dziecko. Wynik elementu podrzędnego, może być jedną z następujących czynności:  
   
     -   SqlSelectStatement niż ten, do którego zostanie dodany element nadrzędny. W takim przypadku może musi on zostać wykonane przez dodanie kolumn domyślnych. Jeśli dane wejściowe sprzężenia, musisz utworzyć nowy symbol sprzężenia. W przeciwnym razie Utwórz symbol normalny.  
   

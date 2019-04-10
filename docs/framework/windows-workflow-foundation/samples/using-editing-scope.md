@@ -2,12 +2,12 @@
 title: Używanie zakresu edycji
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749051"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308630"
 ---
 # <a name="using-editing-scope"></a>Używanie zakresu edycji
 Niniejszy przykład pokazuje jak dzielić na partie zestaw zmian, dzięki czemu mogą zostać cofnięte w pojedynczą jednostkę atomic. Domyślnie akcje wykonywane przez autora projektanta działań są automatycznie zintegrowane system Cofnij/Ponów.  
@@ -24,15 +24,15 @@ Niniejszy przykład pokazuje jak dzielić na partie zestaw zmian, dzięki czemu 
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Tworzenie i uruchamianie aplikacji przykładowej, a następnie użyj przycisków po lewej stronie, aby zmodyfikować przepływ pracy.  
+1. Tworzenie i uruchamianie aplikacji przykładowej, a następnie użyj przycisków po lewej stronie, aby zmodyfikować przepływ pracy.  
   
-2.  Kliknij przycisk **Otwórz zakresu edycji**.  
+2. Kliknij przycisk **Otwórz zakresu edycji**.  
   
     1.  To polecenie wymaga <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> , tworzy zakresu edycji i wypycha go na stosie edycji.  
   
     2.  Trzy czynności zostaną następnie dodane do wybranych <xref:System.Activities.Presentation.Model.ModelItem>. Należy pamiętać, że jeśli zakresu edycji nie był on otwarty przy użyciu <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trzy nowe działania zostanie wyświetlony na kanwie projektanta. Ponieważ ta operacja jest nadal oczekujące w ramach <xref:System.Activities.Presentation.Model.EditingScope>, Projektant nie jest jeszcze zaktualizowane.  
   
-3.  Naciśnij klawisz **Zamknij zakresu edycji** zatwierdzić zakresu edycji. Trzy czynności są wyświetlane w projektancie.  
+3. Naciśnij klawisz **Zamknij zakresu edycji** zatwierdzić zakresu edycji. Trzy czynności są wyświetlane w projektancie.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301337"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Instrukcje: ustawienie elementu ToolTips dla kontrolek w formularzu systemu Windows w czasie projektowania
 Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w programie Windows Forms Designer. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.ToolTip> składników, zobacz [— informacje o składniku ToolTip](tooltip-component-overview-windows-forms.md).  
@@ -24,9 +24,9 @@ Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w progr
   
 ### <a name="to-set-a-tooltip-programmatically"></a>Aby programowo ustawić etykietkę narzędzia  
   
-1.  Dodaj kontrolkę która będzie wyświetlana etykietka narzędzia.  
+1. Dodaj kontrolkę która będzie wyświetlana etykietka narzędzia.  
   
-2.  Użyj <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metody <xref:System.Windows.Forms.ToolTip> składnika.  
+2. Użyj <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metody <xref:System.Windows.Forms.ToolTip> składnika.  
   
     ```vb  
     ' In this example, Button1 is the control to display the ToolTip.  
@@ -45,15 +45,15 @@ Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w progr
   
 ### <a name="to-set-a-tooltip-in-the-designer"></a>Aby ustawić etykietkę narzędzi w Projektancie  
   
-1.  Dodaj <xref:System.Windows.Forms.ToolTip> składnika do formularza.  
+1. Dodaj <xref:System.Windows.Forms.ToolTip> składnika do formularza.  
   
-2.  Wybierz kontrolkę która będzie wyświetlić wskazówkę, albo dodaj go do formularza.  
+2. Wybierz kontrolkę która będzie wyświetlić wskazówkę, albo dodaj go do formularza.  
   
-3.  W **właściwości** oknie **etykietki narzędzia w ToolTip1** wartość na odpowiedni ciąg tekstowy.  
+3. W **właściwości** oknie **etykietki narzędzia w ToolTip1** wartość na odpowiedni ciąg tekstowy.  
 
 ### <a name="to-remove-a-tooltip-programmatically"></a>Aby usunąć etykietka narzędzia programistyczne  
   
-1.  Użyj <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metody <xref:System.Windows.Forms.ToolTip> składnika.  
+1. Użyj <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> metody <xref:System.Windows.Forms.ToolTip> składnika.  
   
     ```vb  
     ' In this example, Button1 is the control displaying the ToolTip.  
@@ -72,9 +72,9 @@ Możesz ustawić <xref:System.Windows.Forms.ToolTip> ciągu w kodzie lub w progr
   
 ### <a name="to-remove-a-tooltip-in-the-designer"></a>Aby usunąć etykietki narzędzia w Projektancie  
   
-1.  Wybierz kontrolkę która jest wyświetlana etykietka narzędzia.  
+1. Wybierz kontrolkę która jest wyświetlana etykietka narzędzia.  
   
-2.  W **właściwości** oknie Usuwanie tekstu z **etykietki narzędzia w ToolTip1**.  
+2. W **właściwości** oknie Usuwanie tekstu z **etykietki narzędzia w ToolTip1**.  
 
 ## <a name="see-also"></a>Zobacz także
 

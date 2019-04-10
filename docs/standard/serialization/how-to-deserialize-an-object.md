@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deserializacji obiektu'
+title: 'Instrukcje: deserializowanie obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298139"
 ---
-# <a name="how-to-deserialize-an-object"></a>Instrukcje: Deserializacji obiektu
+# <a name="how-to-deserialize-an-object"></a>Instrukcje: deserializowanie obiektu
 Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzony obiekt PLiku lub strumienia. Po transport format jest określony, można wywołać <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> lub <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metod, zgodnie z potrzebami.  
   
 ### <a name="to-deserialize-an-object"></a>Do deserializacji obiektu  
   
-1.  Budowy <xref:System.Xml.Serialization.XmlSerializer> przy użyciu typu obiektu do deserializacji.  
+1. Budowy <xref:System.Xml.Serialization.XmlSerializer> przy użyciu typu obiektu do deserializacji.  
   
-2.  Wywołaj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metodę tworzenia repliki obiektu. Podczas deserializacji, należy rzutować zwracany obiekt na typ pierwotny, jak pokazano w następującym przykładzie deserializuje obiekt do pliku (chociaż może on również zostać przeprowadzona deserializacja strumienia).  
+2. Wywołaj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metodę tworzenia repliki obiektu. Podczas deserializacji, należy rzutować zwracany obiekt na typ pierwotny, jak pokazano w następującym przykładzie deserializuje obiekt do pliku (chociaż może on również zostać przeprowadzona deserializacja strumienia).  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -54,4 +54,4 @@ Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzo
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Instrukcje: serializowanie obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298425"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Weryfikowanie dokumentu XML w modelu DOM
 <xref:System.Xml.XmlDocument> Klasy XML w modelu DOM (Document Object) względem schematu XML definicji język (XSD) schematu lub dokumentu definicja typu (DTD) domyślnie weryfikują dane XML tylko sprawdza się, jest poprawnie sformułowany.  
@@ -29,15 +29,15 @@ ms.locfileid: "54664333"
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>Tworzenie pliku XML sprawdzanie poprawności schematu elementu XmlReader  
  Aby utworzyć XML schematu weryfikacji <xref:System.Xml.XmlReader>, wykonaj następujące kroki.  
   
-1.  Utworzyć nową <xref:System.Xml.XmlReaderSettings> wystąpienia.  
+1. Utworzyć nową <xref:System.Xml.XmlReaderSettings> wystąpienia.  
   
-2.  Dodawanie schematu XML do <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwość <xref:System.Xml.XmlReaderSettings> wystąpienia.  
+2. Dodawanie schematu XML do <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwość <xref:System.Xml.XmlReaderSettings> wystąpienia.  
   
-3.  Określ `Schema` jako <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
+3. Określ `Schema` jako <xref:System.Xml.XmlReaderSettings.ValidationType%2A>.  
   
-4.  Opcjonalnie można określić <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> i <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> do obsługi schematu błędy i ostrzeżenia walidacji podczas sprawdzania poprawności.  
+4. Opcjonalnie można określić <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> i <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> do obsługi schematu błędy i ostrzeżenia walidacji podczas sprawdzania poprawności.  
   
-5.  Na koniec Przekaż <xref:System.Xml.XmlReaderSettings> obiekt <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy wraz z dokumentu XML, tworzenie, sprawdzanie poprawności schematu <xref:System.Xml.XmlReader>.  
+5. Na koniec Przekaż <xref:System.Xml.XmlReaderSettings> obiekt <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy wraz z dokumentu XML, tworzenie, sprawdzanie poprawności schematu <xref:System.Xml.XmlReader>.  
   
 ### <a name="example"></a>Przykład  
  W przykładzie kodu, który następuje po sprawdzanie poprawności schematu <xref:System.Xml.XmlReader> sprawdza poprawność danych XML załadowane do modelu DOM. Nieprawidłowe zmiany zostaną wprowadzone do dokumentu XML i dokumentu jest następnie sprawdzony ponownie, powodując błędy sprawdzania poprawności schematu. Na koniec jeden z błędów jest usuwana, a następnie częściowo zweryfikowane części dokumentu XML.  

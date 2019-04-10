@@ -2,12 +2,12 @@
 title: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295604"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak produkcji XAML, który korzysta z określonego słownika XAML współdziała z obiektu zapisywania zachowania, w tym sposób mapowania typów rozwiązuje, jak zespoły są ładowane, jak w przypadku niektórych czytników i składników zapisywania ustawienia są interpretowane. W tym temacie opisano funkcje usług .NET Framework XAML i kontekst schematu XAML skojarzoną domyślną, który jest oparty na systemie typu CLR. W tym temacie opisano kontekst schematu XAML, który służy do WPF.  
@@ -46,9 +46,9 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
   
 #### <a name="xaml-reader-input-loose-xaml"></a>Dane wejściowe czytnika XAML (luźne XAML)  
   
-1.  Kontekst schematu XAML, który wykonuje iterację przez <xref:System.AppDomain> aplikacji wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, począwszy od najbardziej niedawno załadowany zestaw. Jeśli zostanie znalezione dopasowanie, ten zestaw jest używany do rozpoznawania.  
+1. Kontekst schematu XAML, który wykonuje iterację przez <xref:System.AppDomain> aplikacji wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, począwszy od najbardziej niedawno załadowany zestaw. Jeśli zostanie znalezione dopasowanie, ten zestaw jest używany do rozpoznawania.  
   
-2.  W przeciwnym razie jedną z następujących technik oparte na CLR <xref:System.Reflection.Assembly> interfejsu API są używane do załadowania zestawu:  
+2. W przeciwnym razie jedną z następujących technik oparte na CLR <xref:System.Reflection.Assembly> interfejsu API są używane do załadowania zestawu:  
   
     -   Jeśli nazwa kwalifikuje się do mapowania, wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
   
@@ -61,9 +61,9 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
   
  Należy zauważyć, że zestaw, który odwołuje się za pośrednictwem `XamlBuildTask` są zawsze w pełni kwalifikowana.  
   
-1.  Wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
+1. Wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
   
-2.  Jeśli w poprzednim kroku nie powiedzie się, użyj krótkiej nazwy (i token klucza publicznego Jeśli jest obecna) do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Jeśli w poprzednim kroku nie powiedzie się, użyj krótkiej nazwy (i token klucza publicznego Jeśli jest obecna) do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  Istnieją dwa aspekty ładowania zestawu dla BAML: podczas ładowania początkowego zestawu, który zawiera BAML jako składnik, a ładowanie zestawów zapasowy typ dla wszystkich typów, które odwołuje się produkcji BAML.  
@@ -71,16 +71,16 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
 ##### <a name="assembly-load-for-initial-markup"></a>Ładowanie zestawu dla początkowej znaczników:  
  Odwołanie do zestawu do załadowania znaczników z jest zawsze niekwalifikowane.  
   
-1.  Kontekst schematu WPF XAML, który wykonuje iterację przez <xref:System.AppDomain> aplikacji WPF, wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, począwszy od najbardziej niedawno załadowany zestaw. Jeśli zostanie znalezione dopasowanie, ten zestaw jest używany do rozpoznawania.  
+1. Kontekst schematu WPF XAML, który wykonuje iterację przez <xref:System.AppDomain> aplikacji WPF, wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, począwszy od najbardziej niedawno załadowany zestaw. Jeśli zostanie znalezione dopasowanie, ten zestaw jest używany do rozpoznawania.  
   
-2.  Jeśli w poprzednim kroku nie powiedzie się, użyj krótkiej nazwy (i token klucza publicznego Jeśli jest obecna) do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Jeśli w poprzednim kroku nie powiedzie się, użyj krótkiej nazwy (i token klucza publicznego Jeśli jest obecna) do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ##### <a name="assembly-references-by-baml-types"></a>Odwołania do zestawu według typów BAML:  
  Odwołania do zestawów dla typów używanych w środowisku produkcyjnym BAML są zawsze w pełni kwalifikowaną jako dane wyjściowe z zadania kompilacji.  
   
-1.  Kontekst schematu WPF XAML, który wykonuje iterację przez <xref:System.AppDomain> aplikacji WPF, wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, począwszy od najbardziej niedawno załadowany zestaw. Jeśli zostanie znalezione dopasowanie, ten zestaw jest używany do rozpoznawania.  
+1. Kontekst schematu WPF XAML, który wykonuje iterację przez <xref:System.AppDomain> aplikacji WPF, wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, począwszy od najbardziej niedawno załadowany zestaw. Jeśli zostanie znalezione dopasowanie, ten zestaw jest używany do rozpoznawania.  
   
-2.  W przeciwnym razie jest jedną z następujących technik służy do załadowania zestawu:  
+2. W przeciwnym razie jest jedną z następujących technik służy do załadowania zestawu:  
   
     -   Wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308448"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Przewodnik: uruchamianie operacji w tle
 Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować opóźnienia w interfejsie użytkownika, możesz użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby uruchomić operację na inny wątek.  
@@ -30,33 +30,33 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
   
 ### <a name="to-run-an-operation-in-the-background"></a>Uruchamianie operacji w tle  
   
-1.  Za pomocą formularza aktywny w Windows Forms Designer, przeciągnij dwa <xref:System.Windows.Forms.Button> kontrolki z **przybornika** do formularza, a następnie ustaw `Name` i <xref:System.Windows.Forms.Control.Text%2A> właściwości przycisków zgodnie z poniższą tabelą.  
+1. Za pomocą formularza aktywny w Windows Forms Designer, przeciągnij dwa <xref:System.Windows.Forms.Button> kontrolki z **przybornika** do formularza, a następnie ustaw `Name` i <xref:System.Windows.Forms.Control.Text%2A> właściwości przycisków zgodnie z poniższą tabelą.  
   
     |Przycisk|Nazwa|Tekst|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Uruchamianie**|  
     |`button2`|`cancelBtn`|**Anuluj**|  
   
-2.  Otwórz **przybornika**, kliknij przycisk **składniki** kartę, a następnie przeciągnij <xref:System.ComponentModel.BackgroundWorker> składnika do formularza.  
+2. Otwórz **przybornika**, kliknij przycisk **składniki** kartę, a następnie przeciągnij <xref:System.ComponentModel.BackgroundWorker> składnika do formularza.  
   
      `backgroundWorker1` Składnika, który pojawia się w **zasobniku składnika**.  
   
-3.  W oknie **Właściwości** ustaw właściwość <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> na `true`.   
+3. W oknie **Właściwości** ustaw właściwość <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> na `true`.   
   
-4.  W **właściwości** okna, kliknij pozycję **zdarzenia** przycisk, a następnie kliknij dwukrotnie <xref:System.ComponentModel.BackgroundWorker.DoWork> i <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń, aby utworzyć procedury obsługi zdarzeń.  
+4. W **właściwości** okna, kliknij pozycję **zdarzenia** przycisk, a następnie kliknij dwukrotnie <xref:System.ComponentModel.BackgroundWorker.DoWork> i <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> zdarzeń, aby utworzyć procedury obsługi zdarzeń.  
   
-5.  Wstaw kod czasochłonne do <xref:System.ComponentModel.BackgroundWorker.DoWork> programu obsługi zdarzeń.  
+5. Wstaw kod czasochłonne do <xref:System.ComponentModel.BackgroundWorker.DoWork> programu obsługi zdarzeń.  
   
-6.  Wyodrębnij wszystkie parametry wymagane przez operację z <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> właściwość <xref:System.ComponentModel.DoWorkEventArgs> parametru.  
+6. Wyodrębnij wszystkie parametry wymagane przez operację z <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> właściwość <xref:System.ComponentModel.DoWorkEventArgs> parametru.  
   
-7.  Przypisz wynik obliczeń, aby <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> właściwość <xref:System.ComponentModel.DoWorkEventArgs>.  
+7. Przypisz wynik obliczeń, aby <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> właściwość <xref:System.ComponentModel.DoWorkEventArgs>.  
   
      To jest dostępne <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> programu obsługi zdarzeń.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  Wstawianie kodu do pobierania wyników operacji w <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> programu obsługi zdarzeń.  
+8. Wstawianie kodu do pobierania wyników operacji w <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> programu obsługi zdarzeń.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -90,7 +90,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie chcesz powodować op�
 > [!NOTE]
 >  Jeśli użytkownik naciśnie klawisz F5, aby uruchomić aplikację w debugerze, wyjątek zgłoszony w `TimeConsumingOperation` metoda jest przechwycony i wyświetlane przez debuger. Po uruchomieniu aplikacji poza debugerem, <xref:System.ComponentModel.BackgroundWorker> obsługuje wyjątek i zapisuje go w pamięci podręcznej <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> właściwość <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
   
-1.  Kliknij przycisk **Start** przycisk, aby uruchomić operację asynchroniczną, a następnie kliknij przycisk **anulować** przycisk, aby zatrzymać operację pracę asynchroniczną.  
+1. Kliknij przycisk **Start** przycisk, aby uruchomić operację asynchroniczną, a następnie kliknij przycisk **anulować** przycisk, aby zatrzymać operację pracę asynchroniczną.  
   
      Wynikiem operacji jest wyświetlana w <xref:System.Windows.Forms.MessageBox>.  
   

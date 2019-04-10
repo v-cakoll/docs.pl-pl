@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320074"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i przejście przez hiperłącza. Struktura stron i sposoby, w którym ich można nawigować, zgodnie z definicją hiperłącza, jest określany jako topologia nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które nawigowania w dokumentach. Na potrzeby takich aplikacji użytkownik może przejść z jednej strony do innej strony bez dowolnej stronie znajomości o innych.  
@@ -134,9 +134,9 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Zwracanie wyniku zadania i dane zadania z zadaniem do strony wywołania  
  Po użytkownik zakończył, za pomocą strony o nazwie, oznaczony w tym przykładzie, naciskając przycisk OK lub Anuluj przyciski, potrzeb wywołana strona do zwrócenia. Ponieważ wywołujący strony używane strony o nazwie do zbierania danych przez użytkownika, wywoływania strona wymaga dwóch typów informacji:  
   
-1.  Czy użytkownik anulował strony o nazwie (przez naciśnięcie klawisza przycisk OK lub przycisk Anuluj, w tym przykładzie). Dzięki temu wywoływania stronę, aby ustalić, czy do przetwarzania danych, który wywoływania strony zebranych od użytkownika.  
+1. Czy użytkownik anulował strony o nazwie (przez naciśnięcie klawisza przycisk OK lub przycisk Anuluj, w tym przykładzie). Dzięki temu wywoływania stronę, aby ustalić, czy do przetwarzania danych, który wywoływania strony zebranych od użytkownika.  
   
-2.  Dane, które zostało dostarczone przez użytkownika.  
+2. Dane, które zostało dostarczone przez użytkownika.  
   
  Aby zostały zwrócone informacje, <xref:System.Windows.Navigation.PageFunction%601> implementuje <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> metody. Poniższy kod przedstawia sposób wywołania go.  
   

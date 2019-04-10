@@ -2,12 +2,12 @@
 title: 'Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301116"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych
   
 ## <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
   
-1.  Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go do folderu projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
+1. Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go do folderu projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych
     122, 94, 92, 91, 91  
     ```  
   
-2.  Skopiuj następujące wiersze do pliku, który nosi nazwę names.csv i zapisz go do folderu projektu. Plik reprezentuje arkusz kalkulacyjny zawierający identyfikatora dla uczniów, imię i nazwisko studenta  
+2. Skopiuj następujące wiersze do pliku, który nosi nazwę names.csv i zapisz go do folderu projektu. Plik reprezentuje arkusz kalkulacyjny zawierający identyfikatora dla uczniów, imię i nazwisko studenta  
   
     ```  
     Omelchenko,Svetlana,111  

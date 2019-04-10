@@ -2,12 +2,12 @@
 title: Nieogólne działanie ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303547"
 ---
 # <a name="non-generic-foreach"></a>Nieogólne działanie ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] jest dostarczany w przyborniku jej zestaw działań przepływu sterowania, w tym <xref:System.Activities.Statements.ForEach%601>, co pozwala iteracja <xref:System.Collections.Generic.IEnumerable%601> kolekcji.  
@@ -95,13 +95,13 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>Aby uruchomić ten przykład  
   
-1.  Ustaw projekt wybranego jako projekt startowy rozwiązania:  
+1. Ustaw projekt wybranego jako projekt startowy rozwiązania:  
   
     1.  **CodeTestClient** pokazuje, jak użyć działania przy użyciu kodu.  
   
     2.  **DesignerTestClient** pokazuje, jak użyć działania w projektancie.  
   
-2.  Skompiluj i uruchom projekt.  
+2. Skompiluj i uruchom projekt.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

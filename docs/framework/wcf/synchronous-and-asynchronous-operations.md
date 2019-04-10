@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297710"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono wdrażanie i wywoływanie operacji usługi asynchronicznego.  
@@ -49,11 +49,11 @@ W tym temacie omówiono wdrażanie i wywoływanie operacji usługi asynchroniczn
 ### <a name="implementing-an-asynchronous-service-operation"></a>Wdrażanie asynchronicznej operacji usługi  
  Operacje asynchroniczne można zaimplementować przy użyciu jednej z trzech poniższych metod:  
   
-1.  Wzorca asynchronicznego opartego na zadaniach  
+1. Wzorca asynchronicznego opartego na zadaniach  
   
-2.  Asynchroniczny wzorzec oparty na zdarzeniach  
+2. Asynchroniczny wzorzec oparty na zdarzeniach  
   
-3.  Wzorzec asynchroniczny IAsyncResult  
+3. Wzorzec asynchroniczny IAsyncResult  
   
 #### <a name="task-based-asynchronous-pattern"></a>Wzorzec asynchroniczny oparty na zadanie  
  Wzorca asynchronicznego opartego na zadaniach jest preferowany sposób implementowania asynchronicznych operacji, ponieważ jest najłatwiejszym i najbardziej bardzo proste. Aby użyć tej metody po prostu implementuje operację usługi i określ typu zwracanego zadania\<T >, gdzie T jest typem zwracanym przez operacji logicznej. Na przykład:  

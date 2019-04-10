@@ -2,12 +2,12 @@
 title: Użycie standardowych punktów końcowych
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304613"
 ---
 # <a name="usage-of-standard-endpoints"></a>Użycie standardowych punktów końcowych
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2012, otwórz plik StandardEndpoints.sln.
+1. Za pomocą programu Visual Studio 2012, otwórz plik StandardEndpoints.sln.
 
-2.  Włączanie wielu projektów do uruchomienia.
+2. Włączanie wielu projektów do uruchomienia.
 
     1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy rozwiązanie standardowych punktów końcowych, a następnie wybierz **właściwości**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          To ustawienie określa, że projekt klienta jest wykonywane po projektu usługi.
 
-3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
 > [!NOTE]
 > Jeśli te kroki nie zadziałają, należy sprawdzić, czy środowiska prawidłowo skonfigurowano, wykonując następujące czynności:

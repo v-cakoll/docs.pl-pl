@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725704"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302572"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (opcje kompilatora C#)
 Osadza określony zasób w pliku wyjściowego.  
@@ -50,13 +50,13 @@ Osadza określony zasób w pliku wyjściowego.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Dodaj plik zasobów do projektu.  
+1. Dodaj plik zasobów do projektu.  
   
-2.  Wybierz plik, który ma zostać osadzony w **Eksploratora rozwiązań**.  
+2. Wybierz plik, który ma zostać osadzony w **Eksploratora rozwiązań**.  
   
-3.  Wybierz **Build Action** dla pliku **właściwości** okna.  
+3. Wybierz **Build Action** dla pliku **właściwości** okna.  
   
-4.  Ustaw **Akcja kompilacji** do **osadzony zasób**.  
+4. Ustaw **Akcja kompilacji** do **osadzony zasób**.  
   
  Aby dowiedzieć się, jak programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.FileProperties2.BuildAction%2A>.  
   
@@ -70,4 +70,4 @@ csc -resource:rf.resource in.cs
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: 97340f8583ef0900645f6db5c453475e85549c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297255"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta WCF
 
@@ -20,11 +20,11 @@ Po utworzeniu usługi, następnym krokiem jest utworzenie serwer proxy klienta W
 
  Następujące podstawowe kroki tworzenia klienta programu WCF:
 
-1.  Kompilowanie kodu usługi.
+1. Kompilowanie kodu usługi.
 
-2.  Generuj proxy klienta WCF.
+2. Generuj proxy klienta WCF.
 
-3.  Tworzy serwer proxy klienta WCF.
+3. Tworzy serwer proxy klienta WCF.
 
 Serwer proxy klienta WCF można wygenerować ręcznie przy użyciu usługi modelu metadanych narzędzie (SvcUtil.exe) Aby uzyskać więcej informacji, zobacz [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Serwer proxy klienta WCF, mogą być też generowane w programie Visual Studio przy użyciu **Dodaj odwołanie do usługi** funkcji. Aby wygenerować serwer proxy klienta WCF, za pomocą jednej z metod usługi musi być uruchomiona. Jeśli usługa jest samodzielnie hostowana należy uruchomić hosta. Jeśli usługa jest hostowana w programie IIS / WAS, nie trzeba nic robić.
 
@@ -189,11 +189,11 @@ Po wystąpieniu tego rodzaju wyjątków, najlepszym sposobem rozwiązania tego p
 ## <a name="see-also"></a>Zobacz także
 
 - [Instrukcje: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Instrukcje: Dostęp do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Instrukcje: Asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Instrukcje: Uzyskiwanie dostępu do usług za pomocą jednokierunkowego i kontraktów "żądanie odpowiedź"](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Instrukcje: Dostęp do programu WSE 3.0 usługi](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Instrukcje: asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Instrukcje: dostęp do usługi WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
 - [Opis wygenerowanego kodu klienta](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Instrukcje: Poprawę czasu uruchamiania programu WCF klienta aplikacji przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
 - [Określanie zachowania klienta w czasie wykonywania](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [Konfigurowanie zachowań klienta](../../../docs/framework/wcf/configuring-client-behaviors.md)

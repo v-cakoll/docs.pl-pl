@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 3c1087f1ea260b61a51126f42703a32075884e54
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296072"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Przewodnik: Pisanie zapytań w języku Visual Basic
 W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do zapisywania [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeniach zapytań. Przewodnik pokazuje, jak tworzyć zapytania na liście obiektów dla uczniów, jak uruchamiać zapytania i sposobu ich modyfikacji. Kilka funkcji, w tym inicjatorów obiektów, wnioskowanie o typie lokalnym i typy anonimowe dołączyć do nich zapytania.  
@@ -23,17 +23,17 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 #### <a name="to-create-a-console-application-project"></a>Aby utworzyć projekt aplikacji konsoli  
   
-1.  Uruchom program Visual Studio.  
+1. Uruchom program Visual Studio.  
   
-2.  Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
+2. Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
   
-3.  W **zainstalowane szablony** kliknij **języka Visual Basic**.  
+3. W **zainstalowane szablony** kliknij **języka Visual Basic**.  
   
-4.  Na liście typów projektów, kliknij **aplikację Konsolową**. W **nazwa** wpisz nazwę dla projektu, a następnie kliknij przycisk **OK**.  
+4. Na liście typów projektów, kliknij **aplikację Konsolową**. W **nazwa** wpisz nazwę dla projektu, a następnie kliknij przycisk **OK**.  
   
      Projekt jest tworzony. Domyślnie zawiera odwołania do System.Core.dll. Ponadto **zaimportowane przestrzenie nazw** listy na [strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic) obejmuje <xref:System.Linq?displayProperty=nameWithType> przestrzeni nazw.  
   
-5.  Na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), upewnij się, że **Option infer** ustawiono **na**.  
+5. Na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic), upewnij się, że **Option infer** ustawiono **na**.  
   
 ## <a name="add-an-in-memory-data-source"></a>Dodaj źródło danych w pamięci  
  Źródło danych dla zapytania w tym przewodniku znajduje się lista `Student` obiektów. Każdy `Student` obiekt zawiera imię, nazwisko, rok klasy i rangi akademickich w treści dla uczniów.  
@@ -54,7 +54,7 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
 #### <a name="to-create-a-simple-query"></a>Aby utworzyć proste zapytanie  
   
-1.  Znajdź miejsce w `Main` metoda projektu, który jest oznaczony w następujący sposób:  
+1. Znajdź miejsce w `Main` metoda projektu, który jest oznaczony w następujący sposób:  
   
      [!code-vb[VbLINQWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#1)]  
   
@@ -62,33 +62,33 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
      [!code-vb[VbLINQWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#2)]  
   
-2.  Zatrzymaj wskaźnik myszy nad `studentQuery` w kodzie, aby sprawdzić, czy jest przypisany przez kompilator typu `IEnumerable(Of Student)`.  
+2. Zatrzymaj wskaźnik myszy nad `studentQuery` w kodzie, aby sprawdzić, czy jest przypisany przez kompilator typu `IEnumerable(Of Student)`.  
   
 ## <a name="run-the-query"></a>Uruchom zapytanie  
  Zmienna `studentQuery` zawiera definicję kwerendy nie wynikami przeprowadzonej kwerendy. Typowe mechanizm do uruchamiania kwerendy jest `For Each` pętli. Każdy element w zwracanej sekwencji jest dostępny za pośrednictwem zmiennej iteracji pętli. Aby uzyskać więcej informacji na temat wykonywania zapytań, zobacz [Your pierwszego zapytania LINQ pisania](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md).  
   
 #### <a name="to-run-the-query"></a>Aby uruchomić zapytanie  
   
-1.  Dodaj następujący kod `For Each` pętli poniżej zapytania w projekcie.  
+1. Dodaj następujący kod `For Each` pętli poniżej zapytania w projekcie.  
   
      [!code-vb[VbLINQWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#3)]  
   
-2.  Zatrzymaj wskaźnik myszy nad zmienna sterująca pętli `studentRecord` aby zobaczyć jego typu danych. Typ `studentRecord` jest `Student`, ponieważ `studentQuery` zwraca kolekcję `Student` wystąpień.  
+2. Zatrzymaj wskaźnik myszy nad zmienna sterująca pętli `studentRecord` aby zobaczyć jego typu danych. Typ `studentRecord` jest `Student`, ponieważ `studentQuery` zwraca kolekcję `Student` wystąpień.  
   
-3.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
+3. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
 ## <a name="modify-the-query"></a>Zmodyfikuj zapytanie  
  Jest bardziej czytelne wyniki zapytania, jeśli znajdują się w określonej kolejności. Można sortować zwracana sekwencja, w oparciu o wszystkie dostępne pola.  
   
 #### <a name="to-order-the-results"></a>Aby uporządkować wyniki  
   
-1.  Dodaj następujący kod `Order By` klauzuli między `Where` instrukcji i `Select` instrukcja kwerendy. `Order By` Klauzuli będzie kolejność wyników alfabetycznie od A do Z, zgodnie z ostatnią nazwę każdego ucznia.  
+1. Dodaj następujący kod `Order By` klauzuli między `Where` instrukcji i `Select` instrukcja kwerendy. `Order By` Klauzuli będzie kolejność wyników alfabetycznie od A do Z, zgodnie z ostatnią nazwę każdego ucznia.  
   
     ```  
     Order By currentStudent.Last Ascending   
     ```  
   
-2.  Aby zamówić nazwisko i imię, należy dodać do zapytania obu pól:  
+2. Aby zamówić nazwisko i imię, należy dodać do zapytania obu pól:  
   
     ```  
     Order By currentStudent.Last Ascending, currentStudent.First Ascending   
@@ -96,35 +96,35 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
   
      Można również określić `Descending` kolejności od Z do A.  
   
-3.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
+3. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
 #### <a name="to-introduce-a-local-identifier"></a>Aby wprowadzić identyfikator lokalny  
   
-1.  Dodaj kod, w tej sekcji, aby wprowadzić identyfikator lokalny w wyrażeniu zapytania. Identyfikator lokalny będzie przechowywać wyniki pośrednie. W poniższym przykładzie `name` jest identyfikator, który przechowuje łączenia student imienia i nazwiska. Identyfikator lokalny może służyć do zapewnienia wygody, lub go może poprawić wydajność dzięki przechowywaniu wyniki wyrażenie, które w przeciwnym razie nalicza się wiele razy.  
+1. Dodaj kod, w tej sekcji, aby wprowadzić identyfikator lokalny w wyrażeniu zapytania. Identyfikator lokalny będzie przechowywać wyniki pośrednie. W poniższym przykładzie `name` jest identyfikator, który przechowuje łączenia student imienia i nazwiska. Identyfikator lokalny może służyć do zapewnienia wygody, lub go może poprawić wydajność dzięki przechowywaniu wyniki wyrażenie, które w przeciwnym razie nalicza się wiele razy.  
   
      [!code-vb[VbLINQWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#4)]  
   
-2.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
+2. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
 #### <a name="to-project-one-field-in-the-select-clause"></a>Aby zaprojektować jedno pole w klauzuli Wybierz  
   
-1.  Dodaj zapytanie i `For Each` pętli w tej sekcji, aby utworzyć zapytanie, który wytwarza sekwencję, w której elementy różnią się od elementów w źródle. W poniższym przykładzie źródło to zbiór `Student` obiektów, ale tylko jeden element członkowski każdy obiekt jest zwracany: imię studentów, których nazwisko jest Garcia. Ponieważ `currentStudent.First` jest ciągiem, typ danych sekwencji zwróconej przez `studentQuery3` jest `IEnumerable(Of String)`, sekwencją ciągów. Tak samo jak wcześniejszych przykładach przydział danych w polu `studentQuery3` pozostanie do kompilatora, aby określić za pomocą wnioskowanie o typie lokalnym.  
+1. Dodaj zapytanie i `For Each` pętli w tej sekcji, aby utworzyć zapytanie, który wytwarza sekwencję, w której elementy różnią się od elementów w źródle. W poniższym przykładzie źródło to zbiór `Student` obiektów, ale tylko jeden element członkowski każdy obiekt jest zwracany: imię studentów, których nazwisko jest Garcia. Ponieważ `currentStudent.First` jest ciągiem, typ danych sekwencji zwróconej przez `studentQuery3` jest `IEnumerable(Of String)`, sekwencją ciągów. Tak samo jak wcześniejszych przykładach przydział danych w polu `studentQuery3` pozostanie do kompilatora, aby określić za pomocą wnioskowanie o typie lokalnym.  
   
      [!code-vb[VbLINQWalkthrough#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#5)]  
   
-2.  Zatrzymaj wskaźnik myszy nad `studentQuery3` w kodzie, aby sprawdzić, czy jest przypisany typ `IEnumerable(Of String)`.  
+2. Zatrzymaj wskaźnik myszy nad `studentQuery3` w kodzie, aby sprawdzić, czy jest przypisany typ `IEnumerable(Of String)`.  
   
-3.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
+3. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
 #### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Aby utworzyć typ anonimowy w klauzuli Wybierz  
   
-1.  Dodaj kod z tej sekcji, aby zobaczyć, jak anonimowych typów są używane w kwerendach. Można ich używać w zapytaniach zwrócić wiele pól ze źródła danych, a nie pełne rekordy (`currentStudent` rekordów w poprzednich przykładach) lub pojedynczego pola (`First` w poprzedniej sekcji). Zamiast Definiowanie nowego typu nazwanego, który zawiera pola, które chcesz uwzględnić w wyniku, możesz określić pola w `Select` klauzuli i kompilator tworzy typ anonimowy z tych pól jako jego właściwości. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
+1. Dodaj kod z tej sekcji, aby zobaczyć, jak anonimowych typów są używane w kwerendach. Można ich używać w zapytaniach zwrócić wiele pól ze źródła danych, a nie pełne rekordy (`currentStudent` rekordów w poprzednich przykładach) lub pojedynczego pola (`First` w poprzedniej sekcji). Zamiast Definiowanie nowego typu nazwanego, który zawiera pola, które chcesz uwzględnić w wyniku, możesz określić pola w `Select` klauzuli i kompilator tworzy typ anonimowy z tych pól jako jego właściwości. Aby uzyskać więcej informacji, zobacz [typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
      Poniższy przykład tworzy zapytanie zwracające nazwą i ranga seniors, w której akademickich pozycję to od 1 do 10, w kolejności akademickich. W tym przykładzie typ `studentQuery4` musi wywnioskować, ponieważ `Select` klauzula Zwraca wystąpienie typu anonimowego, a typ anonimowy nie ma użytecznych nazw.  
   
      [!code-vb[VbLINQWalkthrough#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#6)]  
   
-2.  Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
+2. Skompiluj i uruchom aplikację, naciskając klawisze CTRL + F5. Należy pamiętać, wyniki w oknie konsoli.  
   
 ## <a name="additional-examples"></a>Dodatkowe przykłady  
  Teraz, gdy już rozumiesz podstawy, Oto lista dodatkowe przykłady ilustrują elastyczność i możliwości [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Każdy przykład jest poprzedzony przez krótki opis jego działania. Zatrzymaj wskaźnik myszy nad zmienną wyników kwerendy dla każdego zapytania zobaczyć wnioskowany typ. Użyj `For Each` pętli do wygenerowania wyników.  
@@ -134,21 +134,21 @@ W tym instruktażu pokazano, jak funkcje języka Visual Basic można użyć do z
 ## <a name="additional-information"></a>Dodatkowe informacje  
  Po przejściu na podstawowych pojęciach dotyczących pracy z zapytaniami, jesteś gotowy do odczytu dokumentację i przykłady dla określonego typu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawcy, który Cię interesuje:  
   
- [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+ [LINQ do obiektów](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
+ [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ do XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zapytanie o języku zintegrowanym (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Wprowadzenie do programu LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)

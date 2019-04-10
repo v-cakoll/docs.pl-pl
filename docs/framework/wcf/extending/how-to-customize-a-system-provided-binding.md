@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0c5474a65bee7d3d290372e79f8423ea9986235f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301181"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>Instrukcje: dostosowywanie wiązania udostępnionego przez system
 Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które pozwalają na konfigurowanie niektórych właściwości podstawowych elementów powiązania, ale nie wszystkie właściwości. W tym temacie pokazano, jak ustawić właściwości na elementy powiązania do tworzenia niestandardowego powiązania.  
@@ -25,27 +25,27 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
   
  <xref:System.ServiceModel.BasicHttpBinding> Klasa zawiera trzy elementy powiązania:  
   
-1.  Opcjonalne zabezpieczeń powiązania elementu, albo <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> klasa używana do za pomocą transportu HTTP (zabezpieczeniami na poziomie wiadomości) lub <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> klasy, która jest używana, gdy warstwa transportu zapewnia zabezpieczeń, w tym przypadku transportu HTTPS jest używany.  
+1. Opcjonalne zabezpieczeń powiązania elementu, albo <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> klasa używana do za pomocą transportu HTTP (zabezpieczeniami na poziomie wiadomości) lub <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> klasy, która jest używana, gdy warstwa transportu zapewnia zabezpieczeń, w tym przypadku transportu HTTPS jest używany.  
   
-2.  Kodera komunikatów wymaganego elementu, powiązania albo <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> lub <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
+2. Kodera komunikatów wymaganego elementu, powiązania albo <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> lub <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>.  
   
-3.  Wymagane transportu elementu, powiązania albo <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, lub <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
+3. Wymagane transportu elementu, powiązania albo <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, lub <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>.  
   
  W tym przykładzie firma Microsoft Utwórz wystąpienie obiektu powiązania, generowanie *niestandardowego powiązania* z niego, sprawdź elementy niestandardowego powiązania, a gdy okaże się element powiązania protokołu HTTP, firma Microsoft jego `KeepAliveEnabled` właściwość `false`. `KeepAliveEnabled` Właściwość nie jest uwidaczniana bezpośrednio na `BasicHttpBinding`, dzięki czemu możemy utworzyć niestandardowego powiązania, przejdź do elementu powiązania i ustawić tę właściwość.  
   
 ### <a name="to-modify-a-system-provided-binding"></a>Aby zmodyfikować powiązania dostarczane przez system  
   
-1.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.BasicHttpBinding> klasy i ustaw jej tryb zabezpieczeń na poziomie wiadomości.  
+1. Utwórz wystąpienie obiektu <xref:System.ServiceModel.BasicHttpBinding> klasy i ustaw jej tryb zabezpieczeń na poziomie wiadomości.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#1)]
      [!code-vb[C_HowTo_ChangeStandardBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#1)]  
   
-2.  Tworzenie niestandardowego powiązania z wiązania i utworzyć <xref:System.ServiceModel.Channels.BindingElementCollection> klasy z jednej z właściwości niestandardowego powiązania.  
+2. Tworzenie niestandardowego powiązania z wiązania i utworzyć <xref:System.ServiceModel.Channels.BindingElementCollection> klasy z jednej z właściwości niestandardowego powiązania.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#2)]
      [!code-vb[C_HowTo_ChangeStandardBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#2)]  
   
-3.  W pętli poprzez <xref:System.ServiceModel.Channels.BindingElementCollection> klasy, i jeśli znajdziesz <xref:System.ServiceModel.Channels.HttpTransportBindingElement> klasy, ustaw jego <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> właściwości `false`.  
+3. W pętli poprzez <xref:System.ServiceModel.Channels.BindingElementCollection> klasy, i jeśli znajdziesz <xref:System.ServiceModel.Channels.HttpTransportBindingElement> klasy, ustaw jego <xref:System.ServiceModel.Channels.HttpTransportBindingElement.KeepAliveEnabled%2A> właściwości `false`.  
   
      [!code-csharp[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_changestandardbinding/cs/program.cs#3)]
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  

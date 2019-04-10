@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320135"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194815"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>Debugowanie aplikacji XBAP, które używają HostScript  
  Jeśli korzysta z Twojego XBAP <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> obiektu do komunikowania się z okna kodu HTML, istnieją dwa ustawienia, które należy określić w celu uruchamiania i debugowania aplikacji w programie Visual Studio. Aplikacja musi mieć dostęp do witryny pochodzenia i należy uruchomić aplikację za pomocą strony HTML, który zawiera XBAP. W poniższych krokach opisano, jak sprawdzić te dwa ustawienia:  
   
-1.  W programie Visual Studio Otwórz właściwości projektu.  
+1. W programie Visual Studio Otwórz właściwości projektu.  
   
-2.  Na **zabezpieczeń** kliknij pozycję **zaawansowane**.  
+2. Na **zabezpieczeń** kliknij pozycję **zaawansowane**.  
   
      Zostanie wyświetlone okno dialogowe Zaawansowane ustawienia zabezpieczeń.  
   
-3.  Upewnij się, że **przyznać aplikacji dostęp do witryny pochodzenia** zaznacz pole wyboru zostało zaznaczone, a następnie kliknij przycisk **OK**.  
+3. Upewnij się, że **przyznać aplikacji dostęp do witryny pochodzenia** zaznacz pole wyboru zostało zaznaczone, a następnie kliknij przycisk **OK**.  
   
-4.  Na **debugowania** zaznacz **uruchamiania przeglądarki z adresem URL** opcji, a następnie określ adres URL strony HTML, który zawiera XBAP.  
+4. Na **debugowania** zaznacz **uruchamiania przeglądarki z adresem URL** opcji, a następnie określ adres URL strony HTML, który zawiera XBAP.  
   
-5.  W programie Internet Explorer kliknij **narzędzia** przycisk, a następnie wybierz pozycję **Opcje internetowe**.  
+5. W programie Internet Explorer kliknij **narzędzia** przycisk, a następnie wybierz pozycję **Opcje internetowe**.  
   
      Zostanie wyświetlone okno dialogowe Opcje internetowe.  
   
-6.  Kliknij przycisk **zaawansowane** kartę.  
+6. Kliknij przycisk **zaawansowane** kartę.  
   
-7.  W **ustawienia** w obszarze **zabezpieczeń**, sprawdź **active zawartości do uruchamiania w plikach na moim komputerze** pole wyboru.  
+7. W **ustawienia** w obszarze **zabezpieczeń**, sprawdź **active zawartości do uruchamiania w plikach na moim komputerze** pole wyboru.  
   
-8.  Kliknij przycisk **OK**.  
+8. Kliknij przycisk **OK**.  
   
      Zmiany zostaną wprowadzone po ponownym uruchomieniu programu Internet Explorer.  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194815"
 ### <a name="creating-a-full-trust-xbap"></a>Tworzenie XBAP pełnego zaufania  
  Jeśli Twoje XBAP wymaga pełnego zaufania, można zmienić projekt tak, aby włączyć te uprawnienia. W poniższych krokach opisano sposób włączania pełnego zaufania:  
   
-1.  W programie Visual Studio Otwórz właściwości projektu.  
+1. W programie Visual Studio Otwórz właściwości projektu.  
   
-2.  Na **zabezpieczeń** zaznacz **jest to aplikacja w trybie pełnego zaufania** opcji.  
+2. Na **zabezpieczeń** zaznacz **jest to aplikacja w trybie pełnego zaufania** opcji.  
   
  To ustawienie powoduje następujące zmiany:  
   

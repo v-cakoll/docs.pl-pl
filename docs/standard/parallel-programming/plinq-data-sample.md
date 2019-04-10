@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298919"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
 W tym przykładzie zawiera przykładowe dane w formacie CSV, wraz z metod, które przetwarzają je do kolekcji w pamięci dla klientów, produkty, zamówień i szczegóły zamówienia. Do dalszych eksperymentów z PLINQ, Wklej przykłady kodu z niektórych innych tematów, jak kod w tym temacie i wywołać go z `Main` metody. Umożliwia także te dane za pomocą zapytań PLINQ.  
@@ -27,13 +27,13 @@ W tym przykładzie zawiera przykładowe dane w formacie CSV, wraz z metod, któr
   
 ### <a name="to-set-up-this-sample"></a>Aby skonfigurować w tym przykładzie  
   
-1.  Utwórz projekt aplikacji konsoli Visual Basic lub Visual C#.  
+1. Utwórz projekt aplikacji konsoli Visual Basic lub Visual C#.  
   
-2.  Zastąp zawartość Module1.vb lub Program.cs przy użyciu kodu, który obejmuje następujące kroki.  
+2. Zastąp zawartość Module1.vb lub Program.cs przy użyciu kodu, który obejmuje następujące kroki.  
   
-3.  Na **projektu** menu, kliknij przycisk **Dodaj nowy element**. Wybierz **plik tekstowy** a następnie kliknij przycisk **OK**. Skopiuj dane w tym temacie, a następnie wklej go w nowy plik tekstowy. Na **pliku** menu, kliknij przycisk **Zapisz**, nadaj plikowi Plinqdata.csv, a następnie zapisz go w folderze, który zawiera pliki kodu źródłowego.  
+3. Na **projektu** menu, kliknij przycisk **Dodaj nowy element**. Wybierz **plik tekstowy** a następnie kliknij przycisk **OK**. Skopiuj dane w tym temacie, a następnie wklej go w nowy plik tekstowy. Na **pliku** menu, kliknij przycisk **Zapisz**, nadaj plikowi Plinqdata.csv, a następnie zapisz go w folderze, który zawiera pliki kodu źródłowego.  
   
-4.  Naciśnij klawisz F5, aby zweryfikować, że projekt kompiluje i działa poprawnie. Następujące dane wyjściowe powinna być wyświetlana w oknie konsoli.  
+4. Naciśnij klawisz F5, aby zweryfikować, że projekt kompiluje i działa poprawnie. Następujące dane wyjściowe powinna być wyświetlana w oknie konsoli.  
   
     ```  
     Customer count: 50  

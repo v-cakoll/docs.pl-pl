@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300570"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniających produkcji bezpiecznego kodu. To kluczowy element wiarygodne technologie komputerowe [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Jest praktykę, który jest używany w połączeniu z standardowa inżynieryjnym ułatwiają dostarczanie bezpiecznego kodu. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] Składa się z dziesięciu fazy, które łączą najlepsze rozwiązania z ujęcie w formalne ramy measurability oraz dodatkowe struktury, w tym:  
@@ -47,11 +47,11 @@ Wiarygodne technologie komputerowe to inicjatywa firmy Microsoft, zapewniającyc
   
  Na wysokim poziomie modelowanie zagrożeń obejmuje następujące kroki klucza przy użyciu magazynu połówce, na przykład:  
   
-1.  **Identyfikowanie zasobów**. Zasoby w magazynie połówce może obejmować pracowników, bezpiecznym miejscu, kasy i spisu.  
+1. **Identyfikowanie zasobów**. Zasoby w magazynie połówce może obejmować pracowników, bezpiecznym miejscu, kasy i spisu.  
   
-2.  **Wyliczanie punktów wejścia**. Punkty wejścia w magazynie połówce może obejmować frontonu i drzwi Wstecz, systemu windows, ładowanie dock i klimatyzacji.  
+2. **Wyliczanie punktów wejścia**. Punkty wejścia w magazynie połówce może obejmować frontonu i drzwi Wstecz, systemu windows, ładowanie dock i klimatyzacji.  
   
-3.  **Badanie ataków na zasoby przy użyciu punktów wejścia**. Jeden możliwych ataków skierowania sklepu połówce *bezpieczne* zasobów za pomocą *klimatyzacja* punkt wejścia; klimatyzacja jednostką może być unscrewed umożliwia bezpiecznie można ściągnąć, za jego pośrednictwem i poza Magazyn.  
+3. **Badanie ataków na zasoby przy użyciu punktów wejścia**. Jeden możliwych ataków skierowania sklepu połówce *bezpieczne* zasobów za pomocą *klimatyzacja* punkt wejścia; klimatyzacja jednostką może być unscrewed umożliwia bezpiecznie można ściągnąć, za jego pośrednictwem i poza Magazyn.  
   
  Modelowanie zagrożeń są stosowane w całym [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] i obejmuje następujące elementy:  
   

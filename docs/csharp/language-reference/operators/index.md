@@ -1,5 +1,5 @@
 ---
-title: C#Operatory
+title: Operatory języka C#
 ms.date: 04/04/2018
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308656"
 ---
-# <a name="c-operators"></a>C#Operatory
+# <a name="c-operators"></a>Operatory języka C#
 
 C# zawiera wiele operatorów, które są symbolami określającymi operacje (matematycznych, indeksowanie, wywołanie funkcji itp.) do wykonania w wyrażeniu. Możesz [przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md) wiele operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.
 
@@ -75,7 +75,7 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [-x](subtraction-operator.md) — negacji liczbowych.
 
-[\!x](logical-negation-operator.md) — negacji logicznej.
+[\!x](boolean-logical-operators.md#logical-negation-operator-) — negacji logicznej.
 
 [~ x](bitwise-complement-operator.md) — uzupełnienie bitowe.
 
@@ -163,13 +163,13 @@ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet ni�
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x & & y](conditional-and-operator.md) — operatora logicznego AND. Jeśli pierwszy operand zwróci wartość false, następnie C# nie może oszacować drugiego operandu.
+[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-) — operatora logicznego AND. Jeśli pierwszy operand zwróci wartość false, następnie C# nie może oszacować drugiego operandu.
 
 ## <a name="conditional-or-operator"></a>Operator warunkowy OR
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x &#124; &#124; y](conditional-or-operator.md) — operator logiczny lub. Jeśli pierwszy argument zwraca wartość true, następnie C# nie może oszacować drugiego operandu.
+[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) — operator logiczny lub. Jeśli pierwszy argument zwraca wartość true, następnie C# nie może oszacować drugiego operandu.
 
 ## <a name="null-coalescing-operator"></a>Operatorem łączenia wartości null
 
@@ -213,7 +213,7 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [C#](../../index.md)
 - [Operatory z możliwością przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

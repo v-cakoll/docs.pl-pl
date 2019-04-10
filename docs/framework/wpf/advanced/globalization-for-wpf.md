@@ -7,17 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084170"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy wiedzieć podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalny. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.
-
-
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Globalizacja XAML
@@ -154,7 +152,7 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
  Z punktu widzenia zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku przeznaczona do opisania zależne od języka [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest elementem zasobów i w związku z tym formatem końcowej dystrybucji musi być możliwy do zlokalizowania do obsługi języków obcych. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie może obsłużyć zdarzenia wiele [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacje zawierają bloki kodu, aby to zrobić. Aby uzyskać więcej informacji, zobacz [Przegląd XAML (WPF)](xaml-overview-wpf.md). Kod jest wycięte i kompilowane do różnych plików binarnych podczas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku jest stokenizowana na formularz BAML XAML. Formularz BAML pliki XAML, obrazy i inne typy obiektów zarządzanych zasobów są osadzone w głównym zestawie satelickim zestawem zasobów, która może być lokalizowana w innych językach, lub w, gdy lokalizacja nie jest wymagane.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do obsługi wszystkich [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zasobów, w tym tabele ciągów, obrazy i tak dalej.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje do obsługi wszystkich [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] zasobów, w tym tabele ciągów, obrazy i tak dalej.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Tworzenie zlokalizowanych aplikacjach
@@ -181,4 +179,5 @@ Poniższy przykład pokazuje odwołania znaków szesnastkowych. Należy zauważy
 ```
 
 ## <a name="see-also"></a>Zobacz także
-- [Przeglądanie globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)
+
+- [Przegląd Lokalizacja i globalizacja WPF](wpf-globalization-and-localization-overview.md)

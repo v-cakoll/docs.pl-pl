@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304158"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>Wyrażenie typu \<typ > nie umożliwia zadawania zapytań
 Wyrażenie typu \<typ > nie umożliwia zadawania zapytań. Upewnij się, że nie brakuje importu zestawu odwołania i/lub przestrzeń nazw dla dostawcy LINQ.  
@@ -29,9 +29,9 @@ Wyrażenie typu \<typ > nie umożliwia zadawania zapytań. Upewnij się, że nie
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Dodaj `Import` poufności informacji dotyczące <xref:System.Linq>, <xref:System.Data.Linq>, lub <xref:System.Xml.Linq> przestrzeni nazw do pliku kodu. Możesz również zaimportować przestrzeni nazw dla projektu, przy użyciu **odwołania** strony Projektant projektu (**mój projekt**).  
+1. Dodaj `Import` poufności informacji dotyczące <xref:System.Linq>, <xref:System.Data.Linq>, lub <xref:System.Xml.Linq> przestrzeni nazw do pliku kodu. Możesz również zaimportować przestrzeni nazw dla projektu, przy użyciu **odwołania** strony Projektant projektu (**mój projekt**).  
   
-2.  Upewnij się, że typ, który masz zidentyfikowane jako źródła zapytania jest typem odpytywalnym. Oznacza to, że typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>.  
+2. Upewnij się, że typ, który masz zidentyfikowane jako źródła zapytania jest typem odpytywalnym. Oznacza to, że typ, który implementuje <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Linq.IQueryable%601>.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -41,6 +41,6 @@ Wyrażenie typu \<typ > nie umożliwia zadawania zapytań. Upewnij się, że nie
 - [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Referencje i importy — Instrukcja](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports — Instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

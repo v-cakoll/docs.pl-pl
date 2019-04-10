@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: ca8471f6a25c9ef5295af0edaabcefe58114aac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320062"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera
 > [!NOTE]
@@ -148,13 +148,13 @@ ms.locfileid: "59077293"
   
  Aby zmienić elementu nadrzędnego okno podręczne:  
   
-1.  Tworzenie dostawcy dla tego okna. Wymaga to, że klasy okna podręcznego jest znana z wyprzedzeniem.  
+1. Tworzenie dostawcy dla tego okna. Wymaga to, że klasy okna podręcznego jest znana z wyprzedzeniem.  
   
-2.  Zaimplementuj wszystkie właściwości i wzorce w zwykły sposób tym okno podręczne, tak, jakby była kontroli samodzielną.  
+2. Zaimplementuj wszystkie właściwości i wzorce w zwykły sposób tym okno podręczne, tak, jakby była kontroli samodzielną.  
   
-3.  Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> właściwości, tak że zwraca wartość uzyskana z <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, gdzie parametr jest uchwyt okna podręcznego okna.  
+3. Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A> właściwości, tak że zwraca wartość uzyskana z <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, gdzie parametr jest uchwyt okna podręcznego okna.  
   
-4.  Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> dla tego okna i jego obiektu nadrzędnego, tak że nawigacja odbywa się prawidłowo z logiczną elementu nadrzędnego do podrzędnych logicznego oraz między elementami podrzędnymi tego samego poziomu.  
+4. Implementowanie <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A> dla tego okna i jego obiektu nadrzędnego, tak że nawigacja odbywa się prawidłowo z logiczną elementu nadrzędnego do podrzędnych logicznego oraz między elementami podrzędnymi tego samego poziomu.  
   
  Gdy [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] napotka oknie podręcznym rozpoznaje nawigacji jest przesłaniana z domyślnego i nakłada się na oknie podręcznym po napotkaniu się jako element podrzędny pulpitu. Zamiast tego węzła tylko będzie dostępny za pośrednictwem tego fragmentu.  
   

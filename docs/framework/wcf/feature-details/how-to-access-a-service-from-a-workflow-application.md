@@ -1,36 +1,36 @@
 ---
-title: 'Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy'
+title: 'Instrukcje: uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309319"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: Uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy
 W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji konsoli przepływu pracy. To zależy od ukończenia [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu. Mimo że w tym temacie opisano sposób wywoływania usługi przepływu pracy z poziomu aplikacji przepływu pracy, te same metody można wywołać dowolną usługę Windows Communication Foundation (WCF) z poziomu aplikacji przepływu pracy.
 
 ### <a name="create-a-workflow-console-application-project"></a>Utwórz projekt aplikacji konsoli przepływu pracy
 
-1.  Start Visual Studio 2012.
+1. Start Visual Studio 2012.
 
-2.  Załaduj projekt MyWFService został utworzony w [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu.
+2. Załaduj projekt MyWFService został utworzony w [jak: Tworzenie usługi przepływu pracy przy użyciu działań Messaging](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) tematu.
 
-3.  Kliknij prawym przyciskiem myszy **MyWFService** rozwiązania **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy projekt**. Wybierz **przepływu pracy** w **zainstalowane szablony** i **Aplikacja konsoli przepływu pracy** z listy typów projektów. Nazwij projekt MyWFClient i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.
+3. Kliknij prawym przyciskiem myszy **MyWFService** rozwiązania **Eksploratora rozwiązań** i wybierz **Dodaj**, **nowy projekt**. Wybierz **przepływu pracy** w **zainstalowane szablony** i **Aplikacja konsoli przepływu pracy** z listy typów projektów. Nazwij projekt MyWFClient i użyj domyślnej lokalizacji, jak pokazano na poniższej ilustracji.
 
      ![Dodaj okno dialogowe nowego projektu](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      Kliknij przycisk **OK** przycisk, aby odrzucić **okna dialogowego Dodawanie nowego projektu**.
 
-4.  Po utworzeniu projektu plik Workflow1.xaml zostanie otwarty w projektancie. Kliknij przycisk **przybornika** kartę, aby otworzyć przybornik, jeśli nie jest już otworzyć i kliknij przycisk pinezki, aby nie zamykaj okna przybornika.
+4. Po utworzeniu projektu plik Workflow1.xaml zostanie otwarty w projektancie. Kliknij przycisk **przybornika** kartę, aby otworzyć przybornik, jeśli nie jest już otworzyć i kliknij przycisk pinezki, aby nie zamykaj okna przybornika.
 
-5.  Naciśnij klawisz **Ctrl**+**F5** Aby skompilować i uruchomić usługę. Tak jak poprzednio jest uruchamiane w ASP.NET Development Server i programu Internet Explorer wyświetla stronę pomocy programu WCF. Należy zauważyć identyfikator URI dla tej strony, ponieważ musisz ją wykorzystać w następnym kroku.
+5. Naciśnij klawisz **Ctrl**+**F5** Aby skompilować i uruchomić usługę. Tak jak poprzednio jest uruchamiane w ASP.NET Development Server i programu Internet Explorer wyświetla stronę pomocy programu WCF. Należy zauważyć identyfikator URI dla tej strony, ponieważ musisz ją wykorzystać w następnym kroku.
 
      ![Wyświetlanie strony pomocy usługi WCF i identyfikator URI programu Internet Explorer](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6.  Kliknij prawym przyciskiem myszy **MyWFClient** projektu w **Eksploratora rozwiązań** i wybierz **Dodaj** > **odwołanie do usługi**. Kliknij przycisk **odnajdź** przycisk, aby wyszukać bieżące rozwiązanie dla wszystkich usług. Kliknij przycisk trójkąta obok Service1.xamlx na liście usług. Kliknij przycisk trójkąta obok Service1, aby wyświetlić listę zamówień implementowane przez usługę Service1. Rozwiń **Service1** w węźle **usług** listy. Operacja echa są wyświetlane w **operacji** listy, jak pokazano na poniższej ilustracji.
+6. Kliknij prawym przyciskiem myszy **MyWFClient** projektu w **Eksploratora rozwiązań** i wybierz **Dodaj** > **odwołanie do usługi**. Kliknij przycisk **odnajdź** przycisk, aby wyszukać bieżące rozwiązanie dla wszystkich usług. Kliknij przycisk trójkąta obok Service1.xamlx na liście usług. Kliknij przycisk trójkąta obok Service1, aby wyświetlić listę zamówień implementowane przez usługę Service1. Rozwiń **Service1** w węźle **usług** listy. Operacja echa są wyświetlane w **operacji** listy, jak pokazano na poniższej ilustracji.
 
      ![Dodaj okno dialogowe odwołanie do usługi](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -42,9 +42,9 @@ W tym temacie opisano sposób wywoływania usługi przepływu pracy z aplikacji 
 
      ![Echo działania w przyborniku](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
-7.  Przeciąganie i upuszczanie <xref:System.Activities.Statements.Sequence> działania na powierzchnię projektanta. Jest on w **przepływ sterowania** sekcji przybornika.
+7. Przeciąganie i upuszczanie <xref:System.Activities.Statements.Sequence> działania na powierzchnię projektanta. Jest on w **przepływ sterowania** sekcji przybornika.
 
-8.  Za pomocą <xref:System.Activities.Statements.Sequence> działania w trybie koncentracji uwagi, kliknij przycisk **zmienne** łącze i Dodaj zmienną ciągu o nazwie `inString`. Jej nadać wartość domyślną `"Hello, world"` oraz na zmienną ciągu o nazwie `outString` jak pokazano na poniższym diagramie.
+8. Za pomocą <xref:System.Activities.Statements.Sequence> działania w trybie koncentracji uwagi, kliknij przycisk **zmienne** łącze i Dodaj zmienną ciągu o nazwie `inString`. Jej nadać wartość domyślną `"Hello, world"` oraz na zmienną ciągu o nazwie `outString` jak pokazano na poniższym diagramie.
 
      ![Dodawanie zmiennej inString](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 

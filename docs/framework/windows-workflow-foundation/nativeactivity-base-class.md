@@ -1,15 +1,15 @@
 ---
-title: Klasa bazowa NativeActivity
+title: NativeActivity, klasa bazowa
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 40eff2e597763fd492b3051df1a91622e7a60672
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296592"
 ---
-# <a name="nativeactivity-base-class"></a>Klasa bazowa NativeActivity
+# <a name="nativeactivity-base-class"></a>NativeActivity, klasa bazowa
 
 <xref:System.Activities.NativeActivity> jest klasą abstrakcyjną, przy użyciu Konstruktor chroniony. Podobnie jak <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> służy do zapisywania imperatywne zachowanie przez zaimplementowanie <xref:System.Activities.NativeActivity.Execute%2A> metody. W odróżnieniu od <xref:System.Activities.CodeActivity>, <xref:System.Activities.NativeActivity> ma dostęp do wszystkich funkcji narażonych środowiska uruchomieniowego przepływu pracy za pośrednictwem <xref:System.Activities.NativeActivityContext> obiekt przekazany do <xref:System.Activities.NativeActivity.Execute%2A> metody.
 
@@ -34,28 +34,28 @@ ms.locfileid: "48842038"
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>Aby utworzyć niestandardowe działanie, która dziedziczy z elementu NativeActivity
 
-1.  Otwórz program Visual Studio 2010.
+1. OpenVisual Studio 2010.
 
-2.  Wybierz **pliku**, **nowe**, a następnie **projektu**. Wybierz **Workflow 4.0** w obszarze **Visual C#** w **typów projektów** okna, a następnie wybierz **v2010** węzła. Wybierz **Biblioteka działań** w **szablony** okna. Nazwa nowego projektu HelloActivity.
+2. Wybierz **pliku**, **nowe**, a następnie **projektu**. Wybierz **Workflow 4.0** w obszarze **Visual C#** w **typów projektów** okna, a następnie wybierz **v2010** węzła. Wybierz **Biblioteka działań** w **szablony** okna. Nazwa nowego projektu HelloActivity.
 
-3.  Kliknij prawym przyciskiem myszy Activity1.xaml w projekcie HelloActivity, a następnie wybierz pozycję **Usuń**.
+3. Kliknij prawym przyciskiem myszy Activity1.xaml w projekcie HelloActivity, a następnie wybierz pozycję **Usuń**.
 
-4.  Kliknij prawym przyciskiem myszy projekt HelloActivity, a następnie wybierz pozycję **Dodaj**, a następnie **klasy**. Nazwa nowej klasy HelloActivity.cs.
+4. Kliknij prawym przyciskiem myszy projekt HelloActivity, a następnie wybierz pozycję **Dodaj**, a następnie **klasy**. Nazwa nowej klasy HelloActivity.cs.
 
-5.  W pliku HelloActivity.cs, Dodaj następujący kod `using` dyrektywy.
+5. W pliku HelloActivity.cs, Dodaj następujący kod `using` dyrektywy.
 
     ```csharp
     using System.Activities;
     using System.Activities.Statements;
     ```
 
-6.  Wprowadź nowy dziedziczyć z klasy <xref:System.Activities.NativeActivity> przez dodanie klasy bazowej do deklaracji klasy.
+6. Wprowadź nowy dziedziczyć z klasy <xref:System.Activities.NativeActivity> przez dodanie klasy bazowej do deklaracji klasy.
 
     ```csharp
     class HelloActivity : NativeActivity
     ```
 
-7.  Dodawanie funkcji do klasy, dodając <xref:System.Activities.NativeActivity.Execute%2A> metody.
+7. Dodawanie funkcji do klasy, dodając <xref:System.Activities.NativeActivity.Execute%2A> metody.
 
     ```csharp
     protected override void Execute(NativeActivityContext context)
@@ -64,7 +64,7 @@ ms.locfileid: "48842038"
     }
     ```
 
-8.  Zastąp <xref:System.Activities.NativeActivity.CacheMetadata%2A> metody i wywołanie odpowiedniej metody Add umożliwiające wiedzieć o zmienne, argumenty, elementy podrzędne i delegatów działania niestandardowego środowiska uruchomieniowego przepływu pracy. Aby uzyskać więcej informacji, zobacz <xref:System.Activities.NativeActivityMetadata> klasy.
+8. Zastąp <xref:System.Activities.NativeActivity.CacheMetadata%2A> metody i wywołanie odpowiedniej metody Add umożliwiające wiedzieć o zmienne, argumenty, elementy podrzędne i delegatów działania niestandardowego środowiska uruchomieniowego przepływu pracy. Aby uzyskać więcej informacji, zobacz <xref:System.Activities.NativeActivityMetadata> klasy.
 
 9. Użyj <xref:System.Activities.NativeActivityContext> obiektu, aby zaplanować zakładki. Zobacz <xref:System.Activities.WorkflowApplicationIdleEventArgs.Bookmarks%2A> Aby uzyskać szczegółowe informacje dotyczące sposobu tworzenia, planowanie i wznowienie zakładki.
 

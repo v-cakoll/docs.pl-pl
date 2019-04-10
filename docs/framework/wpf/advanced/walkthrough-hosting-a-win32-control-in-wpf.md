@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307707"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Przewodnik: hostowanie kontrolki Win32 w WPF
 Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje w kodzie Win32, może być bardziej efektywne ponownie użyć przynajmniej część tego kodu w aplikacji WPF, a nie jego przepisania całkowicie. WPF zapewnia prosty mechanizm do obsługi oknie Win32, na stronie programu WPF.  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) zapewnia rozbudowane środowisko do tworze
   
  Podstawowa procedura obsługi jest:  
   
-1.  Implementowanie strony WPF do hostowania okna. Jedna z technik jest utworzenie <xref:System.Windows.Controls.Border> element, aby zarezerwować części strony okna hostowanej.  
+1. Implementowanie strony WPF do hostowania okna. Jedna z technik jest utworzenie <xref:System.Windows.Controls.Border> element, aby zarezerwować części strony okna hostowanej.  
   
-2.  Implementowanie klasy do hostowania kontrolki, która dziedziczy <xref:System.Windows.Interop.HwndHost>.  
+2. Implementowanie klasy do hostowania kontrolki, która dziedziczy <xref:System.Windows.Interop.HwndHost>.  
   
-3.  W tej klasie zastąpić <xref:System.Windows.Interop.HwndHost> składowej klasy <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
+3. W tej klasie zastąpić <xref:System.Windows.Interop.HwndHost> składowej klasy <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>.  
   
-4.  Utworzyć hostowanej okno jako element podrzędny okno, które zawiera stronę WPF. Mimo że konwencjonalne programowania WPF nie trzeba jawnie wprowadzać z niej korzystać, strona macierzysta jest oknem z dojściem (HWND). Pojawi się Strona HWND za pośrednictwem `hwndParent` parametru <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> metody. Okno hostowanej powinien zostać utworzony jako element podrzędny tego HWND.  
+4. Utworzyć hostowanej okno jako element podrzędny okno, które zawiera stronę WPF. Mimo że konwencjonalne programowania WPF nie trzeba jawnie wprowadzać z niej korzystać, strona macierzysta jest oknem z dojściem (HWND). Pojawi się Strona HWND za pośrednictwem `hwndParent` parametru <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A> metody. Okno hostowanej powinien zostać utworzony jako element podrzędny tego HWND.  
   
-5.  Po utworzeniu okno hosta Zwróć HWND hostowanej okna. Jeśli chcesz udostępnić co najmniej jednej kontrolki Win32 są zazwyczaj tworzone okna hosta jako element podrzędny HWND i utworzyć formanty elementy podrzędne tego okna hosta. OPAKOWYWANIE formantów w oknie hosta zapewnia prostą metodę dla strony WPF może otrzymywać powiadomienia z formantów, które dotyczy niektóre konkretnej kwestii Win32, dzięki powiadomieniom granicę HWND.  
+5. Po utworzeniu okno hosta Zwróć HWND hostowanej okna. Jeśli chcesz udostępnić co najmniej jednej kontrolki Win32 są zazwyczaj tworzone okna hosta jako element podrzędny HWND i utworzyć formanty elementy podrzędne tego okna hosta. OPAKOWYWANIE formantów w oknie hosta zapewnia prostą metodę dla strony WPF może otrzymywać powiadomienia z formantów, które dotyczy niektóre konkretnej kwestii Win32, dzięki powiadomieniom granicę HWND.  
   
-6.  Obsługuj wybrane komunikaty wysyłane do okna hosta, takich jak powiadomienia z formantów podrzędnych. Istnieją dwa sposoby, aby to zrobić.  
+6. Obsługuj wybrane komunikaty wysyłane do okna hosta, takich jak powiadomienia z formantów podrzędnych. Istnieją dwa sposoby, aby to zrobić.  
   
     -   Jeśli wolisz do obsługi wiadomości w klasie hostingu, Zastąp <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost> klasy.  
   
     -   Jeśli chcesz mieć WPF obsługi komunikatów, obsługa <xref:System.Windows.Interop.HwndHost> klasy <xref:System.Windows.Interop.HwndHost.MessageHook> zdarzenia w swojej związanym z kodem. To zdarzenie występuje dla każdego komunikatu odebranego przez okno hostowanej. Jeśli ta opcja jest wybrana, nadal musisz przesłonić <xref:System.Windows.Interop.HwndHost.WndProc%2A>, ale wystarczy tylko minimalne implementacji.  
   
-7.  Zastąp <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> i <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost>. Konieczne jest przesłonięcie tych metod w celu zaspokojenia <xref:System.Windows.Interop.HwndHost> kontraktu, ale może być tylko konieczne podanie minimalny implementacji.  
+7. Zastąp <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> i <xref:System.Windows.Interop.HwndHost.WndProc%2A> metody <xref:System.Windows.Interop.HwndHost>. Konieczne jest przesłonięcie tych metod w celu zaspokojenia <xref:System.Windows.Interop.HwndHost> kontraktu, ale może być tylko konieczne podanie minimalny implementacji.  
   
-8.  W pliku związanym z kodem, Utwórz wystąpienie obiektu hostingu klasy formantu, co element podrzędny elementu <xref:System.Windows.Controls.Border> element, który jest przeznaczony do obsługi oknie.  
+8. W pliku związanym z kodem, Utwórz wystąpienie obiektu hostingu klasy formantu, co element podrzędny elementu <xref:System.Windows.Controls.Border> element, który jest przeznaczony do obsługi oknie.  
   
 9. Komunikować się z oknie hostowanej przez wysłanie go [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] komunikatów i obsługi komunikatów z jego okien podrzędnych, takich jak powiadomienia wysyłane przez formanty.  
   

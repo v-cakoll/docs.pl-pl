@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kompilacja zestawów pojedynczego pliku'
+title: 'Instrukcje: Kompilacja zestawu jednoplikowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5c0b5dc2e001121ab54447bae4a5eed3290a580
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304002"
 ---
-# <a name="how-to-build-a-single-file-assembly"></a>Instrukcje: Kompilacja zestawów pojedynczego pliku
+# <a name="how-to-build-a-single-file-assembly"></a>Instrukcje: Kompilacja zestawu jednoplikowego
 
 Zestawu pojedynczego pliku to najprostszy rodzaj zestawów, zawiera informacje o typie i wdrażania, jak również [manifestu zestawu](../../../docs/framework/app-domains/assembly-manifest.md). Można użyć kompilatorów wiersza polecenia lub programu Visual Studio, można utworzyć zestawu pojedynczego pliku. Domyślnie kompilator tworzy plik zestawu z rozszerzeniem .exe.
 
@@ -33,7 +33,7 @@ Poniższe procedury przedstawiają sposób tworzenia zespołów pojedynczego pli
 
 ## <a name="to-create-an-assembly-with-an-exe-extension"></a>Aby utworzyć zestaw z rozszerzeniem .exe
 
-1.  W wierszu polecenia wpisz następujące polecenie:
+1. W wierszu polecenia wpisz następujące polecenie:
 
      \<*polecenie kompilatora*> \<*Nazwa modułu*>
 
@@ -51,7 +51,7 @@ vbc myCode.vb
 
 ### <a name="to-create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>Aby utworzyć zestaw z rozszerzeniem .exe i określ nazwę pliku wyjściowego
 
-1.  W wierszu polecenia wpisz następujące polecenie:
+1. W wierszu polecenia wpisz następujące polecenie:
 
      \<*polecenie kompilatora*> **/out:**\<*nazwy pliku*> \<*Nazwa modułu*>
 
@@ -72,7 +72,7 @@ vbc -out:myAssembly.exe myCode.vb
 
 ### <a name="to-create-a-library-assembly"></a>Można utworzyć zestawu biblioteki
 
-1.  W wierszu polecenia wpisz następujące polecenie:
+1. W wierszu polecenia wpisz następujące polecenie:
 
      \<*polecenie kompilatora*> **- t: Biblioteka** \< *Nazwa modułu*>
 

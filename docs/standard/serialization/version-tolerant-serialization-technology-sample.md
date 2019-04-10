@@ -2,12 +2,12 @@
 title: Przykład technologii serializacji z tolerancją wersji
 ms.date: 03/30/2017
 ms.assetid: 2a183664-bfbf-4ff0-96f6-c836284ea916
-ms.openlocfilehash: b874a347924f6d15e2e6164092b819321384ca3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7dfcf7548571d29032495ca8be96db70f2336fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681121"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308370"
 ---
 # <a name="version-tolerant-serialization-technology-sample"></a>Przykład technologii serializacji z tolerancją wersji
 [Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/VTS.zip.exe)  
@@ -16,29 +16,29 @@ ms.locfileid: "54681121"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Aby skompilować przykład za pomocą wiersza polecenia  
   
-1.  Otwórz okno wiersza polecenia i przejdź do jednej z podkatalogi specyficzny dla języka (w obszarze aplikację V1 lub V2) dla próbki.  
+1. Otwórz okno wiersza polecenia i przejdź do jednej z podkatalogi specyficzny dla języka (w obszarze aplikację V1 lub V2) dla próbki.  
   
-2.  Typ **msbuild.exe \<ver > application.sln** w wierszu polecenia (gdzie \<serwerów > jest v1 lub v2).  
+2. Typ **msbuild.exe \<ver > application.sln** w wierszu polecenia (gdzie \<serwerów > jest v1 lub v2).  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Aby skompilować przykład za pomocą programu Visual Studio  
   
-1.  Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
+1. Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
   
-2.  Przejdź do podkatalogu V1 aplikacji w katalogu, który został wybrany w poprzednim kroku.  
+2. Przejdź do podkatalogu V1 aplikacji w katalogu, który został wybrany w poprzednim kroku.  
   
-3.  Kliknij dwukrotnie ikonę Application.sln V1 do otwierania tego pliku w programie Visual Studio.  
+3. Kliknij dwukrotnie ikonę Application.sln V1 do otwierania tego pliku w programie Visual Studio.  
   
-4.  Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
+4. Na **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie**.  
   
-5.  Przejdź do podkatalogu aplikacji w wersji 2 i Powtórz dwa poprzednie kroki do tworzenia aplikacji w wersji 2.  
+5. Przejdź do podkatalogu aplikacji w wersji 2 i Powtórz dwa poprzednie kroki do tworzenia aplikacji w wersji 2.  
   
  Aplikacje zostanie utworzona w domyślnych podkatalogów \bin lub \bin\Debug ich katalogów odpowiednich projektu.  
   
 ### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  W oknie wiersza polecenia przejdź do wybranego podczas tworzenia aplikacji przykładowych podkatalogu specyficzny dla języka.  
+1. W oknie wiersza polecenia przejdź do wybranego podczas tworzenia aplikacji przykładowych podkatalogu specyficzny dla języka.  
   
-2.  Typ **runme.cmd** w wierszu polecenia do uruchamiania obu aplikacji jednocześnie.  
+2. Typ **runme.cmd** w wierszu polecenia do uruchamiania obu aplikacji jednocześnie.  
   
  Ewentualnie przejdź do katalogi, które zawierają nowe PLiki wykonywalne i uruchom je sekwencyjnie.  
   

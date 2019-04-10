@@ -2,19 +2,19 @@
 title: 'Instrukcje: tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313141"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Instrukcje: tworzenie usługi przyjmującej dowolne dane w modelu programowania REST programu WCF
 Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacja usługi musi zwracać dane w formacie nieobsługiwane byWCF. W tym temacie omówiono, aby utworzyć usługę, która odbiera dowolne dane za pomocą modelu programowania REST programu WCF.  
   
 ### <a name="to-implement-the-service-contract"></a>Aby zaimplementować kontrakt usługi  
   
-1.  Definiowanie kontraktu usługi. Operacja, która odbiera dane dowolnego musi mieć parametr typu <xref:System.IO.Stream>. Ponadto ten parametr musi być jedynym parametrem, które są przekazywane w treści żądania. Działanie opisane w tym przykładzie pobiera również parametr filename. Ten parametr jest przekazywany w adresie URL żądania. Można określić, że parametr jest przekazywany w adresie URL, określając <xref:System.UriTemplate> w <xref:System.ServiceModel.Web.WebInvokeAttribute>. W tym przypadku, identyfikator URI używany do wywołania tej metody kończy się na "UploadFile/niektóre — nazwa pliku". Fragment szablon URI "{filename}" Określa, że parametr filename dla tej operacji jest przekazywany w identyfikatorze URI używany do wywoływania operacji.  
+1. Definiowanie kontraktu usługi. Operacja, która odbiera dane dowolnego musi mieć parametr typu <xref:System.IO.Stream>. Ponadto ten parametr musi być jedynym parametrem, które są przekazywane w treści żądania. Działanie opisane w tym przykładzie pobiera również parametr filename. Ten parametr jest przekazywany w adresie URL żądania. Można określić, że parametr jest przekazywany w adresie URL, określając <xref:System.UriTemplate> w <xref:System.ServiceModel.Web.WebInvokeAttribute>. W tym przypadku, identyfikator URI używany do wywołania tej metody kończy się na "UploadFile/niektóre — nazwa pliku". Fragment szablon URI "{filename}" Określa, że parametr filename dla tej operacji jest przekazywany w identyfikatorze URI używany do wywoływania operacji.  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
     }  
     ```  
   
-2.  Implementowanie kontraktu usługi. Kontrakt ma tylko jedną metodę `UploadFile` odbierająca pliku dowolnych danych w strumieniu. Operacja odczytuje strumień zliczenie liczby bajtów odczytu, a następnie wyświetla nazwę pliku i liczba odczytanych bajtów.  
+2. Implementowanie kontraktu usługi. Kontrakt ma tylko jedną metodę `UploadFile` odbierająca pliku dowolnych danych w strumieniu. Operacja odczytuje strumień zliczenie liczby bajtów odczytu, a następnie wyświetla nazwę pliku i liczba odczytanych bajtów.  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -46,7 +46,7 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
   
 ### <a name="to-host-the-service"></a>Do obsługi usługi  
   
-1.  Utwórz aplikację konsolową, do obsługi usługi.  
+1. Utwórz aplikację konsolową, do obsługi usługi.  
   
     ```csharp  
     class Program  
@@ -57,25 +57,25 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
     }  
     ```  
   
-2.  Utwórz zmienną do przechowywania adres podstawowy dla usługi w ramach `Main` metody.  
+2. Utwórz zmienną do przechowywania adres podstawowy dla usługi w ramach `Main` metody.  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie usługi, który określa klasę usługi i adres podstawowy.  
+3. Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie usługi, który określa klasę usługi i adres podstawowy.  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  Dodaj punkt końcowy, który określa kontrakt <xref:System.ServiceModel.WebHttpBinding>, i <xref:System.ServiceModel.Description.WebHttpBehavior>.  
+4. Dodaj punkt końcowy, który określa kontrakt <xref:System.ServiceModel.WebHttpBinding>, i <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  Otworzyć hosta usługi. Usługa jest teraz gotowa do odbierania żądań.  
+5. Otworzyć hosta usługi. Usługa jest teraz gotowa do odbierania żądań.  
   
     ```csharp  
     host.Open();  
@@ -84,20 +84,20 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
   
 ### <a name="to-call-the-service-programmatically"></a>Aby wywołać usługę programowe  
   
-1.  Utwórz <xref:System.Net.HttpWebRequest> z identyfikator URI używany do wywołania tej usługi. W tym kodzie adres podstawowy jest połączony z `"/UploadFile/Text"`. `"UploadFile"` Część identyfikatora URI określa operację do wywołania. `"Test.txt"` Część identyfikatora URI określa parametr nazwy pliku do przekazania do `UploadFile` operacji. Oba te elementy mapowania <xref:System.UriTemplate> dotyczą kontrakt operacji.  
+1. Utwórz <xref:System.Net.HttpWebRequest> z identyfikator URI używany do wywołania tej usługi. W tym kodzie adres podstawowy jest połączony z `"/UploadFile/Text"`. `"UploadFile"` Część identyfikatora URI określa operację do wywołania. `"Test.txt"` Część identyfikatora URI określa parametr nazwy pliku do przekazania do `UploadFile` operacji. Oba te elementy mapowania <xref:System.UriTemplate> dotyczą kontrakt operacji.  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  Ustaw <xref:System.Net.HttpWebRequest.Method%2A> właściwość <xref:System.Net.HttpWebRequest> do `POST` i <xref:System.Net.HttpWebRequest.ContentType%2A> właściwość `"text/plain"`. Informuje usługę, że kod wysyła dane i dane są w postaci zwykłego tekstu.  
+2. Ustaw <xref:System.Net.HttpWebRequest.Method%2A> właściwość <xref:System.Net.HttpWebRequest> do `POST` i <xref:System.Net.HttpWebRequest.ContentType%2A> właściwość `"text/plain"`. Informuje usługę, że kod wysyła dane i dane są w postaci zwykłego tekstu.  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3.  Wywołaj <xref:System.Net.HttpWebRequest.GetRequestStream%2A> uzyskanie strumienia żądania, tworzenia danych do wysyłania, zapisać te dane do strumienia żądania i zamykać strumień.  
+3. Wywołaj <xref:System.Net.HttpWebRequest.GetRequestStream%2A> uzyskanie strumienia żądania, tworzenia danych do wysyłania, zapisać te dane do strumienia żądania i zamykać strumień.  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,14 +110,14 @@ Czasami deweloperzy muszą mieć pełną kontrolę nad jak dane są zwracane z o
     reqStream.Close();  
     ```  
   
-4.  Uzyskiwanie odpowiedzi z usługi przez wywołanie metody <xref:System.Net.HttpWebRequest.GetResponse%2A> i wyświetlić dane odpowiedzi do konsoli.  
+4. Uzyskiwanie odpowiedzi z usługi przez wywołanie metody <xref:System.Net.HttpWebRequest.GetResponse%2A> i wyświetlić dane odpowiedzi do konsoli.  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5.  Zamknij hosta usługi.  
+5. Zamknij hosta usługi.  
   
     ```csharp  
     host.Close();  

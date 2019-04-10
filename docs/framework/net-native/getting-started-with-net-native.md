@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298477"
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
 Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przeprowadzana migracja istniejącej aplikacji Windows Store, możesz wykonać ten sam zestaw procedur. Aby utworzyć [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji, wykonaj następujące kroki:  
   
-1.  [Tworzenie aplikacji uniwersalnych platformy Windows (UWP), który jest przeznaczony dla systemu Windows 10](#Step1), tworzenie i testowanie kompilacji debugowania aplikacji w taki sposób, aby upewnić się, że działa on prawidłowo.  
+1. [Tworzenie aplikacji uniwersalnych platformy Windows (UWP), który jest przeznaczony dla systemu Windows 10](#Step1), tworzenie i testowanie kompilacji debugowania aplikacji w taki sposób, aby upewnić się, że działa on prawidłowo.  
   
-2.  [Obsługa dodatkowe użycie odbicia i serializacja](#Step2).  
+2. [Obsługa dodatkowe użycie odbicia i serializacja](#Step2).  
   
-3.  [Wdrażanie i testowanie kompilacji wydania aplikacji](#Step3).  
+3. [Wdrażanie i testowanie kompilacji wydania aplikacji](#Step3).  
   
-4.  [Ręczne rozwiązywanie Brak metadanych](#Step4)i powtórz [kroku 3](#Step3) dopóki wszystkie problemy są rozwiązywane.  
+4. [Ręczne rozwiązywanie Brak metadanych](#Step4)i powtórz [kroku 3](#Step3) dopóki wszystkie problemy są rozwiązywane.  
   
 > [!NOTE]
 >  Jeśli migrujesz istniejącą aplikację Windows Store w celu [!INCLUDE[net_native](../../../includes/net-native-md.md)], należy przejrzeć [Migrowanie Your Windows Store aplikacji platformy .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md).  
@@ -29,9 +29,9 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Krok 1. Tworzenie i testowanie kompilacji do debugowania aplikacji platformy uniwersalnej systemu Windows  
  Czy tworzysz nową aplikację lub Migrowanie istniejącą, wykonaj się tego samego procesu jak w przypadku dowolnej aplikacji Windows.  
   
-1.  Utwórz nowy projekt platformy uniwersalnej systemu Windows w programie Visual Studio za pomocą szablonu aplikacji Universal Windows dla języka Visual C# lub Visual Basic. Domyślnie wszystkie aplikacje platformy uniwersalnej systemu Windows docelowe oprogramowania CoreCLR i ich kompilacji wydania są kompilowane przy użyciu platformy .NET Native łańcucha narzędzi.  
+1. Utwórz nowy projekt platformy uniwersalnej systemu Windows w programie Visual Studio za pomocą szablonu aplikacji Universal Windows dla języka Visual C# lub Visual Basic. Domyślnie wszystkie aplikacje platformy uniwersalnej systemu Windows docelowe oprogramowania CoreCLR i ich kompilacji wydania są kompilowane przy użyciu platformy .NET Native łańcucha narzędzi.  
   
-2.  Należy pamiętać, że istnieją niektóre znane problemy ze zgodnością między kompilowanie projektów aplikacji platformy uniwersalnej systemu Windows przy użyciu platformy .NET Native łańcucha narzędzi i bez niego. Zapoznaj się [Przewodnik po migracji](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) Aby uzyskać więcej informacji.  
+2. Należy pamiętać, że istnieją niektóre znane problemy ze zgodnością między kompilowanie projektów aplikacji platformy uniwersalnej systemu Windows przy użyciu platformy .NET Native łańcucha narzędzi i bez niego. Zapoznaj się [Przewodnik po migracji](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) Aby uzyskać więcej informacji.  
   
  Teraz można napisać kod C# lub Visual Basic [!INCLUDE[net_native](../../../includes/net-native-md.md)] powierzchnia, która jest uruchamiana w systemie lokalnym (lub w symulatorze).  
   

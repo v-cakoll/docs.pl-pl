@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301402"
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przeciągnij i upuść często odnosi się do metody transferu danych, która polega na użyciu myszy (lub inne urządzenie wskazujące) zaznacz jeden lub więcej obiektów, przeciągając obiekty za pośrednictwem niektórych żądanego miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i upuszczając je.  
@@ -181,11 +181,11 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
   
  Aby określić, czy element jest miejsca docelowego, możesz ustawić jej <xref:System.Windows.UIElement.AllowDrop%2A> właściwość `true`. Docelowego upuszczania następnie zostanie wygenerowany w elemencie, tak aby mógł je obsłużyć. Podczas operacji przeciągania i upuszczania w element docelowy upuszczania ma miejsce następująca sekwencja zdarzeń:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> lub <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> lub <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> Zdarzenie występuje, gdy dane zostanie przeciągnięty do granic miejsca docelowego. To zdarzenie do podglądu skutków operacji przeciągania i upuszczania, zwykle obsłużyć, jeśli jest to odpowiedni dla aplikacji. Nie należy ustawiać <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> właściwość <xref:System.Windows.DragDrop.DragEnter> zdarzenie, ponieważ zostaną zastąpione w <xref:System.Windows.DragDrop.DragOver> zdarzeń.  
   

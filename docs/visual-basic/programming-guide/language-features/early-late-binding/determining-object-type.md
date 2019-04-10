@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302715"
 ---
 # <a name="determining-object-type-visual-basic"></a>Określanie typu obiektu (Visual Basic)
 Obiekt generyczny zmienne (czyli zmienne został zadeklarowany jako `Object`) może zawierać obiekty z dowolnej klasy. W przypadku używania zmiennych typu `Object`, konieczne może być różne akcje na podstawie klasy obiektu; na przykład niektóre obiekty mogą nie obsługiwać określoną właściwość lub metoda. Visual Basic zapewnia dwa sposoby kontrolowania, jakiego typu obiektu jest przechowywany w zmiennej obiektu: `TypeName` funkcji i `TypeOf...Is` operatora.  
@@ -36,11 +36,11 @@ Obiekt generyczny zmienne (czyli zmienne został zadeklarowany jako `Object`) mo
   
 #### <a name="to-run-the-example"></a>Aby uruchomić przykład  
   
-1.  Utwórz nowy projekt aplikacji Windows i Dodaj <xref:System.Windows.Forms.Button> kontroli <xref:System.Windows.Forms.CheckBox> kontroli i <xref:System.Windows.Forms.RadioButton> formantu do formularza.  
+1. Utwórz nowy projekt aplikacji Windows i Dodaj <xref:System.Windows.Forms.Button> kontroli <xref:System.Windows.Forms.CheckBox> kontroli i <xref:System.Windows.Forms.RadioButton> formantu do formularza.  
   
-2.  Przy użyciu przycisku w formularzu, należy wywołać `TestObject` procedury.  
+2. Przy użyciu przycisku w formularzu, należy wywołać `TestObject` procedury.  
   
-3.  Dodaj następujący kod do formularza:  
+3. Dodaj następujący kod do formularza:  
   
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
@@ -48,7 +48,7 @@ Obiekt generyczny zmienne (czyli zmienne został zadeklarowany jako `Object`) mo
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Wywoływanie właściwości lub metody za pomocą nazwy ciągu](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Dyrektywa #If...Then...#Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer, typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [If...Then...Else — Instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Typ danych ciągu](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer — Typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

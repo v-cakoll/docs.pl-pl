@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308487"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>Namespace lub typ określony w elemencie Imports na poziomie projektu\<qualifiedelementname >' nie zawiera żadnej publicznej składowej lub nie można odnaleźć
 Namespace lub typ określony w elemencie Imports na poziomie projektu\<qualifiedelementname >' nie zawiera żadnej publicznej składowej lub nie można odnaleźć. Upewnij się, że przestrzeń nazw lub typ zostały zdefiniowane i zawierają co najmniej jednego członka publicznego. Upewnij się, że nazwa aliasu nie zawiera innych aliasów.  
@@ -31,16 +31,16 @@ Namespace lub typ określony w elemencie Imports na poziomie projektu\<qualified
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Otwórz **projektanta projektu** i przełącz się do **odwołania** strony.  
+1. Otwórz **projektanta projektu** i przełącz się do **odwołania** strony.  
   
-2.  W **zaimportowane przestrzenie nazw** sekcji, upewnij się, że element zawierający jest dostępny z projektu.  
+2. W **zaimportowane przestrzenie nazw** sekcji, upewnij się, że element zawierający jest dostępny z projektu.  
   
-3.  Sprawdź element zawierający ujawnia co najmniej jeden `Public` elementu członkowskiego.  
+3. Sprawdź element zawierający ujawnia co najmniej jeden `Public` elementu członkowskiego.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Przestrzenie nazw w języku Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Przestrzenie nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Odwołania do elementów zadeklarowanych](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

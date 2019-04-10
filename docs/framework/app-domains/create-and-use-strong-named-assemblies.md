@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198894"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300700"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnych nazwach
 
@@ -34,17 +34,17 @@ Zestaw o silnej nazwie można używać tylko typów od innych zestawów o silnyc
 
 Poniższy scenariusz przedstawia proces podpisywanie zestawu silną nazwą, a później odwoływania się do niego o takiej nazwie.
 
-1.  Zestaw A jest tworzony za pomocą silnej nazwy przy użyciu jednej z następujących metod:
+1. Zestaw A jest tworzony za pomocą silnej nazwy przy użyciu jednej z następujących metod:
 
     -   Przy użyciu środowiska programowania, który obsługuje tworzenie silnej nazwy, takie jak Visual Studio.
 
     -   Tworzenie pary kluczy kryptograficznych za pomocą [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) i przypisywanie tej pary kluczy do zestawu przy użyciu wiersza polecenia kompilatora lub [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Zestaw Windows Software Development Kit (SDK) zawiera zarówno Sn.exe, jak i Al.exe.
 
-2.  Środowisko projektowe i narzędzia podpisuje skrót pliku zawierającego manifest zestawu przy użyciu klucza prywatnego dla deweloperów. Podpis cyfrowy jest przechowywany w przenośny plik wykonywalny (PE), który zawiera manifest zestawu A.
+2. Środowisko projektowe i narzędzia podpisuje skrót pliku zawierającego manifest zestawu przy użyciu klucza prywatnego dla deweloperów. Podpis cyfrowy jest przechowywany w przenośny plik wykonywalny (PE), który zawiera manifest zestawu A.
 
-3.  Zestaw B jest konsumenta zestawu A. Sekcja odwołanie do manifestu zestawu B zawiera token, który reprezentuje klucz publiczny zestawu A. Token jest częścią klucza publicznego pełnej i jest używana zamiast sam klucz, aby zaoszczędzić miejsce na.
+3. Zestaw B jest konsumenta zestawu A. Sekcja odwołanie do manifestu zestawu B zawiera token, który reprezentuje klucz publiczny zestawu A. Token jest częścią klucza publicznego pełnej i jest używana zamiast sam klucz, aby zaoszczędzić miejsce na.
 
-4.  Środowisko uruchomieniowe języka wspólnego weryfikuje podpisu silnej nazwy, gdy zestawu znajduje się w globalnej pamięci podręcznej. Podczas tworzenia powiązania przez silną nazwę w czasie wykonywania, środowisko uruchomieniowe języka wspólnego porównuje klucz przechowywany w manifeście zestawu B przy użyciu klucza, służącego do generowania silnej nazwy zestawu A. Jeśli — dostęp próbny kontrole zabezpieczeń .NET Framework i powiązania zakończy się powodzeniem, Assembly B ma gwarancji, że bity zestawu, A nie został zmodyfikowany i że bity te faktycznie pochodzą od programistów języka zestawu A.
+4. Środowisko uruchomieniowe języka wspólnego weryfikuje podpisu silnej nazwy, gdy zestawu znajduje się w globalnej pamięci podręcznej. Podczas tworzenia powiązania przez silną nazwę w czasie wykonywania, środowisko uruchomieniowe języka wspólnego porównuje klucz przechowywany w manifeście zestawu B przy użyciu klucza, służącego do generowania silnej nazwy zestawu A. Jeśli — dostęp próbny kontrole zabezpieczeń .NET Framework i powiązania zakończy się powodzeniem, Assembly B ma gwarancji, że bity zestawu, A nie został zmodyfikowany i że bity te faktycznie pochodzą od programistów języka zestawu A.
 
 > [!NOTE]
 > W tym scenariuszu nie rozwiązać problemy z zaufaniem. Zespoły mogą przenosić pełne podpisy Microsoft Authenticode oprócz silnej nazwy. Sygnatur Authenticode obejmują certyfikat, który ustanawia relację zaufania. Należy zauważyć, że silne nazwy nie wymagają kodu, aby zalogować się w ten sposób. Silne nazwy zapewniają tylko unikatową tożsamość.
@@ -63,18 +63,18 @@ Funkcja pomijania ma zastosowanie do dowolnego złożenia, który jest podpisany
 
 -   Nie podpisywane z opóźnieniem.
 
-Tę funkcję można wyłączyć dla poszczególnych aplikacji lub komputera. Zobacz [porady: wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
+Tę funkcję można wyłączyć dla poszczególnych aplikacji lub komputera. Zobacz [jak: Wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|W tym artykule opisano sposób tworzenia pary kluczy kryptograficznych dla podpisywania zestawu.|
-|[Instrukcje: podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|W tym artykule opisano sposób tworzenia zestawu z silną nazwą.|
+|[Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|W tym artykule opisano sposób tworzenia pary kluczy kryptograficznych dla podpisywania zestawu.|
+|[Instrukcje: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|W tym artykule opisano sposób tworzenia zestawu z silną nazwą.|
 |[Poprawa silnego nazywania](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Opis ulepszeń silnych nazw w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
-|[Instrukcje: odwołanie do zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|W tym artykule opisano, jak odwoływać się do typów lub zasoby znajdujące się zestawu z silną nazwą w czasie kompilacji lub czasu wykonywania.|
-|[Instrukcje: wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Opisuje sposób wyłączania funkcji, które Pomija weryfikację podpisy silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub określonych aplikacji.|
+|[Instrukcje: Odwołanie do zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|W tym artykule opisano, jak odwoływać się do typów lub zasoby znajdujące się zestawu z silną nazwą w czasie kompilacji lub czasu wykonywania.|
+|[Instrukcje: Wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Opisuje sposób wyłączania funkcji, które Pomija weryfikację podpisy silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub określonych aplikacji.|
 |[Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)|Zawiera omówienie pojedynczego pliku i wieloplikowe zestawy.|
 |[Sposób opóźnić Podpisz zestaw w programie Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Wyjaśnia, jak podpisać zestaw silną nazwą, po utworzeniu zestawu.|
-|[Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|W tym artykule opisano narzędzia zawarte w .NET Framework, która pomaga tworzyć zestawy o silnych nazwach. To narzędzie dostarcza opcje do zarządzania kluczami oraz generowania podpisów i weryfikowania ich.|
-|[Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)|W tym artykule opisano narzędzia zawarte w .NET Framework, która generuje plik z manifestem zestawu z modułów lub zasobów plików.|
+|[Sn.exe (Narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|W tym artykule opisano narzędzia zawarte w .NET Framework, która pomaga tworzyć zestawy o silnych nazwach. To narzędzie dostarcza opcje do zarządzania kluczami oraz generowania podpisów i weryfikowania ich.|
+|[Al.exe (Konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)|W tym artykule opisano narzędzia zawarte w .NET Framework, która generuje plik z manifestem zestawu z modułów lub zasobów plików.|

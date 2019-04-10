@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: fd73deb4682ec12b982740f6e9e9c1e38a5688a3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202434"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294980"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Instrukcje: Przesłanianie metody ToString (C# Programming Guide)
 Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Object> klasy. W związku z tym, każdy obiekt w języku C# pobiera <xref:System.Object.ToString%2A> metody, która zwraca reprezentację ciągu tego obiektu. Na przykład, wszystkie zmienne typu `int` mają `ToString` metody, która pozwala na zwrócenie ich zawartość jako ciąg:  
@@ -27,13 +27,13 @@ Każdej klasy lub struktury w języku C# dziedziczy niejawnie <xref:System.Objec
   
 ### <a name="to-override-the-tostring-method-in-your-class-or-struct"></a>Aby przesłonięcie metody ToString w swojej klasie lub strukturze  
   
-1.  Zadeklaruj `ToString` następujące Modyfikatory oraz zwracany typ metody:  
+1. Zadeklaruj `ToString` następujące Modyfikatory oraz zwracany typ metody:  
   
     ```csharp  
     public override string ToString(){}  
     ```  
   
-2.  Implementowanie metoda zwraca ciąg.  
+2. Implementowanie metoda zwraca ciąg.  
   
      Poniższy przykład zwraca nazwę klasy, oprócz danych określonej do konkretnego wystąpienia klasy.  
   

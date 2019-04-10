@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904374"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313245"
 ---
 # <a name="working-with-data-definition-language"></a>Praca z językiem definicji danych
 Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] w wersji 4 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje języka definicji danych (DDL). Dzięki temu można utworzyć lub usunąć wystąpienie bazy danych na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
@@ -36,9 +36,9 @@ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
 #### <a name="to-define-a-database-based-on-the-existing-model"></a>Aby zdefiniować bazę danych na podstawie istniejącego modelu  
   
-1.  Utwórz aplikację konsoli.  
+1. Utwórz aplikację konsoli.  
   
-2.  Dodawanie istniejącego modelu do aplikacji.  
+2. Dodawanie istniejącego modelu do aplikacji.  
   
     1.  Dodaj pusty modelu o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [jak: Tworzenie nowego edmx pliku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) tematu.  
   
@@ -48,7 +48,7 @@ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
     2.  Otwórz plik SchoolModel.edmx i Wklej zawartość w ramach `edmx:Runtime` tagów.  
   
-3.  Dodaj następujący kod do funkcji main. Ten kod inicjalizuje parametry połączenia z serwerem bazy danych, widoki, skrypt DDL tworzy bazę danych, dodaje nową jednostkę do kontekstu i zapisuje zmiany w bazie danych.  
+3. Dodaj następujący kod do funkcji main. Ten kod inicjalizuje parametry połączenia z serwerem bazy danych, widoki, skrypt DDL tworzy bazę danych, dodaje nową jednostkę do kontekstu i zapisuje zmiany w bazie danych.  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

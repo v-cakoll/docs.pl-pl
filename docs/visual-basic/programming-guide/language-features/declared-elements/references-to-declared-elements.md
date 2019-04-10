@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296709"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Odwołania do elementów zadeklarowanych (Visual Basic)
 Gdy kod odwołuje się do element zadeklarowany, kompilator Visual Basic pasuje do nazwy, w której można się odwołać do odpowiedniego zgłoszenia o takiej nazwie. Jeśli więcej niż jeden element jest zadeklarowana za pomocą tej samej nazwie, możesz kontrolować, które z tych elementów ma być przywoływane przez *kwalifikacji* jego nazwę.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>Dostęp kwalifikowania nazwy zadeklarowanych elementów  
   
-1.  Określ lokalizację, w którym zdefiniowano element. Może to obejmować przestrzeni nazw lub nawet hierarchię przestrzeni nazw. W obszarze nazw najniższy poziom elementu muszą być zawarte w module, klasy lub struktury.  
+1. Określ lokalizację, w którym zdefiniowano element. Może to obejmować przestrzeni nazw lub nawet hierarchię przestrzeni nazw. W obszarze nazw najniższy poziom elementu muszą być zawarte w module, klasy lub struktury.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  Określ ścieżkę kwalifikacji, na podstawie lokalizacji elementu docelowego. Uruchom z przestrzenią nazw najwyższego poziomu, przejdź do obszaru nazw najniższy poziom, a kończyć się znakiem modułu, klasy lub struktury zawierającej element docelowy. Każdy element w ścieżce musi zawierać element, który po nim następuje.  
+2. Określ ścieżkę kwalifikacji, na podstawie lokalizacji elementu docelowego. Uruchom z przestrzenią nazw najwyższego poziomu, przejdź do obszaru nazw najniższy poziom, a kończyć się znakiem modułu, klasy lub struktury zawierającej element docelowy. Każdy element w ścieżce musi zawierać element, który po nim następuje.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  Przygotowanie ciągu kwalifikacji do elementu docelowego. Umieść okres (`.`) po każdego elementu w ścieżce. Aplikacja musi mieć dostęp do każdego elementu w ciągu kwalifikacji.  
+3. Przygotowanie ciągu kwalifikacji do elementu docelowego. Umieść okres (`.`) po każdego elementu w ścieżce. Aplikacja musi mieć dostęp do każdego elementu w ciągu kwalifikacji.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  Napisz wyrażenie lub instrukcję przypisania odwołujące się do elementu docelowego w normalny sposób.  
+4. Napisz wyrażenie lub instrukcję przypisania odwołujące się do elementu docelowego w normalny sposób.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  Poprzedź nazwę elementu docelowego przy użyciu parametrów kwalifikacji. Nazwę należy natychmiast po kropce (`.`) następujący modułu, klasy lub struktury, który zawiera element.  
+5. Poprzedź nazwę elementu docelowego przy użyciu parametrów kwalifikacji. Nazwę należy natychmiast po kropce (`.`) następujący modułu, klasy lub struktury, który zawiera element.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  Kompilator używa ciągu kwalifikacji, aby znaleźć Wyczyść, jednoznaczną deklaracji, do którego może odnosić odwołanie do elementu docelowego.  
+6. Kompilator używa ciągu kwalifikacji, aby znaleźć Wyczyść, jednoznaczną deklaracji, do którego może odnosić odwołanie do elementu docelowego.  
   
  Może być również konieczne kwalifikują się odwołania do nazwy, jeśli aplikacja ma dostęp do więcej niż jeden element programowania, który ma taką samą nazwę. Na przykład <xref:System.Windows.Forms> i <xref:System.Web.UI.WebControls> przestrzenie nazw obu zawierają `Label` klasy (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> i <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). Jeśli aplikacja korzysta z obu lub definiuje swój własny `Label` klasy, należy odróżnić poszczególne `Label` obiektów. Uwzględnij aliasu przestrzeni nazw lub importu w deklaracji zmiennej. W poniższym przykładzie użyto aliasu importu.  
   
@@ -197,8 +197,8 @@ Dim xDoc As xD.XmlDocument
 
 - [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
 - [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [New, operator](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [Imports — Instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Nowy operator](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Public](../../../../visual-basic/language-reference/modifiers/public.md)

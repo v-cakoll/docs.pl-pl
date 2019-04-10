@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297788"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z elementu DataSet w usłudze internetowej XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodne transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji", może być określony jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez pisania dodatkowe wymagane do przesyłania strumieniowego zawartości **DataSet** z usługi XML sieci Web do klientów i z powrotem. **DataSet** niejawnie konwertowane na strumień XML przy użyciu formatu w formacie DiffGram, wysyłane przez sieć i następnie odtworzone strumień XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny metody przesyłania i zwraca dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu w formacie DiffGram zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "59180248"
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Do tworzenia usługi XML sieci Web, zwraca wartość, która korzysta z zestawu danych  
   
-1.  Utwórz usługę sieci Web XML.  
+1. Utwórz usługę sieci Web XML.  
   
      W przykładzie, usługi XML sieci Web zostanie utworzona, która zwraca dane, w tym przypadku listę klientów z **Northwind** bazy danych i odbiera **zestawu danych** dzięki aktualizacjom danych, które usługi sieci Web XML rozwiązuje do oryginalnego źródła danych.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "59180248"
   
      W typowym scenariuszu **UpdateCustomers** metody powinny być zapisane catch naruszeń optymistycznej współbieżności. Dla uproszczenia przykładu nie obejmuje to. Aby uzyskać więcej informacji na temat optymistycznej współbieżności, zobacz [optymistycznej współbieżności](../../../../../docs/framework/data/adonet/optimistic-concurrency.md).  
   
-2.  Utwórz serwer proxy usługi sieci Web XML.  
+2. Utwórz serwer proxy usługi sieci Web XML.  
   
      Klienci usługi XML sieci Web wymagają serwera proxy protokołu SOAP celu korzystania z metody narażone. Masz program Visual Studio, generowanie ten serwer proxy dla Ciebie. Ustawiając odwołanie sieci Web do istniejącej usługi sieci Web z poziomu programu Visual Studio, wszystkie zachowanie, które są opisane w tym kroku wykonywane w sposób przezroczysty. Jeśli chcesz utworzyć klasy proxy samodzielnie, przejdź do tej dyskusji. W większości przypadków jednak przy użyciu programu Visual Studio do utworzenia klasy serwera proxy dla aplikacji klienckiej jest wystarczająca.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "59180248"
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  Tworzenie klienta usługi XML sieci Web.  
+3. Tworzenie klienta usługi XML sieci Web.  
   
      Jeśli chcesz program Visual Studio, Generowanie klasy serwera proxy usługi sieci Web dla Ciebie, po prostu utworzyć projekt klienta, a w oknie Eksploratora rozwiązań kliknij prawym przyciskiem myszy projekt, kliknij przycisk **Dodaj odwołanie sieci Web**i wybierz usługę sieci Web z na liście dostępnych usług sieci Web (może to wymagać udostępnia adres punktu końcowego usługi sieci Web, jeśli usługa sieci Web nie jest dostępny w bieżącym rozwiązaniu lub na bieżącym komputerze.) Jeśli utworzysz serwer proxy usługi sieci Web XML, samodzielnie (zgodnie z opisem w poprzednim kroku), można zaimportować go do kodu klienta i korzystać z metody usługi sieci Web XML. Następujący przykładowy kod importuje biblioteki serwera proxy, wywołania **GetCustomers** można uzyskać listy klientów, dodaje nowego klienta, a następnie zwraca **zestawu danych** dzięki aktualizacjom **UpdateCustomers** .  
   

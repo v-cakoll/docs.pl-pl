@@ -8,52 +8,52 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112570"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295435"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: konfigurowanie poświadczeń usługi federacyjnej
 W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa się z następujących procedur głównego:  
   
-1.  Konfigurowanie <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowego powiązania. Aby uzyskać więcej informacji na temat tworzenia odpowiednie powiązanie, zobacz [jak: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
+1. Konfigurowanie <xref:System.ServiceModel.WSFederationHttpBinding> lub podobne niestandardowego powiązania. Aby uzyskać więcej informacji na temat tworzenia odpowiednie powiązanie, zobacz [jak: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).  
   
-2.  Konfigurowanie <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> sterującą jak wystawione tokeny, przedstawione z usługą uwierzytelniania.  
+2. Konfigurowanie <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> sterującą jak wystawione tokeny, przedstawione z usługą uwierzytelniania.  
   
  Ten temat zawiera szczegółowe informacje o drugi etap. Aby uzyskać więcej informacji na temat współdziałania usługi federacyjnej, zobacz [Federacji](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>Aby ustawić właściwości IssuedTokenServiceCredential w kodzie  
   
-1.  Użyj <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> właściwość <xref:System.ServiceModel.Description.ServiceCredentials> klasy, aby zwrócić odwołanie do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> wystąpienia. Właściwość jest dostępny z <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwość <xref:System.ServiceModel.ServiceHostBase> klasy.  
+1. Użyj <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> właściwość <xref:System.ServiceModel.Description.ServiceCredentials> klasy, aby zwrócić odwołanie do <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> wystąpienia. Właściwość jest dostępny z <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> właściwość <xref:System.ServiceModel.ServiceHostBase> klasy.  
   
-2.  Ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> właściwości `true` Jeśli samodzielnie wystawionych tokenów, takich jak [!INCLUDE[infocard](../../../../includes/infocard-md.md)] karty, to uwierzytelnianie. Wartość domyślna to `false`.  
+2. Ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> właściwości `true` Jeśli samodzielnie wystawionych tokenów, takich jak [!INCLUDE[infocard](../../../../includes/infocard-md.md)] karty, to uwierzytelnianie. Wartość domyślna to `false`.  
   
-3.  Wypełnianie kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwość wystąpieniami <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy. Każde wystąpienie reprezentuje wystawcy, z której usługa uwierzytelnia tokenów.  
+3. Wypełnianie kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwość wystąpieniami <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy. Każde wystąpienie reprezentuje wystawcy, z której usługa uwierzytelnia tokenów.  
   
     > [!NOTE]
     >  W przeciwieństwie do kolekcji po stronie klienta, zwracany przez <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> właściwości kolekcji znanych certyfikatów nie jest kolekcją kluczem. Usługa akceptuje tokeny, które wystawiają certyfikaty określonego, niezależnie od adresów klienta, która wysłała komunikat zawierający wystawiony token (zależnie od dalszego ograniczenia, które są opisane w dalszej części tego tematu).  
   
-4.  Ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> jedną z właściwości <xref:System.ServiceModel.Security.X509CertificateValidationMode> wartości wyliczenia. Można to zrobić tylko w przypadku kodu. Wartość domyślna to <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
+4. Ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> jedną z właściwości <xref:System.ServiceModel.Security.X509CertificateValidationMode> wartości wyliczenia. Można to zrobić tylko w przypadku kodu. Wartość domyślna to <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>.  
   
-5.  Jeśli <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, przypisując wystąpienia niestandardowego <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> właściwości.  
+5. Jeśli <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>, przypisując wystąpienia niestandardowego <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> właściwości.  
   
-6.  Jeśli <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> ustawiono `ChainTrust` lub `PeerOrChainTrust`ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> właściwość do odpowiedniej wartości z <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> wyliczenia. Należy zauważyć, że tryb odwołania nie jest używany w `PeerTrust` lub `Custom` tryby weryfikacji.  
+6. Jeśli <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> ustawiono `ChainTrust` lub `PeerOrChainTrust`ustaw <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> właściwość do odpowiedniej wartości z <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> wyliczenia. Należy zauważyć, że tryb odwołania nie jest używany w `PeerTrust` lub `Custom` tryby weryfikacji.  
   
-7.  Jeśli to konieczne, przypisz wystąpienie klasy niestandardowej <xref:System.IdentityModel.Tokens.SamlSerializer> klasy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> właściwości. Niestandardowy serializator zabezpieczeń potwierdzenia Markup Language (SAML) wymagane jest na przykład do analizowania niestandardowe twierdzenia SAML.  
+7. Jeśli to konieczne, przypisz wystąpienie klasy niestandardowej <xref:System.IdentityModel.Tokens.SamlSerializer> klasy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> właściwości. Niestandardowy serializator zabezpieczeń potwierdzenia Markup Language (SAML) wymagane jest na przykład do analizowania niestandardowe twierdzenia SAML.  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>Aby ustawić właściwości IssuedTokenServiceCredential konfigurację  
   
-1.  Tworzenie `<issuedTokenAuthentication>` element jako element podrzędny <`serviceCredentials`> element.  
+1. Tworzenie `<issuedTokenAuthentication>` element jako element podrzędny <`serviceCredentials`> element.  
   
-2.  Ustaw `allowUntrustedRsaIssuers` atrybutu `<issuedTokenAuthentication>` elementu `true` Jeśli uwierzytelnia własnym wystawiony token, taki jak [!INCLUDE[infocard](../../../../includes/infocard-md.md)] karty.  
+2. Ustaw `allowUntrustedRsaIssuers` atrybutu `<issuedTokenAuthentication>` elementu `true` Jeśli uwierzytelnia własnym wystawiony token, taki jak [!INCLUDE[infocard](../../../../includes/infocard-md.md)] karty.  
   
-3.  Tworzenie `<knownCertificates>` element jako element podrzędny elementu `<issuedTokenAuthentication>` elementu.  
+3. Tworzenie `<knownCertificates>` element jako element podrzędny elementu `<issuedTokenAuthentication>` elementu.  
   
-4.  Utwórz zero lub więcej `<add>` elementy jako elementy podrzędne `<knownCertificates>` element i określ, jak można zlokalizować certyfikatu za pomocą `storeLocation`, `storeName`, `x509FindType`, i `findValue` atrybutów.  
+4. Utwórz zero lub więcej `<add>` elementy jako elementy podrzędne `<knownCertificates>` element i określ, jak można zlokalizować certyfikatu za pomocą `storeLocation`, `storeName`, `x509FindType`, i `findValue` atrybutów.  
   
-5.  Jeśli to konieczne, ustaw `samlSerializer` atrybut <`issuedTokenAuthentication`> element na nazwę typu niestandardowego <xref:System.IdentityModel.Tokens.SamlSerializer> klasy.  
+5. Jeśli to konieczne, ustaw `samlSerializer` atrybut <`issuedTokenAuthentication`> element na nazwę typu niestandardowego <xref:System.IdentityModel.Tokens.SamlSerializer> klasy.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie ustawiono właściwości <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> w kodzie.  

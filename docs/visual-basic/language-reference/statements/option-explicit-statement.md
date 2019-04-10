@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308617"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit — Instrukcja (Visual Basic)
 Wymusza jawnej deklaracji wszystkich zmiennych w pliku lub zezwala na niejawne deklaracje zmiennych.  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>Aby ustawić Option Explicit w środowisku IDE  
   
-1.  W **Eksploratora rozwiązań**, wybierz projekt. Na **projektu** menu, kliknij przycisk **właściwości**.  
+1. W **Eksploratora rozwiązań**, wybierz projekt. Na **projektu** menu, kliknij przycisk **właściwości**.  
   
-2.  Kliknij przycisk **skompilować** kartę.  
+2. Kliknij przycisk **skompilować** kartę.  
   
-3.  Ustaw wartość w **Option Explicit** pole.  
+3. Ustaw wartość w **Option Explicit** pole.  
   
  Podczas tworzenia nowego projektu **Option Explicit** ustawienie **skompilować** karta jest ustawiona na **Option Explicit** ustawienie w **VB domyślnie**okno dialogowe. Aby uzyskać dostęp do **ustawienia domyślne VB** dialogowym **narzędzia** menu, kliknij przycisk **opcje**. W **opcje** okna dialogowego rozwiń **projekty i rozwiązania**, a następnie kliknij przycisk **ustawienia domyślne VB**. Ustawieniem domyślnym początkowej w **ustawienia domyślne VB** jest `On`.  
   
@@ -68,11 +68,11 @@ Option Explicit { On | Off }
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
-- [ReDim, instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [ReDim — Instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [Option Compare — Instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)
+- [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Domyślne ustawienia programu Visual Basic, Projekty, okno dialogowe Opcje](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6ba3f29ad0ceef7f1ea9d102743df568a32c26c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320148"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Rozszerzanie modelu aplikacji Visual Basic
 Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridable` członkowie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy. Ta technika umożliwia dostosowywanie zachowania dotyczącego modelu aplikacji i dodawać wywołania do swoje własne metody, jak aplikacja uruchamia się i kończy pracę.  
@@ -32,7 +32,7 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
   
  Jeśli aplikacja jest aplikacją normalny (aplikacja z wieloma wystąpieniami) lub pierwsze wystąpienie pojedyncze wystąpienie aplikacji, <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metoda jest wykonywana `Overridable` metod w następującej kolejności:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Domyślnie ta metoda ustawia stylów wizualnych, style wyświetlania tekstu i bieżący podmiot zabezpieczeń dla wątku głównego aplikacji (Jeśli aplikacja używa uwierzytelniania Windows) i wywołuje `ShowSplashScreen` Jeśli żadna `/nosplash` ani `-nosplash` służy jako argument wiersza polecenia.  
+1. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Domyślnie ta metoda ustawia stylów wizualnych, style wyświetlania tekstu i bieżący podmiot zabezpieczeń dla wątku głównego aplikacji (Jeśli aplikacja używa uwierzytelniania Windows) i wywołuje `ShowSplashScreen` Jeśli żadna `/nosplash` ani `-nosplash` służy jako argument wiersza polecenia.  
   
      Sekwencja uruchamiania aplikacji została anulowana, jeśli ta funkcja zwróci `False`. Może to być przydatne, jeśli istnieją okoliczności, w których aplikacja nie powinna działać.  
   
@@ -46,11 +46,11 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
   
          Domyślnie ta metoda nie działa. Wybranie ekran powitalny dla aplikacji w języku Visual Basic **projektanta projektu**, Projektant zastępuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodę z metodą, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> właściwość nowe wystąpienie formularza ekran powitalny .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Udostępnia punkt rozszerzalności dla podnoszonego `Startup` zdarzeń. Sekwencja uruchamiania aplikacji zatrzyma, jeśli ta funkcja zwróci `False`.  
+2. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Udostępnia punkt rozszerzalności dla podnoszonego `Startup` zdarzeń. Sekwencja uruchamiania aplikacji zatrzyma, jeśli ta funkcja zwróci `False`.  
   
      Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> zdarzeń. Jeśli program obsługi zdarzeń ustawia <xref:System.ComponentModel.CancelEventArgs.Cancel> właściwości argumentu zdarzenia `True`, metoda zwraca `False` do anulowania uruchomienia aplikacji.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Zapewnia punkt początkowy podczas aplikacji głównej jest gotowy do uruchomienia, uruchomione po zakończeniu inicjowania.  
+3. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Zapewnia punkt początkowy podczas aplikacji głównej jest gotowy do uruchomienia, uruchomione po zakończeniu inicjowania.  
   
      Domyślnie przed uśpieniem pętli komunikatów Windows Forms, ta metoda wywołuje `OnCreateMainForm` (w celu utworzenia aplikacji formularza głównego) i `HideSplashScreen` (tak, aby zamknąć ekran powitalny) metody:  
   
@@ -62,15 +62,15 @@ Można dodawać funkcjonalność model aplikacji poprzez zastąpienie `Overridab
   
          Domyślnie ta metoda zamyka ekran powitalny.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Zapewnia sposób dostosowywania, jak aplikacja o pojedynczym wystąpieniu zachowuje się podczas uruchamiania inne wystąpienie aplikacji.  
+4. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Zapewnia sposób dostosowywania, jak aplikacja o pojedynczym wystąpieniu zachowuje się podczas uruchamiania inne wystąpienie aplikacji.  
   
      Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> zdarzeń.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Udostępnia punkt rozszerzalności dla podnoszonego `Shutdown` zdarzeń. Ta metoda nie działa, jeśli wystąpi nieobsługiwany wyjątek w głównej aplikacji.  
+5. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Udostępnia punkt rozszerzalności dla podnoszonego `Shutdown` zdarzeń. Ta metoda nie działa, jeśli wystąpi nieobsługiwany wyjątek w głównej aplikacji.  
   
      Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzeń.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Wykonywane, jeśli wystąpił nieobsługiwany wyjątek wystąpi w żadnej z wymienionych powyżej metod.  
+6. <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Wykonywane, jeśli wystąpił nieobsługiwany wyjątek wystąpi w żadnej z wymienionych powyżej metod.  
   
      Domyślnie ta metoda wywołuje <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> tak długo, jak nie jest dołączony debuger i aplikacji jest obsługa zdarzeń `UnhandledException` zdarzeń.  
   

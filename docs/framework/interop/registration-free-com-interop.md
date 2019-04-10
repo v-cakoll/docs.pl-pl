@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fbdc6f795aff5e84debd2e83485a22f1d42b31d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300999"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Windows do przechowywania informacji o zestawie. Zamiast rejestrowanie składników na komputerze podczas wdrażania, utworzysz plik manifestu Win32 stylu w czasie projektowania, które zawierają informacje dotyczące powiązania i aktywacji. Te pliki manifestu, zamiast kluczy rejestru, bezpośrednie aktywacji obiektu.  
@@ -32,7 +32,7 @@ Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Window
   
 ### <a name="requirements-for-registration-free-com-interop"></a>Wymagania dotyczące współdziałania z modelem COM bez rejestrowania  
   
-1.  Obsługa rejestracji wolnego modelu COM interop różni się nieco w zależności od typu biblioteki zestawu; w szczególności zestaw niezarządzanych (COM side-by-side) czy jest zarządzany (. NET-based). W poniższej tabeli przedstawiono systemu operacyjnego i wymagania dotyczące wersji .NET Framework dla każdego typu zestawu.  
+1. Obsługa rejestracji wolnego modelu COM interop różni się nieco w zależności od typu biblioteki zestawu; w szczególności zestaw niezarządzanych (COM side-by-side) czy jest zarządzany (. NET-based). W poniższej tabeli przedstawiono systemu operacyjnego i wymagania dotyczące wersji .NET Framework dla każdego typu zestawu.  
   
     |Typ zestawu|System operacyjny|Wersja programu .NET Framework|  
     |-------------------|----------------------|----------------------------|  
@@ -45,7 +45,7 @@ Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Window
   
 ### <a name="configuring-com-components-for-registration-free-activation"></a>Konfigurowanie aktywacji bez rejestracji składników COM  
   
-1.  Dla składnika modelu COM do wzięcia udziału w aktywacji bez rejestracji musi zostać wdrożony jako zestawu side-by-side. Side-by-side zestawy są niezarządzane zestawów.  Aby uzyskać więcej informacji, zobacz [używanie zestawów Side-by-side](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
+1. Dla składnika modelu COM do wzięcia udziału w aktywacji bez rejestracji musi zostać wdrożony jako zestawu side-by-side. Side-by-side zestawy są niezarządzane zestawów.  Aby uzyskać więcej informacji, zobacz [używanie zestawów Side-by-side](/windows/desktop/SbsCs/using-side-by-side-assemblies).  
   
      Używanie zestawów side-by-side COM,. Deweloper aplikacji opartych na sieci należy podać manifest aplikacji, który zawiera informacje dotyczące powiązania i aktywacji. Obsługa dla niezarządzanych zestawów side-by-side jest wbudowana w system operacyjny Windows XP. Środowisko uruchomieniowe modelu COM, obsługiwana przez system operacyjny skanuje manifest aplikacji, aby uzyskać informacje o aktywacji, gdy składnik aktywowanego nie znajduje się w rejestrze.  
   

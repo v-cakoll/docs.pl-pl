@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301038"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 Dalej w tym temacie opisano obecności i celem dwóch mapowań przestrzeni nazw XAML, jak często występuje w tagu głównego pliku XAML w WPF. On również zawiera opis sposobu tworzenia podobnych mapowania dla za pomocą elementów, które są zdefiniowane we własnym kodzie i/lub w ramach oddzielne zestawy.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF i ładowania zestawu  
  Kontekst schematu WPF XAML integruje się z modelem aplikacji WPF, który z kolei używa zdefiniowane CLR koncepcji <xref:System.AppDomain>. Poniższa sekwencja opisuje, jak kontekst schematu XAML interpretuje jak ładować zestawy lub znaleźć typów w czasie wykonywania lub czasie projektowania na podstawie związane z użyciem WPF <xref:System.AppDomain> i inne czynniki.  
   
-1.  Iteracyjne przeglądanie <xref:System.AppDomain>, wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, od ostatniego załadowany zestaw.  
+1. Iteracyjne przeglądanie <xref:System.AppDomain>, wyszukiwanie już załadowany zestaw, który dopasowuje wszystkie aspekty nazwę, od ostatniego załadowany zestaw.  
   
-2.  Jeśli nazwa jest kwalifikowana, wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
+2. Jeśli nazwa jest kwalifikowana, wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
   
-3.  Jeśli krótką nazwę i token klucza publicznego kwalifikowana nazwa pasuje do zestawu, który znaczników został załadowany z, zwróć tego zestawu.  
+3. Jeśli krótką nazwę i token klucza publicznego kwalifikowana nazwa pasuje do zestawu, który znaczników został załadowany z, zwróć tego zestawu.  
   
-4.  Użyj krótkiej nazwy i token klucza publicznego do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Użyj krótkiej nazwy i token klucza publicznego do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Jeśli nazwa jest niekwalifikowana, wywołaj <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Jeśli nazwa jest niekwalifikowana, wywołaj <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Luźne XAML nie korzysta z kroku 3; nie ma żadnego załadowane z zestawu.  
   

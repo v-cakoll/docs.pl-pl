@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297931"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Zmienna obiektu lub zmienna bloku With nie jest ustawiona
 Odwołuje się do nieprawidłowego obiektu zmiennej.   Ten błąd może wystąpić z kilku powodów:  
@@ -36,7 +36,7 @@ Odwołuje się do nieprawidłowego obiektu zmiennej.   Ten błąd może wystąpi
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Ustaw `Option Strict` do `On` , dodając następujący kod na początku pliku:  
+1. Ustaw `Option Strict` do `On` , dodając następujący kod na początku pliku:  
   
 ```vb  
 Option Strict On  
@@ -44,16 +44,16 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Jeśli nie chcesz umożliwić `Option Strict`, wyszukiwanie w kodzie żadnych zmiennych, które zostały określone bez typu (`Dim x` zamiast `Dim x As String`) i Dodaj zamierzony typ oświadczenia.  
+2. Jeśli nie chcesz umożliwić `Option Strict`, wyszukiwanie w kodzie żadnych zmiennych, które zostały określone bez typu (`Dim x` zamiast `Dim x As String`) i Dodaj zamierzony typ oświadczenia.  
   
-3.  Upewnij się, że nie są odwołujesz się do zmiennej obiektu, który został ustawiony na `Nothing`.  Wyszukiwanie w kodzie słowa kluczowego `Nothing`i popraw swój kod, aby obiekt nie jest ustawiony na `Nothing` dopóki po ma on wywołany.  
+3. Upewnij się, że nie są odwołujesz się do zmiennej obiektu, który został ustawiony na `Nothing`.  Wyszukiwanie w kodzie słowa kluczowego `Nothing`i popraw swój kod, aby obiekt nie jest ustawiony na `Nothing` dopóki po ma on wywołany.  
   
-4.  Upewnij się, że wszystkie zmienne tablicy są wymiary przed można uzyskiwać do nich dostęp. Po utworzeniu tablicy można przypisać wymiaru (`Dim x(5) As String` zamiast `Dim x() As String`), lub użyj `ReDim` słowo kluczowe, aby ustawić wymiary tablicy, zanim zostanie najpierw uzyskać do niego dostęp.  
+4. Upewnij się, że wszystkie zmienne tablicy są wymiary przed można uzyskiwać do nich dostęp. Po utworzeniu tablicy można przypisać wymiaru (`Dim x(5) As String` zamiast `Dim x() As String`), lub użyj `ReDim` słowo kluczowe, aby ustawić wymiary tablicy, zanim zostanie najpierw uzyskać do niego dostęp.  
   
-5.  Upewnij się, że Twoje `With` bloku jest inicjowany przez wykonanie `With` instrukcji punktu wejścia.  
+5. Upewnij się, że Twoje `With` bloku jest inicjowany przez wykonanie `With` instrukcji punktu wejścia.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Deklaracja zmiennej obiektu](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [ReDim, instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [With...End With, instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [ReDim — Instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [With...End With — Instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

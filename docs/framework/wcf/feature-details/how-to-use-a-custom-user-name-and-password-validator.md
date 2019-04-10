@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ad53700590c3f3683663d306e15fcbe857f625e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308513"
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
 Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Windows Communication Foundation (WCF) używa Windows do weryfikowania nazwy użytkownika i hasła. Jednak WCF umożliwia niestandardowych użytkownika nazwy i hasła schematy uwierzytelniania, znany także jako *moduły weryfikacji*. Aby dołączyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego, należy utworzyć klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
@@ -21,12 +21,12 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
   
 ### <a name="to-create-a-custom-user-name-and-password-validator"></a>Aby utworzyć moduł weryfikacji nazwy i hasła użytkownika niestandardowego  
   
-1.  Utwórz klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
+1. Utwórz klasę, która pochodzi od klasy <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>.  
   
      [!code-csharp[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customusernameandpasswordvalidator/cs/service.cs#3)]
      [!code-vb[C_CustomUsernameAndPasswordValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#3)]  
   
-2.  Implementowanie schemat uwierzytelniania niestandardowego przez zastąpienie <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
+2. Implementowanie schemat uwierzytelniania niestandardowego przez zastąpienie <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody.  
   
      W poniższym przykładzie, który zastępuje nie należy używać kodu <xref:System.IdentityModel.Selectors.UserNamePasswordValidator.Validate%2A> metody w środowisku produkcyjnym. Zastąp kod przy użyciu usługi użytkownika niestandardowego nazwy i hasła sprawdzania poprawności schematu, które mogą wiązać z pobieraniem pary nazwy i hasła użytkownika z bazy danych.  
   
@@ -37,7 +37,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
   
 ### <a name="to-configure-a-service-to-use-a-custom-user-name-and-password-validator"></a>Aby skonfigurować usługę do używania weryfikacji nazwy i hasła użytkownika niestandardowego  
   
-1.  Konfigurowanie powiązania, który używa Zabezpieczanie komunikatów za pośrednictwem dowolnego transportu lub zabezpieczenia na poziomie transportu za pośrednictwem protokołu HTTP (S).  
+1. Konfigurowanie powiązania, który używa Zabezpieczanie komunikatów za pośrednictwem dowolnego transportu lub zabezpieczenia na poziomie transportu za pośrednictwem protokołu HTTP (S).  
   
      Korzystając z zabezpieczeń wiadomości, dodać jedno z powiązań dostarczanych przez system, takie jak [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md), lub [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) obsługuje zabezpieczenia wiadomości i `UserName` typ poświadczeń.  
   
@@ -82,7 +82,7 @@ Domyślnie gdy nazwa użytkownika i hasło są używane do uwierzytelniania, Win
     </system.serviceModel>  
     ```  
   
-2.  Konfigurowanie zachowania, który określa, czy moduł weryfikacji nazwy i hasła użytkownika niestandardowego jest używana do zweryfikowania pary nazwy i hasła użytkownika dla przychodzących <xref:System.IdentityModel.Tokens.UserNameSecurityToken> tokenów zabezpieczających.  
+2. Konfigurowanie zachowania, który określa, czy moduł weryfikacji nazwy i hasła użytkownika niestandardowego jest używana do zweryfikowania pary nazwy i hasła użytkownika dla przychodzących <xref:System.IdentityModel.Tokens.UserNameSecurityToken> tokenów zabezpieczających.  
   
     1.  Jako element podrzędny [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
   

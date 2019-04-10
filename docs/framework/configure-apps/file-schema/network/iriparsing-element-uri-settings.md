@@ -2,12 +2,12 @@
 title: <iriParsing> Element (ustawienia identyfikatora Uri)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092503"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299673"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing >, Element (ustawienia identyfikatora Uri)
 Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są stosowane do <xref:System.Uri> , czy powinna być stosowana IRI podczas analizowania reguły.  
@@ -50,13 +50,13 @@ Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są sto
   
  Aby włączyć obsługę IRI, wymagane są następujące dwie zmiany:  
   
-1.  Dodaj następujący wiersz do pliku machine.config w katalogu .NET Framework 2.0  
+1. Dodaj następujący wiersz do pliku machine.config w katalogu .NET Framework 2.0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Określ, czy powinny być stosowane IRI podczas analizowania reguły. Można to zrobić w pliku machine.config lub w pliku app.config.  
+2. Określ, czy powinny być stosowane IRI podczas analizowania reguły. Można to zrobić w pliku machine.config lub w pliku app.config.  
   
  Włączanie analizy IRI (iriParsing włączone = `true`) będziesz robić normalizacji i znak sprawdzanie zgodnie z IRI najnowsze reguły w dokumencie RFC 3987. Wartość domyślna to `false` będzie czy normalizacji i znak sprawdzanie zgodnie z RFC 2396 i ze standardem RFC 3986 (dla literałów IPv6).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302624"
 ---
 # <a name="clr-etw-providers"></a>Dostawcy CLR ETW
 Środowisko uruchomieniowe języka wspólnego (CLR) ma dwóch dostawców: dostawcę środowiska uruchomieniowego i dostawcę podsumowania.  
@@ -58,7 +58,7 @@ ms.locfileid: "59188607"
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>Zbieranie danych ETW za pomocą środowiska uruchomieniowego i podsumowania dostawców  
  Poniższy przykład pokazuje sposób użycia dostawcy podsumowania CLR w sposób umożliwiający rozpoznawanie symboli procesów zarządzanych z minimalnym wpływem, niezależnie od tego, czy procesy rozpoczęły lub zakończyły się wewnątrz lub poza oknem profilowania.  
   
-1.  Włącz rejestrowanie ETW za pomocą dostawcy środowiska uruchomieniowego CLR:  
+1. Włącz rejestrowanie ETW za pomocą dostawcy środowiska uruchomieniowego CLR:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ ms.locfileid: "59188607"
   
      Dziennik zostanie zapisany do pliku clr1.etl.  
   
-2.  Aby zatrzymać profilowanie, podczas gdy proces kontynuuje wykonywanie, Rozpocznij dostawcę podsumowań do przechwytywania `DCEnd` zdarzenia:  
+2. Aby zatrzymać profilowanie, podczas gdy proces kontynuuje wykonywanie, Rozpocznij dostawcę podsumowań do przechwytywania `DCEnd` zdarzenia:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ ms.locfileid: "59188607"
   
      Umożliwia to kolekcja `DCEnd` zdarzenia, które można uruchomić sesji podsumowania. Należy poczekać 30 do 60 sekund, aby wszystkie zdarzenia mają być zbierane. Dziennik zostanie zapisany do pliku clr1.et2.  
   
-3.  Wyłącz wszystkie profilowania ETW:  
+3. Wyłącz wszystkie profilowania ETW:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Scal profile Aby utworzyć jeden plik dziennika:  
+4. Scal profile Aby utworzyć jeden plik dziennika:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

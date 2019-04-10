@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303144"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Instrukcje: Zapewnienie pozostawania wybranego wiersza w tabeli podrzędnej w prawidłowym położeniu
 Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows Forms, będą wyświetlane dane, co jest nazywany nadrzędne/podrzędne lub wzorzec/szczegół widoku. Odnosi się do scenariusza wiązania danych, których dane z tego samego źródła są wyświetlane w dwóch kontrolek. Zmienianie zaznaczenia w jednym formancie powoduje, że dane wyświetlane w drugiej kontrolce. Na przykład pierwszy formant może zawierać listę klientów i druga lista zamówień powiązanych z wybranym klientem w pierwszej kontrolce.  
@@ -30,28 +30,28 @@ Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows F
   
 ### <a name="to-cache-the-current-child-position"></a>Buforowanie bieżące położenie elementów podrzędnych  
   
-1.  Zadeklaruj zmienną całkowitoliczbową do przechowywania położenie listy elementów podrzędnych i zmiennej typu Boolean do przechowywania, czy w pamięci podręcznej położenie elementów podrzędnych.  
+1. Zadeklaruj zmienną całkowitoliczbową do przechowywania położenie listy elementów podrzędnych i zmiennej typu Boolean do przechowywania, czy w pamięci podręcznej położenie elementów podrzędnych.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  Obsługa <xref:System.Windows.Forms.CurrencyManager.ListChanged> zdarzenia dla wiązania <xref:System.Windows.Forms.CurrencyManager> i sprawdź, czy <xref:System.ComponentModel.ListChangedType> z <xref:System.ComponentModel.ListChangedType.Reset>.  
+2. Obsługa <xref:System.Windows.Forms.CurrencyManager.ListChanged> zdarzenia dla wiązania <xref:System.Windows.Forms.CurrencyManager> i sprawdź, czy <xref:System.ComponentModel.ListChangedType> z <xref:System.ComponentModel.ListChangedType.Reset>.  
   
-3.  Sprawdź bieżące położenie <xref:System.Windows.Forms.CurrencyManager>. Czy jest on większy niż pierwszy wpis na liście (zazwyczaj 0), zapisz go do zmiennej.  
+3. Sprawdź bieżące położenie <xref:System.Windows.Forms.CurrencyManager>. Czy jest on większy niż pierwszy wpis na liście (zazwyczaj 0), zapisz go do zmiennej.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  Obsługiwać listy nadrzędnej <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> zdarzenia nadrzędnego menedżera waluty. W procedurze obsługi należy ustawić wartość logiczna wskazująca, że nie jest scenariusz buforowania. Jeśli <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> problem wystąpi, zmiany do elementu nadrzędnego jest zmiana położenia listy i nie zmieniać wartość elementu.  
+4. Obsługiwać listy nadrzędnej <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> zdarzenia nadrzędnego menedżera waluty. W procedurze obsługi należy ustawić wartość logiczna wskazująca, że nie jest scenariusz buforowania. Jeśli <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> problem wystąpi, zmiany do elementu nadrzędnego jest zmiana położenia listy i nie zmieniać wartość elementu.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>Aby zresetować położenie elementów podrzędnych  
   
-1.  Obsługa <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> zdarzenia podrzędnego wiązania <xref:System.Windows.Forms.CurrencyManager>.  
+1. Obsługa <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> zdarzenia podrzędnego wiązania <xref:System.Windows.Forms.CurrencyManager>.  
   
-2.  Resetuj położenie elementów podrzędnych w tabeli do pamięci podręcznej pozycji zapisany w poprzedniej procedurze.  
+2. Resetuj położenie elementów podrzędnych w tabeli do pamięci podręcznej pozycji zapisany w poprzedniej procedurze.  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,17 +64,17 @@ Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows F
   
  Aby przetestować przykładowy kod, wykonaj następujące czynności:  
   
-1.  Uruchom przykład.  
+1. Uruchom przykład.  
   
-2.  Upewnij się, że **pamięci podręcznej i Resetuj położenie** pole wyboru jest zaznaczone.  
+2. Upewnij się, że **pamięci podręcznej i Resetuj położenie** pole wyboru jest zaznaczone.  
   
-3.  Kliknij przycisk **pole nadrzędne wyczyść** przycisk, aby spowodować, że zmiany w tabeli nadrzędnej. Należy zauważyć, że zaznaczony wiersz w tabeli podrzędnej nie zmienia się.  
+3. Kliknij przycisk **pole nadrzędne wyczyść** przycisk, aby spowodować, że zmiany w tabeli nadrzędnej. Należy zauważyć, że zaznaczony wiersz w tabeli podrzędnej nie zmienia się.  
   
-4.  Zamknij i ponownie uruchom przykład. Należy to zrobić, ponieważ spowoduje zachowanie resetowania tylko na pierwszej zmianie wiersza nadrzędnego.  
+4. Zamknij i ponownie uruchom przykład. Należy to zrobić, ponieważ spowoduje zachowanie resetowania tylko na pierwszej zmianie wiersza nadrzędnego.  
   
-5.  Wyczyść **pamięci podręcznej i Resetuj położenie** pole wyboru.  
+5. Wyczyść **pamięci podręcznej i Resetuj położenie** pole wyboru.  
   
-6.  Kliknij przycisk **pole nadrzędne wyczyść** przycisku. Należy zauważyć, że zaznaczony wiersz w tabeli podrzędnej zmienia się do pierwszego wiersza.  
+6. Kliknij przycisk **pole nadrzędne wyczyść** przycisku. Należy zauważyć, że zaznaczony wiersz w tabeli podrzędnej zmienia się do pierwszego wiersza.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  

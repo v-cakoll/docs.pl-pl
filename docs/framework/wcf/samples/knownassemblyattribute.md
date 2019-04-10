@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196869"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325777"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Niniejszy przykład pokazuje, jak można dostosować procesy serializacji i deserializacji za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy. W tym przykładzie pokazano, jak dynamicznie dodać znanych typów podczas serializacji i deserializacji.  
@@ -346,21 +346,21 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>Aby skonfigurować, uruchomić i skompilować przykład  
   
-1.  Kliknij prawym przyciskiem myszy rozwiązanie **KnownAssemblyAttribute** i wybierz **właściwości**.  
+1. Kliknij prawym przyciskiem myszy rozwiązanie **KnownAssemblyAttribute** i wybierz **właściwości**.  
   
-2.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.  
+2. W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.  
   
-3.  Dodaj **Start** akcji **usługi** i **klienta** projektów.  
+3. Dodaj **Start** akcji **usługi** i **klienta** projektów.  
   
-4.  Kliknij przycisk **OK**i naciśnij klawisz **F5** do uruchomienia przykładu.  
+4. Kliknij przycisk **OK**i naciśnij klawisz **F5** do uruchomienia przykładu.  
   
-5.  Jeśli aplikacja nie działa prawidłowo, wykonaj następujące kroki, aby upewnić się, że środowisko zostało prawidłowo skonfigurowane:  
+5. Jeśli aplikacja nie działa prawidłowo, wykonaj następujące kroki, aby upewnić się, że środowisko zostało prawidłowo skonfigurowane:  
   
-6.  Upewnij się, że wykonano [jednorazowe Ustaw się procedury dla przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Upewnij się, że wykonano [jednorazowe Ustaw się procedury dla przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [Windows Communication Foundation — przykład tworzenia](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [Windows Communication Foundation — przykład tworzenia](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

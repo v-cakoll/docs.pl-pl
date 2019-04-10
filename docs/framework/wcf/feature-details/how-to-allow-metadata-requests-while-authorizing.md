@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
-ms.openlocfilehash: 4d549bb953ecdcbddd0ea4730a766538b2205d0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082675"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317704"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>Instrukcje: zezwalanie na żądania metadanych podczas autoryzowania
 Podczas autoryzacji niestandardowej może być konieczne do umożliwienia żądanie metadanych do przetworzenia. Poniższy temat przedstawiono kroki, aby sprawdzić takie żądanie.  
@@ -21,13 +21,13 @@ Podczas autoryzacji niestandardowej może być konieczne do umożliwienia żąda
   
 ### <a name="to-allow-metadata-requests-during-authorization"></a>Aby zezwolić na żądania metadanych podczas autoryzacji  
   
-1.  Utwórz rozszerzenie <xref:System.ServiceModel.ServiceAuthorizationManager> klasy.  
+1. Utwórz rozszerzenie <xref:System.ServiceModel.ServiceAuthorizationManager> klasy.  
   
-2.  Zastąp <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody. Metoda ta zwraca `true` lub `false` w zależności od tego, czy jest dozwolone autoryzacji. Informacje o bieżącej procedurze, znajduje się w <xref:System.ServiceModel.OperationContext> przekazany jako parametr do metody.  
+2. Zastąp <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody. Metoda ta zwraca `true` lub `false` w zależności od tego, czy jest dozwolone autoryzacji. Informacje o bieżącej procedurze, znajduje się w <xref:System.ServiceModel.OperationContext> przekazany jako parametr do metody.  
   
-3.  Override Sprawdź nazwę kontraktu, przestrzeń nazw i akcji, jak pokazano w poniższym przykładzie. Jeśli warunki są prawidłowe, a następnie wróć `true.`  
+3. Override Sprawdź nazwę kontraktu, przestrzeń nazw i akcji, jak pokazano w poniższym przykładzie. Jeśli warunki są prawidłowe, a następnie wróć `true.`  
   
-4.  Użyj punktu rozszerzalności, mogą wykorzystać klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
+4. Użyj punktu rozszerzalności, mogą wykorzystać klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano nadpisanie <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> metody.  

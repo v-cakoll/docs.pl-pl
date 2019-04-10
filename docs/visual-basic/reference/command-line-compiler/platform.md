@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301168"
 ---
 # <a name="-platform-visual-basic"></a>-platformy (Visual Basic)
 Określa, którą platformy wersję środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić pliku wyjściowego.  
@@ -68,9 +68,9 @@ Określa, którą platformy wersję środowiska uruchomieniowego języka wspóln
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>Aby ustawić - platform w środowisku IDE programu Visual Studio  
   
-1.  W **Eksploratora rozwiązań**, wybierz projekt, otwórz **projektu** menu, a następnie kliknij przycisk **właściwości**.  
+1. W **Eksploratora rozwiązań**, wybierz projekt, otwórz **projektu** menu, a następnie kliknij przycisk **właściwości**.  
   
-2.  Na **skompilować** kartę, zaznacz lub wyczyść **Preferuj 32-bitowe** pole wyboru lub w **Procesora docelowego** listy, wybierz wartość.  
+2. Na **skompilować** kartę, zaznacz lub wyczyść **Preferuj 32-bitowe** pole wyboru lub w **Procesora docelowego** listy, wybierz wartość.  
   
      Aby uzyskać więcej informacji, zobacz [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [/ TARGET (Visual Basic)](target.md)
-- [Kompilator wiersza polecenia programu Visual Basic](index.md)
-- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)
+- [/target (Visual Basic)](target.md)
+- [Kompilator wierszy poleceń w Visual Basic](index.md)
+- [Kompilacja przykładów — wiersze poleceń](sample-compilation-command-lines.md)

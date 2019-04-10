@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171577"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298321"
 ---
 # <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizowanie aplikacji
 W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu locbaml — narzędzie.  
@@ -38,13 +38,13 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="create-a-sample-application"></a>Tworzenie przykładowej aplikacji  
  W tym kroku przygotujesz się do lokalizacji aplikacji. W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] przykłady HelloApp podano przykładowe, który będzie używany dla przykładów kodu w tej dyskusji. Jeśli chcesz korzystać z tej próbki, Pobierz [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] plików ze [locbaml — narzędzie przykładowe](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
-1.  Tworzenie aplikacji do punktu, w którym chcesz uruchomić lokalizacji.  
+1. Tworzenie aplikacji do punktu, w którym chcesz uruchomić lokalizacji.  
   
-2.  Wybierz język programowania w pliku projektu, aby [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generuje głównym zestawie i zestawem satelickim (plik o. resources.dll rozszerzenia) zawierać neutralny język zasobów. Plik projektu w przykładzie HelloApp jest HelloApp.csproj. W tym pliku znajdziesz języka programowania, określone w następujący sposób:  
+2. Wybierz język programowania w pliku projektu, aby [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] generuje głównym zestawie i zestawem satelickim (plik o. resources.dll rozszerzenia) zawierać neutralny język zasobów. Plik projektu w przykładzie HelloApp jest HelloApp.csproj. W tym pliku znajdziesz języka programowania, określone w następujący sposób:  
   
      `<UICulture>en-US</UICulture>`  
   
-3.  UID, aby dodać swoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików. UID są używane do śledzenia zmian w plikach i zidentyfikować elementy, które musi podlegać translacji. Aby dodać UID do plików, uruchom **updateuid** w pliku projektu:  
+3. UID, aby dodać swoje [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików. UID są używane do śledzenia zmian w plikach i zidentyfikować elementy, które musi podlegać translacji. Aby dodać UID do plików, uruchom **updateuid** w pliku projektu:  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
@@ -66,30 +66,30 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Tworzenie zestawu satelickiego neutralny język zasobów  
  Po skonfigurowaniu aplikacji do generowania zestawu satelickiego neutralny język zasobów kompilacji aplikacji. Spowoduje to wygenerowanie zestawie aplikacji głównej, a także zestawu satelickiego neutralny język zasobów, wymaganego przez locbaml — dla lokalizacji. Aby skompilować aplikację:  
   
-1.  Skompilować HelloApp, aby utworzyć [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Skompilować HelloApp, aby utworzyć [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
      **MSBUILD helloapp.csproj**  
   
-2.  Nowo utworzony głównym zestawem aplikacji, HelloApp.exe, jest tworzony w następującym folderze:  
+2. Nowo utworzony głównym zestawem aplikacji, HelloApp.exe, jest tworzony w następującym folderze:  
   
      `C:\HelloApp\Bin\Debug\`  
   
-3.  Zestawu satelickiego zasobów nowo utworzony neutralnym językiem, HelloApp.resources.dll, jest tworzony w następującym folderze:  
+3. Zestawu satelickiego zasobów nowo utworzony neutralnym językiem, HelloApp.resources.dll, jest tworzony w następującym folderze:  
   
      `C:\HelloApp\Bin\Debug\en-US\`  
   
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Tworzenie locbaml — narzędzie  
   
-1.  Wszystkie pliki niezbędne do utworzenia locbaml — znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przykładów. Pobierz pliki C# z [locbaml — narzędzie przykładowe](https://go.microsoft.com/fwlink/?LinkID=160016).  
+1. Wszystkie pliki niezbędne do utworzenia locbaml — znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przykładów. Pobierz pliki C# z [locbaml — narzędzie przykładowe](https://go.microsoft.com/fwlink/?LinkID=160016).  
   
-2.  Uruchom plik projektu (locbaml.csproj) do skompilowania narzędzie z wiersza polecenia:  
+2. Uruchom plik projektu (locbaml.csproj) do skompilowania narzędzie z wiersza polecenia:  
   
      **msbuild locbaml.csproj**  
   
-3.  Przejdź do katalogu Bin\Release, aby znaleźć nowo utworzony plik wykonywalny (locbaml.exe). Example:C:\LocBaml\Bin\Release\locbaml.exe.  
+3. Przejdź do katalogu Bin\Release, aby znaleźć nowo utworzony plik wykonywalny (locbaml.exe). Example:C:\LocBaml\Bin\Release\locbaml.exe.  
   
-4.  Dostępne są następujące opcje, które można określić po uruchomieniu locbaml —:  
+4. Dostępne są następujące opcje, które można określić po uruchomieniu locbaml —:  
   
     -   **analizowanie** lub **-p:** Analizuje Baml, zasobów, lub [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] plików, aby wygenerować plik CSV lub txt.  
   
@@ -114,16 +114,16 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="use-locbaml-to-parse-a-file"></a>Locbaml — Użyj, aby analizować plik  
  Teraz, po utworzeniu locbaml — narzędzie, jesteś gotowy na potrzeby analizowania HelloApp.resources.dll, aby wyodrębnić zawartość tekstu, który zostanie zlokalizowany.  
   
-1.  Skopiuj LocBaml.exe do folderu bin\debug aplikacji, w której utworzono zestawu głównej aplikacji.  
+1. Skopiuj LocBaml.exe do folderu bin\debug aplikacji, w której utworzono zestawu głównej aplikacji.  
   
-2.  Aby przeanalizować plik zestawu satelickiego i przechowywanie danych wyjściowych w formacie pliku CSV, użyj następującego polecenia:  
+2. Aby przeanalizować plik zestawu satelickiego i przechowywanie danych wyjściowych w formacie pliku CSV, użyj następującego polecenia:  
   
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  Jeśli plik wejściowy HelloApp.resources.dll, nie znajduje się w tym samym katalogu co LocBaml.exe przenieść jeden z plików, tak aby oba pliki znajdują się w tym samym katalogu.  
   
-3.  Po uruchomieniu locbaml — można przeanalizować pliki, dane wyjściowe składa się z siedmiu pól rozdzielonych przecinkami (.csv pliki) lub kart (txt). Poniżej przedstawiono plik CSV przeanalizowany HelloApp.resources.dll:
+3. Po uruchomieniu locbaml — można przeanalizować pliki, dane wyjściowe składa się z siedmiu pól rozdzielonych przecinkami (.csv pliki) lub kart (txt). Poniżej przedstawiono plik CSV przeanalizowany HelloApp.resources.dll:
 
    | |
    |-|
@@ -157,7 +157,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
    Należy zauważyć, że wszystkie wartości dla **komentarze** pola nie zawierają wartości; Jeśli pola nie ma wartości, jest pusty. Także zauważyć, że elementu w pierwszym wierszu nie można odczytać ani można modyfikować oraz "Ignorowania" jako jego **kategorii** wartości, które wskazuje, że wartość jest możliwych do zlokalizowania.  
   
-4.  Ułatwiają odnajdowanie elementów możliwych do zlokalizowania w plikach przeanalizowany, szczególnie w dużych plików, można sortować i filtrować elementy według **kategorii**, **czytelność**, i **Modifiability**. Na przykład można odfiltrować wartości nie można go odczytać i niemodyfikowalnych.  
+4. Ułatwiają odnajdowanie elementów możliwych do zlokalizowania w plikach przeanalizowany, szczególnie w dużych plików, można sortować i filtrować elementy według **kategorii**, **czytelność**, i **Modifiability**. Na przykład można odfiltrować wartości nie można go odczytać i niemodyfikowalnych.  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>Tłumaczenie możliwych do zlokalizowania zawartości  
@@ -167,26 +167,26 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Użyj locbaml —, aby wygenerować nowy. resources.dll pliku  
  Zawartość, który został zidentyfikowany przez analizowanie HelloApp.resources.dll z locbaml — został przetłumaczony i musi być scalone oryginalnej aplikacji. Użyj **Generowanie** lub **-g** opcję, aby wygenerować nowy. resources.dll pliku.  
   
-1.  Użyj następującej składni, aby wygenerować nowy plik HelloApp.resources.dll. Oznacz kulturę, co en US (/ cul:en — Stany Zjednoczone).  
+1. Użyj następującej składni, aby wygenerować nowy plik HelloApp.resources.dll. Oznacz kulturę, co en US (/ cul:en — Stany Zjednoczone).  
   
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
     >  Jeśli plik wejściowy Hello.csv, nie jest w tym samym katalogu co plik wykonywalny LocBaml.exe, należy przenieść jeden z plików tak, aby oba pliki znajdują się w tym samym katalogu.  
   
-2.  Zastąp starego pliku HelloApp.resources.dll w katalogu C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll nowo utworzony plik HelloApp.resources.dll.  
+2. Zastąp starego pliku HelloApp.resources.dll w katalogu C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll nowo utworzony plik HelloApp.resources.dll.  
   
-3.  "Hello World" i "Goodbye World" powinien teraz przetłumaczony na aplikację.  
+3. "Hello World" i "Goodbye World" powinien teraz przetłumaczony na aplikację.  
   
-4.  Do tłumaczenia, aby określić inną kulturę, używają kultury języka, który tłumaczy do. Poniższy przykład pokazuje, jak przełożyć na French-Canadian:  
+4. Do tłumaczenia, aby określić inną kulturę, używają kultury języka, który tłumaczy do. Poniższy przykład pokazuje, jak przełożyć na French-Canadian:  
   
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**  
   
-5.  Z tego samego zestawu jako zestawu głównej aplikacji Utwórz nowy folder specyficzne dla kultury do przechowywania nowego zestawu satelickiego. French-Canadian folder będzie fr-CA.  
+5. Z tego samego zestawu jako zestawu głównej aplikacji Utwórz nowy folder specyficzne dla kultury do przechowywania nowego zestawu satelickiego. French-Canadian folder będzie fr-CA.  
   
-6.  Skopiuj wygenerowany satelicki do nowego folderu.  
+6. Skopiuj wygenerowany satelicki do nowego folderu.  
   
-7.  Aby przetestować nowego zestawu satelickiego, musisz zmienić kulturę, w którym aplikacja jest uruchamiana. Można to zrobić na jeden z dwóch sposobów:  
+7. Aby przetestować nowego zestawu satelickiego, musisz zmienić kulturę, w którym aplikacja jest uruchamiana. Można to zrobić na jeden z dwóch sposobów:  
   
     -   Zmień ustawienia regionalne systemu operacyjnego (**Start** &#124; **Panelu sterowania** &#124; **Opcje regionalne i językowe**).  
   

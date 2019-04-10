@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 186b921f508b1a4b05e766c4f1a3c9e65de04722
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38550b3b7d6fd7c6808db174017499ec71685140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299855"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Instrukcje: Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia dostosowanie Atom serializacji w odpowiedzi usługi danych, dzięki czemu właściwości jednostki mogą być mapowane do nieużywanych elementów, które są zdefiniowane w protokole AtomPub. W tym temacie przedstawiono sposób definiowania atrybutów mapowania dla typów jednostek w modelu danych, która jest zdefiniowana w pliku edmx przy użyciu dostawcy środowiska Entity Framework. Aby uzyskać więcej informacji, zobacz [kanału informacyjnego dostosowywania](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -19,21 +19,21 @@ ms.locfileid: "59089292"
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Aby ręcznie zmodyfikować plik Northwind.edmx, aby dodać atrybuty dostosowywania kanału informacyjnego  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `Northwind.edmx` pliku, a następnie kliknij przycisk **Otwórz za pomocą**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy `Northwind.edmx` pliku, a następnie kliknij przycisk **Otwórz za pomocą**.  
   
-2.  W **Otwórz za pomocą - Northwind.edmx** okno dialogowe, wybierz opcję **edytora XML**, a następnie kliknij przycisk **OK**.  
+2. W **Otwórz za pomocą - Northwind.edmx** okno dialogowe, wybierz opcję **edytora XML**, a następnie kliknij przycisk **OK**.  
   
-3.  Znajdź `ConceptualModels` elementu i Zastąp istniejące `Customers` typu jednostki z następujący element, który zawiera źródła danych dostosowywania mapowania atrybutów:  
+3. Znajdź `ConceptualModels` elementu i Zastąp istniejące `Customers` typu jednostki z następujący element, który zawiera źródła danych dostosowywania mapowania atrybutów:  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  Zapisz zmiany i zamknij plik Northwind.edmx.  
+4. Zapisz zmiany i zamknij plik Northwind.edmx.  
   
-5.  (Opcjonalnie) Kliknij prawym przyciskiem myszy plik Northwind.edmx, a następnie kliknij przycisk **Uruchom narzędzie niestandardowe**.  
+5. (Opcjonalnie) Kliknij prawym przyciskiem myszy plik Northwind.edmx, a następnie kliknij przycisk **Uruchom narzędzie niestandardowe**.  
   
      To ponowne wygenerowanie pliku warstwy obiektu, który może być wymagane.  
   
-6.  Skompiluj ponownie projekt.  
+6. Skompiluj ponownie projekt.  
   
 ## <a name="example"></a>Przykład  
  Poprzedni przykład zwraca następujące wyniki dla identyfikatora URI `http://myservice/Northwind.svc/Customers('ALFKI')`.  

@@ -2,12 +2,12 @@
 title: SPŁASZCZANIE (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 1a670c63-0a29-4738-80e6-101f66af05c3
-ms.openlocfilehash: 76fba91f27479df19bbc4ac6e120d615a16f1d42
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4f9a6315fc9cc2f295c21cc5fb7e1007e47796b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304580"
 ---
 # <a name="flatten-entity-sql"></a>SPŁASZCZANIE (jednostka SQL)
 Konwertuje kolekcję spłaszczonych kolekcją kolekcji. Nowa kolekcja zawiera te same elementy co stary kolekcji, ale bez struktury zagnieżdżonej.  
@@ -28,9 +28,9 @@ FLATTEN ( collection )
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa `FLATTEN` operatora, aby przekonwertować kolekcję spłaszczonych kolekcją kolekcji. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#FLATTEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#flatten)]  
   

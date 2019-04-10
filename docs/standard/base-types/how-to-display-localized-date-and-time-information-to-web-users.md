@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web'
+title: 'Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320161"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, operacje analizy i formatowanie wartości daty i godziny, nie należy polegać na format domyślny (czyli w większości przypadków format kultury lokalnego serwera sieci Web) podczas interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, Obsługa daty i godziny ciągi wprowadzane przez użytkownika, które należy przeanalizować ciągi przy użyciu preferowanej kultury użytkownika. Podobnie dane daty i godziny, powinna być wyświetlana dla użytkownika w formacie, który jest zgodny z kultury użytkownika. W tym temacie pokazano, jak to zrobić.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>Ciągi danych wejściowych przez użytkownika, można przeanalizować daty i godziny  
   
-1.  Określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 6.  
+1. Określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 6.  
   
-2.  Jeśli ciąg tablica zwrócona przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest wypełniana, pobrać jej pierwszego elementu. Pierwszy element wskazuje domyślną lub preferowanego języka i regionu użytkownika.  
+2. Jeśli ciąg tablica zwrócona przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest wypełniana, pobrać jej pierwszego elementu. Pierwszy element wskazuje domyślną lub preferowanego języka i regionu użytkownika.  
   
-3.  Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje użytkownika preferowanego kultury poprzez wywołanie <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora.  
+3. Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje użytkownika preferowanego kultury poprzez wywołanie <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora.  
   
-4.  Wywołaj opcję `TryParse` lub `Parse` metody <xref:System.DateTime> lub <xref:System.DateTimeOffset> typu próby konwersji. Używanie przeciążenia `TryParse` lub `Parse` metody z `provider` parametru i przekazywać je w jednej z następujących pozycji:  
+4. Wywołaj opcję `TryParse` lub `Parse` metody <xref:System.DateTime> lub <xref:System.DateTimeOffset> typu próby konwersji. Używanie przeciążenia `TryParse` lub `Parse` metody z `provider` parametru i przekazywać je w jednej z następujących pozycji:  
   
     -   <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 3.  
   
     -   <xref:System.Globalization.DateTimeFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 3.  
   
-5.  Jeśli konwersja nie powiedzie się, powtórz kroki od 2 do 4 dla każdego pozostałego elementu w tablicy ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwości.  
+5. Jeśli konwersja nie powiedzie się, powtórz kroki od 2 do 4 dla każdego pozostałego elementu w tablicy ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwości.  
   
-6.  Jeśli konwersja nadal kończy się niepowodzeniem lub tablicę ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest pusta, przeanalizować składni ciągu przy użyciu niezmiennej kultury, która jest zwracana przez <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
+6. Jeśli konwersja nadal kończy się niepowodzeniem lub tablicę ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest pusta, przeanalizować składni ciągu przy użyciu niezmiennej kultury, która jest zwracana przez <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>Aby przeanalizować lokalnego datę i godzinę żądanie użytkownika  
   
-1.  Dodaj <xref:System.Web.UI.WebControls.HiddenField> formantu do formularza sieci Web.  
+1. Dodaj <xref:System.Web.UI.WebControls.HiddenField> formantu do formularza sieci Web.  
   
-2.  Utwórz funkcję języka JavaScript, która obsługuje `onClick` zdarzenia `Submit` przycisku, pisząc bieżącej daty i godziny oraz przesunięcie lokalnej strefy czasowej z uniwersalnego czasu koordynowanego (UTC) do <xref:System.Web.UI.WebControls.HiddenField.Value%2A> właściwości. Użyj ogranicznika (np. średnikiem) do oddzielenia dwa składniki ciągu.  
+2. Utwórz funkcję języka JavaScript, która obsługuje `onClick` zdarzenia `Submit` przycisku, pisząc bieżącej daty i godziny oraz przesunięcie lokalnej strefy czasowej z uniwersalnego czasu koordynowanego (UTC) do <xref:System.Web.UI.WebControls.HiddenField.Value%2A> właściwości. Użyj ogranicznika (np. średnikiem) do oddzielenia dwa składniki ciągu.  
   
-3.  Za pomocą formularza sieci Web <xref:System.Web.UI.Control.PreRender> zdarzenie, aby wstawić funkcji do HTML strumienia wyjściowego, przekazując tekst skryptu <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> metody.  
+3. Za pomocą formularza sieci Web <xref:System.Web.UI.Control.PreRender> zdarzenie, aby wstawić funkcji do HTML strumienia wyjściowego, przekazując tekst skryptu <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType> metody.  
   
-4.  Połącz program obsługi zdarzeń do `Submit` przycisku `onClick` zdarzeń, podając nazwę funkcji JavaScript do `OnClientClick` atrybutu `Submit` przycisku.  
+4. Połącz program obsługi zdarzeń do `Submit` przycisku `onClick` zdarzeń, podając nazwę funkcji JavaScript do `OnClientClick` atrybutu `Submit` przycisku.  
   
-5.  Utwórz procedurę obsługi dla `Submit` przycisku <xref:System.Web.UI.WebControls.Button.Click> zdarzeń.  
+5. Utwórz procedurę obsługi dla `Submit` przycisku <xref:System.Web.UI.WebControls.Button.Click> zdarzeń.  
   
-6.  W obsłudze zdarzeń należy określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 14.  
+6. W obsłudze zdarzeń należy określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 14.  
   
-7.  Jeśli ciąg tablica zwrócona przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest wypełniana, pobrać jej pierwszego elementu. Pierwszy element wskazuje domyślną lub preferowanego języka i regionu użytkownika.  
+7. Jeśli ciąg tablica zwrócona przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest wypełniana, pobrać jej pierwszego elementu. Pierwszy element wskazuje domyślną lub preferowanego języka i regionu użytkownika.  
   
-8.  Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje użytkownika preferowanego kultury poprzez wywołanie <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora.  
+8. Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje użytkownika preferowanego kultury poprzez wywołanie <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora.  
   
 9. Przekazać ciąg przypisane do <xref:System.Web.UI.WebControls.HiddenField.Value%2A> właściwość <xref:System.String.Split%2A> metodę, aby ciąg reprezentujący użytkownika lokalnego daty i godziny oraz reprezentację ciągu przesunięcie strefy czasu lokalnego użytkownika są przechowywane w osobnej tablicy elementów.  
   

@@ -3,12 +3,12 @@ title: Historia języka C# — Przewodnik po języku C#
 description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126152"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303365"
 ---
 # <a name="the-history-of-c"></a>Historia języka c\#
 
@@ -20,11 +20,11 @@ Ten artykuł zawiera historię każdej wersji głównej programu C# języka. C# 
 C# Narzędzia do kompilacji należy wziąć pod uwagę najnowszej wersji języka głównych domyślną wersję językową. Może to być punktowe między głównymi wersjami, szczegółowo opisanych w innych artykułach w tej sekcji. Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję. Zostały trzy punktowe od C# 7.0:
 
 * [C# 7.3](csharp-7-3.md):
-  - C#7.3 jest obecnie dostępna w [Visual Studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [zestawu SDK platformy .NET Core 2.1 2.1.300 RC1](../../core/whats-new/index.md).
+  - C#7.3 jest dostępna, począwszy od [Visual Studio 2017 w wersji 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [zestawu SDK programu .NET Core 2.1](../../core/whats-new/dotnet-core-2-1.md).
 * [C# 7.2](csharp-7-2.md):
-  - C#7.2 jest obecnie dostępna w [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+  - C#7.2 jest dostępna, począwszy od [programu Visual Studio 2017 w wersji 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), i [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 * [C# 7.1](csharp-7-1.md):
-  - Te funkcje zostały dodane w [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
+  - C#7.1 jest dostępna, począwszy od [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) i [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md).
 
 ## <a name="c-version-10"></a>C# w wersji 1.0
 
@@ -58,7 +58,7 @@ Teraz rozpocząć pobieranie interesujących rzeczy. Spójrzmy na niektóre gł�
 - [Typy ogólne](../programming-guide/generics/index.md)
 - [Typy częściowe](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metody anonimowe](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Typy dopuszczające wartości zerowe](../programming-guide/nullable-types/index.md)
+- [Typy dopuszczające wartości null](../programming-guide/nullable-types/index.md)
 - [Iteratory](../programming-guide/concepts/iterators.md)
 - [Kowariancja i kontrawariancja](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -166,7 +166,7 @@ Najbardziej aktualną wersję główną jest C# w wersji 7.0. Ta wersja ma kilka
 
 Inne funkcje uwzględnione:
 
-- [Odrzucenia](./csharp-7.md#discards)
+- [Odrzuca](./csharp-7.md#discards)
 - [Literały binarne oraz separatory cyfr](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Wyrażenia throw](./csharp-7.md#throw-expressions)
 

@@ -1,5 +1,5 @@
 ---
-title: Relacje typu w operacjach zapytań LINQ (C#)
+title: Relacje typu w operacjach kwerend LINQ (C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring type information [LINQ in C#]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 8bc366e6c88c8ea378504535bb259e81dad83306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307655"
 ---
-# <a name="type-relationships-in-linq-query-operations-c"></a>Relacje typu w operacjach zapytań LINQ (C#)
+# <a name="type-relationships-in-linq-query-operations-c"></a>Relacje typu w operacjach kwerend LINQ (C#)
 Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą typy zmiennych w kompletnej operacji zapytania. Jeśli zrozumiesz te relacje będzie łatwiej pojmować [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] i przykłady kodu w dokumentacji. Ponadto zrozumiesz, co dzieje się, gdy zmienne są wpisywane niejawnie przy użyciu `var`.  
   
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operacje zapytań są silnie typizowane w źródle danych, samo zapytanie i wykonywania zapytań. Typ zmiennych w zapytaniu musi być zgodny z typem elementów w źródle danych i z typem zmiennej iteracji w `foreach` instrukcji. To pogrubione wpisywanie gwarantuje, że błędy wpisywania są wyłapywane w czasie kompilacji, gdy mogą być poprawione zanim użytkownik je napotka.  
@@ -31,32 +31,32 @@ Aby efektywnie pisać zapytania, należy zrozumieć jak powiązane są ze sobą 
   
  ![Typy relacji danych, w zapytaniu programu LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
   
-1.  Argument typu źródła danych określa typ zmiennej zakresu.  
+1. Argument typu źródła danych określa typ zmiennej zakresu.  
   
-2.  Typ wybranego obiektu określa typ zmiennej zapytania. W tym miejscu `name` jest ciągiem. Zmienna zapytania jest `IEnumerable<string>`.  
+2. Typ wybranego obiektu określa typ zmiennej zapytania. W tym miejscu `name` jest ciągiem. Zmienna zapytania jest `IEnumerable<string>`.  
   
-3.  Zmienna zapytania jest powtarzana w `foreach` instrukcji. Ponieważ zmienna zapytania jest sekwencja ciągów, zmienną iteracji jest ciąg.  
+3. Zmienna zapytania jest powtarzana w `foreach` instrukcji. Ponieważ zmienna zapytania jest sekwencja ciągów, zmienną iteracji jest ciąg.  
   
 ## <a name="queries-that-transform-the-source-data"></a>Zapytania, które przetwarzają dane źródłowe  
  Poniższa ilustracja przedstawia [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] operację, która wykonuje prostą transformację danych zapytania. Zapytanie pobiera sekwencję `Customer` obiektów jako dane wejściowe i wybiera jedynie `Name` właściwości w wyniku. Ponieważ `Name` jest ciągiem, tworzy zapytanie sekwencji ciągów jako dane wyjściowe.  
   
  ![Zapytanie, które przekształca typu danych](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
   
-1.  Argument typu źródła danych określa typ zmiennej zakresu.  
+1. Argument typu źródła danych określa typ zmiennej zakresu.  
   
-2.  `select` Instrukcja zwraca `Name` właściwości zamiast pełnego `Customer` obiektu. Ponieważ `Name` jest ciągiem, argument typu `custNameQuery` jest `string`, a nie `Customer`.  
+2. `select` Instrukcja zwraca `Name` właściwości zamiast pełnego `Customer` obiektu. Ponieważ `Name` jest ciągiem, argument typu `custNameQuery` jest `string`, a nie `Customer`.  
   
-3.  Ponieważ `custNameQuery` jest sekwencją ciągów, `foreach` Zmienna iteracji pętli musi być również `string`.  
+3. Ponieważ `custNameQuery` jest sekwencją ciągów, `foreach` Zmienna iteracji pętli musi być również `string`.  
   
  Na poniższej ilustracji przedstawiono nieco bardziej skomplikowaną transformację. `select` Instrukcja zwraca typ anonimowy, który przechwytuje tylko dwa elementy członkowskie oryginalnego `Customer` obiektu.  
   
  ![Zapytanie, które przekształca typu danych](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
   
-1.  Argument typu źródła danych jest zawsze typem zmiennej zakresu w zapytaniu.  
+1. Argument typu źródła danych jest zawsze typem zmiennej zakresu w zapytaniu.  
   
-2.  Ponieważ `select` instrukcja generuje typ anonimowy, zmienna zapytania musi być wpisana niejawnie przy użyciu `var`.  
+2. Ponieważ `select` instrukcja generuje typ anonimowy, zmienna zapytania musi być wpisana niejawnie przy użyciu `var`.  
   
-3.  Ponieważ typ zmiennej zapytania jest niejawny, Zmienna iteracji w `foreach` pętli musi być niejawne.  
+3. Ponieważ typ zmiennej zapytania jest niejawny, Zmienna iteracji w `foreach` pętli musi być niejawne.  
   
 ## <a name="letting-the-compiler-infer-type-information"></a>Umożliwienie kompilatorowi wywnioskowania informacji o typie  
  Chociaż należy zrozumieć relacje typów w operacji zapytania, masz opcję, aby pozwolić kompilatorowi wykonanie całąj pracy za Ciebie. Słowo kluczowe [var](../../../../csharp/language-reference/keywords/var.md) mogą być używane dla dowolnej zmiennej lokalnej w operacji zapytania. Na poniższej ilustracji jest podobny do przykładu numer 2, który została omówiony wcześniej. Jednak kompilator dostarcza silnego typu dla każdej zmiennej w operacji zapytania.  

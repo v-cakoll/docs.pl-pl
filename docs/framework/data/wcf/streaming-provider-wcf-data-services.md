@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298880"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (WCF Data Services)
 Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne może reprezentować strumieni wideo i audio, obrazy, pliki dokumentów lub inne typy nośników binarnego. Gdy jednostki w modelu danych zawiera jedną lub więcej właściwości binarnych, Usługa danych zwraca te dane binarne zakodowanymi w formacie base-64, wewnątrz wpisu w źródle danych odpowiedzi. Ponieważ ładowania i serializacja dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, które są niezależne od jednostki, do której należy. Jest to realizowane przez oddzielenie danych binarnych z jednostki w co najmniej jeden strumień danych.  
@@ -28,15 +28,15 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
   
  Konfigurowanie usługi danych, aby obsługiwać przesyłanie strumieniowe danych binarnych wymaga wykonania następujących czynności:  
   
-1.  Atrybut co najmniej jednej jednostki w modelu danych, zgodnie z nośnika wpisu łącza nośnika. Te jednostki nie może zawierać dane binarne do celów przesyłania strumieniowego. Wszystkie właściwości binarnych jednostki są zawsze zwracane we wpisie jako kodowanie base-64 binarnego.  
+1. Atrybut co najmniej jednej jednostki w modelu danych, zgodnie z nośnika wpisu łącza nośnika. Te jednostki nie może zawierać dane binarne do celów przesyłania strumieniowego. Wszystkie właściwości binarnych jednostki są zawsze zwracane we wpisie jako kodowanie base-64 binarnego.  
   
-2.  Implementuj interfejs T:System.Data.Services.Providers.IDataServiceStreamProvider.  
+2. Implementuj interfejs T:System.Data.Services.Providers.IDataServiceStreamProvider.  
   
-3.  W celu zdefiniowania usługi danych, który implementuje <xref:System.IServiceProvider> interfejsu. Zastosowań usługi danych <xref:System.IServiceProvider.GetService%2A> implementacji dostęp do przesyłania strumieniowego implementacja dostawcy danych. Ta metoda zwraca odpowiednie implementacja dostawcy przesyłania strumieniowego.  
+3. W celu zdefiniowania usługi danych, który implementuje <xref:System.IServiceProvider> interfejsu. Zastosowań usługi danych <xref:System.IServiceProvider.GetService%2A> implementacji dostęp do przesyłania strumieniowego implementacja dostawcy danych. Ta metoda zwraca odpowiednie implementacja dostawcy przesyłania strumieniowego.  
   
-4.  Włącz strumieni dużych bloków komunikatów w konfiguracji aplikacji sieci Web.  
+4. Włącz strumieni dużych bloków komunikatów w konfiguracji aplikacji sieci Web.  
   
-5.  Zapewnianie dostępu do zasobów binarnych na serwerze lub w źródle danych.  
+5. Zapewnianie dostępu do zasobów binarnych na serwerze lub w źródle danych.  
   
  Przykłady w tym temacie są oparte na próbkę, przesyłanie strumieniowe zdjęć usługi, która została omówiona szczegółowo we wpisie [serii dostawca przesyłania strumieniowego usługi danych: Implementowanie dostawca przesyłania strumieniowego (część 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Kod źródłowy dla tej usługi próbka jest dostępna w [przesyłanie strumieniowe zdjęć danych usługi przykładową stronę](https://go.microsoft.com/fwlink/?LinkID=198988) w galerii kodów MSDN.  
   

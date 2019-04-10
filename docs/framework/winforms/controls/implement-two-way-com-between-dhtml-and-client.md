@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 4823bf482e785b1e9d03ca57010a832cb0e26dd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295617"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta
 Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejący dynamiczny kod aplikacji sieci Web HTML (DHTML) do aplikacji klienta Windows Forms. Jest to przydatne, gdy zainwestowali czas opracowywania znaczące w tworzeniu kontrolek na podstawie DHTML i chcesz korzystać z zalet użytkownikowi możliwości interfejsu Windows Forms bez konieczności ponownego zapisania istniejącego kodu.  
@@ -28,22 +28,22 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istni
   
 ### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>Aby osadzić DHTML w aplikacji Windows Forms  
   
-1.  Ustaw <xref:System.Windows.Forms.WebBrowser> kontrolki <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> właściwości `false` aby zapobiec <xref:System.Windows.Forms.WebBrowser> kontroli otwieranie plików upuszczone na go.  
+1. Ustaw <xref:System.Windows.Forms.WebBrowser> kontrolki <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A> właściwości `false` aby zapobiec <xref:System.Windows.Forms.WebBrowser> kontroli otwieranie plików upuszczone na go.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
-2.  Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie jego menu skrótów, gdy użytkownik kliknie prawym przyciskiem myszy go.  
+2. Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli wyświetlanie jego menu skrótów, gdy użytkownik kliknie prawym przyciskiem myszy go.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
-3.  Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli ją klawiszy skrótów.  
+3. Ustaw dla formantu <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> właściwości `false` zapobiegające <xref:System.Windows.Forms.WebBrowser> kontroli ją klawiszy skrótów.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
-4.  Ustaw <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> właściwość w Konstruktorze formularza lub <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
+4. Ustaw <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> właściwość w Konstruktorze formularza lub <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
   
      W poniższym kodzie użyto samej klasy formularza dla skryptów obiektu.  
   
@@ -53,14 +53,14 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istni
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
-5.  Implementuje właściwości publiczne lub metody w kodzie aplikacji, która będzie używana w kodzie skryptu.  
+5. Implementuje właściwości publiczne lub metody w kodzie aplikacji, która będzie używana w kodzie skryptu.  
   
      Na przykład jeśli używasz klasy formularza dla skryptów obiektu, Dodaj następujący kod do klasy formularza.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
-6.  Użyj `window.external` obiektu w kodzie skryptu do publicznej właściwości i metody określonego obiektu.  
+6. Użyj `window.external` obiektu w kodzie skryptu do publicznej właściwości i metody określonego obiektu.  
   
      Poniższy kod HTML przedstawia sposób wywołania metody wobec obiektu skryptów od kliknięcia przycisku. Skopiuj ten kod do elementu BODY dokumentu HTML, który należy załadować przy użyciu formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.  
   
@@ -70,7 +70,7 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istni
     </button>  
     ```  
   
-7.  Implementowanie funkcji w kodzie skryptu, który będzie używany w kodzie aplikacji.  
+7. Implementowanie funkcji w kodzie skryptu, który będzie używany w kodzie aplikacji.  
   
      Następujący element HTML skrypt zawiera przykład funkcja. Skopiuj ten kod w element główny dokumentu HTML, który należy załadować przy użyciu formantu <xref:System.Windows.Forms.WebBrowser.Navigate%2A> metody lub przypisać formantu <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości.  
   
@@ -82,7 +82,7 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istni
     </script>  
     ```  
   
-8.  Użyj <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości dostępu do kodu skryptu w kodzie aplikacji klienta.  
+8. Użyj <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwości dostępu do kodu skryptu w kodzie aplikacji klienta.  
   
      Na przykład, Dodaj następujący kod do przycisku <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń.  
   

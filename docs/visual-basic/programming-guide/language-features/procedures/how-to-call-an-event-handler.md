@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320174"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>Instrukcje: Wywoływanie programu do obsługi zdarzeń w języku Visual Basic
 *Zdarzeń* jest akcja lub zdarzenie — takich jak myszy kliknij lub limit środków przekroczyła — który jest rozpoznawany przez inny składnik programu i dla którego można napisać kod odpowiedzi. *Programu obsługi zdarzeń* znajduje się kod pisany w celu reagowania na zdarzenie.  
@@ -26,13 +26,13 @@ ms.locfileid: "58837770"
   
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>Aby wywołać procedurę obsługi zdarzeń za pomocą dojścia i WithEvents  
   
-1.  Upewnij się, że zdarzenie jest zadeklarowana za pomocą [Event — instrukcja](../../../../visual-basic/language-reference/statements/event-statement.md).  
+1. Upewnij się, że zdarzenie jest zadeklarowana za pomocą [Event — instrukcja](../../../../visual-basic/language-reference/statements/event-statement.md).  
   
-2.  Deklarowanie zmiennej obiektu modułu lub klasy przy użyciu poziomu [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) — słowo kluczowe. `As` Klauzula dla tej zmiennej, należy określić klasę, która wywołuje zdarzenie.  
+2. Deklarowanie zmiennej obiektu modułu lub klasy przy użyciu poziomu [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) — słowo kluczowe. `As` Klauzula dla tej zmiennej, należy określić klasę, która wywołuje zdarzenie.  
   
-3.  W deklaracji obsługi zdarzeń `Sub` procedury dodawania [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzula, która określa `WithEvents` zmienną i nazwa zdarzenia.  
+3. W deklaracji obsługi zdarzeń `Sub` procedury dodawania [obsługuje](../../../../visual-basic/language-reference/statements/handles-clause.md) klauzula, która określa `WithEvents` zmienną i nazwa zdarzenia.  
   
-4.  Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje `Sub` procedury. Kod może użyć `RaiseEvent` instrukcję, aby utworzyć zdarzenia występują.  
+4. Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje `Sub` procedury. Kod może użyć `RaiseEvent` instrukcję, aby utworzyć zdarzenia występują.  
   
      W poniższym przykładzie zdefiniowano zdarzenia i `WithEvents` zmiennej, która odwołuje się do klasy, która wywołuje zdarzenia. Obsługa zdarzeń `Sub` używa procedury `Handles` klauzuli, aby określić klasy i obsługi zdarzeń.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "58837770"
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>Aby wywołać procedurę obsługi zdarzeń za pomocą AddHandler  
   
-1.  Upewnij się, że zdarzenie jest zadeklarowana za pomocą `Event` instrukcji.  
+1. Upewnij się, że zdarzenie jest zadeklarowana za pomocą `Event` instrukcji.  
   
-2.  Wykonaj [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) dynamicznie połączyć obsługi zdarzeń `Sub` procedury ze zdarzeniem.  
+2. Wykonaj [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) dynamicznie połączyć obsługi zdarzeń `Sub` procedury ze zdarzeniem.  
   
-3.  Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje `Sub` procedury. Kod może użyć `RaiseEvent` instrukcję, aby utworzyć zdarzenia występują.  
+3. Po wystąpieniu zdarzenia, Visual Basic automatycznie wywołuje `Sub` procedury. Kod może użyć `RaiseEvent` instrukcję, aby utworzyć zdarzenia występują.  
   
      W poniższym przykładzie zdefiniowano `Sub` procedury, aby obsłużyć <xref:System.Windows.Forms.Form.Closing> zdarzeń formularza. Następnie używa [AddHandler — instrukcja](../../../../visual-basic/language-reference/statements/addhandler-statement.md) skojarzyć `catchClose` procedury jako program obsługi zdarzeń dla <xref:System.Windows.Forms.Form.Closing>.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58837770"
 
 - [Procedury](./index.md)
 - [Sub, procedury](./sub-procedures.md)
-- [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [AddressOf, operator](../../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Sub — Instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Operator AddressOf](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Instrukcje: Tworzenie procedury](./how-to-create-a-procedure.md)
 - [Instrukcje: Wywoływanie procedury, która nie zwraca wartości](./how-to-call-a-procedure-that-does-not-return-a-value.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313226"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>Instrukcje: Tworzenie kontraktu programu Windows Communication Foundation za pomocą klasy
 Jest preferowany sposób tworzenia kontraktu usługi Windows Communication Foundation (WCF) przy użyciu interfejsu. Aby uzyskać więcej informacji, zobacz [jak: Definiowanie kontraktu usługi](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md). Tutaj alternatywne, schemat jest utworzyć klasę, a następnie zastosować <xref:System.ServiceModel.ServiceContractAttribute> bezpośrednio do klasy atrybutu i <xref:System.ServiceModel.OperationContractAttribute> atrybut do każdej metody w klasie, które są dostępne w ramach umowy.  
@@ -22,13 +22,13 @@ Jest preferowany sposób tworzenia kontraktu usługi Windows Communication Found
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>Tworzenie kontraktu programu Windows Communication Foundation za pomocą klasy  
   
-1.  Utwórz nową klasę w języku Visual Basic C#, lub dowolnego innego języka środowiska uruchomieniowego języka wspólnego.  
+1. Utwórz nową klasę w języku Visual Basic C#, lub dowolnego innego języka środowiska uruchomieniowego języka wspólnego.  
   
-2.  Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasy do klasy.  
+2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasy do klasy.  
   
-3.  Tworzenie metod w klasie.  
+3. Tworzenie metod w klasie.  
   
-4.  Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej metody, które muszą być widoczne jako część publicznego kontraktu usługi WCF.  
+4. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej metody, które muszą być widoczne jako część publicznego kontraktu usługi WCF.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje klasę, która definiuje kontrakt usługi.  

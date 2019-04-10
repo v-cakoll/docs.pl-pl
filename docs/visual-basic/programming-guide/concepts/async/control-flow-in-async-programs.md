@@ -2,12 +2,12 @@
 title: Przepływ sterowania w programach Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 57c83021551ab386f62c8d22b90db8da8054df7f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300934"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Przepływ sterowania w programach Async (Visual Basic)
 Pozwala pisać i łatwiej utrzymać asynchroniczne programy za pomocą `Async` i `Await` słów kluczowych. Jednak wyniki mogą Cię zaskoczyć, jeśli nie rozumiesz sposobu działania programu. W tym temacie omówiono, którą przepływ sterowania za pośrednictwem prostego programu asynchronicznego aby pokazać, kiedy sterowania przechodzi od jednej metody do innej i jakie informacje są przesyłane za każdym razem.  
@@ -100,34 +100,34 @@ Length of the downloaded string: 33946.
 ### <a name="download-the-program"></a>Pobierz Program  
  Możesz pobrać aplikację dotyczącą tego tematu z [próbka asynchroniczna: Kontrolowanie Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki, Otwórz i uruchom program.  
   
-1.  Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.  
+1. Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
+2. Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-3.  Przejdź do folderu, który posiada rozpakowany przykładowego kodu, otwórz plik rozwiązania (.sln), a następnie wybierz klawisz F5, aby skompilować i uruchomić projekt.  
+3. Przejdź do folderu, który posiada rozpakowany przykładowego kodu, otwórz plik rozwiązania (.sln), a następnie wybierz klawisz F5, aby skompilować i uruchomić projekt.  
   
 ### <a name="build-the-program-yourself"></a>Sam Zbuduj Program  
  Poniższy projekt Windows Presentation Foundation (WPF) zawiera przykład kodu, w tym temacie.  
   
  Aby uruchomić projekt, należy wykonać następujące czynności:  
   
-1.  Uruchom program Visual Studio.  
+1. Uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
+2. Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
      **Nowy projekt** zostanie otwarte okno dialogowe.  
   
-3.  W **zainstalowane szablony** okienku wybierz **języka Visual Basic**, a następnie wybierz **aplikacji WPF** z listy typów projektów.  
+3. W **zainstalowane szablony** okienku wybierz **języka Visual Basic**, a następnie wybierz **aplikacji WPF** z listy typów projektów.  
   
-4.  Wprowadź `AsyncTracer` jako nazwę projektu, a następnie wybierz **OK** przycisku.  
+4. Wprowadź `AsyncTracer` jako nazwę projektu, a następnie wybierz **OK** przycisku.  
   
      Nowy projekt, który pojawia się w **Eksploratora rozwiązań**.  
   
-5.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
+5. W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
   
      Jeśli karta nie jest widoczna, otwórz menu skrótów dla pliku MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz **Wyświetl kod**.  
   
-6.  W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.  
+6. W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.  
   
     ```vb  
     <Window  
@@ -145,9 +145,9 @@ Length of the downloaded string: 33946.
   
      Proste okno, które zawiera pole tekstowe i przycisk pojawia się w **projektowania** widoku MainWindow.xaml.  
   
-7.  Dodaj odwołanie do <xref:System.Net.Http>.  
+7. Dodaj odwołanie do <xref:System.Net.Http>.  
   
-8.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.vb, a następnie wybierz **Wyświetl kod**.  
+8. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.vb, a następnie wybierz **Wyświetl kod**.  
   
 9. W pliku MainWindow.xaml.vb Zastąp kod następującym kodem.  
   
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Próbka asynchroniczna: Kontrolowanie Flow in Async Programs (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Próbka asynchroniczna: Przepływ sterowania w aplikacjach asynchronicznych (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

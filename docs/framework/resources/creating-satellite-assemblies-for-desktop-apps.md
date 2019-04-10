@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff0e51ad0d0e12c944c996a4262541fb980efe05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138011"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295994"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikację, aby wyświetlić ciągi, obrazy i inne dane w przez użytkownika języka i kultury, a także do dostarczania danych alternatywnego, jeśli nie są dostępne zasoby dotyczące języka przez użytkownika lub kultury. .NET Framework wykorzystuje model Gwiazda — w celu zlokalizowania i pobrania zlokalizowanych zasobów. Piasta to główny zestaw, który zawiera niemożliwe do zlokalizowania kodu wykonywalnego i zasoby dla jednej kultury, które jest wywoływane zero lub kultury domyślnej. Domyślną kulturę używaną jest rezerwowego kulturą aplikacji; jest używany, gdy nie zlokalizowane zasoby są dostępne. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wyznaczyć kultury aplikacji domyślnej kultury. Każdej szprysze nawiązuje połączenie z zestawem satelickim, który zawiera zasoby dla pojedynczej zlokalizowanej kultury, ale nie zawiera żadnego kodu. Ponieważ zestawy satelickie nie są częścią zestawu głównego, można łatwo zaktualizować lub zastąpić zasoby, które odpowiadają określonej kultury bez zastępowania głównym zestawie aplikacji.  
@@ -52,10 +52,11 @@ Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwi
   
 -   Informacje na temat kultury zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby przechować nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcji, gdy używasz [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) Osadzanie zasobów w zestawie satelickim.  
   
- Na poniższej ilustracji przedstawiono przykład struktury i lokalizacji wymaganiami katalogu dla aplikacji, które nie jest instalowany w [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md). Elementy z rozszerzeniami txt i Resources nie będą dostarczane wraz z ostatnim aplikacji. Są to pliki zasobów pośredniego, używany do tworzenia zestawów zasobów satelickich końcowego. W tym przykładzie można zastąpić pliki resx na pliki txt. Aby uzyskać więcej informacji, zobacz [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).  
+ Na poniższej ilustracji przedstawiono przykład struktury i lokalizacji wymaganiami katalogu dla aplikacji, które nie jest instalowany w [globalnej pamięci podręcznej](../../../docs/framework/app-domains/gac.md). Elementy z rozszerzeniami txt i Resources nie będą dostarczane wraz z ostatnim aplikacji. Są to pliki zasobów pośredniego, używany do tworzenia zestawów zasobów satelickich końcowego. W tym przykładzie można zastąpić pliki resx na pliki txt. Aby uzyskać więcej informacji, zobacz [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). 
+ 
+ Na poniższej ilustracji przedstawiono katalogu zestawów satelickich:
   
- ![Zestawy satelickie](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
-Katalog zestawu satelickiego  
+ ![Katalog zestawu satelickiego z podkatalogi zlokalizowanej kultury.](./media/creating-satellite-assemblies-for-desktop-apps/satellite-assembly-directory.gif)
   
 ## <a name="compiling-satellite-assemblies"></a>Kompilowanie zestawów satelickich  
  Możesz użyć [Resource File Generator (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) do kompilowania plików tekstowych lub pliki XML (resx), które zawierają zasoby do binarnych plików Resources. Następnie użyj [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) do kompilowania plików Resources do zestawów satelickich. Al.exe tworzy zestaw z plików Resources, które określisz. Zestawy satelickie może zawierać tylko zasoby; nie mogą zawierać dowolny kod wykonywalny.  
@@ -87,14 +88,14 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ## <a name="satellite-assemblies-an-example"></a>Zestawy satelitarne: Przykład  
  Poniżej przedstawiono prosty przykład "Hello world", która wyświetla okno komunikatu, zawierającą zlokalizowane powitanie. Przykład zawiera zasoby dla języka angielskiego (Stany Zjednoczone), francuski (Francja) i kultur rosyjski (Rosja), a jego rezerwowego kultury jest język angielski. Aby utworzyć przykładu, wykonaj następujące czynności:  
   
-1.  Utwórz plik zasobów o nazwie Greeting.resx lub Greeting.txt, aby zawierała zasobów dla kultury domyślnej. Pojedynczy ciąg o nazwie Store `HelloString` którego wartością jest "Hello world!" w tym pliku.  
+1. Utwórz plik zasobów o nazwie Greeting.resx lub Greeting.txt, aby zawierała zasobów dla kultury domyślnej. Pojedynczy ciąg o nazwie Store `HelloString` którego wartością jest "Hello world!" w tym pliku.  
   
-2.  Do wskazywania aplikacji domyślnej kultury angielski (en), Dodaj następujący kod <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybutu do pliku AssemblyInfo aplikacji lub do pliku kodu źródłowego głównego, który zostanie skompilowany w głównym zestawie aplikacji.  
+2. Do wskazywania aplikacji domyślnej kultury angielski (en), Dodaj następujący kod <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybutu do pliku AssemblyInfo aplikacji lub do pliku kodu źródłowego głównego, który zostanie skompilowany w głównym zestawie aplikacji.  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  Dodanie obsługi dodatkowych kultur (en US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
+3. Dodanie obsługi dodatkowych kultur (en US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
   
     -   Do obsługi en US lub kultury angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greeting.en US.resx lub Greeting.en US.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Witaj świecie!"  
   
@@ -102,7 +103,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
     -   Na potrzeby obsługi, ru-RU lub kultury rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru RU.resx lub Greeting.ru RU.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `HelloString` którego wartością jest "Всем привет!"  
   
-4.  Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstowym lub XML pliku zasobu do binarnego pliku Resources. Dane wyjściowe to zbiór plików, które mają taką samą nazwę pliku głównego, jak pliki resx lub .txt, ale z rozszerzeniem Resources. Po utworzeniu przykładu z programu Visual Studio, proces kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenia do kompilowania plików resx na pliki Resources:  
+4. Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstowym lub XML pliku zasobu do binarnego pliku Resources. Dane wyjściowe to zbiór plików, które mają taką samą nazwę pliku głównego, jak pliki resx lub .txt, ale z rozszerzeniem Resources. Po utworzeniu przykładu z programu Visual Studio, proces kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenia do kompilowania plików resx na pliki Resources:  
   
     ```console
     resgen Greeting.resx  
@@ -113,7 +114,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
      Jeśli zasoby w plikach tekstowych zamiast plików XML, Zamień .txt rozszerzeniem resx.  
   
-5.  Skompiluj następujący kod źródłowy, wraz z zasobów dla kultury domyślnej do zestawu głównej aplikacji:  
+5. Skompiluj następujący kod źródłowy, wraz z zasobów dla kultury domyślnej do zestawu głównej aplikacji:  
   
     > [!IMPORTANT]
     >  Korzystając z wiersza polecenia, a nie programu Visual Studio do tworzenia przykładu, należy zmodyfikować wywołanie <xref:System.Resources.ResourceManager> konstruktora klasy do następującego: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
@@ -133,9 +134,9 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  Tworzenie podkatalogu w katalogu głównym aplikacji, dla każdej zlokalizowanej kultury, obsługiwanych przez aplikację. Należy utworzyć en US, fr-FR i podkatalogu ru-RU. Program Visual Studio automatycznie tworzy te podkatalogi jako część procesu kompilacji.  
+6. Tworzenie podkatalogu w katalogu głównym aplikacji, dla każdej zlokalizowanej kultury, obsługiwanych przez aplikację. Należy utworzyć en US, fr-FR i podkatalogu ru-RU. Program Visual Studio automatycznie tworzy te podkatalogi jako część procesu kompilacji.  
   
-7.  Osadzanie plików poszczególnych Resources specyficzne dla kultury w zestawy satelickie i zapisują je do odpowiedniego katalogu. To polecenie, aby to zrobić dla każdego pliku Resources:  
+7. Osadzanie plików poszczególnych Resources specyficzne dla kultury w zestawy satelickie i zapisują je do odpowiedniego katalogu. To polecenie, aby to zrobić dla każdego pliku Resources:  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
@@ -202,7 +203,7 @@ gacutil -i:StringLibrary.resources.dll
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>Zasoby w globalnej pamięci podręcznej: Przykład  
  W poniższym przykładzie użyto metody w bibliotece klas .NET Framework, aby wyodrębnić i zwraca zlokalizowany pozdrowienia z pliku zasobów. Biblioteki i jej zasoby są zarejestrowane w globalnej pamięci podręcznej. Przykład zawiera zasoby dla języka angielskiego (Stany Zjednoczone), francuski (Francja), rosyjski (Rosja) i angielskim kultur. Język angielski jest domyślną kulturą; jego zasobów są przechowywane w głównym zestawie. Przykład opóźnienie początkowo objawy biblioteki i jej zestawy satelickie z kluczem publicznym, następnie podpisuje ponownie je parą kluczy publiczny/prywatny. Aby utworzyć przykładu, wykonaj następujące czynności:  
   
-1.  Jeśli nie używasz programu Visual Studio, należy użyć następującego [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenie, aby utworzyć parę kluczy publiczny/prywatny, o nazwie ResKey.snk:  
+1. Jeśli nie używasz programu Visual Studio, należy użyć następującego [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenie, aby utworzyć parę kluczy publiczny/prywatny, o nazwie ResKey.snk:  
   
     ```console
     sn –k ResKey.snk  
@@ -210,20 +211,20 @@ gacutil -i:StringLibrary.resources.dll
   
      Jeśli używasz programu Visual Studio, użyj **podpisywanie** projektu na karcie **właściwości** okno dialogowe, aby wygenerować plik klucza.  
   
-2.  Należy użyć następującego [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenie, aby utworzyć plik klucza publicznego o nazwie PublicKey.snk:  
+2. Należy użyć następującego [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenie, aby utworzyć plik klucza publicznego o nazwie PublicKey.snk:  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  Utwórz plik zasobów o nazwie Strings.resx zawierać zasobów dla kultury domyślnej. Pojedynczy ciąg o nazwie Store `Greeting` którego wartością jest "Jak czy ich czy?" w tym pliku.  
+3. Utwórz plik zasobów o nazwie Strings.resx zawierać zasobów dla kultury domyślnej. Pojedynczy ciąg o nazwie Store `Greeting` którego wartością jest "Jak czy ich czy?" w tym pliku.  
   
-4.  Do wskazywania aplikacji domyślnej kultury "en", Dodaj następujący kod <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybutu do pliku AssemblyInfo aplikacji lub do pliku kodu źródłowego głównego, który zostanie skompilowany w głównym zestawie aplikacji:  
+4. Do wskazywania aplikacji domyślnej kultury "en", Dodaj następujący kod <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybutu do pliku AssemblyInfo aplikacji lub do pliku kodu źródłowego głównego, który zostanie skompilowany w głównym zestawie aplikacji:  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  Dodanie obsługi dodatkowych kultur (kultury en US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
+5. Dodanie obsługi dodatkowych kultur (kultury en US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
   
     -   Aby obsługiwać "en US" lub kultury angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Strings.en US.resx lub Strings.en US.txt, a w niej przechowywane jako jeden ciąg znaków o nazwie `Greeting` którego wartością jest "Hello!".  
   
@@ -231,7 +232,7 @@ gacutil -i:StringLibrary.resources.dll
   
     -   Aby obsługiwać "ru-RU" lub kultury rosyjski (Rosja), Utwórz plik zasobów o nazwie Strings.ru RU.resx lub Strings.ru RU.txt i przechowywanych w niej pojedynczego ciągu o nazwie `Greeting` którego wartością jest "Привет!"  
   
-6.  Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstowym lub XML pliku zasobu do binarnego pliku Resources. Dane wyjściowe to zbiór plików, które mają taką samą nazwę pliku głównego, jak pliki resx lub .txt, ale z rozszerzeniem Resources. Po utworzeniu przykładu z programu Visual Studio, proces kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenie do kompilowania plików resx na pliki Resources:  
+6. Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstowym lub XML pliku zasobu do binarnego pliku Resources. Dane wyjściowe to zbiór plików, które mają taką samą nazwę pliku głównego, jak pliki resx lub .txt, ale z rozszerzeniem Resources. Po utworzeniu przykładu z programu Visual Studio, proces kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenie do kompilowania plików resx na pliki Resources:  
   
     ```console
     resgen filename  
@@ -239,7 +240,7 @@ gacutil -i:StringLibrary.resources.dll
   
      gdzie *filename* jest opcjonalna ścieżka, nazwa pliku i rozszerzenie pliku tekstowych lub resx.  
   
-7.  Kompiluj następujący kod źródłowy dla StringLibrary.vb lub StringLibrary.cs wraz z zasobów dla kultury domyślnej do opóźnienia podpisanego zestawu biblioteki o nazwie StringLibrary.dll:  
+7. Kompiluj następujący kod źródłowy dla StringLibrary.vb lub StringLibrary.cs wraz z zasobów dla kultury domyślnej do opóźnienia podpisanego zestawu biblioteki o nazwie StringLibrary.dll:  
   
     > [!IMPORTANT]
     >  Korzystając z wiersza polecenia, a nie programu Visual Studio do tworzenia przykładu, należy zmodyfikować wywołanie <xref:System.Resources.ResourceManager> Konstruktor `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.  
@@ -259,7 +260,7 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  Tworzenie podkatalogu w katalogu głównym aplikacji, dla każdej zlokalizowanej kultury, obsługiwanych przez aplikację. Należy utworzyć en US, fr-FR i podkatalogu ru-RU. Program Visual Studio automatycznie tworzy te podkatalogi jako część procesu kompilacji. Ponieważ wszystkie zestawy satelickie mają taką samą nazwę, podkatalogi są używane do przechowywania poszczególnych specyficzne dla kultury zestawy satelickie, dopóki nie są podpisane parą kluczy publiczny/prywatny.  
+8. Tworzenie podkatalogu w katalogu głównym aplikacji, dla każdej zlokalizowanej kultury, obsługiwanych przez aplikację. Należy utworzyć en US, fr-FR i podkatalogu ru-RU. Program Visual Studio automatycznie tworzy te podkatalogi jako część procesu kompilacji. Ponieważ wszystkie zestawy satelickie mają taką samą nazwę, podkatalogi są używane do przechowywania poszczególnych specyficzne dla kultury zestawy satelickie, dopóki nie są podpisane parą kluczy publiczny/prywatny.  
   
 9. Osadzanie poszczególnych plików Resources specyficzne dla kultury do podpisany z opóźnieniem zestawy satelickie i zapisują je do odpowiedniego katalogu. To polecenie, aby to zrobić dla każdego pliku Resources:  
   

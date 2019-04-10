@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 90e26154b4a0a006a4cbb114ec5ddd74a33fc762
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7216b3aed89dc88737cc346386d6b03929fe60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295578"
 ---
 # <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificates-private-key"></a>Instrukcje: zmienianie dostawcy kryptograficznego dla klucza prywatnego certyfikatu X.509
 W tym temacie pokazano, jak zmienić dostawcy usług kryptograficznych, używane do zapewnienia klucza prywatnego certyfikatu X.509 oraz integrować dostawcę w ramach zabezpieczeń Windows Communication Foundation (WCF). Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
@@ -29,19 +29,19 @@ W tym temacie pokazano, jak zmienić dostawcy usług kryptograficznych, używane
   
 #### <a name="to-create-a-custom-x509-asymmetric-key"></a>Aby utworzyć niestandardowy klucz asymetryczny X.509  
   
-1.  Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> klasy.  
+1. Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Tokens.X509AsymmetricSecurityKey> klasy.  
   
-2.  Zastąp <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> właściwość tylko do odczytu. Ta właściwość zwraca rzeczywisty rozmiar klucza pary kluczy publiczny/prywatny certyfikatu.  
+2. Zastąp <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A> właściwość tylko do odczytu. Ta właściwość zwraca rzeczywisty rozmiar klucza pary kluczy publiczny/prywatny certyfikatu.  
   
-3.  Zastąp <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> metody. Ta metoda jest wywoływana przez strukturę zabezpieczeń programu WCF do odszyfrowania klucza symetrycznego przy użyciu klucza prywatnego certyfikatu. (Klucz wcześniej został zaszyfrowany za pomocą klucza publicznego certyfikatu).  
+3. Zastąp <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A> metody. Ta metoda jest wywoływana przez strukturę zabezpieczeń programu WCF do odszyfrowania klucza symetrycznego przy użyciu klucza prywatnego certyfikatu. (Klucz wcześniej został zaszyfrowany za pomocą klucza publicznego certyfikatu).  
   
-4.  Zastąp <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> metody. Ta metoda jest wywoływana przez platformę zabezpieczeń usługi WCF w celu uzyskania wystąpienie <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasa, która reprezentuje dostawcy usług kryptograficznych do certyfikatu prywatnej lub publicznej klucza, w zależności od parametrów przekazywany do metody.  
+4. Zastąp <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A> metody. Ta metoda jest wywoływana przez platformę zabezpieczeń usługi WCF w celu uzyskania wystąpienie <xref:System.Security.Cryptography.AsymmetricAlgorithm> klasa, która reprezentuje dostawcy usług kryptograficznych do certyfikatu prywatnej lub publicznej klucza, w zależności od parametrów przekazywany do metody.  
   
-5.  Opcjonalna. Zastąp <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> metody. Przesłonić tę metodę, jeśli z inną implementacją <xref:System.Security.Cryptography.HashAlgorithm> klasy jest wymagana.  
+5. Opcjonalna. Zastąp <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A> metody. Przesłonić tę metodę, jeśli z inną implementacją <xref:System.Security.Cryptography.HashAlgorithm> klasy jest wymagana.  
   
-6.  Zastąp <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> metody. Ta metoda zwraca wystąpienie <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> klasę, która jest skojarzona z klucza prywatnego certyfikatu.  
+6. Zastąp <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetSignatureFormatter%2A> metody. Ta metoda zwraca wystąpienie <xref:System.Security.Cryptography.AsymmetricSignatureFormatter> klasę, która jest skojarzona z klucza prywatnego certyfikatu.  
   
-7.  Zastąp <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> metody. Ta metoda jest używana w celu wskazania, czy określonego algorytmu kryptograficznego jest obsługiwana przez implementację klucza zabezpieczeń.  
+7. Zastąp <xref:System.IdentityModel.Tokens.SecurityKey.IsSupportedAlgorithm%2A> metody. Ta metoda jest używana w celu wskazania, czy określonego algorytmu kryptograficznego jest obsługiwana przez implementację klucza zabezpieczeń.  
   
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
@@ -50,17 +50,17 @@ W tym temacie pokazano, jak zmienić dostawcy usług kryptograficznych, używane
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Aby zastąpić token zabezpieczający X.509 dostarczane przez system niestandardowy token klucza asymetrycznego zabezpieczeń X.509  
   
-1.  Utwórz niestandardowy token zabezpieczający X.509, który zwraca niestandardowy klucz asymetryczny zabezpieczeń X.509 zamiast klucz zabezpieczeń dostarczanych przez system, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat tokenów zabezpieczających niestandardowe zobacz [jak: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
+1. Utwórz niestandardowy token zabezpieczający X.509, który zwraca niestandardowy klucz asymetryczny zabezpieczeń X.509 zamiast klucz zabezpieczeń dostarczanych przez system, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat tokenów zabezpieczających niestandardowe zobacz [jak: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md).  
   
      [!code-csharp[c_CustomX509Token#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#2)]
      [!code-vb[c_CustomX509Token#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#2)]  
   
-2.  Tworzenie niestandardowego dostawcy tokenów zabezpieczeń zwracające niestandardowy token zabezpieczający X.509, jak pokazano w przykładzie. Aby uzyskać więcej informacji na temat dostawcy tokenów zabezpieczeń niestandardowe zobacz [jak: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
+2. Tworzenie niestandardowego dostawcy tokenów zabezpieczeń zwracające niestandardowy token zabezpieczający X.509, jak pokazano w przykładzie. Aby uzyskać więcej informacji na temat dostawcy tokenów zabezpieczeń niestandardowe zobacz [jak: Tworzenie niestandardowego dostawcy tokenów zabezpieczeń](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md).  
   
      [!code-csharp[c_CustomX509Token#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#3)]
      [!code-vb[c_CustomX509Token#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#3)]  
   
-3.  Jeśli klucz niestandardowy zabezpieczeń wymaga do użycia na stronie inicjatora, tworzenie niestandardowego klienta Menedżer tokenów zabezpieczeń i klas poświadczenia niestandardowego klienta, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji o poświadczenia niestandardowego klienta i menedżerów tokenu zabezpieczeń klienta, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+3. Jeśli klucz niestandardowy zabezpieczeń wymaga do użycia na stronie inicjatora, tworzenie niestandardowego klienta Menedżer tokenów zabezpieczeń i klas poświadczenia niestandardowego klienta, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji o poświadczenia niestandardowego klienta i menedżerów tokenu zabezpieczeń klienta, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#4)]
      [!code-vb[c_CustomX509Token#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#4)]  
@@ -68,7 +68,7 @@ W tym temacie pokazano, jak zmienić dostawcy usług kryptograficznych, używane
      [!code-csharp[c_CustomX509Token#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#6)]
      [!code-vb[c_CustomX509Token#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#6)]  
   
-4.  Jeśli klucz niestandardowy zabezpieczeń musi być używane po stronie odbiorcy, należy utworzyć niestandardowe usługi Menedżer tokenów zabezpieczeń i poświadczeń usługi niestandardowych, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat niestandardowe poświadczenia i menedżerów tokenu zabezpieczeń usługi, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+4. Jeśli klucz niestandardowy zabezpieczeń musi być używane po stronie odbiorcy, należy utworzyć niestandardowe usługi Menedżer tokenów zabezpieczeń i poświadczeń usługi niestandardowych, jak pokazano w poniższym przykładzie. Aby uzyskać więcej informacji na temat niestandardowe poświadczenia i menedżerów tokenu zabezpieczeń usługi, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#5)]
      [!code-vb[c_CustomX509Token#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#5)]  

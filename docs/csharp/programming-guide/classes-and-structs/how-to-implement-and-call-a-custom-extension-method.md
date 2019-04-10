@@ -5,29 +5,29 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303339"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Instrukcje: Implementowanie i wywołanie niestandardowej metody rozszerzenia (C# Programming Guide)
 W tym temacie pokazano, jak można implementować własne metody rozszerzenia dla dowolnego typu platformy .NET. Kod klienta można użyć metody rozszerzenia przez dodanie odwołania do biblioteki DLL, która je zawiera i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywę, który określa obszar nazw, w którym zdefiniowano metody rozszerzenia.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Aby zdefiniować i wywołanie metody rozszerzenia  
   
-1.  Definiowanie statycznego [klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) zawiera metody rozszerzenia.  
+1. Definiowanie statycznego [klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) zawiera metody rozszerzenia.  
   
      Klasy muszą być widoczne dla kodu klienta. Aby uzyskać więcej informacji o regułach ułatwień dostępu, zobacz [modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
-2.  Implementuje metody rozszerzenia jako metody statycznej z co najmniej taką samą widoczność jak klasa zawierająca.  
+2. Implementuje metody rozszerzenia jako metody statycznej z co najmniej taką samą widoczność jak klasa zawierająca.  
   
-3.  Pierwszy parametr metody Określa typ, który działa metody; musi być poprzedzony znakiem [to](../../../csharp/language-reference/keywords/this.md) modyfikator.  
+3. Pierwszy parametr metody Określa typ, który działa metody; musi być poprzedzony znakiem [to](../../../csharp/language-reference/keywords/this.md) modyfikator.  
   
-4.  W wywoływanym kodzie Dodaj `using` dyrektywy, aby określić [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) zawierający klasę metody rozszerzenia.  
+4. W wywoływanym kodzie Dodaj `using` dyrektywy, aby określić [przestrzeni nazw](../../../csharp/language-reference/keywords/namespace.md) zawierający klasę metody rozszerzenia.  
   
-5.  Tak, jakby były metodami wystąpień w typie, należy wywołać metodę.  
+5. Tak, jakby były metodami wystąpień w typie, należy wywołać metodę.  
   
      Pamiętaj, że pierwszy parametr nie jest określony przez wywołanie kodu, ponieważ reprezentuje on typ, na którym jest stosowany operator kompilator wie już typ obiektu. Musisz podać argumenty dla parametrów 2 za pośrednictwem `n`.  
   
@@ -46,10 +46,10 @@ W tym temacie pokazano, jak można implementować własne metody rozszerzenia dl
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (Language-Integrated Query)](../../../csharp/linq/linq-in-csharp.md)
-- [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [LINQ (zapytania o języku zintegrowanym)](../../../csharp/linq/linq-in-csharp.md)
+- [Klasy statyczne i statyczne składowe klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [this](../../../csharp/language-reference/keywords/this.md)
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+- [— przestrzeń nazw](../../../csharp/language-reference/keywords/namespace.md)

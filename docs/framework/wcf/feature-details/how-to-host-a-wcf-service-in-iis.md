@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: 8b2ebc108bf3eef60e8877e617acec782da38fa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309683"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Instrukcje: hostowanie usługi WCF w usługach IIS
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Windows Communication Foundation (WCF), który znajduje się w Internet Information Services (IIS). W tym temacie przyjęto założenie, są zaznajomieni z usług IIS i dowiedzieć się, jak używać narzędzia do zarządzania usług IIS do tworzenia i obsługi aplikacji programu IIS. Aby uzyskać więcej informacji na temat usług IIS zobacz [Internetowe usługi informacyjne](https://go.microsoft.com/fwlink/?LinkId=132449). Usługi WCF, który jest uruchamiany w środowisku usług IIS wykorzystuje pełną funkcje usług IIS, takie jak odtwarzanie procesów, bezczynności zamykania, monitorowania kondycji procesu i aktywacja oparta na komunikatach. Ta opcja hostingu wymaga, aby poprawnie skonfigurować usługi IIS, ale nie wymaga się, że każdy kod hostingu zapisywane jako część aplikacji. Umożliwia hostowanie usług IIS tylko w przypadku transportu HTTP.  
@@ -21,28 +21,28 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>Tworzenie usługi hostowanej przez Internetowe usługi informacyjne  
   
-1.  Upewnij się, czy program IIS jest zainstalowana i uruchomiona na komputerze. Aby uzyskać więcej informacji na temat instalowania i konfigurowania usług IIS zobacz [Instalowanie i konfigurowanie usług IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. Upewnij się, czy program IIS jest zainstalowana i uruchomiona na komputerze. Aby uzyskać więcej informacji na temat instalowania i konfigurowania usług IIS zobacz [Instalowanie i konfigurowanie usług IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2.  Utwórz nowy folder na potrzeby plików aplikacji o nazwie "IISHostedCalcService", upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ma dostęp do zawartości folderu i użyć narzędzia do zarządzania usług IIS, aby utworzyć nową aplikację usług IIS, która fizycznie znajduje się w tej aplikacji katalog. Podczas tworzenia alias do użytku w katalogu aplikacji "IISHostedCalc".  
+2. Utwórz nowy folder na potrzeby plików aplikacji o nazwie "IISHostedCalcService", upewnij się, że [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ma dostęp do zawartości folderu i użyć narzędzia do zarządzania usług IIS, aby utworzyć nową aplikację usług IIS, która fizycznie znajduje się w tej aplikacji katalog. Podczas tworzenia alias do użytku w katalogu aplikacji "IISHostedCalc".  
   
-3.  Utwórz nowy plik o nazwie "service.svc" w katalogu aplikacji. Edytuj ten plik, dodając następujące @ServiceHost elementu.  
+3. Utwórz nowy plik o nazwie "service.svc" w katalogu aplikacji. Edytuj ten plik, dodając następujące @ServiceHost elementu.  
   
     ```  
     <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>  
     ```  
   
-4.  Utwórz podkatalog App_Code w katalogu aplikacji.  
+4. Utwórz podkatalog App_Code w katalogu aplikacji.  
   
-5.  Utwórz plik kodu o nazwie Service.cs w podkatalogu App_Code.  
+5. Utwórz plik kodu o nazwie Service.cs w podkatalogu App_Code.  
   
-6.  Dodaj następujące za pomocą instrukcji na górze pliku Service.cs.  
+6. Dodaj następujące za pomocą instrukcji na górze pliku Service.cs.  
   
     ```csharp  
     using System;  
     using System.ServiceModel;  
     ```  
   
-7.  Dodaj następującą deklarację przestrzeni nazw, gdy po użyciu instrukcji.  
+7. Dodaj następującą deklarację przestrzeni nazw, gdy po użyciu instrukcji.  
   
     ```csharp  
     namespace Microsoft.ServiceModel.Samples  
@@ -50,7 +50,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia usługi Wind
     }  
     ```  
   
-8.  Definiowanie kontraktu usługi, wewnątrz deklaracji przestrzeni nazw, jak pokazano w poniższym kodzie.  
+8. Definiowanie kontraktu usługi, wewnątrz deklaracji przestrzeni nazw, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[c_HowTo_HostInIIS#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/cs/source.cs#11)]
      [!code-vb[c_HowTo_HostInIIS#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#11)]  

@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów dotyczących konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299621"
 ---
 # <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
 W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Foundation (WCF), skonfigurować problemów.  
@@ -30,13 +30,13 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>Instalacja bloki uszkodzenie usługi WMI podczas instalacji pakietu .NET Framework 3.0 dostawcy WMI programu Windows Communication Foundation  
  Uszkodzenie usługi WMI mogą blokować instalację dostawcy usługi WMI do programu Windows Communication Foundation. Podczas instalacji programu Windows Communication Foundation Instalator nie mógł zarejestrować plik MOF programu WCF za pomocą składnika mofcomp.exe. Oto lista objawy:  
   
-1.  Instalacja środowiska .NET framework 3.0 zakończy się pomyślnie, ale dostawca WMI usługi WCF nie jest zarejestrowany.  
+1. Instalacja środowiska .NET framework 3.0 zakończy się pomyślnie, ale dostawca WMI usługi WCF nie jest zarejestrowany.  
   
-2.  Zdarzenie błędu pojawia się w dzienniku zdarzeń aplikacji, która odwołuje się problemy dotyczące rejestrowania dostawcy WMI dla usług WCF lub systemem mofcomp.exe.  
+2. Zdarzenie błędu pojawia się w dzienniku zdarzeń aplikacji, która odwołuje się problemy dotyczące rejestrowania dostawcy WMI dla usług WCF lub systemem mofcomp.exe.  
   
-3.  W pliku dziennika Instalatora o nazwie dd_wcf_retCA * w katalogu temp % % użytkownika zawiera odwołania do błędów, aby zarejestrować dostawcę WMI usługi WCF.  
+3. W pliku dziennika Instalatora o nazwie dd_wcf_retCA * w katalogu temp % % użytkownika zawiera odwołania do błędów, aby zarejestrować dostawcę WMI usługi WCF.  
   
-4.  Wyjątek taki poniżej mogą być wymienione w pliku dziennika śledzenia dziennika zdarzeń lub instalacji:  
+4. Wyjątek taki poniżej mogą być wymienione w pliku dziennika śledzenia dziennika zdarzeń lub instalacji:  
   
      ServiceModelReg [11:09:59:046]: System.ApplicationException: Nieoczekiwany wynik 3 wykonywania E:\WINDOWS\system32\wbem\mofcomp.exe za pomocą "E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows komunikacji Foundation\ServiceModel.mof"  
   
@@ -52,7 +52,7 @@ W tym temacie opisano, jak rozwiązywać problemy z Windows Communication Founda
   
  Poniższe kroki musi występować w celu rozwiązania problemu opisanego wcześniej.  
   
-1.  Uruchom [narzędzie diagnostyczne WMI, wersja 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) naprawy usługi WMI. Aby uzyskać więcej informacji dotyczących używania tego narzędzia, zobacz [narzędzie diagnostyczne WMI](https://go.microsoft.com/fwlink/?LinkId=94686) tematu.  
+1. Uruchom [narzędzie diagnostyczne WMI, wersja 2.0](https://go.microsoft.com/fwlink/?LinkId=94685) naprawy usługi WMI. Aby uzyskać więcej informacji dotyczących używania tego narzędzia, zobacz [narzędzie diagnostyczne WMI](https://go.microsoft.com/fwlink/?LinkId=94686) tematu.  
   
  Napraw instalację programu .NET Framework 3.0 za pomocą **Dodaj/Usuń programy** apletu znajduje się w **Panelu sterowania**, lub odinstalowanie/ponownie zainstalowanie programu .NET Framework 3.0.  
   

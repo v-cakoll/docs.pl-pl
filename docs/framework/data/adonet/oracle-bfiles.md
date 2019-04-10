@@ -2,12 +2,12 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304470"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleBFile> klasę, która zostanie użyta do pracy z bazą danych Oracle <xref:System.Data.OracleClient.OracleType.BFile> typu danych.  
@@ -26,9 +26,9 @@ ms.locfileid: "59142392"
   
  Każda inna niż NULL **OracleBFile** obiekt jest skojarzony z dwiema jednostkami, które określają lokalizację podstawowy plik fizyczny:  
   
-1.  Obiekt bazy danych Oracle katalogu, który jest alias bazy dla katalogu w systemie plików, a  
+1. Obiekt bazy danych Oracle katalogu, który jest alias bazy dla katalogu w systemie plików, a  
   
-2.  Nazwa pliku bazowego fizycznym pliku, który znajduje się w katalogu, który został skojarzony z obiektem katalogu.  
+2. Nazwa pliku bazowego fizycznym pliku, który znajduje się w katalogu, który został skojarzony z obiektem katalogu.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie C# pokazano, jak utworzyć **BPLIK** Oracle tabeli, a następnie pobrać jednego w formie **OracleBFile** obiektu. W przykładzie pokazano, za pomocą <xref:System.Data.OracleClient.OracleDataReader> obiektu i **OracleBFile** **Seek** i **odczytu** metody. Należy pamiętać, aby można było korzystać z tej próbki, należy najpierw utworzyć katalog o nazwie "c:\\\bfiles" oraz plik o nazwie "MyFile.jpg" na serwerze bazy danych Oracle.  

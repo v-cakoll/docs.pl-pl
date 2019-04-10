@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 90008b00c95906ba43364c5a4ae3f85d9fdf0e22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300531"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows
 Jeśli chcesz rozszerzyć funkcjonalność istniejącej kontrolki, można utworzyć formant pochodzące z istniejącej kontrolki przez dziedziczenie. Dziedziczy z istniejącej kontrolki, dziedziczenie, wszystkie funkcje i wizualne właściwości tej kontrolki. Na przykład, jeśli podczas tworzenia formant, który odziedziczone <xref:System.Windows.Forms.Button>nowego formantu będzie wyglądała i act dokładnie tak jak standardowy <xref:System.Windows.Forms.Button> kontroli. Można następnie rozszerzyć lub zmodyfikować funkcje nowego formantu poprzez wdrożenie niestandardowe metody i właściwości. W niektórych kontrolek można zmienić wygląd formantu dziedziczone przez zastąpienie jej <xref:System.Windows.Forms.Control.OnPaint%2A> metody.  
@@ -23,23 +23,23 @@ Jeśli chcesz rozszerzyć funkcjonalność istniejącej kontrolki, można utworz
   
 ### <a name="to-create-an-inherited-control"></a>Aby utworzyć odziedziczoną kontrolkę  
   
-1.  Utwórz nową **aplikacja interfejsu Windows Forms** projektu.  
+1. Utwórz nową **aplikacja interfejsu Windows Forms** projektu.  
   
-2.  Z **projektu** menu, wybierz **Dodaj nowy element**.  
+2. Z **projektu** menu, wybierz **Dodaj nowy element**.  
   
      **Dodaj nowy element** pojawi się okno dialogowe.  
   
-3.  W **Dodaj nowy element** okno dialogowe, kliknij dwukrotnie **kontrolkę niestandardową**.  
+3. W **Dodaj nowy element** okno dialogowe, kliknij dwukrotnie **kontrolkę niestandardową**.  
   
      Nowy formant niestandardowy zostanie dodany do projektu.  
   
-4.  Jeśli używasz języka Visual Basic w górnej części **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki**. Rozwiń CustomControl1.vb, a następnie otwórz CustomControl1.Designer.vb w edytorze kodu.  
+4. Jeśli używasz języka Visual Basic w górnej części **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki**. Rozwiń CustomControl1.vb, a następnie otwórz CustomControl1.Designer.vb w edytorze kodu.  
   
-5.  Jeśli używasz języka C#, należy otworzyć CustomControl1.cs w edytorze kodu.  
+5. Jeśli używasz języka C#, należy otworzyć CustomControl1.cs w edytorze kodu.  
   
-6.  Znajdź deklaracji klasy, która dziedziczy z <xref:System.Windows.Forms.Control>.  
+6. Znajdź deklaracji klasy, która dziedziczy z <xref:System.Windows.Forms.Control>.  
   
-7.  Zmień formant, który ma być dziedziczona z klasy bazowej.  
+7. Zmień formant, który ma być dziedziczona z klasy bazowej.  
   
      Na przykład, jeśli ma być dziedziczona z <xref:System.Windows.Forms.Button>, zmień deklarację klasy następująco:  
   
@@ -52,7 +52,7 @@ Jeśli chcesz rozszerzyć funkcjonalność istniejącej kontrolki, można utworz
     public partial class CustomControl1 : System.Windows.Forms.Button  
     ```  
   
-8.  Jeśli używasz języka Visual Basic, Zapisz i zamknij CustomControl1.Designer.vb. Otwórz CustomControl1.vb w edytorze kodu.  
+8. Jeśli używasz języka Visual Basic, Zapisz i zamknij CustomControl1.Designer.vb. Otwórz CustomControl1.vb w edytorze kodu.  
   
 9. Implementowanie niestandardowych metod dowolnej właściwości, które będą zawierały kontrolki.  
   

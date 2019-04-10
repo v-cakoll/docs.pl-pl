@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840929"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308565"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Przewodnik: Obsługa zdarzeń (Visual Basic)
 Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwszy temat [instruktażu: Deklarujący i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarować i wywoływać zdarzenia. Ta sekcja używa formularza i klasy z tego przewodnika, aby pokazują, jak obsługiwać zdarzenia w przypadku mogą mieć miejsce.  
@@ -23,7 +23,7 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Aby obsłużyć zdarzenie PercentDone klasy elementu Widget  
   
-1.  Umieść następujący kod w `Form1`:  
+1. Umieść następujący kod w `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
   
 #### <a name="to-handle-an-event"></a>Aby obsłużyć zdarzenie  
   
-1.  Wybierz `mWidget` na liście rozwijanej po lewej stronie w **Edytor kodu**.  
+1. Wybierz `mWidget` na liście rozwijanej po lewej stronie w **Edytor kodu**.  
   
-2.  Wybierz `PercentDone` zdarzenie z listy po prawej listy rozwijanej. **Edytor kodu** otwiera `mWidget_PercentDone` procedury zdarzenia.  
+2. Wybierz `PercentDone` zdarzenie z listy po prawej listy rozwijanej. **Edytor kodu** otwiera `mWidget_PercentDone` procedury zdarzenia.  
   
     > [!NOTE]
     >  **Edytor kodu** jest przydatna, ale nie jest to wymagane, do wstawiania nowych programów obsługi zdarzeń. W tym instruktażu jest bardziej bezpośrednie, aby po prostu skopiować procedury obsługi zdarzeń bezpośrednio w kodzie.  
   
-3.  Dodaj następujący kod do `mWidget_PercentDone` program obsługi zdarzeń:  
+3. Dodaj następujący kod do `mWidget_PercentDone` program obsługi zdarzeń:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Zawsze, gdy `PercentDone` zdarzenie jest zgłaszane, procedura zdarzenia Wyświetla procent wykonania w `Label` kontroli. `DoEvents` Metoda umożliwia etykiety do odświeżenia, a także zapewnia możliwość kliknij **anulować** przycisku.  
   
-4.  Dodaj następujący kod do `Button2_Click` program obsługi zdarzeń:  
+4. Dodaj następujący kod do `Button2_Click` program obsługi zdarzeń:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Aby utworzyć obiekt i przypisać odwołanie do niej  
   
-1.  Wybierz **(formularz Form1 zdarzenia)** na liście rozwijanej po lewej stronie w **Edytor kodu**.  
+1. Wybierz **(formularz Form1 zdarzenia)** na liście rozwijanej po lewej stronie w **Edytor kodu**.  
   
-2.  Wybierz `Load` zdarzenie z listy po prawej listy rozwijanej. **Edytor kodu** otwiera `Form1_Load` procedury zdarzenia.  
+2. Wybierz `Load` zdarzenie z listy po prawej listy rozwijanej. **Edytor kodu** otwiera `Form1_Load` procedury zdarzenia.  
   
-3.  Dodaj następujący kod do `Form1_Load` procedurę zdarzeń w celu utworzenia `Widget`:  
+3. Dodaj następujący kod do `Form1_Load` procedurę zdarzeń w celu utworzenia `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ Jest to drugi dwa tematy, które pokazują sposób pracy ze zdarzeniami. Pierwsz
   
 #### <a name="to-run-the-program"></a>Aby uruchomić program  
   
-1.  Naciśnij klawisz F5, aby przełączyć projekt w trybie uruchamiania.  
+1. Naciśnij klawisz F5, aby przełączyć projekt w trybie uruchamiania.  
   
-2.  Kliknij przycisk **Rozpocznij zadanie** przycisku. Każdorazowo `PercentDone` zdarzenie jest zgłaszane, etykieta zostanie zaktualizowana przy użyciu procent wykonania zadania.  
+2. Kliknij przycisk **Rozpocznij zadanie** przycisku. Każdorazowo `PercentDone` zdarzenie jest zgłaszane, etykieta zostanie zaktualizowana przy użyciu procent wykonania zadania.  
   
-3.  Kliknij przycisk **anulować** przycisk, aby zatrzymać zadanie. Należy zauważyć, że wygląd **anulować** natychmiast po kliknięciu przycisku nie powoduje zmiany. `Click` Zdarzeń nie może się zdarzyć, dopóki `My.Application.DoEvents` instrukcji umożliwia przetwarzanie zdarzeń.  
+3. Kliknij przycisk **anulować** przycisk, aby zatrzymać zadanie. Należy zauważyć, że wygląd **anulować** natychmiast po kliknięciu przycisku nie powoduje zmiany. `Click` Zdarzeń nie może się zdarzyć, dopóki `My.Application.DoEvents` instrukcji umożliwia przetwarzanie zdarzeń.  
   
     > [!NOTE]
     >  `My.Application.DoEvents` Metody nie przetwarza zdarzeń w taki sam sposób jak formularz. Na przykład, w tym przewodniku należy kliknij **anulować** podwójnie. Aby zezwolić na formularzu do obsługi zdarzeń bezpośrednio, możesz użyć wielowątkowości. Aby uzyskać więcej informacji, zobacz [zarządzana wątkowość](../../../../standard/threading/index.md).

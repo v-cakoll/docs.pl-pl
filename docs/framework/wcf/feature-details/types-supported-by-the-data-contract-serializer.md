@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: e61d257f9503d95764a5d1f6374d6e2a216fceaa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c532858ba3b93d427e5c0455f953db2499ebd6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072548"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Typy obsługiwane przez serializator kontraktu danych
 Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization.DataContractSerializer> jako jego domyślny mechanizm serializacji do konwertowania danych do formatu XML i konwertowania XML do danych. <xref:System.Runtime.Serialization.DataContractSerializer> Zaprojektowano w celu serializacji *kontraktu danych* typów. Obsługuje jednak wiele innych typów, które mogą być uważane za zawierające kontraktu danych niejawnych. Poniżej przedstawiono pełną listę typów, które można wykonywać serializację:  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization
   
 -   Typy oznaczone <xref:System.SerializableAttribute> atrybutu. Wiele typów objęte [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy podstawowej biblioteki należą do tej kategorii. <xref:System.Runtime.Serialization.DataContractSerializer> Tej serializacji model programowania, który został użyty przez wywołaniem funkcji zdalnych .NET Framework, w pełni obsługuje <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>i <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, łącznie z obsługą <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
--   Typy, które reprezentują pierwotne XML lub typy, które reprezentują [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] opartego na danych relacyjnych. <xref:System.Xml.XmlElement> Tablicę <xref:System.Xml.XmlNode> typy są obsługiwane jako sposób reprezentowania XML bezpośrednio. Ponadto typami, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu są obsługiwane, w tym powiązane <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu, a <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> typów. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataTable> Typu i <xref:System.Data.DataSet> typu (a także typizowanych klas pochodnych) implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejs i nadają się do tej kategorii. Aby uzyskać więcej informacji, zobacz [typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
+-   Typy, które reprezentują pierwotne XML lub typy, które reprezentują [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] opartego na danych relacyjnych. <xref:System.Xml.XmlElement> Tablicę <xref:System.Xml.XmlNode> typy są obsługiwane jako sposób reprezentowania XML bezpośrednio. Ponadto typami, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu są obsługiwane, w tym powiązane <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> atrybutu, a <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> typów. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> Typu i <xref:System.Data.DataSet> typu (a także typizowanych klas pochodnych) implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejs i nadają się do tej kategorii. Aby uzyskać więcej informacji, zobacz [typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>Tryb zaufania ograniczenia przy użyciu określonych typów w częściowym  
  Poniżej przedstawiono listę ograniczeń, korzystając z określonych typów w scenariuszach tryb częściowej relacji zaufania:  
@@ -68,6 +68,7 @@ Windows Communication Foundation (WCF) używa <xref:System.Runtime.Serialization
 -   <xref:System.DBNull> Typu jest traktowana w specjalny sposób. Jest to typ pojedyncze i po deserializacji deserializacji stosuje się do ograniczeń pojedyncze i wszystkie punkty `DBNull` odwołania do pojedyncze wystąpienie. Ponieważ `DBNull` jest możliwy do serializacji typów, zażąda on <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> uprawnień.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)
 - [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Typy z możliwością serializowania](../../../../docs/framework/wcf/feature-details/serializable-types.md)

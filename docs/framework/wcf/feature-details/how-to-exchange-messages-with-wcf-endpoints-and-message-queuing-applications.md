@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: 7fdcebe7ab9ee82a7283add9e0200af2ea5c94bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7463f9cfc37c2bf4f271f6e59896a7d77f3f65cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310309"
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów
 Istniejące aplikacje usługi kolejkowania komunikatów (MSMQ) można zintegrować z aplikacjami Windows Communication Foundation (WCF), przy użyciu powiązanie integracji usługi MSMQ na Konwertowanie wiadomości usługi MSMQ komunikatów WCF. Dzięki temu można wywoływać z aplikacji odbiornika usługi MSMQ z klientów programu WCF, a także wywoływać usługi WCF z usługi MSMQ nadawcy aplikacji.  
@@ -23,38 +23,38 @@ Istniejące aplikacje usługi kolejkowania komunikatów (MSMQ) można zintegrowa
   
 ### <a name="to-create-a-wcf-service-that-receives-messages-from-a-msmq-client"></a>Aby utworzyć usługę WCF, która odbiera komunikaty z klienta usługi MSMQ  
   
-1.  Zdefiniuj interfejs, który definiuje kontrakt usługi dla usługi WCF, która odbiera komunikaty w kolejce z usługi MSMQ aplikacji nadawcy, jak pokazano w poniższym przykładowym kodzie.  
+1. Zdefiniuj interfejs, który definiuje kontrakt usługi dla usługi WCF, która odbiera komunikaty w kolejce z usługi MSMQ aplikacji nadawcy, jak pokazano w poniższym przykładowym kodzie.  
   
      [!code-csharp[S_MsmqToWcf#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#1)]
      [!code-vb[S_MsmqToWcf#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#1)]  
   
-2.  Zaimplementuj interfejs i zastosować <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutów do klasy, jak pokazano w poniższym przykładowym kodzie.  
+2. Zaimplementuj interfejs i zastosować <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutów do klasy, jak pokazano w poniższym przykładowym kodzie.  
   
      [!code-csharp[S_MsmqToWcf#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmqtowcf/cs/service.cs#2)]
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
-3.  Utwórz plik konfiguracji, który określa <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
+3. Utwórz plik konfiguracji, który określa <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
 
-4.  Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> obiektu, który używa skonfigurowanego powiązania.  
+4. Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> obiektu, który używa skonfigurowanego powiązania.  
 
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>Aby utworzyć klienta WCF, która wysyła komunikaty do aplikacji odbiornika usługi MSMQ  
   
-1.  Zdefiniuj interfejs, który definiuje kontrakt usługi dla klienta WCF, wysyła wiadomości, do odbiorcy usługi MSMQ w kolejce, jak pokazano w poniższym przykładowym kodzie.  
+1. Zdefiniuj interfejs, który definiuje kontrakt usługi dla klienta WCF, wysyła wiadomości, do odbiorcy usługi MSMQ w kolejce, jak pokazano w poniższym przykładowym kodzie.  
   
      [!code-csharp[S_WcfToMsmq#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/proxy.cs#6)]
      [!code-vb[S_WcfToMsmq#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/proxy.vb#6)]  
   
-2.  Zdefiniuj klasę klienta używanego przez klienta programu WCF do wywoływania odbiornika usługi MSMQ.  
+2. Zdefiniuj klasę klienta używanego przez klienta programu WCF do wywoływania odbiornika usługi MSMQ.  
   
      [!code-csharp[S_WcfToMsmq#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#2)]
      [!code-vb[S_WcfToMsmq#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#2)]  
   
-3.  Utwórz konfigurację, która określa użycie powiązania MsmqIntegrationBinding.  
+3. Utwórz konfigurację, która określa użycie powiązania MsmqIntegrationBinding.  
   
      [!code-csharp[S_WcfToMsmq#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/snippets.cs#3)]
      [!code-vb[S_WcfToMsmq#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_wcftomsmq/vb/snippets.vb#3)]  
   
-4.  Utwórz wystąpienie klasy klienta i wywołanie metody zdefiniowane za pomocą wiadomości Odbieranie usługi.  
+4. Utwórz wystąpienie klasy klienta i wywołanie metody zdefiniowane za pomocą wiadomości Odbieranie usługi.  
   
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   

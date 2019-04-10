@@ -12,12 +12,12 @@ helpviewer_keywords:
 - installutil.exe tool
 ms.assetid: c89c5169-f567-4305-9d62-db31a1de5481
 author: ghogen
-ms.openlocfilehash: c4eb1e5fd0c0b06f332b1eba7d3445963699415c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0119fee443aafd1d4215260d2cf42cec9f7eba74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308474"
 ---
 # <a name="how-to-install-and-uninstall-windows-services"></a>Instrukcje: Instalowanie i odinstalowywanie usług Windows
 Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można szybko zainstalować usługi app service przy użyciu [ *InstallUtil.exe* ](../tools/installutil-exe-installer-tool.md) narzędzie wiersza polecenia. Deweloperzy, którzy mają być wersji usług Windows, które użytkownicy mogą instalować i odinstalowywać należy używać programu InstallShield. Aby uzyskać więcej informacji, zobacz [Utwórz pakiet Instalatora (systemu Windows Windows client)](https://docs.microsoft.com/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-client).
@@ -34,13 +34,13 @@ Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można s
   
 ### <a name="install-your-service-manually"></a>Ręcznie zainstalować usługę  
   
-1.  Z **Start** menu, wybierz opcję **programu Visual Studio \< *wersji* >**  katalogu, a następnie wybierz opcję **wiersz polecenia dla deweloperów dla programu VS \< *wersji*>**.
+1. Z **Start** menu, wybierz opcję **programu Visual Studio \< *wersji* >**  katalogu, a następnie wybierz opcję **wiersz polecenia dla deweloperów dla programu VS \< *wersji*>**.
   
      Pojawi się wiersz polecenia dla deweloperów programu Visual Studio. 
   
-2.  Dostęp do katalogu, w którym znajduje się plik wykonywalny projektu.  
+2. Dostęp do katalogu, w którym znajduje się plik wykonywalny projektu.  
   
-3.  Uruchom *InstallUtil.exe* polecenia w pliku wykonywalnego jako parametr wiersza z projektem:  
+3. Uruchom *InstallUtil.exe* polecenia w pliku wykonywalnego jako parametr wiersza z projektem:  
   
     ```console
     installutil <yourproject>.exe  
@@ -58,7 +58,7 @@ Jeśli opracowujesz usługi Windows za pomocą programu .NET Framework, można s
   
      Pojawi się wiersz polecenia dla deweloperów programu Visual Studio.  
   
-2.  Uruchom *InstallUtil.exe* w wierszu polecenia z danymi wyjściowymi projektu jako parametr:  
+2. Uruchom *InstallUtil.exe* w wierszu polecenia z danymi wyjściowymi projektu jako parametr:  
   
     ```console  
     installutil /u <yourproject>.exe  

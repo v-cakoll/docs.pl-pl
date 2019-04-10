@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189316"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304741"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -35,10 +35,9 @@ ms.locfileid: "59189316"
   
  Jeśli <xref:System.Windows.Forms.DataGrid> jest powiązany z danymi z wielu powiązanych tabel i włączenie nawigacyjne siatki siatki będą wyświetlane ekspanderów znajdujących w każdym wierszu. Ekspander użytkownika umożliwia przeniesienie z tabeli nadrzędnej do tabeli podrzędnej. Kliknięcie węzła wyświetla tabeli podrzędnej oraz kliknięcie przycisku Wstecz oryginalnej tabeli nadrzędnej. W ten sposób Siatka wyświetla hierarchiczne relacje między tabelami.  
   
- Poniższy zrzut ekranu pokazuje, że elementem DataGrid powiązany z danymi z wielu tabel.  
+ Poniższy zrzut ekranu pokazuje, że elementem DataGrid powiązany z danymi z wielu tabel:  
   
- ![DataGrid powiązany z danymi z wielu tabel](./media/vbcontrol1.gif "vbControl1")  
-DataGrid, powiązane z danymi z wielu tabel  
+ ![Aplikacja WinForms, wyświetlanie elementu DataGrid powiązany z danymi z wielu tabel.](./media/datagrid-control-overview-windows-forms/datagrid-bound-multiple-tables.gif)  
   
  <xref:System.Windows.Forms.DataGrid> Może zapewnić interfejsu użytkownika dla zestawu danych, nawigację między powiązanymi tabelami i rozbudowane, formatowania i edycji możliwości.  
   
@@ -94,15 +93,16 @@ DataGrid, powiązane z danymi z wielu tabel
   
  Gdy <xref:System.Windows.Forms.DataGrid> kontroli jest wyświetlanie tabeli i <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> właściwość jest ustawiona na `true`, dane mogą mieć zastosowanie, klikając nagłówki kolumn. Użytkownik może również dodawanie wierszy i edytować komórek.  
   
- Relacje między tabelami są widoczne dla użytkowników przy użyciu struktury nadrzędny/podrzędny nawigacji. Tabele są najwyższy poziom danych, a tabele podrzędne są tymi tabelami danych, które są uzyskiwane z poszczególnych ofert w tabelach nadrzędnej. Ekspanderów znajdujących są wyświetlane w każdym wierszu nadrzędnego, który zawiera tabeli podrzędnej. Kliknięcie przycisku ekspandera generuje listę łączy stylu sieci Web do tabel podrzędnych. Gdy użytkownik wybierze link, zostanie wyświetlona tabela podrzędna. Klikając ikonę Pokaż/Ukryj wiersze nadrzędnego (![Pokaż&#47;ukryć ikony wierszy nadrzędnego](./media/vbicon.gif "vbIcon")) będzie ukryć informacje dotyczące tabeli nadrzędnej lub spowodować, że pojawią się ponownie, jeśli użytkownik wcześniej została ukryta. Użytkownik może kliknąć przycisk Wstecz, aby powrócić do poprzednio czytanego tabeli.  
+ Relacje między tabelami są widoczne dla użytkowników przy użyciu struktury nadrzędny/podrzędny nawigacji. Tabele są najwyższy poziom danych, a tabele podrzędne są tymi tabelami danych, które są uzyskiwane z poszczególnych ofert w tabelach nadrzędnej. Ekspanderów znajdujących są wyświetlane w każdym wierszu nadrzędnego, który zawiera tabeli podrzędnej. Kliknięcie przycisku ekspandera generuje listę łączy stylu sieci Web do tabel podrzędnych. Gdy użytkownik wybierze link, zostanie wyświetlona tabela podrzędna. Pokaż/Ukryj nadrzędnego wierszy ikonę (kliknięcie![Pokaż/Ukryj ikona wierszy nadrzędnego](./media/datagrid-control-overview-windows-forms/show-hide-parent-rows.gif)) będzie ukryć informacje dotyczące tabeli nadrzędnej lub spowodować, że pojawią się ponownie, jeśli użytkownik wcześniej została ukryta. Użytkownik może kliknąć przycisk Wstecz, aby powrócić do poprzednio czytanego tabeli.  
   
 ## <a name="columns-and-rows"></a>Kolumnami i wierszami  
  <xref:System.Windows.Forms.DataGrid> Składa się z kolekcją <xref:System.Windows.Forms.DataGridTableStyle> obiekty, które są zawarte w <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości. Styl tabeli, który może zawierać zbiór <xref:System.Windows.Forms.DataGridColumnStyle> obiekty, które są zawarte w <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>... Możesz edytować <xref:System.Windows.Forms.DataGrid.TableStyles%2A> i <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości przy użyciu edytory kolekcji udostępniane za pośrednictwem **właściwości** okna.  
   
  Wszelkie <xref:System.Windows.Forms.DataGridTableStyle> skojarzone z <xref:System.Windows.Forms.DataGrid> kontroli jest możliwy za pośrednictwem <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> Mogą być edytowane w Projektancie z <xref:System.Windows.Forms.DataGridTableStyle> Edytor kolekcji lub programowo za pomocą <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości.  
-  
- ![Obiektów uwzględnionych w formancie DataGrid](./media/vbcolumns1.gif "vbColumns1")  
-Poniższa ilustracja przedstawia obiektów uwzględnionych w formancie DataGrid.  
+
+ Poniższa ilustracja przedstawia obiektów uwzględnionych w formancie DataGrid:
+
+ ![Diagram przedstawiający obiektów uwzględnionych w formancie DataGrid.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
  Style tabeli i kolumn, które są synchronizowane z <xref:System.Data.DataTable> obiektów i <xref:System.Data.DataColumn> obiektów, ustawiając ich `MappingName` właściwości do odpowiednich <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataColumn.ColumnName%2A> właściwości. Gdy <xref:System.Windows.Forms.DataGridTableStyle> , nie ma kolumny style zostanie dodany do <xref:System.Windows.Forms.DataGrid> formant powiązany z poprawnego źródła danych i <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość stylu tabeli jest ustawiona na prawidłową <xref:System.Data.DataTable.TableName%2A> właściwość, zbiór <xref:System.Windows.Forms.DataGridColumnStyle> obiektów jest tworzony w tym Styl tabeli. Dla każdego <xref:System.Data.DataColumn> w <xref:System.Data.DataTable.Columns%2A> zbiór <xref:System.Data.DataTable>, odpowiedni <xref:System.Windows.Forms.DataGridColumnStyle> jest dodawany do <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Kolumny można dodać lub usunąć z przy użyciu siatki <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> lub <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metody <xref:System.Windows.Forms.GridColumnStylesCollection>. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie tabel i kolumn do Windows formantu DataGrid formularzy](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) i [jak: Usuwanie lub ukrywanie kolumn w Windows formantu DataGrid formularzy](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102235"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294928"
 ---
 # <a name="white-space-processing-in-xaml"></a>Przetwarzanie spacji w XAML
 Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie opisano te reguły języka XAML. Również dokumenty obsługi dodatkowe biały znak, który jest definiowany przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML i zapisywania XAML do serializacji.  
@@ -25,15 +25,15 @@ Stan reguły języka XAML, że znaczące biały znak muszą zostać przetworzone
 ## <a name="white-space-normalization"></a>Normalizacji biały znak —  
  Domyślnie następujące normalizacji biały znak — występuje gdy [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesów procesora [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] pliku:  
   
-1.  Znaki wysuwu wiersza między znaki wschodnioazjatyckie są usuwane. Zobacz sekcję "Znaki wschodnioazjatyckie" w dalszej części tego tematu dla definicji tego terminu.  
+1. Znaki wysuwu wiersza między znaki wschodnioazjatyckie są usuwane. Zobacz sekcję "Znaki wschodnioazjatyckie" w dalszej części tego tematu dla definicji tego terminu.  
   
-2.  Wszystkie znaki odstępu (spacja, wysuw wiersza, karta) są konwertowane na miejsca do magazynowania.  
+2. Wszystkie znaki odstępu (spacja, wysuw wiersza, karta) są konwertowane na miejsca do magazynowania.  
   
-3.  Wszystkich następujących po sobie spacji są usunięty i zastąpiony przez jedną spację.  
+3. Wszystkich następujących po sobie spacji są usunięty i zastąpiony przez jedną spację.  
   
-4.  Odstęp natychmiast po tagu początkowego jest usuwany.  
+4. Odstęp natychmiast po tagu początkowego jest usuwany.  
   
-5.  Miejsce, od razu, przed usunięciem tagu końcowego.  
+5. Miejsce, od razu, przed usunięciem tagu końcowego.  
   
  "Domyślna" odnosi się do stanu wskazywane przez wartość domyślną [XML: Space](xml-space-handling-in-xaml.md) atrybutu.  
   

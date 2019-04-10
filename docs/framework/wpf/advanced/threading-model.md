@@ -18,20 +18,18 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200353"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Służy do zapisywania deweloperów trudności wątkowości. W rezultacie, większość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] deweloperzy nie będą musieli napisać interfejs, który korzysta z więcej niż jeden wątek. Ponieważ złożonej i trudnej do debugowania programów wielowątkowych, należy ich unikać gdy istnieje jednowątkowe rozwiązania.  
   
  Niezależnie od tego, jak dobrze zaprojektowana, jednak nie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] framework nigdy nie będą mogli stanowią rozwiązanie jednowątkowe dla każdego rodzaju problemu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pochodzi Zamknij, ale nadal istnieją sytuacje, gdy wiele wątków poprawić [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] wydajności aplikacji lub czas odpowiedzi. Po omówieniu niektóre materiały tła, w tym dokumencie analizuje niektóre z tych sytuacji, a następnie uzna, za pomocą dyskusję na temat niektórych informacji niższego poziomu.  
-  
 
-  
 > [!NOTE]
 >  W tym temacie omówiono wielowątkowości za pomocą <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> metodę wywołania asynchroniczne. Asynchroniczne wywołania można również ustawić, wywołując <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> metody, która zająć <xref:System.Action> lub <xref:System.Func%601> jako parametr.  <xref:System.Windows.Threading.Dispatcher.InvokeAsync%2A> Metoda zwraca <xref:System.Windows.Threading.DispatcherOperation> lub <xref:System.Windows.Threading.DispatcherOperation%601>, który ma <xref:System.Windows.Threading.DispatcherOperation.Task%2A> właściwości. Możesz użyć `await` — słowo kluczowe z oboma <xref:System.Windows.Threading.DispatcherOperation> lub skojarzonego <xref:System.Threading.Tasks.Task>. Jeśli musisz czekać synchronicznie <xref:System.Threading.Tasks.Task> zwracanym przez <xref:System.Windows.Threading.DispatcherOperation> lub <xref:System.Windows.Threading.DispatcherOperation%601>, wywołaj <xref:System.Windows.Threading.TaskExtensions.DispatcherOperationWait%2A> — metoda rozszerzenia.  Wywoływanie <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> spowoduje zakleszczenia. Aby uzyskać więcej informacji o korzystaniu z <xref:System.Threading.Tasks.Task> do wykonywania operacji asynchronicznych, zobacz równoległość zadań.  <xref:System.Windows.Threading.Dispatcher.Invoke%2A> Metoda ta ma również przeciążeń, które przyjmują <xref:System.Action> lub <xref:System.Func%601> jako parametr.  Możesz użyć <xref:System.Windows.Threading.Dispatcher.Invoke%2A> synchroniczne metody wywołania, przekazując delegata, <xref:System.Action> lub <xref:System.Func%601>.  
   
@@ -99,7 +97,7 @@ ms.locfileid: "58125684"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- Ta metoda sprawdza, czy najbliższej nieparzystej liczby pierwsze. Jeśli jest zainicjowanie, metoda bezpośrednio aktualizuje `bigPrime` <xref:System.Windows.Controls.TextBlock> aby odzwierciedlić ich odnajdywania. Możemy to zrobić, ponieważ obliczenie jest wykonywane w tym samym wątku, który został użyty do utworzenia składnika. Firma Microsoft wybierze użyć oddzielnego wątku do obliczenia, firma Microsoft musiałaby używany był mechanizm synchronizacji bardziej skomplikowane i wykonać aktualizację w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Następnie zademonstrujemy tę sytuację.  
+ Ta metoda sprawdza, czy najbliższej nieparzystej liczby pierwsze. Jeśli jest zainicjowanie, metoda bezpośrednio aktualizuje `bigPrime`<xref:System.Windows.Controls.TextBlock> aby odzwierciedlić ich odnajdywania. Możemy to zrobić, ponieważ obliczenie jest wykonywane w tym samym wątku, który został użyty do utworzenia składnika. Firma Microsoft wybierze użyć oddzielnego wątku do obliczenia, firma Microsoft musiałaby używany był mechanizm synchronizacji bardziej skomplikowane i wykonać aktualizację w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Następnie zademonstrujemy tę sytuację.  
   
  Aby uzyskać pełnego kodu źródłowego dla tego przykładu, zobacz [Single-Threaded aplikacji z przykładem obliczania długotrwałych](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -145,7 +143,7 @@ ms.locfileid: "58125684"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Eksplorator działa w ten sposób. Każde nowe okno Eksploratora należy do oryginalnego proces, ale jest tworzona pod kontrolą, niezależnie od wątku.  
   
- Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> kontrolki, można też wyświetlać stron sieci Web. Firma Microsoft można łatwo utworzyć prostą [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] zastąpienia. Rozpoczniemy pracę ważną funkcją: możliwości, aby otworzyć nowe okno Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno" przycisk, możemy uruchomić kopię naszych okna w oddzielnym wątku. W ten sposób operacji długotrwałych lub blokowania w jednym z systemu windows nie będzie blokować inne okna.  
+ Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> kontrolki, można też wyświetlać stron sieci Web. Firma Microsoft można łatwo utworzyć prostą [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] zastąpienia. Rozpoczniemy pracę ważną funkcją: możliwości, aby otworzyć nowe okno Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno" przycisk, możemy uruchomić kopię naszych okna w oddzielnym wątku. W ten sposób operacji długotrwałych lub blokowania w jednym z systemu windows nie będzie blokować inne okna.  
   
  W rzeczywistości modelu przeglądarki sieci Web ma swój własny skomplikowany model wątkowości. Wybraliśmy on, ponieważ powinna być znane większość odbiorców.  
   
@@ -218,4 +216,5 @@ ms.locfileid: "58125684"
  Zadanie dotyczące [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest unikanie nieoczekiwanych wielobieżność bez ponownym wprowadzeniem przeciek pamięci, dlatego firma Microsoft nie blokują współużytkowania wątkowości w dowolnym miejscu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Aplikacja jednowątkowa z przykładem obliczania długotrwałych](https://go.microsoft.com/fwlink/?LinkID=160038)

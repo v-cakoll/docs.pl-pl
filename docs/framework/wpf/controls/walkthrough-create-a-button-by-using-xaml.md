@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309501"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Przewodnik: Tworzenie przycisku przy użyciu języka XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do użycia w aplikacji Windows Presentation Foundation (WPF). W tym przewodniku używa szablonu i style w celu utworzenia zasobu dostosowany przycisk, który umożliwia oddzielenie logiki przycisk od deklaracji przycisku i ponowne użycie kodu. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -26,11 +26,11 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Aby utworzyć nowy projekt WPF i dodać przyciski do okna  
   
-1.  Uruchom program Visual Studio.  
+1. Uruchom program Visual Studio.  
   
-2.  **Utwórz nowy projekt WPF:** Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**. Znajdź **Windows aplikacji (WPF)** szablonu i nazwy projektu "AnimatedButton". Spowoduje to utworzenie szkielet dla aplikacji.  
+2. **Utwórz nowy projekt WPF:** Na **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**. Znajdź **Windows aplikacji (WPF)** szablonu i nazwy projektu "AnimatedButton". Spowoduje to utworzenie szkielet dla aplikacji.  
   
-3.  **Dodaj przyciski podstawowe domyślne:** Wszystkie pliki potrzebne w tym przewodniku znajdują się w szablonie. Otwórz plik Window1.xaml, klikając go dwukrotnie w Eksploratorze rozwiązań. Domyślnie jest <xref:System.Windows.Controls.Grid> element Window1.xaml. Usuń <xref:System.Windows.Controls.Grid> elementu i kilku przycisków, aby dodać [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] strony, wpisując lub skopiować i wkleić następujący wyróżniony kod do Window1.xaml:  
+3. **Dodaj przyciski podstawowe domyślne:** Wszystkie pliki potrzebne w tym przewodniku znajdują się w szablonie. Otwórz plik Window1.xaml, klikając go dwukrotnie w Eksploratorze rozwiązań. Domyślnie jest <xref:System.Windows.Controls.Grid> element Window1.xaml. Usuń <xref:System.Windows.Controls.Grid> elementu i kilku przycisków, aby dodać [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] strony, wpisując lub skopiować i wkleić następujący wyróżniony kod do Window1.xaml:  
   
     ```xaml  
     <Window x:Class="AnimatedButton.Window1"  
@@ -58,7 +58,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
 #### <a name="to-use-styles-to-set-basic-properties-on-the-buttons"></a>Aby używać stylów do ustawiania właściwości podstawowe na przyciskach  
   
-1.  **Zdefiniuj blokiem Application.Resources:** Otwórz pliku app.xaml i Dodaj następujący wyróżniony kod znaczników, jeśli nie jest już istnieje:  
+1. **Zdefiniuj blokiem Application.Resources:** Otwórz pliku app.xaml i Dodaj następujący wyróżniony kod znaczników, jeśli nie jest już istnieje:  
   
     ```xaml  
     <Application x:Class="AnimatedButton.App"  
@@ -74,7 +74,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Zakres zasobów jest określana przez gdy zdefiniujesz zasób. Definiowanie zasobów w `Application.Resources` w pliku app.xaml plik umożliwia zasobów do użycia w dowolnym miejscu w aplikacji. Aby dowiedzieć się więcej na temat definiowania zakresu zasobów, zobacz [zasoby XAML](../advanced/xaml-resources.md).  
   
-2.  **Tworzenie stylu i definiować wartości właściwości podstawowe z nią:** Dodaj następujący kod do `Application.Resources` bloku. Ten kod znaczników tworzy <xref:System.Windows.Style> która odnosi się do wszystkich przycisków w aplikacji, ustawienie <xref:System.Windows.FrameworkElement.Width%2A> przycisków do 90 i <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
+2. **Tworzenie stylu i definiować wartości właściwości podstawowe z nią:** Dodaj następujący kod do `Application.Resources` bloku. Ten kod znaczników tworzy <xref:System.Windows.Style> która odnosi się do wszystkich przycisków w aplikacji, ustawienie <xref:System.Windows.FrameworkElement.Width%2A> przycisków do 90 i <xref:System.Windows.FrameworkElement.Margin%2A> 10:  
   
     ```xaml  
     <Application.Resources>  
@@ -91,7 +91,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Jest znacznie więcej możliwości style, tym na różne sposoby, aby dostroić, które obiekty są stosowane, określając wartości właściwości złożonej i nawet przy użyciu stylów jako dane wejściowe dla innych stylów. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](styling-and-templating.md).  
   
-3.  **Ustaw wartość właściwości stylu do zasobu:** Zasoby Włącz prosty sposób na ponowne użycie typowych zdefiniowanych obiektów i wartości. Jest to szczególnie przydatne do definiowania złożonych wartości przy użyciu zasobów, aby sprawić, że kod jest bardziej moduły. Dodaj następujący wyróżniony kod znaczników do pliku app.xaml.  
+3. **Ustaw wartość właściwości stylu do zasobu:** Zasoby Włącz prosty sposób na ponowne użycie typowych zdefiniowanych obiektów i wartości. Jest to szczególnie przydatne do definiowania złożonych wartości przy użyciu zasobów, aby sprawić, że kod jest bardziej moduły. Dodaj następujący wyróżniony kod znaczników do pliku app.xaml.  
   
     ```xaml  
     <Application.Resources>  
@@ -121,7 +121,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
 #### <a name="to-use-the-template-to-define-the-look-of-the-button"></a>Aby użyć szablonu, aby zdefiniować wyglądu przycisku  
   
-1.  **Konfigurowanie szablonu:** Ponieważ kontrolki, takie jak <xref:System.Windows.Controls.Button> mają <xref:System.Windows.Controls.Control.Template%2A> właściwości, można zdefiniować wartości właściwości szablonu, podobnie jak inne wartości właściwości ustawimy w <xref:System.Windows.Style> przy użyciu <xref:System.Windows.Setter>. Dodaj następujący wyróżniony kod znaczników do własnego stylu przycisku.  
+1. **Konfigurowanie szablonu:** Ponieważ kontrolki, takie jak <xref:System.Windows.Controls.Button> mają <xref:System.Windows.Controls.Control.Template%2A> właściwości, można zdefiniować wartości właściwości szablonu, podobnie jak inne wartości właściwości ustawimy w <xref:System.Windows.Style> przy użyciu <xref:System.Windows.Setter>. Dodaj następujący wyróżniony kod znaczników do własnego stylu przycisku.  
   
     ```xaml
     <Application.Resources>  
@@ -144,7 +144,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
     </Application.Resources>  
     ```  
   
-2.  **Instrukcja ALTER prezentacji przycisku:** W tym momencie należy zdefiniować w szablonie. Dodaj następujący wyróżniony kod znaczników. Ten kod znaczników określa dwa <xref:System.Windows.Shapes.Rectangle> elementy z zaokrąglonymi narożnikami, następuje <xref:System.Windows.Controls.DockPanel>. <xref:System.Windows.Controls.DockPanel> Służy do hosta <xref:System.Windows.Controls.ContentPresenter> przycisku. A <xref:System.Windows.Controls.ContentPresenter> Wyświetla zawartość przycisku. W tym przewodniku zawartości jest tekst ("Przycisk 1", "Button 2", "Button 3"). Wszystkie składniki szablonu (prostokątów i <xref:System.Windows.Controls.DockPanel>) są ułożone wewnątrz <xref:System.Windows.Controls.Grid>.  
+2. **Instrukcja ALTER prezentacji przycisku:** W tym momencie należy zdefiniować w szablonie. Dodaj następujący wyróżniony kod znaczników. Ten kod znaczników określa dwa <xref:System.Windows.Shapes.Rectangle> elementy z zaokrąglonymi narożnikami, następuje <xref:System.Windows.Controls.DockPanel>. <xref:System.Windows.Controls.DockPanel> Służy do hosta <xref:System.Windows.Controls.ContentPresenter> przycisku. A <xref:System.Windows.Controls.ContentPresenter> Wyświetla zawartość przycisku. W tym przewodniku zawartości jest tekst ("Przycisk 1", "Button 2", "Button 3"). Wszystkie składniki szablonu (prostokątów i <xref:System.Windows.Controls.DockPanel>) są ułożone wewnątrz <xref:System.Windows.Controls.Grid>.  
   
     ```xaml  
     <Setter.Value>  
@@ -167,7 +167,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      ![](./media/custom-button-animatedbutton-4.gif "custom_button_AnimatedButton_4")  
   
-3.  **Dodaj glasseffect do szablonu:** Następnie dodasz szkła. Najpierw należy utworzyć niektóre zasoby tworzone efekt szkła gradientu. Dodaj zasobom gradientu w dowolnym miejscu w obrębie `Application.Resources` bloku:  
+3. **Dodaj glasseffect do szablonu:** Następnie dodasz szkła. Najpierw należy utworzyć niektóre zasoby tworzone efekt szkła gradientu. Dodaj zasobom gradientu w dowolnym miejscu w obrębie `Application.Resources` bloku:  
   
     ```xaml  
     <Application.Resources>  
@@ -253,7 +253,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
 #### <a name="to-create-button-interactivity"></a>Aby utworzyć przycisk interakcyjność  
   
-1.  **Dodawanie wyzwalaczy szablonu:** Dodaj wyróżnione znaczników do szablonu.  
+1. **Dodawanie wyzwalaczy szablonu:** Dodaj wyróżnione znaczników do szablonu.  
   
     ```xaml
     <Setter.Value>  
@@ -318,7 +318,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
     </Setter.Value>  
     ```  
   
-2.  **Dodaj wyzwalacze właściwości:** Dodaj wyróżnione znaczników `ControlTemplate.Triggers` bloku:  
+2. **Dodaj wyzwalacze właściwości:** Dodaj wyróżnione znaczników `ControlTemplate.Triggers` bloku:  
   
     ```xaml
     <ControlTemplate.Triggers>  
@@ -330,7 +330,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Naciśnij klawisz F5, aby uruchomić aplikację i zobaczyć efekt, podczas uruchamiania wskaźnik myszy nad przycisków.  
   
-3.  **Dodawanie wyzwalacza koncentracji uwagi:** Następnie dodamy kilka podobnych metod ustawiających, aby obsłużyć przypadek, gdy przycisk ma fokus (na przykład po kliknięciu przez użytkownika).  
+3. **Dodawanie wyzwalacza koncentracji uwagi:** Następnie dodamy kilka podobnych metod ustawiających, aby obsłużyć przypadek, gdy przycisk ma fokus (na przykład po kliknięciu przez użytkownika).  
   
     ```xaml  
     <ControlTemplate.Triggers>  
@@ -361,7 +361,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Naciśnij klawisz F5, aby uruchomić aplikację, a następnie kliknij jeden z przycisków. Zwróć uwagę, przycisk pozostaje wyróżniony, po kliknięciu ponieważ wciąż jest ustawiony fokus. Po kliknięciu przycisku inny przycisk Nowy przycisk uzyska fokus, gdy ostatnie traci go.  
   
-4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** Następnie dodamy niektórych animacji do wyzwalaczy. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku.  
+4. **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** Następnie dodamy niektórych animacji do wyzwalaczy. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku.  
   
     ```xaml
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -398,7 +398,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
   
      Drugi wyzwalacz zdarzenia (<xref:System.Windows.UIElement.MouseLeave>) po prostu zatrzymuje pierwszy z nich. W chwili zatrzymania <xref:System.Windows.Media.Animation.Storyboard>, animowany właściwości powrócić do wartości domyślnych. W związku z tym kiedy użytkownik przesunie wskaźnik myszy poza przycisk, przycisk powraca do sposób, w jaki był, zanim wskaźnik myszy jest przesuwany nad przycisku. Aby uzyskać więcej informacji na temat animacji, zobacz [Przegląd animacja](../graphics-multimedia/animation-overview.md).  
   
-5.  **Dodawanie animacji do po kliknięciu przycisku:** Ostatnim krokiem jest dodać wyzwalacza, gdy użytkownik kliknie przycisk. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku:  
+5. **Dodawanie animacji do po kliknięciu przycisku:** Ostatnim krokiem jest dodać wyzwalacza, gdy użytkownik kliknie przycisk. Dodaj następujący kod, dowolne miejsce wewnątrz elementu `ControlTemplate.Triggers` bloku:  
   
     ```xaml
     <!-- Animation fires when button is clicked, causing glass to spin.  -->  

@@ -2,12 +2,12 @@
 title: Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294863"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Dostęp do usług WCF za pomocą aplikacji klienckiej ze Sklepu Windows
 Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te aplikacje są projektowane na podstawie interfejsem ekranie dotykowym. .NET framework 4.5 umożliwia aplikacji Windows Store do wywołania usługi WCF.  
@@ -24,31 +24,31 @@ Windows 8 wprowadzono nowy typ aplikacji o nazwie aplikacje Windows Store. Te ap
 ### <a name="supported-bindings"></a>Obsługiwane powiązania  
  Następujące powiązaniami WCF są obsługiwane w Windows Store aplikacji:  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Następujące elementy powiązania są obsługiwane w programie Windows Store aplikacji  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>Serializacja  
  Następujące serializatory są obsługiwane w aplikacjach Windows Store:  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write(DateTime) teraz zapisuje obiekt daty/godziny jako ciąg.  
@@ -120,21 +120,21 @@ Następujące tryby zabezpieczeń są obsługiwane w aplikacjach Windows Store:
   
 Następujące typy poświadczeń klienta są obsługiwane w aplikacjach Windows Store:
   
-1.  Brak  
+1. Brak  
   
-2.  Podstawowy  
+2. Podstawowy  
   
-3.  Podsumowanie  
+3. Podsumowanie  
   
-4.  Negotiate  
+4. Negotiate  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  Nazwa użytkownika (zabezpieczenia komunikatów)  
+7. Nazwa użytkownika (zabezpieczenia komunikatów)  
   
-8.  Windows (zabezpieczenia transportu)  
+8. Windows (zabezpieczenia transportu)  
   
  Do uzyskania dostępu i wysyłać domyślne poświadczenia Windows przy użyciu aplikacji Windows Store, należy włączyć tę funkcję w pliku Package.appmanifest. Otwórz ten plik i wybierz kartę funkcji wybierz pozycję "Domyślne poświadczenia Windows". Umożliwia aplikacji łączenie się z zasobami w sieci intranet, które wymagają podania poświadczeń domeny.  
   
@@ -144,11 +144,11 @@ Następujące typy poświadczeń klienta są obsługiwane w aplikacjach Windows 
 ### <a name="misc"></a>Różne  
  Użyj następujących klas jest obsługiwana dla Windows Store aplikacji:  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>Definiowanie kontraktów usług  
  Firma Microsoft zaleca tylko Definiowanie operacji asynchronicznej usługi za pomocą wzorca asynchronicznego opartego na zadaniach. Dzięki temu aplikacje Windows Store nadal odpowiadać podczas wywoływania operacji usługi.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301298"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
@@ -27,17 +27,17 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>Aby utworzyć interfejs użytkownika programu Outlook stylu w czasie projektowania  
   
-1.  Utwórz nowy projekt aplikacji Windows (**pliku** > **New** > **projektu** > **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
+1. Utwórz nowy projekt aplikacji Windows (**pliku** > **New** > **projektu** > **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
   
-2.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza. W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.SplitContainer.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.   
+2. Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza. W oknie **Właściwości** ustaw właściwość <xref:System.Windows.Forms.SplitContainer.Dock%2A> na <xref:System.Windows.Forms.DockStyle.Fill>.   
   
-3.  Przeciągnij <xref:System.Windows.Forms.TreeView> z kontrolować **przybornika** do panelu po lewej stronie <xref:System.Windows.Forms.SplitContainer> kontroli. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Left> , klikając w panelu po lewej stronie ekranu, w edytorze wartości wyświetlane po kliknięciu strzałki w dół.  
+3. Przeciągnij <xref:System.Windows.Forms.TreeView> z kontrolować **przybornika** do panelu po lewej stronie <xref:System.Windows.Forms.SplitContainer> kontroli. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Left> , klikając w panelu po lewej stronie ekranu, w edytorze wartości wyświetlane po kliknięciu strzałki w dół.  
   
-4.  Przeciągnij kolejny <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika**; umieść go w panelu po prawej stronie <xref:System.Windows.Forms.SplitContainer> formant został dodany do formularza. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Fill> i <xref:System.Windows.Forms.SplitContainer.Orientation%2A> właściwość <xref:System.Windows.Forms.Orientation.Horizontal>.  
+4. Przeciągnij kolejny <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika**; umieść go w panelu po prawej stronie <xref:System.Windows.Forms.SplitContainer> formant został dodany do formularza. W **właściwości** oknie <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwości <xref:System.Windows.Forms.DockStyle.Fill> i <xref:System.Windows.Forms.SplitContainer.Orientation%2A> właściwość <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
-5.  Przeciągnij <xref:System.Windows.Forms.ListView> z kontrolować **przybornika** na górnym panelu drugi <xref:System.Windows.Forms.SplitContainer> formant został dodany do formularza. Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.ListView> kontrolę <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Przeciągnij <xref:System.Windows.Forms.ListView> z kontrolować **przybornika** na górnym panelu drugi <xref:System.Windows.Forms.SplitContainer> formant został dodany do formularza. Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.ListView> kontrolę <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-6.  Przeciągnij <xref:System.Windows.Forms.RichTextBox> z kontrolować **przybornika** do dolnej części drugiej <xref:System.Windows.Forms.SplitContainer> kontroli. Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolę <xref:System.Windows.Forms.DockStyle.Fill>.  
+6. Przeciągnij <xref:System.Windows.Forms.RichTextBox> z kontrolować **przybornika** do dolnej części drugiej <xref:System.Windows.Forms.SplitContainer> kontroli. Ustaw <xref:System.Windows.Forms.SplitContainer.Dock%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolę <xref:System.Windows.Forms.DockStyle.Fill>.  
   
      W tym momencie użytkownik naciśnie klawisz F5, aby uruchomić aplikację, formularz zawiera interfejs użytkownika trzyczęściowej serii, podobnie jak w przypadku programu Microsoft Outlook.  
   

@@ -2,12 +2,12 @@
 title: Konfiguracja i obsługa metadanych
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183493"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298308"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguracja i obsługa metadanych
 W tym temacie opisano sposób włączania obsługi konfiguracji i metadanych dla powiązania i elementy powiązań.  
@@ -124,7 +124,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ### <a name="adding-wsdl-support"></a>Dodawanie pomocy technicznej WSDL  
  Element powiązania transportu powiązanie jest odpowiedzialny za eksportowanie i importowanie informacji o adresach w metadanych. Korzystając z powiązania protokołu SOAP, element powiązania transportu powinien również wyeksportować poprawne transportu identyfikatora URI w metadanych. Poniższy przykład kodu jest pobierana z [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki.  
   
-#### <a name="wsdl-export"></a>Eksportu WSDL  
+#### <a name="wsdl-export"></a>WSDL Export  
  Aby wyeksportować informacje dotyczące adresowania, `UdpTransportBindingElement` implementuje <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interfejsu. <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> Metoda dodaje poprawnych informacji adresowania do portu WSDL.  
   
 ```csharp  
@@ -144,7 +144,7 @@ if (soapBinding != null)
 }  
 ```  
   
-#### <a name="wsdl-import"></a>Importu WSDL  
+#### <a name="wsdl-import"></a>WSDL Import  
  Aby rozszerzyć system importu WSDL do obsługi importowanie adresów, dodaj następującą konfigurację do pliku konfiguracji dla Svcutil.exe jak pokazano w pliku Svcutil.exe.config:  
   
 ```xml  
@@ -163,9 +163,9 @@ if (soapBinding != null)
   
  Podczas uruchamiania Svcutil.exe, istnieją dwie opcje w celu uzyskania Svcutil.exe można załadować rozszerzenia importu WSDL:  
   
-1.  Punkt Svcutil.exe do pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
+1. Punkt Svcutil.exe do pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
   
-2.  Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
+2. Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
   
  `UdpBindingElementImporter` Typ implementuje <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interfejsu. `ImportEndpoint` Metoda importuje adres z portu WSDL:  
   
@@ -223,9 +223,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Następnie wdrożymy <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> z naszych zarejestrowanych klasy (`UdpBindingElementImporter`). W <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, sprawdź potwierdzenia w odpowiedniej przestrzeni nazw i przetworzyć te generowania transportu i sprawdzanie, czy jest multiemisji. Ponadto należy usunąć potwierdzenia, które obsługuje importera z listy powiązania potwierdzenia. Ponownie uruchamiając Svcutil.exe, dostępne są dwie opcje integracji:  
   
-1.  Punkt Svcutil.exe do naszego pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
+1. Punkt Svcutil.exe do naszego pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
   
-2.  Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
+2. Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Dodawanie niestandardowych standardowego powiązanie importera  
  Svcutil.exe i <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> typu, domyślnie, rozpoznaje i importować powiązania dostarczane przez system. W przeciwnym razie powiązanie pobiera importowane jako <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> wystąpienia. Aby włączyć Svcutil.exe i <xref:System.ServiceModel.Description.WsdlImporter> do zaimportowania `SampleProfileUdpBinding` `UdpBindingElementImporter` działa również jako importera niestandardowego powiązania standardowych.  

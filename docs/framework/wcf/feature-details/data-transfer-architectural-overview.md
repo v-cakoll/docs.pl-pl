@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127461"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315884"
 ---
 # <a name="data-transfer-architectural-overview"></a>Omówienie architektury transferu danych
 Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura obsługi komunikatów. Może odbierać komunikaty, je przetworzyć i wysyłać je do kodu użytkownika wykonywać dalszych akcji lub można skonstruować wiadomości z dane podane przez kod użytkownika i dostarczania ich do miejsca docelowego. W tym temacie, który jest przeznaczony dla zaawansowanych deweloperów, w tym artykule opisano architekturę do obsługi wiadomości i zawartymi danymi. Prostsze, zorientowane na zadania widoku sposób wysyłania i odbierania danych, zobacz [Określanie transferu danych w kontraktach usług](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura 
   
  Aby było to możliwe, należy zdefiniować mapowanie między całą `Message` wystąpienie i zestaw informacji XML. Takie mapowanie istnieje już w rzeczywistości: Usługi WCF używa standardowego protokołu SOAP do definiowania tego mapowania. Gdy `Message` wystąpienia jest zapisywany jako zestaw informacji XML, wynikowy zestaw informacji jest prawidłowy kopercie SOAP, która zawiera komunikat. W efekcie `WriteMessage` zwykle wykona następujące czynności:  
   
-1.  Napisz tagu początkowego elementu koperty protokołu SOAP.  
+1. Napisz tagu początkowego elementu koperty protokołu SOAP.  
   
-2.  Zapisać element nagłówek SOAP tagu początkowego, zapisać wszystkie nagłówki, a następnie Zamknij element nagłówka.  
+2. Zapisać element nagłówek SOAP tagu początkowego, zapisać wszystkie nagłówki, a następnie Zamknij element nagłówka.  
   
-3.  Zapis elementu treści protokołu SOAP tagu początkowego.  
+3. Zapis elementu treści protokołu SOAP tagu początkowego.  
   
-4.  Wywołaj `WriteBodyContents` lub metodę równoważną zapisać treści.  
+4. Wywołaj `WriteBodyContents` lub metodę równoważną zapisać treści.  
   
-5.  Zamknij elementów treści i schematu envelope.  
+5. Zamknij elementów treści i schematu envelope.  
   
  Poprzednie kroki są ściśle powiązane ze standardem protokołu SOAP. Jest to skomplikowane faktem, że wiele wersji protokołu SOAP istnieje, na przykład nie można poprawnie zapisać element koperty protokołu SOAP nie wiedząc o tym wersję protokołu SOAP. Ponadto w niektórych przypadkach może być pożądane, aby wyłączyć to złożone SOAP specyficzne dla mapowania całkowicie.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura 
   
  W tym celu <xref:System.Xml.IStreamProvider> używany jest interfejs. Interfejs ma <xref:System.Xml.IStreamProvider.GetStream> metodę, która zwraca strumień do zapisania. Poprawny sposób zapisać treść komunikatu przesyłanej strumieniowo w <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> jest następująca:  
   
-1.  Należy zapisać wszystkie informacje niezbędne poprzedzających strumienia (na przykład otwierający XML tag).  
+1. Należy zapisać wszystkie informacje niezbędne poprzedzających strumienia (na przykład otwierający XML tag).  
   
-2.  Wywołaj `WriteValue` przeciążenia na <xref:System.Xml.XmlDictionaryWriter> przyjmującej <xref:System.Xml.IStreamProvider>, za pomocą `IStreamProvider` implementację, która zwraca strumień do zapisania.  
+2. Wywołaj `WriteValue` przeciążenia na <xref:System.Xml.XmlDictionaryWriter> przyjmującej <xref:System.Xml.IStreamProvider>, za pomocą `IStreamProvider` implementację, która zwraca strumień do zapisania.  
   
-3.  Napisz żadnych informacji po strumienia (na przykład zamykający XML tag).  
+3. Napisz żadnych informacji po strumienia (na przykład zamykający XML tag).  
   
  W przypadku tej metody, moduł zapisujący XML może wybrać kiedy wywołać metodę <xref:System.Xml.IStreamProvider.GetStream> i zapisać dane przesyłane strumieniowo. Na przykład autorzy XML pomocy tekstowych i binarnych wywołać ją od razu i zapisać zawartości przesyłanej strumieniowo umieszczone między tagiem początkowym i końcowym. Moduł zapisujący MTOM może podjąć <xref:System.Xml.IStreamProvider.GetStream> później, gdy wszystko będzie gotowe do zapisu w odpowiedniej części wiadomości.  
   

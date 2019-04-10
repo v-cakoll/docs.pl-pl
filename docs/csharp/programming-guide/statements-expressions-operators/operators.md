@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307477"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 
@@ -63,13 +63,13 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Tożsamość|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negacja|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Negacja logiczna|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Negacja logiczna|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negacja bitowa|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Preinkrementacja|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Predekrementacja|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Jawna konwersja wartości x na typ T|  
   
- **Operatory mnożenia**  
+ **Operatory mnożne**  
   
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
@@ -91,7 +91,7 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |x [ < \< ](../../../csharp/language-reference/operators/left-shift-operator.md) y|Przesunięcie w lewo|  
 |x [ >> ](../../../csharp/language-reference/operators/right-shift-operator.md) y|Przesunięcie w prawo|  
   
- **Relacyjne i operatory typów**  
+ **Operatory relacyjne i operatory typów**  
   
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
@@ -109,15 +109,15 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |x [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Równa się|  
 |x [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Nie równa się|  
   
- **Operatory logiczne, warunkowe i o wartości Null**  
+ **Operatory logiczne, warunkowe i równe Null**  
   
 |Kategoria|Wyrażenie|Opis|  
 |--------------|----------------|-----------------|  
 |Logicznego AND|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Bitowe AND dla wartości całkowitych, logiczne AND dla wartości binarnych|  
 |Logicznego XOR|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Liczba całkowita iloczynu bitowego XOR, logiczne XOR logiczne|  
 |Logicznego OR|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Liczba całkowita bitowego lub logiczną logiczne OR|  
-|Warunkowego AND|x [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
-|Warunkowego OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
+|Warunkowego AND|x [ && ](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
+|Warunkowego OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
 |Łączenia wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  
 |Warunkowe|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|Wynikiem jest wartość y, gdy wartość x jest równa true, lub z, gdy wartość x jest równa false|  
   

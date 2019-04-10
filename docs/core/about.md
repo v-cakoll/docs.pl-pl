@@ -3,12 +3,12 @@ title: Temat platformy .NET Core
 description: Dowiedz się więcej na temat platformy .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675969"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296410"
 ---
 # <a name="about-net-core"></a>Temat platformy .NET Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "57675969"
 
 ## <a name="languages"></a>Języki
 
-C#, Visual Basic i F# języków może służyć do pisania aplikacji i bibliotek dla platformy .NET Core. Te języki są lub można zintegrować z tekstu edytorami i środowiskami IDE, w tym [programu Visual Studio](https://visualstudio.microsoft.com/vs/), [programu Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text i Vim. Ta integracja świadczą, w całości, to dobry osoby z [technologię OmniSharp](https://www.omnisharp.net/) i [Ionide](http://ionide.io) projektów.
+C#, Visual Basic i F# języków może służyć do pisania aplikacji i bibliotek dla platformy .NET Core. Te języki są lub można zintegrować z tekstu edytorami i środowiskami IDE, w tym [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), [programu Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text i Vim. Ta integracja świadczą, w całości, to dobry osoby z [technologię OmniSharp](https://www.omnisharp.net/) i [Ionide](http://ionide.io) projektów.
 
 ## <a name="apis"></a>interfejsy API
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: e6e8a4a5908d890d34ab6de952917cd97be2b433
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3f1f013cbb5e41c997014f556602b01bab62914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120149"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297515"
 ---
 # <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy systemu Windows
 > [!NOTE]
@@ -32,13 +32,13 @@ ms.locfileid: "59120149"
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>Aby programowo usunąć kolumnę z elementu DataGrid  
   
-1.  W obszarze deklaracje w formularzu, należy zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
+1. W obszarze deklaracje w formularzu, należy zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
   
-2.  Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> właściwości do tabeli w źródle danych, którą chcesz zastosować styl. W poniższym przykładzie użyto <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która zakłada, że jest już ustawiona.  
+2. Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType> właściwości do tabeli w źródle danych, którą chcesz zastosować styl. W poniższym przykładzie użyto <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która zakłada, że jest już ustawiona.  
   
-3.  Dodaj nowy <xref:System.Windows.Forms.DataGridTableStyle> obiektu do kolekcji style tabeli w elemencie datagrid.  
+3. Dodaj nowy <xref:System.Windows.Forms.DataGridTableStyle> obiektu do kolekcji style tabeli w elemencie datagrid.  
   
-4.  Wywołaj <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.DataGrid>firmy <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> zbierania, określając indeks kolumny kolumny do usunięcia.  
+4. Wywołaj <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> metody <xref:System.Windows.Forms.DataGrid>firmy <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> zbierania, określając indeks kolumny kolumny do usunięcia.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "59120149"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>Aby ukryć kolumnę w elemencie DataGrid programowe  
   
-1.  W obszarze deklaracje w formularzu, należy zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
+1. W obszarze deklaracje w formularzu, należy zadeklarować nowe wystąpienie klasy <xref:System.Windows.Forms.DataGridTableStyle> klasy.  
   
-2.  Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle> do tabeli w źródle danych, którą chcesz zastosować styl. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która zakłada, że jest już ustawiona.  
+2. Ustaw <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle> do tabeli w źródle danych, którą chcesz zastosować styl. Poniższy przykład kodu wykorzystuje <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> właściwość, która zakłada, że jest już ustawiona.  
   
-3.  Dodaj nowy <xref:System.Windows.Forms.DataGridTableStyle> obiektu do kolekcji style tabeli w elemencie datagrid.  
+3. Dodaj nowy <xref:System.Windows.Forms.DataGridTableStyle> obiektu do kolekcji style tabeli w elemencie datagrid.  
   
-4.  Ukryj kolumnę, ustawiając jego `Width` właściwości na wartość 0, określając indeks kolumny, aby ukryć kolumny.  
+4. Ukryj kolumnę, ustawiając jego `Width` właściwości na wartość 0, określając indeks kolumny, aby ukryć kolumny.  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  

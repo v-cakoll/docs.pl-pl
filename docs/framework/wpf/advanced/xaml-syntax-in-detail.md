@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149308"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298893"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie opisano terminy, które są używane do opisywania elementy składni XAML. Te warunki są często stosowane w pozostałej części tej dokumentacji, zarówno dla dokumentacji WPF specjalnie i dla innych platform, które używają XAML lub włączane przez obsługę języka XAML na poziomie System.Xaml podstawowe pojęcia dotyczące XAML. W tym temacie omówiono w podstawowej terminologii opisanymi w temacie [Przegląd XAML (WPF)](xaml-overview-wpf.md).  
@@ -99,11 +99,11 @@ W tym temacie opisano terminy, które są używane do opisywania elementy skład
   
  Wartość atrybutu jest wypełniana przez jedną z następujących czynności, za pomocą tego kolejność przetwarzania:  
   
-1.  Jeśli procesor XAML napotka nawiasu klamrowego lub element obiektu, który pochodzi od klasy <xref:System.Windows.Markup.MarkupExtension>, następnie rozszerzenie znaczników odwołania jest stosowana jako pierwsza zamiast przetwarzania wartość jako ciąg i Obiekt zwrócony przez rozszerzenie znaczników jest używany jako wartość. W wielu przypadkach obiektu zwróconego przez rozszerzenie znaczników będzie odwołanie do istniejącego obiektu lub wyrażenie, który odracza oceny do czasu wykonywania, a nie jest obiektem nowo utworzona.  
+1. Jeśli procesor XAML napotka nawiasu klamrowego lub element obiektu, który pochodzi od klasy <xref:System.Windows.Markup.MarkupExtension>, następnie rozszerzenie znaczników odwołania jest stosowana jako pierwsza zamiast przetwarzania wartość jako ciąg i Obiekt zwrócony przez rozszerzenie znaczników jest używany jako wartość. W wielu przypadkach obiektu zwróconego przez rozszerzenie znaczników będzie odwołanie do istniejącego obiektu lub wyrażenie, który odracza oceny do czasu wykonywania, a nie jest obiektem nowo utworzona.  
   
-2.  Jeśli właściwość jest zadeklarowana za pomocą opartego na atrybutach <xref:System.ComponentModel.TypeConverter>, lub typ wartości tej właściwości jest zadeklarowany z atrybutami <xref:System.ComponentModel.TypeConverter>, wartość ciągu atrybutu jest przesyłany do usługi konwertera typów wejście konwersji i zwróci konwerter nowe wystąpienie obiektu.  
+2. Jeśli właściwość jest zadeklarowana za pomocą opartego na atrybutach <xref:System.ComponentModel.TypeConverter>, lub typ wartości tej właściwości jest zadeklarowany z atrybutami <xref:System.ComponentModel.TypeConverter>, wartość ciągu atrybutu jest przesyłany do usługi konwertera typów wejście konwersji i zwróci konwerter nowe wystąpienie obiektu.  
   
-3.  Jeśli ma nie <xref:System.ComponentModel.TypeConverter>, podejmowana jest próba to bezpośrednia konwersji na typ właściwości. Ten poziom ostatecznego jest to bezpośrednia konwersji wartość native analizatora między typów pierwotnych języka XAML lub wyboru dla nazw nazwanych stałych wyliczenia (analizator następnie uzyskuje dostęp do dopasowania wartości).  
+3. Jeśli ma nie <xref:System.ComponentModel.TypeConverter>, podejmowana jest próba to bezpośrednia konwersji na typ właściwości. Ten poziom ostatecznego jest to bezpośrednia konwersji wartość native analizatora między typów pierwotnych języka XAML lub wyboru dla nazw nazwanych stałych wyliczenia (analizator następnie uzyskuje dostęp do dopasowania wartości).  
   
 #### <a name="enumeration-attribute-values"></a>Wyliczanie wartości atrybutów  
  Wyliczenia w XAML są przetwarzane wewnętrznie przez analizatory składni XAML i elementy członkowskie wyliczenia powinien być określony przez określenie nazwy ciągu jednego nazwanych stałych wyliczenia.  

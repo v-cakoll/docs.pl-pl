@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: b05ff42fc79a8fc39b7ebe4969875dbadf0dab7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f30974e020545a69ad20c03bc05ac6a28f289b01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074628"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transakcja i operacje kopiowania zbiorczego
 Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać operacji kopiowania zbiorczego. Tę opcję, ostatnie pozwala wykonać kilka operacji kopiowania zbiorczego w ramach tej samej transakcji, a także wykonywać inne operacje bazy danych (na przykład wstawiania, aktualizacji i usuwania) przy zachowaniu możliwości Zatwierdź lub Wycofaj całą transakcję.  
@@ -25,7 +25,7 @@ Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać oper
  Operacji kopiowania zbiorczego jest wykonywane przy użyciu <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> właściwość jest ustawiona na 10. Gdy operacja napotka nieprawidłowy wiersz, jest zgłaszany wyjątek. W tym przykładzie pierwsze operacji kopiowania zbiorczego jest nietransakcyjnej. Wszystkie instancje skopiowane aż do momentu wystąpienia błędu są zatwierdzone; zadanie wsadowe zawierające zduplikowany klucz zostanie wycofana i operacji kopiowania zbiorczego zostało zatrzymane przed przetworzeniem pozostałe partie.  
   
 > [!NOTE]
->  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcję, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać oper
  Następująca aplikacja konsoli jest podobny do poprzedniego przykładu, z jednym wyjątkiem: W tym przykładzie operacji kopiowania zbiorczego zarządza własną transakcji. Wszystkie instancje skopiowane aż do momentu wystąpienia błędu są zatwierdzone; zadanie wsadowe zawierające zduplikowany klucz zostanie wycofana i operacji kopiowania zbiorczego zostało zatrzymane przed przetworzeniem pozostałe partie.  
   
 > [!IMPORTANT]
->  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcję, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,11 +54,12 @@ Jako operacje izolowanej lub w ramach wielu transakcji krok można wykonać oper
  Następująca aplikacja konsoli jest podobne do pierwszego (nietransakcyjnej), z jednym wyjątkiem: w tym przykładzie operacji kopiowania zbiorczego znajduje się w ramach transakcji większych i zewnętrznych. Gdy wystąpi błąd naruszenia klucza podstawowego, cała transakcja zostanie wycofana, a żadne wiersze są dodawane do tabeli docelowej.  
   
 > [!IMPORTANT]
->  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrukcję, aby skopiować dane.  
+>  W tym przykładzie nie będzie działać, chyba że utworzonego tabelami pracy zgodnie z opisem w [Konfiguracja przykładu kopiowania zbiorczego](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ten kod jest dostarczany do zademonstrowania składnia przy użyciu **SqlBulkCopy** tylko. Jeśli tabele źródłowy i docelowy znajdują się w tym samym wystąpieniu programu SQL Server, jest łatwiejsze i szybsze do użycia [!INCLUDE[tsql](../../../../../includes/tsql-md.md)]`INSERT … SELECT` instrukcję, aby skopiować dane.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje kopiowania masowego w programie SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

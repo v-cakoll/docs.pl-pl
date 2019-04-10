@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304561"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Instrukcje: wiązanie kontrolek formularzy systemu Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant
 Po dodać formanty do formularza i określić interfejsu użytkownika dla aplikacji, formanty można powiązać ze źródłem danych, tak, aby w czasie wykonywania, użytkownicy mogą zmienić i zapisać dane związane z aplikacją.  
@@ -27,9 +27,9 @@ Po dodać formanty do formularza i określić interfejsu użytkownika dla aplika
   
 ### <a name="to-bind-a-control-at-design-time"></a>Aby powiązać formant w czasie projektowania  
   
-1.  Przeciągnij <xref:System.Windows.Forms.TextBox> formantu do formularza.  
+1. Przeciągnij <xref:System.Windows.Forms.TextBox> formantu do formularza.  
   
-2.  W **właściwości** okna:  
+2. W **właściwości** okna:  
   
     1.  Rozwiń **(powiązania danych)** węzła.  
   
@@ -39,17 +39,17 @@ Po dodać formanty do formularza i określić interfejsu użytkownika dla aplika
   
          Jeśli wcześniej skonfigurowano źródła danych dla projektu lub formularza, pojawi się.  
   
-3.  Kliknij przycisk **Dodaj źródło danych projektu** do nawiązywania połączeń z danymi i Utwórz źródło danych.  
+3. Kliknij przycisk **Dodaj źródło danych projektu** do nawiązywania połączeń z danymi i Utwórz źródło danych.  
   
-4.  Na **Kreatora konfiguracji źródła danych** strona powitalna, kliknij przycisk **dalej**.  
+4. Na **Kreatora konfiguracji źródła danych** strona powitalna, kliknij przycisk **dalej**.  
   
-5.  Na **wybierz typ źródła danych** wybierz opcję **bazy danych**.  
+5. Na **wybierz typ źródła danych** wybierz opcję **bazy danych**.  
   
-6.  Na **wybierz połączenie danych** wybierz połączenie danych z listy dostępnych połączeń. Jeśli żądane połączenie danych nie jest dostępna, wybierz **nowe połączenie** Aby utworzyć nowe połączenie danych.  
+6. Na **wybierz połączenie danych** wybierz połączenie danych z listy dostępnych połączeń. Jeśli żądane połączenie danych nie jest dostępna, wybierz **nowe połączenie** Aby utworzyć nowe połączenie danych.  
   
-7.  Wybierz **tak, Zapisz połączenie** można zapisać parametry połączenia w pliku konfiguracyjnym aplikacji.  
+7. Wybierz **tak, Zapisz połączenie** można zapisać parametry połączenia w pliku konfiguracyjnym aplikacji.  
   
-8.  Wybierz obiekty bazy danych w celu dostosowania do aplikacji. W takim przypadku wybierz pola w tabeli, które chcieliby <xref:System.Windows.Forms.TextBox> do wyświetlenia.  
+8. Wybierz obiekty bazy danych w celu dostosowania do aplikacji. W takim przypadku wybierz pola w tabeli, które chcieliby <xref:System.Windows.Forms.TextBox> do wyświetlenia.  
   
 9. Zastąp domyślną nazwę zestawu danych, jeśli chcesz.  
   

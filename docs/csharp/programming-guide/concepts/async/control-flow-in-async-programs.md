@@ -2,12 +2,12 @@
 title: Przepływ sterowania w programach Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 45d349fa131daf3fdf39d29d53d8ec236c79f81f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326206"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Przepływ sterowania w programach async (C#)
 
@@ -99,11 +99,11 @@ Kod, który używa tego tematu możesz pobrać z witryny MSDN lub tworzyć je sa
 
 Możesz pobrać aplikację dotyczącą tego tematu z [próbka asynchroniczna: Kontrolowanie Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0). Poniższe kroki, Otwórz i uruchom program.
 
-1.  Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.
+1. Rozpakuj pobrany plik, a następnie uruchom program Visual Studio.
 
-2.  Na pasku menu wybierz **pliku** > **Otwórz** > **projekt/rozwiązanie**.
+2. Na pasku menu wybierz **pliku** > **Otwórz** > **projekt/rozwiązanie**.
 
-3.  Przejdź do folderu, który posiada rozpakowany przykładowego kodu, otwórz plik rozwiązania (.sln), a następnie wybierz **F5** klawisz, aby skompilować i uruchomić projekt.
+3. Przejdź do folderu, który posiada rozpakowany przykładowego kodu, otwórz plik rozwiązania (.sln), a następnie wybierz **F5** klawisz, aby skompilować i uruchomić projekt.
 
 ### <a name="create-the-program-yourself"></a>Utwórz program, samodzielnie
 
@@ -111,23 +111,23 @@ Poniższy projekt Windows Presentation Foundation (WPF) zawiera przykład kodu, 
 
 Aby uruchomić projekt, należy wykonać następujące czynności:
 
-1.  Uruchom program Visual Studio.
+1. Uruchom program Visual Studio.
 
-2.  Na pasku menu wybierz **pliku** > **New** > **projektu**.
+2. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
      **Nowy projekt** zostanie otwarte okno dialogowe.
 
-3.  Wybierz **zainstalowane** > **Visual C#** > **pulpitu Windows** kategorii, a następnie wybierz **aplikacja WPF** z listy szablonów projektu.
+3. Wybierz **zainstalowane** > **Visual C#** > **pulpitu Windows** kategorii, a następnie wybierz **aplikacja WPF** z listy szablonów projektu.
 
-4.  Wprowadź `AsyncTracer` jako nazwę projektu, a następnie wybierz **OK** przycisku.
+4. Wprowadź `AsyncTracer` jako nazwę projektu, a następnie wybierz **OK** przycisku.
 
      Nowy projekt, który pojawia się w **Eksploratora rozwiązań**.
 
-5.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.
+5. W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.
 
      Jeśli karta nie jest widoczna, otwórz menu skrótów dla pliku MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz **Wyświetl kod**.
 
-6.  W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.
+6. W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.
 
     ```csharp
     <Window
@@ -145,9 +145,9 @@ Aby uruchomić projekt, należy wykonać następujące czynności:
 
      Proste okno, które zawiera pole tekstowe i przycisk pojawia się w **projektowania** widoku MainWindow.xaml.
 
-7.  Dodaj odwołanie do <xref:System.Net.Http>.
+7. Dodaj odwołanie do <xref:System.Net.Http>.
 
-8.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.cs, a następnie wybierz **Wyświetl kod**.
+8. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.cs, a następnie wybierz **Wyświetl kod**.
 
 9. W MainWindow.xaml.cs Zastąp kod następującym kodem.
 
@@ -383,11 +383,11 @@ int contentLength = await getLengthTask;
 
  Poniższa ilustracja przedstawia powrót sterowania z `AccessTheWebAsync` do `startButton_Click`.
 
- ![Krok 6](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace 6")
+ ![Step SIX](../../../../csharp/programming-guide/concepts/async/media/asynctrace-six.png "AsyncTrace-SIX")
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Asynchroniczne typy zwracane (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Próbka asynchroniczna: Kontrolowanie Flow in Async Programs (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Próbka asynchroniczna: Przepływ sterowania w aplikacjach asynchronicznych (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

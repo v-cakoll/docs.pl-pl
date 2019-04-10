@@ -2,12 +2,12 @@
 title: Asynchroniczne typy zwracane (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838355"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313284"
 ---
 # <a name="async-return-types-visual-basic"></a>Asynchroniczne typy zwracane (Visual Basic)
 Metody asynchroniczne mają trzy możliwe zwracane typy: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>oraz typ void. W języku Visual Basic, zwrócony typ void jest napisany w postaci [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedury. Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -150,23 +150,23 @@ End Sub
   
  Aby uruchomić projekt, należy wykonać następujące czynności:  
   
-1.  Uruchom program Visual Studio.  
+1. Uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
+2. Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
      **Nowy projekt** zostanie otwarte okno dialogowe.  
   
-3.  W **zainstalowane**, **szablony** kategorii, wybierz **języka Visual Basic**, a następnie wybierz **Windows**. Wybierz **aplikacji WPF** z listy typów projektów.  
+3. W **zainstalowane**, **szablony** kategorii, wybierz **języka Visual Basic**, a następnie wybierz **Windows**. Wybierz **aplikacji WPF** z listy typów projektów.  
   
-4.  Wprowadź `AsyncReturnTypes` jako nazwę projektu, a następnie wybierz **OK** przycisku.  
+4. Wprowadź `AsyncReturnTypes` jako nazwę projektu, a następnie wybierz **OK** przycisku.  
   
      Nowy projekt, który pojawia się w **Eksploratora rozwiązań**.  
   
-5.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
+5. W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
   
      Jeśli karta nie jest widoczna, otwórz menu skrótów dla pliku MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz **Otwórz**.  
   
-6.  W **XAML** okna pliku mainwindow.XAML, Zastąp kod następującym kodem.  
+6. W **XAML** okna pliku mainwindow.XAML, Zastąp kod następującym kodem.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Proste okno, które zawiera pole tekstowe i przycisk pojawia się w **projektowania** okna MainWindow.xaml.  
   
-7.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.vb, a następnie wybierz **Wyświetl kod**.  
+7. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.vb, a następnie wybierz **Wyświetl kod**.  
   
-8.  Zastąp kod w MainWindow.xaml.vb następującym kodem.  
+8. Zastąp kod w MainWindow.xaml.vb następującym kodem.  
   
     ```vb  
     Class MainWindow  
@@ -298,4 +298,4 @@ End Sub
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Przepływ sterowania w programach Async (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await — Operator](../../../../visual-basic/language-reference/operators/await-operator.md)

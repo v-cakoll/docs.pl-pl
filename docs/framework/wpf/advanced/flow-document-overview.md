@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303495"
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast jest ustawiona na jeden układ wstępnie zdefiniowanych, dokumenty przepływu dynamicznie Dostosuj i przepełnieniem ich zawartości na podstawie zmiennych czasu wykonywania, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto dokumenty przepływu oferują funkcje zaawansowane dokumentu, takie jak podział na strony i kolumn. Ten temat zawiera omówienie dokumenty przepływu i jak je utworzyć.  
@@ -89,9 +89,9 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
  Do celów zawartość przepływu istnieją dwie ważne kategorie:  
   
-1.  **Klasy pochodne bloku**: Skrót "Elementów zawartości bloku" lub po prostu bloku elementów"". Elementy, które dziedziczą z <xref:System.Windows.Documents.Block> może służyć do grupowania elementów do wspólnego elementu nadrzędnego lub można zastosować atrybuty wspólne do grupy.  
+1. **Klasy pochodne bloku**: Skrót "Elementów zawartości bloku" lub po prostu bloku elementów"". Elementy, które dziedziczą z <xref:System.Windows.Documents.Block> może służyć do grupowania elementów do wspólnego elementu nadrzędnego lub można zastosować atrybuty wspólne do grupy.  
   
-2.  **Klasy pochodne wbudowane**: Skrót "Zawartości elementów śródwierszowych" lub po prostu "elementów śródwierszowych". Elementy, które dziedziczą z <xref:System.Windows.Documents.Inline> są albo zawarte w elemencie bloku lub innego wbudowanego elementu. Elementy wbudowane są często używane jako bezpośrednie kontener zawartości, który jest renderowany na ekranie. Na przykład <xref:System.Windows.Documents.Paragraph> (Blokuj) może zawierać <xref:System.Windows.Documents.Run> (wbudowanego elementu), ale <xref:System.Windows.Documents.Run> faktycznie zawiera tekst, który jest renderowany na ekranie.  
+2. **Klasy pochodne wbudowane**: Skrót "Zawartości elementów śródwierszowych" lub po prostu "elementów śródwierszowych". Elementy, które dziedziczą z <xref:System.Windows.Documents.Inline> są albo zawarte w elemencie bloku lub innego wbudowanego elementu. Elementy wbudowane są często używane jako bezpośrednie kontener zawartości, który jest renderowany na ekranie. Na przykład <xref:System.Windows.Documents.Paragraph> (Blokuj) może zawierać <xref:System.Windows.Documents.Run> (wbudowanego elementu), ale <xref:System.Windows.Documents.Run> faktycznie zawiera tekst, który jest renderowany na ekranie.  
   
  Każda klasa w tych dwóch kategorii krótko opisano poniżej.  
   

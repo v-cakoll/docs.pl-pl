@@ -15,12 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-ms.openlocfilehash: 10d9c976a9294bffd85791b222dfededd0fc9256
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8b17f5a7167eb539e04a19db797bc1b0cc6c5eaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295461"
 ---
 # <a name="internet-authentication"></a>Uwierzytelnianie internetowe
 <xref:System.Net> Klasy obsługi różnych mechanizmów uwierzytelniania klienta, w tym standardowa Internet metod uwierzytelniania, podstawowe, szyfrowane, negocjowania NTLM, a uwierzytelnianie Kerberos, a także niestandardowych metod, które można utworzyć.  
@@ -33,9 +33,9 @@ ms.locfileid: "59155925"
   
  Podczas uwierzytelniania, żądania zasobów internetowych <xref:System.Net.WebRequest.GetResponse%2A?displayProperty=nameWithType> metoda wysyła <xref:System.Net.WebRequest> do **słowniku** wraz z żądaniem o poświadczenia. Żądanie jest uwierzytelniane zgodnie z następującego procesu:  
   
-1.  **Słowniku** wywołania <xref:System.Net.IAuthenticationModule.Authenticate%2A> metoda dla każdego z modułów uwierzytelniania zarejestrowanego w kolejności, zostały one zarejestrowane. **Słowniku** używa pierwszego modułu, która nie zwraca **null** przeprowadzić proces uwierzytelniania. Szczegółowe informacje o procesie różnią się w zależności od typu uwierzytelniania modułu związane.  
+1. **Słowniku** wywołania <xref:System.Net.IAuthenticationModule.Authenticate%2A> metoda dla każdego z modułów uwierzytelniania zarejestrowanego w kolejności, zostały one zarejestrowane. **Słowniku** używa pierwszego modułu, która nie zwraca **null** przeprowadzić proces uwierzytelniania. Szczegółowe informacje o procesie różnią się w zależności od typu uwierzytelniania modułu związane.  
   
-2.  Po zakończeniu procesu uwierzytelniania moduł uwierzytelniania zwraca <xref:System.Net.Authorization> do **WebRequest** zawierający informacje wymagane do dostępu do zasobu internetowego.  
+2. Po zakończeniu procesu uwierzytelniania moduł uwierzytelniania zwraca <xref:System.Net.Authorization> do **WebRequest** zawierający informacje wymagane do dostępu do zasobu internetowego.  
   
  Niektóre schematy uwierzytelniania można uwierzytelnić użytkownika bez wcześniejszego utworzenia żądania dla zasobu. Aplikację można zaoszczędzić czas i preauthenticating użytkownika z zasobem, eliminując co najmniej jedną rundę do serwera. Lub, aby później można zwiększyć szybkość reakcji użytkownika może wykonywać uwierzytelnianie podczas uruchamiania programu. Schematy uwierzytelniania, które można użyć uwierzytelniania wstępnego zestawu <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> właściwości **true**.  
   

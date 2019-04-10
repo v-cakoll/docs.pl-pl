@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 634489ced9b437d7b273eb5fa1092165cc6a935f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311113"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Instrukcje: Inspekcja zdarzeń zabezpieczeń programu Windows Communication Foundation
 Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpieczeń w dzienniku zdarzeń Windows, które można przeglądać za pomocą Podglądu zdarzeń Windows. W tym temacie wyjaśniono, jak skonfigurować aplikację tak, aby go dzienników zdarzeń zabezpieczeń. Aby uzyskać więcej informacji na temat inspekcji WCF, zobacz [inspekcji](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Inspekcja zdarzeń zabezpieczeń w kodzie  
   
-1.  Określ lokalizację dziennika inspekcji. Aby to zrobić, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> klasy do jednego z <xref:System.ServiceModel.AuditLogLocation> wartości wyliczenia, jak pokazano w poniższym kodzie.  
+1. Określ lokalizację dziennika inspekcji. Aby to zrobić, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A> właściwość <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> klasy do jednego z <xref:System.ServiceModel.AuditLogLocation> wartości wyliczenia, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
      <xref:System.ServiceModel.AuditLogLocation> Wyliczenie ma trzy wartości: `Application`, `Security`, lub `Default`. Wartość określa jednym z dzienników, które są widoczne w Podglądzie zdarzeń, albo w dzienniku zabezpieczeń lub w dzienniku aplikacji. Jeśli używasz `Default` wartości rzeczywistej dziennika będzie zależeć od systemu operacyjnego, w której działa aplikacja na. Jeśli nie określono lokalizacji dziennika inspekcji jest włączona, wartość domyślna to `Security` dziennika dla platform, które obsługują pisanie w dzienniku zabezpieczeń; w przeciwnym razie będą zapisywane do `Application` dziennika. Tylko [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wv](../../../../includes/wv-md.md)] domyślnie obsługują zapisywanie w dzienniku zabezpieczeń.  
   
-2.  Skonfiguruj typy zdarzeń inspekcji. Jednocześnie można przeprowadzać inspekcję uwierzytelnianie na poziomie komunikatu lub poziomu usługi zdarzenia. Aby to zrobić, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> właściwości lub <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> jedną z właściwości <xref:System.ServiceModel.AuditLevel> wartości wyliczenia, jak pokazano w poniższym kodzie.  
+2. Skonfiguruj typy zdarzeń inspekcji. Jednocześnie można przeprowadzać inspekcję uwierzytelnianie na poziomie komunikatu lub poziomu usługi zdarzenia. Aby to zrobić, należy ustawić <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> właściwości lub <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> jedną z właściwości <xref:System.ServiceModel.AuditLevel> wartości wyliczenia, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[AuditingSecurityEvents#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#3)]
      [!code-vb[AuditingSecurityEvents#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#3)]  
   
-3.  Określ, czy pominąć lub udostępnić błędów aplikacji dotyczące zdarzenia inspekcji w dzienniku. Ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwości albo `true` lub `false`, jak pokazano w poniższym kodzie.  
+3. Określ, czy pominąć lub udostępnić błędów aplikacji dotyczące zdarzenia inspekcji w dzienniku. Ustaw <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> właściwości albo `true` lub `false`, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[AuditingSecurityEvents#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#4)]
      [!code-vb[AuditingSecurityEvents#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#4)]  
   
      Wartość domyślna `SuppressAuditFailure` właściwość `true`, dzięki czemu Niepowodzenie inspekcji nie ma wpływu na aplikację. W przeciwnym razie jest zgłaszany wyjątek. Dla dowolnego pomyślne inspekcji pełnego śledzenia są zapisywane. Jakiekolwiek niepowodzenie inspekcji, aby uzyskać dane śledzenia są zapisywane na poziomie błędu.  
   
-4.  Usuń istniejącą <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> z kolekcji zachowań odnaleziona w opisie elementu <xref:System.ServiceModel.ServiceHost>. Kolekcja zachowanie odbywa się przez <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> właściwość, która z kolei jest dostępny z <xref:System.ServiceModel.ServiceHostBase.Description%2A> właściwości. Następnie dodaj nową <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> do tej samej kolekcji, jak pokazano w poniższym kodzie.  
+4. Usuń istniejącą <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> z kolekcji zachowań odnaleziona w opisie elementu <xref:System.ServiceModel.ServiceHost>. Kolekcja zachowanie odbywa się przez <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> właściwość, która z kolei jest dostępny z <xref:System.ServiceModel.ServiceHostBase.Description%2A> właściwości. Następnie dodaj nową <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> do tej samej kolekcji, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[AuditingSecurityEvents#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#5)]
      [!code-vb[AuditingSecurityEvents#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#5)]  
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Aby skonfigurować inspekcję w konfiguracji  
   
-1.  Aby skonfigurować inspekcję w konfiguracji, należy dodać [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elementu [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sekcja pliku web.config. Następnie dodaj [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) element i ustaw różne atrybuty, jak pokazano w poniższym przykładzie.  
+1. Aby skonfigurować inspekcję w konfiguracji, należy dodać [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elementu [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) sekcja pliku web.config. Następnie dodaj [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) element i ustaw różne atrybuty, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <behaviors>  
@@ -58,7 +58,7 @@ Windows Communication Foundation (WCF) umożliwia rejestrowanie zdarzeń zabezpi
     </behaviors>  
     ```  
   
-2.  Zachowanie usługi, należy określić, jak pokazano w poniższym przykładzie.  
+2. Zachowanie usługi, należy określić, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <services>  

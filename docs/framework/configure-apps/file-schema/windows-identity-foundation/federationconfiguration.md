@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297490"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) i <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) za pomocą federacyjnego uwierzytelniania za pomocą protokołu WS-Federation. Konfiguruje <xref:System.Security.Claims.ClaimsAuthorizationManager> przy użyciu <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> lub <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy w celu zapewnienia kontroli dostępu opartej na oświadczeniach.  
@@ -58,13 +58,13 @@ Konfiguruje <xref:System.IdentityModel.Services.WSFederationAuthenticationModule
   
  Niezależnie od tego, w tym scenariuszu środowisko uruchomieniowe ładuje domyślnej konfiguracji federacji. To zachowanie jest zdefiniowana w następujący sposób:  
   
-1.  Jeśli ma nie `<federationConfiguration>` element jest obecny, środowisko uruchomieniowe umożliwia utworzenie konfiguracji Federacji i wypełnia ją wartościami domyślnymi. Tej domyślnej konfiguracji Federacji będzie odwoływać się domyślnej konfiguracji tożsamości.  
+1. Jeśli ma nie `<federationConfiguration>` element jest obecny, środowisko uruchomieniowe umożliwia utworzenie konfiguracji Federacji i wypełnia ją wartościami domyślnymi. Tej domyślnej konfiguracji Federacji będzie odwoływać się domyślnej konfiguracji tożsamości.  
   
-2.  Jeśli jeden `<federationConfiguration>` element jest obecny, jest domyślna konfiguracja Federacji, niezależnie od tego, czy jest nazwane i nienazwane. Jeśli jej `identityConfiguration` atrybut jest określony, odwołuje się do konfiguracji o nazwie tożsamości; w przeciwnym razie odwołuje się do domyślnej konfiguracji tożsamości.  
+2. Jeśli jeden `<federationConfiguration>` element jest obecny, jest domyślna konfiguracja Federacji, niezależnie od tego, czy jest nazwane i nienazwane. Jeśli jej `identityConfiguration` atrybut jest określony, odwołuje się do konfiguracji o nazwie tożsamości; w przeciwnym razie odwołuje się do domyślnej konfiguracji tożsamości.  
   
-3.  Jeśli nienazwane `<federationConfiguration>` element jest obecny, jest domyślna konfiguracja federacji. Jeśli jej `identityConfiguration` atrybut jest określony, odwołuje się do konfiguracji o nazwie tożsamości; w przeciwnym razie odwołuje się do domyślnej konfiguracji tożsamości.  
+3. Jeśli nienazwane `<federationConfiguration>` element jest obecny, jest domyślna konfiguracja federacji. Jeśli jej `identityConfiguration` atrybut jest określony, odwołuje się do konfiguracji o nazwie tożsamości; w przeciwnym razie odwołuje się do domyślnej konfiguracji tożsamości.  
   
-4.  Jeśli nazwany wielu `<federationConfiguration>` elementy są dostępne i nie nienazwane `<federationConfiguration>` element jest obecny, zgłaszany jest wyjątek.  
+4. Jeśli nazwany wielu `<federationConfiguration>` elementy są dostępne i nie nienazwane `<federationConfiguration>` element jest obecny, zgłaszany jest wyjątek.  
   
  Zwykle, tylko jeden `<federationConfiguration>` sekcja jest zdefiniowana. Ta sekcja jest domyślna konfiguracja federacji. Można określić wiele, unikatową nazwę `<federationConfiguration>` elementów; jednak w tym przypadku jeśli chcesz załadować konfiguracji Federacji, innym niż bez nazwy, musisz podać program obsługi. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> zdarzenia i ustaw <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> właściwości wewnątrz procedury obsługi do <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> obiekt został zainicjowany przy użyciu wartości z odpowiedniego `<federationConfiguration>` elementu w pliku konfiguracji.  
   

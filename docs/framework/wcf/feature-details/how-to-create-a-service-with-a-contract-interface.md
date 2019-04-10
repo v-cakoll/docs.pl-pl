@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298542"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>Instrukcje: tworzenie usługi przy użyciu interfejsu kontraktu
 Jest to preferowany sposób tworzenie kontraktu programu Windows Communication Foundation (WCF) przy użyciu interfejsu. Ten kontrakt Określa, kolekcji i struktury komunikaty wymagane operacje dostępu do oferty usługi. Ten interfejs definiuje typy wejściowe i wyjściowe, stosując <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu i <xref:System.ServiceModel.OperationContractAttribute> klasy do metod, które chcesz udostępnić.  
@@ -19,13 +19,13 @@ Jest to preferowany sposób tworzenie kontraktu programu Windows Communication F
   
 ### <a name="creating-a-wcf-contract-with-an-interface"></a>Tworzenie kontraktu usługi WCF za pomocą interfejsu  
   
-1.  Tworzenie nowego interfejsu w języku Visual Basic C#, lub dowolnego innego języka środowiska uruchomieniowego języka wspólnego.  
+1. Tworzenie nowego interfejsu w języku Visual Basic C#, lub dowolnego innego języka środowiska uruchomieniowego języka wspólnego.  
   
-2.  Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu.  
+2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> klasy interfejsu.  
   
-3.  Określ metody w interfejsie.  
+3. Określ metody w interfejsie.  
   
-4.  Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej metody, które muszą być widoczne jako część publicznego kontraktu usługi WCF.  
+4. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> klasy do każdej metody, które muszą być widoczne jako część publicznego kontraktu usługi WCF.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje interfejs, który definiuje kontrakt usługi.  

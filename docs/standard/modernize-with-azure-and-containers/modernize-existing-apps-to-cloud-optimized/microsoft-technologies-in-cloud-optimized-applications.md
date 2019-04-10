@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296254"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Technologie firmy Microsoft w aplikacjach zoptymalizowane pod kątem chmury
 
@@ -25,9 +25,9 @@ Na poniższej liście opisano narzędzia, technologie i rozwiązania, które są
 
 -   **Monitorowanie telemetrii, rejestrowanie i przeprowadzanie inspekcji**: Możliwość monitorować i sprawdzać aplikacji i kontenerów, które działają w chmurze jest krytyczny dla dowolnej aplikacji zoptymalizowane pod kątem chmury. [Usługa Azure Application Insights](https://azure.microsoft.com/services/application-insights/) i [pakietu Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) to głównego narzędzia firmy Microsoft, które zapewnia monitorowanie i przeprowadzanie inspekcji dla aplikacji zoptymalizowane pod kątem chmury.
 
--   **Inicjowanie obsługi administracyjnej**: Narzędzia usługi Automation ułatwiają Inicjowanie obsługi infrastruktury oraz wdrażanie aplikacji dla wielu środowisk (produkcja, testowania, przemieszczania). Do zarządzania, konfiguracji i środowiska aplikacji, można użyć narzędzi, takich jak Chef i Puppet. Ta warstwa może również implementowany przy użyciu metod prostszy i bardziej bezpośredni. Na przykład, można wdrożyć bezpośrednio przy użyciu wiersza polecenia interfejsu CLI platformy Azure (Azure) narzędzia i Zastosuj ciągłe wdrażanie i zarządzanie potoki w wersji [usługom DevOps platformy Azure](https://visualstudio.microsoft.com/team-services/).
+-   **Inicjowanie obsługi administracyjnej**: Narzędzia usługi Automation ułatwiają Inicjowanie obsługi infrastruktury oraz wdrażanie aplikacji dla wielu środowisk (produkcja, testowania, przemieszczania). Do zarządzania, konfiguracji i środowiska aplikacji, można użyć narzędzi, takich jak Chef i Puppet. Ta warstwa może również implementowany przy użyciu metod prostszy i bardziej bezpośredni. Na przykład, można wdrożyć bezpośrednio przy użyciu wiersza polecenia interfejsu CLI platformy Azure (Azure) narzędzia i Zastosuj ciągłe wdrażanie i zarządzanie potoki w wersji [usługom DevOps platformy Azure](https://azure.microsoft.com/services/devops/).
 
--   **Cykl życia aplikacji**: [Usługi Azure DevOps](https://visualstudio.microsoft.com/team-services/) i innych narzędzi, takich jak Jenkins, są serwery utworzonych automatyzacji, które ułatwiają wdrożenie potoków ciągłej integracji/ciągłego wdrażania, w tym rozwiązania release management.
+-   **Cykl życia aplikacji**: [Usługi Azure DevOps](https://azure.microsoft.com/services/devops/) i innych narzędzi, takich jak Jenkins, są serwery utworzonych automatyzacji, które ułatwiają wdrożenie potoków ciągłej integracji/ciągłego wdrażania, w tym rozwiązania release management.
 
 Następne sekcje w tym rozdziale i pokrewne instruktaże, skupić się w dalszej części przedstawiono szczegółowe informacje o warstwie środowiska uruchomieniowego (systemu Windows Windows kontenery). Się ze wskazówkami w tym artykule opisano sposób, można wdrożyć maszyny wirtualne Windows kontenery w systemie Windows Server 2016 (lub nowszym) i Azure Container Instances. Obejmuje ona również bardziej zaawansowanych platform PaaS, takich jak usługa Azure App Service i programu orchestrator, takich jak Azure Service Fabric i usługi Azure Kubernetes Service.
 

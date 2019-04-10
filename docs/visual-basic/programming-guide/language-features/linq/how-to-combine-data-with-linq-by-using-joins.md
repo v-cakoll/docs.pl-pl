@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319602"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Instrukcje: Łączenie danych w LINQ za pomocą sprzężeń (Visual Basic)
 Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie zawartości wielu kolekcji na podstawie wartości typowych między kolekcjami zapytania. Wartości te są znane jako *klucz* wartości. Deweloperzy znasz koncepcji relacyjnych baz danych będzie także rozpoznawał `Join` klauzuli jako INNER JOIN i `Group Join` klauzuli jako skutecznie, z LEFT OUTER JOIN.  
@@ -25,9 +25,9 @@ Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie z
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Aby utworzyć projekt, który zawiera przykładowe dane i typy  
   
-1.  Aby uruchomić przykłady w tym temacie, Otwórz program Visual Studio i Dodaj nowy projekt aplikacji konsoli Visual Basic. Kliknij dwukrotnie plik Module1.vb utworzone przez program Visual Basic.  
+1. Aby uruchomić przykłady w tym temacie, Otwórz program Visual Studio i Dodaj nowy projekt aplikacji konsoli Visual Basic. Kliknij dwukrotnie plik Module1.vb utworzone przez program Visual Basic.  
   
-2.  Przykłady w tym temacie `Person` i `Pet` typów i danych w poniższym przykładzie kodu. Skopiuj ten kod jest to domyślna `Module1` modułu utworzony przez program Visual Basic.  
+2. Przykłady w tym temacie `Person` i `Pet` typów i danych w poniższym przykładzie kodu. Skopiuj ten kod jest to domyślna `Module1` modułu utworzony przez program Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
@@ -43,7 +43,7 @@ Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie z
   
 #### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Aby wykonać Inner Join przy użyciu klauzuli Join  
   
-1.  Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady zarówno jawne i niejawne sprzężenia wewnętrznego.  
+1. Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady zarówno jawne i niejawne sprzężenia wewnętrznego.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
@@ -56,7 +56,7 @@ Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie z
   
 #### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Aby wykonać Left Outer Join przy użyciu klauzuli Join grupy  
   
-1.  Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady pogrupowanych lewe sprzężenie zewnętrzne i niezgrupowane lewego sprzężenia zewnętrznego.  
+1. Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady pogrupowanych lewe sprzężenie zewnętrzne i niezgrupowane lewego sprzężenia zewnętrznego.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
@@ -65,7 +65,7 @@ Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie z
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Do wykonania sprzężenia, przy użyciu klucza złożonego  
   
-1.  Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady sprzężenia, który używa klucza złożonego.  
+1. Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady sprzężenia, który używa klucza złożonego.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
@@ -73,19 +73,19 @@ Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie z
   
 #### <a name="to-add-code-to-run-the-examples"></a>Aby dodać kod, aby uruchomić przykłady  
   
-1.  Zastąp `Sub Main` w `Module1` modułu w projekcie, używając następującego kodu, aby uruchomić przykłady w tym temacie.  
+1. Zastąp `Sub Main` w `Module1` modułu w projekcie, używając następującego kodu, aby uruchomić przykłady w tym temacie.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2.  Naciśnij klawisz F5, aby uruchomić przykłady.  
+2. Naciśnij klawisz F5, aby uruchomić przykłady.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Join, klauzula](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Klauzula Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [From, klauzula](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [Join — Klauzula](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [Group Join — Klauzula](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [From — Klauzula](../../../../visual-basic/language-reference/queries/from-clause.md)
+- [Where — Klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)
+- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)
 - [Przekształcanie danych za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

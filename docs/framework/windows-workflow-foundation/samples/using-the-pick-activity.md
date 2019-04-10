@@ -2,12 +2,12 @@
 title: Używanie działania Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 59f99d2e0a69d796c1ec64093cf73e07b88887c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0b2fbeb9b32406dd913d7e1ee87ac167113d0f28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302985"
 ---
 # <a name="using-the-pick-activity"></a>Używanie działania Pick
 W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Statements.Pick> działania.
@@ -24,25 +24,25 @@ W tym przykładzie przedstawiono sposób użycia <xref:System.Activities.Stateme
 
  Projektanta Workflow Designer wersję przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Uwzględnione są następujące pliki:
 
--   Plik program.CS: Zawiera `Main` funkcja, która wykonuje przykładowy przepływ pracy.
+-   Program.cs : Obejmuje `Main` funkcja, która wykonuje przykładowy przepływ pracy.
 
 -   ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.
 
--   Sequence1.XAML: Przepływ pracy przy użyciu projektanta, który używa wybierz.
+-   Sequence1.XAML: Przepływ pracy utworzony za pomocą projektanta, który używa wybierz.
 
  Kodowane przepływu pracy kodowane wersję przykładu przedstawia sposób tworzenia przepływu pracy w projektancie. Uwzględnione są następujące pliki:
 
--   Plik program.CS: Zawiera `Main` funkcja, która wykonuje przykładowy przepływ pracy.
+-   Program.cs : Obejmuje `Main` funkcja, która wykonuje przykładowy przepływ pracy.
 
 -   ReadString.cs: Niestandardowe działanie, które odczytuje dane wejściowe z konsoli.
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania Pick.sln.
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania Pick.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

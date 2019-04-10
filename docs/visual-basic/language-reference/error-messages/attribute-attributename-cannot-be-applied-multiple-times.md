@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30663
 ms.assetid: 3760e7ff-7238-40a1-8676-77d858a64fc0
-ms.openlocfilehash: fe72e7a14723bcfa429ce80b15dbc22b256774aa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: da4a766e2617308cb33b9673a88db9e7a954152a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304301"
 ---
 # <a name="attribute-attributename-cannot-be-applied-multiple-times"></a>Atrybut "\<attributename >" nie można zastosować wiele razy
 Ten atrybut można zastosować tylko raz. `AttributeUsage` Atrybut określa, czy atrybut można zastosować więcej niż raz.  
@@ -21,9 +21,9 @@ Ten atrybut można zastosować tylko raz. `AttributeUsage` Atrybut określa, czy
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Upewnij się, że ten atrybut jest stosowany tylko raz.  
+1. Upewnij się, że ten atrybut jest stosowany tylko raz.  
   
-2.  Jeśli używasz atrybutów niestandardowych, które utworzono, należy rozważyć zmianę ich `AttributeUsage` atrybutu, aby zezwolić na użycie wielu atrybutu, podobnie jak w poniższym przykładzie.  
+2. Jeśli używasz atrybutów niestandardowych, które utworzono, należy rozważyć zmianę ich `AttributeUsage` atrybutu, aby zezwolić na użycie wielu atrybutu, podobnie jak w poniższym przykładzie.  
   
 ```vb  
 <AttributeUsage(AllowMultiple := True)>  

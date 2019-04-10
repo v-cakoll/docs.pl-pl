@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221098"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296657"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Edytor lokalizacji zasobów Windows)
 
@@ -106,9 +106,9 @@ Należy użyć wersji winres.exe wydanej z .NET Framework, którego używasz. W 
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>Aby zlokalizować plik resx lub .resources skojarzony z formularzem
 
-1.  Typ `winres` w wierszu polecenia dla deweloperów, aby uruchomić Winres.exe.
+1. Typ `winres` w wierszu polecenia dla deweloperów, aby uruchomić Winres.exe.
 
-2.  Aby otworzyć domyślnych zasobów do formularza do zlokalizowania, kliknij przycisk **Otwórz** polecenie **pliku** menu i przejdź do pliku, aby go otworzyć.
+2. Aby otworzyć domyślnych zasobów do formularza do zlokalizowania, kliknij przycisk **Otwórz** polecenie **pliku** menu i przejdź do pliku, aby go otworzyć.
 
      —lub—
 
@@ -129,11 +129,11 @@ Należy użyć wersji winres.exe wydanej z .NET Framework, którego używasz. W 
     > [!NOTE]
     > Jeśli formularz, którego zasoby są edytowane, jest odziedziczonym formularzem, zarówno zestaw zawierający formularz, po którym został odziedziczony edytowany formularz, jak i zestaw zawierający dziedziczący formularz muszą być albo zarejestrowane w globalnej pamięci podręcznej zestawów (GAC) lub znajdować się w tym samym katalogu co plik WinRes.exe. Aby uzyskać więcej informacji na temat instalowania składników .NET Framework w GAC, zobacz [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).
 
-3.  Zaznacz formanty formularza i zmień ich <xref:System.Windows.Forms.Control.Text%2A> i innych właściwości w celu odzwierciedlenia zlokalizowanej kultury i jej języka. Przenoszenie lub zmienianie rozmiaru formantów w celu dostosowania zlokalizowanego tekstu.
+3. Zaznacz formanty formularza i zmień ich <xref:System.Windows.Forms.Control.Text%2A> i innych właściwości w celu odzwierciedlenia zlokalizowanej kultury i jej języka. Przenoszenie lub zmienianie rozmiaru formantów w celu dostosowania zlokalizowanego tekstu.
 
-4.  Aby zapisać zlokalizowaną wersję pliku ResX lub Resources, kliknij przycisk **Zapisz** ikony lub tego samego polecenia na **pliku** menu. Narzędzie wyświetli **Wybieranie kultury** okna.
+4. Aby zapisać zlokalizowaną wersję pliku ResX lub Resources, kliknij przycisk **Zapisz** ikony lub tego samego polecenia na **pliku** menu. Narzędzie wyświetli **Wybieranie kultury** okna.
 
-5.  Wybierz odpowiednią kulturę i tryb pliku, a następnie kliknij przycisk **OK**.
+5. Wybierz odpowiednią kulturę i tryb pliku, a następnie kliknij przycisk **OK**.
 
    Narzędzie zapisuje plik przy użyciu konwencji nazewnictwa, która w czasie wykonywania dla zlokalizowanych plików zasobów. Na przykład, jeśli jest lokalizowany `TestApp.resources` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako `TestApp.de-DE.resources`. Jeśli jest lokalizowany `TestApp.resx` dla języka niemieckiego w Niemczech, narzędzie zapisuje plik jako `TestApp.de-DE.resx`. Aby uzyskać więcej informacji dotyczących konwencji nazywania zasobów, zobacz [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Aby uzyskać listę nazw wstępnie zdefiniowanych kultur używanych w czasie wykonywania, zobacz <xref:System.Globalization.CultureInfo> klasy.
 
@@ -146,4 +146,4 @@ Należy użyć wersji winres.exe wydanej z .NET Framework, którego używasz. W 
 - <xref:System.Resources.ResourceWriter>
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)
-- [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)
+- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)

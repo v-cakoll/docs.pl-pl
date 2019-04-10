@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296397"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Przewodnik: zapewnianie elementów menu standardowego dla formularza
 Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.Forms.MenuStrip> kontroli.  
@@ -47,53 +47,53 @@ Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.For
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz projekt aplikacji Windows, o nazwie **StandardMenuForm** (**pliku** > **New** > **projektu**  >  **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms Aplikacja**).  
+1. Utwórz projekt aplikacji Windows, o nazwie **StandardMenuForm** (**pliku** > **New** > **projektu**  >  **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms Aplikacja**).  
   
-2.  W programie Windows Forms Designer wybierz formularz.  
+2. W programie Windows Forms Designer wybierz formularz.  
   
 ## <a name="creating-a-standard-menu"></a>Tworzenie standardowego Menu  
  Windows Forms Designer może automatycznie wypełnić <xref:System.Windows.Forms.MenuStrip> kontrolki z elementów menu standardowego.  
   
 #### <a name="to-create-a-standard-menu"></a>Aby utworzyć menu standardowe  
   
-1.  Z **przybornika**, przeciągnij <xref:System.Windows.Forms.MenuStrip> formantu do formularza.  
+1. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.MenuStrip> formantu do formularza.  
   
-2.  Kliknij przycisk <xref:System.Windows.Forms.MenuStrip> symbol tagu inteligentnego kontrolki (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) i wybierz **Wstaw elementy standardowe**.  
+2. Kliknij przycisk <xref:System.Windows.Forms.MenuStrip> symbol tagu inteligentnego kontrolki (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) i wybierz **Wstaw elementy standardowe**.  
   
      <xref:System.Windows.Forms.MenuStrip> Kontrolka zostanie wypełniona elementów menu standardowego.  
   
-3.  Kliknij przycisk **pliku** element menu, aby zobaczyć jego elementy menu domyślne i odpowiadające im ikony.  
+3. Kliknij przycisk **pliku** element menu, aby zobaczyć jego elementy menu domyślne i odpowiadające im ikony.  
   
 ## <a name="creating-a-statusstrip-control"></a>Tworzenie StatusStrip, kontrolka  
  Użyj <xref:System.Windows.Forms.StatusStrip> formantu, aby wyświetlić stan dla aplikacji Windows Forms. W bieżącym przykładzie wybrane przez użytkownika elementy menu są wyświetlane w <xref:System.Windows.Forms.StatusStrip> kontroli.  
   
 #### <a name="to-create-a-statusstrip-control"></a>Aby utworzyć StatusStrip, kontrolka  
   
-1.  Z **przybornika**, przeciągnij <xref:System.Windows.Forms.StatusStrip> formantu do formularza.  
+1. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.StatusStrip> formantu do formularza.  
   
      <xref:System.Windows.Forms.StatusStrip> Kontroli automatycznie dokowane do dolnej części formularza.  
   
-2.  Kliknij przycisk <xref:System.Windows.Forms.StatusStrip> przycisk listy rozwijanej i wybierz formantu **StatusLabel** dodać <xref:System.Windows.Forms.ToolStripStatusLabel> kontrolę <xref:System.Windows.Forms.StatusStrip> kontroli.  
+2. Kliknij przycisk <xref:System.Windows.Forms.StatusStrip> przycisk listy rozwijanej i wybierz formantu **StatusLabel** dodać <xref:System.Windows.Forms.ToolStripStatusLabel> kontrolę <xref:System.Windows.Forms.StatusStrip> kontroli.  
   
 ## <a name="handling-item-selection"></a>Wybór elementu obsługi  
  Obsługa <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> zdarzenie, aby odpowiadać, gdy użytkownik wybierze element menu.  
   
 #### <a name="to-handle-item-selection"></a>Aby obsłużyć Wybór elementu  
   
-1.  Kliknij przycisk **pliku** elementu menu, który został utworzony w tworzenie sekcji standardowe Menu.  
+1. Kliknij przycisk **pliku** elementu menu, który został utworzony w tworzenie sekcji standardowe Menu.  
   
-2.  W **właściwości** okna, kliknij przycisk **zdarzenia**.  
+2. W **właściwości** okna, kliknij przycisk **zdarzenia**.  
   
-3.  Kliknij dwukrotnie <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> zdarzeń.  
+3. Kliknij dwukrotnie <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> zdarzeń.  
   
      Windows Forms Designer generuje moduł obsługi zdarzenia <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> zdarzeń.  
   
-4.  Wstaw następujący kod do obsługi zdarzeń.  
+4. Wstaw następujący kod do obsługi zdarzeń.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Wstaw `UpdateStatus` definicję metody narzędzie do formularza.  
+5. Wstaw `UpdateStatus` definicję metody narzędzie do formularza.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -102,11 +102,11 @@ Możesz podać standardowe menu formularzy przy użyciu <xref:System.Windows.For
   
 #### <a name="to-test-your-form"></a>Aby przetestować formularz  
   
-1.  Naciśnij klawisz F5, aby skompilować i uruchomić formularz.  
+1. Naciśnij klawisz F5, aby skompilować i uruchomić formularz.  
   
-2.  Kliknij przycisk **pliku** element menu, aby otworzyć menu.  
+2. Kliknij przycisk **pliku** element menu, aby otworzyć menu.  
   
-3.  Na **pliku** menu, kliknij jeden z elementów, aby go zaznaczyć.  
+3. Na **pliku** menu, kliknij jeden z elementów, aby go zaznaczyć.  
   
      <xref:System.Windows.Forms.StatusStrip> Kontrolka Wyświetla wybrany element.  
   

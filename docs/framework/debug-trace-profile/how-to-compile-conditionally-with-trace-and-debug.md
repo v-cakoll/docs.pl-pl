@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298581"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjściowe debugowania przejdź do okna danych wyjściowych w programie Visual Studio. Jednak aby włączyć funkcje śledzenia do wdrożonej aplikacji, należy skompilować instrumentowanej aplikacji przy użyciu **śledzenia** dyrektywy kompilatora włączone. Dzięki temu kod śledzenia jest kompilowana do wersji aplikacji. Jeśli nie włączysz **śledzenia** dyrektywy, cały kod śledzenia jest ignorowany podczas kompilacji, a nie znajduje się w kodzie pliku wykonywalnego, który zostanie wdrożony.  
@@ -36,9 +36,9 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Aby zmienić ustawienia kompilacji z okna dialogowego strony właściwości  
   
-1.  Kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań**.  
+1. Kliknij prawym przyciskiem myszy węzeł projektu w **Eksploratora rozwiązań**.  
   
-2.  Wybierz **właściwości** z menu skrótów.  
+2. Wybierz **właściwości** z menu skrótów.  
   
     -   W języku Visual Basic, kliknij przycisk **skompilować** w lewym okienku na stronie właściwości, a następnie kliknij **zaawansowane opcje kompilacji** przycisk, aby wyświetlić **Zaawansowane ustawienia kompilatora**okno dialogowe. Zaznacz pole wyboru, jeśli dla ustawienia kompilatora, który chcesz włączyć. Wyczyść pola wyboru dla ustawień, które chcesz wyłączyć.  
   
@@ -46,7 +46,7 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Aby skompilować kod instrumentowanych przy użyciu wiersza polecenia  
   
-1.  Ustaw przełącznik warunkowe kompilatora w wierszu polecenia. Kompilator będzie zawierać śledzenia lub możliwe jest debugowanie kodu w pliku wykonywalnym.  
+1. Ustaw przełącznik warunkowe kompilatora w wierszu polecenia. Kompilator będzie zawierać śledzenia lub możliwe jest debugowanie kodu w pliku wykonywalnym.  
   
      Na przykład następująca instrukcja kompilatora wprowadzone w wierszu polecenia zawierałoby kod śledzenia w skompilowany plik wykonywalny:  
   
@@ -71,7 +71,7 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
   
 ### <a name="to-perform-conditional-compilation-using-const-or-define"></a>Do wykonania kompilacji warunkowej przy użyciu #CONST lub #define  
   
-1.  Wpisz odpowiedniej instrukcji dla języka programowania, w górnej części pliku kodu źródłowego.  
+1. Wpisz odpowiedniej instrukcji dla języka programowania, w górnej części pliku kodu źródłowego.  
   
     |Język|Instrukcja|Wynik|  
     |--------------|---------------|------------|  

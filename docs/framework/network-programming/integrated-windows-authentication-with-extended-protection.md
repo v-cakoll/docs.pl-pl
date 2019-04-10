@@ -2,12 +2,12 @@
 title: Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 71e4359686ea2a6b1ae3e8ec840bf25af644a369
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146825"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325725"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
 Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w <xref:System.Net> i pokrewnych przestrzeniach nazw. Dodano obsługę ochrony rozszerzonej zwiększyć poziom bezpieczeństwa.  
@@ -25,17 +25,17 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
   
  Ogólne cele są następujące:  
   
-1.  Jeśli klient zostanie zaktualizowany do obsługi ochrony rozszerzonej, aplikacje powinny dostarczyć wiązania kanałów i informacje o powiązaniu usługi na wszystkie protokoły obsługiwane uwierzytelnianie. Informacje o powiązaniu do kanału można podawać tylko po kanału (TLS), aby powiązać. Należy zawsze podać informacje o powiązaniu do usługi.  
+1. Jeśli klient zostanie zaktualizowany do obsługi ochrony rozszerzonej, aplikacje powinny dostarczyć wiązania kanałów i informacje o powiązaniu usługi na wszystkie protokoły obsługiwane uwierzytelnianie. Informacje o powiązaniu do kanału można podawać tylko po kanału (TLS), aby powiązać. Należy zawsze podać informacje o powiązaniu do usługi.  
   
-2.  Zaktualizowane serwery, które są poprawnie skonfigurowane może sprawdzić kanału i informacje o powiązaniu do usługi, gdy nie jest obecny w tokenie uwierzytelniania klienta i odrzucić próby uwierzytelnienia, jeśli powiązania kanału nie są zgodne. W zależności od scenariusza wdrożenia serwerów może zweryfikować powiązania kanału, powiązania usługi lub obu.  
+2. Zaktualizowane serwery, które są poprawnie skonfigurowane może sprawdzić kanału i informacje o powiązaniu do usługi, gdy nie jest obecny w tokenie uwierzytelniania klienta i odrzucić próby uwierzytelnienia, jeśli powiązania kanału nie są zgodne. W zależności od scenariusza wdrożenia serwerów może zweryfikować powiązania kanału, powiązania usługi lub obu.  
   
-3.  Zaktualizowano serwery mają możliwość akceptowanie lub odrzucanie żądań klientów niskiego poziomu, które nie zawierają informacje o powiązaniu kanału, na podstawie zasad.  
+3. Zaktualizowano serwery mają możliwość akceptowanie lub odrzucanie żądań klientów niskiego poziomu, które nie zawierają informacje o powiązaniu kanału, na podstawie zasad.  
   
  Informacje używane przez rozszerzonej ochrony zawiera jeden lub oba z następujących dwóch części:  
   
-1.  Kanał powiązanie tokenu lub CBT.  
+1. Kanał powiązanie tokenu lub CBT.  
   
-2.  Usługi informacje o powiązaniu w formie główna nazwa usługi lub nazwy SPN.  
+2. Usługi informacje o powiązaniu w formie główna nazwa usługi lub nazwy SPN.  
   
  Powiązania usługi informacji jest wskazanie celem klienta do uwierzytelniania punktu końcowego określonej usługi. Jest przekazywane z klienta do serwera z następującymi właściwościami:  
   
@@ -122,11 +122,11 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
   
  W tej konfiguracji po wysłaniu żądania do serwera przy użyciu zewnętrznym bezpiecznego kanału channel zewnętrzne zostaje przesłane zapytanie wiązania kanałów. Tego powiązania kanału jest przekazywany do wywołania interfejsu SSPI uwierzytelniania, których sprawdzanie poprawności, które powiązania kanału dopasowanie blob uwierzytelniania w. Istnieją trzy możliwe wyniki:  
   
-1.  System operacyjny serwera nie obsługuje ochrony rozszerzonej. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
+1. System operacyjny serwera nie obsługuje ochrony rozszerzonej. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
   
-2.  Wywołania interfejsu SSPI nie powiodło się wskazujący, że klient określono powiązania kanału, który nie odpowiada oczekiwanej wartości pobierane z zewnętrznych kanału lub klient nie może dostarczyć powiązania kanału, gdy skonfigurowano zasady ochrony rozszerzonej na serwerze Aby uzyskać <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. W obu przypadkach żądanie, nie będzie ona widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
+2. Wywołania interfejsu SSPI nie powiodło się wskazujący, że klient określono powiązania kanału, który nie odpowiada oczekiwanej wartości pobierane z zewnętrznych kanału lub klient nie może dostarczyć powiązania kanału, gdy skonfigurowano zasady ochrony rozszerzonej na serwerze Aby uzyskać <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>. W obu przypadkach żądanie, nie będzie ona widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
   
-3.  Klient określa powiązania w poprawnym kanale lub może nawiązać połączenie bez określenia powiązania kanału, ponieważ zasady ochrony rozszerzonej na serwerze jest skonfigurowany przy użyciu <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> żądania jest zwracana do aplikacji w celu przetworzenia. Nie wyboru nazwa usługi jest realizowane automatycznie. Aplikacja może wybrać do wykonania własnej usługi nazwa weryfikacji za pomocą <xref:System.Net.HttpListenerRequest.ServiceName%2A> właściwości, ale w poniższych sytuacjach jest nadmiarowe.  
+3. Klient określa powiązania w poprawnym kanale lub może nawiązać połączenie bez określenia powiązania kanału, ponieważ zasady ochrony rozszerzonej na serwerze jest skonfigurowany przy użyciu <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> żądania jest zwracana do aplikacji w celu przetworzenia. Nie wyboru nazwa usługi jest realizowane automatycznie. Aplikacja może wybrać do wykonania własnej usługi nazwa weryfikacji za pomocą <xref:System.Net.HttpListenerRequest.ServiceName%2A> właściwości, ale w poniższych sytuacjach jest nadmiarowe.  
   
  Jeśli aplikacja sprawia, że jego własnej wywołania interfejsu SSPI, aby przeprowadzać uwierzytelnianie oparte na obiekty BLOB przekazane i z powrotem w treści żądania HTTP i chce obsługiwać powiązania kanału, musi pobrać wiązania kanałów oczekiwanych z zewnętrznym bezpiecznego kanału, za pomocą <xref:System.Net.HttpListener> aby można było przekazać go do natywnego Win32 [działanie funkcji AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) funkcji. Aby to zrobić, należy użyć <xref:System.Net.HttpListenerRequest.TransportContext%2A> właściwości i wywołania <xref:System.Net.TransportContext.GetChannelBinding%2A> metodę, która pobierze CBT. Obsługiwane są tylko powiązania punktu końcowego. Jeśli niczego poza <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> jest określony, <xref:System.NotSupportedException> zostanie zgłoszony. Jeśli system operacyjny obsługuje wiązania kanałów <xref:System.Net.TransportContext.GetChannelBinding%2A> metoda zwróci <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> zawijania wskaźnik do powiązania odpowiedni do przekazania do kanału [działanie funkcji AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) pełnią pvBuffer element członkowski struktury SecBuffer przekazanej `pInput` parametru. <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> Właściwość zawiera długość w bajtach, powiązania kanału. Jeśli system operacyjny nie obsługuje powiązań kanałów, funkcja zwróci `null`.  
   
@@ -136,13 +136,13 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
   
  W tej konfiguracji po wysłaniu żądania do serwera bez zewnętrznym bezpiecznego uwierzytelniania kanału przetwarzane w zwykły sposób bez powiązania wyboru kanału. Jeśli uwierzytelnianie zakończy się powodzeniem, kontekst zostaje przesłane zapytanie dla nazwy usługi, czy klient podane, a następnie weryfikowany pod kątem listy nazw usług dopuszczalne. Istnieją cztery możliwe wyniki:  
   
-1.  System operacyjny serwera nie obsługuje ochrony rozszerzonej. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
+1. System operacyjny serwera nie obsługuje ochrony rozszerzonej. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
   
-2.  System operacyjny klienta nie obsługuje ochrony rozszerzonej. W <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> konfigurację, próba uwierzytelnienia zostanie wykonane pomyślnie i żądania, które zostaną zwrócone do aplikacji. W <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> konfiguracji, próba uwierzytelnienia nie powiedzie się. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
+2. System operacyjny klienta nie obsługuje ochrony rozszerzonej. W <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> konfigurację, próba uwierzytelnienia zostanie wykonane pomyślnie i żądania, które zostaną zwrócone do aplikacji. W <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> konfiguracji, próba uwierzytelnienia nie powiedzie się. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
   
-3.  System operacyjny klienta obsługuje rozszerzonej ochrony, ale aplikacja nie określiła powiązania usługi. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
+3. System operacyjny klienta obsługuje rozszerzonej ochrony, ale aplikacja nie określiła powiązania usługi. Żądanie nie będzie widoczna dla aplikacji, a odpowiedź (401) nieautoryzowane zostanie zwrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
   
-4.  Klient określone powiązanie usługi. Powiązanie usługi jest porównywana do listy dozwolonych powiązania. Jeśli jest zgodny, żądanie jest zwracana do aplikacji. W przeciwnym razie nie zostaną ujawnione żądania do aplikacji i odpowiedź (401) nieautoryzowane zostanie automatycznie przywrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
+4. Klient określone powiązanie usługi. Powiązanie usługi jest porównywana do listy dozwolonych powiązania. Jeśli jest zgodny, żądanie jest zwracana do aplikacji. W przeciwnym razie nie zostaną ujawnione żądania do aplikacji i odpowiedź (401) nieautoryzowane zostanie automatycznie przywrócony do klienta. Komunikat zostaną zarejestrowane <xref:System.Net.HttpListener> źródła śledzenia, określania przyczyny niepowodzenia.  
   
  Jeśli to proste podejście przy użyciu listy dozwolonych dla nazwy usługi dopuszczalne jest niewystarczająca, aplikacja może podać swój własny sprawdzanie poprawności nazwy usługi, badając <xref:System.Net.HttpListenerRequest.ServiceName%2A> właściwości. W przypadku 1 i 2 powyżej, zwróci właściwość `null`. W przypadku, gdy 3, zwróci pusty ciąg. W przypadku, gdy 4, zostaną zwrócone z nazwą usługi określoną przez klienta.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika w kontrolkach internetowych na liczby'
+title: 'Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296163"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika w kontrolkach internetowych na liczby
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych
 Ponieważ strony sieci Web może być wyświetlany w dowolnym miejscu na świecie, użytkownicy można wpisać dane liczbowe do <xref:System.Web.UI.WebControls.TextBox> formantu w niemal nieograniczoną liczbę formatów. W rezultacie jest bardzo ważne określić ustawienia regionalne i kultury użytkownika strony sieci Web. Podczas analizy danych wejściowych użytkownika, można użyć konwencji formatowania, zdefiniowane przez użytkownika ustawień regionalnych i kultur.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>Aby konwertowanie liczbowych danych wejściowych z formantu sieci Web w polu tekstowym na liczbę  
   
-1.  Określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 6.  
+1. Określić, czy tablica ciągów zwracane przez <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> właściwość jest wypełnione. Jeśli nie jest, przejdź do kroku 6.  
   
-2.  Jeśli ciąg tablica zwrócona przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest wypełniana, pobrać jej pierwszego elementu. Pierwszy element wskazuje domyślną lub preferowanego języka i regionu użytkownika.  
+2. Jeśli ciąg tablica zwrócona przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest wypełniana, pobrać jej pierwszego elementu. Pierwszy element wskazuje domyślną lub preferowanego języka i regionu użytkownika.  
   
-3.  Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje użytkownika preferowanego kultury poprzez wywołanie <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora.  
+3. Utwórz wystąpienie <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje użytkownika preferowanego kultury poprzez wywołanie <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora.  
   
-4.  Wywołaj opcję `TryParse` lub `Parse` wejściowych do metody typu liczbowego, który chcesz przekonwertować użytkownika. Używanie przeciążenia `TryParse` lub `Parse` metody z `provider` parametru i przekazywać je w jednej z następujących pozycji:  
+4. Wywołaj opcję `TryParse` lub `Parse` wejściowych do metody typu liczbowego, który chcesz przekonwertować użytkownika. Używanie przeciążenia `TryParse` lub `Parse` metody z `provider` parametru i przekazywać je w jednej z następujących pozycji:  
   
     -   <xref:System.Globalization.CultureInfo> Obiekt utworzony w kroku 3.  
   
     -   <xref:System.Globalization.NumberFormatInfo> Obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.NumberFormat%2A> właściwość <xref:System.Globalization.CultureInfo> obiekt utworzony w kroku 3.  
   
-5.  Jeśli konwersja nie powiedzie się, powtórz kroki od 2 do 4 dla każdego pozostałego elementu w tablicy ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwości.  
+5. Jeśli konwersja nie powiedzie się, powtórz kroki od 2 do 4 dla każdego pozostałego elementu w tablicy ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwości.  
   
-6.  Jeśli konwersja nadal kończy się niepowodzeniem lub tablicę ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest pusta, przeanalizować składni ciągu przy użyciu niezmiennej kultury, która jest zwracana przez <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
+6. Jeśli konwersja nadal kończy się niepowodzeniem lub tablicę ciągów zwrócony przez <xref:System.Web.HttpRequest.UserLanguages%2A> właściwość jest pusta, przeanalizować składni ciągu przy użyciu niezmiennej kultury, która jest zwracana przez <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> właściwości.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia kompletny osobna strona kodu formularza sieci Web, która prosi użytkownika o podanie wartości numerycznej w <xref:System.Web.UI.WebControls.TextBox> kontroli i konwertuje ją na liczbę. Ta liczba jest następnie dwukrotnie i wyświetlane przy użyciu tego samego reguły formatowania jako oryginalne dane wejściowe.  

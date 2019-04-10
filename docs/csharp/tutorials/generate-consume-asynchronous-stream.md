@@ -3,12 +3,12 @@ title: Generowanie i używanie strumieni asynchronicznych
 description: W tym samouczku zaawansowane przedstawiono scenariusze, w którym generowania i używania strumieni asynchronicznych zapewnia bardziej naturalny sposób pracy z sekwencje danych, które mogą być generowane w sposób asynchroniczny.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308552"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Samouczek: Generowanie i używanie strumieni asynchronicznych za pomocą C# 8.0 i .NET Core 3.0
 
@@ -23,7 +23,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 beta. C# 8 kompilatora w wersji beta jest dostępna, począwszy od [2019 usługi Visual Studio w wersji zapoznawczej 1](https://visualstudio.microsoft.com/vs/preview/), lub [1 — zestaw SDK platformy .NET Core 3.0 w wersji zapoznawczej](https://dotnet.microsoft.com/download/dotnet-core/3.0). Asynchroniczne strumienie najpierw są dostępne w wersji zapoznawczej platformy .NET Core 3.0 to 1.
+Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 beta. C# 8 kompilatora w wersji beta jest dostępna, począwszy od [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), lub r [.NET Core 3.0 (wersja zapoznawcza) zestawu SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0). Asynchroniczne strumienie najpierw są dostępne w wersji zapoznawczej platformy .NET Core 3.0 to 1.
 
 Musisz utworzyć [token dostępu GitHub](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) tak, aby mogli punktu końcowego usługi GitHub GraphQL. Wybierz następujące uprawnienia dla Twojego tokenu dostępu usługi GitHub:
 

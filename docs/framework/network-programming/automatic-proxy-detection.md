@@ -14,12 +14,12 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 3de9b67d687d23e9f31c3060f5af6ef90d45f217
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 656a21a7b8801a2c3b72b25531705576fcf047cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295760"
 ---
 # <a name="automatic-proxy-detection"></a>Automatyczne wykrywanie serwera proxy
 Automatyczne wykrywanie serwera proxy jest procesem, za pomocą którego serwer proxy sieci Web jest identyfikowane przez system i używane do wysyłania żądania w imieniu klienta. Ta funkcja jest również znana jako funkcja autowykrywania serwera Proxy sieci Web (WPAD). Gdy automatyczne wykrywanie serwera proxy jest włączone, system próbuje zlokalizować skryptu konfiguracji serwera proxy, która jest odpowiedzialna za zwrócenie zestaw serwerów proxy, które mogą być używane dla żądania. Jeśli zostanie znaleziony skryptu konfiguracji serwera proxy, skrypt pobrany, skompilowany i uruchom na komputerze lokalnym, jeśli informacje o serwerze proxy, strumienia żądania lub odpowiedzi jest uzyskiwany na żądanie, który używa <xref:System.Net.WebProxy> wystąpienia.  
@@ -31,13 +31,13 @@ Automatyczne wykrywanie serwera proxy jest procesem, za pomocą którego serwer 
   
  Gdy jest włączone automatyczne wykrywanie serwera proxy, <xref:System.Net.WebProxy> klasy próbuje zlokalizować skryptu konfiguracji serwera proxy w następujący sposób:  
   
-1.  WinINet `InternetQueryOption` funkcja jest używana do lokalizowania skryptu konfiguracji serwera proxy ostatnio wykrytych przez program Internet Explorer.  
+1. WinINet `InternetQueryOption` funkcja jest używana do lokalizowania skryptu konfiguracji serwera proxy ostatnio wykrytych przez program Internet Explorer.  
   
-2.  Jeśli skrypt nie jest umieszczony <xref:System.Net.WebProxy> klasa używa DHCP Dynamic Host Configuration Protocol (), aby zlokalizować scenariusza. Serwer DHCP może odpowiadać za pomocą lokalizacji (nazwa hosta), skryptu lub pełny adres URL skryptu.  
+2. Jeśli skrypt nie jest umieszczony <xref:System.Net.WebProxy> klasa używa DHCP Dynamic Host Configuration Protocol (), aby zlokalizować scenariusza. Serwer DHCP może odpowiadać za pomocą lokalizacji (nazwa hosta), skryptu lub pełny adres URL skryptu.  
   
-3.  Jeśli DHCP nie wskazuje hosta WPAD, DNS zostaje przesłane zapytanie do hosta za pomocą WPAD jako jego nazwę lub alias.  
+3. Jeśli DHCP nie wskazuje hosta WPAD, DNS zostaje przesłane zapytanie do hosta za pomocą WPAD jako jego nazwę lub alias.  
   
-4.  Ta lokalizacja jest używana, jeśli host nie zostanie zidentyfikowany, lokalizacja skryptu konfiguracji serwera proxy jest określony przez ustawienia Internet Explorer w sieci LAN lub pliku konfiguracji.  
+4. Ta lokalizacja jest używana, jeśli host nie zostanie zidentyfikowany, lokalizacja skryptu konfiguracji serwera proxy jest określony przez ustawienia Internet Explorer w sieci LAN lub pliku konfiguracji.  
   
 > [!NOTE]
 >  Aplikacje działające jako usługi NT lub w ramach programu ASP.NET Użyj ustawień serwera proxy programu Internet Explorer (jeśli jest dostępny) użytkownika, które powinny być przekazywane wywołującemu. Te ustawienia mogą być dostępne dla wszystkich aplikacji usługi.  

@@ -2,12 +2,12 @@
 title: Zarządzanie wstrzymanymi wystąpieniami
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319563"
 ---
 # <a name="suspended-instance-management"></a>Zarządzanie wstrzymanymi wystąpieniami
 Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, które zostało zawieszone.  Domyślna akcja dla <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> jest `AbandonAndSuspend`. Oznacza to, że domyślnie nieobsługiwanych wyjątków zgłoszonych z wystąpienia przepływu pracy hostowane w <xref:System.ServiceModel.WorkflowServiceHost> spowoduje wystąpienie Aby zostać usunięty z pamięci (porzucone) i trwałość/utrwalona wersję wystąpienia został oznaczony jako zawieszone. Wystąpienie Wstrzymany przepływ pracy nie będzie działać, dopóki nie zostało zawieszenia.
@@ -24,13 +24,13 @@ Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, kt�
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
 
-1.  Ten przykładowy skrypt wymaga włączenia następujących składników Windows:
+1. Ten przykładowy skrypt wymaga włączenia następujących składników Windows:
 
-    1.  Microsoft Message kolejki serwer (MSMQ)
+    1.  Microsoft Message Queues (MSMQ) Server
 
     2.  SQL Server Express
 
-2.  Konfigurowanie bazy danych programu SQL Server.
+2. Konfigurowanie bazy danych programu SQL Server.
 
     1.  Z wiersza polecenia programu Visual Studio 2010 należy uruchomić "plik setup.cmd" z katalogu przykładowe SuspendedInstanceManagement, który wykonuje następujące czynności:
 
@@ -40,7 +40,7 @@ Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, kt�
 
         3.  Dodaje IIS APPPOOL\DefaultAppPool i NT AUTHORITY\Network Service do roli InstanceStoreUsers, która została określona podczas konfigurowania bazy danych dla trwałości.
 
-3.  Konfigurowanie usługi kolejki.
+3. Konfigurowanie usługi kolejki.
 
     1.  W programie Visual Studio 2010, kliknij prawym przyciskiem myszy **SampleWorkflowApp** projektu, a następnie kliknij przycisk **Ustaw jako projekt startowy**.
 
@@ -56,7 +56,7 @@ Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, kt�
 
     7.  Wybierz **zabezpieczeń** kartę i umożliwiają **wszyscy** musi mieć uprawnienia do **odbieranie wiadomości**, **wglądu do wiadomości**, i  **Wyślij wiadomość**.
 
-4.  Teraz uruchom przykład.
+4. Teraz uruchom przykład.
 
     1.  W programie Visual Studio 2010, SampleWorkflowApp project należy ponownie uruchomić bez debugowania, naciskając klawisz **kombinację klawiszy Ctrl + F5**. Dwa adresy punktów końcowych, które będą wypisywane w oknie konsoli: jeden dla punktu końcowego aplikacji i następnie inne z <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Wystąpienie przepływu pracy zostanie utworzony i śledzenia rekordów dla tego wystąpienia zostaną wyświetlone w oknie konsoli. Wystąpienie przepływu pracy spowoduje zgłoszenie wyjątku powoduje wystąpienie aby je zawieszać i zostało przerwane.
 
@@ -68,13 +68,13 @@ Niniejszy przykład pokazuje, jak zarządzać wystąpienia przepływu pracy, kt�
 
 #### <a name="to-cleanup-optional"></a>Aby oczyścić (opcjonalnie)
 
-1.  Otwórz konsolę Zarządzanie komputerem, uruchamiając Compmgmt.msc z `vs2010` wiersza polecenia.
+1. Otwórz konsolę Zarządzanie komputerem, uruchamiając Compmgmt.msc z `vs2010` wiersza polecenia.
 
-2.  Rozwiń **usługi i aplikacje**, **usługi kolejkowania komunikatów**, **kolejki prywatne**.
+2. Rozwiń **usługi i aplikacje**, **usługi kolejkowania komunikatów**, **kolejki prywatne**.
 
-3.  Usuń **ReceiveTx** kolejki.
+3. Usuń **ReceiveTx** kolejki.
 
-4.  Aby usunąć bazy danych trwałości, uruchom cleanup.cmd.
+4. Aby usunąć bazy danych trwałości, uruchom cleanup.cmd.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

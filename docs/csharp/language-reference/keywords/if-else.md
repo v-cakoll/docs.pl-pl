@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294422"
 ---
 # <a name="if-else-c-reference"></a>if-else (odwołanie w C#)
 
@@ -82,7 +82,7 @@ Poniższy przykład określa, czy znak danych wejściowych jest mała litera, Wi
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-Tak, jak instrukcji else bloku lub bloku następnie może być dowolną prawidłową instrukcją, można użyć dowolne prawidłowe wyrażenie logiczne dla warunku. Można użyć operatorów logicznych, takich jak [ && ](../operators/conditional-and-operator.md), [ & ](../operators/and-operator.md), [ &#124; &#124; ](../operators/conditional-or-operator.md), [ &#124; ](../operators/or-operator.md) i [!](../operators/logical-negation-operator.md) Aby złożone warunki. Poniższy kod przedstawia przykłady.
+Tak, jak instrukcji else bloku lub bloku następnie może być dowolną prawidłową instrukcją, można użyć dowolne prawidłowe wyrażenie logiczne dla warunku. Możesz użyć [operatorów logicznych](../operators/boolean-logical-operators.md) takich jak `!`, `&&`, `||`, `&`, `|`, i `^` się złożone warunki. Poniższy kod przedstawia przykłady.
 
 ```csharp
 // NOT
@@ -137,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [?: operator](../operators/conditional-operator.md)
-- [if-else, instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)
-- [switch](switch.md)
+- [?: Operator](../operators/conditional-operator.md)
+- [if-else — instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)
+- [— przełącznik](switch.md)

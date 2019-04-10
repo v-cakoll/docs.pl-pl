@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091619"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304808"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a> Program .NET Framework zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługuje rozszerzalność w dodatku. Ten dodatek model umożliwia tworzenie dodatków, które integrują się z oraz rozszerzanie funkcjonalności aplikacji. W niektórych przypadkach aplikacje wymagają także do wyświetlania interfejsu użytkownika, które są dostarczane przez dodatki. W tym temacie pokazano, jak WPF, rozszerzają model dodatku .NET Framework umożliwiają tych scenariuszy, architektura za go, jego zalety i jego pewne ograniczenia.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091619"
 ## <a name="wpf-add-ins"></a>Dodatki WPF  
  WPF, w połączeniu z .NET Framework — w modelu pozwala rozwiązać szerokiej gamy scenariuszy, które wymagają obsługi aplikacji, aby wyświetlić interfejs użytkownika z dodatków. W szczególności te scenariusze są rozwiązywane przez WPF za pomocą następujących dwóch modelach programowania:  
   
-1.  **Dodatek zwraca interfejs użytkownika**. Dodatek zwraca interfejs użytkownika do aplikacji hosta za pośrednictwem wywołania metody, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
+1. **Dodatek zwraca interfejs użytkownika**. Dodatek zwraca interfejs użytkownika do aplikacji hosta za pośrednictwem wywołania metody, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
   
     -   Wygląd interfejsu użytkownika, który jest zwracany przez dodatek jest zależny od danych albo lub warunków, które istnieją tylko w czasie wykonywania, takie jak dynamicznie wygenerowanych raportów.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091619"
   
     -   Dodatek przede wszystkim wykonuje usługi dla aplikacji hosta i raportuje stan aplikacji hosta, za pomocą interfejsu użytkownika.  
   
-2.  **Dodatek jest interfejsem użytkownika**. Dodatek jest interfejsem użytkownika, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
+2. **Dodatek jest interfejsem użytkownika**. Dodatek jest interfejsem użytkownika, zgodnie z definicją w umowie. W tym scenariuszu jest używany w następujących przypadkach:  
   
     -   Dodatek nie zapewnia usługami innymi niż są wyświetlane, takich jak reklamy.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091619"
   
  Typy WPF UI nie są wykonywane zdalnie. Aby rozwiązać ten problem, WPF rozszerza model dodatku .NET Framework umożliwia WPF UI utworzone przez dodatki mają być wyświetlane z hosta aplikacji. Ta pomoc techniczna jest świadczona przez WPF przez dwa typy: <xref:System.AddIn.Contract.INativeHandleContract> interfejsu i dwa statycznych metod zaimplementowanych przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters> klasy: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:  
   
-1.  WPF wymaga, że interfejsy użytkownika, dostarczone przez dodatki są klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Windows.FrameworkElement>, takich jak kształtów, formantów, kontrolki użytkownika, panele układu i strony.  
+1. WPF wymaga, że interfejsy użytkownika, dostarczone przez dodatki są klas, które pochodzą bezpośrednio lub pośrednio z <xref:System.Windows.FrameworkElement>, takich jak kształtów, formantów, kontrolki użytkownika, panele układu i strony.  
   
-2.  Wszędzie tam, gdzie kontrakt deklaruje, że interfejs użytkownika będą przekazywane między dodatkiem a aplikacją hosta, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> jest reprezentacją może być zastosowana zdalnie dodatku interfejs użytkownika, który może być przekazywany w granicach izolacji.  
+2. Wszędzie tam, gdzie kontrakt deklaruje, że interfejs użytkownika będą przekazywane między dodatkiem a aplikacją hosta, musi być zadeklarowany jako <xref:System.AddIn.Contract.INativeHandleContract> (nie <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> jest reprezentacją może być zastosowana zdalnie dodatku interfejs użytkownika, który może być przekazywany w granicach izolacji.  
   
-3.  Przed przesłaniem z dodatku w domenie aplikacji <xref:System.Windows.FrameworkElement> jest spakowany jako <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Przed przesłaniem z dodatku w domenie aplikacji <xref:System.Windows.FrameworkElement> jest spakowany jako <xref:System.AddIn.Contract.INativeHandleContract> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Po były przekazywane do aplikacji hosta domeny aplikacji, <xref:System.AddIn.Contract.INativeHandleContract> muszą być udostępniane jako <xref:System.Windows.FrameworkElement> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Po były przekazywane do aplikacji hosta domeny aplikacji, <xref:System.AddIn.Contract.INativeHandleContract> muszą być udostępniane jako <xref:System.Windows.FrameworkElement> przez wywołanie metody <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  Jak <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> służą zależy od konkretnego scenariusza. Poniższe sekcje zawierają szczegółowe informacje dla każdego modelu programowania.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091619"
 ## <a name="add-in-returns-a-user-interface"></a>Dodatek zwraca interfejs użytkownika  
  Dla dodatku do zwrócenia interfejsu użytkownika dla aplikacji hosta wymagane jest spełnienie następujących:  
   
-1.  Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.  
+1. Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.  
   
-2.  Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i zwracać interfejsu użytkownika, kontrakt musi deklarować metody o wartości zwracanego typu <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Kontrakt musi implementować <xref:System.AddIn.Contract.IContract> i zwracać interfejsu użytkownika, kontrakt musi deklarować metody o wartości zwracanego typu <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Interfejs użytkownika, który jest przekazywany między dodatkiem a aplikacją hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.  
+3. Interfejs użytkownika, który jest przekazywany między dodatkiem a aplikacją hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.  
   
-4.  Interfejs użytkownika, który jest zwracany przez dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.  
+4. Interfejs użytkownika, który jest zwracany przez dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.  
   
-5.  Interfejs użytkownika, który jest zwracany, muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.  
+5. Interfejs użytkownika, który jest zwracany, muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.  
   
-6.  Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
+6. Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
   
  Na przykład, który demonstruje sposób implementacji dodatku, który zwraca interfejs użytkownika, zobacz [utworzyć dodatek zwracającego interfejs użytkownika](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091619"
 ## <a name="add-in-is-a-user-interface"></a>Dodatek jest interfejsem użytkownika  
  Gdy dodatek jest interfejsem użytkownika, wymagane są następujące:  
   
-1.  Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.  
+1. Aplikacja hosta i potoku należy utworzyć, zgodnie z opisem w programie .NET Framework [dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) dokumentacji.  
   
-2.  Musi implementować interfejs kontraktu dla dodatku <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Musi implementować interfejs kontraktu dla dodatku <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Dodatek, który jest przekazywany do aplikacji hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.  
+3. Dodatek, który jest przekazywany do aplikacji hosta należy bezpośrednio ani pośrednio dziedziczyć <xref:System.Windows.FrameworkElement>.  
   
-4.  Dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.  
+4. Dodatek muszą zostać skonwertowane z <xref:System.Windows.FrameworkElement> do <xref:System.AddIn.Contract.INativeHandleContract> przed przekroczeniem granic izolacji.  
   
-5.  Dodatek muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.  
+5. Dodatek muszą zostać skonwertowane z <xref:System.AddIn.Contract.INativeHandleContract> do <xref:System.Windows.FrameworkElement> po przekroczeniu granic izolacji.  
   
-6.  Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
+6. Aplikacja hosta Wyświetla zwracanego <xref:System.Windows.FrameworkElement>.  
   
  Na przykład, który demonstruje sposób implementacji dodatku, który jest interfejsem użytkownika, zobacz [dodatku oznacza to tworzenie interfejsu użytkownika](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091619"
   
  Następnym krokiem jest określenie zestawów potoku i zestawów w dodatku, jako [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] zawartości plików w [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] , wykonując następujące czynności:  
   
-1.  Łącznie z zestawu potoku i dodatek w projekcie, klikając prawym przyciskiem myszy każdy folder potoku w Eksploratorze rozwiązań i wybierając pozycję **załącz do projektu**.  
+1. Łącznie z zestawu potoku i dodatek w projekcie, klikając prawym przyciskiem myszy każdy folder potoku w Eksploratorze rozwiązań i wybierając pozycję **załącz do projektu**.  
   
-2.  Ustawienie **Build Action** każdego zestawu potoku i zestawów w dodatku do **zawartości** z **właściwości** okna.  
+2. Ustawienie **Build Action** każdego zestawu potoku i zestawów w dodatku do **zawartości** z **właściwości** okna.  
   
  Ostatnim krokiem jest skonfigurowanie manifest aplikacji do uwzględnienia potoku plików zestawu i pliku zestawu w dodatku do pobrania. Pliki powinny się znajdować w foldery w katalogu głównym folderu w [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] pamięci podręcznej, który [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] zajmuje aplikacji. Konfigurację można osiągnąć w [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] , wykonując następujące czynności:  
   
-1.  Kliknij prawym przyciskiem myszy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu, kliknij przycisk **właściwości**, kliknij przycisk **Publikuj**, a następnie kliknij przycisk **pliki aplikacji** przycisku.  
+1. Kliknij prawym przyciskiem myszy [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu, kliknij przycisk **właściwości**, kliknij przycisk **Publikuj**, a następnie kliknij przycisk **pliki aplikacji** przycisku.  
   
-2.  W **pliki aplikacji** okno dialogowe, zestaw **stan publikowania** każdego potoku i biblioteki DLL dodatku **Include (Auto)** i ustaw **grupa pobierania** dla każdego potoku dodatku DLL **(wymagane)**.  
+2. W **pliki aplikacji** okno dialogowe, zestaw **stan publikowania** każdego potoku i biblioteki DLL dodatku **Include (Auto)** i ustaw **grupa pobierania** dla każdego potoku dodatku DLL **(wymagane)**.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Przy użyciu potoku i dodać od podstawy aplikacji  
  Jeśli skonfigurowana potoku i dodać do [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] wdrożenie, są one pobierane do tej samej [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] folder pamięci podręcznej jako [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Korzystanie z potoku i dodatek z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] kodu należy pobrać je z aplikacji podstawowej. Różne typy i członkowie model dodatku .NET Framework dla przy użyciu potoków i dodatki obsługi specjalnych dla tego scenariusza. Po pierwsze, ścieżka jest identyfikowane za pomocą <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartości wyliczenia. Będzie ona używana z przeciążeń odpowiednich członków dodatku dotyczące korzystania z potokiem, które są następujące:  

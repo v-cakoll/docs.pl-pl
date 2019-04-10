@@ -2,12 +2,12 @@
 title: Tworzenie długo działającej usługi przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109658"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301350"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Tworzenie długo działającej usługi przepływu pracy
 W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. Długotrwałe usług przepływu pracy może działać przez dłuższy czas. W pewnym momencie przepływu pracy może być bezczynny, oczekiwanie na kilku dodatkowych informacji. W takim przypadku przepływ pracy jest trwały do usługi SQL database i zostanie usunięty z pamięci. Po udostępnieniu dodatkowych informacji wystąpienia przepływu pracy jest ładowany do pamięci i kontynuuje wykonywanie.  W tym scenariuszu w przypadku wdrażania bardzo uproszczony system zamawiania.  Klient wysyła pierwszy komunikat do usługi przepływu pracy, aby rozpocząć kolejności. Zwraca identyfikator zamówienia dla klienta. W tym momencie Usługa przepływu pracy oczekuje na inny komunikat z klienta i przechodzi w stan bezczynności i jest umieszczone w bazie danych programu SQL Server.  Gdy klient wysyła następnej wiadomości w celu uporządkowania elementów, usługi przepływu pracy jest ładowany do pamięci i zakończeniu przetwarzania zamówienia. W przykładowym kodzie zwraca ciąg z informacją, że element został dodany do zamówienia. Przykładowy kod nie jest przeznaczona do rzeczywistej aplikacji w technologii, ale raczej prosty przykład ilustrujący długo działającej usługi przepływu pracy. W tym temacie założono, że wiesz, jak tworzyć projekty programu Visual Studio 2012 i rozwiązań.
@@ -15,33 +15,33 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 ## <a name="prerequisites"></a>Wymagania wstępne
  Musi mieć następujące oprogramowanie, które są zainstalowane, aby użyć tego przewodnika:
 
-1.  Microsoft SQL Server 2008
+1. Microsoft SQL Server 2008
 
-2.  Visual Studio 2012
+2. Visual Studio 2012
 
-3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4.  Znają WCF i programu Visual Studio 2012 i wiedzieć, jak tworzyć projekty i rozwiązania.
+4. Znają WCF i programu Visual Studio 2012 i wiedzieć, jak tworzyć projekty i rozwiązania.
 
 ### <a name="to-setup-the-sql-database"></a>Aby skonfigurować bazy danych SQL
 
-1.  Aby wystąpień usługi przepływu pracy w celu jego utrwalenia muszą mieć zainstalowany program Microsoft SQL Server i skonfiguruj bazę danych do przechowywania wystąpień utrwalonych przepływu pracy. Uruchom program Microsoft SQL Management Studio, klikając pozycję **Start** przycisku, wybierając **wszystkie programy**, **Microsoft SQL Server 2008**, i **programu Microsoft SQL Management Studio**.
+1. Aby wystąpień usługi przepływu pracy w celu jego utrwalenia muszą mieć zainstalowany program Microsoft SQL Server i skonfiguruj bazę danych do przechowywania wystąpień utrwalonych przepływu pracy. Uruchom program Microsoft SQL Management Studio, klikając pozycję **Start** przycisku, wybierając **wszystkie programy**, **Microsoft SQL Server 2008**, i **programu Microsoft SQL Management Studio**.
 
-2.  Kliknij przycisk **Connect** przycisk, aby zalogować się do wystąpienia programu SQL Server
+2. Kliknij przycisk **Connect** przycisk, aby zalogować się do wystąpienia programu SQL Server
 
-3.  Kliknij prawym przyciskiem myszy **baz danych** w widoku drzewa i wybierz pozycję **nową bazę danych...** Aby utworzyć nową bazę danych o nazwie `SQLPersistenceStore`.
+3. Kliknij prawym przyciskiem myszy **baz danych** w widoku drzewa i wybierz pozycję **nową bazę danych...** Aby utworzyć nową bazę danych o nazwie `SQLPersistenceStore`.
 
-4.  Uruchom plik skryptu SqlWorkflowInstanceStoreSchema.sql znajduje się w katalogu C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en SQLPersistenceStore bazy danych do skonfigurowania schematy potrzebne bazy danych.
+4. Uruchom plik skryptu SqlWorkflowInstanceStoreSchema.sql znajduje się w katalogu C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en SQLPersistenceStore bazy danych do skonfigurowania schematy potrzebne bazy danych.
 
-5.  Uruchom plik skryptu SqlWorkflowInstanceStoreLogic.sql znajduje się w katalogu C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en SQLPersistenceStore bazy danych do skonfigurowania logiki potrzebne bazy danych.
+5. Uruchom plik skryptu SqlWorkflowInstanceStoreLogic.sql znajduje się w katalogu C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en SQLPersistenceStore bazy danych do skonfigurowania logiki potrzebne bazy danych.
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>Aby utworzyć w sieci Web hostowanej usługi przepływu pracy
 
-1.  Utwórz puste rozwiązanie programu Visual Studio 2012, nadaj jej nazwę `OrderProcessing`.
+1. Utwórz puste rozwiązanie programu Visual Studio 2012, nadaj jej nazwę `OrderProcessing`.
 
-2.  Dodaj nowy projekt aplikacji usługi przepływu pracy WCF o nazwie `OrderService` do rozwiązania.
+2. Dodaj nowy projekt aplikacji usługi przepływu pracy WCF o nazwie `OrderService` do rozwiązania.
 
-3.  W oknie dialogowym właściwości projektu zaznacz **Web** kartę.
+3. W oknie dialogowym właściwości projektu zaznacz **Web** kartę.
 
     1.  W obszarze **Akcja uruchamiania** wybierz **konkretnej strony** i określ `Service1.xamlx`.
 
@@ -56,16 +56,16 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
          Następujące dwa kroki konfigurowania projektu przepływu pracy usługi hostowane przez usługi IIS.
 
-4.  Otwórz `Service1.xamlx` przypadku nie otwarto już i usuń istniejącą **ReceiveRequest** i **SendResponse** działań.
+4. Otwórz `Service1.xamlx` przypadku nie otwarto już i usuń istniejącą **ReceiveRequest** i **SendResponse** działań.
 
-5.  Wybierz **usługa Sekwencyjna** działania i kliknij przycisk **zmienne** łącze i Dodaj zmienne pokazano na poniższej ilustracji. W ten sposób dodaje niektóre zmienne, które będą używane później w usłudze przepływu pracy.
+5. Wybierz **usługa Sekwencyjna** działania i kliknij przycisk **zmienne** łącze i Dodaj zmienne pokazano na poniższej ilustracji. W ten sposób dodaje niektóre zmienne, które będą używane później w usłudze przepływu pracy.
 
     > [!NOTE]
     >  Jeśli CorrelationHandle nie znajduje się w rozwijanej Typ zmiennej, wybierz opcję **vyhledat typy** z listy rozwijanej. Wpisz CorrelationHandle w **nazwy typu** polu Wybierz CorrelationHandle w polu listy i kliknij **OK**.
 
      ![Dodaj zmienne](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "Dodaj zmienne do działania sekwencyjne usługi.")
 
-6.  Przeciąganie i upuszczanie **ReceiveAndSendReply** szablon działania do **usługa Sekwencyjna** działania. Ten zbiór działań zostanie wyświetlony komunikat z klienta i wysyłać odpowiedzi ponownie.
+6. Przeciąganie i upuszczanie **ReceiveAndSendReply** szablon działania do **usługa Sekwencyjna** działania. Ten zbiór działań zostanie wyświetlony komunikat z klienta i wysyłać odpowiedzi ponownie.
 
     1.  Wybierz **Receive** działanie i ustaw właściwości wyróżnione na poniższej ilustracji.
 
@@ -95,7 +95,7 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
          ![Dodanie inicjatora korelacji](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "Dodaj inicjator korelacji.")
 
-7.  Przeciąganie i upuszczanie innego **ReceiveAndSendReply** działania na końcu przepływu pracy (poza **sekwencji** zawierający pierwszy **Receive** i  **SendReply** działań). Zostanie wyświetlony drugi komunikat wysyłany przez klienta i odpowiedzieć na.
+7. Przeciąganie i upuszczanie innego **ReceiveAndSendReply** działania na końcu przepływu pracy (poza **sekwencji** zawierający pierwszy **Receive** i  **SendReply** działań). Zostanie wyświetlony drugi komunikat wysyłany przez klienta i odpowiedzieć na.
 
     1.  Wybierz **sekwencji** zawiera nowo dodanych **Receive** i **SendReply** działania i kliknij przycisk **zmienne** przycisku. Dodaj zmienną wyróżnione na poniższej ilustracji:
 
@@ -131,7 +131,7 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
              ![Ustawienie powiązania danych dla działania SendReply](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "ustaw właściwość SendReplyToAddItem działania.")
 
-8.  Otwórz plik web.config i dodaj następujące elementy w \<zachowanie > sekcji, aby włączyć opcję trwałości przepływu pracy.
+8. Otwórz plik web.config i dodaj następujące elementy w \<zachowanie > sekcji, aby włączyć opcję trwałości przepływu pracy.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -145,17 +145,17 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
 
 ### <a name="to-create-a-client-application-to-call-the-workflow-service"></a>Aby utworzyć aplikację kliencką do wywoływania usługi przepływu pracy
 
-1.  Dodaj nowy projekt aplikacji konsoli o nazwie `OrderClient` do rozwiązania.
+1. Dodaj nowy projekt aplikacji konsoli o nazwie `OrderClient` do rozwiązania.
 
-2.  Dodaj odwołania do następujących zestawów, które mają `OrderClient` projektu
+2. Dodaj odwołania do następujących zestawów, które mają `OrderClient` projektu
 
     1.  System.ServiceModel.dll
 
     2.  System.ServiceModel.Activities.dll
 
-3.  Dodaj odwołanie do usługi przepływu pracy usługi i określ `OrderService` jak przestrzeń nazw.
+3. Dodaj odwołanie do usługi przepływu pracy usługi i określ `OrderService` jak przestrzeń nazw.
 
-4.  W `Main()` metoda projekt klienta, Dodaj następujący kod:
+4. W `Main()` metoda projekt klienta, Dodaj następujący kod:
 
     ```
     static void Main(string[] args)
@@ -182,17 +182,17 @@ W tym temacie opisano tworzenie długo działającej usługi przepływu pracy. D
     }
     ```
 
-5.  Skompilować rozwiązanie i uruchomić `OrderClient` aplikacji. Klient spowoduje wyświetlenie następującego tekstu:
+5. Skompilować rozwiązanie i uruchomić `OrderClient` aplikacji. Klient spowoduje wyświetlenie następującego tekstu:
 
     ```Output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6.  Aby sprawdzić, trwałość usługi przepływu pracy, uruchom program SQL Server Management Studio, przechodząc do **Start** menu wybranie **wszystkie programy**, **Microsoft SQL Server 2008**, **Programu SQL Server Management Studio**.
+6. Aby sprawdzić, trwałość usługi przepływu pracy, uruchom program SQL Server Management Studio, przechodząc do **Start** menu wybranie **wszystkie programy**, **Microsoft SQL Server 2008**, **Programu SQL Server Management Studio**.
 
     1.  W okienku po lewej stronie ekranu należy rozwinąć, **baz danych**, **SQLPersistenceStore**, **widoków** i kliknij prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances**  i wybierz **zaznacz 1000 pierwszych wierszy**. W **wyniki** okienko sprawdzić, zostanie wyświetlona co najmniej jedno wystąpienie na liście. Mogą istnieć inne wystąpienia z poprzednich przebiegów, jeśli wystąpił wyjątek podczas uruchamiania. Możesz usunąć istniejące wiersze, klikając prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances** i wybierając polecenie **Edytuj pierwszych 200 wierszy**, naciskając klawisz **Execute** przycisku wybranie wszystkich wierszy w okienku wyników, a użycie **Usuń**.  Aby sprawdzić wystąpienia wyświetlana w bazie danych jest wystąpienie aplikacji, który został utworzony, sprawdź, widoku wystąpień jest pusta przed uruchomieniem klienta. Gdy klient jest uruchomiony ponownie uruchom zapytanie (zaznacz 1000 pierwszych wierszy) i sprawdź dodano nowe wystąpienie.
 
-7.  Naciśnij klawisz enter, aby wysłać wiadomość elementu dodawanie do usługi przepływu pracy. Klient spowoduje wyświetlenie następującego tekstu:
+7. Naciśnij klawisz enter, aby wysłać wiadomość elementu dodawanie do usługi przepływu pracy. Klient spowoduje wyświetlenie następującego tekstu:
 
     ```Output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .

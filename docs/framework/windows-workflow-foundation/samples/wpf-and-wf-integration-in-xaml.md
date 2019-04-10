@@ -1,15 +1,15 @@
 ---
-title: Integracja WPF i WF w XAML
+title: Integracja WPF i WF w języku XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: ce6fc259b4e8743abd71e979825545183eef136a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298646"
 ---
-# <a name="wpf-and-wf-integration-in-xaml"></a>Integracja WPF i WF w XAML
+# <a name="wpf-and-wf-integration-in-xaml"></a>Integracja WPF i WF w języku XAML
 W tym przykładzie pokazano, jak utworzyć aplikację, która korzysta z funkcji Windows Presentation Foundation (WPF) i Windows Workflow Foundation (WF) w jednym dokumencie XAML. Aby to osiągnąć, w przykładzie użyto rozszerzalności Windows Workflow Foundation (WF) i XAML.
 
 ## <a name="sample-details"></a>Przykład szczegółów
@@ -26,15 +26,15 @@ W tym przykładzie pokazano, jak utworzyć aplikację, która korzysta z funkcji
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania WPFWFIntegration.sln.
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania WPFWFIntegration.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
-4.  Wpisz swoje imię i nazwisko do okna dialogowego.
+4. Wpisz swoje imię i nazwisko do okna dialogowego.
 
-5.  Zamknij okno dialogowe i konsolę zwraca nazwę.
+5. Zamknij okno dialogowe i konsolę zwraca nazwę.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

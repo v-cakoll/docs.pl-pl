@@ -2,40 +2,40 @@
 title: Śledzenie SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308929"
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
 W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia SQL, który zapisuje rekordy śledzenia bazą danych SQL. Windows Workflow Foundation (WF) zapewnia wgląd w wykonywania wystąpienia przepływu pracy śledzenia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Aby uzyskać więcej informacji na temat śledzenia przepływu pracy, zobacz [przepływu pracy i śledzenie](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Sprawdź, zainstalowany jest program SQL Server 2008, SQL Server 2008 Express lub nowszej. Skrypty w pakiecie z przykładem założono korzystanie z wystąpienia programu SQL Express na komputerze lokalnym. Jeśli masz inne wystąpienie, zmodyfikuj skrypty związane z bazy danych przed uruchomieniem przykładu.
+1. Sprawdź, zainstalowany jest program SQL Server 2008, SQL Server 2008 Express lub nowszej. Skrypty w pakiecie z przykładem założono korzystanie z wystąpienia programu SQL Express na komputerze lokalnym. Jeśli masz inne wystąpienie, zmodyfikuj skrypty związane z bazy danych przed uruchomieniem przykładu.
 
-2.  Utwórz bazę danych śledzenia programu SQL Server, uruchamiając Trackingsetup.cmd w katalogu skryptów (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Spowoduje to utworzenie bazy danych o nazwie TrackingSample.
+2. Utwórz bazę danych śledzenia programu SQL Server, uruchamiając Trackingsetup.cmd w katalogu skryptów (\WF\Basic\Tracking\SqlTracking\CS\Scripts). Spowoduje to utworzenie bazy danych o nazwie TrackingSample.
 
     > [!NOTE]
     >  Skrypt tworzy bazę danych w domyślnym wystąpieniu programu SQL Express. Jeśli chcesz zainstalować je na inne wystąpienie bazy danych, zmodyfikuj skrypt Trackingsetup.cmd.  
   
-3.  Otwórz SqlTrackingSample.sln w programie Visual Studio 2010.  
+3. Otwórz SqlTrackingSample.sln w programie Visual Studio 2010.  
   
-4.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+4. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-5.  Naciśnij klawisz F5, aby uruchomić aplikację.  
+5. Naciśnij klawisz F5, aby uruchomić aplikację.  
   
      Okno przeglądarki otwiera i pokazuje katalog zawierający informacje o aplikacji.  
   
-6.  W przeglądarce kliknij przycisk StockPriceService.xamlx.  
+6. W przeglądarce kliknij przycisk StockPriceService.xamlx.  
   
-7.  W przeglądarce pojawi się stronie StockPriceService zawiera usługę lokalnego adresu WSDL. Skopiuj ten adres.  
+7. W przeglądarce pojawi się stronie StockPriceService zawiera usługę lokalnego adresu WSDL. Skopiuj ten adres.  
   
      Na przykład adres WSDL Usługa lokalna `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8.  Za pomocą [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], uruchom klienta testowego WCF (WcfTestClient.exe). Znajduje się on w katalogu programu Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Za pomocą [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], uruchom klienta testowego WCF (WcfTestClient.exe). Znajduje się on w katalogu programu Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. W kliencie testowym WCF kliknij **pliku** menu, a następnie wybierz **Dodaj usługę**. Wklej adres lokalnej usługi w polu tekstowym. Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
   
@@ -45,7 +45,7 @@ W tym przykładzie pokazano, jak napisać uczestnikiem niestandardowe śledzenia
   
 #### <a name="to-uninstall-the-sample"></a>Aby odinstalować próbki  
   
-1.  Uruchom skrypt theTrackingcleanup.cmd w katalogu próbki (\WF\Basic\Tracking\SqlTracking).  
+1. Uruchom skrypt theTrackingcleanup.cmd w katalogu próbki (\WF\Basic\Tracking\SqlTracking).  
   
     > [!NOTE]
     >  Trackingcleanup.cmd próbuje usunąć bazę danych programu SQL Express komputera lokalnego. Jeśli używasz innego wystąpienia programu SQL server, należy edytować Trackingcleanup.cmd.

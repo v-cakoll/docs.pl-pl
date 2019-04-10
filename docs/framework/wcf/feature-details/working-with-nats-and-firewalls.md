@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 9cecca0905baa4c0769359caf1fe1b477bf4d6bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296345"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Praca z translatorami adresów sieciowych i zaporami
 Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otworzyć ścieżki komunikacji. Pakiety są filtrowane, kierowane, analizowane i przekształcone zarówno na komputerach punktu końcowego, jak i pośredniego maszyn w sieci. Translacje adresów sieciowych (NAT) i zapory są typowe przykłady pośrednich aplikacji, które mogą uczestniczyć w komunikacji sieciowej.  
@@ -37,11 +37,11 @@ Klient i serwer połączenia sieciowego często nie mają bezpośredniego i otwo
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Wybieranie transportu i wymiany komunikatów  
  Wybieranie transportu i MEP jest procesem trzech kroków:  
   
-1.  Analizuj adresowanie maszyn punktu końcowego. Serwerów przedsiębiorstwa często mają bezpośrednie adresowanie, a użytkownicy końcowi często ich adresowanie zablokowanych przez translatorami adresów sieciowych. Jeśli oba punkty końcowe są poza NAT, takie jak w scenariuszach peer-to-peer między użytkownicy końcowi mogą następnie możesz potrzebować technologii, takich jak protokół Teredo, aby zapewnić adresowanie.  
+1. Analizuj adresowanie maszyn punktu końcowego. Serwerów przedsiębiorstwa często mają bezpośrednie adresowanie, a użytkownicy końcowi często ich adresowanie zablokowanych przez translatorami adresów sieciowych. Jeśli oba punkty końcowe są poza NAT, takie jak w scenariuszach peer-to-peer między użytkownicy końcowi mogą następnie możesz potrzebować technologii, takich jak protokół Teredo, aby zapewnić adresowanie.  
   
-2.  Analizuj ograniczenia protokół i port maszyn punktu końcowego. Serwery w przedsiębiorstwie są zazwyczaj za zaporami silne tego bloku wielu portów. Jednak port 80 jest często otwarty, aby zezwalać na ruch protokołu HTTP i port 443 został otwarty, aby zezwalać na ruch protokołu HTTPS. Użytkownicy końcowi są mniej prawdopodobne, mają ograniczenia portu, ale może być zaporą, która zezwala na tylko połączeń wychodzących. Niektóre zapory umożliwienia zarządzania przez aplikacje w punkcie końcowym, aby selektywnie otworzyć połączenia.  
+2. Analizuj ograniczenia protokół i port maszyn punktu końcowego. Serwery w przedsiębiorstwie są zazwyczaj za zaporami silne tego bloku wielu portów. Jednak port 80 jest często otwarty, aby zezwalać na ruch protokołu HTTP i port 443 został otwarty, aby zezwalać na ruch protokołu HTTPS. Użytkownicy końcowi są mniej prawdopodobne, mają ograniczenia portu, ale może być zaporą, która zezwala na tylko połączeń wychodzących. Niektóre zapory umożliwienia zarządzania przez aplikacje w punkcie końcowym, aby selektywnie otworzyć połączenia.  
   
-3.  Obliczenia transportu i MEPs zezwalające na adresowanie i port ograniczenia sieci.  
+3. Obliczenia transportu i MEPs zezwalające na adresowanie i port ograniczenia sieci.  
   
  Typowe topologii dla aplikacji klienckich i serwerowych jest klientów znajdujących się poza NAT bez Teredo przy użyciu tylko wychodzącego zapory i serwera, który jest staną się dostępne bezpośrednio z zaporą silne. W tym scenariuszu, warstwy transportowej TCP z dwukierunkowego MEP i protokół transportu HTTP za pomocą żądanie odpowiedź MEP działa poprawnie. Typowe topologii dla aplikacji peer-to-peer jest zarówno punkty końcowe poza translatorami adresów sieciowych i zaporami. W tym scenariuszu i w scenariuszach, gdzie jest nieznany topologią i konfiguracją sieci należy wziąć pod uwagę następujące zalecenia:  
   

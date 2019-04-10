@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e9e4aaef8e5f9ece88f56350065b2b688ba2a93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299478"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Przewodnik: Emitowanie kodu w scenariuszach częściowo zaufanych
 Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają specjalnych uprawnień w kodzie częściowo zaufanym. Ponadto emisji odbicia posiada funkcję, anonimowo obsługiwane metody dynamiczne, który jest przeznaczony do użycia z częściowej relacji zaufania, jak również przezroczyste dla zabezpieczeń zestawów.  
@@ -59,12 +59,12 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem  
   
-1.  Utwórz zestaw uprawnień do przydzielenia do zestawów w domenie aplikacji w trybie piaskownicy. W tym przypadku jest używany zestaw uprawnień strefy Internet.  
+1. Utwórz zestaw uprawnień do przydzielenia do zestawów w domenie aplikacji w trybie piaskownicy. W tym przypadku jest używany zestaw uprawnień strefy Internet.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Utwórz <xref:System.AppDomainSetup> obiekt, aby zainicjować domenę aplikacji ze ścieżką do aplikacji.  
+2. Utwórz <xref:System.AppDomainSetup> obiekt, aby zainicjować domenę aplikacji ze ścieżką do aplikacji.  
   
     > [!IMPORTANT]
     >  Dla uproszczenia ten przykład kodu używa bieżącego folderu. Aby uruchomić kod, który rzeczywiście pochodzi z Internetu, używaj oddzielnego folderu dla niezaufanego kodu zgodnie z opisem w [jak: Uruchamianie częściowo zaufanego kodu w piaskownicy](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).  
@@ -72,7 +72,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przydziel zestaw dla wszystkich zestawów, które są wykonywane w domenie aplikacji.  
+3. Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przydziel zestaw dla wszystkich zestawów, które są wykonywane w domenie aplikacji.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>Aby utworzyć domenę aplikacji z częściowym zaufaniem plus RMA  
   
-1.  Utwórz nową <xref:System.Security.Permissions.ReflectionPermission> obiekt z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) i użyj <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> metodę, aby dodać uprawnienie do zestawu dotacji.  
+1. Utwórz nową <xref:System.Security.Permissions.ReflectionPermission> obiekt z <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA) i użyj <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> metodę, aby dodać uprawnienie do zestawu dotacji.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
     > [!NOTE]
     >  RMA jest funkcją anonimowo obsługiwanych metod dynamicznych. W przypadku zwykłych metod dynamicznych Pomiń sprawdzanie widoczności JIT, emitowany kod wymaga pełnego zaufania.  
   
-2.  Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przydziel zestawu.  
+2. Utwórz domenę aplikacji, określając informacje o konfiguracji domeny aplikacji i przydziel zestawu.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>Aby zdefiniować i wykonać metodę w domenie aplikacji  
   
-1.  Definiowanie klasy, która jest pochodną <xref:System.MarshalByRefObject>. Dzięki temu można utworzyć wystąpienia klasy w innych domenach aplikacji i wykonywać metody wywołań poza granice domeny aplikacji. Klasa w tym przykładzie ma nazwę `Worker`.  
+1. Definiowanie klasy, która jest pochodną <xref:System.MarshalByRefObject>. Dzięki temu można utworzyć wystąpienia klasy w innych domenach aplikacji i wykonywać metody wywołań poza granice domeny aplikacji. Klasa w tym przykładzie ma nazwę `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Zdefiniuj metodę publiczną, która zawiera kod, który chcesz wykonać. W tym przykładzie kod emituje prostą metodę dynamiczną, tworzy delegata, aby wykonać metodę i wywołuje delegata.  
+2. Zdefiniuj metodę publiczną, która zawiera kod, który chcesz wykonać. W tym przykładzie kod emituje prostą metodę dynamiczną, tworzy delegata, aby wykonać metodę i wywołuje delegata.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  W programie głównym Uzyskaj nazwę wyświetlaną zestawu. Ta nazwa jest używana podczas tworzenia wystąpienia elementu `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
+3. W programie głównym Uzyskaj nazwę wyświetlaną zestawu. Ta nazwa jest używana podczas tworzenia wystąpienia elementu `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  W programie głównym Utwórz domenę aplikacji w trybie piaskownicy, zgodnie z opisem w [pierwszej procedury](#Setting_up) w tym przewodniku. Nie trzeba dodawać żadnych uprawnień do `Internet` zestawu uprawnień, ponieważ `SimpleEmitDemo` metoda wykorzystuje tylko metody publiczne.  
+4. W programie głównym Utwórz domenę aplikacji w trybie piaskownicy, zgodnie z opisem w [pierwszej procedury](#Setting_up) w tym przewodniku. Nie trzeba dodawać żadnych uprawnień do `Internet` zestawu uprawnień, ponieważ `SimpleEmitDemo` metoda wykorzystuje tylko metody publiczne.  
   
-5.  W programie głównym Utwórz wystąpienie obiektu `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
+5. W programie głównym Utwórz wystąpienie obiektu `Worker` klasy w domenie aplikacji w trybie piaskownicy.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ Odbicie emituje użycie tego samego interfejsu API, ustaw w pełnej lub części
     > [!NOTE]
     >  Jeśli używasz tego kodu w programie Visual Studio, należy zmienić nazwę klasy, aby uwzględnić przestrzeń nazw. Domyślnie przestrzeń nazw jest nazwą projektu. Na przykład jeśli projekt to "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
   
-6.  Dodaj kod, aby wywołać `SimpleEmitDemo` metody. Wywołanie jest organizowane przez granicę domeny aplikacji, a kod jest wykonywany w domenie aplikacji w trybie piaskownicy.  
+6. Dodaj kod, aby wywołać `SimpleEmitDemo` metody. Wywołanie jest organizowane przez granicę domeny aplikacji, a kod jest wykonywany w domenie aplikacji w trybie piaskownicy.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  

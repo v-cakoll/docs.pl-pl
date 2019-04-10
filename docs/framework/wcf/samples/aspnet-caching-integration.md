@@ -2,12 +2,12 @@
 title: Integracja buforowania platformy ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197451"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309475"
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
 Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podręcznej platformy ASP.NET przy użyciu modelu programowania protokołu HTTP sieci WEB WCF. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych platformy ASP.NET.  
@@ -34,31 +34,31 @@ Niniejszy przykład pokazuje sposób wykorzystywania wyjściowej pamięci podrę
 ## <a name="to-run-the-sample"></a>Aby uruchomić przykład  
  Przykład obejmuje trzy projekty:  
   
--   **Usługa**: projekt aplikacji sieci Web, która obejmuje usługi HTTP programu WCF hostowanych w programie ASP.NET.  
+-   **Usługa**: Projekt aplikacji sieci Web, która obejmuje usługi HTTP programu WCF hostowanych w programie ASP.NET.  
   
--   **Klient**: projekt aplikacji konsoli, która sprawia, że wywołań do usługi.  
+-   **Klient**: Projekt aplikacji konsoli, która sprawia, że wywołań do usługi.  
   
--   **Typowe**: biblioteki udostępnionej, który zawiera typ klienta używany przez klienta i usługi.  
+-   **Typowe**: Biblioteki udostępnionej, który zawiera typ klienta używany przez klienta i usługi.  
   
  Po uruchomieniu aplikacji konsolowej klienta klient wysyła żądania do usługi i zapisuje odpowiednie informacje z odpowiedzi w oknie konsoli.  
   
 #### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Otwórz rozwiązanie dla przykładu integracja buforowania platformy ASP.NET.  
+1. Otwórz rozwiązanie dla przykładu integracja buforowania platformy ASP.NET.  
   
-2.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+2. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-3.  Jeśli **Eksploratora rozwiązań** okno nie jest jeszcze otwarty, naciśnij klawisze CTRL + W + S.  
+3. Jeśli **Eksploratora rozwiązań** okno nie jest jeszcze otwarty, naciśnij klawisze CTRL + W + S.  
   
-4.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projektu, a następnie wybierz **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie oprogramowania ASP.NET development server, który hostuje usługę.  
+4. Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projektu, a następnie wybierz **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie oprogramowania ASP.NET development server, który hostuje usługę.  
   
-5.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **klienta** projektu, a następnie wybierz **Uruchom nowe wystąpienie**.  
+5. Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **klienta** projektu, a następnie wybierz **Uruchom nowe wystąpienie**.  
   
-6.  Okna konsoli klienta pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
+6. Okna konsoli klienta pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
   
-7.  Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
+7. Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
   
-8.  Naciśnij dowolny klawisz, aby zakończyć aplikację konsoli klienta.  
+8. Naciśnij dowolny klawisz, aby zakończyć aplikację konsoli klienta.  
   
 9. Naciśnij klawisze SHIFT + F5, aby zatrzymać debugowanie usługi.  
   

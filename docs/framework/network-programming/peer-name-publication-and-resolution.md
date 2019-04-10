@@ -2,12 +2,12 @@
 title: Publikowanie i rozwiązywanie nazw elementów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 0c55b2f1294c055a873278147ff549aa19e33179
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309098"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publikowanie i rozwiązywanie nazw elementów równorzędnych
 
@@ -25,9 +25,9 @@ PNRP w wersji 2 węzłów nie opublikowano identyfikatory PNRP, jeśli tylko są
 
  Lokalizowanie innych elementów równorzędnych w protokole PNRP sieci lub w chmurze to proces obejmuje dwa etapy:  
   
-1.  Określenie punktu końcowego  
+1. Określenie punktu końcowego  
   
-2.  Protokół PNRP identyfikator rozwiązania  
+2. Protokół PNRP identyfikator rozwiązania  
   
  W fazie określenie punktu końcowego elementu równorzędnego, który próbuje rozpoznać Identyfikatora PNRP usługi na innym komputerze określa adres IPv6 ten komputer zdalny.  Komputer zdalny jest opublikowana lub jest skojarzony z Identyfikatorem PNRP komputera lub usługi.  
   

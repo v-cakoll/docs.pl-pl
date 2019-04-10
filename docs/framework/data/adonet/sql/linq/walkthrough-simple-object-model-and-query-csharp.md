@@ -2,12 +2,12 @@
 title: 'Przewodnik: Prosty model obiektu i zapytanie (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309462"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Przewodnik: Prosty model obiektu i zapytanie (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza minimalnej złożoności. Utworzy klasę jednostki, który modeluje tabelę Klienci w przykładowej bazie danych Northwind. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  
@@ -44,30 +44,30 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
   
-1.  W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
+1. W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
   
-2.  W **typów projektów** okienku **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
+2. W **typów projektów** okienku **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
   
-3.  W **szablony** okienku kliknij **aplikację Konsolową**.  
+3. W **szablony** okienku kliknij **aplikację Konsolową**.  
   
-4.  W **nazwa** wpisz **LinqConsoleApp**.  
+4. W **nazwa** wpisz **LinqConsoleApp**.  
   
-5.  W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
+5. W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
   
-6.  Kliknij przycisk **OK**.  
+6. Kliknij przycisk **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Dodawanie odwołania do zapytań LINQ i dyrektywy  
  W tym instruktażu wykorzystano zestawów, które nie mogą być instalowane domyślnie w projekcie. Jeśli System.Data.Linq nie jest wymieniony jako odwołanie w projekcie (rozwiń **odwołania** w węźle **Eksploratora rozwiązań**), ją dodać, zgodnie z opisem w poniższych krokach.  
   
 #### <a name="to-add-systemdatalinq"></a>To add System.Data.Linq  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
   
-2.  W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
+2. W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
   
      Zestaw został dodany do projektu.  
   
-3.  Dodaj następujące dyrektywy w górnej części **Program.cs**:  
+3. Dodaj następujące dyrektywy w górnej części **Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-execute-the-query"></a>Aby wykonać zapytanie  
   
-1.  Wpisz lub wklej następujący kod na końcu `Main` metody (opis kwerendy).  
+1. Wpisz lub wklej następujący kod na końcu `Main` metody (opis kwerendy).  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  Naciśnij klawisz F5, aby debugować aplikację.  
+2. Naciśnij klawisz F5, aby debugować aplikację.  
   
     > [!NOTE]
     >  Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów z [nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
@@ -147,7 +147,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
      `ID=SEVES, City=London`  
   
-3.  Naciśnij klawisz Enter w oknie konsoli, aby zamknąć aplikację.  
+3. Naciśnij klawisz Enter w oknie konsoli, aby zamknąć aplikację.  
   
 ## <a name="next-steps"></a>Następne kroki  
  [Instruktażu: Relacje między querying (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md) tematu będzie kontynuowane, gdy kończy się w tym przewodniku. Instruktaż zapytań w relacjach demonstruje, jak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można wykonywanie zapytań względem tabel, podobnie jak *sprzężeń* relacyjnej bazy danych.  

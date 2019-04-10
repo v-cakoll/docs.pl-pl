@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b8896f5c8501b757313cc8a549b187ecedcebe97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307772"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeń nazw w celu weryfikacji danych XML podpisany przy użyciu podpisu cyfrowego. Podpisy cyfrowe XML (XMLDSIG) pozwalają zweryfikować, że dane nie została zmodyfikowana po podpisaniu. Aby uzyskać więcej informacji na temat standardowych XMLDSIG, zobacz specyfikację World Wide Web Consortium (W3C) na <https://www.w3.org/TR/xmldsig-core/>.
@@ -32,37 +32,37 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeń nazw w 
   
 ### <a name="to-verify-the-digital-signature-of-an-xml-document"></a>Aby sprawdzić podpis cyfrowy dokumentu XML  
   
-1.  Aby sprawdzić, czy dokument, należy użyć tego samego klucza asymetrycznego, który został użyty do podpisania.  Utwórz <xref:System.Security.Cryptography.CspParameters> obiektu i określ nazwę kontenera kluczy, który został użyty do podpisania.  
+1. Aby sprawdzić, czy dokument, należy użyć tego samego klucza asymetrycznego, który został użyty do podpisania.  Utwórz <xref:System.Security.Cryptography.CspParameters> obiektu i określ nazwę kontenera kluczy, który został użyty do podpisania.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToVerifyXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Pobieranie klucza publicznego przy użyciu <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  Klucz jest automatycznie ładowany z kontenera kluczy według nazwy podczas przekazywania <xref:System.Security.Cryptography.CspParameters> obiekt do konstruktora obiektu <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  
+2. Pobieranie klucza publicznego przy użyciu <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  Klucz jest automatycznie ładowany z kontenera kluczy według nazwy podczas przekazywania <xref:System.Security.Cryptography.CspParameters> obiekt do konstruktora obiektu <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToVerifyXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Utwórz <xref:System.Xml.XmlDocument> obiektu, ładując plik XML z dysku.  <xref:System.Xml.XmlDocument> Obiekt zawiera podpisanych dokumentu XML, aby sprawdzić.  
+3. Utwórz <xref:System.Xml.XmlDocument> obiektu, ładując plik XML z dysku.  <xref:System.Xml.XmlDocument> Obiekt zawiera podpisanych dokumentu XML, aby sprawdzić.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToVerifyXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Utwórz nową <xref:System.Security.Cryptography.Xml.SignedXml> i przekazać <xref:System.Xml.XmlDocument> obiektu do niego.  
+4. Utwórz nową <xref:System.Security.Cryptography.Xml.SignedXml> i przekazać <xref:System.Xml.XmlDocument> obiektu do niego.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToVerifyXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Znajdź <`signature`> element i Utwórz nowy <xref:System.Xml.XmlNodeList> obiektu.  
+5. Znajdź <`signature`> element i Utwórz nowy <xref:System.Xml.XmlNodeList> obiektu.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToVerifyXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  Ładowanie kodu XML pierwszego <`signature`> elementu do <xref:System.Security.Cryptography.Xml.SignedXml> obiektu.  
+6. Ładowanie kodu XML pierwszego <`signature`> elementu do <xref:System.Security.Cryptography.Xml.SignedXml> obiektu.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToVerifyXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Sprawdzić przy użyciu podpisu <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> metody i klucz publiczny RSA.  Ta metoda zwraca wartość logiczną, która wskazuje powodzenie lub niepowodzenie.  
+7. Sprawdzić przy użyciu podpisu <xref:System.Security.Cryptography.Xml.SignedXml.CheckSignature%2A> metody i klucz publiczny RSA.  Ta metoda zwraca wartość logiczną, która wskazuje powodzenie lub niepowodzenie.  
   
      [!code-csharp[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToVerifyXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToVerifyXMLDocumentRSA/vb/sample.vb#8)]  

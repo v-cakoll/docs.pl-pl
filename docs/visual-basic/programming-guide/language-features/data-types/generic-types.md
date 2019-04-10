@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301233"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
 A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosowuje się do wykonywania funkcji dla różnych typów danych. Po zdefiniowaniu klasy ogólnej lub procedura ma definiuje oddzielnych wersji dla każdego typu danych, dla którego możesz chcieć wykonać tę funkcję.  
@@ -83,9 +83,9 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
 ## <a name="advantages-of-generic-types"></a>Zalety typów ogólnych  
  Typ ogólny służy jako podstawa do deklarowania wiele różnych elementów programowania, każde z nich działa na określony typ danych. Alternatywy dla typu ogólnego są:  
   
-1.  Korzysta z jednego typu `Object` typu danych.  
+1. Korzysta z jednego typu `Object` typu danych.  
   
-2.  Zbiór *specyficznych dla typu* wersji typu, każda wersja indywidualnie zakodowanych i działających na jeden określony typ danych, takich jak `String`, `Integer`, lub typ zdefiniowany przez użytkownika, takie jak `customer`.  
+2. Zbiór *specyficznych dla typu* wersji typu, każda wersja indywidualnie zakodowanych i działających na jeden określony typ danych, takich jak `String`, `Integer`, lub typ zdefiniowany przez użytkownika, takie jak `customer`.  
   
  Ogólny typ ma następujące korzyści za pośrednictwem następujących alternatyw:  
   
@@ -151,11 +151,11 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Konwersje plików w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Rozwiązywanie problemów związanych z typami](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
-- [z](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Kowariancja i kontrawariancja](../../concepts/covariance-contravariance/index.md)
 - [Iteratory](../../../../visual-basic/programming-guide/concepts/iterators.md)

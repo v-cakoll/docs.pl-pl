@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294668"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Grupowanie komunikatów z obsługą kolejek w ramach sesji
 Windows Communication Foundation (WCF) zapewnia sesji, która pozwala grupować zestaw komunikatów powiązane ze sobą do przetworzenia przez aplikację odbierającą jednego. Komunikaty, które są częścią sesji musi być częścią tej samej transakcji. Ponieważ wszystkie komunikaty są częścią tej samej transakcji, jeśli jeden komunikat zakończy się niepowodzeniem do przetworzenia całej sesji jest wycofywana. Sesje mają podobne zachowanie w odniesieniu do kolejki utraconych wiadomości i skażone kolejki. Czas wygaśnięcia (TTL) ustawiona w Zakolejkowane powiązanie skonfigurowane dla sesji jest stosowana do sesji jako całości. Jeśli tylko część wiadomości w sesji są wysyłane przed wygaśnięcia, podczas całej sesji jest umieszczana w kolejce wiadomości utraconych. Podobnie po wiadomości w sesji nie można wysyłać do aplikacji z kolejki aplikacji, podczas całej sesji jest umieszczany w kolejce skażone (jeśli jest dostępny).  
@@ -24,49 +24,49 @@ Windows Communication Foundation (WCF) zapewnia sesji, która pozwala grupować 
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>Aby skonfigurować kontraktu usługi do użycia sesji  
   
-1.  Definiowanie kontraktu usługi, która wymaga sesji. W tym z <xref:System.ServiceModel.OperationContractAttribute> atrybutu i określenie:  
+1. Definiowanie kontraktu usługi, która wymaga sesji. W tym z <xref:System.ServiceModel.OperationContractAttribute> atrybutu i określenie:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Oznacz operacji w umowie jako jednokierunkowe, ponieważ te metody nie zwraca niczego. Jest to zrobić za pomocą <xref:System.ServiceModel.OperationContractAttribute> atrybutu i określenie:  
+2. Oznacz operacji w umowie jako jednokierunkowe, ponieważ te metody nie zwraca niczego. Jest to zrobić za pomocą <xref:System.ServiceModel.OperationContractAttribute> atrybutu i określenie:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Implementowanie kontraktu usługi i określ `InstanceContextMode` z `PerSession`. Tworzy to wystąpienie usługi, tylko jeden raz dla każdej sesji.  
+3. Implementowanie kontraktu usługi i określ `InstanceContextMode` z `PerSession`. Tworzy to wystąpienie usługi, tylko jeden raz dla każdej sesji.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Każda operacja usługi wymaga transakcji. Określ za pomocą <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu. Operacja, która kończy transakcji należy również ustawić `TransactionAutoComplete` do `true`.  
+4. Każda operacja usługi wymaga transakcji. Określ za pomocą <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutu. Operacja, która kończy transakcji należy również ustawić `TransactionAutoComplete` do `true`.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Konfigurowanie punktu końcowego, który używa dostarczane przez system `NetMsmqBinding` powiązania.  
+5. Konfigurowanie punktu końcowego, który używa dostarczane przez system `NetMsmqBinding` powiązania.  
   
-6.  Utwórz kolejkę transakcyjną za pomocą <xref:System.Messaging>. Można również utworzyć kolejkę przy użyciu usługi kolejkowania komunikatów (MSMQ) lub programu MMC. Jeśli to zrobisz, Utwórz kolejkę transakcyjną.  
+6. Utwórz kolejkę transakcyjną za pomocą <xref:System.Messaging>. Można również utworzyć kolejkę przy użyciu usługi kolejkowania komunikatów (MSMQ) lub programu MMC. Jeśli to zrobisz, Utwórz kolejkę transakcyjną.  
   
-7.  Tworzenie usługi hosta usługi przy użyciu <xref:System.ServiceModel.ServiceHost>.  
+7. Tworzenie usługi hosta usługi przy użyciu <xref:System.ServiceModel.ServiceHost>.  
   
-8.  Otwórz hosta usługi, aby udostępnić usługę.  
+8. Otwórz hosta usługi, aby udostępnić usługę.  
   
 9. Zamknij hosta usługi.  
   
 #### <a name="to-set-up-a-client"></a>Aby skonfigurować klienta  
   
-1.  Tworzenie zakresu transakcji do zapisu do kolejki transakcyjne.  
+1. Tworzenie zakresu transakcji do zapisu do kolejki transakcyjne.  
   
-2.  Tworzenie klienta WCF, używając [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia.  
+2. Tworzenie klienta WCF, używając [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia.  
   
-3.  Złóż zamówienie.  
+3. Złóż zamówienie.  
   
-4.  Zamknij klienta platformy WCF.  
+4. Zamknij klienta platformy WCF.  
   
 ## <a name="example"></a>Przykład  
   

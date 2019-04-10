@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819804"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296358"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>Parametrów typu nie można używać jako kwalifikatorów
 Elementu programistycznego kwalifikuje się ciągiem kwalifikacji, który zawiera parametr typu.  
@@ -34,9 +34,9 @@ End Function
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Usuń parametr typu z ciągu kwalifikacji lub Zamień zdefiniowanego typu.  
+1. Usuń parametr typu z ciągu kwalifikacji lub Zamień zdefiniowanego typu.  
   
-2.  Jeśli musisz użyć skonstruowanego typu można zlokalizować elementu programistycznego, jest kwalifikowana, należy użyć dodatkowej logiki programu.  
+2. Jeśli musisz użyć skonstruowanego typu można zlokalizować elementu programistycznego, jest kwalifikowana, należy użyć dodatkowej logiki programu.  
   
 ## <a name="see-also"></a>Zobacz także
 

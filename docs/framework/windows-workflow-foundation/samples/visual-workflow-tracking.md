@@ -2,12 +2,12 @@
 title: Wizualne śledzenie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703585"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296462"
 ---
 # <a name="visual-workflow-tracking"></a>Wizualne śledzenie przepływu pracy
 W tym przykładzie przedstawiono sposób pisania przepływu pracy visual śledzenia aplikacji przy użyciu funkcji debugowania dostępnych za pośrednictwem [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].
@@ -19,17 +19,17 @@ W tym przykładzie przedstawiono sposób pisania przepływu pracy visual śledze
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Otwórz plik WorkflowSimulator.sln katalog przykładu w programie Visual Studio 2010.
+1. Otwórz plik WorkflowSimulator.sln katalog przykładu w programie Visual Studio 2010.
 
-2.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.
+2. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.
 
-3.  Naciśnij klawisze CTRL + F5, aby uruchomić przykład. Spowoduje to wyświetlenie pliku Workflow.xaml w oknie projektanta rehostowanym przepływu pracy.
+3. Naciśnij klawisze CTRL + F5, aby uruchomić przykład. Spowoduje to wyświetlenie pliku Workflow.xaml w oknie projektanta rehostowanym przepływu pracy.
 
-4.  Kliknij przycisk **pliku** menu, a następnie wybierz **Uruchom przepływ pracy...** .
+4. Kliknij przycisk **pliku** menu, a następnie wybierz **Uruchom przepływ pracy...** .
 
-5.  Ogłoszenie aktualnie wykonywanej działanie zostanie wyróżniona, zgodnie z opisem w poprzedniej sekcji i rekordów śledzenia są wyświetlane po prawej stronie okna aplikacji.
+5. Ogłoszenie aktualnie wykonywanej działanie zostanie wyróżniona, zgodnie z opisem w poprzedniej sekcji i rekordów śledzenia są wyświetlane po prawej stronie okna aplikacji.
 
-6.  Po ukończeniu przepływu pracy, możesz kliknąć dowolny z rekordów śledzenia, aby sprawdzić działanie, które odnosi się do informacji.
+6. Po ukończeniu przepływu pracy, możesz kliknąć dowolny z rekordów śledzenia, aby sprawdzić działanie, które odnosi się do informacji.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

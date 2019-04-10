@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079334"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299335"
 ---
 # <a name="defining-and-specifying-faults"></a>Definiowanie i określanie błędów
 Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjny. W tym temacie omówiono, kiedy i jak zdefiniować zawartości niestandardowych błędów i określić, jakie operacje można przywrócić je. Aby uzyskać więcej informacji na temat jak usługi lub dupleks klient może wysyłać te błędy i jak aplikacja klienta lub usługę obsługuje te błędy, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Aby uzyskać omówienie obsługi błędów w aplikacji Windows Communication Foundation (WCF), zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -21,11 +21,11 @@ Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a 
 ## <a name="overview"></a>Omówienie  
  Zadeklarowane w błędach SOAP są te, w których jest operacją <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> , który określa typ niestandardowy błędu protokołu SOAP. Niezadeklarowany błędach SOAP są te, które nie zostały określone w umowie dla danej operacji. W tym temacie pomaga zidentyfikować te warunki błędów i tworzenie usterek kontraktu usługi używanego przez klientów aby prawidłowo obsługiwać te warunki błędów zgłoszonych przez niestandardowych błędach SOAP. Podstawowe zadania są w kolejności:  
   
-1.  Zdefiniuj warunki błędów, które należy wiedzieć, klient usługi.  
+1. Zdefiniuj warunki błędów, które należy wiedzieć, klient usługi.  
   
-2.  Definiowanie zawartości niestandardowych błędach SOAP dla tych warunków błędu.  
+2. Definiowanie zawartości niestandardowych błędach SOAP dla tych warunków błędu.  
   
-3.  Oznacz operacje tak, aby określonych błędach SOAP, które zgłaszają są widoczne dla klientów w języku WSDL.  
+3. Oznacz operacje tak, aby określonych błędach SOAP, które zgłaszają są widoczne dla klientów w języku WSDL.  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>Definiowanie warunków błędów, których klientów należy wiedzieć o  
  Błędy protokołu SOAP są publicznie opisano komunikaty, które zawierają informacje o błędzie dla określonej operacji. Ponieważ zostały one opisane oraz inne komunikaty operacji w języku WSDL, klienci wiedzieć i dlatego należy oczekiwać obsłużyć takie błędy podczas wywoływania operacji. Ale ponieważ usług WCF są zapisywane w kodzie zarządzanym przy wyborze rozwiązania, które błąd warunków w kodzie zarządzanym są do przekonwertowania na błędy i zwracany do klienta zapewnia możliwość oddzielenia warunki błędów i usterki w usłudze sprawność po błędzie formalne Konwersacja należy za pomocą klienta.  

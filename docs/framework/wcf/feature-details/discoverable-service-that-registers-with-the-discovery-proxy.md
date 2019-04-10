@@ -2,36 +2,36 @@
 title: 'Instrukcje: implementowanie odnajdywanej usługi rejestrowanej za pomocą serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177830"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302197"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>Instrukcje: implementowanie odnajdywanej usługi rejestrowanej za pomocą serwera proxy odnajdywania
 Ten temat dotyczy druga cztery tematy w tym artykule omówiono sposób wdrażania serwera proxy odnajdywania. W poprzednim temacie [jak: Wdrażanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), zaimplementowane serwera proxy odnajdywania. W tym temacie utworzysz usługi WCF, która wysyła komunikaty anonsów (`Hello` i `Bye`) do serwera proxy odnajdywania, co powoduje rejestrować i wyrejestrowywać przy użyciu serwera proxy odnajdywania.
 
 ### <a name="to-define-the-service-contract"></a>Aby zdefiniować kontrakt usługi
 
-1.  Dodaj nowy projekt aplikacji konsoli, aby `DiscoveryProxyExample` rozwiązanie o nazwie `Service`.
+1. Dodaj nowy projekt aplikacji konsoli, aby `DiscoveryProxyExample` rozwiązanie o nazwie `Service`.
 
-2.  Dodaj odwołania do następujących zestawów:
+2. Dodaj odwołania do następujących zestawów:
 
     1.  System.ServiceModel
 
     2.  System.ServiceModel.Discovery
 
-3.  Dodaj nową klasę do projektu o nazwie `CalculatorService`.
+3. Dodaj nową klasę do projektu o nazwie `CalculatorService`.
 
-4.  Dodaj następujące instrukcje using.
+4. Dodaj następujące instrukcje using.
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  W ramach CalculatorService.cs definiowanie kontraktu usługi.
+5. W ramach CalculatorService.cs definiowanie kontraktu usługi.
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ Ten temat dotyczy druga cztery tematy w tym artykule omówiono sposób wdrażani
     }
     ```
 
-6.  Również w ramach CalculatorService.cs, należy zaimplementować kontrakt usługi.
+6. Również w ramach CalculatorService.cs, należy zaimplementować kontrakt usługi.
 
     ```csharp
     // Service class which implements the service contract.
@@ -91,9 +91,9 @@ Ten temat dotyczy druga cztery tematy w tym artykule omówiono sposób wdrażani
 
 ### <a name="to-host-the-service"></a>Do obsługi usługi
 
-1.  Otwórz plik Program.cs, który został wygenerowany podczas tworzenia projektu.
+1. Otwórz plik Program.cs, który został wygenerowany podczas tworzenia projektu.
 
-2.  Dodaj następujące instrukcje using.
+2. Dodaj następujące instrukcje using.
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ Ten temat dotyczy druga cztery tematy w tym artykule omówiono sposób wdrażani
     using System.ServiceModel.Discovery;
     ```
 
-3.  W ramach `Main()` metody, Dodaj następujący kod:
+3. W ramach `Main()` metody, Dodaj następujący kod:
 
     ```csharp
     // Define the base address of the service

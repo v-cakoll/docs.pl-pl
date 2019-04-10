@@ -2,12 +2,12 @@
 title: Śledzenie za pomocą funkcji ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 964c8fbe04f61ebf7a68e1bf36f9efdaab841e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300687"
 ---
 # <a name="etw-tracing"></a>Śledzenie za pomocą funkcji ETW
 Ten przykład demonstruje sposób implementacji śledzenia End-to-End (E2E) przy użyciu śledzenie zdarzeń dla Windows (ETW) i `ETWTraceListener` która jest dostarczana z tego przykładu. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) oraz śledzenie.  
@@ -80,22 +80,22 @@ Logman stop Wcf
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Pamiętaj, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Pamiętaj, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
     >  Aby użyć polecenia RegisterProvider.bat, SetupETW.bat i CleanupETW.bat, należy uruchomić przy użyciu konta administratora lokalnego. Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)] lub nowszej, należy także uruchomić wiersz polecenia z podwyższonym poziomem uprawnień. Aby to zrobić, kliknij prawym przyciskiem myszy ikonę wiersza polecenia, a następnie kliknij przycisk **Uruchom jako administrator**.  
   
-3.  Przed uruchomieniem przykładu, należy uruchomić RegisterProvider.bat na kliencie i serwerze. Spowoduje to utworzenie wynikowy plik ETWTracingSampleLog.etl do generowania danych śledzenia, które mogą być odczytywane przez przeglądarki danych śledzenia usługi. Ten plik można znaleźć w folderze C:\logs. Jeśli ten folder nie istnieje, musi ona zostać utworzona, lub są generowane nie dane śledzenia. Następnie uruchom SetupETW.bat na komputerach klienta i serwera, aby rozpocząć sesję śledzenia funkcji ETW. Plik SetupETW.bat znajdują się w folderze CS\Client.  
+3. Przed uruchomieniem przykładu, należy uruchomić RegisterProvider.bat na kliencie i serwerze. Spowoduje to utworzenie wynikowy plik ETWTracingSampleLog.etl do generowania danych śledzenia, które mogą być odczytywane przez przeglądarki danych śledzenia usługi. Ten plik można znaleźć w folderze C:\logs. Jeśli ten folder nie istnieje, musi ona zostać utworzona, lub są generowane nie dane śledzenia. Następnie uruchom SetupETW.bat na komputerach klienta i serwera, aby rozpocząć sesję śledzenia funkcji ETW. Plik SetupETW.bat znajdują się w folderze CS\Client.  
   
-4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Po ukończeniu próbki, należy uruchomić CleanupETW.bat, aby zakończyć tworzenie pliku ETWTracingSampleLog.etl.  
+5. Po ukończeniu próbki, należy uruchomić CleanupETW.bat, aby zakończyć tworzenie pliku ETWTracingSampleLog.etl.  
   
-6.  Otwórz plik ETWTracingSampleLog.etl z w ramach przeglądarki danych śledzenia usługi. Zostanie wyświetlony monit Zapisz plik binarny sformatowane jako plik .svclog.  
+6. Otwórz plik ETWTracingSampleLog.etl z w ramach przeglądarki danych śledzenia usługi. Zostanie wyświetlony monit Zapisz plik binarny sformatowane jako plik .svclog.  
   
-7.  Otwórz plik .svclog nowo utworzony z w ramach przeglądarki danych śledzenia usługi do wyświetlania śladów funkcji ETW i ServiceModel.  
+7. Otwórz plik .svclog nowo utworzony z w ramach przeglądarki danych śledzenia usługi do wyświetlania śladów funkcji ETW i ServiceModel.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

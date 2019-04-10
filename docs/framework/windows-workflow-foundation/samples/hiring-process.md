@@ -2,12 +2,12 @@
 title: Proces zatrudniania
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313154"
 ---
 # <a name="hiring-process"></a>Proces zatrudniania
 Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyciu działań dotyczących komunikatów i dwa przepływy pracy hostowany jako usług przepływu pracy. Te przepływy pracy są częścią infrastruktury IT w fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -60,9 +60,9 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
 ## <a name="description-of-the-process"></a>Opis procesu  
  Contoso, Inc. chce, aby mieć ścisłą kontrolę nad zatrudnionych w każdym z jego działów. W związku z tym w dowolnym momencie każdy pracownik chce, aby rozpocząć nowy proces zatrudniania, muszą przejść przez zatrudniania zatwierdzenia proces żądania, zanim rekrutacji może rzeczywiście wystąpi. Ten proces jest nazywany zatrudniania żądanie procesu (zdefiniowane w projekcie HiringRequestService) i składa się z następujących czynności:  
   
-1.  Pracownik (osoby żądającej) uruchamia zatrudniania żądanie procesu.  
+1. Pracownik (osoby żądającej) uruchamia zatrudniania żądanie procesu.  
   
-2.  Menedżer żądającego musi zatwierdzić żądanie:  
+2. Menedżer żądającego musi zatwierdzić żądanie:  
   
     1.  Menedżer może odrzucić żądanie.  
   
@@ -72,13 +72,13 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
     3.  Menedżer może zatwierdzić.  
   
-3.  Po Menedżera żądającego zatwierdza, właściciel działu, musisz zatwierdzić żądanie:  
+3. Po Menedżera żądającego zatwierdza, właściciel działu, musisz zatwierdzić żądanie:  
   
     1.  Właściciel działu może odrzucić.  
   
     2.  Właściciel działu mogą zatwierdzać.  
   
-4.  Po zatwierdzeniu przez właściciela działu, ten proces wymaga zatwierdzenia menedżerów 2 h lub dyrektora generalnego:  
+4. Po zatwierdzeniu przez właściciela działu, ten proces wymaga zatwierdzenia menedżerów 2 h lub dyrektora generalnego:  
   
     1.  Ten proces można przejść do stanu zaakceptowane lub odrzucone.  
   
@@ -86,11 +86,11 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
  Po zatwierdzić menedżerowie zatrudniania nowych pracowników działu KADR muszą znaleźć odpowiednim kandydatem. Ten proces odbywa się przez drugi przepływu pracy (`ResumeRequest`zdefiniowaną w ResumeRequestService.csproj). Ten przepływ pracy definiuje proces przesyłania zadania publikowanie za pomocą kariery możliwość zewnętrznej witryny sieci Web kariery firmy Contoso, otrzyma wznawia od kandydatów, a następnie monitoruje stan delegowania zadań. Pozycje są dostępne przez stały okres (aż do czasu wygaśnięcia) lub dopóki pracownika z firmy Contoso decyduje go usunąć. `ResumeRequest` Przepływu pracy składa się z następujących czynności:  
   
-1.  Pracownika z firmy Contoso typów w informacje na temat pozycji i okres limitu czasu. Gdy typy pracowników te informacje, pozycja jest publikowany w witrynie sieci Web kariery.  
+1. Pracownika z firmy Contoso typów w informacje na temat pozycji i okres limitu czasu. Gdy typy pracowników te informacje, pozycja jest publikowany w witrynie sieci Web kariery.  
   
-2.  Po opublikowaniu informacji zainteresowane strony mogą przesyłać wznawia ich. Po przesłaniu życiorysu znajduje się w rekordzie połączone do otwarcia zadania.  
+2. Po opublikowaniu informacji zainteresowane strony mogą przesyłać wznawia ich. Po przesłaniu życiorysu znajduje się w rekordzie połączone do otwarcia zadania.  
   
-3.  Kandydaci mogą przesyłać wznawia, do momentu wygaśnięcia limitu czasu lub ktoś z działu KADR Contoso jawnie postanowi usunąć delegowania zatrzymywania procesu.  
+3. Kandydaci mogą przesyłać wznawia, do momentu wygaśnięcia limitu czasu lub ktoś z działu KADR Contoso jawnie postanowi usunąć delegowania zatrzymywania procesu.  
   
 ## <a name="projects-in-the-sample"></a>Projekty w przykładzie  
  W poniższej tabeli przedstawiono projektów w przykładowym rozwiązaniu.  
@@ -128,7 +128,7 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
 |Transakcje|Niestandardowego uczestnika stanów trwałych (`HiringRequestPersistenceParticipant`) i niestandardowego uczestnika śledzenia (`HistoryFileTrackingParticipant`) Użyj tej samej transakcji.|HiringRequestService|  
 |Za pomocą [!INCLUDE[wf1](../../../../includes/wf1-md.md)] w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|Przepływy pracy są dostępne z dwóch [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.|InternalClient / CareersWebSite|  
   
-## <a name="data-storage"></a>Magazyn danych  
+## <a name="data-storage"></a>Data Storage  
  Dane są przechowywane w bazie danych programu SQL Server o nazwie `ContosoHR` (skryptu do tworzenia tej bazy danych znajduje się w `DbSetup` folder). Wystąpienia przepływu pracy są przechowywane w bazie danych programu SQL Server o nazwie `InstanceStore` (skrypty służące do tworzenia magazyn wystąpienia są częścią [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] dystrybucji).  
   
  Obu bazach danych są tworzone przez uruchomienie skryptu plik Setup.cmd z wiersza polecenia dla deweloperów programu Visual Studio.  
@@ -137,87 +137,87 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
 #### <a name="to-create-the-databases"></a>Do tworzenia baz danych  
   
-1.  Otwórz wiersz polecenia dla deweloperów programu Visual Studio.  
+1. Otwórz wiersz polecenia dla deweloperów programu Visual Studio.  
   
-2.  Przejdź do folderu przykładu.  
+2. Przejdź do folderu przykładu.  
   
-3.  Uruchom plik Setup.cmd.  
+3. Uruchom plik Setup.cmd.  
   
-4.  Sprawdź, czy dwie bazy danych `ContosoHR` i `InstanceStore` zostały utworzone w programie SQL Express.  
+4. Sprawdź, czy dwie bazy danych `ContosoHR` i `InstanceStore` zostały utworzone w programie SQL Express.  
   
 #### <a name="to-set-up-the-solution-for-execution"></a>Aby skonfigurować rozwiązanie do wykonania  
   
-1.  Uruchom program Visual Studio jako administrator. Otwórz HiringRequest.sln.  
+1. Uruchom program Visual Studio jako administrator. Otwórz HiringRequest.sln.  
   
-2.  Kliknij prawym przyciskiem myszy rozwiązanie w **Eksploratora rozwiązań** i wybierz **właściwości**.  
+2. Kliknij prawym przyciskiem myszy rozwiązanie w **Eksploratora rozwiązań** i wybierz **właściwości**.  
   
-3.  Wybierz opcję **wiele projektów startowych** i ustaw **CareersWebSite**, **InternalClient**, **HiringRequestService**, i **ResumeRequestService** do **Start**. Pozostaw **ContosoHR**, **InboxService**, i **OrgService** None.  
+3. Wybierz opcję **wiele projektów startowych** i ustaw **CareersWebSite**, **InternalClient**, **HiringRequestService**, i **ResumeRequestService** do **Start**. Pozostaw **ContosoHR**, **InboxService**, i **OrgService** None.  
   
-4.  Skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B. Sprawdź, czy kompilacja zakończyła się pomyślnie.  
+4. Skompiluj rozwiązanie, naciskając klawisze CTRL + SHIFT + B. Sprawdź, czy kompilacja zakończyła się pomyślnie.  
   
 #### <a name="to-run-the-solution"></a>Aby uruchomić rozwiązanie  
   
-1.  Po kompilacji rozwiązania, naciśnij klawisze CTRL + F5, aby uruchomić bez debugowania. Sprawdź, czy wszystkie usługi zostały uruchomione.  
+1. Po kompilacji rozwiązania, naciśnij klawisze CTRL + F5, aby uruchomić bez debugowania. Sprawdź, czy wszystkie usługi zostały uruchomione.  
   
-2.  Kliknij prawym przyciskiem myszy **InternalClient** w rozwiązaniu, a następnie wybierz **Pokaż w przeglądarce**. Domyślna strona dla `InternalClient` jest wyświetlana. Upewnij się, że usługi są uruchomione, a następnie kliknij łącze.  
+2. Kliknij prawym przyciskiem myszy **InternalClient** w rozwiązaniu, a następnie wybierz **Pokaż w przeglądarce**. Domyślna strona dla `InternalClient` jest wyświetlana. Upewnij się, że usługi są uruchomione, a następnie kliknij łącze.  
   
-3.  **HiringRequest** modułu jest wyświetlana. Możesz wykonać scenariusz przedstawione w tym miejscu.  
+3. **HiringRequest** modułu jest wyświetlana. Możesz wykonać scenariusz przedstawione w tym miejscu.  
   
-4.  Gdy `HiringRequest` jest zakończone, możesz rozpocząć `ResumeRequest`. Możesz wykonać scenariusz przedstawione w tym miejscu.  
+4. Gdy `HiringRequest` jest zakończone, możesz rozpocząć `ResumeRequest`. Możesz wykonać scenariusz przedstawione w tym miejscu.  
   
-5.  Gdy `ResumeRequest` jest opublikowana, jest dostępna w publicznej witrynie sieci Web (witryna sieci Web kariery firmy Contoso). Aby zobaczyć, publikując zadania (i zastosować dla pozycji), przejdź do witryny sieci Web kariery.  
+5. Gdy `ResumeRequest` jest opublikowana, jest dostępna w publicznej witrynie sieci Web (witryna sieci Web kariery firmy Contoso). Aby zobaczyć, publikując zadania (i zastosować dla pozycji), przejdź do witryny sieci Web kariery.  
   
-6.  Kliknij prawym przyciskiem myszy **CareersWebSite** w rozwiązaniu i wybierz **Pokaż w przeglądarce**.  
+6. Kliknij prawym przyciskiem myszy **CareersWebSite** w rozwiązaniu i wybierz **Pokaż w przeglądarce**.  
   
-7.  Przejdź z powrotem do `InternalClient` przez kliknięcie prawym przyciskiem myszy **InternalClient** w rozwiązaniu i wybierając polecenie **Pokaż w przeglądarce**.  
+7. Przejdź z powrotem do `InternalClient` przez kliknięcie prawym przyciskiem myszy **InternalClient** w rozwiązaniu i wybierając polecenie **Pokaż w przeglądarce**.  
   
-8.  Przejdź do **JobPostings** sekcji, klikając **zadań** link w menu u góry skrzynki odbiorczej. Możesz wykonać scenariusz przedstawione w tym miejscu.  
+8. Przejdź do **JobPostings** sekcji, klikając **zadań** link w menu u góry skrzynki odbiorczej. Możesz wykonać scenariusz przedstawione w tym miejscu.  
   
 ## <a name="scenarios"></a>Scenariusze  
   
 ### <a name="hiring-request"></a>Żądanie zatrudniania  
   
-1.  Jan Alexander (inżynier oprogramowania) chce zażądać nowego położenia zatrudnienia programista testu (SDET) działu inżynierii, który ma co najmniej 3 lata doświadczenia w języku C#.  
+1. Jan Alexander (inżynier oprogramowania) chce zażądać nowego położenia zatrudnienia programista testu (SDET) działu inżynierii, który ma co najmniej 3 lata doświadczenia w języku C#.  
   
-2.  Utworzone żądanie pojawi się w skrzynce odbiorczej przez Michaela (kliknij **Odśwież** Jeśli nie widzisz żądania) oczekuje na zatwierdzenie Peter Brehm, kto jest kierownikiem firmy Michael.  
+2. Utworzone żądanie pojawi się w skrzynce odbiorczej przez Michaela (kliknij **Odśwież** Jeśli nie widzisz żądania) oczekuje na zatwierdzenie Peter Brehm, kto jest kierownikiem firmy Michael.  
   
-3.  Peter chce działać na żądanie przez Michaela. ADAM sądzą zapotrzebowanie pozycji 5 lat środowisko C#, a nie 3, więc użytkownik wysyła swoje komentarze, wróć do przeglądu.  
+3. Peter chce działać na żądanie przez Michaela. ADAM sądzą zapotrzebowanie pozycji 5 lat środowisko C#, a nie 3, więc użytkownik wysyła swoje komentarze, wróć do przeglądu.  
   
-4.  Michael zobaczy komunikat w swojej Skrzynce odbiorczej z menedżerowi i chce działać. Michael widzi historię żądań pozycji i zgadza się z Peter. Michael modyfikuje opis, który wymaga 5 lat doświadczenia w języku C# i akceptuje modyfikacji.  
+4. Michael zobaczy komunikat w swojej Skrzynce odbiorczej z menedżerowi i chce działać. Michael widzi historię żądań pozycji i zgadza się z Peter. Michael modyfikuje opis, który wymaga 5 lat doświadczenia w języku C# i akceptuje modyfikacji.  
   
-5.  Peter działa na żądanie zmodyfikowane przez Michaela i akceptuje je. Żądanie musi zostać zatwierdzone, Dyrektor ds. inżynierii, Reiterowi Tsvi firmy.  
+5. Peter działa na żądanie zmodyfikowane przez Michaela i akceptuje je. Żądanie musi zostać zatwierdzone, Dyrektor ds. inżynierii, Reiterowi Tsvi firmy.  
   
-6.  Reiterowi Tsvi firmy chce, aby przyspieszyć żądania, dlatego umieszcza się on w komentarzu powiedzieć, że żądanie jest pilne i akceptuje je.  
+6. Reiterowi Tsvi firmy chce, aby przyspieszyć żądania, dlatego umieszcza się on w komentarzu powiedzieć, że żądanie jest pilne i akceptuje je.  
   
-7.  Żądanie zawiera teraz zostać zatwierdzone przez dwa HR menedżerowie lub dyrektora Generalnego. Dyrektor Generalny, Brian Richard Goldstein, widzi nagłe żądanie przez Tsvi. On działa na żądanie, akceptując, związku z czym pomijany zatwierdzenia przez menedżerów dwóch HR.  
+7. Żądanie zawiera teraz zostać zatwierdzone przez dwa HR menedżerowie lub dyrektora Generalnego. Dyrektor Generalny, Brian Richard Goldstein, widzi nagłe żądanie przez Tsvi. On działa na żądanie, akceptując, związku z czym pomijany zatwierdzenia przez menedżerów dwóch HR.  
   
-8.  Żądanie zostanie usunięty ze skrzynki odbiorczej Michael firmy, a teraz rozpoczął proces zatrudniania specjalistów SDET.  
+8. Żądanie zostanie usunięty ze skrzynki odbiorczej Michael firmy, a teraz rozpoczął proces zatrudniania specjalistów SDET.  
   
 ### <a name="start-resume-request"></a>Rozpocznij żądanie wznowienia  
   
-1.  Teraz, pozycja zadanie oczekuje na zostać opublikowane do zewnętrznej witryny sieci Web, w którym użytkownicy mogą stosować (można to sprawdzić kliknięcie **zadań** link). Obecnie pozycji zadania znajdują się z przedstawicielem działu KADR, który jest odpowiedzialny za finalizowanie pozycji zadania i opublikuj go.  
+1. Teraz, pozycja zadanie oczekuje na zostać opublikowane do zewnętrznej witryny sieci Web, w którym użytkownicy mogą stosować (można to sprawdzić kliknięcie **zadań** link). Obecnie pozycji zadania znajdują się z przedstawicielem działu KADR, który jest odpowiedzialny za finalizowanie pozycji zadania i opublikuj go.  
   
-2.  HR chce edytować tej pozycji zadania (klikając **Edytuj** link), ustawiając limit czasu 60 minut (w realnym, może to być dni lub tygodni). Limit czasu umożliwia pozycji zadania, aby zdjąć zewnętrznej witryny sieci Web zgodnie z określonym czasie.  
+2. HR chce edytować tej pozycji zadania (klikając **Edytuj** link), ustawiając limit czasu 60 minut (w realnym, może to być dni lub tygodni). Limit czasu umożliwia pozycji zadania, aby zdjąć zewnętrznej witryny sieci Web zgodnie z określonym czasie.  
   
-3.  Po zapisaniu edytowanego stanowisko, zostanie on wyświetlony na **odbieranie wznawia** karcie (w wyniku odświeżenia strony sieci Web, aby zobaczyć nowe położenie zadania).  
+3. Po zapisaniu edytowanego stanowisko, zostanie on wyświetlony na **odbieranie wznawia** karcie (w wyniku odświeżenia strony sieci Web, aby zobaczyć nowe położenie zadania).  
   
 ### <a name="collecting-resumes"></a>Wznawia zbieranie  
   
-1.  Pozycja zadania powinny pojawić się na zewnętrznej witryny sieci Web. Jako osoba zainteresowani zastosowanie dla zadania możesz poprosić o tej pozycji i Prześlij swój życiorys.  
+1. Pozycja zadania powinny pojawić się na zewnętrznej witryny sieci Web. Jako osoba zainteresowani zastosowanie dla zadania możesz poprosić o tej pozycji i Prześlij swój życiorys.  
   
-2.  Jeśli możesz wrócić do usługi listy ogłoszeń zadania, możesz "wyświetlić wznawia", zostały zebrane do tej pory.  
+2. Jeśli możesz wrócić do usługi listy ogłoszeń zadania, możesz "wyświetlić wznawia", zostały zebrane do tej pory.  
   
-3.  GODZ. je również zatrzymać zbieranie wznawia (np. Po zidentyfikowaniu prawo Release candidate).  
+3. GODZ. je również zatrzymać zbieranie wznawia (np. Po zidentyfikowaniu prawo Release candidate).  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
   
-1.  Upewnij się, że używasz programu Visual Studio z uprawnieniami administratora.  
+1. Upewnij się, że używasz programu Visual Studio z uprawnieniami administratora.  
   
-2.  Jeśli rozwiązanie nie twórz, sprawdź następujące informacje:  
+2. Jeśli rozwiązanie nie twórz, sprawdź następujące informacje:  
   
     -   Odwołanie do `ContosoHR` nie brakuje `InternalClient` lub `CareersWebSite` projektów.  
   
-3.  Jeśli rozwiązanie wykonanie nie powiedzie się, sprawdź następujące informacje:  
+3. Jeśli rozwiązanie wykonanie nie powiedzie się, sprawdź następujące informacje:  
   
     1.  Wszystkie usługi są uruchomione.  
   
@@ -231,6 +231,6 @@ Ten przykład demonstruje sposób implementacji procesu biznesowego, przy użyci
   
 ## <a name="uninstalling"></a>Odinstalowywanie  
   
-1.  Usuń magazyn wystąpienia programu SQL Server, uruchamiając Cleanup.bat, znajdujący się w folderze Program DbSetup.  
+1. Usuń magazyn wystąpienia programu SQL Server, uruchamiając Cleanup.bat, znajdujący się w folderze Program DbSetup.  
   
-2.  Usuń w formie kodu źródłowego na dysku twardym.
+2. Usuń w formie kodu źródłowego na dysku twardym.

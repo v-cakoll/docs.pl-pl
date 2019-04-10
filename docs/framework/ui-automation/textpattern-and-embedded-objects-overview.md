@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077923"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342521"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern i obiekty osadzone — omówienie
 > [!NOTE]
@@ -43,13 +43,13 @@ Przykład strumienia tekstu przy użyciu osadzonych obiektów i ich zakresy zakr
   
  Gdy jest to konieczne przechodzenie przez zawartość zakres tekstu, szereg kroków biorących udział w tle, aby <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> pomyślnie wykonać metodę.  
   
-1.  Zakres tekstu jest znormalizować; oznacza to, że zakres tekstu jest zwinięte do wymiaru degeneracji zakresu na <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> punktu końcowego, co sprawia, że <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> zbędny punktu końcowego. Ten krok jest niezbędny usunąć niejednoznaczność w sytuacjach, w którym obejmuje zakres tekstu <xref:System.Windows.Automation.Text.TextUnit> granice: na przykład `{The URL https://www.microsoft.com is embedded in text` których "{" i "}" są wartościami tekstowymi punkty końcowe zakresu.  
+1. Zakres tekstu jest znormalizować; oznacza to, że zakres tekstu jest zwinięte do wymiaru degeneracji zakresu na <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> punktu końcowego, co sprawia, że <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> zbędny punktu końcowego. Ten krok jest niezbędny usunąć niejednoznaczność w sytuacjach, w którym obejmuje zakres tekstu <xref:System.Windows.Automation.Text.TextUnit> granice: na przykład `{The URL https://www.microsoft.com is embedded in text` których "{" i "}" są wartościami tekstowymi punkty końcowe zakresu.  
   
-2.  Wynikowy zakres zostaje przeniesiony do tyłu <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> na początku żądany <xref:System.Windows.Automation.Text.TextUnit> granic.  
+2. Wynikowy zakres zostaje przeniesiony do tyłu <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> na początku żądany <xref:System.Windows.Automation.Text.TextUnit> granic.  
   
-3.  Zakres jest przenoszony do przodu lub Wstecz w <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> , żądana liczba <xref:System.Windows.Automation.Text.TextUnit> granic.  
+3. Zakres jest przenoszony do przodu lub Wstecz w <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> , żądana liczba <xref:System.Windows.Automation.Text.TextUnit> granic.  
   
-4.  Zakres jest rozszerzany ze stanu wymiaru degeneracji zakresu przez przesunięcie <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktu końcowego za pomocą jednej żądane <xref:System.Windows.Automation.Text.TextUnit> granic.  
+4. Zakres jest rozszerzany ze stanu wymiaru degeneracji zakresu przez przesunięcie <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktu końcowego za pomocą jednej żądane <xref:System.Windows.Automation.Text.TextUnit> granic.  
   
  ![Zakres korekt przez przeniesienie & ExpandToEnclosingUnit](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 Przykłady jak zakres tekstu jest uwzględniany Move() i ExpandToEnclosingUnit()  

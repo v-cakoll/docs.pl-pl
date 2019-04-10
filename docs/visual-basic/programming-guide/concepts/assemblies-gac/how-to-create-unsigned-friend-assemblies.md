@@ -2,21 +2,21 @@
 title: 'Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-ms.openlocfilehash: 814c2584ea9e1e14c3af003a0515166f53b6d913
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4771d0fe116d1532c270cf41b209665d5403a9b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339180"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, które są bez znaku.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Aby utworzyć zestaw i zestaw przyjazny  
   
-1.  Otwórz wiersz polecenia.  
+1. Otwórz wiersz polecenia.  
   
-2.  Utwórz plik w języku Visual Basic o nazwie `friend_signed_A.` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
+2. Utwórz plik w języku Visual Basic o nazwie `friend_signed_A.` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -42,13 +42,13 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
     End Class  
     ```  
   
-3.  Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
+3. Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
   
     ```console  
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Utwórz plik w języku Visual Basic o nazwie `friend_unsigned_B` zawierający poniższy kod. Ponieważ friend_unsigned_A określa friend_unsigned_B jako zestaw przyjazny, kod w friend_unsigned_B mogą uzyskiwać dostęp do `Friend` typów i elementów członkowskich z friend_unsigned_A.  
+4. Utwórz plik w języku Visual Basic o nazwie `friend_unsigned_B` zawierający poniższy kod. Ponieważ friend_unsigned_A określa friend_unsigned_B jako zestaw przyjazny, kod w friend_unsigned_B mogą uzyskiwać dostęp do `Friend` typów i elementów członkowskich z friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -69,7 +69,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
     End Module  
     ```  
   
-5.  Skompiluj friend_signed_B przy użyciu następującego polecenia.  
+5. Skompiluj friend_signed_B przy użyciu następującego polecenia.  
   
     ```console
     vbc -r:friend_unsigned_A.dll friend_unsigned_B.vb  
@@ -77,7 +77,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów, kt�
   
      Nazwa zestawu, który jest generowany przez kompilator musi odpowiadać nazwy przyjaznego zestawu, który jest przekazywany do <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Należy jawnie określić zestawu przy użyciu `/out` — opcja kompilatora.  
   
-6.  Uruchom plik friend_signed_B.exe.  
+6. Uruchom plik friend_signed_B.exe.  
   
      Ten program wyświetla dwa ciągi: "Class1.Test" i "Class2.Test".  
   

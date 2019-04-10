@@ -2,12 +2,12 @@
 title: Omówienie odnajdywania WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 8f89a3b52728f10a0d0e0544f3663c9af13488c9
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: cb1eb52e0996a03709a755ff2f148152e2625c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084943"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335345"
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 API odnajdywania udostępniają jednolity model programowania do opublikowania dynamiczne i odnajdywania usług sieci Web przy użyciu protokołu WS Discovery. Te interfejsy API umożliwiają services, aby publikować z nimi i klientów w celu znalezienia opublikowanych usług. Gdy usługa jest wykrywalne, usługa ma możliwość wysyłania komunikatów Anons, a także nasłuchiwania i odpowiadania na żądania odnajdywania. Wykrywalny usług można wysłać wiadomości powitania poinformować ich przybycia w sieci i Bye komunikaty, aby poinformować o ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądanie, które zawiera określone kryteria, takich jak typ kontraktu usługi, słowa kluczowe i zakresu w sieci. Usługi odbierać `Probe` żądania i określić, czy spełniają kryteria. Jeśli usługa jest zgodny, odpowie, wysyłając `ProbeMatch` wiadomość do klienta przy użyciu informacji niezbędnych do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądań, które pozwalają znaleźć usług, które uległy zmianie adresu punktu końcowego. Zgodnych usług odpowiadanie na `Resolve` żądań, wysyłając `ResolveMatch` wiadomość do klienta.  
@@ -151,9 +151,9 @@ class Client
 ## <a name="discovery-and-web-hosted-services"></a>Usługi hostowane w sieci Web i odnajdywania  
  Aby usług WCF pod być wykrywalne musi być uruchomiona. Usługi WCF hostowanej przez usługi IIS i WAS nie uruchamiaj aż do usług IIS / WAS odbiera komunikat powiązane usługi, dlatego nie może być wykrywalny domyślnie.  Dostępne są dwie opcje składania wykrywalny usługi hostowane w sieci Web:  
   
-1.  Użyj funkcji systemu Windows Server AppFabric automatycznego uruchamiania  
+1. Użyj funkcji systemu Windows Server AppFabric automatycznego uruchamiania  
   
-2.  Komunikować się w imieniu usługi za pomocą serwera proxy odnajdywania  
+2. Komunikować się w imieniu usługi za pomocą serwera proxy odnajdywania  
   
  Windows Server AppFabric ma funkcję automatycznego uruchamiania, która umożliwi usługi do uruchomienia przed odbierał komunikaty. Auto-Start zestawu usług IIS / WAS hostowanej usługi można skonfigurować jako wykrywalne. Aby uzyskać więcej informacji na temat automatycznego uruchamiania funkcji, zobacz [systemu Windows Server AppFabric Auto-Start funkcji](https://go.microsoft.com/fwlink/?LinkId=205545). Wraz z włączając funkcję automatycznego uruchamiania, należy skonfigurować usługę odnajdywania. Aby uzyskać więcej informacji, zobacz [jak: Programowe Dodawanie możliwości odnajdywania do usługi i klienta WCF](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Konfigurowanie odnajdywania w pliku konfiguracyjnym](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201016"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333993"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy> Element
 Określa, że tożsamość Windows nie przepływać przez punkty asynchroniczne, na niezależnie od ustawień przepływu kontekstu wykonania dla bieżącego wątku.  
@@ -67,11 +67,11 @@ Określa, że tożsamość Windows nie przepływać przez punkty asynchroniczne,
   
  Możesz zmienić to zachowanie domyślne na dwa inne sposoby:  
   
-1.  W kodzie zarządzanym na zasadzie na wątek.  
+1. W kodzie zarządzanym na zasadzie na wątek.  
   
      Można pominąć przepływu na podstawie na wątek, modyfikując <xref:System.Threading.ExecutionContext> i <xref:System.Security.SecurityContext> ustawienia za pomocą <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType> lub <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> metody.  
   
-2.  W wywołaniu do niezarządzanego interfejsu hostingu załadować środowisko uruchomieniowe języka wspólnego (CLR).  
+2. W wywołaniu do niezarządzanego interfejsu hostingu załadować środowisko uruchomieniowe języka wspólnego (CLR).  
   
      Jeśli niezarządzane hostingu interfejsu (zamiast prostego pliku wykonywalnego zarządzane) jest używana do ładowania CLR, można określić Flaga specjalna, w wywołaniu [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funkcji. Aby włączyć tryb zgodności dla całego procesu, należy ustawić `flags` parametr [corbindtoruntimeex — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) do STARTUP_LEGACY_IMPERSONATION.  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID53
 ms.assetid: 57addb16-6f9a-444d-8af8-dda52431daca
-ms.openlocfilehash: 2cd5bba135284ba72eed595fdfc548cfea63ff70
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cac84c3fa549760ee92601bbb07a379ea102b6dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333967"
 ---
 # <a name="file-not-found-visual-basic-run-time-error"></a>Nie odnaleziono pliku (błąd czasu wykonywania Visual Basic)
 Nie odnaleziono pliku, w przypadku, gdy określony. Błąd ma następujące możliwe przyczyny:  
@@ -22,8 +22,8 @@ Nie odnaleziono pliku, w przypadku, gdy określony. Błąd ma następujące moż
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Sprawdź pisownię nazwy pliku i specyfikacji ścieżki.  
+1. Sprawdź pisownię nazwy pliku i specyfikacji ścieżki.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare — Instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)

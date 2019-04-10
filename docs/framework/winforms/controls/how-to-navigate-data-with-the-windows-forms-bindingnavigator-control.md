@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: fe1d037d7d72f41b602abe823a26655750338d85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0c2fdf820b9b42a592c422cf77362598c5e5eed7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338894"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Instrukcje: nawigowanie w danych za pomocą kontrolki BindingNavigator formularzy systemu Windows
 Pojawienie się <xref:System.Windows.Forms.BindingNavigator> kontroli w formularzach Windows Forms umożliwia deweloperom zapewni użytkownikom końcowym proste dane nawigacji i manipulowania interfejsu użytkownika w formularzach tworzą.  
@@ -26,16 +26,16 @@ Pojawienie się <xref:System.Windows.Forms.BindingNavigator> kontroli w formular
   
 ### <a name="to-set-up-the-bindingnavigator-control"></a>Aby skonfigurować BindingNavigator — kontrolka  
   
-1.  Dodaj <xref:System.Windows.Forms.BindingSource> składnika o nazwie `bindingSource1` oraz dwóch <xref:System.Windows.Forms.TextBox> kontrolki o nazwie `textBox1` i `textBox2`.  
+1. Dodaj <xref:System.Windows.Forms.BindingSource> składnika o nazwie `bindingSource1` oraz dwóch <xref:System.Windows.Forms.TextBox> kontrolki o nazwie `textBox1` i `textBox2`.  
   
-2.  Powiąż `bindingSource1` do danych i kontrolki pola tekstowego do `bindingSource1`. Aby to zrobić, wklej następujący kod do formularza i wywołania `LoadData` z konstruktora formularza lub <xref:System.Windows.Forms.Form.Load> metody obsługi zdarzeń.  
+2. Powiąż `bindingSource1` do danych i kontrolki pola tekstowego do `bindingSource1`. Aby to zrobić, wklej następujący kod do formularza i wywołania `LoadData` z konstruktora formularza lub <xref:System.Windows.Forms.Form.Load> metody obsługi zdarzeń.  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
   
-3.  Dodaj <xref:System.Windows.Forms.BindingNavigator> formantu o nazwie `bindingNavigator1` do formularza.  
+3. Dodaj <xref:System.Windows.Forms.BindingNavigator> formantu o nazwie `bindingNavigator1` do formularza.  
   
-4.  Ustaw <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> właściwość `bindingNavigator1` do `bindingSource1`. Można to zrobić za pomocą projektanta lub w kodzie.  
+4. Ustaw <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> właściwość `bindingNavigator1` do `bindingSource1`. Można to zrobić za pomocą projektanta lub w kodzie.  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  

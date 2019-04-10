@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831257"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335501"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Instrukcje: Utwórz procedurę, która zwraca wartość (Visual Basic)
 Możesz użyć `Function` procedury w celu zwrócenia wartości do wywołującego kodu.  
   
 ### <a name="to-create-a-procedure-that-returns-a-value"></a>Aby utworzyć procedurę, która nie zwraca wartości  
   
-1.  Poza innej procedury, należy użyć `Function` instrukcji, następuje `End Function` instrukcji.  
+1. Poza innej procedury, należy użyć `Function` instrukcji, następuje `End Function` instrukcji.  
   
-2.  W `Function` instrukcji, postępuj zgodnie z `Function` — słowo kluczowe o nazwie procedury oraz lista parametrów w nawiasach.  
+2. W `Function` instrukcji, postępuj zgodnie z `Function` — słowo kluczowe o nazwie procedury oraz lista parametrów w nawiasach.  
   
-3.  Postępuj zgodnie z nawiasów za pomocą `As` klauzuli, aby określić typ danych zwróconej wartości.  
+3. Postępuj zgodnie z nawiasów za pomocą `As` klauzuli, aby określić typ danych zwróconej wartości.  
   
-4.  Umieść instrukcje kod procedury między `Function` i `End Function` instrukcji.  
+4. Umieść instrukcje kod procedury między `Function` i `End Function` instrukcji.  
   
-5.  Użyj `Return` instrukcji, aby zwrócić wartości do wywołującego kodu.  
+5. Użyj `Return` instrukcji, aby zwrócić wartości do wywołującego kodu.  
   
      Następujące `Function` procedury oblicza najdłuższy bok lub przeciwprostokątnej trójkąta prostokątnego, biorąc pod uwagę wartości dla obu stron.  
   
@@ -43,6 +43,6 @@ Możesz użyć `Function` procedury w celu zwrócenia wartości do wywołująceg
 - [Procedury właściwości](./property-procedures.md)
 - [Procedury operatorów](./operator-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function — Instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Instrukcje: Zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)
 - [Instrukcje: Wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)

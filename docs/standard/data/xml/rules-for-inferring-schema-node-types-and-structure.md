@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338712"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Zasady wnioskowania typów węzłów schematu i struktury
 W tym temacie opisano, jak procesu wnioskowania schematu tłumaczy typy węzłów w dokumencie XML do struktury języka (XSD) definicji schematu XML.  
@@ -18,21 +18,21 @@ W tym temacie opisano, jak procesu wnioskowania schematu tłumaczy typy węzłó
 ## <a name="element-inference-rules"></a>Zasady wnioskowania — element  
  W tej sekcji opisano reguły wnioskowania dla deklaracji elementu. Istnieją osiem struktury deklaracji elementu, które zostanie wywnioskowany:  
   
-1.  Element typu prostego  
+1. Element typu prostego  
   
-2.  Pusty element  
+2. Pusty element  
   
-3.  Pusty element za pomocą atrybutów  
+3. Pusty element za pomocą atrybutów  
   
-4.  Element z atrybutami i zawartość, proste  
+4. Element z atrybutami i zawartość, proste  
   
-5.  Element z sekwencji elementów podrzędnych  
+5. Element z sekwencji elementów podrzędnych  
   
-6.  Element z sekwencji elementów podrzędnych i atrybutów  
+6. Element z sekwencji elementów podrzędnych i atrybutów  
   
-7.  Element z sekwencji wybór elementów podrzędnych  
+7. Element z sekwencji wybór elementów podrzędnych  
   
-8.  Element z sekwencji liczbę elementów podrzędnych i atrybutów  
+8. Element z sekwencji liczbę elementów podrzędnych i atrybutów  
   
 > [!NOTE]
 >  Wszystkie `complexType` deklaracje są wnioskowane jako typów anonimowych. Element jedyna globalna wywnioskować jest głównym elementem; wszystkie inne elementy są lokalne.  

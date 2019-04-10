@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072939"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335631"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Dane tabelaryczne często są prezentowane w formacie jak rejestr, gdzie przemienne wiersze mają różnych kolorów tła. Ten format ułatwia użytkownikom Poinformuj komórki, które są w każdym wierszu, szczególnie w przypadku szerokich tabel, które mają wiele kolumn.  
@@ -27,13 +27,13 @@ Dane tabelaryczne często są prezentowane w formacie jak rejestr, gdzie przemie
   
 ### <a name="define-styles-for-alternating-rows"></a>Zdefiniuj style przemienne wiersze  
   
-1.  Wybierz <xref:System.Windows.Forms.DataGridView> formantu w projektancie.  
+1. Wybierz <xref:System.Windows.Forms.DataGridView> formantu w projektancie.  
   
-2.  W **właściwości** okna, kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> właściwości.  
+2. W **właściwości** okna, kliknij przycisk oznaczony wielokropkiem (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> właściwości.  
   
-3.  W **CellStyle Konstruktor —** okno dialogowe definiowania stylu przez ustawienie właściwości i używania **Podgląd** okienko, aby potwierdzić wybór. Style, które określisz są używane dla każdego wiersza wyświetlany w formancie, począwszy od drugiej.  
+3. W **CellStyle Konstruktor —** okno dialogowe definiowania stylu przez ustawienie właściwości i używania **Podgląd** okienko, aby potwierdzić wybór. Style, które określisz są używane dla każdego wiersza wyświetlany w formancie, począwszy od drugiej.  
   
-4.  Aby zdefiniować style dla pozostałych wierszy, powtórz kroki 2 i 3, za pomocą <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> właściwości.  
+4. Aby zdefiniować style dla pozostałych wierszy, powtórz kroki 2 i 3, za pomocą <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> właściwości.  
   
     > [!NOTE]
     >  Komórki są wyświetlane przy użyciu stylów dziedziczone z wieloma właściwościami. Aby uzyskać więcej informacji na temat dziedziczenie stylów, zobacz [style komórki w formancie DataGridView formularzy Windows](cell-styles-in-the-windows-forms-datagridview-control.md).  

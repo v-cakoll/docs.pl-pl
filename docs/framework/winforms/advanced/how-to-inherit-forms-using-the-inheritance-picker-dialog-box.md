@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212287"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342096"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Instrukcje: Dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **selektor dziedziczenia** okno dialogowe. Dzięki niemu można korzystać z zalet interfejsów kodu lub użytkownika (UI), utworzono już w innych rozwiązaniach.  
@@ -23,23 +23,23 @@ Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **sele
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Aby utworzyć formularz Windows dziedziczone z istniejącego formularza za pomocą selektora dziedziczenia  
   
-1.  Z **projektu** menu, wybierz **Dodaj formularz Windows**.  
+1. Z **projektu** menu, wybierz **Dodaj formularz Windows**.  
   
      **Dodaj nowy element** zostanie otwarte okno dialogowe.  
   
-2.  Wyszukiwanie **dziedziczone formularza** szablonu z searchbox lub klikając **formularzy Windows** kategorii, zaznacz ją, a następnie nadaj mu w **nazwa** pole. Kliknij przycisk **Dodaj** przycisk, aby kontynuować.  
+2. Wyszukiwanie **dziedziczone formularza** szablonu z searchbox lub klikając **formularzy Windows** kategorii, zaznacz ją, a następnie nadaj mu w **nazwa** pole. Kliknij przycisk **Dodaj** przycisk, aby kontynuować.  
   
      **Selektor dziedziczenia** zostanie otwarte okno dialogowe. Jeśli bieżący projekt zawiera już formularzy, zostaną one wyświetlone w **selektor dziedziczenia** okno dialogowe.  
   
-3.  Dziedziczenie z formularza w innym zestawie, kliknij przycisk **Przeglądaj** przycisku.  
+3. Dziedziczenie z formularza w innym zestawie, kliknij przycisk **Przeglądaj** przycisku.  
   
-4.  W ramach **wybierz plik, który zawiera składnik do dziedziczenia** okno dialogowe, przejdź do projektu zawierającego formularz lub moduł wygodną pracę.  
+4. W ramach **wybierz plik, który zawiera składnik do dziedziczenia** okno dialogowe, przejdź do projektu zawierającego formularz lub moduł wygodną pracę.  
   
-5.  Kliknij nazwę pliku .exe lub .dll, aby go zaznaczyć, a następnie kliknij przycisk **Otwórz** przycisku.  
+5. Kliknij nazwę pliku .exe lub .dll, aby go zaznaczyć, a następnie kliknij przycisk **Otwórz** przycisku.  
   
      Nastąpi powrót do **selektor dziedziczenia** okno dialogowe, w którym składnik znajduje się teraz, wraz z projektu, w którym znajduje się.  
   
-6.  Wybierz składnik.  
+6. Wybierz składnik.  
   
      W **Eksploratora rozwiązań**, składnik zostanie dodany do projektu. Ma interfejs użytkownika, kontrolek, które są częścią odziedziczony formularz będą oznaczone znakiem glif (![zrzut ekranu przedstawiający symboli dziedziczenie Visual Basic.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)), a po wybraniu miała obramowanie wskazujący poziom zabezpieczeń, między formantem podklasy formularz. W poniższej tabeli wymieniono zachowań, które odnoszą się do różnych poziomów ochrony.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341325"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy systemu Windows
 Gdy formularze Windows <xref:System.Windows.Forms.TextBox> formant najpierw otrzymuje fokus, wstawiania domyślną w polu tekstowym znajduje się po lewej stronie wszelki istniejący tekst. Użytkownik może przenieść punkt wstawiania, za pomocą klawiatury lub myszy. Jeśli pole tekstowe traci, a następnie ponownie otrzymuje fokus, kursor będzie wszędzie tam, gdzie użytkownik ostatniego umieszczenia go.  
@@ -24,9 +24,9 @@ Gdy formularze Windows <xref:System.Windows.Forms.TextBox> formant najpierw otrz
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>Aby kontrolować punktu wstawiania w formancie TextBox  
   
-1.  Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> właściwość do odpowiedniej wartości. Zero umieszcza punkt wstawiania natychmiast na lewo od pierwszego znaku.  
+1. Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> właściwość do odpowiedniej wartości. Zero umieszcza punkt wstawiania natychmiast na lewo od pierwszego znaku.  
   
-2.  (Opcjonalnie) Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> właściwości do długości tekstu, aby wybrać.  
+2. (Opcjonalnie) Ustaw <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> właściwości do długości tekstu, aby wybrać.  
   
      Poniższy kod zawsze zwraca punkt wstawiania do 0. `TextBox1_Enter` Programu obsługi zdarzeń musi być powiązana z formantem; Aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach Windows Forms](../creating-event-handlers-in-windows-forms.md).  
   

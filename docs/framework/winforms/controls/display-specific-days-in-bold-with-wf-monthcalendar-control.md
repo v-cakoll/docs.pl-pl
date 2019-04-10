@@ -11,12 +11,12 @@ helpviewer_keywords:
 - GetDayBold event
 - MonthCalendar control [Windows Forms], dates displayed in bold
 ms.assetid: 8b20db5b-8118-4825-90e8-2c45c186ac7d
-ms.openlocfilehash: cf3ec21aa0272f60599f5659d78214120bcfcaf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27b19e47d108b9af43a6d8882264d62c726ffe56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343272"
 ---
 # <a name="how-to-display-specific-days-in-bold-with-the-windows-forms-monthcalendar-control"></a>Instrukcje: wyświetlanie określonych dni pogrubioną czcionką za pomocą kontrolki MonthCalendar formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlić dni pogrubioną czcionką, jako pojedynczej daty lub na zasadzie powtarzające się. Możesz zrobić to, aby zwrócić uwagę czytelnika na wybranych dat, takich jak dni wolnych od pracy i weekendów.  
@@ -25,7 +25,7 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyśw
   
 ### <a name="to-make-a-date-appear-in-bold-type"></a>Daty są wyświetlane pogrubioną czcionką  
   
-1.  Utwórz <xref:System.DateTime> obiektów.  
+1. Utwórz <xref:System.DateTime> obiektów.  
   
     ```vb  
     Dim myVacation1 As Date = New DateTime(2001, 6, 10)  
@@ -42,7 +42,7 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyśw
     DateTime myVacation2 = DateTime(2001, 6, 17);  
     ```  
   
-2.  Pogrubienie pojedyncza Data, wywołując <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> metody <xref:System.Windows.Forms.MonthCalendar> kontroli.  
+2. Pogrubienie pojedyncza Data, wywołując <xref:System.Windows.Forms.MonthCalendar.AddBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.AddAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.AddMonthlyBoldedDate%2A> metody <xref:System.Windows.Forms.MonthCalendar> kontroli.  
   
     ```vb  
     MonthCalendar1.AddBoldedDate(myVacation1)  
@@ -80,7 +80,7 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyśw
   
 ### <a name="to-make-a-date-appear-in-the-regular-font"></a>Daty są wyświetlane w regularnych czcionki  
   
-1.  Pojawiają się w regularnych czcionki przez wywołanie datę pogrubiony pojedynczego <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> metody.  
+1. Pojawiają się w regularnych czcionki przez wywołanie datę pogrubiony pojedynczego <xref:System.Windows.Forms.MonthCalendar.RemoveBoldedDate%2A>, <xref:System.Windows.Forms.MonthCalendar.RemoveAnnuallyBoldedDate%2A>, lub <xref:System.Windows.Forms.MonthCalendar.RemoveMonthlyBoldedDate%2A> metody.  
   
     ```vb  
     MonthCalendar1.RemoveBoldedDate(myVacation1)  
@@ -113,7 +113,7 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyśw
     monthCalendar1->RemoveAllBoldedDates();  
     ```  
   
-2.  Zaktualizuj wygląd czcionki, wywołując <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> metody.  
+2. Zaktualizuj wygląd czcionki, wywołując <xref:System.Windows.Forms.MonthCalendar.UpdateBoldedDates%2A> metody.  
   
     ```vb  
     MonthCalendar1.UpdateBoldedDates()  

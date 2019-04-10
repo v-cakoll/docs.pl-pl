@@ -2,12 +2,12 @@
 title: Podstawowa usługa HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 247fedac339ebb22a6ef3b3e84f557451ecaaf1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337113"
 ---
 # <a name="basic-http-service"></a>Podstawowa usługa HTTP
 Ten przykład demonstruje sposób implementacji usługi oparte na protokole HTTP, opartego na protokole RPC — co jest często określany jako usługa "POX" (zwykłe stare XML) — przy użyciu modelu programowania REST Windows Communication Foundation (WCF). Ten przykład zawiera dwa składniki: samodzielnie hostowana usługa HTTP programu WCF (Service.cs) i aplikacji konsoli (Program.cs), która tworzy usługę i wykonywania wywołań do niego.  
@@ -27,11 +27,11 @@ Ten przykład demonstruje sposób implementacji usługi oparte na protokole HTTP
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Otwórz rozwiązanie, podstawowe przykładowej usługi Http. Podczas uruchamiania programu Visual Studio 2012, należy uruchomić jako administrator na potrzeby przykładu zostać pomyślnie uruchomiony. W tym celu kliknij prawym przyciskiem myszy ikonę programu Visual Studio 2012 i wybierając polecenie **Uruchom jako Administrator** z menu kontekstowego.  
+1. Otwórz rozwiązanie, podstawowe przykładowej usługi Http. Podczas uruchamiania programu Visual Studio 2012, należy uruchomić jako administrator na potrzeby przykładu zostać pomyślnie uruchomiony. W tym celu kliknij prawym przyciskiem myszy ikonę programu Visual Studio 2012 i wybierając polecenie **Uruchom jako Administrator** z menu kontekstowego.  
   
-2.  Naciśnij klawisze CTRL + SHIFT + B, Skompiluj rozwiązanie, a następnie naciśnij klawisz Ctrl + F5, aby uruchomić aplikację konsoli bez debugowania. W oknie konsoli pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce. Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
+2. Naciśnij klawisze CTRL + SHIFT + B, Skompiluj rozwiązanie, a następnie naciśnij klawisz Ctrl + F5, aby uruchomić aplikację konsoli bez debugowania. W oknie konsoli pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce. Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
   
-3.  Naciśnij dowolny klawisz, aby zakończyć próbki.  
+3. Naciśnij dowolny klawisz, aby zakończyć próbki.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

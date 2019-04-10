@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03098126985abc898b8911f98013662632d56e35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176517"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336580"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
 Aktywacji bez rejestracji dla składników opartych na programie .NET Framework jest tylko nieco bardziej skomplikowane niż jest dla składników COM. Instalator wymaga dwóch manifesty:  
@@ -28,9 +28,9 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
 ### <a name="to-create-an-application-manifest"></a>Aby utworzyć manifest aplikacji  
   
-1.  Za pomocą edytora XML, Utwórz (lub zmodyfikuj) należące do aplikacji modelu COM, który jest współdziałanie z co najmniej jednego składnika zarządzanego manifest aplikacji.  
+1. Za pomocą edytora XML, Utwórz (lub zmodyfikuj) należące do aplikacji modelu COM, który jest współdziałanie z co najmniej jednego składnika zarządzanego manifest aplikacji.  
   
-2.  Wstaw następujący nagłówek standardowy na początku pliku:  
+2. Wstaw następujący nagłówek standardowy na początku pliku:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
      Aby uzyskać informacji na temat ich atrybuty i elementy manifestu, zobacz [manifesty aplikacji](/windows/desktop/SbsCs/application-manifests).  
   
-3.  Określ właściciela manifestu. W poniższym przykładzie `myComApp` w wersji 1 jest właścicielem pliku manifestu.  
+3. Określ właściciela manifestu. W poniższym przykładzie `myComApp` w wersji 1 jest właścicielem pliku manifestu.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,7 +51,7 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
       />  
     ```  
   
-4.  Zidentyfikuj zestawów zależnych. W poniższym przykładzie `myComApp` zależy od `myManagedComp`.  
+4. Zidentyfikuj zestawów zależnych. W poniższym przykładzie `myComApp` zależy od `myManagedComp`.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -75,22 +75,22 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
     </assembly>  
     ```  
   
-5.  Zapisz i nazwa pliku manifestu. Nazwa manifest aplikacji jest nazwa zestawu pliku wykonywalnego, następuje rozszerzenie .manifest. Na przykład nazwa pliku manifestu aplikacji dla myComApp.exe jest myComApp.exe.manifest.  
+5. Zapisz i nazwa pliku manifestu. Nazwa manifest aplikacji jest nazwa zestawu pliku wykonywalnego, następuje rozszerzenie .manifest. Na przykład nazwa pliku manifestu aplikacji dla myComApp.exe jest myComApp.exe.manifest.  
   
  W tym samym katalogu co aplikacji modelu COM, można zainstalować manifest aplikacji. Alternatywnie można go dodać jako zasób do pliku .exe aplikacji. Aby uzyskać dodatkowe informacje, aby uzyskać więcej informacji, zobacz [informacje o zestawach Side-by-Side](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Aby utworzyć manifest składnika  
   
-1.  Za pomocą edytora XML, Utwórz manifestu składnika, aby opisać zarządzanego zestawu.  
+1. Za pomocą edytora XML, Utwórz manifestu składnika, aby opisać zarządzanego zestawu.  
   
-2.  Wstaw następujący nagłówek standardowy na początku pliku:  
+2. Wstaw następujący nagłówek standardowy na początku pliku:  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  Określ właściciela pliku. `<assemblyIdentity>` Elementu `<dependentAssembly>` elementu w pliku manifestu aplikacji musi pasować do w manifeście składnika. W poniższym przykładzie `myManagedComp` wersję 1.2.3.4 właścicielem pliku manifestu.  
+3. Określ właściciela pliku. `<assemblyIdentity>` Elementu `<dependentAssembly>` elementu w pliku manifestu aplikacji musi pasować do w manifeście składnika. W poniższym przykładzie `myManagedComp` wersję 1.2.3.4 właścicielem pliku manifestu.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,11 +103,11 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
            />  
     ```  
   
-4.  Zidentyfikuj każdej klasy w zestawie. Użyj `<clrClass>` element do unikatowego identyfikowania każdej klasy w zestawie zarządzanym. Element, który jest podelementem z `<assembly>` elementu atrybutami opisane w poniższej tabeli.  
+4. Zidentyfikuj każdej klasy w zestawie. Użyj `<clrClass>` element do unikatowego identyfikowania każdej klasy w zestawie zarządzanym. Element, który jest podelementem z `<assembly>` elementu atrybutami opisane w poniższej tabeli.  
   
     |Atrybut|Opis|Wymagane|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Tak|  
+    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Yes|  
     |`description`|Ciąg, który informuje użytkownika o informacje o składniku. Pusty ciąg jest ustawieniem domyślnym.|Nie|  
     |`name`|Ciąg, który reprezentuje klasy zarządzanej.|Tak|  
     |`progid`|Identyfikator, który ma być używany do aktywacji z późnym wiązaniem.|Nie|  
@@ -146,25 +146,25 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
     </assembly>  
     ```  
   
-5.  Zapisz i nazwa pliku manifestu. Nazwa manifestu składnika jest nazwa biblioteki zestawu, a po nim rozszerzenie .manifest. Na przykład myManagedComp.dll jest myManagedComp.manifest.  
+5. Zapisz i nazwa pliku manifestu. Nazwa manifestu składnika jest nazwa biblioteki zestawu, a po nim rozszerzenie .manifest. Na przykład myManagedComp.dll jest myManagedComp.manifest.  
   
  Manifestu składnika należy osadzić jako zasób w zestawie.  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>Osadzanie manifestu składnika w zestaw zarządzany  
   
-1.  Utwórz skrypt zasobu, który zawiera następującą instrukcję:  
+1. Utwórz skrypt zasobu, który zawiera następującą instrukcję:  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      W niniejszych zasadach `myManagedComp.manifest` nazywa się manifestu składnika osadzona. W tym przykładzie jest nazwa pliku skryptu `myresource.rc`.  
   
-2.  Kompiluj skrypt z użyciem Microsoft Windows Resource Compiler (Rc.exe). W wierszu polecenia wpisz następujące polecenie:  
+2. Kompiluj skrypt z użyciem Microsoft Windows Resource Compiler (Rc.exe). W wierszu polecenia wpisz następujące polecenie:  
   
      `rc myresource.rc`  
   
      Tworzy RC.exe `myresource.res` pliku zasobów.  
   
-3.  Ponownie skompiluj plik źródłowy zestawu i określ plik zasobów przy użyciu **/win32res** opcji:  
+3. Ponownie skompiluj plik źródłowy zestawu i określ plik zasobów przy użyciu **/win32res** opcji:  
   
     ```  
     /win32res:myresource.res  

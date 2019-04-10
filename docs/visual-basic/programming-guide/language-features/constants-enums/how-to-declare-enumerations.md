@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 1e6ec63688899533b64a6fc5215f77019b64b49c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830165"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343344"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Instrukcje: Deklarowanie wyliczeń (Visual Basic)
 Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Nie można zadeklarować wyliczenie wewnątrz metody. Aby określić odpowiedni poziom dostępu, użyj `Private`, `Protected`, `Friend`, lub `Public`.  
@@ -24,15 +24,15 @@ Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Ni
   
 ### <a name="to-declare-an-enumeration"></a>Aby zadeklarować wyliczenie  
   
-1.  Zapis deklarację, że obejmuje poziom dostępu do kodu, `Enum` — słowo kluczowe i prawidłową nazwą, tak jak w poniższych przykładach, z których każdy deklaruje inną `Enum`.  
+1. Zapis deklarację, że obejmuje poziom dostępu do kodu, `Enum` — słowo kluczowe i prawidłową nazwą, tak jak w poniższych przykładach, z których każdy deklaruje inną `Enum`.  
   
      [!code-vb[VbEnumsTask#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#3)]  
   
-2.  Definiowanie stałych w wyliczeniu. Domyślnie pierwszej stałej wyliczenia jest inicjowany do `0`, i kolejne stałe są inicjowane na wartość jeden więcej niż poprzedniego — stała. Na przykład, poniższy wyliczenie `Days`, zawiera stałą o nazwie `Sunday` wartością `0`, stałą o nazwie `Monday` wartością `1`, stałą o nazwie `Tuesday` z wartością `2`i tak dalej.  
+2. Definiowanie stałych w wyliczeniu. Domyślnie pierwszej stałej wyliczenia jest inicjowany do `0`, i kolejne stałe są inicjowane na wartość jeden więcej niż poprzedniego — stała. Na przykład, poniższy wyliczenie `Days`, zawiera stałą o nazwie `Sunday` wartością `0`, stałą o nazwie `Monday` wartością `1`, stałą o nazwie `Tuesday` z wartością `2`i tak dalej.  
   
      [!code-vb[VbEnumsTask#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#4)]  
   
-3.  Można jawnie przypisać wartości do stałe, wyliczenia, korzystając z instrukcji przypisania. Możesz przypisać dowolnej wartości liczby całkowitej, łącznie z liczbami ujemnymi. Na przykład może być stałe przy użyciu wartości mniejsze od zera do reprezentowania warunków błędów. W poniższym wyliczenia, stała `Invalid` jawnie jest przypisywana wartość `–1`i stałą `Sunday` jest przypisywana wartość `0`. Ponieważ jest on pierwszy stała wyliczenia `Saturday` również jest ustawiana na wartość `0`. Wartość `Monday` jest `1` (jeden więcej niż wartość `Sunday`); wartość `Tuesday` jest `2`i tak dalej.  
+3. Można jawnie przypisać wartości do stałe, wyliczenia, korzystając z instrukcji przypisania. Możesz przypisać dowolnej wartości liczby całkowitej, łącznie z liczbami ujemnymi. Na przykład może być stałe przy użyciu wartości mniejsze od zera do reprezentowania warunków błędów. W poniższym wyliczenia, stała `Invalid` jawnie jest przypisywana wartość `–1`i stałą `Sunday` jest przypisywana wartość `0`. Ponieważ jest on pierwszy stała wyliczenia `Saturday` również jest ustawiana na wartość `0`. Wartość `Monday` jest `1` (jeden więcej niż wartość `Sunday`); wartość `Tuesday` jest `2`i tak dalej.  
   
      [!code-vb[VbEnumsTask#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#5)]  
   
@@ -45,7 +45,7 @@ Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Ni
 ## <a name="see-also"></a>Zobacz także
 
 - [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [Instrukcje: Odnoszą się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [Instrukcje: Odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Instrukcje: Iterowanie za pomocą wyliczania w Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Instrukcje: Określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)

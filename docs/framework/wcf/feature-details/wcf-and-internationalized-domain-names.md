@@ -2,12 +2,12 @@
 title: Architektura WCF i międzynarodowe nazwy domen
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
-ms.openlocfilehash: c166f497117314dd8cea3b04b9b1072203374c52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112609"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335384"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>Architektura WCF i międzynarodowe nazwy domen
 Dodano obsługę do obsługi usług WCF za pomocą nazw międzynarodowych domen (IDN). Międzynarodowa nazwa domeny jest nazwa domeny, który zawiera znaki spoza zestawu ASCII. Ta obsługa obejmuje możliwość hostowanie usługi WCF przy użyciu nazwy IDN i klienta programu WCF na komunikowanie się z usługą sieci web o nazwie IDN.  
@@ -27,11 +27,11 @@ Dodano obsługę do obsługi usług WCF za pomocą nazw międzynarodowych domen 
   
  \<Idn > element zawiera atrybut włączony, którą można ustawić na jeden z następujących wartości:  
   
-1.  "None"  
+1. "None"  
   
-2.  "AllExceptIntranet"  
+2. "AllExceptIntranet"  
   
-3.  "Wszystkie"  
+3. "Wszystkie"  
   
  Gdy ustawienie IDN ma wartość "None", nie konwersje są wykonywane przez Uri.Host lub Uri.DnsSafeHost. Jeśli ustawienie IDN jest równa "All", identyfikator uri. Host pozostaje Unicode i identyfikatora uri. DnsSafeHost jest konwertowana na ciąg Punycode. Jeśli ustawienie IDN, jest równa "AllExceptIntranet", identyfikator uri. DnsSafeHost jest konwertowana na ciąg Punycode w przypadku adresów internetowych i pozostaje Unicode dla adresów w sieci intranet. To ustawienie jest ważne dla poprawnego rozpoznawania nazw DNS. Należy pamiętać, że to ustawienie nie jest wymagane do skonfigurowania dla systemu Windows 8 i nowszych wersji.  
   

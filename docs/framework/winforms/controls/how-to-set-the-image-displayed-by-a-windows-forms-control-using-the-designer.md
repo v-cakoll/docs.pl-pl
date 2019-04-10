@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153494"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339674"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant
 Kilka kontrolek Windows Forms można wyświetlać obrazy. Obraz, który może być ikonę która wyjaśnia przeznaczenia kontrolki, takie jak ikonę dysku, na przycisku określające elementy **Zapisz** polecenia. Alternatywnie ikona może być obrazu tła, aby nadać wygląd, który ma kontrolki.  
@@ -24,13 +24,13 @@ Kilka kontrolek Windows Forms można wyświetlać obrazy. Obraz, który może by
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Aby ustawić obrazu wyświetlanego przez kontrolkę  
   
-1.  W **właściwości** wybierz **obraz** lub **BackgroundImage** właściwości kontrolki, następnie kliknij przycisk wielokropka (przycisk  
+1. W **właściwości** wybierz **obraz** lub **BackgroundImage** właściwości kontrolki, następnie kliknij przycisk wielokropka (przycisk  
   
      ![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) do wyświetlenia **wybierz zasób** okno dialogowe.  
   
-2.  Wybierz obraz, który chcesz wyświetlić.  
+2. Wybierz obraz, który chcesz wyświetlić.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141638"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334461"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows
 *Klucz dostępu* jest podkreślony znak w tekście menu, element menu lub etykieta kontrolki, takiej jak przycisk. Przy użyciu klucza dostępu użytkownik może "przycisk", naciskając klawisz ALT w połączeniu z kluczem dostępu do wstępnie zdefiniowanych. Na przykład, jeśli przycisk uruchamia procedurę do Drukowanie formularza i dlatego jego `Text` właściwość jest ustawiona na "Print","Dodawanie handlowe" i ", zanim litery"P"powoduje, że litery"P"podkreślić w tekst przycisku w czasie wykonywania. Użytkownik może uruchamiać polecenie skojarzone z przyciskiem, naciskając klawisze ALT + P. Nie może mieć klucza dostępu dla formantu, który nie może otrzymać ostrości.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Aby utworzyć klucz dostępu dla formantu  
   
-1.  Ustaw `Text` właściwość ciąg, który zawiera handlowe "i" (&) przed literą, który ma być skrót.  
+1. Ustaw `Text` właściwość ciąg, który zawiera handlowe "i" (&) przed literą, który ma być skrót.  
   
     ```vb  
     ' Set the letter "P" as an access key.  

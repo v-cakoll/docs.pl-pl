@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Włączanie wykrywania powtarzania tokenu'
+title: 'Instrukcje: Włączanie wykrywania ponownego odtwarzania tokenu'
 ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
-ms.openlocfilehash: 373177924a0a2e03bd43237510c918694cd5a340
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336528"
 ---
-# <a name="how-to-enable-token-replay-detection"></a>Instrukcje: Włączanie wykrywania powtarzania tokenu
+# <a name="how-to-enable-token-replay-detection"></a>Instrukcje: Włączanie wykrywania ponownego odtwarzania tokenu
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® formularzy sieci Web  
+-   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
- Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące włączania wykrywania powtarzania tokenu w aplikacji ASP.NET, który używa programu WIF. On również instrukcje testowania aplikacji pozwalające sprawdzić, czy jest włączone wykrywanie powtórzeń tokenów. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące włączania wykrywania powtarzania tokenu w aplikacji ASP.NET, który używa programu WIF. On również instrukcje testowania aplikacji pozwalające sprawdzić, czy jest włączone wykrywanie powtórzeń tokenów. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [Narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Spis treści  
   
@@ -54,17 +54,17 @@ ms.locfileid: "47236007"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
+1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
-2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
+2. W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
-3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+3. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
-4.  Kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
+4. Kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
   
-5.  **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
+5. **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
   
-6.  Dodaj następujący kod  **\<tokenReplayDetection >** elementu *Web.config* pliku konfiguracji, natychmiast po  **\<system.identityModel >** i  **\<identityConfiguration >** elementów, takich jak pokazano:  
+6. Dodaj następujący kod  **\<tokenReplayDetection >** elementu *Web.config* pliku konfiguracji, natychmiast po  **\<system.identityModel >** i  **\<identityConfiguration >** elementów, takich jak pokazano:  
   
     ```xml  
     <system.identityModel>  
@@ -77,8 +77,8 @@ ms.locfileid: "47236007"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>Aby przetestować aplikację ASP.NET z włączoną obsługą programu WIF do wykrywania powtórzeń  
   
-1.  Uruchom rozwiązanie, naciskając klawisz **F5** klucza. Użytkownik powinien być prezentowane z domyślną stronę główną struktury ASP.NET i automatycznie uwierzytelniana przy użyciu nazwy użytkownika *Terry*, która jest domyślny użytkownik, który jest zwracany za pomocą deweloperskiej usługi STS.  
+1. Uruchom rozwiązanie, naciskając klawisz **F5** klucza. Użytkownik powinien być prezentowane z domyślną stronę główną struktury ASP.NET i automatycznie uwierzytelniana przy użyciu nazwy użytkownika *Terry*, która jest domyślny użytkownik, który jest zwracany za pomocą deweloperskiej usługi STS.  
   
-2.  Naciśnij w przeglądarce **ponownie** przycisku. Powinna pojawić się **błąd serwera w aplikacji» /»** strony na następujący opis: *ID1062: wykryto powtarzania: Token: "System.IdentityModel.Tokens.SamlSecurityToken"* , a następnie *identyfikator potwierdzenia* i *wystawcy*.  
+2. Naciśnij w przeglądarce **ponownie** przycisku. Powinna pojawić się **błąd serwera w aplikacji» /»** strony z poniższym opisem: *ID1062: Wykryto powtarzania dla: token: "System.IdentityModel.Tokens.SamlSecurityToken"*, a następnie *identyfikator potwierdzenia* i *wystawcy*.  
   
      Ta strona błędu jest wyświetlana, ponieważ wystąpił wyjątek typu <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> był zgłaszany, gdy wykryto powtarzania tokenu. Ten błąd występuje, ponieważ próbujesz ponownie wysłać żądanie POST początkowej, najpierw umieszczeniem tokenu. **Ponownie** przycisku nie spowoduje to zachowanie dla kolejnych żądań do serwera.

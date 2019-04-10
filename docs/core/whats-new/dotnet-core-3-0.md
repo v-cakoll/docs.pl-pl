@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: 3ce7bbc0dfccfda7a25dfecf32e93876ddde01f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341728"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 2)
 
@@ -70,8 +70,8 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 Oprócz możliwości `await foreach`, można również utworzyć async Iteratory, na przykład iterator, który zwraca `IAsyncEnumerable/IAsyncEnumerator` można zarówno `await` i `yield` w. W przypadku obiektów, które muszą zostać zlikwidowany, można użyć `IAsyncDisposable`, który implementuje różnych typów BCL, takich jak `Stream` i `Timer`.
 
->[!NOTE]
->Potrzebujesz .NET Core 3.0 w wersji zapoznawczej 2, aby użyć strumieni asynchronicznych, jeśli chcesz tworzyć aplikacje za pomocą programu Visual Studio 2019 r w wersji zapoznawczej 2 lub jego najnowszej wersji zapoznawczej [ C# rozszerzenia programu Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Jeśli używasz platformy .NET Core 3.0 w wersji zapoznawczej 2 w wierszu polecenia, następnie wszystko, co będzie działać zgodnie z oczekiwaniami.
+> [!NOTE]
+> Wymagany jest platforma .NET Core 3.0 w wersji zapoznawczej 2, aby użyć strumieni asynchronicznych, jeśli chcesz tworzyć aplikacje za pomocą albo 2019 Visual Studio lub jego najnowszej wersji zapoznawczej [ C# rozszerzenia programu Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/releases/tag/v1.18.0-beta5). Jeśli używasz platformy .NET Core 3.0 w wersji zapoznawczej 2 w wierszu polecenia, następnie wszystko, co będzie działać zgodnie z oczekiwaniami.
 
 ### <a name="using-declarations"></a>Za pomocą deklaracji
 
@@ -267,7 +267,7 @@ dotnet new wpf
 dotnet new winforms
 ```
 
-Visual Studio 2019 Preview 2 dodaje **nowy projekt** szablonów dla platformy .NET Core 3.0 Windows Forms i WPF. Projektanci nadal jeszcze nie są obsługiwane. I można otwierać, uruchamianie i debugowanie tych projektów w programie Visual Studio 2019 r.
+Visual Studio 2019 dodaje **nowy projekt** szablonów dla platformy .NET Core 3.0 Windows Forms i WPF. Projektanci nadal jeszcze nie są obsługiwane. I można otwierać, uruchamianie i debugowanie tych projektów w programie Visual Studio 2019 r.
 
 Visual Studio 2017 15.9 dodaje możliwość [Włącz podglądy platformy .NET Core](https://devblogs.microsoft.com/dotnet/net-core-tooling-update-for-visual-studio-2017-version-15-9/), ale konieczne jest włączenie tej funkcji i nie jest obsługiwanym scenariuszem.
 
@@ -307,7 +307,7 @@ Podziel się swoją opinię na [dotnet/winforms](https://github.com/dotnet/winfo
 
 [MSIX](https://docs.microsoft.com/windows/msix/) jest nowy format pakietu aplikacji Windows. Może służyć do wdrażania aplikacji klasycznych .NET Core 3.0 dla systemu Windows 10.
 
-[Projekt pakietu aplikacji Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępne w wersji 2 (wersja zapoznawcza) 2019 r w usłudze Visual Studio, umożliwia tworzenie pakietów MSIX [niezależna](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
+[Projekt pakietu aplikacji Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępne w programie Visual Studio 2019 r, pozwala na tworzenie pakietów MSIX [niezależna](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
 
 >Uwaga: Plik projektu .NET Core, musisz określić obsługiwane środowiska uruchomieniowe w `<RuntimeIdentifiers>` właściwości:
 ```xml

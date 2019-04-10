@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335020"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -87,7 +87,7 @@ Pakiety NuGet docelowe co najmniej jeden [struktur](frameworks.md). Pakiety .NET
 
 [ `NETStandard.Library` ](https://www.nuget.org/packages/NETStandard.Library/) Meta Microsoft.aspnetcore.all odwołuje się do pełnego zestawu pakietów NuGet, które definiują .NET Standard.  Najczęstszym sposobem docelowej `netstandard` jest, odwołując się do tego meta Microsoft.aspnetcore.all. Jej opis i zapewnia dostęp do bibliotek .NET około 40 i skojarzone interfejsy API, które definiują .NET Standard. Dodatkowe pakiety można odwoływać się przeznaczonych `netstandard` uzyskać dostęp do dodatkowych interfejsów API.
 
-### <a name="versioning"></a>Obsługa wersji
+### <a name="versioning"></a>Przechowywanie wersji
 
 Specyfikacja nie jest liczbie pojedynczej, ale w przyrostowo stałym wzbogacaniu i liniowo określonej wersji zestawu interfejsów API. Pierwsza wersja standard ustanawia zbiór interfejsów API w linii bazowej. Kolejne wersje dodawanie interfejsów API i dziedziczą zdefiniowane przez poprzednie wersje interfejsów API. Istnieje ustanowionych usuwania interfejsów API niż standardowe.
 
@@ -113,7 +113,7 @@ Aby uzyskać więcej informacji, zobacz [.NET Framework w trybie zgodności](../
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>Biblioteki .NET standard oraz programu Visual Studio
 
-Aby można było utworzyć biblioteki .NET Standard w programie Visual Studio, upewnij się, [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) na Windows, lub nowszej lub [programu Visual Studio dla komputerów Mac w wersji 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) na lub nowszej z systemem macOS.
+Aby można było utworzyć biblioteki .NET Standard w programie Visual Studio, upewnij się, [programu Visual Studio 2017 w wersji 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) na Windows, lub nowszej lub [programu Visual Studio dla komputerów Mac w wersji 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) na lub nowszej z systemem macOS.
 
 Jeśli musisz korzystać z bibliotek .NET Standard 2.0 w projektach, możesz także zrobić to w programie Visual Studio 2015. Należy jednak NuGet zainstalowany klient 3.6 lub nowszej. Możesz pobrać klienta programu NuGet dla programu Visual Studio 2015 z [NuGet pobiera](https://www.nuget.org/downloads) strony.
 

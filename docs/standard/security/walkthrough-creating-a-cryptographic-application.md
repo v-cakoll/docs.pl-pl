@@ -1,5 +1,5 @@
 ---
-title: 'Wskazówki: tworzenie aplikacji kryptograficznej'
+title: 'Przewodnik: Tworzenie aplikacji kryptograficznej'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341767"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>Wskazówki: tworzenie aplikacji kryptograficznej
+# <a name="walkthrough-creating-a-cryptographic-application"></a>Przewodnik: Tworzenie aplikacji kryptograficznej
 W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przykłady kodu są przeznaczone dla aplikacji Windows Forms. Ta aplikacja nie przedstawiono tu scenariusze ze świata rzeczywistego, takich jak za pomocą kart inteligentnych. Zamiast tego przedstawiono podstawowe informacje dotyczące szyfrowania i odszyfrowywania.  
   
  W tym instruktażu wykorzystano poniższe wskazówki dotyczące szyfrowania:  
@@ -53,7 +53,7 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
 ## <a name="creating-a-windows-forms-application"></a>Tworzenie aplikacji Windows Forms  
  Większość przykładów kodu w tym przewodniku są przeznaczone do można programy obsługi zdarzeń dla przycisku kontrolki. W poniższej tabeli wymieniono kontrole wymagane dla przykładowej aplikacji i ich wymagane nazwy zgodne z przykładami kodu.  
   
-|Formant|Nazwa|Właściwość Text (zgodnie z potrzebami)|  
+|formant|Nazwa|Właściwość Text (zgodnie z potrzebami)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Szyfrowanie pliku|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Odszyfrowywanie pliku|  
@@ -88,15 +88,15 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
   
  `EncryptFile` Metoda wykonuje następujące czynności:  
   
-1.  Tworzy <xref:System.Security.Cryptography.RijndaelManaged> algorytm symetryczny zawartość.  
+1. Tworzy <xref:System.Security.Cryptography.RijndaelManaged> algorytm symetryczny zawartość.  
   
-2.  Tworzy <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do zaszyfrowania <xref:System.Security.Cryptography.RijndaelManaged> klucza.  
+2. Tworzy <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do zaszyfrowania <xref:System.Security.Cryptography.RijndaelManaged> klucza.  
   
-3.  Używa <xref:System.Security.Cryptography.CryptoStream> obiektu do odczytu i szyfrowania <xref:System.IO.FileStream> pliku źródłowego w blokach bajtów do miejsca docelowego <xref:System.IO.FileStream> obiektu dla zaszyfrowanego pliku.  
+3. Używa <xref:System.Security.Cryptography.CryptoStream> obiektu do odczytu i szyfrowania <xref:System.IO.FileStream> pliku źródłowego w blokach bajtów do miejsca docelowego <xref:System.IO.FileStream> obiektu dla zaszyfrowanego pliku.  
   
-4.  Określa długość zaszyfrowanego klucza i IV i tworzy tablice typu byte ich wartości długości.  
+4. Określa długość zaszyfrowanego klucza i IV i tworzy tablice typu byte ich wartości długości.  
   
-5.  Zapisuje klucz, IV i ich wartości długości zaszyfrowany pakiet.  
+5. Zapisuje klucz, IV i ich wartości długości zaszyfrowany pakiet.  
   
  Pakietu szyfrowania posługuje się następującym formatem:  
   
@@ -127,15 +127,15 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
   
  `Decrypt` Metoda wykonuje następujące czynności:  
   
-1.  Tworzy <xref:System.Security.Cryptography.RijndaelManaged> algorytm symetryczny do odszyfrowania zawartości.  
+1. Tworzy <xref:System.Security.Cryptography.RijndaelManaged> algorytm symetryczny do odszyfrowania zawartości.  
   
-2.  Odczytuje pierwsze 8 bajtów z <xref:System.IO.FileStream> pakietu zaszyfrowane w tablice bajtów w celu uzyskania długości zaszyfrowanego klucza i IV.  
+2. Odczytuje pierwsze 8 bajtów z <xref:System.IO.FileStream> pakietu zaszyfrowane w tablice bajtów w celu uzyskania długości zaszyfrowanego klucza i IV.  
   
-3.  Wyodrębnia klucz i IV z pakietu szyfrowania do tablice typu byte.  
+3. Wyodrębnia klucz i IV z pakietu szyfrowania do tablice typu byte.  
   
-4.  Tworzy <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do odszyfrowania <xref:System.Security.Cryptography.RijndaelManaged> klucza.  
+4. Tworzy <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu do odszyfrowania <xref:System.Security.Cryptography.RijndaelManaged> klucza.  
   
-5.  Używa <xref:System.Security.Cryptography.CryptoStream> obiektu do odczytu i odszyfrować części tekstowej szyfrowania <xref:System.IO.FileStream> szyfrowanie pakietów, w blokach bajtów w <xref:System.IO.FileStream> obiekt odszyfrowanego pliku. Po jej zakończeniu odszyfrowywania został ukończony.  
+5. Używa <xref:System.Security.Cryptography.CryptoStream> obiektu do odczytu i odszyfrować części tekstowej szyfrowania <xref:System.IO.FileStream> szyfrowanie pakietów, w blokach bajtów w <xref:System.IO.FileStream> obiekt odszyfrowanego pliku. Po jej zakończeniu odszyfrowywania został ukończony.  
   
  Dodaj następujący kod jako `Click` program obsługi zdarzeń dla `Decrypt File` przycisku.  
   
@@ -182,33 +182,33 @@ W tym instruktażu pokazano, jak szyfrowanie i odszyfrowywanie zawartości. Przy
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>Aby utworzyć klucze, szyfrowania i odszyfrowywania  
   
-1.  Kliknij przycisk `Create Keys` przycisku. Etykieta Wyświetla nazwę klucza i wskazuje, że jest parą kluczy pełnej.  
+1. Kliknij przycisk `Create Keys` przycisku. Etykieta Wyświetla nazwę klucza i wskazuje, że jest parą kluczy pełnej.  
   
-2.  Kliknij przycisk `Export Public Key` przycisku. Należy pamiętać, że eksportowanie parametrów klucza publicznego nie zmienia bieżącego klucza.  
+2. Kliknij przycisk `Export Public Key` przycisku. Należy pamiętać, że eksportowanie parametrów klucza publicznego nie zmienia bieżącego klucza.  
   
-3.  Kliknij przycisk `Encrypt File` przycisku i wybierz plik.  
+3. Kliknij przycisk `Encrypt File` przycisku i wybierz plik.  
   
-4.  Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane.  
+4. Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane.  
   
-5.  Zapoznaj się z plikiem, po prostu odszyfrować.  
+5. Zapoznaj się z plikiem, po prostu odszyfrować.  
   
-6.  Zamknij aplikację i uruchom ponownie, aby przetestować pobieranie utrwalonych kontenerów kluczy w kolejnym scenariuszu.  
+6. Zamknij aplikację i uruchom ponownie, aby przetestować pobieranie utrwalonych kontenerów kluczy w kolejnym scenariuszu.  
   
 #### <a name="to-encrypt-using-the-public-key"></a>Aby zaszyfrować przy użyciu klucza publicznego  
   
-1.  Kliknij przycisk `Import Public Key` przycisku. Etykieta Wyświetla nazwę klucza i pokazuje, że nie jest publiczny wyłącznie.  
+1. Kliknij przycisk `Import Public Key` przycisku. Etykieta Wyświetla nazwę klucza i pokazuje, że nie jest publiczny wyłącznie.  
   
-2.  Kliknij przycisk `Encrypt File` przycisku i wybierz plik.  
+2. Kliknij przycisk `Encrypt File` przycisku i wybierz plik.  
   
-3.  Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To zakończy się niepowodzeniem, ponieważ konieczne jest posiadanie klucza prywatnego do odszyfrowania.  
+3. Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To zakończy się niepowodzeniem, ponieważ konieczne jest posiadanie klucza prywatnego do odszyfrowania.  
   
  Ten scenariusz pokazuje, posiadające klucza publicznego do szyfrowania plików dla innej osoby. Zazwyczaj tej osobie umożliwiają tylko klucz publiczny i wstrzymania klucza prywatnego do odszyfrowania.  
   
 #### <a name="to-decrypt-using-the-private-key"></a>Aby odszyfrować, używając klucza prywatnego  
   
-1.  Kliknij przycisk `Get Private Key` przycisku. Etykieta Wyświetla nazwę klucza i pokazuje, czy jest to pary kluczy pełnej.  
+1. Kliknij przycisk `Get Private Key` przycisku. Etykieta Wyświetla nazwę klucza i pokazuje, czy jest to pary kluczy pełnej.  
   
-2.  Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To powiedzie się, ponieważ masz pary pełnej kluczy do odszyfrowania.  
+2. Kliknij przycisk `Decrypt File` i wybierz plik, po prostu szyfrowane. To powiedzie się, ponieważ masz pary pełnej kluczy do odszyfrowania.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,29 +2,29 @@
 title: 'Instrukcje: programowe dodawanie możliwości odnajdywania do usługi i klienta WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224211"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336593"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Instrukcje: programowe dodawanie możliwości odnajdywania do usługi i klienta WCF
 W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communication Foundation (WCF). Jest on oparty na [hosta samodzielnego](https://go.microsoft.com/fwlink/?LinkId=145523) próbki.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Aby skonfigurować istniejący przykład hosta samodzielnego usługi odnajdywania  
   
-1.  Otwórz rozwiązanie hosta samodzielnego w programie Visual Studio 2012. Przykład znajduje się w katalogu TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1. Otwórz rozwiązanie hosta samodzielnego w programie Visual Studio 2012. Przykład znajduje się w katalogu TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Dodaj odwołanie do `System.ServiceModel.Discovery.dll` do projektu usługi. Może zostać wyświetlony komunikat o błędzie informujący o tym, "System. ServiceModel.Discovery.dll lub jednej z jego zależności wymaga nowszej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] niż określona w projekcie... " Jeśli ten komunikat jest wyświetlony, kliknij prawym przyciskiem myszy projekt w Eksploratorze rozwiązań i wybierz polecenie **właściwości**. W **właściwości projektu** okna, upewnij się, że **platformę docelową** jest [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2. Dodaj odwołanie do `System.ServiceModel.Discovery.dll` do projektu usługi. Może zostać wyświetlony komunikat o błędzie informujący o tym, "System. ServiceModel.Discovery.dll lub jednej z jego zależności wymaga nowszej wersji [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] niż określona w projekcie... " Jeśli ten komunikat jest wyświetlony, kliknij prawym przyciskiem myszy projekt w Eksploratorze rozwiązań i wybierz polecenie **właściwości**. W **właściwości projektu** okna, upewnij się, że **platformę docelową** jest [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
-3.  Otwórz plik Service.cs i Dodaj następujący kod `using` instrukcji.  
+3. Otwórz plik Service.cs i Dodaj następujący kod `using` instrukcji.  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  W `Main()` metody, wewnątrz `using` instrukcji, Dodaj <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> wystąpienia hosta usługi.  
+4. W `Main()` metody, wewnątrz `using` instrukcji, Dodaj <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> wystąpienia hosta usługi.  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
   
      <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> Określa, że usługa jest stosowany do wykrywalne.  
   
-5.  Dodaj <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> host usługi bezpośrednio po kodzie, który dodaje <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
+5. Dodaj <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> host usługi bezpośrednio po kodzie, który dodaje <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>.  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>Aby utworzyć aplikację kliencką, która używa odnajdywania w celu wywołania tej usługi  
   
-1.  Dodaj nową aplikację konsoli w rozwiązaniu o nazwie `DiscoveryClientApp`.  
+1. Dodaj nową aplikację konsoli w rozwiązaniu o nazwie `DiscoveryClientApp`.  
   
-2.  Dodaj odwołanie do `System.ServiceModel.dll` i `System.ServiceModel.Discovery.dll`  
+2. Dodaj odwołanie do `System.ServiceModel.dll` i `System.ServiceModel.Discovery.dll`  
   
-3.  Skopiuj pliki GeneratedClient.cs i App.config z istniejącego projektu klienta do nowego projektu DiscoveryClientApp. Aby to zrobić, kliknij prawym przyciskiem myszy pliki znajdujące się w **Eksploratora rozwiązań**, wybierz opcję **kopiowania**, a następnie wybierz pozycję **DiscoveryClientApp** projektu, kliknij prawym przyciskiem myszy i wybierz **Wklej**.  
+3. Skopiuj pliki GeneratedClient.cs i App.config z istniejącego projektu klienta do nowego projektu DiscoveryClientApp. Aby to zrobić, kliknij prawym przyciskiem myszy pliki znajdujące się w **Eksploratora rozwiązań**, wybierz opcję **kopiowania**, a następnie wybierz pozycję **DiscoveryClientApp** projektu, kliknij prawym przyciskiem myszy i wybierz **Wklej**.  
   
-4.  Otwórz plik Program.cs.  
+4. Otwórz plik Program.cs.  
   
-5.  Dodaj następujący kod `using` instrukcji.  
+5. Dodaj następujący kod `using` instrukcji.  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  Dodaj metodę statyczną o nazwie `FindCalculatorServiceAddress()` do `Program` klasy.  
+6. Dodaj metodę statyczną o nazwie `FindCalculatorServiceAddress()` do `Program` klasy.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
   
      Ta metoda używa odnajdywania, aby wyszukać `CalculatorService` usługi.  
   
-7.  Wewnątrz `FindCalculatorServiceAddress` metody, Utwórz nową <xref:System.ServiceModel.Discovery.DiscoveryClient> wystąpienia, przekazując <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> do konstruktora.  
+7. Wewnątrz `FindCalculatorServiceAddress` metody, Utwórz nową <xref:System.ServiceModel.Discovery.DiscoveryClient> wystąpienia, przekazując <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> do konstruktora.  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
   
      Oznacza to, WCF, <xref:System.ServiceModel.Discovery.DiscoveryClient> klasa powinna być używana standardowy punkt końcowy odnajdywania protokołu UDP do wysyłania i odbierania komunikatów odnajdywania.  
   
-8.  W następnym wierszu, należy wywołać <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> metodę i określić <xref:System.ServiceModel.Discovery.FindCriteria> wystąpienia, które zawiera kontrakt usługi, które ma być wyszukiwany. W takim przypadku określić `ICalculator`.  
+8. W następnym wierszu, należy wywołać <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> metodę i określić <xref:System.ServiceModel.Discovery.FindCriteria> wystąpienia, które zawiera kontrakt usługi, które ma być wyszukiwany. W takim przypadku określić `ICalculator`.  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
   
 ### <a name="to-test-the-application"></a>Aby przetestować aplikację  
   
-1.  Otwórz wiersz polecenia z podwyższonym poziomem uprawnień i uruchom Service.exe.  
+1. Otwórz wiersz polecenia z podwyższonym poziomem uprawnień i uruchom Service.exe.  
   
-2.  Otwórz wiersz polecenia i uruchom Discoveryclientapp.exe.  
+2. Otwórz wiersz polecenia i uruchom Discoveryclientapp.exe.  
   
-3.  Dane wyjściowe z service.exe powinien wyglądać jak poniższe dane wyjściowe.  
+3. Dane wyjściowe z service.exe powinien wyglądać jak poniższe dane wyjściowe.  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ W tym temacie wyjaśniono, jak stał się wykrywalny usługi Windows Communicati
     Return: 6.25390869293308  
     ```  
   
-4.  Dane wyjściowe z Discoveryclientapp.exe powinien wyglądać jak poniższe dane wyjściowe.  
+4. Dane wyjściowe z Discoveryclientapp.exe powinien wyglądać jak poniższe dane wyjściowe.  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  

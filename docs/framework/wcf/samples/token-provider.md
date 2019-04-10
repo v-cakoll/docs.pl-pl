@@ -2,12 +2,12 @@
 title: Dostawca tokenów
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: a0d46419de71cb3504467d1b728fb05f3de0bf45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085765"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336294"
 ---
 # <a name="token-provider"></a>Dostawca tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego dostawcy tokenów. Dostawca tokenu w Windows Communication Foundation (WCF) jest używany dla podanie poświadczeń w celu infrastruktura zabezpieczeń. Dostawcy tokenu, który sprawdza ogólnie rzecz biorąc, element docelowy i problemy odpowiednie poświadczenia, aby infrastruktura zabezpieczeń można zabezpieczyć wiadomości. Usługi WCF jest dostarczany z domyślny dostawca tokenu Menedżera poświadczeń. Usługi WCF jest również dostarczany z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] dostawcy tokenu. Niestandardowego dostawcy tokenów są przydatne w następujących przypadkach:
@@ -109,7 +109,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
 
  Poniższe kroki pokazują, jak tworzenie niestandardowego dostawcy tokenów i zintegrować ją z architekturą WCF zabezpieczeń:
 
-1.  Pisania niestandardowego dostawcy tokenów.
+1. Pisania niestandardowego dostawcy tokenów.
 
      Przykład implementuje niestandardowego dostawcy tokenu, który uzyskuje nazwę użytkownika i hasło. Hasło musi być tą nazwą użytkownika. Ten dostawca tokenów niestandardowych jest tylko w celach demonstracyjnych i nie jest zalecane w przypadku rzeczywistych wdrożenia.
 
@@ -128,7 +128,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
     }
     ```
 
-2.  Napisz Menedżer tokenów zabezpieczeń niestandardowych.
+2. Napisz Menedżer tokenów zabezpieczeń niestandardowych.
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> Służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla konkretnego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> przekazanego do niej w `CreateSecurityTokenProvider` metody. Menedżer tokenów zabezpieczeń jest również używany do tworzenia wystawcy uwierzytelnienia tokenu i Serializator tokenów, ale te nie są objęte tego przykładu. W tym przykładzie Menedżer tokenów zabezpieczeń niestandardowe dziedziczy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i zastąpień `CreateSecurityTokenProvider` żądana jest metoda do zwrócenia username niestandardowego dostawcy tokenów, jeśli przekazany wymagania tokenu wskazywać tego dostawcy nazwy użytkownika.
 
@@ -159,7 +159,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
     }
     ```
 
-3.  Wpisz poświadczenia niestandardowego klienta.
+3. Wpisz poświadczenia niestandardowego klienta.
 
      Klasa poświadczeń klienta jest używany do reprezentowania poświadczenia, które są skonfigurowane dla serwera proxy klienta i tworzy zabezpieczeń Menedżer tokenów, który jest używany do uzyskiwania wystawców uwierzytelnienia tokenu, dostawcy tokenów i tokenów serializatora.
 
@@ -184,7 +184,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego dostawcy token�
     }
     ```
 
-4.  Konfigurowanie klienta do używania poświadczeń klienta.
+4. Konfigurowanie klienta do używania poświadczeń klienta.
 
      Aby klientowi korzystanie z poświadczeń klienta niestandardowych przykład usuwa domyślną klasę poświadczeń klienta i dostarcza nową klasę poświadczeń klienta.
 
@@ -246,44 +246,44 @@ static void DisplayIdentityInformation()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1.  Uruchom Setup.bat z folderu instalacji przykładowej w wierszu polecenia programu Visual Studio 2012 otwartych z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
+1. Uruchom Setup.bat z folderu instalacji przykładowej w wierszu polecenia programu Visual Studio 2012 otwartych z uprawnieniami administratora. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
 
     > [!NOTE]
     >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2012 wiersz polecenia. Ustaw w Visual Studio 2012 Command Prompt punkty do katalogu, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest zmiennej środowiskowej PATH.  
   
-2.  Uruchom service.exe z service\bin.  
+2. Uruchom service.exe z service\bin.  
   
-3.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
+3. Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-4.  W wierszu polecenia nazwy użytkownika, wpisz nazwę użytkownika.  
+4. W wierszu polecenia nazwy użytkownika, wpisz nazwę użytkownika.  
   
-5.  Hasła w wierszu należy użyć tego samego ciągu, który został wpisany monit o nazwę użytkownika.  
+5. Hasła w wierszu należy użyć tego samego ciągu, który został wpisany monit o nazwę użytkownika.  
   
-6.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+6. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Do uruchomienia przykładu na komputerach  
   
-1.  Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
+1. Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
   
-2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
+2. Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik Service.exe.config należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikatu serwera, modyfikując plik wsadowy Setup.bat. Należy zauważyć, że plik Setup.bat jest należy uruchomić z wiersza polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmiennej do hosta w pełni kwalifikowaną nazwę komputera, który jest używany do obsługi usługi.  
+3. Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik Service.exe.config należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu. Można utworzyć certyfikatu serwera, modyfikując plik wsadowy Setup.bat. Należy zauważyć, że plik Setup.bat jest należy uruchomić z wiersza polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora. Należy ustawić `%SERVER_NAME%` zmiennej do hosta w pełni kwalifikowaną nazwę komputera, który jest używany do obsługi usługi.  
   
-4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Nie trzeba to zrobić, gdy certyfikat serwera jest wystawiony przez klienta zaufanego wystawcy.  
+4. Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Nie trzeba to zrobić, gdy certyfikat serwera jest wystawiony przez klienta zaufanego wystawcy.  
   
-5.  W pliku Service.exe.config na komputerze usługi Zmień wartość z adresu podstawowego, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
+5. W pliku Service.exe.config na komputerze usługi Zmień wartość z adresu podstawowego, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
   
-6.  Na komputerze usługi service.exe należy uruchomić z wiersza polecenia.  
+6. Na komputerze usługi service.exe należy uruchomić z wiersza polecenia.  
   
-7.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
+7. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
   
-8.  W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
+8. W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
   
 9. Na komputerze klienckim, należy uruchomić `Client.exe` z okna wiersza polecenia.  
   
@@ -291,4 +291,4 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
-1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+1. Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  

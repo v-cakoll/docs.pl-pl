@@ -9,28 +9,28 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 21592fdd74c43d40310e0fcbc96af6565a42e08b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336073"
 ---
 # <a name="how-to-disable-tab-pages"></a>Instrukcje: wyłączanie kart
 W niektórych przypadkach można ograniczyć dostęp do danych, która jest dostępna w aplikacji Windows Forms. Przykładem mogą być, jeśli masz dane wyświetlane na kartach kontroli kartę; Administratorzy mogą mają informacje na stronie karty, który chcesz uniemożliwić gościa lub użytkowników niższego poziomu.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>Aby programowo wyłączanie kart  
   
-1.  Napisz kod obsługujący kontrolki karty <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń. To zdarzenie, które jest wywoływane, gdy użytkownik zmienia się z jednej karty do następnego.  
+1. Napisz kod obsługujący kontrolki karty <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń. To zdarzenie, które jest wywoływane, gdy użytkownik zmienia się z jednej karty do następnego.  
   
-2.  Sprawdź poświadczenia. Informacje znajdujące się w zależności, można sprawdzić nazwę użytkownika, który użytkownik zalogował się przy użyciu lub innej formy poświadczeń, zanim zezwoli użytkownikowi wyświetlić na karcie.  
+2. Sprawdź poświadczenia. Informacje znajdujące się w zależności, można sprawdzić nazwę użytkownika, który użytkownik zalogował się przy użyciu lub innej formy poświadczeń, zanim zezwoli użytkownikowi wyświetlić na karcie.  
   
-3.  Jeśli użytkownik ma odpowiednie poświadczenia, Wyświetl kartę, który został kliknięty. Jeśli użytkownik nie ma odpowiednie poświadczenia, wyświetlić okno komunikatu lub innego interfejsu użytkownika wskazująca, że nie mają one mają dostęp i powrócić do początkowej karty.  
+3. Jeśli użytkownik ma odpowiednie poświadczenia, Wyświetl kartę, który został kliknięty. Jeśli użytkownik nie ma odpowiednie poświadczenia, wyświetlić okno komunikatu lub innego interfejsu użytkownika wskazująca, że nie mają one mają dostęp i powrócić do początkowej karty.  
   
     > [!NOTE]
     >  Po zaimplementowaniu tej funkcji w aplikacjach produkcyjnych, przeprowadzić to sprawdzenie poświadczeń podczas formularza <xref:System.Windows.Forms.Form.Load> zdarzeń. Pozwoli to ukryć kartę, zanim zostanie wyświetlone żadnego interfejsu użytkownika, który jest znacznie bardziej przejrzyste podejście do programowania. Metodologia poniżej (Sprawdzanie poświadczeń i wyłączanie karcie podczas <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzeń) jest w celach ilustracyjnych.  
   
-4.  Opcjonalnie Jeśli masz więcej niż dwie karty, należy wyświetlić strony karty różni się od oryginału.  
+4. Opcjonalnie Jeśli masz więcej niż dwie karty, należy wyświetlić strony karty różni się od oryginału.  
   
      W poniższym przykładzie <xref:System.Windows.Forms.CheckBox> formant jest używany zamiast sprawdzania poświadczenia, jako kryterium dla dostępu do karty zależą od aplikacji. Gdy <xref:System.Windows.Forms.TabControl.SelectedIndexChanged> zdarzenie jest wywoływane, jeśli spełniony jest wyboru poświadczeń (oznacza to, że pole wyboru jest zaznaczone) i wybranej karty `TabPage2` (karta poufne informacje, w tym przykładzie), następnie `TabPage2` jest wyświetlana. W przeciwnym razie `TabPage3` jest wyświetlany i okno komunikatu jest wyświetlany użytkownikowi, wskazującą, ma odpowiednie uprawnienia dostępu. Poniższy kod zakłada formularza z <xref:System.Windows.Forms.CheckBox> kontroli (`CredentialCheck`) i <xref:System.Windows.Forms.TabControl> formantu o trzy strony karty.  
   

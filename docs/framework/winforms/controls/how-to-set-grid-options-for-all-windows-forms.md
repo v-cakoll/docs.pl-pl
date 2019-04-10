@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336060"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Instrukcje: ustawianie opcji siatki dla wszystkich formularzy systemu Windows
 Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, nad którymi pracujesz w programie Windows Forms Designer.  
@@ -23,9 +23,9 @@ Stają się używane do pracy w środowisku programowania Visual Studio, można 
   
 ### <a name="to-set-global-windows-forms-options"></a>Aby ustawić opcje globalne Windows Forms  
   
-1.  Z **narzędzia** menu, wybierz opcję **opcje**.  
+1. Z **narzędzia** menu, wybierz opcję **opcje**.  
   
-2.  W okienku po lewej stronie **opcje** okno dialogowe, kliknij przycisk **Windows Forms Designer**.  
+2. W okienku po lewej stronie **opcje** okno dialogowe, kliknij przycisk **Windows Forms Designer**.  
   
      W okienku po prawej stronie w obszarze **ustawienia układu** nagłówka, możesz ustawić domyślne ustawienia siatki dla wszystkich nowych formularzy, należy utworzyć. Te ustawienia obejmują rozmiar siatki, czy formanty mają być przyciągane do niego i czy są to domyślne. Ponadto, możesz wybrać między **SnapToGrid** i **linii przyciągania** trybami układów. Aby uzyskać więcej informacji na temat linii przyciągania, zobacz [instruktażu: Rozmieszczanie formantów Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

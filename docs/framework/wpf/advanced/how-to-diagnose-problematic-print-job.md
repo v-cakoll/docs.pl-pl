@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338478"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Instrukcje: Diagnozowanie problematycznych zadań drukowania
 Administratorzy sieci często pola skarg od użytkowników dotyczące zadania drukowania, które nie drukowania lub wydrukować powoli. Bogaty zestaw właściwości zadania drukowania, udostępniane w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej diagnostyki zdalnej zadań drukowania.  
@@ -23,7 +23,7 @@ Administratorzy sieci często pola skarg od użytkowników dotyczące zadania dr
 ## <a name="example"></a>Przykład  
  Oto główne kroki tworzenia tego rodzaju narzędzia.  
   
-1.  Zidentyfikuj zadania drukowania, które użytkownik jest skarżących o. Użytkownicy często nie można tego zrobić dokładnie. Może nie wiedzieć nazwy serwerów wydruku i drukarek. Może zawierać opis lokalizacji drukarki w terminologii innego, niż zostało użyte w ustawieniach jego <xref:System.Printing.PrintQueue.Location%2A> właściwości. W związku z tym jest to dobry pomysł, aby wygenerować listę użytkownika aktualnie przesłanych zadań. Jeśli istnieje więcej niż jeden, następnie komunikacji między określonym użytkownikiem a administrator systemu drukowania może służyć do punktu przyczepienia zadanie, które występują problemy. Poniżej znajdują się podkroki.  
+1. Zidentyfikuj zadania drukowania, które użytkownik jest skarżących o. Użytkownicy często nie można tego zrobić dokładnie. Może nie wiedzieć nazwy serwerów wydruku i drukarek. Może zawierać opis lokalizacji drukarki w terminologii innego, niż zostało użyte w ustawieniach jego <xref:System.Printing.PrintQueue.Location%2A> właściwości. W związku z tym jest to dobry pomysł, aby wygenerować listę użytkownika aktualnie przesłanych zadań. Jeśli istnieje więcej niż jeden, następnie komunikacji między określonym użytkownikiem a administrator systemu drukowania może służyć do punktu przyczepienia zadanie, które występują problemy. Poniżej znajdują się podkroki.  
   
     1.  Uzyskaj listę wszystkich serwerów wydruku.  
   
@@ -33,7 +33,7 @@ Administratorzy sieci często pola skarg od użytkowników dotyczące zadania dr
   
     4.  W ramach każdego przebiegu pętli kolejki w pętli poprzez zadania, a następnie Zbierz informacje identyfikujące te, które zostały przesłane przez użytkownika wnioskujących.  
   
-2.  W przypadku wykryto problematyczne zadanie drukowania, należy sprawdzić odpowiednie właściwości, aby zobaczyć, co może być problem. Na przykład jest zadanie w stanie błędu, lub czy drukarki obsługi kolejki przejdź do trybu offline przed zadania można wydrukować?  
+2. W przypadku wykryto problematyczne zadanie drukowania, należy sprawdzić odpowiednie właściwości, aby zobaczyć, co może być problem. Na przykład jest zadanie w stanie błędu, lub czy drukarki obsługi kolejki przejdź do trybu offline przed zadania można wydrukować?  
   
  Poniższy kod jest szereg przykładów kodu. Pierwszy przykład kodu zawiera pętlę za pośrednictwem kolejek wydruku. (Krok 1c powyżej). Zmienna `myPrintQueues` jest <xref:System.Printing.PrintQueueCollection> obiektu dla bieżącego serwera wydruku.  
   

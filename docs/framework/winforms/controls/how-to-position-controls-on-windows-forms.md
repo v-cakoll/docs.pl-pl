@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334006"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Instrukcje: kontrolki pozycji na formularzach systemu Windows
 Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:System.Windows.Forms.Control.Location%2A> właściwości.  
@@ -37,9 +37,9 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>Aby ustalić położenie formantu w oknie właściwości  
   
-1.  Kliknij formant, który ma zostać ustawiony.  
+1. Kliknij formant, który ma zostać ustawiony.  
   
-2.  W **właściwości** okna, typ wartości <xref:System.Windows.Forms.Control.Location%2A> właściwości, oddzielając wartości przecinkami, aby ustalić położenie kontrolki wewnątrz jej kontenera.  
+2. W **właściwości** okna, typ wartości <xref:System.Windows.Forms.Control.Location%2A> właściwości, oddzielając wartości przecinkami, aby ustalić położenie kontrolki wewnątrz jej kontenera.  
   
      Pierwsza liczba (X) jest odległość między lewą krawędzią kontenera; Druga liczba (Y) jest odległość od górnej krawędzi obszaru kontenera (w pikselach).  
   
@@ -48,7 +48,7 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
   
 ### <a name="to-position-a-control-programmatically"></a>Aby programowo położenie formantu  
   
-1.  Ustaw <xref:System.Windows.Forms.Control.Location%2A> właściwości formantu, aby <xref:System.Drawing.Point>.  
+1. Ustaw <xref:System.Windows.Forms.Control.Location%2A> właściwości formantu, aby <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Zmień współrzędną X lokalizacji kontrolki przy użyciu <xref:System.Windows.Forms.Control.Left%2A> podwłaściwości.  
+2. Zmień współrzędną X lokalizacji kontrolki przy użyciu <xref:System.Windows.Forms.Control.Left%2A> podwłaściwości.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ Położenie formantów, za pomocą projektanta Windows Forms lub określ <xref:S
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>Aby programowo dodać kolejne położenie formantu  
   
-1.  Ustaw <xref:System.Windows.Forms.Control.Left%2A> właściwości podrzędnej, aby zwiększyć współrzędną X formantu.  
+1. Ustaw <xref:System.Windows.Forms.Control.Left%2A> właściwości podrzędnej, aby zwiększyć współrzędną X formantu.  
   
     ```vb  
     Button1.Left += 200  

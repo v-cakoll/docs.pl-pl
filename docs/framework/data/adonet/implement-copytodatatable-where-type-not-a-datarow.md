@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
-ms.openlocfilehash: 4ec609ac38b3fa91a4b11b93e24b465f48696a9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 120b4bf22e310bee73ba006cfe5a060d0ecd9d65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338946"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>Instrukcje: Implementowanie CopyToDataTable\<T > gdzie ogólny typ T nie jest elementem DataRow
 <xref:System.Data.DataTable> Obiektu jest często używana do wiązania danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyniki zapytania i kopiuje dane do <xref:System.Data.DataTable>, która następnie umożliwia powiązanie danych. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metod, jednak działać tylko w odniesieniu <xref:System.Collections.Generic.IEnumerable%601> źródła gdzie parametr ogólny `T` typu <xref:System.Data.DataRow>. Mimo że jest to przydatne, nie zezwala tabel, które ma zostać utworzony z sekwencji typami skalarnymi, zapytania, które anonimowych typów projektów lub zapytania, które wykonują sprzężeń tabel.  
@@ -21,7 +21,7 @@ ms.locfileid: "59159236"
   
 ### <a name="to-implement-the-custom-copytodatatablet-methods-in-your-application"></a>Implementacji niestandardowego CopyToDataTable\<T > metodami w aplikacji  
   
-1.  Implementowanie `ObjectShredder<T>` klasy w celu utworzenia <xref:System.Data.DataTable> z <xref:System.Collections.Generic.IEnumerable%601> źródła:  
+1. Implementowanie `ObjectShredder<T>` klasy w celu utworzenia <xref:System.Data.DataTable> z <xref:System.Collections.Generic.IEnumerable%601> źródła:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#objectshredderclass)]
      [!code-vb[DP Custom CopyToDataTable Examples#ObjectShredderClass](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#objectshredderclass)]  
@@ -32,12 +32,12 @@ ms.locfileid: "59159236"
     DataColumn dc = table.Columns.Contains(p.Name) ? table.Columns[p.Name] : table.Columns.Add(p.Name, Nullable.GetUnderlyingType(p.PropertyType) ?? p.PropertyType);
     ```
 
-2.  Implementowanie niestandardowego `CopyToDataTable<T>` metody rozszerzenia w klasie:  
+2. Implementowanie niestandardowego `CopyToDataTable<T>` metody rozszerzenia w klasie:  
   
      [!code-csharp[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/CS/Program.cs#customcopytodatatablemethods)]
      [!code-vb[DP Custom CopyToDataTable Examples#CustomCopyToDataTableMethods](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#customcopytodatatablemethods)]  
   
-3.  Dodaj `ObjectShredder<T>` klasy i `CopyToDataTable<T>` metody rozszerzenia do aplikacji.  
+3. Dodaj `ObjectShredder<T>` klasy i `CopyToDataTable<T>` metody rozszerzenia do aplikacji.  
   
 ```vb  
 Module Module1  

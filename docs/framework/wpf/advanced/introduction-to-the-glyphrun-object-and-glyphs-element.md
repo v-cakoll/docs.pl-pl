@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 7c78853aef9dfa96c49a0f2a4b585a2bd0cd5e98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59206983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341052"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Wprowadzenie do obiektu GlyphRun i elementu glifu
 W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:System.Windows.Documents.Glyphs> elementu.  
@@ -23,9 +23,9 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
 ## <a name="introduction-to-glyphrun"></a>Wprowadzenie do GlyphRun  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę zaawansowane tekstu, w tym poziom symbol znacznika bezpośredni dostęp do <xref:System.Windows.Documents.Glyphs> dla klientów, którzy chcą przechwytywać i przetrwają formatowania tekstu. Te funkcje zapewniają krytycznych wymagających pomocy technicznej inny tekst wymagania związane z renderowaniem w każdym z poniższych scenariuszy.  
   
-1.  Wyświetlanie dokumentów o stałym formacie.  
+1. Wyświetlanie dokumentów o stałym formacie.  
   
-2.  Scenariusze drukowania.  
+2. Scenariusze drukowania.  
   
     -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] jako urządzenie języka drukarki.  
   
@@ -35,7 +35,7 @@ W tym temacie opisano <xref:System.Windows.Media.GlyphRun> obiektu i <xref:Syste
   
     -   Format buforu wydruku.  
   
-3.  Reprezentacja dokumentu ustalonym formacie, w tym klientów we wcześniejszych wersjach programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i innych urządzeń komputerowych.  
+3. Reprezentacja dokumentu ustalonym formacie, w tym klientów we wcześniejszych wersjach programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i innych urządzeń komputerowych.  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> są przeznaczone do drukowania scenariuszy i prezentacji dokumentów o stałym formacie. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia kilka elementów ogólny układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] scenariuszy, takich jak <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.TextBlock>. Aby uzyskać więcej informacji na temat układu i [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] scenariuszy, zobacz [Typografia w WPF](typography-in-wpf.md).  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335033"
 ---
 # <a name="extending-dispatchers"></a>Rozszerzanie dyspozytorów
 Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza podstawowym kanały, tłumaczenie je na wywołania metody w kodzie aplikacji i wyniki są wysyłane do obiektu wywołującego. Rozszerzenia dyspozytorów umożliwiają modyfikowanie tego przetwarzania.  Możesz zaimplementować wiadomości lub parametr inspektorzy inspekcja lub modyfikowanie zawartości wiadomości lub parametrów.  Możesz zmienić sposób komunikaty są kierowane do operacji lub podaj niektórych innych funkcji.  
@@ -76,13 +76,13 @@ Dystrybucja jest odpowiedzialny za ściąganie komunikaty przychodzące poza pod
   
  Istnieją cztery główne obszary rozszerzalności dyspozytora udostępnianych przez <xref:System.ServiceModel.Dispatcher.DispatchRuntime> klasy:  
   
-1.  Kanał składniki używane właściwości <xref:System.ServiceModel.Dispatcher.DispatchRuntime> i wysyłający skojarzony kanał zwracany przez <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> właściwości, aby dostosować akceptuje i zamyka kanały Dyspozytor kanału. Ta kategoria obejmuje <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> właściwości.  
+1. Kanał składniki używane właściwości <xref:System.ServiceModel.Dispatcher.DispatchRuntime> i wysyłający skojarzony kanał zwracany przez <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> właściwości, aby dostosować akceptuje i zamyka kanały Dyspozytor kanału. Ta kategoria obejmuje <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> właściwości.  
   
-2.  Składniki wiadomości są dostosowane dla każdego komunikatu przetworzone. Ta kategoria obejmuje <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>i <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> właściwości.  
+2. Składniki wiadomości są dostosowane dla każdego komunikatu przetworzone. Ta kategoria obejmuje <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A>i <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> właściwości.  
   
-3.  Składniki wystąpienia dostosować tworzenia, okres istnienia i usuwania wystąpień typu usługi. Aby uzyskać więcej informacji na temat okresów istnienia obiektu usługi zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Ta kategoria obejmuje <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwości.  
+3. Składniki wystąpienia dostosować tworzenia, okres istnienia i usuwania wystąpień typu usługi. Aby uzyskać więcej informacji na temat okresów istnienia obiektu usługi zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> właściwości. Ta kategoria obejmuje <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> i <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> właściwości.  
   
-4.  Składniki związane z zabezpieczeniami można użyć następujących właściwości:  
+4. Składniki związane z zabezpieczeniami można użyć następujących właściwości:  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Wskazuje, gdzie zdarzenia inspekcji są zapisywane.  
   

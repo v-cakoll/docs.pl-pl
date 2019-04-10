@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339154"
 ---
 # <a name="local-transactions"></a>Transakcje lokalne
 Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, gdy chcesz powiązać ze sobą wiele zadań, tak, aby są wykonywane jako pojedyncza jednostka pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabelę, która zawiera informacje dotyczące spisu, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje zostaną wycofane.  
@@ -34,13 +34,13 @@ Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używ
 ## <a name="example"></a>Przykład  
  Wykonaj następujące kroki do wykonania transakcji.  
   
-1.  Wywołaj <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu do oznaczania początku transakcji. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> Metoda zwraca odwołanie do transakcji. Ta dokumentacja jest przypisany do <xref:System.Data.SqlClient.SqlCommand> obiektów, które są zarejestrowane w transakcji.  
+1. Wywołaj <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu do oznaczania początku transakcji. <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> Metoda zwraca odwołanie do transakcji. Ta dokumentacja jest przypisany do <xref:System.Data.SqlClient.SqlCommand> obiektów, które są zarejestrowane w transakcji.  
   
-2.  Przypisz `Transaction` obiekt <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> właściwość <xref:System.Data.SqlClient.SqlCommand> do wykonania. Jeśli polecenie jest wykonywane przy połączeniu z aktywnej transakcji, a `Transaction` obiekt nie został przypisany do `Transaction` właściwość `Command` obiektu, jest zgłaszany wyjątek.  
+2. Przypisz `Transaction` obiekt <xref:System.Data.SqlClient.SqlCommand.Transaction%2A> właściwość <xref:System.Data.SqlClient.SqlCommand> do wykonania. Jeśli polecenie jest wykonywane przy połączeniu z aktywnej transakcji, a `Transaction` obiekt nie został przypisany do `Transaction` właściwość `Command` obiektu, jest zgłaszany wyjątek.  
   
-3.  Wykonaj wymagane polecenia.  
+3. Wykonaj wymagane polecenia.  
   
-4.  Wywołaj <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> metody <xref:System.Data.SqlClient.SqlTransaction> obiektu do zrealizowania transakcji, lub zadzwoń <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metodę, aby zakończyć transakcji. Jeśli połączenie jest zamknięte lub usunięty przed albo <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> lub <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metody zostały wykonane, transakcja zostanie wycofana.  
+4. Wywołaj <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> metody <xref:System.Data.SqlClient.SqlTransaction> obiektu do zrealizowania transakcji, lub zadzwoń <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metodę, aby zakończyć transakcji. Jeśli połączenie jest zamknięte lub usunięty przed albo <xref:System.Data.SqlClient.SqlTransaction.Commit%2A> lub <xref:System.Data.SqlClient.SqlTransaction.Rollback%2A> metody zostały wykonane, transakcja zostanie wycofana.  
   
  Poniższy przykład kodu demonstruje, przy użyciu logiki transakcyjnej [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] z programem Microsoft SQL Server.  
   

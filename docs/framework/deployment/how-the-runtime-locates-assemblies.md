@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b3bbe330e71c30e9e92fdd107a59f78fee31ecc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111569"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342349"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże się do zestawów, które składają się na aplikację. Domyślnie środowisko uruchomieniowe podejmuje próbę powiązania z dokładną wersją zestawu, który aplikacja została skompilowana przy użyciu. To zachowanie domyślne można przesłonić, ustawień pliku konfiguracji.  
@@ -40,16 +40,16 @@ Aby pomyślnie wdrożyć aplikacji środowiska .NET Framework, trzeba zrozumieć
   
  Środowisko wykonawcze używa następujące kroki, aby rozwiązać odwołania do zestawu:  
   
-1.  [Określa wersję poprawny zestaw](#step1) , sprawdzając właściwych plików konfiguracji, w tym pliku konfiguracji aplikacji, plik zasad wydawcy i plik konfiguracji komputera. Jeśli plik konfiguracji znajduje się na komputerze zdalnym, środowisko uruchomieniowe należy zlokalizować i najpierw pobrać plik konfiguracji aplikacji.  
+1. [Określa wersję poprawny zestaw](#step1) , sprawdzając właściwych plików konfiguracji, w tym pliku konfiguracji aplikacji, plik zasad wydawcy i plik konfiguracji komputera. Jeśli plik konfiguracji znajduje się na komputerze zdalnym, środowisko uruchomieniowe należy zlokalizować i najpierw pobrać plik konfiguracji aplikacji.  
   
-2.  [Sprawdza, czy nazwa zestawu została powiązana z przed](#step2) i jeśli tak, korzysta z wcześniej załadowanych zestawów. Jeśli poprzednie żądanie załadowania zestawu nie powiodło się żądanie nie powiodło się natychmiast bez próby załadowania zestawu.  
+2. [Sprawdza, czy nazwa zestawu została powiązana z przed](#step2) i jeśli tak, korzysta z wcześniej załadowanych zestawów. Jeśli poprzednie żądanie załadowania zestawu nie powiodło się żądanie nie powiodło się natychmiast bez próby załadowania zestawu.  
   
     > [!NOTE]
     >  Buforowanie niepowodzenia powiązań zestawu jest nowa w .NET Framework w wersji 2.0.  
   
-3.  [Sprawdza, czy global assembly cache](#step3). Jeśli zestaw zostanie znaleziony istnieje, środowisko wykonawcze używa tego zestawu.  
+3. [Sprawdza, czy global assembly cache](#step3). Jeśli zestaw zostanie znaleziony istnieje, środowisko wykonawcze używa tego zestawu.  
   
-4.  [Sondy dla zestawu](#step4) wykonując następujące czynności:  
+4. [Sondy dla zestawu](#step4) wykonując następujące czynności:  
   
     1.  Jeśli zasady konfiguracji i wydawca nie wpływają na pierwotne odniesienie, a żądania powiązania został utworzony przy użyciu <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody, środowisko uruchomieniowe sprawdza, czy wskazówki dotyczące lokalizacji.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Krok 4. Lokalizowanie zestawu za pośrednictwem ścieżek bazowych kodu lub sondowanie  
  Po określeniu wersji poprawny zestaw, korzystając z informacji w odwołaniu do wywołującego zestawu i w plikach konfiguracji, a po jego zaewidencjonowanego w globalnej pamięci podręcznej (tylko w przypadku zestawu o silnych nazwach), języka wspólnego środowisko uruchomieniowe próbuje znaleźć zestawu. Proces lokalizowania zestawów obejmuje następujące czynności:  
   
-1.  Jeśli [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element zostanie znaleziony w pliku konfiguracyjnym aplikacji, środowisko uruchomieniowe sprawdza określonej lokalizacji. Jeśli zostanie znalezione dopasowanie, że zestaw jest używany i badania nie występuje. Jeśli zestaw nie zostaną znalezione, żądania powiązania nie powiedzie się.  
+1. Jeśli [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) element zostanie znaleziony w pliku konfiguracyjnym aplikacji, środowisko uruchomieniowe sprawdza określonej lokalizacji. Jeśli zostanie znalezione dopasowanie, że zestaw jest używany i badania nie występuje. Jeśli zestaw nie zostaną znalezione, żądania powiązania nie powiedzie się.  
   
-2.  Środowisko uruchomieniowe następnie sondy dla przywoływanego zestawu za pomocą reguł określonych w dalszej części w tej sekcji.  
+2. Środowisko uruchomieniowe następnie sondy dla przywoływanego zestawu za pomocą reguł określonych w dalszej części w tej sekcji.  
   
 > [!NOTE]
 >  Jeśli masz wiele wersji zestawu w katalogu i chcesz odwoływać się do konkretnej wersji tego zestawu, należy użyć [ \<codeBase >](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) elementu zamiast `privatePath` atrybutu [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu. Jeśli używasz [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) elementu, środowisko uruchomieniowe zatrzymuje sondowanie znajdzie zestawu, który jest zgodna z nazwą prostego zestawu, do których odwołuje się, czy jest poprawny dopasowania po raz pierwszy. Jeśli jest to poprawne dopasowanie, tego zestawu jest używana. Jeśli nie ma prawidłowego dopasowania sondowanie zatrzymuje i powiązanie kończy się niepowodzeniem.  

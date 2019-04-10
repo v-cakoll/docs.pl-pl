@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f59c6ea6f39ecba49bd8aa18ee3abab750891c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337282"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Przestarzałe elementy w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.  
@@ -42,9 +42,9 @@ ms.locfileid: "59203720"
   
  Może nie chcesz ponownie skompilować istniejący kod w nowszej wersji programu .NET Framework. Zamiast tego można określić wersji programu .NET Framework, względem którego istniejącą skompilowany kod działa. Na przykład załóżmy, że masz aplikację o nazwie app1.exe, który został skompilowany [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], ale chcesz, aby uruchamiać aplikację [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Wymagane jest wykonanie następujących kroków:  
   
-1.  Utwórz plik konfiguracji dla użytkownika głównego pliku wykonywalnego i nadaj mu nazwę *appName*. exe.config, gdzie *appName* jest nazwą pliku wykonywalnego aplikacji. Dla aplikacji o nazwie app1.exe w naszym przykładzie należy utworzyć plik konfiguracji o nazwie app1.exe.config.  
+1. Utwórz plik konfiguracji dla użytkownika głównego pliku wykonywalnego i nadaj mu nazwę *appName*. exe.config, gdzie *appName* jest nazwą pliku wykonywalnego aplikacji. Dla aplikacji o nazwie app1.exe w naszym przykładzie należy utworzyć plik konfiguracji o nazwie app1.exe.config.  
   
-2.  Dodaj następujący element do pliku konfiguracji.  
+2. Dodaj następujący element do pliku konfiguracji.  
   
     ```xml  
     <configuration>  

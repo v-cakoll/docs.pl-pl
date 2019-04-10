@@ -2,19 +2,19 @@
 title: 'Instrukcje: konfigurowanie trwałości za pomocą elementu WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 8485cfdfb3a8f62f04fc488ad28df86e609e17ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b8839f42a9b8b5f4da0a1a8364c7eac5a4c06d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337165"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>Instrukcje: konfigurowanie trwałości za pomocą elementu WorkflowServiceHost
 W tym temacie opisano sposób konfigurowania funkcji Store wystąpienia przepływu pracy SQL, aby włączyć opcję trwałości dla przepływów pracy hostowanych w <xref:System.ServiceModel.Activities.WorkflowServiceHost> przy użyciu pliku konfiguracji. Przed użyciem funkcji Store wystąpienia przepływu pracy SQL należy utworzyć bazę danych SQL jest używany, aby utrwalić wystąpienia przepływu pracy. Aby uzyskać więcej informacji, zobacz [jak: Włączanie stanów trwałych programu SQL dla przepływów pracy i usług przepływu pracy](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md).  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>Aby skonfigurować Store wystąpienia przepływu pracy SQL w konfiguracji  
   
-1.  Właściwości magazynu wystąpień przepływu pracy SQL można skonfigurować za pomocą <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, zachowanie usługi, które umożliwia zmianę ustawień konfiguracji XML. W poniższym przykładzie konfiguracji pokazuje, jak skonfigurować Magazyn wystąpień przepływu pracy SQL za pomocą <`sqlWorkflowInstanceStore`> zachowania elementu w pliku konfiguracji.  
+1. Właściwości magazynu wystąpień przepływu pracy SQL można skonfigurować za pomocą <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, zachowanie usługi, które umożliwia zmianę ustawień konfiguracji XML. W poniższym przykładzie konfiguracji pokazuje, jak skonfigurować Magazyn wystąpień przepływu pracy SQL za pomocą <`sqlWorkflowInstanceStore`> zachowania elementu w pliku konfiguracji.  
   
     ```xml  
     <serviceBehaviors>  
@@ -38,7 +38,7 @@ W tym temacie opisano sposób konfigurowania funkcji Store wystąpienia przepły
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-code"></a>Aby skonfigurować Store wystąpienia przepływu pracy SQL w kodzie  
   
-1.  Właściwości magazynu wystąpień przepływu pracy SQL można skonfigurować za pomocą <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, zachowanie usługi, które umożliwia zmianę ustawień za pomocą kodu. Poniższy przykład pokazuje, jak skonfigurować Magazyn wystąpień przepływu pracy SQL przy użyciu <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> zachowania elementu w kodzie  
+1. Właściwości magazynu wystąpień przepływu pracy SQL można skonfigurować za pomocą <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>, zachowanie usługi, które umożliwia zmianę ustawień za pomocą kodu. Poniższy przykład pokazuje, jak skonfigurować Magazyn wystąpień przepływu pracy SQL przy użyciu <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> zachowania elementu w kodzie  
   
     ```csharp  
     host.Description.Behaviors.Add(new SqlWorkflowInstanceStoreBehavior  

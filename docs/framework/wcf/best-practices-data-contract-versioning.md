@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334929"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych
 Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych, które można łatwo ewoluować wraz z upływem czasu. Aby uzyskać więcej informacji na temat kontraktów danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -50,21 +50,21 @@ Ten temat zawiera najlepsze rozwiązania dotyczące tworzenia kontraktów danych
   
  Niektóre wytyczne musi występować dokładnie wysyłanie nowej wersji typu gdzie stary oczekuje lub wysyłania stare hasło, których oczekuje się nowego. Innych wytycznych, nie są ściśle wymagane, ale są wymienione w tym miejscu, ponieważ one mogą mieć wpływ na przyszłość schematu przechowywania wersji.  
   
-1.  Nie należy próbować wersji kontraktów danych poprzez dziedziczenie typu. Aby utworzyć nowsze wersje, zmień kontraktu danych na istniejący typ lub utworzenia nowego typu niepowiązanego.  
+1. Nie należy próbować wersji kontraktów danych poprzez dziedziczenie typu. Aby utworzyć nowsze wersje, zmień kontraktu danych na istniejący typ lub utworzenia nowego typu niepowiązanego.  
   
-2.  Dziedziczenie wraz z kontraktów danych jest dozwolone, pod warunkiem, że dziedziczenie nie jest używana jako mechanizm obsługi wersji, a niektóre zasady zostaną wykonane prawidłowo. Jeśli typ pochodzi z określonego typu podstawowego, nie dokonuj on pochodzić z innym typem bazowym w przyszłych wersjach (chyba że ma te same dane umowy). Istnieje jeden wyjątek to: typ można wstawić do hierarchii między typu kontraktu danych i jego typ podstawowy, ale tylko wtedy, gdy nie zawiera elementów członkowskich danych za pomocą te same nazwy jak inne elementy wszystkie możliwe wersje innych typów w hierarchii. Ogólnie rzecz biorąc elementy członkowskie danych przy użyciu tych samych nazw na różnych poziomach w tej samej hierarchii dziedziczenia może prowadzić do problemów poważnych versioning i należy ich unikać.  
+2. Dziedziczenie wraz z kontraktów danych jest dozwolone, pod warunkiem, że dziedziczenie nie jest używana jako mechanizm obsługi wersji, a niektóre zasady zostaną wykonane prawidłowo. Jeśli typ pochodzi z określonego typu podstawowego, nie dokonuj on pochodzić z innym typem bazowym w przyszłych wersjach (chyba że ma te same dane umowy). Istnieje jeden wyjątek to: typ można wstawić do hierarchii między typu kontraktu danych i jego typ podstawowy, ale tylko wtedy, gdy nie zawiera elementów członkowskich danych za pomocą te same nazwy jak inne elementy wszystkie możliwe wersje innych typów w hierarchii. Ogólnie rzecz biorąc elementy członkowskie danych przy użyciu tych samych nazw na różnych poziomach w tej samej hierarchii dziedziczenia może prowadzić do problemów poważnych versioning i należy ich unikać.  
   
-3.  Począwszy od pierwszej wersji kontraktu danych, zawsze wdrożenia <xref:System.Runtime.Serialization.IExtensibleDataObject> umożliwia Pełna zgodnooć wersji. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Jeśli zostały wydane co najmniej wersji typu bez implementacji interfejsu, należy ją wykonać w następnej wersji typu.  
+3. Począwszy od pierwszej wersji kontraktu danych, zawsze wdrożenia <xref:System.Runtime.Serialization.IExtensibleDataObject> umożliwia Pełna zgodnooć wersji. Aby uzyskać więcej informacji, zobacz [kontrakty danych zgodne](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Jeśli zostały wydane co najmniej wersji typu bez implementacji interfejsu, należy ją wykonać w następnej wersji typu.  
   
-4.  W nowszych wersjach nie zmieniaj nazwy kontraktu danych lub obszaru nazw. Jeśli zmiana nazwy lub przestrzeń nazw typu kontraktu danych bazowych upewnij się zachować nazwie kontraktu danych i przestrzeni nazw przy użyciu odpowiednich mechanizmów, takich jak <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>. Aby uzyskać więcej informacji na temat nazewnictwa, zobacz [nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4. W nowszych wersjach nie zmieniaj nazwy kontraktu danych lub obszaru nazw. Jeśli zmiana nazwy lub przestrzeń nazw typu kontraktu danych bazowych upewnij się zachować nazwie kontraktu danych i przestrzeni nazw przy użyciu odpowiednich mechanizmów, takich jak <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> właściwość <xref:System.Runtime.Serialization.DataContractAttribute>. Aby uzyskać więcej informacji na temat nazewnictwa, zobacz [nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  W nowszych wersjach nie należy zmieniać nazw żadnych składowych danych. Jeśli zmiana nazwy pola, właściwości lub zdarzenia bazowego elementu członkowskiego danych, użyj `Name` właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> zachować istniejącą nazwę elementu członkowskiego danych.  
+5. W nowszych wersjach nie należy zmieniać nazw żadnych składowych danych. Jeśli zmiana nazwy pola, właściwości lub zdarzenia bazowego elementu członkowskiego danych, użyj `Name` właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> zachować istniejącą nazwę elementu członkowskiego danych.  
   
-6.  W nowszych wersjach nie należy zmieniać typu pola, właściwości lub zdarzenia podstawowy element członkowski danych w taki sposób, że dane wynikowe kontrakt dla tej zmiany element członkowski danych. Należy pamiętać, że typy interfejsów są równoważne <xref:System.Object> na potrzeby określania kontraktu oczekiwanych danych.  
+6. W nowszych wersjach nie należy zmieniać typu pola, właściwości lub zdarzenia podstawowy element członkowski danych w taki sposób, że dane wynikowe kontrakt dla tej zmiany element członkowski danych. Należy pamiętać, że typy interfejsów są równoważne <xref:System.Object> na potrzeby określania kontraktu oczekiwanych danych.  
   
-7.  W nowszych wersjach, nie należy zmieniać kolejność istniejących elementów członkowskich danych przez dostosowanie <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu.  
+7. W nowszych wersjach, nie należy zmieniać kolejność istniejących elementów członkowskich danych przez dostosowanie <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> właściwość <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu.  
   
-8.  W nowszych wersjach można dodać nowe elementy członkowskie danych. Powinny one zawsze wykonać następujące czynności:  
+8. W nowszych wersjach można dodać nowe elementy członkowskie danych. Powinny one zawsze wykonać następujące czynności:  
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> Właściwość zawsze należy pozostawić wartość domyślną `false`.  
   

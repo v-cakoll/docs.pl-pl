@@ -7,32 +7,32 @@ helpviewer_keywords:
 - trappable errors
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
-ms.openlocfilehash: c326b781222429d68ec4385d95507a6ba99eafcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590137"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338140"
 ---
 # <a name="error-messages-visual-basic"></a>Komunikaty o błędach (Visual Basic)
-Podczas zapisu, kompilacji lub uruchamianie aplikacji Visual Basic, mogą wystąpić następujące błędy:  
+Podczas pisania, kompilacji lub uruchamiania aplikacji w języku Visual Basic mogą wystąpić następujące błędy:  
   
-1.  Błędy czasu projektowania, podczas pisania aplikacji w programie Visual Studio.  
+1. Błędy czasu projektowania, które występują, gdy napisać aplikację w programie Visual Studio.  
   
-2.  Błędy kompilacji podczas kompilowania aplikacji w programie Visual Studio lub w wierszu polecenia.  
+2. Błędy kompilacji, które występują, gdy kompilujesz aplikację w programie Visual Studio lub w wierszu polecenia.  
   
-3.  Błędy środowiska wykonawczego, które występują po uruchomieniu aplikacji w programie Visual Studio lub jako autonomicznego pliku wykonywalnego.  
+3. Błędy środowiska wykonawczego, które występują podczas uruchamiania aplikacji w programie Visual Studio lub jako autonomicznego pliku wykonywalnego.  
   
- Aby uzyskać informacje o rozwiązywaniu problemów z określonego błędu, zobacz [zasoby dodatkowe dla programistów Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
+ Aby dowiedzieć się, jak rozwiązywać problemy z określonego błędu, zobacz [zasoby dodatkowe dla programistów Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Błędy wykonania  
- Jeśli aplikacji Visual Basic próbuje wykonać akcję systemu nie można wykonać, wystąpi błąd czasu wykonywania i Visual Basic generuje `Exception` obiektu. Visual Basic mogą generować błędy niestandardowe wszelkich danych typu, łącznie z `Exception` obiektów przy użyciu `Throw` instrukcji. Aplikację można zidentyfikować błędu wyświetlając numer błędu i komunikat zgłoszony wyjątek. Jeśli nie jest zgłoszony błąd, kończy się aplikacja.  
+ Jeśli aplikacji Visual Basic podejmie próbę wykonania działania, które system nie może wykonać, wystąpi błąd czasu wykonywania i Visual Basic zgłasza `Exception` obiektu. Visual Basic mogą generować błędy niestandardowe wszelkich danych typu, w tym `Exception` obiektów przy użyciu `Throw` instrukcji. Aplikację można zidentyfikować ten błąd, wyświetlając numer błędu i komunikacie przechwycony wyjątek. Jeśli nie jest przechwycony błąd, kończy się aplikacja.  
   
- Kod można przechwytują i sprawdzić błędy środowiska wykonawczego. Jeśli umieść kod, który powoduje błąd w `Try` bloku, można przechwycić zgłoszenia błędu w odpowiadającego mu `Catch` bloku. Aby uzyskać informacje na temat reagowania na je w kodzie i przechwytywać błędy w czasie wykonywania, zobacz [spróbuj... CATCH... Instrukcji finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Kod można pułapek i zbadaj błędy czasu wykonywania. Jeśli uwzględnisz kod, który generuje błąd w `Try` bloku, można przechwytywać wszelkie zgłoszonego błędu, w ramach odpowiadającego `Catch` bloku. Aby uzyskać informacje na temat wyłapuje błędy w czasie wykonywania i Reaguj na nie w kodzie, zobacz [spróbuj... CATCH... Na koniec instrukcji](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
-## <a name="compile-time-errors"></a>Błędy w czasie kompilacji  
- Jeśli kompilator Visual Basic napotka problem w kodzie, występuje błąd kompilacji. W edytorze kodu można łatwo zidentyfikować które wiersz kodu spowodował błąd, ponieważ faliste pozycji zostanie wiersza kodu. Komunikat o błędzie jest wyświetlany, jeśli albo wskazania faliste podkreślenie lub Otwórz **listy błędów**, który zawiera również inne komunikaty.  
+## <a name="compile-time-errors"></a>Błędy czasu kompilacji  
+ Jeśli kompilator Visual Basic napotyka problem w kodzie, wystąpi błąd kompilacji. W edytorze kodu można łatwo zidentyfikować która linia kodu spowodowały błąd, ponieważ linia falista jest wyświetlany w obszarze wiersza kodu. Komunikat o błędzie jest wyświetlany, jeśli albo wskaż faliste podkreślenie lub Otwórz **lista błędów**, które wyświetla również inne komunikaty.  
   
- Jeśli identyfikator ma faliste podkreślenie i krótki podkreślenie jest wyświetlany w obszarze znak po prawej stronie, można wygenerować klasy zastępczej dla klasy, konstruktora, metody, właściwości, pola lub wyliczenia. Aby uzyskać więcej informacji, zobacz [Generowanie z użycia](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
+ Jeśli identyfikator ma linią falistą i krótki podkreślenie pojawia się w obszarze znak po prawej stronie, można wygenerować klasy zastępczej dla klasy, Konstruktor, metody, właściwości, pola lub typu wyliczeniowego. Aby uzyskać więcej informacji, zobacz [Generowanie z użycia](/visualstudio/ide/visual-csharp-intellisense#generate-from-usage).
   
- Rozwiązując ostrzeżenia kompilatora Visual Basic, można napisać kod, który działa szybciej i ma mniejszą liczbę usterek. Te ostrzeżenia dotyczące identyfikowania kod, który może powodować błędy po uruchomieniu aplikacji. Na przykład kompilator ostrzega możesz próba wywołania elementu członkowskiego zmiennej obiektu nieprzypisane zwracanie z funkcji bez ustawienia wartości zwracanej lub wykonać `Try` bloku błędów w logice przechwytują wyjątki. Aby uzyskać więcej informacji na temat ostrzeżenia, łącznie ze sposobem jej włączanie i wyłączanie, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+ Przez rozwiązanie ostrzeżeń kompilatora języka Visual Basic, można napisać kod, który działa szybciej i ma mniejszą liczbę usterek. Ostrzeżenia te Zidentyfikuj kod, który może powodować błędy, gdy aplikacja jest uruchomiona. Na przykład, kompilator wyświetla ostrzeżenie, możesz Jeśli zostanie podjęta próba wywołania członkiem zmienną spowodowało utworzenie nieprzypisanego obiektu Zwróć z funkcji bez ustawienia zwracanej wartości lub wykonania `Try` bloku błędów w logice przechwytują wyjątki. Aby uzyskać więcej informacji na temat ostrzeżenia, w tym jak włączyć je włączać i wyłączać, zobacz [Konfigurowanie ostrzeżeń w języku Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).

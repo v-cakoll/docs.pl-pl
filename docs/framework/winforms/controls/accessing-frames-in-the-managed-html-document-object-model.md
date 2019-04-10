@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 32f4df947926a0c69963d5f4c6872dc38ceeed1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173501"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337633"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
@@ -27,11 +27,11 @@ Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą po
   
 -   Za pomocą `IFRAME` znacznik, który tworzy okno przestawne, które może być przeniesiony w czasie wykonywania.  
   
-1.  Ponieważ ramki zawierają dokumentów HTML, są one reprezentowane w modelu DOM (Document Object) jako elementy okna i elementy ramki.  
+1. Ponieważ ramki zawierają dokumentów HTML, są one reprezentowane w modelu DOM (Document Object) jako elementy okna i elementy ramki.  
   
-2.  Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą klatek zbiór <xref:System.Windows.Forms.HtmlWindow>, pobierają elementu okna odpowiadającego ramki. Ta pozycja reprezentuje wszystkie ramki właściwości dynamicznych, takich jak bieżący adres URL, dokumentów i rozmiaru.  
+2. Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą klatek zbiór <xref:System.Windows.Forms.HtmlWindow>, pobierają elementu okna odpowiadającego ramki. Ta pozycja reprezentuje wszystkie ramki właściwości dynamicznych, takich jak bieżący adres URL, dokumentów i rozmiaru.  
   
-3.  Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> właściwość <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> kolekcji lub metody takie jak <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> lub <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, pobierają elementu ramki. Reprezentuje statycznej właściwości ramki, w tym adres URL określony w oryginalnym pliku HTML.  
+3. Jeśli uzyskujesz dostęp do `FRAME` lub `IFRAME` tagu za pomocą <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> właściwość <xref:System.Windows.Forms.HtmlWindow>, <xref:System.Windows.Forms.HtmlElement.Children%2A> kolekcji lub metody takie jak <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> lub <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, pobierają elementu ramki. Reprezentuje statycznej właściwości ramki, w tym adres URL określony w oryginalnym pliku HTML.  
   
 ## <a name="frames-and-security"></a>Ramki i zabezpieczeń  
  Dostęp do ramki jest skomplikowane faktem, że zarządzany HTML DOM implementuje środkiem bezpieczeństwa, znane jako *między ramkami skryptów zabezpieczeń*. Jeśli dokument zawiera `FRAMESET` z co najmniej dwóch `FRAME`s w różnych domenach, te `FRAME`s nie mogą współdziałać ze sobą. Innymi słowy `FRAME` , wyświetla zawartość w witrynie sieci Web nie może uzyskać dostęp do informacji w `FRAME` obsługujący takich jak witryny innych firm `http://www.adatum.com/`. To są implementowane na poziomie <xref:System.Windows.Forms.HtmlWindow> klasy. Można uzyskać ogólne informacje na temat `FRAME` hostingu z innej witryny sieci Web, takich jak adres URL, ale będzie mógł uzyskać dostępu do jego <xref:System.Windows.Forms.HtmlWindow.Document%2A> lub zmienić rozmiar lub położenie jego hostingu `FRAME` lub `IFRAME`.  

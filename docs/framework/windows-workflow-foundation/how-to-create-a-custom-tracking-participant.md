@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64320a8f4799e79f54348e5381ed2d8ed49d496b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720959"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338179"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Instrukcje: Tworzenie niestandardowego uczestnika śledzenia
 Śledzenie przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowisko wykonawcze przepływów pracy emituje rekordów śledzenia, które opisują przepływ pracy zdarzenia cyklu życia, zdarzenia cyklu życia działań, resumptions zakładki i błędów. Te rekordy śledzenia są używane przez śledzenia uczestników. Windows Workflow Foundation (WF) zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. W tym kroku samouczka opisano tworzenie niestandardowego uczestnika śledzenia i profilu śledzenia, który przechwycenie danych wyjściowych `WriteLine` działania, aby mogą być wyświetlane użytkownikowi.  
@@ -20,9 +20,9 @@ ms.locfileid: "57720959"
   
 ## <a name="to-create-the-custom-tracking-participant"></a>Aby utworzyć niestandardowego uczestnika śledzenia  
   
-1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `StatusTrackingParticipant` do **nazwa** polu, a następnie kliknij przycisk **Dodaj**.  
+1. Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `StatusTrackingParticipant` do **nazwa** polu, a następnie kliknij przycisk **Dodaj**.  
   
-2.  Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
+2. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -34,7 +34,7 @@ ms.locfileid: "57720959"
     using System.IO;  
     ```  
   
-3.  Modyfikowanie `StatusTrackingParticipant` klasy, tak aby dziedziczył z `TrackingParticipant`.  
+3. Modyfikowanie `StatusTrackingParticipant` klasy, tak aby dziedziczył z `TrackingParticipant`.  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -49,7 +49,7 @@ ms.locfileid: "57720959"
     }  
     ```  
   
-4.  Dodaj następujący kod `Track` zastąpienie metody. Istnieje kilka różnych typów rekordów śledzenia. Jesteśmy zainteresowani dane wyjściowe `WriteLine` działań, które są zawarte w działaniu śledzenia rekordów. Jeśli `TrackingRecord` jest `ActivityTrackingRecord` dla `WriteLine` działania `Text` z `WriteLine` jest dołączany do pliku o nazwie po `InstanceId` przepływu pracy. W tym samouczku plik jest zapisywany do bieżącego folderu aplikacji hosta.  
+4. Dodaj następujący kod `Track` zastąpienie metody. Istnieje kilka różnych typów rekordów śledzenia. Jesteśmy zainteresowani dane wyjściowe `WriteLine` działań, które są zawarte w działaniu śledzenia rekordów. Jeśli `TrackingRecord` jest `ActivityTrackingRecord` dla `WriteLine` działania `Text` z `WriteLine` jest dołączany do pliku o nazwie po `InstanceId` przepływu pracy. W tym samouczku plik jest zapisywany do bieżącego folderu aplikacji hosta.  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -96,9 +96,9 @@ ms.locfileid: "57720959"
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>Aby utworzyć profil śledzenia i zarejestrować uczestnika śledzenia  
   
-1.  Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **Wyświetl kod**.  
+1. Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **Wyświetl kod**.  
   
-2.  Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
+2. Dodaj następujący kod `using` (lub `Imports`) instrukcji w górnej części pliku razem z innymi `using` (lub `Imports`) instrukcji.  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -108,7 +108,7 @@ ms.locfileid: "57720959"
     using System.Activities.Tracking;  
     ```  
   
-3.  Dodaj następujący kod do `ConfigureWorkflowApplication` zaraz po kod, który dodaje `StringWriter` rozszerzenia przepływu pracy i przed przepływu pracy obsługi cyklu życia.  
+3. Dodaj następujący kod do `ConfigureWorkflowApplication` zaraz po kod, który dodaje `StringWriter` rozszerzenia przepływu pracy i przed przepływu pracy obsługi cyklu życia.  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -217,9 +217,9 @@ ms.locfileid: "57720959"
   
 ## <a name="to-display-the-tracking-information"></a>Aby wyświetlić informacje o śledzeniu  
   
-1.  Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **Wyświetl kod**.  
+1. Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **Wyświetl kod**.  
   
-2.  W `InstanceId_SelectedIndexChanged` obsługi, Dodaj następujący kod bezpośrednio po kodzie, która Czyści okno stanu.  
+2. W `InstanceId_SelectedIndexChanged` obsługi, Dodaj następujący kod bezpośrednio po kodzie, która Czyści okno stanu.  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -312,11 +312,11 @@ ms.locfileid: "57720959"
   
 ## <a name="to-build-and-run-the-application"></a>Aby skompilować i uruchomić aplikację  
   
-1.  Naciśnij klawisze Ctrl + Shift + B, aby skompilować aplikację.  
+1. Naciśnij klawisze Ctrl + Shift + B, aby skompilować aplikację.  
   
-2.  Naciśnij klawisze Ctrl + F5, aby uruchomić aplikację.  
+2. Naciśnij klawisze Ctrl + F5, aby uruchomić aplikację.  
   
-3.  Wybierz zakres do odgadnięcia gier i typ przepływu pracy, aby rozpocząć, a następnie kliknij przycisk **nowych gier**. Wprowadź odgadnięcia w **odgadnięcia** pole, a następnie kliknij przycisk **Przejdź** przesłać przypuszczenie. Należy zauważyć, że stan przepływu pracy jest wyświetlana w oknie stanu. Te dane wyjściowe są przechwytywane z `WriteLine` działań. Przełącz się do innego przepływu pracy, wybierając jedną z **identyfikator wystąpienia przepływu pracy** pola kombi i zwróć uwagę, że stan bieżącego przepływu pracy została usunięta. Przejdź z powrotem do poprzedniej przepływu pracy i zwróć uwagę, że stan został przywrócony, podobny do poniższego przykładu.  
+3. Wybierz zakres do odgadnięcia gier i typ przepływu pracy, aby rozpocząć, a następnie kliknij przycisk **nowych gier**. Wprowadź odgadnięcia w **odgadnięcia** pole, a następnie kliknij przycisk **Przejdź** przesłać przypuszczenie. Należy zauważyć, że stan przepływu pracy jest wyświetlana w oknie stanu. Te dane wyjściowe są przechwytywane z `WriteLine` działań. Przełącz się do innego przepływu pracy, wybierając jedną z **identyfikator wystąpienia przepływu pracy** pola kombi i zwróć uwagę, że stan bieżącego przepływu pracy została usunięta. Przejdź z powrotem do poprzedniej przepływu pracy i zwróć uwagę, że stan został przywrócony, podobny do poniższego przykładu.  
   
     > [!NOTE]
     > Po przełączeniu do przepływu pracy, która została uruchomiona przed włączeniem śledzenia nie stan jest wyświetlany. Jednak w przypadku wprowadzenia dodatkowych prób ich stan jest zapisać, ponieważ włączono śledzenie.  
@@ -332,7 +332,7 @@ ms.locfileid: "57720959"
 
     Zanotuj identyfikator wystąpienia przepływu pracy i Zagraj w grę za pośrednictwem do jego zakończenia.
   
-4.  Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowHost\bin\debug** folder (lub **bin\release** w zależności od ustawień projektu). Należy zauważyć, że oprócz projekt istnieje pliki wykonywalne pliki przy użyciu identyfikatora guid w nazwach plików. Zidentyfikuj ten, który odpowiada identyfikator wystąpienia przepływu pracy z ukończony przepływ pracy w poprzednim kroku, a następnie otwórz go w Notatniku. Informacje o śledzeniu zawiera informacje podobne do następujących.  
+4. Otwórz Eksploratora Windows i przejdź do **NumberGuessWorkflowHost\bin\debug** folder (lub **bin\release** w zależności od ustawień projektu). Należy zauważyć, że oprócz projekt istnieje pliki wykonywalne pliki przy użyciu identyfikatora guid w nazwach plików. Zidentyfikuj ten, który odpowiada identyfikator wystąpienia przepływu pracy z ukończony przepływ pracy w poprzednim kroku, a następnie otwórz go w Notatniku. Informacje o śledzeniu zawiera informacje podobne do następujących.  
   
     ```output
     Please enter a number between 1 and 10

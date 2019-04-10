@@ -2,12 +2,12 @@
 title: Niestandardowy host usługi
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: daa6645440a9988fc148757948d7d24615d5a9f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127800"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340935"
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 W tym przykładzie przedstawiono sposób użycia niestandardowego utworów zależnych od <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania. Metoda ta umożliwia wielokrotnego użytku alternatywa konfigurowanie dużej liczby usług w typowy sposób. W przykładzie pokazano również sposób użycia <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy, aby użyć niestandardowego elementu ServiceHost w środowisku hostingu usług Internet Information Services (IIS) lub Windows Process Activation Service (WAS).  
@@ -158,21 +158,21 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 #### <a name="to-observe-the-effect-of-the-custom-host"></a>Aby obserwować wpływ niestandardowego hosta  
   
-1.  Otwórz plik Web.config usługi i sprawdź, czy brak konfiguracji jawnie Włączanie metadanych dla usługi.  
+1. Otwórz plik Web.config usługi i sprawdź, czy brak konfiguracji jawnie Włączanie metadanych dla usługi.  
   
-2.  Otwórz plik .svc usługi i Zauważ, że jego @ServiceHost dyrektywa zawiera atrybut fabryki, który określa nazwę niestandardowego elementu ServiceHostFactory.  
+2. Otwórz plik .svc usługi i Zauważ, że jego @ServiceHost dyrektywa zawiera atrybut fabryki, który określa nazwę niestandardowego elementu ServiceHostFactory.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Po rozwiązaniu został utworzony, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Katalog ServiceModelSamples teraz powinny się wyświetlać jako [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikacji.  
+3. Po rozwiązaniu został utworzony, uruchom Setup.bat jest, aby skonfigurować aplikację ServiceModelSamples w [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Katalog ServiceModelSamples teraz powinny się wyświetlać jako [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikacji.  
   
-4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Aby usunąć [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikację, uruchom Cleanup.bat.  
+5. Aby usunąć [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikację, uruchom Cleanup.bat.  
   
 ## <a name="see-also"></a>Zobacz także
 

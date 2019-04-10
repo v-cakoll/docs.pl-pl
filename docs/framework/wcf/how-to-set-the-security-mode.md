@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-ms.openlocfilehash: 652fcef75f8d5a8dee824bb89bf4695f1629fed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116405"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339388"
 ---
 # <a name="how-to-set-the-security-mode"></a>Instrukcje: Ustawianie trybu zabezpieczeń
 Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często używanych trybów zabezpieczeń, które znajdują się na najbardziej wstępnie zdefiniowanych powiązań: transportu, wiadomości i "transport z poświadczeniami komunikatu". Dwa tryby dodatkowe są specyficzne dla dwa powiązania: tryb "tylko transportu credential" znalezione na <xref:System.ServiceModel.BasicHttpBinding>i "Oba" Tryb znalezione na <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech często używanych trybów zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>, i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
@@ -25,9 +25,9 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często uż
   
 ### <a name="to-set-the-security-mode-in-code"></a>Aby ustawić tryb zabezpieczeń w kodzie  
   
-1.  Utwórz wystąpienie klasy powiązania, którego używasz. Aby uzyskać listę wstępnie zdefiniowanych powiązań, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). W tym przykładzie tworzone jest wystąpienie <xref:System.ServiceModel.WSHttpBinding> klasy.  
+1. Utwórz wystąpienie klasy powiązania, którego używasz. Aby uzyskać listę wstępnie zdefiniowanych powiązań, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). W tym przykładzie tworzone jest wystąpienie <xref:System.ServiceModel.WSHttpBinding> klasy.  
   
-2.  Ustaw `Mode` własności obiektu zwróconego przez `Security` właściwości.  
+2. Ustaw `Mode` własności obiektu zwróconego przez `Security` właściwości.  
   
      [!code-csharp[c_SettingSecurityMode#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#1)]
      [!code-vb[c_SettingSecurityMode#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#1)]  
@@ -42,7 +42,7 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często uż
      [!code-csharp[c_SettingSecurityMode#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#3)]
      [!code-vb[c_SettingSecurityMode#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#3)]  
   
-3.  Można również ustawić tryb w Konstruktorze powiązanie, jak pokazano w poniższym kodzie.  
+3. Można również ustawić tryb w Konstruktorze powiązanie, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[c_SettingSecurityMode#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#4)]
      [!code-vb[c_SettingSecurityMode#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#4)]  
@@ -52,35 +52,35 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) ma trzy często uż
   
 #### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Aby ustawić właściwość ClientCredentialType dla trybu transportu  
   
-1.  Utwórz wystąpienie wiązania.  
+1. Utwórz wystąpienie wiązania.  
   
-2.  Ustaw `Mode` właściwość `Transport`.  
+2. Ustaw `Mode` właściwość `Transport`.  
   
-3.  Ustaw `ClientCredential` właściwość do odpowiedniej wartości. Poniższy kod ustawia właściwość `Windows`.  
+3. Ustaw `ClientCredential` właściwość do odpowiedniej wartości. Poniższy kod ustawia właściwość `Windows`.  
   
      [!code-csharp[c_SettingSecurityMode#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#5)]
      [!code-vb[c_SettingSecurityMode#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#5)]  
   
 #### <a name="to-set-the-clientcredentialtype-property-for-message-mode"></a>Aby ustawić właściwość ClientCredentialType dla trybu wiadomości  
   
-1.  Utwórz wystąpienie wiązania.  
+1. Utwórz wystąpienie wiązania.  
   
-2.  Ustaw `Mode` właściwość `Message`.  
+2. Ustaw `Mode` właściwość `Message`.  
   
-3.  Ustaw `ClientCredential` właściwość do odpowiedniej wartości. Poniższy kod ustawia właściwość `Certificate`.  
+3. Ustaw `ClientCredential` właściwość do odpowiedniej wartości. Poniższy kod ustawia właściwość `Certificate`.  
   
      [!code-csharp[c_SettingSecurityMode#6](../../../samples/snippets/csharp/VS_Snippets_CFX/c_settingsecuritymode/cs/source.cs#6)]
      [!code-vb[c_SettingSecurityMode#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_settingsecuritymode/vb/source.vb#6)]  
   
 #### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Aby ustawić tryb i właściwości ClientCredentialType o wartości właściwości w konfiguracji  
   
-1.  Dodaj odpowiednie powiązanie elementu [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) element pliku konfiguracji. W poniższym przykładzie dodano [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu.  
+1. Dodaj odpowiednie powiązanie elementu [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) element pliku konfiguracji. W poniższym przykładzie dodano [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elementu.  
   
-2.  Dodaj `<binding>` element i ustaw jego `name` atrybutu do odpowiedniej wartości.  
+2. Dodaj `<binding>` element i ustaw jego `name` atrybutu do odpowiedniej wartości.  
   
-3.  Dodaj `<security>` element i ustaw `mode` atrybutu `Message`, `Transport`, lub `TransportWithMessageCredential`.  
+3. Dodaj `<security>` element i ustaw `mode` atrybutu `Message`, `Transport`, lub `TransportWithMessageCredential`.  
   
-4.  Jeśli tryb jest ustawiony na `Transport`, Dodaj `<transport>` element i ustaw `clientCredential` atrybutu do odpowiedniej wartości.  
+4. Jeśli tryb jest ustawiony na `Transport`, Dodaj `<transport>` element i ustaw `clientCredential` atrybutu do odpowiedniej wartości.  
   
      Poniższy przykład ustawia tryb "`Transport"`, a następnie ustawia `clientCredentialType` atrybutu `<transport>` elementu"`Windows"`.  
   

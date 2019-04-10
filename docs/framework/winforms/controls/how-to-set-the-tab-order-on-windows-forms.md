@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339908"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Instrukcje: ustawianie kolejności tabulacji na formularzach systemu Windows
 Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi fokus z jednego formantu do drugiego, naciskając klawisz TAB. Każdy formularz ma swój własny kolejności tabulacji. Domyślnie kolejność dostępu jest taka sama jak kolejność, w którym utworzono kontrolki. Kolejność tabulacji numerowania rozpoczyna się od zera.  
@@ -25,16 +25,16 @@ Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi foku
   
 ### <a name="to-set-the-tab-order-of-a-control"></a>Aby ustawić kolejność tabulacji kontrolki  
   
-1.  Na **widoku** menu, kliknij przycisk **kolejność tabulacji**.  
+1. Na **widoku** menu, kliknij przycisk **kolejność tabulacji**.  
   
      Aktywuje tryb wyboru kolejność tabulacji w formularzu. Numer (reprezentujący <xref:System.Windows.Forms.Control.TabIndex%2A> właściwość) pojawia się w lewym górnym rogu każdej kontrolki.  
   
-2.  Kliknij formanty, które po kolei, aby ustanowić kolejność tabulacji, które chcesz.  
+2. Kliknij formanty, które po kolei, aby ustanowić kolejność tabulacji, które chcesz.  
   
     > [!NOTE]
     >  Kontrolki miejscu w kolejności tabulacji można ustawić dowolną wartość większa niż lub równa 0. Gdy występują duplikaty, porządek dwie kontrolki jest obliczane i kontroli na górze na kartach jest pierwszy. (Warstwy visual kontrolek w formularzu wzdłuż osi z formularza [głębokość] jest porządku osi z. Porządek określa formanty, które znajdują się przed innymi kontrolkami). Aby uzyskać więcej informacji na temat porządku osi z, zobacz [Układanie warstwowo obiektów na formularzach Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
-3.  Po zakończeniu kliknij przycisk **kolejność tabulacji** na **widoku** menu ponownie, aby wyjść z trybu zlecenia kartę.  
+3. Po zakończeniu kliknij przycisk **kolejność tabulacji** na **widoku** menu ponownie, aby wyjść z trybu zlecenia kartę.  
   
     > [!NOTE]
     >  Formanty, które nie można pobrać fokus, a także wyłączone i niewidoczne formantów, nie mają <xref:System.Windows.Forms.Control.TabIndex%2A> właściwości i są nie zawarte w kolejności tabulacji. Jako użytkownik naciśnie klawisz TAB, te kontrolki są pomijane.  
@@ -47,7 +47,7 @@ Kolejność tabulacji polega na kolejności, w którym użytkownik przenosi foku
   
 #### <a name="to-remove-a-control-from-the-tab-order"></a>Aby usunąć formant z kolejność tabulacji  
   
-1.  Ustaw dla formantu <xref:System.Windows.Forms.Control.TabStop%2A> właściwości `false` w oknie dialogowym właściwości.  
+1. Ustaw dla formantu <xref:System.Windows.Forms.Control.TabStop%2A> właściwości `false` w oknie dialogowym właściwości.  
   
      A formant, którego <xref:System.Windows.Forms.Control.TabStop%2A> została ustawiona właściwość `false` nadal obsługuje jego położenie w kolejności tabulacji, mimo że formant zostanie pominięta, gdy przechodzić między formantami za pomocą klawisza TAB.  
   

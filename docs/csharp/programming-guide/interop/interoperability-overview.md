@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 160403b938a95ae5bb03703f73fa906de5fc3ded
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410761"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337555"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarządzanego i niezarządzanego kodu.  
@@ -33,26 +33,26 @@ Temacie opisano metody, aby umożliwić współdziałanie kodu języka C# zarzą
 ## <a name="exposing-com-components-to-c"></a>Udostępnianie składników COM do C\#
  Mogą wykorzystywać składnika modelu COM z projektu języka C#. Ogólne kroki są następujące:  
   
-1.  Zlokalizuj składnik COM, aby użyć i zarejestrować ją. Użyj regsvr32.exe zarejestrować lub wyrejestrować — Zarejestruj bibliotekę DLL modelu COM.  
+1. Zlokalizuj składnik COM, aby użyć i zarejestrować ją. Użyj regsvr32.exe zarejestrować lub wyrejestrować — Zarejestruj bibliotekę DLL modelu COM.  
   
-2.  Dodaj do projektu odwołanie do biblioteki modelu COM składnika lub typu.  
+2. Dodaj do projektu odwołanie do biblioteki modelu COM składnika lub typu.  
   
      Po dodaniu odwołania, program Visual Studio używa [Tlbimp.exe (Importer biblioteki typów)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), który przyjmuje jako dane wejściowe do wyjściowego zestawu międzyoperacyjnego .NET Framework bibliotekę typów. Zestaw o nazwie wywoływana otoka środowiska uruchomieniowego (RCW) zawiera zarządzanych klas i interfejsów, które umieszczają w otoce klasy COM i interfejsy, które znajdują się w bibliotece typów. Visual Studio dodaje do projektu odwołanie do wygenerowanego zestawu.  
   
-3.  Tworzenie wystąpienia klasy, która jest zdefiniowana w RCW. Spowoduje to, z kolei utworzenie wystąpienia obiektu COM.  
+3. Tworzenie wystąpienia klasy, która jest zdefiniowana w RCW. Spowoduje to, z kolei utworzenie wystąpienia obiektu COM.  
   
-4.  Użyj obiektu, tak samo, jak używać innych obiektów zarządzanych. Gdy obiekt jest odzyskiwane przez wyrzucanie elementów bezużytecznych, wystąpienie obiektu COM jest również zwalniane z pamięci.  
+4. Użyj obiektu, tak samo, jak używać innych obiektów zarządzanych. Gdy obiekt jest odzyskiwane przez wyrzucanie elementów bezużytecznych, wystąpienie obiektu COM jest również zwalniane z pamięci.  
   
  Aby uzyskać więcej informacji, zobacz [udostępnianie składników modelu COM aplikacji .NET Framework](../../../../docs/framework/interop/exposing-com-components.md).  
   
 ## <a name="exposing-c-to-com"></a>Udostępnianie C# dla modelu COM  
  Klienci COM mogą wykorzystywać C# typy, które zostały poprawnie udostępniane. Podstawowe kroki, aby uwidocznić typów języka C# są następujące:  
   
-1.  Dodawanie atrybutów międzyoperacyjności w projekcie języka C#.  
+1. Dodawanie atrybutów międzyoperacyjności w projekcie języka C#.  
   
      Zestaw COM można uwidocznić, modyfikując właściwości projektu Visual C#. Aby uzyskać więcej informacji, zobacz [informacje o zestawie — okno dialogowe](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
-2.  Generuj bibliotekę typów modelu COM i zarejestruj je dla modelu COM użycia.  
+2. Generuj bibliotekę typów modelu COM i zarejestruj je dla modelu COM użycia.  
   
      Można zmodyfikować właściwości projektu Visual C# do automatycznego rejestrowania zestawu języka C# dla współdziałania z modelem COM. Program Visual Studio używa [Regasm.exe (narzędzie rejestracji zestawów)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)przy użyciu `/tlb` przełącznik wiersza polecenia, które pobiera zestaw zarządzany jako dane wejściowe, aby wygenerować bibliotekę typów. Ta biblioteka typów zawiera opis `public` typy w zestawie i dodaje wpisy rejestru, dzięki czemu klienci COM mogą tworzyć klas zarządzanych.  
   

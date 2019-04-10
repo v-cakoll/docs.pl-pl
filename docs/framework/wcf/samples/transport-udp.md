@@ -2,31 +2,31 @@
 title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334669"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Przykładowe transportu UDP demonstruje sposób implementacji UDP emisji pojedynczej i multiemisji jako niestandardowy transportu Windows Communication Foundation (WCF). Przykład w tym artykule opisano zalecane procedury tworzenia niestandardowych transportu programu WCF, za pomocą struktura kanału i zgodnie z najlepszymi rozwiązaniami WCF. Kroki umożliwiające utworzenie niestandardowego transportu są następujące:  
   
-1.  Zdecyduj, które kanał [wiadomości programu Exchange wzorców](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel lub IReplyChannel) będzie obsługiwać Twoja elementu ChannelFactory i ChannelListener. Następnie zdecyduj, czy będzie obsługiwać sesji odchylenia tych interfejsów.  
+1. Zdecyduj, które kanał [wiadomości programu Exchange wzorców](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel lub IReplyChannel) będzie obsługiwać Twoja elementu ChannelFactory i ChannelListener. Następnie zdecyduj, czy będzie obsługiwać sesji odchylenia tych interfejsów.  
   
-2.  Tworzenie fabryki kanałów i odbiornik, który obsługuje usługi wymiany komunikatów.  
+2. Tworzenie fabryki kanałów i odbiornik, który obsługuje usługi wymiany komunikatów.  
   
-3.  Upewnij się, że wszystkie wyjątki dotyczące sieci są znormalizowane zgodnie z odpowiedniej klasy pochodnej z <xref:System.ServiceModel.CommunicationException>.  
+3. Upewnij się, że wszystkie wyjątki dotyczące sieci są znormalizowane zgodnie z odpowiedniej klasy pochodnej z <xref:System.ServiceModel.CommunicationException>.  
   
-4.  Dodaj [ \<powiązania >](../../../../docs/framework/misc/binding.md) element, który dodaje niestandardowy transportu do stosu kanału. Aby uzyskać więcej informacji, zobacz [Dodawanie elementu powiązania](#AddingABindingElement).  
+4. Dodaj [ \<powiązania >](../../../../docs/framework/misc/binding.md) element, który dodaje niestandardowy transportu do stosu kanału. Aby uzyskać więcej informacji, zobacz [Dodawanie elementu powiązania](#AddingABindingElement).  
   
-5.  Dodaj sekcję rozszerzenia elementu powiązania do udostępnienia nowego elementu powiązania do konfiguracji systemu.  
+5. Dodaj sekcję rozszerzenia elementu powiązania do udostępnienia nowego elementu powiązania do konfiguracji systemu.  
   
-6.  Dodaj rozszerzenia metadanych do komunikowania się funkcji innych punktów końcowych.  
+6. Dodaj rozszerzenia metadanych do komunikowania się funkcji innych punktów końcowych.  
   
-7.  Dodaj powiązanie, które są wstępnie konfiguruje stosie elementów wiązania zgodnie z profilem dobrze zdefiniowane. Aby uzyskać więcej informacji, zobacz [dodając powiązanie standardowe](#AddingAStandardBinding).  
+7. Dodaj powiązanie, które są wstępnie konfiguruje stosie elementów wiązania zgodnie z profilem dobrze zdefiniowane. Aby uzyskać więcej informacji, zobacz [dodając powiązanie standardowe](#AddingAStandardBinding).  
   
-8.  Dodaj sekcję wiązania i element konfiguracji powiązania aby uwidocznić powiązania do systemu konfiguracji. Aby uzyskać więcej informacji, zobacz [dodanie obsługi konfiguracji](#AddingConfigurationSupport).  
+8. Dodaj sekcję wiązania i element konfiguracji powiązania aby uwidocznić powiązania do systemu konfiguracji. Aby uzyskać więcej informacji, zobacz [dodanie obsługi konfiguracji](#AddingConfigurationSupport).  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>Wzorce wymiany komunikatów  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  Podczas uruchamiania Svcutil.exe, istnieją dwie opcje w celu uzyskania Svcutil.exe można załadować rozszerzenia importu WSDL:  
   
-1.  Punkt Svcutil.exe do naszego pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
+1. Punkt Svcutil.exe do naszego pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
   
-2.  Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
+2. Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
   
  `UdpBindingElementImporter` Typ implementuje `IWsdlImportExtension` interfejsu. `ImportEndpoint` Metoda importuje adres z portu WSDL.  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Następnie wdrożymy `IPolicyImporterExtension` z naszych zarejestrowanych klasy (`UdpBindingElementImporter`). W `ImportPolicy()`, firma Microsoft za pośrednictwem potwierdzenia w naszych przestrzeni nazw i przetwarzać te generowania transportu i sprawdź, czy jest multiemisji. Możemy również usunąć potwierdzenia, które będziemy obsługiwać z listy powiązania potwierdzenia. Ponownie uruchamiając Svcutil.exe, dostępne są dwie opcje integracji:  
   
-1.  Punkt Svcutil.exe do naszego pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
+1. Punkt Svcutil.exe do naszego pliku konfiguracji, za pomocą /SvcutilConfig:\<pliku >.  
   
-2.  Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
+2. Dodaj sekcję konfiguracji do Svcutil.exe.config, w tym samym katalogu co Svcutil.exe.  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>Dodawanie standardowych powiązania  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-3.  Zapoznaj się z poprzedniej sekcji "UDP testu i klienta usługi".  
+3. Zapoznaj się z poprzedniej sekcji "UDP testu i klienta usługi".  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

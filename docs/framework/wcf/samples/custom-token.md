@@ -2,12 +2,12 @@
 title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334448"
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` można bezpiecznie przekazać informacje o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowane przy użyciu elementu powiązania zabezpieczeń symetryczne, wraz z treści wiadomości i innych nagłówków wiadomości. Jest to przydatne w przypadkach, gdzie wbudowany tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczającego niestandardowe z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -588,38 +588,38 @@ string GetCallerCreditCardNumber()
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Aby uruchomić przykład na tym samym komputerze
 
-1.  Otwórz okno wiersza polecenia 2012 w usłudze Visual Studio z uprawnieniami administratora i uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert.exe.
+1. Otwórz okno wiersza polecenia 2012 w usłudze Visual Studio z uprawnieniami administratora i uruchom Setup.bat jest z poziomu folderu instalacji przykładowej. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu. Upewnij się, że ścieżka zawiera folder, w którym znajduje się Makecert.exe.
 
 > [!NOTE]
 >  Pamiętaj usunąć certyfikaty, uruchamiając Cleanup.bat po zakończeniu pracy z przykładem. Inne przykłady zabezpieczeń za pomocą tych samych certyfikatów.  
   
-1.  Uruchom Client.exe z katalogu client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
+1. Uruchom Client.exe z katalogu client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-2.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+2. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Do uruchomienia przykładu na komputer  
   
-1.  Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
+1. Utwórz katalog na komputerze usługi, aby pliki binarne usługi.  
   
-2.  Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Pamiętaj skopiować CreditCardFile.txt; w przeciwnym razie authenticator karta kredytowa nie można zweryfikować informacji o karcie kredytowej wysłanych z klienta. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
+2. Skopiuj pliki programu usługi do katalogu usługi na komputerze usługi. Pamiętaj skopiować CreditCardFile.txt; w przeciwnym razie authenticator karta kredytowa nie można zweryfikować informacji o karcie kredytowej wysłanych z klienta. Także skopiować pliki Setup.bat i Cleanup.bat na komputerze usługi.  
   
-3.  Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Możesz je utworzyć za pomocą Setup.bat, jeśli zmienisz `%SERVER_NAME%` zmiennej do w pełni kwalifikowaną nazwę komputera, na którym jest hostowana usługa. Należy zauważyć, że plik Setup.bat jest należy uruchomić w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.  
+3. Musi mieć certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Możesz je utworzyć za pomocą Setup.bat, jeśli zmienisz `%SERVER_NAME%` zmiennej do w pełni kwalifikowaną nazwę komputera, na którym jest hostowana usługa. Należy zauważyć, że plik Setup.bat jest należy uruchomić w wierszu polecenia dla deweloperów programu Visual Studio otwartych z uprawnieniami administratora.  
   
-4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople na komputerze klienckim. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
+4. Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople na komputerze klienckim. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
   
-5.  W pliku EchoServiceHost.cs należy zmienić wartość Nazwa podmiotu certyfikatu, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
+5. W pliku EchoServiceHost.cs należy zmienić wartość Nazwa podmiotu certyfikatu, aby określić nazwę komputera w pełni kwalifikowaną, zamiast nazwy localhost.  
   
-6.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
+6. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
   
-7.  W pliku Client.cs Zmień wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
+7. W pliku Client.cs Zmień wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
   
-8.  W pliku Client.cs należy zmienić nazwę podmiotu certyfikatu X.509 service, aby pasować do nazwy komputera w pełni kwalifikowana hosta zdalnego zamiast nazwy localhost.  
+8. W pliku Client.cs należy zmienić nazwę podmiotu certyfikatu X.509 service, aby pasować do nazwy komputera w pełni kwalifikowana hosta zdalnego zamiast nazwy localhost.  
   
 9. Na komputerze klienckim, aby uruchomić Client.exe z okna wiersza polecenia.  
   
@@ -627,4 +627,4 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
-1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+1. Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  

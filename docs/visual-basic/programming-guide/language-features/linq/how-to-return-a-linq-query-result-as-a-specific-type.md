@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334942"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Instrukcje: Zwracanie wyniku zapytania LINQ jako określonego typu (Visual Basic)
 Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywania zapytań. Domyślnie zapytania LINQ zwracają listę obiektów jako typu anonimowego. Można również określić, że zapytanie zwraca listę określonego typu przy użyciu `Select` klauzuli.  
@@ -27,45 +27,45 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
   
 ### <a name="to-create-a-connection-to-a-database"></a>Aby utworzyć połączenie z bazą danych  
   
-1.  W programie Visual Studio, otwórz **Eksploratora serwera**/**Eksplorator bazy danych** , klikając **Eksploratora serwera**/**bazy danych Eksplorator** na **widoku** menu.  
+1. W programie Visual Studio, otwórz **Eksploratora serwera**/**Eksplorator bazy danych** , klikając **Eksploratora serwera**/**bazy danych Eksplorator** na **widoku** menu.  
   
-2.  Kliknij prawym przyciskiem myszy **połączeń danych** w **Eksploratora serwera**/**Eksplorator bazy danych** a następnie kliknij przycisk **Dodaj połączenie**.  
+2. Kliknij prawym przyciskiem myszy **połączeń danych** w **Eksploratora serwera**/**Eksplorator bazy danych** a następnie kliknij przycisk **Dodaj połączenie**.  
   
-3.  Określ prawidłowe połączenie z przykładową bazą danych Northwind.  
+3. Określ prawidłowe połączenie z przykładową bazą danych Northwind.  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Aby dodać projekt, który zawiera plik LINQ to SQL  
   
-1.  W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**. Wybierz pozycję Visual Basic **aplikacja interfejsu Windows Forms** jako typ projektu.  
+1. W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**. Wybierz pozycję Visual Basic **aplikacja interfejsu Windows Forms** jako typ projektu.  
   
-2.  Na **projektu** menu, kliknij przycisk **Dodaj nowy element**. Wybierz **klasy LINQ do SQL** szablon elementu.  
+2. Na **projektu** menu, kliknij przycisk **Dodaj nowy element**. Wybierz **klasy LINQ do SQL** szablon elementu.  
   
-3.  Nadaj plikowi nazwę `northwind.dbml`. Kliknij przycisk **Dodaj**. Zostanie otwarty plik northwind.dbml Object Relational Designer (O/R Designer).  
+3. Nadaj plikowi nazwę `northwind.dbml`. Kliknij przycisk **Dodaj**. Zostanie otwarty plik northwind.dbml Object Relational Designer (O/R Designer).  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>Aby dodać tabele do zapytania O/R Designer  
   
-1.  W **Eksploratora serwera**/**Eksplorator bazy danych**, rozwiń węzeł połączenia z bazą danych Northwind. Rozwiń **tabel** folderu.  
+1. W **Eksploratora serwera**/**Eksplorator bazy danych**, rozwiń węzeł połączenia z bazą danych Northwind. Rozwiń **tabel** folderu.  
   
      Po zamknięciu O/R Designer, możesz otworzyć go ponownie, klikając dwukrotnie plik northwind.dbml, który został dodany wcześniej.  
   
-2.  Kliknij tabelę klientów i przeciągnij go do okienka po lewej stronie projektanta.  
+2. Kliknij tabelę klientów i przeciągnij go do okienka po lewej stronie projektanta.  
   
      Projektant tworzy nową `Customer` obiektu w projekcie. Można poddawać projekcji wynik kwerendy w postaci `Customer` typu lub jako typ, który tworzysz. W tym przykładzie utworzysz nowy typ w dalszej części procedury i projektu jako typu wyniku zapytania.  
   
-3.  Zapisz zmiany i zamknij projektanta.  
+3. Zapisz zmiany i zamknij projektanta.  
   
-4.  Zapisz projekt.  
+4. Zapisz projekt.  
   
 ### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Aby dodać kod do wykonywania zapytań bazy danych i wyświetlić wyniki  
   
-1.  Z **przybornika**, przeciągnij <xref:System.Windows.Forms.DataGridView> formant na domyślnego formularza Windows do projektu formularz Form1.  
+1. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.DataGridView> formant na domyślnego formularza Windows do projektu formularz Form1.  
   
-2.  Kliknij dwukrotnie Form1, aby zmodyfikować klasy Form1.  
+2. Kliknij dwukrotnie Form1, aby zmodyfikować klasy Form1.  
   
-3.  Po `End Class` instrukcji Form1 klasy, Dodaj następujący kod, aby utworzyć `CustomerInfo` typu do przechowywania wyników zapytania dla tego przykładu.  
+3. Po `End Class` instrukcji Form1 klasy, Dodaj następujący kod, aby utworzyć `CustomerInfo` typu do przechowywania wyników zapytania dla tego przykładu.  
   
      [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
-4.  Po dodaniu tabel do Projektanta obiektów relacyjnych projektanta dodano <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera kod, który musi mieć dostęp do tych tabel i uzyskiwać dostęp do poszczególnych obiektów i kolekcji, dla każdej tabeli. <xref:System.Data.Linq.DataContext> Obiektu dla Twojego projektu jest nazwany na podstawie nazwy pliku dbml. Dla tego projektu <xref:System.Data.Linq.DataContext> nosi nazwę obiektu `northwindDataContext`.  
+4. Po dodaniu tabel do Projektanta obiektów relacyjnych projektanta dodano <xref:System.Data.Linq.DataContext> obiektu do projektu. Ten obiekt zawiera kod, który musi mieć dostęp do tych tabel i uzyskiwać dostęp do poszczególnych obiektów i kolekcji, dla każdej tabeli. <xref:System.Data.Linq.DataContext> Obiektu dla Twojego projektu jest nazwany na podstawie nazwy pliku dbml. Dla tego projektu <xref:System.Data.Linq.DataContext> nosi nazwę obiektu `northwindDataContext`.  
   
      Można utworzyć wystąpienia <xref:System.Data.Linq.DataContext> w kodzie i zapytania tabele określone przez projektanta O/R.  
   
@@ -73,11 +73,11 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
   
      [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
-5.  Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.  
+5. Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

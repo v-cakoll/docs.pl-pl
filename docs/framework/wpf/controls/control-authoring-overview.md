@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340025"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
 Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] model kontroli znacząco zmniejsza potrzebę tworzenia nowego formantu. Jednak w niektórych przypadkach może być nadal należy utworzyć formant niestandardowy. W tym temacie omówiono funkcje, które zminimalizować potrzebę tworzenia formantu niestandardowego i innej kontrolki tworzenia modeli w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Również w tym temacie pokazano, jak utworzyć nowy formant.  
@@ -191,15 +191,15 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
  Jeśli aplikacja wygląda dla zasobu, wygląda na trzech poziomach w następującej kolejności:  
   
-1.  Poziom elementu.  
+1. Poziom elementu.  
   
      System rozpoczyna się od elementu, który odwołuje się do zasobu i wyszukuje zasoby logiczne nadrzędnego itd aż do osiągnięcia elementu głównego.  
   
-2.  Na poziomie aplikacji.  
+2. Na poziomie aplikacji.  
   
      Zasoby zdefiniowane przez <xref:System.Windows.Application> obiektu.  
   
-3.  Poziom motywu.  
+3. Poziom motywu.  
   
      Motyw poziomie słowniki są przechowywane w podfolderze o nazwie motywów.  Pliki w folderze motywów odpowiadają motywów.  Na przykład Niewykluczone, że Aero.NormalColor.xaml, Luna.NormalColor.xaml, Royale.NormalColor.xaml i tak dalej.  Może również mieć plik o nazwie klasie generic.xaml.  Gdy system wyszukuje zasobów na poziomie motywy, najpierw szuka go w pliku specyficznych dla motywów, a następnie szuka go w klasie generic.xaml.  
   

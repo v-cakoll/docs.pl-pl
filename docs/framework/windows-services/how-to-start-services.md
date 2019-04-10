@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: fbca3cfd241ded6f83df6ba2206601a7417322ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336840"
 ---
 # <a name="how-to-start-services"></a>Instrukcje: Uruchamianie usług
 Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody w klasie usługi. Zazwyczaj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda definiuje przydatnej pracy, wykona usługi. Po uruchomieniu usługi pozostaje aktywne do czasu jest ręcznie wstrzymana lub zatrzymana.  
@@ -27,11 +27,11 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
 ### <a name="to-specify-how-a-service-should-start"></a>Aby określić, jak usługa powinna być uruchamiana  
   
-1.  Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Po utworzeniu usługi, dodanie niezbędnych instalatorów dla niego. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  W Projektancie kliknij Instalatora usługi dla usługi, którą pracujesz.  
+2. W Projektancie kliknij Instalatora usługi dla usługi, którą pracujesz.  
   
-3.  W **właściwości** oknie <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwości do jednej z następujących czynności:  
+3. W **właściwości** oknie <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwości do jednej z następujących czynności:  
   
     |Aby zainstalować usługę|Ustaw tę wartość|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>Aby ręcznie uruchomić usługę z poziomu Eksploratora serwera  
   
-1.  W **Eksploratora serwera**, dodać serwer, jeśli go nie ma już na liście. Aby uzyskać więcej informacji, zobacz jak: Uzyskiwanie dostępu oraz inicjowanie Eksploratora bazy danych Eksploratora serwera.  
+1. W **Eksploratora serwera**, dodać serwer, jeśli go nie ma już na liście. Aby uzyskać więcej informacji, zobacz jak: Uzyskiwanie dostępu oraz inicjowanie Eksploratora bazy danych Eksploratora serwera.  
   
-2.  Rozwiń **usług** węzła, a następnie znajdź odpowiednią usługę, aby uruchomić.  
+2. Rozwiń **usług** węzła, a następnie znajdź odpowiednią usługę, aby uruchomić.  
   
-3.  Kliknij prawym przyciskiem myszy nazwę usługi, a następnie kliknij przycisk **Start**.  
+3. Kliknij prawym przyciskiem myszy nazwę usługi, a następnie kliknij przycisk **Start**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>Aby ręcznie uruchomić usługę z Menedżera sterowania usługami  
   
-1.  Otwórz **Menedżera sterowania usługami** , wykonując jedną z następujących czynności:  
+1. Otwórz **Menedżera sterowania usługami** , wykonując jedną z następujących czynności:  
   
     -   Windows XP lub 2000 Professional, kliknij prawym przyciskiem myszy **Mój komputer** na pulpicie, a następnie kliknij **Zarządzaj**. W oknie dialogowym Rozwiń **usługi i aplikacje** węzła.  
   
@@ -69,13 +69,13 @@ Po zainstalowaniu usługi musi być uruchomiona. Początkowo wywołań <xref:Sys
   
      Powinien zostać wyświetlony na liście usługi **usług** okna.  
   
-2.  Wybierz usługę na liście, kliknij go prawym przyciskiem myszy, a następnie kliknij **Start**.  
+2. Wybierz usługę na liście, kliknij go prawym przyciskiem myszy, a następnie kliknij **Start**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>Aby ręcznie uruchomić usługę z kodu  
   
-1.  Utwórz wystąpienie obiektu <xref:System.ServiceProcess.ServiceController> klasy, a następnie skonfigurować go do interakcji z usługą, którą chcesz administrować.  
+1. Utwórz wystąpienie obiektu <xref:System.ServiceProcess.ServiceController> klasy, a następnie skonfigurować go do interakcji z usługą, którą chcesz administrować.  
   
-2.  Wywołaj <xref:System.ServiceProcess.ServiceController.Start%2A> metodę, aby uruchomić usługę.  
+2. Wywołaj <xref:System.ServiceProcess.ServiceController.Start%2A> metodę, aby uruchomić usługę.  
   
 ## <a name="see-also"></a>Zobacz także
 

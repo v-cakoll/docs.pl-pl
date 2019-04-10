@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 346fb3399993246eb8d90f7fa900ab382ae12c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339440"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Instrukcje: Tworzenie i inicjowanie źródeł śledzenia
 <xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które pozwalają na łatwe śledzenie zdarzeń, dane śledzenia i ślady informacyjne problemu. Dane wyjściowe śledzenia z <xref:System.Diagnostics.TraceSource> mogą być tworzone i inicjowane z użyciem lub bez korzystania z plików konfiguracji. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się używać plików konfiguracyjnych ułatwiających rekonfigurację śladów produkowanych przez źródła śledzenia w czasie wykonywania.  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>Aby utworzyć i zainicjować źródło śledzenia przy użyciu pliku konfiguracji  
   
-1.  Utwórz projekt aplikacji konsoli Visual Studio i Zastąp dostarczony kod następującym kodem. Ten kod rejestruje błędy i ostrzeżenia i wysyła niektóre z nich do konsoli, a niektóre z nich do pliku myListener, który jest tworzony przez wpisy w pliku konfiguracji.  
+1. Utwórz projekt aplikacji konsoli Visual Studio i Zastąp dostarczony kod następującym kodem. Ten kod rejestruje błędy i ostrzeżenia i wysyła niektóre z nich do konsoli, a niektóre z nich do pliku myListener, który jest tworzony przez wpisy w pliku konfiguracji.  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  Dodaj plik konfiguracji aplikacji, jeśli nie został jeszcze dołączony, do projektu, aby zainicjować źródła śledzenia o nazwie `TraceSourceApp` w przykładzie kodu w kroku 1.  
+2. Dodaj plik konfiguracji aplikacji, jeśli nie został jeszcze dołączony, do projektu, aby zainicjować źródła śledzenia o nazwie `TraceSourceApp` w przykładzie kodu w kroku 1.  
   
-3.  Zastąp domyślną treść pliku konfiguracji z następującymi ustawieniami, aby zainicjować detektor śledzenia konsoli i odbiornik śledzenia modułu zapisującego tekst dla źródła śledzenia, który został utworzony w kroku 1.  
+3. Zastąp domyślną treść pliku konfiguracji z następującymi ustawieniami, aby zainicjować detektor śledzenia konsoli i odbiornik śledzenia modułu zapisującego tekst dla źródła śledzenia, który został utworzony w kroku 1.  
   
     ```xml  
     <configuration>  

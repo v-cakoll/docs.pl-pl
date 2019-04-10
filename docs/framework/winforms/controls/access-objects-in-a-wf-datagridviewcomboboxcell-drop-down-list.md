@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334279"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Instrukcje: uzyskiwanie dostępu do obiektów na liście rozwijanej DataGridViewComboBoxCell formularzy systemu Windows
 Podobnie jak <xref:System.Windows.Forms.ComboBox> kontroli <xref:System.Windows.Forms.DataGridViewComboBoxColumn> i <xref:System.Windows.Forms.DataGridViewComboBoxCell> typy umożliwiają dodać dowolne obiekty do listy rozwijanej. Dzięki tej funkcji może reprezentować złożonych stanów na liście rozwijanej bez konieczności przechowywania odpowiednimi obiektami w oddzielnych kolekcji.  
@@ -27,17 +27,17 @@ Podobnie jak <xref:System.Windows.Forms.ComboBox> kontroli <xref:System.Windows.
   
 ### <a name="to-add-business-objects-to-the-drop-down-list"></a>Aby dodać obiekty biznesowych do listy rozwijanej  
   
-1.  Utwórz nową <xref:System.Windows.Forms.DataGridViewComboBoxColumn> i wypełnić jego <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> kolekcji. Alternatywnie, można ustawić kolumny <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> właściwości do kolekcji obiektów biznesowych. W takim przypadku należy jednak nie można dodać "nieprzypisane" do listy rozwijanej bez tworzenia odpowiedniego obiektu biznesowego z kolekcji.  
+1. Utwórz nową <xref:System.Windows.Forms.DataGridViewComboBoxColumn> i wypełnić jego <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> kolekcji. Alternatywnie, można ustawić kolumny <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> właściwości do kolekcji obiektów biznesowych. W takim przypadku należy jednak nie można dodać "nieprzypisane" do listy rozwijanej bez tworzenia odpowiedniego obiektu biznesowego z kolekcji.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  Ustaw <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> i <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> właściwości. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> Wskazuje właściwość obiektu biznesowych do wyświetlenia na liście rozwijanej. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Wskazuje właściwość, która zwraca odwołanie do obiektu biznesowego.  
+2. Ustaw <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> i <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> właściwości. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> Wskazuje właściwość obiektu biznesowych do wyświetlenia na liście rozwijanej. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Wskazuje właściwość, która zwraca odwołanie do obiektu biznesowego.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  Upewnij się, że typ obiektu usługi biznesowe zawiera właściwość, która zwraca odwołanie do bieżącego wystąpienia. Ta właściwość musi mieć nazwę z wartością przypisaną do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> w poprzednim kroku.  
+3. Upewnij się, że typ obiektu usługi biznesowe zawiera właściwość, która zwraca odwołanie do bieżącego wystąpienia. Ta właściwość musi mieć nazwę z wartością przypisaną do <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> w poprzednim kroku.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
@@ -54,11 +54,11 @@ Podobnie jak <xref:System.Windows.Forms.ComboBox> kontroli <xref:System.Windows.
   
  Aby wyświetlić zachowanie tego przykładu, wykonaj następujące czynności:  
   
-1.  Zmień przypisania w `Assigned To` kolumny, wybierając różne wartości z listy rozwijanej lub naciskając klawisze CTRL + 0, w komórce pola kombi.  
+1. Zmień przypisania w `Assigned To` kolumny, wybierając różne wartości z listy rozwijanej lub naciskając klawisze CTRL + 0, w komórce pola kombi.  
   
-2.  Kliknij przycisk `Generate Report` Aby wyświetlić bieżące przypisania. Oznacza to, że zmiana `Assigned To` kolumny automatycznie aktualizuje `tasks` kolekcji.  
+2. Kliknij przycisk `Generate Report` Aby wyświetlić bieżące przypisania. Oznacza to, że zmiana `Assigned To` kolumny automatycznie aktualizuje `tasks` kolekcji.  
   
-3.  Kliknij przycisk `Request Status` przycisk, aby wywołać `RequestStatus` metoda bieżącego `Employee` obiektu dla tego wiersza. Oznacza to, że wybrany obiekt zostały pomyślnie pobrane.  
+3. Kliknij przycisk `Request Status` przycisk, aby wywołać `RequestStatus` metoda bieżącego `Employee` obiektu dla tego wiersza. Oznacza to, że wybrany obiekt zostały pomyślnie pobrane.  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wartości obustronne daty i godziny'
+title: 'Instrukcje: Obustronne wartości daty i godziny'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340610"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>Instrukcje: Wartości obustronne daty i godziny
+# <a name="how-to-round-trip-date-and-time-values"></a>Instrukcje: Obustronne wartości daty i godziny
 W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznacznej identyfikacji pojedynczego punktu w czasie. W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartości i wartości daty i godziny, z czasem strefy, aby wartość przywróconej identyfikuje tym samym czasie jako zapisaną wartość.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>Aby obustronnie konwertować wartość daty/czasu  
   
-1.  Konwertuj <xref:System.DateTime> wartość na jego reprezentację ciągu, wywołując <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> metody przy użyciu specyfikatora formatu "o".  
+1. Konwertuj <xref:System.DateTime> wartość na jego reprezentację ciągu, wywołując <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> metody przy użyciu specyfikatora formatu "o".  
   
-2.  Zapisz ciąg reprezentujący <xref:System.DateTime> do pliku lub wartości krzyż procesu, domeny aplikacji lub granic maszyny.  
+2. Zapisz ciąg reprezentujący <xref:System.DateTime> do pliku lub wartości krzyż procesu, domeny aplikacji lub granic maszyny.  
   
-3.  Pobierz ciąg, który reprezentuje <xref:System.DateTime> wartość.  
+3. Pobierz ciąg, który reprezentuje <xref:System.DateTime> wartość.  
   
-4.  Wywołaj <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> metody i przekazać <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> jako wartość `styles` parametru.  
+4. Wywołaj <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> metody i przekazać <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> jako wartość `styles` parametru.  
   
  Poniższy przykład ilustruje sposób przesłania danych <xref:System.DateTime> wartość.  
   
@@ -43,13 +43,13 @@ W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznac
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>Aby obustronnie konwertować wartość przesunięcia daty/czasu  
   
-1.  Konwertuj <xref:System.DateTimeOffset> wartość na jego reprezentację ciągu, wywołując <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metody przy użyciu specyfikatora formatu "o".  
+1. Konwertuj <xref:System.DateTimeOffset> wartość na jego reprezentację ciągu, wywołując <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metody przy użyciu specyfikatora formatu "o".  
   
-2.  Zapisz ciąg reprezentujący <xref:System.DateTimeOffset> do pliku lub wartości krzyż procesu, domeny aplikacji lub granic maszyny.  
+2. Zapisz ciąg reprezentujący <xref:System.DateTimeOffset> do pliku lub wartości krzyż procesu, domeny aplikacji lub granic maszyny.  
   
-3.  Pobierz ciąg, który reprezentuje <xref:System.DateTimeOffset> wartość.  
+3. Pobierz ciąg, który reprezentuje <xref:System.DateTimeOffset> wartość.  
   
-4.  Wywołaj <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> metody i przekazać <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> jako wartość `styles` parametru.  
+4. Wywołaj <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType> metody i przekazać <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> jako wartość `styles` parametru.  
   
  Poniższy przykład ilustruje sposób przesłania danych <xref:System.DateTimeOffset> wartość.  
   
@@ -60,18 +60,18 @@ W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznac
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>Aby obustronnie konwertować wartość daty i czasu z ich strefą czasu  
   
-1.  Zdefiniuj klasę lub strukturę z dwóch pól. Pierwsze pole to <xref:System.DateTime> lub <xref:System.DateTimeOffset> obiektu, a drugi jest <xref:System.TimeZoneInfo> obiektu. Poniższy przykład jest prosta wersja takiego typu.  
+1. Zdefiniuj klasę lub strukturę z dwóch pól. Pierwsze pole to <xref:System.DateTime> lub <xref:System.DateTimeOffset> obiektu, a drugi jest <xref:System.TimeZoneInfo> obiektu. Poniższy przykład jest prosta wersja takiego typu.  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  Oznacz klasę za pomocą <xref:System.SerializableAttribute> atrybutu.  
+2. Oznacz klasę za pomocą <xref:System.SerializableAttribute> atrybutu.  
   
-3.  Serializowanie przy użyciu obiektu <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> metody.  
+3. Serializowanie przy użyciu obiektu <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType> metody.  
   
-4.  Przywrócić dane przy użyciu obiektu <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> metody.  
+4. Przywrócić dane przy użyciu obiektu <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> metody.  
   
-5.  Rzutowanie (C#) lub przekonwertować (w języku Visual Basic) obiektu po deserializacji obiektu odpowiedniego typu.  
+5. Rzutowanie (C#) lub przekonwertować (w języku Visual Basic) obiektu po deserializacji obiektu odpowiedniego typu.  
   
  W poniższym przykładzie pokazano, jak przesyłania danych obiektu, który przechowuje informacje o datę i godzinę i strefę czasową.  
   
@@ -102,5 +102,5 @@ W wielu aplikacjach wartości daty i godziny jest przeznaczona do jego jednoznac
 ## <a name="see-also"></a>Zobacz także
 
 - [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [Wybieranie pomiędzy elementem DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339024"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel
 Kontrolki w <xref:System.Windows.Forms.TableLayoutPanel> kontrolki mogą znajdować się na sąsiadujących wierszy i kolumn.  
@@ -25,15 +25,15 @@ Kontrolki w <xref:System.Windows.Forms.TableLayoutPanel> kontrolki mogą znajdow
   
 ### <a name="to-span-columns-and-rows"></a>Obejmować kolumnami i wierszami  
   
-1.  Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
+1. Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
   
-2.  Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do lewej górnej komórki <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
+2. Przeciągnij <xref:System.Windows.Forms.Button> z kontrolować **przybornika** do lewej górnej komórki <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
   
-3.  Ustaw <xref:System.Windows.Forms.Button> kontrolki **ColumnSpan** właściwości **2**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontroli obejmuje pierwsza i druga kolumna.  
+3. Ustaw <xref:System.Windows.Forms.Button> kontrolki **ColumnSpan** właściwości **2**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontroli obejmuje pierwsza i druga kolumna.  
   
-4.  Ustaw <xref:System.Windows.Forms.Button> kontrolki **RowSpan** właściwości **2**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontroli rozciąga się pierwszym i drugim wierszu.  
+4. Ustaw <xref:System.Windows.Forms.Button> kontrolki **RowSpan** właściwości **2**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontroli rozciąga się pierwszym i drugim wierszu.  
   
-5.  Ustaw <xref:System.Windows.Forms.Button> kontrolki **ColumnSpan** właściwości **1**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontrola przechodzi do pierwszej kolumny i obejmuje pierwszym i drugim wierszu.  
+5. Ustaw <xref:System.Windows.Forms.Button> kontrolki **ColumnSpan** właściwości **1**. Należy pamiętać, że <xref:System.Windows.Forms.Button> kontrola przechodzi do pierwszej kolumny i obejmuje pierwszym i drugim wierszu.  
   
 ## <a name="see-also"></a>Zobacz także
 

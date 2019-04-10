@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342176"
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
 Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarzeń klawiatury w odpowiedzi na wiadomości Windows. Większość aplikacji Windows Forms przetwarzać dane wejściowe z klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak musisz zrozumieć, jak komunikaty klawiatury współdziałać, dzięki czemu można zaimplementować bardziej zaawansowane scenariusze wejście klawiatury, przechwytuje kluczy, zanim dotrą formantu. W tym temacie opisano typy danych klucza, formularze Windows rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacji na temat zdarzeń klawiatury, zobacz [zdarzenia klawiatury przy użyciu](using-keyboard-events.md).  
@@ -22,13 +22,13 @@ Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarze�
 ## <a name="order-of-keyboard-events"></a>Kolejność zdarzeń klawiatury  
  Zgodnie z wymienionymi wcześniej, istnieją 3 za pomocą klawiatury w powiązanych zdarzeń, które mogą wystąpić w kontrolce. Poniższa sekwencja zawiera kolejność zdarzeń:  
   
-1.  Użytkownik umieszcza klucz "", klucz jest wstępnie przetworzony, wysyłane oraz <xref:System.Windows.Forms.Control.KeyDown> wystąpi zdarzenie.  
+1. Użytkownik umieszcza klucz "", klucz jest wstępnie przetworzony, wysyłane oraz <xref:System.Windows.Forms.Control.KeyDown> wystąpi zdarzenie.  
   
-2.  Użytkownik utrzyma "" klucza, klucz jest wstępnie przetworzony, wysyłane oraz <xref:System.Windows.Forms.Control.KeyPress> wystąpi zdarzenie.  
+2. Użytkownik utrzyma "" klucza, klucz jest wstępnie przetworzony, wysyłane oraz <xref:System.Windows.Forms.Control.KeyPress> wystąpi zdarzenie.  
   
      To zdarzenie występuje wiele razy, użytkownik posiada klucza.  
   
-3.  Wersje użytkownika "" klucz jest wstępnie przetworzony, wysyłane i <xref:System.Windows.Forms.Control.KeyUp> wystąpi zdarzenie.  
+3. Wersje użytkownika "" klucz jest wstępnie przetworzony, wysyłane i <xref:System.Windows.Forms.Control.KeyUp> wystąpi zdarzenie.  
   
 ## <a name="preprocessing-keys"></a>Klucze przetwarzania wstępnego  
  Podobnie jak inne komunikaty, komunikaty klawiatury są przetwarzane w <xref:System.Windows.Forms.Control.WndProc%2A> metody formularza lub formantu. Jednak przed klawiatury komunikaty są przetwarzane, <xref:System.Windows.Forms.Control.PreProcessMessage%2A> metoda wywołuje co najmniej jednej metody, które może zostać zastąpiona w celu obsługi znaków specjalnych kluczy i kluczy fizycznych. Możesz przesłonić te metody, aby wykrywać i filtrowania określonych kluczy przed komunikaty są przetwarzane przez kontrolkę. W poniższej tabeli przedstawiono akcję, która jest wykonywana i powiązanej metody, która występuje, w kolejności, że metoda występuje.  

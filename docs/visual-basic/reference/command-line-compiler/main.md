@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337243"
 ---
 # <a name="-main"></a>-main
 Określa klasę lub moduł, który zawiera `Sub Main` procedury.  
@@ -37,13 +37,13 @@ Określa klasę lub moduł, który zawiera `Sub Main` procedury.
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>Aby ustawić — główny w programie Visual Studio zintegrowanego środowiska programistycznego  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.  
+1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.  
   
-2.  Kliknij przycisk **aplikacji** kartę.  
+2. Kliknij przycisk **aplikacji** kartę.  
   
-3.  Upewnij się, że **struktury aplikacji Włącz** nie zaznaczono pola wyboru.  
+3. Upewnij się, że **struktury aplikacji Włącz** nie zaznaczono pola wyboru.  
   
-4.  Zmodyfikuj wartość w **obiekt początkowy** pole.  
+4. Zmodyfikuj wartość w **obiekt początkowy** pole.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `T2.vb` i `T3.vb`, określania, `Sub Main` procedurę można znaleźć w `Test2` klasy.  
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Procedura główna w Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

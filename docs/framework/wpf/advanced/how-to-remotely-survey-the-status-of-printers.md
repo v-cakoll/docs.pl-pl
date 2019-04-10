@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340792"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Instrukcje: Zdalne badanie stanu drukarek
 W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek, które nie działa z powodu zakleszczenie papieru lub Brak papieru lub problematycznych sytuacji. Bogaty zestaw właściwości drukarki ujawnione w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej udział w ankiecie stanów drukarki.  
@@ -24,11 +24,11 @@ W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek,
 ## <a name="example"></a>Przykład  
  Oto główne kroki tworzenia tego rodzaju narzędzia.  
   
-1.  Uzyskaj listę wszystkich serwerów wydruku.  
+1. Uzyskaj listę wszystkich serwerów wydruku.  
   
-2.  Pętla za pośrednictwem serwerów do wykonywania zapytań ich kolejek wydruku.  
+2. Pętla za pośrednictwem serwerów do wykonywania zapytań ich kolejek wydruku.  
   
-3.  W ramach każdego przebiegu serwera pętli w pętli poprzez wszystkich kolejek na serwerze, a następnie zapoznaj się każdej właściwości, które mogą wskazywać, że kolejka nie jest obecnie działa.  
+3. W ramach każdego przebiegu serwera pętli w pętli poprzez wszystkich kolejek na serwerze, a następnie zapoznaj się każdej właściwości, które mogą wskazywać, że kolejka nie jest obecnie działa.  
   
  Poniższy kod jest szereg fragmentów kodu. Dla uproszczenia w tym przykładzie przyjęto założenie, że znajduje się lista rozdzielonych CRLF serwerów wydruku. Zmienna `fileOfPrintServers` jest <xref:System.IO.StreamReader> obiektu dla tego pliku. Ponieważ nazwa każdego serwera w osobnym wierszu, żadnym wywołaniu, z <xref:System.IO.StreamReader.ReadLine%2A> pobiera nazwę kolejny serwer i przenosi <xref:System.IO.StreamReader>przez kursor na początku następnego wiersza.  
   

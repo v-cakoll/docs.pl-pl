@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333837"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>Instrukcje: Definiowanie parametru dla procedury (Visual Basic)
 A *parametru* umożliwia kod wywołujący, aby przekazać wartości do procedury, gdy wywoływanych przez nią. Możesz zadeklarować każdego parametru dla procedury taki sam sposób, jak zadeklarować zmienną, określając jej nazwę i typ danych. Możesz również określić mechanizm przekazywania, i czy parametr jest opcjonalny.  
@@ -22,17 +22,17 @@ A *parametru* umożliwia kod wywołujący, aby przekazać wartości do procedury
   
 ### <a name="to-define-a-procedure-parameter"></a>Aby zdefiniować parametr procedury  
   
-1.  W deklaracji procedury Dodaj nazwę parametru do listy parametrów procedury, oddzielając od innych parametrów przecinkami.  
+1. W deklaracji procedury Dodaj nazwę parametru do listy parametrów procedury, oddzielając od innych parametrów przecinkami.  
   
-2.  Zdecyduj, typ danych parametru.  
+2. Zdecyduj, typ danych parametru.  
   
-3.  Postępuj zgodnie z nazwą parametru `As` klauzuli, aby określić typ danych.  
+3. Postępuj zgodnie z nazwą parametru `As` klauzuli, aby określić typ danych.  
   
-4.  Zdecyduj, mechanizm przekazywania, dla parametru. Zwykle należy podać parametr według wartości, chyba że chcesz procedury, aby można było zmienić jego wartość w wywoływanym kodzie.  
+4. Zdecyduj, mechanizm przekazywania, dla parametru. Zwykle należy podać parametr według wartości, chyba że chcesz procedury, aby można było zmienić jego wartość w wywoływanym kodzie.  
   
-5.  Poprzedź nazwę parametru za pomocą [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Aby określić mechanizm przekazywania. Aby uzyskać więcej informacji, zobacz [różnice pomiędzy przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+5. Poprzedź nazwę parametru za pomocą [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) Aby określić mechanizm przekazywania. Aby uzyskać więcej informacji, zobacz [różnice pomiędzy przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-6.  Jeśli parametr jest opcjonalny, poprzedź mechanizm przekazywania za pomocą [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) i postępuj zgodnie z typem danych parametru znakiem równości (`=`) i wartość domyślną.  
+6. Jeśli parametr jest opcjonalny, poprzedź mechanizm przekazywania za pomocą [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) i postępuj zgodnie z typem danych parametru znakiem równości (`=`) i wartość domyślną.  
   
      W poniższym przykładzie zdefiniowano konturu `Sub` procedury z trzech parametrów. Pierwsze dwa są wymagane, a trzeci jest opcjonalne. Deklaracji parametrów są rozdzielone na liście parametrów przecinkami.  
   

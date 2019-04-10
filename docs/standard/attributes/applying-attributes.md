@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836477"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337698"
 ---
 # <a name="applying-attributes"></a>Stosowanie atrybutów
 W celu zastosowania atrybutu do elementu kodu należy wykonać procedurę opisaną poniżej.  
   
-1.  Zdefiniuj nowy atrybut lub użyj istniejącego atrybutu, importując jego przestrzeń nazw ze środowiska .NET Framework.  
+1. Zdefiniuj nowy atrybut lub użyj istniejącego atrybutu, importując jego przestrzeń nazw ze środowiska .NET Framework.  
   
-2.  Zastosuj atrybut do elementu kodu, umieszczając go bezpośrednio przed elementem.  
+2. Zastosuj atrybut do elementu kodu, umieszczając go bezpośrednio przed elementem.  
   
      Każdy język ma własną składnię atrybutów. W językach C++ i C# atrybut jest ujęty w nawiasy kwadratowe i oddzielony od elementu znakiem odstępu, który może zawierać znak podziału wiersza. W języku Visual Basic atrybut jest ujęty w nawiasy kątowe i musi się znajdować w tym samym wierszu logicznym. Jeśli trzeba użyć podziału wiersza, można wstawić znak kontynuacji wiersza.
   
-3.  Określ parametry pozycyjne i nazwane atrybutu.  
+3. Określ parametry pozycyjne i nazwane atrybutu.  
   
      Parametry pozycyjne są wymagane i muszą się znajdować przed parametrami nazwanymi. Odpowiadają parametrom jednego z konstruktorów atrybutu. Parametry nazwane są opcjonalne i odnoszą się do właściwości odczytu/zapisu atrybutu. W języku C++ i C#, określ `name` = `value` dla każdego opcjonalnego parametru, gdzie `name` jest nazwą właściwości. W języku Visual Basic należy określić przyporządkowanie `name`:=`value`.  
   

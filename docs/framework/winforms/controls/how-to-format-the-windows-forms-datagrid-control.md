@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147904"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336125"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Instrukcje: format kontrolki DataGrid formularzy systemu Windows
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147904"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Ustanowienie domyślnego stylu dla formantu DataGrid  
   
-1.  Ustaw następujące właściwości zgodnie z potrzebami:  
+1. Ustaw następujące właściwości zgodnie z potrzebami:  
   
     |Właściwość|Opis|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147904"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>Aby programowo ustawić styl tabel i kolumn w tabeli danych  
   
-1.  Utwórz nowy styl tabeli i ustaw jego właściwości.  
+1. Utwórz nowy styl tabeli i ustaw jego właściwości.  
   
-2.  Utwórz styl kolumny i ustaw jego właściwości.  
+2. Utwórz styl kolumny i ustaw jego właściwości.  
   
-3.  Dodaj style kolumny do kolekcji Style kolumn styl tabeli.  
+3. Dodaj style kolumny do kolekcji Style kolumn styl tabeli.  
   
-4.  Styl tabeli należy dodać do kolekcji style tabeli w siatce danych.  
+4. Styl tabeli należy dodać do kolekcji style tabeli w siatce danych.  
   
-5.  W poniższym przykładzie Utwórz wystąpienie nowego <xref:System.Windows.Forms.DataGridTableStyle> i ustaw jego <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwości.  
+5. W poniższym przykładzie Utwórz wystąpienie nowego <xref:System.Windows.Forms.DataGridTableStyle> i ustaw jego <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwości.  
   
-6.  Utwórz nowe wystąpienie klasy **GridColumnStyle** i ustaw jego **MappingName** (i inne układu i wyświetlania właściwości).  
+6. Utwórz nowe wystąpienie klasy **GridColumnStyle** i ustaw jego **MappingName** (i inne układu i wyświetlania właściwości).  
   
-7.  Powtórz kroki od 2 do 6 dla każdego stylu kolumn, który chcesz utworzyć.  
+7. Powtórz kroki od 2 do 6 dla każdego stylu kolumn, który chcesz utworzyć.  
   
      Poniższy przykład ilustruje sposób <xref:System.Windows.Forms.DataGridTextBoxColumn> zostanie utworzony, ponieważ jest nazwa będzie wyświetlana w kolumnie. Ponadto możesz dodać styl kolumny do <xref:System.Windows.Forms.GridColumnStylesCollection> stylu tabeli i Dodaj styl tabeli do <xref:System.Windows.Forms.GridTableStylesCollection> siatki danych.  
   

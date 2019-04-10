@@ -2,19 +2,19 @@
 title: 'Instrukcje: konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336567"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Instrukcje: konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost
 W tym temacie opisano sposób konfigurowania śledzenia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] przepływu pracy są hostowane w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest on skonfigurowany za pomocą pliku Web.config, określając zachowanie usługi.  
   
 ### <a name="configure-tracking-in-configuration"></a>Konfigurowanie śledzenia w konfiguracji  
   
-1.  Dodaj <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu <`behavior`> element pliku konfiguracji, jak pokazano w poniższym przykładzie.  
+1. Dodaj <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu <`behavior`> element pliku konfiguracji, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <behaviors>  
@@ -56,7 +56,7 @@ W tym temacie opisano sposób konfigurowania śledzenia [!INCLUDE[netfx_current_
   
 ### <a name="configure-tracking-in-code"></a>Konfigurowanie śledzenia w kodzie  
   
-1.  Dodaj <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> zachowanie w kodzie, jak pokazano w poniższym przykładzie.  
+1. Dodaj <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior> zachowanie w kodzie, jak pokazano w poniższym przykładzie.  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  

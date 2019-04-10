@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336658"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Przewodnik: Tworzenie dostępnej aplikacji bazującej na systemie Windows
 Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć ułatwień dostępu przepisami lub ustaleniami dotyczącymi oprogramowania zakupionego. Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu. Szacowany mieszkańcy 30 mln Stanów Zjednoczonych samodzielnie, wiele potencjalnych klientów, są zagrożone dostępność oprogramowania.  
@@ -158,7 +158,7 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>Aby włączyć tryb dużego kontrastu w skutecznym sposobem  
   
-1.  Utwórz metodę, aby ustawić kolory, etykiety kolory systemowe.  
+1. Utwórz metodę, aby ustawić kolory, etykiety kolory systemowe.  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     }  
     ```  
   
-2.  Wywołaj `SetColorScheme` procedury w Konstruktorze formularza (`Public Sub New()` w języku Visual Basic i `public class Form1` w elemencie wizualnym C#). Aby uzyskać dostęp do konstruktora w języku Visual Basic, konieczne będzie rozwiń region etykietą **kod wygenerowany przez projektanta formularzy Windows**.  
+2. Wywołaj `SetColorScheme` procedury w Konstruktorze formularza (`Public Sub New()` w języku Visual Basic i `public class Form1` w elemencie wizualnym C#). Aby uzyskać dostęp do konstruktora w języku Visual Basic, konieczne będzie rozwiń region etykietą **kod wygenerowany przez projektanta formularzy Windows**.  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     }  
     ```  
   
-3.  Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń.  
+3. Utwórz procedurę zdarzenia z odpowiednim podpisem, aby odpowiedzieć na <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń.  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     }  
     ```  
   
-4.  Dodaj kod konstruktora formularza po wywołaniu `InitializeComponents`, żeby podpiąć procedury zdarzenia zdarzeń systemu. Ta metoda wywołuje `SetColorScheme` procedury.  
+4. Dodaj kod konstruktora formularza po wywołaniu `InitializeComponents`, żeby podpiąć procedury zdarzenia zdarzeń systemu. Ta metoda wywołuje `SetColorScheme` procedury.  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     }  
     ```  
   
-5.  Dodaj kod do formularza <xref:System.Windows.Forms.Control.Dispose%2A> metoda przed wywołaniem do <xref:System.Windows.Forms.Control.Dispose%2A> metody klasy bazowej, aby zwolnić zdarzenia po zamknięciu aplikacji. Aby uzyskać dostęp do <xref:System.Windows.Forms.Control.Dispose%2A> metoda w języku Visual Basic, konieczne będzie rozwiń region, kod generowany przez projektanta formularzy Windows etykietą.  
+5. Dodaj kod do formularza <xref:System.Windows.Forms.Control.Dispose%2A> metoda przed wywołaniem do <xref:System.Windows.Forms.Control.Dispose%2A> metody klasy bazowej, aby zwolnić zdarzenia po zamknięciu aplikacji. Aby uzyskać dostęp do <xref:System.Windows.Forms.Control.Dispose%2A> metoda w języku Visual Basic, konieczne będzie rozwiń region, kod generowany przez projektanta formularzy Windows etykietą.  
   
     > [!NOTE]
     >  Kod zdarzenia system działa wątku oddzielnie od głównej aplikacji. Jeśli zdarzenie nie jest zwolniony, kod, który można dołączyć do zdarzenia będzie działać po zamknięciu programu.  
@@ -281,38 +281,38 @@ Tworzenie dostępnej aplikacji ma skutki dla firmy ważne. Wiele rządy mieć u�
     }  
     ```  
   
-6.  Naciśnij klawisz F5, aby uruchomić aplikację.  
+6. Naciśnij klawisz F5, aby uruchomić aplikację.  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>Przekazywania ważnych informacji przy użyciu metod innych niż dźwięku  
  W tej aplikacji żadne informacje jest przekazywany za pomocą samodzielnie dźwięku. Jeśli używasz dźwięk w aplikacji należy dostarczać informacji za pomocą innych środków także.  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>Aby podać informacje w inny sposób niż dźwięku  
   
-1.  Należy na pasku tytułu flash przy użyciu funkcji Windows API FlashWindow. Na przykład sposób wywołania funkcji Windows API zobacz [instruktażu: Wywoływanie Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
+1. Należy na pasku tytułu flash przy użyciu funkcji Windows API FlashWindow. Na przykład sposób wywołania funkcji Windows API zobacz [instruktażu: Wywoływanie Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
     > [!NOTE]
     >  Użytkownik może korzystać z usługi Windows WartownikDźwięków włączone, co spowoduje również okna flash odtwarzania dźwięki systemu za pomocą wbudowanych głośników komputera.  
   
-2.  Wyświetlania ważnych informacji w kompaktowym niemodalnym oknie, dzięki czemu użytkownik może odpowiedzieć na.  
+2. Wyświetlania ważnych informacji w kompaktowym niemodalnym oknie, dzięki czemu użytkownik może odpowiedzieć na.  
   
-3.  Wyświetla okno komunikatu, który uzyskuje fokus klawiatury. Należy unikać tej metody, gdy użytkownik może wpisać.  
+3. Wyświetla okno komunikatu, który uzyskuje fokus klawiatury. Należy unikać tej metody, gdy użytkownik może wpisać.  
   
-4.  Wyświetl wskaźnik stanu w obszarze stanu powiadomień paska zadań. Aby uzyskać więcej informacji, zobacz [dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+4. Wyświetl wskaźnik stanu w obszarze stanu powiadomień paska zadań. Aby uzyskać więcej informacji, zobacz [dodawanie ikon aplikacji do paska zadań za pomocą składnika NotifyIcon formularzy Windows](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
 ## <a name="testing-the-application"></a>Testowanie aplikacji  
  Przed wdrożeniem aplikacji, należy przetestować funkcje ułatwień dostępu, które zostały zaimplementowane.  
   
 #### <a name="to-test-accessibility-features"></a>Aby przetestować funkcje ułatwień dostępu  
   
-1.  Aby przetestować dostęp za pomocą klawiatury, odłącz myszy, a następnie przejdź do interfejsu użytkownika dla każdej funkcji, za pomocą klawiatury. Upewnij się, że wszystkie zadania można wykonać za pomocą klawiatury, tylko.  
+1. Aby przetestować dostęp za pomocą klawiatury, odłącz myszy, a następnie przejdź do interfejsu użytkownika dla każdej funkcji, za pomocą klawiatury. Upewnij się, że wszystkie zadania można wykonać za pomocą klawiatury, tylko.  
   
-2.  Aby przetestować obsługę dużego kontrastu, wybierz ikonę aplet Opcje ułatwień dostępu w Panelu sterowania. Kliknij kartę ekran, a następnie zaznacz pole wyboru Użyj o wysokim kontraście. Przejdź do wszystkich elementów interfejsu użytkownika, aby upewnić się, że odzwierciedlenie zmiany kolorów i czcionek. Ponadto upewnij się, obrazów lub wzorców rysowane pod tekstem zostaną pominięte.  
+2. Aby przetestować obsługę dużego kontrastu, wybierz ikonę aplet Opcje ułatwień dostępu w Panelu sterowania. Kliknij kartę ekran, a następnie zaznacz pole wyboru Użyj o wysokim kontraście. Przejdź do wszystkich elementów interfejsu użytkownika, aby upewnić się, że odzwierciedlenie zmiany kolorów i czcionek. Ponadto upewnij się, obrazów lub wzorców rysowane pod tekstem zostaną pominięte.  
   
     > [!NOTE]
     >  Windows NT 4 nie ma ikony opcji ułatwień dostępu w Panelu sterowania. W związku z tym tę procedurę dla zmiany ustawienia SystemInformation.HighContrast nie działa w Windows NT 4.  
   
-3.  Inne narzędzia są łatwo dostępne dla testów dostępności aplikacji.  
+3. Inne narzędzia są łatwo dostępne dla testów dostępności aplikacji.  
   
-4.  Aby przetestować udostępnianie fokus klawiatury, uruchom program Lupa. (Aby go otworzyć, kliknij przycisk **Start** menu wskaż **programy**, wskaż polecenie **Akcesoria**, wskaż **ułatwień dostępu**, a następnie kliknij przycisk  **Program Lupa**). Przejdź interfejsu użytkownika przy użyciu przełączania klawiatury i myszy. Upewnij się poprawnie w systemie śledzenia wszystkich nawigacji **Lupa**.  
+4. Aby przetestować udostępnianie fokus klawiatury, uruchom program Lupa. (Aby go otworzyć, kliknij przycisk **Start** menu wskaż **programy**, wskaż polecenie **Akcesoria**, wskaż **ułatwień dostępu**, a następnie kliknij przycisk  **Program Lupa**). Przejdź interfejsu użytkownika przy użyciu przełączania klawiatury i myszy. Upewnij się poprawnie w systemie śledzenia wszystkich nawigacji **Lupa**.  
   
-5.  Aby przetestować uwidaczniającą elementów na ekranie, uruchom Sprawdź, a następnie użyj myszy i klawisz TAB, aby dotrzeć do każdego elementu. Upewnij się, że informacje znajdujące się w polach Nazwa, stan, rola, lokalizacji i wartość okna Sprawdź zrozumiały dla użytkownika dla każdego obiektu w interfejsie użytkownika.
+5. Aby przetestować uwidaczniającą elementów na ekranie, uruchom Sprawdź, a następnie użyj myszy i klawisz TAB, aby dotrzeć do każdego elementu. Upewnij się, że informacje znajdujące się w polach Nazwa, stan, rola, lokalizacji i wartość okna Sprawdź zrozumiały dla użytkownika dla każdego obiektu w interfejsie użytkownika.

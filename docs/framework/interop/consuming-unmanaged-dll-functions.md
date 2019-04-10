@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb2aea648df5df9b69815d77a731717f8bc39bbd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340038"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Wykorzystywanie niezarządzanych funkcji DLL
 Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływanie funkcji niezarządzanych zaimplementowane w biblioteki dołączanej dynamicznie (dll), takich jak te w interfejsie API Windows. Lokalizuje i wywołuje eksportowanych funkcji i kieruje argumentów (liczby całkowite, ciągi, tablice, struktur i tak dalej) wewnątrz międzyoperacyjnej granicy, zgodnie z potrzebami.  
@@ -29,15 +29,15 @@ Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływ
   
 #### <a name="to-consume-exported-dll-functions"></a>Korzystanie z wyeksportowanych funkcji DLL  
   
-1.  [Identyfikowanie funkcji w bibliotekach DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
+1. [Identyfikowanie funkcji w bibliotekach DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md).  
   
      Minimalny zestaw należy określić nazwę funkcji i nazwa pliku dll, który go zawiera.  
   
-2.  [Tworzenie klasy utrzymującej funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
+2. [Tworzenie klasy utrzymującej funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md).  
   
      Można użyć istniejącej klasy, tworzenia poszczególnych klas dla każdej funkcji niezarządzanej lub utworzyć jedną klasę, która zawiera zbiór powiązanych funkcji niezarządzanych.  
   
-3.  [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] Użyj **Declare** instrukcję, określając **funkcja** i **Lib** słów kluczowych. W rzadkich przypadkach można użyć **DllImportAttribute** z **funkcji udostępnionych** słów kluczowych. Te przypadki zostały omówione w dalszej części w tej sekcji.  
   
@@ -45,7 +45,7 @@ Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływ
   
      [C++] Użyj **DllImportAttribute** do identyfikowania biblioteki DLL i funkcji. Oznaczenia metody otoki lub funkcją **extern "C"**.  
   
-4.  [Wywoływanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
+4. [Wywoływanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
   
      Wywołaj metodę w klasie zarządzanej tak jak każda inna metoda zarządzanych. [Przekazywanie struktur](../../../docs/framework/interop/passing-structures.md) i [Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md) są specjalne przypadki.  
   
@@ -58,16 +58,16 @@ Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływ
   
  Gdy wywołanie platformy wywołania funkcji niezarządzanej, wykonuje następującą sekwencję czynności:  
   
-1.  Lokalizuje biblioteki DLL zawierającej funkcję.  
+1. Lokalizuje biblioteki DLL zawierającej funkcję.  
   
-2.  Ładuje bibliotekę DLL do pamięci.  
+2. Ładuje bibliotekę DLL do pamięci.  
   
-3.  Lokalizuje adres funkcji w pamięci, a następnie wypycha argumenty na stosie, organizowanie danych zgodnie z potrzebami.  
+3. Lokalizuje adres funkcji w pamięci, a następnie wypycha argumenty na stosie, organizowanie danych zgodnie z potrzebami.  
   
     > [!NOTE]
     >  Lokalizowanie i ładowanie biblioteki DLL i lokalizowanie adres funkcji w pamięci odbywa się tylko przy pierwszym wywołaniu funkcji.  
   
-4.  Transfer kontroli do funkcji niezarządzanych.  
+4. Transfer kontroli do funkcji niezarządzanych.  
   
  Wywołanie platformy zgłasza wyjątki generowane przez funkcję niezarządzane do zarządzanego obiektu wywołującego.
 

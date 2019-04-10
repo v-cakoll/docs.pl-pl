@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej'
+title: 'Instrukcje: wymiana komunikatów w ramach sesji niezawodnej'
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342990"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: wymiana komunikatów w ramach sesji niezawodnej
 
 W tym temacie opisano kroki wymagane w celu umożliwienia niezawodnej sesji przy użyciu jednej z powiązań dostarczanych przez system, które obsługują sesji programu, ale nie domyślnie. Włącz niezawodnej sesji obowiązkowo przy użyciu kodu lub deklaratywnie w pliku konfiguracji. Ta procedura wykorzystuje pliki konfiguracji klienta i usługi, aby umożliwić niezawodnej sesji i określać, że komunikaty zostaną dostarczone w tej samej kolejności, w jakiej zostały wysłane.
 
@@ -37,7 +37,7 @@ Kluczowa część tej procedury jest, że element konfiguracji punktu końcowego
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  Miejsce *Service.svc* pliku w katalogu wirtualnego Internet Information Services (IIS).
+1. Miejsce *Service.svc* pliku w katalogu wirtualnego Internet Information Services (IIS).
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>Konfigurowanie klienta za pomocą WSHttpBinding używać niezawodnej sesji
 

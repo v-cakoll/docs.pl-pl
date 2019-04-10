@@ -2,41 +2,41 @@
 title: 'Instrukcje: wdrażanie aplikacji integracji modelu COM+'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 281fe0fb93fffb84f85f19b42e8d90e86dc300c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343385"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Instrukcje: wdrażanie aplikacji integracji modelu COM+
 Po napisaniu aplikacji COM +, integracja, warto wdrożyć ją na innym komputerze. W tym temacie opisano sposób przenoszenia aplikacji integracji modelu COM + z jednego komputera na inny.  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>Przenoszenie modelu COM + hostowanych integracji aplikacji  
   
-1.  Upewnij się, że WCF jest zainstalowany na obu komputerach.  
+1. Upewnij się, że WCF jest zainstalowany na obu komputerach.  
   
-2.  Eksportowanie aplikacji z komputera A.  
+2. Eksportowanie aplikacji z komputera A.  
   
-3.  Importuj aplikację na komputerze B.  
+3. Importuj aplikację na komputerze B.  
   
-4.  Ustaw katalog główny aplikacji. Według Konwencji jest to aplikacje %PROGRAMFILES%/ComPlus / {AppGUID}.  
+4. Ustaw katalog główny aplikacji. Według Konwencji jest to aplikacje %PROGRAMFILES%/ComPlus / {AppGUID}.  
   
-5.  Skopiuj pliki Application.config i Application.manifest z katalogu głównego aplikacji na maszynie, A do katalogu głównego aplikacji na maszynie B.  
+5. Skopiuj pliki Application.config i Application.manifest z katalogu głównego aplikacji na maszynie, A do katalogu głównego aplikacji na maszynie B.  
   
-6.  Edytuj adresy punktów końcowych usługi w pliku Application.config na komputerze B, aby zidentyfikować odpowiedni komputer. Na przykład zmienić `http://machineA/MyService` do `http://machineB/MyService`.  
+6. Edytuj adresy punktów końcowych usługi w pliku Application.config na komputerze B, aby zidentyfikować odpowiedni komputer. Na przykład zmienić `http://machineA/MyService` do `http://machineB/MyService`.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Przenoszenie aplikacji hostowanej w sieci Web integracji  
   
-1.  Upewnij się, że WCF jest zainstalowany na obu komputerach.  
+1. Upewnij się, że WCF jest zainstalowany na obu komputerach.  
   
-2.  Eksportowanie aplikacji z komputera A.  
+2. Eksportowanie aplikacji z komputera A.  
   
-3.  Importuj aplikację na komputerze B.  
+3. Importuj aplikację na komputerze B.  
   
-4.  Tworzenie vroot usług IIS na maszynie B.  
+4. Tworzenie vroot usług IIS na maszynie B.  
   
-5.  Skopiuj plik .svc (componentName.svc) i plik Web.config z głównego katalogu wirtualnego na maszynie, A do nowo utworzonego głównego katalogu wirtualnego na maszynie B.  
+5. Skopiuj plik .svc (componentName.svc) i plik Web.config z głównego katalogu wirtualnego na maszynie, A do nowo utworzonego głównego katalogu wirtualnego na maszynie B.  
   
 ## <a name="see-also"></a>Zobacz także
 

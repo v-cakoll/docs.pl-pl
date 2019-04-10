@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 108293a5f4607afb8c19dce65d53efdaf9e184b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210467"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333395"
 ---
 # <a name="srmp"></a>SRMP
 W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ) za pośrednictwem protokołu HTTP.  
@@ -18,21 +18,21 @@ W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji p
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-4.  Przed uruchomieniem przykładu **Dodaj/Usuń składniki Windows**, upewnij się, że usługa MSMQ jest zainstalowana z obsługą protokołu HTTP. Instalowanie obsługi HTTP automatycznie instaluje Internet Information Services (IIS) i dodaje obsługę protokołu w usługach IIS dla usługi MSMQ.  
+4. Przed uruchomieniem przykładu **Dodaj/Usuń składniki Windows**, upewnij się, że usługa MSMQ jest zainstalowana z obsługą protokołu HTTP. Instalowanie obsługi HTTP automatycznie instaluje Internet Information Services (IIS) i dodaje obsługę protokołu w usługach IIS dla usługi MSMQ.  
   
-5.  Jeśli chcesz mieć pewność, że HTTP jest używany do komunikacji, można włączyć usługi MSMQ do pracy w trybie zaostrzonym. Daje to gwarancję, że żadnych komunikatów do kolejkach obsługiwanych na maszynie mogą pojawić się za pomocą transportu dowolnego innego niż HTTP.  
+5. Jeśli chcesz mieć pewność, że HTTP jest używany do komunikacji, można włączyć usługi MSMQ do pracy w trybie zaostrzonym. Daje to gwarancję, że żadnych komunikatów do kolejkach obsługiwanych na maszynie mogą pojawić się za pomocą transportu dowolnego innego niż HTTP.  
   
-6.  Po wybraniu usługi MSMQ do pracy w trybie zaostrzonym komputer wymaga ponownego rozruchu na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Po wybraniu usługi MSMQ do pracy w trybie zaostrzonym komputer wymaga ponownego rozruchu na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
-7.  Uruchom usługę.  
+7. Uruchom usługę.  
   
-8.  Uruchom klienta. Upewnij się, że zmienisz adres punktu końcowego, aby wskazywał nazwę komputera lub adres IP zamiast nazwy localhost. Klient wysyła komunikat i kończy pracę.  
+8. Uruchom klienta. Upewnij się, że zmienisz adres punktu końcowego, aby wskazywał nazwę komputera lub adres IP zamiast nazwy localhost. Klient wysyła komunikat i kończy pracę.  
   
 ## <a name="requirements"></a>Wymagania  
  Aby uruchomić ten przykład, usługi IIS musi być zainstalowany zarówno usługi, jak i na komputerach klienckich, oprócz usługi MSMQ.  

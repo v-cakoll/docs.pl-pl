@@ -2,21 +2,21 @@
 title: Określanie niestandardowego algorytmu kryptograficznego
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b365c3c8e74adcad03246a227d6593c49f8b3993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342833"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Określanie niestandardowego algorytmu kryptograficznego
 WCF umożliwia określanie niestandardowego algorytmu kryptograficznego do użycia podczas szyfrowania danych lub przetwarzania podpisów cyfrowych. Jest to realizowane przez następujące kroki:  
   
-1.  Wyprowadzić klasę z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
+1. Wyprowadzić klasę z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
-2.  Rejestrowanie algorytmu  
+2. Rejestrowanie algorytmu  
   
-3.  Konfigurowanie powiązania z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-klasy pochodnej.  
+3. Konfigurowanie powiązania z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-klasy pochodnej.  
   
 ## <a name="derive-a-class-from-securityalgorithmsuite"></a>Wyprowadzenia klasy z SecurityAlgorithmSuite  
  <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> Jest abstrakcyjną klasę bazową, która pozwala na Określanie algorytmu do użycia podczas przeprowadzania zabezpieczeń różnych operacji związanych z. Na przykład obliczanie skrótu do podpisu cyfrowego lub szyfrowania wiadomości. Poniższy kod przedstawia sposób wyprowadzić klasę z <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>:  

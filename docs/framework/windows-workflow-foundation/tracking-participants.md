@@ -2,12 +2,12 @@
 title: Uczestnicy śledzenia
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138830"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340181"
 ---
 # <a name="tracking-participants"></a>Uczestnicy śledzenia
 Śledzenie uczestników są punkty rozszerzeń, zezwalających na dewelopera przepływu pracy, aby uzyskać dostęp do <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> obiektów i ich przetwarzania. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] zawiera standardowe śledzenia uczestnika, który zapisuje rekordy śledzenia jako zdarzenia śledzenie zdarzeń dla Windows (ETW). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia.  
@@ -81,13 +81,13 @@ ms.locfileid: "59138830"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>Aby umożliwić wyświetlanie rekordów śledzenia w Podglądzie zdarzeń  
   
-1.  Uruchomienie podglądu zdarzeń (EVENTVWR. Z ROZSZERZENIEM EXE)  
+1. Uruchomienie podglądu zdarzeń (EVENTVWR. Z ROZSZERZENIEM EXE)  
   
-2.  Wybierz **Podgląd zdarzeń, dzienniki aplikacji i usług, aplikacji serwera firmy Microsoft, Windows, aplikacji**.  
+2. Wybierz **Podgląd zdarzeń, dzienniki aplikacji i usług, aplikacji serwera firmy Microsoft, Windows, aplikacji**.  
   
-3.  Kliknij prawym przyciskiem myszy i upewnij się, że **widoku, Pokaż dzienniki analityczne i debugowania** jest zaznaczone. Jeśli nie, wybierz ją, dzięki czemu pojawi się znacznik wyboru obok niego. Spowoduje to wyświetlenie **analityczne**, **wydajności**, i **debugowania** dzienniki.  
+3. Kliknij prawym przyciskiem myszy i upewnij się, że **widoku, Pokaż dzienniki analityczne i debugowania** jest zaznaczone. Jeśli nie, wybierz ją, dzięki czemu pojawi się znacznik wyboru obok niego. Spowoduje to wyświetlenie **analityczne**, **wydajności**, i **debugowania** dzienniki.  
   
-4.  Kliknij prawym przyciskiem myszy **analityczne** logowania, a następnie wybierz pozycję **Włącz dziennik**. Dziennik będzie istnieć w pliku Server-Applications%4Analytic.etl %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application.  
+4. Kliknij prawym przyciskiem myszy **analityczne** logowania, a następnie wybierz pozycję **Włącz dziennik**. Dziennik będzie istnieć w pliku Server-Applications%4Analytic.etl %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application.  
   
 ## <a name="custom-tracking-participant"></a>Niestandardowego uczestnika śledzenia  
  Uczestnika śledzenia interfejsu API umożliwia rozszerzenie środowiska uruchomieniowego śledzenia przy użyciu podanego przez użytkownika śledzenia uczestnika, który może zawierać niestandardowej logiki do obsługi rekordów śledzenia emitowane przez środowisko wykonawcze przepływów pracy. Aby napisać uczestnikiem niestandardowe śledzenia, deweloper musi implementować `Track` metody <xref:System.Activities.Tracking.TrackingParticipant> klasy. Ta metoda jest wywoływana, gdy rekord śledzenia jest emitowane przez środowisko wykonawcze przepływów pracy.  

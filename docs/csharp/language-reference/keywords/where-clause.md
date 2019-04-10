@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341390"
 ---
 # <a name="where-clause-c-reference"></a>Klauzula where (odwołanie w C#)
 
@@ -27,7 +27,7 @@ W poniższym przykładzie `where` klauzuli odfiltrowuje wszystkie liczby z wyją
 
 ## <a name="example"></a>Przykład
 
-W obrębie pojedynczego `where` klauzuli, można określić dowolną liczbę predykatów zgodnie z potrzebami przy użyciu [ && ](../operators/conditional-and-operator.md) i [ &#124; &#124; ](../operators/conditional-or-operator.md) operatorów. W poniższym przykładzie zapytanie określa predykatów dwa, aby wybrać tylko liczby parzyste z zakresu, które są mniej niż pięć.
+W obrębie pojedynczego `where` klauzuli, można określić dowolną liczbę predykatów zgodnie z potrzebami przy użyciu [ && ](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) i [ &#124; &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) operatorów. W poniższym przykładzie zapytanie określa predykatów dwa, aby wybrać tylko liczby parzyste z zakresu, które są mniej niż pięć.
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -48,8 +48,8 @@ W czasie kompilacji `where` — słowo kluczowe jest konwertowana na wywołanie 
 ## <a name="see-also"></a>Zobacz także
 
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)
-- [from, klauzula](from-clause.md)
-- [select, klauzula](select-clause.md)
+- [Klauzula from](from-clause.md)
+- [select — Klauzula](select-clause.md)
 - [Filtrowanie danych](../../programming-guide/concepts/linq/filtering-data.md)
 - [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [Wprowadzenie do korzystania z LINQ w C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

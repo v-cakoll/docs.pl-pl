@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339947"
 ---
 # <a name="service-transaction-behavior"></a>Zachowanie transakcji usługi
 Niniejszy przykład pokazuje użycie transakcji koordynowane przez klienta i ustawień ServiceBehaviorAttribute i gdy, aby kontrolować zachowanie transakcji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementuje usługi Kalkulator, ale jest rozszerzony do obsługi operacji wykonywanych w tabeli bazy danych i stanowe, Suma operacji Kalkulator dziennika serwera. Utrwalonych zapisy do tabeli dziennika serwera są zależne od wyniku transakcji klienta koordynowany — Jeśli transakcja klienta nie zostanie ukończone, transakcji usługi sieci Web zapewnia aktualizacji do bazy danych nie są przekazywane.  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że zainstalowano program SQL Server 2005 Express Edition lub SQL Server 2005. W pliku App.config usługi bazy danych `connectionString` może być zestaw lub bazy danych, interakcje mogą być wyłączone przez ustawienia appSettings `usingSql` wartość `false`.  
+1. Upewnij się, że zainstalowano program SQL Server 2005 Express Edition lub SQL Server 2005. W pliku App.config usługi bazy danych `connectionString` może być zestaw lub bazy danych, interakcje mogą być wyłączone przez ustawienia appSettings `usingSql` wartość `false`.  
   
-2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
  Po uruchomieniu przykładu na komputerach, należy skonfigurować transakcję Koordynator MSDTC (Microsoft Distributed) Włączanie przepływu transakcji sieci i włączanie usługi Windows Communication Foundation (WCF) transakcji sieci za pomocą narzędzia WsatConfig.exe Pomoc techniczna.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Aby skonfigurować transakcji Koordynator MSDTC (Microsoft Distributed) do obsługi działa aplikacja przykładowa na komputerach  
   
-1.  Na komputerze usługi należy skonfigurować usługi MSDTC, aby zezwolić na przychodzące transakcje sieciowe.  
+1. Na komputerze usługi należy skonfigurować usługi MSDTC, aby zezwolić na przychodzące transakcje sieciowe.  
   
     1.  Z **Start** menu, przejdź do **Panelu sterowania**, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-2.  Na komputerze usługi i komputerze klienckim należy skonfigurować zaporę Windows obejmujący transakcji Koordynator MSDTC (Microsoft Distributed) do listy aplikacji wyjątku:  
+2. Na komputerze usługi i komputerze klienckim należy skonfigurować zaporę Windows obejmujący transakcji Koordynator MSDTC (Microsoft Distributed) do listy aplikacji wyjątku:  
   
     1.  Uruchom aplikację Zapora Windows z poziomu Panelu sterowania.  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  Kliknij przycisk **OK** zamknąć **Dodaj Program** okno dialogowe, a następnie kliknij przycisk **OK** ponownie, aby zamknąć aplet Zapora Windows.  
   
-3.  Na komputerze klienckim należy skonfigurować usługi MSDTC, aby zezwolić na wychodzące transakcje sieciowe:  
+3. Na komputerze klienckim należy skonfigurować usługi MSDTC, aby zezwolić na wychodzące transakcje sieciowe:  
   
     1.  Z **Start** menu, przejdź do **Panelu sterowania**, następnie **narzędzia administracyjne**, a następnie **usługi składowe**.  
   

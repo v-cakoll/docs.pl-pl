@@ -2,12 +2,12 @@
 title: Aktywacja UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337659"
 ---
 # <a name="udp-activation"></a>Aktywacja UDP
 Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki. Rozszerza [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki do obsługi aktywacji procesu przy użyciu Windows Process Activation Service (WAS).  
@@ -75,13 +75,13 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
   
 #### <a name="to-set-up-this-sample"></a>Aby skonfigurować w tym przykładzie  
   
-1.  Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
+1. Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Skompiluj projekt w systemie Windows Vista. Po kompilacji również wykonuje następujące operacje w fazie po kompilacji:  
+2. Skompiluj projekt w systemie Windows Vista. Po kompilacji również wykonuje następujące operacje w fazie po kompilacji:  
   
     -   Instaluje powiązania protokołu UDP do lokacji "Domyślna witryna sieci Web".  
   
@@ -89,13 +89,13 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
   
     -   Umożliwia ona także protokół "net.udp" dla tej aplikacji wirtualnej.  
   
-3.  Uruchom aplikację interfejsu użytkownika "WasNetActivator.exe". Kliknij przycisk **instalacji** kartę, zaznacz następujące pola wyboru, a następnie kliknij przycisk **zainstalować** je zainstalować:  
+3. Uruchom aplikację interfejsu użytkownika "WasNetActivator.exe". Kliknij przycisk **instalacji** kartę, zaznacz następujące pola wyboru, a następnie kliknij przycisk **zainstalować** je zainstalować:  
   
     -   Adapter odbiornika protokołu UDP  
   
     -   Programy obsługi protokołu UDP  
   
-4.  Kliknij przycisk **aktywacji** kartę aplikacji interfejsu użytkownika "WasNetActivator.exe". Kliknij przycisk **Start** przycisk, aby uruchomić odbiornik karty. Teraz można przystąpić do uruchomienia programu.  
+4. Kliknij przycisk **aktywacji** kartę aplikacji interfejsu użytkownika "WasNetActivator.exe". Kliknij przycisk **Start** przycisk, aby uruchomić odbiornik karty. Teraz można przystąpić do uruchomienia programu.  
   
     > [!NOTE]
     >  Po zakończeniu tego przykładu, należy uruchomić Cleanup.bat, aby usunąć powiązanie net.udp z "Domyślna witryna sieci Web".  
@@ -113,15 +113,15 @@ Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/sa
   
 -   Upewnij się, że wszystkie wymagane elementy zostały zainstalowane poprawnie. Poniższe kroki pokazują jak do uruchomienia przykładu:  
   
-1.  Upewnij się, że zostały uruchomione następujące usługi Windows:  
+1. Upewnij się, że zostały uruchomione następujące usługi Windows:  
   
     -   Usługi Windows Process Activation Service (WAS).  
   
     -   Internetowe usługi informacyjne (IIS): W3SVC.  
   
-2.  Następnie uruchom aktywator WasNetActivator.exe. W obszarze **aktywacji** karta, jedynym protokołem **UDP**, jest zaznaczony na liście rozwijanej. Kliknij przycisk **Start** przycisk, aby uruchomić aktywatora.  
+2. Następnie uruchom aktywator WasNetActivator.exe. W obszarze **aktywacji** karta, jedynym protokołem **UDP**, jest zaznaczony na liście rozwijanej. Kliknij przycisk **Start** przycisk, aby uruchomić aktywatora.  
   
-3.  Po rozpoczęciu aktywator może uruchamiać kod klienta, uruchamiając Client.exe z okna poleceń. Poniżej przedstawiono przykładowe dane wyjściowe:  
+3. Po rozpoczęciu aktywator może uruchamiać kod klienta, uruchamiając Client.exe z okna poleceń. Poniżej przedstawiono przykładowe dane wyjściowe:  
   
     ```  
     Testing Udp Activation.  

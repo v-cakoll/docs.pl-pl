@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377031"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335325"
 ---
 # <a name="the-ink-threading-model"></a>Model wątkowości typu atrament
 Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wydawać, bardzo podobnie jak za pomocą regularnego pióra i dokument.  Aby to osiągnąć, Pióro zbiera dane wejściowe stawki znacznie wyższa niż myszy i renderuje pismo odręczne jako zapisy użytkownika.  Wątek interfejsu użytkownika aplikacji nie wystarcza do zbierania danych pióra i renderowanie pisma odręcznego, ponieważ może zostać zablokowany.  Aby rozwiązać tego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacja używa dwa dodatkowe wątki, gdy użytkownik zapisze pisma odręcznego.  
@@ -38,7 +38,7 @@ Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wyda
   
  ![Model wątkowości podczas rysowania pociągnięcia. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Akcjami występującymi podczas, gdy użytkownik wprowadzi pociągnięcia  
+1. Akcjami występującymi podczas, gdy użytkownik wprowadzi pociągnięcia  
   
     1.  Gdy użytkownik wprowadzi pociągnięcia, punkty pióra mają na wątek pióra.  Pióro dodatków plug-in, w tym <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>Zaakceptuj punktów pióra na wątek pióra i szansę zmodyfikuj je przed <xref:System.Windows.Controls.InkCanvas> otrzymuje je.  
   
@@ -46,7 +46,7 @@ Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wyda
   
     3.  <xref:System.Windows.Controls.InkCanvas> Otrzymuje punkty pióra przez wątek interfejsu użytkownika.  
   
-2.  Akcje, które pojawiają się po użytkownik kończy pociągnięcia  
+2. Akcje, które pojawiają się po użytkownik kończy pociągnięcia  
   
     1.  Gdy użytkownik zakończy rysowania pociągnięcia <xref:System.Windows.Controls.InkCanvas> tworzy <xref:System.Windows.Ink.Stroke> obiektu i dodaje go do <xref:System.Windows.Controls.InkPresenter>, która statycznie renderuje.  
   
@@ -61,13 +61,13 @@ Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wyda
   
  Na poprzednim rysunku następujące zachowanie ma miejsce:  
   
-1.  `StylusPlugin1` Modyfikuje wartości x i y.  
+1. `StylusPlugin1` Modyfikuje wartości x i y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera punktów zmodyfikowane pióra i renderuje je na wątek renderowania dynamicznego.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> odbiera punktów zmodyfikowane pióra i renderuje je na wątek renderowania dynamicznego.  
   
-3.  `StylusPlugin2` odbiera punktów zmodyfikowane pióra i dalsze Modyfikuje wartości x i y.  
+3. `StylusPlugin2` odbiera punktów zmodyfikowane pióra i dalsze Modyfikuje wartości x i y.  
   
-4.  Aplikacji umożliwia zbieranie informacji o punktach pióra i, gdy użytkownik zakończy obrysu statycznie renderuje obrysu.  
+4. Aplikacji umożliwia zbieranie informacji o punktach pióra i, gdy użytkownik zakończy obrysu statycznie renderuje obrysu.  
   
  Załóżmy, że `stylusPlugin1` ogranicza punktów pióro prostokąt i `stylusPlugin2` tłumaczy punktów pióro po prawej stronie.  W poprzednim scenariuszu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> otrzymuje punkty pióro ograniczony, ale nie wskazuje przetłumaczone pióra.  Gdy użytkownik wprowadzi obrysu, obrysu jest renderowany w granicach prostokąt, ale obrysu nie pojawia się do tłumaczenia użytkownika podnosi pióra.  
   
@@ -83,15 +83,15 @@ Jest jedną z zalet pisma odręcznego na komputerze typu Tablet, może się wyda
   
  ![Diagram wątkowości pisma odręcznego](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  Użytkownik rozpoczyna stroke.  
+1. Użytkownik rozpoczyna stroke.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Tworzy drzewo wizualne.  
   
-2.  Użytkownik jest rysowanie stroke.  
+2. Użytkownik jest rysowanie stroke.  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Tworzy drzewo wizualne.  
   
-3.  Użytkownik kończy się stroke.  
+3. Użytkownik kończy się stroke.  
   
     1.  <xref:System.Windows.Controls.InkPresenter> Dodaje skok do jego drzewa wizualnego.  
   

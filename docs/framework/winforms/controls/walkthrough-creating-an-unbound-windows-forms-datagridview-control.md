@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220581"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343472"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows
 Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych. Na przykład można wyświetlić zawartości dwuwymiarową tablicę ciągów. <xref:System.Windows.Forms.DataGridView> Klasy umożliwia łatwe i dużym stopniu dostosowywane do wyświetlania danych bez powiązania ze źródłem danych. W tym instruktażu pokazano, jak wypełnić <xref:System.Windows.Forms.DataGridView> sterowania i zarządzania nimi dodawania i usuwania wierszy w trybie "niepowiązanych". Domyślnie użytkownik może dodawać nowe wiersze. Aby zapobiec wierszy, ustawianie <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwość `false`.  
@@ -27,19 +27,19 @@ Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych
   
 #### <a name="to-use-an-unbound-datagridview-control"></a>Aby użyć niezwiązanego formantu DataGridView  
   
-1.  Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera następujące deklaracje zmiennych i `Main` metody.  
+1. Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera następujące deklaracje zmiennych i `Main` metody.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  Implementowanie `SetupLayout` metody w definicji klasy formularza, aby zdefiniować układ formularza.  
+2. Implementowanie `SetupLayout` metody w definicji klasy formularza, aby zdefiniować układ formularza.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  Tworzenie `SetupDataGridView` metodę, aby skonfigurować <xref:System.Windows.Forms.DataGridView> kolumny i właściwości.  
+3. Tworzenie `SetupDataGridView` metodę, aby skonfigurować <xref:System.Windows.Forms.DataGridView> kolumny i właściwości.  
   
      Metoda ta najpierw umożliwia dodanie <xref:System.Windows.Forms.DataGridView> kontrolki formularza <xref:System.Windows.Forms.Control.Controls%2A> kolekcji. Następnie liczbę kolumn do wyświetlenia można ustawić przy użyciu <xref:System.Windows.Forms.DataGridView.ColumnCount%2A> właściwości. Domyślny styl w nagłówkach kolumn została ustawiona przez ustawienie <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>, <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>, i <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> właściwości <xref:System.Windows.Forms.DataGridViewCellStyle> zwrócone przez <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> właściwości.  
   
@@ -48,14 +48,14 @@ Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  Tworzenie `PopulateDataGridView` metodę, aby dodać wiersze do <xref:System.Windows.Forms.DataGridView> kontroli.  
+4. Tworzenie `PopulateDataGridView` metodę, aby dodać wiersze do <xref:System.Windows.Forms.DataGridView> kontroli.  
   
      Każdy wiersz reprezentuje utworu i związane z nim informacje.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  Za pomocą metody narzędziowe w miejscu można dołączyć procedury obsługi zdarzeń.  
+5. Za pomocą metody narzędziowe w miejscu można dołączyć procedury obsługi zdarzeń.  
   
      Będzie obsługiwać **Dodaj** i **Usuń** przycisków <xref:System.Windows.Forms.Control.Click> zdarzenia, formularz <xref:System.Windows.Forms.Form.Load> zdarzenia i <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.CellFormatting> zdarzeń.  
   

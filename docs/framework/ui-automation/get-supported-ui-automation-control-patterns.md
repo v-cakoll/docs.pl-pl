@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: f55862722c6062c5353fc3b1ab8569d4759ac342
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 64c5bae738cee5249e6c2406a2f94667ecb2931f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337022"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>Pobierz obsługiwane wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -24,18 +24,18 @@ ms.locfileid: "59157290"
   
 ### <a name="obtain-all-control-patterns"></a>Uzyskaj wszystkie wzorce kontrolki  
   
-1.  Pobierz <xref:System.Windows.Automation.AutomationElement> wzorce którego kontrolek, możesz są zainteresowani.  
+1. Pobierz <xref:System.Windows.Automation.AutomationElement> wzorce którego kontrolek, możesz są zainteresowani.  
   
-2.  Wywołaj <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> można pobrać wszystkie wzorce kontrolki z elementem.  
+2. Wywołaj <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> można pobrać wszystkie wzorce kontrolki z elementem.  
   
 > [!CAUTION]
 >  Zdecydowanie zaleca się, że klient nie używać <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>. Może mieć znaczny wpływ na wydajność, ponieważ ta metoda wywołuje <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> wewnętrznie dla każdego istniejącego wzorca kontrolki. Jeśli to możliwe, należy wywołać klienta <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> klucza wzorców zainteresowania.  
   
 ### <a name="obtain-a-specific-control-pattern"></a>Uzyskaj wzorca określonego formantu  
   
-1.  Pobierz <xref:System.Windows.Automation.AutomationElement> wzorce którego kontrolek, możesz są zainteresowani.  
+1. Pobierz <xref:System.Windows.Automation.AutomationElement> wzorce którego kontrolek, możesz są zainteresowani.  
   
-2.  Wywołaj <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> zapytania dla określonego wzorca. Te metody są podobne, ale jeśli wzorzec nie zostanie znaleziony, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zgłasza wyjątek, i <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> zwraca `false`.  
+2. Wywołaj <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> lub <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> zapytania dla określonego wzorca. Te metody są podobne, ale jeśli wzorzec nie zostanie znaleziony, <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> zgłasza wyjątek, i <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> zwraca `false`.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pobiera <xref:System.Windows.Automation.AutomationElement> dla elementu listy i uzyskuje <xref:System.Windows.Automation.SelectionItemPattern> z tego elementu.  

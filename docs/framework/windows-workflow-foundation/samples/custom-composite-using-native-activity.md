@@ -2,12 +2,12 @@
 title: Niestandardowy element złożony przy użyciu działania Native
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 4d7cd64d5a7d581a81d10c39638b63f1f6787570
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340298"
 ---
 # <a name="custom-composite-using-native-activity"></a>Niestandardowy element złożony przy użyciu działania Native
 W tym przykładzie pokazano, jak napisać <xref:System.Activities.NativeActivity> planujące innych <xref:System.Activities.Activity> obiekty do sterowania przepływem wykonania przepływu pracy. W tym przykładzie użyto dwóch typowych przepływów sterowania sekwencjonowania i While, aby wykazać, jak to zrobić.
@@ -25,13 +25,13 @@ W tym przykładzie pokazano, jak napisać <xref:System.Activities.NativeActivity
 
  Po ukończeniu działania podrzędnego <xref:System.Activities.CompletionCallback> jest wykonywany. Pętla jest kontynuowane od góry. Podobnie jak `Execute`, <xref:System.Activities.CompletionCallback> przyjmuje <xref:System.Activities.NativeActivityContext>, przyznawania dostępu implementujący w czasie wykonywania.
 
- `MyWhile` różni się od `MySequence` , planuje ona pojedynczy <xref:System.Activities.Activity> obiektu wielokrotnie, przy czym w tym <xref:System.Activities.Activity%601>< bool\> o nazwie `Condition` do określenia, czy to planowanie powinny być wykonywane. Podobnie jak `MySequence`, `MyWhile` używa `InternalExecute` metody, można scentralizować swojej logiki planowania. Planuje ona `Condition` <xref:System.Activities.Activity>< wartość logiczna\> z <xref:System.Activities.CompletionCallback%601> \<bool > o nazwie `OnEvaluationCompleted`. Podczas wykonywania `Condition` jest zakończone, jego wynik staje się dostępna za pośrednictwem to <xref:System.Activities.CompletionCallback> w silnie typizowane parametr o nazwie `result`. Jeśli `true`, `MyWhile` wywołania <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, przekazując `Body` <xref:System.Activities.Activity> obiektu i `InternalExecute` jako <xref:System.Activities.CompletionCallback>. Podczas wykonywania `Body` zakończeniu `Condition` pobiera zaplanowane ponownie w `InternalExecute`, rozpoczynanie pętli ponownie. Podczas `Condition` zwraca `false`, wystąpienie `MyWhile` zapewnia kontrolę powrót do środowiska uruchomieniowego bez planowania `Body` i środowisko uruchomieniowe przenosi jego <xref:System.Activities.ActivityInstanceState.Closed> stanu.
+ `MyWhile` różni się od `MySequence` , planuje ona pojedynczy <xref:System.Activities.Activity> obiektu wielokrotnie, przy czym w tym <xref:System.Activities.Activity%601>< bool\> o nazwie `Condition` do określenia, czy to planowanie powinny być wykonywane. Podobnie jak `MySequence`, `MyWhile` używa `InternalExecute` metody, można scentralizować swojej logiki planowania. Planuje ona `Condition`<xref:System.Activities.Activity>< wartość logiczna\> z <xref:System.Activities.CompletionCallback%601> \<bool > o nazwie `OnEvaluationCompleted`. Podczas wykonywania `Condition` jest zakończone, jego wynik staje się dostępna za pośrednictwem to <xref:System.Activities.CompletionCallback> w silnie typizowane parametr o nazwie `result`. Jeśli `true`, `MyWhile` wywołania <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>, przekazując `Body`<xref:System.Activities.Activity> obiektu i `InternalExecute` jako <xref:System.Activities.CompletionCallback>. Podczas wykonywania `Body` zakończeniu `Condition` pobiera zaplanowane ponownie w `InternalExecute`, rozpoczynanie pętli ponownie. Podczas `Condition` zwraca `false`, wystąpienie `MyWhile` zapewnia kontrolę powrót do środowiska uruchomieniowego bez planowania `Body` i środowisko uruchomieniowe przenosi jego <xref:System.Activities.ActivityInstanceState.Closed> stanu.
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
 
-1.  Otwórz Composite.sln przykładowe rozwiązanie w programie Visual Studio 2010.
+1. Otwórz Composite.sln przykładowe rozwiązanie w programie Visual Studio 2010.
 
-2.  Skompiluj i uruchom rozwiązanie.
+2. Skompiluj i uruchom rozwiązanie.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

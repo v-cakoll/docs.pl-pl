@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342534"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Tworzenie elementu DataTable w wyniku zapytania (LINQ to DataSet)
 Wiązanie danych jest często używana <xref:System.Data.DataTable> obiektu. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda pobiera wyniki zapytania i kopiuje dane do <xref:System.Data.DataTable>, która następnie umożliwia powiązanie danych. Po wykonaniu operacji danych, nowa <xref:System.Data.DataTable> jest scalany z powrotem do źródła skrzynki <xref:System.Data.DataTable>.  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Metoda przystępuje do następującej procedury, aby utworzyć <xref:System.Data.DataTable> w wyniku zapytania:  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Klony metoda <xref:System.Data.DataTable> z tabeli źródłowej ( <xref:System.Data.DataTable> obiekt, który implementuje <xref:System.Linq.IQueryable%601> interfejsu). <xref:System.Collections.IEnumerable> Źródło ma zazwyczaj pochodzenia [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wyrażenie lub metody zapytania.  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> Klony metoda <xref:System.Data.DataTable> z tabeli źródłowej ( <xref:System.Data.DataTable> obiekt, który implementuje <xref:System.Linq.IQueryable%601> interfejsu). <xref:System.Collections.IEnumerable> Źródło ma zazwyczaj pochodzenia [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wyrażenie lub metody zapytania.  
   
-2.  Schemat sklonowany <xref:System.Data.DataTable> została stworzona od kolumny pierwszy wyliczane <xref:System.Data.DataRow> obiektu w tabeli źródłowej i nazwa tabeli sklonowany jest nazwą tabeli źródłowej z wyrazem "query" dołączone do niego.  
+2. Schemat sklonowany <xref:System.Data.DataTable> została stworzona od kolumny pierwszy wyliczane <xref:System.Data.DataRow> obiektu w tabeli źródłowej i nazwa tabeli sklonowany jest nazwą tabeli źródłowej z wyrazem "query" dołączone do niego.  
   
-3.  Dla każdego wiersza w tabeli źródłowej zawartość wiersza jest kopiowany do nowego <xref:System.Data.DataRow> obiektu, który zostanie wstawiony na sklonowanym tabeli. <xref:System.Data.DataRow.RowState%2A> i <xref:System.Data.DataRow.RowError%2A> właściwości są zachowywane w operacji kopiowania. <xref:System.ArgumentException> Jest generowany, jeśli <xref:System.Data.DataRow> obiekty w źródle pochodzą z różnych tabel.  
+3. Dla każdego wiersza w tabeli źródłowej zawartość wiersza jest kopiowany do nowego <xref:System.Data.DataRow> obiektu, który zostanie wstawiony na sklonowanym tabeli. <xref:System.Data.DataRow.RowState%2A> i <xref:System.Data.DataRow.RowError%2A> właściwości są zachowywane w operacji kopiowania. <xref:System.ArgumentException> Jest generowany, jeśli <xref:System.Data.DataRow> obiekty w źródle pochodzą z różnych tabel.  
   
-4.  Sklonowany <xref:System.Data.DataTable> jest zwracany po wszystkich <xref:System.Data.DataRow> obiektów w tabeli wejściowej odpytywalny zostały skopiowane. Jeśli sekwencja źródłowa nie zawiera żadnych <xref:System.Data.DataRow> obiektów, metoda zwraca pustą <xref:System.Data.DataTable>.  
+4. Sklonowany <xref:System.Data.DataTable> jest zwracany po wszystkich <xref:System.Data.DataRow> obiektów w tabeli wejściowej odpytywalny zostały skopiowane. Jeśli sekwencja źródłowa nie zawiera żadnych <xref:System.Data.DataRow> obiektów, metoda zwraca pustą <xref:System.Data.DataTable>.  
   
  Należy pamiętać, że wywołanie <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> metoda spowoduje, że zapytanie powiązane z tabeli źródłowej do wykonania.  
   

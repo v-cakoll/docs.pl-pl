@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336697"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion — Funkcja
 Umożliwia hostowi na określenie, która wersja środowiska uruchomieniowego języka wspólnego (CLR), będą używane w ramach procesu przed jawnym zainicjowaniem środowiska CLR.  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  Po zainicjowaniu środowiska uruchomieniowego są wykonywane następujące kroki:  
   
-1.  Wywołania hosta [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jednego z innych funkcji inicjowania środowiska uruchomieniowego. Alternatywnie hosta można zainicjować aparatu plików wykonywalnych przy użyciu aktywowanie obiektu COM.  
+1. Wywołania hosta [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jednego z innych funkcji inicjowania środowiska uruchomieniowego. Alternatywnie hosta można zainicjować aparatu plików wykonywalnych przy użyciu aktywowanie obiektu COM.  
   
-2.  Środowisko wykonawcze wywołuje funkcji określonej przez `hostCallback` parametru.  
+2. Środowisko wykonawcze wywołuje funkcji określonej przez `hostCallback` parametru.  
   
-3.  Funkcji określonej przez `hostCallback` następnie sprawia, że następująca sekwencja wywołań:  
+3. Funkcji określonej przez `hostCallback` następnie sprawia, że następująca sekwencja wywołań:  
   
     -   Funkcji określonej przez `pBeginHostSetup` parametru.  
   

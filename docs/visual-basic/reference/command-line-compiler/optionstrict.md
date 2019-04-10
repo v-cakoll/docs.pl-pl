@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336086"
 ---
 # <a name="-optionstrict"></a>-optionstrict —
 Wymusza semantykę typów ścisłych w celu ograniczenia niejawnych konwersji typów.  
@@ -39,11 +39,11 @@ Wymusza semantykę typów ścisłych w celu ograniczenia niejawnych konwersji ty
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>Aby ustawić - optionstrict — w środowisku IDE programu Visual Studio  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości.**   
+1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości.**   
   
-2.  Kliknij przycisk **skompilować** kartę.  
+2. Kliknij przycisk **skompilować** kartę.  
   
-3.  Zmodyfikuj wartość w **Option Strict** pole.  
+3. Zmodyfikuj wartość w **Option Strict** pole.  
   
 ### <a name="to-set--optionstrict-programmatically"></a>Aby programowo ustawić - optionstrict —  
   
@@ -58,12 +58,12 @@ vbc -optionstrict+ test.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer —](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror — (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Domyślne ustawienia programu Visual Basic, Projekty, okno dialogowe Opcje](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

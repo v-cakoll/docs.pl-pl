@@ -2,12 +2,12 @@
 title: Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: dad832aeef4d6519c272589033acc6d2fe3c2676
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333694"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
 W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, używanego przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne dane wyjściowe w każdym przykładzie.  
@@ -20,9 +20,9 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
   
 #### <a name="to-create-the-wordprocessingml-document"></a>Aby utworzyć dokument WordprocessingML  
   
-1.  Utwórz nowy dokument programu Microsoft Word.  
+1. Utwórz nowy dokument programu Microsoft Word.  
   
-2.  Wklej następujący tekst do nowego dokumentu:  
+2. Wklej następujący tekst do nowego dokumentu:  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
     Hello World  
     ```  
   
-3.  Formatuj pierwszy wiersz ze stylem "Nagłówek 1".  
+3. Formatuj pierwszy wiersz ze stylem "Nagłówek 1".  
   
-4.  Wybierz wiersze, które zawierają kod języka Visual Basic. Pierwszy wiersz zaczyna się od `Imports` — słowo kluczowe. Ostatni wiersz jest "End Class". Formatuj wierszy przy użyciu czcionki courier. Formatuj je przy użyciu nowego stylu i nazwę nowego stylu "Code".  
+4. Wybierz wiersze, które zawierają kod języka Visual Basic. Pierwszy wiersz zaczyna się od `Imports` — słowo kluczowe. Ostatni wiersz jest "End Class". Formatuj wierszy przy użyciu czcionki courier. Formatuj je przy użyciu nowego stylu i nazwę nowego stylu "Code".  
   
-5.  Na koniec zaznacz całą linię, która zawiera dane wyjściowe i sformatować je za pomocą `Code` stylu.  
+5. Na koniec zaznacz całą linię, która zawiera dane wyjściowe i sformatować je za pomocą `Code` stylu.  
   
-6.  Zapisz dokument, a następnie nadaj mu nazwę SampleDoc.docx.  
+6. Zapisz dokument, a następnie nadaj mu nazwę SampleDoc.docx.  
   
     > [!NOTE]
     >  Jeśli używasz programu Microsoft Word 2003, wybierz opcję **dokument programu Word 2007** w **Zapisz jako typ** listy rozwijanej.  

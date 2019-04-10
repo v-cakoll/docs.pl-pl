@@ -2,12 +2,12 @@
 title: Hostowanie w aplikacji usługi systemu Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335371"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
 Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces modelu szczególnie odpowiednie dla aplikacji, które muszą znajdować się w pliku wykonywalnym długotrwałych i nie są wyświetlane w dowolnej postaci interfejsu użytkownika. Okres istnienia procesu systemu Windows, aplikacji usługi jest zarządzany przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i oraz ich wstrzymywania aplikacji usług Windows. Możesz skonfigurować proces usługi Windows do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko hostingu dla aplikacji "zawsze włączone". Aby uzyskać więcej informacji na temat aplikacji usług Windows zobacz [aplikacji usług Windows](https://go.microsoft.com/fwlink/?LinkId=89450).  
@@ -24,9 +24,9 @@ Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces mo
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>Hostowanie usługi WCF wewnątrz aplikacji usługi Windows  
   
-1.  Tworzenie aplikacji usługi Windows. Możesz tworzyć aplikacje usługi Windows w kodzie zarządzanym przy użyciu klas w <xref:System.ServiceProcess> przestrzeni nazw. Ta aplikacja musi zawierać jedną klasę, która dziedziczy <xref:System.ServiceProcess.ServiceBase>.  
+1. Tworzenie aplikacji usługi Windows. Możesz tworzyć aplikacje usługi Windows w kodzie zarządzanym przy użyciu klas w <xref:System.ServiceProcess> przestrzeni nazw. Ta aplikacja musi zawierać jedną klasę, która dziedziczy <xref:System.ServiceProcess.ServiceBase>.  
   
-2.  Okres istnienia usługi WCF można połączyć cyklu życia aplikacji usługa Windows. Zazwyczaj chcesz usług WCF hostowanych w aplikacji usługi Windows stają się aktywne po uruchomieniu usługi hostingu, przestawaj słuchać komunikaty po zatrzymaniu usługi hostingowej i zamknąć procesu hostingu, gdy usługa WCF napotka błąd. Można to zrobić w następujący sposób:  
+2. Okres istnienia usługi WCF można połączyć cyklu życia aplikacji usługa Windows. Zazwyczaj chcesz usług WCF hostowanych w aplikacji usługi Windows stają się aktywne po uruchomieniu usługi hostingu, przestawaj słuchać komunikaty po zatrzymaniu usługi hostingowej i zamknąć procesu hostingu, gdy usługa WCF napotka błąd. Można to zrobić w następujący sposób:  
   
     -   Zastąp <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> do otwarcia jednego lub większej liczby wystąpień <xref:System.ServiceModel.ServiceHost>. Jedną aplikację usługi Windows może obsługiwać wiele usług WCF, które uruchamiają i zatrzymują jako grupa.  
   

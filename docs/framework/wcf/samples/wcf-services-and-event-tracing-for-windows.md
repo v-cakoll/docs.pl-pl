@@ -2,12 +2,12 @@
 title: Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 945daa305db9fe6785e1624e2dbb2e975cd8e94b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 35d0202a3b9cf4060240dc521554644d419a5c23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119577"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338972"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Usługi i śledzenie zdarzeń programu WCF dla systemu Windows
 Ten przykład pokazuje sposób użycia śledzenia danych analitycznych w Windows Communication Foundation (WCF) aby emitować zdarzenia w śledzenie zdarzeń dla Windows (ETW). Śledzenie analityczne są zdarzenia emitowane w kluczowych punktach w stosie usługi WCF, które umożliwiają rozwiązywanie problemów z usług WCF w środowisku produkcyjnym.
@@ -18,31 +18,31 @@ Ten przykład pokazuje sposób użycia śledzenia danych analitycznych w Windows
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2012, otwórz plik rozwiązania EtwAnalyticTraceSample.sln.
+1. Za pomocą programu Visual Studio 2012, otwórz plik rozwiązania EtwAnalyticTraceSample.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.
+3. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.
 
      W przeglądarce internetowej kliknij **Calculator.svc**. Identyfikator URI dokumentu WSDL usługi powinna zostać wyświetlona w przeglądarce. Skopiuj ten identyfikator URI.
 
      Domyślnie usługa rozpoczyna nasłuchiwanie żądań na porcie 1378 `http://localhost:1378/Calculator.svc`.
 
-4.  Uruchom klienta testowego WCF (WcfTestClient.exe).
+4. Uruchom klienta testowego WCF (WcfTestClient.exe).
 
      Testowy klient WCF (WcfTestClient.exe) znajduje się w `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  Katalog instalacji programu Visual Studio 2012 domyślny jest `C:\Program Files\Microsoft Visual Studio 10.0`.
 
-5.  W kliencie testowym WCF, należy dodać usługę, wybierając **pliku**, a następnie **Dodaj usługę**.
+5. W kliencie testowym WCF, należy dodać usługę, wybierając **pliku**, a następnie **Dodaj usługę**.
 
      W polu wejściowym, należy dodać adres punktu końcowego. Wartość domyślna to `http://localhost:1378/Calculator.svc`.
 
-6.  Otwórz aplikację Podgląd zdarzeń.
+6. Otwórz aplikację Podgląd zdarzeń.
 
      Przed wywołaniem usługi, Uruchom Podgląd zdarzeń i upewnij się, że w dzienniku zdarzeń nasłuchuje śledzenia zdarzeń wysyłanego z usługi WCF.
 
-7.  Z **Start** menu, wybierz opcję **narzędzia administracyjne**, a następnie **Podgląd zdarzeń**.  Włącz **analityczne** i **debugowania** dzienniki.
+7. Z **Start** menu, wybierz opcję **narzędzia administracyjne**, a następnie **Podgląd zdarzeń**.  Włącz **analityczne** i **debugowania** dzienniki.
 
-8.  W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **aplikacje serwera aplikacji**, wybierz opcję **widoku**, a następnie **Pokaż analityczne i debugowania dzienniki**.
+8. W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **aplikacje serwera aplikacji**, wybierz opcję **widoku**, a następnie **Pokaż analityczne i debugowania dzienniki**.
 
      Upewnij się, że **Pokaż analityczne i debugowania dzienniki** opcja jest zaznaczona.
 
@@ -52,17 +52,17 @@ Ten przykład pokazuje sposób użycia śledzenia danych analitycznych w Windows
 
 #### <a name="to-test-the-service"></a>Aby przetestować usługę
 
-1.  Przejdź z powrotem do klienta testowego WCF, a następnie kliknij dwukrotnie ikonę `Divide` i Zachowaj wartości domyślne, które określają mianownik 0.
+1. Przejdź z powrotem do klienta testowego WCF, a następnie kliknij dwukrotnie ikonę `Divide` i Zachowaj wartości domyślne, które określają mianownik 0.
 
      Jeżeli mianownik wynosi 0, usługa zgłasza błąd.
 
-2.  Sprawdź zdarzenia wysyłanego z usługi.
+2. Sprawdź zdarzenia wysyłanego z usługi.
 
      Przejdź z powrotem do programu Podgląd zdarzeń i przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Odśwież**.
 
      Zdarzenia śledzenia analitycznego WCF są wyświetlane w Podglądzie zdarzeń. Zauważ, że ponieważ błąd został zgłoszony przez usługę, którą zdarzenie śledzenia błędu jest wyświetlana w zdarzeniu podglądu.
 
-3.  Powtórz kroki 1 i 2, ale z prawidłowych danych wejściowych. Wartość `N2` parametr może być dowolna liczba innych niż 0.
+3. Powtórz kroki 1 i 2, ale z prawidłowych danych wejściowych. Wartość `N2` parametr może być dowolna liczba innych niż 0.
 
      Odśwież kanał analityczne, aby wyświetlić WCF zdarzeń nie ma żadnych zdarzeń błędu.
 
@@ -70,13 +70,13 @@ Ten przykład pokazuje sposób użycia śledzenia danych analitycznych w Windows
 
 #### <a name="to-cleanup-optional"></a>Aby oczyścić (opcjonalnie)
 
-1.  Otwórz Podgląd zdarzeń.
+1. Otwórz Podgląd zdarzeń.
 
-2.  Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.
+2. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.
 
-3.  Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.
+3. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.
 
-4.  Wybierz **wyczyść** możliwość wyczyszczenia zdarzeń.
+4. Wybierz **wyczyść** możliwość wyczyszczenia zdarzeń.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

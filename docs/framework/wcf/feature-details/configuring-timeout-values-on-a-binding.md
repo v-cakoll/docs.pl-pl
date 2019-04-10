@@ -1,27 +1,27 @@
 ---
-title: Konfigurowanie wartości limitów czasu w powiązaniu
+title: Konfigurowanie wartości limitów czasu w wiązaniu
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: 21d99ad2ce092db738469f93e80c39380acabd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339765"
 ---
-# <a name="configuring-timeout-values-on-a-binding"></a>Konfigurowanie wartości limitów czasu w powiązaniu
-Powiązania WCF ma dostępnych wiele ustawień limitu czasu. Ustawienie tych limitu czasu ustawienia poprawnie może zwiększyć nie tylko z usługą wydajności, ale również play rolę w zakresie użyteczności i zabezpieczeń usługi. Następujące limity czasu są dostępne na powiązań WCF:  
+# <a name="configuring-timeout-values-on-a-binding"></a>Konfigurowanie wartości limitów czasu w wiązaniu
+Istnieje kilka ustawień limitu czasu są dostępne w powiązaniach WCF. Ustawienia te timeout ustawienia poprawnie ulepszyć nie tylko z usługą wydajność, ale również odtwarzania roli w użyteczność i zabezpieczeń usługi. Następujące limity czasu są dostępne na powiązaniami WCF:  
   
-1.  OpenTimeout  
+1. OpenTimeout  
   
-2.  closeTimeout  
+2. closeTimeout  
   
-3.  właściwości sendTimeout  
+3. SendTimeout  
   
-4.  ReceiveTimeout  
+4. ReceiveTimeout  
   
-## <a name="wcf-binding-timeouts"></a>Limity czasu wiązania WCF  
- Wszystkie ustawienia omówione w tym temacie są dokonywane na powiązanie, albo w konfiguracji lub kodu. Poniższy kod przedstawia sposób programowane Ustawianie limitów czasu dla wiązania WCF w ramach samodzielnie hostowana usługa.  
+## <a name="wcf-binding-timeouts"></a>Powiązania WCF przekroczeń limitu czasu  
+ Wszystkie ustawienia omówione w tym temacie są dokonywane na powiązanie, albo w kodzie lub konfiguracji. Poniższy kod pokazuje, jak programowo ustawić limity czasu w powiązaniu usługi WCF w kontekście samodzielnie hostowanej usługi.  
   
 ```csharp  
 public static void Main()
@@ -74,20 +74,20 @@ public static void Main()
   
  Więcej informacji na temat tych ustawień można znaleźć w dokumentacji dotyczącej <xref:System.ServiceModel.Channels.Binding> klasy.  
   
-### <a name="client-side-timeouts"></a>Limity czasu po stronie klienta  
+### <a name="client-side-timeouts"></a>Przekroczenia limitu czasu po stronie klienta  
  Po stronie klienta:  
   
-1.  Właściwości SendTimeout — używaną do inicjalizacji OperationTimeout, rządzące całego procesu wysyłania wiadomości, w tym odbieranie komunikatu odpowiedzi dla operacji żądania/odpowiedzi usługi. Ten limit czasu ma również zastosowanie, podczas wysyłania wiadomości odpowiedzi z metody kontrakt wywołania zwrotnego.  
+1. Właściwości SendTimeout — używane do zainicjowania OperationTimeout, rządzące całego procesu wysyłania wiadomości, w tym odebranie komunikatu odpowiedzi dla operacji usługowej żądanie/nietypizowana odpowiedź. Tego limitu czasu ma również zastosowanie, podczas wysyłania komunikatów odpowiedzi z metodą kontrakt wywołania zwrotnego.  
   
-2.  OpenTimeout — używane podczas otwierania kanały, jeśli nie określono żadnej wartości jawne limitu czasu.  
+2. OpenTimeout — które są używane podczas otwierania kanały, gdy określona jest wartość nie jawnego limitu czasu.  
   
-3.  CloseTimeout — używany podczas zamykania kanałów, jeśli nie określono żadnej wartości jawne limitu czasu.  
+3. CloseTimeout — używany podczas zamykania kanałów, gdy określona jest wartość limitu czasu jawne nie.  
   
-4.  ReceiveTimeout — nie jest używany.  
+4. ReceiveTimeout — nie jest używana.  
   
-### <a name="service-side-timeouts"></a>Limity czasu po stronie serwera  
+### <a name="service-side-timeouts"></a>Przekroczenia limitu czasu po stronie usługi  
  Na stronie usługi:  
   
-1.  Właściwości SendTimeout, OpenTimeout, CloseTimeout są takie same, jak na komputerze klienckim.  
+1. Właściwości SendTimeout, OpenTimeout, CloseTimeout są takie same, jak na komputerze klienckim.  
   
-2.  ReceiveTimeout — używane przez warstwę Framework usługi można zainicjować limit czasu bezczynności sesji, która kontroluje, jak długo sesji może być bezczynne przed przekroczeniem limitu czasu.
+2. ReceiveTimeout — używane przez warstwę Framework usługi do zainicjowania czasu bezczynności sesji, określający, jak długo sesja może być bezczynne przed przekroczeniem limitu czasu.

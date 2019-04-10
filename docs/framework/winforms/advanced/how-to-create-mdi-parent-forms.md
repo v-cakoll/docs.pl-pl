@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338660"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Instrukcje: Tworzenie formularzy nadrzędnych MDI
 > [!IMPORTANT]
@@ -20,20 +20,20 @@ ms.locfileid: "59216317"
   
 ### <a name="to-create-an-mdi-parent-form-at-design-time"></a>Aby utworzyć formularza nadrzędnego MDI w czasie projektowania  
   
-1.  Utwórz projekt aplikacji Windows.  
+1. Utwórz projekt aplikacji Windows.  
   
-2.  W **właściwości** oknie <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości **true**.  
+2. W **właściwości** oknie <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości **true**.  
   
      Określa formularza jako kontenera okien podrzędnych MDI.  
   
     > [!NOTE]
     >  Podczas ustawiania właściwości w **właściwości** okna, można również ustawić `WindowState` właściwości **Maximized**, jeśli chcesz, ponieważ jest najprostszym manipulować oknami podrzędnymi MDI, gdy formularz nadrzędny jest zmaksymalizowany. Ponadto należy pamiętać, że krawędzi formularza nadrzędnego MDI przejmą kolorów systemu (zestaw w Panelu sterowania systemu Windows), zamiast kolor tyłu można ustawić za pomocą <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> właściwości.  
   
-3.  Z **przybornika**, przeciągnij **MenuStrip** formantu do formularza. Utwórz element menu najwyższego poziomu za pomocą **tekstu** właściwością **& plik** ze wskazaniem elementów podmenu **& nowe** i **i Zamknij**. Również utworzyć menu najwyższego poziomu elementu o nazwie **& okna**.  
+3. Z **przybornika**, przeciągnij **MenuStrip** formantu do formularza. Utwórz element menu najwyższego poziomu za pomocą **tekstu** właściwością **& plik** ze wskazaniem elementów podmenu **& nowe** i **i Zamknij**. Również utworzyć menu najwyższego poziomu elementu o nazwie **& okna**.  
   
      Pierwszym menu spowoduje to utworzenie i ukrywanie elementów menu w czasie wykonywania, i drugiego menu będzie śledzenie otwarte okna podrzędnego MDI. Na tym etapie utworzono nadrzędnego okna MDI.  
   
-4.  Naciśnij klawisz **F5** do uruchomienia aplikacji. Aby uzyskać informacje dotyczące tworzenia elementu podrzędnego MDI systemu windows, które działają w ramach formularza nadrzędnego MDI, zobacz [jak: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md).  
+4. Naciśnij klawisz **F5** do uruchomienia aplikacji. Aby uzyskać informacje dotyczące tworzenia elementu podrzędnego MDI systemu windows, które działają w ramach formularza nadrzędnego MDI, zobacz [jak: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

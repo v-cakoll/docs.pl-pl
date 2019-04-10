@@ -2,21 +2,21 @@
 title: Nie można uzyskać nazw portów seryjnych w związku z wystąpieniem błędu
 ms.date: 07/20/2015
 ms.assetid: 789a1e94-28c2-4c20-8ee4-ad65fea37812
-ms.openlocfilehash: 7a65edc06c9130675ed12c93912c2c3203e10ce1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 04841634938a1ccd6702fd1e3e14cf379f82875f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825082"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342495"
 ---
 # <a name="unable-to-get-serial-port-names-because-of-an-internal-system-error"></a>Nie można uzyskać nazw portów seryjnych w związku z wystąpieniem błędu
 Wystąpił wewnętrzny błąd wystąpił podczas `My.Computer.Ports.SerialPortNames` właściwość została wywołana.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Zobacz [podstawy debugera](/visualstudio/debugger/debugger-basics) Aby uzyskać więcej informacji o rozwiązywaniu problemów.  
+1. Zobacz [podstawy debugera](/visualstudio/debugger/debugger-basics) Aby uzyskać więcej informacji o rozwiązywaniu problemów.  
   
-2.  Należy pamiętać, okoliczności, w których wystąpił błąd, a następnie wywołać pomoc techniczna firmy Microsoft.  
+2. Należy pamiętać, okoliczności, w których wystąpił błąd, a następnie wywołać pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 

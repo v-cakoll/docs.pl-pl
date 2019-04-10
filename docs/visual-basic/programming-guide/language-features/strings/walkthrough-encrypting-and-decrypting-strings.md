@@ -7,12 +7,12 @@ helpviewer_keywords:
 - decryption [Visual Basic], strings
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
-ms.openlocfilehash: aaf8238a330ceb9e1cf4f9ff5892d1db1d951faa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334045"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Przewodnik: Szyfrowanie i odszyfrowywanie ciągów w Visual Basic
 W tym instruktażu dowiesz się, jak używać <xref:System.Security.Cryptography.DESCryptoServiceProvider> klasy szyfrowanie i odszyfrowywanie ciągów za pomocą wersji dostawcy usług kryptograficznych Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorytmu. Pierwszym krokiem jest utworzyć klasę otoki prostą, która hermetyzuje algorytmu 3DES i przechowuje zaszyfrowane dane jako ciąg zakodowany base-64. Następnie tej otoki służy do bezpiecznego przechowywania prywatnych danych użytkowników w pliku tekstowym dostępny publicznie.  
@@ -26,33 +26,33 @@ W tym instruktażu dowiesz się, jak używać <xref:System.Security.Cryptography
   
 ### <a name="to-create-the-encryption-wrapper"></a>Aby utworzyć otokę szyfrowania  
   
-1.  Utwórz `Simple3Des` klasy do hermetyzacji metod szyfrowania i odszyfrowywania.  
+1. Utwórz `Simple3Des` klasy do hermetyzacji metod szyfrowania i odszyfrowywania.  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2.  Dodaj import obszaru nazw kryptografii na początku pliku który zawiera `Simple3Des` klasy.  
+2. Dodaj import obszaru nazw kryptografii na początku pliku który zawiera `Simple3Des` klasy.  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3.  W `Simple3Des` klasy, Dodaj pole prywatne do przechowywania dostawcy usług kryptograficznych 3DES.  
+3. W `Simple3Des` klasy, Dodaj pole prywatne do przechowywania dostawcy usług kryptograficznych 3DES.  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
-4.  Dodaj metody prywatnej, która tworzy tablicę bajtów o określonej długości ze skrótu z określonym kluczem.  
+4. Dodaj metody prywatnej, która tworzy tablicę bajtów o określonej długości ze skrótu z określonym kluczem.  
   
      [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
-5.  Dodaj Konstruktor do zainicjowania dostawcy usług kryptograficznych 3DES.  
+5. Dodaj Konstruktor do zainicjowania dostawcy usług kryptograficznych 3DES.  
   
      `key` Parametr określa `EncryptData` i `DecryptData` metody.  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
-6.  Dodaj metodę publiczną, która szyfruje ciągu.  
+6. Dodaj metodę publiczną, która szyfruje ciągu.  
   
      [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
-7.  Dodaj metodę publiczną, która odszyfrowuje ciągu.  
+7. Dodaj metodę publiczną, która odszyfrowuje ciągu.  
   
      [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
@@ -60,17 +60,17 @@ W tym instruktażu dowiesz się, jak używać <xref:System.Security.Cryptography
   
 ### <a name="to-test-the-encryption-wrapper"></a>Aby przetestować otoki szyfrowania  
   
-1.  W osobnej klasy, Dodaj metodę, która używa otoki `EncryptData` metodę, aby zaszyfrować ciągu i zapisz go do użytkownika w folderze Moje dokumenty.  
+1. W osobnej klasy, Dodaj metodę, która używa otoki `EncryptData` metodę, aby zaszyfrować ciągu i zapisz go do użytkownika w folderze Moje dokumenty.  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2.  Dodaj metodę, która odczytuje zaszyfrowany ciąg od użytkownika w folderze Moje dokumenty i odszyfrowuje ciągu z otoką `DecryptData` metody.  
+2. Dodaj metodę, która odczytuje zaszyfrowany ciąg od użytkownika w folderze Moje dokumenty i odszyfrowuje ciągu z otoką `DecryptData` metody.  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3.  Dodaj kod interfejsu użytkownika, aby wywołać `TestEncoding` i `TestDecoding` metody.  
+3. Dodaj kod interfejsu użytkownika, aby wywołać `TestEncoding` i `TestDecoding` metody.  
   
-4.  Uruchom aplikację.  
+4. Uruchom aplikację.  
   
      Podczas testowania aplikacji, zwróć uwagę, że jej nie powoduje odszyfrowania danych jeśli podano nieprawidłowe hasło.  
   

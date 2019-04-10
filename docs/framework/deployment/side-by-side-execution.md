@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341078"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Wykonywanie równoczesne w programie .NET Framework
 Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacji lub składnika na jednym komputerze. Można mieć wiele wersji środowiska uruchomieniowego języka wspólnego i wiele wersji aplikacji oraz składników, które używają wersji środowiska uruchomieniowego na jednym komputerze w tym samym czasie.  
@@ -75,11 +75,11 @@ Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacj
   
  Jeśli plik konfiguracji aplikacji jest obecny, środowisko wykonawcze określa wersję odpowiedniego środowiska uruchomieniowego do załadowania w oparciu o wyniki następującego procesu:  
   
-1.  Sprawdza, czy środowisko uruchomieniowe [ \<supportedRuntime > Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) elementu w pliku konfiguracyjnym aplikacji. Jeśli co najmniej jeden obsługiwane wersje środowiska uruchomieniowego określone w  **\<supportedRuntime >** elementu, środowisko uruchomieniowe ładuje wersji środowiska uruchomieniowego, w określonym przez pierwszy  **\< supportedRuntime >** elementu. Jeśli ta wersja nie jest dostępna, środowisko uruchomieniowe sprawdza, czy następnego  **\<supportedRuntime >** elementu i próbuje załadować określona wersja środowiska uruchomieniowego. Jeśli ta wersja środowiska uruchomieniowego nie jest dostępna, kolejne  **\<supportedRuntime >** elementy są sprawdzane. Jeśli żaden z obsługiwane wersje środowiska uruchomieniowego są dostępne, środowisko wykonawcze nie można załadować wersji środowiska uruchomieniowego, a następnie wyświetla komunikat dla użytkownika (zobacz krok 3).  
+1. Sprawdza, czy środowisko uruchomieniowe [ \<supportedRuntime > Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) elementu w pliku konfiguracyjnym aplikacji. Jeśli co najmniej jeden obsługiwane wersje środowiska uruchomieniowego określone w  **\<supportedRuntime >** elementu, środowisko uruchomieniowe ładuje wersji środowiska uruchomieniowego, w określonym przez pierwszy  **\< supportedRuntime >** elementu. Jeśli ta wersja nie jest dostępna, środowisko uruchomieniowe sprawdza, czy następnego  **\<supportedRuntime >** elementu i próbuje załadować określona wersja środowiska uruchomieniowego. Jeśli ta wersja środowiska uruchomieniowego nie jest dostępna, kolejne  **\<supportedRuntime >** elementy są sprawdzane. Jeśli żaden z obsługiwane wersje środowiska uruchomieniowego są dostępne, środowisko wykonawcze nie można załadować wersji środowiska uruchomieniowego, a następnie wyświetla komunikat dla użytkownika (zobacz krok 3).  
   
-2.  Środowisko uruchomieniowe odczytuje nagłówek pliku PE pliku wykonywalnego aplikacji. Jeśli dostępna jest wersja środowiska uruchomieniowego, określony w nagłówku pliku PE, środowisko uruchomieniowe ładuje tej wersji. Jeśli określona wersja środowiska uruchomieniowego nie jest dostępna, środowisko uruchomieniowe wyszukuje wersji środowiska uruchomieniowego, określane przez firmę Microsoft, aby był zgodny z wersją środowiska uruchomieniowego w nagłówku PE. Jeśli ta wersja nie zostanie znaleziony, proces jest kontynuowany do kroku 3.  
+2. Środowisko uruchomieniowe odczytuje nagłówek pliku PE pliku wykonywalnego aplikacji. Jeśli dostępna jest wersja środowiska uruchomieniowego, określony w nagłówku pliku PE, środowisko uruchomieniowe ładuje tej wersji. Jeśli określona wersja środowiska uruchomieniowego nie jest dostępna, środowisko uruchomieniowe wyszukuje wersji środowiska uruchomieniowego, określane przez firmę Microsoft, aby był zgodny z wersją środowiska uruchomieniowego w nagłówku PE. Jeśli ta wersja nie zostanie znaleziony, proces jest kontynuowany do kroku 3.  
   
-3.  Środowisko uruchomieniowe wyświetla komunikat informujący, że wersja środowiska uruchomieniowego, obsługiwanych przez aplikację jest niedostępna. Nie załadowano środowiska uruchomieniowego.  
+3. Środowisko uruchomieniowe wyświetla komunikat informujący, że wersja środowiska uruchomieniowego, obsługiwanych przez aplikację jest niedostępna. Nie załadowano środowiska uruchomieniowego.  
   
     > [!NOTE]
     >  Wyświetlanie ten komunikat można pominąć przy użyciu wartości NoGuiFromShim w kluczu rejestru HKLM\Software\Microsoft\\. NETFramework lub przy użyciu zmiennej środowiskowej COMPLUS_NoGuiFromShim. Na przykład można pominąć wiadomości dla aplikacji, które zazwyczaj wchodzi w interakcję z użytkownikiem, takich jak instalacji nienadzorowanej lub usługi Windows. Gdy ten komunikat o błędzie jest pominięty, środowisko uruchomieniowe zapisuje komunikat w dzienniku zdarzeń.  Ustaw wartość rejestru NoGuiFromShim 1, aby pominąć ten komunikat dla wszystkich aplikacji na komputerze. Możesz również ustawić zmienną środowiskową COMPLUS_NoGuiFromShim 1, aby pominąć komunikat dla aplikacji uruchamianych w kontekście danego użytkownika.  
@@ -116,7 +116,7 @@ publicKeyToken=...,
 |[Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Opis sposobu tworzenia powiązania aplikacji z określoną wersją zestawu.|  
 |[Konfigurowanie przekierowywania powiązań zestawów](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Opis sposobu przekierowywania odwołań do powiązań zestawów do określonej wersji zestawów programu .NET Framework.|  
 |[Wykonywanie równoczesne i wewnątrzprocesowe](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Omówienie sposobu używania aktywacji hosta środowiska uruchomieniowego wewnątrzprocesowego wykonywania równoczesnego w celu uruchamiania wielu wersji środowiska CLR w pojedynczym procesie.|  
-|[Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Omówienie koncepcyjne zestawów.|  
+|[Zestawy w środowisku uruchomieniowym języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Omówienie koncepcyjne zestawów.|  
 |[Domeny aplikacji](../../../docs/framework/app-domains/application-domains.md)|Omówienie koncepcyjne domen aplikacji.|  
   
 ## <a name="reference"></a>Tematy pomocy  

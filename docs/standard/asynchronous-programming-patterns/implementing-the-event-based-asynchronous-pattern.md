@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333375"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zdarzeniach
 Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie zauważalnego opóźnienia, należy wziąć pod uwagę nadając mu funkcje asynchroniczne z zastosowaniem [oparte na zdarzeniach asynchronicznych omówienie wzorca](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -75,7 +75,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
   
  Dla każdego oddzielnego _MethodName_**Async** sygnatury metody:  
   
-1.  W tej samej klasy jako metodę, należy zdefiniować następujące zdarzenie:  
+1. W tej samej klasy jako metodę, należy zdefiniować następujące zdarzenie:  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ Jeśli piszesz klasy z niektórych operacji, które może spowodować naliczenie
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  Zdefiniuj następujące delegata i <xref:System.ComponentModel.AsyncCompletedEventArgs>. Te prawdopodobnie zostanie zdefiniowany, poza samej klasy, ale w tej samej przestrzeni nazw.  
+2. Zdefiniuj następujące delegata i <xref:System.ComponentModel.AsyncCompletedEventArgs>. Te prawdopodobnie zostanie zdefiniowany, poza samej klasy, ale w tej samej przestrzeni nazw.  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -251,8 +251,8 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
 - [Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [Instrukcje: Uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Decydowanie o czasie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
-- [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
+- [Instrukcje: uruchamianie operacji w tle](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
+- [Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

@@ -1,23 +1,23 @@
 ---
-title: Usuwanie atrybutów z węzła elementu w modelu DOM
+title: Usuwanie atrybutów z węzła elementu w ramach modelu DOM
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835184"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336138"
 ---
-# <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Usuwanie atrybutów z węzła elementu w modelu DOM
+# <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Usuwanie atrybutów z węzła elementu w ramach modelu DOM
 Istnieje wiele sposobów, aby usunąć atrybuty. Jedna z technik jest je usunąć z kolekcji atrybutów. Aby to zrobić, wykonywane są następujące czynności:  
   
-1.  Pobierz kolekcję atrybutów z elementu za pomocą `XmlAttributeCollection attrs = elem.Attributes;`.  
+1. Pobierz kolekcję atrybutów z elementu za pomocą `XmlAttributeCollection attrs = elem.Attributes;`.  
   
-2.  Usuń atrybut z kolekcji atrybutów przy użyciu jednej z trzech metod:  
+2. Usuń atrybut z kolekcji atrybutów przy użyciu jednej z trzech metod:  
   
     -   Użyj <xref:System.Xml.XmlAttributeCollection.Remove%2A> Aby usunąć określony atrybut.  
   
@@ -41,4 +41,4 @@ Istnieje wiele sposobów, aby usunąć atrybuty. Jedna z technik jest je usuną�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML Document Object Model (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

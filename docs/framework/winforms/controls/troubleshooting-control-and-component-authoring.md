@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168067"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343418"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
 Ten temat zawiera następujące typowe problemy, które występują podczas tworzenia składników i formantów. Aby uzyskać więcej informacji, zobacz [Programowanie przy użyciu składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -38,9 +38,9 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>Aby dodać formant do przybornika  
   
-1.  Kliknij prawym przyciskiem myszy **przybornika** z menu skrótów wybierz **wybierz elementy**.  
+1. Kliknij prawym przyciskiem myszy **przybornika** z menu skrótów wybierz **wybierz elementy**.  
   
-2.  W **wybierz elementy przybornika** okna dialogowego Dodaj składnik:  
+2. W **wybierz elementy przybornika** okna dialogowego Dodaj składnik:  
   
     -   Jeśli chcesz dodać do składnik .NET Framework lub formantu, kliknij przycisk **składników .NET Framework** kartę.  
   
@@ -48,11 +48,11 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
   
     -   Aby dodać składnik COM lub formantu ActiveX, kliknij przycisk **składników COM** kartę.  
   
-3.  Jeśli formant znajduje się w oknie dialogowym, upewnij się, jest zaznaczone, a następnie kliknij przycisk **OK**.  
+3. Jeśli formant znajduje się w oknie dialogowym, upewnij się, jest zaznaczone, a następnie kliknij przycisk **OK**.  
   
      Formant jest dodawany do **przybornika**.  
   
-4.  Jeśli formant nie znajduje się w oknie dialogowym, wykonaj następujące czynności:  
+4. Jeśli formant nie znajduje się w oknie dialogowym, wykonaj następujące czynności:  
   
     1.  Kliknij przycisk **Przeglądaj** przycisku.  
   
@@ -73,15 +73,15 @@ Ten temat zawiera następujące typowe problemy, które występują podczas twor
   
 #### <a name="to-debug-a-control-or-component"></a>Aby debugować formant lub składnika  
   
-1.  Z **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie** tworzenia rozwiązań.  
+1. Z **kompilacji** menu, kliknij przycisk **Kompiluj rozwiązanie** tworzenia rozwiązań.  
   
-2.  Z **pliku** menu, wybierz **Dodaj**, a następnie **nowy projekt** dodać projekt testowy do aplikacji.  
+2. Z **pliku** menu, wybierz **Dodaj**, a następnie **nowy projekt** dodać projekt testowy do aplikacji.  
   
-3.  W **Dodaj nowy projekt** okno dialogowe Wybierz **aplikacji Windows** dla typu projektu.  
+3. W **Dodaj nowy projekt** okno dialogowe Wybierz **aplikacji Windows** dla typu projektu.  
   
-4.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzeł dla nowego projektu. W menu skrótów kliknij **Dodaj odwołanie** można dodać odwołania do projektu zawierającego kontrola lub składników.  
+4. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** węzeł dla nowego projektu. W menu skrótów kliknij **Dodaj odwołanie** można dodać odwołania do projektu zawierającego kontrola lub składników.  
   
-5.  Utwórz wystąpienie składnika lub kontrolki w projekcie testowym. Jeśli składnik jest w **przybornika**, a następnie przeciągnij go do Twojego powierzchni projektanta lub można utworzyć wystąpienia programistycznie, jak pokazano w poniższym przykładzie kodu.  
+5. Utwórz wystąpienie składnika lub kontrolki w projekcie testowym. Jeśli składnik jest w **przybornika**, a następnie przeciągnij go do Twojego powierzchni projektanta lub można utworzyć wystąpienia programistycznie, jak pokazano w poniższym przykładzie kodu.  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  

@@ -2,23 +2,23 @@
 title: Powiadomienia zapytań w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e31a733635cf56a9c5e539dfb1d71d7d7037175a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203681"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336671"
 ---
 # <a name="query-notifications-in-sql-server"></a>Powiadomienia zapytań w programie SQL Server
 Powiadomienia o zapytaniach utworzonych na podstawie infrastruktury programu Service Broker, Zezwalaj na aplikacje otrzymywać powiadomienia, gdy dane zostały zmienione. Ta funkcja jest szczególnie użyteczna w przypadku aplikacji, które zapewniają pamięci podręcznej informacje z bazy danych, takich jak aplikacji sieci Web i musi być zgłoszone po zmianie źródła danych.  
   
  Istnieją trzy sposoby, które można wdrożyć za pomocą platformy ADO.NET powiadomienia o zapytaniach:  
   
-1.  Implementacja niskiego poziomu są dostarczane przez `SqlNotificationRequest` klasę, która udostępnia funkcje po stronie serwera, dzięki któremu można wykonać polecenia z żądaniem powiadomienia.  
+1. Implementacja niskiego poziomu są dostarczane przez `SqlNotificationRequest` klasę, która udostępnia funkcje po stronie serwera, dzięki któremu można wykonać polecenia z żądaniem powiadomienia.  
   
-2.  Wdrożenia wysokiego poziomu są dostarczane przez `SqlDependency` klasy, która jest klasą, która zawiera Abstrakcja wysokiego poziomu funkcjonalności powiadomień od źródłowej aplikacji i programu SQL Server, dzięki czemu można na potrzeby wykrywania zmian w zależności serwer. W większości przypadków jest to najprostszy i najbardziej efektywnym sposobem wykorzystać możliwości powiadomienia programu SQL Server, aplikacji klienckich zarządzanych za pomocą dostawcy danych .NET Framework dla programu SQL Server.  
+2. Wdrożenia wysokiego poziomu są dostarczane przez `SqlDependency` klasy, która jest klasą, która zawiera Abstrakcja wysokiego poziomu funkcjonalności powiadomień od źródłowej aplikacji i programu SQL Server, dzięki czemu można na potrzeby wykrywania zmian w zależności serwer. W większości przypadków jest to najprostszy i najbardziej efektywnym sposobem wykorzystać możliwości powiadomienia programu SQL Server, aplikacji klienckich zarządzanych za pomocą dostawcy danych .NET Framework dla programu SQL Server.  
   
-3.  Ponadto sieci Web aplikacji utworzonych za pomocą programu ASP.NET 2.0 lub później za pomocą `SqlCacheDependency` klas pomocniczych.  
+3. Ponadto sieci Web aplikacji utworzonych za pomocą programu ASP.NET 2.0 lub później za pomocą `SqlCacheDependency` klas pomocniczych.  
   
  Powiadomienia o zapytaniach są używane dla aplikacji, które trzeba odświeżyć Wyświetla lub zapisuje w pamięci podręcznej, w odpowiedzi na zmiany w danych bazowych. Microsoft SQL Server umożliwia aplikacji .NET Framework wysyłać polecenia do programu SQL Server i powiadomień żądania, jeśli wykonywane to samo polecenie dałby w efekcie inne niż pobierana początkowo zestawów wyników. Powiadomienia generowane na serwerze są wysyłane za pośrednictwem kolejki do przetworzenia później.  
   

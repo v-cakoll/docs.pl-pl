@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 80c55b45067405b1204cad0435b46b376f783c57
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342209"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>Instrukcje: Port aplikacji klasycznej WPF i .NET Core
 
@@ -27,7 +27,7 @@ W tym artykule różne nazwy są używane do identyfikacji typów plików używa
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=wpf+core) dla wszelkie prace projektanta, co chcesz zrobić.
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) dla wszelkie prace projektanta, co chcesz zrobić.
 
   Zainstaluj następujące obciążenia w programie Visual Studio:
   - Programowanie aplikacji klasycznych dla platformy .NET
@@ -38,7 +38,7 @@ W tym artykule różne nazwy są używane do identyfikacji typów plików używa
 - Zainstaluj najnowszą wersję [.NET Core 3.0](https://aka.ms/netcore3download) (wersja zapoznawcza).
 
 >[!NOTE]
->**Program Visual Studio 2017** nie obsługuje projektów .NET Core 3.0. **Program Visual Studio 2019 r w wersji zapoznawczej/RC** obsługuje projekty .NET Core 3.0, ale nie obsługuje jeszcze wizualnego projektanta dla projektów .NET Core 3.0 WPF. Aby użyć projektanta wizualnego, musi mieć projekt .NET WPF w danym rozwiązaniu, który udostępnia swoje pliki z projektu .NET Core.
+>**Program Visual Studio 2017** nie obsługuje projektów .NET Core 3.0. **Visual Studio 2019** obsługuje projekty .NET Core 3.0, ale nie obsługuje jeszcze wizualnego projektanta dla projektów .NET Core 3.0 WPF. Aby użyć projektanta wizualnego, musi mieć projekt .NET WPF w danym rozwiązaniu, który udostępnia swoje pliki z projektu .NET Core.
 
 ### <a name="consider"></a>Należy wziąć pod uwagę
 
@@ -60,7 +60,7 @@ Podczas przenoszenia aplikacji .NET Framework WPF, istnieje kilka rzeczy, które
 
     Zawsze jest dobrą praktyką jest używanie najnowszych wersji pakietów NuGet przed wykonaniem dowolnej migracji. Jeśli aplikacja odwołuje się do żadnych pakietów NuGet, aktualizację do najnowszej wersji. Upewnij się, że Twoja aplikacja pomyślnie skompilowana. Po uaktualnieniu, w przypadku błędów pakietu obniżyć wersję pakietu do najnowszej wersji, który nie przerywa działania kodu.
 
-01. Program Visual Studio 2019 r w wersji zapoznawczej/RC programu .NET Core 3.0 nie obsługuje jeszcze projektanta WPF
+01. Visual Studio 2019 r dla programu .NET Core 3.0 nie obsługuje jeszcze projektanta WPF
 
     Obecnie należy zachować istniejący plik projektu programu .NET Framework WPF, jeśli chcesz użyć projektanta WPF w programie Visual Studio.
 
@@ -215,7 +215,7 @@ Poprzednie polecenie dodaje następujące polecenie, aby **MyWPFCore.csproj** pr
 
 ## <a name="wpf-designer"></a>Projektant WPF
 
-Zgodnie z opisem w tym artykule program Visual Studio 2019 r w wersji zapoznawczej/RC obsługuje projektanta WPF tylko w projektach .NET Framework. Tworząc projekt .NET Core side-by-side, można przetestować projektu na platformie .NET Core, podczas korzystania z projektu .NET Framework do projektowania formularzy. Plik rozwiązania zawiera projekty .NET Framework i .NET Core. Dodaj projekt formularzy i kontrolek w projekcie .NET Framework i wzorce glob pliku dodaliśmy do projektów .NET Core i wszelkich nowych lub zmienionych plików zostaną automatycznie uwzględnione w projektach .NET Core.
+Zgodnie z opisem w tym artykule Visual Studio 2019 obsługuje projektanta WPF tylko w projektach .NET Framework. Tworząc projekt .NET Core side-by-side, można przetestować projektu na platformie .NET Core, podczas korzystania z projektu .NET Framework do projektowania formularzy. Plik rozwiązania zawiera projekty .NET Framework i .NET Core. Dodaj projekt formularzy i kontrolek w projekcie .NET Framework i wzorce glob pliku dodaliśmy do projektów .NET Core i wszelkich nowych lub zmienionych plików zostaną automatycznie uwzględnione w projektach .NET Core.
 
 Gdy program Visual Studio 2019 obsługuje projektanta WPF, można kopiujesz/wklejasz zawartość pliku projektu .NET Core do pliku projektu .NET Framework. Następnie usuń wzorce glob plików, które są dodawane przy użyciu `<Source>` i `<EmbeddedResource>` elementów. Napraw ścieżki do dowolnego odwołania projektu do używanych przez aplikację. Projekt programu .NET Framework to skutecznie uaktualniania do projektu .NET Core.
  

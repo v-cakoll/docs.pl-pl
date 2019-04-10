@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337841"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi
 Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obsługuje model extensible autoryzacji opartej na oświadczeniach. Oświadczenia są wyodrębniane z tokenów i opcjonalnie przetwarzane przy użyciu zasad autoryzacji niestandardowej i następnie umieszczać w <xref:System.IdentityModel.Policy.AuthorizationContext>. Menedżer autoryzacji sprawdza, czy oświadczenia w <xref:System.IdentityModel.Policy.AuthorizationContext> do podejmowania decyzji dotyczących autoryzacji.  
@@ -28,12 +28,12 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obs�
   
 ### <a name="to-create-a-custom-authorization-manager"></a>Aby utworzyć Menedżera autoryzacji niestandardowej  
   
-1.  Wyprowadzić klasę z <xref:System.ServiceModel.ServiceAuthorizationManager> klasy.  
+1. Wyprowadzić klasę z <xref:System.ServiceModel.ServiceAuthorizationManager> klasy.  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Zastąp <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> metody.  
+2. Zastąp <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> metody.  
   
      Użyj <xref:System.ServiceModel.OperationContext> przekazana do <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> metodę do podejmowania decyzji dotyczących autoryzacji.  
   
@@ -44,7 +44,7 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obs�
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>Aby zarejestrować Menedżera autoryzacji niestandardowej przy użyciu kodu  
   
-1.  Utwórz wystąpienie obiektu autoryzacja niestandardowa manager i przypisz ją do <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> właściwości.  
+1. Utwórz wystąpienie obiektu autoryzacja niestandardowa manager i przypisz ją do <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> właściwości.  
   
      <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> Można uzyskać dostęp za pomocą <xref:System.ServiceModel.ServiceHostBase.Authorization%2A> właściwości.  
   
@@ -55,17 +55,17 @@ Infrastruktura modelu tożsamości w Windows Communication Foundation (WCF) obs�
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>Aby zarejestrować Menedżera autoryzacji niestandardowej przy użyciu konfiguracji  
   
-1.  Otwórz plik konfiguracji usługi.  
+1. Otwórz plik konfiguracji usługi.  
   
-2.  Dodaj [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) do [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
+2. Dodaj [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) do [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md).  
   
      Aby [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md), Dodaj `serviceAuthorizationManagerType` atrybut i ustawić jej wartość na typ, który reprezentuje Menedżera autoryzacji niestandardowej.  
   
-3.  Dodaj powiązanie, które zabezpiecza komunikację między klientem a usługą.  
+3. Dodaj powiązanie, które zabezpiecza komunikację między klientem a usługą.  
   
      Powiązania, który wybrano dla tej komunikacji określa oświadczenia, które są dodawane do <xref:System.IdentityModel.Policy.AuthorizationContext>, który używa Menedżera autoryzacji niestandardowej w celu podejmowania decyzji dotyczących autoryzacji. Aby uzyskać więcej szczegółów na temat powiązania dostarczane przez system, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
-4.  Kojarzenie zachowania punktu końcowego usługi, dodając [ \<usługi >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) element i ustaw wartość `behaviorConfiguration` atrybutu z wartością atrybutu nazwy [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu.  
+4. Kojarzenie zachowania punktu końcowego usługi, dodając [ \<usługi >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) element i ustaw wartość `behaviorConfiguration` atrybutu z wartością atrybutu nazwy [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu.  
   
      Aby uzyskać więcej informacji na temat konfigurowania punktu końcowego usługi, zobacz [jak: Tworzenie punktu końcowego usługi w konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   

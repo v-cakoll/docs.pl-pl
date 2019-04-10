@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmienianie stylu elementu w modelu obiektów zarządzanych dokumentów HTML'
+title: 'Instrukcje: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333668"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Instrukcje: Zmienianie stylu elementu w modelu obiektów zarządzanych dokumentów HTML
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Instrukcje: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 
 Aby sterować wyglądem dokumentu i jej elementów, można użyć style w formacie HTML. <xref:System.Windows.Forms.HtmlDocument> i <xref:System.Windows.Forms.HtmlElement> obsługuje <xref:System.Windows.Forms.HtmlElement.Style%2A> właściwości, które pobierają ciągi stylu następujący format:
 
@@ -68,7 +68,7 @@ Poniższa procedura zawiera kod, który umożliwia łatwe manipulowanie stylów,
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  Uruchom projekt. Uruchom kursor nad pierwszym `DIV` aby obserwować wyniki kodu.  
+7. Uruchom projekt. Uruchom kursor nad pierwszym `DIV` aby obserwować wyniki kodu.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje pełny kod `StyleGenerator` klasy, która analizuje istniejącą wartość stylu, obsługuje dodawanie, zmienianie i usuwanie stylów i zwraca nową wartość stylu z żądanych zmian.  

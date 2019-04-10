@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
-ms.openlocfilehash: 0bc7c9d09922b7fbef534e6b58389ca343cc1e13
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333915"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>Instrukcje: Przekazywanie argumentów do procedury (Visual Basic)
 Po wywołaniu procedury, należy wykonać Nazwa procedury z listą argumentów w nawiasach. Należy podać argument odpowiadający każdego wymaganego parametru definiuje procedurę i opcjonalnie można podać argumenty do `Optional` parametrów. Jeśli nie podasz `Optional` parametr w wywołaniu musi zawierać przecinek, aby oznaczyć jego miejsce na liście argumentów, jeśli są podawania wszystkie pozostałe argumenty.  
@@ -27,15 +27,15 @@ Po wywołaniu procedury, należy wykonać Nazwa procedury z listą argumentów w
   
 ### <a name="to-pass-one-or-more-arguments-to-a-procedure"></a>Aby przekazać jeden lub więcej argumentów do procedury  
   
-1.  W instrukcji wywołujące postępuj zgodnie z nazwy procedury za pomocą nawiasów.  
+1. W instrukcji wywołujące postępuj zgodnie z nazwy procedury za pomocą nawiasów.  
   
-2.  Wewnątrz nawiasów umieść listy argumentów. Obejmują argument dla każdego wymaganego parametru definiuje procedurę i należy je oddzielić przecinkami.  
+2. Wewnątrz nawiasów umieść listy argumentów. Obejmują argument dla każdego wymaganego parametru definiuje procedurę i należy je oddzielić przecinkami.  
   
-3.  Upewnij się, że każdy argument jest prawidłowe wyrażenie obliczane do typu danych można przekonwertować na typ procedury definiuje odpowiadającego mu parametru.  
+3. Upewnij się, że każdy argument jest prawidłowe wyrażenie obliczane do typu danych można przekonwertować na typ procedury definiuje odpowiadającego mu parametru.  
   
-4.  Jeśli parametr jest zdefiniowany jako [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md), możesz włączyć ją na liście argumentów lub Pomiń ją. Jeśli ten parametr zostanie pominięty, w procedurze użyto wartości domyślnej zdefiniowanej dla tego parametru.  
+4. Jeśli parametr jest zdefiniowany jako [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md), możesz włączyć ją na liście argumentów lub Pomiń ją. Jeśli ten parametr zostanie pominięty, w procedurze użyto wartości domyślnej zdefiniowanej dla tego parametru.  
   
-5.  Jeżeli pominięto argument `Optional` parametru i ma inny parametr po liście parametrów, można oznaczyć miejsce pominięty argument przez dodatkowy przecinek na liście argumentów.  
+5. Jeżeli pominięto argument `Optional` parametru i ma inny parametr po liście parametrów, można oznaczyć miejsce pominięty argument przez dodatkowy przecinek na liście argumentów.  
   
      Poniższy przykład wywołuje Visual Basic <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> funkcji.  
   

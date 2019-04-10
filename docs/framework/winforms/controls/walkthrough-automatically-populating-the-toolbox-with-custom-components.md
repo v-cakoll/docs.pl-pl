@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178792"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338101"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi
 Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie, zostanie automatycznie wyświetlona w **przybornika**, za pomocą trzeba wykonywać żadnych czynności przez użytkownika. Możesz również ręcznie wypełnić **przybornika** za pomocą składników niestandardowych za pomocą [wybierz przybornika dialogowego elementy (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ale **przybornika** uwzględnia elementy w Twoim rozwiązaniu kompilacji danych wyjściowych o następującej charakterystyce:  
@@ -45,31 +45,31 @@ Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie,
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz projekt aplikacji systemu Windows o nazwie `ToolboxExample` (**pliku** > **New** > **projektu**  >  **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
+1. Utwórz projekt aplikacji systemu Windows o nazwie `ToolboxExample` (**pliku** > **New** > **projektu**  >  **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
   
-2.  Dodaj nowy składnik do projektu. Wywołaj go `DemoComponent`.  
+2. Dodaj nowy składnik do projektu. Wywołaj go `DemoComponent`.  
   
      Aby uzyskać więcej informacji, zobacz [jak: Dodaj nowe elementy projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)).  
   
-3.  Skompiluj projekt.  
+3. Skompiluj projekt.  
   
-4.  Z **narzędzia** menu, kliknij przycisk **opcje** elementu. Kliknij przycisk **ogólne** w obszarze **Windows Forms Designer** element i upewnij się, że **AutoToolboxPopulate** ustawiono opcję **True**.  
+4. Z **narzędzia** menu, kliknij przycisk **opcje** elementu. Kliknij przycisk **ogólne** w obszarze **Windows Forms Designer** element i upewnij się, że **AutoToolboxPopulate** ustawiono opcję **True**.  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>Tworzenie wystąpienia składnika niestandardowego  
  Następnym krokiem jest do utworzenia wystąpienia składnika niestandardowego w formularzu. Ponieważ **przybornika** automatycznie kont dla nowego składnika, jest to tak proste, jak tworzenie innych składnika lub kontrolki.  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>Aby utworzyć wystąpienie składnika niestandardowego  
   
-1.  Otwieranie formularza projektu w **projektanta formularzy**.  
+1. Otwieranie formularza projektu w **projektanta formularzy**.  
   
-2.  W **przybornika**, kliknij przycisk Nowa karta o nazwie **składniki ToolboxExample**.  
+2. W **przybornika**, kliknij przycisk Nowa karta o nazwie **składniki ToolboxExample**.  
   
      Po kliknięciu karty, zostanie wyświetlony **DemoComponent**.  
   
     > [!NOTE]
     >  Ze względu na wydajność składników w obszarze automatycznie wypełniony **przybornika** niestandardowych map bitowych, nie są wyświetlane i <xref:System.Drawing.ToolboxBitmapAttribute> nie jest obsługiwane. Aby wyświetlić ikonę do składnika niestandardowego w **przybornika**, użyj **wybierz elementy przybornika** okno dialogowe, aby załadować składnika.  
   
-3.  Przeciągnij składnik do formularza.  
+3. Przeciągnij składnik do formularza.  
   
      Wystąpienia składnika, zostanie utworzony i dodany do **zasobniku składnika**.  
   
@@ -78,15 +78,15 @@ Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie,
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>Aby eksperymentować z wpływu na przybornika zwalniania i ponownego ładowania składników  
   
-1.  Zwolnij projekt z rozwiązania.  
+1. Zwolnij projekt z rozwiązania.  
   
      Aby uzyskać więcej informacji na temat zwalniając projekty, zobacz [jak: Zwolnij i ponownie Załaduj projekty](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100)). Jeśli zostanie wyświetlony monit, aby zapisać, wybierz opcję **tak**.  
   
-2.  Dodaj nową **aplikacji Windows** projektu do rozwiązania. Otwórz formularz w **projektanta**.  
+2. Dodaj nową **aplikacji Windows** projektu do rozwiązania. Otwórz formularz w **projektanta**.  
   
      **Składniki ToolboxExample** kartę z poprzednim projektu jest teraz usunięte.  
   
-3.  Załaduj ponownie `ToolboxExample` projektu.  
+3. Załaduj ponownie `ToolboxExample` projektu.  
   
      **Składniki ToolboxExample** karcie teraz będzie pojawiać się ponownie.  
   

@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: fbcd880d7bae9d6ad57f4769a5c4b6ef6f0141a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f41a8e38812cf9d3c652fa605febf2511f07a27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339089"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (Visual Basic)
 Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest często używana do przechowywania danych w arkuszu kalkulacyjnym lub inne dane tabelaryczne, który jest reprezentowany przez wierszy i kolumn. Za pomocą <xref:System.String.Split%2A> metodę, aby rozdzielić pola, jest bardzo proste w celu wykonywania zapytań i manipulowania plików CSV za pomocą LINQ. W rzeczywistości tej samej techniki można zmieniać kolejność części ze strukturą wiersza tekstu. nie jest ograniczona do plików CSV.  
@@ -16,7 +16,7 @@ Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest cz�
   
 ### <a name="to-create-the-data-file"></a>Aby utworzyć plik danych  
   
-1.  Skopiuj następujące wiersze do zwykły plik tekstowy o nazwie spreadsheet1.csv. Zapisz plik w folderze projektu.  
+1. Skopiuj następujące wiersze do zwykły plik tekstowy o nazwie spreadsheet1.csv. Zapisz plik w folderze projektu.  
   
     ```  
     Adams,Terry,120  
@@ -80,4 +80,4 @@ End Class
 
 - [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [Instrukcje: Generowanie kodu XML z plików CSV](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)
+- [Instrukcje: generowanie kodu XML z plików CSV](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

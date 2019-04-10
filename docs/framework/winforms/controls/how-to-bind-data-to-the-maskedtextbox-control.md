@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342235"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Instrukcje: powiązanie danych z kontrolką MaskedTextBox
 Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować, jak dowolną inną kontrolką Windows Forms. Jednak jeśli format danych w bazie danych nie jest zgodny z formatu oczekiwanego przez definicję maska sieci, należy ponownie sformatować dane. Poniższa procedura demonstruje, jak to zrobić za pomocą <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia <xref:System.Windows.Forms.Binding> klasy, aby wyświetlić numer telefonu oddzielne i telefonów rozszerzenie pola bazy danych jako pojedyncze pole można edytować.  
@@ -24,15 +24,15 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować,
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>Aby powiązać dane z kontrolką MaskedTextBox  
   
-1.  Utwórz nowy projekt Windows Forms.  
+1. Utwórz nowy projekt Windows Forms.  
   
-2.  Przeciągnij dwa <xref:System.Windows.Forms.TextBox> formanty do formularza; nazwij je `FirstName` i `LastName`.  
+2. Przeciągnij dwa <xref:System.Windows.Forms.TextBox> formanty do formularza; nazwij je `FirstName` i `LastName`.  
   
-3.  Przeciągnij <xref:System.Windows.Forms.MaskedTextBox> formant do formularza; nadaj mu nazwę `PhoneMask`.  
+3. Przeciągnij <xref:System.Windows.Forms.MaskedTextBox> formant do formularza; nadaj mu nazwę `PhoneMask`.  
   
-4.  Ustaw <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwość `PhoneMask` do `(000) 000-0000 x9999`.  
+4. Ustaw <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwość `PhoneMask` do `(000) 000-0000 x9999`.  
   
-5.  Dodaj następująca przestrzeń nazw importuje do formularza.  
+5. Dodaj następująca przestrzeń nazw importuje do formularza.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować,
     Imports System.Data.SqlClient  
     ```  
   
-6.  Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**. Umieść ten kod w dowolnym miejscu w klasie formularza.  
+6. Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**. Umieść ten kod w dowolnym miejscu w klasie formularza.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować,
     End Sub  
     ```  
   
-7.  Dodawanie obsługi zdarzeń <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzeń w celu łączenia i oddzielić `PhoneNumber` i `Extension` pól z powiązanych z <xref:System.Data.DataSet>.  
+7. Dodawanie obsługi zdarzeń <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzeń w celu łączenia i oddzielić `PhoneNumber` i `Extension` pól z powiązanych z <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować,
     End Sub  
     ```  
   
-8.  Dodaj dwie <xref:System.Windows.Forms.Button> formantów do formularza. Nazwij je `previousButton` i `nextButton`. Kliknij dwukrotnie każdy przycisk, aby dodać <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń, a następnie wypełnij procedury obsługi zdarzeń, jak pokazano w poniższym przykładzie kodu.  
+8. Dodaj dwie <xref:System.Windows.Forms.Button> formantów do formularza. Nazwij je `previousButton` i `nextButton`. Kliknij dwukrotnie każdy przycisk, aby dodać <xref:System.Windows.Forms.Control.Click> program obsługi zdarzeń, a następnie wypełnij procedury obsługi zdarzeń, jak pokazano w poniższym przykładzie kodu.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

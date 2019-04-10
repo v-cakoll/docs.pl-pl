@@ -2,12 +2,12 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341104"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez architekturę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, przeglądać i filtrować komunikaty śledzenia w dzienniku, aby zdiagnozować, naprawy i sprawdź problemów z usługą WCF.  
@@ -72,7 +72,7 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
 ##### <a name="to-open-a-trace-file"></a>Aby otworzyć plik śledzenia  
   
-1.  Rozpocznij przeglądarki danych śledzenia usługi za pomocą okno polecenia przejdź do lokalizacji instalacji usługi WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.  
+1. Rozpocznij przeglądarki danych śledzenia usługi za pomocą okno polecenia przejdź do lokalizacji instalacji usługi WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Narzędzie przeglądarki danych śledzenia usługi można skojarzyć z dwóch typów plików: .svclog i .stvproj. Dwa parametry wiersza polecenia umożliwia rejestrowanie i wyrejestrowywanie rozszerzeń plików.  
@@ -81,14 +81,14 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 >   
 >  / unregister: unregister skojarzenie rozszerzenia pliku ".svclog" i ".stvproj" SvcTraceViewer.exe  
   
-1.  Po uruchomieniu przeglądarki danych śledzenia usługi kliknij **pliku** i wskaż **Otwórz**. Przejdź do lokalizacji, w którym są przechowywane pliki śledzenia.  
+1. Po uruchomieniu przeglądarki danych śledzenia usługi kliknij **pliku** i wskaż **Otwórz**. Przejdź do lokalizacji, w którym są przechowywane pliki śledzenia.  
   
-2.  Kliknij dwukrotnie plik śledzenia, który chcesz otworzyć.  
+2. Kliknij dwukrotnie plik śledzenia, który chcesz otworzyć.  
   
     > [!NOTE]
     >  Naciśnij klawisz SHIFT podczas klikania wielu plików śledzenia, wybierz i otwórz je jednocześnie. Przeglądarki danych śledzenia usługi Scala zawartość wszystkich plików i przedstawia jeden widok. Na przykład możesz otworzyć pliki śledzenia zarówno klient, jak i usługi. Jest to przydatne, gdy włączono rejestrowanie i działania Propagacja komunikatów w konfiguracji. W ten sposób można sprawdzić w wymianie wiadomości między klientem a usługą. Można również przeciągnąć wielu plików w przeglądarce lub użyj **projektu** kartę. Zobacz sekcję Zarządzanie projektu, aby uzyskać więcej informacji.  
   
-3.  Aby dodać pliki śledzenia dodatkowych kolekcji, która jest otwarta, kliknij **pliku** i wskaż **Dodaj**. W otwartym oknie przejdź do lokalizacji plików śledzenia, a następnie kliknij dwukrotnie plik, który chcesz dodać.  
+3. Aby dodać pliki śledzenia dodatkowych kolekcji, która jest otwarta, kliknij **pliku** i wskaż **Dodaj**. W otwartym oknie przejdź do lokalizacji plików śledzenia, a następnie kliknij dwukrotnie plik, który chcesz dodać.  
   
 > [!CAUTION]
 >  Nie zaleca się załadowanie pliku dziennika śledzenia większy niż 200MB. Jeśli użytkownik podejmie próbę załadowania pliku przekracza ten limit, proces ładowania może potrwać długo zależnie od zasobu komputera. Narzędzie przeglądarki danych śledzenia usługi może nie być dynamiczny przez długi czas lub go może wyczerpać pamięci maszyny. Zaleca się konfigurowania ładowania częściowego, aby tego uniknąć. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz sekcję "Podczas ładowania dużych śledzenia Files".  
@@ -154,24 +154,24 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
 ###### <a name="selecting-traces-in-the-graph"></a>Wybieranie ślady na wykresie  
   
-1.  Kliknij blok na wykresie.  
+1. Kliknij blok na wykresie.  
   
-2.  W górę i w dół kluczy, aby wybrać jej sąsiednich ślady.  
+2. W górę i w dół kluczy, aby wybrać jej sąsiednich ślady.  
   
-3.  Sprawdź informacje o śledzeniu w okienku śledzenia i okienka szczegółów.  
+3. Sprawdź informacje o śledzeniu w okienku śledzenia i okienka szczegółów.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Rozwijanie lub zwijanie transferów działań  
  Podczas działania w zaznaczeniu przenosi się do kolejnego działania, można rozwinąć transferów działań. Pozwala ona do wykonania transferu.  
   
  Aby rozwinąć lub zwinąć transferów działań  
   
-1.  Znajdź śledzenia transferu znakiem "+" po lewej stronie ikony transferu.  
+1. Znajdź śledzenia transferu znakiem "+" po lewej stronie ikony transferu.  
   
-2.  Kliknij przycisk "+" lub naciśnij **Ctrl** i "+" za pomocą klawiatury.  
+2. Kliknij przycisk "+" lub naciśnij **Ctrl** i "+" za pomocą klawiatury.  
   
-3.  Następne działanie jest wyświetlana na wykresie.  
+3. Następne działanie jest wyświetlana na wykresie.  
   
-4.  Element "-" pojawia się po lewej stronie ikony transferu. Kliknij przycisk "-" Zaloguj się i nacisnąć klawisz Ctrl i "-", zwija transferu działania.  
+4. Element "-" pojawia się po lewej stronie ikony transferu. Kliknij przycisk "-" Zaloguj się i nacisnąć klawisz Ctrl i "-", zwija transferu działania.  
   
 > [!NOTE]
 >  Gdy działanie ma wiele przeniesienia do niego i jedną przeniesień Rozwiń, są wyświetlane działań, które powoduje nowe działanie z działania głównego. Te nowe działania są wyświetlane w formularzu zwinięty. Jeśli chcesz wyświetlić szczegóły tych działań, powiększyć je w pionie, klikając ikonę rozwijania w nagłówku wykresu.  
@@ -181,13 +181,13 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
  Aby rozwinąć lub zwinąć działań w pionie  
   
-1.  Kliknij ikonę "+" w nagłówku działania, aby rozwinąć działania w pionie.  
+1. Kliknij ikonę "+" w nagłówku działania, aby rozwinąć działania w pionie.  
   
-2.  Należy zauważyć, że wszystkie ślady są wyświetlane na wykresie.  
+2. Należy zauważyć, że wszystkie ślady są wyświetlane na wykresie.  
   
-3.  Kliknij przycisk "-" ikona w nagłówku działania, aby zwinąć działania w pionie.  
+3. Kliknij przycisk "-" ikona w nagłówku działania, aby zwinąć działania w pionie.  
   
-4.  Zwróć uwagę że tylko ważne w przypadku transferów komunikatu dzienników, ostrzeżenie i śledzenia wyjątków są wyświetlane w działaniu.  
+4. Zwróć uwagę że tylko ważne w przypadku transferów komunikatu dzienników, ostrzeżenie i śledzenia wyjątków są wyświetlane w działaniu.  
   
 ###### <a name="options"></a>Opcje  
  Można wybrać dwie opcje z **opcja** menu w widoku wykresu.  
@@ -259,17 +259,17 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Utworzenie filtru niestandardowego za pomocą Kreatora szablonu  
  Można kliknąć istniejących śledzenia i utworzyć filtr oparty na strukturze śledzenia. W tym przykładzie tworzy niestandardowy filtr oparty na identyfikator wątku.  
   
-1.  W okienku śledzenia w prawym górnym obszarze podglądu wybierz śledzenia, który zawiera element, którego chcesz filtrować.  
+1. W okienku śledzenia w prawym górnym obszarze podglądu wybierz śledzenia, który zawiera element, którego chcesz filtrować.  
   
-2.  Kliknij przycisk **utworzyć niestandardowy filtr** znajdujący się w górnej części okienka śledzenia.  
+2. Kliknij przycisk **utworzyć niestandardowy filtr** znajdujący się w górnej części okienka śledzenia.  
   
-3.  W oknie dialogowym Wprowadź nazwę filtru. W tym przykładzie wprowadź `Thread ID`. Można również podać opis filtru.  
+3. W oknie dialogowym Wprowadź nazwę filtru. W tym przykładzie wprowadź `Thread ID`. Można również podać opis filtru.  
   
-4.  Widok drzewa po lewej stronie wyświetla strukturę rekord śledzenia, który został wybrany w kroku 1. Przejdź do elementu, którego chcesz utworzyć warunek. W tym przykładzie, przejdź do ThreadID muszą znajdować się w wyrażenie XPath: /E2ETraceEvent/System/Execution/@ThreadID węzła. Kliknij dwukrotnie atrybut ThreadID w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.  
+4. Widok drzewa po lewej stronie wyświetla strukturę rekord śledzenia, który został wybrany w kroku 1. Przejdź do elementu, którego chcesz utworzyć warunek. W tym przykładzie, przejdź do ThreadID muszą znajdować się w wyrażenie XPath: /E2ETraceEvent/System/Execution/@ThreadID węzła. Kliknij dwukrotnie atrybut ThreadID w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.  
   
-5.  Zmień wartość pola parametrów dla warunku ThreadID z Brak, aby "{0}". Ten krok powoduje włączenie wartość ThreadID skonfigurowane, po zastosowaniu filtru. (Zobacz jak zastosować sekcja filtru) Można zdefiniować maksymalnie cztery parametry. Warunki są łączone za pomocą operatora OR.  
+5. Zmień wartość pola parametrów dla warunku ThreadID z Brak, aby "{0}". Ten krok powoduje włączenie wartość ThreadID skonfigurowane, po zastosowaniu filtru. (Zobacz jak zastosować sekcja filtru) Można zdefiniować maksymalnie cztery parametry. Warunki są łączone za pomocą operatora OR.  
   
-6.  Kliknij przycisk **Ok** do utworzenia filtru.  
+6. Kliknij przycisk **Ok** do utworzenia filtru.  
   
 > [!NOTE]
 >  Po utworzeniu filtru przy użyciu Kreatora szablonów, można ją edytować tylko ręcznie. Nie jest możliwe uruchomić Kreatora tworzenia filtru, który został utworzony wcześniej. Ponadto warunki filtr XPath w Kreatorze szablonu są łączone za pomocą operatora OR. Jeśli potrzebujesz i operacji, można edytować wyrażenie filtru, po jego utworzeniu.  
@@ -277,20 +277,20 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 ###### <a name="creating-a-custom-filter-manually"></a>Ręczne tworzenie niestandardowego filtru  
  Menu niestandardowe filtry umożliwia ręczne wprowadzenie filtrach XPath.  
   
-1.  W menu Widok, kliknij przycisk **niestandardowe filtry** elementu menu.  
+1. W menu Widok, kliknij przycisk **niestandardowe filtry** elementu menu.  
   
-2.  W wyświetlonym oknie dialogowym kliknij **nowy.**  
+2. W wyświetlonym oknie dialogowym kliknij **nowy.**  
   
-3.  Minimum Określ nazwę filtru i XPath wyrażenia.  
+3. Minimum Określ nazwę filtru i XPath wyrażenia.  
   
-4.  Kliknij przycisk **OK**.  
+4. Kliknij przycisk **OK**.  
   
 ###### <a name="applying-a-custom-filter"></a>Stosowanie niestandardowego filtru  
  Po utworzeniu niestandardowego filtru jest dostępny do narzędzi filtru. Wybierz filtr, który chcesz zastosować w **wyszukiwania w** pole filtru paska narzędzi. W poprzednim przykładzie należy wybrać identyfikator wątku.  
   
-1.  Określ wartość, którego szukasz w **Znajdź** pola. W tym przykładzie należy wprowadzić identyfikator wątku, który chcesz wyszukać.  
+1. Określ wartość, którego szukasz w **Znajdź** pola. W tym przykładzie należy wprowadzić identyfikator wątku, który chcesz wyszukać.  
   
-2.  Kliknij przycisk **filtr teraz**i sprawdź, czy wynik operacji.  
+2. Kliknij przycisk **filtr teraz**i sprawdź, czy wynik operacji.  
   
  Jeśli filtr korzysta z wielu parametrów, wprowadź je przy użyciu ";" jako separator w **Znajdź** pola. Na przykład następujący ciąg definiuje 3 parametry: "1; findValue tekst". Podgląd dotyczy '1' {0} parametru filtru. 'findValue' i 'text' są stosowane do {1} i {2} odpowiednio.  
   
@@ -299,21 +299,21 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
   
  Aby zaimportować filtr niestandardowy:  
   
-1.  W **widoku** menu, kliknij przycisk **niestandardowe filtry**.  
+1. W **widoku** menu, kliknij przycisk **niestandardowe filtry**.  
   
-2.  W wyświetlonym oknie dialogowym kliknij **importu** przycisku.  
+2. W wyświetlonym oknie dialogowym kliknij **importu** przycisku.  
   
-3.  Przejdź do pliku niestandardowego filtru (.stvcf), kliknij plik, a następnie kliknij przycisk **Otwórz** przycisku.  
+3. Przejdź do pliku niestandardowego filtru (.stvcf), kliknij plik, a następnie kliknij przycisk **Otwórz** przycisku.  
   
  Aby wyeksportować niestandardowy filtr:  
   
-1.  W menu Widok, kliknij przycisk **niestandardowe filtry**.  
+1. W menu Widok, kliknij przycisk **niestandardowe filtry**.  
   
-2.  W wyświetlonym oknie dialogowym Wybierz filtr, który chcesz wyeksportować.  
+2. W wyświetlonym oknie dialogowym Wybierz filtr, który chcesz wyeksportować.  
   
-3.  Kliknij przycisk **wyeksportować** przycisku.  
+3. Kliknij przycisk **wyeksportować** przycisku.  
   
-4.  Określ nazwę i lokalizację pliku definicji niestandardowego filtru (.stvcf), a następnie kliknij przycisk **Zapisz** przycisku.  
+4. Określ nazwę i lokalizację pliku definicji niestandardowego filtru (.stvcf), a następnie kliknij przycisk **Zapisz** przycisku.  
   
 > [!NOTE]
 >  Te filtry niestandardowe można tylko zaimportować i wyeksportować z przeglądarki danych śledzenia usługi. Nie można ich odczytać, za pomocą innych narzędzi.  
@@ -396,9 +396,9 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
 #### <a name="adjusting-partial-loading"></a>Dostosowywanie ładowania częściowego  
  Po załadowaniu częściowo pliku śledzenia, można zmienić ładowany zestaw danych. Aby to zrobić przez dostosowanie narzędzi ładowania częściowego, u góry okna podglądu.  
   
-1.  Przesuń pasek narzędzi, myszy, lub wprowadź godzinę rozpoczęcia i zakończenia.  
+1. Przesuń pasek narzędzi, myszy, lub wprowadź godzinę rozpoczęcia i zakończenia.  
   
-2.  Kliknij przycisk **Dostosuj** przycisku.  
+2. Kliknij przycisk **Dostosuj** przycisku.  
   
 ## <a name="understanding-trace-icons"></a>Omówienie śledzenia ikon  
  Poniżej przedstawiono listę ikon używanych przez narzędzie przeglądarki danych śledzenia usługi w **działania** widoku **wykres** widoku i **śledzenia** reprezentują różne elementy w okienku.  

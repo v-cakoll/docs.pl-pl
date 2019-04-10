@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341494"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Instrukcje: Tworzenie obrazów miniatur
 Obraz miniatury jest mały wersję obrazu. Możesz utworzyć obraz miniatury, przez wywołanie metody <xref:System.Drawing.Image.GetThumbnailImage%2A> metody <xref:System.Drawing.Image> obiektu.  
@@ -34,19 +34,19 @@ Obraz miniatury jest mały wersję obrazu. Możesz utworzyć obraz miniatury, pr
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń. Aby uruchomić przykład, wykonaj następujące kroki:  
   
-1.  Tworzenie nowej aplikacji Windows Forms.  
+1. Tworzenie nowej aplikacji Windows Forms.  
   
-2.  Dodaj przykładowy kod do formularza.  
+2. Dodaj przykładowy kod do formularza.  
   
-3.  Utwórz procedurę obsługi w formularzu <xref:System.Windows.Forms.Control.Paint> zdarzeń  
+3. Utwórz procedurę obsługi w formularzu <xref:System.Windows.Forms.Control.Paint> zdarzeń  
   
-4.  W <xref:System.Windows.Forms.Control.Paint> program obsługi, wywołanie `GetThumbnail` metody i przekazać `e` dla <xref:System.Windows.Forms.PaintEventArgs>.  
+4. W <xref:System.Windows.Forms.Control.Paint> program obsługi, wywołanie `GetThumbnail` metody i przekazać `e` dla <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Znajdź plik obrazu, który ma się miniaturę.  
+5. Znajdź plik obrazu, który ma się miniaturę.  
   
-6.  W `GetThumbnail` metody, określ ścieżkę i nazwę obrazu pliku.  
+6. W `GetThumbnail` metody, określ ścieżkę i nazwę obrazu pliku.  
   
-7.  Naciśnij klawisz F5, aby uruchomić przykład.  
+7. Naciśnij klawisz F5, aby uruchomić przykład.  
   
      W formularzu pojawi się miniaturę 100 x 100.  
   

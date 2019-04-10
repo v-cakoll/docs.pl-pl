@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343015"
 ---
 # <a name="comments-in-code-visual-basic"></a>Komentarze w kodzie (Visual Basic)
 Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbol informuje kompilator języka Visual Basic, aby zignorować tekst następujący, lub *komentarz*. Komentarze to krótkie notatki wyjaśniające, dodane do kodu, aby ułatwić życie innym osobom, które go czytają.  
@@ -54,7 +54,7 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
   
 -   Komentarze nie mogą występować w tym samym wierszu, jeśli jest on kontynuowany w następnym.  
   
- Można dodawać lub usuwać symbole komentarza dla bloku kodu, zaznaczając jeden lub więcej wierszy kodu i wybierając **komentarz** (![Obiekt VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) i **Odkomentuj** (![Obiekt VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) przyciski na **edycji**  paska narzędzi.  
+ Można dodawać lub usuwać symbole komentarza dla bloku kodu, zaznaczając jeden lub więcej wierszy kodu i wybierając **komentarz** (![przycisk komentarza Visual Basic w programie Visual Studio.](./media/comments-in-code/visual-basic-comment-button.gif)) i **Usuń komentarz**  (![Przycisk Usuń komentarz z Visual Basic w programie Visual Studio.](./media/comments-in-code/visual-basic-uncomment-button.gif)) przyciski na **Edytuj** paska narzędzi.  
   
 > [!NOTE]
 >  Można również dodawać komentarze do kodu, poprzedzając tekst między znakami dwóch `REM` — słowo kluczowe. Jednak `'` symboli i **komentarz**/**Odkomentuj** przyciski są łatwiejsze w użyciu i wymagają mniej miejsca i pamięci.  
@@ -64,5 +64,5 @@ Czytając przykłady kodu, często napotykasz symbol komentarza (`'`). Ten symbo
 - [Podstawowe Intuicji - dokumentowanie kodu przy użyciu komentarzy XML](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
-- [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [REM, instrukcja](../../../visual-basic/language-reference/statements/rem-statement.md)
+- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [REM — Instrukcja](../../../visual-basic/language-reference/statements/rem-statement.md)

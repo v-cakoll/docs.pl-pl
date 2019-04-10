@@ -15,21 +15,21 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 0456190f160c555dcc8ce5553674eee2cb73db8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ffbce7401f068b3d0a7fee4fd8ba04c10cb6f6b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086783"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340857"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświetlać zwykłego tekstu, tekst zwykły Unicode lub tekst sformatowany (RTF) pliku. Aby to zrobić, należy wywołać <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metody. Można również użyć <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metodę, aby załadować dane ze strumienia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>Ładowanie pliku w formancie RichTextBox  
   
-1.  Określić ścieżkę do pliku, które były otwierane przy użyciu <xref:System.Windows.Forms.OpenFileDialog> składnika. Aby uzyskać przegląd, zobacz [OpenFileDialog, składnik — omówienie](openfiledialog-component-overview-windows-forms.md).  
+1. Określić ścieżkę do pliku, które były otwierane przy użyciu <xref:System.Windows.Forms.OpenFileDialog> składnika. Aby uzyskać przegląd, zobacz [OpenFileDialog, składnik — omówienie](openfiledialog-component-overview-windows-forms.md).  
   
-2.  Wywołaj <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metody <xref:System.Windows.Forms.RichTextBox> kontrolki, określając plik do załadowania i opcjonalnie typu pliku. W poniższym przykładzie plik do załadowania jest pobierana z <xref:System.Windows.Forms.OpenFileDialog> składnika <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości. Wywołanie metody z nazwą pliku jako argument tylko typu pliku będą uznawane za będące RTF. Aby określić inny typ pliku, należy wywołać metodę z wartością <xref:System.Windows.Forms.RichTextBoxStreamType> wyliczenia jako swój drugi argument.  
+2. Wywołaj <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> metody <xref:System.Windows.Forms.RichTextBox> kontrolki, określając plik do załadowania i opcjonalnie typu pliku. W poniższym przykładzie plik do załadowania jest pobierana z <xref:System.Windows.Forms.OpenFileDialog> składnika <xref:System.Windows.Forms.FileDialog.FileName%2A> właściwości. Wywołanie metody z nazwą pliku jako argument tylko typu pliku będą uznawane za będące RTF. Aby określić inny typ pliku, należy wywołać metodę z wartością <xref:System.Windows.Forms.RichTextBoxStreamType> wyliczenia jako swój drugi argument.  
   
      W poniższym przykładzie <xref:System.Windows.Forms.OpenFileDialog> składnik jest wyświetlany po kliknięciu przycisku. Wybrany plik jest otwarty i wyświetlana w <xref:System.Windows.Forms.RichTextBox> kontroli. W tym przykładzie przyjęto założenie, formularz znajduje się przycisk`btnOpenFile`.  
   

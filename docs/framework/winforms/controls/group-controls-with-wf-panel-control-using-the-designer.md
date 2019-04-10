@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341403"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant
 Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do grupowania innych kontrolek. Istnieją trzy powody do grupy kontrolek. Jeden jest wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne; innym jest programowe grupowanie przycisków radiowych np. ostatni jest przenoszenie kontrolek jako jednostki w czasie projektowania.  
@@ -21,13 +21,13 @@ Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do grupowani
   
 ### <a name="to-create-a-group-of-controls"></a>Aby utworzyć grupę kontrolek  
   
-1.  Przeciągnij <xref:System.Windows.Forms.Panel> z kontrolować **Windows Forms** kartę przybornika do formularza.  
+1. Przeciągnij <xref:System.Windows.Forms.Panel> z kontrolować **Windows Forms** kartę przybornika do formularza.  
   
-2.  Dodaj inne formanty do panelu, rysowania każdego wewnątrz panelu.  
+2. Dodaj inne formanty do panelu, rysowania każdego wewnątrz panelu.  
   
      W przypadku istniejących formantów, które chcesz umieścić w panelu można zaznaczyć wszystkie kontrolki, Wytnij je do Schowka, zaznacz <xref:System.Windows.Forms.Panel> sterowania, a następnie wklej je do panelu. Można również przeciągnąć je do panelu.  
   
-3.  (Opcjonalnie) Jeśli chcesz dodać obramowanie do panelu, ustaw jego <xref:System.Windows.Forms.BorderStyle> właściwości. Istnieją trzy opcje: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, i <xref:System.Windows.Forms.BorderStyle.None>.  
+3. (Opcjonalnie) Jeśli chcesz dodać obramowanie do panelu, ustaw jego <xref:System.Windows.Forms.BorderStyle> właściwości. Istnieją trzy opcje: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, i <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Zobacz także
 

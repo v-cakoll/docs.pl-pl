@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 1b8b344c713fdd27c67cf98c51c8c69198fd508f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127468"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341065"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF
 Klienci Windows Communication Foundation (WCF) są protokół sieciowy niskiego poziomu zgodnego z sieci Web usługi rozszerzeń (programu WSE) 3.0 dla usług programu Microsoft .NET, gdy klienci WCF są skonfigurowane do korzystania z sierpnia 2004 wersję specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują metadanych protokołu exchange (MEX), dlatego podczas korzystania [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do utworzenia klasy klienta WCF, ustawienia zabezpieczeń nie są stosowane do wygenerowany Klient usługi WCF. W związku z tym, należy określić ustawienia zabezpieczeń, usługa programu WSE 3.0 wymaga po wygenerowaniu klienta platformy WCF.  
@@ -19,13 +19,13 @@ Klienci Windows Communication Foundation (WCF) są protokół sieciowy niskiego 
   
 ### <a name="to-access-a-wse-30-web-service-with-a-wcf-client"></a>Do uzyskania dostępu do usługi sieci Web programu WSE 3.0 za pomocą klienta WCF  
   
-1.  Uruchom [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć klienta WCF usługi sieci Web programu WSE 3.0.  
+1. Uruchom [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć klienta WCF usługi sieci Web programu WSE 3.0.  
   
      W przypadku usługi sieci Web programu WSE 3.0 klienta WCF jest tworzony. Ponieważ programu WSE 3.0 nie obsługuje protokół wymiany Metadanych, nie można użyć narzędzia do pobierania wymagania dotyczące zabezpieczeń dla usługi sieci Web. Deweloper aplikacji należy dodać ustawienia zabezpieczeń dla klienta.  
   
      Aby uzyskać więcej informacji na temat tworzenia klienta WCF, zobacz [jak: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
-2.  Utwórz klasę, która reprezentuje powiązanie, który może komunikować się z usługami WSE 3.0 w sieci Web.  
+2. Utwórz klasę, która reprezentuje powiązanie, który może komunikować się z usługami WSE 3.0 w sieci Web.  
   
      Następujące klasy jest częścią [współdziałanie z usługami WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) próbki:  
   
@@ -50,7 +50,7 @@ Klienci Windows Communication Foundation (WCF) są protokół sieciowy niskiego 
          [!code-csharp[c_WCFClientToWSEService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#2)]
          [!code-vb[c_WCFClientToWSEService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#2)]  
   
-3.  W kodzie aplikacji klienta należy dodać kod, aby ustawić właściwości powiązania.  
+3. W kodzie aplikacji klienta należy dodać kod, aby ustawić właściwości powiązania.  
   
      Poniższy przykład kodu Określa, że klienta platformy WCF musi używać ochrony wiadomości i uwierzytelniania, zgodnie z definicją programu WSE 3.0 `AnonymousForCertificate` asercji zabezpieczeń gotowej do użycia. Ponadto wymagane są bezpieczne sesje i kluczy pochodnych.  
   

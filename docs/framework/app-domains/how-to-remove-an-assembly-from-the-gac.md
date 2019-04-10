@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9bece9e21a29e10f08d53c5e98f01cf02602e18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338725"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów
 Istnieją dwa sposoby, aby usunąć zestaw z globalnej pamięci podręcznej zestawów (GAC):  
@@ -29,7 +29,7 @@ Istnieją dwa sposoby, aby usunąć zestaw z globalnej pamięci podręcznej zest
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Usuwanie zestawu z Gacutil.exe  
   
-1.  W wierszu polecenia wpisz następujące polecenie:  
+1. W wierszu polecenia wpisz następujące polecenie:  
   
      **Gacutil – u** \< *nazwy zestawu*>  
   
@@ -46,7 +46,7 @@ gacutil -u hello
   
 ### <a name="removing-an-assembly-with-windows-installer"></a>Usuwanie zestawu za pomocą Instalatora Windows  
   
-1.  Z **programy i funkcje** aplikacji w **Panelu sterowania**, wybierz aplikację, która ma zostać odinstalowany. Jeśli pakiet instalacyjny umieszczone zestawów w pamięci podręcznej GAC, Instalator Windows spowoduje usunięcie ich, jeśli nie są one używane przez inną aplikację.  
+1. Z **programy i funkcje** aplikacji w **Panelu sterowania**, wybierz aplikację, która ma zostać odinstalowany. Jeśli pakiet instalacyjny umieszczone zestawów w pamięci podręcznej GAC, Instalator Windows spowoduje usunięcie ich, jeśli nie są one używane przez inną aplikację.  
   
     > [!NOTE]
     >  Instalator Windows przechowuje licznik odwołań do zestawów zainstalowane w GAC. Zestaw zostanie usunięty z pamięci podręcznej GAC, tylko wtedy, gdy jego licznik odwołań osiągnie zero, co oznacza, że nie jest używany przez dowolną aplikację, instalowane przez pakiet Instalatora Windows.  

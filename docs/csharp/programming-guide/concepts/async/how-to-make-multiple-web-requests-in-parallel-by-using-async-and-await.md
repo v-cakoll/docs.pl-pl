@@ -2,12 +2,12 @@
 title: 'Instrukcje: Wiele żądań sieci Web równolegle za pomocą async i await (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547647"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335423"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Instrukcje: Wiele żądań sieci Web równolegle za pomocą async i await (C#)
 W metodzie asynchronicznej zadania są uruchamiane po ich utworzeniu. [Await](../../../../csharp/language-reference/keywords/await.md) operator jest stosowany do zadania w tym punkcie metody, których nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadanie jest oczekiwane, zaraz po jego utworzeniu, co ilustruje poniższy przykład.  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>Aby skonfigurować projekt  
   
-1.  Aby skonfigurować aplikację programu WPF, wykonaj następujące czynności. Można znaleźć szczegółowe instrukcje tych kroków w [instruktażu: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Aby skonfigurować aplikację programu WPF, wykonaj następujące czynności. Można znaleźć szczegółowe instrukcje tych kroków w [instruktażu: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     -   Tworzenie aplikacji WPF, która zawiera pole tekstowe i przycisk. Nazwij przycisk `startButton`i pole tekstowego `resultsTextBox`.  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>Aby dodać kod  
   
-1.  W oknie projektu, MainWindow.xaml, kliknij dwukrotnie przycisk, aby utworzyć `startButton_Click` programu obsługi zdarzeń w MainWindow.xaml.cs.  
+1. W oknie projektu, MainWindow.xaml, kliknij dwukrotnie przycisk, aby utworzyć `startButton_Click` programu obsługi zdarzeń w MainWindow.xaml.cs.  
   
-2.  Skopiuj poniższy kod i wklej go w treść `startButton_Click` w MainWindow.xaml.cs.  
+2. Skopiuj poniższy kod i wklej go w treść `startButton_Click` w MainWindow.xaml.cs.  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -65,7 +65,7 @@ var result = await myTask;
   
      Kod wywołuje metodę asynchroniczną, `CreateMultipleTasksAsync`, która steruje aplikacją.  
   
-3.  Dodaj następujące metody pomocy technicznej do projektu:  
+3. Dodaj następujące metody pomocy technicznej do projektu:  
   
     -   `ProcessURLAsync` używa <xref:System.Net.Http.HttpClient> metody do pobierania zawartości witryny sieci Web w postaci tablicy bajtów. Metoda pomocnicza `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
   
@@ -93,7 +93,7 @@ var result = await myTask;
     }  
     ```  
   
-4.  Na koniec zdefiniuj metodę `CreateMultipleTasksAsync`, który wykonuje następujące czynności.  
+4. Na koniec zdefiniuj metodę `CreateMultipleTasksAsync`, który wykonuje następujące czynności.  
   
     -   Metoda deklaruje `HttpClient` obiektu, który jest potrzebny na dostęp do metody <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> w `ProcessURLAsync`.  
   
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5.  Wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku.  
+5. Wybierz klawisz F5, aby uruchomić program, a następnie wybierz **Start** przycisku.  
   
      Uruchom program kilka razy, aby sprawdzić, czy te trzy zadania nie zawsze kończą się w tej samej kolejności i czy kolejność ich zakończenia niekoniecznie jest kolejnością w którym są tworzone i oczekiwane.  
   

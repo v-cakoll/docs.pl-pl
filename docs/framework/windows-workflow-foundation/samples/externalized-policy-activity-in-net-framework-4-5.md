@@ -2,12 +2,12 @@
 title: Działanie zasad zewnętrznych w programie .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338283"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Działanie zasad zewnętrznych w programie .NET Framework 4.5
 
@@ -66,21 +66,21 @@ Ten przykład zawiera dwie aplikacje klienckie: ImperativeCodeClientSample i Des
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>Uruchom aplikację ImperativeCodeClientSample
 
-1.  Za pomocą programu Visual Studio, otwórz *Policy4sample.sln* pliku rozwiązania.
+1. Za pomocą programu Visual Studio, otwórz *Policy4sample.sln* pliku rozwiązania.
 
-2.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ImperativeCodeClientSample** projektu, a następnie wybierz pozycję **Ustaw jako projekt startowy**.
+2. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **ImperativeCodeClientSample** projektu, a następnie wybierz pozycję **Ustaw jako projekt startowy**.
 
-3.  Aby uruchomić projekt, naciśnij klawisz **Ctrl**+**F5**.
+3. Aby uruchomić projekt, naciśnij klawisz **Ctrl**+**F5**.
 
 ### <a name="run-the-designerclientsample-application"></a>Uruchom aplikację DesignerClientSample
 
-1.  Za pomocą programu Visual Studio, otwórz *Policy4sample.sln* pliku rozwiązania.
+1. Za pomocą programu Visual Studio, otwórz *Policy4sample.sln* pliku rozwiązania.
 
-2.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **DesignerClientSample** projektu, a następnie wybierz pozycję **Ustaw jako projekt startowy**.
+2. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **DesignerClientSample** projektu, a następnie wybierz pozycję **Ustaw jako projekt startowy**.
 
-3.  Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania projektu.
+3. Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania projektu.
 
-4.  Naciśnij klawisz **Ctrl**+**F5** Aby uruchomić projekt.
+4. Naciśnij klawisz **Ctrl**+**F5** Aby uruchomić projekt.
 
 > [!IMPORTANT]
 > Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).

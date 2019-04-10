@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 958b58b31193dbf4c03709e4ab7ba38f7f30e0ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334175"
 ---
 # <a name="bool-c-reference"></a>bool (odwołanie w C#)
 
 `bool` — Słowo kluczowe jest aliasem <xref:System.Boolean?displayProperty=nameWithType>. Służy do deklarowania zmiennych do przechowywania wartości logiczne: [true](true-literal.md) i [false](false-literal.md).
 
 > [!NOTE]
-> Jeśli potrzebujesz zmiennej typu Boolean, który może mieć również wartość `null`, użyj `bool?`. Aby uzyskać więcej informacji, zobacz [bool? typu](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) części [przy użyciu typów dopuszczających wartości zerowe](../../programming-guide/nullable-types/using-nullable-types.md) artykułu.
+> Użyj `bool?` typu, jeśli wymagana jest obsługa przechowywanymi w trzech logiki, na przykład podczas pracy z bazami danych, które obsługują przechowywanymi w trzech typu Boolean. Dla `bool?` argumentów operacji, wstępnie zdefiniowane `&` i `|` Operatorzy pomocy technicznej przechowywanymi w trzech logiki. Aby uzyskać więcej informacji, zobacz [Nullable logiczna operatorów logicznych](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) części [logiczna operatorów logicznych](../operators/boolean-logical-operators.md) artykułu.
 
 ## <a name="literals"></a>Literały
 
@@ -52,7 +52,7 @@ W tym przykładzie Wprowadź znak przy użyciu klawiatury i program sprawdza, cz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Odwołanie w C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)

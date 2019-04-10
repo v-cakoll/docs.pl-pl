@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 2ee7abb2fa709c6d49b049d69882b2fd6b7f3a0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85d089813a455784fde679e9200a9b29b956af8e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338699"
 ---
 # <a name="windows-service-host"></a>Host usług systemu Windows
 Niniejszy przykład pokazuje usługi Windows Communication Foundation (WCF), hostowana w zarządzanych usług Windows. Usługi Windows są kontrolowane za pomocą apletu usługi w **Panelu sterowania** i można je skonfigurować, aby uruchamiała się automatycznie po ponownym uruchomieniu systemu. Przykład składa się z program kliencki i programów usługi Windows. Ta usługa jest implementowany jako .exe program i zawiera swój własny kod hostingu. W innych środowiskach hostingu, takich jak Windows Process Activation usług (WAS) lub Internet Information Services (IIS) nie jest konieczne pisanie kod hostingu.
@@ -55,13 +55,13 @@ Niniejszy przykład pokazuje usługi Windows Communication Foundation (WCF), hos
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Po rozwiązaniu została skompilowana, uruchom Setup.bat Visual Studio 2012 w wierszu polecenia z podwyższonym zainstalować usługę Windows, za pomocą narzędzie Installutil.exe. Usługa powinna pojawić się w usługach.  
+3. Po rozwiązaniu została skompilowana, uruchom Setup.bat Visual Studio 2012 w wierszu polecenia z podwyższonym zainstalować usługę Windows, za pomocą narzędzie Installutil.exe. Usługa powinna pojawić się w usługach.  
   
-4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

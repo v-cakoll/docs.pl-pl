@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334630"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML umożliwia przechowywania lub transportu poufnych kod XML, nie martwiąc się o łatwo odczytywanych danych.  Ten przykład kodu odszyfrowuje — element XML przy użyciu algorytmu Advanced Encryption Standard (AES), nazywany także Rijndael.  
@@ -33,24 +33,24 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>Aby odszyfrować element XML przy użyciu klucza symetrycznego  
   
-1.  Zaszyfrować XML element przy użyciu wcześniej wygenerowany klucz przy użyciu metod opisanych w [jak: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1. Zaszyfrować XML element przy użyciu wcześniej wygenerowany klucz przy użyciu metod opisanych w [jak: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
-2.  Znajdź <`EncryptedData`> elementu (określoną przez standard szyfrowanie XML) w <xref:System.Xml.XmlDocument> obiekt, który zawiera zaszyfrowane XML i Utwórz nowy <xref:System.Xml.XmlElement> obiekt reprezentujący ten element.  
+2. Znajdź <`EncryptedData`> elementu (określoną przez standard szyfrowanie XML) w <xref:System.Xml.XmlDocument> obiekt, który zawiera zaszyfrowane XML i Utwórz nowy <xref:System.Xml.XmlElement> obiekt reprezentujący ten element.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3.  Tworzenie <xref:System.Security.Cryptography.Xml.EncryptedData> obiektu przez załadowanie pierwotne dane XML z utworzonej wcześniej <xref:System.Xml.XmlElement> obiektu.  
+3. Tworzenie <xref:System.Security.Cryptography.Xml.EncryptedData> obiektu przez załadowanie pierwotne dane XML z utworzonej wcześniej <xref:System.Xml.XmlElement> obiektu.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4.  Utwórz nową <xref:System.Security.Cryptography.Xml.EncryptedXml> obiektu i użyć go do odszyfrowywania danych XML przy użyciu tego samego klucza, który został użyty do szyfrowania.  
+4. Utwórz nową <xref:System.Security.Cryptography.Xml.EncryptedXml> obiektu i użyć go do odszyfrowywania danych XML przy użyciu tego samego klucza, który został użyty do szyfrowania.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5.  Zastąp element zaszyfrowanych za pomocą elementu nowo odszyfrowane w postaci zwykłego tekstu w dokumencie XML.  
+5. Zastąp element zaszyfrowanych za pomocą elementu nowo odszyfrowane w postaci zwykłego tekstu w dokumencie XML.  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  

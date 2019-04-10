@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338491"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (opcje kompilatora C#)
 **-Debug** opcji powoduje, że kompilator generuje informacje o debugowaniu i umieść go w pliku danych wyjściowych lub plików.  
@@ -46,13 +46,13 @@ ms.locfileid: "54502983"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony.  
+1. Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **kompilacji** stronę właściwości.  
+2. Kliknij przycisk **kompilacji** stronę właściwości.  
   
-3.  Kliknij przycisk **zaawansowane** przycisku.  
+3. Kliknij przycisk **zaawansowane** przycisku.  
   
-4.  Modyfikowanie **informacje o debugowaniu** właściwości.  
+4. Modyfikowanie **informacje o debugowaniu** właściwości.  
   
  Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>.  
   
@@ -66,4 +66,4 @@ csc -debug -pdb:app.pdb test.cs
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

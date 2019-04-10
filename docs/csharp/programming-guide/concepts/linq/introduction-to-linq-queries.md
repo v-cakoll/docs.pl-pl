@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333707"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Wprowadzenie do kwerend LINQ (C#)
 A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytania są zwykle wyrażane w specjalistycznym języku zapytań. Czas dla różnych rodzajów źródeł danych, na przykład SQL dla relacyjnych baz danych i XQuery dla XML zostały opracowane w różnych językach. Dlatego programiści musieli nauczyć się nowego języka zapytań dla każdego typu źródła danych lub formatu danych, które muszą obsługiwać. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] upraszcza tę sytuację oferując spójny model do pracy z danymi w różnych rodzajach formatów i źródeł danych. W [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, zawsze pracujesz z obiektami. Użyj tych samych podstawowych schematów kodowania do wykonywania zapytań i przekształcania danych w dokumentach XML, baz danych SQL, [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawów danych, kolekcjach .NET i innych formatach, do których [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dostawca jest niedostępny.  
@@ -20,11 +20,11 @@ A *zapytania* jest wyrażeniem, które pobiera dane ze źródła danych. Zapytan
 ## <a name="three-parts-of-a-query-operation"></a>Trzy części operacji zapytania  
  Wszystkie [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania operacje składają się z trzech odrębnych czynności:  
   
-1.  Uzyskaj źródło danych.  
+1. Uzyskaj źródło danych.  
   
-2.  Utwórz zapytanie.  
+2. Utwórz zapytanie.  
   
-3.  Wykonaj zapytanie.  
+3. Wykonaj zapytanie.  
   
  Poniższy przykład pokazuje, jak trzy części operacji zapytania są wyrażone w kodzie źródłowym. W przykładzie użyto tablicę liczb całkowitych jako źródła danych dla wygody; Jednak te same pojęcia dotyczą innych źródeł danych również. W tym przykładzie jest określana w pozostałej części tego tematu.  
   

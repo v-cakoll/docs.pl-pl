@@ -2,12 +2,12 @@
 title: Wprowadzenie do integracji środowiska CLR programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 2f65e8690aa52f0442b4bee3b98bb1ea86e064a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336814"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>Wprowadzenie do integracji środowiska CLR programu SQL Server
 Środowisko uruchomieniowe języka wspólnego (CLR) to serce platformy Microsoft .NET Framework i oferuje środowisko wykonywania dla całego kodu .NET Framework. Kod, który jest uruchamiany w ramach środowiska CLR jest określany jako kod zarządzany. Środowisko CLR oferuje różnych funkcji i usług wymaganych do wykonania programu, w tym just-in-time (JIT) kompilacja, przydzielanie i zarządzanie pamięcią, wymuszanie bezpieczeństwo typów, obsługa wyjątków, zarządzanie wątkami i zabezpieczeń.  
@@ -45,7 +45,7 @@ GO
   
  **SQL Server Books Online**  
   
-1.  [Wdrażanie obiekty bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [Wdrażanie obiekty bazy danych środowiska CLR](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>Zabezpieczenia integracji CLR  
  Model zabezpieczeń integracji programu Microsoft SQL Server za pomocą programu Microsoft .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) zarządza i zabezpiecza dostęp między różnymi typami obiektów CLR i / CLR, które są uruchomione w programie SQL Server. Te obiekty może zostać wywołana przez instrukcję Transact-SQL lub innego obiektu CLR uruchomiona na serwerze.  

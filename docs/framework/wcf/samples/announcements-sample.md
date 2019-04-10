@@ -2,12 +2,12 @@
 title: Anonse — przykład
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094557"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333980"
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 W tym przykładzie pokazano, jak korzystać z funkcji ogłoszenie funkcji odnajdywania. Anonse Zezwól usługom do wysłania komunikatów Anons, które zawierają metadane dotyczące usługi. Domyślnie ogłoszenie hello jest wysyłany podczas uruchamiania usługi i ogłoszenie bye jest wysyłana, gdy usługa kończy pracę. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie składa się z dwóch projektów usługi i klienta.  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  W tym przykładzie użyto punktów końcowych HTTP i przeprowadzić to przykład, odpowiednie listy ACL adresu URL muszą zostać dodane zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Aby uzyskać szczegółowe informacje. Wykonując następujące polecenie w podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Można zastąpić Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli polecenie nie działa, ponieważ jest. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. W tym przykładzie użyto punktów końcowych HTTP i przeprowadzić to przykład, odpowiednie listy ACL adresu URL muszą zostać dodane zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Aby uzyskać szczegółowe informacje. Wykonując następujące polecenie w podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Można zastąpić Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli polecenie nie działa, ponieważ jest. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Skompiluj rozwiązanie.  
+2. Skompiluj rozwiązanie.  
   
-3.  Uruchom aplikację client.exe.  
+3. Uruchom aplikację client.exe.  
   
-4.  Uruchom aplikację service.exe. Należy zauważyć, że klient odbierze anonsu online.  
+4. Uruchom aplikację service.exe. Należy zauważyć, że klient odbierze anonsu online.  
   
-5.  Zamknij aplikację service.exe. Należy pamiętać, że klient otrzymuje powiadomienia w trybie offline.  
+5. Zamknij aplikację service.exe. Należy pamiętać, że klient otrzymuje powiadomienia w trybie offline.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

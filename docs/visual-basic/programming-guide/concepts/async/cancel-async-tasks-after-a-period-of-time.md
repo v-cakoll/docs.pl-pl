@@ -2,12 +2,12 @@
 title: Anulowanie zadań asynchronicznych po upływie określonego czasu (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a48045a3-6a99-42af-b824-af340f0b9a5d
-ms.openlocfilehash: 2b5634165493ff1aa5e07f5240a3db15741d57a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2f3fee4909338155ed4b8917fd1de46984614908
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831556"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341702"
 ---
 # <a name="cancel-async-tasks-after-a-period-of-time-visual-basic"></a>Anulowanie zadań asynchronicznych po upływie określonego czasu (Visual Basic)
 Możesz anulować operację asynchroniczną po upływie pewnego czasu za pomocą <xref:System.Threading.CancellationTokenSource.CancelAfter%2A?displayProperty=nameWithType> metody, jeśli nie chcesz czekać na zakończenie operacji. Ta metoda planuje anulowanie skojarzonych zadań, które nie są ukończone przed upływem czasu, który jest wyznaczone przez `CancelAfter` wyrażenia.  
@@ -20,19 +20,19 @@ Możesz anulować operację asynchroniczną po upływie pewnego czasu za pomocą
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
  Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
-1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
+1. Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
+2. Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-3.  W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
+3. W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
   
-4.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelAfterTime** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
+4. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelAfterTime** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   
-5.  Wybierz klawisz F5, aby uruchomić projekt.  
+5. Wybierz klawisz F5, aby uruchomić projekt.  
   
      Wybierz klawisze Ctrl + F5, aby uruchomić projekt bez debugowania go.  
   
-6.  Uruchom program kilka razy, aby sprawdzić, czy dane wyjściowe są pokazywane dla wszystkich witryn sieci Web, witryn sieci Web lub niektórych witryn sieci web.  
+6. Uruchom program kilka razy, aby sprawdzić, czy dane wyjściowe są pokazywane dla wszystkich witryn sieci Web, witryn sieci Web lub niektórych witryn sieci web.  
   
  Jeśli nie chcesz wczytać projekt, można przejrzeć plik MainWindow.xaml.vb na końcu tego tematu.  
   

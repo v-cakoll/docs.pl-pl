@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336151"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a> Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
   
-1.  [Wybieranie kompilatora](#choosing_a_compiler).  
+1. [Wybieranie kompilatora](#choosing_a_compiler).  
   
      Aby uzyskać korzyści dostarczane przez środowisko uruchomieniowe języka wspólnego, należy użyć co najmniej jeden Kompilatory języka przeznaczone dla środowiska uruchomieniowego.  
   
-2.  [Kompilowanie kodu MSIL](#compiling_to_msil).  
+2. [Kompilowanie kodu MSIL](#compiling_to_msil).  
   
      Kompilowanie dokonuje translacji kodu źródłowego do języka Microsoft intermediate language (MSIL) i generuje wymaganych metadanych.  
   
-3.  [Kompilowanie MSIL do kodu macierzystego](#compiling_msil_to_native_code).  
+3. [Kompilowanie MSIL do kodu macierzystego](#compiling_msil_to_native_code).  
   
      W czasie wykonywania kompilator just-in-time (JIT) tłumaczy MSIL w kodzie natywnym. Podczas tej kompilacji kod musi przejść proces weryfikacji, który analizuje MSIL i metadanych, aby dowiedzieć się, czy kod może być uznane za bezpieczne dla typów.  
   
-4.  [Uruchamianie kodu](#running_code).  
+4. [Uruchamianie kodu](#running_code).  
   
      Środowisko uruchomieniowe języka wspólnego udostępnia infrastrukturę, która umożliwia wykonywanie i usług, które mogą być używane podczas wykonywania.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652023"
   
  W programie Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] i [!INCLUDE[windowsver](../../includes/windowsver-md.md)], moduł ładujący systemu operacyjnego sprawdza, czy modułów zarządzanych, sprawdzając nieco nagłówka COFF. Bit ustawiania wskazuje, że moduł zarządzany. Jeśli moduł ładujący wykryje modułów zarządzanych, ładuje mscoree.dll, i `_CorValidateImage` i `_CorImageUnloading` powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są ładowane i zwolnione. `_CorValidateImage` wykonuje następujące czynności:  
   
-1.  Zapewnia, że kod jest prawidłowy kod zarządzany.  
+1. Zapewnia, że kod jest prawidłowy kod zarządzany.  
   
-2.  Zmiany punktu wejścia w obrazie punktu wejścia w środowisku uruchomieniowym.  
+2. Zmiany punktu wejścia w obrazie punktu wejścia w środowisku uruchomieniowym.  
   
  Na Windows 64-bitowych `_CorValidateImage` modyfikuje obrazu, który znajduje się w pamięci przez przekształcenie go z PE32 je typu PE32 + format.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "54652023"
 ## <a name="see-also"></a>Zobacz także
 
 - [Omówienie](../../docs/framework/get-started/overview.md)
-- [Niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Niezależność od języka i elementy niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Składniki samoopisujące się i metadane](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Ilasm.exe (Asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Zabezpieczenia](../../docs/standard/security/index.md)
 - [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)
-- [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)
-- [Zestawy w środowisku uruchomieniowym CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [wdrażania](../../docs/framework/deployment/net-framework-applications.md)
+- [Zestawy w środowisku uruchomieniowym języka wspólnego](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Domeny aplikacji](../../docs/framework/app-domains/application-domains.md)

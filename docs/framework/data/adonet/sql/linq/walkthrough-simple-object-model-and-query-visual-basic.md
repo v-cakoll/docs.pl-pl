@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338075"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza minimalnej złożoności. Utworzy klasę jednostki, który modeluje tabelę Klienci w przykładowej bazie danych Northwind. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  
@@ -46,32 +46,32 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
   
-1.  Na **pliku** menu, kliknij przycisk **nowy projekt**.  
+1. Na **pliku** menu, kliknij przycisk **nowy projekt**.  
   
-2.  W **typów projektów** okienku **nowy projekt** okno dialogowe, kliknij przycisk **języka Visual Basic**.  
+2. W **typów projektów** okienku **nowy projekt** okno dialogowe, kliknij przycisk **języka Visual Basic**.  
   
-3.  W **szablony** okienku kliknij **aplikację Konsolową**.  
+3. W **szablony** okienku kliknij **aplikację Konsolową**.  
   
-4.  W **nazwa** wpisz **LinqConsoleApp**.  
+4. W **nazwa** wpisz **LinqConsoleApp**.  
   
-5.  Kliknij przycisk **OK**.  
+5. Kliknij przycisk **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Dodawanie odwołania do zapytań LINQ i dyrektywy  
  W tym instruktażu wykorzystano zestawów, które nie mogą być instalowane domyślnie w projekcie. Jeśli `System.Data.Linq` nie jest wymieniony jako odwołanie do projektu (kliknij **Pokaż wszystkie pliki** w **Eksploratora rozwiązań** i rozwiń **odwołania** węzła), ją dodać, jak wyjaśniono w Poniższe kroki.  
   
 #### <a name="to-add-systemdatalinq"></a>To add System.Data.Linq  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
   
-2.  W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
+2. W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
   
      Zestaw został dodany do projektu.  
   
-3.  Również w **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**przewiń i kliknij przestrzeń nazw System.Windows.Forms, a następnie kliknij przycisk **OK**.  
+3. Również w **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**przewiń i kliknij przestrzeń nazw System.Windows.Forms, a następnie kliknij przycisk **OK**.  
   
      Ten zestaw, który obsługuje okno komunikatu w instruktażu, jest dodawany do projektu.  
   
-4.  Dodaj następujące dyrektywy powyżej `Module1`:  
+4. Dodaj następujące dyrektywy powyżej `Module1`:  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -128,22 +128,22 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-execute-the-query"></a>Aby wykonać zapytanie  
   
-1.  Wpisz lub wklej następujący kod na końcu `Sub Main` metody (opis kwerendy):  
+1. Wpisz lub wklej następujący kod na końcu `Sub Main` metody (opis kwerendy):  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  Naciśnij klawisz F5, aby debugować aplikację.  
+2. Naciśnij klawisz F5, aby debugować aplikację.  
   
     > [!NOTE]
     >  Jeśli aplikacja generuje błąd w czasie wykonywania, zobacz sekcję Rozwiązywanie problemów z [nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).  
   
      W oknie komunikatu Wyświetla listę sześcioma klientami. W oknie konsoli zostaną wyświetlone wygenerowanego kodu SQL.  
   
-3.  Kliknij przycisk **OK** aby odrzucić okno komunikatu.  
+3. Kliknij przycisk **OK** aby odrzucić okno komunikatu.  
   
      Zamyka aplikację.  
   
-4.  Na **pliku** menu, kliknij przycisk **Zapisz wszystko**.  
+4. Na **pliku** menu, kliknij przycisk **Zapisz wszystko**.  
   
      Należy tej aplikacji, jeśli będziesz korzystać z poniższych wskazówek.  
   

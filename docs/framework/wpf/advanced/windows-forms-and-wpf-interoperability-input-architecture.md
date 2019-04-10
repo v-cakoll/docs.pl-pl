@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335722"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Struktura wejścia ze zdolnością do współpracy Windows Forms i WPF
 Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] wymaga, że obie technologie mają odpowiednie skróty przetwarzania danych wejściowych. W tym temacie opisano sposób implementacji tych technologii, klawiatury i przetwarzania, aby umożliwić bezproblemowe współdziałanie w aplikacjach hybrydowych komunikatów.  
@@ -57,13 +57,13 @@ Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
 ### <a name="surrogate-windows-forms-message-loop"></a>Pętli komunikatów dla zastępczy Windows Forms  
  Domyślnie <xref:System.Windows.Forms.Application?displayProperty=nameWithType> klasa zawiera pętli komunikatów głównej dla [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji. Podczas współdziałanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] komunikat pętli nie przetwarza komunikatów. W związku z tym można odtworzyć tę logikę. Obsługa <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> zdarzeń wykonuje następujące czynności:  
   
-1.  Filtry wiadomości przy użyciu <xref:System.Windows.Forms.IMessageFilter> interfejsu.  
+1. Filtry wiadomości przy użyciu <xref:System.Windows.Forms.IMessageFilter> interfejsu.  
   
-2.  Wywołania <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> metody.  
+2. Wywołania <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> metody.  
   
-3.  Tłumaczy i wysyła komunikat, jeśli jest to wymagane.  
+3. Tłumaczy i wysyła komunikat, jeśli jest to wymagane.  
   
-4.  Przekazuje komunikat do hostowania kontrolki, jeśli brak innych kontrolek przetworzyć komunikatu.  
+4. Przekazuje komunikat do hostowania kontrolki, jeśli brak innych kontrolek przetworzyć komunikatu.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>Implementacja IKeyboardInputSink  
  Zastępczy pętli komunikatów obsługuje zarządzanie klawiatury. W związku z tym <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> metody jest jedyną <xref:System.Windows.Interop.IKeyboardInputSink> elementu członkowskiego, który wymaga implementacji w <xref:System.Windows.Forms.Integration.WindowsFormsHost> klasy.  
@@ -72,11 +72,11 @@ Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Implementacji <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> metoda wykonuje następujące czynności:  
   
-1.  Wyszukuje pierwszy lub ostatni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant, który jest zawarty w <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroli i który może odebrać fokus. Wybór kontroli zależy od informacji przechodzenia.  
+1. Wyszukuje pierwszy lub ostatni [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formant, który jest zawarty w <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontroli i który może odebrać fokus. Wybór kontroli zależy od informacji przechodzenia.  
   
-2.  Ustawia fokus do formantu i zwraca `true`.  
+2. Ustawia fokus do formantu i zwraca `true`.  
   
-3.  Jeśli formant nie może odebrać fokus, zwraca `false`.  
+3. Jeśli formant nie może odebrać fokus, zwraca `false`.  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost rejestracji  
  Jeśli okna obsługi do <xref:System.Windows.Forms.Integration.WindowsFormsHost> formant zostanie utworzony, <xref:System.Windows.Forms.Integration.WindowsFormsHost> kontrolki wywołuje wewnętrznego statyczna metoda, która rejestruje jego obecność dla pętli komunikatów.  

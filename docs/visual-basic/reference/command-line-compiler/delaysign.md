@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334604"
 ---
 # <a name="-delaysign"></a>-delaysign
 Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.  
@@ -37,15 +37,15 @@ Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>Aby ustawić delaysign — w programie Visual Studio zintegrowane środowisko projektowe  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
+1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
   
-2.  Kliknij przycisk **podpisywanie** kartę.  
+2. Kliknij przycisk **podpisywanie** kartę.  
   
-3.  Ustaw wartość w **opóźnienie logowania tylko** pole.  
+3. Ustaw wartość w **opóźnienie logowania tylko** pole.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

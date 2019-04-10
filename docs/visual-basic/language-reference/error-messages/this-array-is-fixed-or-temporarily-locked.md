@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: f0b80e2be007ff44569365f37a2331f1ecd7a216
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839408"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337971"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)
 Ten błąd ma następujące możliwe przyczyny:  
@@ -22,11 +22,11 @@ Ten błąd ma następujące możliwe przyczyny:
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Utworzyć tablicy oryginalnej dynamiczną, zamiast stałej deklarując ją za pomocą `ReDim` (Jeśli tablica jest zadeklarowana w obrębie procedury), lub deklarując ją bez określania liczby elementów (Jeśli tablica jest zadeklarowana na poziomie modułu.  
+1. Utworzyć tablicy oryginalnej dynamiczną, zamiast stałej deklarując ją za pomocą `ReDim` (Jeśli tablica jest zadeklarowana w obrębie procedury), lub deklarując ją bez określania liczby elementów (Jeśli tablica jest zadeklarowana na poziomie modułu.  
   
-2.  Ustal, czy naprawdę potrzebujesz przekazać elementu, ponieważ jest ona widoczna w ramach wszystkich procedur w module.  
+2. Ustal, czy naprawdę potrzebujesz przekazać elementu, ponieważ jest ona widoczna w ramach wszystkich procedur w module.  
   
-3.  Określić, co blokuje `Variant` i usunięcia go.  
+3. Określić, co blokuje `Variant` i usunięcia go.  
   
 ## <a name="see-also"></a>Zobacz także
 

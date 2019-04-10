@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 77cfeb57bc313ded2d2c4d5a0c59041c5c19f515
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334968"
 ---
 # <a name="initializer-expected"></a>Oczekiwano inicjatora
 Próbowano deklarować wystąpienia klasy za pomocą inicjatora obiektów, w którym listy inicjowania jest pusta, jak pokazano w poniższym przykładzie.  
@@ -29,7 +29,7 @@ Próbowano deklarować wystąpienia klasy za pomocą inicjatora obiektów, w kt�
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Inicjowanie co najmniej jednego pola lub właściwości w inicjatorze lub nie należy używać inicjatora obiektów.  
+1. Inicjowanie co najmniej jednego pola lub właściwości w inicjatorze lub nie należy używać inicjatora obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
 

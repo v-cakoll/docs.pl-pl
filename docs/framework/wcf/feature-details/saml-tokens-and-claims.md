@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218215"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339843"
 ---
 # <a name="saml-tokens-and-claims"></a>Tokeny i oświadczenia języka SAML
 Zabezpieczenia potwierdzenia Markup Language (SAML) *tokenów* są reprezentacji XML oświadczeń. Domyślnie są tokeny SAML, które korzysta z usługi Windows Communication Foundation (WCF) w scenariuszach federacyjnego zabezpieczenia *wystawionych tokenów*.  
   
  Tokeny SAML, wykonaj instrukcje, które są zestawami oświadczenia wprowadzone przez jedną jednostkę o innej jednostki. Na przykład w scenariuszach federacyjnego zabezpieczenia instrukcje są wykonywane przez usługę tokenu zabezpieczającego o użytkowniku w systemie. Usługa tokenu zabezpieczającego podpisuje token SAML, aby wskazać wiarygodności instrukcji zawartych w tokenie. Ponadto SAML token jest skojarzony z materiału klucza kryptograficznego, użytkownika w tokenie języka SAML upoważnienie wiedzę na temat. Dowód ten spełnia jednostki uzależnionej strona, która była tokenu SAML, w rzeczywistości wystawiony dla tego użytkownika. Na przykład w typowym scenariuszu:  
   
-1.  Klient żąda tokenu SAML z usługi tokenu zabezpieczeń, którzy uwierzytelniają się do usługi tokenu zabezpieczeń przy użyciu poświadczeń Windows.  
+1. Klient żąda tokenu SAML z usługi tokenu zabezpieczeń, którzy uwierzytelniają się do usługi tokenu zabezpieczeń przy użyciu poświadczeń Windows.  
   
-2.  Usługa tokenu zabezpieczającego wystawia SAML token do klienta. SAML token jest podpisany przy użyciu certyfikatu skojarzonego z usługi tokenu zabezpieczeń i zawiera klucz potwierdzający zaszyfrowane dla usługi docelowej.  
+2. Usługa tokenu zabezpieczającego wystawia SAML token do klienta. SAML token jest podpisany przy użyciu certyfikatu skojarzonego z usługi tokenu zabezpieczeń i zawiera klucz potwierdzający zaszyfrowane dla usługi docelowej.  
   
-3.  Klient odbiera także kopię *klucz potwierdzający*. Klient przedstawia token SAML z usługą application ( *jednostki uzależnionej*) i podpisuje wiadomości przy użyciu tego klucza weryfikacji.  
+3. Klient odbiera także kopię *klucz potwierdzający*. Klient przedstawia token SAML z usługą application ( *jednostki uzależnionej*) i podpisuje wiadomości przy użyciu tego klucza weryfikacji.  
   
-4.  Podpis w tokenie języka SAML informuje uzależnionej, czy usługa tokenu zabezpieczającego wystawiony token. Podpisu wiadomości utworzone przy użyciu klucza weryfikacji informuje uzależnionej, czy token został wystawiony dla klienta.  
+4. Podpis w tokenie języka SAML informuje uzależnionej, czy usługa tokenu zabezpieczającego wystawiony token. Podpisu wiadomości utworzone przy użyciu klucza weryfikacji informuje uzależnionej, czy token został wystawiony dla klienta.  
   
 ## <a name="from-claims-to-samlattributes"></a>Z oświadczeń SamlAttributes  
  W programie WCF, instrukcje w tokeny SAML są modelowane jako <xref:System.IdentityModel.Tokens.SamlAttribute> obiektów, które mogą zostać wypełnione bezpośrednio z <xref:System.IdentityModel.Claims.Claim> obiektów, pod warunkiem <xref:System.IdentityModel.Claims.Claim> obiekt ma <xref:System.IdentityModel.Claims.Claim.Right%2A> właściwość <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> i <xref:System.IdentityModel.Claims.Claim.Resource%2A> właściwość jest Typ <xref:System.String>. Na przykład:  

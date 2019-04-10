@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
-ms.openlocfilehash: 7616bcdc39ab479049586534fac22f1e2d96a700
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c7a3e6bcd0db268a0e0acfc74c570e26f89cff6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831842"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339076"
 ---
 # <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a>Instrukcje „Line” nie są już obsługiwane (Błąd kompilatora Visual Basic)
 Instrukcje wiersza nie są już obsługiwane. Funkcje We/Wy pliku jest dostępna jako `Microsoft.VisualBasic.FileSystem.LineInput` i funkcje graficzne jest dostępna jako `System.Drawing.Graphics.DrawLine`.  
@@ -21,9 +21,9 @@ Instrukcje wiersza nie są już obsługiwane. Funkcje We/Wy pliku jest dostępna
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Jeśli wykonanie dostęp do plików, użyj `Microsoft.VisualBasic.FileSystem.LineInput`.  
+1. Jeśli wykonanie dostęp do plików, użyj `Microsoft.VisualBasic.FileSystem.LineInput`.  
   
-2.  Jeśli wykonanie grafiki, użyj `System.Drawing.Graphics.Drawline`.  
+2. Jeśli wykonanie grafiki, użyj `System.Drawing.Graphics.Drawline`.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124530"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342482"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Instrukcje: Tworzenie formularzy podrzędnych MDI
 Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md), jak te formularze są środek interakcji z użytkownikiem.  
@@ -26,17 +26,17 @@ Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu
   
 ### <a name="to-create-mdi-child-forms"></a>Umożliwia tworzenie formularzy podrzędnych MDI  
   
-1.  Utwórz nowy projekt Windows Forms. W **Windows właściwości** formularza, ustaw jego <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości `true`, a jego `WindowsState` właściwość `Maximized`.  
+1. Utwórz nowy projekt Windows Forms. W **Windows właściwości** formularza, ustaw jego <xref:System.Windows.Forms.Form.IsMdiContainer%2A> właściwości `true`, a jego `WindowsState` właściwość `Maximized`.  
   
      Określa formularza jako kontenera okien podrzędnych MDI.  
   
-2.  Z `Toolbox`, przeciągnij <xref:System.Windows.Forms.MenuStrip> formantu do formularza. Ustaw jego `Text` właściwości **pliku**.  
+2. Z `Toolbox`, przeciągnij <xref:System.Windows.Forms.MenuStrip> formantu do formularza. Ustaw jego `Text` właściwości **pliku**.  
   
-3.  Kliknij przycisk z wielokropkiem (...) obok pozycji **elementów** właściwości, a następnie kliknij przycisk **Dodaj** można dodać dwa elementy menu paska narzędzi podrzędnych. Ustaw `Text` właściwości dla tych elementów do **New** i **okna**.  
+3. Kliknij przycisk z wielokropkiem (...) obok pozycji **elementów** właściwości, a następnie kliknij przycisk **Dodaj** można dodać dwa elementy menu paska narzędzi podrzędnych. Ustaw `Text` właściwości dla tych elementów do **New** i **okna**.  
   
-4.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, wskaż **Dodaj**, a następnie wybierz pozycję **Dodaj nowy element**.  
+4. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, wskaż **Dodaj**, a następnie wybierz pozycję **Dodaj nowy element**.  
   
-5.  W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza Windows** (w języku Visual Basic lub języka Visual C#) lub **Windows Forms aplikacji (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z  **Szablony** okienka. W **nazwa** pola, określ nazwę formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularz do projektu.  
+5. W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza Windows** (w języku Visual Basic lub języka Visual C#) lub **Windows Forms aplikacji (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z  **Szablony** okienka. W **nazwa** pola, określ nazwę formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularz do projektu.  
   
     > [!NOTE]
     >  Formularz podrzędny MDI, który został utworzony w tym kroku jest standardowy formularz Windows. W efekcie ma <xref:System.Windows.Forms.Form.Opacity%2A> właściwość, która umożliwia kontrolowanie przezroczystości formularza. Jednak <xref:System.Windows.Forms.Form.Opacity%2A> właściwość została zaprojektowana dla okien najwyższego poziomu. Nie używaj go za pomocą formularzy podrzędnych MDI, jak mogą wystąpić problemy malowania.  
@@ -45,13 +45,13 @@ Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu
   
      **Windows Forms Designer** otwiera się i wyświetla **formularz2**.  
   
-6.  Z **przybornika**, przeciągnij **RichTextBox** formantu do formularza.  
+6. Z **przybornika**, przeciągnij **RichTextBox** formantu do formularza.  
   
-7.  W **właściwości** oknie `Anchor` właściwości **, lewa górna** i `Dock` właściwości **wypełnienia**.  
+7. W **właściwości** oknie `Anchor` właściwości **, lewa górna** i `Dock` właściwości **wypełnienia**.  
   
      Powoduje to, że <xref:System.Windows.Forms.RichTextBox> sterowania, aby całkowicie wypełnić obszaru formularz podrzędny MDI, nawet w przypadku, gdy zmieniany jest rozmiar formularza.  
   
-8.  Kliknij dwukrotnie **New** element menu, aby utworzyć <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń.  
+8. Kliknij dwukrotnie **New** element menu, aby utworzyć <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń.  
   
 9. Wstawianie kodu podobne do następujących czynności, aby utworzyć nowy formularz podrzędny MDI, gdy użytkownik kliknie **New** elementu menu.  
   

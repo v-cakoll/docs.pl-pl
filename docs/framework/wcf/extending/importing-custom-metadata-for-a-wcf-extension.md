@@ -2,12 +2,12 @@
 title: Importowanie niestandardowych metadanych dla rozszerzenia WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339973"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importowanie niestandardowych metadanych dla rozszerzenia WCF
 W Windows Communication Foundation (WCF), importowanie metadanych jest proces generowania abstrakcyjną reprezentację usługi lub jej części składowe z jego metadanych. Na przykład, można zaimportować WCF <xref:System.ServiceModel.Description.ServiceEndpoint> przypadkach <xref:System.ServiceModel.Channels.Binding> wystąpień lub <xref:System.ServiceModel.Description.ContractDescription> wystąpień na podstawie pliku WSDL dokumentów dla usługi. Aby zaimportować metadane usługi w programie WCF, należy korzystać z implementacji <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> klasy abstrakcyjnej. Typy, które wynikają z <xref:System.ServiceModel.Description.MetadataImporter> klasa implementuje pomocy technicznej w przypadku importowania formaty metadanych, które korzystają z protokołu WS-Policy zaimportować logiki w programie WCF.  
@@ -21,9 +21,9 @@ W Windows Communication Foundation (WCF), importowanie metadanych jest proces ge
   
  W tej sekcji opisano:  
   
-1.  Jak implementować oraz używać <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interfejs, który udostępnia dane WSDL niestandardowe importerów przed Generowanie opisy i generowanie kodu. Aby sprawdzić lub zmodyfikuj opis typów i kompilacja kodu, wykonywane przy użyciu określonego zestawu metadanych, można użyć tego interfejsu.  
+1. Jak implementować oraz używać <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interfejs, który udostępnia dane WSDL niestandardowe importerów przed Generowanie opisy i generowanie kodu. Aby sprawdzić lub zmodyfikuj opis typów i kompilacja kodu, wykonywane przy użyciu określonego zestawu metadanych, można użyć tego interfejsu.  
   
-2.  Jak implementować oraz używać <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interfejs, który udostępnia asercji zasad importerów przed generacji obiektów opis. Aby przejrzeć lub zmodyfikować binding lub umowy na podstawie pobranego zasad, można użyć tego interfejsu.  
+2. Jak implementować oraz używać <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> interfejs, który udostępnia asercji zasad importerów przed generacji obiektów opis. Aby przejrzeć lub zmodyfikować binding lub umowy na podstawie pobranego zasad, można użyć tego interfejsu.  
   
  Aby uzyskać więcej informacji na temat eksportowania niestandardowych plików WSDL i asercji zasad, zobacz [Eksportowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md).  
   

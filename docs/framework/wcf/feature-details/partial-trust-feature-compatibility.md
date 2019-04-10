@@ -2,12 +2,12 @@
 title: Zgodność funkcji zaufania częściowego
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124569"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
 Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są projektowane na podstawie określonego zestawu scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
@@ -160,6 +160,7 @@ Windows Communication Foundation (WCF) obsługuje ograniczony podzestaw funkcji 
  Najlepszym sposobem odnajdywanie informacji lub akcja jest niedostępna, podczas uruchamiania w środowisku częściowej relacji zaufania spróbuj uzyskać dostęp do zasobu lub wykonaj akcję wewnątrz `try` bloku, a następnie `catch` awarii. Aby zapobiec przepełnieniu pliki śledzenia błędów zduplikowane, WCF wyłącza śledzenie zasobów lub akcji po pierwszym niepowodzeniu zabezpieczeń. Istnieje jeden śledzenia wyjątków dla każdego dostępu zasobu nie powiodło się po raz pierwszy zostanie podjęta próba dostępu do zasobu lub wykonania akcji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

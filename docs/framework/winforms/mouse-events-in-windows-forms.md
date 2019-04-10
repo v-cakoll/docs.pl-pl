@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: d762c73862d99801c3c65ca12b4c97514834ac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134982"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Zdarzenia myszy w formularzach systemu Windows
 Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji kursora myszy wskaźnik i stan przycisku myszy. Ten temat zawiera szczegółowe informacje dotyczące sposobu uzyskania tych informacji ze zdarzeń myszy i wyjaśnia kolejność, w której kliknięcie myszą zdarzenia są wywoływane w kontrolkach formularzy Windows Forms. Aby uzyskać listę i opis wszystkich zdarzeń myszy, zobacz [sposób działania wejście myszy w formularzach Windows Forms](how-mouse-input-works-in-windows-forms.md).  Zobacz też [Przegląd obsługi zdarzeń (Windows Forms)](event-handlers-overview-windows-forms.md) i [Przegląd zdarzeń (systemu Windows Windows Forms)](events-overview-windows-forms.md).  
@@ -93,7 +93,7 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
     -   Kliknij dwukrotnie bezpośrednio: Nie zdarzeń kliknij zgłaszanych  
   
--   <xref:System.Windows.Forms.ListView> Kontrolki  
+-   <xref:System.Windows.Forms.ListView>  — formant  
   
     > [!NOTE]
     >  Zachowanie zdarzeń, w dalszej części występuje tylko wtedy, gdy użytkownik kliknie elementów w <xref:System.Windows.Forms.ListView> kontroli. Żadne zdarzenia nie są zgłaszane dla kliknięcia miejscach w formancie. Oprócz zdarzeń opisanym w dalszej części, istnieją <xref:System.Windows.Forms.ListView.BeforeLabelEdit> i <xref:System.Windows.Forms.ListView.AfterLabelEdit> zdarzenia, które mogą być przydatne, jeśli chcesz używać Weryfikacja przy użyciu <xref:System.Windows.Forms.ListView> kontroli.  
@@ -106,7 +106,7 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
     -   Kliknij dwukrotnie przycisk z prawej: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
--   <xref:System.Windows.Forms.TreeView> Kontrolki  
+-   <xref:System.Windows.Forms.TreeView>  — formant  
   
     > [!NOTE]
     >  Zachowanie zdarzeń, w dalszej części występuje tylko po kliknięciu przez użytkownika na elementach, samodzielnie lub z prawej strony elementów w <xref:System.Windows.Forms.TreeView> kontroli. Żadne zdarzenia nie są zgłaszane dla kliknięcia miejscach w formancie. Oprócz tych opisanym w dalszej części istnieją <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>, i <xref:System.Windows.Forms.TreeView.AfterLabelEdit> zdarzenia, które mogą być przydatne, jeśli chcesz używać Weryfikacja przy użyciu <xref:System.Windows.Forms.TreeView> kontroli .  
@@ -142,4 +142,5 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
     >  Gdy użytkownik przesuwa wskaźnik myszy poza formant przełączania, gdy przycisk myszy jest wciśnięty (np. przesuwanie wskaźnika myszy <xref:System.Windows.Forms.Button> kontroli, gdy naciśnięcia), kontrolki przełącznika namaluje w wypukły stanu i tylko <xref:System.Windows.Forms.Control.MouseUp> wystąpi zdarzenie. <xref:System.Windows.Forms.Control.Click> Lub <xref:System.Windows.Forms.Control.MouseClick> zdarzenia nie będzie występować w tej sytuacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)

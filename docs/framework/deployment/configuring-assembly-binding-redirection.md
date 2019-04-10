@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3d2552b71ac13ef6d352b229d2ad965d0f989c7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df468b87c62f454f6a42fa7a80d92e5ec199fd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151544"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Konfigurowanie przekierowywania powiązań zestawów
 Domyślnie aplikacje używają zbiór zestawów .NET Framework, które są dostarczane z wersji środowiska uruchomieniowego, które umożliwiają kompilowanie aplikacji. Możesz użyć **appliesTo** atrybutu na [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracji aplikacji do przekierowywania odwołań do powiązań zestawów do określonej wersji programu .NET Zestawy struktury. Ten atrybut opcjonalny używa numeru wersji .NET Framework w celu wskazania, której wersji ma zastosowanie do. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework.  
@@ -58,4 +58,5 @@ Domyślnie aplikacje używają zbiór zestawów .NET Framework, które są dosta
  Można określić, czy plik konfiguracji jest on używany przez określenie, czy występują przekierowania powiązań zestawu. Użyj [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) Aby wyświetlić zestawy, które są ładowane. Aby wyświetlić wszystkie powiązania zestawów, należy ustawić wpis dla **ForceLog** w rejestrze.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

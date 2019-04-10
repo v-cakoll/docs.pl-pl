@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 480cbdecd681408a7e1d6fa366e3f1a4b131ab42
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: efa0efaf40e2e432d477f1659d7bde3abc98241d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236106"
 ---
 ### <a name="unicode-standard-version-80-categories-now-supported"></a>Teraz obsługiwane kategorie standardowej wersji 8.0 Unicode
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760672"
 |Wersja|4.6.2|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Char.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.Char)?displayProperty=nameWithType></li><li><xref:System.Globalization.CharUnicodeInfo.GetUnicodeCategory(System.String,System.Int32)?displayProperty=nameWithType></li></ul>|
-

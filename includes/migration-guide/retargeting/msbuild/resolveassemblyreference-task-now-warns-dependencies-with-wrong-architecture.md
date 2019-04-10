@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 39a329597ef28e002242103a247515d94761676a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234804"
+---
 ### <a name="resolveassemblyreference-task-now-warns-of-dependencies-with-the-wrong-architecture"></a>Wyświetli ostrzeżenie zależności z architekturą niewłaściwego resolveassemblyreference — zadanie
 
 |   |   |
@@ -7,4 +15,3 @@
 |Zakres|Mały|
 |Wersja|4.5.1|
 |Typ|Przekierowanie|
-

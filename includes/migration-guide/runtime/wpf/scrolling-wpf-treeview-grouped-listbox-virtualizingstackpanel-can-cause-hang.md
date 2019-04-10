@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0887379fb23e9e66c6cc55a3774545162634c3f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236707"
+---
 ### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-cause-a-hang"></a>Przewijanie w widoku drzewa w WPF lub ListBox zgrupowane w VirtualizingStackPanel może spowodować zawieszenie
 
 |   |   |
@@ -8,4 +16,3 @@
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

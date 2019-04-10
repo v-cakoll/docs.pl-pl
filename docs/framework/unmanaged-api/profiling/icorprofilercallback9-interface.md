@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6c480af921fb0259ef85beec8d8f65bdd430522
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227759"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 Interface
 [Obsługiwane w programie .NET Framework 4.7.2 i nowszych wersjach]  
@@ -36,7 +36,8 @@ ms.locfileid: "54689320"
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy profilowania](profiling-interfaces.md)
 - [ICorProfilerCallback8, interfejs](icorprofilercallback9-interface.md)
-- [Metoda ICorProfilerCallback8.DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8.DynamicMethodJITCompilationStarted method](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [Metoda ICorProfilerCallback8.DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

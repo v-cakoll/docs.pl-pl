@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231282"
 ---
 # <a name="one-way-services"></a>Usługi jednokierunkowe
 Domyślnym zachowaniem operacji usługi jest wzorzec "żądanie-odpowiedź". We wzorcu "żądanie-odpowiedź" klient czeka na komunikat odpowiedzi, nawet, jeśli operacja usługi jest reprezentowana w kodzie jako `void` metody. Za pomocą operacji jednokierunkowych są przesyłane tylko jeden komunikat. Odbiornik nie wysyła komunikat odpowiedzi nie jest nadawca oczekiwany jeden.  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  Jest to zalecane, zamiast tego należy zbadać różne formanty w usłudze, a także na komputerze klienckim, a następnie przetestować swoich scenariuszy aplikacji, aby określić najlepszą konfigurację po obu stronach. Na przykład, jeśli korzystanie z sesji blokuje przetwarzanie komunikatów w usłudze, możesz ustawić <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.InstanceContextMode.PerCall> tak, aby każdy komunikat może przetwarzane przez utworzone wystąpienie innej usługi i ustaw <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> do <xref:System.ServiceModel.ConcurrencyMode.Multiple> Aby zezwolić na więcej niż jeden wątek do wysyłania wiadomości w czasie. Innym rozwiązaniem jest zwiększyć te limity odczytu powiązań usługi i klienta.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Komunikacja jednokierunkowa](../../../../docs/framework/wcf/samples/one-way.md)

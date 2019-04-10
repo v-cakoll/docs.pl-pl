@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21742881c5aef7384be318297aa3432411c3d57c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b60dde31707175a27d2dc6c50484d6089adaeaa6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229630"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory — Funkcja
 Pobiera ścieżkę katalogu historii aplikacji.  
@@ -63,6 +63,7 @@ HRESULT GetHistoryFileDirectory (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [CreateHistoryReader, funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [NukeDownloadedCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
+
+- [CreateHistoryReader — Funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
+- [NukeDownloadedCache — Funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)
 - [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

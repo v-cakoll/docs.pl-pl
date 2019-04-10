@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d7cf32eb369e2607ee540d7188cc680b9506c261
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 946096cb9510ca12bbd2cecd00099142308b072a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236156"
 ---
 ### <a name="keytips-behavior-improved-in-wpf"></a>Zachowanie wskazówki ulepszone w WPF
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760747"
 |Zakres|Krawędź|
 |Wersja|4.7.2|
 |Typ|Środowisko uruchomieniowe|
-

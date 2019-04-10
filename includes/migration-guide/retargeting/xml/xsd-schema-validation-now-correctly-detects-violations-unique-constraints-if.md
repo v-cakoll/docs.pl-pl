@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "50746666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234550"
 ---
 ### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>Weryfikacja schematu XSD teraz prawidłowo wykrywa naruszenia ograniczenia unikatowe klucze złożone są używane, jeśli jeden klucz jest pusty
 
@@ -15,4 +15,3 @@ ms.locfileid: "50746666"
 |Zakres|Krawędź|
 |Wersja|4.6|
 |Typ|Przekierowanie|
-

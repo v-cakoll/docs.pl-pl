@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi'
+title: 'Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228357"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi
 > [!NOTE]
 >  <xref:System.Windows.Forms.ToolStrip> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.ToolBar> kontrolować; jednak <xref:System.Windows.Forms.ToolBar> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz.  
   
@@ -135,7 +135,8 @@ ms.locfileid: "57707550"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: Dodawanie przycisków do formantu ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
-- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [ToolBar, kontrolka](toolbar-control-windows-forms.md)
+- [Instrukcje: dodawanie przycisków do kontrolki ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Instrukcje: określanie ikony dla przycisku ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar — Formant](toolbar-control-windows-forms.md)

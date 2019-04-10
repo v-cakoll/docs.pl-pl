@@ -2,12 +2,12 @@
 title: Pisanie dostawcy danych programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 254207b9c3f5edd55fff867b784d71359f6c94c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228747"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Pisanie dostawcy danych programu Entity Framework
 W tej sekcji omówiono sposób pisania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy w celu obsługi źródła danych inne niż SQL Server. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje dostawcę, który obsługuje program SQL Server.  
@@ -42,4 +42,5 @@ W tej sekcji omówiono sposób pisania [!INCLUDE[adonet_ef](../../../../../inclu
  [Specyfikacja manifestu dostawcy](../../../../../docs/framework/data/adonet/ef/provider-manifest-specification.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Praca z dostawcami danymi](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)

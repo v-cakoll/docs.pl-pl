@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228267"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje zabezpieczenia procesów. Po wystąpieniu błędów zabezpieczeń w warstwie interfejsu SSPI, są one udostępniane przez Windows Communication Foundation (WCF). Ten temat zawiera framework i zestaw pytań, aby łatwiej diagnozować błędy.  
@@ -145,6 +145,7 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
  Jeśli tworzenia aplikacji na jednym komputerze wdrożeniu w innym, używają różnych typów kont do uwierzytelniania na każdej maszynie, mogą występować inne zachowanie. Załóżmy, że tworzenie aplikacji przy użyciu Windows XP Pro maszyny `SSPI Negotiated` tryb uwierzytelniania. Jeśli używasz konta użytkownika lokalnego do uwierzytelniania przy użyciu protokołu NTLM będą używane. Gdy aplikacja jest opracowana, możesz wdrożyć usługę do maszyny systemu Windows Server 2003, w którym został uruchomiony w ramach konta domeny. W tym momencie klient nie będzie mógł uwierzytelnić usługi, ponieważ będą używać protokołu Kerberos i kontrolerem domeny.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

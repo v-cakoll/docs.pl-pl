@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6dc3669433804a4524c18d5a932f9879343ab508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235459"
+---
 ### <a name="the-replace-method-in-odata-urls-is-disabled-by-default"></a>Metoda Replace w adresach URL OData jest domyślnie wyłączony
 
 |   |   |
@@ -8,4 +16,3 @@
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Data.Services.DataService%601?displayProperty=nameWithType></li></ul>|
-

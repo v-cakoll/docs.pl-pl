@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 16b60b2973524c8e600f5efebb3f2b291377ffcc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392855e3db2ea10c90784a6f9003805b79db74a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732716"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230580"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Dodawanie elementu DataTable do elementu DataSet
 ADO.NET pozwala na tworzenie <xref:System.Data.DataTable> obiektów i dodać je do istniejącej <xref:System.Data.DataSet>. Można ustawić informacje o ograniczeniach dla <xref:System.Data.DataTable> przy użyciu <xref:System.Data.DataTable.PrimaryKey%2A> i <xref:System.Data.DataColumn.Unique%2A> właściwości.  
@@ -33,5 +33,6 @@ ADO.NET pozwala na tworzenie <xref:System.Data.DataTable> obiektów i dodać je 
  W wersjach programu ADO.NET starszych niż 2.0 dwie tabele nie może mieć takiej samej nazwie, nawet jeśli były one w różnych obszarach nazw. To ograniczenie zostało usunięte ADO.NET w wersji 2.0. A <xref:System.Data.DataSet> może zawierać dwóch tabel, które mają taki sam <xref:System.Data.DataTable.TableName%2A> wartości właściwości, ale o różnych <xref:System.Data.DataTable.Namespace%2A> wartości właściwości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

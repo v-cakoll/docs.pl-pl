@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227694"
 ---
 # <a name="adorners-overview"></a>Przegląd Moduły indeksowania układu
 Moduły definiowania układu są specjalnym typem <xref:System.Windows.FrameworkElement>, który jest używany w celu zapewnienia podpowiedzi wizualne dla użytkownika. Wśród innych zastosowań moduły definiowania układu może służyć do dodawania funkcjonalności dojść do elementów lub podaj informacje o kontrolce stanie.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Moduły indeksowania układu — informacje  
  <xref:System.Windows.Documents.Adorner> Jest niestandardowy <xref:System.Windows.FrameworkElement> , jest powiązany z <xref:System.Windows.UIElement>. Moduły indeksowania układu — zostaną zrenderowane w <xref:System.Windows.Documents.AdornerLayer>, czyli powierzchnię renderowania, który jest zawsze na górze elementu element lub kolekcję elementów element. Renderowanie moduł definiowania układu jest niezależny od renderowanie <xref:System.Windows.UIElement> powiązaną moduł definiowania układu. Moduł definiowania układu zwykle znajduje się względem elementu, do którego jest powiązany, przy użyciu standardowego źródła współrzędnych 2-D, znajduje się w lewym górnym rogu elementu element.  
@@ -102,8 +100,9 @@ Moduły definiowania układu są specjalnym typem <xref:System.Windows.Framework
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Rysowanie obiektów — przegląd](../graphics-multimedia/drawing-objects-overview.md)
-- [Tematy z instrukcjami](adorners-how-to-topics.md)
+- [Przegląd Kształty i podstawowe rysowanie w WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Malowanie obrazami, rysowaniem i Visual](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Przegląd Rysowanie obiektów](../graphics-multimedia/drawing-objects-overview.md)
+- [— Tematy porad](adorners-how-to-topics.md)

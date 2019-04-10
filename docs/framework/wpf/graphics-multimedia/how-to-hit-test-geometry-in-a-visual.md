@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przeprowadź test trafienia geometrii w Visual'
+title: 'Instrukcje: Przeprowadzanie testu trafienia geometrii w wizualizacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227343"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>Instrukcje: Przeprowadź test trafienia geometrii w Visual
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>Instrukcje: Przeprowadzanie testu trafienia geometrii w wizualizacji
 W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny, który składa się z co najmniej jeden <xref:System.Windows.Media.Geometry> obiektów.  
   
 ## <a name="example"></a>Przykład  
@@ -36,5 +36,6 @@ W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny
 >  W tym przykładzie nie bierze pod uwagę jakichkolwiek plików transformacji lub przycinania, które można stosować do geometrii. Ponadto w tym przykładzie nie będzie działać z kontrolkę ze stylem, ponieważ nie ma rysunki bezpośrednio związane z nią.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)
+
+- [Test trafienia w warstwie Visual](hit-testing-in-the-visual-layer.md)
 - [Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru](how-to-hit-test-using-geometry-as-a-parameter.md)

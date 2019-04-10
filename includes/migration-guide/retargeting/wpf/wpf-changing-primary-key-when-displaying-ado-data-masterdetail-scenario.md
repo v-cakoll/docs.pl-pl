@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1d9841b9c8989a07820c75ac07940c90e5c0753e
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 2cd107dc92fd0fae89717c38840ce7ea44f3ac9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234001"
 ---
 ### <a name="wpf-changing-a-primary-key-when-displaying-ado-data-in-a-masterdetail-scenario"></a>WPF, zmiana klucza podstawowego, podczas wyświetlania danych ADO w scenariuszu wzorzec/szczegół
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760912"
 |Zakres|Mały|
 |Wersja|4.7.2|
 |Typ|Przekierowanie|
-

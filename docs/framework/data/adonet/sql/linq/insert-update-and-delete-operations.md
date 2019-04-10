@@ -1,18 +1,18 @@
 ---
-title: Wstawiania, aktualizowania i usuwania działań
+title: Operacje wstawiania, aktualizowania i usuwania
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: 7dd2eb64a9320d88c7bc3b5feb6578d70f5910b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230683"
 ---
-# <a name="insert-update-and-delete-operations"></a>Wstawiania, aktualizowania i usuwania działań
+# <a name="insert-update-and-delete-operations"></a>Operacje wstawiania, aktualizowania i usuwania
 Należy wykonać `Insert`, `Update`, i `Delete` operacje w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przez dodawanie, zmienianie i usuwanie obiektów w modelu obiektu. Domyślnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy swoje działania do bazy danych SQL i przesyła zmiany do bazy danych.  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia maksymalną elastyczność manipulowanie i utrzymanie zmiany wprowadzone do obiektów. Jak najszybciej jednostek dostępnych obiektów (albo pobierając je za pomocą kwerendy lub tworząc je od nowa), możesz zmienić je jako typowe obiekty w aplikacji. Oznacza to możesz zmienić ich wartości, można dodać je do kolekcji i można je usunąć z kolekcji. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Śledzi zmiany i jest gotowa do przesyłania ich w bazie danych, gdy wywołujesz <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
@@ -33,5 +33,6 @@ Należy wykonać `Insert`, `Update`, i `Delete` operacje w [!INCLUDE[vbtecdlinq]
 >  Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Tworzenie procedur składowanych w tym celu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

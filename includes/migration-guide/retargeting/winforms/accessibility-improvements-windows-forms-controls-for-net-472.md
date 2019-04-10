@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5194df21e086291611dc32ee03fd928d89df3d6c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: ad29d522451649aae09786a90088f0a5d33c3ad8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234013"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls-for-net-472"></a>Ulepszenia ułatwień dostępu w kontrolkach formularzy Windows Forms dla platformy .NET 4.7.2
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760873"
 |Zakres|Duży|
 |Wersja|4.7.2|
 |Typ|Przekierowanie|
-

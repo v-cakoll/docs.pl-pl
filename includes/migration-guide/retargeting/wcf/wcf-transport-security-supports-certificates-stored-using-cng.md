@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b57e0acb03a99f33460a7b6c880280b37e01a17b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234980"
+---
 ### <a name="wcf-transport-security-supports-certificates-stored-using-cng"></a>Zabezpieczenia transportu usługi WCF obsługuje certyfikaty przechowywane przy użyciu CNG
 
 |   |   |
@@ -7,4 +15,3 @@
 |Zakres|Mały|
 |Wersja|4.6.2|
 |Typ|Przekierowanie|
-

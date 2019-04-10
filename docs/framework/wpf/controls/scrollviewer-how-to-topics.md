@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 0bd8925e2449df7d86502ed3b12385eb6f786063
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229417"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer — Tematy porad
 Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Controls.ScrollViewer> elementu do utworzenia przewijany regionów w swoich aplikacjach.  
@@ -28,5 +28,6 @@ Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Controls
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>Zobacz także
-- [Panele — omówienie](panels-overview.md)
+
+- [Przegląd Panele](panels-overview.md)
 - [Układ](../advanced/layout.md)

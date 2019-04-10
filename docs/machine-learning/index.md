@@ -1,14 +1,14 @@
 ---
 title: Przewodnik po zawartości struktury ML.NET
 description: Dowiedz się, jak tworzyć niestandardowe rozwiązania za pomocą sztucznej inteligencji i łączyć je z aplikacją .NET za pomocą struktury ML.NET
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231334"
 ---
 # <a name="mlnet-content-guide"></a>Przewodnik po zawartości struktury ML.NET
 
@@ -33,7 +33,11 @@ Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w
 
 [Przewidywanie cen przy użyciu modelu regresji](./tutorials/taxi-fare.md) pokazuje, jak stworzyć aplikację, która przewiduje cenę przy użyciu wielu czynników z danych historycznych.
 
-[Klasyfikowanie irysów według ich cech](./tutorials/iris-clustering.md) pokazuje w jaki sposób model klastrowania umożliwia analizowanie zestawu danych. 
+[Klasyfikowanie irysów według ich cech](./tutorials/iris-clustering.md) pokazuje w jaki sposób model klastrowania umożliwia analizowanie zestawu danych.
+
+[Utwórz polecania filmów za pomocą platformy ML.NET](./tutorials/movie-recommmendation.md) dowiesz się, jak utworzyć aplikację zalecenie, aby zalecić filmy dla użytkowników na podstawie ich historii.
+
+[Tworzenie klasyfikatora obrazu niestandardowego strukturze ML.NET z TensorFlow](./tutorials/image-classification.md): Pokazuje, jak ponowne szkolenie z istniejącego modelu Tensorflow do utworzenia przy użyciu strukturze ML.NET klasyfikatora obrazu niestandardowego.
 
 ## <a name="how-to-guide"></a>Przewodnik z instrukcjami
 
@@ -46,7 +50,6 @@ Aby poznać podstawy, zobacz [Podstawowe pojęcia dotyczące trenowania modelu w
 [Zadania do wykonania za pomocą uczenia maszynowego](./resources/tasks.md) – w tym artykule opisano zadania, takie jak klasyfikowanie i wykrywanie anomalii. 
 
 [Przekształcenia danych](./resources/transforms.md) zawiera opis możliwości przygotowywania danych w strukturze ML.NET.
-
 
 ## <a name="api-reference"></a>Dokumentacja interfejsów API
 

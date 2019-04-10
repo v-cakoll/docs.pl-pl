@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Utwórz formant TextBox tylko do odczytu'
+title: 'Instrukcje: Tworzenie kontrolki TextBox tylko do odczytu'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - read-only TextBox controls [WPF]
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
-ms.openlocfilehash: 3784471020210f995c8bb0a377d56a2466d97da1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229839"
 ---
-# <a name="how-to-make-a-textbox-control-read-only"></a>Instrukcje: Utwórz formant TextBox tylko do odczytu
+# <a name="how-to-make-a-textbox-control-read-only"></a>Instrukcje: Tworzenie kontrolki TextBox tylko do odczytu
 W tym przykładzie pokazano, jak skonfigurować <xref:System.Windows.Controls.TextBox> formantu nie zezwalać na dane wejściowe użytkownika lub modyfikacji.  
   
 ## <a name="example"></a>Przykład  
@@ -25,5 +25,6 @@ W tym przykładzie pokazano, jak skonfigurować <xref:System.Windows.Controls.Te
  Wartość domyślna <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> jest **false**.  
   
 ## <a name="see-also"></a>Zobacz także
-- [TextBox — omówienie](textbox-overview.md)
-- [RichTextBox — omówienie](richtextbox-overview.md)
+
+- [TextBox — Przegląd](textbox-overview.md)
+- [RichTextBox — Przegląd](richtextbox-overview.md)

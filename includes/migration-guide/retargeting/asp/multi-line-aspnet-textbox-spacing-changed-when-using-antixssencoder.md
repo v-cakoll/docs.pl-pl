@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e2bca42daebd25667ab2f312d5e59089b986503c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234787"
+---
 ### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>W wielowierszowym polu tekstowym ASP.Net TextBox zmieniły się odstępy w przypadku użycia klasy AntiXSSEncoder
 
 |   |   |
@@ -7,4 +15,3 @@
 |Zakres|Mały|
 |Wersja|4.5|
 |Typ|Przekierowanie|
-

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obróć obiekt z wykorzystaniem ścieżki geometrycznej'
+title: 'Instrukcje: Obracanie obiektu przy użyciu ścieżki geometrycznej'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - geometric paths [WPF], rotating objects by
 - rotating objects by geometric paths [WPF]
 ms.assetid: cb31ca4d-f05a-4c6b-9a18-4b6faaf38d45
-ms.openlocfilehash: 2a027e11b910650044996c7ca7bdb822a1de513f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e35169da7297ec62e0114ab21f4ba81c0a656ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229215"
 ---
-# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Instrukcje: Obróć obiekt z wykorzystaniem ścieżki geometrycznej
+# <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Instrukcje: Obracanie obiektu przy użyciu ścieżki geometrycznej
 W tym przykładzie pokazano, jak obrócić (Tabela przestawna) obiekt na ścieżce geometryczne, który jest definiowany przez <xref:System.Windows.Media.PathGeometry> obiektu.  
   
 ## <a name="example"></a>Przykład  
@@ -35,6 +35,7 @@ W tym przykładzie pokazano, jak obrócić (Tabela przestawna) obiekt na ścież
  Aby uzyskać pełny przykład, zobacz [przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
+
+- [Przegląd Animacja](animation-overview.md)
 - [Przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Animacja ścieżki — tematy z instrukcjami](path-animation-how-to-topics.md)
+- [Animacja ścieżki Tematy Pomocy](path-animation-how-to-topics.md)

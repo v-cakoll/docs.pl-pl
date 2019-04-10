@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: e30fcd5952fadc3b6cf30cb352a3bb51c86cc117
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228240"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 Definiuje transport, powodujący przesył kanałem wiadomości używając potoków nazwanych, gdy jest włączony do niestandardowego powiązania.  
@@ -73,6 +73,7 @@ Identyfikatory URI w postaci "net.pipe://hostname/path" korzysta z tego transpor
 `namedPipeTransport` Element jest punktem wyjścia do tworzenia niestandardowego powiązania, który implementuje protokół transportowy nazwanych potoków. Tego transportu jest używany dla na komputerze Windows Communication Foundation (WCF) - do - komunikacji WCF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228396"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Samouczek: Definiowanie kontraktu usługi Windows Communication Foundation
 
@@ -28,7 +28,6 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > [!div class="checklist"]
 > - Tworzenie **biblioteki usługi WCF** projektu.
 > - Zdefiniuj interfejs kontraktu usługi.
-
 
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Utwórz projekt biblioteki usługi WCF i definiowanie interfejsu kontraktu usługi
 
@@ -54,7 +53,6 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
       > [!NOTE]
       > Po zainstalowaniu programu Visual Studio z ustawieniami środowiska dewelopera języka Visual Basic, rozwiązanie może być ukryta. Jeśli jest to możliwe, wybierz opcję **opcje** z **narzędzia** menu, następnie wybierz pozycję **projekty i rozwiązania** > **ogólne** w **opcje** okna. Wybierz **zawsze pokazuj rozwiązanie**. Ponadto upewnij się, że **Zapisz nowe projekty po utworzeniu** jest zaznaczone.
-
 
 3. Z **Eksploratora rozwiązań**, otwórz **IService1.cs** lub **IService1.vb** pliku i zastąp jego kod poniższym kodem:
 

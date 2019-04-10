@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Użyj kolorów systemowych w gradiencie'
+title: 'Instrukcje: Używanie kolorów systemowych w gradiencie'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - gradients [WPF], system colors in
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
-ms.openlocfilehash: 3148a5901ccf64194717e26664ab8b9cbd57db2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229443"
 ---
-# <a name="how-to-use-system-colors-in-a-gradient"></a>Instrukcje: Użyj kolorów systemowych w gradiencie
+# <a name="how-to-use-system-colors-in-a-gradient"></a>Instrukcje: Używanie kolorów systemowych w gradiencie
 Aby użyć kolorów systemowych w gradiencie, należy użyć  *\<SystemColor >* kolorów i  *\<SystemColor >* właściwości statycznej ColorKey <xref:System.Windows.SystemColors> klasy w celu uzyskania Odwołanie do koloru, gdzie  *\<SystemColor >* jest nazwą koloru żądany system. Użyj  *\<SystemColor >* ColorKey właściwości, gdy użytkownik chce utworzyć dynamiczne odwołania, który jest aktualizowany automatycznie, zgodnie ze zmianami motywu systemu. W przeciwnym razie użyj  *\<SystemColor >* koloru właściwości.  
   
 ## <a name="example"></a>Przykład  
@@ -25,6 +25,7 @@ Aby użyć kolorów systemowych w gradiencie, należy użyć  *\<SystemColor >* 
  [!code-xaml[brushsamples_snip#GraphicsMMStaticSystemColorGradientExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/StaticSystemColorExample.xaml#graphicsmmstaticsystemcolorgradientexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.SystemColors>
 - [Malowanie obszaru pędzlem systemowym](how-to-paint-an-area-with-a-system-brush.md)
-- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)

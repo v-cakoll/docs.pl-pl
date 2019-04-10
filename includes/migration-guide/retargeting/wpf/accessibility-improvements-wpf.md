@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a900856d7460a3b777db4f0a8621b2a49fc1118b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: c37b90f7f68c4de1d22e148c8800005ae3d8e800
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236472"
 ---
 ### <a name="accessibility-improvements-in-wpf"></a>Ulepszenia ułatwień dostępu w WPF
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760242"
 |Wersja|4.7.1|
 |Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Automation.AutomationElementIdentifiers.LiveSettingProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationElementIdentifiers.LiveRegionChangedEvent?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationProperties.LiveSettingProperty?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationProperties.SetLiveSetting(System.Windows.DependencyObject,System.Windows.Automation.AutomationLiveSetting)?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.AutomationProperties.GetLiveSetting(System.Windows.DependencyObject)?displayProperty=nameWithType></li><li><xref:System.Windows.Automation.Peers.AutomationPeer.GetLiveSettingCore?displayProperty=nameWithType></li></ul>|
-

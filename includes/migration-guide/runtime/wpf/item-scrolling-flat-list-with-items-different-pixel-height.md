@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: eb3cfdfd39444536f423b65166a3413db67a0e01
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 088ebad0f822f791d05a8a8dafb0f7fd74f5581a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234183"
 ---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>Element przewijania płaskiej listy elementów różnych wysokość pikseli
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761364"
 |Wersja|4.6.1|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel?displayProperty=nameWithType></li></ul>|
-

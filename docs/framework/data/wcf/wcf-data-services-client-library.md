@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230203"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteka klienta usług danych WCF
 Każda aplikacja może współdziałać z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]— na podstawie danych usługi, jeśli jest w stanie wysyłać żądania HTTP i [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych zwracanych usługi danych. Takie współdziałanie pozwala uzyskać dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usług z szerokim aplikacje korzystające z zakresu sieci Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zawiera biblioteki klienckie, które zapewniają bardziej zaawansowane środowisko programowania, gdy wykorzystasz [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł z .NET Framework lub aplikacji opartych na technologii Silverlight.  
@@ -39,7 +39,7 @@ Każda aplikacja może współdziałać z [!INCLUDE[ssODataFull](../../../../inc
  [Operacje przetwarzania wsadowego](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  W tym artykule opisano sposób wysyłania wielu żądań do usługi danych w jednej partii przy użyciu biblioteki klienta.  
   
- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Wiązanie danych z kontrolką](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Opis sposobu tworzenia powiązania kontrolki [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródło danych zwróconych przez usługę danych.  
   
  [Wywołania operacji usługi](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
@@ -52,5 +52,6 @@ Każda aplikacja może współdziałać z [!INCLUDE[ssODataFull](../../../../inc
  Informacje dotyczące dostępu i zmiany danych binarnych zwracane przez usługę danych jako strumień danych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228201"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Jednostki znaków XML i XAML
 XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W tym temacie opisano niektóre jednostki określonych znaków i ogólne uwagi dotyczące innych pojęć XML w XAML.  
@@ -46,7 +46,7 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
   
 |Znak|Jednostka|Uwagi|  
 |---------------|------------|-----------|  
-|& (znak handlowe „i”)|\&amp;|Należy użyć wartości atrybutów i zawartości elementu.|  
+|& (znak)|\&amp;|Należy użyć wartości atrybutów i zawartości elementu.|  
 |> (większą-niż znak)|\&gt;|Musi być używany dla wartości atrybutu, ale > jest akceptowany w zawartości elementu tak długo, jak < nie należy poprzedzić go.|  
 |< (mniej-niż znak)|\&lt;|Musi być używany dla wartości atrybutu, ale \< jest akceptowany w zawartości elementu tak długo, jak > nie wykonać.|  
 |"(prosty cudzysłów)|\&quot;|Musi być używany dla wartości atrybutu, ale prosty cudzysłów (") jest akceptowany w zawartości elementu. Należy pamiętać, że wartości atrybutu mogą być ujęte w prostej znak pojedynczego cudzysłowu (') lub bezpośrednio znak cudzysłowu ("); niezależnie od znaku występuje jako pierwszy definiuje obudowy wartość atrybutu i alternatywne oferty mogą posłużyć jako literał w wartości.|  
@@ -63,7 +63,8 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
  XAML obsługuje instrukcji przetwarzania XML według specyfikacji XML, co oznacza, że instrukcje muszą być przekazywane za pośrednictwem. Przetwarzanie w .NET Framework XAML Services XAML nie korzysta z żadnych instrukcji przetwarzania. Inne istniejącymi strukturami, które używają XAML również należy używać instrukcji przetwarzania z XAML.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XamlName, gramatyka](xamlname-grammar.md)
-- [Znak odstępu przetwarzanie w XAML](whitespace-processing-in-xaml.md)
+
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName — Gramatyka](xamlname-grammar.md)
+- [Przetwarzanie spacji w XAML](whitespace-processing-in-xaml.md)

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 08c16f261338148619de2e484c73046b9d9a6bfe
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: ee5070a1a4c58d6c1282ba47c921436ca22722ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234319"
 ---
 ### <a name="the-net-framework-46-does-not-use-a-45xx-version-when-registering-itself-in-the-registry"></a>.NET Framework 4.6 nie korzystają z wersji 4.5.x.x po zarejestrowaniu się w rejestrze
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761395"
 |Zakres|Krawędź|
 |Wersja|4.6|
 |Typ|Środowisko uruchomieniowe|
-

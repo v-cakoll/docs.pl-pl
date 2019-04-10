@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e7154919d6a09a04e650d5546feb2ae6c6cc912f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234990"
+---
 ### <a name="httpruntimeappdomainapppath-throws-a-nullreferenceexception"></a>HttpRuntime.AppDomainAppPath zgłasza obiektu NullReferenceException
 
 |   |   |
@@ -8,4 +16,3 @@
 |Wersja|4.6.2|
 |Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Web.HttpRuntime.AppDomainAppPath?displayProperty=nameWithType></li></ul>|
-

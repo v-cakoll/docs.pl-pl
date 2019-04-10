@@ -1,18 +1,18 @@
 ---
-title: Dublowania w programie SQL Server
+title: Dublowanie bazy danych w programie SQL Server
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230996"
 ---
-# <a name="database-mirroring-in-sql-server"></a>Dublowania w programie SQL Server
+# <a name="database-mirroring-in-sql-server"></a>Dublowanie bazy danych w programie SQL Server
 Funkcja dublowania baz danych w programie SQL Server pozwala na zachowanie kopiowania lub dublowania bazy danych programu SQL Server na serwerze wstrzymania. Dublowanie gwarantuje, że dwie oddzielne kopie danych istnieją przez cały czas, zapewniając wysoką dostępność i ukończyć nadmiarowości danych. .NET Data Provider for SQL Server obsługuje niejawne dublowania bazy danych, tak aby deweloper nie trzeba podejmować żadnych działań lub pisania kodu, gdy został skonfigurowany dla bazy danych programu SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiekt obsługuje tryb jawne połączenie, który umożliwia podanie nazwy serwera partnerskiego trybu failover, w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  Poniższy uproszczony sekwencja zdarzeń dla <xref:System.Data.SqlClient.SqlConnection> obiektu, który jest przeznaczony dla skonfigurowano obsługę dublowania bazy danych:  
@@ -64,4 +64,5 @@ string activeServer = connection.DataSource;
 |[Funkcja dublowania baz danych](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Opisuje sposób instalowania i konfigurowania dublowania w programie SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

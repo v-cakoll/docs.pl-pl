@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bc56a3437e16e5d2c9679847bf3a3035b9e34286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234772"
+---
 ### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>Aplikacje opublikowane za pomocą technologii ClickOnce, korzystających z algorytmu SHA-256 certyfikat podpisywania kodu może zakończyć się niepowodzeniem w systemie Windows 2003
 
 |   |   |
@@ -6,5 +14,4 @@
 |Sugestia|Zmiana z rejestracją ClickOnce pliku wykonywalnego dotyczy tylko systemów Windows Server 2003; wymagają one, że KB 938397 zostanie zainstalowany. Zmiana podpisywania manifestu za pomocą algorytmu SHA-256, nawet wtedy, gdy aplikacja jest przeznaczony dla .NET Framework 4.0 i jego wcześniejsze wersje wprowadza zależność środowiska uruchomieniowego .NET Framework 4.5 lub nowszej wersji.|
 |Zakres|Krawędź|
 |Wersja|4.5|
-|Typ|Trwa przekierowywanie|
-
+|Typ|Przekierowanie|

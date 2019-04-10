@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bae7d11f29609acddaf9f6391983176ccaa9ebcb
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e4cf139d308a1c12425d966a84d59a0c3bb89712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236453"
 ---
 ### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>Obiektu NullReferenceException w kodu z ImageSourceConverter.ConvertFrom obsługi wyjątków
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760378"
 |Wersja|4.7|
 |Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
-

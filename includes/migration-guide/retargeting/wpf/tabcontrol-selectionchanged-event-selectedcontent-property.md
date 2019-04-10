@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e80748c183a10cac4ef66c96ab48458cd9baa806
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 923105114c9e8da02c61c842cc02bed1ead3eddc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "52742519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236463"
 ---
 ### <a name="tabcontrol-selectionchanged-event-and-selectedcontent-property"></a>TabControl SelectionChanged zdarzeń i właściwości SelectedContent
 
@@ -16,4 +16,3 @@ ms.locfileid: "52742519"
 |Wersja|4.7.1|
 |Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.TabControl.SelectedContent?displayProperty=nameWithType></li><li><xref:System.Windows.Controls.Primitives.Selector.SelectionChanged?displayProperty=nameWithType></li></ul>|
-

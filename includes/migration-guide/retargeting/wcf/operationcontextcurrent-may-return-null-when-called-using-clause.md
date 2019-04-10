@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e08b78b49cab88d4435d75b04bd446b413a61340
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234963"
+---
 ### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>Właściwości OperationContext.Current może zwracać wartość null, gdy zostanie wywołana w za pomocą klauzuli
 
 |   |   |
@@ -8,4 +16,3 @@
 |Wersja|4.6.2|
 |Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.ServiceModel.OperationContext.Current?displayProperty=nameWithType></li></ul>|
-

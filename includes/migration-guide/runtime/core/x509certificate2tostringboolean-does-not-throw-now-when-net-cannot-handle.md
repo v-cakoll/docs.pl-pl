@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d48519443aeee05617538cf2cc12bea49ad3e16d
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 0dfc87201b9b31cd9d936f2c965c7d0ca0140cab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234316"
 ---
 ### <a name="x509certificate2tostringboolean-does-not-throw-now-when-net-cannot-handle-the-certificate"></a>X509Certificate2.toString(Boolean) throw, kiedy .NET nie obsługuje teraz certyfikatu
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761328"
 |Wersja|4.6|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.X509Certificates.X509Certificate2.ToString(System.Boolean)?displayProperty=nameWithType></li></ul>|
-

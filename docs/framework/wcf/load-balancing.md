@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228643"
 ---
 # <a name="load-balancing"></a>Równoważenie obciążenia
 Jednym ze sposobów, aby zwiększyć jej pojemność aplikacji Windows Communication Foundation (WCF) jest Skaluj je automatycznie przez wdrażanie ich do farmy serwerów z równoważeniem obciążenia. Aplikacji WCF może być równoważone za pomocą standardowych równoważenia technik, w tym oprogramowania równoważenia obciążenia, takich jak Windows Równoważenie obciążenia sieciowego, a także oparte na sprzęcie równoważenia urządzenia.  
@@ -92,4 +92,5 @@ Jednym ze sposobów, aby zwiększyć jej pojemność aplikacji Windows Communica
  Aby uzyskać najlepszą wydajność w scenariuszach ze zrównoważonym obciążeniem, należy wziąć pod uwagę przy użyciu <xref:System.ServiceModel.NetTcpSecurity> (albo <xref:System.ServiceModel.SecurityMode.Transport> lub <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

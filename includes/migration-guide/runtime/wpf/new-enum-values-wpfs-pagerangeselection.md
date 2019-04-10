@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: edd194fef27d97976f1ff45daec1cd56382bbb55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235469"
+---
 ### <a name="new-enum-values-in-wpfs-pagerangeselection"></a>Nowe wartości wyliczenia w PageRangeSelection w WPF
 
 |   |   |
@@ -8,4 +16,3 @@
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.Controls.PageRangeSelection?displayProperty=nameWithType></li></ul>|
-

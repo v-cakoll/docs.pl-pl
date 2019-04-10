@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231126"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -149,8 +149,9 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
  Zrozumienie, jak elementy są mierzone i uporządkowane jest pierwszym krokiem w układzie opis. Aby uzyskać więcej informacji o dostępnych <xref:System.Windows.Controls.Panel> elementów, zobacz [Przegląd panele](../controls/panels-overview.md). Aby lepiej zrozumieć różne właściwości pozycjonowania, które mogą wpływać na układ, zobacz [wyrównanie, marginesy i dopełnienie Przegląd](alignment-margins-and-padding-overview.md). Na przykład niestandardowy <xref:System.Windows.Controls.Panel> elementu, zobacz [niestandardowe promieniowego przykładowe panelu](https://go.microsoft.com/fwlink/?LinkID=159982). Gdy wszystko jest gotowe do zebranie wszystkich aplikacji lekki, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
-- [Panele — omówienie](../controls/panels-overview.md)
-- [Przegląd wyrównania, marginesów i wypełnień](alignment-margins-and-padding-overview.md)
+- [Przegląd Panele](../controls/panels-overview.md)
+- [Przegląd Wyrównanie, marginesy i wypełnienia](alignment-margins-and-padding-overview.md)
 - [Układ i projekt](optimizing-performance-layout-and-design.md)

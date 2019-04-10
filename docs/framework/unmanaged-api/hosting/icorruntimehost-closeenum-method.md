@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65da00d99fec5f2280bcd00ce97b8eddafede680
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f150fe80302cd03e872ca8bdf5d172caae1ce599
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230775"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum — Metoda
 Resetuje wyliczający domeny do początku listy domen.  
@@ -58,5 +58,6 @@ HRESULT CloseEnum (
  **Wersje programu .NET framework:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Zobacz także
-- [CorBindToRuntimeEx, funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
-- [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+
+- [CorBindToRuntimeEx — Funkcja](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
+- [ICorRuntimeHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

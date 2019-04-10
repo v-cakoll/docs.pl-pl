@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 88e00454894c8404fd48e92404e35ae27fa056f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235422"
+---
 ### <a name="wpf-treeviewitem-must-be-used-within-a-treeview"></a>Należy użyć WPF TreeViewItem w TreeView
 
 |   |   |
@@ -7,4 +15,3 @@
 |Zakres|Mały|
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
-

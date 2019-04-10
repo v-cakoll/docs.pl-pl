@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236483"
 ---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>Sumy kontrolne przepływu pracy, zmienione od MD5, SHA1
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760370"
 |Zakres|Mały|
 |Wersja|4.7|
 |Typ|Przekierowanie|
-

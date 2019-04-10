@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 366878fbfbfbe3e3951095c9ad82c1260638a0cb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228305"
 ---
 # <a name="application-element-net-native"></a>\<Aplikacja > (architektura .NET Native)
 Służy jako kontener dla całej aplikacji, typy i składowe typu, którego metadanych dotyczących odbicia w czasie wykonywania oraz będzie miało zastosowanie zasad odbicia środowiska uruchomieniowego do wszystkich elementów programu w aplikacji.  
@@ -61,8 +61,8 @@ Służy jako kontener dla całej aplikacji, typy i składowe typu, którego meta
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady do wszystkich typów w określonym zestawie.|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w określonej przestrzeni nazw.|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje zasady do określonego typu, takie jak klasy lub struktury.|  
+|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w określonej przestrzeni nazw.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje zasady do określonego typu, takie jak klasy lub struktury.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego typu ogólnego. Na przykład [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element może służyć do definiowania zasad dla `List<String>` typu.|  
 |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Stosuje zasady do metody dla określonego typu.|  
 |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego metody rodzajowej.|  
@@ -86,6 +86,7 @@ Służy jako kontener dla całej aplikacji, typy i składowe typu, którego meta
 -   Jako element, który ustawia zasady dla całej aplikacji odbicia, serializacja i współdziałania. Atrybuty `<Application>` element Definiowanie zasad całej aplikacji, które mogą zostać zastąpione przez elementy podrzędne, zdefiniowane przez `<Application>` lub [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) elementu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<Biblioteka > Element](../../../docs/framework/net-native/library-element-net-native.md)
 - [\<Dyrektywy > Element](../../../docs/framework/net-native/directives-element-net-native.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

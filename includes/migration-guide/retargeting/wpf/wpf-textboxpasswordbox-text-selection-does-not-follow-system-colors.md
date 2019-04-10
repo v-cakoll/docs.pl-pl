@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 649e4456ef6a11903ab1b390baf56583f31f5562
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3f88c8b80518aa65c082dc3da2d75b5221dd00f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234033"
 ---
 ### <a name="wpf-textboxpasswordbox-text-selection-does-not-follow-system-colors"></a>Zaznaczanie tekstu w polu tekstowym/PasswordBox WPF nie jest zgodna z kolory systemowe
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760919"
 |Zakres|Krawędź|
 |Wersja|4.7.2|
 |Typ|Przekierowanie|
-

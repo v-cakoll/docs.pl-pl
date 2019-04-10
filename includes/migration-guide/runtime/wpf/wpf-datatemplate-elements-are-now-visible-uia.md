@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 51691ced3f05201f784ccdeffbc130e34748b7c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235569"
+---
 ### <a name="wpf-datatemplate-elements-are-now-visible-to-uia"></a>Elementów WPF DataTemplate są teraz widoczne dla automatyzacji interfejsu użytkownika
 
 |   |   |
@@ -8,4 +16,3 @@
 |Wersja|4.5|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Windows.DataTemplate.%23ctor?displayProperty=nameWithType></li><li><xref:System.Windows.DataTemplate.%23ctor(System.Object)?displayProperty=nameWithType></li></ul>|
-

@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Użyj siatki do automatycznego układu'
+title: 'Instrukcje: Używanie siatki do automatycznego układu'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227135"
 ---
-# <a name="how-to-use-a-grid-for-automatic-layout"></a>Instrukcje: Użyj siatki do automatycznego układu
+# <a name="how-to-use-a-grid-for-automatic-layout"></a>Instrukcje: Używanie siatki do automatycznego układu
 W tym przykładzie opisano, jak użyć siatki w ujęciu automatycznego układu do tworzenia aplikacji możliwych do zlokalizowania.  
   
  Lokalizacja [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] może być procesem dużo czasu. Często lokalizatorzy muszą zmieniać rozmiar i zmienić położenie elementów oprócz tłumaczenie tekstu. W przeszłości każdego z języków, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] została dostosowana wymaganych dostosowań. Teraz z możliwościami [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] można zaprojektować elementy, które zmniejszyć zapotrzebowanie na dostosowanie. Nosi nazwę podejścia do pisania aplikacji, które mogą być łatwiejsze zmieniono rozmiar i zmienionym `auto layout`.  
@@ -30,5 +30,6 @@ W tym przykładzie opisano, jak użyć siatki w ujęciu automatycznego układu d
 Siatka  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)
+
+- [Przegląd Użyj automatycznego układu](use-automatic-layout-overview.md)
 - [Używanie automatycznego układu do utworzenia przycisku](how-to-use-automatic-layout-to-create-a-button.md)

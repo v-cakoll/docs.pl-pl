@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c9fde24a4c3260cf5b9e265dfd03080c5cd1d04
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 384f8c7fa08b69c13d05edb3404787d428dad837
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234047"
 ---
 ### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>Ślady stosu uzyskane podczas przy użyciu przenośnych plików PDB teraz obejmować informacje o pliku i wiersza źródłowego, jeśli jest to wymagane
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760926"
 |Wersja|4.7.2|
 |Typ|Przekierowanie|
 |Dotyczy interfejsów API|<ul><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Boolean)?displayProperty=nameWithType><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Int32,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

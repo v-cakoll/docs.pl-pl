@@ -8,12 +8,12 @@ helpviewer_keywords:
 - picture controls [Windows Forms], about picture controls
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
-ms.openlocfilehash: e81ae5c814edd22bc6dc440824732d6f38e634d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227865"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>PictureBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.PictureBox> formant jest używany do wyświetlania grafiki w formacie mapy bitowej, GIF, JPEG, metaplik lub ikonę.  
@@ -22,8 +22,9 @@ Formularze Windows <xref:System.Windows.Forms.PictureBox> formant jest używany 
  Obraz, który jest wyświetlany jest określana przez <xref:System.Windows.Forms.PictureBox.Image%2A> właściwość, którą można ustawić w czasie wykonywania, czy w czasie projektowania. Obraz, który można alternatywnie określić, ustawiając <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> właściwości, a następnie załadować obraz synchronicznie przy użyciu <xref:System.Windows.Forms.PictureBox.Load%2A> metody lub asynchronicznie przy użyciu <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> metody. <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Właściwość kontroluje sposób dopasowania obrazu i formant ze sobą. Aby uzyskać więcej informacji, zobacz [jak: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.PictureBox>
-- [Instrukcje: Zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Instrukcje: Modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [Instrukcje: Ustawienie obrazów w czasie wykonywania](how-to-set-pictures-at-run-time-windows-forms.md)
+- [Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Instrukcje: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Instrukcje: ustawienie obrazów w czasie wykonywania](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox, kontrolka](picturebox-control-windows-forms.md)

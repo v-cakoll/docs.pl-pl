@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule — Interfejs
+title: ICorDebugModule, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fd8314c018653703a262c8c43e6113886c25047
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 257011562a9ea687ef70b842c6d47219283e158e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225641"
 ---
-# <a name="icordebugmodule-interface"></a>ICorDebugModule — Interfejs
+# <a name="icordebugmodule-interface"></a>ICorDebugModule, interfejs
 
 Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) moduł, który jest plikiem wykonywalnym lub biblioteki dołączanej (dynamicznie DLL).  
   
@@ -64,5 +64,6 @@ Reprezentuje wspólnego języka środowiska uruchomieniowego (języka wspólnego
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebug — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

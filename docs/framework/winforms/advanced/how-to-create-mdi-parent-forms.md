@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216317"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Instrukcje: Tworzenie formularzy nadrzędnych MDI
 > [!IMPORTANT]
@@ -36,8 +36,9 @@ ms.locfileid: "57722987"
 4.  Naciśnij klawisz **F5** do uruchomienia aplikacji. Aby uzyskać informacje dotyczące tworzenia elementu podrzędnego MDI systemu windows, które działają w ramach formularza nadrzędnego MDI, zobacz [jak: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md)
 - [Instrukcje: Tworzenie formularzy podrzędnych MDI](how-to-create-mdi-child-forms.md)
-- [Instrukcje: Określanie elementu podrzędnego Active MDI](how-to-determine-the-active-mdi-child.md)
+- [Instrukcje: Określanie elementu podrzędnego MDI Active](how-to-determine-the-active-mdi-child.md)
 - [Instrukcje: Wysyłanie danych do Active MDI Child](how-to-send-data-to-the-active-mdi-child.md)
-- [Instrukcje: Aranżowanie formularzy podrzędnych MDI](how-to-arrange-mdi-child-forms.md)
+- [Instrukcje: Rozmieszczanie formularzy podrzędnych MDI](how-to-arrange-mdi-child-forms.md)

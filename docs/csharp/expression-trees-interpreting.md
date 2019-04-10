@@ -3,12 +3,12 @@ title: Interpreting Expressions
 description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wyrażenie.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211247"
 ---
 # <a name="interpreting-expressions"></a>Interpreting Expressions
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 Ten kod przedstawia jedna implementacja możliwe matematyczne *silnię* funkcji. Sposób moje recenzje ten kod wyróżnia dwa ograniczenia dotyczące tworzenia drzew wyrażeń, przypisując wyrażeń lambda wyrażenia. Po pierwsze instrukcji wyrażenia lambda nie są dozwolone. Oznacza to, nie można użyć pętli, bloki, jeśli / inne instrukcje i inne kontrolowanie struktury typowe w języku C#. Jestem maksymalnie za pomocą wyrażeń. Po drugie nie można rekursywnie wywołania to samo wyrażenie.
 Było to możliwe, jeśli zostały już delegata, ale nie można wywołać ją w postaci drzewa wyrażeń. W sekcji [tworzenia drzew wyrażeń](expression-trees-building.md) dowiesz się, techniki, aby wyeliminować te ograniczenia.
-
 
 W tym wyrażeniu spotkasz się węzły te typy:
 1. Równe (wyrażenia binarnego)

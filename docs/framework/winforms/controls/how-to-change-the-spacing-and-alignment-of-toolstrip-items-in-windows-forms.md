@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zmienianie odstępów i wyrównania elementów ToolStrip w formularzach Windows Forms'
+title: 'Instrukcje: zmienianie odstępów i wyrównania elementów ToolStrip w formularzach systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213314"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Instrukcje: Zmienianie odstępów i wyrównania elementów ToolStrip w formularzach Windows Forms
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Instrukcje: zmienianie odstępów i wyrównania elementów ToolStrip w formularzach systemu Windows
 <xref:System.Windows.Forms.ToolStrip> Kontroli w pełni obsługuje układ funkcje, takie jak rozmiary, odstępy między <xref:System.Windows.Forms.ToolStripItem> formantów względem siebie, rozmieszczenie kontrolek w <xref:System.Windows.Forms.ToolStrip>i odstępy kontroli względem <xref:System.Windows.Forms.ToolStrip>.  
   
  Ponieważ wartość domyślną <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> właściwość `true`, formanty mają rozmiar automatycznie, chyba że <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> właściwość `false`.  
@@ -80,6 +80,7 @@ ms.locfileid: "57719445"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>
@@ -88,5 +89,5 @@ ms.locfileid: "57719445"
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip, kontrolka — architektura](toolstrip-control-architecture.md)
-- [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md)
+- [ToolStrip — Architektura formantu](toolstrip-control-architecture.md)
+- [Podsumowanie informacji o technologii formantów ToolStrip](toolstrip-technology-summary.md)

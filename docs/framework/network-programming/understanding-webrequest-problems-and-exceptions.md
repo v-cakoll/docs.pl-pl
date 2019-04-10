@@ -1,15 +1,15 @@
 ---
-title: Opis elementu WebRequest problemów i wyjątków
+title: Opis problemów i wyjątków dotyczących elementów WebRequest
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215017"
 ---
-# <a name="understanding-webrequest-problems-and-exceptions"></a>Opis elementu WebRequest problemów i wyjątków
+# <a name="understanding-webrequest-problems-and-exceptions"></a>Opis problemów i wyjątków dotyczących elementów WebRequest
 <xref:System.Net.WebRequest> i jej klasy pochodne (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, i <xref:System.Net.FileWebRequest>) zgłaszać wyjątków do sygnalizowania nietypowe warunku. Czasami rozwiązania tych problemów nie jest oczywisty.  
   
 ## <a name="solutions"></a>Rozwiązania  
@@ -29,6 +29,7 @@ ms.locfileid: "54587531"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Odpowiedź z serwera nie jest prawidłową odpowiedź HTTP. Ten problem występuje, gdy programu .NET Framework wykryje, że odpowiedź serwera nie jest zgodne z protokołu HTTP 1.1 w dokumencie RFC. Ten problem może wystąpić, gdy odpowiedź zawiera niepoprawne nagłówki lub nieprawidłowy nagłówek ograniczniki. Dokumencie RFC 2616 definiuje protokołu HTTP 1.1 i prawidłowy format odpowiedzi z serwera. Aby uzyskać więcej informacji, zobacz [RFC 2616 — Hypertext Transfer Protocol — HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) na [Internet Engineering Task Force (IETF)](https://www.ietf.org/) witryny sieci Web.|Uzyskać ślad sieci, transakcji i zbadaj nagłówków odpowiedzi.<br /><br /> Jeśli aplikacja wymaga odpowiedzi serwera bez analizy (może to być problem z zabezpieczeniami), zestaw `useUnsafeHeaderParsing` do `true` w pliku konfiguracji. Zobacz [ \<httpWebRequest >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

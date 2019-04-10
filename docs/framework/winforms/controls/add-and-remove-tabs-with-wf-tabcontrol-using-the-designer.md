@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows, przy użyciu narzędzia Projektant'
+title: 'Instrukcje: dodawanie i usuwanie kart za pomocą formularzy systemu Windows TabControl przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: f58121455c346b2b615a5cf6e617e916618b4d6e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 23fe9fa2b8405a6ebe66e8f0cee1d81d45f2395b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219762"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows, przy użyciu narzędzia Projektant
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Instrukcje: dodawanie i usuwanie kart za pomocą formularzy systemu Windows TabControl przy użyciu narzędzia Projektant
 Po umieszczeniu <xref:System.Windows.Forms.TabControl> formantu w formularzu, zawiera dwie karty domyślnie. Można dodawać lub usuwanie kart za pomocą projektanta.  
   
  Poniższa procedura wymaga **aplikacji Windows** projektu za pomocą zawierający formularz <xref:System.Windows.Forms.TabControl> kontroli. Aby uzyskać informacje o konfigurowaniu taki projekt, zobacz [jak: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) i [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md).  
@@ -32,8 +32,9 @@ Po umieszczeniu <xref:System.Windows.Forms.TabControl> formantu w formularzu, za
      W **właściwości** okna, kliknij przycisk **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości, aby otworzyć **TabPage — Edytor kolekcji**. Kliknij przycisk **Dodaj** lub **Usuń** przycisku.  
   
 ## <a name="see-also"></a>Zobacz także
-- [TabControl, kontrolka](tabcontrol-control-windows-forms.md)
+
+- [TabControl — Formant](tabcontrol-control-windows-forms.md)
 - [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)
-- [Instrukcje: Dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
-- [Instrukcje: Wyłączanie kart](how-to-disable-tab-pages.md)
-- [Instrukcje: Zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Instrukcje: dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
+- [Instrukcje: wyłączanie kart](how-to-disable-tab-pages.md)
+- [Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

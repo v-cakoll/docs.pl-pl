@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms'
+title: 'Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: bb1eb057814b44e2fd184c14e0c7e16ecb2fbb3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29422ad384240b017b279795d07e3c8100fae493
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208803"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms
 Za pomocą <xref:System.Windows.Forms.WebBrowser> kontrolki, można dodać funkcji przeglądarki sieci Web do aplikacji. Kontrolka działa jak przeglądarki sieci Web domyślnie. Po załadowaniu początkowy adres URL, ustawiając <xref:System.Windows.Forms.WebBrowser.Url%2A> właściwości, można przejść, klikając hiperłącza lub za pomocą skrótów klawiaturowych do tyłu i do przodu w historii nawigacji. Domyślnie możesz uzyskać dostęp przeglądarki dodatkowe funkcje, za pomocą menu skrótów kliknij prawym przyciskiem myszy. Można również otworzyć nowe dokumenty przez ich upuszczenie na formant. <xref:System.Windows.Forms.WebBrowser> Kontrolka ma również kilka właściwości, metody i zdarzenia, które można użyć, aby zaimplementować funkcje interfejsu użytkownika jest podobne do tych dostępnych w programie Internet Explorer.  
   
  Poniższy przykładowy kod implementuje paska adresu, przyciski przeglądarki typowe **pliku** menu, pasek stanu i pasek tytułu, który wyświetla bieżący tytuł strony.  
@@ -37,5 +37,6 @@ Za pomocą <xref:System.Windows.Forms.WebBrowser> kontrolki, można dodać funkc
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.WebBrowser>
-- [WebBrowser, kontrolka](webbrowser-control-windows-forms.md)
+- [WebBrowser — Formant](webbrowser-control-windows-forms.md)

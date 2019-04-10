@@ -2,12 +2,12 @@
 title: <clientCertificate> z <clientCredentials> — Element
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216460"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate> of \<clientCredentials> Element
 Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.  
@@ -53,6 +53,7 @@ Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.
  Ten element konfiguracji określa certyfikat używany do uwierzytelniania klienta z tym elementem. Aby uzyskać więcej informacji, zobacz [jak: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -61,6 +62,6 @@ Definiuje certyfikat X.509 używany do uwierzytelniania klienta do usługi.
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Instrukcje: Określanie wartości poświadczeń klienta](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [Zabezpieczanie klientów](../../../../../docs/framework/wcf/securing-clients.md)
+- [Zabezpieczanie klientów [WCF]](../../../../../docs/framework/wcf/securing-clients.md)
 - [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

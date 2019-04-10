@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zdiagnozuj problematyczne zadanie drukowania'
+title: 'Instrukcje: Diagnozowanie problematycznych zadań drukowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211045"
 ---
-# <a name="how-to-diagnose-problematic-print-job"></a>Instrukcje: Zdiagnozuj problematyczne zadanie drukowania
+# <a name="how-to-diagnose-problematic-print-job"></a>Instrukcje: Diagnozowanie problematycznych zadań drukowania
 Administratorzy sieci często pola skarg od użytkowników dotyczące zadania drukowania, które nie drukowania lub wydrukować powoli. Bogaty zestaw właściwości zadania drukowania, udostępniane w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej diagnostyki zdalnej zadań drukowania.  
   
 ## <a name="example"></a>Przykład  
@@ -82,10 +82,11 @@ Administratorzy sieci często pola skarg od użytkowników dotyczące zadania dr
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& — Operator (C# odwołania)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& — Operator (odwołanie w C#)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd drukowania](printing-overview.md)
+- [Przegląd Drukowanie](printing-overview.md)

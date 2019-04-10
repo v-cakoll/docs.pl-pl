@@ -2,12 +2,12 @@
 title: Opcje technologii ADO.NET i wskazówki
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212534"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je aby programować przy użyciu modeli danych koncepcyjnymi encji. Ta platforma obejmuje ADO.NET Entity Framework i powiązanych technologii.  
@@ -40,6 +40,7 @@ Platforma danych ADO.NET jest strategia wielu wersji, aby zmniejszyć ilość ko
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Służy do wdrażania usług danych w Internecie lub intranecie. Dane mają strukturę jako jednostek i relacji zgodnie ze specyfikacją modelu Entity Data Model. Adresowane przez standardowego protokołu HTTP jest wdrożony w tym modelu danych. Aby uzyskać więcej informacji, zobacz [4.5 usług danych WCF](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

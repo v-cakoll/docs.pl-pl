@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy Windows Forms'
+title: 'Instrukcje: ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: 2476c7e972e5ba742c499c53ed689efca41cd148
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 737a4b943125245a2916bbf6b24b8abdffa8e371
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215349"
 ---
-# <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Instrukcje: Ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy Windows Forms
+# <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Instrukcje: ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy systemu Windows
 Można określić wygląd komórki znajdujące się wewnątrz <xref:System.Windows.Forms.DataGridView> kontroli przez ustawienie właściwości <xref:System.Windows.Forms.DataGridViewCellStyle> klasy. Wystąpienia tej klasy można pobrać z różnych właściwości obiektu <xref:System.Windows.Forms.DataGridView> klasy i jej klasy pomocnika lub można utworzyć wystąpienie <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów w celu przypisania do tych właściwości.  
   
  Poniższe procedury przedstawiają podstawowe Dostosowywanie za pomocą wygląd komórki <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> właściwości. Każdej komórki w formancie dziedziczy style określone przez tę właściwość, chyba że zostaną zastąpione poziomie kolumny, wiersza lub komórki. Na przykład dziedziczenie stylów zobacz [jak: Ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy Windows](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Aby uzyskać informacje o dodatkowych zastosowań <xref:System.Windows.Forms.DataGridViewCellStyle> klasy, zobacz tematy wymienione w sekcji Zobacz też.  
@@ -60,7 +60,8 @@ Można określić wygląd komórki znajdujące się wewnątrz <xref:System.Windo
  W przypadku maksymalnej skalowalności powinny współużytkować <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów między wiele wierszy, kolumny lub komórki, które używają tego samego style, zamiast oddzielnie ustawienie ponownego obliczenia właściwości stylu dla każdego elementu. Aby uzyskać więcej informacji, zobacz [najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)

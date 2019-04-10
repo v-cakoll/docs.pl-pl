@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219632"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Instrukcje: Obsługa zdarzenia ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Zdarzenia mogą być obsługiwane w aplikacji albo dostosować istniejący przed menu kontekstowe do wyświetlania lub Pomiń menu, które w przeciwnym razie będzie można wyświetlić, ustawiając <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości `true` danych zdarzenia. Typową przyczyną ustawienia <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true` zdarzeń danych ma zastąpić menu całkowicie nową <xref:System.Windows.Controls.ContextMenu> obiektu, co czasami wymaga anuluje operację i uruchomienie nowej open. Jeśli podczas pisania procedur obsługi dla <xref:System.Windows.FrameworkElement.ContextMenuOpening> zdarzeń, powinno być znane problemy dotyczące synchronizacji między <xref:System.Windows.Controls.ContextMenu> kontroli i usługi, która jest odpowiedzialna za otwarcie i ogólnie rzecz biorąc pozycjonowanie menu kontekstowe dla formantów. W tym temacie pokazano niektóre z technik kodu dla różnych menu kontekstowe, otwierając scenariuszy i ilustruje przypadek, gdzie błąd synchronizacji jest dostarczany do gry.  
@@ -56,7 +56,8 @@ ms.locfileid: "57364843"
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
-- [Przegląd elementów podstawowych](base-elements-overview.md)
-- [ContextMenu — przegląd](../controls/contextmenu-overview.md)
+- [Przegląd Elementy bazy](base-elements-overview.md)
+- [ContextMenu — Przegląd](../controls/contextmenu-overview.md)

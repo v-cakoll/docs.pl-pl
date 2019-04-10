@@ -2,12 +2,12 @@
 title: Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 6fb96dc431008936658bb941f16373037e712f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211091"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>Migrowanie usług sieci Web na platformie ASP.NET do programu WCF
 Program ASP.NET udostępnia narzędzia i biblioteki klas .NET Framework do tworzenia usług sieci Web, a także funkcje służące do hostingu usług w ramach usługi Internet Information Services (IIS). Windows Communication Foundation (WCF) udostępnia biblioteki klas .NET Framework, narzędzia i hostingu funkcje służące do włączania jednostek oprogramowania do komunikowania się za pomocą protokołów, w tym używanych przez usługi sieci Web.  Migrowanie usług sieci Web ASP.NET do programu WCF umożliwia aplikacjom korzystanie z zalet nowych funkcji i ulepszeń, które są unikatowe dla usługi WCF.  
@@ -36,8 +36,9 @@ Program ASP.NET udostępnia narzędzia i biblioteki klas .NET Framework do tworz
  W tej sekcji opisano te opcje szczegółowo, porównuje usług sieci Web ASP.NET do programu WCF i zawiera instrukcje dotyczące sposobu przeprowadzenia migracji kodu usługi sieci Web platformy ASP.NET do programu WCF.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+
+- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie integracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [Adoptowanie programu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
-- [Porównanie usług internetowych platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
-- [Porównywanie usług internetowych platformy ASP.NET z programem WCF na podstawie procesów programistycznych](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)
+- [Porównanie usług sieci Web platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

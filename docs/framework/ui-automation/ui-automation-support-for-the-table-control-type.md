@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: a4e59258550cb2fad92a3eacc726f952f3b0164c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 0c9286ff65c84a8d20532fd119ecd335ad90ee7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206021"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu tabela
 > [!NOTE]
@@ -55,9 +55,9 @@ ms.locfileid: "57674526"
 ## <a name="required-ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolować wzorców, wymagane są obsługiwane przez formanty tabeli. Aby uzyskać więcej informacji na temat wzorców kontrolek, zobacz [Przegląd wzorców kontrolki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
-|— Wzorzec kontrolki|Obsługa|Uwagi|  
+|— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Tak|Kontrolki tabeli zawsze obsługuje ten — wzorzec kontrolki, ponieważ elementy, które zawiera dane, które są prezentowane w siatce.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Kontrolki tabeli zawsze obsługuje ten — wzorzec kontrolki, ponieważ elementy, które zawiera dane, które są prezentowane w siatce.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Tak (wymagane za pomocą obiektów podrzędnych)|Wewnętrzne obiekty tabeli powinien obsługiwać wzorce kontrolki GridItem dla i TableItem. Sama tabela muszą obsługuje wzorce kontrolki GridItem dla lub TableItem, chyba że tabela jest częścią innej tabeli.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|Tak|Kontrolka tabeli ma zawsze możliwości o nagłówki skojarzone z zawartością.|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|Tak (wymagane za pomocą obiektów podrzędnych)|Wewnętrzne obiekty tabeli powinien obsługiwać wzorce kontrolki GridItem dla i TableItem. Sama tabela muszą obsługuje wzorce kontrolki GridItem dla lub TableItem, chyba że tabela jest częścią innej tabeli.|  
@@ -66,7 +66,7 @@ ms.locfileid: "57674526"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty w tabeli. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Obsługa|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -75,6 +75,7 @@ ms.locfileid: "57674526"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Wymagane|Brak|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Automation.ControlType.Table>
-- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

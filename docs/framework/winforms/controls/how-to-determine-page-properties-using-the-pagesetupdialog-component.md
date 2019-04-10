@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie właściwości strony za pomocą składnika PageSetupDialog'
+title: 'Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213706"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Instrukcje: Określanie właściwości strony za pomocą składnika PageSetupDialog
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) składnika wyświetlane układ, rozmiar papieru i inne opcje układu strony użytkownika do danego dokumentu.  
   
  Należy określić wystąpienie <xref:System.Drawing.Printing.PrintDocument> klasy — jest to dokument do wydrukowania. Ponadto użytkownicy muszą mieć zainstalowany na komputerze, lokalnie lub za pośrednictwem sieci, drukarki, jest częściowo sposób, w jaki <xref:System.Windows.Forms.PageSetupDialog> składnika Określa stronę, użytkownik widzi opcji formatowania.  
@@ -88,6 +88,7 @@ ms.locfileid: "57713205"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Instrukcje: Tworzenie zadań drukowania formularzy Windows Standard](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Instrukcje: Tworzenie standardowych zadań drukowania formularzy systemu Windows](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog, składnik](pagesetupdialog-component-windows-forms.md)

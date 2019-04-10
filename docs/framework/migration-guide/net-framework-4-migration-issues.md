@@ -1,5 +1,5 @@
 ---
-title: Zagadnienia dotyczące migracji programu .NET framework 4
+title: Problemy podczas migracji programu .NET Framework 4
 ms.date: 05/02/2017
 helpviewer_keywords:
 - .NET Framework 4, migration
@@ -7,22 +7,22 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210233"
 ---
-# <a name="net-framework-4-migration-issues"></a>Zagadnienia dotyczące migracji programu .NET framework 4
+# <a name="net-framework-4-migration-issues"></a>Problemy podczas migracji programu .NET Framework 4
 
 W tym temacie opisano problemy przy migracji między .NET Framework w wersji 3.5 z dodatkiem Service Pack 1 i .NET Framework w wersji 4, w tym poprawki, zmian dotyczących zgodności ze standardami i bezpieczeństwo i zmiany na podstawie opinii klientów. Większość tych zmian nie wymaga żadnych modyfikacji programistycznych w aplikacjach. Dla osób, które mogą obejmować modyfikacje Zobacz zalecane kolumny zmiany w tabeli.
 
 W tym temacie opisano znaczące zmiany w następujących obszarach:
 
-* [Program ASP.NET i sieci Web](#aspnet-and-web)
+* [ASP.NET i Internet](#aspnet-and-web)
 
-* [Funkcje podstawowe](#core)
+* [Core](#core)
 
 * [Dane](#data)
 
@@ -85,7 +85,6 @@ Namespace: <xref:System>; zestaw: mscorlib (w mscorlib.dll)
 | ------- | ------------------------ | ------------------- |
 | **Oszczędność czasu letniego** | Aby zachować spójność z zegara systemowego, czas właściwości (takie jak <xref:System.TimeZoneInfo.Local> i <xref:System.DateTime.Now>) teraz używać reguł systemu operacyjnego zamiast innych danych .NET Framework dla operacji czasu letniego. | Brak. |
 | **Ciągi formatujące** | Do obsługi formatowania kultury, <xref:System.TimeSpan> struktura zawiera nowe przeciążenia `ToString`, `Parse`, i `TryParse` metody z nowym `ParseExact` i `TryParseExact` metody. | Brak. |
-
 
 ### <a name="globalization"></a>Globalizacja
 
@@ -162,9 +161,9 @@ Przestrzenie nazw: <xref:System.Data>, <xref:System.Data.Objects>, <xref:System.
 | Funkcja | Różnice z 3.5 z dodatkiem SP1 |
 | ------- | ------------------------ |
 | **Obiekty jednostki** | Teraz jest parzystość <xref:System.Data.Objects.ObjectContext.Detach%2A> metody i stan obiektu jednostki po <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> metoda jest wywoływana. Ten spójności ulepszone zapobiega nieoczekiwane wyjątki od zgłaszane. |
-| **Jednostki SQL** | Zasady zostały ulepszone do rozpoznawania identyfikatora jednostki SQL.<br><br>Analizator składni SQL jednostki poprawiła logiki rozpoznawania wieloczęściowych identyfikatorów. |
+| **Entity SQL** | Zasady zostały ulepszone do rozpoznawania identyfikatora jednostki SQL.<br><br>Analizator składni SQL jednostki poprawiła logiki rozpoznawania wieloczęściowych identyfikatorów. |
 | **Adnotacje strukturalnych** | Entity Framework rozpoznaje teraz strukturalnych adnotacji. |
-| **Zapytania** | W zapytaniach wprowadzono następujące ulepszenia:<br><br>* A `GroupBy` zapytanie przy użyciu klucza o wartości null dla pustej kolekcji nie będzie zwracać wszystkie wiersze, niezależnie od tego, jeśli ma żadnych dodatkowych wybiera w zapytaniu.<br>* Wygenerowane zapytań SQL, w LINQ i jednostki SQL teraz Traktuj parametry jako wartości innego niż Unicode domyślnie. |
+| **Kwerendy** | W zapytaniach wprowadzono następujące ulepszenia:<br><br>* A `GroupBy` zapytanie przy użyciu klucza o wartości null dla pustej kolekcji nie będzie zwracać wszystkie wiersze, niezależnie od tego, jeśli ma żadnych dodatkowych wybiera w zapytaniu.<br>* Wygenerowane zapytań SQL, w LINQ i jednostki SQL teraz Traktuj parametry jako wartości innego niż Unicode domyślnie. |
 
 ### <a name="linq-to-sql"></a>LINQ do SQL
 
@@ -175,7 +174,7 @@ Namespace: <xref:System.Data.Linq>; zestaw: System.Data.Linq (in System.Data.Lin
 | Funkcja | Różnice z 3.5 z dodatkiem SP1 |
 | ------- | ------------------------ |
 | **Zdarzenia** | A <xref:System.Data.Linq.EntitySet%601> zgłasza teraz kolekcji <xref:System.Data.Linq.EntitySet%601.ListChanged> zdarzenie Dodaj i Usuń operacje, jeśli <xref:System.Data.Linq.EntitySet%601> jest zwalniana, oprócz podnoszonego zdarzenia, gdy kolekcja jest ładowany. |
-| **Zapytania** | `Skip(0)` kwerendy SQL nie jest już jest ignorowany w składniku LINQ. W wyniku zapytania, które mają ta metoda może zachowywać się inaczej. Na przykład w niektórych przypadkach `OrderBy` klauzula jest wymagany w przypadku `Skip(0)`, i teraz zgłosi zapytanie <xref:System.NotSupportedException> wyjątek Jeśli `OrderBy` klauzula nie jest dołączony. |
+| **Kwerendy** | `Skip(0)` kwerendy SQL nie jest już jest ignorowany w składniku LINQ. W wyniku zapytania, które mają ta metoda może zachowywać się inaczej. Na przykład w niektórych przypadkach `OrderBy` klauzula jest wymagany w przypadku `Skip(0)`, i teraz zgłosi zapytanie <xref:System.NotSupportedException> wyjątek Jeśli `OrderBy` klauzula nie jest dołączony. |
 
 ### <a name="wcf-data-services"></a>Usługi danych WCF
 
@@ -218,7 +217,7 @@ Przestrzenie nazw: <xref:System.Windows>, <xref:System.Windows.Controls>; zestaw
 | **Słowniki zasobów** | Aby zwiększyć słowników zasobów na poziomie motywu i uniemożliwić zmianę, freezable zasoby, które są zdefiniowane w słowniku zasobów i scalenia ich z słownika poziom motywu są teraz zawsze oznaczone jako zablokowany i są niezmienne. Jest to oczekiwane zachowanie freezable zasobów. | Aplikacje, które modyfikują z zasobem, który jest zdefiniowany w słowniku scalonych poziom motywu należy sklonować zasobu i zmodyfikuj sklonowanej kopii. Alternatywnie, można oznaczyć zasób `x:Shared="false"` tak, aby <xref:System.Windows.ResourceDictionary> tworzy nową kopię za każdym razem, gdy zasób zostaje przesłane zapytanie. |
 | **Windows 7** | Aby aplikacje WPF działają lepiej na Windows 7, wprowadzono następujące ulepszenia, aby poprawić działanie okna:<br><br>* Zadokować i gestów współpracują teraz stanów jako użytkownika na podstawie oczekiwanego interakcji.<br>* Polecenia paska zadań **kaskadowo systemu windows, Pokaż okna skumulowany**, i **Pokaż okna side-by-side** teraz ma poprawne zachowanie i zaktualizuj odpowiednie właściwości.<br>* `Top`, `Left`, `Width`, I `Height` właściwości zmaksymalizowanego lub zminimalizowanego okna zawierają teraz lokalizacji przywracania poprawne okna zamiast innych wartości w zależności od tego monitora. | Brak. |
 | **Windows style i przezroczystości** | <xref:System.InvalidOperationException> Jest generowany, Jeśli spróbujesz ustawić <xref:System.Windows.Window.WindowStyle> wartość inną niż <xref:System.Windows.WindowStyle> podczas <xref:System.Windows.Window.AllowsTransparency> jest `true` i <xref:System.Windows.WindowState> jest <xref:System.Windows.WindowState>. | Jeśli musisz zmienić <xref:System.Windows.Window.WindowStyle> podczas <xref:System.Windows.Window.AllowsTransparency> jest `true`, można wywołać Win32 `SetWindowLongPtr` funkcji. |
-| **XPS Viewer** | WPF nie obejmuje Microsoft XML Paper specyfikacji Essentials pakietu (XPSEP). XPSEP jest dołączony do Windows 7 i Windows Vista.<br><br>Na komputerze z systemem Windows XP bez .NET Framework 3.5 z dodatkiem SP1 zainstalowane drukowanie przy użyciu interfejsu API programu WPF, inne niż te w <xref:System.Windows.Controls.PrintDialog> będzie zależny od WINSPOOL. Niektóre funkcje drukarki nie będą raportowane i niektóre ustawienia drukarki nie będą stosowane podczas drukowania. | Jeśli to konieczne, zainstaluj [Microsoft XML Paper specyfikacji Essentials dodatkiem Service Pack](https://go.microsoft.com/fwlink/?LinkId=178895). |
+| **Przeglądarka plików XPS** | WPF nie obejmuje Microsoft XML Paper specyfikacji Essentials pakietu (XPSEP). XPSEP jest dołączony do Windows 7 i Windows Vista.<br><br>Na komputerze z systemem Windows XP bez .NET Framework 3.5 z dodatkiem SP1 zainstalowane drukowanie przy użyciu interfejsu API programu WPF, inne niż te w <xref:System.Windows.Controls.PrintDialog> będzie zależny od WINSPOOL. Niektóre funkcje drukarki nie będą raportowane i niektóre ustawienia drukarki nie będą stosowane podczas drukowania. | Jeśli to konieczne, zainstaluj [Microsoft XML Paper specyfikacji Essentials dodatkiem Service Pack](https://go.microsoft.com/fwlink/?LinkId=178895). |
 
 ### <a name="controls"></a>Formanty
 
@@ -330,4 +329,4 @@ Przestrzenie nazw: <xref:System.Xml.Linq>; <xref:System.Xml.Schema>, <xref:Syste
 
 ### <a name="other-resources"></a>Inne zasoby
 
-- [Co to jest przestarzała w bibliotece klas programu .NET Framework](../whats-new/whats-obsolete.md)
+- [Przestarzałe elementy w bibliotece klas programu .NET Framework](../whats-new/whats-obsolete.md)

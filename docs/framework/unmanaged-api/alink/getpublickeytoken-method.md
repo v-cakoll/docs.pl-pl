@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0481cfc3fa88aeb6fd7cd6ba93554d426f8eb2e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215771"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken — Metoda
 Pobiera token klucza publicznego do pliku danego klucza lub kontenera kluczy.  
@@ -57,6 +57,7 @@ HRESULT GetPublicKeyToken(
  Wymaga alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
-- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

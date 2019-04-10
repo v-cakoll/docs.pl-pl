@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220178"
 ---
 # <a name="callid-structure"></a>CALL_ID — Struktura
 Informacje debugera o funkcję, która jest wywoływana. Zobacz [inotifysink2 —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) interfejsu, aby uzyskać więcej informacji.  
@@ -55,5 +55,6 @@ typedef struct tagCALL_ID
  **Nagłówek:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Zobacz także
-- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+
+- [INotifySink2 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [Struktury magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

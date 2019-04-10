@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie i Inicjowanie obiektów nasłuchujących śledzenia'
+title: 'Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222721"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>Instrukcje: Tworzenie i Inicjowanie obiektów nasłuchujących śledzenia
+# <a name="how-to-create-and-initialize-trace-listeners"></a>Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenia
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> i <xref:System.Diagnostics.Trace?displayProperty=nameWithType> klasy wysyłania komunikatów do obiektów o nazwie obiektów nasłuchujących odbierać i przetwarzać te komunikaty. Jedno takie odbiornik <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, jest automatycznie tworzone i inicjowana, gdy włączone jest śledzenie lub debugowania. Jeśli chcesz <xref:System.Diagnostics.Trace> lub <xref:System.Diagnostics.Debug> dane wyjściowe były kierowane do żadnych dodatkowych źródeł, należy utworzyć i zainicjować odbiorniki śledzenia dodatkowe.  
   
  Odbiorniki, tworzonych powinny odzwierciedlać potrzeb aplikacji. Na przykład rekord tekstu z wszystkich danych wyjściowych śledzenia, utworzyć <xref:System.Diagnostics.TextWriterTraceListener> odbiornika, który zapisuje wszystkie dane wyjściowe w nowy plik tekstowy, gdy jest włączone. Z drugiej strony, jeśli chcesz wyświetlić dane wyjściowe tylko podczas wykonywania aplikacji, należy utworzyć <xref:System.Diagnostics.ConsoleTraceListener> odbiornika, który określa, że wszystkie dane wyjściowe do okna konsoli. <xref:System.Diagnostics.EventLogTraceListener> Można skierować dane wyjściowe śledzenia do dziennika zdarzeń. Aby uzyskać więcej informacji, zobacz [detektorów śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
@@ -95,7 +95,8 @@ ms.locfileid: "54583106"
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+
+- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

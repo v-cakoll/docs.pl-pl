@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określ źródło wiążące'
+title: 'Instrukcje: Określanie obiektu źródłowego powiązania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
-ms.openlocfilehash: 105924fec2956f2f74a2a574ee62f71a37df9366
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222305"
 ---
-# <a name="how-to-specify-the-binding-source"></a>Instrukcje: Określ źródło wiążące
+# <a name="how-to-specify-the-binding-source"></a>Instrukcje: Określanie obiektu źródłowego powiązania
 W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, który można uzyskać danych z. W tym temacie opisano różne sposoby określania źródło wiążące.  
   
 ## <a name="example"></a>Przykład  
@@ -44,9 +44,10 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 |<xref:System.Windows.Data.Binding.ElementName%2A>|Należy określić ciąg, który reprezentuje element, który chcesz powiązać. Jest to przydatne, jeśli chcesz powiązać właściwości innego elementu w swojej aplikacji. Na przykład, jeśli chcesz użyć <xref:System.Windows.Controls.Slider> kontrolować jego wysokość innej kontrolki w aplikacji, lub jeśli chcesz powiązać <xref:System.Windows.Controls.ContentControl.Content%2A> kontrolki do <xref:System.Windows.Controls.Primitives.Selector.SelectedValue%2A> właściwości usługi <xref:System.Windows.Controls.ListBox> kontroli. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Data.Binding.ElementName%2A>.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Dziedziczenie wartości właściwości](../advanced/property-value-inheritance.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Powiązanie deklaracji — omówienie](binding-declarations-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przejęcie wartości właściwości](../advanced/property-value-inheritance.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [Przegląd Wiązanie deklaracji](binding-declarations-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

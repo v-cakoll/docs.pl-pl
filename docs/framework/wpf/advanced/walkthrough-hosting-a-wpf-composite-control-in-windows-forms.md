@@ -1,17 +1,17 @@
 ---
-title: 'Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms'
+title: 'Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219606"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej efektywne rozszerzyć istniejącą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a nie do jego przepisania od podstaw. Jest to typowy scenariusz, gdy chcesz osadzić jedną lub większą liczbę opcji implementowane za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji Windows Forms. Aby uzyskać więcej informacji na temat dostosowywania kontrolek WPF, zobacz [niestandardowe Dostosowywanie formantu](../controls/control-customization.md).  
   
  Ten przewodnik przeprowadzi Cię przez aplikację obsługujący [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] złożonego formantu, aby wykonać wprowadzanie danych w aplikacji Windows Forms. Złożonej kontrolki jest dostarczana w bibliotece DLL. Ta procedura ogólne można rozszerzyć do bardziej złożonych aplikacji i formantów. Ten przewodnik jest przeznaczony do niemal identyczne w wyglądu i działania [instruktażu: Hosting Windows złożonego formantu formularzy na platformie WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Podstawowa różnica polega na tym, że scenariusza hostingu została odwrócona.  
@@ -35,7 +35,6 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
  Na poniższej ilustracji przedstawiono złożonego formantu WPF: 
 
-  
  ![Zrzut ekranu pokazujący prostego formantu WPF.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>Tworzenie projektu  
@@ -324,8 +323,9 @@ Na poniższej ilustracji przedstawiono złożonego formantu WPF hostowany w apli
  Skompiluj i uruchom aplikację. Kliknij przyciski radiowe różnych, aby zobaczyć efekt na złożonego formantu WPF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu 3D WPF w formularzach Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej 3-D WPF w Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

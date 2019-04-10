@@ -5,18 +5,16 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ffdcb58cdd332f9c730e7ed367e0f8bcc56da459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222097"
 ---
 # <a name="multimedia-overview"></a>Przegląd Multimedia
 Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwiają integrowanie audio i wideo w aplikacje w celu poprawienia środowiska użytkownika. W tym temacie przedstawiono funkcje multimedialne [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
-  
- 
-  
+
 <a name="mediaapi"></a>   
 ## <a name="media-api"></a>Interfejs API multimediów  
  <xref:System.Windows.Controls.MediaElement> i <xref:System.Windows.Media.MediaPlayer> klasy są używane do przedstawienia zawartości audio i wideo. Te klasy można sterować interaktywnie lub za pomocą zegara. Te klasy można użyć na [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10 kontrolka odtwarzania multimediów. Klasy, których używasz, zależy od scenariusza.  
@@ -101,7 +99,7 @@ Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="controlling-mediaplayer"></a>Kontrolowanie MediaPlayer  
  Ponieważ <xref:System.Windows.Media.MediaPlayer> jest bezstanowych, istnieją tylko dwa sposoby, aby kontrolować odtwarzanie multimediów.  
   
-1.  Metody kontroli interaktywne. W miejscu, w trybie niezależne (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> właściwości).  
+1.  Metody kontroli interaktywne. W miejscu, w trybie niezależne (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> właściwości).  
   
 2.  <xref:System.Windows.Media.MediaClock>. W miejscu, w przypadku nośnika <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -113,6 +111,7 @@ Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
  Zobacz [Przegląd obiektów rysowania](drawing-objects-overview.md) Aby uzyskać więcej informacji na temat <xref:System.Windows.Media.Drawing> obiektów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [Układ](../advanced/layout.md)
-- [Tematy z instrukcjami](audio-and-video-how-to-topics.md)
+- [— Tematy porad](audio-and-video-how-to-topics.md)

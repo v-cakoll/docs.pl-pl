@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211065"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a> Windows Presentation Foundation (WPF) to struktura prezentacji, która może służyć do tworzenia następujących typów aplikacji:  
@@ -27,9 +27,7 @@ ms.locfileid: "57365137"
 >  Używanie typów WPF w usłudze Windows jest zdecydowanie odradzane. Jeśli spróbujesz użyć tych funkcji w usłudze Windows może nie działają zgodnie z oczekiwaniami.  
   
  Do tworzenia tego zestawu aplikacji, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje hosta usługi. Ten temat zawiera omówienie tych usług i gdzie można znaleźć więcej informacji.  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>Zarządzanie aplikacjami  
  Plik wykonywalny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje często wymagają podstawowy zestaw funkcji, który obejmuje następujące elementy:  
@@ -123,10 +121,10 @@ ms.locfileid: "57365137"
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Zarządzanie aplikacjami — omówienie](application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy, w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
+|[Przegląd Zarządzanie aplikacjami](application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy, w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
 |[Okna w programie WPF](windows-in-wpf-applications.md)|Zawiera szczegółowe informacje o zarządzanie systemem windows w Twojej aplikacji, takich jak używać <xref:System.Windows.Window> klasy i w oknach dialogowych.|  
-|[Nawigacja — omówienie](navigation-overview.md)|Omówienie zarządzania Nawigacja między stronami aplikacji.|  
+|[Przegląd Nawigacja](navigation-overview.md)|Omówienie zarządzania Nawigacja między stronami aplikacji.|  
 |[Hosting](hosting-wpf-applications.md)|Zawiera omówienie [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Tworzenie i wdrażanie](building-and-deploying-wpf-applications.md)|W tym artykule opisano sposób tworzenia i wdrażania aplikacji WPF.|  
+|[Wdróż i konfiguruj](building-and-deploying-wpf-applications.md)|W tym artykule opisano sposób tworzenia i wdrażania aplikacji WPF.|  
 |[Wprowadzenie do platformy WPF w programie Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|W tym artykule opisano główne funkcje WPF.|  
-|[Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć WPF aplikacji za pomocą strony nawigacji, układ, formanty, obrazy, style i powiązania.|
+|[Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć WPF aplikacji za pomocą strony nawigacji, układ, formanty, obrazy, style i powiązania.|

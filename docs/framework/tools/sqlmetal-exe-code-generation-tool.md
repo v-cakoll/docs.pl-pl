@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9631ed7ecc854fe6f355eb4bbc2bfb5097ea770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540627"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206424"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Narzędzie generowania kodu)
 Narzędzie wiersza polecenia SqlMetal generuje kod i mapowanie dla [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] składnika [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Stosując opisane w dalszej części tego tematu opcje, można za pomocą programu SqlMetal wykonać kilka różnych akcji, takich jak:  
@@ -41,7 +41,7 @@ sqlmetal [options] [<input file>]
 ## <a name="options"></a>Opcje  
  Aby wyświetlić najbardziej aktualną listę opcji, wpisz `sqlmetal /?` w wierszu polecenia w lokalizacji instalacji.  
   
- **Opcje połączenia**  
+ **Opcje połączeń**  
   
 |Opcja|Opis|  
 |------------|-----------------|  
@@ -76,7 +76,7 @@ sqlmetal [options] [<input file>]
 |**/ NAMESPACE:**  *\<name >*|Określa przestrzeń nazw wygenerowanego kodu. Wartość domyślna: brak przestrzeni nazw.|  
 |**/ Context:**  *\<typ >*|Określa nazwę klasy kontekstu danych. Wartość domyślna: Pochodzi od nazwy bazy danych.|  
 |**/entitybase:** *\<type>*|Określa klasę bazową klas obiektów w generowanym kodzie. Wartość domyślna: Jednostki nie mają klasy bazowej.|  
-|**/ pluralize**|Automatycznie zmienia nazwy klas i składowych na liczbę mnogą lub pojedynczą.<br /><br /> Ta opcja jest dostępna tylko w Stanach Zjednoczonych Wersja w języku angielskim.|  
+|**/pluralize**|Automatycznie zmienia nazwy klas i składowych na liczbę mnogą lub pojedynczą.<br /><br /> Ta opcja jest dostępna tylko w Stanach Zjednoczonych Wersja w języku angielskim.|  
 |**/Serialization:**  *\<opcja >*|Generuje klasy, które można serializować.<br /><br /> Nieprawidłowa  *\<opcja >*: None, Unidirectional. Wartość domyślna: Brak.<br /><br /> Aby uzyskać więcej informacji, zobacz [serializacji](../../../docs/framework/data/adonet/sql/linq/serialization.md).|  
   
  **Plik wejściowy**  
@@ -111,28 +111,29 @@ sqlmetal [options] [<input file>]
 ## <a name="examples"></a>Przykłady  
  Generuje plik dbml zawierający wyodrębnione metadane SQL:  
   
- **sqlmetal /server:myserver /database:northwind /dbml:mymeta.dbml**  
+ **sqlmetal /server:mój_serwer /database:northwind /dbml:moje_metadane.dbml**  
   
  Generuje plik dbml zawierający metadane SQL wyodrębnione z pliku mdf przy użyciu programu SQL Server Express:  
   
- **sqlmetal /dbml:mymeta.dbml mydbfile.mdf**  
+ **sqlmetal /dbml:moje_metadane.dbml mój_plik_db.mdf**  
   
  Generuje plik dbml zawierający metadane SQL wyodrębnione z programu SQL Server Express:  
   
- **sqlmetal /server:.\sqlexpress /dbml:mymeta.dbml /database:northwind**  
+ **sqlmetal /server:.\sqlexpress /dbml:moje_metadane.dbml /database:northwind**  
   
  Generuje kod źródłowy na podstawie pliku metadanych dbml:  
   
- **Program sqlmetal /namespace:nwind /code:nwind.cs/Language: CSharp mymetal.dbml**  
+ **sqlmetal /namespace:nwind /code:nwind.cs /language:csharp moje_metadane.dbml**  
   
  Generuje kod źródłowy bezpośrednio na podstawie metadanych SQL:  
   
- **Program sqlmetal Mój_serwer / /database:northwind /namespace:nwind /code:nwind.cs/Language: CSharp**  
+ **sqlmetal /server:mój_serwer /database:northwind /namespace:nwind /code:nwind.cs /language:csharp**  
   
 > [!NOTE]
 >  Kiedy używasz **/ pluralize** opcji z przykładową bazą danych Northwind, należy pamiętać o następujących zasadach. Gdy program SqlMetal tworzy nazwy tabel typu wiersz, nazwy tabel mają liczbę pojedynczą. Gdy <xref:System.Data.Linq.DataContext> dla tabel właściwości nazwy tabel mają liczbę mnogą. Przypadkowo nazwy tabel w przykładowej bazie danych Northwind mają już liczbę mnogą. Dlatego też nie widać działania tej części opcji. Popularną praktyką jest nadawanie tabelom w bazie danych nazw w liczbie pojedynczej, ale równie popularną praktyką na platformie .NET jest nadawanie kolekcjom nazw w liczbie mnogiej.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lubC#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+
+- [Instrukcje: Generowanie modelu obiektu w języku Visual Basic lub C#](../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
 - [Generowanie kodu w składniku LINQ to SQL](../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [Mapowanie zewnętrzne](../../../docs/framework/data/adonet/sql/linq/external-mapping.md)

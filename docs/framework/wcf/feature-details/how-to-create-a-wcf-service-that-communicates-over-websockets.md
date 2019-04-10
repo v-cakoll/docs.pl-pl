@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets'
+title: 'Instrukcje: tworzenie usługi WCF komunikującej się przez protokół WebSockets'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: d578b58f6613fb48f1bfceb8929ec51b8e025de1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223189"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: Tworzenie usługi WCF komunikującej się przez protokół WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Instrukcje: tworzenie usługi WCF komunikującej się przez protokół WebSockets
 Usługi WCF i klienci mogą używać <xref:System.ServiceModel.NetHttpBinding> powiązania do komunikowania się przez protokół WebSockets.  WebSockets będą używane podczas <xref:System.ServiceModel.NetHttpBinding> określa kontrakt usługi definiuje kontrakt wywołania zwrotnego. W tym temacie opisano, jak wdrożyć usługę WCF i klienta, który używa <xref:System.ServiceModel.NetHttpBinding> do komunikowania się przez protokół WebSockets.  
   
 ### <a name="define-the-service"></a>Zdefiniuj usługę  
@@ -319,5 +319,6 @@ namespace Client
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje synchroniczne i asynchroniczne](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [Używanie elementu NetHttpBinding](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

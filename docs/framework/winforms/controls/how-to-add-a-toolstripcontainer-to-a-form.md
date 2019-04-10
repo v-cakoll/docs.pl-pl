@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie elementu ToolStripContainer do formularza'
+title: 'Instrukcje: dodawanie elementu ToolStripContainer do formularza'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], adding to Windows Forms
 ms.assetid: d0f55095-a833-453e-be5a-644906d75d54
-ms.openlocfilehash: 35d35c9cf9bca2720cb6d02d602d2d7bc6740f25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d70c5b8f548cf325083782d6ea185c18fd2fa003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216213"
 ---
-# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Instrukcje: Dodawanie elementu ToolStripContainer do formularza
+# <a name="how-to-add-a-toolstripcontainer-to-a-form"></a>Instrukcje: dodawanie elementu ToolStripContainer do formularza
 Możesz programowo dodać <xref:System.Windows.Forms.ToolStripContainer> do formularza Windows i wypełnić ją za pomocą kontrolek.  
   
 ## <a name="example"></a>Przykład  
@@ -33,6 +33,7 @@ Możesz programowo dodać <xref:System.Windows.Forms.ToolStripContainer> do form
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStripContainer>
-- [ToolStripContainer, kontrolka](toolstripcontainer-control.md)
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [ToolStripContainer — Formant](toolstripcontainer-control.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)

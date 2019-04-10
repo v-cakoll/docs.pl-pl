@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Powiąż z dokumentem X, elementem X lub LINQ dla wyników zapytań XML'
+title: 'Instrukcje: Wiązanie z elementem XDocument, XElement lub LINQ dla wyników zapytań XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 6c220bf7b06e6eaf4cf661c07a0a8c6c37ec333d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209661"
 ---
-# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Instrukcje: Powiąż z dokumentem X, elementem X lub LINQ dla wyników zapytań XML
+# <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>Instrukcje: Wiązanie z elementem XDocument, XElement lub LINQ dla wyników zapytań XML
 W tym przykładzie pokazano, jak powiązać dane XML do <xref:System.Windows.Controls.ItemsControl> przy użyciu <xref:System.Xml.Linq.XDocument>.  
   
 ## <a name="example"></a>Przykład  
@@ -40,7 +40,8 @@ W tym przykładzie pokazano, jak powiązać dane XML do <xref:System.Windows.Con
  [!code-vb[XLinqExample#BindToResults](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wiązanie źródeł — omówienie](binding-sources-overview.md)
-- [Powiązanie danych WPF za pomocą LINQ to XML — omówienie](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
+
+- [Przegląd Wiązanie źródeł](binding-sources-overview.md)
+- [Powiązanie danych WPF za pomocą LINQ to XML — Przegląd](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [Powiązanie danych WPF za pomocą LINQ to XML — przykład](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)
-- [Właściwości dynamiczne LINQ to XML](/visualstudio/designers/linq-to-xml-dynamic-properties)
+- [LINQ to XML właściwości dynamiczne](/visualstudio/designers/linq-to-xml-dynamic-properties)

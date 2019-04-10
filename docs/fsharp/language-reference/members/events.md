@@ -2,12 +2,12 @@
 title: Zdarzenia
 description: Dowiedz się, jak F# zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika, które są ważne w programowaniu graficznych interfejsów użytkownika.
 ms.date: 05/16/2016
-ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612169"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227005"
 ---
 # <a name="events"></a>Zdarzenia
 
@@ -97,7 +97,6 @@ type AppForm() as this =
     [<CLIEvent>]
     member this.PropertyChanged = propertyChanged.Publish
 
-
     // Define the add and remove methods to implement this interface.
     interface INotifyPropertyChanged with
         member this.add_PropertyChanged(handler) = propertyChanged.Publish.AddHandler(handler)
@@ -138,7 +137,6 @@ type AppForm private (dummy) as this =
         this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
         this.Property2 <- "text3")
 
-
     // This property does not have the property changed event set.
     member val Property1 : string = "text" with get, set
 
@@ -169,7 +167,6 @@ type AppForm private (dummy) as this =
             let inpc = this :> INotifyPropertyChanged
             inpc.PropertyChanged.Add(this.OnPropertyChanged)
 
-
 // Create a form, hook up the event handler, and start the application.
 let appForm = new AppForm()
 Application.Run(appForm)
@@ -179,7 +176,7 @@ Application.Run(appForm)
 
 - [Elementy członkowskie](index.md)
 - [Obsługa i wywoływanie zdarzeń](../../../../docs/standard/events/index.md)
-- [Wyrażenia lambda: słowo kluczowe `fun`](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda Expressions: `fun` — Słowo kluczowe](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;t&#62; klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
-- [Control.Event&#60;"Delegowanie", argumenty&#62; klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)
+- [Control.Event&#60;'Delegate,'Args&#62; Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

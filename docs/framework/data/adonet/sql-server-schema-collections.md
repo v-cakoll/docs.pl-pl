@@ -2,12 +2,12 @@
 title: Kolekcje schematów programu SQL Server
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224574"
 ---
 # <a name="sql-server-schema-collections"></a>Kolekcje schematów programu SQL Server
 Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsługuje kolekcje schematów dodatkowe, oprócz Typowe kolekcje schematów. Kolekcje schematów nieco różnią się zależnie od wersji programu SQL Server, którego używasz. Aby określić listę obsługiwanych schematu kolekcji, należy wywołać **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcje schematów obsługiwanych, liczba ograniczeń, które obsługują one każdego i części identyfikator, których używają.  
@@ -256,5 +256,6 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |Permission_set_desc|String|Przyjazna nazwa zestaw/security poziom uprawnień dla zestawu.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

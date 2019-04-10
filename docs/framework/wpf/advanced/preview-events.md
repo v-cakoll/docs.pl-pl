@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211400"
 ---
 # <a name="preview-events"></a>Podgląd zdarzeń
 Podgląd zdarzeń, tzw. tunelowanie zdarzeń, są zdarzenia trasowane, gdzie kierunek trasy, przybliżone ilości tych danych z katalogu głównego aplikacji do elementu, który spowodował zdarzenie i jest zgłaszana jako źródło danych zdarzenia. Nie wszystkie scenariusze zdarzenie obsługi lub wymagania Podgląd zdarzeń; w tym temacie opisano sytuacje, gdzie Podgląd zdarzeń istnieją, jak aplikacje lub składniki powinny obsługiwać je i przypadkach, gdy tworzenie zdarzenia (wersja zapoznawcza) w niestandardowych składnikami lub klasami jest odpowiednie.  
@@ -30,5 +30,6 @@ Podgląd zdarzeń, tzw. tunelowanie zdarzeń, są zdarzenia trasowane, gdzie kie
  Każda z tych metod ma efekty uboczne lub ograniczenia. Po stronie obsługi zdarzenia (wersja zapoznawcza) powoduje, że w tym momencie obsługi zdarzenia może wyłączyć programy obsługi, które oczekują, aby obsłużyć zdarzenie propagacji i dlatego nie ograniczenia, zazwyczaj nie jest dobry pomysł, aby oznaczyć zdarzeń obsługiwane, gdy jest nadal na Previ Nowa część trasy. Ograniczenia `handledEventsToo` techniką jest, że nie można określić `handledEventsToo` obsługi w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jako atrybutu, należy zarejestrować program obsługi zdarzeń w kodzie po uzyskaniu odwołania do obiektu do elementu, gdzie program obsługi ma zostać dołączony.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
-- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+
+- [Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
+- [Przegląd Zdarzenia trasowane](routed-events-overview.md)

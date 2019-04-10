@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Zmień rozmiar kolumn przy użyciu GridSplitter'
+title: 'Instrukcje: Zmienianie rozmiaru kolumn przy użyciu GridSplitter'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - grid columns [WPF], resizing
 - GridSplitter control [WPF], resizing grid columns
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
-ms.openlocfilehash: 93106ee25d98a056dfa5ba1a064c9803bebb072e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f743e9ccf8a984a646a4b8f05ee99162e5bc73ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210441"
 ---
-# <a name="how-to-resize-columns-with-a-gridsplitter"></a>Instrukcje: Zmień rozmiar kolumn przy użyciu GridSplitter
+# <a name="how-to-resize-columns-with-a-gridsplitter"></a>Instrukcje: Zmienianie rozmiaru kolumn przy użyciu GridSplitter
 W tym przykładzie przedstawiono sposób tworzenia pionowej <xref:System.Windows.Controls.GridSplitter> w celu rozpowszechniania odstęp między kolumnami w <xref:System.Windows.Controls.Grid> bez konieczności zmieniania wymiary <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Przykład  
@@ -35,5 +35,6 @@ W tym przykładzie przedstawiono sposób tworzenia pionowej <xref:System.Windows
 [!code-xaml[GridSplitterRowColumn#GridSplitterEntireColumnPart2](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterRowColumn/CS/Window1.xaml#gridsplitterentirecolumnpart2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [Tematy z instrukcjami](gridsplitter-how-to-topics.md)
+- [— Tematy porad](gridsplitter-how-to-topics.md)

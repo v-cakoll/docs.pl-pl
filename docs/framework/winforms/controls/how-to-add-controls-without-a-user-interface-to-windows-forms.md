@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie formantów bez interfejsu użytkownika do formularzy Windows Forms'
+title: 'Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 4d99f56710fa1d879aed5000edb5424a0727ae3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223696"
 ---
-# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Instrukcje: Dodawanie formantów bez interfejsu użytkownika do formularzy Windows Forms
+# <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows
 Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwieństwie do innych formantów składniki nie udostępniają interfejs użytkownika dla użytkownika i dlatego nie powinny być wyświetlane na powierzchni projektanta formularzy Windows. Po dodaniu składnika do formularza Windows Forms Designer przedstawia o zmiennych rozmiarach na pasku w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu kontrolki do zasobnika składnika można wybrać składnik i ustaw jego właściwości, tak jak inne kontrolki, w formularzu.  
   
 > [!NOTE]
@@ -80,11 +80,12 @@ Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwień
     >  Na komputerze lokalnym to zagrożenie bezpieczeństwa, za pośrednictwem sieci może narazić, odwołując się do złośliwego elementu UserControl. Powinien to być jedynie kwestią w przypadku złośliwe osoby tworzącej szkodliwe kontrolka niestandardowa, a następnie przez Ciebie przez pomyłkę dodawania do projektu.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
-- [Instrukcje: Kopiowanie formantów pomiędzy formularzami Windows](how-to-copy-controls-between-windows-forms.md)
-- [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
-- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
-- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
+
+- [Formanty formularzy systemu Windows](index.md)
+- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows](how-to-add-activex-controls-to-windows-forms.md)
+- [Instrukcje: kopiowanie kontrolek pomiędzy formularzami systemu Windows](how-to-copy-controls-between-windows-forms.md)
+- [Umieszczanie formantów na formularzach systemu Windows](putting-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)

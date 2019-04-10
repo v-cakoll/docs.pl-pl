@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Formatowanie danych w Windows formantu DataGridView formularzy'
+title: 'Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], date values
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-ms.openlocfilehash: 0699aec73c0a48efe88fc2901ef11c70d6f639d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 62701edfdb3cf2729cb401ad12a12ee4f524287b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221303"
 ---
-# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Instrukcje: Formatowanie danych w Windows formantu DataGridView formularzy
+# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows
 Poniższe procedury przedstawiają podstawowe formatowanie wartości komórki za pomocą <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> właściwość <xref:System.Windows.Forms.DataGridView> kontroli i określonych kolumn w formancie. Informacje na temat zaawansowanych danych formatowania, zobacz [jak: Dostosowywanie formatowania danych w formancie DataGridView formularzy Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="to-format-currency-and-date-values"></a>Formatowanie waluty i wartości daty  
@@ -68,11 +68,12 @@ Poniższe procedury przedstawiają podstawowe formatowanie wartości komórki za
  W przypadku maksymalnej skalowalności powinny współużytkować <xref:System.Windows.Forms.DataGridViewCellStyle> obiektów między wiele wierszy, kolumny lub komórki, które używają tego samego style, zamiast oddzielnie ustawienie ponownego obliczenia właściwości stylu dla każdego elementu. Aby uzyskać więcej informacji, zobacz [najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formatowanie danych w formancie DataGridView formularzy systemu Windows](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Formatowanie typów](../../../standard/base-types/formatting-types.md)

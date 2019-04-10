@@ -2,12 +2,12 @@
 title: Instrukcje dotyczące konfigurowania katalogów wirtualnych
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225589"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrukcje dotyczące konfigurowania katalogów wirtualnych
 Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólnego katalogu wirtualnego o nazwie servicemodelsamples, który jest zamapowany na %SystemDrive%\inetpub\wwwroot\servicemodelsamples folder.  
@@ -59,7 +59,7 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
 7.  Domyślnie wybrane są następujące pola wyboru:  
   
-    -   **Read**  
+    -   **Odczyt**  
   
     -   **Uruchamianie skryptów (np. ASP)**  
   
@@ -84,7 +84,7 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
   
 2.  Domyślnie wybrane są następujące pola wyboru:  
   
-    -   **Read**  
+    -   **Odczyt**  
   
     -   **Rejestruj wizyty**  
   
@@ -191,4 +191,5 @@ Przykłady Windows Communication Foundation (WCF) będą udostępniać wspólneg
     3.  W **grupy** kolumny, sprawdź, czy wartość **ASPNET** jest "Użytkownicy".  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

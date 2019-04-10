@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj obiekt na ścieżce (animacja matrycy akumulacją przesunięcia)'
+title: 'Instrukcje: Animowanie obiektu na ścieżce (animacja matrycy akumulacją przesunięcia)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation with offset accumulation)
 - matrix animation with offset accumulation [WPF]
 ms.assetid: 1bca90ef-9832-4128-8ed6-62908e7ec146
-ms.openlocfilehash: 859a3556bc29d2b30572be03708ebab80ce692fb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e7b892e2a2215d26512850477844d71bce7fe09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207373"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Instrukcje: Animuj obiekt na ścieżce (animacja matrycy akumulacją przesunięcia)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation-with-offset-accumulation"></a>Instrukcje: Animowanie obiektu na ścieżce (animacja matrycy akumulacją przesunięcia)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> klasy animowanie obiektu na ścieżce i animacji są gromadzone przesunięcie wartości jak powtarza się.  
   
 ## <a name="example"></a>Przykład  
@@ -34,5 +34,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.M
  Aby uzyskać pełny przykład, zobacz [przykład animacji ścieżki](https://go.microsoft.com/fwlink/?LinkID=160028). Aby uzyskać przykład pokazujący sposób animować <xref:System.Windows.Media.Matrix> wartość na ścieżce bez akumulacją przesunięcia, zobacz [animowanie obiektu na ścieżce (animacja Matrix)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Animacja — przegląd](animation-overview.md)
-- [Animacja ścieżki — tematy z instrukcjami](path-animation-how-to-topics.md)
+
+- [Przegląd Animacja](animation-overview.md)
+- [Animacja ścieżki Tematy Pomocy](path-animation-how-to-topics.md)

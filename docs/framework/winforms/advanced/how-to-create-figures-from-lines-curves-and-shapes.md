@@ -8,12 +8,12 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 1977f1c9efe2c379ef6039870aade300efca2bdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224913"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Instrukcje: Tworzenie figur z linii, krzywych i kształtów
 Do utworzenia rysunku, należy utworzyć <xref:System.Drawing.Drawing2D.GraphicsPath>, a następnie wywołać metod, takich jak <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> i <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, aby dodać w nim elementów podstawowych do ścieżki.  
@@ -35,6 +35,7 @@ Do utworzenia rysunku, należy utworzyć <xref:System.Drawing.Drawing2D.Graphics
  Poprzednie przykłady są skonstruowane do użycia za pomocą interfejsu Windows Forms i wymagają one <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [Konstruowanie i rysowanie ścieżek](constructing-and-drawing-paths.md)
 - [Rysowanie linii i kształtów za pomocą pióra](using-a-pen-to-draw-lines-and-shapes.md)

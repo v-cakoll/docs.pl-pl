@@ -2,12 +2,12 @@
 title: Omówienie modelu fabryki
 ms.date: 03/30/2017
 ms.assetid: b5dc81c4-7554-44b9-b513-769bd61e2e7b
-ms.openlocfilehash: b45e73dd21cad1381f58b578a19c39a1d89e8c3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b1d438ce5a7dbb22772d6c5dc97f196b3263d38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221837"
 ---
 # <a name="factory-model-overview"></a>Omówienie modelu fabryki
 ADO.NET w wersji 2.0 wprowadzono nowe klasy bazowe w <xref:System.Data.Common> przestrzeni nazw. Klasy bazowe są abstrakcyjne, co oznacza, że ich nie można bezpośrednio utworzyć wystąpienia. Obejmują one <xref:System.Data.Common.DbConnection>, <xref:System.Data.Common.DbCommand>, i <xref:System.Data.Common.DbDataAdapter> i są udostępniane przez dostawcę danych .NET Framework, takich jak <xref:System.Data.SqlClient> i <xref:System.Data.OleDb>. Dodawanie klas bazowych upraszcza dodano funkcję dostawcy danych .NET Framework bez konieczności tworzenia nowych interfejsów.  
@@ -20,6 +20,7 @@ ADO.NET w wersji 2.0 wprowadzono nowe klasy bazowe w <xref:System.Data.Common> p
  Począwszy od wersji 2.0 programu ADO.NET, <xref:System.Data.Common.DbProviderFactories> klasa udostępnia `static` (lub `Shared` w języku Visual Basic) metody tworzenia <xref:System.Data.Common.DbProviderFactory> wystąpienia. Wystąpienie zwraca poprawne silnie typizowany obiekt na podstawie informacji o dostawcy i parametry połączenia, podany w czasie wykonywania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uzyskiwanie DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [DbConnection, DbCommand i DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [Modyfikowanie danych za pomocą obiektu DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)

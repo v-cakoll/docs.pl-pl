@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211975"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operacje usługi (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia zdefiniowanie operacji usługi w usłudze data ujawniać metod na serwerze. Podobnie jak inne zasoby usługi danych operacji usługi są rozwiązywane przez identyfikatory URI. Operacje usługi umożliwiają udostępnianie logikę biznesową w usłudze danych, takich jak zaimplementować logikę weryfikacji, aby zastosować zabezpieczenia oparte na rolach, lub do udostępnienia wyspecjalizowane możliwościami wysyłania zapytań. Operacje usługi są dodawane do klasie usługi danych, która pochodzi z metody <xref:System.Data.Services.DataService%601>. Podobnie jak wszystkich innych zasobów usługi danych możesz podać parametry do metody operacji usługi. Na przykład, następujące operacja identyfikator URI usługi (na podstawie [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) usługi danych) przekazuje wartość `London` do `city` parametru:  
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interceptory](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

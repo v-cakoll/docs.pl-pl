@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: b38cc51cb7eaf0913ed821bb60f10cdde2430916
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223007"
 ---
 # <a name="ui-automation-properties-overview"></a>Przegląd właściwości automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "57676060"
   
  <xref:System.Windows.Automation.AutomationProperty> obiektów reprezentujących szczególne właściwości są dostępne jako pola w różnych klas. Ze względów bezpieczeństwa dostawcy automatyzacji interfejsu użytkownika, należy uzyskać te obiekty z oddzielny zestaw klas, które są zawarte w Uiautomationtypes.dll.  
   
- Poniższa tabela kategoryzuje właściwości według klasy, które zawierają <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ Poniższa tabela kategoryzuje właściwości według klasy, które zawierają <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
 |Typy właściwości|Identyfikatory z pobierania przez klientów|Dostawców pobrać identyfikatorów z|  
 |-------------------------|--------------------------|----------------------------|  
@@ -160,6 +160,7 @@ ms.locfileid: "57676060"
  Klienci nasłuchiwać zdarzeń, subskrybując je. Subskrybowanie zdarzeń oznacza, że tworzenie metod delegatów, które może obsłużyć zdarzenia, a następnie przekazywanie metody służące do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wraz z określonych zdarzeń, które zostanie omówione w tych metodach. Dla zdarzenia zmiany właściwości w szczególności, klienci muszą implementować <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Buforowanie w klientach automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [Właściwości automatyzacji interfejsu użytkownika dla klientów](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
 - [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

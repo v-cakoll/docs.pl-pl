@@ -1,15 +1,15 @@
 ---
-title: Połączenia Oracle, OLE DB i ODBC buforowanie
+title: Buforowanie połączenia Oracle, OLE DB i ODBC
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208894"
 ---
-# <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Połączenia Oracle, OLE DB i ODBC buforowanie
+# <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Buforowanie połączenia Oracle, OLE DB i ODBC
 Tworzenie puli połączeń mogą znacznie poprawić wydajność i skalowalność aplikacji. W tej sekcji omówiono tworzenie puli połączeń dla dostawcy danych .NET Framework dla OLE DB, ODBC i Oracle.  
   
 ## <a name="connection-pooling-for-oledb"></a>Tworzenie puli połączeń dla OLE DB  
@@ -69,6 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|Gdy `true`, połączenie jest rysowana od odpowiedniej puli, lub jeśli to konieczne, utworzony i dodany do odpowiedniej puli.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Liczniki wydajności](../../../../docs/framework/data/adonet/performance-counters.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

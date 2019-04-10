@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostęp do kolekcji z kluczami w formularzach Windows'
+title: 'Instrukcje: Uzyskiwanie dostępu do kolekcji z kluczami w formularzach Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - keyed collections [Windows Forms]
 - collections [Windows Forms], accessing with keys
 ms.assetid: b9b79b8b-d9bf-4f8c-b9d6-9578bc3219d3
-ms.openlocfilehash: af398e8ac051bfc89c532fe5dc216e9cfbfdc4b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fdd3a56ab9a267990bb0e832c0d4cc2af9334034
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214043"
 ---
-# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Instrukcje: Dostęp do kolekcji z kluczami w formularzach Windows
+# <a name="how-to-access-keyed-collections-in-windows-forms"></a>Instrukcje: Uzyskiwanie dostępu do kolekcji z kluczami w formularzach Windows Forms
 -   Możesz uzyskać dostęp poszczególnych kolekcji elementów według klucza. Ta funkcja dołączonym do wielu klas kolekcji, które zazwyczaj są używane przez aplikacje Windows Forms. Na poniższej liście przedstawiono niektóre z klas kolekcji, które mają dostępne kolekcje zabezpieczone kluczami:  
   
 -   <xref:System.Windows.Forms.ListView.ListViewItemCollection>  
@@ -52,5 +52,6 @@ ms.locfileid: "57709626"
      [!code-vb[System.Windows.Forms.KeyedCollectionsEx#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.KeyedCollectionsEx/VB/Form1.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)
-- [Instrukcje: Dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy Windows](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+
+- [Wprowadzenie do formularzy systemu Windows](getting-started-with-windows-forms.md)
+- [Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows](./controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203551"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu — Przegląd
 <xref:System.Windows.Controls.ContextMenu> Klasa reprezentuje element, który udostępnia funkcje przy użyciu określonego kontekstu <xref:System.Windows.Controls.Menu>. Zazwyczaj użytkownik udostępnia <xref:System.Windows.Controls.ContextMenu> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] klikając prawym przyciskiem myszy przycisk myszy. W tym temacie przedstawiono <xref:System.Windows.Controls.ContextMenu> elementu oraz przykłady sposobu używania go w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i kod.  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>ContextMenu — formant  
  Element <xref:System.Windows.Controls.ContextMenu> jest dołączony do określonej kontrolki. <xref:System.Windows.Controls.ContextMenu> Element umożliwia prezentowanie użytkowników z listą elementów, które określają poleceń lub opcje, które są skojarzone z określonego formantu, na przykład <xref:System.Windows.Controls.Button>. Użytkownicy kliknij prawym przyciskiem myszy formant Aby utworzyć menu są wyświetlane. Zazwyczaj kliknięcie <xref:System.Windows.Controls.MenuItem> spowoduje otwarcie podmenu lub powoduje, że aplikacja do wykonania polecenia.  
@@ -63,10 +61,11 @@ ms.locfileid: "57357368"
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>
 - <xref:System.Windows.Controls.MenuItem>
 - [ContextMenu](contextmenu.md)
-- [ContextMenu — style i szablony](contextmenu-styles-and-templates.md)
+- [ContextMenu — Style i szablony](contextmenu-styles-and-templates.md)
 - [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

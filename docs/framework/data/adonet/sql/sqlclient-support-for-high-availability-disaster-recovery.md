@@ -2,12 +2,12 @@
 title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213795"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) o wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do programu SQL Server 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności zobacz dokumentację SQL Server — książki Online.  
@@ -79,7 +79,7 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
   
  `ApplicationIntent` — Słowo kluczowe nie działa dla starszej wersji, tylko do odczytu bazy danych.  
   
- Bazę danych można zezwolić lub nie zezwalaj na obciążeniami odczytu w docelowej bazie danych zawsze włączonych. (Jest to zrobić za pomocą `ALLOW_CONNECTIONS` klauzuli `PRIMARY_ROLE` i `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji.)  
+ Bazę danych można zezwolić lub nie zezwalaj na obciążeniami odczytu w docelowej bazie danych zawsze włączonych. (Jest to zrobić za pomocą `ALLOW_CONNECTIONS` klauzuli `PRIMARY_ROLE` i `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji.)  
   
  `ApplicationIntent` Słowo kluczowe jest używane, aby umożliwić routing tylko do odczytu.  
   
@@ -97,5 +97,6 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
  Routing tylko do odczytu może trwać dłużej niż łączenie do podstawowej, ponieważ odczytu tylko routing najpierw łączy się podstawowym, a następnie szuka najlepsze dostępne pomocniczego do odczytu. W związku z tym należy zwiększyć swoje limit czasu logowania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

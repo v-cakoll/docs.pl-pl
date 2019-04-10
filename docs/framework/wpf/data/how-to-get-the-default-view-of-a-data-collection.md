@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobierz domyślny widok kolekcji danych'
+title: 'Instrukcje: Pobieranie widoku domyślnego kolekcji danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222110"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Instrukcje: Pobierz domyślny widok kolekcji danych
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Instrukcje: Pobieranie widoku domyślnego kolekcji danych
 Widoki zezwala na tej samej kolekcji danych do wyświetlenia na różne sposoby, w zależności od tego, czy sortowanie, filtrowanie lub kryteria grupowania. Każda kolekcja ma jeden udostępnionego widok domyślny, jest używany jako źródło faktycznego wiązania, gdy powiązanie Określa kolekcję jako źródło. Ten przykład pokazuje, jak pobrać domyślny widok kolekcji.  
   
 ## <a name="example"></a>Przykład  
@@ -33,5 +33,6 @@ Widoki zezwala na tej samej kolekcji danych do wyświetlenia na różne sposoby,
  Przykłady funkcje udostępniane przez widok kolekcji, zobacz [sortowanie danych w widoku](how-to-sort-data-in-a-view.md), [filtrować dane w widoku](how-to-filter-data-in-a-view.md), i [przejdź do obiektów w danych CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Sortowanie i grupowanie danych przy użyciu widoku w XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

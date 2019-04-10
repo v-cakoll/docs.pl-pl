@@ -2,12 +2,12 @@
 title: Omówienie programu Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217604"
 ---
 # <a name="windows-workflow-overview"></a>Omówienie programu Windows Workflow
 Przepływ pracy jest zbiorem elemental jednostek nazywanych *działania* , są przechowywane jako obiekty modelu, który zawiera opis procesu rzeczywistych. Przepływy pracy, zapewniają sposób opisania kolejności wykonania i zależności między elementami krótkotrwałej pracy krótkim lub długim. Ta Praca przechodzi przez model od początku do końca, a działania może być wykonywane przez osoby lub funkcji systemu.  
@@ -42,4 +42,5 @@ Składniki przepływu pracy w procesie hosta
 -   Niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.CodeActivity> klasy abstrakcyjnej. <xref:System.Activities.CodeActivity> Mogą uzyskiwać dostęp do funkcji wykonawczej (takich jak śledzenie i właściwości) przy użyciu <xref:System.Activities.CodeActivityContext> który jest dostępny jako parametr <xref:System.Activities.CodeActivity.Execute%2A> metody. Aby uzyskać więcej informacji o tych funkcjach czasu wykonywania, zobacz [przepływu pracy i śledzenie](workflow-tracking-and-tracing.md) i [właściwości wykonania przepływu pracy](workflow-execution-properties.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [BizTalk Server 2006 lub WF? Wybór narzędzia prawo przepływu pracy dla projektu](https://go.microsoft.com/fwlink/?LinkId=154901)

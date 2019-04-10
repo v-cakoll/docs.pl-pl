@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Usuń moduł definiowania układów z elementu'
+title: 'Instrukcje: Usuwanie modułu definiowania układów z elementu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
-ms.openlocfilehash: 0c74fe9ed1e7190ce4ff26a7dbae1413f950ba7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 256dd6fa0117f88aec2ef6b60c6dcd4c33b57855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374079"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212404"
 ---
-# <a name="how-to-remove-an-adorner-from-an-element"></a>Instrukcje: Usuń moduł definiowania układów z elementu
+# <a name="how-to-remove-an-adorner-from-an-element"></a>Instrukcje: Usuwanie modułu definiowania układów z elementu
 W tym przykładzie pokazano, jak programowo usunąć określonego modułu definiowania układu kodu z określonym <xref:System.Windows.UIElement>.  
   
 ## <a name="example"></a>Przykład  
@@ -30,4 +30,5 @@ W tym przykładzie pokazano, jak programowo usunąć określonego modułu defini
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Moduły indeksowania układu — omówienie](adorners-overview.md)
+
+- [Przegląd Moduły indeksowania układu](adorners-overview.md)

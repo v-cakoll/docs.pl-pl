@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Uzyskiwanie dostępu do źródła HTML w modelu obiektów zarządzanych dokumentów HTML'
+title: 'Instrukcje: uzyskiwanie dostępu do źródła HTML w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203265"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Instrukcje: Uzyskiwanie dostępu do źródła HTML w modelu obiektów zarządzanych dokumentów HTML
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Instrukcje: uzyskiwanie dostępu do źródła HTML w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> i <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości <xref:System.Windows.Forms.WebBrowser> kontrola zwraca kod HTML w bieżącym dokumencie, jaka istniała podczas najpierw został wyświetlony. Jednak w przypadku zmodyfikowania strony przy użyciu wywołania metod i właściwości, takich jak <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> i <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, te zmiany nie pojawią się po wywołaniu <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> i <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. Aby uzyskać najbardziej aktualne źródło HTML dla modelu DOM, należy wywołać <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> właściwość elementu HTML.  
   
  Poniższa procedura pokazuje, jak pobrać źródło dynamiczne i wyświetlania ich w menu skrótów oddzielne.  
@@ -46,5 +46,6 @@ ms.locfileid: "57723650"
  Należy zawsze przetestować wartość <xref:System.Windows.Forms.WebBrowser.Document%2A> przed podjęciem próby pobrania go. Jeśli bieżąca strona nie jest zakończony podczas ładowania, <xref:System.Windows.Forms.WebBrowser.Document%2A> lub nie można zainicjować co najmniej jeden z jego obiektów podrzędnych.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](using-the-managed-html-document-object-model.md)
-- [WebBrowser, kontrolka — omówienie](webbrowser-control-overview.md)
+- [WebBrowser — Informacje o formancie](webbrowser-control-overview.md)

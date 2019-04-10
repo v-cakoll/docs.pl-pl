@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204747"
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
 Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarzeń klawiatury w odpowiedzi na wiadomości Windows. Większość aplikacji Windows Forms przetwarzać dane wejściowe z klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak musisz zrozumieć, jak komunikaty klawiatury współdziałać, dzięki czemu można zaimplementować bardziej zaawansowane scenariusze wejście klawiatury, przechwytuje kluczy, zanim dotrą formantu. W tym temacie opisano typy danych klucza, formularze Windows rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacji na temat zdarzeń klawiatury, zobacz [zdarzenia klawiatury przy użyciu](using-keyboard-events.md).  
@@ -63,15 +63,16 @@ Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarze�
 |Zadanie|Metoda|  
 |----------|------------|  
 |Przechwytywać klucz nawigacji i podnieść <xref:System.Windows.Forms.Control.KeyDown> zdarzeń. Na przykład chcesz kartę i wróć do obsłużenia w polu tekstowym.|Zastąp <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Uwaga:**  Alternatywnie, można obsługiwać <xref:System.Windows.Forms.Control.PreviewKeyDown> zdarzeń i ustaw <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> z <xref:System.Windows.Forms.PreviewKeyDownEventArgs> do `true` klucza lub kluczy ma.|  
-|W kontrolce, należy wykonać specjalne obsługi danych wejściowych lub nawigacji. Na przykład chcesz użycie klawiszy strzałek w kontrolce listy można zmienić wybranego elementu.|zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|W kontrolce, należy wykonać specjalne obsługi danych wejściowych lub nawigacji. Na przykład chcesz użycie klawiszy strzałek w kontrolce listy można zmienić wybranego elementu.|Zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Przechwytywać klucz nawigacji i podnieść <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład w kontrolce pola pokrętła potrzebujesz wielu Strzałka musi nacisnąć, aby przyspieszyć przez kolejne elementy.|Zastąp <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Wykonywać specjalne obsługi danych wejściowych lub nawigacji podczas <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład na liście kontroli, przytrzymując naciśnięty klawisz "r" pomija między elementami, które zaczynają się od litery r.|zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Wykonywać specjalne obsługi danych wejściowych lub nawigacji podczas <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład na liście kontroli, przytrzymując naciśnięty klawisz "r" pomija między elementami, które zaczynają się od litery r.|Zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Wykonaj niestandardowy skrót klawiszowy obsługi; na przykład chcesz obsługiwać symboli na przyciskach rysowanych przez właściciela, znajdujących się na pasku narzędzi.|Zastąp <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
-- [My.Computer.Keyboard, obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
+- [My.Computer.Keyboard — Obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Uzyskiwanie dostępu do klawiatury](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
 - [Używanie zdarzeń klawiatury](using-keyboard-events.md)

@@ -1,15 +1,15 @@
 ---
-title: DataTables
+title: Elementy DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207321"
 ---
-# <a name="datatables"></a>DataTables
+# <a name="datatables"></a>Elementy DataTable
 A <xref:System.Data.DataSet> składa się z kolekcją tabel, relacje i ograniczenia. W ADO.NET <xref:System.Data.DataTable> obiekty są używane do reprezentowania tabel w **zestawu danych**. A **DataTable** reprezentuje jedną tabelę danych relacyjnych w pamięci; dane są lokalne. Aplikacja oparta na NET, w którym to znajduje się, ale mogą zostać wypełnione ze źródła danych, takich jak Microsoft SQL Server przy użyciu **DataAdapter** Aby uzyskać więcej informacji, zobacz [wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
   
  **DataTable** klasa jest elementem członkowskim **System.Data** przestrzeni nazw w bibliotece klas programu .NET Framework. Można tworzyć i używać **DataTable** niezależnie lub jako członek **DataSet**, i **DataTable** obiekty również mogą być używane w połączeniu z innymi obiektami .NET Framework w tym <xref:System.Data.DataView>. Możesz uzyskać dostęp do kolekcji tabel w **zestawu danych** za pośrednictwem **tabel** właściwość **zestawu danych** obiektu.  
@@ -21,13 +21,13 @@ A <xref:System.Data.DataSet> składa się z kolekcją tabel, relacje i ogranicze
  Można utworzyć hierarchiczne relacje między tabelami przy użyciu jednej lub więcej powiązanych kolumn w tabelach. Utwórz relację między **DataTable** obiektów przy użyciu <xref:System.Data.DataRelation>. **DataRelation —** obiektów, następnie może służyć do zwrócenia powiązane podrzędnej lub nadrzędnej wiersze określonego wiersza. Aby uzyskać więcej informacji, zobacz [Dodawanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie elementów DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Tworzenie elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Wyjaśnia sposób tworzenia **DataTable** i dodać go do **zestawu danych**.  
   
  [Definicja schematu elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Informacje na temat tworzenia i używania **DataColumn** obiektów i ograniczenia.  
   
- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Operowanie na danych w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Opis sposobu dodawania, modyfikowania i usuwania danych w tabeli. Opis sposobu użycia **DataTable** zdarzeń w celu zbadania zmian danych w tabeli.  
   
  [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
@@ -52,8 +52,9 @@ A <xref:System.Data.DataSet> składa się z kolekcją tabel, relacje i ogranicze
  <xref:System.Data.DataTable>  
  Zawiera informacje na temat **DataTable** obiektu.  
   
- [Omówienie biblioteki klas](../../../../../docs/standard/class-library-overview.md)  
+ [Przegląd biblioteki klas](../../../../../docs/standard/class-library-overview.md)  
  Zawiera omówienie biblioteki klas programu .NET Framework, w tym **systemu** przestrzeni nazw oraz jego przestrzeń nazw drugiego poziomu, **System.Data**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

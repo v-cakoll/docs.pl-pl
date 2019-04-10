@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodaj typ właściciela dla właściwości zależności'
+title: 'Instrukcje: Dodawanie typu właściciela dla właściwości zależności'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 03ffec87c98c88452aa8fde89c64646eaf48a8da
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217097"
 ---
-# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Instrukcje: Dodaj typ właściciela dla właściwości zależności
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Instrukcje: Dodawanie typu właściciela dla właściwości zależności
 W tym przykładzie przedstawiono sposób dodawania klasy jako właściciele właściwości zależności, zarejestrowany dla innego typu. Dzięki temu, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] czytnika i system właściwości są rozpoznawać klasy jako właściciel dodatkowe właściwości. Dodawanie jako właściciel opcjonalnie umożliwia dodanie klasy do udostępnienia metadanych specyficznych dla typu.  
   
  W poniższym przykładzie `StateProperty` właściwość zarejestrowane przez `MyStateControl` klasy. Klasa `UnrelatedStateControl` dodaje się jako właściciel `StateProperty` przy użyciu <xref:System.Windows.DependencyProperty.AddOwner%2A> metody, w szczególności za pomocą podpisu, umożliwiający nowe metadane dla właściwości zależności, ponieważ znajduje się na dodawanie typu. Należy zauważyć, że należy podać [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] metod dostępu właściwości, które są podobne do pokazanego poniżej [implementować właściwość zależności](how-to-implement-a-dependency-property.md) przykładu, a także ponownie udostępnić identyfikator właściwości zależności klasy dodawane jako właściciel.  
@@ -31,5 +31,6 @@ W tym przykładzie przedstawiono sposób dodawania klasy jako właściciele wła
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)

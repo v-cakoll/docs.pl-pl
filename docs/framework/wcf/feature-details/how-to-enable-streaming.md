@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Włączanie przesyłania strumieniowego'
+title: 'Instrukcje: włączanie przesyłania strumieniowego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227317"
 ---
-# <a name="how-to-enable-streaming"></a>Instrukcje: Włączanie przesyłania strumieniowego
+# <a name="how-to-enable-streaming"></a>Instrukcje: włączanie przesyłania strumieniowego
 Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu transferu buforowane lub przesyłane strumieniowo. W domyślny tryb zbuforowany transferu wiadomości musi być całkowicie dostarczana przed odbiorca może go odczytać. W transmisji strumieniowej tryb transferu, można rozpocząć przetworzyć komunikatu przed przekazaniem całkowicie odbiornika. Tryb przesyłania strumieniowego jest przydatne, gdy informacje jest przekazywany jest długi i mogą być przetwarzane pojedynczo. Tryb przesyłania strumieniowego jest również przydatne, gdy komunikat jest zbyt duży, aby całkowicie buforowany.  
   
  Włączanie przesyłania strumieniowego, należy zdefiniować `OperationContract` odpowiednio i włączanie przesyłania strumieniowego na poziomie transportu.  
@@ -75,5 +75,6 @@ Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Duże ilości danych i przesyłanie strumieniowe](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [Strumień](../../../../docs/framework/wcf/samples/stream.md)

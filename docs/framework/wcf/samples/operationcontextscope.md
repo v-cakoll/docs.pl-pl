@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 24c4478ac53ab5f1a38476d00d47152cafb7db0d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f48a63b1706cad3dfa8b58d84d4a2b5ef818ea92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212508"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 Przykładowy element OperationContextScope pokazano sposób wysyłania dodatkowych informacji na temat wywołania usług Windows Communication Foundation (WCF) przy użyciu nagłówków. W tym przykładzie serwera i klienta są aplikacji konsoli.  
@@ -129,4 +129,3 @@ Press <ENTER> to terminate client.
 >  Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
-  

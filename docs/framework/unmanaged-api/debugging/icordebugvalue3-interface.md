@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34e1dd6adaa9906babca80f4cc610c157bd00534
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 300d2263c076c9028340863e2f7a3fa27a36ef9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221980"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 — Interfejs
 Rozszerza interfejsy "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsługę tablic, które są większe niż 2 GB.  
@@ -46,6 +46,5 @@ Rozszerza interfejsy "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsług
   
 ## <a name="see-also"></a>Zobacz także
 
-
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

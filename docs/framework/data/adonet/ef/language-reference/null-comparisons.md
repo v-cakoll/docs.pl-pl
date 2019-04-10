@@ -1,18 +1,18 @@
 ---
-title: Porównania wartości null
+title: Porównania wartości Null
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222669"
 ---
-# <a name="null-comparisons"></a>Porównania wartości null
+# <a name="null-comparisons"></a>Porównania wartości Null
 A `null` wartości w źródle danych wskazuje, czy wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania, można sprawdzić w przypadku wartości null wartości, tak aby niektóre obliczeń lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub innych niż null, danych. Semantyka wartości null CLR, jednak może różnić się od semantyka wartości null, źródła danych. Większość baz danych użyć wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie można rozpoznać `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI na wartości null, ale nie zawsze jest to wymagane.  
   
  Domyślnie w programie SQL Server porównywanie wartości null jest równa null, zwraca wartość null. W poniższym przykładzie wiersze gdzie `ShipDate` ma wartość null są wykluczone z zestawu wyników i [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] instrukcji zwróci 0 wierszy.  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], jeśli przekazujesz kolekcji, która obsługuje `IQueryable` do funkcji agregującej, operacje agregacji są wykonywane w bazie danych. Może to być różnice w wynikach zapytania, które były wykonywane w pamięci i zapytania, które zostało wykonane w bazie danych. Za pomocą zapytania w pamięci Jeśli brak dopasowań, zapytanie zwraca zero. W bazie danych, takie same zapytanie zwraca `null`. Jeśli `null` wartość jest przekazywana do funkcji agregującej LINQ, zostanie zgłoszony wyjątek. Aby zaakceptować to możliwe `null` wartości rzutowania typów i właściwości typów, które odbierają wyników zapytania do typów dopuszczających wartości null.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wyrażenia w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

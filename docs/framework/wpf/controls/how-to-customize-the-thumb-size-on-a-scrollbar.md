@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Dostosuj rozmiar miniatury na ScrollBar'
+title: 'Instrukcje: Dostosowywanie rozmiaru miniatury na pasku ScrollBar'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ScrollBar control [WPF]
 - customizing thumb size [WPF]
 - thumb size [WPF]
 ms.assetid: fa32b866-5ca1-4e73-85e7-2ac64b80d194
-ms.openlocfilehash: 30fc72e3f0631b01777bf058c7a7470cc376a547
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 60ae7c4e95801036c5deb0c485645297509b830c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207282"
 ---
-# <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Instrukcje: Dostosuj rozmiar miniatury na ScrollBar
+# <a name="how-to-customize-the-thumb-size-on-a-scrollbar"></a>Instrukcje: Dostosowywanie rozmiaru miniatury na pasku ScrollBar
 W tym temacie wyjaśniono, jak ustawić <xref:System.Windows.Controls.Primitives.Thumb> z <xref:System.Windows.Controls.Primitives.ScrollBar> o stałym rozmiarze i jak określić minimalny rozmiar <xref:System.Windows.Controls.Primitives.Thumb> z <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
 ## <a name="example"></a>Przykład  
@@ -31,4 +31,5 @@ W tym temacie wyjaśniono, jak ustawić <xref:System.Windows.Controls.Primitives
  [!code-xaml[ScrollBarCustomThumbSize#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollBarCustomThumbSize/CS/Window1.xaml#2)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ScrollBar — style i szablony](scrollbar-styles-and-templates.md)
+
+- [ScrollBar — Style i szablony](scrollbar-styles-and-templates.md)

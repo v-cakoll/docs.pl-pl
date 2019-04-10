@@ -2,17 +2,17 @@
 title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 4f5435dd482a20e1aa5a6e0b93d6222025b05518
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 95004951a664c3c8271604938c5ce1d93a269304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211507"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)
 Po dołączeniu asynchronicznego kodu w aplikacji należy wziąć pod uwagę i ewentualnie zapobiec współużytkowaniu wątkowości, która odwołuje się do ponownego wprowadzania operacji asynchronicznej, zanim została ukończona. Jeśli nie zidentyfikujesz i obsłużysz możliwości współużytkowania wątkowości, może to spowodować nieoczekiwane wyniki.  
   
- **W tym temacie**  
+ **W tym temacie:**  
   
 -   [Uznawanie współużytkowania wątkowości](#BKMK_RecognizingReentrancy)  
   
@@ -480,8 +480,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
         $"\r\n\r\nTOTAL bytes returned:  {total}\r\n";
 }  
 ```  
-  
-   
+
 #### <a name="points-of-interest"></a>Punktów orientacyjnych  
  Linie informacyjne, rozpoczynające się od znaku funta (#) w danych wyjściowych objaśnić, jak działa ten przykład.  
   

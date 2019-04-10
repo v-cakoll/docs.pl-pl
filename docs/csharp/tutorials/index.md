@@ -2,12 +2,12 @@
 title: Samouczki języka C#
 description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214445"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
 
@@ -61,5 +61,3 @@ Następujące samouczki umożliwiają tworzenie C# programy przy użyciu [platfo
 * [Praca z technologią LINQ](working-with-linq.md): Pokazuje wiele funkcji LINQ i elementów języka, które go obsługują.
 * [Przy użyciu atrybutów](attributes.md): Pokazuje, jak utworzyć i używać atrybutów w C#.
 * [Interpolacja ciągów](exploration/interpolated-strings.yml) samouczku przedstawiono sposób wstawiania wartości do ciągu. Dowiesz się, jak utworzyć ciągu interpolowanego z osadzonymi C# wyrażeń i jak kontrolować wygląd tekstu wyniki wyrażenia w ciągu wynikowym. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](exploration/interpolated-strings-local.md).
-
-

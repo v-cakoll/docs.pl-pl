@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214874"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi — funkcja
 Tworzy połączenie za pomocą modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.
@@ -105,7 +105,6 @@ Ta funkcja zawija wywołanie do [IWbemLocator::ConnectServer](/windows/desktop/a
 Lokalny dostęp do domyślnej przestrzeni nazw `strNetworkResource` może być ścieżką prosty obiekt: "root\default" lub "\\.\root\default". Aby uzyskać dostęp do domyślnej przestrzeni nazw na komputerze zdalnym za pomocą modelu COM lub zgodny z programem Microsoft sieci, należy dołączyć nazwę komputera: "\\myserver\root\default". Nazwa komputera może również być nazwy DNS lub adres IP. `ConnectServerWmi` Funkcji można też połączyć z komputerami z systemem IPv6 przy użyciu adresu IPv6.
 
 `strUser` Nie może być ciągiem pustym. Jeśli domena została określona w `strAuthority`, jego musi również być nieuwzględnione w `strUser`, lub funkcja zwraca `WBEM_E_INVALID_PARAMETER`.
-
 
 ## <a name="requirements"></a>Wymagania
 

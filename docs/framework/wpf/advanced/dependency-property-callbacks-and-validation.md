@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219814"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Zależność wartości wywołania zwrotnego i walidacji
 W tym temacie opisano sposób tworzenia właściwości zależności za pomocą alternatywnych implementacji niestandardowych dla powiązanych właściwości funkcji, takich jak sprawdzanie poprawności oznaczania, wywołania zwrotne, które są wywoływane po każdej zmianie od wartości właściwości i zastępowaniem możliwe, poza wpływa na określenie wartości. W tym temacie omówiono również scenariusze, w których rozwijając domyślną właściwość dla systemu zachowania przy użyciu tych metod jest właściwe.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W tym temacie założono, że rozumiesz podstawowe scenariusze Implementowanie właściwości zależności i sposób stosowania metadanych właściwości zależności niestandardowej. Zobacz [niestandardowe właściwości zależności](custom-dependency-properties.md) i [metadane zależności właściwości](dependency-property-metadata.md) dla kontekstu.  
@@ -81,6 +79,7 @@ W tym temacie opisano sposób tworzenia właściwości zależności za pomocą a
  System właściwości będą traktować dowolny <xref:System.Windows.CoerceValueCallback> zwracającego wartość <xref:System.Windows.DependencyProperty.UnsetValue> w szczególnych przypadkach. Ten przypadek specjalny oznacza, że zmiana właściwości, które spowodowały <xref:System.Windows.CoerceValueCallback> wywołanego powinny zostać odrzucone przez system właściwości, a system właściwości zamiast tego powinien wysyłać raporty niezależnie od poprzedniej wartości, gdyby właściwość. Mechanizm ten może być przydatne do Sprawdź, czy zmiany właściwości, które były inicjowane asynchronicznie są ciągle ważny dla bieżącego stanu obiektu i pominąć zmiany, jeśli nie. Inny scenariusz możliwe polega na tym, że selektywnie można pominąć wartość, w zależności od tego, który składnik właściwości określenie wartości jest odpowiedzialny za raportowana. Aby to zrobić, można użyć <xref:System.Windows.DependencyProperty> przekazany jako dane wejściowe na potrzeby wywołania zwrotnego i identyfikator właściwości <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, a następnie przetwarzania <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Metadane zależności właściwości](dependency-property-metadata.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)

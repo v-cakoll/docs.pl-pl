@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Implementuj właściwość zależności'
+title: 'Instrukcje: Implementowanie właściwości zależności'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223804"
 ---
-# <a name="how-to-implement-a-dependency-property"></a>Instrukcje: Implementuj właściwość zależności
+# <a name="how-to-implement-a-dependency-property"></a>Instrukcje: Implementowanie właściwości zależności
 W tym przykładzie pokazano, jak utworzyć kopię [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwość o <xref:System.Windows.DependencyProperty> pola, w związku z tym Definiowanie właściwości zależności. Podczas definiowania własnych właściwości i chcesz, aby obsługiwać wiele aspektów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funkcje, w tym stylów, powiązań danych, dziedziczenie, animacji i wartości domyślne należy go wdrożyć jako właściwość zależności.  
   
 ## <a name="example"></a>Przykład  
@@ -33,5 +33,6 @@ W tym przykładzie pokazano, jak utworzyć kopię [!INCLUDE[TLA#tla_clr](../../.
  Aby uzyskać więcej informacji o tym, jak i dlaczego implementować właściwość zależności, a nie tylko tworzenie kopii [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Zobacz właściwość z polem prywatnej [Przegląd właściwości zależności](dependency-properties-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Tematy z instrukcjami](properties-how-to-topics.md)
+- [— Tematy porad](properties-how-to-topics.md)

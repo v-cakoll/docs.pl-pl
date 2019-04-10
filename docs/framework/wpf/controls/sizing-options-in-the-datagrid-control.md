@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219203"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Opcje ustalania rozmiaru w formancie DataGrid
 Różne opcje są dostępne do kontroli sposób, w jaki <xref:System.Windows.Controls.DataGrid> rozciąga się. <xref:System.Windows.Controls.DataGrid>, A poszczególne wiersze i kolumny w <xref:System.Windows.Controls.DataGrid>, można ustawić rozmiar automatycznie, aby ich zawartość lub może być ustawiona na określone wartości. Domyślnie <xref:System.Windows.Controls.DataGrid> będzie rosnąć i Dopasuj przez zmniejszenie rozmiaru jego zawartość.  
@@ -86,6 +86,7 @@ Różne opcje są dostępne do kontroli sposób, w jaki <xref:System.Windows.Con
  Użytkownicy mogą zmieniać rozmiar <xref:System.Windows.Controls.DataGrid> wierszy i kolumn sekcjami nagłówek wiersza lub kolumny. <xref:System.Windows.Controls.DataGrid> Obsługuje również automatyczna zmiana rozmiaru wierszy i kolumn, klikając dwukrotnie wiersz lub kolumnę linii podziału nagłówka. Aby zapobiec zmiana rozmiaru kolumn określonej przez użytkownika, ustaw <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> właściwość `false` dla poszczególnych kolumn. Aby uniemożliwić użytkownikom zmienianie rozmiaru wszystkich kolumn, należy ustawić <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> właściwość `false`. Aby uniemożliwić użytkownikom zmienianie rozmiaru wszystkich wierszy, ustawianie <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> właściwość `false`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

@@ -2,12 +2,12 @@
 title: System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 ms.date: 03/30/2017
 ms.assetid: c6cb0065-b4f6-40eb-89ac-5e8f0e05e0de
-ms.openlocfilehash: 41fcb01b55ece7f5f99b41487795ee568a7e314b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cab5ea2c02748c03a5a703244009b11c3263ee1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208788"
 ---
 # <a name="systemservicemodelsecuritysecuritytokenauthenticatoropened"></a>System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
 System.ServiceModel.Security.SecurityTokenAuthenticatorOpened  
@@ -16,6 +16,7 @@ System.ServiceModel.Security.SecurityTokenAuthenticatorOpened
  Wystawcy uwierzytelniania tokenu zabezpieczeń został otwarty.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

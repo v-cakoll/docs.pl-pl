@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216473"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
 Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. Czasami możesz zwiększyć szybkość realizacji przez następujących podstawowych reguł w kodzie źródłowym. W niektórych programach jest ważne, aby dokładnie sprawdzić kod i użyć profilerów, aby upewnić się, że działa tak szybko, jak to możliwe. W innych programach nie trzeba wykonywać takiej optymalizacji, ponieważ kod działa zadowalająco szybko, jak jest pisany. W tym artykule wymieniono niektóre typowe obszary, w których może to spowodować obniżenie wydajności i wskazówki dotyczące poprawiania go, a także łącza do tematów wyższą wydajność. Aby uzyskać więcej informacji na temat planowania i dokonywania jej pomiarów wydajności, zobacz [wydajności](../../../docs/framework/performance/index.md)  
@@ -32,7 +32,7 @@ Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. C
   
 -   [Szybsze pisanie kodu zarządzanego: Znaj koszt](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Pisanie wysokiej wydajności aplikacji zarządzanych: A Primer](https://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [Pisanie wysokiej wydajności aplikacji zarządzanych: Podstawowe informacje](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
 -   [Podstawy modułu odśmiecania pamięci i wskazówki dotyczące wydajności](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
@@ -43,6 +43,7 @@ Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. C
 -   [Blog Morrison zaliczko](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wydajność](../../../docs/framework/performance/index.md)
-- [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania w Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)

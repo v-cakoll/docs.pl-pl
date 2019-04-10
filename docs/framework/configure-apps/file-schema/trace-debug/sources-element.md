@@ -1,5 +1,5 @@
 ---
-title: <sources>, element
+title: <sources> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9104a4a302aa9c6094adbc13396074fdd4db4bbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262507"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215784"
 ---
 # <a name="sources-element"></a>\<źródła > Element
 Określa źródła śledzenia, które inicjują komunikatów śledzenia.  
@@ -80,6 +80,7 @@ Określa źródła śledzenia, które inicjują komunikatów śledzenia.
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>

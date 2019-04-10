@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a098afe1702e9559a2784ea0716a0a61216e9fd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7f29c365e9f6ba85f85ceb232f7af89446af2a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213054"
 ---
-# <a name="endmethodenumeration-function"></a>Funkcja EndMethodEnumeration
+# <a name="endmethodenumeration-function"></a>EndMethodEnumeration, funkcja
 Kończy sekwencji wyliczenie pracę z wywołaniem [funkcja BeginMethodEnumeration](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -68,4 +68,5 @@ Obiekt wywołujący, który rozpoczyna się przy użyciu sekwencji wyliczenie [f
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

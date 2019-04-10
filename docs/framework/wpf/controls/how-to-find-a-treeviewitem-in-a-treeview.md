@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Znajdź TreeViewItem w TreeView'
+title: 'Instrukcje: Znajdowanie elementu TreeViewItem w kontrolce TreeView'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219047"
 ---
-# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Instrukcje: Znajdź TreeViewItem w TreeView
+# <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Instrukcje: Znajdowanie elementu TreeViewItem w kontrolce TreeView
 <xref:System.Windows.Controls.TreeView> Kontrola zapewnia wygodny sposób prezentują dane hierarchiczne. Jeśli Twoje <xref:System.Windows.Controls.TreeView> jest powiązana ze źródłem danych <xref:System.Windows.Controls.TreeView.SelectedItem%2A> właściwość zapewnia wygodny sposób na szybkie pobranie obiektu wybranych danych. Zazwyczaj najlepiej pracować z obiektu źródłowego danych, ale czasami konieczne może być programowe Zmienianie danych zawierające <xref:System.Windows.Controls.TreeViewItem>. Na przykład, konieczne może być programowo rozwiń <xref:System.Windows.Controls.TreeViewItem>, lub wybierz inny element w <xref:System.Windows.Controls.TreeView>.  
   
  Aby znaleźć <xref:System.Windows.Controls.TreeViewItem> zawierającą obiekt danych określonego, musi przechodzić przez każdy poziom <xref:System.Windows.Controls.TreeView>. Elementy w <xref:System.Windows.Controls.TreeView> można także zwirtualizować poprawić wydajność. W przypadku których może być zwirtualizowane elementy, możesz również należy weź pod uwagę <xref:System.Windows.Controls.TreeViewItem> do sprawdzenia, czy zawiera on obiektu danych.  
@@ -42,4 +42,5 @@ ms.locfileid: "57360236"
  [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Poprawianie wydajności kontrolki TreeView](how-to-improve-the-performance-of-a-treeview.md)

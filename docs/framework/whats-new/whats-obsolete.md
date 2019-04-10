@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: 5f59c6ea6f39ecba49bd8aa18ee3abab750891c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203720"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Przestarzałe elementy w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.  
@@ -56,7 +56,7 @@ ms.locfileid: "58018744"
   
  W poniższej tabeli wymieniono wartości ciągów, które można przypisać do `version` atrybut pod kątem określonej wersji programu .NET Framework.  
   
-|Wersja programu .NET Framework|`version` ciąg|
+|Wersja programu .NET Framework|`version` string|
 |-|-|  
 |4.7 (w tym 4.7.1 i 4.7.2)|w wersji 4.0|  
 |4.6 (w tym 4.6.1 i 4.6.2)|w wersji 4.0|  
@@ -70,7 +70,7 @@ ms.locfileid: "58018744"
 ## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Przestarzałe list dla .NET Framework 4.5 lub nowszy  
  [Przestarzałe typy](obsolete-types.md)  
   
- [Przestarzałe elementy członkowskie](obsolete-members.md)  
+ [Przestarzałe składowe](obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Przestarzałe list dla wcześniejszych wersji  
  [Przestarzałe typy w programie .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
@@ -82,4 +82,5 @@ ms.locfileid: "58018744"
  [.NET framework 2.0 przestarzałe listy](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

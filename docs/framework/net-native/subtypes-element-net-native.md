@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 712282153b79edc480ec387aa746e375ddd30d27
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208296"
 ---
 # <a name="subtypes-element-net-native"></a>\<Podtypy > (architektura .NET Native)
 Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z typu zawierającego.  
@@ -60,7 +60,7 @@ Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z t
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<Subtypes>` Element dotyczy podtypy jej typ zawierający zasady. Możesz użyć, jeśli chcesz zastosować zasady różnych typów pochodnych i ich klasami podstawowymi.  
@@ -90,6 +90,7 @@ Stosuje zasady środowiska uruchomieniowego dla wszystkich klas dziedziczone z t
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [\<Typ > Element](../../../docs/framework/net-native/type-element-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], Rotation3DAnimation
 - 3-D translations [WPF], animating [WPF], with key frames (Rotation3DAnimation)
 ms.assetid: 6f671b95-7f30-4836-9a4f-aeb7dc30121f
-ms.openlocfilehash: 90e982838cb5d5b4488185c041e946c15d1e61e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 2316282a39190e86b0e2f0ec67ccc743a45d55e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213184"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames"></a>Instrukcje: Animuj rotację 3D z wykorzystaniem klatek kluczowych
 W poniższym przykładzie <xref:System.Windows.Media.Animation.Rotation3DAnimationUsingKeyFrames> jest używane do utworzenia obiektu 3D Obróć podczas jego osi obrotu animuje skutkuje "wobble". Ta animacja używa następujących klatek kluczowych:  
@@ -26,8 +26,9 @@ W poniższym przykładzie <xref:System.Windows.Media.Animation.Rotation3DAnimati
  [!code-xaml[Animation3DGallery_snip#Rotation3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Rotation3DAnimationUsingKeyFramesExample.xaml#rotation3danimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Grafika 3D — przegląd](3-d-graphics-overview.md)
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+
+- [Przegląd Grafika 3-D](3-d-graphics-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Animowanie obrotu 3D przy użyciu scenorysów](how-to-animate-a-3-d-rotation-using-storyboards.md)
 - [Animowanie obrotu 3D przy użyciu elementu Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
 - [Animowanie obrotu 3D przy użyciu kwaternionów](how-to-animate-a-3-d-rotation-using-quaternions.md)

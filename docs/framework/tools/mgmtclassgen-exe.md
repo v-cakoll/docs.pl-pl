@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213132"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Zarządzanie generatorem silnie typizowanej klasy)
 Narzędzie Management Strongly Typed Class Generator umożliwia szybkie generowanie wcześnie powiązanych klas zarządzanych dla określonej klasy Instrumentacji zarządzania Windows (WMI). Wygenerowana klasa upraszcza kod, który trzeba napisać, aby uzyskać dostęp do wystąpienia klasy WMI.  
@@ -36,13 +36,13 @@ WMIClass [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/l***języka* |Określa język, w którym ma zostać wygenerowana wcześnie powiązana klasa zarządzana. Można określić **CS** (C#; domyślna), **VB** (Visual Basic), **MC** (C++) lub **JS** (JScript) jako argument języka.|  
-|**/m***maszyny* |Określa komputer, z którym należy nawiązać połączenie (na tym komputerze znajduje się klasa WMI). Wartością domyślną jest komputer lokalny.|  
-|**/n***ścieżki* |Określa ścieżkę do przestrzeni nazw usługi WMI zawierającej odpowiednią klasę WMI. Jeśli ta opcja nie jest określona, narzędzie wygeneruje kod dla *WMIClass* w domyślnym **Root\cimv2** przestrzeni nazw.|  
-|**/o***classnamespace* |Określa przestrzeń nazw platformy .NET, w której ma zostać wygenerowana klasa kodu zarządzanego. Jeśli ta opcja nie zostanie określona, narzędzie wygeneruje przestrzeń nazw, używając przestrzeni nazw usługi WMI i prefiksu schematu. Prefiks schematu jest częścią nazwy klasy poprzedzającą znak podkreślenia. Na przykład w przypadku **Win32_OperatingSystem** klasy w **Root\cimv2** przestrzeni nazw, narzędzie wygeneruje klasy w **głównego. CIMV2. Win32**.|  
-|**/p***filepath* |Określa ścieżkę do pliku, w którym ma zostać zapisany wygenerowany kod. Jeśli ta opcja nie zostanie określona, narzędzie utworzy plik w bieżącym katalogu. Nazwa klasy oraz pliku, w którym jest generowana, przy użyciu klasy *WMIClass* argumentu. Nazwa klasy i pliku są takie same jak nazwa *WMIClass.* Jeśli *WMIClass* zawiera znak podkreślenia, narzędzie użyje części nazwy klasy po znaku podkreślenia. Na przykład jeśli *WMIClass* nazwa jest w formacie **Win32_LogicalDisk**, wygenerowana klasa oraz plik nosi nazwę "DyskLogiczny". Jeżeli plik już istnieje, narzędzie zastąpi istniejący plik.|  
-|**/PW***hasła* |Określa hasło używane podczas logowania do komputera określonego przez **/m** opcji.|  
-|**/u***nazwy użytkownika* |Określa nazwę użytkownika do użycia podczas logowania się do komputera określonego przez **/m** opcji.|  
+|**/l***języka*|Określa język, w którym ma zostać wygenerowana wcześnie powiązana klasa zarządzana. Można określić **CS** (C#; domyślna), **VB** (Visual Basic), **MC** (C++) lub **JS** (JScript) jako argument języka.|  
+|**/m***maszyny*|Określa komputer, z którym należy nawiązać połączenie (na tym komputerze znajduje się klasa WMI). Wartością domyślną jest komputer lokalny.|  
+|**/n***ścieżki*|Określa ścieżkę do przestrzeni nazw usługi WMI zawierającej odpowiednią klasę WMI. Jeśli ta opcja nie jest określona, narzędzie wygeneruje kod dla *WMIClass* w domyślnym **Root\cimv2** przestrzeni nazw.|  
+|**/o***classnamespace*|Określa przestrzeń nazw platformy .NET, w której ma zostać wygenerowana klasa kodu zarządzanego. Jeśli ta opcja nie zostanie określona, narzędzie wygeneruje przestrzeń nazw, używając przestrzeni nazw usługi WMI i prefiksu schematu. Prefiks schematu jest częścią nazwy klasy poprzedzającą znak podkreślenia. Na przykład w przypadku **Win32_OperatingSystem** klasy w **Root\cimv2** przestrzeni nazw, narzędzie wygeneruje klasy w **głównego. CIMV2. Win32**.|  
+|**/p***filepath*|Określa ścieżkę do pliku, w którym ma zostać zapisany wygenerowany kod. Jeśli ta opcja nie zostanie określona, narzędzie utworzy plik w bieżącym katalogu. Nazwa klasy oraz pliku, w którym jest generowana, przy użyciu klasy *WMIClass* argumentu. Nazwa klasy i pliku są takie same jak nazwa *WMIClass.* Jeśli *WMIClass* zawiera znak podkreślenia, narzędzie użyje części nazwy klasy po znaku podkreślenia. Na przykład jeśli *WMIClass* nazwa jest w formacie **Win32_LogicalDisk**, wygenerowana klasa oraz plik nosi nazwę "DyskLogiczny". Jeżeli plik już istnieje, narzędzie zastąpi istniejący plik.|  
+|**/PW***hasła*|Określa hasło używane podczas logowania do komputera określonego przez **/m** opcji.|  
+|**/u***nazwy użytkownika*|Określa nazwę użytkownika do użycia podczas logowania się do komputera określonego przez **/m** opcji.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -61,11 +61,11 @@ WMIClass [options]
 |CIM_SINT32|**Int32**|  
 |SIM_UINT32|**UInt32**|  
 |CIM_SINT64|**Int64**|  
-|CIM_UINT64|**UInt64 —**|  
+|CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
 |CIM_BOOLEAN|**Boolean**|  
-|CIM_String|**Ciąg**|  
+|CIM_String|**String**|  
 |CIM_DATETIME|**Data i godzina** lub **przedział czasu**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

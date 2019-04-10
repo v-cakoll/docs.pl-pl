@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215043"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
 Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:  
@@ -43,14 +43,14 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*assemblyFile.dll*|Plik zestawu źródłowego. Zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|*plikZestawu.dll*|Plik zestawu źródłowego. Zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/appdir:** *ścieżki*|Określa katalog główny aplikacji.|  
 |**operacji:** *applicationName*|Określa nazwę aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/c**|Tworzy aplikację docelową.|  
-|**componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
+|**/componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
 |**/exapp**|Określa, że narzędzie ma oczekiwać istniejącej aplikacji.|  
 |**/extlb**|Używa istniejącej biblioteki typów.|  
 |**/fc**|Znajduje lub tworzy aplikację docelową.|  
@@ -87,6 +87,7 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Instrukcje: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

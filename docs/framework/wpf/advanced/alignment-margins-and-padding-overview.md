@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209167"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Przegląd Wyrównanie, marginesy i wypełnienia
 <xref:System.Windows.FrameworkElement> Klasa udostępnia kilka właściwości, które są używane do dokładnie pozycjonować elementy podrzędne. W tym temacie omówiono cztery najważniejsze właściwości: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Efekty te właściwości są ważne, aby dowiedzieć się, ponieważ stanowią podstawę do kontrolowania położenie elementów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>Wprowadzenie do pozycjonowania elementu  
  Wiele sposobów, aby ustalić położenie elementów za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Jednak osiągnięcia idealny układ wykracza poza po prostu wybierając po prawej stronie <xref:System.Windows.Controls.Panel> elementu. Precyzyjnego pozycjonowania wymaga zrozumienia <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> właściwości.  
@@ -56,7 +55,7 @@ ms.locfileid: "57355414"
 |<xref:System.Windows.HorizontalAlignment.Left>|Elementy podrzędne są wyrównane do lewej miejsca przydzielonego układu elementu nadrzędnego.|  
 |<xref:System.Windows.HorizontalAlignment.Center>|Elementy podrzędne są wyrównane do środka miejsce przydzielone układu elementu nadrzędnego.|  
 |<xref:System.Windows.HorizontalAlignment.Right>|Elementy podrzędne są wyrównane z prawej strony elementu nadrzędnego układu przydzielonego miejsca.|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (Ustawienie domyślne)|Elementy podrzędne są rozciągnięte do wypełnienia elementu nadrzędnego układu przydzielonego miejsca. Jawne <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> wartości mają pierwszeństwo.|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (Domyślnie)|Elementy podrzędne są rozciągnięte do wypełnienia elementu nadrzędnego układu przydzielonego miejsca. Jawne <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> wartości mają pierwszeństwo.|  
   
  Poniższy przykład pokazuje, jak zastosować <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> właściwość <xref:System.Windows.Controls.Button> elementów. Każda wartość atrybutu jest wyświetlany, aby lepiej zilustrować różnych zachowań renderowania.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "57355414"
 |<xref:System.Windows.VerticalAlignment.Top>|Elementy podrzędne są wyrównane do górnej części miejsce przydzielone układu elementu nadrzędnego.|  
 |<xref:System.Windows.VerticalAlignment.Center>|Elementy podrzędne są wyrównane do środka miejsce przydzielone układu elementu nadrzędnego.|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|Elementy podrzędne są wyrównane do dolnej części elementu nadrzędnego układu przydzielonego miejsca.|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (Ustawienie domyślne)|Elementy podrzędne są rozciągnięte do wypełnienia elementu nadrzędnego układu przydzielonego miejsca. Jawne <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> wartości mają pierwszeństwo.|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (Domyślnie)|Elementy podrzędne są rozciągnięte do wypełnienia elementu nadrzędnego układu przydzielonego miejsca. Jawne <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> wartości mają pierwszeństwo.|  
   
  Poniższy przykład pokazuje, jak zastosować <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> właściwość <xref:System.Windows.Controls.Button> elementów. Każda wartość atrybutu jest wyświetlany, aby lepiej zilustrować różnych zachowań renderowania. Do celów tego przykładu <xref:System.Windows.Controls.Grid> element z liniami siatki widoczny jest używany jako element nadrzędny, aby lepiej zilustrować zachowanie układ każdej wartości właściwości.  
   
@@ -142,10 +141,11 @@ ms.locfileid: "57355414"
  Dodatkowe zasoby są dostępne objaśniające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układ bardziej szczegółowo. [Przegląd panele](../controls/panels-overview.md) temat zawiera szczegółowe informacje o różnych <xref:System.Windows.Controls.Panel> elementów. Temat [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md) wprowadza zaawansowanych technik, które pozycji składników i wiązania ich działania ze źródłami danych za pomocą elementów układu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
-- [Panele — omówienie](../controls/panels-overview.md)
+- [Przegląd Panele](../controls/panels-overview.md)
 - [Układ](layout.md)
 - [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)

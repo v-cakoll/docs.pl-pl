@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eceff4380fa5965ef38fb98f4ead81b052da3460
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221104"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Menedżer certyfikatów)
 Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listami zaufania certyfikatów (CTL) oraz listami odwołania certyfikatów (CRL).  
@@ -48,22 +48,22 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*sourceStorename*|Magazyn certyfikatów zawierający istniejące certyfikaty, listy CTL lub CRL do dodania, zapisania lub wyświetlenia. Może to być plik magazynu lub magazyn systemowy.|  
-|*destinationStorename*|Wyjściowy magazyn lub plik certyfikatów.|  
+|*nazwaMagazynuŹródłowego*|Magazyn certyfikatów zawierający istniejące certyfikaty, listy CTL lub CRL do dodania, zapisania lub wyświetlenia. Może to być plik magazynu lub magazyn systemowy.|  
+|*nazwaMagazynuDocelowego*|Wyjściowy magazyn lub plik certyfikatów.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ add**|Dodaje certyfikaty oraz listy CTL i CRL do magazynu certyfikatów.|  
-|**/ all**|Dodaje wszystkie wpisy, gdy jest używane z **/ add**. Usuwa wszystkie wpisy, gdy jest używane z **/del**. Wyświetla wszystkie wpisy, gdy jest używana bez **/ add** lub **/del** opcje. **/All** opcji nie można używać z **/put**.|  
+|**/add**|Dodaje certyfikaty oraz listy CTL i CRL do magazynu certyfikatów.|  
+|**/all**|Dodaje wszystkie wpisy, gdy jest używane z **/ add**. Usuwa wszystkie wpisy, gdy jest używane z **/del**. Wyświetla wszystkie wpisy, gdy jest używana bez **/ add** lub **/del** opcje. **/All** opcji nie można używać z **/put**.|  
 |**/c**|Dodaje certyfikaty, gdy jest używany z **/ add**. Usuwa certyfikaty, gdy jest używany z **/del**. Zapisuje certyfikaty, gdy jest używane z **/put**. Wyświetla certyfikaty, gdy jest używana bez **/ add**, **/del**, lub **/put** opcji.|  
-|**/ LIST CRL**|Dodaje listy CRL, gdy jest używane z **/ add**. Usuwa listy CRL, gdy jest używane z **/del**. Zapisuje listy CRL, gdy jest używane z **/put**. Wyświetla listy CRL, gdy jest używana bez **/ add**, **/del**, lub **/put** opcji.|  
-|**/ CTL**|Dodaje listy CTL, gdy jest używane z **/ add**. Usuwa listy CTL, gdy jest używane z **/del**. Zapisuje listy CTL, gdy jest używane z **/put**. Wyświetla listy CTL, gdy jest używana bez **/ add**, **/del**, lub **/put** opcji.|  
-|**/ del**|Usuwa certyfikaty oraz listy CTL i CRL z magazynu certyfikatów.|  
+|**/CRL**|Dodaje listy CRL, gdy jest używane z **/ add**. Usuwa listy CRL, gdy jest używane z **/del**. Zapisuje listy CRL, gdy jest używane z **/put**. Wyświetla listy CRL, gdy jest używana bez **/ add**, **/del**, lub **/put** opcji.|  
+|**/CTL**|Dodaje listy CTL, gdy jest używane z **/ add**. Usuwa listy CTL, gdy jest używane z **/del**. Zapisuje listy CTL, gdy jest używane z **/put**. Wyświetla listy CTL, gdy jest używana bez **/ add**, **/del**, lub **/put** opcji.|  
+|**/del**|Usuwa certyfikaty oraz listy CTL i CRL z magazynu certyfikatów.|  
 |**/e** *encodingType*|Określa typ kodowania certyfikatu. Wartość domyślna to `X509_ASN_ENCODING`.|  
 |**/f** *Flagidw*|Określa flagę otwarcia magazynu. Jest to *Flagidw* parametr przekazany do **CertOpenStore**. Wartość domyślna to CERT_SYSTEM_STORE_CURRENT_USER. Ta opcja jest uwzględniana tylko wtedy, gdy **/y** jest używana opcja.|  
 |**/ h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/n** *nazwa*|Określa wspólną nazwę certyfikatu do dodania, usunięcia lub zapisania. Tej opcji można używać tylko z certyfikatami; nie można używać jej z listami CTL i CRL.|  
-|**/ put**|Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku. Plik jest zapisywany w formacie X.509. Możesz użyć **/7** z opcją **/put** opcję, aby zapisać plik w formacie PKCS #7. **/Put** opcji musi następować albo **/c**, **/CTL**, lub **/CRL**. **/All** opcji nie można używać z **/put**.|  
+|**/put**|Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku. Plik jest zapisywany w formacie X.509. Możesz użyć **/7** z opcją **/put** opcję, aby zapisać plik w formacie PKCS #7. **/Put** opcji musi następować albo **/c**, **/CTL**, lub **/CRL**. **/All** opcji nie można używać z **/put**.|  
 |**/r** *lokalizacji*|Określa lokalizację w rejestrze magazynu systemowego. Ta opcja jest uwzględniana tylko wtedy, gdy należy określić **/s** opcji. *Lokalizacja* musi mieć jedną z następujących czynności:<br /><br /> -   `currentUser` Wskazuje, że magazyn certyfikatów znajduje się w kluczu HKEY_CURRENT_USER. Domyślnie włączone.<br />-   `localMachine` Wskazuje, że magazyn certyfikatów znajduje się w kluczu HKEY_LOCAL_MACHINE.|  
 |**/s**|Wskazuje, że magazyn certyfikatów jest magazynem systemowym. Jeśli ta opcja nie jest określona, za magazyn jest uważany za **StoreFile**.|  
 |**{1** *wartośćskrótusha1*|Określa skrót SHA1 certyfikatu, listy CTL lub CRL do dodania, usunięcia lub zapisania.|  
@@ -138,6 +138,7 @@ certmgr /put /c /s my newFile
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Narzędzia](../../../docs/framework/tools/index.md)
-- [MakeCert.exe (narzędzie tworzenia certyfikatów)](/windows/desktop/SecCrypto/makecert)
+- [Makecert.exe (Narzędzie tworzenia certyfikatów)](/windows/desktop/SecCrypto/makecert)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

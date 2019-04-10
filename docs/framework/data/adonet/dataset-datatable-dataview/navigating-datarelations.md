@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 0f19e08aba36d2e93033fb944efe848d4e1125e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204162"
 ---
 # <a name="navigating-datarelations"></a>Nawigowanie w elementach DataRelation
 Jedną z podstawowych funkcji <xref:System.Data.DataRelation> jest umożliwienie nawigacji z jednego <xref:System.Data.DataTable> do drugiej w ramach <xref:System.Data.DataSet>. Dzięki temu można pobrać wszystkie powiązane <xref:System.Data.DataRow> obiekty w jednym **DataTable** , gdy jeden **DataRow** z powiązanych **DataTable**. Na przykład po ustanowieniu **DataRelation** między spisu klientów i tabelę zamówień, mogą pobierać wszystkie wiersze zamówienia dla wiersza określonego klienta za pomocą **GetChildRows**.  
@@ -50,5 +50,6 @@ Customer ID: NORTS
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

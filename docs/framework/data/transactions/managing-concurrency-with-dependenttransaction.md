@@ -2,12 +2,12 @@
 title: Zarządzanie współbieżnością za pomocą DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 1943c8c8c03bb9598dc0c456d52fa962288d240c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216304"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Zarządzanie współbieżnością za pomocą DependentTransaction
 <xref:System.Transactions.Transaction> Obiekt zostanie utworzony przy użyciu <xref:System.Transactions.Transaction.DependentClone%2A> metody. Jej jedyny ma na celu zagwarantowania, że transakcji nie można zatwierdzić, podczas gdy niektóre części kodu (na przykład wątku roboczego) są nadal wykonując pracę w transakcji. Podczas pracy w ramach transakcji sklonowanym jest gotowy do można zatwierdzić, można go powiadomić twórca za pomocą transakcji <xref:System.Transactions.DependentTransaction.Complete%2A> metody. W związku z tym można zachować spójności i poprawności danych.  
@@ -82,4 +82,5 @@ using(TransactionScope scope = new TransactionScope())
 -   Jeśli wątku roboczego spawns nowego wątku roboczego, upewnij się, że tworzenie klon zależny od klon zależny i przekazywanie ich do nowego wątku.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Transactions.DependentTransaction>

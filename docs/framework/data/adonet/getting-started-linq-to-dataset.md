@@ -2,12 +2,12 @@
 title: Wprowadzenie (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 743b99aeaaf4e0ce0f3049dd582ab396570ca295
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: cb9e2ddc3fa667d93d724740281fb61974e623a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208335"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Wprowadzenie (LINQ to DataSet)
 Ta sekcja zawiera informacje wprowadzające dotyczące programowania przy użyciu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -33,6 +33,7 @@ Ta sekcja zawiera informacje wprowadzające dotyczące programowania przy użyci
  <xref:System.Data.DataTableExtensions>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [LINQ i ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [Zapytanie o języku zintegrowanym (LINQ) —C#](../../../csharp/programming-guide/concepts/linq/index.md)  
 - [Zapytanie o języku zintegrowanym (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  

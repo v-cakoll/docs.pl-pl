@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe90542d1ba106dd52e8995afab298b4b9f69899
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1c95c22c6d4e4421e8a7681dfccabcc82e0ffd86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219788"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Instrukcje: Podłączanie delegata za pomocą odbicia
 Gdy używasz odbicia można załadować i uruchomić zestawów, nie można używać funkcji języka, takich jak C# `+=` operatora lub Visual Basic [AddHandler — instrukcja](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) do podłączania zdarzeń. Poniższe procedury pokazują, jak dołączyć istniejącą metodę do zdarzenia przez pobranie wszystkich typów wymaganych przez odbicie, a także jak utworzyć metodę dynamiczną za pomocą odbicia emisji i podłączyć ją do zdarzenia.  
@@ -114,6 +114,7 @@ Gdy używasz odbicia można załadować i uruchomić zestawów, nie można używ
 -   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>

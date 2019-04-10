@@ -2,12 +2,12 @@
 title: Przepływy pracy automatu stanów
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222994"
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.Activities.Statements.StateMachine> Działania, wraz z <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, i inne działania może służyć do tworzenia programów przepływu pracy maszyny stanu. Ten temat zawiera omówienie tworzenia przepływów pracy automatu stanów.  
@@ -101,8 +101,9 @@ Komputer stanu jest dobrze znanego modelu do tworzenia programów. <xref:System.
  Stan, który reprezentuje ukończenie automatu stanów.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Instrukcje: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md)
 - [StateMachine, projektant działań](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State, projektant działań](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState, projektant działań](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [Transaction, projektant działań](/visualstudio/workflow-designer/transition-activity-designer)
+- [Transition, projektant działań](/visualstudio/workflow-designer/transition-activity-designer)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218774"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Przechwycenie danych z pisaka
 <xref:System.Windows.Input.StylusPlugIns> Architektura zapewnia mechanizm implementowania kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i tworzenia cyfrowy atrament <xref:System.Windows.Ink.Stroke> obiektów. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowe zachowanie i zastosować je do strumienia danych pochodzących z urządzeń pióra, aby uzyskać optymalną wydajność.  
@@ -28,7 +28,7 @@ ms.locfileid: "57374313"
   
 -   [Dodawanie wtyczkę z elementem InkCanvas](#AddingYourPluginToAnInkCanvas)  
   
--   [Podsumowanie](#Conclusion)  
+-   [Wniosek](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektura  
@@ -71,5 +71,6 @@ ms.locfileid: "57374313"
  Przez wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> klasy i wstawiania ich do <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> kolekcji, można znacznie zwiększyć zachowanie cyfrowego pisma odręcznego. Masz dostęp do <xref:System.Windows.Input.StylusPoint> dane ponieważ jest generowany, dzięki czemu możesz dostosować <xref:System.Windows.Input.Stylus> danych wejściowych. Ponieważ masz takiego niskiego poziomu dostępu do <xref:System.Windows.Input.StylusPoint> danych, można zaimplementować kolekcji pisma odręcznego i renderowanie z optymalną wydajnością aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
+
+- [Zaawansowana obsługa atramentu](advanced-ink-handling.md)
 - [Uzyskiwania dostępu i manipulowania piórem](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

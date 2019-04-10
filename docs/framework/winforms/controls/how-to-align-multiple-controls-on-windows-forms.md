@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyrównywanie formantów na formularzach Windows Forms'
+title: 'Instrukcje: wyrównywanie kontrolek na formularzach systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: cf9213d4d7c5d7586a632374310a284c36f31bb6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209544"
 ---
-# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Instrukcje: Wyrównywanie formantów na formularzach Windows Forms
+# <a name="how-to-align-multiple-controls-on-windows-forms"></a>Instrukcje: wyrównywanie kontrolek na formularzach systemu Windows
 Aby ustandaryzować układ interfejsu użytkownika (UI), oparte na Windows aplikacji, można umieścić grup formantów za pomocą jednego polecenia.  
   
 > [!NOTE]
@@ -29,12 +29,13 @@ Aby ustandaryzować układ interfejsu użytkownika (UI), oparte na Windows aplik
 3.  Na **Format** menu wskaż **Wyrównaj**, a następnie kliknij jedną z dostępnych opcji siedem.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Kontrolki formularzy Windows Forms](index.md)
-- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
-- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
-- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Instrukcje: Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego](how-to-reassign-existing-controls-to-a-different-parent.md)
+
+- [Formanty formularzy systemu Windows](index.md)
+- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)
+- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
+- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)
+- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Instrukcje: ponowne przypisywanie istniejących kontrolek do innego elementu nadrzędnego](how-to-reassign-existing-controls-to-a-different-parent.md)

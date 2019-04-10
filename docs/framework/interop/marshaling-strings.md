@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223033"
 ---
 # <a name="marshaling-strings"></a>Organizowanie ciągów
 Wywołanie platformy parametry ciągu kopii, konwersję z formatu .NET Framework (Unicode) do formatu niezarządzane (ANSI), jeśli to konieczne. Ponieważ ciągi zarządzane są niezmienne, wywołanie platformy nie kopiuje ich powrót po awarii z niezarządzanej pamięci do pamięci zarządzanej, gdy funkcja zwraca.  
@@ -39,7 +39,8 @@ Wywołanie platformy parametry ciągu kopii, konwersję z formatu .NET Framework
 |Jako tablica struktur, które zawierają ciągi według wartości.|Tworzy tablicę, struktur, które zawierają ciągi i tablicy jest przekazywany przez wartość.|[Tablice](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Marshaling danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
+
+- [Organizowanie danych w wywołaniu platformy](marshaling-data-with-platform-invoke.md)
 - [Marshaling klas, struktur i unii](marshaling-classes-structures-and-unions.md)
 - [Organizowanie różnych typów tablic](marshaling-different-types-of-arrays.md)
 - [Różne przykłady organizowania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))

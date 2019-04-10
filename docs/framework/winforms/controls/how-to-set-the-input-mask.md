@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Ustawienie maski wprowadzania'
+title: 'Instrukcje: ustawienie maski wprowadzania'
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207548"
 ---
-# <a name="how-to-set-the-input-mask"></a>Instrukcje: Ustawienie maski wprowadzania
+# <a name="how-to-set-the-input-mask"></a>Instrukcje: ustawienie maski wprowadzania
 Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, który obsługuje składni deklaratywnej akceptowanie lub odrzucanie dane wejściowe użytkownika. Ustawiając właściwość maski, można określić danych wejściowych użytkownika dozwolony bez konieczności pisania wszelkie logikę niestandardowego sprawdzania poprawności w aplikacji. Aby uzyskać więcej informacji, zobacz sekcję Uwagi <xref:System.Windows.Forms.MaskedTextBox> klasy.  
   
 ## <a name="setting-the-mask-property-manually"></a>Właściwość maski ręcznie  
@@ -64,4 +64,5 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
      Maska jest wprowadzana w **maski** właściwość **właściwości** okna.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Praca z formantem MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)
+
+- [Przewodnik: praca z kontrolką MaskedTextBox](walkthrough-working-with-the-maskedtextbox-control.md)

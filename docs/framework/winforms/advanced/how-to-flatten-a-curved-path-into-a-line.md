@@ -8,12 +8,12 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: d4847124c7af2e0b35d6874f53b85be4891b22df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215160"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Instrukcje: Spłaszczanie ścieżki krzywej do linii
 A <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt przechowuje sekwencji linii i krzywych Beziera. Można dodać kilka typów krzywych (wielokropek, łuki kardynalne) do ścieżki, ale każda krzywa jest konwertowany na krzywej Beziera, zanim znajduje się w ścieżce. Spłaszczanie ścieżki składa się z konwersji każdego krzywej Beziera w ścieżce z linii prostych sekwencji. Na poniższej ilustracji przedstawiono ścieżkę przed i po nim spłaszczanie.  
@@ -25,6 +25,7 @@ A <xref:System.Drawing.Drawing2D.GraphicsPath> obiekt przechowuje sekwencji lini
 -   Wywołaj <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> metody <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Metoda otrzymuje argument płaskość, który określa maksymalną odległość między ścieżką spłaszczone i Oryginalna ścieżka.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)
 - [Konstruowanie i rysowanie ścieżek](constructing-and-drawing-paths.md)

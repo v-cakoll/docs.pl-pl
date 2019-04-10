@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1bcf52a3745b22df58e67e892bf3a2b77c542d43
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24b7af4b44d51da06e9d65104f1b469ef1d83b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219437"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread — Metoda
 Pobiera obiekt, który może być odpytywany icordebugthread — interfejs. Ta metoda jest przestarzała w programie .NET Framework 2.0.  
@@ -51,4 +51,5 @@ HRESULT GetInprocInspectionIThisThread(
  **Wersja programu .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+
+- [ICorProfilerInfo — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210675"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Określanie i obsługa błędów w kontraktach i usługach
 Aplikacje Windows Communication Foundation (WCF) obsługują sytuacje przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów protokołu SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, sposób zwracania tych błędów w ramach implementacji usługi i jak klienci wychwycić takie błędy.  
@@ -56,6 +56,7 @@ Aplikacje Windows Communication Foundation (WCF) obsługują sytuacje przez mapo
  Podczas deserializacji kontrakt błędu, WCF najpierw próbuje dopasować nazwę kontraktu błędu w wiadomości protokołu SOAP z typem umowy błędów. Nie można znaleźć dokładne dopasowanie, które następnie wyszuka listę błędów dostępnych umów w kolejności alfabetycznej na zgodne z typem. Jeśli dwa błędów kontrakty są niezgodne typy (jest podklasą innego, na przykład) niewłaściwy typ może służyć do deserializować błędu. To tylko wtedy, gdy kontrakt błędu nie określa nazwy, nazw i akcji. Aby zapobiec występowaniu tego problemu, zawsze w pełni kwalifikuje się błędów kontrakty, określając nazwę przestrzeni nazw i atrybutów akcji. Ponadto jeśli zdefiniowano liczbę usterek powiązanych umów pochodzi od udostępnionego klasy bazowej, upewnij się, że oznaczyć żadnych nowych elementów członkowskich z `[DataMember(IsRequired=true)]`. Aby uzyskać więcej informacji na ten `IsRequired` , zobacz atrybut <xref:System.Runtime.Serialization.DataMemberAttribute>. Spowoduje to uniemożliwić klasy bazowej na zgodny typ. i wymusić błędów, które ma zostać przeprowadzona do poprawnego typu pochodnego.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

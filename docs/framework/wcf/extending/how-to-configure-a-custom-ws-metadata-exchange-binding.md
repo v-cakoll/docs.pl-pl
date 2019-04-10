@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Konfigurowanie niestandardowego protokołu WS-Metadata Exchange powiązania'
+title: 'Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210506"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Instrukcje: Konfigurowanie niestandardowego protokołu WS-Metadata Exchange powiązania
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange
 W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metadata exchange powiązania. Windows Communication Foundation (WCF) zawiera cztery powiązania metadane zdefiniowane przez system, ale można opublikować za pomocą dowolnego powiązania, który ma metadanych. W tym temacie opisano, jak można opublikować za pomocą metadanych `wsHttpBinding`. To powiązanie zapewnia możliwość ujawnienia metadanych w bezpieczny sposób. Kod ten artykuł jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Korzystanie z pliku konfiguracji  
@@ -114,6 +114,7 @@ W tym temacie wyjaśniono, jak skonfigurować niestandardowe protokołu WS-Metad
     ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zachowanie publikowania metadanych](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [Pobieranie metadanych](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)

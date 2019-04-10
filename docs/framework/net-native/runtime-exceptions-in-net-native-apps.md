@@ -1,17 +1,17 @@
 ---
-title: Wyjątki czasu wykonywania w aplikacjach .NET Native
+title: Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native
 ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208283"
 ---
-# <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki czasu wykonywania w aplikacjach .NET Native
+# <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native
 Jest ważne przetestować kompilacji wydania aplikacji Universal Windows Platform na ich platformach docelowych, ponieważ konfiguracji debug i release całkowicie różnią się. Domyślnie korzysta z konfiguracji debugowania środowiska uruchomieniowego .NET Core do kompilowania aplikacji, ale konfiguracja wydania używa platformy .NET Native do kompilowania aplikacji do kodu macierzystego.  
   
 > [!IMPORTANT]
@@ -60,5 +60,6 @@ Additional information: Value does not fall within the expected range.
  Aby uzyskać pełny stos, należy zamiast tego należy uruchomić z kompilacji debugowania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Debugowanie aplikacji Universal Windows natywnych platformy .NET](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)

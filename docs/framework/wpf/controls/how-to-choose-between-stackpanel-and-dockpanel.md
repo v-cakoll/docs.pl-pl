@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wybierz pomiędzy StackPanel i DockPanel'
+title: 'Instrukcje: Wybieranie między elementami StackPanel i DockPanel'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - StackPanel control [WPF], DockPanel control compared to
 - controls [WPF], StackPanel
 ms.assetid: f9239086-451f-42e6-81f7-ef89ef349742
-ms.openlocfilehash: 13353212589f99c9ad735761af60ab3eff6c9ad8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8338421dfb1bea856c15edf9d324cec955584f9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206970"
 ---
-# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Instrukcje: Wybierz pomiędzy StackPanel i DockPanel
+# <a name="how-to-choose-between-stackpanel-and-dockpanel"></a>Instrukcje: Wybieranie między elementami StackPanel i DockPanel
 Ten przykład pokazuje, jak wybrać między za pomocą <xref:System.Windows.Controls.StackPanel> lub <xref:System.Windows.Controls.DockPanel> kiedy stos zawartość <xref:System.Windows.Controls.Panel>.  
   
 ## <a name="example"></a>Przykład  
@@ -32,6 +32,7 @@ Ten przykład pokazuje, jak wybrać między za pomocą <xref:System.Windows.Cont
  [!code-xaml[StackPanelOvw4#1](~/samples/snippets/xaml/VS_Snippets_Wpf/StackPanelOvw4/XAML/default.xaml#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.DockPanel>
-- [Panele — omówienie](panels-overview.md)
+- [Przegląd Panele](panels-overview.md)

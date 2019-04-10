@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Określanie wiązania klienta w kodzie'
+title: 'Instrukcje: Określanie powiązania klienta w kodzie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632845"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218605"
 ---
-# <a name="how-to-specify-a-client-binding-in-code"></a>Instrukcje: Określanie wiązania klienta w kodzie
+# <a name="how-to-specify-a-client-binding-in-code"></a>Instrukcje: Określanie powiązania klienta w kodzie
 W tym przykładzie zostanie utworzona usługa Kalkulator klienta i obowiązkowo określono powiązania dla tego klienta w kodzie. Klient uzyskuje dostęp do `CalculatorService`, który implementuje `ICalculator` interfejsu i usługi oraz klienta, użyj <xref:System.ServiceModel.BasicHttpBinding> klasy.  
   
  W tej procedurze założono, że usługa Kalkulator jest uruchomiona. Aby uzyskać informacje o tworzeniu usługi, zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md). Korzysta również [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)Windows Communication Foundation (WCF) umożliwia automatyczne generowanie składniki klienta. Narzędzie generuje kod klienta do uzyskania dostępu do usługi.  
@@ -47,4 +47,5 @@ W tym przykładzie zostanie utworzona usługa Kalkulator klienta i obowiązkowo 
 5.  Kompilowanie i uruchamianie klienta.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+
+- [Konfigurowanie usług i klientów za pomocą wiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

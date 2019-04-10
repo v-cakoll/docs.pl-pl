@@ -1,18 +1,18 @@
 ---
-title: Wykonywanie zapytania XPath w zestawie danych
+title: Wykonywanie zapytania XPath w elemencie DataSet
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209479"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie zapytania XPath w zestawie danych
+# <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie zapytania XPath w elemencie DataSet
 Relacja między zsynchronizowany <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> pozwala korzystać z XML usług, takich jak zapytania XML Path Language (XPath), do których dostęp **XmlDataDocument** i mogą wykonywać niektóre funkcje bardzo ułatwia niż dostęp do **DataSet** bezpośrednio. Na przykład, zamiast używać **wybierz** metody <xref:System.Data.DataTable> do nawigowanie po relacjach z innymi tabelami w **zestawu danych**, można wykonać zapytania XPath na **XmlDataDocument**  , jest zsynchronizowany z **DataSet**, aby uzyskać listę elementów XML w formie <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowania jako <xref:System.Xml.XmlElement> węzłów, może być następnie przekazywany do **GetRowFromElement** metody **XmlDataDocument**, aby zwrócić dopasowania <xref:System.Data.DataRow> odwołania do wierszy w tabeli zsynchronizowane **zestawu danych**.  
   
  Na przykład poniższy przykładowy kod wykonuje zapytanie XPath "podwójnym". **DataSet** jest wypełniany trzy tabele: **Klienci**, **zamówienia**, i **OrderDetails**. W tym przykładzie najpierw tworzenie relacji nadrzędny podrzędny między **klientów** i **zamówienia** tabel oraz między **zamówienia** i **OrderDetails** tabel. Zapytania XPath następnie odbywa się do zwrócenia **XmlNodeList** z **klientów** węzły w przypadku, gdy podwójnym **OrderDetails** węzeł ma **ProductID**węzła z wartością 43. W zasadzie próbka używa zapytanie XPath do określenia, którzy mają uporządkowane produktu, który ma **ProductID** 43.  
@@ -102,5 +102,6 @@ foreach (XmlNode xmlNode in nodeList)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Synchronizacja elementów DataSet i XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

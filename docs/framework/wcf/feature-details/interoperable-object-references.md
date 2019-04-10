@@ -2,12 +2,12 @@
 title: Odwołania do obiektów międzyoperacyjnych
 ms.date: 03/30/2017
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 5d2f7d93544cafab7cfe5d8dcbb8a4c5d5c5b576
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cbbd5a34269a7c4a5c33d72487a02df21f2f0fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222708"
 ---
 # <a name="interoperable-object-references"></a>Odwołania do obiektów międzyoperacyjnych
 Domyślnie <xref:System.Runtime.Serialization.DataContractSerializer> serializuje obiektów według wartości. Możesz użyć <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> właściwości w celu poinstruowania serializator kontraktu danych, aby zachować odwołania do obiektu podczas serializowania obiektów tego typu.  
@@ -95,6 +95,7 @@ public class SomeClass
  Za pomocą `IsReference` zapewnia zgodność na komunikat Pełna zgodnooć wersji. Bez niego gdy typem jest generowany na podstawie schematu, co jest wysyłane ponownie jako plik XML dla typ nie jest zawsze zgodny ze schematem pierwotnie zakłada, że. Innymi słowy mimo że `id` i `ref` atrybuty zostały zaszeregowane, oryginalnym schematem może mieć pozbawiona tych atrybutów (lub wszystkie atrybuty) występuje w kodzie XML. Za pomocą `IsReference` stosowany do składowej danych, należy w dalszym ciągu być uznane za "którego można się odwoływać" gdy roundtripped.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>

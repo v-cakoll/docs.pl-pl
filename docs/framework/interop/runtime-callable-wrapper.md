@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654136"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210142"
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
 Środowisko uruchomieniowe języka wspólnego udostępnia obiekty COM za pośrednictwem serwera proxy, wywoływana otoka wywoływana w czasie wykonywania (RCW). Mimo że RCW wydaje się być zwykły obiekt do klientów programu .NET, jego podstawową funkcją jest kierowanie wywołań między klientem platformy .NET i obiekt COM.  
@@ -25,8 +25,7 @@ ms.locfileid: "58654136"
 Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów COM za pomocą wywoływana otoka środowiska uruchomieniowego:
 
  ![Proces uzyskiwania dostępu do obiektów COM — throug RCW.](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  Przy użyciu metadanych pochodzące z biblioteki typów, środowisko uruchomieniowe tworzy wywoływanego obiektu COM i otoki dla tego obiektu. Każdy RCW obsługuje pamięć podręczną wskaźniki interfejsu na obiekt COM, otacza i zwalnia swoje odwołanie do obiektu COM, gdy RCW nie jest już potrzebny. Środowisko uruchomieniowe wykonuje wyrzucanie elementów bezużytecznych na RCW.  
   
  Wśród innych działań RCW kieruje dane między kodem zarządzanym i niezarządzanym imieniu opakowana obiektu. W szczególności RCW zapewnia marshaling dla argumentów metody i wartości zwracane metody zawsze wtedy, gdy klient i serwer mają różne reprezentacje danych przesyłanych między nimi.  
@@ -60,7 +59,8 @@ Na poniższej ilustracji przedstawiono proces uzyskiwania dostępu do obiektów 
 |**Interfejs IEnumVARIANT**|Umożliwia typów modelu COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Otoki COM](com-wrappers.md)
 - [Wywoływana otoka COM](com-callable-wrapper.md)
-- [Biblioteki typów na zestaw konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Podsumowanie informacji o konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

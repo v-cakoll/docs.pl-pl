@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Sortuj dane w widoku'
+title: 'Instrukcje: Sortowanie danych w widoku'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - views [WPF], grouping data
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
-ms.openlocfilehash: 41ee5cded04559acac5e7270c5e1a2450c70a5aa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211260"
 ---
-# <a name="how-to-sort-data-in-a-view"></a>Instrukcje: Sortuj dane w widoku
+# <a name="how-to-sort-data-in-a-view"></a>Instrukcje: Sortowanie danych w widoku
 W tym przykładzie opisano sposób sortowania danych w widoku.  
   
 ## <a name="example"></a>Przykład  
@@ -37,8 +37,9 @@ W tym przykładzie opisano sposób sortowania danych w widoku.
  Aby uzyskać przykład sposobu stosowania logiki sortowania [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], zobacz [sortowania i grupy danych przy użyciu widoku w XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>
 - [Sortowanie kolumny GridView po kliknięciu nagłówka](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
 - [Filtrowanie danych w widoku](how-to-filter-data-in-a-view.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

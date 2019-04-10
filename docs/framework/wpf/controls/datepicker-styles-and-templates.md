@@ -1,5 +1,5 @@
 ---
-title: DatePicker — style i szablony
+title: DatePicker — Style i szablony
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ControlTemplate [WPF], DatePicker
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - styles [WPF], DatePicker
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
-ms.openlocfilehash: 685eb9478f1ff2da9047546648320a94305fff57
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206138"
 ---
-# <a name="datepicker-styles-and-templates"></a>DatePicker — style i szablony
+# <a name="datepicker-styles-and-templates"></a>DatePicker — Style i szablony
 W tym temacie opisano, style i szablony <xref:System.Windows.Controls.DatePicker> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="datepicker-parts"></a>Części DatePicker  
@@ -77,9 +77,10 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.DatePicker
  Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony kontrolek](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
+- [Style i szablony formantu](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie formantu](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Używanie elementu ToolStripPanels dla MDI'
+title: 'Instrukcje: używanie elementu ToolStripPanels dla MDI'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ToolStripPanel control [Windows Forms], using for MDI
 - toolbars [Windows Forms], using for MDI
 ms.assetid: d6b884fc-0846-465f-83c3-5dc0fe93b00f
-ms.openlocfilehash: a543b9e292f29e54b45327ae77a81676c992f103
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 42d4ed23f477f545c4ff2be53c36d8ea86d3b4f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219879"
 ---
-# <a name="how-to-use-toolstrippanels-for-mdi"></a>Instrukcje: Używanie elementu ToolStripPanels dla MDI
+# <a name="how-to-use-toolstrippanels-for-mdi"></a>Instrukcje: używanie elementu ToolStripPanels dla MDI
 <xref:System.Windows.Forms.ToolStripPanel> Zapewnia elastyczność dla aplikacji interfejsu wielu dokumentów (MDI) za pomocą <xref:System.Windows.Forms.ToolStripPanel.Join%2A> metody.  
   
 ## <a name="example"></a>Przykład  
@@ -33,5 +33,6 @@ ms.locfileid: "57722064"
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [Instrukcje: Join ToolStripPanels](how-to-join-toolstrippanels.md)
+- [Instrukcje: łączenie ToolStripPanels](how-to-join-toolstrippanels.md)

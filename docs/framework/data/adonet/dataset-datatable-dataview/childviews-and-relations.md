@@ -1,18 +1,18 @@
 ---
-title: Elementy Childview i relacje
+title: Elementy ChildView i relacje
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 72ab53c9b7687246e1ab219774a67b7b1d42938f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e56b97ad7b375c69184e0f1928183612abfef42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207503"
 ---
-# <a name="childviews-and-relations"></a>Elementy Childview i relacje
+# <a name="childviews-and-relations"></a>Elementy ChildView i relacje
 Jeśli istnieje relacja między tabelami w <xref:System.Data.DataSet>, możesz utworzyć <xref:System.Data.DataView> zawierające wiersze z pokrewną tabelę podrzędną przy użyciu <xref:System.Data.DataRowView.CreateChildView%2A> metody <xref:System.Data.DataRowView> wierszy w tabeli nadrzędnej. Na przykład, poniższy kod wyświetla **kategorie** i ich pokrewnych **produktów** w kolejności alfabetycznej, posortowane według **CategoryName** i **ProductName** .  
   
 ```vb  
@@ -74,6 +74,7 @@ foreach (DataRowView catDRV in catView)
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>

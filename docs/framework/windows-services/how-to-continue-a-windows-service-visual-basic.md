@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kontynuowanie usług Windows (Visual Basic)'
+title: 'Instrukcje: Kontynuowanie usługi systemu Windows (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217162"
 ---
-# <a name="how-to-continue-a-windows-service-visual-basic"></a>Instrukcje: Kontynuowanie usług Windows (Visual Basic)
+# <a name="how-to-continue-a-windows-service-visual-basic"></a>Instrukcje: Kontynuowanie usługi systemu Windows (Visual Basic)
 W tym przykładzie użyto <xref:System.ServiceProcess.ServiceController> składnika, aby kontynuować Administrator usług IIS na komputerze lokalnym.  
   
 ## <a name="example"></a>Przykład  
@@ -50,6 +50,7 @@ W tym przykładzie użyto <xref:System.ServiceProcess.ServiceController> składn
  Dostęp do informacji o usłudze może być ograniczana przy użyciu <xref:System.Security.Permissions.PermissionState> wyliczeniu, aby ustawić uprawnienia w <xref:System.Security.Permissions.SecurityPermission> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [Instrukcje: Wstrzymaj usługę Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

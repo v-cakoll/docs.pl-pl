@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218384"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a> Ogólnie rzecz biorąc aplikacje internetowe powinny być ograniczone z mających bezpośredni dostęp do krytycznych zasobów systemu, aby uniemożliwić złośliwym uszkodzeniem. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języków skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ za pomocą przeglądarki można uruchamiać aplikacje hostowane w przeglądarce Windows Presentation Foundation (WPF), powinna być zgodna z zestawem podobnych ograniczeń. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategia zabezpieczeń WPF - zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Domyślnie aplikacje hostowane w przeglądarce żądań strefy Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy będą uruchamiane z sieci Internet, lokalny intranet lub komputera lokalnego. Aplikacje uruchamiane w każdym innym mniejszą niż pełny zestaw uprawnień, mówi się, że jest uruchomiona z częściowej relacji zaufania.  
@@ -131,17 +131,17 @@ ms.locfileid: "57371635"
 |Uprawnienie|Atrybut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Dostęp do serwerów DNS|Tak|Nie|  
-|Zmienne środowiskowe|Odczyt|Tak|Nie|  
+|Zmienne środowiskowe|Odczyt|Yes|Nie|  
 |Okna dialogowe pliku|Otwarcie|Tak|Tak|  
-|Okna dialogowe pliku|Bez ograniczeń|Tak|Nie|  
+|Okna dialogowe pliku|Bez ograniczeń|Yes|Nie|  
 |Izolowany magazyn|Zestaw Izolacja według użytkownika|Tak|Nie|  
 |Izolowany magazyn|Nieznany izolacji|Tak|Tak|  
 |Izolowany magazyn|Limit przydziału użytkownika bez ograniczeń|Tak|Nie|  
 |Nośnik|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
 |Drukowanie|Drukowanie domyślne|Tak|Nie|  
-|Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
+|Drukowanie|Bezpieczne drukowanie|Tak|Yes|  
 |Odbicie|Emituj|Tak|Nie|  
-|Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Tak|  
+|Zabezpieczenia|Wykonywanie kodu zarządzanego|Yes|Yes|  
 |Zabezpieczenia|Asercja udzielone uprawnienia|Tak|Nie|  
 |Interfejs użytkownika|Bez ograniczeń|Tak|Nie|  
 |Interfejs użytkownika|Bezpieczne najwyższego poziomu systemu windows|Tak|Tak|  
@@ -164,6 +164,7 @@ ms.locfileid: "57371635"
  Alternatywnie można użyć modelu wdrażania zaufanych ClickOnce do wdrożenia pełnego zaufania z żadnej strefy zabezpieczeń. Aby uzyskać więcej informacji, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) i [zabezpieczeń](security-wpf.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczenia](security-wpf.md)
-- [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
-- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
+- [Strategia zabezpieczeń WPF - zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
+- [Strategia zabezpieczeń WPF - projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

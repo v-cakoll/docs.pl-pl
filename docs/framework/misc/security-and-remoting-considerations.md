@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225290"
 ---
 # <a name="security-and-remoting-considerations"></a>Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu
 Wywołaniem funkcji zdalnych pozwala skonfigurować przezroczyste wywoływaniu między domenami aplikacji, procesy lub komputerów. Jednak przeszukiwania stosu zabezpieczeń dostępu kodu nie może przekraczać granice procesu i maszynowo lub (dotyczy ona między domenami aplikacji tego samego procesu).  
@@ -38,4 +38,5 @@ Wywołaniem funkcji zdalnych pozwala skonfigurować przezroczyste wywoływaniu m
  Zazwyczaj domyślnej domeny aplikacji tworzy element podrzędny domeny aplikacji za pomocą obiektu formantu w każdej z nich. Obiekt formantu zarządza nową domenę aplikacji, a od czasu do czasu zajmuje zamówienia z domyślnej domeny aplikacji, ale go nie może faktycznie skontaktuj się z domeny bezpośrednio. Od czasu do czasu domyślnej domeny aplikacji wywołuje jego agent proxy do obiektu formantu. Jednak może być przypadki, w których jest wymagane dla obiektu formantu do wywołania zwrotnego do domyślnej domeny aplikacji. W takich przypadkach domyślnej domeny aplikacji przekazuje obiekt wywołania zwrotnego marshal-by-reference do konstruktora obiektu formantu. Jest odpowiedzialny za obiekt formantu, aby chronić ten serwer proxy. Jeżeli obiekt formantu Umieść serwer proxy na publiczne pole statyczne klasy publicznej lub w przeciwnym razie uwidoczniają publicznie serwera proxy, to czy otwierają niebezpiecznych mechanizm dla innego kodu, wywołanie domyślnej domeny aplikacji. Z tego powodu obiekty kontrolek są zawsze niejawnie zaufany w celu zachowania prywatności serwera proxy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)

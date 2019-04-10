@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Sprawdzanie poprawności ustawień aplikacji'
+title: 'Instrukcje: Walidacja ustawień aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212092"
 ---
-# <a name="how-to-validate-application-settings"></a>Instrukcje: Sprawdzanie poprawności ustawień aplikacji
+# <a name="how-to-validate-application-settings"></a>Instrukcje: Walidacja ustawień aplikacji
 W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim zostaną utrwalone.  
   
  Ponieważ ustawienia aplikacji są silnie typizowane, masz niektóre pewność użytkowników nie można przypisać danych niepoprawny typ danego ustawienia. Jednak użytkownik nadal może podejmować prób do przypisania wartości do ustawienia, która wykracza poza dopuszczalne granice — na przykład, podając datę urodzenia, który występuje w przyszłości. <xref:System.Configuration.ApplicationSettingsBase>, klasą nadrzędną dla wszystkich klas ustawienia aplikacji, udostępnia cztery zdarzeń w celu włączenia takich sprawdzanie granic. Obsługa tych zdarzeń umieszcza wszystkie kod sprawdzania poprawności w jednej lokalizacji, a nie rozproszenie go w całym projekcie.  
@@ -161,5 +161,6 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
     ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../creating-event-handlers-in-windows-forms.md)
+
+- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](../creating-event-handlers-in-windows-forms.md)
 - [Instrukcje: Tworzenie ustawień aplikacji](how-to-create-application-settings.md)

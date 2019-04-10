@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216424"
 ---
 # <a name="designing-and-implementing-services"></a>Projektowanie i implementowanie usług
 W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług WCF. Kontrakt usługi określa punkt końcowy komunikuje na zewnątrz. Na poziomie bardziej konkretne takie jak żądanie/nietypizowana odpowiedź, jednokierunkowe i dwukierunkowego jest poufności informacji na temat zestawu specyficzne komunikaty dotyczące podzielone na podstawowe wiadomości programu exchange wzorców (MEPs). Kontrakt usługi to zestaw logicznie powiązanych wymianę komunikatów, operacja usługi czy exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście akceptują jeden komunikat (tak, aby obiekt wywołujący może poinformować o powitania) i może być lub może nie zwrócić komunikat (w zależności od grzecznościowy operacji).  
@@ -67,5 +67,6 @@ W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług
  Ten proces dodawania wymaganie ważne jest, aby należy wziąć pod uwagę podczas projektowania, wdrażania, konfigurowania i hostowania aplikacji usługi Windows Communication Foundation (WCF). Na przykład kontrakt może określać, czy należy go obsługuje sesji. Jeśli tak, musisz skonfigurować powiązania w celu spełnienia tego wymagania umownych lub implementacji usługi nie będzie działać. Lub jeśli usługa wymaga zintegrowanego uwierzytelniania Windows i jest hostowana w Internet Information Services (IIS), aplikacji sieci Web, w którym znajduje się usługa musi mieć zintegrowane uwierzytelnianie Windows włączona i anonimowe pomocy technicznej, wyłączony. Aby uzyskać więcej informacji o funkcjach i wpływ typów aplikacji hosta innej usługi, zobacz [usług obsługującego](../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)

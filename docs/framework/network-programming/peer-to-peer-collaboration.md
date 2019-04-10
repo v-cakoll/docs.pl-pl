@@ -1,13 +1,13 @@
 ---
-title: Peer-to-Peer współpracy
+title: Współpraca równorzędna
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225303"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-peer współpracy
 
@@ -40,5 +40,6 @@ Infrastruktura współpracy Peer-to-Peer jest uproszczone wdrożenia infrastrukt
  W domenie usługi Active Directory kontrolery domeny zapewniają usługi uwierzytelniania, przy użyciu protokołu Kerberos. W środowisku bez użycia serwera elementu równorzędnego równorzędnym należy podać własny mechanizm uwierzytelniania. Peer-to-Peer Networking dowolny węzeł może pełnić urzędu certyfikacji, usuwając wymagania certyfikatu głównego w magazynie zaufany główny urząd certyfikacji każdego elementu równorzędnego. Uwierzytelnianie jest obsługiwane przy użyciu certyfikatów z podpisem własnym, w formacie certyfikatu x.509. Są certyfikaty, które są tworzone przez każdy komputer, która powoduje wygenerowanie pary kluczy publiczny klucz/prywatny i certyfikat, który jest podpisany przy użyciu klucza prywatnego. Certyfikat z podpisem własnym służy do uwierzytelniania i podaj informacje o jednostce elementów równorzędnych. Takich jak uwierzytelnianie X.509 uwierzytelnianie sieci węzłów równorzędnych opiera się na łańcuch certyfikatów śledzenia do klucza publicznego, który jest zaufany.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

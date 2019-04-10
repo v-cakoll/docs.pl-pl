@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Użycie monikera programu Windows Communication Foundation bez rejestracji'
+title: 'Instrukcje: używanie krótkiej nazwy programu Windows Communication Foundation bez rejestracji'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203980"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Instrukcje: Użycie monikera programu Windows Communication Foundation bez rejestracji
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Instrukcje: używanie krótkiej nazwy programu Windows Communication Foundation bez rejestracji
 Aby nawiązać połączenie i komunikować się z usługą Windows Communication Foundation (WCF), aplikacja klienta WCF musi mieć adres usługi, Konfiguracja powiązania i kontraktu usługi.  
   
  Monikera programu WCF zwykle uzyskuje kontrakt wymagane przez wcześniejsze rejestrację typów wymaganego atrybutu, ale może być przypadki, w którym nie jest to możliwe. Zamiast rejestracji, moniker można uzyskać definicję kontraktu w postaci dokumentów sieci Web Services Definition Language (WSDL), za pośrednictwem `wsdl` parametru lub za pośrednictwem wymiany metadanych, korzystając ze `mexAddress` parametr.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Jeśli moniker jest źle sformułowany lub jeśli usługa jest niedostępna, wywołanie `GetObject` zwraca błąd informujący o "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, moniker elementu, którego używasz jest poprawna i ta usługa jest dostępna.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [Instrukcje: rejestrowanie i konfigurowanie krótkiej nazwy usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

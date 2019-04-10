@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ee0aca905c488bc3d285d69e431e79740bf8b7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216356"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (niezarządzana dokumentacja interfejsu API)
 Obsługuje moduł tworzenia i weryfikacji licencji Authenticode XrML.  
@@ -43,4 +43,5 @@ Obsługuje moduł tworzenia i weryfikacji licencji Authenticode XrML.
  Definiuje informacje stamper czasu Authenticode.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Niezarządzane interfejsy API — informacje](../../../../docs/framework/unmanaged-api/index.md)
+
+- [Niezarządzany wykaz interfejsów API](../../../../docs/framework/unmanaged-api/index.md)

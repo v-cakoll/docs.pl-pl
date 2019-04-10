@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224926"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
 Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie jest podstawowy ani określonego typu XAML. Użycie atrybutu rozszerzenia znaczników użytku sekwencję znaków znanych otwierającym nawiasie klamrowym `{` zakres rozszerzenia znaczników i zamykający nawias klamrowy `}` aby wyjść. Korzystając z usług programu .NET Framework XAML, możesz korzystać z niektórych wstępnie zdefiniowanych rozszerzeń znaczników języka XAML z zestawu System.Xaml. Możesz również podklasy z <xref:System.Windows.Markup.MarkupExtension> klasy zdefiniowane w System.Xaml i zdefiniować własne rozszerzenia znaczników. Lub możesz użyć rozszerzenia znaczników zdefiniowana przez strukturę określonego, jeśli są już odwołanie do tej struktury.  
@@ -27,7 +27,7 @@ Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie
 ### <a name="xtype"></a>x: Type  
  `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ta funkcja jest używana najczęściej w mechanizmów opóźnienia, które należy użyć podstawowy typ środowiska CLR i wpisać pochodnym jako moniker grupowania lub identyfikator. WPF style i szablony i ich użycie funkcji `TargetType` właściwości, znajdują się konkretnemu przykładowi. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](x-type-markup-extension.md).  
   
-### <a name="xstatic"></a>x: Static  
+### <a name="xstatic"></a>X:static  
  `x:Static` Tworzy statyczny wartości z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości, ale mogą być obliczane do tego typu. Jest to przydatne do określenia wartości, które już istnieją jako stałe dobrze znane w definicji typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
@@ -155,6 +155,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
  Jeśli pracujesz z strumień węzłów XAML Zapisz ścieżkę, zazwyczaj żadne działania w reprezentację wykresu obiektu, który może wcześniej poinformować, obiekt do zserializowania pierwotnie został dostarczony przez użycie rozszerzenia znaczników i `ProvideValue` wynik. Scenariusze, które musisz zachować użycia rozszerzenia znaczników dla Pełna zgodnooć wersji, a także Przechwytywanie inne zmiany na grafie obiektu musi należy opracować własne techniki zachowaniu wiedzy o użycie rozszerzenia znaczników, od oryginału wejściowe XAML. Na przykład, aby przywrócić użycia rozszerzenia znaczników, konieczne może być pracę w usłudze stream węzła w Zapisz ścieżkę, aby można było przywrócić użycia rozszerzenia znaczników lub wykonać pewien rodzaj scalania między oryginalnego XAML i XAML zwrotnego —. Niektórych platform Implementowanie XAML, takich jak WPF użyć typów pośrednich (wyrażenia) do reprezentowania przypadki, w którym użycia rozszerzenia znaczników podane wartości.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - [Typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md)
-- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -12,12 +12,12 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7fa8e2f06faa399734c44b1a52b41246296ef3f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aff6f63bb9f41fe45b22854787667070929bf987
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213769"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>Metoda ICorProfilerInfo7::ApplyMetaData
 [Obsługiwane w programie .NET Framework 4.6.1 i nowszych wersjach]  
@@ -69,4 +69,5 @@ Począwszy od .NET Core 3.0 to `ApplyMetaData` również obsługuje następując
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ICorProfilerInfo7, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

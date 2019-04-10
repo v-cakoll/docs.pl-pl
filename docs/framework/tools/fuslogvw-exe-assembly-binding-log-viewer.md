@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0219699a7369b3c1fe3fd92caa68a80eef235c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203343"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Podgląd dziennika powiązań zasobów)
 Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Błąd wykonywalnych języka wspólnego do zlokalizowania zestawu zwykle pojawia się jako <xref:System.TypeLoadException> w aplikacji.  
@@ -229,6 +229,7 @@ Discarding native image.
     >  To pole jest włączone tylko w systemie Windows 8 lub nowszym.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.TypeLoadException>
 - [Narzędzia](../../../docs/framework/tools/index.md)
 - [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Ustaw powiadomienie o łączeniu aktualizacji'
+title: 'Instrukcje: Konfigurowanie powiadomienia o aktualizacji powiązań'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-ms.openlocfilehash: 0a28e6fc31601e881cf972f586f75ba0b1526b45
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213965"
 ---
-# <a name="how-to-set-up-notification-of-binding-updates"></a>Instrukcje: Ustaw powiadomienie o łączeniu aktualizacji
+# <a name="how-to-set-up-notification-of-binding-updates"></a>Instrukcje: Konfigurowanie powiadomienia o aktualizacji powiązań
 Ten przykład pokazuje, jak ustawić, aby otrzymywać powiadomienia, gdy cel wiążący (docelowy) lub właściwość source (źródło) powiązania powiązania został zaktualizowany.  
   
 ## <a name="example"></a>Przykład  
@@ -33,5 +33,6 @@ Ten przykład pokazuje, jak ustawić, aby otrzymywać powiadomienia, gdy cel wi�
  Aby określić szczegóły dotyczące właściwości, która się zmieniła (na przykład typ lub określony element, jeśli ten sam program obsługi jest podłączony do więcej niż jeden element), można użyć parametrów zdarzenia, które mogą być przydatne, jeśli ma wiele powiązanych właściwości na pojedynczy element.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

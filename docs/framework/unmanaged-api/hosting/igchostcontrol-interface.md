@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d23a8d494c3f3e2e94bb309ab1c2141e527f2f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 050b515e91517efe5b4dc4e391ace4fba5876727
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215537"
 ---
 # <a name="igchostcontrol-interface"></a>IGCHostControl — Interfejs
 Dostarcza metodę, która pozwala modułowi odśmiecania żądanie hosta, aby zmienić limity pamięci wirtualnej.  
@@ -42,4 +42,5 @@ Dostarcza metodę, która pozwala modułowi odśmiecania żądanie hosta, aby zm
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224485"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Instrukcje: Określanie łańcucha certyfikatu urzędu certyfikacji służącego do weryfikowania podpisów (WCF)
 Gdy Windows Communication Foundation (WCF) odbiera wiadomości SOAP podpisany przy użyciu certyfikatu X.509, domyślnie ją sprawdza, czy certyfikat X.509 został wystawiony przez zaufany urząd certyfikacji. Odbywa się przez wyszukiwanie w magazynie certyfikatów i określenia, jeśli certyfikat dla tego urzędu certyfikacji został wyznaczony jako zaufane. Aby WCF określić to łańcuch certyfikatów urzędu certyfikacji musi być zainstalowany w magazynie certyfikatów poprawny.  
@@ -34,4 +34,5 @@ Gdy Windows Communication Foundation (WCF) odbiera wiadomości SOAP podpisany pr
          Aby uzyskać więcej informacji o użyciu przystawki Certyfikaty programu MMC, zobacz [jak: Wyświetlanie certyfikatów za pomocą przystawki programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

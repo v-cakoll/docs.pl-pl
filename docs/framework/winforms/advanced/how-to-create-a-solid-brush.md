@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Utwórz pełny obiekt Brush'
+title: 'Instrukcje: Tworzenie pędzla pełnego koloru'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213444"
 ---
-# <a name="how-to-create-a-solid-brush"></a>Instrukcje: Utwórz pełny obiekt Brush
+# <a name="how-to-create-a-solid-brush"></a>Instrukcje: Tworzenie pędzla pełnego koloru
 Ten przykład tworzy <xref:System.Drawing.SolidBrush> obiekt, który może być używany przez <xref:System.Drawing.Graphics> obiektu do wypełniania kształtów.  
   
 ## <a name="example"></a>Przykład  
@@ -29,6 +29,7 @@ Ten przykład tworzy <xref:System.Drawing.SolidBrush> obiekt, który może być 
  Po zakończeniu korzystania z nich należy wywołać <xref:System.IDisposable.Dispose%2A> na obiektach, których wartość użycia zasobów systemowych, takich jak obiekty pędzla.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)

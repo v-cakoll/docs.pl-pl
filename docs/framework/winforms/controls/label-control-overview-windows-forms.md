@@ -8,12 +8,12 @@ helpviewer_keywords:
 - labels
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
-ms.openlocfilehash: 13dcd6c63c30a5726a959c33f75c0c54e2810ef4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210095"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label — Informacje o formancie (Formularze systemu Windows)
 Windows Forms <xref:System.Windows.Forms.Label> formanty są używane do wyświetlania tekstu lub obrazów, które nie mogą być edytowane przez użytkownika. Służą one do identyfikowania obiektów w formularzu — podaj opis, jaki niektóre kontrolki będzie wykonywać na przykład po kliknięciu lub wyświetlić informacje w odpowiedzi na zdarzenie środowiska wykonawczego lub proces w aplikacji. Na przykład można użyć etykiet można dodać opisowe transkrypcje do pola tekstowe, pola listy, pola kombi i tak dalej. Można także napisać kod, który zmienia tekst wyświetlany przez etykietę w odpowiedzi na zdarzenia w czasie wykonywania. Na przykład jeśli aplikacja zajmuje kilka minut, aby przetworzyć zmiany, możesz wyświetlić komunikat o stanie przetwarzania w etykiecie.  
@@ -24,6 +24,7 @@ Windows Forms <xref:System.Windows.Forms.Label> formanty są używane do wyświe
  Podpis wyświetlany w etykiecie znajduje się w <xref:System.Windows.Forms.Label.Text%2A> właściwości. <xref:System.Windows.Forms.Label.TextAlign%2A> Właściwość pozwala ustawić wyrównanie tekstu w etykiecie. Aby uzyskać więcej informacji, zobacz [jak: Ustawianie tekstu wyświetlanego przez formant formularzy Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Label>
-- [Instrukcje: Rozmiaru kontrolki Label formularzy Windows pasujący do jego zawartości](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Instrukcje: rozmiar kontrolki etykiety (Formularze systemu Windows) pasujący do jego zawartości](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [Instrukcje: tworzenie klawiszy dostępu za pomocą kontrolek etykiet formularzy systemu Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)

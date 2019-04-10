@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19ca92db6f57a004dca54f6e22db10603c9498a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214848"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity — Interfejs
 Służy jako modułu wyliczającego dla kolekcji `IDefinitionIdentity` obiektów.  
@@ -68,5 +68,6 @@ IEnumDefinitionIdentity : IUnknown {
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDefinitionIdentity — Interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

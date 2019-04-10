@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dostęp do modelu obiektów zarządzanych dokumentów HTML'
+title: 'Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205020"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Instrukcje: Dostęp do modelu obiektów zarządzanych dokumentów HTML
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodzajów aplikacji:  
   
 -   Aplikacji Windows Forms (.exe), która obsługiwana zarządzanej <xref:System.Windows.Forms.WebBrowser> kontroli. Te dwie technologie wzajemnie się uzupełniają, za pomocą <xref:System.Windows.Forms.WebBrowser> kontroli stroną dla użytkownika i HTML DOM reprezentującej strukturę logiczną dokumentu.  
@@ -46,4 +46,5 @@ Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodza
 1.  Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagać pełnego zaufania w celu uzyskania dostępu do zarządzanego kodu HTML DOM. Jeżeli wdrażasz aplikacji Windows Forms przy użyciu [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], możesz poprosić o pełnym zaufaniu przy użyciu zaufanego wdrożenia aplikacji lub podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) Aby uzyskać szczegółowe informacje.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](using-the-managed-html-document-object-model.md)

@@ -2,12 +2,12 @@
 title: Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0105cc762696c54a65cd06b3ffcb5fb4c8530a41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216720"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1
 Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatkiem SP1 i później, wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w przestrzeni nazw System.Net. Te zmiany mogą mieć wpływ na aplikacje, które używają tych klas do żądań sieci web i odbierania odpowiedzi, gdy jest używane zintegrowane uwierzytelnianie Windows oparte na NTLM. Ta zmiana może wpłynąć na serwerach sieci web i aplikacji klienckich, które są skonfigurowane do korzystania ze zintegrowanego uwierzytelniania Windows.  
@@ -51,6 +51,7 @@ Zmiany zabezpieczeń zostały wprowadzone w .NET Framework w wersji 3.5 z dodatk
  Mniej bezpieczna opcja pracy około jest wyłączenie sprawdzania wstecz pętli, zgodnie z opisem w <https://support.microsoft.com/kb/896861>. Powoduje to wyłączenie ochrony przed atakami odbicia. Dlatego lepiej jest ograniczyć zestaw alternatywnych nazw tylko te, które oczekują maszynę aby rzeczywiście używane.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
 - <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

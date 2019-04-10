@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: aa7d77509a80ce67ee97abf648036ebb26b6f4c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211494"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>Instrukcje: Definiowanie i wykonywanie metod dynamicznych
 Poniższe procedury pokazują, jak zdefiniować i wykonać prostą metodę dynamiczną i metodę dynamiczną, która jest powiązana z wystąpienia klasy. Aby uzyskać więcej informacji na temat metod dynamicznych, zobacz <xref:System.Reflection.Emit.DynamicMethod> klasy i [odbicia emitowanie dynamicznych scenariusze metod](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100)).  
@@ -123,6 +123,7 @@ Poniższe procedury pokazują, jak zdefiniować i wykonać prostą metodę dynam
 -   Skompilować kod w wierszu polecenia przy użyciu csc.exe i vbc.exe, cl.exe. Aby skompilować kod w programie Visual Studio, umieść go w szablonie projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [Używanie emisji odbicia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [Scenariusze metod dynamicznych emisji odbicia](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

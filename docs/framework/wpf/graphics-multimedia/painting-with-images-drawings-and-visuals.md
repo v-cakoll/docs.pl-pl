@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204201"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Malowanie obrazami, rysowaniem i Visual
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> obiektów można malować obszar za pomocą obrazu, <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby zrozumieć, w tym temacie, należy się zapoznać z różnymi typami pędzle [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia i ich funkcje podstawowe. Aby zapoznać się z wprowadzeniem, zobacz [pędzle WPF — Przegląd](wpf-brushes-overview.md).  
@@ -108,7 +107,7 @@ Obiekty malowane przez DrawingBrush
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/visualbrushexample.vb#graphicsmmvisualbrushasrectanglebackgroundexample1)]  
   
 <a name="examplevisualbrush2"></a>   
-## <a name="example-create-a-reflection"></a>Przykład: Utwórz odbicie  
+## <a name="example-create-a-reflection"></a>Przykład: Tworzenie odbicia  
  Poprzednim przykładzie pokazano, jak utworzyć nową <xref:System.Windows.Media.Visual> do użycia jako tło. Można również użyć <xref:System.Windows.Media.VisualBrush> do wyświetlenia istniejącej wizualizacji; ta funkcja umożliwia tworzenie efektów wizualnych interesujące, takie jak odbić i powiększenia. W poniższym przykładzie użyto <xref:System.Windows.Media.VisualBrush> do tworzenie odbicia <xref:System.Windows.Controls.Border> zawiera wiele elementów. Poniższa ilustracja przedstawia ten przykład generuje dane wyjściowe.  
   
  ![A odzwierciedlone obiekt wizualny](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
@@ -135,15 +134,16 @@ Składniki TileBrush o wiele kafelków
  Aby uzyskać więcej informacji o funkcjach fragmentacji <xref:System.Windows.Media.TileBrush> obiekty, zobacz [TileBrush — Przegląd](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [TileBrush — przegląd](tilebrush-overview.md)
-- [Pędzle WPF — przegląd](wpf-brushes-overview.md)
-- [Obrazowanie — przegląd](imaging-overview.md)
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
-- [Maska nieprzezroczystości — przegląd](opacity-masks-overview.md)
-- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
-- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [TileBrush — Przegląd](tilebrush-overview.md)
+- [Przegląd Pędzle WPF](wpf-brushes-overview.md)
+- [Przegląd Obrazowanie](imaging-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
+- [Przegląd Masek krycia](opacity-masks-overview.md)
+- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
+- [ImageBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

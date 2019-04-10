@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211676"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Instrukcje: Wypełnianie kształtów jednolitym kolorem
 Wypełnianie kształtów jednolitym kolorem, należy utworzyć <xref:System.Drawing.SolidBrush> obiektu, a następnie przekaż go <xref:System.Drawing.SolidBrush> obiektu jako argumentu do jednej z metod wypełnienia <xref:System.Drawing.Graphics> klasy. Poniższy przykład pokazuje, jak można wypełnić elipsę kolorem czerwonym.  
@@ -30,4 +30,5 @@ Wypełnianie kształtów jednolitym kolorem, należy utworzyć <xref:System.Draw
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie pędzla do wypełniania kształtów](using-a-brush-to-fill-shapes.md)

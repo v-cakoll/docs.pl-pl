@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Implementuj powiadomienie o zmianie właściwości'
+title: 'Instrukcje: Implementowanie powiadomienia o zmianie właściwości'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: 93a291b6dd35f9cc13c3c6f88aca5dc376b8bc1b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204357"
 ---
-# <a name="how-to-implement-property-change-notification"></a>Instrukcje: Implementuj powiadomienie o zmianie właściwości
+# <a name="how-to-implement-property-change-notification"></a>Instrukcje: Implementowanie powiadomienia o zmianie właściwości
 Do obsługi <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windows.Data.BindingMode.TwoWay> powiązanie umożliwiające powiązanie właściwości docelowej do automatycznie odzwierciedlają zmiany dynamicznej w źródle powiązania (na przykład, aby mieć okienko podglądu aktualizowane automatycznie, gdy użytkownik edytuje formularza), klasa wymaga do udostępniania powiadomień o odpowiednie zmiany właściwości. W tym przykładzie pokazano, jak utworzyć klasę, która implementuje <xref:System.ComponentModel.INotifyPropertyChanged>.  
   
 ## <a name="example"></a>Przykład  
@@ -29,6 +29,7 @@ Do obsługi <xref:System.Windows.Data.BindingMode.OneWay> lub <xref:System.Windo
  Aby zobaczyć przykładowy sposób, w jaki `Person` klasa może być używana do obsługi <xref:System.Windows.Data.BindingMode.TwoWay> powiązań, zobacz [kontrolować kiedy tekst TextBox aktualizuje źródło](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Wiązanie źródeł — omówienie](binding-sources-overview.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+
+- [Przegląd Wiązanie źródeł](binding-sources-overview.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

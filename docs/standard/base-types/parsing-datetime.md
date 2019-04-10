@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208127"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny na platformie .NET
 
@@ -32,7 +32,6 @@ Analizowanie ciągów w celu przekonwertowania ich do <xref:System.DateTime> obi
 1. Można określić sposób brakujących składników w tekście reprezentacji są ustawiane w daty i godziny.
 
 <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.TryParse%2A> konwertują wiele typowych liczbami w postaci daty i godziny. <xref:System.DateTime.ParseExact%2A> i <xref:System.DateTime.TryParseExact%2A> konwertują reprezentację ciągu znaków, który jest zgodny z wzorcem, określona przez ciąg formatu daty i godziny. (Zobacz artykuły w [ciągi formatu standardowego daty i godziny](standard-date-and-time-format-strings.md) i [niestandardowa data i godzina ciągi formatujące](custom-date-and-time-format-strings.md) Aby uzyskać szczegółowe informacje.)
-
 
 Bieżący <xref:System.Globalization.DateTimeFormatInfo> obiekt zapewnia większą kontrolę nad jak tekst należy interpretować jako daty i godziny. Właściwości <xref:System.Globalization.DateTimeFormatInfo> opisują Data i godzina separatory i nazwy miesięcy, dni, a ery i format oznaczenia "AM" i "PM". Bieżąca kultura wątku dostarcza <xref:System.Globalization.DateTimeFormatInfo> reprezentujący bieżącą kulturę. Jeśli chcesz, aby ustawienia niestandardowe lub określonej kultury, określ <xref:System.IFormatProvider> parametr metody analizy. Dla <xref:System.IFormatProvider> parametru, określ <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje kulturę, lub <xref:System.Globalization.DateTimeFormatInfo> obiektu.
 

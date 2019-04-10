@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Eksportowanie niestandardowych asercji zasad'
+title: 'Instrukcje: eksportowanie niestandardowych asercji zasad'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213631"
 ---
-# <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: Eksportowanie niestandardowych asercji zasad
+# <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: eksportowanie niestandardowych asercji zasad
 Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usługi. Aplikacje usługi można użyć niestandardowych asercji zasad w metadanych usługi do komunikacji z punktu końcowego, binding lub umowy informacje o dostosowaniu do aplikacji klienckiej. Windows Communication Foundation (WCF) umożliwia eksportowanie asercji w wyrażeniach zasad dołączone w powiązaniach WSDL na punkt końcowy, operacji lub tematów wiadomości, w zależności od możliwości i wymagania, które komunikują się.  
   
  Niestandardowych asercji zasad są eksportowane przez zaimplementowanie <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejsu na <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i wstawianie elementu powiązania bezpośrednio do powiązania punktu końcowego usługi lub rejestrując element powiązania w aplikacji plik konfiguracji. Implementacji eksportu zasad należy dodać swoje potwierdzeń niestandardowych zasad jako <xref:System.Xml.XmlElement?displayProperty=nameWithType> wystąpienia do odpowiednich <xref:System.ServiceModel.Description.PolicyAssertionCollection?displayProperty=nameWithType> na <xref:System.ServiceModel.Description.PolicyConversionContext?displayProperty=nameWithType> przekazany do <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A> metody.  
@@ -50,6 +50,7 @@ Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usł
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [Instrukcje: Importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [Instrukcje: importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225797"
 ---
 # <a name="wpf-xaml-namescopes"></a>Zakresy nazw WPF XAML
 Zakresy nazw XAML to pojęcie, który identyfikuje obiekty, które są definiowane w XAML. Nazwy w XAML namescope może służyć do ustanawiania relacji między nazwami zdefiniowane XAML, obiektów i ich odpowiedniki wystąpienia drzewem obiektu. Zazwyczaj zakresy XAML nazw w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zarządzanego kodu są tworzone podczas ładowania strony XAML poszczególnych obiektów głównych dla aplikacji XAML. Zakresy nazw XAML, co obiekt programowania są definiowane przez <xref:System.Windows.Markup.INameScope> interfejsu, a także są implementowane przez klasy praktyczne <xref:System.Windows.NameScope>.  
-  
-  
-  
+
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## <a name="namescopes-in-loaded-xaml-applications"></a>Zakresy nazw w aplikacjach XAML załadowane  
  W szerszym programowania lub komputera do nauki o kontekście pojęcia dotyczące programowania często zawierają zasady unikatowego identyfikatora lub nazwy, która może służyć do dostępu do obiektu. W systemach używających nazwy lub identyfikatory namescope definiuje granic w ramach procesu lub techniki wyszuka, jeśli wymagana jest obiekt o tej nazwie lub granice, w którym unikatowość nazwy identyfikowania jest wymuszany. Te zasady ogólne są względem niego spełnione zakresy nazw XAML. W środowisku WPF zakresy nazw XAML są tworzone dla elementu głównego dla strony XAML podczas ładowania strony. Każda nazwa określona w obrębie strony XAML, począwszy od głównego strony jest dodawany do odpowiednich namescope XAML.  
@@ -97,5 +95,6 @@ Zakresy nazw XAML to pojęcie, który identyfikuje obiekty, które są definiowa
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name, dyrektywa](../../xaml-services/x-name-directive.md)
+- [x:Name — dyrektywa](../../xaml-services/x-name-directive.md)

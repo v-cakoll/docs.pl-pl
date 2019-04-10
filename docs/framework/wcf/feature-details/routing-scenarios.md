@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223830"
 ---
 # <a name="routing-scenarios"></a>Scenariusze routingu
 Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymagającym projektować wydajne logikę routingu, tworząc nową konfigurację od podstaw.  Istnieje jednak kilka typowych scenariuszy, które należy wykonać w większości konfiguracji usługa routingu. Te scenariusze mogą nie dotyczą bezpośrednio do określonej konfiguracji, zrozumienie, jak można skonfigurować do obsługi tych scenariuszy, usługa routingu będzie pomocy można zrozumieć usługa routingu.  
@@ -75,4 +75,5 @@ Usługa routingu jest w dużym stopniu dostosowywane, może być wyzwaniem wymag
  [Instrukcje: Obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

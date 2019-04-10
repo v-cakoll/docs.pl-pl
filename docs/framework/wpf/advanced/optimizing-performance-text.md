@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225966"
 ---
 # <a name="optimizing-performance-text"></a>Optymalizacja wydajności: Tekst
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obejmuje obsługę prezentacji zawartość tekstu przy użyciu bogate [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki. Ogólnie rzecz biorąc można podzielić renderowanie tekstu w trzech warstwach:  
@@ -28,8 +28,7 @@ ms.locfileid: "58409409"
 3.  Korzystanie z kontrolek wysokiego poziomu, takie jak <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów.  
   
  Ten temat zawiera tekst zalecenia dotyczące wydajności renderowania.  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>Renderowanie tekstu na poziomie glifów  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę zaawansowane tekstu, w tym poziom symbol znacznika bezpośredni dostęp do <xref:System.Windows.Documents.Glyphs> dla klientów, którzy chcą przechwytywać i przetrwają formatowania tekstu. Te funkcje zapewniają krytycznych wymagających pomocy technicznej inny tekst wymagania związane z renderowaniem w każdym z poniższych scenariuszy.  
@@ -162,6 +161,7 @@ ms.locfileid: "58409409"
  Funkcja optymalne akapitu <xref:System.Windows.Documents.FlowDocument> obiektu wychodzi poza akapitów, dlatego, że biały znak jest możliwie najbardziej równomiernie rozproszonych. Domyślnie funkcja optymalne akapitu jest wyłączona. Możesz włączyć tę funkcję, ustawiając obiektu <xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A> właściwość `true`. Jednak włączenie tej funkcji ma wpływ na wydajność aplikacji. Zaleca się, że należy używać funkcji optymalne akapitu chyba że potrzebne.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
 - [Planowanie wydajności aplikacji](planning-for-application-performance.md)
 - [Wykorzystanie możliwości sprzętu](optimizing-performance-taking-advantage-of-hardware.md)

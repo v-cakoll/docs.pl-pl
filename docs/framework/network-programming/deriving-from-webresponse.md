@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
-ms.openlocfilehash: f07e20bc3d81c328390ad5da43e55aab457a62a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226048"
 ---
 # <a name="deriving-from-webresponse"></a>Wyprowadzanie z elementu WebResponse
 <xref:System.Net.WebResponse> Klasa jest abstrakcyjna klasa bazowa, który udostępnia podstawowe metody i właściwości, do tworzenia odpowiedzi związane z protokołem, który pasuje do modelu podłączanego protokołu .NET Framework. Aplikacje, które używają <xref:System.Net.WebRequest> klasy, żeby dane żądania z zasobów otrzymywać odpowiedzi w **elementu WebResponse**. Oparte na protokole **elementu WebResponse** elementy podrzędne muszą implementować członków abstrakcyjnych z **elementu WebResponse** klasy.  
@@ -39,6 +39,7 @@ ms.locfileid: "54598870"
  Wystąpienie strumienia, zwrócone przez **GetResponseStream dla** metoda należące do aplikacji i może zostać zamknięty bez zamykania **elementu WebResponse**. Zgodnie z Konwencją wywoływania **WebResponse.Close** metoda również zamyka Strumień zwrócony przez **metody GetResponse**.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.WebResponse>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>

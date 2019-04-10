@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Utwórz proste lub złożone TreeViews'
+title: 'Instrukcje: Tworzenie prostej lub złożonej kontrolki TreeView'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-ms.openlocfilehash: 9b19443c80818809122b0bbfc7c7dae7b4b40da5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205150"
 ---
-# <a name="how-to-create-simple-or-complex-treeviews"></a>Instrukcje: Utwórz proste lub złożone TreeViews
+# <a name="how-to-create-simple-or-complex-treeviews"></a>Instrukcje: Tworzenie prostej lub złożonej kontrolki TreeView
 W tym przykładzie pokazano, jak utworzyć proste lub złożone <xref:System.Windows.Controls.TreeView> kontrolki.  
   
  A <xref:System.Windows.Controls.TreeView> składa się z hierarchią <xref:System.Windows.Controls.TreeViewItem> formanty, które mogą zawierać ciągi zwykły tekst i również bardziej złożonych zawartości, takie jak <xref:System.Windows.Controls.Button> kontrolki lub <xref:System.Windows.Controls.StackPanel> przy użyciu osadzonej zawartości. Można jawnie określić <xref:System.Windows.Controls.TreeView> zawartości lub źródło danych może zapewnić zawartości. Ten temat zawiera przykłady tych koncepcji.  
@@ -41,7 +41,8 @@ W tym przykładzie pokazano, jak utworzyć proste lub złożone <xref:System.Win
  [!code-xaml[TreeViewSimple#9](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [TreeView — omówienie](treeview-overview.md)
-- [Tematy z instrukcjami](treeview-how-to-topics.md)
+- [TreeView — Przegląd](treeview-overview.md)
+- [— Tematy porad](treeview-how-to-topics.md)

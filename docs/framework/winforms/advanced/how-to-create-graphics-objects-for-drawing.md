@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223631"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Instrukcje: Tworzenie obiektów graficznych do rysowania
 Zanim można narysować linie i kształty, renderowanie tekstu, lub wyświetlanie obrazów i manipulowania nimi za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], musisz utworzyć <xref:System.Drawing.Graphics> obiektu. <xref:System.Drawing.Graphics> Obiekt reprezentuje [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] rysowania powierzchni i jest obiekt, który jest używany do tworzenia obrazów graficznych.  
@@ -165,13 +165,14 @@ Zanim można narysować linie i kształty, renderowanie tekstu, lub wyświetlani
   
     |Do renderowania|Zobacz|  
     |---------------|---------|  
-    |wiersze|[Instrukcje: Rysuj linię w formularzu Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |wiersze|[Instrukcje: Rysowanie linii w formularzu systemu Windows](how-to-draw-a-line-on-a-windows-form.md)|  
     |Kształty|[Instrukcje: Rysowanie konturu kształtu](how-to-draw-an-outlined-shape.md)|  
-    |Tekst|[Instrukcje: Rysowanie tekstu w formularzu Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Obrazy|[Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)|  
+    |Tekst|[Instrukcje: Rysowanie tekstu w formularzu systemu Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Obrazy|[Instrukcje: Renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)
-- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)
-- [Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)
+- [Instrukcje: Renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)

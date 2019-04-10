@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212287"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Instrukcje: Dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **selektor dziedziczenia** okno dialogowe. Dzięki niemu można korzystać z zalet interfejsów kodu lub użytkownika (UI), utworzono już w innych rozwiązaniach.  
@@ -57,7 +57,8 @@ Najprostszym sposobem dziedziczą formularza lub inny obiekt jest użycie **sele
     >  Łącząc dziedziczone kontrolek i składników za pomocą standardowych kontrolek i składników na formularzach Windows Forms, może wystąpić powoduje konflikt z kolejności z. Problem można rozwiązać, zmieniając porządku osi z, które jest realizowane przez kliknięcie w **Format** menu, wskazać polecenie **kolejności**, a następnie klikając polecenie **Przesuń na wierzch** lub  **Przesuń na spód**. Aby uzyskać więcej informacji na temat kolejności z formantów zobacz [jak: Warstw obiektów na formularzach Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
-- [using](~/docs/csharp/language-reference/keywords/using.md)
+
+- [Inherits — Instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+- [korzystanie](~/docs/csharp/language-reference/keywords/using.md)
 - [Efekty modyfikowania wyglądu formularza podstawowego](effects-of-modifying-base-form-appearance.md)
-- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
+- [Formularze systemu Windows — dziedziczenie Visual](windows-forms-visual-inheritance.md)

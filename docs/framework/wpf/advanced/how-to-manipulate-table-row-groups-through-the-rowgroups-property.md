@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zarządzaj grupami wierszy tabeli za pomocą właściwości RowGroups'
+title: 'Instrukcje: Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - documents [WPF], manipulating row groups through RowGroups property
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
-ms.openlocfilehash: e456aab0d36ae611f3bfe4974aa3603efff27379
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209973"
 ---
-# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Instrukcje: Zarządzaj grupami wierszy tabeli za pomocą właściwości RowGroups
+# <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>Instrukcje: Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups
 W tym przykładzie przedstawiono niektóre typowe operacje, które mogą być wykonywane na grupami wierszy tabeli za <xref:System.Windows.Documents.Table.RowGroups%2A> właściwości.  
   
 ## <a name="example"></a>Przykład  
@@ -84,6 +84,7 @@ W tym przykładzie przedstawiono niektóre typowe operacje, które mogą być wy
  [!code-vb[TableSnippets2#_Table_RowGroups_Clear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets2/visualbasic/window1.xaml.vb#_table_rowgroups_clear)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Instrukcje: Zarządzaj przepływem elementów zawartości za pomocą właściwości Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+
+- [Instrukcje: Zarządzanie przepływem elementów zawartości za pomocą właściwości Inlines](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [Zarządzanie parametrem FlowDocument przez właściwość Blocks](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Zarządzanie kolumnami tabeli za pomocą właściwości Columns](how-to-manipulate-table-columns-through-the-columns-property.md)

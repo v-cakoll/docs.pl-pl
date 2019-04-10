@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225342"
 ---
 # <a name="federation-and-trust"></a>Federacja i zaufanie
 W tym temacie omówiono różne aspekty związane z aplikacji federacyjnych, granice zaufania i konfiguracji i użytkowania wystawione tokeny w Windows Communication Foundation (WCF).  
@@ -38,7 +38,8 @@ W tym temacie omówiono różne aspekty związane z aplikacji federacyjnych, gra
  Wystawiony token jest serializowana we wiadomości wysłane przez klienta do punktu końcowego federacyjnego czy nie jest kontrolowane przez ustawienie <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> właściwość <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> klasy. Tę właściwość można ustawić na jedną z <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode> wartości wyliczenia, ale nie jest użyteczny w scenariuszach obejmujących Federację najbardziej. `SecurityTokenInclusionMode.Never` i `SecurityTokenInclusionMode.AlwaysToInitiator` wartości spowoduje to klientowi wysłanie odwołania do tokenu wystawionego przez usługę tokenu zabezpieczającego do jednostki uzależnionej. Chyba że uzależnionej posiada kopię wystawionych tokenów, uwierzytelnianie zakończy się niepowodzeniem, ponieważ nie można rozpoznać odwołania do tokenu. Traktuje WCF `SecurityTokenInclusionMode.Once` za równoważny `SecurityTokenInclusionMode.AlwaysToRecipient`.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

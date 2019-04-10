@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 86efc3a9d9eab5c1529804769af413dd88e71f1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220490"
 ---
 # <a name="resources-in-net-apps"></a>Zasoby w aplikacjach .NET
 Niemal każda aplikacja jakości produkcyjnej ma korzystać z zasobów. Zasób to wszelkie dane niewykonywalne, które są logicznie wdrażane za pomocą aplikacji. Zasób może być wyświetlany w aplikacji jako komunikaty o błędach lub jako część interfejsu użytkownika. Zasoby mogą zawierać dane w wielu formach, takich jak ciągi, obrazy i obiekty utrwalone. (Do zapisywania obiektów utrwalonego pliku zasobów, obiekty muszą podlegać serializacji.) Przechowywanie danych w pliku zasobów umożliwia zmianę danych bez konieczności ponownego kompilowania całej aplikacji. On również pozwala na przechowywanie danych w jednej lokalizacji i eliminuje konieczność łączenia się z zakodowanych danych przechowywanych w wielu lokalizacjach.  
@@ -62,6 +62,7 @@ Możesz również dostosować zasoby aplikacji dla określonych kultur. Dzięki 
 -   <xref:System.Resources.ResXResourceSet> Klasy, która umożliwia pobieranie wszystkich elementów w pliku XML, zasób do pamięci.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Globalization.CultureInfo>
 - <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>
 - [Podstawy aplikacji](../../../docs/standard/application-essentials.md)

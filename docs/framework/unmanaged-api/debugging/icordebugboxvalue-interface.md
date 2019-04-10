@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue — Interfejs
+title: ICorDebugBoxValue, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7238574334b599c7922693c7e9a476a51785491
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221967"
 ---
-# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue — Interfejs
+# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue, interfejs
 
 Podklasa klasy "ICorDebugHeapValue", który reprezentuje spakowany obiekt klasy wartości.  
   
@@ -31,7 +31,7 @@ Podklasa klasy "ICorDebugHeapValue", który reprezentuje spakowany obiekt klasy 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Pobiera wskaźnik interfejsu do spakowanej wystąpienia "ICorDebugObjectValue".|  
+|[GetObject — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Pobiera wskaźnik interfejsu do spakowanej wystąpienia "ICorDebugObjectValue".|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -48,4 +48,5 @@ Podklasa klasy "ICorDebugHeapValue", który reprezentuje spakowany obiekt klasy 
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

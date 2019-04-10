@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Animuj ciąg z wykorzystaniem klatek kluczowych'
+title: 'Instrukcje: Animowanie ciągu przy użyciu klatek kluczowych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], strings with key frames
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 70c5766da2ea91f519756cb47b20d688b33253e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4a37408ad90fda12a95e66c1b44018967b376837
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204175"
 ---
-# <a name="how-to-animate-a-string-by-using-key-frames"></a>Instrukcje: Animuj ciąg z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-a-string-by-using-key-frames"></a>Instrukcje: Animowanie ciągu przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak animować ciąg, który w tym przykładzie jest <xref:System.Windows.Controls.ContentControl.Content%2A> właściwość <xref:System.Windows.Controls.Button> kontroli przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -26,9 +26,10 @@ W tym przykładzie pokazano, jak animować ciąg, który w tym przykładzie jest
  Aby uzyskać pełny przykład, zobacz [przykład animacji ramki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.ContentControl.Content%2A>
 - <xref:System.Windows.Controls.Button>
 - <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

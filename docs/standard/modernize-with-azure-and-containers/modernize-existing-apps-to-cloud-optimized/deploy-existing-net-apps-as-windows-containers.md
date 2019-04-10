@@ -1,17 +1,17 @@
 ---
-title: Wdrażanie istniejących aplikacji .NET jako kontenerów Windows
+title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w chmurze platformy Azure i Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216668"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów Windows
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
 Wdrożenia, które są oparte na Windows kontenery są stosowane do aplikacji zoptymalizowane pod kątem chmury i aplikacji natywnych dla chmury.
 
@@ -102,8 +102,8 @@ Dla platformy .NET Core (dla wielu platform dla systemów Linux i Windows) tagi 
 
 > | **Tag** | **Wersja i system**
 > |---|---|
-> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 runtime-only on Linux |
-> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 na serwerze Windows Nano Server jest tylko do środowiska uruchomieniowego |
+> | **Microsoft/DotNet:2.0.0-Runtime** | .NET Core 2.0 runtime-only on Linux |
+> | **Microsoft/DotNet:2.0.0-Runtime-nanoserver** | .NET core 2.0 na serwerze Windows Nano Server jest tylko do środowiska uruchomieniowego |
 
 ### <a name="multi-arch-images"></a>Wielu architektury obrazów
 
@@ -135,7 +135,6 @@ Uruchamianie kontenera na Windows z użyciem lub bez izolacji funkcji Hyper-V je
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
-
 ## <a name="the-container-ecosystem-in-azure"></a>Ekosystem kontenera na platformie Azure
 
 W poprzednich sekcjach zostały wyjaśnione, co to są korzyści z kontenerów platformy Docker oraz szczegółowe informacje na temat obrazów kontenera dla aplikacji .NET. Wszystko to ogólne informacje jest niezbędne, aby tworzyć lub konteneryzowanie aplikacji.
@@ -156,7 +155,7 @@ Dostępne są następujące produkty z obsługi kontenerów platformy Azure, kt�
 
 -   **Usługa Azure App Service**
 -   **Azure Kubernetes Service (AKS i usługi ACS)**
--   **Usługa Azure Service Fabric** 
+-   **Azure Service Fabric** 
 -   **Azure Batch** 
 
 Następnie usługi Azure Container Registry to rejestr kontenera skalowalne wysokiej hostowanych na platformie Azure, korzystających z wszystkie poprzednie produkty podczas rejestrowania i wdrażania obrazów kontenerów niestandardowych.

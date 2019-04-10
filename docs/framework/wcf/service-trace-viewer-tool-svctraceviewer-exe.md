@@ -2,12 +2,12 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213392"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez architekturę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, przeglądać i filtrować komunikaty śledzenia w dzienniku, aby zdiagnozować, naprawy i sprawdź problemów z usługą WCF.  
@@ -456,6 +456,7 @@ Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycj
  Po otwarciu dziennika śledzenia utworzone za pomocą arabskim systemie operacyjnym, możesz zauważyć, że nie działa filtr czasu. Na przykład roku 2005 odnosi się do roku 1427 w języku arabskim kalendarzu. Zakres czasu, obsługiwane przez przeglądarki danych śledzenia usługi filtr narzędzie nie obsługuje jednak daty wcześniejszej niż 1752. To oznacza, że nie jest możliwe wybrać poprawną datę w filtrze. Aby rozwiązać ten problem, należy utworzyć filtr niestandardowy (**widok/niestandardowe filtry**) za pomocą wyrażenia XPath do uwzględnienia w określonym zakresie czasu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [Kompleksowe śledzenie](./diagnostics/tracing/end-to-end-tracing.md)

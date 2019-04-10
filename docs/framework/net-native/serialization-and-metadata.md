@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c778cc4bc1172763c2473b472d02dc7b19d545
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207035"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 Jeśli Twoja aplikacja serializuje i deserializuje obiektów, konieczne może być dodawanie wpisów do Twojej dyrektywy środowiska uruchomieniowego (. rd.xml) plik, aby upewnić się, że metadane potrzebne znajduje się w czasie wykonywania. Istnieją dwie kategorie serializatory, a każdy z nich wymaga innej obsługi w pliku dyrektyw środowiska uruchomieniowego:  
@@ -65,6 +65,7 @@ Jeśli Twoja aplikacja serializuje i deserializuje obiektów, konieczne może by
  Aby uzyskać informacje dotyczące składni użytych w tym przykładzie, zobacz [ \<typ > Element](../../../docs/framework/net-native/type-element-net-native.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [\<Typ > Element](../../../docs/framework/net-native/type-element-net-native.md)

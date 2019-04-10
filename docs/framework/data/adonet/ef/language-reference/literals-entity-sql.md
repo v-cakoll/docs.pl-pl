@@ -2,12 +2,12 @@
 title: Literały (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209778"
 ---
 # <a name="literals-entity-sql"></a>Literały (jednostka SQL)
 W tym temacie opisano [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Obsługa literałów.  
@@ -91,7 +91,7 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>Identyfikator GUID  
+## <a name="guid"></a>Guid  
  A `GUID` Literał reprezentuje unikatowy identyfikator globalny. Jest sekwencją utworzone przez słowo kluczowe `GUID` i cyfry szesnastkowe w formularzu, znane jako *rejestru* formatu: 8-4-4-4-12 ujęta w apostrofy. Cyfry szesnastkowe jest rozróżniana wielkość liter.  
   
  Może być dowolną liczbę spacji między symbol identyfikator GUID i ładunek w postaci literału, ale nie nowe wiersze.  
@@ -102,4 +102,5 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
 ```  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221603"
 ---
 # <a name="generics-in-xaml"></a>Typy ogólne w XAML
 .NET Framework XAML Services zaimplementowanego w System.Xaml zapewnia obsługę za pomocą typów ogólnych CLR. Ta obsługa obejmuje określenie ograniczenia typów ogólnych jako argument typu i wymuszanie ograniczenia przez wywołanie odpowiedniej `Add` metodę w przypadku kolekcji ogólnej. W tym temacie opisano aspekty przy użyciu i odwoływanie się do typów ogólnych w XAML.  
@@ -43,6 +43,7 @@ ms.locfileid: "58048908"
  Niestandardowe przepływy pracy w programie Windows Workflow Foundation dla [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] nie obsługują ogólnego użycia XAML.  
   
 ## <a name="see-also"></a>Zobacz także
-- [x:TypeArguments, dyrektywa](x-typearguments-directive.md)
-- [x:Class, dyrektywa](x-class-directive.md)
+
+- [x:TypeArguments — dyrektywa](x-typearguments-directive.md)
+- [x:Class — dyrektywa](x-class-directive.md)
 - [Typy wbudowane dla wspólnych elementów podstawowych języka XAML](built-in-types-for-common-xaml-language-primitives.md)

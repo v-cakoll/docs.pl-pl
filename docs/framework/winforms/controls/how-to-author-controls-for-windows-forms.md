@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms'
+title: 'Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224341"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows
 Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki można podać i przetwarzania danych, akceptują dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonywać dowolna liczba innych funkcji, które łączą się z użytkownikiem a aplikacją. Ponieważ formant jest zasadniczo składnika za pomocą interfejsu graficznego, może być każda funkcja, która jest składnikiem, również zapewnić interakcji z użytkownikiem. Formanty są tworzone do obsługi określonych celów i tworzenie formantów jest po prostu kolejne zadania programowania. Mając to na uwadze następujące kroki przedstawiają Przegląd kontroli procesu tworzenia. Linki udostępniają dodatkowe informacje na temat poszczególnych kroków.  
   
 > [!NOTE]
@@ -52,10 +52,11 @@ Formant reprezentuje graficzny link między użytkownikiem i program. Kontrolki 
 10. Tworzenie pakietów i wdrażanie formantu. Aby uzyskać więcej informacji, zobacz [Pierwsze spojrzenie na wdrażanie w programie Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Instrukcje: Dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Instrukcje: Dziedziczenie z klasy formantów](how-to-inherit-from-the-control-class.md)
-- [Instrukcje: Dziedzicz Windows istniejących formantów formularzy](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Instrukcje: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
+
+- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Instrukcje: dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Instrukcje: dziedziczenie z klasy kontrolek](how-to-inherit-from-the-control-class.md)
+- [Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess — Interfejs
+title: ICorDebugProcess, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dc732a8e3419a7ca42f5180d1bd32128ec33417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 46d96d66f16cd956d8fab1afe00486d564e37953
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216798"
 ---
-# <a name="icordebugprocess-interface"></a>ICorDebugProcess — Interfejs
+# <a name="icordebugprocess-interface"></a>ICorDebugProcess, interfejs
 Reprezentuje proces, który wykonuje kod zarządzany. Ten interfejs jest podklasą icordebugcontroller —.  
   
 ## <a name="methods"></a>Metody  
@@ -37,7 +37,7 @@ Reprezentuje proces, który wykonuje kod zarządzany. Ten interfejs jest podklas
 |[GetHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|Pobiera uchwyt do procesu.|  
 |[GetHelperThreadID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|Pobiera identyfikator wątku systemu operacyjnego (OS) dla debugera wewnętrzny wątek pomocniczy.|  
 |[GetID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|Pobiera identyfikator systemu operacyjnego (OS) procesu.|  
-|[GetObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Nie zaimplementowano.|  
+|[GetObject — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|Nie zaimplementowano.|  
 |[GetThread, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|Pobiera identyfikator wystąpienia ICorDebugThread, który ma określony wątek systemu operacyjnego.|  
 |[GetThreadContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|Pobiera kontekst dla danego wątku.|  
 |[IsOSSuspended, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|Określa, czy wątek została zawieszona wyniku debugera zatrzymywania procesu.|  
@@ -63,5 +63,6 @@ Reprezentuje proces, który wykonuje kod zarządzany. Ten interfejs jest podklas
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebug — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

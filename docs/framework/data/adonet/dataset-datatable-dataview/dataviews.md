@@ -1,15 +1,15 @@
 ---
-title: DataView
+title: Elementy DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
-ms.openlocfilehash: bcf370e30c50bf5d992279c7abe02bfc6262ea40
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215914"
 ---
-# <a name="dataviews"></a>DataView
+# <a name="dataviews"></a>Elementy DataView
 A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych przechowywanych w <xref:System.Data.DataTable>, możliwości, jest często używany w aplikacjach powiązanie danych. Za pomocą **DataView**, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru.  
   
  A **DataView** udostępnia dynamiczny widok danych w źródłowym **DataTable**: zawartość, kolejność i członkostwa odzwierciedlenia zmian w miarę ich występowania. To zachowanie różni się od **wybierz** metody **DataTable**, co powoduje zwrócenie <xref:System.Data.DataRow> tablica z tabeli opartym na określonej kolejności filtrowania lub sortowania: Ta zawartość zawiera zmiany podstawowy w tabeli, ale członkostwo i kolejność pozostaną statyczne. Dynamiczne możliwości **DataView** jest idealnym rozwiązaniem dla wiązania danych aplikacji.  
@@ -60,4 +60,5 @@ A <xref:System.Data.DataView> umożliwia tworzenie różnych widoków danych prz
  W tym artykule opisano ADO.NET architektura i składniki i jak za pomocą ADO.NET dostęp do istniejących źródeł danych i zarządzania danymi w aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

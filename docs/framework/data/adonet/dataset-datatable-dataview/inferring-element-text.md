@@ -2,12 +2,12 @@
 title: Wnioskowanie tekstu elementu
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: d457985bfbec924748d1a418e318609b6837b9d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224965"
 ---
 # <a name="inferring-element-text"></a>Wnioskowanie tekstu elementu
 Jeśli element zawiera tekst, a nie ma żadnych elementów podrzędnych, aby był wywnioskowany, ponieważ tabele takie jak (elementy przy użyciu atrybutów) lub powtarzalne elementy nową kolumnę o nazwie **TableName_Text** zostaną dodane do tabeli, która jest wnioskowany dla elementu. Tekst zawarty w elemencie zostaną dodane do wiersza w tabeli i przechowywane w nowej kolumnie. **ColumnMapping** właściwości nowej kolumny, która będzie równa **MappingType.SimpleContent**.  
@@ -51,6 +51,7 @@ Jeśli element zawiera tekst, a nie ma żadnych elementów podrzędnych, aby by�
 |Tekst2|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wnioskowanie relacyjnej struktury elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Ładowanie informacji o schemacie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)

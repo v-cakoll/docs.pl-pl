@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6880584fe407d651010fad885c2dd5983ad4dfcf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 864cb893511bceabd61ce0064065b3866ce01dfe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212599"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>Metoda ICorDebugVariableHome::GetOffset
 Pobiera przesunięcie z podstawowej rejestru dla zmiennej.  
@@ -57,4 +57,5 @@ HRESULT GetOffset(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [ICorDebugVariableHome, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

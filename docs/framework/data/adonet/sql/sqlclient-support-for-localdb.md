@@ -1,15 +1,15 @@
 ---
-title: Obsługa SqlClient dla LocalDB
+title: Obsługa SqlClient w bazie danych LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 102dbdcc79234525a45e9059092ccaad63fa3353
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204760"
 ---
-# <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient dla LocalDB
+# <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient w bazie danych LocalDB
 Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja programu SQL Server, o nazwie LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączeń z bazą danych LocalDB.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -59,5 +59,6 @@ Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja pro
 -   Użyj `AttachDBFilename` słowo kluczowe parametrów połączenia, aby określić. Plik MDF.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

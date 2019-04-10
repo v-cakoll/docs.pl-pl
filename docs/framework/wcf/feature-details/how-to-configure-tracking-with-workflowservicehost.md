@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost'
+title: 'Instrukcje: konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 8ed8775a8eb13a8e69566c1d413dcd2eba6d8b6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226550"
 ---
-# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Instrukcje: Konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost
+# <a name="how-to-configure-tracking-with-workflowservicehost"></a>Instrukcje: konfigurowanie śledzenia za pomocą elementu WorkflowServiceHost
 W tym temacie opisano sposób konfigurowania śledzenia [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] przepływu pracy są hostowane w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest on skonfigurowany za pomocą pliku Web.config, określając zachowanie usługi.  
   
 ### <a name="configure-tracking-in-configuration"></a>Konfigurowanie śledzenia w konfiguracji  
@@ -69,6 +69,7 @@ W tym temacie opisano sposób konfigurowania śledzenia [!INCLUDE[netfx_current_
      Aby uzyskać więcej informacji na temat śledzenia ogólnie rzecz biorąc, zobacz [przepływu pracy i śledzenie](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md). Przykład konfigurowania śledzenia programowo zobacz [Konfigurowanie śledzenia przepływu pracy](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)
 - [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Profile śledzenia](../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

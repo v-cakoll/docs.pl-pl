@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Określanie poświadczeń zabezpieczeń kanału'
+title: 'Instrukcje: określanie poświadczeń zabezpieczeń kanału'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222604"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Instrukcje: Określanie poświadczeń zabezpieczeń kanału
+# <a name="how-to-specify-channel-security-credentials"></a>Instrukcje: określanie poświadczeń zabezpieczeń kanału
 Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji modelu COM do wywołania usługi WCF. Większość usług WCF wymaga klienta określić poświadczenia dla uwierzytelniania i autoryzacji. Podczas wywoływania usługi WCF z klienta programu WCF, te poświadczenia można określić w kodzie zarządzanym lub w pliku konfiguracji aplikacji. Podczas wywoływania usługi WCF z poziomu aplikacji modelu COM, można użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu, aby określić poświadczenia. W tym temacie przedstawiają różne sposoby, aby określić poświadczenia, za pomocą <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
   
 > [!NOTE]
@@ -65,13 +65,9 @@ Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji mo
 ### <a name="to-specify-user-name-and-password"></a>Aby określić nazwę użytkownika i hasło  
   
 1.  Zmodyfikuj plik App.config usługi, aby użyć `wsHttpBinding`. Jest to wymagane do weryfikacji nazwy i hasła użytkownika:  
-  
-  
-  
+
 2.  Ustaw `clientCredentialType` na nazwę użytkownika:  
-  
-  
-  
+
 3.  Otwórz Visual Basic 6.0 i Utwórz nowy plik .exe standardowych. Dodawanie przycisku do formularza, a następnie kliknij dwukrotnie przycisk aby dodać następujący kod programem obsługi kliknięcia:  
   
     ```  
@@ -96,9 +92,7 @@ Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji mo
 ### <a name="to-specify-windows-credentials"></a>Aby określić poświadczenia Windows  
   
 1.  Ustaw `clientCredentialType` do Windows w pliku App.config usługi:  
-  
-  
-  
+
 2.  Otwórz Visual Basic 6.0 i Utwórz nowy plik .exe standardowych. Dodawanie przycisku do formularza, a następnie kliknij dwukrotnie przycisk aby dodać następujący kod programem obsługi kliknięcia:  
   
     ```  
@@ -138,8 +132,9 @@ Monikera programu Windows Communication Foundation (WCF) umożliwia aplikacji mo
      Aby uzyskać więcej informacji na temat parametrów dla tej metody, zobacz <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
-- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

@@ -1,15 +1,15 @@
 ---
-title: Szybkie odwołanie do jednostki SQL
+title: Szybkie odwołanie do języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207074"
 ---
-# <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do jednostki SQL
+# <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do języka Entity SQL
 Ten temat zawiera krótki przewodnik po [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
   
 ## <a name="literals"></a>Literały  
@@ -71,7 +71,7 @@ DATETIME '2006-12-25 01:01'
   
 ## <a name="type-constructors"></a>Konstruktorzy typów  
   
-### <a name="row"></a>WIERSZ  
+### <a name="row"></a>ROW  
  [WIERSZ](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md) tworzy anonimowe, strukturalnie wpisane (rekordów) wartością jako: `ROW(1 AS myNumber, ‘Name’ AS myName).`  
   
  Przykład:  
@@ -256,7 +256,7 @@ using SqlServer; LOWER('AA');
 |-----------|  
 |aa|  
   
-## <a name="paging"></a>Stronicowania  
+## <a name="paging"></a>Stronicowanie  
  Stronicowania może być wyrażona przez zadeklarowanie [POMIŃ](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) i [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) podklauzul do [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) klauzuli.  
   
  Przykład:  
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  Dane wyjściowe:  
   
-|ID|Nazwa|  
+|Identyfikator|Nazwa|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -333,7 +333,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |Czapka z Logo AWC|  
 |...|  
   
-### <a name="select"></a>WYBIERZ POZYCJĘ  
+### <a name="select"></a>SELECT  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapewnia także Konstruktor row do utworzenia dowolnego wierszy. Wybierz przyjmuje jeden lub więcej elementów w projekcji i wyniki w rekordzie danych z polami, na przykład: `SELECT a, b, c`.  
   
  Przykład:  
@@ -363,5 +363,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |WARTOŚĆ TRUE|  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

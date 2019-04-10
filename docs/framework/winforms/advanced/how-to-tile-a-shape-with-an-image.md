@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kafelek kształtu obrazem'
+title: 'Instrukcje: Wypełnianie kafelków w obrębie kształtu obrazem'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719692"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221541"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Instrukcje: Kafelek kształtu obrazem
+# <a name="how-to-tile-a-shape-with-an-image"></a>Instrukcje: Wypełnianie kafelków w obrębie kształtu obrazem
 Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, prostokątne obrazy mogą być umieszczone obok siebie do wypełnienia kształtu (fragment). Na kafelku wewnątrz kształtu, użyj pędzla tekstury. Podczas konstruowania <xref:System.Drawing.TextureBrush> obiektu w Argumenty przekazane do konstruktora jest <xref:System.Drawing.Image> obiektu. Malowanie wnętrza kształtu przy użyciu pędzli tekstury, kształt zostanie wypełniony powtarzających się kopii tego obrazu.  
   
  Właściwość tryb zawijania <xref:System.Drawing.TextureBrush> obiektu określa, jak obraz, który jest ustawiony jako jest powtarzany w siatce kartezjańskiej. Można tworzyć Kafelki w siatce, że ten sam orientacji, czy też mają być obrazu przerzucić od położenia na siatce co do następnego. Przerzucanie może być poziome, pionowe lub obu. W poniższych przykładach pokazano fragmentacji z różnymi typami Przerzucanie.  
@@ -61,4 +61,5 @@ Zgodnie z kafelków mogą być umieszczane obok siebie na pokrycie piętra, pros
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Używanie pędzla do wypełniania kształtów](using-a-brush-to-fill-shapes.md)

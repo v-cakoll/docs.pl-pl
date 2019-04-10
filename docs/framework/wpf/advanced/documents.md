@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206944"
 ---
 # <a name="documents"></a>Dokumenty
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zawiera wszechstronny zestaw składników, które umożliwiają deweloperom tworzenie aplikacji za pomocą dokumentów zaawansowane funkcje i ulepszone czytanie. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje również uproszczone zarządzanie infrastrukturą usługi pakowania dokumentu, zabezpieczeń i magazynu.  
@@ -25,6 +25,7 @@ ms.locfileid: "54546978"
  [Drukowanie i zarządzanie systemem drukowania](printing-and-print-system-management.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>

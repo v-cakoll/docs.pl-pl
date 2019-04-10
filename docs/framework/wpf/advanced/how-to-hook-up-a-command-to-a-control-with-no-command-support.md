@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Podepnij polecenie do formantu bez użycia obsługi poleceń'
+title: 'Instrukcje: Podpinanie polecenia do kontrolki bez użycia obsługi poleceń'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: 66b371f4d67c1102ddf341dd4b70aac66aa41605
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ae45c9a9e33a3cb53ada6e1e5430ae0f9e6c198
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352675"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216980"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Instrukcje: Podepnij polecenie do formantu bez użycia obsługi poleceń
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Instrukcje: Podpinanie polecenia do kontrolki bez użycia obsługi poleceń
 Poniższy przykład pokazuje, jak podpiąć <xref:System.Windows.Input.RoutedCommand> do <xref:System.Windows.Controls.Control> który nie ma wbudowaną obsługą dla polecenia.  Aby uzyskać pełny przykład, który przechwytuje się polecenia do wielu źródeł, zobacz [tworzenie przykładowej routedcommand — niestandardowe](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand) próbki.  
   
 ## <a name="example"></a>Przykład  
@@ -47,5 +47,6 @@ Poniższy przykład pokazuje, jak podpiąć <xref:System.Windows.Input.RoutedCom
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przegląd poleceń](commanding-overview.md)
+
+- [Przegląd Polecenia](commanding-overview.md)
 - [Podpinanie polecenia do kontrolki za pomocą obsługi poleceń](how-to-hook-up-a-command-to-a-control-with-command-support.md)

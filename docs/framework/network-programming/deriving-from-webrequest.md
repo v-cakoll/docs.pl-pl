@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8e7c1d2943dcbfa8d9faa0b2e53bae57c767101
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216488"
 ---
 # <a name="deriving-from-webrequest"></a>Wyprowadzanie z elementu WebRequest
 <xref:System.Net.WebRequest> Klasa jest abstrakcyjna klasa bazowa, który zawiera podstawowe metody i właściwości dla tworzenia program obsługi żądania związane z protokołem, który pasuje do modelu podłączanego protokołu .NET Framework. Aplikacje, które używają **WebRequest** klasy mogą żądać danych za pomocą dowolnego obsługiwanego protokołu bez konieczności, aby określić protokół używany.  
@@ -89,6 +89,7 @@ ms.locfileid: "54717457"
  **Metody GetResponse** metoda jest odpowiedzialna za tworzenie odpowiednich **elementu WebResponse** podrzędnych zawiera przychodzącą odpowiedź.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>

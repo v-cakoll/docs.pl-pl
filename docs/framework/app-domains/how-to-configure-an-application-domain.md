@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8989d7695f44b0cd2e8b0ce3ec8bd74a6e802102
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0c7ecf1b0daf0e9ea56ec590083fe1ccd2d693
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225082"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Instrukcje: Konfigurowanie domeny aplikacji
 Środowisko uruchomieniowe języka wspólnego może udostępniać informacje o konfiguracji dla nowej domeny aplikacji, za pomocą <xref:System.AppDomainSetup> klasy. Podczas tworzenia domen aplikacji, najważniejsze właściwości to <xref:System.AppDomainSetup.ApplicationBase%2A>. Druga **AppDomainSetup** właściwości są używane głównie przez hosty środowiska uruchomieniowego, aby skonfigurować domeny określonej aplikacji.  
@@ -34,5 +34,6 @@ ms.locfileid: "54534569"
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)
-- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
+
+- [Programowanie za pomocą domen aplikacji](application-domains.md#programming-with-application-domains)
+- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)

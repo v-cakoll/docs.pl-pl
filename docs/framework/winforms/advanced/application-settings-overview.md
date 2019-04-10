@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203629"
 ---
 # <a name="application-settings-overview"></a>Przegląd ustawień aplikacji
 W tym temacie omówiono sposób tworzenia i przechowywania danych ustawień w imieniu użytkowników i aplikacji.  
@@ -48,13 +48,14 @@ W tym temacie omówiono sposób tworzenia i przechowywania danych ustawień w im
  Można również użyć <xref:System.Windows.Forms.Binding> klasy ustawienia programowo można powiązać właściwości formularzy i kontrolek.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Instrukcje: Sprawdzanie poprawności ustawień aplikacji](how-to-validate-application-settings.md)
+- [Instrukcje: Walidacja ustawień aplikacji](how-to-validate-application-settings.md)
 - [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Instrukcje: Odczytaj ustawienia w czasie wykonywania za pomocąC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Instrukcje: Czytanie ustawień w czasie wykonywania w języku C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Używanie ustawień aplikacji i ustawień użytkownika](using-application-settings-and-user-settings.md)
 - [Architektura ustawień aplikacji](application-settings-architecture.md)
 - [Ustawienia aplikacji dotyczące kontrolek niestandardowych](application-settings-for-custom-controls.md)

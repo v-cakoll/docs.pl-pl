@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208868"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funkcje domyślne w formancie DataGridView formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.DataGridView> kontroli udostępnia użytkownikom znacznej ilości funkcje domyślne.  
@@ -47,5 +47,6 @@ Formularze Windows <xref:System.Windows.Forms.DataGridView> kontroli udostępnia
 -   Automatycznie sortuje wierszy oparte na danych bazowych, gdy użytkownik kliknie nagłówek kolumny.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView, kontrolka](datagridview-control-windows-forms.md)
+- [DataGridView — Formant](datagridview-control-windows-forms.md)

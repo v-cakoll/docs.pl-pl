@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
-ms.openlocfilehash: 1384103f6ca35bab02280e6019d717a5d2f333cc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0a85232b753eed891cded4b0fb1154269b30dc9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224119"
 ---
 # <a name="dataview-performance"></a>Wydajność widoku danych
 W tym temacie omówiono zalety wydajności przy użyciu <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView> klasy i buforowania <xref:System.Data.DataView> w aplikacji sieci Web.  
@@ -87,4 +87,5 @@ GridView1.DataBind();
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Powiązanie danych i LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)

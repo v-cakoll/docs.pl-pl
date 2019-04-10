@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215940"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Izolacja migawki w programie SQL Server
 Izolacja migawki zwiększa współbieżności dla aplikacji OLTP.  
@@ -142,6 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
  Jeśli aplikacja ma wiele konfliktów, izolacji migawki nie może być najlepszym wyborem. Wskazówki dotyczące powinna służyć wyłącznie po naprawdę potrzebne. Aplikacji nie powinna być zaprojektowana tak, aby stale opiera się na wskazówki blokady do swoich operacji.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [Przewodnik obsługi wersji wiersza i blokowanie transakcji](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

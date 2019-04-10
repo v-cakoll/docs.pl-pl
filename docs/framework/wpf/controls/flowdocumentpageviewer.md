@@ -7,18 +7,19 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: 40c0ad20e22c06a0b92b71c59ea733b08fbded52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207633"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
 <xref:System.Windows.Controls.FlowDocumentPageViewer> Formantu służy do wyświetlania <xref:System.Windows.Documents.FlowDocument> zawartości na podstawie na stronę. Porównaj z <xref:System.Windows.Controls.FlowDocumentScrollViewer>, który przedstawia <xref:System.Windows.Documents.FlowDocument> zawartości w podglądzie z przewijaniem.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Documents.FlowDocument>
-- [Przegląd dokumentu przepływu](../advanced/flow-document-overview.md)
-- [Tematy z instrukcjami](../advanced/flow-content-elements-how-to-topics.md)
+- [Przegląd Dokument przepływu](../advanced/flow-document-overview.md)
+- [— Tematy porad](../advanced/flow-content-elements-how-to-topics.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)

@@ -1,15 +1,15 @@
 ---
-title: Właściwość klucza obcego
+title: właściwość klucza obcego
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: 8680019f6f1a53233b5c49163f474cf33409b69b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 74117b30ca54f7c57bd970003fc6f5dcc54d553f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218020"
 ---
-# <a name="foreign-key-property"></a>Właściwość klucza obcego
+# <a name="foreign-key-property"></a>właściwość klucza obcego
 A *właściwość klucza obcego* w Entity Data Model (EDM) jest typem pierwotnym [właściwość](../../../../docs/framework/data/adonet/property.md) (lub zestaw właściwości typu pierwotnego) na [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) zawierający [klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md) innego typu jednostki.  
   
  Właściwość klucza obcego jest analogiczne do kolumny klucza obcego w relacyjnej bazie danych. W ten sam sposób, że kolumny klucza obcego są używane w relacyjnej bazie danych do tworzenia relacji między wierszy w tabelach, właściwości klucza obcego w modelu koncepcyjnym są używane do ustanawiania [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) między typami encji. A [ograniczenia integralności referencyjnej](../../../../docs/framework/data/adonet/referential-integrity-constraint.md) służy do definiowania skojarzenie między dwoma typami encji, gdy jeden z typów ma właściwość klucza obcego.  
@@ -24,5 +24,6 @@ A *właściwość klucza obcego* w Entity Data Model (EDM) jest typem pierwotnym
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -3,12 +3,12 @@ title: Używanie języka F# na platformie Azure
 description: Przewodnik dotyczący korzystania z usług Azure za pomocąF#
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211741"
 ---
 # <a name="using-f-on-azure"></a>Używanie języka F# na platformie Azure
 
@@ -24,7 +24,6 @@ W poniższych sekcjach znajdziesz zasoby dotyczące korzystania z usług platfor
 Platforma Azure obsługuje szeroką gamę konfiguracji maszyny wirtualnej (VM), zobacz [systemów Linux i maszynach wirtualnych platformy Azure](https://azure.microsoft.com/services/virtual-machines/).
 
 Aby zainstalować F# na maszynie wirtualnej do wykonania, kompilacji i/lub zobacz skryptów [Using F# w systemie Linux](https://fsharp.org/use/linux) i [Using F# na Windows](https://fsharp.org/use/windows).
-
 
 ## <a name="using-azure-functions-with-f"></a>Użycie usługi Azure Functions f\#
 
@@ -42,10 +41,10 @@ Inne zasoby dotyczące korzystania z usługi Azure Functions i F#:
 
 Usługa Azure Storage jest podstawowy warstwy magazynowania dla nowoczesnych aplikacji, które polegają na trwałości, dostępności i skalowalności, aby spełniać potrzeby klientów. F#programy mogą wchodzić w interakcje bezpośrednio z usługami Azure storage, za pomocą metod opisanych w następujących artykułach.
 
-* [Rozpoczynanie pracy z usługą Azure Blob Storage przy użyciu języka F#](blob-storage.md)
-* [Rozpoczynanie pracy z usługą Azure File Storage przy użyciu języka F#](file-storage.md)
-* [Rozpoczynanie pracy z usługą Azure Queue Storage przy użyciu języka F#](queue-storage.md)
-* [Rozpoczynanie pracy z usługą Azure Table Storage przy użyciu języka F#](table-storage.md)
+* [Rozpoczynanie pracy z usługą Azure Blob storage przy użyciuF#](blob-storage.md)
+* [Rozpoczynanie pracy z usługą Azure File storage przy użyciuF#](file-storage.md)
+* [Rozpoczynanie pracy z usługą Azure Queue storage przy użyciuF#](queue-storage.md)
+* [Rozpoczynanie pracy z usługą Azure Table storage przy użyciuF#](table-storage.md)
 
 Usługa Azure Storage można również w połączeniu z usługą Azure Functions za pomocą deklaratywnych konfiguracji, a nie jawnych wywołań interfejsu API. Zobacz [Wyzwalacze usługi Azure Functions i powiązania dla usługi Azure Storage](/azure/azure-functions/functions-bindings-storage) zawierający F# przykłady.
 
@@ -89,7 +88,6 @@ Usługa Azure Notification Hubs może być używany z F# na dwa sposoby:
 
 1. Proces tworzenia F# usługi Azure Functions, która będzie wysyłać wyniki do danego centrum powiadomień. Zobacz [wyzwalaczy dane wyjściowe funkcji platformy Azure dla usługi Notification Hubs](/azure/azure-functions/functions-bindings-notification-hubs), lub
 2. Za pomocą [zestawu .NET SDK dla platformy Azure](https://blogs.msdn.microsoft.com/azuremobile/2014/04/08/push-notifications-using-notification-hub-and-net-backend/). Należy pamiętać, że te przykłady w języku C#.
-
 
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementowanie elementów Webhook na platformie Azure dzięki F\#
 

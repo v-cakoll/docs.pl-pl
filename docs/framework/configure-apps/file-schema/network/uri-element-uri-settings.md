@@ -1,13 +1,13 @@
 ---
-title: <Uri> — Element (Ustawienia identyfikatora Uri)
+title: <Uri> Element (ustawienia identyfikatora Uri)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212146"
 ---
 # <a name="uri-element-uri-settings"></a>\<Identyfikator URI >, Element (ustawienia identyfikatora Uri)
 Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL wyrażone za pomocą uniform resource identifier (URI).  
@@ -34,7 +34,7 @@ Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[idn](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazw domen.|  
+|[IDN](../../../../../docs/framework/configure-apps/file-schema/network/idn-element-uri-settings.md)|Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazw domen.|  
 |[iriParsing](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)|Określa, jeśli analizy międzynarodowego identyfikatora zasobów (IRI) są stosowane do <xref:System.Uri> , czy powinna być stosowana IRI podczas analizowania reguły.|  
 |[schemeSettings](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Określa, jak <xref:System.Uri> będzie być analizowana pod kątem określonych systemów.|  
   
@@ -42,7 +42,7 @@ Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Konfiguracja](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Zawiera ustawienia dla wszystkich przestrzeni nazw.|  
+|[konfiguracja](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Zawiera ustawienia dla wszystkich przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
  `uri` Element zawiera ustawienia dla elementów członkowskich <xref:System.Uri> klasy używane przez klasy w <xref:System.Net> przestrzeni nazw. Ustawienia skonfigurować obsługę IRI i IDN.  
@@ -68,4 +68,5 @@ Zawiera ustawienia, które określają, jak .NET Framework obsługuje adresy URL
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Schemat ustawień sieci](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

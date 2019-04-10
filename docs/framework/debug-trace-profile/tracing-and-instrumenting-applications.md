@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547819"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219216"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie jest sposobem monitorowania wykonywanie aplikacji, gdy jest on uruchomiony. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework, Opracuj go, gdy zarówno podczas opracowywania aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Możesz użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach oraz wykonywania aplikacji w dzienniki, pliki tekstowe lub innych urządzeń do późniejszej analizy.  
@@ -124,7 +124,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |------------|------------|  
 |**Assert**|Określony tekst. lub, jeśli nie określono wywołanie stosu. Dane wyjściowe są zapisywane tylko jeśli warunek określony jako argument w **Asercja** instrukcja jest **false**.|  
 |**Niepowodzenie**|Określony tekst. lub, jeśli nie określono wywołanie stosu.|  
-|**Zapis**|Określony tekst.|  
+|**Write**|Określony tekst.|  
 |**Writeif —**|Określony tekst, jeśli warunek określony jako argument w **writeif —** instrukcji jest spełniony.|  
 |**WriteLine**|Określony tekst i znaku powrotu karetki.|  
 |**WriteLineIf**|Określony tekst i karetki zwracają, jeśli warunek określony jako argument w **WriteLineIf** instrukcji jest spełniony.|  
@@ -142,6 +142,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Jeśli nie można wyłączyć śledzenie i debugowanie przed wdrożeniem aplikacji ASP.NET, aplikacja może ujawnić informacje o sobie, które mogą zostać wykorzystane przez złośliwych programów. Aby uzyskać więcej informacji, zobacz [jak: Kompiluj warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [kompilowanie i tworzenie](/visualstudio/ide/compiling-and-building-in-visual-studio), i [jak: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Debugowanie jest także można skonfigurować za pomocą programu Internet Information Services (IIS).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Kontrakty kodu](../../../docs/framework/debug-trace-profile/code-contracts.md)
@@ -149,7 +150,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Instrukcje: Tworzenie i Inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Instrukcje: Użycie TraceSource i filtrów z obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
-- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Instrukcje: Tworzenie i inicjowanie źródeł śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Instrukcje: Użycie TraceSource i filtrów z obiektami nasłuchującymi śledzenia](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)

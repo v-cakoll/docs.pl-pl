@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Użyj SystemFonts'
+title: 'Instrukcje: Używanie elementu SystemFonts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216785"
 ---
-# <a name="how-to-use-systemfonts"></a>Instrukcje: Użyj SystemFonts
+# <a name="how-to-use-systemfonts"></a>Instrukcje: Używanie elementu SystemFonts
 W tym przykładzie pokazano, jak korzystać z zasobów statycznych <xref:System.Windows.SystemFonts> klasy do nadawania stylu lub dostosować przycisku.  
   
 ## <a name="example"></a>Przykład  
@@ -37,11 +37,12 @@ W tym przykładzie pokazano, jak korzystać z zasobów statycznych <xref:System.
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.SystemFonts>
 - [Malowanie obszaru pędzlem systemowym](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Używanie elementu SystemParameters](how-to-use-systemparameters.md)
 - [Używanie kluczy czcionek systemowych](how-to-use-system-fonts-keys.md)
-- [Tematy z instrukcjami](resources-how-to-topics.md)
-- [x:Static, rozszerzenie znaczników](../../xaml-services/x-static-markup-extension.md)
+- [— Tematy porad](resources-how-to-topics.md)
+- [x:Static — Rozszerzenie znaczników](../../xaml-services/x-static-markup-extension.md)
 - [Zasoby XAML](xaml-resources.md)
-- [DynamicResource, rozszerzenie znaczników](dynamicresource-markup-extension.md)
+- [DynamicResource — Rozszerzenie znaczników](dynamicresource-markup-extension.md)

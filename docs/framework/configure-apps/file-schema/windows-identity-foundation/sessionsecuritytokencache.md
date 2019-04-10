@@ -3,12 +3,12 @@ title: <sessionSecurityTokenCache>
 ms.date: 03/30/2017
 ms.assetid: d43e676c-0153-485c-ab31-0257a2db7507
 author: BrucePerlerMS
-ms.openlocfilehash: 697c20d1f526cb376c2430f0006349f7d8f9b2f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c68fe618f965f364a3716c3bc65de5e165b12ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207802"
 ---
 # <a name="sessionsecuritytokencache"></a>\<sessionSecurityTokenCache>
 Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji programu obsługi tokenów zabezpieczeń.  
@@ -62,4 +62,5 @@ Rejestruje pamięci podręcznej dla sesji tokenów z usługi lub kolekcji progra
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>

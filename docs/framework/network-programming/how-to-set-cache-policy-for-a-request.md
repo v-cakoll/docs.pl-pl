@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie zasad pamięci podręcznej dla żądania'
+title: 'Instrukcje: ustawianie zasad pamięci podręcznej dla żądania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226576"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>Instrukcje: Określanie zasad pamięci podręcznej dla żądania
+# <a name="how-to-set-cache-policy-for-a-request"></a>Instrukcje: ustawianie zasad pamięci podręcznej dla żądania
 W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Przykład  
@@ -106,6 +106,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)
 - [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)

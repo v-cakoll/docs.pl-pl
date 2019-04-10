@@ -1,18 +1,18 @@
 ---
 title: Niezależność od języka i składniki niezależne od języka
-description: Dowiedz się, jak można tworzyć w jednym z wielu języków obsługiwanych na platformie .NET, takich jak C#, C + +/ CLI, F#, IronPython, VB, Visual COBOL i programu PowerShell.
+description: Dowiedz się, jak można tworzyć w jednym z wielu języków obsługiwanych na platformie .NET, takich jak C#, C++sposób niezamierzony, F#, IronPython, VB, Visual COBOL i programu PowerShell.
 ms.date: 07/22/2016
 dev_langs:
 - csharp
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723312"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214744"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i składniki niezależne od języka
 
@@ -47,7 +47,7 @@ W tym artykule:
 
     * [Typy ogólne i członkowie](#generic-types-and-members)
 
-    * [Konstruktory](#constructors)
+    * [Konstruktorów](#constructors)
 
     * [Właściwości](#properties)
 
@@ -160,8 +160,8 @@ Tablice | [Tablice](#arrays) | Tablice powinny zawierać elementy o typie zgodny
 Atrybuty | [Atrybuty](#attributes) | Atrybuty powinny być typu [klasy System.Attribute](xref:System.Attribute), lub typu z niego dziedziczącego. | 41
 Atrybuty | [Atrybuty](#attributes) | Specyfikacja CLS zezwala tylko na podzestaw kodowań atrybutów niestandardowych. Jedyne typy, które mają się pojawiać w tych kodowaniach to (zobacz część IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [ System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double), i Typ wyliczeniowy oparty na zgodny ze specyfikacją CLS podstawowym typie integer. | 34
 Atrybuty | [Atrybuty](#attributes) | Specyfikacja CLS nie zezwala na Modyfikatory widoczne publicznie (`modreq`, zob. partycja II), ale zezwala na Modyfikatory opcjonalne (`modopt`, zob. partycja II) nie rozumie. | 35
-Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)  | 21
-Konstruktorów | [Konstruktory](#constructors) | Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie. | 22
+Konstruktorów | [Konstruktorów](#constructors) | Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)  | 21
+Konstruktorów | [Konstruktorów](#constructors) | Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie. | 22
 Wyliczenia | [Wyliczenia](#enumerations) | Podstawowym typem wyliczenia będzie wbudowany typ liczby całkowitej ze specyfikacją CLS, nazwy pola będzie "value__" i pole to będzie oznakowane `RTSpecialName`. |  7
 Wyliczenia | [Wyliczenia](#enumerations) | Istnieją dwa odrębne rodzaje wyliczeń, wskazywane przez obecność lub Brak [System.FlagsAttribute](xref:System.FlagsAttribute) atrybut niestandardowy (zobacz Biblioteka partycja IV). Reprezentuje nazwane wartości liczb całkowitych; inne reprezentuje nazwane flagi bitowe, które mogą być połączone do generowania wartości nienazwanej. Wartość `enum` nie jest ograniczona do określonej wartości. |  8
 Wyliczenia | [Wyliczenia](#enumerations) | Literał statycznego pola elementu enum ma typ wyliczenia Enum. |  9
@@ -325,9 +325,9 @@ Typ zgodny ze specyfikacją CLS | Opis
 [Double](xref:System.Double) | Wartość zmiennoprzecinkowa o podwójnej precyzji
 [Boolean](xref:System.Boolean) | Typ wartości true lub false
 [Char](xref:System.Char) | Jednostka zakodowany kodu UTF-16
-[Decimal](xref:System.Decimal) | Liczba dziesiętna non--liczba zmiennoprzecinkowa
+[Wartość dziesiętna](xref:System.Decimal) | Liczba dziesiętna non--liczba zmiennoprzecinkowa
 [IntPtr](xref:System.IntPtr) | Wskaźnik lub uchwyt rozmiaru zdefiniowanej platformy
-[Ciąg](xref:System.String) | Zbiór zero, jeden lub więcej obiektów Char
+[String](xref:System.String) | Zbiór zero, jeden lub więcej obiektów Char
 
 Typy wewnętrzne wymienione w poniższej tabeli nie są zgodne ze specyfikacją CLS.
 
@@ -336,7 +336,7 @@ Typ niezgodny | Opis | Alternatywa zgodna ze specyfikacją CLS
 [SByte](xref:System.SByte) | Typ danych 8-bitową | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16-bitowej nieoznaczonej liczby całkowitej | [Int32](xref:System.Int32)
 [UInt32](xref:System.UInt32) | 32-bitowej nieoznaczonej liczby całkowitej | [Int64](xref:System.Int64)
-[UInt64 —](xref:System.UInt64) | 64-bitowej nieoznaczonej liczby całkowitej | [Int64](xref:System.Int64) (możliwe przepełnienie), [BigInteger](xref:System.Numerics.BigInteger), lub [Double](xref:System.Double)
+[UInt64](xref:System.UInt64) | 64-bitowej nieoznaczonej liczby całkowitej | [Int64](xref:System.Int64) (możliwe przepełnienie), [BigInteger](xref:System.Numerics.BigInteger), lub [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | Nieoznaczony wskaźnik lub uchwyt | [IntPtr](xref:System.IntPtr)
 
 Biblioteka klas programu .NET Framework lub inne biblioteki klas może zawierać inne typy, które nie są zgodne ze specyfikacją CLS; na przykład:
@@ -1632,7 +1632,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -1644,7 +1643,6 @@ Assembly: CLSCompliant(True)>
 
 <CLSCompliant(False)> Public Class BaseClass
 End Class
-
 
 Public Class BaseCollection(Of T As BaseClass)
 End Class
@@ -1763,7 +1761,6 @@ Przykład pomyślnie wykonuje kompilację ograniczenie zostanie dodane do `Float
 using System;
 
 [assembly:CLSCompliant(true)]
-
 
 public class Number<T> where T : struct
 {
@@ -1893,7 +1890,6 @@ Public Class C1(Of T)
    Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
                                              ' accessible from within C1(Of T) in all
    End Sub                                   ' languages
-
 
    Protected Sub M2(n As C1(Of T).N)     ' CLS-compliant – C1(Of T).N accessible
    End Sub                               ' inside C1(Of T)
@@ -2584,7 +2580,7 @@ Konstruktor lub właściwości atrybutu zgodne ze specyfikacją CLS mogą uwidac
 
 * [Single](xref:System.Single)
 
-* [Ciąg](xref:System.String)
+* [String](xref:System.String)
 
 * [Typ](xref:System.Type)
 

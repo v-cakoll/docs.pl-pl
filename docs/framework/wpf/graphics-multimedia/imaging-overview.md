@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209713"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Umożliwia deweloperom do wyświetlenia, przekształcania i formatowanie obrazów.  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>Składnik obrazowania WPF  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zapewnia znaczące ulepszenia w zakresie możliwości w ramach imaging [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Tworzenie obrazu funkcji, takich jak wyświetlanie mapy bitowej lub za pomocą obrazu na formancie wspólnego zostały wcześniej zależnej od [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] lub [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] bibliotek. Te [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] oferują funkcje obsługi obrazów linii bazowej, ale brak funkcje, takie jak obsługa kodera-dekodera rozszerzalność i obsługę obrazu o dużej wierności. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] zaprojektowano w celu pokonania braków [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] i [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] i podaj nowy zestaw [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wyświetlić obrazy i używać w aplikacjach.  
@@ -190,6 +189,7 @@ Pędzle obrazu można wypełnić kształtów, formantów, tekstu i więcej
 >  Koder-dekoder musi być podpisany cyfrowo dla systemu, aby można było go rozpoznać.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>

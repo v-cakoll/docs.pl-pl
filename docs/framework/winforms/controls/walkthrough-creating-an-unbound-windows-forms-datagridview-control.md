@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie Windows niezwiązanego formantu DataGridView formularzy'
+title: 'Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: ebbfeaa2d6a7734aa0f2b214be65e64111d28ac0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220581"
 ---
-# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Przewodnik: Tworzenie Windows niezwiązanego formantu DataGridView formularzy
+# <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows
 Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych. Na przykład można wyświetlić zawartości dwuwymiarową tablicę ciągów. <xref:System.Windows.Forms.DataGridView> Klasy umożliwia łatwe i dużym stopniu dostosowywane do wyświetlania danych bez powiązania ze źródłem danych. W tym instruktażu pokazano, jak wypełnić <xref:System.Windows.Forms.DataGridView> sterowania i zarządzania nimi dodawania i usuwania wierszy w trybie "niepowiązanych". Domyślnie użytkownik może dodawać nowe wiersze. Aby zapobiec wierszy, ustawianie <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwość `false`.  
   
  Aby skopiować kod, w tym temacie na jednej liście, zobacz [jak: Tworzenie formantu DataGridView formularzy Windows niepowiązanych](how-to-create-an-unbound-windows-forms-datagridview-control.md).  
@@ -93,7 +93,8 @@ Można często wyświetlić dane tabelaryczne, która nie pochodzi z bazy danych
 -   Dostosowywanie wyglądu komórek. Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy Windows](customize-the-appearance-of-cells-in-the-datagrid.md) i [jak: Ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy Windows](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: Tworzenie formantu DataGridView formularzy Windows niepowiązanych](how-to-create-an-unbound-windows-forms-datagridview-control.md)
-- [Tryby wyświetlania danych w kontrolce DataGridView formularzy Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows](how-to-create-an-unbound-windows-forms-datagridview-control.md)
+- [Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows](data-display-modes-in-the-windows-forms-datagridview-control.md)

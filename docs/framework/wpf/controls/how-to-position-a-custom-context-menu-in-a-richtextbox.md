@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustaw położenie menu kontekstowego w RichTextBox'
+title: 'Instrukcje: Ustawianie położenia menu kontekstowego w kontrolce RichTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209427"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Instrukcje: Ustaw położenie menu kontekstowego w RichTextBox
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>Instrukcje: Ustawianie położenia menu kontekstowego w kontrolce RichTextBox
 W tym przykładzie pokazano, jak położenie menu kontekstowego dla <xref:System.Windows.Controls.RichTextBox>.  
   
  Podczas implementacji menu kontekstowego dla **RichTextBox**, jesteś odpowiedzialny za obsługę położenie menu kontekstowego.  Domyślnie menu kontekstowego jest otwarty w środku **RichTextBox**.  
@@ -35,5 +35,6 @@ W tym przykładzie pokazano, jak położenie menu kontekstowego dla <xref:System
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [RichTextBox — omówienie](richtextbox-overview.md)
-- [TextBox — omówienie](textbox-overview.md)
+
+- [RichTextBox — Przegląd](richtextbox-overview.md)
+- [TextBox — Przegląd](textbox-overview.md)

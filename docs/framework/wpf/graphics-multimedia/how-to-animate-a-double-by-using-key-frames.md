@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj double z wykorzystaniem klatek kluczowych'
+title: 'Instrukcje: Animowanie elementu double przy użyciu klatek kluczowych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: fe2efdada43e5dd6aced730ab59d9dd004899822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208785"
 ---
-# <a name="how-to-animate-a-double-by-using-key-frames"></a>Instrukcje: Animuj double z wykorzystaniem klatek kluczowych
+# <a name="how-to-animate-a-double-by-using-key-frames"></a>Instrukcje: Animowanie elementu double przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak animować wartość właściwości, która przyjmuje <xref:System.Double> przy użyciu klatek kluczowych.  
   
 ## <a name="example"></a>Przykład  
@@ -37,10 +37,11 @@ W tym przykładzie pokazano, jak animować wartość właściwości, która przy
  Aby zachować spójność z innymi przykładami animacji, użyj wersji kodu w tym przykładzie <xref:System.Windows.Media.Animation.Storyboard> obiekt, aby zastosować <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Alternatywnie, stosując jednej animacji w kodzie, jest łatwiejszy w obsłudze <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> metody zamiast <xref:System.Windows.Media.Animation.Storyboard>. Aby uzyskać przykład, zobacz [animować właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Shapes.Rectangle>
 - <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>
-- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

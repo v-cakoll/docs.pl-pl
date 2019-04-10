@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210558"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Dodawanie istniejących ograniczeń do zestawu danych
 **Wypełnienia** metody **DataAdapter** wypełnia <xref:System.Data.DataSet> tylko z tabel, kolumn i wierszy ze źródła danych; jednak ograniczenia są zazwyczaj ustawiane przez źródło danych **wypełnienia** metoda nie dodaje te informacje schematu **DataSet** domyślnie. Aby wypełnić **zestawu danych** z istniejących informacji ograniczenia klucza podstawowego źródła danych, można wywołać **FillSchema** metody **DataAdapter**, lub ustaw **MissingSchemaAction** właściwość **DataAdapter** do **AddWithKey** przed wywołaniem **wypełnienia**. Pozwoli to zagwarantować, że klucz podstawowy ograniczeń **DataSet** odzwierciedlają poglądy w źródle danych. Informacje ograniczenie klucza obcego nie jest uwzględniona i muszą być jawnie, jak pokazano na tworzone [ograniczenia elementu DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
@@ -61,7 +61,8 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Jeśli **FillSchema** metody **OleDbDataAdapter** obiektu jest wywoływana dla polecenia, które zwraca wiele zestawów wyników, informacje schematu pierwszy zestaw wyników jest zwracany. Podczas zwracania informacji o schemacie dla wielu wyników sets przy użyciu **OleDbDataAdapter**, zaleca się, że podajesz **MissingSchemaAction** z **AddWithKey** i uzyskiwanie informacji o schemacie podczas wywoływania **wypełnienia** metody.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+
+- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

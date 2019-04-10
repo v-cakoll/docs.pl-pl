@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 01d17b39e89b764871c1c70512eae6929cc98554
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212417"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jednocześnie również wykorzystuje funkcje zabezpieczeń, możliwości platformy, która zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy są łączone w celu zapewnienia [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, ochronę w głębi, który próbuje uniknąć dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
@@ -30,9 +30,7 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
  ![Ilustracja przedstawiająca zabezpieczenia WPF](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
   
  W pozostałej części tego tematu opisano funkcje, w każdym z tych warstw, które odnoszą się do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] specjalnie.  
-  
 
-  
 <a name="Operating_System_Security"></a>   
 ## <a name="operating-system-security"></a>Zabezpieczeń systemu operacyjnego  
  Minimalny poziom systemu operacyjnego, która jest wymagana przez [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] jest [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]. Rdzeń [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] udostępnia kilka funkcji zabezpieczeń, które stanowią podstawę zabezpieczeń dla wszystkich aplikacji Windows, łącznie z tymi utworzonych za pomocą [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] zawiera funkcje zabezpieczeń [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] i rozszerza je dalej. W tym temacie omówiono szerokość te funkcje zabezpieczeń, które są istotne dla [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], a także [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] integruje się z nimi, aby zapewnić dalsze ochronę w głębi.  
@@ -209,8 +207,9 @@ Windows Presentation Foundation (WPF) zapewnia szereg usług zabezpieczeń, jedn
  [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] dołącza i rozszerza możliwości zabezpieczeń [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] jako część nieustannie zobowiązuje się do zabezpieczeń.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Opis zabezpieczeń w programie Microsoft Internet Explorer 6 Windows XP z dodatkiem SP2](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
 - [Zabezpieczenia](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
-- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
+- [Strategia zabezpieczeń WPF - projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

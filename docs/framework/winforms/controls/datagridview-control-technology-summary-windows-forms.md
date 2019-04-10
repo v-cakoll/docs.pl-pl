@@ -5,19 +5,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217422"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
 Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klas, które obsługują jego użycia.  
   
  Wyświetlanie danych w formacie tabelarycznym jest zadaniem, które najprawdopodobniej będzie wykonywać często. `DataGridView` Kontrolki została zaprojektowana jako kompletne rozwiązanie do prezentowania danych w siatce.  
   
-## <a name="keywords"></a>Słowa kluczowe  
+## <a name="keywords"></a>słowa kluczowe  
  DataGridView, BindingSource, tabeli, komórki, powiązań danych, tryb wirtualny  
   
 ## <a name="namespaces"></a>Namespaces  
@@ -61,6 +61,7 @@ Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klas, któ
  <xref:System.Windows.Forms.DataGridView> Kontroli może współpracować Zamknij z <xref:System.Windows.Forms.BindingSource> składnika. Ten składnik jest zaprojektowane jako podstawowego źródła danych formularza. Może zarządzać interakcji między <xref:System.Windows.Forms.DataGridView> kontroli i źródłem danych, niezależnie od tego, dane typu źródła.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DataGridView, kontrolka — omówienie](datagridview-control-overview-windows-forms.md)
 - [DataGridView, kontrolka — architektura](datagridview-control-architecture-windows-forms.md)
 - [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md)

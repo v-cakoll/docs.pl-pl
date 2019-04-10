@@ -6,18 +6,16 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: fbdd04f40c1d4a29ff1807b8a2760802b0338cb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215953"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświetlanie dokumentów wysokiej jakości.  Ulepszone funkcje, które obsługują Naprawiono dokumenty i dokumenty przepływu, zaawansowane wyświetlania formantów, w połączeniu z zaawansowanych 2D i funkcje grafiki 3D aplikacji .NET Framework na nowy poziom jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem programu .NET Framework i możliwość efektywnie zapisywanie i ładowanie dokumentów z magazynu danych jest niezbędne do niemal wszystkich aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
-  
- 
-  
+
 <a name="AboutSerialization"></a>   
 ## <a name="about-document-serialization"></a>Informacje o serializacji dokumentu  
  Najlepiej proces serializacji i deserializacji dokumentu z, a następnie wstecz do pamięci jest niewidoczna dla aplikacji.  Aplikacja wywołuje element serializujący "write" metodę, aby zapisać dokumentu, podczas deserializacji "Odczyt" Metoda uzyskuje dostęp do magazynu danych oraz odtwarza oryginalnego wystąpienia w pamięci.  Określony format, którego dane są przechowywane w zwykle nie jest kwestią w aplikacji, jak długie jako serializacja i zdeserializować procesu odtwarza dokumentu z powrotem do ich oryginalnej postaci.  
@@ -74,9 +72,10 @@ Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświe
 3.  Po utworzeniu dodatku typu plug-in serializator skrypt instalacji został zaimplementowany dla dystrybucji i instalacji (i odinstalowywania) wtyczki (zobacz powyżej, "[Instalowanie wtyczki Serializatory](#InstallingPluginSerializers)").  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Documents.Serialization>
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd drukowania](printing-overview.md)
-- [Formatu XML Paper Specification: omówienie](https://go.microsoft.com/fwlink?LinkID=106246)
+- [Przegląd Drukowanie](printing-overview.md)
+- [Formatu XML Paper Specification: Omówienie](https://go.microsoft.com/fwlink?LinkID=106246)

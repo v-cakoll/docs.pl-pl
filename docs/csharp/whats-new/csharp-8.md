@@ -2,12 +2,12 @@
 title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
-ms.translationtype: MT
+ms.openlocfilehash: 34db8df43f962272f21fc8bf3fa31be06b8fdaf3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545562"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221244"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
 
@@ -24,7 +24,7 @@ Istnieje wiele ulepszeń C# języka, które możesz wypróbować już w wersji z
 
 Następujące funkcje języka najpierw pojawiła się C# 8.0 w wersji zapoznawczej 1:
 
-- [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
+- [Typy dopuszczające wartości null odwołań](#nullable-reference-types)
 - [Asynchroniczne strumienie](#asynchronous-streams)
 - [Indeksy i zakresy](#indices-and-ranges)
 
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 W powyższym przykładzie plik jest usuwany po osiągnięciu zamykającego nawiasu klamrowego dla metody. To już koniec zakresu, w którym `file` jest zadeklarowana. Powyższy kod jest równoważny z następującym kodem przy użyciu klasycznej [za pomocą instrukcji](../language-reference/keywords/using-statement.md) instrukcji:
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 44dcd118be62214b82a68efa77aecb4a605fdb71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218397"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Udostępnianie składników COM programowi.NET Framework
 Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący składnik COM do zarządzanego kodu. Aby uzyskać informacje na temat pisania serwerów COM, który jest ściśle zintegrowane z .NET Framework, zobacz [zagadnień projektowych dotyczących współdziałanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -39,8 +39,9 @@ Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący s
      Aplikacje międzyoperacyjne najlepiej są wdrażane jako [o silnej nazwie](../app-domains/strong-named-assemblies.md), podpisane zestawów w globalnej pamięci podręcznej.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Współdziałanie z kodem niezarządzanym](index.md)
-- [Zagadnienia dotyczące projektowania do celów międzyoperacyjności](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
-- [Przykład międzyoperacyjnego modelu COM: Klient modelu .NET i serwer COM](com-interop-sample-net-client-and-com-server.md)
-- [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil.exe (narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Zagadnienia projektowania związane z międzyoperacyjnością](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
+- [Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM](com-interop-sample-net-client-and-com-server.md)
+- [Niezależność od języka i elementy niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
+- [Gacutil.exe (Narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)

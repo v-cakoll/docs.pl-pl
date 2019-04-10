@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania'
+title: 'Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213692"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Przewodnik: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania
+# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania
 Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugowania zachowania w czasie projektowania. Jest to szczególnie istotne w przypadku tworzenia niestandardowego projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md).  
   
  Kontrolki niestandardowe przy użyciu programu Visual Studio umożliwia debugowanie tak samo, jak debuguje się inne klasy .NET Framework. Różnica polega na to, że będziesz debugował osobnego wystąpienia programu Visual Studio, który jest uruchomiony kod kontrolki niestandardowej  
@@ -173,6 +173,7 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
 -   Możesz napisać niestandardowego projektanta dla niestandardowej kontrolki. Zapewnia pełną kontrolę nad środowiskiem projektowania przy użyciu rozszerzonego infrastruktury projektanta udostępnianych przez program Visual Studio. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>Zobacz także
-- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)
+
+- [Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio](creating-a-wf-control-design-time-features.md)
 - [Instrukcje: Dostęp do usługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Instrukcje: Dostęp do obsługi w czasie projektowania w formularzach Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

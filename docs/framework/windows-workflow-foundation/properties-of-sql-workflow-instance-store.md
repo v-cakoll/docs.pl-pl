@@ -1,15 +1,15 @@
 ---
-title: Właściwości Store wystąpienia przepływu pracy SQL
+title: Właściwości magazynu wystąpień przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-ms.openlocfilehash: 7490528d31d76c62b15b32cc1f809ecfe9126eca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae96b08b8b9bb620ae3e86376bb0be4691d4caa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222123"
 ---
-# <a name="properties-of-sql-workflow-instance-store"></a>Właściwości Store wystąpienia przepływu pracy SQL
+# <a name="properties-of-sql-workflow-instance-store"></a>Właściwości magazynu wystąpień przepływu pracy SQL
 Tematy w tej sekcji zawierają szczegółowe informacje dotyczące właściwości Store wystąpienia przepływu pracy SQL.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -27,5 +27,6 @@ Tematy w tej sekcji zawierają szczegółowe informacje dotyczące właściwośc
 -   [Parametry połączenia i nazwa parametrów połączenia](connection-string-and-connection-string-name.md)  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Windows Server App Fabric wystąpienia Store](https://go.microsoft.com/fwlink/?LinkId=201201)
 - [Danych trwałości programu AppFabric programu SQL Server](https://go.microsoft.com/fwlink/?LinkId=201202)

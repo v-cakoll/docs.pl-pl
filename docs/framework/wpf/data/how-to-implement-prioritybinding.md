@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zaimplementuj PriorityBinding'
+title: 'Instrukcje: Implementowanie elementu PriorityBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207568"
 ---
-# <a name="how-to-implement-prioritybinding"></a>Instrukcje: Zaimplementuj PriorityBinding
+# <a name="how-to-implement-prioritybinding"></a>Instrukcje: Implementowanie elementu PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa, określając listę powiązania. Lista powiązania jest uporządkowana z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet, zwraca wartość pomyślnie, gdy jest on przetwarzany występuje nigdy nie trzeba przetworzyć pozostałych powiązaniach na liście. Może to być takim powiązanie najwyższy priorytet zajmuje dużo czasu ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie będzie służyć do momentu powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  
   
 ## <a name="example"></a>Przykład  
@@ -45,6 +45,7 @@ ms.locfileid: "57354599"
  Zobacz <xref:System.Windows.Data.PriorityBinding> uzyskać informacji na temat co jest uznawane za pomyślne wartość zwracana z powiązania.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [Powiązanie danych — omówienie](data-binding-overview.md)
-- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Przegląd Wiązanie danych](data-binding-overview.md)
+- [— Tematy porad](data-binding-how-to-topics.md)

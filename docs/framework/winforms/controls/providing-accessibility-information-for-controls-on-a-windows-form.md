@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218332"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
 Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które pomagają osobom niepełnosprawnym bardziej efektywne wykorzystanie komputerów. Przykłady obejmują czytniki zawartości ekranu dla osób, które są blind i głosu narzędzia danych wejściowych dla osób, które udostępniają ustnej polecenia zamiast przy użyciu myszy lub klawiatury. Tych narzędzi ułatwień dostępu w interakcje z właściwości ułatwień dostępu, udostępnianych przez kontrolek formularzy Windows Forms. Te właściwości są:  
@@ -89,6 +89,7 @@ pictureBox1->AccessibleRole = AccessibleRole::Chart;
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.AccessibleObject>
 - <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>

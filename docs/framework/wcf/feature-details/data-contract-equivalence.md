@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708938"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214939"
 ---
 # <a name="data-contract-equivalence"></a>Równoważność kontraktów danych
 Klient pomyślnie wysyłać danych określonego typu usługi lub Usługa pomyślnie wysyłać dane do klienta wysłane typu nie zawsze musi istnieć po stronie odbiorczej. Jedynym wymaganiem jest równoważne kontraktów danych obu typów. (Czasami równoważności ograniczeniami nie jest wymagane, zgodnie z opisem w [przechowywanie wersji kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -61,6 +61,7 @@ Klient pomyślnie wysyłać danych określonego typu usługi lub Usługa pomyśl
  Podczas przekazywania parametrów i zwracanych wartości między aplikacjami, jeśli oczekiwany typ jest interfejsem, jest równoważne z oczekiwanym typem jest typ <xref:System.Object>. Ponieważ każdy typ ostatecznie jest pochodną <xref:System.Object>, kontraktu danych, co ostatecznie pochodzi z kontraktu danych dla <xref:System.Object>. W związku z tym dowolnego typu kontraktu danych mogą być przekazywane, gdy oczekiwano interfejsu. Dodatkowe kroki są wymagane do pomyślnie pracy z interfejsami; Aby uzyskać więcej informacji, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Kolejność elementów członkowskich danych](../../../../docs/framework/wcf/feature-details/data-member-order.md)

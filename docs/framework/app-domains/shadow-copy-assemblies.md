@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebec8c880f5b40ed3294585b9be0e83972ac12a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204565"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
 Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należy zaktualizować bez rozładowywania domeny aplikacji w tle. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takich jak witryny programu ASP.NET.  
@@ -78,6 +78,7 @@ Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należ
  <xref:System.AppDomain> Klasa ma kilka metod, takich jak <xref:System.AppDomain.SetShadowCopyFiles%2A> i <xref:System.AppDomain.ClearShadowCopyPath%2A>, który może służyć do kontrolowania kopiowania w tle na domenę aplikacji, ale te zostały oznaczone jako przestarzałe w programie .NET Framework w wersji 2.0. Zalecanym sposobem konfigurowanie domeny aplikacji, w przypadku kopiowania w tle jest użycie właściwości <xref:System.AppDomainSetup> klasy.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.AppDomainSetup.ShadowCopyFiles%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>

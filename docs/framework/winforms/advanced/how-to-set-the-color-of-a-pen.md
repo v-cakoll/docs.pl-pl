@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting color
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-ms.openlocfilehash: a2645112950be88cbc569e0be7889c0f1019223d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213418"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>Instrukcje: Ustawianie koloru pióra
 W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.Pen> obiektu  
@@ -33,6 +33,7 @@ W tym przykładzie zmienia kolor istniejących wcześniej <xref:System.Drawing.P
  Należy wywołać <xref:System.Drawing.Pen.Dispose%2A> na obiektach, które zużywają zasoby systemowe (takie jak <xref:System.Drawing.Pen> obiektów) po zakończeniu korzystania z nich.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Pen>
 - [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)
 - [Instrukcje: Tworzenie pióra](how-to-create-a-pen.md)

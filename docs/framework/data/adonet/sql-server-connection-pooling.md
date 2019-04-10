@@ -1,18 +1,18 @@
 ---
-title: Połączenie z serwerem SQL buforowanie (ADO.NET)
+title: Buforowanie połączenia z programem SQL Server (ADO.NET)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203941"
 ---
-# <a name="sql-server-connection-pooling-adonet"></a>Połączenie z serwerem SQL buforowanie (ADO.NET)
+# <a name="sql-server-connection-pooling-adonet"></a>Buforowanie połączenia z programem SQL Server (ADO.NET)
 Nawiązywanie połączenia z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonne. Kanał fizycznych, takich jak gniazda lub nazwany potok należy ustalić, musi nastąpić uzgadnianie początkową z serwerem, informacje o parametrach połączenia musi zostać przeanalizowany, połączenie musi zostać uwierzytelniony przez serwer, należy uruchomić testy dla rejestrowanie w Bieżąca transakcja i tak dalej.  
   
  W praktyce większość aplikacji używa tylko jednej lub kilku różnych konfiguracji dla połączenia. Oznacza to, że podczas wykonywania aplikacji wiele połączeń identyczne będzie wielokrotnie otwierania i zamykania. Aby zminimalizować koszty otwarcia połączeń, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] wykorzystuje technikę optymalizacji o nazwie *buforowanie połączeń*.  
@@ -130,6 +130,7 @@ using (SqlConnection connection = new SqlConnection(
  Zaleca się, że możesz korzystać z mechanizmami zabezpieczeń, które można użyć zamiast ról aplikacji. Aby uzyskać więcej informacji, zobacz [tworzenie ról aplikacji w programie SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Pula połączeń](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [Liczniki wydajności](../../../../docs/framework/data/adonet/performance-counters.md)

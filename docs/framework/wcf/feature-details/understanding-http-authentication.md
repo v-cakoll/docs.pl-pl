@@ -2,12 +2,12 @@
 title: Opis uwierzytelniania HTTP
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206398"
 ---
 # <a name="understanding-http-authentication"></a>Opis uwierzytelniania HTTP
 Uwierzytelnianie to proces stwierdzić, czy klient jest uprawniona do dostępu do zasobu. Protokół HTTP obsługuje uwierzytelnianie jako środek negocjowania dostęp do bezpiecznych zasobów.  
@@ -36,6 +36,7 @@ Uwierzytelnianie to proces stwierdzić, czy klient jest uprawniona do dostępu d
 -   Serwer powinien nieobecne (w nagłówkach uwierzytelniania WWW) dowolny schemat, który nie jest przygotowana do akceptowania lub które nie odpowiednio zabezpieczyć chronionego zasobu. Klienci są swobodę wyboru między dowolnymi schematy uwierzytelniania, który przedstawia informacje o serwerze. Niektórych klientów wartość domyślna to schemat słabe uwierzytelnianie lub pierwszego schematu uwierzytelniania serwera na liście.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przegląd zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
 - [Korzystanie z personifikacji z zabezpieczeniami transportu](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

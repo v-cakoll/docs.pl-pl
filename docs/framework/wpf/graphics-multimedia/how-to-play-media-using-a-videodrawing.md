@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Odtwórz z nośnika z użyciem VideoDrawing'
+title: 'Instrukcje: Odtwarzanie nośnika z użyciem elementu VideoDrawing'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - playback of media [WPF]
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
-ms.openlocfilehash: 2397662c79af208f2528f6eedcd5995cfac9526c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203616"
 ---
-# <a name="how-to-play-media-using-a-videodrawing"></a>Instrukcje: Odtwórz z nośnika z użyciem VideoDrawing
+# <a name="how-to-play-media-using-a-videodrawing"></a>Instrukcje: Odtwarzanie nośnika z użyciem elementu VideoDrawing
 Odtwarzanie pliku audio lub wideo, należy użyć <xref:System.Windows.Media.VideoDrawing> i <xref:System.Windows.Media.MediaPlayer>. Istnieją dwa sposoby, aby załadować i odtwarzanie multimediów. Pierwsza to użycie <xref:System.Windows.Media.MediaPlayer> i <xref:System.Windows.Media.VideoDrawing> przez siebie, a drugi ze sposobów jest utworzenie własnych <xref:System.Windows.Media.MediaTimeline> za pomocą <xref:System.Windows.Media.MediaPlayer> i <xref:System.Windows.Media.VideoDrawing>.  
   
 > [!NOTE]
@@ -33,5 +33,6 @@ Odtwarzanie pliku audio lub wideo, należy użyć <xref:System.Windows.Media.Vid
  Należy zauważyć, że gdy używasz <xref:System.Windows.Media.MediaTimeline>, możesz użyć interakcyjnego <xref:System.Windows.Media.Animation.ClockController> zwróciło <xref:System.Windows.Media.Animation.Clock.Controller%2A> właściwość <xref:System.Windows.Media.MediaClock> Aby kontrolować odtwarzanie multimediów zamiast metod interaktywnych <xref:System.Windows.Media.MediaPlayer>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Media.VideoDrawing>
-- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)

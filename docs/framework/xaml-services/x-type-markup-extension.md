@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042092"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211637"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
 Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  
@@ -80,7 +80,8 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
  W środowisku WPF można użyć funkcji XAML 2009, ale tylko dla luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Style>
 - [Tworzenie szablonów i stylów](../wpf/controls/styling-and-templating.md)
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

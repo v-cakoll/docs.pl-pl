@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Grupowanie formantów z formantem panelu formularzy Windows przy użyciu narzędzia Projektant'
+title: 'Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Panel control [Windows Forms], grouping controls
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214835"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Instrukcje: Grupowanie formantów z formantem panelu formularzy Windows przy użyciu narzędzia Projektant
+# <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant
 Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do grupowania innych kontrolek. Istnieją trzy powody do grupy kontrolek. Jeden jest wizualne grupowanie elementów powiązanych formularza dla interfejsu użytkownika wyraźne; innym jest programowe grupowanie przycisków radiowych np. ostatni jest przenoszenie kontrolek jako jednostki w czasie projektowania.  
   
 > [!NOTE]
@@ -30,6 +30,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do grupowani
 3.  (Opcjonalnie) Jeśli chcesz dodać obramowanie do panelu, ustaw jego <xref:System.Windows.Forms.BorderStyle> właściwości. Istnieją trzy opcje: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, i <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Panel, kontrolka](panel-control-windows-forms.md)
 - [Panel, kontrolka — omówienie](panel-control-overview-windows-forms.md)
-- [Instrukcje: Ustawianie tła panelu](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Instrukcje: ustawianie tła panelu](how-to-set-the-background-of-a-windows-forms-panel.md)

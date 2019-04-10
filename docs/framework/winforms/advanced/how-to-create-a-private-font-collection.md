@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 7cfd2a1fd29b58019d49c8cd5df9adb5b0873302
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210694"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>Instrukcje: Tworzenie prywatnej kolekcji czcionek
 <xref:System.Drawing.Text.PrivateFontCollection> Klasa dziedziczy <xref:System.Drawing.Text.FontCollection> abstrakcyjna klasa bazowa. Możesz użyć <xref:System.Drawing.Text.PrivateFontCollection> obiekt, aby zachować zestaw czcionki specjalnie dla twojej aplikacji. Zbieranie prywatnych czcionki mogą obejmować czcionki systemowe zainstalowane, a także czcionek, które nie zostały zainstalowane na komputerze. Aby dodać plik czcionki do kolekcji prywatnych czcionki, należy wywołać <xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A> metody <xref:System.Drawing.Text.PrivateFontCollection> obiektu.  
@@ -37,9 +37,9 @@ ms.locfileid: "57723780"
   
  Jeśli połączenie danej rodziny/styl jest dostępna, <xref:System.Drawing.Font> obiekt jest konstruowany przy użyciu tej rodziny i stylu. Pierwszy argument przekazany do <xref:System.Drawing.Font.%23ctor%2A> Konstruktor jest nazwa rodziny czcionek (nie <xref:System.Drawing.FontFamily> obiektu, jak w przypadku innych zmian <xref:System.Drawing.Font.%23ctor%2A> konstruktora). Po <xref:System.Drawing.Font> obiekt jest konstruowany, zostanie on przekazany do <xref:System.Drawing.Graphics.DrawString%2A> metody <xref:System.Drawing.Graphics> klasy, aby wyświetlić nazwę rodziny, wraz z nazwą stylu.  
   
- Dane wyjściowe poniższy kod jest podobne do danych wyjściowych, pokazane na poniższej ilustracji.  
+ Dane wyjściowe poniższy kod jest podobne do danych wyjściowych, pokazane na poniższej ilustracji:  
   
- ![Fonts Text](./media/csfontstext7.png "csfontstext7")  
+ ![Zrzut ekranu pokazujący tekstu w różnych czcionek.](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
  Arial.tff (który został dodany do kolekcji prywatnych czcionki w poniższym przykładzie kodu) to plik czcionka Arial stylu regularne. Należy jednak pamiętać, że dane wyjściowe programu zawiera kilka dostępnych stylów innych niż zwykłych rodziny czcionka Arial. To dlatego, że [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można symulować pogrubienie, kursywa i pogrubiony kursywy z regularnych stylu. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można utworzyć również przekreślenia z regularnych stylu i podkreśleń.  
   
@@ -52,5 +52,6 @@ ms.locfileid: "57723780"
  Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Drawing.Text.PrivateFontCollection>
 - [Używanie czcionek i tekstu](using-fonts-and-text.md)

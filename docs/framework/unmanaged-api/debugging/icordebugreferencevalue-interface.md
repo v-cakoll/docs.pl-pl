@@ -1,5 +1,5 @@
 ---
-title: ICorDebugReferenceValue — Interfejs
+title: ICorDebugReferenceValue, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugReferenceValue
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4709d1b8126436d4400c788891960100915cd1bc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d6575acfb1f75cbc8e3d59ddca5fea0953274cf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206463"
 ---
-# <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue — Interfejs
+# <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue, interfejs
 Udostępnia metody zarządzające wartość, która jest odwołanie do obiektu. (Czyli ten interfejs udostępnia metody zarządzające wskaźnik). Ten interfejs implementuje "ICorDebugValue".  
   
 ## <a name="methods"></a>Metody  
@@ -55,5 +55,4 @@ Udostępnia metody zarządzające wartość, która jest odwołanie do obiektu. 
   
 ## <a name="see-also"></a>Zobacz także
 
-
-- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

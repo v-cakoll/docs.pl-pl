@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykaż podzbiór kolejek drukowania'
+title: 'Instrukcje: Wyliczanie podzbioru kolejek drukowania'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217188"
 ---
-# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Instrukcje: Wykaż podzbiór kolejek drukowania
+# <a name="how-to-enumerate-a-subset-of-print-queues"></a>Instrukcje: Wyliczanie podzbioru kolejek drukowania
 Typowe sytuacji sterowaną przez specjalistów technologii informatycznych (IT), zarządzanie zbiór drukarek w firmie polega na generowaniu listę drukarek mające określoną wspólną charakterystykę. Ta funkcjonalność jest dostarczana przez <xref:System.Printing.PrintServer.GetPrintQueues%2A> metody <xref:System.Printing.PrintServer> obiektu i <xref:System.Printing.EnumeratedPrintQueueTypes> wyliczenia.  
   
 ## <a name="example"></a>Przykład  
@@ -35,6 +35,7 @@ Typowe sytuacji sterowaną przez specjalistów technologii informatycznych (IT),
  W tym przykładzie można rozszerzyć przez `foreach` pętli, który przeprowadza użytkownika przez proces każdej kolejki wydruku do dalszego kontroli. Na przykład użytkownik może sprawia, drukarki, które nie obsługują drukowania dwustronnego przez wywołanie pętli każdej kolejki wydruku <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> metody i testowania zwracanej wartości na obecność dupleksu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.LocalPrintServer>
@@ -42,5 +43,5 @@ Typowe sytuacji sterowaną przez specjalistów technologii informatycznych (IT),
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd drukowania](printing-overview.md)
-- [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)
+- [Przegląd Drukowanie](printing-overview.md)
+- [Moduł zapisywania dokumentów XPS firmy Microsoft](https://go.microsoft.com/fwlink/?LinkId=147319)

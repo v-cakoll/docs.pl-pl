@@ -2,12 +2,12 @@
 title: = (Równa się) (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 2791bc0940bad92208c5bdce3659534f237bd6e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ad9eda5a3544ea157d06c57876b1b0454a25dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215684"
 ---
 # <a name="-equals-entity-sql"></a>= (Równa się) (jednostka SQL)
 Porównanie równości dwóch wyrażeń.  
@@ -40,4 +40,5 @@ expression == expression
  [!code-csharp[DP EntityServices Concepts 2#EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#equals)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

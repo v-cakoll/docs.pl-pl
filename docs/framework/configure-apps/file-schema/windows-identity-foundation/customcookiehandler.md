@@ -3,12 +3,12 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224054"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 Ustawia typ procedury obsługi niestandardowego pliku cookie. Ten element może być tylko obecne Jeśli `mode` atrybutu `<cookieHandler>` element jest "Niestandardowy". Niestandardowy typ musi pochodzić od <xref:System.IdentityModel.Services.CookieHandler> klasy.  
@@ -64,4 +64,5 @@ Ustawia typ procedury obsługi niestandardowego pliku cookie. Ten element może 
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Services.CookieHandler>

@@ -2,12 +2,12 @@
 title: Publikowanie i pobieranie metadanych za pośrednictwem powiązania niestandardowego
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 850f341e933e44d92f130dae90aff5b5c1a882b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222981"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publikowanie i pobieranie metadanych za pośrednictwem powiązania niestandardowego
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> Zapewnia obsługę Dodawanie punktu końcowego metadanych usługi. Te punkty końcowe metadanych mogą odpowiadać na żądania HTTP GET pod adresem URL, który ma `?wsdl` querystring i ROZPOCZYNANIE transferu WS żądania, zgodnie z definicją w specyfikacji WS-MetadataExchange (MEX). Implementowanie MEX punktów końcowych <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> kontraktu.  
@@ -28,7 +28,8 @@ ms.locfileid: "54639552"
  Podczas publikowania metadanych za pośrednictwem powiązania niestandardowego, upewnij się, czy powiązanie zapewnia obsługę zabezpieczeń, która wymaga metadanych. Na przykład, aby zapobiec ujawnieniu informacji i upewnij się, klient ma prawo do uzyskania metadanych, możesz można zabezpieczeniu metadane i aplikacji przez skonfigurowanie usługi <xref:System.ServiceModel.Description.IMetadataExchange> punkt końcowy, aby wymagać uwierzytelniania i szyfrowania. Przykład [niestandardowy bezpieczny punkt końcowy metadanych](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) pokazuje, w tym scenariuszu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)
 - [Powiązania elementu WS-MetadataExchange](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
-- [Instrukcje: Konfigurowanie niestandardowego protokołu WS-Metadata Exchange powiązania](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Instrukcje: Pobieranie metadanych przez MEX powiązanie inne niż](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Instrukcje: Pobieranie metadanych przez wiązanie inne niż wymiany metadanych](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

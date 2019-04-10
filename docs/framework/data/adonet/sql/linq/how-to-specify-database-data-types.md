@@ -2,12 +2,12 @@
 title: 'Instrukcje: Określanie typów danych bazy danych'
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: 566ff545cd493eed637093c378aacc865a7f5e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bf53463be8c715fd1c599efac1b19d838be19f86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218046"
 ---
 # <a name="how-to-specify-database-data-types"></a>Instrukcje: Określanie typów danych bazy danych
 Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby określić dokładną tekst, który definiuje kolumnę w deklaracji tabeli języka T-SQL.  
@@ -23,5 +23,6 @@ Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:
 2.  Ustaw wartość <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwości tekstu do dokładnego dopasowania, który jest używany przez język T-SQL.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

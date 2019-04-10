@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344181"
 ---
 # <a name="date-and-time-data"></a>Dane daty i godziny
 Program SQL Server 2008 wprowadzono nowe typy danych do obsługi informacji daty i godziny. Nowe typy danych to oddzielne typy dla daty i godziny i typy danych rozszerzonej z większego zakresu, dokładność i świadomości strefy czasowej. Począwszy od wersji programu .NET Framework 3.5 z dodatkiem Service Pack (SP1), .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) zapewnia pełną obsługę wszystkie nowe funkcje aparatu bazy danych programu SQL Server 2008. Należy zainstalować .NET Framework 3.5 z dodatkiem SP1 (lub nowszym) te nowe funkcje za pomocą SqlClient.  
@@ -21,7 +21,7 @@ Program SQL Server 2008 wprowadzono nowe typy danych do obsługi informacji daty
   
  **SQL Server Books Online**  
   
-1.  [Za pomocą dane daty i godziny](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Za pomocą dane daty i godziny](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Typy danych, które wprowadzono w programie SQL Server 2008 daty/godziny  
  W poniższej tabeli opisano nowe typy danych daty i godziny.  

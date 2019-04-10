@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344926"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiektem, który może być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i stylów. W tym omówieniu opisano, jak użyć zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodem i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasoby i kod](resources-and-code.md).  
@@ -69,11 +69,11 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
 #### <a name="static-resource-lookup-behavior"></a>Zachowanie Wyszukaj zasób statyczny  
   
-1.  Proces wyszukiwania sprawdza, czy żądany klucz w słowniku zasobów, zdefiniowany przez element, który ustawia właściwość.  
+1. Proces wyszukiwania sprawdza, czy żądany klucz w słowniku zasobów, zdefiniowany przez element, który ustawia właściwość.  
   
-2.  Proces wyszukiwania jest przesyłany w górę, drzewo logiczne do elementu nadrzędnego i jego słownika zasobów. Ten proces jest kontynuowany aż do osiągnięcia elementu głównego.  
+2. Proces wyszukiwania jest przesyłany w górę, drzewo logiczne do elementu nadrzędnego i jego słownika zasobów. Ten proces jest kontynuowany aż do osiągnięcia elementu głównego.  
   
-3.  Następnie sprawdzane są zasobów aplikacji. Zasoby aplikacji to zasoby, które w słowniku zasobów, który jest definiowany przez <xref:System.Windows.Application> dla obiektu usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+3. Następnie sprawdzane są zasobów aplikacji. Zasoby aplikacji to zasoby, które w słowniku zasobów, który jest definiowany przez <xref:System.Windows.Application> dla obiektu usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
   
  Zasób statyczny odwołań z w ramach słownika zasobów musi odwoływać się z zasobem, który został już zdefiniowany leksykalnie przed odwołanie do zasobu. Nie można rozpoznać odwołania w przód przez odwołanie zasób statyczny. Z tego powodu Jeśli używasz odwołania do zasobów statycznych, należy zaprojektować strukturę słownika zasobów taki sposób, że zasoby przeznaczone do użytku przez zasobów są zdefiniowane w lub na początku każdego słownik odpowiednich zasobów.  
   
@@ -101,19 +101,19 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
 #### <a name="dynamic-resource-lookup-behavior"></a>Zachowanie Wyszukaj zasób dynamiczny  
  Zachowanie wyszukiwania zasobów dla odwołania do zasobu dynamicznego równoleżnikami zachowania wyszukiwania w kodzie, jeśli wywołasz <xref:System.Windows.FrameworkElement.FindResource%2A> lub <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
-1.  Proces wyszukiwania sprawdza, czy żądany klucz w słowniku zasobów, zdefiniowany przez element, który ustawia właściwość.  
+1. Proces wyszukiwania sprawdza, czy żądany klucz w słowniku zasobów, zdefiniowany przez element, który ustawia właściwość.  
   
     -   Jeśli element definiuje <xref:System.Windows.FrameworkElement.Style%2A> właściwości <xref:System.Windows.Style.Resources%2A> słownika w ramach <xref:System.Windows.Style> jest zaznaczone.  
   
     -   Jeśli element definiuje <xref:System.Windows.Controls.Control.Template%2A> właściwości <xref:System.Windows.FrameworkTemplate.Resources%2A> słownika w ramach <xref:System.Windows.FrameworkTemplate> jest zaznaczone.  
   
-2.  Proces wyszukiwania jest przesyłany w górę, drzewo logiczne do elementu nadrzędnego i jego słownika zasobów. Ten proces jest kontynuowany aż do osiągnięcia elementu głównego.  
+2. Proces wyszukiwania jest przesyłany w górę, drzewo logiczne do elementu nadrzędnego i jego słownika zasobów. Ten proces jest kontynuowany aż do osiągnięcia elementu głównego.  
   
-3.  Następnie sprawdzane są zasobów aplikacji. Zasoby aplikacji to zasoby, które w słowniku zasobów, który jest definiowany przez <xref:System.Windows.Application> dla obiektu usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+3. Następnie sprawdzane są zasobów aplikacji. Zasoby aplikacji to zasoby, które w słowniku zasobów, który jest definiowany przez <xref:System.Windows.Application> dla obiektu usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
   
-4.  Słownik zasobów motywu jest sprawdzane pod kątem aktualnie aktywnego tematu. Jeśli motyw zmieni się w czasie wykonywania, wartość jest ponownie oceniane.  
+4. Słownik zasobów motywu jest sprawdzane pod kątem aktualnie aktywnego tematu. Jeśli motyw zmieni się w czasie wykonywania, wartość jest ponownie oceniane.  
   
-5.  Zasoby systemu są sprawdzane.  
+5. Zasoby systemu są sprawdzane.  
   
  Zachowanie wyjątku (jeśli istnieje) różni się od:  
   

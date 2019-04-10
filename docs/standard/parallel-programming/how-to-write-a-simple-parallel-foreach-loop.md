@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427360"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Instrukcje: Zapisywanie prostej pętli Parallel.ForEach
 
@@ -51,7 +51,7 @@ W programie Visual Studio są Visual Basic i C# konsoli szablonów aplikacji dla
 
 W wierszu polecenia można użyć platformy .NET Core i jego narzędzi interfejsu wiersza polecenia (na przykład `dotnet new console` lub `dotnet new console -lang vb`), lub można utworzyć pliku i używania kompilatora wiersza polecenia dla aplikacji .NET Framework.
 
-Dla projektu .NET Core, należy odwołać **System.Drawing.Common** pakietu NuGet. W programie Visual Studio Użyj Menedżera pakietów NuGet, aby zainstalować pakiet. Alternatywnie, można dodać odwołania do pakietu w swojej *.* csproj * lub *.* vbproj * plik:
+Dla projektu .NET Core, należy odwołać **System.Drawing.Common** pakietu NuGet. W programie Visual Studio Użyj Menedżera pakietów NuGet, aby zainstalować pakiet. Alternatywnie, można dodać odwołania do pakietu w swojej \*.csproj lub \*pliku vbproj:
  
 ```xml
 <ItemGroup>

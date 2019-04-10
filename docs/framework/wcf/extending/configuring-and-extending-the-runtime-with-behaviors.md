@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344250"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań
 Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestandardowych rozszerzeń, które Inspekcja i sprawdź poprawność konfiguracji usługi lub modyfikowanie zachowania w czasie wykonywania w aplikacji klienta i usługi Windows Communication Foundation (WCF). W tym temacie opisano interfejsów zachowanie, jak je wdrożyć i jak je dodać do opisu usługi (w aplikacji usługi) lub punktu końcowego (w aplikacji klienckiej) programowo, albo w pliku konfiguracji. Aby uzyskać więcej informacji na temat za pomocą zachowań dostarczane przez system, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) i [Określanie zachowania środowiska uruchomieniowego klienta](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -18,7 +18,7 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
  Zachowanie typy są dodawane do usługi lub obiektów opis punktu końcowego usługi (na usługi lub klienta, odpowiednio) przed tymi obiektami są używane przez Windows Communication Foundation (WCF) do tworzenia środowiska uruchomieniowego, które wykonuje usługi WCF lub klienta programu WCF. Wywołanego tych zachowań w procesie tworzenia środowiska uruchomieniowego są następnie uzyskać dostęp do środowiska uruchomieniowego właściwości i metod, które modyfikują tworzony przez adresy kontraktu, powiązania i środowiska uruchomieniowego.  
   
 ### <a name="behavior-methods"></a>Zachowanie metody  
- Ma wszystkie zachowania `AddBindingParameters` metody `ApplyDispatchBehavior` metody `Validate` metody i `ApplyClientBehavior` metody z jednym wyjątkiem: ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać na kliencie nie implementuje on `ApplyClientBehavior`.  
+ Ma wszystkie zachowania `AddBindingParameters` metody `ApplyDispatchBehavior` metody `Validate` metody i `ApplyClientBehavior` metody z jednym wyjątkiem: Ponieważ <xref:System.ServiceModel.Description.IServiceBehavior> nie można wykonać na kliencie nie implementuje on `ApplyClientBehavior`.  
   
 -   Użyj `AddBindingParameters` metodę, aby zmodyfikować lub dodać niestandardowe obiekty na kolekcję powiązań niestandardowych mającej dostęp do własnego użytku, gdy środowisko uruchomieniowe jest konstruowany. Na przykład, to w jaki sposób są określone wymagania dotyczące ochrony, który mają wpływ na sposób kanał został opracowany, ale nie są znane przez dewelopera kanału.  
   
@@ -54,16 +54,16 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
 #### <a name="service-behaviors"></a>Zachowania usług  
  Zachowania usług, które implementują <xref:System.ServiceModel.Description.IServiceBehavior>, są podstawowym mechanizmem za pomocą którego możesz zmodyfikować środowisko uruchomieniowe całą usługę. Istnieją trzy mechanizmy dodawania zachowania usługi z usługą.  
   
-1.  Za pomocą atrybutu dla klasy usługi.  Gdy <xref:System.ServiceModel.ServiceHost> jest konstruowany <xref:System.ServiceModel.ServiceHost> implementacja używa odbicia, aby odnaleźć zestaw atrybutów w typie usługi. Jeśli którekolwiek z tych atrybutów są implementacje <xref:System.ServiceModel.Description.IServiceBehavior>, są one dodawane do kolekcji zachowań na <xref:System.ServiceModel.Description.ServiceDescription>. Dzięki temu te zachowania, aby wziąć udział w konstrukcji usługi czasu wykonywania.  
+1. Za pomocą atrybutu dla klasy usługi.  Gdy <xref:System.ServiceModel.ServiceHost> jest konstruowany <xref:System.ServiceModel.ServiceHost> implementacja używa odbicia, aby odnaleźć zestaw atrybutów w typie usługi. Jeśli którekolwiek z tych atrybutów są implementacje <xref:System.ServiceModel.Description.IServiceBehavior>, są one dodawane do kolekcji zachowań na <xref:System.ServiceModel.Description.ServiceDescription>. Dzięki temu te zachowania, aby wziąć udział w konstrukcji usługi czasu wykonywania.  
   
-2.  Programowe Dodawanie zachowania do kolekcji zachowań na <xref:System.ServiceModel.Description.ServiceDescription>. Można to zrobić, z następującymi wierszami kodu:  
+2. Programowe Dodawanie zachowania do kolekcji zachowań na <xref:System.ServiceModel.Description.ServiceDescription>. Można to zrobić, z następującymi wierszami kodu:  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> rozszerzający konfiguracji. To umożliwia zachowanie usługi z plików konfiguracji aplikacji.  
+3. Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> rozszerzający konfiguracji. To umożliwia zachowanie usługi z plików konfiguracji aplikacji.  
   
  Przykłady usługi zachowań w programie WCF <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>i <xref:System.ServiceModel.Description.ServiceMetadataBehavior> zachowanie.  
   
@@ -89,9 +89,9 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
   
  Istnieją dwa mechanizmy dodawania zachowań punktu końcowego usługi.  
   
-1.  Dodawanie zachowania do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> właściwości.  
+1. Dodawanie zachowania do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> właściwości.  
   
-2.  Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> rozszerzający konfiguracji.  
+2. Implementowanie niestandardowego <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> rozszerzający konfiguracji.  
   
  Aby uzyskać więcej informacji i obejrzeć przykład zobacz temat referencyjny.  
   
@@ -110,7 +110,7 @@ Zachowania umożliwiają modyfikowanie zachowania domyślnego i dodać niestanda
  Usługi i punktu końcowego i kontrakt zachowania może przez przeznaczone do można określić w kodzie lub za pomocą atrybutów, a można skonfigurować tylko zachowania usługi i punktu końcowego przy użyciu aplikacji lub pliki konfiguracji sieci Web. Udostępnianie zachowania za pomocą atrybutów pozwala deweloperom na określenie zachowania w czasie kompilacji, który nie może zostać dodane, usunięte lub zmodyfikowany w czasie wykonywania. Często jest to odpowiednie dla zachowania, które zawsze są wymagane do poprawnego działania usługi (na przykład transakcji powiązanych z parametrami <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> atrybutu). Udostępnianie zachowania za pomocą konfiguracji umożliwia deweloperom pozostawić specyfikacji i konfiguracji tych zachowań do tych, którzy wdrażają usługi. Jest to odpowiednie dla zachowania, które są opcjonalne składniki lub inna konfiguracja charakterystyczne dla wdrożenia, takie jak czy metadanych jest uwidaczniany dla usługi lub konfiguracji określonego autoryzacji dla usługi.  
   
 > [!NOTE]
->  Można także użyć zachowań, które obsługują konfigurację, aby wymusić zasady aplikacji firmy przez wstawianie je do pliku machine.config w konfiguracji i blokowanie tych elementów. Aby uzyskać opis i obejrzeć przykład, zobacz [jak: blokady w dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+>  Można także użyć zachowań, które obsługują konfigurację, aby wymusić zasady aplikacji firmy przez wstawianie je do pliku machine.config w konfiguracji i blokowanie tych elementów. Aby uzyskać opis i obejrzeć przykład, zobacz [jak: Blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
  Aby udostępnić za pomocą konfiguracji zachowanie, deweloper musi utworzyć klasę pochodną z <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> , a następnie zarejestruj tego rozszerzenia z konfiguracją.  
   
@@ -188,23 +188,23 @@ protected override object CreateBehavior()
   
  <xref:System.ServiceModel.ServiceHost> Stosuje zachowań w następującej kolejności:  
   
-1.  Usługa  
+1. Usługa  
   
-2.  Kontrakt  
+2. Kontrakt  
   
-3.  Punkt końcowy  
+3. Punkt końcowy  
   
-4.  Operacja  
+4. Operacja  
   
  W dowolnej kolekcji zachowań kolejność nie jest gwarantowana.  
   
  <xref:System.ServiceModel.ChannelFactory%601> Stosuje zachowań w następującej kolejności:  
   
-1.  Kontrakt  
+1. Kontrakt  
   
-2.  Punkt końcowy  
+2. Punkt końcowy  
   
-3.  Operacja  
+3. Operacja  
   
  W dowolnej kolekcji zachowań, ponownie, nie kolejność jest zachowywana.  
   

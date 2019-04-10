@@ -9,19 +9,19 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: 32f58dc8b8b96a3d8660550d8ce7696839587ddc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ef44a9e68b8007d57fc7442a178ae98322747c99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080673"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343678"
 ---
 # <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>Instrukcje: dodawanie w sposób programowy elementów do kontrolki DomainUpDown formularzy systemu Windows
 Można dodać elementy do formularzy Windows Forms <xref:System.Windows.Forms.DomainUpDown> kontrolki w kodzie. Wywołaj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> lub <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> metody <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> klasy do dodawania elementów do formantu <xref:System.Windows.Forms.DomainUpDown.Items%2A> właściwości. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> Metoda dodaje element do końca kolekcji, podczas gdy <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> metoda dodaje element na określonej pozycji.  
   
 ### <a name="to-add-a-new-item"></a>Aby dodać nowy element  
   
-1.  Użyj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> metodę, aby dodać element do końca listy elementów.  
+1. Użyj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> metodę, aby dodać element do końca listy elementów.  
   
     ```vb  
     DomainUpDown1.Items.Add("noodles")  
@@ -37,7 +37,7 @@ Można dodać elementy do formularzy Windows Forms <xref:System.Windows.Forms.Do
   
      —lub—  
   
-2.  Użyj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> metodę, aby wstawić element do listy na określonej pozycji.  
+2. Użyj <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> metodę, aby wstawić element do listy na określonej pozycji.  
   
     ```vb  
     ' Inserts an item at the third position in the list  

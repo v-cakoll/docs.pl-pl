@@ -2,12 +2,12 @@
 title: Program rozpoznawania zakładek dla WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 4676b3c624a7ba1539a7a12ed38c286f688dcf9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344302"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>Program rozpoznawania zakładek dla WorkflowHostingEndpoint
 W tym przykładzie przedstawiono sposób, w jaki <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> mogą być używane z <xref:System.ServiceModel.Activities.WorkflowServiceHost> do utworzenia wystąpienia przepływu pracy.  
@@ -26,9 +26,9 @@ W tym przykładzie przedstawiono sposób, w jaki <xref:System.ServiceModel.Activ
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Skompiluj rozwiązanie.  
+1. Skompiluj rozwiązanie.  
   
-2.  Uruchom aplikację. `CreationEndpoint` Konsoli Pokazuje komunikat, który zawiera identyfikator wystąpienia, gdy tworzone jest wystąpienie przepływu pracy. Komunikat "Hello World!" jest drukowany przez wystąpienie przepływu pracy.  
+2. Uruchom aplikację. `CreationEndpoint` Konsoli Pokazuje komunikat, który zawiera identyfikator wystąpienia, gdy tworzone jest wystąpienie przepływu pracy. Komunikat "Hello World!" jest drukowany przez wystąpienie przepływu pracy.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

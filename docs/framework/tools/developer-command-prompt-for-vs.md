@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e648cdadb567919d320ea8a12d30b7be306e67a
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221235"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344367"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Wiersz polecenia programisty dla programu Visual Studio
 
 Wiersz polecenia dla deweloperów programu Visual Studio pozwala łatwiej używać narzędzi programu .NET Framework. Jest automatycznie ustawia zmienne środowiskowe określonego wiersza polecenia.
 
 > [!div class="button"]
-> [Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [Pobierz program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Wyszukaj wiersz polecenia na komputerze
 
@@ -36,7 +36,7 @@ Może mieć kilka wierszy polecenia, w zależności od wersji programu Visual St
 
 2. Wybierz **wiersz polecenia programisty dla programu Visual Studio** (lub wiersza polecenia, którego chcesz użyć).
 
-### <a name="in-windows-81"></a>W Windows 8.1
+### <a name="in-windows-81"></a>In Windows 8.1
 
 1. Przejdź do **Start** ekran przez naciśnięcie klawiszy logo Windows ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") na klawiaturze, na przykład.
 

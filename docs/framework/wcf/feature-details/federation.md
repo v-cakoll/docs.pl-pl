@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427308"
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także obsługę usług Windows Communication Foundation (WCF) wdrażanie architektury zabezpieczeń. Dla przykładowej aplikacji, która pokazuje federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -33,9 +33,9 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
 |Usługa tokenu zabezpieczającego (STS)|Usługa sieci Web, która wystawia tokeny zabezpieczające; oznacza to, że to sprawia, że potwierdzenia na podstawie dowodów, której ufa do każdego, kto jest w relacji zaufania. Stanowi to podstawę przekazywania zaufania między domenami.|  
   
 ### <a name="example-scenario"></a>Przykładowy scenariusz  
- Na poniższej ilustracji przedstawiono przykład federacyjnego zabezpieczenia.  
+ Na poniższej ilustracji przedstawiono przykład zabezpieczeń:  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![Diagram przedstawiający Scenariusz typowe zabezpieczeń.](./media/federation/typical-federated-security-scenario.gif)  
   
  Ten scenariusz obejmuje dwie organizacje: A i B. organizacji B ma zasób sieci Web (usługa sieci Web), który niektórzy użytkownicy w organizacji, A znaleźć wartościowe.  
   
@@ -90,12 +90,12 @@ Ten temat zawiera krótkie omówienie koncepcji zabezpieczeń. Omówiono także 
 ## <a name="sample-implementation-using-wcf"></a>Przykład implementacji przy użyciu usługi WCF  
  Poniższa ilustracja przedstawia przykład implementacji architektury federacyjnego zabezpieczenia dzięki obsłudze natywnych z usługi WCF.  
   
- ![Zabezpieczenia federacji w programie WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Diagram przedstawiający przykładową implementację zabezpieczeń federacji.](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>Przykład Moja_usługa  
  Usługa `MyService` udostępnia pojedynczego punktu końcowego za pośrednictwem `MyServiceEndpoint`. Na poniższej ilustracji przedstawiono adres, powiązania i umowy związane z punktem końcowym.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![Diagram przedstawiający szczegóły MyServiceEndpoint.](./media/federation/myserviceendpoint-details.gif)  
   
  Punkt końcowy usługi `MyServiceEndpoint` używa [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i wymaga prawidłowego tokenu zabezpieczeń potwierdzenia Markup Language (SAML) z `accessAuthorized` oświadczenia wydane przez usługi STS B. Jest to deklaratywne określony w konfiguracji usługi.  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  Na poniższej ilustracji przedstawiono B. usługi STS Jak wspomniano wcześniej, Usługa tokenu zabezpieczającego (STS) jest również usługa sieci Web i może mieć jego skojarzone punkty końcowe, zasad i tak dalej.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![Diagram przedstawiający usługę tokenu zabezpieczającego B.](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B uwidacznia pojedynczego punktu końcowego wywołanego `STSEndpoint` służy do żądania tokenów zabezpieczających, które można. W szczególności STS B wystawia tokeny SAML za pomocą `accessAuthorized` oświadczenia, które mogą być przedstawiane na `MyService` lokacji usługi do uzyskiwania dostępu do usługi. Jednak Usługa STS B wymaga od użytkowników przedstawić prawidłowy token SAML wystawione przez usługę STS A, który zawiera `userAuthenticated` oświadczenia. Jest to deklaratywne określona w konfiguracji usługi STS.  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>Klient w organizacji, A  
  Na poniższej ilustracji przedstawiono klienta w organizacji A, wraz z etapy w tworzeniu `MyService` wywołania usługi. Funkcjonalności innych składników dostępne są również aby informacje były kompletne.  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![Diagram showwing kroki w wywołaniu usługi Moja_usługa.](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>Podsumowanie  
  Federacyjnego zabezpieczenia zapewnia czyste podział odpowiedzialności i pomaga w tworzeniu architektur bezpiecznego, skalowalnego usług. Platforma do kompilowania i wdrażania aplikacji rozproszonych WCF zapewnia macierzystą obsługę dotyczące implementowania zabezpieczeń.  

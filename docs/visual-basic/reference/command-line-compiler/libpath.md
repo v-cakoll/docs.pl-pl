@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344211"
 ---
 # <a name="-libpath"></a>-libpath
 Określa lokalizację przywoływanych zestawów.  
@@ -33,13 +33,13 @@ Określa lokalizację przywoływanych zestawów.
   
  Kompilator wyszukuje odwołania do zestawów, które nie są w pełni kwalifikowane w następującej kolejności:  
   
-1.  Bieżący katalog roboczy. Jest to katalog, w którym kompilator jest wywoływany.  
+1. Bieżący katalog roboczy. Jest to katalog, w którym kompilator jest wywoływany.  
   
-2.  Katalogu środowiska CLR systemu.  
+2. Katalogu środowiska CLR systemu.  
   
-3.  Katalogi określone przez `/libpath`.  
+3. Katalogi określone przez `/libpath`.  
   
-4.  Katalogi określone przez zmienną środowiskową LIB.  
+4. Katalogi określone przez zmienną środowiskową LIB.  
   
  `-libpath` Opcja jest dodatku; Określanie on więcej niż jeden raz dołącza do dowolnych wartości wcześniejsze.  
   
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>Zobacz także
 
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

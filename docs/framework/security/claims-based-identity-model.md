@@ -1,16 +1,16 @@
 ---
-title: Modelu tożsamości opartej na oświadczeniach
+title: Model tożsamości oparty na oświadczeniach
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345875"
 ---
-# <a name="claims-based-identity-model"></a>Modelu tożsamości opartej na oświadczeniach
+# <a name="claims-based-identity-model"></a>Model tożsamości oparty na oświadczeniach
 W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jednym oświadczeniem może być nazwa użytkownika, a innym adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  
   
  W ramach tego modelu logowanie jednokrotne jest znacznie łatwiejsze do osiągnięcia, a aplikacja przestaje być odpowiedzialna za następujące zadania:  
@@ -73,10 +73,10 @@ W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użyt
   
  Diagram przedstawia witrynę sieci Web (aplikację jednostki uzależnionej, jednostkę uzależnioną), która jest skonfigurowana do używania programu WIF do uwierzytelniania, oraz klienta, przeglądarkę sieci Web, który chce użyć tej witryny.  
   
-1.  Gdy nieuwierzytelniony użytkownik zgłasza żądanie strony, jego przeglądarka jest przekierowywana na strony dostawcy tożsamości.  
+1. Gdy nieuwierzytelniony użytkownik zgłasza żądanie strony, jego przeglądarka jest przekierowywana na strony dostawcy tożsamości.  
   
-2.  Dostawca tożsamości wymaga od użytkownika przedstawienia poświadczeń, takich jak nazwa użytkownika/hasło lub uwierzytelnianie Kerberos.  
+2. Dostawca tożsamości wymaga od użytkownika przedstawienia poświadczeń, takich jak nazwa użytkownika/hasło lub uwierzytelnianie Kerberos.  
   
-3.  Problemy z dostawcy tożsamości, token, do którego są zwracane do przeglądarki.  
+3. Problemy z dostawcy tożsamości, token, do którego są zwracane do przeglądarki.  
   
-4.  Przeglądarka zostaje teraz przekierowana z powrotem na pierwotnie żądaną stronę, gdzie program WIF określa, czy token spełnia wymagania niezbędne do uzyskania dostępu do strony. Jeśli tak, wystawiany jest plik cookie w celu ustanowienia sesji, więc wystarczy jednokrotne przeprowadzenie uwierzytelnienia i sterowanie jest przekazywane do aplikacji.
+4. Przeglądarka zostaje teraz przekierowana z powrotem na pierwotnie żądaną stronę, gdzie program WIF określa, czy token spełnia wymagania niezbędne do uzyskania dostępu do strony. Jeśli tak, wystawiany jest plik cookie w celu ustanowienia sesji, więc wystarczy jednokrotne przeprowadzenie uwierzytelnienia i sterowanie jest przekazywane do aplikacji.

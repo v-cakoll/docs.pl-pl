@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075174"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344835"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Zabezpieczanie komunikatów za pomocą klienta systemu Windows bez negocjowania poświadczeń
 Następujący scenariusz pokazuje klienta usługi Windows Communication Foundation (WCF) i usług zabezpieczonych przez protokół Kerberos.  
@@ -28,7 +28,7 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 |Współdziałanie|Tak, WS-Security-Kerberos tokenu profilu zgodnych klientów|  
 |Uwierzytelnianie (serwer)|Wzajemne uwierzytelnianie serwera i klienta|  
 |Uwierzytelnianie (klient)|Wzajemne uwierzytelnianie serwera i klienta|  
-|Integralność|Yes|  
+|Integralność|Tak|  
 |Poufność|Tak|  
 |Transport|HTTP|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
@@ -46,9 +46,9 @@ Następujący scenariusz pokazuje klienta usługi Windows Communication Foundati
 > [!NOTE]
 >  Aby użyć typu poświadczeń Windows bez negocjowania, konto użytkownika usługi musi mieć dostęp do nazwy głównej usługi (SPN), który jest zarejestrowany w domenie usługi Active Directory. Można to zrobić na dwa sposoby:  
   
-1.  Użyj `NetworkService` lub `LocalSystem` konta, aby uruchomić usługę. Ponieważ te konta dostępu do komputera, nazwę SPN, który jest ustanawiane, jeśli komputer jest przyłączony do domeny usługi Active Directory, usługi WCF automatycznie generuje prawidłowego elementu SPN wewnątrz punktu końcowego usługi w metadanych usługi (Web Services Description Język lub WSDL).  
+1. Użyj `NetworkService` lub `LocalSystem` konta, aby uruchomić usługę. Ponieważ te konta dostępu do komputera, nazwę SPN, który jest ustanawiane, jeśli komputer jest przyłączony do domeny usługi Active Directory, usługi WCF automatycznie generuje prawidłowego elementu SPN wewnątrz punktu końcowego usługi w metadanych usługi (Web Services Description Język lub WSDL).  
   
-2.  Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku należy ustanowić nazwę SPN dla tego konta domeny. Jest jednym ze sposobów w ten sposób korzystania z narzędzia narzędzia Setspn.exe. Po utworzeniu nazwy SPN dla konta usługi należy skonfigurować usługi WCF do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Jest to realizowane przez ustawienie tożsamość punktu końcowego dla narażonych punktu końcowego, albo że plik konfiguracyjny aplikacji lub kodu. Poniższy przykład publikuje tożsamości programowo.  
+2. Użyj dowolnego konta domeny usługi Active Directory do uruchomienia usługi. W takim przypadku należy ustanowić nazwę SPN dla tego konta domeny. Jest jednym ze sposobów w ten sposób korzystania z narzędzia narzędzia Setspn.exe. Po utworzeniu nazwy SPN dla konta usługi należy skonfigurować usługi WCF do opublikowania tej nazwy SPN do obsługi klientów za pośrednictwem jego metadanych (WSDL). Jest to realizowane przez ustawienie tożsamość punktu końcowego dla narażonych punktu końcowego, albo że plik konfiguracyjny aplikacji lub kodu. Poniższy przykład publikuje tożsamości programowo.  
   
  Aby uzyskać więcej informacji na temat nazw głównych usług, protokołu Kerberos i usługi Active Directory, zobacz [Kerberos technicznego dodatku dla Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Aby uzyskać więcej informacji o tożsamościach punktu końcowego, zobacz [tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

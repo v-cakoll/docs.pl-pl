@@ -11,19 +11,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invisible
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
-ms.openlocfilehash: 06283a93c3b88d2febc1d64797139eee62661b42
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345901"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>Instrukcje: ukrywanie kontrolki w czasie wykonywania
 Istnieją terminy, gdy możesz chcieć utworzyć formant użytkownika, który jest niewidoczny w czasie wykonywania. Na przykład formant, który jest zegar alarmu, może być niewidoczne, z wyjątkiem sytuacji, kiedy został podawania alarmu. Łatwo jest to realizowane przez ustawienie <xref:System.Windows.Forms.Control.Visible%2A> właściwości. Jeśli <xref:System.Windows.Forms.Control.Visible%2A> właściwość `true`, formant pojawi się w zwykły sposób. Jeśli `false`, kontrolki będą ukryte. Mimo że kod w kontroli nad może nadal działać podczas niewidoczne, nie można wchodzić w interakcje z kontrolką za pomocą interfejsu użytkownika. Jeśli chcesz utworzyć formant niewidoczne, który nadal odpowiada na dane wejściowe (na przykład kliknięć myszą) użytkownika, należy utworzyć formant przezroczysty. Aby uzyskać więcej informacji, zobacz [zapewniając ustawienie przezroczystego tła formantu](how-to-give-your-control-a-transparent-background.md).  
   
 ### <a name="to-make-your-control-invisible-at-run-time"></a>Aby ukrywanie formantu w czasie wykonywania  
   
-1.  Ustaw <xref:System.Windows.Forms.Control.Visible%2A> właściwość `false`.  
+1. Ustaw <xref:System.Windows.Forms.Control.Visible%2A> właściwość `false`.  
   
     ```vb  
     ' To set the Visible property from within your object's own code.  

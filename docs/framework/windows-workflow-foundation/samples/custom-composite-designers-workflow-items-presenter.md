@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344874"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Projektanci niestandardowych elementów złożonych — prezenter elementu przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Typ klucza w WF projektanta model programowania, który umożliwia edytowanie kolekcję elementów zawartych. Niniejszy przykład pokazuje sposób kompilowania, Projektant działań, która udostępnia można edytować kolekcji.
@@ -25,9 +25,9 @@ ms.locfileid: "59118108"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
 
-1.  Otwórz **UsingWorkflowItemsPresenter.sln** przykładowe rozwiązanie dla języka C# lub VB w programie Visual Studio 2010.
+1. Otwórz **UsingWorkflowItemsPresenter.sln** przykładowe rozwiązanie dla języka C# lub VB w programie Visual Studio 2010.
 
-2.  Skompiluj i uruchom rozwiązanie. Powinna zostać otwarta aplikacja projektanta rehostowanym przepływu pracy i działania można przeciągnąć na kanwę.
+2. Skompiluj i uruchom rozwiązanie. Powinna zostać otwarta aplikacja projektanta rehostowanym przepływu pracy i działania można przeciągnąć na kanwę.
 
 ## <a name="sample-highlights"></a>Najważniejsze funkcje próbki
  Kod w tym przykładzie przedstawiono poniżej:

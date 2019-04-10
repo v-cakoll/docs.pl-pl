@@ -3,12 +3,12 @@ title: 'Samouczek: Zapisać swoje pierwsze analizator i poprawkę kodu'
 description: Ten samouczek zawiera instrukcje krok po kroku kompilacji analizator i poprawki kodu przy użyciu zestawu SDK kompilatora .NET (interfejsy API Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677184"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427503"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Samouczek: Zapisać swoje pierwsze analizator i poprawkę kodu
 
@@ -254,7 +254,7 @@ Poprawkę kod jest gotowy do wypróbowania.  Naciśnij klawisz F5, aby uruchomi�
 
 ![Można wprowadzić const ostrzeżenia](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-Wprowadzono wiele postępu. Istnieją faliste linie w deklaracjach, które mogą być wykonane `const`. Jednak nadal zadania do wykonania. To działa prawidłowo, jeśli dodasz `const` do deklaracji, począwszy od `i`, następnie `j` a na koniec `k`. Jednak jeśli dodasz `const` modyfikator i inną kolejność, począwszy od `k`, Twoje analizatora tworzy błędy: `k` nie można zadeklarować `const`, chyba że `i` i `j` są już `const`. Masz w celu dalszej analizy w celu zapewnienia obsługi różnych sposobów zmienne mogą być deklarowane i inicjowane.
+Wprowadzono wiele postępu. Istnieją faliste linie w deklaracjach, które mogą być wykonane `const`. Jednak nadal zadania do wykonania. To działa prawidłowo, jeśli dodasz `const` do deklaracji, począwszy od `i`, następnie `j` a na koniec `k`. Jednak jeśli dodasz `const` modyfikator w innej kolejności, począwszy od `k`, Twoje analizatora tworzy błędy: `k` nie można zadeklarować `const`, chyba że `i` i `j` są już `const`. Masz w celu dalszej analizy w celu zapewnienia obsługi różnych sposobów zmienne mogą być deklarowane i inicjowane.
 
 ## <a name="build-data-driven-tests"></a>Tworzenie testów opartych na danych
 

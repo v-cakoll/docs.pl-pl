@@ -15,12 +15,12 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344016"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Instrukcje: łączenie z obiektem lub stroną sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows
 Formularze Windows <xref:System.Windows.Forms.LinkLabel> formantu służy do tworzenia łączy stylu sieci Web w formularzu. Po kliknięciu łącza, można zmienić jego kolor, aby wskazać, że link został odwiedzony. Aby uzyskać więcej informacji o zmienianiu kolorów, zobacz [jak: Zmienianie wyglądu formantu LinkLabel formularzy Windows](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
@@ -29,9 +29,9 @@ Formularze Windows <xref:System.Windows.Forms.LinkLabel> formantu służy do two
   
 #### <a name="to-link-to-another-form-with-a-linklabel-control"></a>Aby połączyć innego formularza za pomocą kontrolki LinkLabel  
   
-1.  Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwość odpowiedni podpis.  
+1. Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwość odpowiedni podpis.  
   
-2.  Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpisu zostanie wskazany jako link. Jak jest oznaczany zależy od właściwości powiązane z wyglądem etykieta linku. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wartość jest reprezentowana przez <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> obiekt zawierający dwie liczby, począwszy od pozycji znaku i liczbę znaków. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Właściwość można ustawić w oknie dialogowym właściwości lub w kodzie w sposób podobny do następującego:  
+2. Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpisu zostanie wskazany jako link. Jak jest oznaczany zależy od właściwości powiązane z wyglądem etykieta linku. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Wartość jest reprezentowana przez <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> obiekt zawierający dwie liczby, począwszy od pozycji znaku i liczbę znaków. <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> Właściwość można ustawić w oknie dialogowym właściwości lub w kodzie w sposób podobny do następującego:  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,7 +54,7 @@ Formularze Windows <xref:System.Windows.Forms.LinkLabel> formantu służy do two
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  W <xref:System.Windows.Forms.LinkLabel.LinkClicked> procedura obsługi zdarzeń, wywołaj <xref:System.Windows.Forms.Form.Show%2A> metodę, aby otworzyć formularz innego w projekcie i ustaw <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwość `true`.  
+3. W <xref:System.Windows.Forms.LinkLabel.LinkClicked> procedura obsługi zdarzeń, wywołaj <xref:System.Windows.Forms.Form.Show%2A> metodę, aby otworzyć formularz innego w projekcie i ustaw <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwość `true`.  
   
     > [!NOTE]
     >  Wystąpienie <xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs> klasa przenosi odwołanie do <xref:System.Windows.Forms.LinkLabel> formant, który został kliknięty, więc nie ma potrzeby rzutowanie `sender` obiektu.  
@@ -97,11 +97,11 @@ Formularze Windows <xref:System.Windows.Forms.LinkLabel> formantu służy do two
   
 #### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>Aby uruchomić program Internet Explorer i link do strony sieci Web za pomocą kontrolki LinkLabel  
   
-1.  Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwość odpowiedni podpis.  
+1. Ustaw <xref:System.Windows.Forms.LinkLabel.Text%2A> właściwość odpowiedni podpis.  
   
-2.  Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpisu zostanie wskazany jako link.  
+2. Ustaw <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> właściwości w celu określenia, która część podpisu zostanie wskazany jako link.  
   
-3.  W <xref:System.Windows.Forms.LinkLabel.LinkClicked> procedura obsługi zdarzeń, która znajduje się w środku bloku obsługi wyjątków, wywołań Druga procedura, która ustawia <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwości `true` i używa <xref:System.Diagnostics.Process.Start%2A> metodę, aby uruchomić domyślnej przeglądarki z adresem URL. Aby użyć <xref:System.Diagnostics.Process.Start%2A> należy dodać odwołanie do metody <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw.  
+3. W <xref:System.Windows.Forms.LinkLabel.LinkClicked> procedura obsługi zdarzeń, która znajduje się w środku bloku obsługi wyjątków, wywołań Druga procedura, która ustawia <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> właściwości `true` i używa <xref:System.Diagnostics.Process.Start%2A> metodę, aby uruchomić domyślnej przeglądarki z adresem URL. Aby użyć <xref:System.Diagnostics.Process.Start%2A> należy dodać odwołanie do metody <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw.  
   
     > [!IMPORTANT]
     >  Jeśli poniższy kod jest uruchamiane w środowisku częściowego zaufania (takich jak na udostępnionym dysku), kompilator JIT zakończy się niepowodzeniem kiedy `VisitLink` metoda jest wywoływana. `System.Diagnostics.Process.Start` Instrukcji powoduje, że żądanie łącza, który zakończy się niepowodzeniem. Przez przechwytywanie wyjątku podczas `VisitLink` poniższy kod pewność, że jeśli kompilator JIT nie powiedzie się, błąd odbywa się bez problemu zmieniała, metoda jest wywoływana.  

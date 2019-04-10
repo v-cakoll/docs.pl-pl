@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427386"
 ---
 # <a name="-operator-c-reference"></a>?: Operator (odwołanie w C#)
 
@@ -24,12 +24,12 @@ Operator warunkowy `?:`, powszechnie znane jako operator warunkowy trójargument
 Składnia służąca do operatora warunkowego jest następująca:
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-`condition` Wyrażenia musi być `true` lub `false`. Jeśli `condition` daje w wyniku `true`, `consequence` wyrażenie jest obliczane, a jego wynik staje się wynik operacji. Jeśli `condition` daje w wyniku `false`, `alternative` wyrażenie jest obliczane, a jego wynik staje się wynik operacji. Tylko `consequence` lub `alternative` jest oceniany.
+`condition` Wyrażenia musi być `true` lub `false`. Jeśli `condition` daje w wyniku `true`, `consequent` wyrażenie jest obliczane, a jego wynik staje się wynik operacji. Jeśli `condition` daje w wyniku `false`, `alternative` wyrażenie jest obliczane, a jego wynik staje się wynik operacji. Tylko `consequent` lub `alternative` jest oceniany.
 
-Typ `consequence` i `alternative` musi być w tej samej lub występują musi być niejawna konwersja z jednego typu na drugi.
+Typ `consequent` i `alternative` musi być w tej samej lub występują musi być niejawna konwersja z jednego typu na drugi.
 
 Operator warunkowy jest łączność do prawej strony, oznacza to, że wyrażenie formularza
 
@@ -54,12 +54,12 @@ Począwszy od C# 7.2, umożliwia wyrażenie warunkowe ref zwraca odwołanie do w
 Wyrażenie warunkowe ref składnia jest następująca:
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-Takich jak oryginalne operator warunkowy ref warunkowego wynikiem wyrażenia jest tylko jeden z dwóch wyrażeń: albo `consequence` lub `alternative`.
+Takich jak oryginalne operator warunkowy ref warunkowego wynikiem wyrażenia jest tylko jeden z dwóch wyrażeń: albo `consequent` lub `alternative`.
 
-W przypadku wyrażenie warunkowe ref, typ `consequence` i `alternative` musi być taka sama.
+W przypadku wyrażenie warunkowe ref, typ `consequent` i `alternative` musi być taka sama.
 
 W poniższym przykładzie pokazano użycie wyrażenie warunkowe ref:
 
@@ -83,10 +83,10 @@ Aby uzyskać więcej informacji, zobacz [operator warunkowy](~/_csharplang/spec/
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
 - [if-else, instrukcja](../keywords/if-else.md)
-- [Operatory ?. i ?[]](null-conditional-operators.md)
-- [??, operator](null-coalescing-operator.md)
-- [ref keyword](../keywords/ref.md)
+- [?. i ?[], operatory](null-conditional-operators.md)
+- [?? Operator](null-coalescing-operator.md)
+- [REF — słowo kluczowe](../keywords/ref.md)

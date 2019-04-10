@@ -2,12 +2,12 @@
 title: 'Instrukcje: dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: caaa89573d272c5d11d179b08c2d9e24c76d21e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 078580b96ab911f65790e58338951532cd7ad704
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344692"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>Instrukcje: dodawanie punktu końcowego AJAX ASP.NET bez używania konfiguracji
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udostępnia obsługą ASP.NET AJAX punktu końcowego, który może zostać wywołana z języka JavaScript w witrynie sieci Web klienta. Aby utworzyć punkt końcowy, można za pomocą pliku konfiguracji, jak wszystkie inne punkty końcowe WCF lub należy użyć metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono drugiego podejścia.  
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
   
 ### <a name="to-create-a-basic-wcf-service"></a>Aby utworzyć podstawowe usługi WCF  
   
-1.  Zdefiniuj podstawowego kontraktu usługi WCF z interfejsem oznaczone <xref:System.ServiceModel.ServiceContractAttribute> atrybutu. Oznaczania każdej operacji za pomocą <xref:System.ServiceModel.OperationContractAttribute>. Pamiętaj ustawić <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> właściwości.  
+1. Zdefiniuj podstawowego kontraktu usługi WCF z interfejsem oznaczone <xref:System.ServiceModel.ServiceContractAttribute> atrybutu. Oznaczania każdej operacji za pomocą <xref:System.ServiceModel.OperationContractAttribute>. Pamiętaj ustawić <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> właściwości.  
   
     ```csharp  
     [ServiceContract(Namespace = "MyService")]]  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
     }  
     ```  
   
-2.  Implementowanie `ICalculator` kontraktu usługi o `CalculatorService`.  
+2. Implementowanie `ICalculator` kontraktu usługi o `CalculatorService`.  
   
     ```csharp  
     public class CalculatorService : ICalculator  
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
     //Other operations omitted…  
     ```  
   
-3.  Definiowanie przestrzeni nazw `ICalculator` i `CalculatorService` implementacje opakowując w bloku przestrzeni nazw.  
+3. Definiowanie przestrzeni nazw `ICalculator` i `CalculatorService` implementacje opakowując w bloku przestrzeni nazw.  
   
     ```csharp  
     Namespace Microsoft.Ajax.Samples  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
   
 ### <a name="to-host-the-service-in-internet-information-services-without-configuration"></a>Do hostowania usługi w programie Internet Information Services bez konfiguracji  
   
-1.  Utwórz nowy plik o nazwie usługi z rozszerzeniem .svc w aplikacji. Edytuj ten plik, dodając odpowiednie [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy informacji dla usługi. Określić, że <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ma być używany w [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy, aby automatycznie skonfigurować punktu końcowego ASP.NET AJAX.  
+1. Utwórz nowy plik o nazwie usługi z rozszerzeniem .svc w aplikacji. Edytuj ten plik, dodając odpowiednie [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy informacji dla usługi. Określić, że <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> ma być używany w [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy, aby automatycznie skonfigurować punktu końcowego ASP.NET AJAX.  
   
     ```  
     <%@ServiceHost   
@@ -70,11 +70,11 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która udost�
     %>  
     ```  
   
-2.  Twórz usługi i wywołać go z klienta. Internet Information Services (IIS) aktywuje usługę, gdy zostanie wywołana. Aby uzyskać więcej informacji o hostingu w usługach IIS, zobacz [jak: Hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
+2. Twórz usługi i wywołać go z klienta. Internet Information Services (IIS) aktywuje usługę, gdy zostanie wywołana. Aby uzyskać więcej informacji o hostingu w usługach IIS, zobacz [jak: Hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md).  
   
 ### <a name="to-call-the-service"></a>Do wywołania tej usługi  
   
-1.  Konfigurowany jest punkt końcowy adresem pusty względem pliku SVC, dzięki czemu usługa jest teraz dostępny i może być wywoływany przez wysyłanie żądań do service.svc/\<operacji > — na przykład service.svc/Add dla `Add` operacji. Używając go, wprowadzając adres URL usługi do kolekcji skryptów kontrolki Menedżera skryptów AJAX programu ASP.NET. Aby uzyskać przykład, zobacz [usługa AJAX bez konfiguracji](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).  
+1. Konfigurowany jest punkt końcowy adresem pusty względem pliku SVC, dzięki czemu usługa jest teraz dostępny i może być wywoływany przez wysyłanie żądań do service.svc/\<operacji > — na przykład service.svc/Add dla `Add` operacji. Używając go, wprowadzając adres URL usługi do kolekcji skryptów kontrolki Menedżera skryptów AJAX programu ASP.NET. Aby uzyskać przykład, zobacz [usługa AJAX bez konfiguracji](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md).  
   
 ## <a name="example"></a>Przykład  
   

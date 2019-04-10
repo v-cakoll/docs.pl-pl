@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346057"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows
 Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdzanie poprawności danych wprowadzonych do formularza. <xref:System.Windows.Forms.DataGridView> Klasa oferuje wygodny sposób wykonanie sprawdzenia poprawności przed danych jest zaangażowana w magazynie danych. Sprawdzanie poprawności danych obsługi <xref:System.Windows.Forms.DataGridView.CellValidating> zdarzenie, które jest wywoływane przez <xref:System.Windows.Forms.DataGridView> podczas zmiany bieżącej komórki.  
@@ -35,7 +35,7 @@ Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdz
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>Aby sprawdzić poprawność danych w formancie DataGridView  
   
-1.  Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera <xref:System.Windows.Forms.DataGridView> kontroli i <xref:System.Windows.Forms.BindingSource> składnika.  
+1. Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera <xref:System.Windows.Forms.DataGridView> kontroli i <xref:System.Windows.Forms.BindingSource> składnika.  
   
      Poniższy przykład kodu zawiera inicjowanie podstawowych oraz `Main` metody.  
   
@@ -44,7 +44,7 @@ Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdz
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  W definicji klasy formularza do obsługi szczegółowe informacje o połączenie z bazą danych, należy zaimplementować metodę.  
+2. W definicji klasy formularza do obsługi szczegółowe informacje o połączenie z bazą danych, należy zaimplementować metodę.  
   
      W tym przykładzie kodu użyto `GetData` metodę, która zwraca wypełnione <xref:System.Data.DataTable> obiektu. Upewnij się, że możesz `connectionString` zmiennej na wartość, która jest odpowiednia dla bazy danych.  
   
@@ -54,12 +54,12 @@ Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdz
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  Implementowanie obsługi dla formularza użytkownika <xref:System.Windows.Forms.Form.Load> zdarzeń, która inicjuje <xref:System.Windows.Forms.DataGridView> i <xref:System.Windows.Forms.BindingSource> i konfiguruje powiązanie danych.  
+3. Implementowanie obsługi dla formularza użytkownika <xref:System.Windows.Forms.Form.Load> zdarzeń, która inicjuje <xref:System.Windows.Forms.DataGridView> i <xref:System.Windows.Forms.BindingSource> i konfiguruje powiązanie danych.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  Implementowanie obsługi <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.CellValidating> i <xref:System.Windows.Forms.DataGridView.CellEndEdit> zdarzenia.  
+4. Implementowanie obsługi <xref:System.Windows.Forms.DataGridView> kontrolki <xref:System.Windows.Forms.DataGridView.CellValidating> i <xref:System.Windows.Forms.DataGridView.CellEndEdit> zdarzenia.  
   
      <xref:System.Windows.Forms.DataGridView.CellValidating> Procedura obsługi zdarzeń jest, gdzie możesz określić czy wartość komórki w `CompanyName` kolumna jest pusta. W przypadku niepowodzenia weryfikacji wartość komórki zestawu <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość <xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType> klasy `true`. Powoduje to, że <xref:System.Windows.Forms.DataGridView> formantu, aby zapobiec opuszczania komórki kursora. Ustaw <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> właściwość wiersz, aby ciągiem objaśnienia. Spowoduje to wyświetlenie ikona błędu z etykietka narzędzia zawierająca tekst błędu. W <xref:System.Windows.Forms.DataGridView.CellEndEdit> ustawić programu obsługi zdarzeń <xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A> właściwości w wierszu do pustego ciągu. <xref:System.Windows.Forms.DataGridView.CellEndEdit> Wystąpi zdarzenie, tylko gdy komórki kończy działanie trybu edycji, który go nie może w razie niepowodzenia weryfikacji.  
   

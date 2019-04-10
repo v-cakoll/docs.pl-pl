@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297271"
+ms.locfileid: "59427490"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "59297271"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">Przewodnik po strukturze ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/index#tutorials">Samouczki</a></p>
-                                                <p><a href="/dotnet/machine-learning/index#resources">Resources</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials">Samouczki</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Resources</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Słownik</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">Dokumentacja interfejsów API ML.NET</a></p>
                                             </div>

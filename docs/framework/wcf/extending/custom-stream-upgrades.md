@@ -2,12 +2,12 @@
 title: Niestandardowe uaktualnienia strumienia
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127364"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345251"
 ---
 # <a name="custom-stream-upgrades"></a>Niestandardowe uaktualnienia strumienia
 Zorientowane na Stream transportu, takich jak TCP i nazwane potoki działają na ciągłego strumienia bajtów między klientem i serwerem. Ten strumień jest wykonywane przez <xref:System.IO.Stream> obiektu. W przypadku uaktualniania strumienia klient chce Dodawanie warstwy protokołu opcjonalne stosu kanału i prosi drugiej stronie kanał komunikacyjny, aby to zrobić. Uaktualnienie strumienia polega na zastąpienie oryginalnego <xref:System.IO.Stream> obiektu z uaktualnionym.  
@@ -19,13 +19,13 @@ Zorientowane na Stream transportu, takich jak TCP i nazwane potoki działają na
 ## <a name="how-stream-upgrades-work"></a>Sposób działania uaktualnień Stream  
  Dostępne są cztery składniki podczas procesu uaktualniania strumienia.  
   
-1.  Strumień uaktualnienia *inicjatora* rozpoczyna proces: w czasie wykonywania można zainicjować żądanie drugiej stronie połączenia uaktualnić z warstwy transportowej kanału.  
+1. Strumień uaktualnienia *inicjatora* rozpoczyna proces: w czasie wykonywania można zainicjować żądanie drugiej stronie połączenia uaktualnić z warstwy transportowej kanału.  
   
-2.  Strumień uaktualnienia *wykonawca* przeprowadza uaktualnienie: w czasie wykonywania odbierze żądanie uaktualnienia z innej maszyny i jeśli to możliwe, akceptuje uaktualnienia.  
+2. Strumień uaktualnienia *wykonawca* przeprowadza uaktualnienie: w czasie wykonywania odbierze żądanie uaktualnienia z innej maszyny i jeśli to możliwe, akceptuje uaktualnienia.  
   
-3.  Uaktualnienie *dostawcy* tworzy *inicjatora* na komputerze klienckim i *wykonawca* na serwerze.  
+3. Uaktualnienie *dostawcy* tworzy *inicjatora* na komputerze klienckim i *wykonawca* na serwerze.  
   
-4.  Uaktualnienie strumienia *Element powiązania* jest dodawany do powiązania usługi i klienta i tworzy dostawcę w czasie wykonywania.  
+4. Uaktualnienie strumienia *Element powiązania* jest dodawany do powiązania usługi i klienta i tworzy dostawcę w czasie wykonywania.  
   
  Należy pamiętać, że w przypadku kilku uaktualnień inicjatora i wykonawca hermetyzacji maszyny stanu do wymuszania które uaktualnienia przejścia są prawidłowe dla każdego inicjacji.  
   
@@ -42,27 +42,27 @@ Zorientowane na Stream transportu, takich jak TCP i nazwane potoki działają na
   
  Aby zaimplementować uaktualnienia strumienia niestandardowe, należy wykonać następujące czynności. Ta procedura implementuje minimalny strumienia proces uaktualniania na komputerach klienta i serwera.  
   
-1.  Utwórz klasę, która implementuje <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
+1. Utwórz klasę, która implementuje <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>.  
   
     1.  Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.InitiateUpgrade%2A> metody do wykonania w usłudze stream, można uaktualnić, a następnie wróć uaktualnionego strumienia. Ta metoda działa synchronicznie; dostępne są analogiczne metody, aby zainicjować uaktualnienie asynchronicznie.  
   
     2.  Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> metodę sprawdzania, czy są dostępne dodatkowe uaktualnienia.  
   
-2.  Utwórz klasę, która implementuje <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
+2. Utwórz klasę, która implementuje <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>.  
   
     1.  Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.AcceptUpgrade%2A> metody do wykonania w usłudze stream, można uaktualnić, a następnie wróć uaktualnionego strumienia. Ta metoda działa synchronicznie; istnieją podobne metody o zgodę na uaktualnienie asynchronicznie.  
   
     2.  Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> metodę pozwala ustalić, czy uaktualnienie wymagane jest obsługiwana przez tego uaktualnienia wykonawca na tym etapie w procesie uaktualniania.  
   
-3.  Utwórz klasę implementuje <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> i <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> metody do zwrócenia wystąpienia wykonawca i inicjatora zdefiniowane w kroku 2 i 1.  
+3. Utwórz klasę implementuje <xref:System.ServiceModel.Channels.StreamUpgradeProvider>. Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeAcceptor%2A> i <xref:System.ServiceModel.Channels.StreamUpgradeProvider.CreateUpgradeInitiator%2A> metody do zwrócenia wystąpienia wykonawca i inicjatora zdefiniowane w kroku 2 i 1.  
   
-4.  Utwórz klasę, która implementuje <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
+4. Utwórz klasę, która implementuje <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement>.  
   
     1.  Zastąp <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildClientStreamUpgradeProvider%2A> metody na kliencie i <xref:System.ServiceModel.Channels.StreamUpgradeBindingElement.BuildServerStreamUpgradeProvider%2A> metody dla usługi.  
   
     2.  Zastąp <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> metody na kliencie i <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> metody dla usługi, aby dodać uaktualnienia elementu powiązania do <xref:System.ServiceModel.Channels.BindingContext.BindingParameters%2A>.  
   
-5.  Dodaj nowy element strumienia w uaktualnienia powiązania do powiązania na komputerach serwera i klienta.  
+5. Dodaj nowy element strumienia w uaktualnienia powiązania do powiązania na komputerach serwera i klienta.  
   
 ## <a name="security-upgrades"></a>Aktualizacje zabezpieczeń  
  Dodawanie uaktualnienie zabezpieczeń jest specjalizowanej wersji strumienia ogólne procesu uaktualniania.  
@@ -71,11 +71,11 @@ Zorientowane na Stream transportu, takich jak TCP i nazwane potoki działają na
   
  Dla scenariuszy zabezpieczeń, które nie zostały spełnione przez powyższe elementy powiązania dwóch, trzech związanych z zabezpieczeniami `abstract` klasy pochodzą z powyższych inicjatora, wykonawca i dostawcy klas bazowych:  
   
-1.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
+1. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator?displayProperty=nameWithType>  
   
-2.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
+2. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor?displayProperty=nameWithType>  
   
-3.  <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
+3. <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider?displayProperty=nameWithType>  
   
  Proces wdrażania uaktualnienia strumienia zabezpieczeń jest taka sama jak wcześniej, z tą różnicą, że będą pochodzić z tych trzech klas. Musi zostać zastąpiona dodatkowe właściwości tych klas, aby podać informacje o zabezpieczeniach do środowiska uruchomieniowego.  
   
@@ -84,13 +84,13 @@ Zorientowane na Stream transportu, takich jak TCP i nazwane potoki działają na
   
  Alternatywnie jednego dostawcę uaktualnienia mogą obsługiwać kilku uaktualnień. Na przykład można zaimplementować dostawcę uaktualnienia niestandardowe strumienia, który obsługuje aktualizacje zabezpieczeń, jak i kompresji. Wykonaj następujące czynności:  
   
-1.  Podklasy <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> do zapisywania klasy dostawcy, która tworzy inicjatora i wykonawca.  
+1. Podklasy <xref:System.ServiceModel.Channels.StreamSecurityUpgradeProvider> do zapisywania klasy dostawcy, która tworzy inicjatora i wykonawca.  
   
-2.  Podklasy <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> upewniając się zastąpić <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> metodę, aby zwrócić typy zawartości dla strumienia kompresji i bezpieczne dane ze strumienia, w kolejności.  
+2. Podklasy <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator> upewniając się zastąpić <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> metodę, aby zwrócić typy zawartości dla strumienia kompresji i bezpieczne dane ze strumienia, w kolejności.  
   
-3.  Podklasy <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> rozumie, że niestandardowe typy zawartości w jego <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> metody.  
+3. Podklasy <xref:System.ServiceModel.Channels.StreamSecurityUpgradeAcceptor> rozumie, że niestandardowe typy zawartości w jego <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> metody.  
   
-4.  Strumień zostanie uaktualniony po każdym wywołaniu <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> i <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
+4. Strumień zostanie uaktualniony po każdym wywołaniu <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> i <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 

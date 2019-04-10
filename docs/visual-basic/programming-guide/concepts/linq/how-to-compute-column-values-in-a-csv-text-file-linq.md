@@ -2,19 +2,19 @@
 title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 1249b5555c9ef7074410682ad9b26e5b003aea9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829001"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344224"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)
 Ten przykład przedstawia sposób wykonywania obliczeń agregacji, takich jak Suma, średnia, minimum i maksimum dla kolumn w pliku CSV. Zasady przykładu, które przedstawiono poniżej mogą dotyczyć innych typów strukturalnych tekstu.  
   
 ### <a name="to-create-the-source-file"></a>Aby utworzyć plik źródłowy  
   
-1.  Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go w folderze projektu. Załóżmy, że pierwsza kolumna reprezentuje identyfikator dla uczniów, a kolejne kolumny reprezentują wyniki z czterech egzaminy.  
+1. Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go w folderze projektu. Załóżmy, że pierwsza kolumna reprezentuje identyfikator dla uczniów, a kolejne kolumny reprezentują wyniki z czterech egzaminy.  
   
     ```  
     111, 97, 92, 81, 60  

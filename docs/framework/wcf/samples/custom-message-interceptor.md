@@ -2,12 +2,12 @@
 title: Niestandardowy element przechwytujący komunikaty
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: c756b9947b48fbf7cd902bf570c6d29f52fdaad6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d585e60c9b31e56873b0501425f55541bd647e02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181418"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344276"
 ---
 # <a name="custom-message-interceptor"></a>Niestandardowy element przechwytujący komunikaty
 Niniejszy przykład pokazuje użycie kanału modelu rozszerzalności. W szczególności pokazuje sposób implementacji element niestandardowego powiązania, który pokazuje tworzenie fabryki kanałów i odbiorniki kanałów, aby przechwycić wszystkie komunikaty przychodzące i wychodzące w określonym punkcie w stosie czasu wykonywania. Przykład zawiera również klienta i serwera, które przedstawiają korzystanie z tych niestandardowych fabryk.  
@@ -28,13 +28,13 @@ Niniejszy przykład pokazuje użycie kanału modelu rozszerzalności. W szczegó
   
  Przykład w tym artykule opisano zalecane procedury tworzenia niestandardowym kanale warstwowych w Windows Communication Foundation (WCF), używając struktura kanału i zgodnie z najlepszymi rozwiązaniami WCF. Kroki, aby utworzyć niestandardowy kanał warstwowe są następujące:  
   
-1.  Zdecyduj, które kształty kanału usługi fabryki kanałów i będzie obsługiwać odbiornika kanałów.  
+1. Zdecyduj, które kształty kanału usługi fabryki kanałów i będzie obsługiwać odbiornika kanałów.  
   
-2.  Tworzenie fabryki kanałów i odbiornik kanału, który obsługuje kształty kanału.  
+2. Tworzenie fabryki kanałów i odbiornik kanału, który obsługuje kształty kanału.  
   
-3.  Dodaj element powiązania, który dodaje niestandardowy kanał warstwowej stos kanału.  
+3. Dodaj element powiązania, który dodaje niestandardowy kanał warstwowej stos kanału.  
   
-4.  Dodaj sekcję rozszerzenia elementu powiązania do udostępnienia nowego elementu powiązania do konfiguracji systemu.  
+4. Dodaj sekcję rozszerzenia elementu powiązania do udostępnienia nowego elementu powiązania do konfiguracji systemu.  
   
 ## <a name="channel-shapes"></a>Kształty kanału  
  Pierwszym krokiem podczas zapisywania w niestandardowym kanale warstwowej jest podjęcie decyzji, które kształty są wymagane dla kanału. Dla naszych Inspektor wiadomości, firma Microsoft wspiera dowolnego kształtu, który obsługuje warstwy poniżej nam (na przykład, jeśli można tworzyć warstwy poniżej nam <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, a następnie możemy także ujawniać <xref:System.ServiceModel.Channels.IOutputChannel> i <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
+1. Zainstaluj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0, używając następującego polecenia.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-5.  Uruchom najpierw Service.exe, a następnie uruchom Client.exe się i obejrzyj oba okna konsoli danych wyjściowych.  
+5. Uruchom najpierw Service.exe, a następnie uruchom Client.exe się i obejrzyj oba okna konsoli danych wyjściowych.  

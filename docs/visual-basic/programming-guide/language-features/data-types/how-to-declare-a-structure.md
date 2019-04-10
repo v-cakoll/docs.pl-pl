@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343561"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Instrukcje: Deklarowanie struktury (Visual Basic)
 Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i kończy z `End Structure` instrukcji. Między te dwie instrukcje należy zadeklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jedna musi być zmienną nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
@@ -25,7 +25,7 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
   
 ### <a name="to-declare-a-structure"></a>Aby zadeklarować strukturę  
   
-1.  Utwórz początkowy i końcowy instrukcji w strukturze.  
+1. Utwórz początkowy i końcowy instrukcji w strukturze.  
   
      Można określić poziom dostępu przy użyciu struktury [publicznych](../../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe lub można pozwolić, aby go Domyślnie `Public`.  
   
@@ -34,7 +34,7 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
     End Structure  
     ```  
   
-2.  Dodawanie elementów do treści struktury.  
+2. Dodawanie elementów do treści struktury.  
   
      Struktura musi mieć co najmniej jeden element. Musisz zadeklarować każdego elementu i określić poziom dostępu dla niego. Jeśli używasz [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) bez żadnych słów kluczowych, domyślnie dostępność `Public`.  
   
@@ -58,12 +58,12 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Podstawowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Rozwiązywanie problemów związanych z typami](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Zmienne struktur](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [Struktury oraz inne elementy programowania](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [Struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [User-Defined, typ danych](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+- [User-Defined Data Type](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

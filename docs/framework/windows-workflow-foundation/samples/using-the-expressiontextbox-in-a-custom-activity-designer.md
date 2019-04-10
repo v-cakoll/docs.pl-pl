@@ -2,12 +2,12 @@
 title: Używanie elementu ExpressionTextBox w projektancie działań niestandardowych
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344978"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Używanie elementu ExpressionTextBox w projektancie działań niestandardowych
 Ten przykład ilustruje sposób używania <xref:System.Activities.Presentation.View.ExpressionTextBox> w Projektancie działań niestandardowych. Niestandardowe działanie `MultiAssign`, przypisuje dwóch wartości ciągu do dwóch zmiennych ciągu. Niektóre <xref:System.Activities.Presentation.View.ExpressionTextBox> powiązać formanty <xref:System.Activities.InArgument>s, a niektóre powiązać <xref:System.Activities.OutArgument>s.
@@ -23,19 +23,19 @@ Ten przykład ilustruje sposób używania <xref:System.Activities.Presentation.V
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2010, otwórz plik ExpressionTextBoxSample.sln.
+1. Za pomocą programu Visual Studio 2010, otwórz plik ExpressionTextBoxSample.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
 #### <a name="to-run-this-sample"></a>Aby uruchomić ten przykład
 
-1.  Dodaj nową aplikację konsoli przepływu pracy do rozwiązania.
+1. Dodaj nową aplikację konsoli przepływu pracy do rozwiązania.
 
-2.  Dodaj odwołanie do **ExpressionTextBoxSample** projektu z nowy projekt aplikacji konsoli przepływu pracy.
+2. Dodaj odwołanie do **ExpressionTextBoxSample** projektu z nowy projekt aplikacji konsoli przepływu pracy.
 
-3.  Skompiluj rozwiązanie.
+3. Skompiluj rozwiązanie.
 
-4.  Przeciągnij **MultiAssign** działania z przybornika i upuść go w przepływie pracy.
+4. Przeciągnij **MultiAssign** działania z przybornika i upuść go w przepływie pracy.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

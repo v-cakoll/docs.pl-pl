@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203330"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343717"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Instrukcje: Wysyłanie danych do Active MDI Child
 Często w kontekście [aplikacje interfejsu wielu dokumentów (MDI)](multiple-document-interface-mdi-applications.md), konieczne będzie wysyłać dane do okno podrzędne aktywnego, na przykład gdy użytkownik wkleja danych ze Schowka w aplikacji MDI.  
@@ -25,7 +25,7 @@ Często w kontekście [aplikacje interfejsu wielu dokumentów (MDI)](multiple-do
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>Aby wysyłać dane do aktywnego okna podrzędnego MDI ze Schowka  
   
-1.  Wewnątrz metody należy skopiować tekst do Schowka do aktywną kontrolkę formularza podrzędnego active.  
+1. Wewnątrz metody należy skopiować tekst do Schowka do aktywną kontrolkę formularza podrzędnego active.  
   
     > [!NOTE]
     >  W tym przykładzie przyjęto założenie, istnieje formularza nadrzędnego MDI (`Form1`) zawierający co najmniej jeden podrzędne MDI zawierający <xref:System.Windows.Forms.RichTextBox> kontroli. Aby uzyskać więcej informacji, zobacz [tworzenie formularzy nadrzędnych MDI](how-to-create-mdi-parent-forms.md).  

@@ -3,12 +3,12 @@ title: Projektowanie w przypadku typów referencyjnych dopuszczającego wartoś�
 description: W tym samouczku zaawansowane zawiera wprowadzenie do typów referencyjnych dopuszczającego wartość null. Dowiesz się, że express projektu chcący po wartości odniesienia może mieć wartości null i pozwolić kompilatorowi wymusić, gdy nie może mieć wartości null.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443266"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427295"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Samouczek: Migrowanie istniejącego kodu w przypadku typów referencyjnych dopuszczającego wartość null
 
@@ -24,7 +24,7 @@ W tym samouczku dowiesz się, jak:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 beta. C# 8 kompilatora w wersji beta jest dostępna z [2019 usługi Visual Studio w wersji zapoznawczej 2 lub nowszej](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview), lub [.NET Core 3.0 w wersji zapoznawczej 2](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+Należy skonfigurować komputer do uruchamiania platformę .NET Core, w tym C# kompilatora 8.0 beta. C# 8 kompilatora w wersji beta jest dostępna z [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), lub r [.NET Core 3.0 w wersji zapoznawczej](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
 W tym samouczku założono, kiedy znasz już C# i .NET, w tym Visual Studio lub interfejsu wiersza polecenia platformy .NET Core.
 
@@ -81,7 +81,7 @@ Te dwie właściwości spowodować `CS8618`, "nieprzyjmujące właściwość zos
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Brak znacznej w poprzednim bloku kodu. Ta aplikacja używa [AutoMapper](http://automapper.org/) pakiet NuGet do skonstruowania elementu wiadomości z `ISyndicationItem`. Już znasz, że elementów historii wiadomości są zbudowane i właściwości są ustawione w tym jednej instrukcji. Oznacza to, że projekt `NewsStoryViewModel` wskazuje, że te właściwości nigdy nie powinny mieć `null` wartość. Te właściwości powinny być **typów referencyjnych kolumną**. Najlepiej wyraża oryginalne założenia projektowe. W rzeczywistości wszystkie `NewsStoryViewModel` *jest* poprawnie utworzone za pomocą wartości innych niż null. Sprawia to, że następująca Inicjalizacja prawidłową poprawkę kodu:
+Brak znacznej w poprzednim bloku kodu. Ta aplikacja używa [AutoMapper](https://automapper.org/) pakiet NuGet do skonstruowania elementu wiadomości z `ISyndicationItem`. Już znasz, że elementów historii wiadomości są zbudowane i właściwości są ustawione w tym jednej instrukcji. Oznacza to, że projekt `NewsStoryViewModel` wskazuje, że te właściwości nigdy nie powinny mieć `null` wartość. Te właściwości powinny być **typów referencyjnych kolumną**. Najlepiej wyraża oryginalne założenia projektowe. W rzeczywistości wszystkie `NewsStoryViewModel` *jest* poprawnie utworzone za pomocą wartości innych niż null. Sprawia to, że następująca Inicjalizacja prawidłową poprawkę kodu:
 
 ```csharp
 public class NewsStoryViewModel

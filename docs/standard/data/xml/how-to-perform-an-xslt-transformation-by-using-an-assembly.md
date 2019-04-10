@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345407"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Zestaw można przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
@@ -132,7 +132,7 @@ Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestaw. Ze
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>Aby skompilować arkusz stylów za pomocą skryptu włączone.  
   
-1.  Wykonując następujące polecenie z wiersza polecenia tworzy dwa zestawy o nazwie `Transform.dll` i `Transform_Script1.dll` (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie używa nazwy arkusza stylów głównym):  
+1. Wykonując następujące polecenie z wiersza polecenia tworzy dwa zestawy o nazwie `Transform.dll` i `Transform_Script1.dll` (jest to zachowanie domyślne. O ile nie określono inaczej, nazwa klasy i zestawu domyślnie używa nazwy arkusza stylów głównym):  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>Aby uwzględnić skompilowanego zestawu jako odwołania, podczas kompilowania kodu.  
   
-1.  W programie Visual Studio może zawierać zestaw, przez dodanie odwołania w Eksploratorze rozwiązań lub z wiersza polecenia.  
+1. W programie Visual Studio może zawierać zestaw, przez dodanie odwołania w Eksploratorze rozwiązań lub z wiersza polecenia.  
   
-2.  W wierszu polecenia przy użyciu języka C# należy użyć następującego polecenia:  
+2. W wierszu polecenia przy użyciu języka C# należy użyć następującego polecenia:  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  W wierszu polecenia za pomocą Visual Basic należy użyć następującego polecenia  
+3. W wierszu polecenia za pomocą Visual Basic należy użyć następującego polecenia  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>Aby użyć skompilowanego zestawu w kodzie.  
   
-1.  Poniższy przykład pokazuje, jak wykonać transformację XSLT przy użyciu arkusza stylów skompilowanego.  
+1. Poniższy przykład pokazuje, jak wykonać transformację XSLT przy użyciu arkusza stylów skompilowanego.  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  

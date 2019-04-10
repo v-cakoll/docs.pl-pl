@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WCF, custom bindings
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
-ms.openlocfilehash: 3fe43e3f815e0f918e22a1ec0fd485079afadde8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156029"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343613"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Instrukcje: włączanie wykrywania powtarzania komunikatu
 Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarza strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery, które podlegają ataku przetworzy strumienia jako wiarygodnego wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówienia elementu.  
@@ -26,9 +26,9 @@ Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komun
   
 ### <a name="to-control-replay-detection-on-the-client-using-code"></a>Aby kontrolować wykrywania powtarzania na kliencie przy użyciu kodu  
   
-1.  Tworzenie <xref:System.ServiceModel.Channels.SecurityBindingElement> do użycia w <xref:System.ServiceModel.Channels.CustomBinding>. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). W poniższym przykładzie użyto <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> utworzone za pomocą <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> z <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
+1. Tworzenie <xref:System.ServiceModel.Channels.SecurityBindingElement> do użycia w <xref:System.ServiceModel.Channels.CustomBinding>. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). W poniższym przykładzie użyto <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> utworzone za pomocą <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> z <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
   
-2.  Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> właściwość, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> klasy i skonfiguruj następujące właściwości zgodnie z potrzebami:  
+2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> właściwość, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> klasy i skonfiguruj następujące właściwości zgodnie z potrzebami:  
   
     1.  `DetectReplay`. Wartość logiczna. To decyduje, czy klient powinien wykryć odtworzenie z serwera. Wartość domyślna to `true`.  
   
@@ -40,19 +40,19 @@ Atak przez powtarzanie występuje, gdy osoba atakująca kopiuje strumienia komun
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Aby kontrolować wykrywania powtarzania w usłudze przy użyciu kodu  
   
-1.  Tworzenie <xref:System.ServiceModel.Channels.SecurityBindingElement> do użycia w <xref:System.ServiceModel.Channels.CustomBinding>.  
+1. Tworzenie <xref:System.ServiceModel.Channels.SecurityBindingElement> do użycia w <xref:System.ServiceModel.Channels.CustomBinding>.  
   
-2.  Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> właściwość, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy, a następnie ustaw właściwości, zgodnie z wcześniejszym opisem.  
+2. Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A> właściwość, aby zwrócić odwołanie do <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> klasy, a następnie ustaw właściwości, zgodnie z wcześniejszym opisem.  
   
 ### <a name="to-control-replay-detection-in-configuration-for-the-client-or-service"></a>Aby kontrolować wykrywania powtarzania w konfiguracji dla klienta lub usługę  
   
-1.  Tworzenie [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Tworzenie [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-2.  Utwórz `<security>` elementu.  
+2. Utwórz `<security>` elementu.  
   
-3.  Tworzenie [ \<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) lub [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
+3. Tworzenie [ \<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md) lub [ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md).  
   
-4.  Ustaw następujące wartości atrybutów zgodnie z potrzebami: `detectReplays`, `maxClockSkew`, `replayWindow`, i `replayCacheSize`. W poniższym przykładzie ustawiono oba atrybuty `<localServiceSettings>` i `<localClientSettings>` elementu:  
+4. Ustaw następujące wartości atrybutów zgodnie z potrzebami: `detectReplays`, `maxClockSkew`, `replayWindow`, i `replayCacheSize`. W poniższym przykładzie ustawiono oba atrybuty `<localServiceSettings>` i `<localClientSettings>` elementu:  
   
     ```xml  
     <customBinding>  

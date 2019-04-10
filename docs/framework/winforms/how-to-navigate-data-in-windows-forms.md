@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345004"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Instrukcje: Nawigowanie po danych w formularzach Windows Forms
 W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwiej można powiązać <xref:System.Windows.Forms.BindingSource> składnik do źródła danych, a następnie kontrolki powiązania <xref:System.Windows.Forms.BindingSource>. Można następnie użyć metody wbudowanej nawigacji na <xref:System.Windows.Forms.BindingSource> takich <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> i <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Przy użyciu tych metod skoryguje <xref:System.Windows.Forms.BindingSource.Position%2A> i <xref:System.Windows.Forms.BindingSource.Current%2A> właściwości <xref:System.Windows.Forms.BindingSource> odpowiednio. Można również znaleźć element i ustaw go jako bieżący element ustawiając <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości.  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>Aby dodać kolejne stanowisko w źródle danych  
   
-1.  Ustaw <xref:System.Windows.Forms.BindingSource.Position%2A> właściwość <xref:System.Windows.Forms.BindingSource> pozycja rekordu, aby przejść do powiązanych danych. Poniższy przykład ilustruje użycie <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metody <xref:System.Windows.Forms.BindingSource> do następującej <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości podczas `nextButton` kliknięciu. <xref:System.Windows.Forms.BindingSource> Jest skojarzony z `Customers` tabeli zestawu danych `Northwind`.  
+1. Ustaw <xref:System.Windows.Forms.BindingSource.Position%2A> właściwość <xref:System.Windows.Forms.BindingSource> pozycja rekordu, aby przejść do powiązanych danych. Poniższy przykład ilustruje użycie <xref:System.Windows.Forms.BindingSource.MoveNext%2A> metody <xref:System.Windows.Forms.BindingSource> do następującej <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości podczas `nextButton` kliknięciu. <xref:System.Windows.Forms.BindingSource> Jest skojarzony z `Customers` tabeli zestawu danych `Northwind`.  
   
     > [!NOTE]
     >  Ustawienie <xref:System.Windows.Forms.BindingSource.Position%2A> właściwość z wartością poza pierwszy lub ostatni rekord nie powoduje wystąpienie błędu, jako [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] nie zezwoli na ustawienie pozycji do wartości poza granice listy. Jeśli jest to ważne w aplikacji, aby dowiedzieć się, czy wykonano ostatnie pierwszy lub ostatni rekord, obejmują logikę w celu sprawdzenia, czy przekroczy liczba elementów danych.  
@@ -33,7 +33,7 @@ W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwi
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>Aby sprawdzić, czy ukończyli koniec lub początek  
   
-1.  Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.BindingSource.PositionChanged> zdarzeń. W procedurze obsługi możesz sprawdzić, czy wartość pozycji proponowane przekroczyła liczba elementów danych rzeczywistych.  
+1. Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.BindingSource.PositionChanged> zdarzeń. W procedurze obsługi możesz sprawdzić, czy wartość pozycji proponowane przekroczyła liczba elementów danych rzeczywistych.  
   
      W poniższym przykładzie pokazano, jak można sprawdzić, czy osiągnięto ostatniego elementu danych. W tym przykładzie, jeśli jesteś w ostatnim elemencie **dalej** przycisku w formularzu jest wyłączona.  
   
@@ -45,7 +45,7 @@ W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwi
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>Aby znaleźć element i ustaw go jako bieżący element  
   
-1.  Znajdź rekord, który chcesz ustawić jako bieżący element. Można to zrobić za pomocą <xref:System.Windows.Forms.BindingSource.Find%2A> metody <xref:System.Windows.Forms.BindingSource>, jeśli dane źródłowe implementuje <xref:System.ComponentModel.IBindingList>. Przykłady danych źródła, które implementują <xref:System.ComponentModel.IBindingList> są <xref:System.ComponentModel.BindingList%601> i <xref:System.Data.DataView>.  
+1. Znajdź rekord, który chcesz ustawić jako bieżący element. Można to zrobić za pomocą <xref:System.Windows.Forms.BindingSource.Find%2A> metody <xref:System.Windows.Forms.BindingSource>, jeśli dane źródłowe implementuje <xref:System.ComponentModel.IBindingList>. Przykłady danych źródła, które implementują <xref:System.ComponentModel.IBindingList> są <xref:System.ComponentModel.BindingList%601> i <xref:System.Data.DataView>.  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  

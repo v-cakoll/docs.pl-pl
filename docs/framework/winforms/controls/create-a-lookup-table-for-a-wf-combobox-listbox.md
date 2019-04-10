@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344107"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy systemu Windows
 Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formularzu Windows, ale przechowywać dane w formacie, który jest bardziej zrozumiały dla programu. Na przykład formularz zamówienia ds może wyświetlić elementy menu według nazwy w polu listy. Jednak w tabeli danych rejestrowania kolejność zawierałoby unikatowe numery identyfikacyjne reprezentujący żywności. W poniższej tabeli przedstawiono przykład sposobu przechowywania i wyświetlania danych w formularzu zamówienia ds.  
@@ -46,13 +46,13 @@ Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formular
   
 ### <a name="to-create-a-lookup-table"></a>Można utworzyć tabeli odnośników  
   
-1.  Dodaj <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, lub <xref:System.Windows.Forms.CheckedListBox> formantu do formularza.  
+1. Dodaj <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, lub <xref:System.Windows.Forms.CheckedListBox> formantu do formularza.  
   
-2.  Łączenie ze źródłem danych.  
+2. Łączenie ze źródłem danych.  
   
-3.  Ustanów relację danych między dwiema tabelami. Zobacz [wprowadzenie do obiektów DataRelation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
+3. Ustanów relację danych między dwiema tabelami. Zobacz [wprowadzenie do obiektów DataRelation](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120)).  
   
-4.  Ustaw następujące właściwości. Mogą być ustawiane w kodzie lub w projektancie.  
+4. Ustaw następujące właściwości. Mogą być ustawiane w kodzie lub w projektancie.  
   
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ Czasami warto wyświetlić dane w formacie przyjazny dla użytkownika w formular
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Kolumna tabeli źródła danych, który ma być wyświetlany w formancie. W poprzednim scenariuszu jest to `"Name"` (można ustawić w kodzie, użyj znaków cudzysłowu).|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Kolumna tabeli źródła danych, która zawiera zapisane informacje. W poprzednim scenariuszu jest to `"ID"` (można ustawić w kodzie, użyj znaków cudzysłowu).|  
   
-5.  W procedurze, należy wywołać <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> metody <xref:System.Windows.Forms.ControlBindingsCollection> klasy do wiązania kontrolki <xref:System.Windows.Forms.ListControl.SelectedValue%2A> właściwości do tabeli, rejestrowanie danych wejściowych z formularza. Użytkownik może to zrobić również w Projektancie zamiast w kodzie, uzyskując dostęp do formantu <xref:System.Windows.Forms.Control.DataBindings%2A> właściwość **właściwości** okna. W poprzednim scenariuszu jest to `OrderDetailsTable`, a kolumna jest `"ItemID"`.  
+5. W procedurze, należy wywołać <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> metody <xref:System.Windows.Forms.ControlBindingsCollection> klasy do wiązania kontrolki <xref:System.Windows.Forms.ListControl.SelectedValue%2A> właściwości do tabeli, rejestrowanie danych wejściowych z formularza. Użytkownik może to zrobić również w Projektancie zamiast w kodzie, uzyskując dostęp do formantu <xref:System.Windows.Forms.Control.DataBindings%2A> właściwość **właściwości** okna. W poprzednim scenariuszu jest to `OrderDetailsTable`, a kolumna jest `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

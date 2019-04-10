@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597300"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345173"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Instrukcje: Przekształcanie fragmentu węzła
 Kiedy przekształcasz dane zawarte w <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> obiektu przekształcenia XSLT dotyczą dokumentu jako całości. Innymi słowy Jeśli przekażesz w węźle innym niż węzeł główny dokument, to nie uniemożliwia proces przekształcania uzyskiwania dostępu do wszystkich węzłów w dokumencie załadowane. Aby Przekształcanie fragmentu węzła, należy utworzyć oddzielny obiekt zawierający tylko fragmentu węzła i przekazać ten obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
@@ -22,13 +22,13 @@ Kiedy przekształcasz dane zawarte w <xref:System.Xml.XmlDocument> lub <xref:Sys
   
 #### <a name="to-transform-a-node-fragment"></a>Aby Przekształcanie fragmentu węzła  
   
-1.  Utwórz obiekt zawierający dokumentu źródłowego.  
+1. Utwórz obiekt zawierający dokumentu źródłowego.  
   
-2.  Znajdź fragment węzeł, który chcesz przekształcić.  
+2. Znajdź fragment węzeł, który chcesz przekształcić.  
   
-3.  Utwórz oddzielne obiekty z tylko fragmentu węzła.  
+3. Utwórz oddzielne obiekty z tylko fragmentu węzła.  
   
-4.  Przekazywanie fragmentu węzła do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+4. Przekazywanie fragmentu węzła do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przekształca fragmentu węzła i generuje wyjściowe wyniki do konsoli.  

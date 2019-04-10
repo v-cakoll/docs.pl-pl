@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70189fad6d979d0e0ff6ad5d936d8a5b6142eea4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345771"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
 Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego kodu są różne działania, dla deweloperów. W tej sekcji opisano kilka porad dotyczących pisaniu kodu zarządzanego, który współdziała z klientami COM:  
@@ -34,19 +34,19 @@ Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego ko
   
 #### <a name="to-consume-a-managed-type-from-com"></a>Korzystanie z typu zarządzanego z modelu COM  
   
-1.  [Rejestrowanie zestawów z modelem COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
+1. [Rejestrowanie zestawów z modelem COM](../../../docs/framework/interop/registering-assemblies-with-com.md).  
   
      Typy w zestawie (i biblioteki typów) musi być zarejestrowana w czasie projektowania. Jeśli Instalator nie rejestruje zestaw, poinstruuj deweloperom COM, należy użyć Regasm.exe.  
   
-2.  [Odwoływać się do typów .NET z modelu COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
+2. [Odwoływać się do typów .NET z modelu COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md).  
   
      Deweloperzy COM może odwoływać się typy w zestawie przy użyciu tych samych narzędzi i technik, które używają już dziś.  
   
-3.  [Wywołanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
+3. [Wywołanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)).  
   
      Deweloperzy COM może wywoływać metody dla obiektu .NET taki sam sposób mogą wywoływać metody dla dowolnego typu niezarządzanego. Na przykład COM **CoCreateInstance** API aktywuje obiektów platformy .NET.  
   
-4.  [Wdrażanie aplikacji do dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
+4. [Wdrażanie aplikacji do dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100)).  
   
      Zestawu z silną nazwą, można zainstalować w globalnej pamięci podręcznej i wymaga podpisu od jego wydawcy. Zestawy, które nie są silną nazwę muszą być zainstalowane w katalogu aplikacji klienta.  
   

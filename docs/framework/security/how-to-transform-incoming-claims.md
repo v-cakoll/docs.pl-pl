@@ -3,19 +3,19 @@ title: 'Instrukcje: Przekształcanie oświadczeń przychodzących'
 ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
-ms.openlocfilehash: 83c6f650580a673d308c7ffd580c785cdb2ab9f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344640"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Instrukcje: Przekształcanie oświadczeń przychodzących
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® formularzy sieci Web  
+-   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługujących oświadczenia i przekształcanie oświadczeń przychodzących. On również instrukcje testowania aplikacji, aby zweryfikować, że oświadczenia po przekształceniu są dostarczane, gdy aplikacja jest uruchomiona.  
@@ -58,19 +58,19 @@ ms.locfileid: "50181634"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio w trybie podwyższonych uprawnień jako administrator.  
+1. Uruchom program Visual Studio w trybie podwyższonych uprawnień jako administrator.  
   
-2.  W programie Visual Studio, kliknij przycisk **pliku**, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
+2. W programie Visual Studio, kliknij przycisk **pliku**, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-3.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
+3. W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
-4.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+4. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
-5.  Kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
+5. Kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
   
-6.  **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
+6. **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
   
-7.  W *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem, a następnie zapisz plik:  
+7. W *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem, a następnie zapisz plik:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -87,7 +87,7 @@ ms.locfileid: "50181634"
     </asp:Content>  
     ```  
   
-8.  Otwórz plik związany z kodem o nazwie *Default.aspx.cs*. Zastąp istniejący kod następującym kodem i Zapisz plik:  
+8. Otwórz plik związany z kodem o nazwie *Default.aspx.cs*. Zastąp istniejący kod następującym kodem i Zapisz plik:  
   
     ```csharp  
     using System;  
@@ -113,24 +113,24 @@ ms.locfileid: "50181634"
   
 #### <a name="to-implement-claims-transformation-using-a-custom-claimsauthenticationmanager"></a>Aby zaimplementować przekształcania oświadczeń przy użyciu niestandardowych ClaimsAuthenticationManager  
   
-1.  W programie Visual Studio, kliknij prawym przyciskiem myszy rozwiązanie, wybierz polecenie **Dodaj**, a następnie kliknij przycisk **nowy projekt**.  
+1. W programie Visual Studio, kliknij prawym przyciskiem myszy rozwiązanie, wybierz polecenie **Dodaj**, a następnie kliknij przycisk **nowy projekt**.  
   
-2.  W **Dodaj nowy projekt** wybierz **biblioteki klas** z **Visual C#** szablony list, wprowadź `ClaimsTransformation`, a następnie naciśnij klawisz **OK**. Nowy projekt zostanie utworzony w folderze rozwiązania.  
+2. W **Dodaj nowy projekt** wybierz **biblioteki klas** z **Visual C#** szablony list, wprowadź `ClaimsTransformation`, a następnie naciśnij klawisz **OK**. Nowy projekt zostanie utworzony w folderze rozwiązania.  
   
-3.  Kliknij prawym przyciskiem myszy **odwołania** w obszarze **ClaimsTransformation** projektu, a następnie kliknij przycisk **Dodaj odwołanie**.  
+3. Kliknij prawym przyciskiem myszy **odwołania** w obszarze **ClaimsTransformation** projektu, a następnie kliknij przycisk **Dodaj odwołanie**.  
   
-4.  W **Menadżer odwołań** wybierz **System.IdentityModel**, a następnie kliknij przycisk **OK**.  
+4. W **Menadżer odwołań** wybierz **System.IdentityModel**, a następnie kliknij przycisk **OK**.  
   
-5.  Otwórz **Class1.cs**, lub jeśli nie istnieje, kliknij prawym przyciskiem myszy **ClaimsTransformation**, kliknij przycisk **Dodaj**, następnie kliknij przycisk **klasy...**  
+5. Otwórz **Class1.cs**, lub jeśli nie istnieje, kliknij prawym przyciskiem myszy **ClaimsTransformation**, kliknij przycisk **Dodaj**, następnie kliknij przycisk **klasy...**  
   
-6.  Dodaj następujące dyrektywy using do pliku kodu:  
+6. Dodaj następujące dyrektywy using do pliku kodu:  
   
     ```csharp  
     using System.Security.Claims;  
     using System.Security.Principal;  
     ```  
   
-7.  Dodaj następujące klasy i metody w pliku kodu.  
+7. Dodaj następujące klasy i metody w pliku kodu.  
   
     > [!WARNING]
     >  Poniższy kod jest wyłącznie demonstracyjny; Upewnij się, aby zweryfikować swoje uprawnienia zamierzone, w kodzie produkcyjnym.  
@@ -150,7 +150,7 @@ ms.locfileid: "50181634"
     }  
     ```  
   
-8.  Zapisz plik i skompiluj **ClaimsTransformation** projektu.  
+8. Zapisz plik i skompiluj **ClaimsTransformation** projektu.  
   
 9. W swojej **TestApp** projektu ASP.NET, kliknij prawym przyciskiem myszy na odwołań, a następnie kliknij **Dodaj odwołanie**.  
   
@@ -167,9 +167,9 @@ ms.locfileid: "50181634"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Aby przetestować aplikację ASP.NET Web Forms oświadczenia, za pomocą uwierzytelniania formularzy  
   
-1.  Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*.  
+1. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*.  
   
-2.  Na *Default.aspx* strony powinna zostać wyświetlona tabela poniżej **Your oświadczeń** nagłówek, który zawiera **wystawcy**, **Wystawca_oryginalny**, **Typu**, **wartość**, i **ValueType** oświadczeń informacji o Twoim koncie. Ostatni wiersz powinno zostać wyświetlone w następujący sposób:  
+2. Na *Default.aspx* strony powinna zostać wyświetlona tabela poniżej **Your oświadczeń** nagłówek, który zawiera **wystawcy**, **Wystawca_oryginalny**, **Typu**, **wartość**, i **ValueType** oświadczeń informacji o Twoim koncie. Ostatni wiersz powinno zostać wyświetlone w następujący sposób:  
   
     ||||||  
     |-|-|-|-|-|  

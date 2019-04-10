@@ -2,12 +2,12 @@
 title: Odnajdywanie — znajdowanie i kryteria znajdowania
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095779"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345784"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi przy użyciu protokołu WS Discovery ProbeMatch komunikatów. Aby uzyskać więcej informacji na temat odnajdywania wiadomości zobacz [specyfikacji WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -40,9 +40,9 @@ Operacja Znajdź odnajdywania jest inicjowane przez klienta, aby dowiedzieć si�
   
  Kryteriów zakończenia obejmują:  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> — Maksymalny czas oczekiwania na odpowiedzi z usług w sieci. Domyślny czas trwania wynosi 20 sekund.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> — Maksymalny czas oczekiwania na odpowiedzi z usług w sieci. Domyślny czas trwania wynosi 20 sekund.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> Maksymalna liczba odpowiedzi oczekiwania. Jeśli <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> odpowiedzi są odbierane przed <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> upłynął zakończenia operacji wyszukiwania.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> Maksymalna liczba odpowiedzi oczekiwania. Jeśli <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> odpowiedzi są odbierane przed <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> upłynął zakończenia operacji wyszukiwania.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> ma <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> właściwość kolekcji, która zawiera wszystkie odpowiedzi wysyłane przez dopasowanie usług w sieci. Jeśli użytkownik ma usług, Kolekcja jest pusta. Jeśli co najmniej jedna usługa udzielił odpowiedzi, odpowiedź jest przechowywany w <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> obiekt, który zawiera adres, kontrakt i dodatkowe informacje o usłudze.  

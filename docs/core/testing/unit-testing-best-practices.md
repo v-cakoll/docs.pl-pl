@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427451"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania przy użyciu platformy .NET Core i .NET Standard testy jednostkowe
 
@@ -18,7 +18,7 @@ Istnieje wiele korzyści, do pisania testów jednostkowych; pomagają przy użyc
 
 W tym przewodniku dowiesz się najważniejsze wskazówki podczas pisania testów jednostkowych, aby zachować testów, odporne i łatwe do zrozumienia.
 
-Przez [John Reese](https://reese.dev) ze specjalnymi dzięki [Roy Osherove](http://osherove.com/)
+Przez [John Reese](https://reese.dev) ze specjalnymi dzięki [Roy Osherove](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>Dlaczego test jednostkowy?
 
@@ -250,17 +250,17 @@ Należy wziąć pod uwagę następujący przypadek
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-Pierwszy reakcję może być do rozpoczęcia pisania test `trimInput` ponieważ chcesz upewnić się, że metoda działa zgodnie z oczekiwaniami. Jednak jest całkowicie możliwe, `ParseLogLine` manipuluje `sanitizedInput` w taki sposób, który nie będzie, renderowanie Testuj pod względem `trimInput` bezużyteczny. 
+Pierwszy reakcję może być do rozpoczęcia pisania test `TrimInput` ponieważ chcesz upewnić się, że metoda działa zgodnie z oczekiwaniami. Jednak jest całkowicie możliwe, `ParseLogLine` manipuluje `sanitizedInput` w taki sposób, który nie będzie, renderowanie Testuj pod względem `TrimInput` bezużyteczny. 
 
 Test rzeczywisty ma być przeprowadzane względem publicznej metody mające połączenie z Internetem `ParseLogLine` ponieważ jest to, co powinno ostatecznie interesujące Cię. 
 

@@ -4,27 +4,27 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 47e9106b7355db6ae02ee263dbea82d41a69ed5e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345550"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Przepełnienie (błąd czasu wykonywania w Visual Basic)
 Przepełnienie powoduje podczas próby przypisania przekracza limit przydziału docelowego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Upewnij się, że wyniki typu przypisania, obliczeń i danych konwersje nie są zbyt duże, aby mogły być reprezentowane w ramach zakresu dozwolonych dla tego typu wartości zmiennych i przypisać wartość do zmiennej typu może przechowywać w większym zakresie wartości , jeśli to konieczne.  
+1. Upewnij się, że wyniki typu przypisania, obliczeń i danych konwersje nie są zbyt duże, aby mogły być reprezentowane w ramach zakresu dozwolonych dla tego typu wartości zmiennych i przypisać wartość do zmiennej typu może przechowywać w większym zakresie wartości , jeśli to konieczne.  
   
-2.  Upewnij się, że właściwości dopasowana do zakresu właściwości, do którego zostały wprowadzone.  
+2. Upewnij się, że właściwości dopasowana do zakresu właściwości, do którego zostały wprowadzone.  
   
-3.  Upewnij się, że numerów używanych w obliczeniach, są zmuszone do liczb całkowitych, które nie mają wyniki większy niż liczb całkowitych.  
+3. Upewnij się, że numerów używanych w obliczeniach, są zmuszone do liczb całkowitych, które nie mają wyniki większy niż liczb całkowitych.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
 - [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Error — Typy](../../../visual-basic/programming-guide/language-features/error-types.md)

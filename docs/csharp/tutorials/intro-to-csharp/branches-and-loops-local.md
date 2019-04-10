@@ -3,12 +3,12 @@ title: Gałęzie i pętle — wprowadzenie do C# samouczek
 description: W tym samouczku omawiającym gałęzie i pętle zapisu C# kodu, aby poznać składnię języka, obsługującego warunkowych gałęzi i pętli, aby wykonać instrukcje wielokrotnie.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427256"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Dowiedz się, logikę warunkową instrukcji gałęzi i pętli
 
@@ -88,34 +88,38 @@ Możesz przetestować bardziej skomplikowanych warunków. Dodaj następujący ko
 
 ```csharp
 int c = 4;
-if ((a + b + c > 10) && (a > b))
+if ((a + b + c > 10) && (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("And the first number is greater than the second");
+    Console.WriteLine("And the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("Or the first number is not greater than the second");
+    Console.WriteLine("Or the first number is not equal to the second");
 }
 ```
+
+`==` Symboli testów dla *równości*. Za pomocą `==` wyróżnia testowanie równości z przypisania, które zostały użyte w `a = 5`.
 
 `&&` Reprezentuje "i". Oznacza to, że oba warunki muszą być spełnione, aby wykonać tę instrukcję w gałęzi dla wartości true.  Te przykłady przedstawiają także, może mieć wielu instrukcji w każdej gałęzi warunkowej, pod warunkiem, należy ująć je w `{` i `}`.
 
 Można również użyć `||` do reprezentowania "or". Dodaj następujący kod, po czym napisanych do tej pory:
 
 ```csharp
-if ((a + b + c > 10) || (a > b))
+if ((a + b + c > 10) || (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("Or the first number is greater than the second");
+    Console.WriteLine("Or the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("And the first number is not greater than the second");
+    Console.WriteLine("And the first number is not equal to the second");
 }
 ```
+
+Zmodyfikuj wartości `a`, `b`, i `c` i przełączać się między `&&` i `||` do zbadania. Uzyskasz więcej zrozumieć sposób, w jaki `&&` i `||` pracy operatorów.
 
 Pierwszym krokiem zostały ukończone. Przed rozpoczęciem następnej sekcji, Przejdźmy bieżącego kodu w oddzielnych metodach. Który sprawia, że łatwiej rozpocząć pracę z nową przykładową. Zmiana nazwy Twojego `Main` metodę, aby `ExploreIf` i zapisywać nowy `Main` metodę, która wywołuje `ExploreIf`. Po zakończeniu, kod powinien wyglądać następująco:
 

@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć klasyfikatora obrazu niestandardowego st
 ms.date: 04/05/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d320135d0d414c2cca934ff3d4cad5152a24ee8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 775f26d0e2453a0027f1e54ddc05f51e596ad540
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59232530"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427516"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Samouczek: Tworzenie klasyfikatora obrazu niestandardowego strukturze ML.NET z TensorFlow
 
@@ -28,7 +28,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 > [!NOTE]
 > W tym temacie odnosi się do strukturze ML.NET, która jest obecnie dostępna w wersji zapoznawczej, a materiał może ulec zmianie. Aby uzyskać więcej informacji, odwiedź stronę [wprowadzenie strukturze ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
-Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [dotnet/machinelearning repozytorium GitHub](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)
+Obecnie używasz tego samouczka, a powiązane próbki **strukturze ML.NET wersji 0.10**. Aby uzyskać więcej informacji, zobacz informacje o wersji w [dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) repozytorium GitHub.
 
 ## <a name="image-classification-sample-overview"></a>Omówienie przykładowych klasyfikacji obrazów
 
@@ -38,13 +38,13 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core".
+* [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform .NET Core".
 
 * Pakiet Nuget Microsoft.ML 0.10.0
 * Pakiet Nuget Microsoft.ML.ImageAnalytics 0.10.0
 * Pakiet Nuget Microsoft.ML.TensorFlow 0.10.0
 
-* [Katalog zasobów samouczka. Plik ZIP](http://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
+* [Katalog zasobów samouczka. Plik ZIP](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)
 
 * [Model uczenia maszynowego InceptionV3](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 
@@ -136,7 +136,7 @@ Szkolenia i testowania obrazów znajdują się w folderach zasoby, które, konie
 
 ### <a name="prepare-your-data"></a>Przygotowywanie danych
 
-1. Pobierz [pliku zip projektu zasobów katalogu](http://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)i Rozpakuj go.
+1. Pobierz [pliku zip projektu zasobów katalogu](https://download.microsoft.com/download/0/E/5/0E5E0136-21CE-4C66-AC18-9917DED8A4AD/image-classifier-assets.zip)i Rozpakuj go.
 
 2. Kopiuj `assets` katalogu do usługi *TransferLearningTF* katalogu projektu. Ten katalog i jego podkatalogach zawierać plików danych i pomocy technicznej (z wyjątkiem powstania modelu, który można pobrać i dodać w następnym kroku) potrzebne w tym samouczku.
 
@@ -509,4 +509,4 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 
 Zapoznaj się z repozytorium GitHub przykładów uczenia maszynowego można eksplorować przykładową klasyfikacji obrazów rozwinięty.
 > [!div class="nextstepaction"]
-> [repozytorium GitHub machinelearning-DotNet-samples](https://github.com/dotnet/machinelearning/)
+> [repozytorium GitHub machinelearning-DotNet-samples](https://github.com/dotnet/machinelearning-samples/)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346031"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>Instrukcje: tworzenie niestandardowego dostawcy tokenów zabezpieczeń
 W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandardowego dostawcy tokenów zabezpieczeń i sposobu integracji dostawcę z Menedżer tokenów zabezpieczeń niestandardowych.  
@@ -26,22 +26,22 @@ W tym temacie pokazano, jak utworzyć nowe typy tokenów przy użyciu niestandar
   
 ### <a name="to-create-a-custom-security-token-provider"></a>Aby utworzyć niestandardowego dostawcy tokenów zabezpieczeń  
   
-1.  Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy.  
+1. Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy.  
   
-2.  Implementowanie <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> metody. Metoda jest odpowiedzialna za tworzenie i zwrócenia wystąpienia tokenu zabezpieczającego. Poniższy przykład tworzy klasę o nazwie `MySecurityTokenProvider`, przesłonięć i <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> metodę, aby zwrócić wystąpienia <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy. Konstruktor klasy wymaga wystąpienia <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy.  
+2. Implementowanie <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> metody. Metoda jest odpowiedzialna za tworzenie i zwrócenia wystąpienia tokenu zabezpieczającego. Poniższy przykład tworzy klasę o nazwie `MySecurityTokenProvider`, przesłonięć i <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> metodę, aby zwrócić wystąpienia <xref:System.IdentityModel.Tokens.X509SecurityToken> klasy. Konstruktor klasy wymaga wystąpienia <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy.  
   
      [!code-csharp[c_CustomTokenProvider#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#1)]
      [!code-vb[c_CustomTokenProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#1)]  
   
 ### <a name="to-integrate-a-custom-security-token-provider-with-a-custom-security-token-manager"></a>Aby zintegrować niestandardowego dostawcy tokenów zabezpieczeń z usługą Menedżer tokenów zabezpieczeń niestandardowe  
   
-1.  Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy. (Poniższy przykład pochodzi z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy, która jest pochodną <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy.)  
+1. Zdefiniuj nową klasę pochodną <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy. (Poniższy przykład pochodzi z <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy, która jest pochodną <xref:System.IdentityModel.Selectors.SecurityTokenManager> klasy.)  
   
-2.  Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metody, jeśli nie jest już przesłonięty.  
+2. Zastąp <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> metody, jeśli nie jest już przesłonięty.  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> Metoda jest odpowiedzialna za zwrócenie wystąpienie <xref:System.IdentityModel.Selectors.SecurityTokenProvider> klasy odpowiednie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametr przekazywany do metody przez architekturę zabezpieczeń programu WCF. Zmodyfikować metodę, aby zwrócić implementację dostawcy tokenów zabezpieczeń niestandardowych (utworzonym w poprzedniej procedurze) kiedy metoda jest wywoływana z parametrem tokenu odpowiednie zabezpieczenia. Aby uzyskać więcej informacji na temat Menedżer tokenów zabezpieczeń, zobacz [instruktażu: Tworzenie niestandardowego klienta i poświadczeń usługi](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
-3.  Dodawanie logiki niestandardowej metody umożliwiającej mu do zwrócenia z niestandardowego dostawcy tokenów zabezpieczeń na podstawie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametru. Poniższy przykład zwraca niestandardowego dostawcy tokenów zabezpieczeń, jeśli są spełnione wymagania tokenu. Wymagania obejmują token zabezpieczający X.509 i kierunek wiadomości (czy token jest używany przez dane wyjściowe komunikatu). W pozostałych przypadkach kod wywołuje klasę bazową, aby zapewnić odpowiednie zachowanie dostarczane przez system, pozostałe wymagania tokenu zabezpieczeń.  
+3. Dodawanie logiki niestandardowej metody umożliwiającej mu do zwrócenia z niestandardowego dostawcy tokenów zabezpieczeń na podstawie <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> parametru. Poniższy przykład zwraca niestandardowego dostawcy tokenów zabezpieczeń, jeśli są spełnione wymagania tokenu. Wymagania obejmują token zabezpieczający X.509 i kierunek wiadomości (czy token jest używany przez dane wyjściowe komunikatu). W pozostałych przypadkach kod wywołuje klasę bazową, aby zapewnić odpowiednie zachowanie dostarczane przez system, pozostałe wymagania tokenu zabezpieczeń.  
   
  [!code-csharp[c_CustomTokenProvider#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#2)]
  [!code-vb[c_CustomTokenProvider#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#2)]  

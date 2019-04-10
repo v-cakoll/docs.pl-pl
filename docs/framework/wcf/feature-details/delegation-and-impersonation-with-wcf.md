@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345524"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegowanie i personifikacja za pomocą programu WCF
 *Personifikacja* jest typową techniką, której usługi użyć do ograniczenia dostępu klienta do zasobów w domenie usługi. Zasobów domeny usługi może być zasoby maszyny, takie jak pliki lokalne (dokona personifikacji) lub zasobów na innej maszynie, na przykład do udziału plików (delegowania). Dla przykładowej aplikacji, zobacz [Personifikowanie klienta](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Na przykład jak używać personifikacji zobacz [jak: Personifikowanie klienta w usłudze](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -113,12 +113,12 @@ ms.locfileid: "59122242"
   
 |`AllowedImpersonationLevel` value|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Anonimowe|Yes|n/d|Personifikacja|  
+|Anonimowe|Tak|n/d|Personifikacja|  
 |Anonimowe|Nie|n/d|Identyfikacja|  
 |Identyfikacja|n/d|n/d|Identyfikacja|  
 |Personifikacja|Yes|n/d|Personifikacja|  
 |Personifikacja|Nie|n/d|Identyfikacja|  
-|Delegowanie|Tak|Yes|Delegowanie|  
+|Delegowanie|Yes|Yes|Delegowanie|  
 |Delegowanie|Tak|Nie|Personifikacja|  
 |Delegowanie|Nie|n/d|Identyfikacja|  
   
@@ -135,7 +135,7 @@ ms.locfileid: "59122242"
   
 |Usługa ma `SeTcbPrivilege`|Usługa ma `SeImpersonatePrivilege`|Usługi i klienta są w stanie delegowania|Tokenu z pamięci podręcznej `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|Tak|Tak|n/d|Personifikacja|  
+|Yes|Yes|n/d|Personifikacja|  
 |Tak|Nie|n/d|Identyfikacja|  
 |Nie|n/d|n/d|Identyfikacja|  
   
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Jak skonfigurować aplikację do korzystania z delegowania ograniczonego  
  Zanim będzie można Użyj ograniczonego delegowania, nadawca, odbiorca, a kontroler domeny musi być skonfigurowany tak, aby to zrobić. W poniższej procedurze wyszczególniono czynności, które włączyć ograniczone delegowanie. Aby uzyskać szczegółowe informacje o różnicach między delegowanie i ograniczonego delegowania, zobacz część [systemu Windows Server 2003 Kerberos Extensions](https://go.microsoft.com/fwlink/?LinkId=100194) , w tym artykule omówiono ograniczone dyskusji.  
   
-1.  Na kontrolerze domeny, należy wyczyścić **konto jest poufne i nie może być delegowane** pole wyboru dla konta, w którym aplikacja kliencka jest uruchomiona.  
+1. Na kontrolerze domeny, należy wyczyścić **konto jest poufne i nie może być delegowane** pole wyboru dla konta, w którym aplikacja kliencka jest uruchomiona.  
   
-2.  Na kontrolerze domeny, wybierz **konto jest zaufany dla celów delegacji** pole wyboru dla konta, w którym aplikacja kliencka jest uruchomiona.  
+2. Na kontrolerze domeny, wybierz **konto jest zaufany dla celów delegacji** pole wyboru dla konta, w którym aplikacja kliencka jest uruchomiona.  
   
-3.  Na kontrolerze domeny, skonfiguruj komputer tak, warstwy środkowej, tak aby jest zaufany dla celów delegacji, klikając **zaufania komputerowi w delegowaniu** opcji.  
+3. Na kontrolerze domeny, skonfiguruj komputer tak, warstwy środkowej, tak aby jest zaufany dla celów delegacji, klikając **zaufania komputerowi w delegowaniu** opcji.  
   
-4.  Na kontrolerze domeny, skonfiguruj komputer tak warstwy środkowej w taki sposób, aby używały ograniczonego delegowania, klikając **Ufaj temu komputerowi w delegowaniu tylko do określonych usług** opcji.  
+4. Na kontrolerze domeny, skonfiguruj komputer tak warstwy środkowej w taki sposób, aby używały ograniczonego delegowania, klikając **Ufaj temu komputerowi w delegowaniu tylko do określonych usług** opcji.  
   
  Aby uzyskać bardziej szczegółowe instrukcje na temat konfigurowania ograniczonego delegowania zobacz następujące tematy w witrynie MSDN:  
   

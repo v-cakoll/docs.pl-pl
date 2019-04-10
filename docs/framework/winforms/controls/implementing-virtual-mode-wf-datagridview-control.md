@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344328"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows
 Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych w <xref:System.Windows.Forms.DataGridView> kontrolki, można ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwość `true` i jawnie zarządzać kontrolki interakcji z jej magazynem danych. Dzięki temu można dostosowywać wydajność kontrolki w tej sytuacji.  
@@ -30,7 +30,7 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
   
 #### <a name="to-implement-virtual-mode"></a>Aby zaimplementować trybu wirtualnego  
   
-1.  Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera <xref:System.Windows.Forms.DataGridView> kontroli.  
+1. Utwórz klasę, która pochodzi od klasy <xref:System.Windows.Forms.Form> i zawiera <xref:System.Windows.Forms.DataGridView> kontroli.  
   
      Poniższy kod zawiera kilka podstawowych inicjowania. Deklaruje niektóre zmienne, które będą używane w kolejnych krokach, zapewnia `Main` metody i zapewnia prosty formularz układu w konstruktorze klasy.  
   
@@ -41,13 +41,13 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  Implementowanie obsługi dla formularza użytkownika <xref:System.Windows.Forms.Form.Load> zdarzeń, która inicjuje <xref:System.Windows.Forms.DataGridView> kontroli i wypełnia magazynu danych z przykładowymi wartościami.  
+2. Implementowanie obsługi dla formularza użytkownika <xref:System.Windows.Forms.Form.Load> zdarzeń, która inicjuje <xref:System.Windows.Forms.DataGridView> kontroli i wypełnia magazynu danych z przykładowymi wartościami.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.CellValueNeeded> zdarzeń, który pobiera wartość żądanej komórki z magazynu danych lub `Customer` obiektu aktualnie w trakcie edycji.  
+3. Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.CellValueNeeded> zdarzeń, który pobiera wartość żądanej komórki z magazynu danych lub `Customer` obiektu aktualnie w trakcie edycji.  
   
      To zdarzenie występuje zawsze, gdy <xref:System.Windows.Forms.DataGridView> kontrolka wymaga malowania komórki.  
   
@@ -55,13 +55,13 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.CellValuePushed> zdarzeń, która przechowuje wartość edytowane komórki w `Customer` obiekt reprezentujący wiersz edytowany. To zdarzenie występuje, gdy użytkownik zatwierdza zmiany wartości komórki.  
+4. Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.CellValuePushed> zdarzeń, która przechowuje wartość edytowane komórki w `Customer` obiekt reprezentujący wiersz edytowany. To zdarzenie występuje, gdy użytkownik zatwierdza zmiany wartości komórki.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.NewRowNeeded> zdarzenia, które tworzy nową `Customer` wiersz nowo utworzony obiekt.  
+5. Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.NewRowNeeded> zdarzenia, które tworzy nową `Customer` wiersz nowo utworzony obiekt.  
   
      To zdarzenie występuje, gdy użytkownik wprowadzi wiersza dla nowych rekordów.  
   
@@ -69,7 +69,7 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.RowValidated> zdarzeń, która zapisuje nowe lub zmodyfikowane wiersze w magazynie danych.  
+6. Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.RowValidated> zdarzeń, która zapisuje nowe lub zmodyfikowane wiersze w magazynie danych.  
   
      To zdarzenie występuje, gdy użytkownik zmienia bieżący wiersz.  
   
@@ -77,7 +77,7 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> zdarzeń, która wskazuje, czy <xref:System.Windows.Forms.DataGridView.CancelRowEdit> zdarzeń ma miejsce, gdy użytkownik sygnalizuje operacja cofania wiersza przez naciśnięcie klawisza ESC dwa razy w trybie edycji lub raz poza trybem edycji.  
+7. Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> zdarzeń, która wskazuje, czy <xref:System.Windows.Forms.DataGridView.CancelRowEdit> zdarzeń ma miejsce, gdy użytkownik sygnalizuje operacja cofania wiersza przez naciśnięcie klawisza ESC dwa razy w trybie edycji lub raz poza trybem edycji.  
   
      Domyślnie <xref:System.Windows.Forms.DataGridView.CancelRowEdit> występuje po wierszu operacja cofania, gdy zmodyfikowano wszystkie komórki w bieżącym wierszu, chyba że <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> właściwość jest ustawiona na `true` w <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> programu obsługi zdarzeń. To zdarzenie jest przydatne, gdy zakres zatwierdzenia jest określana w czasie wykonywania.  
   
@@ -85,7 +85,7 @@ Gdy zachodzi potrzeba wyświetlenia bardzo dużych ilości danych tabelarycznych
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.CancelRowEdit> zdarzenia, które odrzuca wszystkie wartości `Customer` obiekt reprezentujący bieżącego wiersza.  
+8. Implementowanie obsługi dla <xref:System.Windows.Forms.DataGridView.CancelRowEdit> zdarzenia, które odrzuca wszystkie wartości `Customer` obiekt reprezentujący bieżącego wiersza.  
   
      To zdarzenie występuje, gdy użytkownik sygnalizuje operacja cofania wiersza przez naciśnięcie klawisza ESC dwa razy w trybie edycji lub raz poza trybem edycji. To zdarzenie nie występuje, jeśli zmodyfikowano żadnych komórek w bieżącym wierszu lub wartość <xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType> została ustawiona właściwość `false` w <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded> programu obsługi zdarzeń.  
   

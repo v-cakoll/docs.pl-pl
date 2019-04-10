@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e5e6b77cdb13c17557f176a37fbb9e7d42ab667
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346005"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Instrukcje: tworzenie podstawowego kontraktu danych dla klasy lub struktury
 W tym temacie przedstawiono podstawowe kroki, aby utworzyć kontraktu danych za pomocą klasy lub struktury. Aby uzyskać więcej informacji na temat kontraktów danych i sposobu ich używania, zobacz [za pomocą kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -23,9 +23,9 @@ W tym temacie przedstawiono podstawowe kroki, aby utworzyć kontraktu danych za 
   
 ### <a name="to-create-a-basic-data-contract-for-a-class-or-structure"></a>Do utworzenia podstawowego kontraktu danych dla klasy lub struktury  
   
-1.  Zadeklaruj, że typ ma kontraktu danych, stosując <xref:System.Runtime.Serialization.DataContractAttribute> do klasy atrybutu. Należy zauważyć, że wszystkie typy publiczne, w tym użytkownicy bez atrybuty, które można serializować. <xref:System.Runtime.Serialization.DataContractSerializer> Wnioskuje kontraktu danych, jeśli <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest nieobecne. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+1. Zadeklaruj, że typ ma kontraktu danych, stosując <xref:System.Runtime.Serialization.DataContractAttribute> do klasy atrybutu. Należy zauważyć, że wszystkie typy publiczne, w tym użytkownicy bez atrybuty, które można serializować. <xref:System.Runtime.Serialization.DataContractSerializer> Wnioskuje kontraktu danych, jeśli <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest nieobecne. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
-2.  Definiowanie elementów członkowskich (właściwości, pola lub zdarzenia), które są serializowane, stosując <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do każdego elementu członkowskiego. Te elementy członkowskie są nazywane składowych danych. Domyślnie wszystkie typy publiczne są możliwe do serializacji. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
+2. Definiowanie elementów członkowskich (właściwości, pola lub zdarzenia), które są serializowane, stosując <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do każdego elementu członkowskiego. Te elementy członkowskie są nazywane składowych danych. Domyślnie wszystkie typy publiczne są możliwe do serializacji. Aby uzyskać więcej informacji, zobacz [typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
   
     > [!NOTE]
     >  Można zastosować <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do pola prywatne, powodując dane, które mają być widoczne dla innych użytkowników. Pamiętaj, elementu członkowskiego nie zawiera poufnych danych.  

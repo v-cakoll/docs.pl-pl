@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344182"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Instrukcje: Aktualizowanie wierszy w bazie danych
 Możesz zaktualizować wierszy w bazie danych, zmieniając wartości elementów członkowskich obiektów skojarzonych z [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> kolekcji, a następnie przesyłanie zmian do bazy danych. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy zmiany w środowisku SQL odpowiednie `UPDATE` poleceń.  
@@ -24,11 +24,11 @@ Możesz zaktualizować wierszy w bazie danych, zmieniając wartości elementów 
   
 ### <a name="to-update-a-row-in-the-database"></a>Aby zaktualizować wiersz w bazie danych  
   
-1.  Odpytywanie bazy danych dla wiersza do zaktualizowania.  
+1. Odpytywanie bazy danych dla wiersza do zaktualizowania.  
   
-2.  Żądane zmiany wartości elementów członkowskich w wynikowym [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiektu.  
+2. Żądane zmiany wartości elementów członkowskich w wynikowym [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiektu.  
   
-3.  Przesyłanie zmian do bazy danych.  
+3. Przesyłanie zmian do bazy danych.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zapytania bazy danych dla zamówienia #11000, a następnie zmienia wartości `ShipName` i `ShipVia` w wynikowym `Order` obiektu. Na koniec zmiany tych wartości elementów członkowskich są przesyłane do bazy danych zgodnie ze zmianami w `ShipName` i `ShipVia` kolumn.  

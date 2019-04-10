@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345095"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opcje kompilatora C#)
 Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora C# do firmy Microsoft.  
@@ -28,13 +28,13 @@ Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora 
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- **Brak**  
+ **brak**  
  Raporty o błędach wewnętrznych kompilatora nie będą zbierane ani wysyłane do firmy Microsoft.  
   
  **wiersz**  
  Monituje o wysłanie raportu po pojawieniu się błędu wewnętrznego kompilatora. **wiersz** jest domyślną kolekcją podczas kompilowania aplikacji w środowisku programistycznym.  
   
- **kolejki**  
+ **queue**  
  Kolejkuje raport o błędach. Po zalogowaniu się przy użyciu poświadczeń administracyjnych może zgłaszać błędów od czasu ostatniego zalogowania się. Użytkownik nie jest monitowany o wysłanie raportu błędów więcej niż raz na trzy dni. **kolejka** jest domyślną kolekcją podczas kompilowania aplikacji w wierszu polecenia.  
   
  **Wyślij**  
@@ -51,13 +51,13 @@ Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora 
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony. Aby uzyskać więcej informacji, zobacz [Stroka kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Otwórz projekt **właściwości** strony. Aby uzyskać więcej informacji, zobacz [Stroka kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Kliknij przycisk **kompilacji** stronę właściwości.  
+2. Kliknij przycisk **kompilacji** stronę właściwości.  
   
-3.  Kliknij przycisk **zaawansowane** przycisku.  
+3. Kliknij przycisk **zaawansowane** przycisku.  
   
-4.  Modyfikowanie **raportowanie wewnętrznych błędów kompilatora** właściwości.  
+4. Modyfikowanie **raportowanie wewnętrznych błędów kompilatora** właściwości.  
   
  Aby dowiedzieć się, jak programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   

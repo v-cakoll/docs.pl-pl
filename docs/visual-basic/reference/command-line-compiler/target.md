@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 69312ca3512c5407185df11e66d95ce9f5cdddff
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412295"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344744"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Określa format danych wyjściowych kompilatora.  
@@ -25,7 +25,7 @@ Określa format danych wyjściowych kompilatora.
 ## <a name="remarks"></a>Uwagi  
  W poniższej tabeli przedstawiono efekt `-target` opcji.  
   
-|**Option**|**Behavior**|  
+|**Opcja**|**Zachowanie**|  
 |----------------|------------------|  
 |`-target:exe`|Powoduje, że kompilator, aby utworzyć aplikację konsoli pliku wykonywalnego.<br /><br /> Jest to opcja domyślna, gdy nie `-target` określono opcję. Plik wykonywalny jest tworzony z rozszerzeniem .exe.<br /><br /> Chyba że określono inaczej, za pomocą `/out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera `Sub Main` procedury.<br /><br /> Tylko jeden `Sub Main` procedura jest wymagana w plikach kodu źródłowego, które są kompilowane do pliku .exe. Użyj `-main` opcję kompilatora, aby określić, która klasa zawiera `Sub Main` procedury.|  
 |`-target:library`|Powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL).<br /><br /> Plik biblioteki dołączanej jest tworzony z rozszerzeniem dll.<br /><br /> Chyba że określono inaczej, za pomocą `-out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.<br /><br /> Podczas tworzenia biblioteki DLL, `Sub Main` procedura nie jest wymagana.|  
@@ -42,11 +42,11 @@ Określa format danych wyjściowych kompilatora.
   
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>Aby ustawić - docelowy w środowisku IDE programu Visual Studio  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
+1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
   
-2.  Kliknij przycisk **aplikacji** kartę.  
+2. Kliknij przycisk **aplikacji** kartę.  
   
-3.  Zmodyfikuj wartość w **typ aplikacji** pole.  
+3. Zmodyfikuj wartość w **typ aplikacji** pole.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `in.vb`, tworzenie `in.dll`:  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
 - [— Odwołanie (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227395"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344666"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
 Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestawu, dołączając plik zasad wydawcy w z uaktualnionych zestawu. Plik zasad wydawcy określa przekierowanie zestawu i podstawowe ustawienia kodu i ma taki sam format jak plik konfiguracji aplikacji. Plik zasad wydawcy jest skompilowany w zestawie i umieszczone w globalnej pamięci podręcznej.  
   
  Istnieją trzy kroki związane z tworzeniem zasad wydawcy:  
   
-1.  Utwórz plik zasad wydawcy.  
+1. Utwórz plik zasad wydawcy.  
   
-2.  Utwórz zestaw zasad wydawcy.  
+2. Utwórz zestaw zasad wydawcy.  
   
-3.  Dodaj zestaw zasad wydawcy do globalnej pamięci podręcznej.  
+3. Dodaj zestaw zasad wydawcy do globalnej pamięci podręcznej.  
   
  Schemat dla zasad wydawcy jest opisana w [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md). W poniższym przykładzie pokazano wydawcy pliku zasad, który przekierowuje jedną wersję `myAssembly` do innego.  
   
@@ -51,7 +51,7 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>Aby utworzyć zestaw zasad wydawcy  
   
-1.  Wpisz następujące polecenie w wierszu polecenia:  
+1. Wpisz następujące polecenie w wierszu polecenia:  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>Aby dodać zestaw zasad wydawcy do globalnej pamięci podręcznej  
   
-1.  Wpisz następujące polecenie w wierszu polecenia:  
+1. Wpisz następujące polecenie w wierszu polecenia:  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

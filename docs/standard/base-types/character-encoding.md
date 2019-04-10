@@ -1,5 +1,5 @@
 ---
-title: Kodowanie znaków w .NET
+title: Kodowanie znaków w programie .NET
 description: Więcej informacji na temat znaków kodowania i dekodowania na platformie .NET.
 ms.date: 12/22/2017
 ms.technology: dotnet-standard
@@ -14,14 +14,14 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649404"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346109"
 ---
-# <a name="character-encoding-in-net"></a>Kodowanie znaków w .NET
+# <a name="character-encoding-in-net"></a>Kodowanie znaków w programie .NET
 Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele różnych sposobów. Kodowanie znaków to system, który pary, każdy znak w obsługiwanych znaków, zestaw z jakąś wartość, która reprezentuje ten znak. Na przykład Morse'a jest znakiem kodowania tej pary każdego znaku w alfabetu łacińskiego z wzorcem kropki i łączniki, które są odpowiednie na potrzeby transmisji przez telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku obsługiwany zestaw z wartością liczbową, który reprezentuje ten znak znaków. Kodowanie znaków ma dwa różne składniki:  
   
 -   Koder, który tłumaczy sekwencji znaków do sekwencji wartości liczbowych (w bajtach).  
@@ -215,11 +215,11 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
   
  Ponadto można zaimplementować niestandardowego rozwiązania, które używa rezerwowe najlepszego dopasowania, rezerwowy zastąpienia lub rezerwowe wyjątek, wykonaj następujące czynności:  
   
-1.  Wyprowadzić klasę z <xref:System.Text.EncoderFallback> operacji kodowania i z <xref:System.Text.DecoderFallback> dekodowania operacji.  
+1. Wyprowadzić klasę z <xref:System.Text.EncoderFallback> operacji kodowania i z <xref:System.Text.DecoderFallback> dekodowania operacji.  
   
-2.  Wyprowadzić klasę z <xref:System.Text.EncoderFallbackBuffer> operacji kodowania i z <xref:System.Text.DecoderFallbackBuffer> dekodowania operacji.  
+2. Wyprowadzić klasę z <xref:System.Text.EncoderFallbackBuffer> operacji kodowania i z <xref:System.Text.DecoderFallbackBuffer> dekodowania operacji.  
   
-3.  Do rezerwowej, gdy wyjątek jest wstępnie zdefiniowane <xref:System.Text.EncoderFallbackException> i <xref:System.Text.DecoderFallbackException> klasy nie spełnia Twoich potrzeb, takich jak wyprowadzenia klasy z obiektu wyjątku <xref:System.Exception> lub <xref:System.ArgumentException>.  
+3. Do rezerwowej, gdy wyjątek jest wstępnie zdefiniowane <xref:System.Text.EncoderFallbackException> i <xref:System.Text.DecoderFallbackException> klasy nie spełnia Twoich potrzeb, takich jak wyprowadzenia klasy z obiektu wyjątku <xref:System.Exception> lub <xref:System.ArgumentException>.  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>Wyprowadzanie z EncoderFallback lub DecoderFallback  
  Aby zaimplementować niestandardowe rozwiązanie alternatywne, należy utworzyć klasę, która dziedziczy po elemencie <xref:System.Text.EncoderFallback> operacji kodowania i z <xref:System.Text.DecoderFallback> dekodowania operacji. Wystąpień tych klas są przekazywane do <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> metod i jako pośrednik między klasą kodowania i implementacji rezerwowej.  
@@ -272,4 +272,4 @@ Znaki są abstrakcyjne jednostek, które mogą być przedstawione na wiele róż
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)
+- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)

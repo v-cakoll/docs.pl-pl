@@ -8,12 +8,12 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2306e3405aa0ff37060d987bdc82b58fbaa7784
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203265"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345563"
 ---
 # <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>Instrukcje: uzyskiwanie dostępu do źródła HTML w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> i <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> właściwości <xref:System.Windows.Forms.WebBrowser> kontrola zwraca kod HTML w bieżącym dokumencie, jaka istniała podczas najpierw został wyświetlony. Jednak w przypadku zmodyfikowania strony przy użyciu wywołania metod i właściwości, takich jak <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> i <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>, te zmiany nie pojawią się po wywołaniu <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> i <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>. Aby uzyskać najbardziej aktualne źródło HTML dla modelu DOM, należy wywołać <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> właściwość elementu HTML.  
@@ -22,22 +22,22 @@ ms.locfileid: "59203265"
   
 ### <a name="retrieving-the-dynamic-source-with-the-outerhtml-property"></a>Trwa pobieranie źródło dynamiczne z właściwością zewnętrzny kod HTML  
   
-1.  Tworzenie nowej aplikacji Windows Forms. Rozpoczynać znakiem pojedynczego <xref:System.Windows.Forms.Form>, a następnie wywołaj ją `Form1`.  
+1. Tworzenie nowej aplikacji Windows Forms. Rozpoczynać znakiem pojedynczego <xref:System.Windows.Forms.Form>, a następnie wywołaj ją `Form1`.  
   
-2.  Host <xref:System.Windows.Forms.WebBrowser> kontrolkę w aplikacji Windows Forms i nadaj mu nazwę `WebBrowser1`. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
+2. Host <xref:System.Windows.Forms.WebBrowser> kontrolkę w aplikacji Windows Forms i nadaj mu nazwę `WebBrowser1`. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md).  
   
-3.  Utwórz drugi <xref:System.Windows.Forms.Form> w aplikacji o nazwie `CodeForm`.  
+3. Utwórz drugi <xref:System.Windows.Forms.Form> w aplikacji o nazwie `CodeForm`.  
   
-4.  Dodaj <xref:System.Windows.Forms.RichTextBox> kontrolę `CodeForm` i ustaw jego <xref:System.Windows.Forms.Control.Dock%2A> właściwość `Fill`.  
+4. Dodaj <xref:System.Windows.Forms.RichTextBox> kontrolę `CodeForm` i ustaw jego <xref:System.Windows.Forms.Control.Dock%2A> właściwość `Fill`.  
   
-5.  Utwórz właściwość publiczną na `CodeForm` o nazwie `Code`.  
+5. Utwórz właściwość publiczną na `CodeForm` o nazwie `Code`.  
   
      [!code-csharp[DisplayWebBrowserCode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/CodeForm.cs#1)]
      [!code-vb[DisplayWebBrowserCode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/CodeForm.vb#1)]  
   
-6.  Dodaj <xref:System.Windows.Forms.Button> formantu o nazwie `Button1` do Twojej <xref:System.Windows.Forms.Form>i Monitoruj <xref:System.Windows.Forms.Control.Click> zdarzeń. Aby uzyskać więcej informacji na temat monitorowania zdarzeń, zobacz [zdarzenia](../../../standard/events/index.md).  
+6. Dodaj <xref:System.Windows.Forms.Button> formantu o nazwie `Button1` do Twojej <xref:System.Windows.Forms.Form>i Monitoruj <xref:System.Windows.Forms.Control.Click> zdarzeń. Aby uzyskać więcej informacji na temat monitorowania zdarzeń, zobacz [zdarzenia](../../../standard/events/index.md).  
   
-7.  Dodaj następujący kod do <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń.  
+7. Dodaj następujący kod do <xref:System.Windows.Forms.Control.Click> programu obsługi zdarzeń.  
   
      [!code-csharp[DisplayWebBrowserCode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/DisplayWebBrowserCode/CS/Form1.cs#2)]
      [!code-vb[DisplayWebBrowserCode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/DisplayWebBrowserCode/VB/Form1.vb#2)]  

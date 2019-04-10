@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne
 description: Dowiedz się, jak F# programowanie async odbywa się za pośrednictwem modelu programowania poziomu języka, który jest łatwy w użyciu i fizycznych dla języka.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343457"
 ---
 # <a name="async-programming-in-f"></a>Programowanie asynchroniczne w F\#
 
@@ -57,7 +57,7 @@ Ponadto normalne `let`, `use`, i `do` słów kluczowych można używać razem z 
 
 Jak wspomniano wcześniej, kod asynchroniczny jest określenie zadań do wykonania w innym kontekście, który musi być jawnie uruchomiona. Oto dwa podstawowe sposoby, w tym celu:
 
-1.  `Async.RunSynchronously` uruchomi przepływ pracy asynchronicznej w innym wątku i poczekać na jego wynik.
+1. `Async.RunSynchronously` uruchomi przepływ pracy asynchronicznej w innym wątku i poczekać na jego wynik.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` Uruchom przepływ pracy asynchronicznej w innym wątku, a będzie **nie** poczekać na jego wynik.
+2. `Async.Start` Uruchom przepływ pracy asynchronicznej w innym wątku, a będzie **nie** poczekać na jego wynik.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Istnieje kilka innych podobieństwa i różnice warte odnotowania.
 
 Z kolei F# asynchronicznymi przepływami pracy są bardziej naturalnie można anulować. Anulowanie jest to prosty proces krok 3.
 
-1.  Utwórz nową `CancellationTokenSource`.
-2.  Przekaż go do wyjścia funkcji.
-3.  Wywołaj `Cancel` w tokenie.
+1. Utwórz nową `CancellationTokenSource`.
+2. Przekaż go do wyjścia funkcji.
+3. Wywołaj `Cancel` w tokenie.
 
 Przykład:
 

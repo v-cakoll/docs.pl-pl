@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
-ms.openlocfilehash: 45b7a16608bea4879e84fa7004097a8c38312284
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031710"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344757"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>Nie można uzyskać strumień dziennika
 Nie można uzyskać strumienia dziennika. Potencjalne nazwy plików na podstawie \<name > jest już w użyciu.  
@@ -20,9 +20,9 @@ Nie można uzyskać strumienia dziennika. Potencjalne nazwy plików na podstawie
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Ustaw <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> właściwości <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> lub <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> obejmujący sygnatura daty w nazwie pliku dziennika.  
+1. Ustaw <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.LogFileCreationSchedule%2A> właściwości <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Daily> lub <xref:Microsoft.VisualBasic.Logging.LogFileCreationScheduleOption.Weekly> obejmujący sygnatura daty w nazwie pliku dziennika.  
   
-2.  Archiwizowanie istniejące dzienniki i usuń je z komputera, aby umożliwić <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> obiekt, aby utworzyć nowe dzienniki.  
+2. Archiwizowanie istniejące dzienniki i usuń je z komputera, aby umożliwić <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> obiekt, aby utworzyć nowe dzienniki.  
   
 ## <a name="see-also"></a>Zobacz także
 

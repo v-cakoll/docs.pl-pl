@@ -2,12 +2,12 @@
 title: 'Instrukcje: Przechowywanie wersji usługi'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085379"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346291"
 ---
 # <a name="how-to-service-versioning"></a>Instrukcje: Przechowywanie wersji usługi
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, które kieruje komunikaty do różnych wersji tej samej usługi. W tym przykładzie komunikaty są kierowane do dwóch różnych wersji usługi Kalkulator `roundingCalc` (wersja 1) i `regularCalc` (v2). Zarówno implementacje obsługują te same operacje; Jednak ze starszej usługi `roundingCalc`, zaokrągla wszystkie obliczenia do najbliższej wartości całkowitej przed zwróceniem. Aplikacja kliencka musi być w stanie wskazać, czy skorzystanie z nowszych `regularCalc` usługi.  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Implementowanie przechowywanie wersji usługi  
   
-1.  Tworzenie podstawowej konfiguracji usługa routingu, określając punkt końcowy usługi udostępniane przez usługę. Poniższy przykład definiuje pojedynczą usługę punktu końcowego, na który będzie używany do odbierania komunikatów. Umożliwia on również definiowanie punktów końcowych klienta, które będą używane do wysyłania wiadomości `roundingCalc` (wersja 1) i `regularCalc` services (wersja 2).  
+1. Tworzenie podstawowej konfiguracji usługa routingu, określając punkt końcowy usługi udostępniane przez usługę. Poniższy przykład definiuje pojedynczą usługę punktu końcowego, na który będzie używany do odbierania komunikatów. Umożliwia on również definiowanie punktów końcowych klienta, które będą używane do wysyłania wiadomości `roundingCalc` (wersja 1) i `regularCalc` services (wersja 2).  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  Zdefiniuj filtry używane do przesyłania wiadomości do docelowych punktów końcowych.  W tym przykładzie filtr XPath jest używana wartość niestandardowego nagłówka "CalcVer", aby określić, która wersja komunikatu, powinny być kierowane do wykrywania. Filtr XPath jest również używane do wykrywania wiadomości, które nie zawierają nagłówek "CalcVer". W poniższym przykładzie zdefiniowano wymagane filtry i przestrzeń nazw tabeli.  
+2. Zdefiniuj filtry używane do przesyłania wiadomości do docelowych punktów końcowych.  W tym przykładzie filtr XPath jest używana wartość niestandardowego nagłówka "CalcVer", aby określić, która wersja komunikatu, powinny być kierowane do wykrywania. Filtr XPath jest również używane do wykrywania wiadomości, które nie zawierają nagłówek "CalcVer". W poniższym przykładzie zdefiniowano wymagane filtry i przestrzeń nazw tabeli.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > Prefiks przestrzeni nazw s12 jest zdefiniowana w przestrzeni nazw tabeli i reprezentuje obszar nazw `http://www.w3.org/2003/05/soap-envelope`.
   
-3.  Definiowanie tabeli filtru każdy filtr zostanie skojarzony z punktem końcowym klienta. Jeśli wiadomość zawiera nagłówek "CalcVer" o wartości 1, zostanie wysłany do usługi regularCalc. Nagłówek zawiera wartość 2, będą przesyłane do usługi roundingCalc. Jeśli występuje bez nagłówka wiadomości będą kierowane do regularCalc.  
+3. Definiowanie tabeli filtru każdy filtr zostanie skojarzony z punktem końcowym klienta. Jeśli wiadomość zawiera nagłówek "CalcVer" o wartości 1, zostanie wysłany do usługi regularCalc. Nagłówek zawiera wartość 2, będą przesyłane do usługi roundingCalc. Jeśli występuje bez nagłówka wiadomości będą kierowane do regularCalc.  
   
      Poniżej definiuje tabelę filtru i dodaje zdefiniowane wcześniej filtry.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Aby ocenić komunikaty przychodzące filtry zawartych w tabeli filtru, należy skojarzyć tabelę filtru z punktami końcowymi usługi za pomocą zachowania routingu. W poniższym przykładzie pokazano kojarzenie `filterTable1` z punktami końcowymi usługi:  
+4. Aby ocenić komunikaty przychodzące filtry zawartych w tabeli filtru, należy skojarzyć tabelę filtru z punktami końcowymi usługi za pomocą zachowania routingu. W poniższym przykładzie pokazano kojarzenie `filterTable1` z punktami końcowymi usługi:  
   
     ```xml  
     <behaviors>  

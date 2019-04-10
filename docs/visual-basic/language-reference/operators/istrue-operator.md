@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344952"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue — Operator (Visual Basic)
 Określa, czy wyrażenie jest `True`.  
@@ -24,15 +24,15 @@ Określa, czy wyrażenie jest `True`.
 ## <a name="compiler-use-of-istrue"></a>Używanie kompilatora IsTrue  
  Po zdefiniowaniu klasy lub struktury, można użyć zmiennej tego typu w `For`, `If`, `Else If`, lub `While` instrukcji lub `When` klauzuli. Jeśli to zrobisz, kompilator wymaga operatora, który konwertuje danego typu w `Boolean` wartość, aby ją przetestować warunku. Wyszukuje odpowiedniego operatora w następującej kolejności:  
   
-1.  Operatora konwersji rozszerzającej od klasy lub struktury do `Boolean`.  
+1. Operatora konwersji rozszerzającej od klasy lub struktury do `Boolean`.  
   
-2.  Operatora konwersji rozszerzającej od klasy lub struktury do `Boolean?`.  
+2. Operatora konwersji rozszerzającej od klasy lub struktury do `Boolean?`.  
   
-3.  `IsTrue` Operator dla swojej klasy lub struktury.  
+3. `IsTrue` Operator dla swojej klasy lub struktury.  
   
-4.  Konwersja zawężająca do `Boolean?` nie wymaga konwersji `Boolean` do `Boolean?`.  
+4. Konwersja zawężająca do `Boolean?` nie wymaga konwersji `Boolean` do `Boolean?`.  
   
-5.  Operatora konwersji zawężającej od klasy lub struktury do `Boolean`.  
+5. Operatora konwersji zawężającej od klasy lub struktury do `Boolean`.  
   
  Jeśli nie zdefiniowano żadnych konwersji na `Boolean` lub `IsTrue` operatora, kompilator sygnalizuje błąd.  
   
@@ -46,6 +46,6 @@ Określa, czy wyrażenie jest `True`.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IsFalse, operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [Operator IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [Instrukcje: Definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [OrElse, operator](../../../visual-basic/language-reference/operators/orelse-operator.md)
+- [Operator OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)

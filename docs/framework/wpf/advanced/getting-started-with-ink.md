@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343600"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Rozpoczynanie pracy z usługą pisma odręcznego na platformie WPF
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) zawiera funkcję pisma odręcznego, ułatw
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Można użyć poniższych przykładów, najpierw [zainstalować program Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Pomaga również wiedzieć, jak napisać podstawowych aplikacji WPF. Aby uzyskać pomoc, wprowadzenie do WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aby użyć poniższych przykładów, należy najpierw zainstalować [programu Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Pomaga również wiedzieć, jak napisać podstawowych aplikacji WPF. Aby uzyskać pomoc, wprowadzenie do WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="quick-start"></a>Przewodnik Szybki Start
 
@@ -112,5 +112,5 @@ Można uzyskać dostęp do wszystkich funkcji środowiska WPF z kodu proceduraln
 
 - [Cyfrowy atrament](digital-ink.md)
 - [Zbieranie atramentu](collecting-ink.md)
-- [Rozpoznawanie pisma odręcznego](handwriting-recognition.md)
-- [Przechowywanie pisma odręcznego](storing-ink.md)
+- [Rozpoznawanie pisma](handwriting-recognition.md)
+- [Przechowywanie atramentu](storing-ink.md)

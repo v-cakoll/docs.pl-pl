@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346317"
 ---
 # <a name="class-classname-cannot-be-found"></a>Klasy\<nazwa_klasy > "nie można odnaleźć
 Klasy\<nazwa_klasy > "nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki 'Microsoft.VisualBasic.dll'.  
@@ -23,13 +23,13 @@ Klasy\<nazwa_klasy > "nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Skompiluj program ponownie, aby zobaczyć, jeśli błąd będzie się powtarzać.  
+1. Skompiluj program ponownie, aby zobaczyć, jeśli błąd będzie się powtarzać.  
   
-2.  Jeśli ten błąd wystąpi, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
+2. Jeśli ten błąd wystąpi, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
   
-3.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
+3. Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
   
-4.  Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
+4. Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 

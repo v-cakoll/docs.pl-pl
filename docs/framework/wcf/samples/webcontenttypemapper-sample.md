@@ -2,12 +2,12 @@
 title: WebContentTypeMapper — przykład
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 7858b07c3da8684326b931b54f825c87a6e35717
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344679"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper — przykład
 Niniejszy przykład pokazuje jak mapować nowych typów zawartości do formatów treści komunikat usług Windows Communication Foundation (WCF).  
@@ -54,11 +54,11 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Skompiluj rozwiązanie WebContentTypeMapperSample.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Skompiluj rozwiązanie WebContentTypeMapperSample.sln, zgodnie z opisem w [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Przejdź do `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (nie należy otwierać JCTMClientPage.htm w przeglądarce z katalogu projektu).  
+3. Przejdź do `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (nie należy otwierać JCTMClientPage.htm w przeglądarce z katalogu projektu).  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

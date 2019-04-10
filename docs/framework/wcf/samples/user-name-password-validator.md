@@ -2,12 +2,12 @@
 title: Moduł weryfikacji nazwy użytkownika i hasła
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345017"
 ---
 # <a name="user-name-password-validator"></a>Moduł weryfikacji nazwy użytkownika i hasła
 Ten przykład demonstruje sposób implementacji niestandardowego modułu weryfikacji UserNamePassword. Jest to przydatne w przypadkach, gdy żadna z wbudowanych tryby weryfikacji UserNamePassword jest odpowiednia dla wymagań aplikacji; na przykład, gdy pary nazwy użytkownika/hasła są przechowywane w niektórych magazynu zewnętrznego, takie jak bazy danych. Niniejszy przykład pokazuje usługi, która ma niestandardowy moduł sprawdzania poprawności, który sprawdza, czy są dostępne dwie pary określonej nazwy użytkownika i hasła. Klient używa pary nazwa użytkownika i hasło do uwierzytelniania w usłudze.
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład
 
-1.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-2.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, użyj poniższych instrukcji.
+2. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, użyj poniższych instrukcji.
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze
 
-1.  Uruchom Setup.bat jest z poziomu folderu instalacji przykładowej w wierszu polecenia programu Visual Studio 2012. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
+1. Uruchom Setup.bat jest z poziomu folderu instalacji przykładowej w wierszu polecenia programu Visual Studio 2012. Spowoduje to zainstalowanie wszystkich certyfikatów, które są wymagane do uruchomienia przykładu.
 
     > [!NOTE]
     >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z programu Visual Studio 2012 wiersz polecenia. Ustaw w Visual Studio 2012 Command Prompt punkty do katalogu, który zawiera pliki wykonywalne wymagane przez skrypt Setup.bat jest zmiennej środowiskowej PATH.  
   
-2.  Uruchom Service.exe z service\bin.  
+2. Uruchom Service.exe z service\bin.  
   
-3.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
+3. Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsolowej klienta.  
   
-4.  Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Jeśli klient i usługa nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 #### <a name="to-run-the-sample-across-machines"></a>Do uruchomienia przykładu na komputerach  
   
-1.  Utwórz katalog na komputerze usługi na potrzeby pliki binarne usługi.  
+1. Utwórz katalog na komputerze usługi na potrzeby pliki binarne usługi.  
   
-2.  Skopiuj pliki programu usługi katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat maszyną usługi.  
+2. Skopiuj pliki programu usługi katalogu usługi na komputerze usługi. Także skopiować pliki Setup.bat i Cleanup.bat maszyną usługi.  
   
-3.  Wymagany jest certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik konfiguracji serwera należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu.  
+3. Wymagany jest certyfikat serwera o nazwie podmiotu, który zawiera w pełni kwalifikowana nazwa domeny komputera. Plik konfiguracji serwera należy zaktualizować w celu odzwierciedlenia tej nowej nazwy certyfikatu.  
   
-4.  Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
+4. Skopiuj certyfikat serwera w magazynie CurrentUser TrustedPeople klienta. Należy to zrobić tylko wtedy, gdy certyfikat serwera nie jest wystawiony przez zaufanego wystawcy.  
   
-5.  W pliku App.config na maszynie usługi Zmień wartość z adresu podstawowego, aby określić nazwę maszyny w pełni kwalifikowana zamiast nazwy localhost.  
+5. W pliku App.config na maszynie usługi Zmień wartość z adresu podstawowego, aby określić nazwę maszyny w pełni kwalifikowana zamiast nazwy localhost.  
   
-6.  Na komputerze usługi uruchom Service.exe z okna wiersza polecenia.  
+6. Na komputerze usługi uruchom Service.exe z okna wiersza polecenia.  
   
-7.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
+7. Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerze klienckim.  
   
-8.  W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
+8. W pliku Client.exe.config na komputerze klienckim należy zmienić wartość adresu punktu końcowego, aby dopasować nowy adres usługi.  
   
 9. Na komputerze klienckim należy uruchomić Client.exe z okna wiersza polecenia.  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
-1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa. Spowoduje to usunięcie certyfikatu serwera z magazynu certyfikatów.  
+1. Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa. Spowoduje to usunięcie certyfikatu serwera z magazynu certyfikatów.  

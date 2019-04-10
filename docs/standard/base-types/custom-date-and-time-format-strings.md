@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 409cea924b8a775621c3073e27009d1f556e4f42
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345433"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowa data i godzina ciągi formatujące
 
@@ -632,7 +632,7 @@ Następujące znaki w niestandardowych daty i godziny w ciągu formatu są zarez
 |F|H|K|M|d|
 |f|g|h|m|s|
 |t|t|z|%|:|
-|/|"|'|\||
+|/|"|'|&#92;||
 
 Wszystkie inne znaki są zawsze interpretowane jako literały znakowe i, w operacji formatowania, są uwzględnione w ciągu wynikowym bez zmian.  Podczas operacji analizowania muszą one odpowiadać znaków w ciągu wejściowym dokładnie; w porównaniu jest uwzględniana wielkość liter.
 

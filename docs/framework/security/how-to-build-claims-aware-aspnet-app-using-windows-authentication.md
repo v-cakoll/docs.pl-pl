@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Tworzenie aplikacji programu ASP.NET obsługującej oświadczenia, za pomocą uwierzytelniania Windows'
+title: 'Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania systemu Windows'
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198531"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323671"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Instrukcje: Tworzenie aplikacji programu ASP.NET obsługującej oświadczenia, za pomocą uwierzytelniania Windows
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Instrukcje: Tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania systemu Windows
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® formularzy sieci Web  
+-   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku dotyczące tworzenia prostej aplikacji formularzy sieci Web programu ASP.NET obsługującej oświadczenia korzystającej z uwierzytelniania Windows. On również instrukcje testowania aplikacji pozwalające sprawdzić, czy są prezentowane oświadczenia, gdy użytkownik loguje się przy użyciu uwierzytelniania Windows.  
@@ -58,13 +58,13 @@ ms.locfileid: "47198531"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
+1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
-2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
+2. W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
-3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+3. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
-4.  Po **TestApp** został utworzony projekt, kliknij go w **Eksploratora rozwiązań**. Właściwości projektu, pojawi się w **właściwości** okienku poniżej **Eksploratora rozwiązań**. Ustaw **uwierzytelniania Windows** właściwości **włączone**.  
+4. Po **TestApp** został utworzony projekt, kliknij go w **Eksploratora rozwiązań**. Właściwości projektu, pojawi się w **właściwości** okienku poniżej **Eksploratora rozwiązań**. Ustaw **uwierzytelniania Windows** właściwości **włączone**.  
   
     > [!WARNING]
     >  Uwierzytelnianie Windows jest domyślnie wyłączona, w nowej aplikacji ASP.NET, więc musisz ręcznie włączyć ją.  
@@ -74,7 +74,7 @@ ms.locfileid: "47198531"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Aby skonfigurować aplikację ASP.NET dla oświadczeń przy użyciu uwierzytelniania Windows  
   
-1.  W **TestApp** projektu *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem:  
+1. W **TestApp** projektu *Default.aspx* pliku, Zastąp istniejący kod znaczników następującym kodem:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198531"
   
      Ten krok powoduje dodanie kontrolki widoku siatki do Twojej *Default.aspx* strony, który zostanie wypełniony oświadczenia jest pobierana z uwierzytelniania Windows.  
   
-2.  Zapisz *Default.aspx* pliku, a następnie otwórz jego pliku związanego z kodem o nazwie *Default.aspx.cs*. Zastąp istniejący kod następujących czynności:  
+2. Zapisz *Default.aspx* pliku, a następnie otwórz jego pliku związanego z kodem o nazwie *Default.aspx.cs*. Zastąp istniejący kod następujących czynności:  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198531"
   
      Powyższy kod wyświetli oświadczenia dotyczące uwierzytelnionego użytkownika.  
   
-3.  Aby zmienić typ uwierzytelniania aplikacji, należy zmodyfikować  **\<uwierzytelniania >** bloku  **\<system.web >** sekcji katalog główny projektu  *Plik Web.config* plik zawiera tylko następujący wpis konfiguracji:  
+3. Aby zmienić typ uwierzytelniania aplikacji, należy zmodyfikować  **\<uwierzytelniania >** bloku  **\<system.web >** sekcji katalog główny projektu  *Plik Web.config* plik zawiera tylko następujący wpis konfiguracji:  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  Na koniec zmodyfikuj  **\<autoryzacji >** bloku  **\<system.web >** sekcji tego samego *Web.config* plik, aby wymusić uwierzytelnianie:  
+4. Na koniec zmodyfikuj  **\<autoryzacji >** bloku  **\<system.web >** sekcji tego samego *Web.config* plik, aby wymusić uwierzytelnianie:  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198531"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Aby przetestować aplikację ASP.NET Web Forms oświadczenia przy użyciu uwierzytelniania Windows  
   
-1.  Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*, i nazwę konta Windows (łącznie z nazwą domeny) już powinna zostać wyświetlona jako użytkownik uwierzytelniony w prawym górnym rogu strony. Zawartość strony powinna zawierać tabelę wypełnione oświadczeń pobierane z konta usługi Windows.
+1. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinna pojawić się *Default.aspx*, i nazwę konta Windows (łącznie z nazwą domeny) już powinna zostać wyświetlona jako użytkownik uwierzytelniony w prawym górnym rogu strony. Zawartość strony powinna zawierać tabelę wypełnione oświadczeń pobierane z konta usługi Windows.

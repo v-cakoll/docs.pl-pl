@@ -2,12 +2,12 @@
 title: W (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: f4fa8cbc07513321e59b93503b59af172c0a6f05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331276"
 ---
 # <a name="in-entity-sql"></a>W (jednostka SQL)
 Określa, czy wartość pasuje do dowolnej wartości w kolekcji.  
@@ -34,9 +34,9 @@ value [ NOT ] IN expression
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operatora w celu ustalenia, czy wartość pasuje do dowolnej wartości w kolekcji. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   

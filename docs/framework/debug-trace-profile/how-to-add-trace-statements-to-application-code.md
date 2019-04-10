@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325595"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji
 Najczęściej używane do śledzenia przedstawiono metody do zapisywania danych wyjściowych odbiorniki: **Zapis**, **writeif —**, **WriteLine**, **WriteLineIf**, **Asercja**, i **się nie powieść**. Metody te można podzielić na dwie kategorie: **Zapis**, **WriteLine**, i **się nie powieść** wszystkie wyemituj dane wyjściowe bezwarunkowo, natomiast **writeif —**, **WriteLineIf**i  **Asercja** warunek logiczny, testowanie i go zapisuje lub nie zapisują na podstawie wartości warunku. **Writeif —** i **WriteLineIf** wyemituj dane wyjściowe, jeśli wynikiem warunku jest `true`, i **Asercja** emituje dane wyjściowe, jeśli warunek nie jest `false`.  
@@ -29,7 +29,7 @@ Najczęściej używane do śledzenia przedstawiono metody do zapisywania danych 
   
 ### <a name="to-write-a-complete-line"></a>Aby zapisać pełny wiersz  
   
-1.  Wywołanie <xref:System.Diagnostics.Trace.WriteLine%2A> lub <xref:System.Diagnostics.Trace.WriteLineIf%2A> metody.  
+1. Wywołanie <xref:System.Diagnostics.Trace.WriteLine%2A> lub <xref:System.Diagnostics.Trace.WriteLineIf%2A> metody.  
   
      Znak powrotu karetki jest dołączany na końcu komunikat, ta metoda zwraca wartość, tak, aby następny komunikat zwrócony przez **zapisu**, **writeif —**, **WriteLine**, lub  **WriteLineIf —** rozpocznie się w następującym wierszu:  
   
@@ -48,7 +48,7 @@ Najczęściej używane do śledzenia przedstawiono metody do zapisywania danych 
   
 ### <a name="to-write-a-partial-line"></a>Aby zapisać wiersz częściowy  
   
-1.  Wywołanie <xref:System.Diagnostics.Trace.Write%2A> lub <xref:System.Diagnostics.Trace.WriteIf%2A> metody.  
+1. Wywołanie <xref:System.Diagnostics.Trace.Write%2A> lub <xref:System.Diagnostics.Trace.WriteIf%2A> metody.  
   
      Następny komunikat przedmiotem **zapisu**, **writeif —**, **WriteLine**, lub **WriteLineIf** rozpocznie się w tym samym wierszu co komunikat przez **zapisu** lub **writeif —** instrukcji:  
   
@@ -69,7 +69,7 @@ Najczęściej używane do śledzenia przedstawiono metody do zapisywania danych 
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>Aby sprawdzić, że niektóre warunki przed lub po wykonaniu metody  
   
-1.  Wywołaj <xref:System.Diagnostics.Trace.Assert%2A> metody.  
+1. Wywołaj <xref:System.Diagnostics.Trace.Assert%2A> metody.  
   
     ```vb  
     Dim i As Integer = 4  

@@ -5,25 +5,25 @@ helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: 86236f7e6f4821cc45dfab80273d82b6f167fba8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332589"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>Instrukcje: Tworzenie nowej zmiennej (Visual Basic)
 Utwórz zmienną za pomocą [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ### <a name="to-create-a-new-variable"></a>Aby utworzyć nową zmienną  
   
-1.  Zadeklaruj zmienną w `Dim` instrukcji.  
+1. Zadeklaruj zmienną w `Dim` instrukcji.  
   
     ```  
     Dim newCustomer  
     ```  
   
-2.  Uwzględnić wymagania dotyczące cech zmiennej, takie jak [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md), [statyczne](../../../../visual-basic/language-reference/modifiers/static.md), [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md), lub [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). Aby uzyskać więcej informacji, zobacz [zadeklarowana Charakterystyka elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).  
+2. Uwzględnić wymagania dotyczące cech zmiennej, takie jak [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md), [statyczne](../../../../visual-basic/language-reference/modifiers/static.md), [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md), lub [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). Aby uzyskać więcej informacji, zobacz [zadeklarowana Charakterystyka elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).  
   
     ```  
     Public Static newCustomer  
@@ -31,13 +31,13 @@ Utwórz zmienną za pomocą [instrukcji Dim](../../../../visual-basic/language-r
   
      Nie ma potrzeby `Dim` — słowo kluczowe, jeśli używasz innych słów kluczowych w deklaracji.  
   
-3.  Postępuj zgodnie z specyfikacją o nazwie zmiennej, która musi być zgodna reguły Visual Basic i konwencje. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).  
+3. Postępuj zgodnie z specyfikacją o nazwie zmiennej, która musi być zgodna reguły Visual Basic i konwencje. Aby uzyskać więcej informacji, zobacz [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Deklarowane nazwy elementów).  
   
     ```  
     Public Static newCustomer  
     ```  
   
-4.  Postępuj zgodnie z nazwą [jako](../../../../visual-basic/language-reference/statements/as-clause.md) klauzuli, aby określić typ danych zmiennej.  
+4. Postępuj zgodnie z nazwą [jako](../../../../visual-basic/language-reference/statements/as-clause.md) klauzuli, aby określić typ danych zmiennej.  
   
     ```  
     Public Static newCustomer As Customer  
@@ -45,7 +45,7 @@ Utwórz zmienną za pomocą [instrukcji Dim](../../../../visual-basic/language-r
   
      Jeśli nie określisz typ danych, wykorzystuje wartość domyślna: `Object`.  
   
-5.  Postępuj zgodnie z `As` klauzuli znakiem równości (`=`) i postępuj zgodnie z równości z wartością początkową zmiennej.  
+5. Postępuj zgodnie z `As` klauzuli znakiem równości (`=`) i postępuj zgodnie z równości z wartością początkową zmiennej.  
   
      Visual Basic przypisuje określoną wartość do zmiennej za każdym razem, gdy działa `Dim` instrukcji. Jeśli nie określisz wartości początkowej, Visual Basic po raz pierwszy najedzie kodu, który zawiera, przypisuje początkowa wartość domyślna dla typu danych zmiennej `Dim` instrukcji.  
   
@@ -64,4 +64,4 @@ Utwórz zmienną za pomocą [instrukcji Dim](../../../../visual-basic/language-r
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [Option Infer — Instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

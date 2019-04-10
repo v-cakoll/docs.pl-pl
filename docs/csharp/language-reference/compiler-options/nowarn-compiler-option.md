@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 79d61e7e4096ab206e207a05553a68020bca6204
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324152"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (opcje kompilatora C#)
 **- Nowarn** opcja umożliwia pomijanie kompilatora wyświetlanie co najmniej jedno ostrzeżenie. Oddziel wiele numerów ostrzeżeń przecinkami.  
@@ -43,16 +43,16 @@ ms.locfileid: "54664827"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz **właściwości** strony dla projektu. Aby uzyskać więcej informacji, zobacz [Stroka kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+1. Otwórz **właściwości** strony dla projektu. Aby uzyskać więcej informacji, zobacz [Stroka kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
-2.  Kliknij przycisk **kompilacji** stronę właściwości.  
+2. Kliknij przycisk **kompilacji** stronę właściwości.  
   
-3.  Modyfikowanie **Pomiń ostrzeżenia** właściwości.  
+3. Modyfikowanie **Pomiń ostrzeżenia** właściwości.  
   
  Aby dowiedzieć się, jak programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
 - [Błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md)

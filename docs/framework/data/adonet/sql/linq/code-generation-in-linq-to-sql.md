@@ -2,21 +2,21 @@
 title: Generowanie kodu w składniku LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174892"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321591"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generowanie kodu w składniku LINQ to SQL
 Istnieje możliwość wygenerowania kodu do reprezentowania bazy danych przy użyciu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] lub narzędzie wiersza polecenia SQLMetal. W obu przypadkach generowania kodu end-to-end odbywa się w trzech etapach:  
   
-1.  *Ekstraktor DBML* wyodrębnia informacje o schemacie z bazy danych i ponownie scala informacje w postaci pliku DBML w formacie XML.  
+1. *Ekstraktor DBML* wyodrębnia informacje o schemacie z bazy danych i ponownie scala informacje w postaci pliku DBML w formacie XML.  
   
-2.  Skanowany za pomocą pliku DBML *DBML modułu sprawdzania poprawności* błędów.  
+2. Skanowany za pomocą pliku DBML *DBML modułu sprawdzania poprawności* błędów.  
   
-3.  Jeśli pojawia się bez błędów sprawdzania poprawności, plik jest przekazywany do generatora kodu.  
+3. Jeśli pojawia się bez błędów sprawdzania poprawności, plik jest przekazywany do generatora kodu.  
   
  Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Deweloperzy korzystający z programu Visual Studio można również użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do generowania kodu. Zobacz [LINQ to SQL Tools w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   

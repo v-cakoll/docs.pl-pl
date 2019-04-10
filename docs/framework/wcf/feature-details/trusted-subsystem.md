@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f845ad0d8ca461f8ab0b3188a72e87c589add2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319368"
 ---
 # <a name="trusted-subsystem"></a>Zaufany podsystem
 Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci. Usługi sieci Web zostały zaprojektowane, tak że dostęp do dodatkowych zasobów (np. baz danych lub inne usługi sieci Web) są hermetyzowane w logice biznesowej usługi sieci Web. Te zasoby muszą być chronione przed nieautoryzowanym dostępem. Poniższa ilustracja przedstawia proces zaufany podsystem.  
@@ -19,15 +19,15 @@ Klient uzyskuje dostęp do usług sieci Web, które są rozpowszechniane w sieci
   
  W poniższych krokach opisano proces zaufany podsystem, jak pokazano:  
   
-1.  Klient przesyła żądanie do zaufany podsystem, wraz z poświadczeniami.  
+1. Klient przesyła żądanie do zaufany podsystem, wraz z poświadczeniami.  
   
-2.  Zaufany podsystem uwierzytelnia i autoryzuje użytkownika.  
+2. Zaufany podsystem uwierzytelnia i autoryzuje użytkownika.  
   
-3.  Zaufany podsystem wysyła komunikat żądania do zasobu zdalnego. To żądanie towarzyszy poświadczenia zaufany podsystem (lub konta usługi, w którym jest wykonywana procesu zaufany podsystem).  
+3. Zaufany podsystem wysyła komunikat żądania do zasobu zdalnego. To żądanie towarzyszy poświadczenia zaufany podsystem (lub konta usługi, w którym jest wykonywana procesu zaufany podsystem).  
   
-4.  Zasób zaplecza uwierzytelnia i autoryzuje zaufany podsystem. Następnie przetwarza żądanie i wysyła odpowiedź do zaufany podsystem.  
+4. Zasób zaplecza uwierzytelnia i autoryzuje zaufany podsystem. Następnie przetwarza żądanie i wysyła odpowiedź do zaufany podsystem.  
   
-5.  Zaufany podsystem przetwarza odpowiedź i generuje odpowiedzi do klienta.  
+5. Zaufany podsystem przetwarza odpowiedź i generuje odpowiedzi do klienta.  
   
 |Cechy|Opis|  
 |--------------------|-----------------|  

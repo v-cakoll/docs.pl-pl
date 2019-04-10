@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201614"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295513"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Instrukcje: Pobieranie danych ze schowka
 <xref:System.Windows.Forms.Clipboard> Klasa zawiera metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji używa Schowka jako tymczasowy repozytorium danych. Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania. Schowek jest również przydatne w przypadku przenoszenia informacji z jednej aplikacji do innej.  
@@ -31,14 +31,14 @@ ms.locfileid: "59201614"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-single-common-format"></a>Można pobrać danych ze Schowka w formacie jednej, wspólnej  
   
-1.  Użyj <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, lub <xref:System.Windows.Forms.Clipboard.GetText%2A> metody. Opcjonalnie można użyć odpowiedniego `Contains` *Format* metody, aby ustalić, czy dane są dostępne w określonym formacie. Metody te są dostępne tylko w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Użyj <xref:System.Windows.Forms.Clipboard.GetAudioStream%2A>, <xref:System.Windows.Forms.Clipboard.GetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.GetImage%2A>, lub <xref:System.Windows.Forms.Clipboard.GetText%2A> metody. Opcjonalnie można użyć odpowiedniego `Contains` *Format* metody, aby ustalić, czy dane są dostępne w określonym formacie. Metody te są dostępne tylko w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-a-custom-format"></a>Można pobrać danych ze Schowka w niestandardowym formacie  
   
-1.  Użyj <xref:System.Windows.Forms.Clipboard.GetData%2A> metodę o nazwie formatu niestandardowego. Ta metoda jest dostępna tylko w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Użyj <xref:System.Windows.Forms.Clipboard.GetData%2A> metodę o nazwie formatu niestandardowego. Ta metoda jest dostępna tylko w [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
   
      Można również użyć wstępnie zdefiniowany format nazwy <xref:System.Windows.Forms.Clipboard.SetData%2A> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.DataFormats>.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59201614"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Można pobrać danych ze Schowka w wielu formatach  
   
-1.  Użyj <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> metody. Należy użyć tej metody do pobierania danych ze Schowka w wersjach wcześniejszych niż [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Użyj <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> metody. Należy użyć tej metody do pobierania danych ze Schowka w wersjach wcześniejszych niż [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

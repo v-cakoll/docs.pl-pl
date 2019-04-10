@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30310
 ms.assetid: 2aeb8872-7c87-4f01-98ef-9714ba3eebbe
-ms.openlocfilehash: aac190119ced74496c4dd012d200fca6d895ff28
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78b0a3131b6e77ed257f200523ecebd4dfce3691
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826772"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316547"
 ---
 # <a name="cannot-refer-to-name-because-it-is-a-member-of-the-value-typed-field-name-of-class-classname-which-has-systemmarshalbyrefobject-as-a-base-class"></a>Nie może odwoływać się do "\<nazwa >", ponieważ jest to składowa pola "\<nazwa >" klasy\<nazwa_klasy > "mającego"System.MarshalByRefObject"klasy bazowej
 `System.MarshalByRefObject` Klasa umożliwia aplikacji, które obsługują zdalny dostęp do obiektów poza granice domeny aplikacji. Typy musi dziedziczyć `MarshalByRejectObject` klasy, gdy typ jest używany poza granice domeny aplikacji. Nie można skopiować stan obiektu, ponieważ elementy członkowskie obiektu nie są użyteczne spoza domeny aplikacji, w którym zostały utworzone.  
@@ -21,11 +21,11 @@ ms.locfileid: "58826772"
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Sprawdzanie odwołania, aby upewnić się, że przywoływanego elementu członkowskiego jest nieprawidłowy.  
+1. Sprawdzanie odwołania, aby upewnić się, że przywoływanego elementu członkowskiego jest nieprawidłowy.  
   
-2.  Kwalifikuj jawnie elementu członkowskiego z `Me` — słowo kluczowe.  
+2. Kwalifikuj jawnie elementu członkowskiego z `Me` — słowo kluczowe.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.MarshalByRefObject>
-- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)

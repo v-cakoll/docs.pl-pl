@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332264"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Instrukcje: Utrzymywanie więcej niż jedną wartość w zmiennej (Visual Basic)
 Zmienna zawiera więcej niż jedną wartość, jeśli zadeklarujesz będzie *złożonego typu danych*.  
@@ -25,9 +25,9 @@ Zmienna zawiera więcej niż jedną wartość, jeśli zadeklarujesz będzie *zł
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Aby pomieścić więcej niż jedną wartość w zmiennej  
   
-1.  Wyznaczyć, jakiego typu danych, którego chcesz użyć zmiennej.  
+1. Wyznaczyć, jakiego typu danych, którego chcesz użyć zmiennej.  
   
-2.  Jeśli typ złożony danych nie jest już zdefiniowany, zdefiniuj tak, aby użyć go do zmiennej.  
+2. Jeśli typ złożony danych nie jest już zdefiniowany, zdefiniuj tak, aby użyć go do zmiennej.  
   
     -   Zdefiniuj strukturę z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
@@ -35,11 +35,11 @@ Zmienna zawiera więcej niż jedną wartość, jeśli zadeklarujesz będzie *zł
   
     -   Zdefiniuj klasę z [Class — instrukcja](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
-3.  Deklarowanie zmiennej za pomocą `Dim` instrukcji.  
+3. Deklarowanie zmiennej za pomocą `Dim` instrukcji.  
   
-4.  Postępuj zgodnie z nazwą zmiennej `As` klauzuli.  
+4. Postępuj zgodnie z nazwą zmiennej `As` klauzuli.  
   
-5.  Postępuj zgodnie z `As` — słowo kluczowe o nazwie odpowiednich złożonych typów danych.  
+5. Postępuj zgodnie z `As` — słowo kluczowe o nazwie odpowiednich złożonych typów danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

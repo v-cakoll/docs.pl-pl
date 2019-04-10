@@ -2,12 +2,12 @@
 title: Odnajdywanie przepływu pracy — przykład
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9a0d3ad22b4663ee71b5b2aa8d0e3d64f20996d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964426"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311672"
 ---
 # <a name="workflow-discovery-sample"></a>Odnajdywanie przepływu pracy — przykład
 Niniejszy przykład pokazuje, jak stał się wykrywalny usługi przepływu pracy i jak tworzyć działania kodu niestandardowego, wyszukująca określonej usługi.  
@@ -20,7 +20,7 @@ Niniejszy przykład pokazuje, jak stał się wykrywalny usługi przepływu pracy
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  W tym przykładzie użyto punktów końcowych HTTP, które musi mieć odpowiednie ACL adresu URL do uruchomienia (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Aby uzyskać szczegółowe informacje). Wykonując następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Zastąp Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli powłoki nie rozpoznaje formatu zmiennej.  
+1. W tym przykładzie użyto punktów końcowych HTTP, które musi mieć odpowiednie ACL adresu URL do uruchomienia (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Aby uzyskać szczegółowe informacje). Wykonując następujące polecenie w wierszu polecenia z podwyższonym poziomem uprawnień, należy dodać odpowiednie listy ACL. Zastąp Twoja domena i nazwa użytkownika o wprowadzenie następujących argumentów, jeśli powłoki nie rozpoznaje formatu zmiennej.  
   
      **netsh http Dodaj adres url urlacl =http://+:8000/ użytkownika domeny % =\\% UserName %**  
   

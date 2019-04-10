@@ -2,12 +2,12 @@
 title: 'Instrukcje: używanie elementu MetadataExchangeClient do pobierania metadanych'
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168626"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327883"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>Instrukcje: używanie elementu MetadataExchangeClient do pobierania metadanych
 Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient> klasy można pobrać metadanych przy użyciu protokołu WS-MetadataExchange (MEX). Pliki pobrane metadanych są zwracane jako <xref:System.ServiceModel.Description.MetadataSet> obiektu. Zwrócony <xref:System.ServiceModel.Description.MetadataSet> obiekt zawiera zbiór <xref:System.ServiceModel.Description.MetadataSection> obiektów, z których każdy zawiera dialekt określonych metadanych i identyfikator. Możesz zapisywać zwróconych metadanych plików, lub jeśli zwróconych metadanych zawiera dokumentów sieci Web Services Description Language (WSDL), możesz zaimportować przy użyciu metadanych <xref:System.ServiceModel.Description.WsdlImporter>.  
@@ -21,11 +21,11 @@ Użyj <xref:System.ServiceModel.Description.MetadataExchangeClient> klasy można
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>Aby używanie elementu MetadataExchangeClient do uzyskania metadanych  
   
-1.  Utwórz nową <xref:System.ServiceModel.Description.MetadataExchangeClient> obiektu przez jawne określenie powiązanie, nazwę konfiguracji punktu końcowego lub adres metadanych.  
+1. Utwórz nową <xref:System.ServiceModel.Description.MetadataExchangeClient> obiektu przez jawne określenie powiązanie, nazwę konfiguracji punktu końcowego lub adres metadanych.  
   
-2.  Konfigurowanie <xref:System.ServiceModel.Description.MetadataExchangeClient> do własnych potrzeb. Na przykład można określić poświadczenia do użycia podczas żądania metadanych, kontrolować sposób odwołania do metadanych są rozwiązane i ustawić <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> właściwości do kontrolowania, jak długo żądanie metadanych musi zwrócić przed upływem limitu czasu.  
+2. Konfigurowanie <xref:System.ServiceModel.Description.MetadataExchangeClient> do własnych potrzeb. Na przykład można określić poświadczenia do użycia podczas żądania metadanych, kontrolować sposób odwołania do metadanych są rozwiązane i ustawić <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> właściwości do kontrolowania, jak długo żądanie metadanych musi zwrócić przed upływem limitu czasu.  
   
-3.  Uzyskaj <xref:System.ServiceModel.Description.MetadataSet> obiekt, który zawiera metadane pobrane, wywołując jedną z <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> metody. Należy zauważyć, że można używać tylko <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> przeciążenia, które nie przyjmuje żadnych argumentów Jeśli jawnie określony adres przy konstruowaniu <xref:System.ServiceModel.Description.MetadataExchangeClient>.  
+3. Uzyskaj <xref:System.ServiceModel.Description.MetadataSet> obiekt, który zawiera metadane pobrane, wywołując jedną z <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> metody. Należy zauważyć, że można używać tylko <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> przeciążenia, które nie przyjmuje żadnych argumentów Jeśli jawnie określony adres przy konstruowaniu <xref:System.ServiceModel.Description.MetadataExchangeClient>.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje sposób użycia <xref:System.ServiceModel.Description.MetadataExchangeClient> do pobrania i wyliczanie metadanych plików.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f68c1f2f888f340488c3cbec4c2384f6dce58077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314012"
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 
@@ -90,7 +90,7 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
 |Typ lub kategoria typów|Zobacz|  
 |---------------------------|---------|  
 |Typy daty i godziny (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Typy wyliczeniowe (wszystkie typy pochodne <xref:System.Enum?displayProperty=nameWithType>)|[Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Typy wyliczeniowe (wszystkie typy pochodne <xref:System.Enum?displayProperty=nameWithType>)|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |Typy liczbowe (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
@@ -100,15 +100,15 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
   
  Sposób interpretowania nawiasów klamrowych poprzedzonych znakiem ucieczki może prowadzić do nieoczekiwanych rezultatów. Na przykład rozważmy element formatu "{{{0:D}}}", który jest przeznaczony do wyświetlania otwierający nawias klamrowy, wartość liczbową w formacie liczby dziesiętnej i zamykającego nawiasu klamrowego. Jednak element formatu jest w rzeczywistości interpretowany w następujący sposób:  
   
-1.  Pierwsze dwa otwierające nawiasy klamrowe są traktowane jako nawias i znak ucieczki, przez co są zwracane jako jeden otwierający nawias klamrowy.  
+1. Pierwsze dwa otwierające nawiasy klamrowe są traktowane jako nawias i znak ucieczki, przez co są zwracane jako jeden otwierający nawias klamrowy.  
   
-2.  Kolejne trzy znaki („{0:”) są interpretowane jako początek elementu formatu.  
+2. Kolejne trzy znaki („{0:”) są interpretowane jako początek elementu formatu.  
   
-3.  Następny znak („D”) powinien zostać zinterpretowany jako standardowy specyfikator formatu liczb dziesiętnych, ale kolejne dwa nawiasy klamrowe („}}”) zostaną zwrócone jako pojedynczy nawias klamrowy. Ponieważ wynikowy ciąg („D}”) nie jest standardowym specyfikatorem formatu liczb, wynikowy ciąg zostanie zinterpretowany jako ciąg formatu niestandardowego, co oznacza wyświetlenie literału ciągu „D}”.  
+3. Następny znak („D”) powinien zostać zinterpretowany jako standardowy specyfikator formatu liczb dziesiętnych, ale kolejne dwa nawiasy klamrowe („}}”) zostaną zwrócone jako pojedynczy nawias klamrowy. Ponieważ wynikowy ciąg („D}”) nie jest standardowym specyfikatorem formatu liczb, wynikowy ciąg zostanie zinterpretowany jako ciąg formatu niestandardowego, co oznacza wyświetlenie literału ciągu „D}”.  
   
-4.  Ostatni nawias klamrowy („}”) jest interpretowany jako zakończenie elementu formatu.  
+4. Ostatni nawias klamrowy („}”) jest interpretowany jako zakończenie elementu formatu.  
   
-5.  Wyświetlony wynik końcowy będzie ciągiem literału „{D}”. Wartość liczbowa, która miała zostać sformatowana, nie zostanie wyświetlona.  
+5. Wyświetlony wynik końcowy będzie ciągiem literału „{D}”. Wartość liczbowa, która miała zostać sformatowana, nie zostanie wyświetlona.  
   
  Jednym ze sposobów pisania kodu tak, aby uniknąć błędnej interpretacji nawiasów klamrowych ze znakami ucieczki jest formatowanie nawiasów klamrowych i elementów formatu rozdzielnie. Oznacza to, że w pierwszej operacji formatowania wyświetlany jest otwierający nawias klamrowy literału, w następnej operacji wyświetlany jest wynik elementu formatu, a następnie w ostatniej operacji wyświetlany jest zamykający nawias klamrowy literału. To podejście pokazano w poniższym przykładzie.  
   
@@ -120,11 +120,11 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
   
  Każda wartość na liście parametrów, który odpowiada elementowi formatu jest konwertowana na ciąg w następujący sposób:  
   
-1.  Jeśli wartość do sformatowania `null`, ciągiem pustym <xref:System.String.Empty?displayProperty=nameWithType> jest zwracana.  
+1. Jeśli wartość do sformatowania `null`, ciągiem pustym <xref:System.String.Empty?displayProperty=nameWithType> jest zwracana.  
   
-2.  Jeśli <xref:System.ICustomFormatter> implementacja jest dostępna, środowisko uruchomieniowe wywołuje swoją <xref:System.ICustomFormatter.Format%2A> metody. Przekazuje do metody w elemencie formatu *formatString* wartość, jeśli jest obecna, lub `null` , jeśli nie jest dostępna, wraz z <xref:System.IFormatProvider> implementacji. Jeśli wywołanie <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> metoda zwraca `null`, wykonanie przechodzi do następnego kroku; w przeciwnym razie wynik <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> wywołanie jest zwracana.
+2. Jeśli <xref:System.ICustomFormatter> implementacja jest dostępna, środowisko uruchomieniowe wywołuje swoją <xref:System.ICustomFormatter.Format%2A> metody. Przekazuje do metody w elemencie formatu *formatString* wartość, jeśli jest obecna, lub `null` , jeśli nie jest dostępna, wraz z <xref:System.IFormatProvider> implementacji. Jeśli wywołanie <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> metoda zwraca `null`, wykonanie przechodzi do następnego kroku; w przeciwnym razie wynik <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> wywołanie jest zwracana.
   
-3.  Jeśli wartość implementuje <xref:System.IFormattable> interfejsu, interfejs <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> metoda jest wywoływana. Metoda jest przekazywana *formatString* wartość, jeśli jest obecna w elemencie formatu lub `null` Jeśli tak nie jest. <xref:System.IFormatProvider> Argument jest określany w następujący sposób:  
+3. Jeśli wartość implementuje <xref:System.IFormattable> interfejsu, interfejs <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> metoda jest wywoływana. Metoda jest przekazywana *formatString* wartość, jeśli jest obecna w elemencie formatu lub `null` Jeśli tak nie jest. <xref:System.IFormatProvider> Argument jest określany w następujący sposób:  
   
     -   Wartość numeryczna, jeśli metoda formatowania złożonego z inną niż null <xref:System.IFormatProvider> argument jest wywoływana, środowisko uruchomieniowe zażąda <xref:System.Globalization.NumberFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można jej dostarczyć, jeśli wartość argumentu jest `null`, lub jeśli nie ma metody formatowania złożonego <xref:System.IFormatProvider> parametru <xref:System.Globalization.NumberFormatInfo> obiekt jest używany przez bieżącą kulturę wątku.  
   
@@ -132,7 +132,7 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
   
     -   W przypadku obiektów innych typów, jeśli formatowanie złożone metoda jest wywoływana z <xref:System.IFormatProvider> argument, jego wartość jest przekazywana bezpośrednio do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji. W przeciwnym razie `null` jest przekazywany do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  
   
-4.  Bez parametrów danego typu `ToString` metody, która zastępuje <xref:System.Object.ToString?displayProperty=nameWithType> lub dziedziczy zachowanie jej klasy bazowej, jest wywoływana. W tym przypadku ciąg formatu określony przez *formatString* składnika w elemencie formatu, jeśli jest obecny, jest ignorowany.  
+4. Bez parametrów danego typu `ToString` metody, która zastępuje <xref:System.Object.ToString?displayProperty=nameWithType> lub dziedziczy zachowanie jej klasy bazowej, jest wywoływana. W tym przypadku ciąg formatu określony przez *formatString* składnika w elemencie formatu, jeśli jest obecny, jest ignorowany.  
   
  Wyrównanie zostanie zastosowane po wykonaniu poprzednich kroków.  
   
@@ -172,4 +172,4 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
 - [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)

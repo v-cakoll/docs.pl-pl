@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: a84363221ee216aade041adb65cce5f092ad3ae5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130147"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311504"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Przewodnik: hostowanie kontrolki ActiveX w WPF
 Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] kontrolki w swojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji. W tym instruktażu pokazano, jak możesz hostować [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] jako formant na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony.
@@ -39,23 +39,23 @@ Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCL
 
 #### <a name="to-create-and-set-up-the-project"></a>Aby utworzyć i skonfigurować projekt
 
-1.  Utwórz projekt aplikacji WPF, o nazwie `HostingAxInWpf`.
+1. Utwórz projekt aplikacji WPF, o nazwie `HostingAxInWpf`.
 
-2.  Dodaj projekt Biblioteka kontrolek formularzy Windows do rozwiązania, a następnie nadaj projektowi nazwę `WmpAxLib`.
+2. Dodaj projekt Biblioteka kontrolek formularzy Windows do rozwiązania, a następnie nadaj projektowi nazwę `WmpAxLib`.
 
-3.  W projekcie WmpAxLib Dodaj odwołanie do zestawu Windows Media Player, która nosi nazwę wmp.dll.
+3. W projekcie WmpAxLib Dodaj odwołanie do zestawu Windows Media Player, która nosi nazwę wmp.dll.
 
-4.  Otwórz **przybornika**.
+4. Otwórz **przybornika**.
 
-5.  Kliknij prawym przyciskiem myszy **przybornika**, a następnie kliknij przycisk **wybierz elementy**.
+5. Kliknij prawym przyciskiem myszy **przybornika**, a następnie kliknij przycisk **wybierz elementy**.
 
-6.  Kliknij przycisk **składników COM** zaznacz **Windows Media Player** sterowania, a następnie kliknij przycisk **OK**.
+6. Kliknij przycisk **składników COM** zaznacz **Windows Media Player** sterowania, a następnie kliknij przycisk **OK**.
 
      Formant programu Windows Media Player jest dodawany do **przybornika**.
 
-7.  W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy **UserControl1** pliku, a następnie kliknij przycisk **Zmień nazwę**.
+7. W Eksploratorze rozwiązań kliknij prawym przyciskiem myszy **UserControl1** pliku, a następnie kliknij przycisk **Zmień nazwę**.
 
-8.  Zmień nazwę na `WmpAxControl.vb` lub `WmpAxControl.cs`, w zależności od języka.
+8. Zmień nazwę na `WmpAxControl.vb` lub `WmpAxControl.cs`, w zależności od języka.
 
 9. Jeśli zostanie wyświetlony monit o zmianę nazwy wszystkich odwołań, kliknij przycisk **tak**.
 
@@ -64,37 +64,37 @@ Aby włączone ulepszone współdziałanie z przeglądarki, można użyć [!INCL
 
 #### <a name="to-create-the-activex-control"></a>Aby utworzyć formant ActiveX
 
-1.  Otwórz WmpAxControl.vb lub WmpAxControl.cs w programie Windows Forms Designer.
+1. Otwórz WmpAxControl.vb lub WmpAxControl.cs w programie Windows Forms Designer.
 
-2.  Z **przybornika**, dodawanie formantu programu Windows Media Player do powierzchni projektowej.
+2. Z **przybornika**, dodawanie formantu programu Windows Media Player do powierzchni projektowej.
 
-3.  W oknie dialogowym właściwości ustawić wartość kontrolki Windows Media Player <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.
+3. W oknie dialogowym właściwości ustawić wartość kontrolki Windows Media Player <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.
 
-4.  Tworzenie projektu biblioteki kontrolek WmpAxLib.
+4. Tworzenie projektu biblioteki kontrolek WmpAxLib.
 
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Hostowanie kontrolki ActiveX na stronie WPF
 
 #### <a name="to-host-the-activex-control"></a>Do hostowania kontrolki ActiveX
 
-1.  W projekcie HostingAxInWpf, należy dodać odwołanie do wygenerowany [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] zestawu współdziałania.
+1. W projekcie HostingAxInWpf, należy dodać odwołanie do wygenerowany [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] zestawu współdziałania.
 
      Ten zestaw o nazwie AxInterop.WMPLib.dll i został dodany do folderu debugowania projektu WmpAxLib po zaimportowaniu formantu programu Windows Media Player.
 
-2.  Dodaj odwołanie do zestawu WindowsFormsIntegration, która nosi nazwę WindowsFormsIntegration.dll.
+2. Dodaj odwołanie do zestawu WindowsFormsIntegration, która nosi nazwę WindowsFormsIntegration.dll.
 
-3.  Dodaj odwołanie do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zestawu, która nosi nazwę System.Windows.Forms.dll.
+3. Dodaj odwołanie do [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zestawu, która nosi nazwę System.Windows.Forms.dll.
 
-4.  Otwórz pliku MainWindow.xaml w Projektancie WPF.
+4. Otwórz pliku MainWindow.xaml w Projektancie WPF.
 
-5.  Nazwa <xref:System.Windows.Controls.Grid> elementu `grid1`.
+5. Nazwa <xref:System.Windows.Controls.Grid> elementu `grid1`.
 
      [!code-xaml[HostingAxInWpf#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]
 
-6.  W widoku projektu lub XAML, wybierz <xref:System.Windows.Window> elementu.
+6. W widoku projektu lub XAML, wybierz <xref:System.Windows.Window> elementu.
 
-7.  W oknie dialogowym właściwości kliknij **zdarzenia** kartę.
+7. W oknie dialogowym właściwości kliknij **zdarzenia** kartę.
 
-8.  Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.
+8. Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.
 
 9. Wstaw następujący kod do obsługi <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.
 

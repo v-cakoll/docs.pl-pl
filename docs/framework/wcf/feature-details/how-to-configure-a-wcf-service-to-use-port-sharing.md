@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: 30c9719c7c53b2e0e99043bd8ff2cb5d7da393a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc0c822659ee57ac8dd87a2adddcd32e934ea4fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218956"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302406"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Instrukcje: Konfigurowanie usługi Windows Communication Foundation na potrzeby współużytkowania portów
 Najprostszym sposobem na korzystanie z portu net.tcp:// udostępniania w aplikacji Windows Communication Foundation (WCF) jest do udostępnienia usługi za pomocą <xref:System.ServiceModel.NetTcpBinding>.  
@@ -21,17 +21,17 @@ Najprostszym sposobem na korzystanie z portu net.tcp:// udostępniania w aplikac
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>Aby włączyć port net.tcp:// udostępnianie na NetTcpBinding w kodzie  
   
-1.  Tworzenie usługi, aby zaimplementować kontrakt o nazwie `IMyService` i nadać mu `MyService`,.  
+1. Tworzenie usługi, aby zaimplementować kontrakt o nazwie `IMyService` i nadać mu `MyService`,.  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
   
-2.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.NetTcpBinding> klasy i ustaw <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwość `true`.  
+2. Utwórz wystąpienie obiektu <xref:System.ServiceModel.NetTcpBinding> klasy i ustaw <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwość `true`.  
   
      [!code-csharp[c_ConfigurePortSharing#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#2)]
      [!code-vb[c_ConfigurePortSharing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#2)]  
   
-3.  Tworzenie <xref:System.ServiceModel.ServiceHost> i Dodaj punkt końcowy usługi do niej uzyskać `MyService` używający portu włączone udostępnianie <xref:System.ServiceModel.NetTcpBinding> i że nasłuchuje w punkcie końcowym adresu URI "net.tcp://localhost/MyService".  
+3. Tworzenie <xref:System.ServiceModel.ServiceHost> i Dodaj punkt końcowy usługi do niej uzyskać `MyService` używający portu włączone udostępnianie <xref:System.ServiceModel.NetTcpBinding> i że nasłuchuje w punkcie końcowym adresu URI "net.tcp://localhost/MyService".  
   
      [!code-csharp[c_ConfigurePortSharing#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#3)]
      [!code-vb[c_ConfigurePortSharing#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#3)]  
@@ -41,7 +41,7 @@ Najprostszym sposobem na korzystanie z portu net.tcp:// udostępniania w aplikac
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-configuration"></a>Aby włączyć port net.tcp:// udostępnianie na NetTcpBinding w konfiguracji  
   
-1.  Poniższy przykład pokazuje, jak włączyć Udostępnianie portów i dodać punktu końcowego usługi za pomocą elementów konfiguracji.  
+1. Poniższy przykład pokazuje, jak włączyć Udostępnianie portów i dodać punktu końcowego usługi za pomocą elementów konfiguracji.  
   
 ```xml  
 <system.serviceModel>  

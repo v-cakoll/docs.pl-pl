@@ -2,12 +2,12 @@
 title: Niestandardowe śledzenie
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161848"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307639"
 ---
 # <a name="custom-tracking"></a>Niestandardowe śledzenie
 W tym przykładzie pokazano, jak tworzenie niestandardowego uczestnika śledzenia i zapisać zawartość danych śledzenia do konsoli. Ponadto w przykładzie pokazano jak emitowanie <xref:System.Activities.Tracking.CustomTrackingRecord> danych zdefiniowane przez obiekty użytkownika jest wypełniony. Filtry uczestnika śledzenia opartych na konsoli <xref:System.Activities.Tracking.TrackingRecord> obiektów emitowanych przez przepływ pracy korzystający z profilu śledzenia obiekt utworzony w kodzie.
@@ -133,11 +133,11 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania CustomTrackingSample.sln.
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania CustomTrackingSample.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.
+3. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

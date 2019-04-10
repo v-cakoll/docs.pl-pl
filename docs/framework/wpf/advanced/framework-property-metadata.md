@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314701"
 ---
 # <a name="framework-property-metadata"></a>Metadane właściwości szablonu
 Opcje metadane właściwości struktury są zgłaszane właściwości elementów obiektu uważane za w ramach WPF poziomie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architektury. Ogólnie rzecz biorąc oznaczenia poziomie struktury WPF pociąga za sobą tej funkcji, np. renderowania wiązania danych, a właściwość systemu uściślenia są obsługiwane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i plików wykonywalnych. Metadane właściwości szablonu zostaje przesłane zapytanie przez te systemy, aby określić właściwości specyficzne dla funkcji właściwości określonego elementu.  
@@ -48,9 +48,9 @@ Opcje metadane właściwości struktury są zgłaszane właściwości elementów
   
  Jeśli tworzysz <xref:System.Windows.FrameworkPropertyMetadata> wystąpienia, istnieją dwa sposoby wypełniania tych metadanych z wartościami dla określonych właściwości, które przekazują charakterystyki właściwość framework:  
   
-1.  Użyj <xref:System.Windows.FrameworkPropertyMetadata> sygnatury konstruktora, który umożliwia `flags` parametru. Ten parametr powinny być widoczne wszystkie żądane połączone wartości <xref:System.Windows.FrameworkPropertyMetadataOptions> wyliczenie flag.  
+1. Użyj <xref:System.Windows.FrameworkPropertyMetadata> sygnatury konstruktora, który umożliwia `flags` parametru. Ten parametr powinny być widoczne wszystkie żądane połączone wartości <xref:System.Windows.FrameworkPropertyMetadataOptions> wyliczenie flag.  
   
-2.  Użyj jednej z podpisów bez `flags` parametru, a następnie ustaw każdy raportowanie właściwość typu Boolean <xref:System.Windows.FrameworkPropertyMetadata> do `true` dla każdego żądanego cech zmiany. Jeśli to zrobisz, należy ustawić te właściwości przed żadnych elementów z tą właściwością zależności są konstruowane; Operatory logiczne są odczytu i zapisu, aby umożliwić takie zachowanie unikania `flags` parametr nadal wypełnić metadanych, ale metadane musi stać się skutecznie zapieczętowany przed użyciem właściwości. W związku z tym próby ustawienia właściwości po otrzymaniu żądania metadanych będzie nieprawidłowa operacja.  
+2. Użyj jednej z podpisów bez `flags` parametru, a następnie ustaw każdy raportowanie właściwość typu Boolean <xref:System.Windows.FrameworkPropertyMetadata> do `true` dla każdego żądanego cech zmiany. Jeśli to zrobisz, należy ustawić te właściwości przed żadnych elementów z tą właściwością zależności są konstruowane; Operatory logiczne są odczytu i zapisu, aby umożliwić takie zachowanie unikania `flags` parametr nadal wypełnić metadanych, ale metadane musi stać się skutecznie zapieczętowany przed użyciem właściwości. W związku z tym próby ustawienia właściwości po otrzymaniu żądania metadanych będzie nieprawidłowa operacja.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Zachowanie scalania metadane właściwości struktury  

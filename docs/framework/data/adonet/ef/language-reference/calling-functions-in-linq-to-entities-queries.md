@@ -2,12 +2,12 @@
 title: Wywoływanie funkcji w zapytaniach składnika LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312088"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Wywoływanie funkcji w zapytaniach składnika LINQ to Entities
 Tematy w tej sekcji opisano sposób wywołania funkcji w składniku LINQ do zapytań jednostki.  
@@ -16,11 +16,11 @@ Tematy w tej sekcji opisano sposób wywołania funkcji w składniku LINQ do zapy
   
  Proces wywoływania funkcji niestandardowej wymaga trzy podstawowe kroki:  
   
-1.  Zdefiniuj funkcję w model koncepcyjny lub deklarowania funkcji w modelu magazynu.  
+1. Zdefiniuj funkcję w model koncepcyjny lub deklarowania funkcji w modelu magazynu.  
   
-2.  Dodaj metodę do swojej aplikacji i Mapuj na funkcję w modelu z <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
+2. Dodaj metodę do swojej aplikacji i Mapuj na funkcję w modelu z <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>.  
   
-3.  Wywołanie funkcji w zapytaniu składnika LINQ to Entities.  
+3. Wywołanie funkcji w zapytaniu składnika LINQ to Entities.  
   
  Aby uzyskać więcej informacji zobacz Tematy w tej sekcji.  
   

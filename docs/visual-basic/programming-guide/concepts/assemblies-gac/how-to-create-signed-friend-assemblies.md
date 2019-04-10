@@ -2,21 +2,21 @@
 title: 'Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
-ms.openlocfilehash: 28cbd0c538441978464033df896d69f80a8396a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324672"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (Visual Basic)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie użyć tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Tworzenie zestawu podpisanego za pomocą i zestaw przyjazny  
   
-1.  Otwórz wiersz polecenia.  
+1. Otwórz wiersz polecenia.  
   
-2.  Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
+2. Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
     1.  Wygeneruj klucz silnej nazwy dla tego przykładu i zapisz go w pliku FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Utwórz plik w języku Visual Basic o nazwie `friend_signed_A` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
+3. Utwórz plik w języku Visual Basic o nazwie `friend_signed_A` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
   
      Narzędzie silnych nazw generuje nowy klucz publiczny, za każdym razem, gdy działa. W związku z tym jak pokazano w poniższym przykładzie, za pomocą klucza publicznego, który zostanie wygenerowany, musisz zastąpić klucza publicznego w poniższym kodzie.  
   
@@ -49,13 +49,13 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
     End Class  
     ```  
   
-4.  Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
+4. Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
   
     ```console  
     Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
     ```  
   
-5.  Utwórz plik w języku Visual Basic, który nosi nazwę `friend_signed_B` i zawiera następujący kod. Ponieważ friend_signed_A określa friend_signed_B jako zestaw przyjazny, kod w friend_signed_B mogą uzyskiwać dostęp do `Friend` typów i elementów członkowskich z friend_signed_A. Plik zawiera następujący kod.  
+5. Utwórz plik w języku Visual Basic, który nosi nazwę `friend_signed_B` i zawiera następujący kod. Ponieważ friend_signed_A określa friend_signed_B jako zestaw przyjazny, kod w friend_signed_B mogą uzyskiwać dostęp do `Friend` typów i elementów członkowskich z friend_signed_A. Plik zawiera następujący kod.  
   
     ```vb  
     ' friend_signed_B.vb  
@@ -69,7 +69,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
     End Module  
     ```  
   
-6.  Skompiluj i podpisać friend_signed_B przy użyciu następującego polecenia.  
+6. Skompiluj i podpisać friend_signed_B przy użyciu następującego polecenia.  
   
     ```console  
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
@@ -77,7 +77,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
   
      Nazwa zestawu, który został wygenerowany przez kompilator musi odpowiadać przekazany do nazwy przyjaznego zestawu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Należy jawnie określić zestawu przy użyciu `-out` — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md).  
   
-7.  Uruchom plik friend_signed_B.exe.  
+7. Uruchom plik friend_signed_B.exe.  
   
      To pole zawiera ciąg "Class1.Test".  
   

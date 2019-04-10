@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące wydajności (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324048"
 ---
 # <a name="performance-considerations-entity-framework"></a>Zagadnienia dotyczące wydajności (Entity Framework)
 W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zapewnia pewne kwestie dotyczące poprawy wydajności aplikacji platformy Entity Framework.  
@@ -82,11 +82,11 @@ W tym temacie opisano charakterystyki wydajności ADO.NET Entity Framework i zap
 ### <a name="query-paths"></a>Ścieżki zapytania  
  Domyślnie, podczas wykonywania <xref:System.Data.Objects.ObjectQuery%601>, powiązane obiekty nie są zwracane (mimo że obiekty reprezentujące same relacje są). Można ładować powiązanych obiektów w jednym z trzech sposobów:  
   
-1.  Ustaw ścieżkę zapytania przed <xref:System.Data.Objects.ObjectQuery%601> jest wykonywany.  
+1. Ustaw ścieżkę zapytania przed <xref:System.Data.Objects.ObjectQuery%601> jest wykonywany.  
   
-2.  Wywołaj `Load` metody, właściwości nawigacji, który udostępnia obiekt.  
+2. Wywołaj `Load` metody, właściwości nawigacji, który udostępnia obiekt.  
   
-3.  Ustaw <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> opcja <xref:System.Data.Objects.ObjectContext> do `true`. Należy pamiętać, że odbywa się to automatycznie podczas generowania kodu warstwy obiektu za pomocą [projektancie Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Aby uzyskać więcej informacji, zobacz [generowane Przegląd kodu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
+3. Ustaw <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> opcja <xref:System.Data.Objects.ObjectContext> do `true`. Należy pamiętać, że odbywa się to automatycznie podczas generowania kodu warstwy obiektu za pomocą [projektancie Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Aby uzyskać więcej informacji, zobacz [generowane Przegląd kodu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
   
  Po zastanowieniu się nad stosownej opcji, należy pamiętać, że istnieje zależność między liczba żądań w bazie danych i ilość danych zwracanych w ramach pojedynczego zapytania. Aby uzyskać więcej informacji, zobacz [ładowanie powiązanych obiektów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   

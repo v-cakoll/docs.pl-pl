@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311665"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Instrukcje: tworzenie warstw obiektów na formularzach systemu Windows
 Podczas tworzenia interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) interfejsu często warto warstwy kontroli i formularze podrzędne, aby utworzyć bardziej złożone interfejsy użytkownika (UI). Aby przenieść i śledzenie kontrolek i systemu windows w ramach grupy, manipulować ich porządek osi z. *Porządek* jest warstwy visual kontrolek w formularzu wzdłuż osi z formularza (na głębokości). Okno w górnej części porządek nakłada się na inne okna. Inne okna nakładać się na okna w dolnej części porządku osi z.  
@@ -27,9 +27,9 @@ Podczas tworzenia interfejsu użytkownika złożonych lub praca wielu dokumentó
   
 ### <a name="to-layer-controls-at-design-time"></a>Warstwa kontrolek w czasie projektowania  
   
-1.  Zaznacz kontrolkę, którą chcesz warstwy.  
+1. Zaznacz kontrolkę, którą chcesz warstwy.  
   
-2.  Na **Format** menu wskaż **kolejności**, a następnie kliknij przycisk **Przesuń na wierzch** lub **Przesuń na spód**.  
+2. Na **Format** menu wskaż **kolejności**, a następnie kliknij przycisk **Przesuń na wierzch** lub **Przesuń na spód**.  
   
 ### <a name="to-layer-controls-programmatically"></a>Aby programowo warstwy formantów  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323177"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Instrukcje: zmienianie odstępów i wyrównania elementów ToolStrip w formularzach systemu Windows
 <xref:System.Windows.Forms.ToolStrip> Kontroli w pełni obsługuje układ funkcje, takie jak rozmiary, odstępy między <xref:System.Windows.Forms.ToolStripItem> formantów względem siebie, rozmieszczenie kontrolek w <xref:System.Windows.Forms.ToolStrip>i odstępy kontroli względem <xref:System.Windows.Forms.ToolStrip>.  
@@ -23,7 +23,7 @@ ms.locfileid: "59213314"
   
 ### <a name="to-manually-size-a-toolstripitem"></a>Aby ręcznie rozmiar elementu ToolStripItem  
   
-1.  Ustaw <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> właściwość `false` skojarzonego formantu.  
+1. Ustaw <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> właściwość `false` skojarzonego formantu.  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,11 +33,11 @@ ms.locfileid: "59213314"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  Ustaw <xref:System.Windows.Forms.ToolStripItem.Size%2A> właściwości w sposób skojarzonych z nim <xref:System.Windows.Forms.ToolStripItem>.  
+2. Ustaw <xref:System.Windows.Forms.ToolStripItem.Size%2A> właściwości w sposób skojarzonych z nim <xref:System.Windows.Forms.ToolStripItem>.  
   
 ### <a name="to-set-the-spacing-of-a-toolstripitem"></a>Aby ustawić odstępy elementu ToolStripItem  
   
-1.  Wstawianie odpowiednie wartości, w pikselach, <xref:System.Windows.Forms.ToolStripItem.Margin%2A> właściwości skojarzonego formantu.  
+1. Wstawianie odpowiednie wartości, w pikselach, <xref:System.Windows.Forms.ToolStripItem.Margin%2A> właściwości skojarzonego formantu.  
   
      Wartości <xref:System.Windows.Forms.ToolStripItem.Margin%2A> właściwość Określ odstępy między elementem a sąsiadujących elementów w następującej kolejności: Po lewej stronie, górnej, prawej strony i dolnej.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59213314"
   
 ### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>Aby wyrównać elementu ToolStripItem w prawą stronę ToolStrip  
   
-1.  Ustaw <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> właściwość <xref:System.Windows.Forms.ToolStripItemAlignment.Right> skojarzonego formantu. Domyślnie <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> ustawiono <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, która wyrównuje kontrolki do lewej części <xref:System.Windows.Forms.ToolStrip>.  
+1. Ustaw <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> właściwość <xref:System.Windows.Forms.ToolStripItemAlignment.Right> skojarzonego formantu. Domyślnie <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> ustawiono <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, która wyrównuje kontrolki do lewej części <xref:System.Windows.Forms.ToolStrip>.  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  

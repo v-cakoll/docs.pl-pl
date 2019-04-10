@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331523"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Określanie transferu danych w kontraktach usług
 Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura obsługi komunikatów. Operacje usługi można odbierać komunikaty, przetwarzać je i wysyłania im komunikatów. Komunikaty są opisane za pomocą kontrakty operacji. Na przykład należy wziąć pod uwagę następujące umowy.  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  Poprzednie trzy przypadki (zachowywanie typu .NET, konserwowania wykresu obiektu i całkowicie niestandardowe `XmlObjectSerializer`— na podstawie serializacji) wymaga niestandardowy serializator są podłączone. W tym celu wykonaj następujące czynności:  
   
-1.  Napisać własne zachowanie wynikające z <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
+1. Napisać własne zachowanie wynikające z <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>.  
   
-2.  Zastąp dwa `CreateSerializer` metody zwracają własne serializatora (albo <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> z `preserveObjectReferences` równa `true`, lub własne niestandardowe <xref:System.Runtime.Serialization.XmlObjectSerializer>).  
+2. Zastąp dwa `CreateSerializer` metody zwracają własne serializatora (albo <xref:System.Runtime.Serialization.NetDataContractSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> z `preserveObjectReferences` równa `true`, lub własne niestandardowe <xref:System.Runtime.Serialization.XmlObjectSerializer>).  
   
-3.  Przed otwarciem hosta usługi lub tworzenia kanału klienta, Usuń istniejące <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> zachowanie i wtyczki niestandardowe klasy pochodnej, który został utworzony w poprzednich krokach.  
+3. Przed otwarciem hosta usługi lub tworzenia kanału klienta, Usuń istniejące <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> zachowanie i wtyczki niestandardowe klasy pochodnej, który został utworzony w poprzednich krokach.  
   
  Aby uzyskać więcej informacji o pojęciach dotyczących zaawansowanych serializacji, zobacz [serializacji i deserializacji](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   

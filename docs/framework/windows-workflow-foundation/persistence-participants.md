@@ -2,31 +2,31 @@
 title: Uczestnicy stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316365"
 ---
 # <a name="persistence-participants"></a>Uczestnicy stanów trwałych
 Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwolone przez aplikację hosta. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, którego można użyć do utworzenia uczestnika stanów trwałych. Uczestnika stanów trwałych pochodzi z jednej z tych klas, implementuje metody zainteresowań, a następnie dodaje wystąpienie klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może poszukaj takie rozszerzenia przepływu pracy po przechowywanie wystąpienia przepływu pracy i wywoływać właściwe metody na uczestnicy stanów trwałych we właściwym czasie.  
   
  Na poniższej liście opisano zadania wykonywane przez podsystem trwałości na różnych etapach operacji utrwalania (Zapisz). Uczestnicy stanów trwałych są używane w etapach trzecia i czwarta. Jeśli uczestnik uczestnika operacji We/Wy (trwałość uczestnika, który również uczestniczy w operacjach we/wy), uczestnika również służy szóstego etapu.  
   
-1.  Zbiera wartości wbudowanych, w tym stanu przepływu pracy, zakładek, zamapowanego zmienne i sygnatura czasowa.  
+1. Zbiera wartości wbudowanych, w tym stanu przepływu pracy, zakładek, zamapowanego zmienne i sygnatura czasowa.  
   
-2.  Zbiera wszystkie uczestnicy stanów trwałych, które zostały dodane do kolekcji rozszerzenie skojarzone z wystąpieniem przepływu pracy.  
+2. Zbiera wszystkie uczestnicy stanów trwałych, które zostały dodane do kolekcji rozszerzenie skojarzone z wystąpieniem przepływu pracy.  
   
-3.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> metody implementowane przez wszystkich uczestników trwałości.  
+3. Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> metody implementowane przez wszystkich uczestników trwałości.  
   
-4.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> metody implementowane przez wszystkich uczestników trwałości.  
+4. Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> metody implementowane przez wszystkich uczestników trwałości.  
   
-5.  Utrwalanie lub Zapisz przepływ pracy w magazynie w trwałości.  
+5. Utrwalanie lub Zapisz przepływ pracy w magazynie w trwałości.  
   
-6.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metody wszyscy uczestnicy stanów trwałych operacji We/Wy. Jeśli uczestnik nie jest uczestnikiem operacji We/Wy, to zadanie zostanie pominięte. Jeśli ten odcinek trwałości jest transakcyjna, transakcja jest podana we właściwości Transaction.Current.  
+6. Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> metody wszyscy uczestnicy stanów trwałych operacji We/Wy. Jeśli uczestnik nie jest uczestnikiem operacji We/Wy, to zadanie zostanie pominięte. Jeśli ten odcinek trwałości jest transakcyjna, transakcja jest podana we właściwości Transaction.Current.  
   
-7.  Czeka, aż wszyscy uczestnicy stanów trwałych do ukończenia. Jeśli uda się wszyscy uczestnicy utrwalanie dane wystąpienia, zatwierdzeń transakcji.  
+7. Czeka, aż wszyscy uczestnicy stanów trwałych do ukończenia. Jeśli uda się wszyscy uczestnicy utrwalanie dane wystąpienia, zatwierdzeń transakcji.  
   
  Pochodzi od klasy uczestnika stanów trwałych **PersistenceParticipant** klasy i mogą implementować **CollectValues** i **MapValues** metody. Trwałość operacji We/Wy uczestnika, który pochodzi od klasy **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnSave** metoda oprócz Implementowanie **CollectValues**i **MapValues** metody.  
   
@@ -34,15 +34,15 @@ Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz 
   
  Na poniższej liście opisano zadania wykonywane przez podsystem trwałości na różnych etapach operacji ładowania. Uczestnicy stanów trwałych są używane w czwartym etapie. Uczestnicy operacji We/Wy stanów trwałych (Uczestnicy stanów trwałych, które także uczestniczyć w operacji We/Wy) są również używane w trzecim etapie.  
   
-1.  Zbiera wszystkie uczestnicy stanów trwałych, które zostały dodane do kolekcji rozszerzenie skojarzone z wystąpieniem przepływu pracy.  
+1. Zbiera wszystkie uczestnicy stanów trwałych, które zostały dodane do kolekcji rozszerzenie skojarzone z wystąpieniem przepływu pracy.  
   
-2.  Ładuje przepływu pracy w trwałości sklepie.  
+2. Ładuje przepływu pracy w trwałości sklepie.  
   
-3.  Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> na wszystkich uczestnicy stanów trwałych operacji We/Wy i czeka na uczestnicy stanów trwałych do ukończenia. Jeśli ten odcinek trwałości jest transakcyjna, transakcja jest przekazywany w Transaction.Current.  
+3. Wywołuje <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> na wszystkich uczestnicy stanów trwałych operacji We/Wy i czeka na uczestnicy stanów trwałych do ukończenia. Jeśli ten odcinek trwałości jest transakcyjna, transakcja jest przekazywany w Transaction.Current.  
   
-4.  Ładuje wystąpienie przepływu pracy w oparciu o dane pobierane z magazynu stanu trwałego pamięci.  
+4. Ładuje wystąpienie przepływu pracy w oparciu o dane pobierane z magazynu stanu trwałego pamięci.  
   
-5.  Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> na każdym uczestnika stanów trwałych.  
+5. Wywołuje <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> na każdym uczestnika stanów trwałych.  
   
  Pochodzi od klasy uczestnika stanów trwałych **PersistenceParticipant** klasy i mogą implementować **PublishValues** metody. Trwałość operacji We/Wy uczestnika, który pochodzi od klasy **PersistenceIOParticipant** klasy i może wdrożyć **BeginOnLoad** metoda oprócz Implementowanie **PublishValues**metody.  
   

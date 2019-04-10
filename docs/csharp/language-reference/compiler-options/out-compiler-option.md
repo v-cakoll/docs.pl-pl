@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331302"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opcje kompilatora C#)
 **-Out** opcja określa nazwę pliku wyjściowego.  
@@ -49,11 +49,11 @@ ms.locfileid: "57362360"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony.  
+1. Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **aplikacji** stronę właściwości.  
+2. Kliknij przycisk **aplikacji** stronę właściwości.  
   
-3.  Modyfikowanie **nazwy zestawu** właściwości.  
+3. Modyfikowanie **nazwy zestawu** właściwości.  
   
      Aby programowo ustawić tę opcję kompilatora: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> jest tylko do odczytu właściwość, która jest określana przez połączenie typu projektu (exe, biblioteki i tak dalej) i nazwę zestawu. Modyfikowanie jedną lub obie te właściwości będą należy ustawić nazwę pliku wyjściowego.  
   
@@ -68,4 +68,4 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
 - [Przyjazne zestawy](../../../standard/assembly/friend-assemblies.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

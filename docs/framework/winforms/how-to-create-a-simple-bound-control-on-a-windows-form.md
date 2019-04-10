@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322176"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Instrukcje: Tworzenie prostej kontrolki powiązanej na formularzu Windows Form
 Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, takiego jak wartość kolumny z tabeli zestawu danych w formancie. Użytkownik może prosty wiązania dowolnej właściwości kontrolki z wartością danych.  
@@ -20,25 +20,25 @@ Za pomocą *proste powiązanie*, można wyświetlić elementu danych jednego, ta
   
 ### <a name="to-simple-bind-a-control"></a>Do wiązania prostego formantu  
   
-1.  Łączenie ze źródłem danych. Aby uzyskać więcej informacji, zobacz [nawiązania połączenia ze źródłem danych](../data/adonet/connecting-to-a-data-source.md).  
+1. Łączenie ze źródłem danych. Aby uzyskać więcej informacji, zobacz [nawiązania połączenia ze źródłem danych](../data/adonet/connecting-to-a-data-source.md).  
   
-2.  W formularzu wybierz kontrolkę i wyświetlić **właściwości** okna.  
+2. W formularzu wybierz kontrolkę i wyświetlić **właściwości** okna.  
   
-3.  Rozwiń **(powiązania danych)** właściwości.  
+3. Rozwiń **(powiązania danych)** właściwości.  
   
      Właściwości najczęściej powiązane są wyświetlane poniżej **(powiązania danych)** właściwości. Na przykład w przypadku większości kontrolek **tekstu** właściwość najczęściej jest powiązana.  
   
-4.  Jeśli właściwość, którą chcesz powiązania nie jest jednym z powszechnie powiązanych właściwości, kliknij pozycję **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](./media/vbellipsesbutton.png "vbEllipsesButton") ) w **(zaawansowane)** pole, aby wyświetlić **formatowanie i powiązywanie zaawansowane** okno dialogowe z pełną listę właściwości dla tej kontrolki.  
+4. Jeśli właściwość, którą chcesz powiązania nie jest jednym z powszechnie powiązanych właściwości, kliknij pozycję **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](./media/vbellipsesbutton.png "vbEllipsesButton") ) w **(zaawansowane)** pole, aby wyświetlić **formatowanie i powiązywanie zaawansowane** okno dialogowe z pełną listę właściwości dla tej kontrolki.  
   
-5.  Wybierz właściwość do powiązania, a następnie kliknij strzałkę listy rozwijanej w obszarze **powiązanie**.  
+5. Wybierz właściwość do powiązania, a następnie kliknij strzałkę listy rozwijanej w obszarze **powiązanie**.  
   
      Zostanie wyświetlona lista dostępnych źródeł danych.  
   
-6.  Rozwiń źródło danych, które chcesz powiązać, dopóki nie znajdziesz element danych jednego, który ma. Na przykład jeśli dokonywane jest wiązanie wartość kolumny w tabeli zestawu danych, rozwiń węzeł z nazwą zestawu danych, a następnie rozwiń nazwę tabeli, aby wyświetlić nazwy kolumn.  
+6. Rozwiń źródło danych, które chcesz powiązać, dopóki nie znajdziesz element danych jednego, który ma. Na przykład jeśli dokonywane jest wiązanie wartość kolumny w tabeli zestawu danych, rozwiń węzeł z nazwą zestawu danych, a następnie rozwiń nazwę tabeli, aby wyświetlić nazwy kolumn.  
   
-7.  Kliknij nazwę elementu można powiązać.  
+7. Kliknij nazwę elementu można powiązać.  
   
-8.  Jeśli pracujesz **formatowanie i powiązywanie zaawansowane** okno dialogowe, kliknij przycisk **OK** aby powrócić do **właściwości** okna.  
+8. Jeśli pracujesz **formatowanie i powiązywanie zaawansowane** okno dialogowe, kliknij przycisk **OK** aby powrócić do **właściwości** okna.  
   
 9. Jeśli chcesz powiązać dodatkowe właściwości formantu, powtórz kroki od 3 do 7.  
   

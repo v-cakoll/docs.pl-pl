@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209818"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318432"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i operacje CUD w aplikacjach N-warstwowych (LINQ to SQL)
 Podczas obiekty obiektów, takich jak klienci i zamówienia klienta za pośrednictwem sieci, te jednostki są odłączone od ich kontekstu danych. Kontekst danych śledzi już zmian lub ich skojarzenia z innymi obiektami. Nie jest to problem tak długo, jak klienci są tylko do odczytu danych. Jest również stosunkowo proste umożliwić klientom dodawanie nowych wierszy do bazy danych. Jednakże, jeśli aplikacja wymaga, aby klienci mogli aktualizować lub usuwać dane, następnie należy dołączyć jednostek do nowy kontekst danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto jeśli używasz kontroli optymistycznej współbieżności przy użyciu oryginalnych wartości, następnie należy również sposób zapewnienia bazy danych, jednostki i oryginalna jednostka zmodyfikowana. `Attach` Udostępniono metody umożliwiające umieść jednostek nowy kontekst danych po mają zostać odłączony.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>Stan  
  Po jednostki obiekt jest dołączony do <xref:System.Data.Linq.DataContext> wystąpienie, obiekt jest uznawane za w `PossiblyModified` stanu. Istnieją trzy sposoby, aby wymusić przyłączonego obiektu, aby zostały uznane za `Modified`.  
   
-1.  Dołączyć go jako niezmodyfikowany, a następnie bezpośrednio modyfikować pola.  
+1. Dołączyć go jako niezmodyfikowany, a następnie bezpośrednio modyfikować pola.  
   
-2.  Dołącz go za pomocą <xref:System.Data.Linq.Table%601.Attach%2A> przeciążenia przyjmującego bieżących i oryginalnych obiektów. Dostarcza śledzenie zmian przy użyciu starej i nowej wartości, dzięki czemu będzie automatycznie wiadomo, które pola zostały zmienione.  
+2. Dołącz go za pomocą <xref:System.Data.Linq.Table%601.Attach%2A> przeciążenia przyjmującego bieżących i oryginalnych obiektów. Dostarcza śledzenie zmian przy użyciu starej i nowej wartości, dzięki czemu będzie automatycznie wiadomo, które pola zostały zmienione.  
   
-3.  Dołącz go za pomocą <xref:System.Data.Linq.Table%601.Attach%2A> przeciążenia przyjmującego drugi parametr logiczny (wartość true). Poinformuje to śledzenie zmian do uwzględnienia w obiekcie modyfikowane bez konieczności podać wszelkie oryginalnych wartości. W tym podejściu obiekt musi mieć pole wersji/sygnatura czasowa.  
+3. Dołącz go za pomocą <xref:System.Data.Linq.Table%601.Attach%2A> przeciążenia przyjmującego drugi parametr logiczny (wartość true). Poinformuje to śledzenie zmian do uwzględnienia w obiekcie modyfikowane bez konieczności podać wszelkie oryginalnych wartości. W tym podejściu obiekt musi mieć pole wersji/sygnatura czasowa.  
   
  Aby uzyskać więcej informacji, zobacz [stany obiektów i śledzenie zmian](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   

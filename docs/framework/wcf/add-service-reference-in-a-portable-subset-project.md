@@ -2,12 +2,12 @@
 title: Dodawanie odwołania usługi w projekcie obsługującym podzestaw przenośny
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145434"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316729"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Dodawanie odwołania usługi w projekcie obsługującym podzestaw przenośny
 Projekty obsługującym podzestaw przenośny umożliwiają deweloperom zestawu .NET do utrzymywania drzewa pojedyncze źródło i systemu kompilacji, nadal obsługując wiele implementacji .NET (pulpitu, Silverlight, Windows Phone i XBOX). Projekty obsługującym podzestaw przenośny tylko odwołania do bibliotek przenośnych platformy .NET, będące zestaw .NET framework, używanym w implementacji .NET.  
@@ -15,21 +15,21 @@ Projekty obsługującym podzestaw przenośny umożliwiają deweloperom zestawu .
 ## <a name="add-service-reference-details"></a>Dodaj szczegóły usługi  
  Podczas dodawania odwołania do usługi w projekcie obsługującym podzestaw przenośny obowiązują następujące ograniczenia:  
   
-1.  Aby uzyskać <xref:System.Xml.Serialization.XmlSerializer>, dozwolone są tylko literał kodowania. Kodowania SOAP generuje błąd podczas importowania.  
+1. Aby uzyskać <xref:System.Xml.Serialization.XmlSerializer>, dozwolone są tylko literał kodowania. Kodowania SOAP generuje błąd podczas importowania.  
   
-2.  Dla usługi używające <xref:System.Runtime.Serialization.DataContractSerializer> scenariuszy, danych zastępcza Umowa znajduje się w celu zapewnienia, że typy ponownie pochodzić tylko z obsługującym podzestaw przenośny.  
+2. Dla usługi używające <xref:System.Runtime.Serialization.DataContractSerializer> scenariuszy, danych zastępcza Umowa znajduje się w celu zapewnienia, że typy ponownie pochodzić tylko z obsługującym podzestaw przenośny.  
   
-3.  Punkty końcowe, które zależą od powiązania nie są obsługiwane w przenośnych bibliotekach (wszystkie powiązania z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> bez przepływu transakcji, niezawodnej sesji lub kodowanie MTOM i powiązań niestandardowych równoważne) są ignorowane.  
+3. Punkty końcowe, które zależą od powiązania nie są obsługiwane w przenośnych bibliotekach (wszystkie powiązania z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> bez przepływu transakcji, niezawodnej sesji lub kodowanie MTOM i powiązań niestandardowych równoważne) są ignorowane.  
   
-4.  Nagłówki wiadomości są usuwane z wszystkie opisy wiadomości we wszystkich operacjach przed zaimportowaniem.  
+4. Nagłówki wiadomości są usuwane z wszystkie opisy wiadomości we wszystkich operacjach przed zaimportowaniem.  
   
-5.  Atrybuty nieprzenośne <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, i <xref:System.ServiceModel.TransactionFlowAttribute> są usuwane z kodu serwera proxy wygenerowanego klienta.  
+5. Atrybuty nieprzenośne <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, i <xref:System.ServiceModel.TransactionFlowAttribute> są usuwane z kodu serwera proxy wygenerowanego klienta.  
   
-6.  Nieprzenośne właściwości ProtectionLevel, SessionMode, IsInitiating i IsTerminating są usuwane z <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, i <xref:System.ServiceModel.FaultContractAttribute>.  
+6. Nieprzenośne właściwości ProtectionLevel, SessionMode, IsInitiating i IsTerminating są usuwane z <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, i <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7.  Wszystkie operacje usługi są generowane jako operacji asynchronicznych na serwerze proxy klienta.  
+7. Wszystkie operacje usługi są generowane jako operacji asynchronicznych na serwerze proxy klienta.  
   
-8.  Konstruktor wygenerowanego klienta, który używa typów nieprzenośne są usuwane.  
+8. Konstruktor wygenerowanego klienta, który używa typów nieprzenośne są usuwane.  
   
 9. A <xref:System.Net.CookieContainer> wystąpienia jest uwidaczniany w wygenerowanego klienta.  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193671"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313570"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a> Podczas tworzenia autonomicznego Windows Presentation Foundation (WPF) i aplikacjami hostowanymi w przeglądarce, należy wziąć pod uwagę modelu zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje samodzielne są wykonywane z nieograniczonymi uprawnieniami ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** zestaw uprawnień), czy wdrożyć przy użyciu Instalatora Windows (msi), polecenia XCopy, lub [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Wdrażanie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce jest nieobsługiwany. Jednak utworzyć aplikację hosta pełnego zaufania częściowego zaufania <xref:System.AppDomain> przy użyciu modelu — w programie .NET Framework. Aby uzyskać więcej informacji, zobacz [Przegląd dodatki WPF](./app-development/wpf-add-ins-overview.md).  
@@ -103,15 +103,15 @@ ms.locfileid: "59193671"
   
  Zbiór funkcji, które mogą być chronione w ten sposób jest skonfigurowany na podstawie stref dla **Internet**, **Intranet**, **Zaufane witryny**, i  **Witryn z ograniczeniami** strefy. W poniższych krokach opisano sposób konfigurowania ustawień zabezpieczeń:  
   
-1.  Otwórz **Panel sterowania**.  
+1. Otwórz **Panel sterowania**.  
   
-2.  Kliknij przycisk **sieć i Internet** a następnie kliknij przycisk **Opcje internetowe**.  
+2. Kliknij przycisk **sieć i Internet** a następnie kliknij przycisk **Opcje internetowe**.  
   
      Zostanie wyświetlone okno dialogowe Opcje internetowe.  
   
-3.  Na **zabezpieczeń** , a następnie wybierz strefy, aby skonfigurować ustawienia zabezpieczeń.  
+3. Na **zabezpieczeń** , a następnie wybierz strefy, aby skonfigurować ustawienia zabezpieczeń.  
   
-4.  Kliknij przycisk **Poziom niestandardowy** przycisku.  
+4. Kliknij przycisk **Poziom niestandardowy** przycisku.  
   
      **Ustawienia zabezpieczeń** pojawi się okno dialogowe i można skonfigurować ustawienia zabezpieczeń dla wybranej strefy.  
   

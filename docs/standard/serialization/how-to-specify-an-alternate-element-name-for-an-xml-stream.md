@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określ nazwę elementu alternatywny Stream XML'
+title: 'Instrukcje: określanie alternatywnej nazwy elementu dla strumienia XML'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465480"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317795"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Instrukcje: Określ nazwę elementu alternatywny Stream XML
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Instrukcje: określanie alternatywnej nazwy elementu dla strumienia XML
   
 Przy użyciu <xref:System.Xml.Serialization.XmlSerializer>, można wygenerować więcej niż jeden strumień XML z tym samym zestawem klas. Można to zrobić, ponieważ na tym samym podstawowe informacje o różnice tylko nieznaczne wymaga dwóch różnych usług sieci Web XML. Załóżmy, dwie usługi XML sieci Web, które przetwarzają zamówienia dla książki, a w związku z tym obu wymagają ISBN liczb. Jedna usługa taga \<ISBN > gdy druga taga \<BookID >. Masz klasę o nazwie `Book` zawiera pole o nazwie `ISBN`. Jeśli wystąpienie `Book` klasy jest serializowane, będzie domyślnie używać nazwy składowej (ISBN) jako nazwy elementu tag. W przypadku pierwszego usługi sieci Web XML jest zgodnie z oczekiwaniami. Ale wysyłania strumień XML do drugiego usługi sieci Web XML, konieczne jest przesłonięcie serializacji tak, aby nazwy elementu znacznika `BookID`.  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Aby utworzyć strumień XML zawierających nazwę elementu alternatywny  
   
-1.  Utworzenie wystąpienia <xref:System.Xml.Serialization.XmlElementAttribute> klasy.  
+1. Utworzenie wystąpienia <xref:System.Xml.Serialization.XmlElementAttribute> klasy.  
   
-2.  Ustaw <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> z <xref:System.Xml.Serialization.XmlElementAttribute> do "BookID".  
+2. Ustaw <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> z <xref:System.Xml.Serialization.XmlElementAttribute> do "BookID".  
   
-3.  Utworzenie wystąpienia <xref:System.Xml.Serialization.XmlAttributes> klasy.  
+3. Utworzenie wystąpienia <xref:System.Xml.Serialization.XmlAttributes> klasy.  
   
-4.  Dodaj `XmlElementAttribute` do kolekcji udostępniane za pośrednictwem <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> właściwości <xref:System.Xml.Serialization.XmlAttributes> .  
+4. Dodaj `XmlElementAttribute` do kolekcji udostępniane za pośrednictwem <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> właściwości <xref:System.Xml.Serialization.XmlAttributes> .  
   
-5.  Utworzenie wystąpienia <xref:System.Xml.Serialization.XmlAttributeOverrides> klasy.  
+5. Utworzenie wystąpienia <xref:System.Xml.Serialization.XmlAttributeOverrides> klasy.  
   
-6.  Dodaj `XmlAttributes` do <xref:System.Xml.Serialization.XmlAttributeOverrides>, przekazując typ obiektu do zastępowania i nazwę elementu zastępowaniu.  
+6. Dodaj `XmlAttributes` do <xref:System.Xml.Serialization.XmlAttributeOverrides>, przekazując typ obiektu do zastępowania i nazwę elementu zastępowaniu.  
   
-7.  Utworzenie wystąpienia `XmlSerializer` klasy z `XmlAttributeOverrides`.  
+7. Utworzenie wystąpienia `XmlSerializer` klasy z `XmlAttributeOverrides`.  
   
-8.  Utworzenie wystąpienia `Book` klasy, a serializacji lub deserializacji go.  
+8. Utworzenie wystąpienia `Book` klasy, a serializacji lub deserializacji go.  
   
 ## <a name="example"></a>Przykład  
   
@@ -98,5 +98,5 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Instrukcje: serializowanie obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Instrukcje: deserializowanie obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

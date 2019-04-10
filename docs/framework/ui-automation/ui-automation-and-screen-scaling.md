@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332695"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194070"
   
  Rozwiązanie jest w dwóch częściach.  
   
-1.  Po pierwsze należy aplikacja kliencka [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware. Aby to zrobić, należy wywołać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcja `SetProcessDPIAware` przy uruchamianiu. W kodzie zarządzanym następującą deklarację udostępnia tę funkcję.  
+1. Po pierwsze należy aplikacja kliencka [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware. Aby to zrobić, należy wywołać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcja `SetProcessDPIAware` przy uruchamianiu. W kodzie zarządzanym następującą deklarację udostępnia tę funkcję.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Ta funkcja sprawia, że cały proces obsługującą ustawienia DPI, co oznacza, że wszystkie systemy windows, które należą do procesu nieskalowanego. W [przykładowe wyróżnienia](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), na przykład czterech systemu windows, które tworzą prostokąt wyróżnienia znajdują się w fizycznych współrzędne uzyskany z automatyzacji interfejsu użytkownika, współrzędne logiczne. Jeśli plik nie były obsługującą ustawienia DPI, Podświetlenie będzie rysowany w współrzędne logiczne na komputerze stacjonarnym, co mogłoby spowodować nieprawidłowe położenie w środowisku bez rozdzielczości 96.  
   
-2.  Aby uzyskać współrzędne kursora, należy wywołać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcja `GetPhysicalCursorPos`. Poniższy przykład pokazuje sposób deklarowania i użyć tej funkcji.  
+2. Aby uzyskać współrzędne kursora, należy wywołać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcja `GetPhysicalCursorPos`. Poniższy przykład pokazuje sposób deklarowania i użyć tej funkcji.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  

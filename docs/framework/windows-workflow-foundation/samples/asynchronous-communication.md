@@ -1,15 +1,15 @@
 ---
-title: Komunikacji asynchronicznej
+title: Komunikacja asynchroniczna
 ms.date: 03/30/2017
 ms.assetid: 128dc092-9eb2-4e33-9470-9a7f62b60df6
-ms.openlocfilehash: e85f7efb0de1326ceb5091c305b20f34809eab57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a9da04e2c6d3c131603211f53c54fd25dde8d338
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323658"
 ---
-# <a name="asynchronous-communication"></a>Komunikacji asynchronicznej
+# <a name="asynchronous-communication"></a>Komunikacja asynchroniczna
 Niniejszy przykład pokazuje, jak komunikacja między dwoma różnymi usługami Windows Workflow Foundation (WF) są wykonywane asynchronicznie domyślnie.  
   
 ## <a name="demonstrates"></a>Demonstracje  
@@ -31,13 +31,13 @@ Niniejszy przykład pokazuje, jak komunikacja między dwoma różnymi usługami 
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Kliknij prawym przyciskiem myszy **AsynchronousCommunication** rozwiązań i wybierz pozycję **właściwości**.  
+1. Kliknij prawym przyciskiem myszy **AsynchronousCommunication** rozwiązań i wybierz pozycję **właściwości**.  
   
-2.  W **wspólne właściwości**, wybierz opcję **projekt startowy**i wybierz **wiele projektów startowych**.  
+2. W **wspólne właściwości**, wybierz opcję **projekt startowy**i wybierz **wiele projektów startowych**.  
   
-3.  Przenieś **RentalApprovalService** na pierwszą pozycję na liście, a następnie **CreditCheckService**, a następnie **klienta**. Ustaw **Start** akcję na wszystkich trzech projektach.  
+3. Przenieś **RentalApprovalService** na pierwszą pozycję na liście, a następnie **CreditCheckService**, a następnie **klienta**. Ustaw **Start** akcję na wszystkich trzech projektach.  
   
-4.  Kliknij przycisk **OK**, i naciśnij klawisz F5, aby uruchomić próbki.  
+4. Kliknij przycisk **OK**, i naciśnij klawisz F5, aby uruchomić próbki.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

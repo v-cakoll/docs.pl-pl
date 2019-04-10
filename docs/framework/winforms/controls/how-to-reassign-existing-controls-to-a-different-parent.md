@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162248"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328221"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>Instrukcje: ponowne przypisywanie istniejących kontrolek do innego elementu nadrzędnego
 Możesz przypisać formantów, które istnieją w formularzu do nowej kontrolki kontenera.  
@@ -21,25 +21,25 @@ Możesz przypisać formantów, które istnieją w formularzu do nowej kontrolki 
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>Ponowne przypisywanie istniejących formantów do innego elementu nadrzędnego  
   
-1.  Przeciągnij trzy <xref:System.Windows.Forms.Button> kontrolki z **przybornika** na formularz.  
+1. Przeciągnij trzy <xref:System.Windows.Forms.Button> kontrolki z **przybornika** na formularz.  
   
      Umieść je blisko siebie, ale pozostawić je niewyrównanych.  
   
-2.  W **przybornika**, kliknij przycisk <xref:System.Windows.Forms.FlowLayoutPanel> ikonę kontrolki.  
+2. W **przybornika**, kliknij przycisk <xref:System.Windows.Forms.FlowLayoutPanel> ikonę kontrolki.  
   
      Nie przeciągnij ikony na formularzu.  
   
-3.  Przesuń wskaźnik myszy w pobliżu trzy <xref:System.Windows.Forms.Button> kontrolki.  
+3. Przesuń wskaźnik myszy w pobliżu trzy <xref:System.Windows.Forms.Button> kontrolki.  
   
      Wskaźnik zmienia się na krzyżyk z <xref:System.Windows.Forms.FlowLayoutPanel> ikonę kontrolki dołączone.  
   
-4.  Kliknij i przytrzymaj przycisk myszy.  
+4. Kliknij i przytrzymaj przycisk myszy.  
   
-5.  Przeciągnij kursor do rysowania konturu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
+5. Przeciągnij kursor do rysowania konturu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
   
-6.  Rysuj obramowania wokół trzech <xref:System.Windows.Forms.Button> kontrolki.  
+6. Rysuj obramowania wokół trzech <xref:System.Windows.Forms.Button> kontrolki.  
   
-7.  Zwolnij przycisk myszy.  
+7. Zwolnij przycisk myszy.  
   
      Trzy <xref:System.Windows.Forms.Button> formanty są wstawiane <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
   

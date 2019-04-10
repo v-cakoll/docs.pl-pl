@@ -2,12 +2,12 @@
 title: 'Instrukcje: Określanie typów danych bazy danych'
 ms.date: 03/30/2017
 ms.assetid: 2228fdad-7e6a-4b1b-b4d1-79d0198b7c28
-ms.openlocfilehash: bf53463be8c715fd1c599efac1b19d838be19f86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67f23ff06aefbcff4ba7e2eaab63d9b8493b9717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218046"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333213"
 ---
 # <a name="how-to-specify-database-data-types"></a>Instrukcje: Określanie typów danych bazy danych
 Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu, aby określić dokładną tekst, który definiuje kolumnę w deklaracji tabeli języka T-SQL.  
@@ -18,9 +18,9 @@ Użyj [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:
   
 ### <a name="to-specify-text-to-define-a-data-type-in-a-t-sql-table"></a>Aby określić tekst, aby zdefiniować typ danych w tabeli języka T-SQL  
   
-1.  Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.  
+1. Dodaj <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwość <xref:System.Data.Linq.Mapping.ColumnAttribute> atrybutu.  
   
-2.  Ustaw wartość <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwości tekstu do dokładnego dopasowania, który jest używany przez język T-SQL.  
+2. Ustaw wartość <xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A> właściwości tekstu do dokładnego dopasowania, który jest używany przez język T-SQL.  
   
 ## <a name="see-also"></a>Zobacz także
 

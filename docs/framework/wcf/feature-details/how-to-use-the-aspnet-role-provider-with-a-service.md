@@ -2,12 +2,12 @@
 title: 'Instrukcje: używanie dostawcy ról ASP.NET razem z usługą'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 20ffd1bb51bc2d6ac106927f805c7349c12059c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8f3fadc60645ef81d2683c63fda0ddd5bf24c982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301142"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Instrukcje: używanie dostawcy ról ASP.NET razem z usługą
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy ról (w połączeniu z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa) to funkcja, która umożliwia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deweloperom tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie konta usługi z lokacją i mieć przypisane role, do autoryzacji do celów. Dzięki tej funkcji każdy użytkownik może ustanowić konto w witrynie i logowania wyłącznego dostępu do lokacji i usług. Jest to w przeciwieństwie do zabezpieczeń Windows, która wymaga od użytkowników mają konta w domenie Windows. Zamiast tego każdy użytkownik, który dostarcza swoje poświadczenia (kombinacja nazwy i hasła użytkownika), można użyć witryny i jego usług.  
@@ -18,13 +18,13 @@ ms.locfileid: "59209089"
   
 ### <a name="to-configure-the-role-provider"></a>Aby skonfigurować dostawcę roli  
   
-1.  W pliku Web.config w obszarze <`system.web`> elementu Dodawanie <`roleManager`> element i ustaw jego `enabled` atrybutu `true`.  
+1. W pliku Web.config w obszarze <`system.web`> elementu Dodawanie <`roleManager`> element i ustaw jego `enabled` atrybutu `true`.  
   
-2.  Ustaw `defaultProvider` atrybutu `SqlRoleProvider`.  
+2. Ustaw `defaultProvider` atrybutu `SqlRoleProvider`.  
   
-3.  Jako element podrzędny <`roleManager`> elementu Dodawanie <`providers`> element.  
+3. Jako element podrzędny <`roleManager`> elementu Dodawanie <`providers`> element.  
   
-4.  Jako element podrzędny <`providers`> elementu Dodawanie <`add`> element z następującymi atrybutami Ustaw odpowiednie wartości: `name`, `type`, `connectionStringName`, i `applicationName`, jak pokazano w poniższym przykładzie.  
+4. Jako element podrzędny <`providers`> elementu Dodawanie <`add`> element z następującymi atrybutami Ustaw odpowiednie wartości: `name`, `type`, `connectionStringName`, i `applicationName`, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -41,19 +41,19 @@ ms.locfileid: "59209089"
   
 ### <a name="to-configure-the-service-to-use-the-role-provider"></a>Aby skonfigurować usługę Używanie dostawcy ról  
   
-1.  W pliku Web.config, Dodaj [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu.  
+1. W pliku Web.config, Dodaj [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu.  
   
-2.  Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu <`system.ServiceModel`> element.  
+2. Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu <`system.ServiceModel`> element.  
   
-3.  Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do <`behaviors`> element.  
+3. Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do <`behaviors`> element.  
   
-4.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element i ustaw `name` atrybutu do odpowiedniej wartości.  
+4. Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) element i ustaw `name` atrybutu do odpowiedniej wartości.  
   
-5.  Dodaj [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) do <`behavior`> element.  
+5. Dodaj [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) do <`behavior`> element.  
   
-6.  Ustaw `principalPermissionMode` atrybutu `UseAspNetRoles`.  
+6. Ustaw `principalPermissionMode` atrybutu `UseAspNetRoles`.  
   
-7.  Ustaw `roleProviderName` atrybutu `SqlRoleProvider`. Poniższy przykład przedstawia fragment konfiguracji.  
+7. Ustaw `roleProviderName` atrybutu `SqlRoleProvider`. Poniższy przykład przedstawia fragment konfiguracji.  
   
     ```xml  
     <behaviors>  

@@ -2,32 +2,32 @@
 title: 'Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 42dc2e8269e36161904f69880712924d4789333e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321006"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Instrukcje: wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania
 Ten temat jest trzeci trzy tematy, które w tym artykule omówiono sposób wdrażania serwera proxy odnajdywania. W poprzednim temacie [jak: Implementowanie Odnajdywanej usługi rejestrowanej za pomocą serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), zaimplementowana usługa WCF, która rejestruje się za pomocą serwera proxy odnajdywania. W tym temacie utworzysz klienta WCF, który używa serwera proxy odnajdywania można znaleźć usługi WCF.  
   
 ### <a name="implement-the-client"></a>Wdrożenie klienta  
   
-1.  Dodaj nowy projekt aplikacji konsoli, aby `DiscoveryProxyExample` rozwiązanie o nazwie `Client`.  
+1. Dodaj nowy projekt aplikacji konsoli, aby `DiscoveryProxyExample` rozwiązanie o nazwie `Client`.  
   
-2.  Dodaj odwołania do następujących zestawów:  
+2. Dodaj odwołania do następujących zestawów:  
   
     1.  System.ServiceModel  
   
     2.  System.ServiceModel.Discovery  
   
-3.  Dodaj GeneratedClient.cs znalezione w dolnej części tego tematu, aby projekt.  
+3. Dodaj GeneratedClient.cs znalezione w dolnej części tego tematu, aby projekt.  
   
     > [!NOTE]
     >  Ten plik jest zwykle generowane przy użyciu narzędzia, takiego jak Svcutil.exe. Jest ona udostępniana w tym temacie, aby uprościć zadanie.  
   
-4.  Otwórz plik Program.cs i dodaj następującą metodę. Ta metoda przyjmuje adres punktu końcowego i używa go do zainicjowania klienta usługi (proxy).  
+4. Otwórz plik Program.cs i dodaj następującą metodę. Ta metoda przyjmuje adres punktu końcowego i używa go do zainicjowania klienta usługi (proxy).  
   
     ```csharp  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -62,7 +62,7 @@ Ten temat jest trzeci trzy tematy, które w tym artykule omówiono sposób wdra�
     }  
     ```  
   
-5.  Dodaj następujący kod do `Main` metody.  
+5. Dodaj następujący kod do `Main` metody.  
   
     ```csharp  
     public static void Main()  

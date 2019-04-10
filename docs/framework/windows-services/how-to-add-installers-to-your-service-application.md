@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: ec20068e2cc920048b2d831db75ea2b4deb3f888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307266"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Instrukcje: Dodawanie instalatorów od aplikacji usług
 Program Visual Studio jest dostarczany składników instalacji, które można zainstalować zasoby skojarzone ze swoimi aplikacjami usługi. Składniki instalacyjne zarejestrować pojedynczą usługę w systemie, do którego jest w trakcie instalacji i umożliwić Menedżera sterowania usługami wiedzieć, że Usługa istnieje. Podczas pracy z aplikacją usługi, możesz wybrać link w oknie dialogowym właściwości, aby automatycznie dodać odpowiednie pliki instalacyjne do projektu.  
@@ -33,17 +33,17 @@ Program Visual Studio jest dostarczany składników instalacji, które można za
   
 ### <a name="to-add-installers-to-your-service-application"></a>Aby dodać instalatorów od aplikacji usług  
   
-1.  W **Eksploratora rozwiązań**, dostępu **projektowania** widoku dla usługi, dla którego chcesz dodać jako składnik instalacji.  
+1. W **Eksploratora rozwiązań**, dostępu **projektowania** widoku dla usługi, dla którego chcesz dodać jako składnik instalacji.  
   
-2.  Kliknij tło projektanta aby wybrać usługę, a nie jakąkolwiek jej zawartość.  
+2. Kliknij tło projektanta aby wybrać usługę, a nie jakąkolwiek jej zawartość.  
   
-3.  Za pomocą projektanta w fokus, kliknij prawym przyciskiem myszy, a następnie kliknij **Dodaj Instalatora**.  
+3. Za pomocą projektanta w fokus, kliknij prawym przyciskiem myszy, a następnie kliknij **Dodaj Instalatora**.  
   
      Nowa klasa `ProjectInstaller`i dwa składniki: Instalacja <xref:System.ServiceProcess.ServiceProcessInstaller> i <xref:System.ServiceProcess.ServiceInstaller>, są dodawane do projektu i wartości właściwości dla usługi są kopiowane do składników.  
   
-4.  Kliknij przycisk <xref:System.ServiceProcess.ServiceInstaller> składnika i sprawdź, czy wartość <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość jest ustawiona na taką samą wartość jak <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość samą usługę.  
+4. Kliknij przycisk <xref:System.ServiceProcess.ServiceInstaller> składnika i sprawdź, czy wartość <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość jest ustawiona na taką samą wartość jak <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> właściwość samą usługę.  
   
-5.  Aby określić, jak można uruchomić usługi, kliknij przycisk <xref:System.ServiceProcess.ServiceInstaller> składnika i ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość odpowiednią wartość.  
+5. Aby określić, jak można uruchomić usługi, kliknij przycisk <xref:System.ServiceProcess.ServiceInstaller> składnika i ustaw <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> właściwość odpowiednią wartość.  
   
     |Wartość|Wynik|  
     |-----------|------------|  
@@ -51,11 +51,11 @@ Program Visual Studio jest dostarczany składników instalacji, które można za
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Usługa zostanie uruchomiona przez siebie przy każdym ponownym uruchomieniu komputera.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Nie można uruchomić usługi.|  
   
-6.  Aby ustalić kontekstu zabezpieczeń, w którym będzie uruchamiany usługi, kliknij przycisk <xref:System.ServiceProcess.ServiceProcessInstaller> składnika i ustawianie wartości odpowiednich właściwości. Aby uzyskać więcej informacji, zobacz [jak: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Aby ustalić kontekstu zabezpieczeń, w którym będzie uruchamiany usługi, kliknij przycisk <xref:System.ServiceProcess.ServiceProcessInstaller> składnika i ustawianie wartości odpowiednich właściwości. Aby uzyskać więcej informacji, zobacz [jak: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Zastąp wszystkie metody, dla których trzeba wykonać niestandardowych.  
+7. Zastąp wszystkie metody, dla których trzeba wykonać niestandardowych.  
   
-8.  Wykonaj kroki od 1 do 7 dla każdego dodatkowe usługi w projekcie.  
+8. Wykonaj kroki od 1 do 7 dla każdego dodatkowe usługi w projekcie.  
   
     > [!NOTE]
     >  Dla każdej dodatkowej usługi w projekcie, należy dodać kolejny <xref:System.ServiceProcess.ServiceInstaller> składnika w projekcie `ProjectInstaller` klasy. <xref:System.ServiceProcess.ServiceProcessInstaller> Składnika dodanej w kroku 3 pracuje ze wszystkimi programów instalacyjnych poszczególnych usług w projekcie.  

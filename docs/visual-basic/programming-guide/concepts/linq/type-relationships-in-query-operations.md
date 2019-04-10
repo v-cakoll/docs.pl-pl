@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822339"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327636"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacje typu w operacjach zapytań (Visual Basic)
 Zmienne używane w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zapytania operacje są silnie typizowane i muszą być zgodne ze sobą. Silne wpisywanie jest używany w źródle danych, samo zapytanie i wykonywania zapytań. Na poniższej ilustracji identyfikuje terminy używane do opisu [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania. Aby uzyskać więcej informacji na temat części zapytania zobacz [podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -49,11 +49,11 @@ Zmienne używane w [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] zapyt
   
  W obu poprzednich przykładach kodu istnieją następujące relacje, czy typy są określone jawnie lub niejawnie.  
   
-1.  Typ elementów w źródle danych `names`, to rodzaj zmiennej zakresu `name`, w zapytaniu.  
+1. Typ elementów w źródle danych `names`, to rodzaj zmiennej zakresu `name`, w zapytaniu.  
   
-2.  Typ obiektu, który jest wybrany, `name`, określa typ zmiennej zapytania `mNames`. W tym miejscu `name` jest ciągiem, dzięki czemu zmienna zapytania jest IEnumerable (Of String) w języku Visual Basic.  
+2. Typ obiektu, który jest wybrany, `name`, określa typ zmiennej zapytania `mNames`. W tym miejscu `name` jest ciągiem, dzięki czemu zmienna zapytania jest IEnumerable (Of String) w języku Visual Basic.  
   
-3.  Zapytanie zdefiniowane w `mNames` jest wykonywany w `For Each` pętli. Pętla wykonuje iterację na wynik wykonania zapytania. Ponieważ `mNames`, gdy jest ono wykonywane, zwróci sekwencją ciągów, zmienną iteracji pętli `nm`, również jest ciągiem.  
+3. Zapytanie zdefiniowane w `mNames` jest wykonywany w `For Each` pętli. Pętla wykonuje iterację na wynik wykonania zapytania. Ponieważ `mNames`, gdy jest ono wykonywane, zwróci sekwencją ciągów, zmienną iteracji pętli `nm`, również jest ciągiem.  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>Zapytania, które zwraca jedno pole z wybranych elementów  
  W poniższym przykładzie przedstawiono [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] operację, która zwraca sekwencję zawierającą tylko jednej części każdy element wybranych ze źródła danych zapytania. Zapytanie zabiera zbiór `Customer` obiektów jako źródło danych i wyłącznie dla projektów `Name` właściwości w wyniku. Ponieważ nazwa klienta jest ciągiem, zapytanie generuje sekwencji ciągów jako dane wyjściowe.  
@@ -72,11 +72,11 @@ Next
   
  Relacje między zmienne są podobne do tych w przykładzie prostsze.  
   
-1.  Typ elementów w źródle danych `customers`, to rodzaj zmiennej zakresu `cust`, w zapytaniu. W tym przykładzie, który jest typem `Customer`.  
+1. Typ elementów w źródle danych `customers`, to rodzaj zmiennej zakresu `cust`, w zapytaniu. W tym przykładzie, który jest typem `Customer`.  
   
-2.  `Select` Instrukcja zwraca `Name` właściwości każdego `Customer` obiekt, a nie cały obiekt. Ponieważ `Name` jest ciągiem, zmienna zapytania `custNames`, ponownie IEnumerable (Of String), nie będzie z `Customer`.  
+2. `Select` Instrukcja zwraca `Name` właściwości każdego `Customer` obiekt, a nie cały obiekt. Ponieważ `Name` jest ciągiem, zmienna zapytania `custNames`, ponownie IEnumerable (Of String), nie będzie z `Customer`.  
   
-3.  Ponieważ `custNames` reprezentuje sekwencję ciągów, `For Each` Zmienna iteracji pętli, `custName`, musi być ciągiem.  
+3. Ponieważ `custNames` reprezentuje sekwencję ciągów, `For Each` Zmienna iteracji pętli, `custName`, musi być ciągiem.  
   
  Bez wnioskowanie o typie lokalnym byłoby bardziej skomplikowane, zapisu i dowiedzieć się, jak w poniższym przykładzie przedstawiono poprzedniego przykładu.  
   
@@ -110,17 +110,17 @@ Next
   
  Chociaż nie jest możliwe określenie typów dla wszystkich zmiennych w poprzednim przykładzie, relacje pozostają takie same.  
   
-1.  Typ elementów w źródle danych jest ponownie rodzaj zmiennej zakresu w zapytaniu. W tym przykładzie `cust` jest wystąpieniem `Customer`.  
+1. Typ elementów w źródle danych jest ponownie rodzaj zmiennej zakresu w zapytaniu. W tym przykładzie `cust` jest wystąpieniem `Customer`.  
   
-2.  Ponieważ `Select` instrukcja generuje typ anonimowy, zmienna zapytania `nameCityQuery`, musi być wpisana niejawnie jako typu anonimowego. Typ anonimowy nie ma użytecznych nazw i dlatego nie może być jawnie określone.  
+2. Ponieważ `Select` instrukcja generuje typ anonimowy, zmienna zapytania `nameCityQuery`, musi być wpisana niejawnie jako typu anonimowego. Typ anonimowy nie ma użytecznych nazw i dlatego nie może być jawnie określone.  
   
-3.  Typ zmiennej iteracji w `For Each` pętla jest typu anonimowego, utworzony w kroku 2. Ponieważ typ nie ma użytecznych nazw, można niejawnie określić typu Zmienna iteracji pętli.  
+3. Typ zmiennej iteracji w `For Each` pętla jest typu anonimowego, utworzony w kroku 2. Ponieważ typ nie ma użytecznych nazw, można niejawnie określić typu Zmienna iteracji pętli.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Wprowadzenie do programu LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)

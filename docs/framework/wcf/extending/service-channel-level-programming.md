@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197200"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329133"
 ---
 # <a name="service-channel-level-programming"></a>Programowanie na poziomie kanału usługi
 W tym temacie opisano sposób pisania aplikacji usługi Windows Communication Foundation (WCF) bez użycia <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> i jego skojarzonego obiektu modelu.  
@@ -18,15 +18,15 @@ W tym temacie opisano sposób pisania aplikacji usługi Windows Communication Fo
 ## <a name="receiving-messages"></a>Odbieranie komunikatów  
  Będzie gotowa do odbierania i przetwarzania wiadomości, wymagane są następujące kroki:  
   
-1.  Tworzenie powiązania.  
+1. Tworzenie powiązania.  
   
-2.  Tworzenie odbiornika kanałów.  
+2. Tworzenie odbiornika kanałów.  
   
-3.  Otwórz odbiornika kanałów.  
+3. Otwórz odbiornika kanałów.  
   
-4.  Żądania odczytu i wysyłać odpowiedzi.  
+4. Żądania odczytu i wysyłać odpowiedzi.  
   
-5.  Zamknij wszystkie obiekty kanału.  
+5. Zamknij wszystkie obiekty kanału.  
   
 #### <a name="creating-a-binding"></a>Tworzenie powiązania  
  Pierwszym etapem nasłuchiwać i odbierać wiadomości jest utworzenie powiązania. Usługi WCF jest dostarczany z kilku wbudowanych lub dostarczane przez system powiązań, które mogą być używane bezpośrednio przez utworzenie wystąpienia jednego z nich. Ponadto można również utworzyć własne powiązania niestandardowego przez utworzenie wystąpienia klasy CustomBinding, która jest wykonuje kod w ofercie 1.  

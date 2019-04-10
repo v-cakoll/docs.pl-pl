@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: e61f7743d984d99b1c6811cb1980b97705c304a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5c60fe411fcbf6257c8aaacf1f7400c11c150ddc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223964"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310281"
 ---
 # <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>Instrukcje: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy systemu Windows
 Operacje przeciągania i upuszczania za pomocą interfejsu Windows Forms <xref:System.Windows.Forms.RichTextBox> kontrolki są wykonywane przez obsługi <xref:System.Windows.Forms.RichTextBox.DragEnter> i <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzenia. W związku z tym, przeciągnij i upuść operacje są bardzo proste dzięki <xref:System.Windows.Forms.RichTextBox> kontroli.  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>Aby włączyć operacji przeciągania w formancie RichTextBox  
   
-1.  Ustaw <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolę `true`.  
+1. Ustaw <xref:System.Windows.Forms.RichTextBox.AllowDrop%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolę `true`.  
   
-2.  Pisz kod w obsłudze zdarzeń <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń. Użyj `if` instrukcję, aby upewnij się, że dane przeciąganie typu dopuszczalnych (w tym przypadku tekstu). <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> Właściwość można ustawić na dowolną wartość <xref:System.Windows.Forms.DragDropEffects> wyliczenia.  
+2. Pisz kod w obsłudze zdarzeń <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń. Użyj `if` instrukcję, aby upewnij się, że dane przeciąganie typu dopuszczalnych (w tym przypadku tekstu). <xref:System.Windows.Forms.DragEventArgs.Effect%2A?displayProperty=nameWithType> Właściwość można ustawić na dowolną wartość <xref:System.Windows.Forms.DragDropEffects> wyliczenia.  
   
     ```vb  
     Private Sub RichTextBox1_DragEnter(ByVal sender As Object, _   
@@ -76,7 +76,7 @@ Operacje przeciągania i upuszczania za pomocą interfejsu Windows Forms <xref:S
        (this, &Form1::richTextBox1_DragEnter);  
     ```  
   
-3.  Napisz kod obsługujący <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzeń. Użyj <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> metody do pobierania danych przeciągania.  
+3. Napisz kod obsługujący <xref:System.Windows.Forms.RichTextBox.DragDrop> zdarzeń. Użyj <xref:System.Windows.Forms.DataObject.GetData%2A?displayProperty=nameWithType> metody do pobierania danych przeciągania.  
   
      W przykładzie poniżej kod ustawia <xref:System.Windows.Forms.RichTextBox.Text%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontrolować równa danych przeciągania. Jeśli istnieje już tekstu w <xref:System.Windows.Forms.RichTextBox> wstawieniu kontrolki, przeciąganego tekstowego w punkcie wstawiania.  
   
@@ -154,11 +154,11 @@ Operacje przeciągania i upuszczania za pomocą interfejsu Windows Forms <xref:S
   
 ### <a name="to-test-the-drag-and-drop-functionality-in-your-application"></a>Aby przetestować funkcje przeciągania i upuszczania w aplikacji  
   
-1.  Zapisz i skompiluj aplikację. Gdy jest uruchomiona, uruchom program WordPad.  
+1. Zapisz i skompiluj aplikację. Gdy jest uruchomiona, uruchom program WordPad.  
   
      Program WordPad, jest Edytor tekstu, zainstalowane przez Windows, która umożliwia wykonywanie operacji przeciągania i upuszczania. Jest dostępny, klikając **Start** przycisku, wybierając **Uruchom**, wpisz `WordPad` w polu tekstowym **Uruchom** okno dialogowe, a następnie klikając polecenie  **OK**.  
   
-2.  Po otwarciu programu WordPad, wpisz ciąg tekstowy w nim. Za pomocą myszy, zaznacz tekst, a następnie przeciągnij zaznaczony tekst do <xref:System.Windows.Forms.RichTextBox> kontrolki w aplikacji Windows.  
+2. Po otwarciu programu WordPad, wpisz ciąg tekstowy w nim. Za pomocą myszy, zaznacz tekst, a następnie przeciągnij zaznaczony tekst do <xref:System.Windows.Forms.RichTextBox> kontrolki w aplikacji Windows.  
   
      Należy zauważyć, że po wskazaniu myszą w <xref:System.Windows.Forms.RichTextBox> kontroli (i w związku z tym, wywoływanie <xref:System.Windows.Forms.RichTextBox.DragEnter> zdarzeń), wskaźnik myszy zmienia i mogą porzucić zaznaczonego tekstu do <xref:System.Windows.Forms.RichTextBox> kontroli.  
   

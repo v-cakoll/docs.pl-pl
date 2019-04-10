@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Buforowanie danych aplikacji w aplikacji WPF'
+title: 'Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361177"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314400"
 ---
-# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: Buforowanie danych aplikacji w aplikacji WPF
+# <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Gdy dane są używane ponownie, aplikacje można uzyskać danych z pamięci podręcznej, zamiast pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowania sprawia, że dane dostępne, gdy źródłem danych jest tymczasowo niedostępna.
 
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Udostępnia klasy, które umożliwiają używanie buforowania w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] aplikacji. W ramach tych zajęć, znajdują się w <xref:System.Runtime.Caching> przestrzeni nazw.
@@ -56,24 +56,24 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 #### <a name="to-create-a-wpf-application"></a>Aby utworzyć aplikację WPF
 
-1.  Uruchom program Visual Studio.
+1. Uruchom program Visual Studio.
 
-2.  W **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **nowy projekt**.
+2. W **pliku** menu, kliknij przycisk **New**, a następnie kliknij przycisk **nowy projekt**.
 
      **Nowy projekt** zostanie wyświetlone okno dialogowe.
 
-3.  W obszarze **zainstalowane szablony**, wybierz język programowania, którego chcesz użyć (**języka Visual Basic** lub **Visual C#**).
+3. W obszarze **zainstalowane szablony**, wybierz język programowania, którego chcesz użyć (**języka Visual Basic** lub **Visual C#**).
 
-4.  W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji WPF**.
+4. W **nowy projekt** okno dialogowe, wybierz opcję **aplikacji WPF**.
 
     > [!NOTE]
     >  Jeśli nie widzisz **aplikacji WPF** szablonu, upewnij się, że są przeznaczone dla wersji programu [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] WPF, która obsługuje. W **nowy projekt** okno dialogowe, wybierz opcję [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] z listy.
 
-5.  W **nazwa** tekstu wprowadź nazwę dla projektu. Na przykład można wprowadzić **WPFCaching**.
+5. W **nazwa** tekstu wprowadź nazwę dla projektu. Na przykład można wprowadzić **WPFCaching**.
 
-6.  Wybierz **Utwórz katalog rozwiązania** pole wyboru.
+6. Wybierz **Utwórz katalog rozwiązania** pole wyboru.
 
-7.  Kliknij przycisk **OK**.
+7. Kliknij przycisk **OK**.
 
      Zostanie otwarty projektant WPF w **projektowania** służy do wyświetlania i wyświetla pliku MainWindow.xaml. Program Visual Studio tworzy **mój projekt** folder, plik Application.xaml i pliku MainWindow.xaml.
 
@@ -87,27 +87,27 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 #### <a name="to-change-the-target-net-framework-in-visual-basic"></a>Aby zmienić docelową aplikację .NET Framework w języku Visual Basic
 
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości**.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości**.
 
      Zostanie wyświetlone okno właściwości dla aplikacji.
 
-2.  Kliknij przycisk **skompilować** kartę.
+2. Kliknij przycisk **skompilować** kartę.
 
-3.  W dolnej części okna kliknij **zaawansowane opcje kompilacji...** .
+3. W dolnej części okna kliknij **zaawansowane opcje kompilacji...** .
 
      **Zaawansowane ustawienia kompilatora** zostanie wyświetlone okno dialogowe.
 
-4.  W **platformy docelowej (wszystkie konfiguracje)** listy wybierz [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Nie należy wybierać [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. W **platformy docelowej (wszystkie konfiguracje)** listy wybierz [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Nie należy wybierać [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
-5.  Kliknij przycisk **OK**.
+5. Kliknij przycisk **OK**.
 
      **Zmiana platformy docelowej** zostanie wyświetlone okno dialogowe.
 
-6.  W **zmiana platformy docelowej** okno dialogowe, kliknij przycisk **tak**.
+6. W **zmiana platformy docelowej** okno dialogowe, kliknij przycisk **tak**.
 
      Projekt jest zamknięty, a następnie ponownego otworzenia.
 
-7.  Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
+7. Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
 
     1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **Dodaj odwołanie**.
 
@@ -115,15 +115,15 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Aby zmienić docelową aplikację .NET Framework w projektach Visual C#
 
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości**.
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy nazwę projektu, a następnie kliknij przycisk **właściwości**.
 
      Zostanie wyświetlone okno właściwości dla aplikacji.
 
-2.  Kliknij przycisk **aplikacji** kartę.
+2. Kliknij przycisk **aplikacji** kartę.
 
-3.  W **platformę docelową** listy wybierz [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Nie należy wybierać **.NET Framework 4 Client Profile**.)
+3. W **platformę docelową** listy wybierz [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Nie należy wybierać **.NET Framework 4 Client Profile**.)
 
-4.  Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
+4. Dodaj odwołanie do pamięci podręcznej zestawów, wykonując następujące czynności:
 
     1.  Kliknij prawym przyciskiem myszy **odwołania** folder, a następnie kliknij przycisk **Dodaj odwołanie**.
 
@@ -134,11 +134,11 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 #### <a name="to-add-a-button-control"></a>Aby dodać kontrolkę przycisku
 
-1.  W **Eksploratora rozwiązań**, kliknij dwukrotnie plik MainWindow.xaml, aby go otworzyć.
+1. W **Eksploratora rozwiązań**, kliknij dwukrotnie plik MainWindow.xaml, aby go otworzyć.
 
-2.  Z **przybornika**w obszarze **wspólnych formantów WPF**, przeciągnij `Button` kontrolę `MainWindow` okna.
+2. Z **przybornika**w obszarze **wspólnych formantów WPF**, przeciągnij `Button` kontrolę `MainWindow` okna.
 
-3.  W **właściwości** oknie `Content` właściwość `Button` kontrolę **Pobieranie pamięci podręcznej**.
+3. W **właściwości** oknie `Content` właściwość `Button` kontrolę **Pobieranie pamięci podręcznej**.
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Inicjowanie pamięci podręcznej i buforowania wpis
  Następnie dodasz kod do wykonywania następujących zadań:
@@ -153,9 +153,9 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 #### <a name="to-create-the-cache-object"></a>Można utworzyć obiektu pamięci podręcznej
 
-1.  Kliknij dwukrotnie przycisk, który właśnie został dodany w celu utworzenia programu obsługi zdarzeń w pliku MainWindow.xaml.cs lub MainWindow.Xaml.vb.
+1. Kliknij dwukrotnie przycisk, który właśnie został dodany w celu utworzenia programu obsługi zdarzeń w pliku MainWindow.xaml.cs lub MainWindow.Xaml.vb.
 
-2.  W górnej części pliku (przed deklaracją klasy), Dodaj następujący kod `Imports` (Visual Basic) lub `using` instrukcje (C#):
+2. W górnej części pliku (przed deklaracją klasy), Dodaj następujący kod `Imports` (Visual Basic) lub `using` instrukcje (C#):
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
     Imports System.IO
     ```
 
-3.  W procedurze obsługi zdarzeń Dodaj następujący kod, aby utworzyć wystąpienie obiektu pamięci podręcznej:
+3. W procedurze obsługi zdarzeń Dodaj następujący kod, aby utworzyć wystąpienie obiektu pamięci podręcznej:
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -179,7 +179,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
      <xref:System.Runtime.Caching.ObjectCache> Klasy jest klasą wbudowanych, która udostępnia pamięć podręczną obiektów w pamięci.
 
-4.  Dodaj następujący kod, aby odczytać zawartość wpisu pamięci podręcznej, o nazwie `filecontents`:
+4. Dodaj następujący kod, aby odczytać zawartość wpisu pamięci podręcznej, o nazwie `filecontents`:
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
     string fileContents = cache["filecontents"] as string;
     ```
 
-5.  Dodaj następujący kod, aby sprawdzić, czy wpis pamięci podręcznej o nazwie `filecontents` istnieje:
+5. Dodaj następujący kod, aby sprawdzić, czy wpis pamięci podręcznej o nazwie `filecontents` istnieje:
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
      Jeśli nie istnieje wpis określony w pamięci podręcznej, należy odczytać plik tekstowy i dodać go jako wpis pamięci podręcznej w pamięci podręcznej.
 
-6.  W `if/then` zablokować, Dodaj następujący kod, aby utworzyć nowy <xref:System.Runtime.Caching.CacheItemPolicy> obiektu, który określa, że wpis pamięci podręcznej wygaśnie po 10 sekundach.
+6. W `if/then` zablokować, Dodaj następujący kod, aby utworzyć nowy <xref:System.Runtime.Caching.CacheItemPolicy> obiektu, który określa, że wpis pamięci podręcznej wygaśnie po 10 sekundach.
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -220,7 +220,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
      Jeśli nie podano żadnych informacji eksmisji lub data jej wygaśnięcia, wartość domyślna to <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, co oznacza, że wpisy w pamięci podręcznej nigdy nie wygasa oparte tylko na bezwzględnego czasu. Zamiast tego wpisy w pamięci podręcznej wygasa tylko wtedy, gdy wykorzystanie pamięci. Najlepszym rozwiązaniem należy zawsze jawnie określić bezwzględną lub wygaśniecie.
 
-7.  Wewnątrz `if/then` blokowania i po kodzie dodanym w poprzednim kroku, Dodaj następujący kod, aby utworzyć kolekcję dla ścieżki do plików, które chcesz monitorować i Dodaj ścieżkę do pliku tekstowego do kolekcji:
+7. Wewnątrz `if/then` blokowania i po kodzie dodanym w poprzednim kroku, Dodaj następujący kod, aby utworzyć kolekcję dla ścieżki do plików, które chcesz monitorować i Dodaj ścieżkę do pliku tekstowego do kolekcji:
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -235,7 +235,7 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
     > [!NOTE]
     >  Jeśli nie jest plik tekstowy, którego chcesz użyć `c:\cache\cacheText.txt`, określ ścieżkę do pliku tekstowego chcesz użyć.
 
-8.  Po kodzie dodanym w poprzednim kroku, Dodaj następujący kod, aby dodać nowy <xref:System.Runtime.Caching.HostFileChangeMonitor> do kolekcji zmiany monitoruje wpisu pamięci podręcznej:
+8. Po kodzie dodanym w poprzednim kroku, Dodaj następujący kod, aby dodać nowy <xref:System.Runtime.Caching.HostFileChangeMonitor> do kolekcji zmiany monitoruje wpisu pamięci podręcznej:
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -288,31 +288,31 @@ Pamięć podręczna umożliwia przechowywanie danych w pamięci, aby uzyskać sz
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Aby przetestować buforowania w aplikacji WPF
 
-1.  Naciśnij klawisze CTRL + F5, aby uruchomić aplikację.
+1. Naciśnij klawisze CTRL + F5, aby uruchomić aplikację.
 
      `MainWindow` Zostanie wyświetlone okno.
 
-2.  Kliknij przycisk **Pobieranie pamięci podręcznej**.
+2. Kliknij przycisk **Pobieranie pamięci podręcznej**.
 
      Zawartości w pamięci podręcznej w pliku tekstowym jest wyświetlany w oknie komunikatu. Zwróć uwagę, znacznik czasu: w pliku.
 
-3.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
+3. Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
 
      Sygnatura czasowa pozostaje bez zmian. Oznacza to, że jest wyświetlana zawartość z pamięci podręcznej.
 
-4.  Poczekaj 10 sekund lub więcej, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
+4. Poczekaj 10 sekund lub więcej, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
 
      Tym razem zostanie wyświetlona nowa sygnatura czasowa. Oznacza to, że zasady umożliwiają wygaśnięcia wpisu pamięci podręcznej i czy jest wyświetlana nowa zawartość pamięci podręcznej.
 
-5.  W edytorze tekstu Otwórz plik tekstowy, który został utworzony. Jeszcze nie wprowadzaj żadnych zmian.
+5. W edytorze tekstu Otwórz plik tekstowy, który został utworzony. Jeszcze nie wprowadzaj żadnych zmian.
 
-6.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
+6. Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
 
      Ponownie Zwróć uwagę sygnaturę czasową.
 
-7.  Wprowadź zmianę do pliku tekstowego, a następnie zapisz plik.
+7. Wprowadź zmianę do pliku tekstowego, a następnie zapisz plik.
 
-8.  Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
+8. Zamknij okno komunikatu, a następnie kliknij przycisk **Pobieranie pamięci podręcznej** ponownie.
 
      To okno komunikatu zawiera zaktualizowaną zawartość z pliku tekstowego i Nowa sygnatura czasowa. Oznacza to, że monitor zmiany pliku hosta wykluczona wpisu pamięci podręcznej natychmiast, gdy zmienisz plik, mimo że nie wygasło bezwzględny limit czasu.
 

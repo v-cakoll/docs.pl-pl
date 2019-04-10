@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313583"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Instrukcje: rejestrowanie i konfigurowanie krótkiej nazwy usługi
 Przed użyciem monikera programu Windows Communication Foundation (WCF) w ramach aplikacji modelu COM z kontrolą typów kontraktu, musisz zarejestrować wymaganych typów opartego na atrybutach z modelem COM i konfigurowanie aplikacji modelu COM i moniker z powiązaniem wymagane Konfiguracja.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Aby zarejestrować wymaganych typów opartego na atrybutach z modelem COM  
   
-1.  Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do pobierania metadanych kontraktu usługi WCF. Spowoduje to wygenerowanie kodu źródłowego dla zestawu klienta WCF i pliku konfiguracji aplikacji klienta.  
+1. Użyj [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia do pobierania metadanych kontraktu usługi WCF. Spowoduje to wygenerowanie kodu źródłowego dla zestawu klienta WCF i pliku konfiguracji aplikacji klienta.  
   
-2.  Upewnij się, że typy w zestawie są oznaczone jako `ComVisible`. Aby to zrobić, Dodaj następujący atrybut w pliku AssemblyInfo.cs w projekcie programu Visual Studio.  
+2. Upewnij się, że typy w zestawie są oznaczone jako `ComVisible`. Aby to zrobić, Dodaj następujący atrybut w pliku AssemblyInfo.cs w projekcie programu Visual Studio.  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Skompiluj zarządzanego klienta programu WCF jako zestawu o silnej nazwie. Ta migracja wymaga logowania przy użyciu pary kluczy kryptograficznych. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](https://go.microsoft.com/fwlink/?LinkId=94874) w Podręczniku dewelopera programu .NET.  
+3. Skompiluj zarządzanego klienta programu WCF jako zestawu o silnej nazwie. Ta migracja wymaga logowania przy użyciu pary kluczy kryptograficznych. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](https://go.microsoft.com/fwlink/?LinkId=94874) w Podręczniku dewelopera programu .NET.  
   
-4.  Narzędzie rejestracji zestawów (Regasm.exe), za pomocą `/tlb` opcję, aby można było zarejestrować typy w zestawie przy użyciu modelu COM.  
+4. Narzędzie rejestracji zestawów (Regasm.exe), za pomocą `/tlb` opcję, aby można było zarejestrować typy w zestawie przy użyciu modelu COM.  
   
-5.  Aby dodać zestaw do globalnej pamięci podręcznej, należy użyć narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe).  
+5. Aby dodać zestaw do globalnej pamięci podręcznej, należy użyć narzędzia Globalna pamięć podręczna zestawów (Gacutil.exe).  
   
     > [!NOTE]
     >  Podpisywanie zestawu i dodanie go do globalnej pamięci podręcznej zestawów są opcjonalne kroki, ale upraszczają proces ładowania zestawu we właściwej lokalizacji, w czasie wykonywania.  
@@ -89,7 +89,7 @@ Przed użyciem monikera programu Windows Communication Foundation (WCF) w ramach
     > [!NOTE]
     >  : Jeśli moniker jest źle sformułowany lub jeśli usługa jest niedostępna, wywołanie `GetObject` zwraca błąd "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, moniker elementu, którego używasz jest poprawna i ta usługa jest dostępna.  
   
-     Chociaż ten temat koncentruje się na temat korzystania z kodu VB 6.0 monikera programu, można użyć krótkiej nazwy z innych języków. Gdy używanie monikera z C++ code Svcutil.exe generowane zestawu należy zaimportować za pomocą "no_namespace named_guids — raw_interfaces_only —", jak pokazano w poniższym kodzie.  
+     Chociaż ten temat koncentruje się na temat korzystania z kodu VB 6.0 monikera programu, można użyć krótkiej nazwy z innych języków. Korzystając z monikerem z C++ kodu Svcutil.exe wygenerowanego zestawu powinny być importowane z "no_namespace named_guids — raw_interfaces_only —", jak pokazano w poniższym kodzie.  
   
     ```  
     #import "ComTestProxy.tlb" no_namespace named_guids  

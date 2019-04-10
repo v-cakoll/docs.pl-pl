@@ -2,12 +2,12 @@
 title: Fabryka kanałów konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5bee4c7cc2c2e64c6e0d8d0ec2634f9500cd9d51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328078"
 ---
 # <a name="configuration-channel-factory"></a>Fabryka kanałów konfiguracji
 Ten przykład obejmuje użycie <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Umożliwia centralne zarządzanie Konfiguracja klienta programu WCF. Może to być również przydatne w scenariuszach, w których konfiguracja jest wybrane lub ulegnie zmianie po czas ładowania domeny aplikacji.
@@ -33,15 +33,15 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
 
-1.  Otwórz program Visual Studio 2012 z uprawnieniami administratora.
+1. Otwórz program Visual Studio 2012 z uprawnieniami administratora.
 
-2.  Kliknij prawym przyciskiem myszy rozwiązanie ConfigurationChannelFactory (projekty, 2), a następnie wybierz pozycję **właściwości**.
+2. Kliknij prawym przyciskiem myszy rozwiązanie ConfigurationChannelFactory (projekty, 2), a następnie wybierz pozycję **właściwości**.
 
-3.  W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.
+3. W **wspólne właściwości**, wybierz opcję **projekt startowy**, a następnie kliknij przycisk **wiele projektów startowych**.
 
-4.  Przenieś **usługi** projektu na początku listy, o **akcji "Start"**, a następnie przenieść **klienta** projektu po **usługi**projektu, również mający **akcji "Start"**, więc **klienta** projektu jest wykonywany po **usługi** projektu.
+4. Przenieś **usługi** projektu na początku listy, o **akcji "Start"**, a następnie przenieść **klienta** projektu po **usługi**projektu, również mający **akcji "Start"**, więc **klienta** projektu jest wykonywany po **usługi** projektu.
 
-5.  Kliknij przycisk **OK**, a następnie naciśnij klawisz F5 (lub CTRL + F5) do uruchomienia przykładu.
+5. Kliknij przycisk **OK**, a następnie naciśnij klawisz F5 (lub CTRL + F5) do uruchomienia przykładu.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

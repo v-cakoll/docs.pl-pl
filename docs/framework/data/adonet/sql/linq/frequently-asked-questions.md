@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323255"
 ---
 # <a name="frequently-asked-questions"></a>Często zadawane pytania
 Poniższe sekcje odpowiedzi na niektóre typowe problemy, które można napotkać podczas implementowania [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A. Wykonaj następujące kroki w tym scenariuszu zaawansowane:  
   
-1.  W pliku dbml, należy zmodyfikować właściwość, zmieniając <xref:System.Data.Linq.ITable.IsReadOnly%2A> flaga `True`.  
+1. W pliku dbml, należy zmodyfikować właściwość, zmieniając <xref:System.Data.Linq.ITable.IsReadOnly%2A> flaga `True`.  
   
-2.  Dodaj klasę częściową. Utwórz konstruktora z parametrami dla członków z prawami tylko do odczytu.  
+2. Dodaj klasę częściową. Utwórz konstruktora z parametrami dla członków z prawami tylko do odczytu.  
   
-3.  Przejrzyj domyślne <xref:System.Data.Linq.Mapping.UpdateCheck> wartość (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) aby określić, czy jest poprawny dla twojej aplikacji.  
+3. Przejrzyj domyślne <xref:System.Data.Linq.Mapping.UpdateCheck> wartość (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) aby określić, czy jest poprawny dla twojej aplikacji.  
   
     > [!CAUTION]
     >  Jeśli używasz [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] w programie Visual Studio, Twoje zmiany mogą być zastępowane.  

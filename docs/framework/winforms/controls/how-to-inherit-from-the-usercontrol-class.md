@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: 1b5d69bda08b94ae00ce022d0d323ad4561ff6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e9bdb6d6628b1c696b7944dc0ea1f4c974c8172
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174801"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311412"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Instrukcje: dziedziczenie z klasy UserControl
 Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms za pomocą kodu niestandardowego, można utworzyć *kontrolki użytkownika*. Formanty użytkownika połączyć rozwoju szybkiej kontroli, standardowych formularzy Windows kontrolować funkcjonalność i wszechstronności niestandardowe właściwości i metod. Po rozpoczęciu tworzenia kontrolki użytkownika, są prezentowane za pomocą projektanta widoczne, na którym można umieścić standardowych kontrolek Windows Forms. Te kontrolki zachowuje wszystkie ich używaniem funkcji, a także wygląd i zachowanie (wyglądu i działania) standardowych kontrolek. Gdy te kontrolki są wbudowane w kontrolce użytkownika, jednak nie są już dostępne za pośrednictwem kodu. Kontrolki użytkownika nie swój własny obraz, a także obsługuje wszystkie podstawowe funkcje, które są skojarzone z formantami.  
@@ -22,17 +22,17 @@ Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms za pomocą ko
   
 ### <a name="to-create-a-user-control"></a>Aby utworzyć kontrolkę użytkownika  
   
-1.  Utwórz nową **Biblioteka formantów Windows** projektu.  
+1. Utwórz nową **Biblioteka formantów Windows** projektu.  
   
      Nowy projekt zostanie utworzony przy użyciu kontrola pustego użytkownika.  
   
-2.  Przeciągnij formanty z **Windows Forms** karcie **przybornika** do projektanta.  
+2. Przeciągnij formanty z **Windows Forms** karcie **przybornika** do projektanta.  
   
-3.  Te kontrolki powinien być umieszczony i zaprojektowana jako ma być wyświetlane w kontrolce użytkownika końcowego. Chcesz umożliwiają deweloperom dostęp do formantów składowych, należy zadeklarować je jako publiczne lub selektywnie udostępnianie właściwości składowych kontroli. Aby uzyskać więcej informacji, zobacz [jak: Udostępnianie właściwości formantów składowych](how-to-expose-properties-of-constituent-controls.md).  
+3. Te kontrolki powinien być umieszczony i zaprojektowana jako ma być wyświetlane w kontrolce użytkownika końcowego. Chcesz umożliwiają deweloperom dostęp do formantów składowych, należy zadeklarować je jako publiczne lub selektywnie udostępnianie właściwości składowych kontroli. Aby uzyskać więcej informacji, zobacz [jak: Udostępnianie właściwości formantów składowych](how-to-expose-properties-of-constituent-controls.md).  
   
-4.  Implementowanie niestandardowych metod dowolnej właściwości, które będą zawierały kontrolki.  
+4. Implementowanie niestandardowych metod dowolnej właściwości, które będą zawierały kontrolki.  
   
-5.  Naciśnij klawisz F5, aby skompilować projekt i uruchomić Twoją kontrolą w **UserControl — kontener testowy**. Aby uzyskać więcej informacji, zobacz [jak: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
+5. Naciśnij klawisz F5, aby skompilować projekt i uruchomić Twoją kontrolą w **UserControl — kontener testowy**. Aby uzyskać więcej informacji, zobacz [jak: Testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -7,34 +7,34 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: 679333186d9f9b791e5ad9c2e1cb74f69e051a62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329040"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel
 <xref:System.Windows.Forms.FlowLayoutPanel> Kontrolować obsługuje <xref:System.Windows.Forms.Control.Anchor%2A> i <xref:System.Windows.Forms.Control.Dock%2A> właściwości w jego formantów podrzędnych.  
   
 ### <a name="to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Aby zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel  
   
-1.  Utwórz <xref:System.Windows.Forms.FlowLayoutPanel> kontrolkę w formularzu.  
+1. Utwórz <xref:System.Windows.Forms.FlowLayoutPanel> kontrolkę w formularzu.  
   
-2.  Ustaw <xref:System.Windows.Forms.Control.Width%2A> z <xref:System.Windows.Forms.FlowLayoutPanel> kontrolę **300**i ustaw jego <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> do <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Ustaw <xref:System.Windows.Forms.Control.Width%2A> z <xref:System.Windows.Forms.FlowLayoutPanel> kontrolę **300**i ustaw jego <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> do <xref:System.Windows.Forms.FlowDirection.TopDown>.  
   
-3.  Utworzyć dwa <xref:System.Windows.Forms.Button> kontroluje i umieść je w <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
+3. Utworzyć dwa <xref:System.Windows.Forms.Button> kontroluje i umieść je w <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
   
-4.  Ustaw <xref:System.Windows.Forms.Control.Width%2A> pierwszego przycisku, aby **200**.  
+4. Ustaw <xref:System.Windows.Forms.Control.Width%2A> pierwszego przycisku, aby **200**.  
   
-5.  Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość drugi przycisk, który <xref:System.Windows.Forms.DockStyle.Fill>.  
+5. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość drugi przycisk, który <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
     >  Drugi przycisk zakłada taką samą szerokość jako pierwszy przycisk. Nie rozciągnąć na szerokość <xref:System.Windows.Forms.FlowLayoutPanel> kontroli.  
   
-6.  Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość drugi przycisk, który `None`. To powoduje, że przycisk założył, jego oryginalna szerokość.  
+6. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość drugi przycisk, który `None`. To powoduje, że przycisk założył, jego oryginalna szerokość.  
   
-7.  Ustaw <xref:System.Windows.Forms.Control.Anchor%2A> właściwość drugi przycisk, który `Left, Right`.  
+7. Ustaw <xref:System.Windows.Forms.Control.Anchor%2A> właściwość drugi przycisk, który `Left, Right`.  
   
     > [!IMPORTANT]
     >  Drugi przycisk zakłada taką samą szerokość jako pierwszy przycisk. Nie rozciągnąć na szerokość <xref:System.Windows.Forms.FlowLayoutPanel> kontroli. To ogólne reguły dla Zakotwiczanie i dokowanie w <xref:System.Windows.Forms.FlowLayoutPanel> kontrolki: w kierunkach pionowy przepływu <xref:System.Windows.Forms.FlowLayoutPanel> kontroli oblicza szerokość kolumny dorozumianych z najszerszej kontrolki podrzędnej w kolumnie. Wszystkie kontrolki w tej kolumnie, za pomocą <xref:System.Windows.Forms.Control.Anchor%2A> lub <xref:System.Windows.Forms.Control.Dock%2A> właściwości są wyrównane, czy rozciągnięte do mieści się w tej kolumnie dorozumianych. Zachowanie działa w podobny sposób jak w poziomie przepływu kierunkach. <xref:System.Windows.Forms.FlowLayoutPanel> Kontroli oblicza wysokość wiersza dorozumianych od najwyższego kontrolki podrzędnej w wierszu i wszystkich kontrolek podrzędnych zadokowany lub zakotwiczone w tym wierszu są wyrównane lub dopasowana dorozumianych wiersza.  

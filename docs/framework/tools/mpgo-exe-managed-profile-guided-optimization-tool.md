@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e44b695a07c0f304e1c995f240d9fa387195358d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177024"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306342"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (narzędzie optymalizacji sterowania zarządzanym profilem)
 
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>Aby użyć Mpgo.exe  
   
-1.  Użyj komputera, na którym zainstalowano Visual Studio Ultimate 2012 i aplikację.  
+1. Użyj komputera, na którym zainstalowano Visual Studio Ultimate 2012 i aplikację.  
   
-2.  Uruchom Mpgo.exe jako administrator z wymaganymi parametrami.  W następnej sekcji znajdują się przykładowe polecenia.  
+2. Uruchom Mpgo.exe jako administrator z wymaganymi parametrami.  W następnej sekcji znajdują się przykładowe polecenia.  
   
      Zestawy zoptymalizowane języka pośredniego (IL) są tworzone w folderze określonym przez `–OutDir` parametru (przykłady to `C:\Optimized` folder).  
   
-3.  Zamień zestawy IL używane dla Ngen.exe z nowymi zestawami IL, które zawierają informacje o profilu z katalogu określonego przez `–OutDir`.  
+3. Zamień zestawy IL używane dla Ngen.exe z nowymi zestawami IL, które zawierają informacje o profilu z katalogu określonego przez `–OutDir`.  
   
-4.  Instalator aplikacji (przy użyciu obrazów dostarczonych przez Mpgo.exe) zainstaluje zoptymalizowane obrazy natywne.  
+4. Instalator aplikacji (przy użyciu obrazów dostarczonych przez Mpgo.exe) zainstaluje zoptymalizowane obrazy natywne.  
   
 ## <a name="suggested-workflow"></a>Sugerowany przebieg pracy  
   
-1.  Utwórz zestaw zoptymalizowanych zestawów IL przy użyciu Mpgo.exe z `–Scenario` parametru.  
+1. Utwórz zestaw zoptymalizowanych zestawów IL przy użyciu Mpgo.exe z `–Scenario` parametru.  
   
-2.  Sprawdź zoptymalizowane zestawy IL w kontroli źródła.  
+2. Sprawdź zoptymalizowane zestawy IL w kontroli źródła.  
   
-3.  W procesie kompilacji Wywołaj Mpgo.exe z `–Import` parametru jako krok po kompilacji w celu wygenerowania zoptymalizowanych obrazów IL do przekazania do Ngen.exe.  
+3. W procesie kompilacji Wywołaj Mpgo.exe z `–Import` parametru jako krok po kompilacji w celu wygenerowania zoptymalizowanych obrazów IL do przekazania do Ngen.exe.  
   
  Ten proces daje pewność, że wszystkie zestawy posiadają dane optymalizacji. Jeśli ewidencjonujesz zaktualizowane zoptymalizowane zestawy (kroki 1 i 2) częściej, wydajności będą spójniejsze w całym procesie tworzenia produktu.  
   

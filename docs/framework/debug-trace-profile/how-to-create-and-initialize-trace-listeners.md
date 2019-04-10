@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222721"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321058"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenia
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> i <xref:System.Diagnostics.Trace?displayProperty=nameWithType> klasy wysyłania komunikatów do obiektów o nazwie obiektów nasłuchujących odbierać i przetwarzać te komunikaty. Jedno takie odbiornik <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, jest automatycznie tworzone i inicjowana, gdy włączone jest śledzenie lub debugowania. Jeśli chcesz <xref:System.Diagnostics.Trace> lub <xref:System.Diagnostics.Debug> dane wyjściowe były kierowane do żadnych dodatkowych źródeł, należy utworzyć i zainicjować odbiorniki śledzenia dodatkowe.  
@@ -29,7 +29,7 @@ ms.locfileid: "59222721"
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>Tworzenie i używanie odbiornika śledzenia przy użyciu pliku konfiguracji  
   
-1.  Zadeklaruj detektor śledzenia w pliku konfiguracyjnym aplikacji. Jeśli odbiornik, który tworzysz wymaga wszystkimi innymi obiektami, je zadeklarować także. Poniższy przykład pokazuje, jak utworzyć odbiornik o nazwie `myListener` zapisuje plik tekstowy `TextWriterOutput.log`.  
+1. Zadeklaruj detektor śledzenia w pliku konfiguracyjnym aplikacji. Jeśli odbiornik, który tworzysz wymaga wszystkimi innymi obiektami, je zadeklarować także. Poniższy przykład pokazuje, jak utworzyć odbiornik o nazwie `myListener` zapisuje plik tekstowy `TextWriterOutput.log`.  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "59222721"
     </configuration>  
     ```  
   
-2.  Użyj <xref:System.Diagnostics.Trace> klasy w kodzie, aby zapisać komunikat do odbiorników śledzenia.  
+2. Użyj <xref:System.Diagnostics.Trace> klasy w kodzie, aby zapisać komunikat do odbiorników śledzenia.  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

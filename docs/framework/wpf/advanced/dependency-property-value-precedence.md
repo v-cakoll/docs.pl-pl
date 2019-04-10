@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315689"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a> W tym temacie opisano sposób pracy z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system właściwości mogą mieć wpływ na wartość właściwości zależności i opisuje pierwszeństwa, które cechy właściwości systemu zastosowania do skutecznego wartości właściwości.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117763"
 ## <a name="dependency-property-setting-precedence-list"></a>Lista pierwszeństwo ustawienie właściwości zależności  
  Poniżej znajduje się ostateczny kolejności, używany w systemie właściwości do przypisywania wartości czasu wykonywania właściwości zależności. Najwyższy priorytet jest wymienione jako pierwsze. Ta lista rozszerza niektóre generalizacje wprowadzone w [Przegląd właściwości zależności](dependency-properties-overview.md).  
   
-1.  **Właściwość systemu wymuszenia.** Szczegółowe informacje na temat wymuszenia, [wymuszenia, animacji i wartość Base](#animations) w dalszej części tego tematu.  
+1. **Właściwość systemu wymuszenia.** Szczegółowe informacje na temat wymuszenia, [wymuszenia, animacji i wartość Base](#animations) w dalszej części tego tematu.  
   
-2.  **Aktywne animacji i animacji z zachowaniem wstrzymania.** Aby można było ma praktycznego wpływu, animacji właściwości musi można mają pierwszeństwo przed (unanimated) wartość bazową, nawet wtedy, gdy ta wartość została ustawiona lokalnie. Aby uzyskać więcej informacji, zobacz [wymuszenia, animacji i wartość Base](#animations) w dalszej części tego tematu.  
+2. **Aktywne animacji i animacji z zachowaniem wstrzymania.** Aby można było ma praktycznego wpływu, animacji właściwości musi można mają pierwszeństwo przed (unanimated) wartość bazową, nawet wtedy, gdy ta wartość została ustawiona lokalnie. Aby uzyskać więcej informacji, zobacz [wymuszenia, animacji i wartość Base](#animations) w dalszej części tego tematu.  
   
-3.  **Lokalna wartość.** Lokalna wartość może być ustawione za pośrednictwem wygody właściwości "otoki", co również ustawienie jako atrybut lub właściwość elementu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], lub przez wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] za pomocą właściwości określonego wystąpienia. Jeśli ustawisz wartość lokalnego przy użyciu powiązania lub zasobu, te każdego działania w pierwszeństwo tak, jakby bezpośrednich wartość została ustawiona.  
+3. **Lokalna wartość.** Lokalna wartość może być ustawione za pośrednictwem wygody właściwości "otoki", co również ustawienie jako atrybut lub właściwość elementu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], lub przez wywołanie <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] za pomocą właściwości określonego wystąpienia. Jeśli ustawisz wartość lokalnego przy użyciu powiązania lub zasobu, te każdego działania w pierwszeństwo tak, jakby bezpośrednich wartość została ustawiona.  
   
-4.  **Właściwości szablonu TemplatedParent.** Element ma <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Jeśli został utworzony jako część szablonu ( <xref:System.Windows.Controls.ControlTemplate> lub <xref:System.Windows.DataTemplate>). Szczegółowe informacje na temat gdy ma to zastosowanie, [TemplatedParent](#templatedparent) w dalszej części tego tematu. W szablonie dotyczy następującej kolejności:  
+4. **Właściwości szablonu TemplatedParent.** Element ma <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Jeśli został utworzony jako część szablonu ( <xref:System.Windows.Controls.ControlTemplate> lub <xref:System.Windows.DataTemplate>). Szczegółowe informacje na temat gdy ma to zastosowanie, [TemplatedParent](#templatedparent) w dalszej części tego tematu. W szablonie dotyczy następującej kolejności:  
   
     1.  Wyzwalacze — od <xref:System.Windows.FrameworkElement.TemplatedParent%2A> szablonu.  
   
     2.  Zestawy właściwości (zwykle za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutów) w <xref:System.Windows.FrameworkElement.TemplatedParent%2A> szablonu.  
   
-5.  **Styl niejawny.** Ma zastosowanie tylko do `Style` właściwości. `Style` Właściwość jest wypełniana przez dowolny zasób stylu z kluczem, który jest zgodny z typem elementu. Że zasobu stylu muszą istnieć w stronę lub aplikacji; Wyszukiwanie zasób stylu niejawnego niemożliwa do tematów.  
+5. **Styl niejawny.** Ma zastosowanie tylko do `Style` właściwości. `Style` Właściwość jest wypełniana przez dowolny zasób stylu z kluczem, który jest zgodny z typem elementu. Że zasobu stylu muszą istnieć w stronę lub aplikacji; Wyszukiwanie zasób stylu niejawnego niemożliwa do tematów.  
   
-6.  **Wyzwalacze w stylu.** Wyzwalacze w ramach stylów ze strony lub aplikacji (te style może być jawne lub niejawne stylów, ale nie z domyślnych stylów, które mają niższy priorytet).  
+6. **Wyzwalacze w stylu.** Wyzwalacze w ramach stylów ze strony lub aplikacji (te style może być jawne lub niejawne stylów, ale nie z domyślnych stylów, które mają niższy priorytet).  
   
-7.  **Wyzwalaczy szablonu.** Dowolny wyzwalającej wydanie na podstawie szablonu w ramach stylu lub bezpośrednio zastosowany szablon.  
+7. **Wyzwalaczy szablonu.** Dowolny wyzwalającej wydanie na podstawie szablonu w ramach stylu lub bezpośrednio zastosowany szablon.  
   
-8.  **Styl metod ustawiających.** Wartości z kolekcji <xref:System.Windows.Setter> w ramach stylów ze strony lub aplikacji.  
+8. **Styl metod ustawiających.** Wartości z kolekcji <xref:System.Windows.Setter> w ramach stylów ze strony lub aplikacji.  
   
 9. **Styl domyślny (motyw).** Szczegółowe informacje na temat gdy ma to zastosowanie, a jak style motyw odnoszą się do szablonów w ramach stylów motywu, [domyślnych (motyw) stylów](#themestyles) w dalszej części tego tematu. W ramach domyślnego stylu mają zastosowanie następujące kolejność według priorytetu:  
   

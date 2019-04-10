@@ -10,12 +10,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: d10616e2f09eabec1209a26aabe501ea0af903cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189654"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321084"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Instrukcje: dzielenie okna w poziomie
 Poniższy przykład kodu tworzy podziału, która dzieli <xref:System.Windows.Forms.SplitContainer> kontrolki w poziomie.  
@@ -25,7 +25,7 @@ Poniższy przykład kodu tworzy podziału, która dzieli <xref:System.Windows.Fo
   
 ### <a name="to-split-a-window-horizontally"></a>Aby Dzielenie okna w poziomie  
   
-1.  W ramach procedury, należy ustawić <xref:System.Windows.Forms.SplitContainer.Orientation%2A> właściwość <xref:System.Windows.Forms.SplitContainer> kontrolę <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1. W ramach procedury, należy ustawić <xref:System.Windows.Forms.SplitContainer.Orientation%2A> właściwość <xref:System.Windows.Forms.SplitContainer> kontrolę <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
     ```vb  
     Sub ShowSplitContainer()  

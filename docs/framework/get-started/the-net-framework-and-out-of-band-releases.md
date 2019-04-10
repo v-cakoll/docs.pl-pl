@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330447"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>Program .NET Framework i wydania poza harmonogramem (OOB)
 
@@ -23,26 +23,26 @@ Program .NET Framework jest rozwijany, tak aby działał na nowych platformach, 
 ## <a name="how-oob-packages-are-distributed"></a>Dystrybucja pakietów OOB
 Wydania OOB dla podstawowych składników środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego są dostarczane za pośrednictwem [NuGet](https://www.nuget.org/), czyli Menedżer pakietów dla platformy .NET. Program NuGet umożliwia łatwe przeglądanie i dodawanie bibliotek do projektów programu .NET Framework z poziomu Eksploratora rozwiązań w programie Visual Studio. Program NuGet jest dołączany do wszystkich wersji programu Visual Studio, począwszy od programu Visual Studio 2012. Aby sprawdzić, czy zainstalowano program NuGet, wyszukaj **Menedżera pakietów NuGet** w programie Visual Studio **narzędzia** menu. Jeśli nie jest zainstalowany:
 
-1.  Na pasku menu programu Visual Studio, wybierz **narzędzia**, **rozszerzenia i aktualizacje** (w programie Visual Studio 2010, wybrać **Menedżera rozszerzeń**).
+1. Na pasku menu programu Visual Studio, wybierz **narzędzia**, **rozszerzenia i aktualizacje** (w programie Visual Studio 2010, wybrać **Menedżera rozszerzeń**).
 
      **Rozszerzenia i aktualizacje** zostanie otwarte okno dialogowe.
 
-2.  Wybierz **Online**, **Menedżera pakietów NuGet**, a następnie wybierz **Pobierz**.
+2. Wybierz **Online**, **Menedżera pakietów NuGet**, a następnie wybierz **Pobierz**.
 
-3.  Po zakończeniu pobierania ponownie uruchom program Visual Studio.
+3. Po zakończeniu pobierania ponownie uruchom program Visual Studio.
 
  Aby uzyskać szczegółowe instrukcje dotyczące instalacji, zobacz [Instalowanie systemu NuGet](/nuget/install-nuget-client-tools) w internetowej dokumentacji systemu NuGet. Aby uzyskać więcej informacji na temat programu NuGet, zobacz [dokumentacja programu NuGet](/nuget).
 
 ## <a name="using-a-nuget-oob-package"></a>Używanie pakietu NuGet OOB
  Po zainstalowaniu programu NuGet można wyszukiwać i dodawać odwołania do pakietów programu NuGet, używając Eksploratora rozwiązań w programie Visual Studio:
 
-1.  Otwórz menu skrótów dla projektu w programie Visual Studio, a następnie wybierz **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna z **projektu** menu.)
+1. Otwórz menu skrótów dla projektu w programie Visual Studio, a następnie wybierz **Zarządzaj pakietami NuGet**. (Ta opcja jest również dostępna z **projektu** menu.)
 
-2.  W okienku po lewej stronie wybierz **Online**.
+2. W okienku po lewej stronie wybierz **Online**.
 
-3.  Jeśli chcesz używać pakietów wydań wstępnych, w polu listy rozwijanej w środkowym okienku wybierz **Uwzględnij wydania wstępne** zamiast **tylko stabilne**.
+3. Jeśli chcesz używać pakietów wydań wstępnych, w polu listy rozwijanej w środkowym okienku wybierz **Uwzględnij wydania wstępne** zamiast **tylko stabilne**.
 
-4.  W okienku po prawej stronie użyj **wyszukiwania** pole, aby zlokalizować pakiet, który chcesz użyć. Niektóre pakiety firmy Microsoft są oznaczone za pomocą logo programu Microsoft .NET Framework, a wszystkie określają firmę Microsoft jako wydawcę.
+4. W okienku po prawej stronie użyj **wyszukiwania** pole, aby zlokalizować pakiet, który chcesz użyć. Niektóre pakiety firmy Microsoft są oznaczone za pomocą logo programu Microsoft .NET Framework, a wszystkie określają firmę Microsoft jako wydawcę.
 
  ![Zrzut ekranu pokazujący Menedżera pakietów NuGet.](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 

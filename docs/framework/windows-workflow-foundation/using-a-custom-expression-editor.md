@@ -2,12 +2,12 @@
 title: Używanie edytora wyrażeń niestandardowych
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101279"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314090"
 ---
 # <a name="using-a-custom-expression-editor"></a>Używanie edytora wyrażeń niestandardowych
 Podaj wyrażenie bogatsze lub prostsze środowisko edytowania plików mogą zostać wdrożone edytora wyrażeń niestandardowych. Istnieje kilka scenariuszy, w których możesz chcieć użyć edytora wyrażeń niestandardowych:  
@@ -18,11 +18,11 @@ Podaj wyrażenie bogatsze lub prostsze środowisko edytowania plików mogą zost
   
  Trzy podstawowe kroki są niezbędne do zaimplementowania edytora wyrażeń niestandardowych:  
   
-1.  Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu. Ten interfejs zarządza tworzeniem i niszczeniem edytory wyrażenia.  
+1. Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu. Ten interfejs zarządza tworzeniem i niszczeniem edytory wyrażenia.  
   
-2.  Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interfejsu. Ten interfejs implementuje interfejs użytkownika dla wyrażenia edytowania interfejsu użytkownika.  
+2. Implementowanie <xref:System.Activities.Presentation.View.IExpressionEditorInstance> interfejsu. Ten interfejs implementuje interfejs użytkownika dla wyrażenia edytowania interfejsu użytkownika.  
   
-3.  Publikowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> w rehostowanym przepływu pracy aplikacji.  
+3. Publikowanie <xref:System.Activities.Presentation.View.IExpressionEditorService> w rehostowanym przepływu pracy aplikacji.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementowanie edytora wyrażeń niestandardowych w bibliotece klas  
  Poniżej znajduje się przykładowy kod (weryfikacja koncepcji) `MyEditorService` klasę, która implementuje <xref:System.Activities.Presentation.View.IExpressionEditorService> interfejsu jest zawarty w projekcie biblioteki MyExpressionEditorService.  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332329"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Przewodnik: Wywoływanie Windows API (Visual Basic)
 Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są częścią systemu operacyjnego Windows. Użyj ich do wykonywania zadań, gdy jest trudne do pisania procedur równoważne własne. Na przykład Windows zapewnia funkcję o nazwie `FlashWindowEx` gwarantowaną na pasku tytułu aplikacji alternatywne między poszczególnymi jasny i ciemny.  
@@ -34,16 +34,16 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
   
 #### <a name="to-declare-a-dll-procedure"></a>Aby zadeklarować procedury biblioteki DLL  
   
-1.  Określić nazwę funkcji, której chcesz się połączyć, oraz jego argumentów, typy argumentów i zwracać wartości, a także nazwę i lokalizację biblioteki DLL, która go zawiera.  
+1. Określić nazwę funkcji, której chcesz się połączyć, oraz jego argumentów, typy argumentów i zwracać wartości, a także nazwę i lokalizację biblioteki DLL, która go zawiera.  
   
     > [!NOTE]
     >  Aby uzyskać pełne informacje o interfejsach API Windows zobacz dokumentację zestawu SDK systemu Win32 w interfejsie API Windows SDK platformy. Aby uzyskać więcej informacji na temat stałe, które używają interfejsów API Windows Sprawdź pliki nagłówkowe, takie jak Windows.h dołączone do zestawu SDK platformy.  
   
-2.  Otwórz nowy projekt aplikacji Windows, klikając **New** na **pliku** menu, a następnie klikając polecenie **projektu**. **Nowy projekt** pojawi się okno dialogowe.  
+2. Otwórz nowy projekt aplikacji Windows, klikając **New** na **pliku** menu, a następnie klikając polecenie **projektu**. **Nowy projekt** pojawi się okno dialogowe.  
   
-3.  Wybierz **aplikacji Windows** z listy szablonów projektu języka Visual Basic. Zostanie wyświetlony nowy projekt.  
+3. Wybierz **aplikacji Windows** z listy szablonów projektu języka Visual Basic. Zostanie wyświetlony nowy projekt.  
   
-4.  Dodaj następujący kod `Declare` funkcję na klasę lub moduł, w której chcesz użyć biblioteki DLL:  
+4. Dodaj następujący kod `Declare` funkcję na klasę lub moduł, w której chcesz użyć biblioteki DLL:  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
@@ -71,38 +71,38 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
   
 ###### <a name="to-declare-constants-for-windows-api-calls"></a>Aby zadeklarować stałe dla wywołań interfejsu API Windows  
   
-1.  Zajrzyj do dokumentacji dla funkcji Windows, którą wywołujesz. Określ nazwę stałe, które są używane i nazwę pliku .h, zawierająca wartości liczbowe dla tych stałych.  
+1. Zajrzyj do dokumentacji dla funkcji Windows, którą wywołujesz. Określ nazwę stałe, które są używane i nazwę pliku .h, zawierająca wartości liczbowe dla tych stałych.  
   
-2.  Użyj edytora tekstu, takiego jak Notatnik, aby wyświetlić zawartość pliku nagłówka (.h) i Znajdź wartości skojarzone z stałe, którego używasz. Na przykład `MessageBox` interfejsu API używa stałej `MB_ICONQUESTION` do wyświetlenia znaku zapytania w oknie komunikatu. Definicja `MB_ICONQUESTION` jest WinUser.h i wygląda następująco:  
+2. Użyj edytora tekstu, takiego jak Notatnik, aby wyświetlić zawartość pliku nagłówka (.h) i Znajdź wartości skojarzone z stałe, którego używasz. Na przykład `MessageBox` interfejsu API używa stałej `MB_ICONQUESTION` do wyświetlenia znaku zapytania w oknie komunikatu. Definicja `MB_ICONQUESTION` jest WinUser.h i wygląda następująco:  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  Dodaj odpowiednik `Const` instrukcji do klasy lub modułu, aby udostępnić te stałe do aplikacji. Na przykład:  
+3. Dodaj odpowiednik `Const` instrukcji do klasy lub modułu, aby udostępnić te stałe do aplikacji. Na przykład:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>Aby wywołać procedurę biblioteki DLL  
   
-1.  Dodaj przycisk o nazwie `Button1` do uruchamiania formularza do projektu, a następnie go dwukrotnie, aby wyświetlić jej kod. Program obsługi zdarzeń dla przycisku zostanie wyświetlona.  
+1. Dodaj przycisk o nazwie `Button1` do uruchamiania formularza do projektu, a następnie go dwukrotnie, aby wyświetlić jej kod. Program obsługi zdarzeń dla przycisku zostanie wyświetlona.  
   
-2.  Dodaj kod, aby `Click` programu obsługi zdarzeń dla przycisku został dodany, aby wywołać procedurę i podaj odpowiednie argumenty:  
+2. Dodaj kod, aby `Click` programu obsługi zdarzeń dla przycisku został dodany, aby wywołać procedurę i podaj odpowiednie argumenty:  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3.  Uruchom projekt, naciskając klawisz F5. Zostanie wyświetlone okno komunikatu, zarówno **tak** i **nie** przyciski odpowiedzi. Kliknij jeden.  
+3. Uruchom projekt, naciskając klawisz F5. Zostanie wyświetlone okno komunikatu, zarówno **tak** i **nie** przyciski odpowiedzi. Kliknij jeden.  
   
 #### <a name="data-marshaling"></a>Marshaling danych  
  Visual Basic automatycznie konwertuje typów danych parametrów i wartości zwracane dla wywołań interfejsu API Windows, ale można użyć `MarshalAs` atrybutu, aby jawnie określić typy niezarządzanych danych, których oczekuje interfejs API. Aby uzyskać więcej informacji na temat marshaling międzyoperacyjny zobacz [Marshaling międzyoperacyjności](../../../framework/interop/interop-marshaling.md).  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Aby użyć Declare i MarshalAs w wywołaniu interfejsu API  
   
-1.  Określ nazwę funkcji, którą chcesz wywołać oraz jej argumenty typów danych i zwracają wartość.  
+1. Określ nazwę funkcji, którą chcesz wywołać oraz jej argumenty typów danych i zwracają wartość.  
   
-2.  Aby uprościć dostęp do `MarshalAs` atrybutu, należy dodać `Imports` instrukcji na górze kod klasę lub moduł, tak jak w poniższym przykładzie:  
+2. Aby uprościć dostęp do `MarshalAs` atrybutu, należy dodać `Imports` instrukcji na górze kod klasę lub moduł, tak jak w poniższym przykładzie:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3.  Dodaj prototypu funkcji dla importowanych funkcji w klasie lub modułu, a zastosowanie `MarshalAs` atrybutu do parametrów lub wartości zwracanej. W poniższym przykładzie wywołanie interfejsu API, która oczekuje typu `void*` jest organizowana jako `AsAny`:  
+3. Dodaj prototypu funkcji dla importowanych funkcji w klasie lub modułu, a zastosowanie `MarshalAs` atrybutu do parametrów lub wartości zwracanej. W poniższym przykładzie wywołanie interfejsu API, która oczekuje typu `void*` jest organizowana jako `AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
@@ -113,27 +113,27 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Aby wywołać interfejs API Windows za pomocą atrybutu DllImport  
   
-1.  Otwórz nowy projekt aplikacji Windows, klikając **New** na **pliku** menu, a następnie klikając polecenie **projektu**. **Nowy projekt** pojawi się okno dialogowe.  
+1. Otwórz nowy projekt aplikacji Windows, klikając **New** na **pliku** menu, a następnie klikając polecenie **projektu**. **Nowy projekt** pojawi się okno dialogowe.  
   
-2.  Wybierz **aplikacji Windows** z listy szablonów projektu języka Visual Basic. Zostanie wyświetlony nowy projekt.  
+2. Wybierz **aplikacji Windows** z listy szablonów projektu języka Visual Basic. Zostanie wyświetlony nowy projekt.  
   
-3.  Dodaj przycisk o nazwie `Button2` do formy uruchamiania.  
+3. Dodaj przycisk o nazwie `Button2` do formy uruchamiania.  
   
-4.  Kliknij dwukrotnie `Button2` otwarcie widoku kodu formularza.  
+4. Kliknij dwukrotnie `Button2` otwarcie widoku kodu formularza.  
   
-5.  Aby uprościć dostęp do `DllImport`, Dodaj `Imports` instrukcji na górze kod startowy klasy formularza:  
+5. Aby uprościć dostęp do `DllImport`, Dodaj `Imports` instrukcji na górze kod startowy klasy formularza:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6.  Deklarowanie funkcji empty poprzedniego `End Class` instrukcji formularza i nazwy funkcji `MoveFile`.  
+6. Deklarowanie funkcji empty poprzedniego `End Class` instrukcji formularza i nazwy funkcji `MoveFile`.  
   
-7.  Zastosuj `Public` i `Shared` Modyfikatory do deklaracji funkcji i ustawianie parametrów `MoveFile` na podstawie argumentów korzysta z funkcji Windows API:  
+7. Zastosuj `Public` i `Shared` Modyfikatory do deklaracji funkcji i ustawianie parametrów `MoveFile` na podstawie argumentów korzysta z funkcji Windows API:  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      Funkcja może mieć dowolną nazwę procedury prawidłowe; `DllImport` atrybut określa nazwę w bibliotece DLL. Umożliwia on również obsługę współdziałanie marshaling dla parametrów i wartości zwracane, więc możesz wybrać typy danych Visual Studio, które są podobne do danych typy używa interfejsu API.  
   
-8.  Zastosuj `DllImport` atrybutu do funkcji empty. Pierwszy parametr jest nazwę i lokalizację pliku DLL zawierającego funkcję, którą wywołujesz. Nie ma potrzeby określ ścieżkę do plików znajdujących się w katalogach systemu Windows. Drugi parametr jest nazwany argument, który określa nazwę funkcji w interfejsie API Windows. W tym przykładzie `DllImport` atrybut wymusza wywołania `MoveFile` były przekazywane do `MoveFileW` w KERNEL32. BIBLIOTEKI DLL. `MoveFileW` Metoda służy do kopiowania pliku ze ścieżki `src` do ścieżki `dst`.  
+8. Zastosuj `DllImport` atrybutu do funkcji empty. Pierwszy parametr jest nazwę i lokalizację pliku DLL zawierającego funkcję, którą wywołujesz. Nie ma potrzeby określ ścieżkę do plików znajdujących się w katalogach systemu Windows. Drugi parametr jest nazwany argument, który określa nazwę funkcji w interfejsie API Windows. W tym przykładzie `DllImport` atrybut wymusza wywołania `MoveFile` były przekazywane do `MoveFileW` w KERNEL32. BIBLIOTEKI DLL. `MoveFileW` Metoda służy do kopiowania pliku ze ścieżki `src` do ścieżki `dst`.  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
@@ -151,9 +151,9 @@ Interfejsy API Windows są bibliotek dołączanych dynamicznie (dll), które są
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare — Instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
-- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tworzenie prototypów w kodzie zarządzanym](../../../framework/interop/creating-prototypes-in-managed-code.md)
 - [Marshaling delegata jako metoda wywołania zwrotnego](../../../framework/interop/marshaling-a-delegate-as-a-callback-method.md)

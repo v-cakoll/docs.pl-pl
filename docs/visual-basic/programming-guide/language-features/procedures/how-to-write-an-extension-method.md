@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313765"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Instrukcje: Zapisywanie metody rozszerzenia (Visual Basic)
 Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy. Metoda rozszerzenia może być wywoływana, jakby była wystąpieniem tej klasy.  
   
 ### <a name="to-define-an-extension-method"></a>Aby zdefiniować metodę rozszerzenia  
   
-1.  Otwieranie nowej lub istniejącej aplikacji języka Visual Basic w programie Visual Studio.  
+1. Otwieranie nowej lub istniejącej aplikacji języka Visual Basic w programie Visual Studio.  
   
-2.  W górnej części pliku, w której chcesz zdefiniować metodę rozszerzenia obejmują następującą instrukcję import:  
+2. W górnej części pliku, w której chcesz zdefiniować metodę rozszerzenia obejmują następującą instrukcję import:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  W module w nowej lub istniejącej aplikacji Rozpocznij definicję metody z atrybutem rozszerzenia:  
+3. W module w nowej lub istniejącej aplikacji Rozpocznij definicję metody z atrybutem rozszerzenia:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Zadeklaruj metodę w zwykły sposób, z tą różnicą, że typ pierwszego parametru musi być typu danych, które chcesz rozszerzyć.  
+4. Zadeklaruj metodę w zwykły sposób, z tą różnicą, że typ pierwszego parametru musi być typu danych, które chcesz rozszerzyć.  
   
     ```  
     <Extension()>   
@@ -85,6 +85,6 @@ End Module
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Metody rozszerzeń](./extension-methods.md)
-- [Instrukcja Module](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Module — Instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

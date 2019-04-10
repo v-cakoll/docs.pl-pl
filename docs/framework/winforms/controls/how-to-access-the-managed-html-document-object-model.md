@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315195"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodzajów aplikacji:  
@@ -24,26 +24,26 @@ Dostęp z zarządzanego HTML Document Object Model (DOM), spośród dwóch rodza
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Aby uzyskać dostęp do modelu DOM z aplikacji Windows Forms  
   
-1.  Host <xref:System.Windows.Forms.WebBrowser> kontrolki w aplikacji Windows Forms i Monitoruj <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Szczegółowe informacje na temat kontrolki hostingu i monitorowania zdarzeń, [zdarzenia](../../../standard/events/index.md).  
+1. Host <xref:System.Windows.Forms.WebBrowser> kontrolki w aplikacji Windows Forms i Monitoruj <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. Szczegółowe informacje na temat kontrolki hostingu i monitorowania zdarzeń, [zdarzenia](../../../standard/events/index.md).  
   
-2.  Pobieranie <xref:System.Windows.Forms.HtmlDocument> dla bieżącej strony, uzyskując dostęp do <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwość <xref:System.Windows.Forms.WebBrowser> kontroli.  
+2. Pobieranie <xref:System.Windows.Forms.HtmlDocument> dla bieżącej strony, uzyskując dostęp do <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwość <xref:System.Windows.Forms.WebBrowser> kontroli.  
 
 ### <a name="to-access-dom-from-a-usercontrol-hosted-in-internet-explorer"></a>Dostęp do modelu DOM z elementu UserControl hostowanych w programie Internet Explorer  
   
-1.  Utwórz własne niestandardowe klasy pochodnej <xref:System.Windows.Forms.UserControl> klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolek złożonych](how-to-author-composite-controls.md).  
+1. Utwórz własne niestandardowe klasy pochodnej <xref:System.Windows.Forms.UserControl> klasy. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie kontrolek złożonych](how-to-author-composite-controls.md).  
   
-2.  Umieść następujący kod wewnątrz procedury obsługi zdarzenia obciążenia dla swojej <xref:System.Windows.Forms.UserControl>:  
+2. Umieść następujący kod wewnątrz procedury obsługi zdarzenia obciążenia dla swojej <xref:System.Windows.Forms.UserControl>:  
   
  [!code-csharp[AccessHTMLDOMControl#1](~/samples/snippets/csharp/VS_Snippets_Winforms/AccessHTMLDOMControl/cs/UserControl1.cs#1)]
  [!code-vb[AccessHTMLDOMControl#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/AccessHTMLDOMControl/vb/UserControl1.vb#1)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   
-1.  Podczas korzystania z modelu DOM przy użyciu <xref:System.Windows.Forms.WebBrowser> kontrolki, należy zawsze poczekać aż <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> wystąpi zdarzenie przed podjęciem próby uzyskania dostępu <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwość <xref:System.Windows.Forms.WebBrowser> kontroli. <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Zdarzenie jest wywoływane po załadowaniu całego dokumentu; Jeśli używasz modelu DOM przed tym dniem, istnieje ryzyko powoduje wyjątek czasu wykonywania w aplikacji.  
+1. Podczas korzystania z modelu DOM przy użyciu <xref:System.Windows.Forms.WebBrowser> kontrolki, należy zawsze poczekać aż <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> wystąpi zdarzenie przed podjęciem próby uzyskania dostępu <xref:System.Windows.Forms.WebBrowser.Document%2A> właściwość <xref:System.Windows.Forms.WebBrowser> kontroli. <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Zdarzenie jest wywoływane po załadowaniu całego dokumentu; Jeśli używasz modelu DOM przed tym dniem, istnieje ryzyko powoduje wyjątek czasu wykonywania w aplikacji.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
   
-1.  Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagać pełnego zaufania w celu uzyskania dostępu do zarządzanego kodu HTML DOM. Jeżeli wdrażasz aplikacji Windows Forms przy użyciu [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], możesz poprosić o pełnym zaufaniu przy użyciu zaufanego wdrożenia aplikacji lub podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) Aby uzyskać szczegółowe informacje.  
+1. Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagać pełnego zaufania w celu uzyskania dostępu do zarządzanego kodu HTML DOM. Jeżeli wdrażasz aplikacji Windows Forms przy użyciu [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], możesz poprosić o pełnym zaufaniu przy użyciu zaufanego wdrożenia aplikacji lub podnoszenia poziomu uprawnień, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) Aby uzyskać szczegółowe informacje.  
   
 ## <a name="see-also"></a>Zobacz także
 

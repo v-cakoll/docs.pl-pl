@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315351"
 ---
 # <a name="data-contract-surrogates"></a>Surogaty kontraktu danych
 Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawie modelu kontraktu danych. Ta funkcja jest przeznaczony do zastosowania w przypadku dostosowywania typu i podstawienia w sytuacjach, w którym użytkownicy chcą zmienić, jak typ jest serializowana, zdeserializowany lub przewidywanych do metadanych. Sytuacje, gdzie mogą być używane zastępczy jest, gdy kontrakt danych nie została określona dla typu, pola i właściwości nie są oznaczone za pomocą <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu lub użytkownicy chcą dynamiczne tworzenie odmiany schematu.  
@@ -141,15 +141,15 @@ Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawi
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>Aby zaimplementować serializacji i deserializacji  
   
-1.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.ServiceHost> dla Twojej usługi. Aby uzyskać pełne instrukcje, zobacz [programowanie WCF Basic](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Utwórz wystąpienie obiektu <xref:System.ServiceModel.ServiceHost> dla Twojej usługi. Aby uzyskać pełne instrukcje, zobacz [programowanie WCF Basic](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-2.  Dla każdego <xref:System.ServiceModel.Description.ServiceEndpoint> hosta określonej usługi, Znajdź jego <xref:System.ServiceModel.Description.OperationDescription>.  
+2. Dla każdego <xref:System.ServiceModel.Description.ServiceEndpoint> hosta określonej usługi, Znajdź jego <xref:System.ServiceModel.Description.OperationDescription>.  
   
-3.  Przeszukaj zachowania operację, aby określić, czy wystąpienie <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> zostanie znaleziony.  
+3. Przeszukaj zachowania operację, aby określić, czy wystąpienie <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> zostanie znaleziony.  
   
-4.  Jeśli <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> jest znaleziono, ustaw jego <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> właściwość nowe wystąpienie klasy zastępcze. Jeśli nie <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> jest znaleźć, a następnie utwórz nowe wystąpienie i ustawić <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> członkiem nowe zachowanie do nowego wystąpienia surogatu.  
+4. Jeśli <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> jest znaleziono, ustaw jego <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> właściwość nowe wystąpienie klasy zastępcze. Jeśli nie <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> jest znaleźć, a następnie utwórz nowe wystąpienie i ustawić <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> członkiem nowe zachowanie do nowego wystąpienia surogatu.  
   
-5.  Na koniec Dodaj to nowe zachowanie do zachowania bieżącej operacji, jak pokazano w poniższym przykładzie:  
+5. Na koniec Dodaj to nowe zachowanie do zachowania bieżącej operacji, jak pokazano w poniższym przykładzie:  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawi
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>Aby zaimplementować surogatu Importowanie metadanych  
   
-1.  Importowanie przy użyciu metadanych <xref:System.ServiceModel.Description.WsdlImporter> klasy.  
+1. Importowanie przy użyciu metadanych <xref:System.ServiceModel.Description.WsdlImporter> klasy.  
   
-2.  Użyj <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metodę sprawdzania, czy <xref:System.Runtime.Serialization.XsdDataContractImporter> został zdefiniowany.  
+2. Użyj <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metodę sprawdzania, czy <xref:System.Runtime.Serialization.XsdDataContractImporter> został zdefiniowany.  
   
-3.  Jeśli <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metoda zwraca `false`, Utwórz nową <xref:System.Runtime.Serialization.XsdDataContractImporter> i ustaw jego <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> właściwość nowe wystąpienie klasy <xref:System.Runtime.Serialization.ImportOptions> klasy. W przeciwnym razie użyj importera zwrócony przez `out` parametru <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metody.  
+3. Jeśli <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metoda zwraca `false`, Utwórz nową <xref:System.Runtime.Serialization.XsdDataContractImporter> i ustaw jego <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> właściwość nowe wystąpienie klasy <xref:System.Runtime.Serialization.ImportOptions> klasy. W przeciwnym razie użyj importera zwrócony przez `out` parametru <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metody.  
   
-4.  Jeśli <xref:System.Runtime.Serialization.XsdDataContractImporter> nie ma przypisanego <xref:System.Runtime.Serialization.ImportOptions> zdefiniowane, a następnie ustaw właściwość jako nowe wystąpienie klasy <xref:System.Runtime.Serialization.ImportOptions> klasy.  
+4. Jeśli <xref:System.Runtime.Serialization.XsdDataContractImporter> nie ma przypisanego <xref:System.Runtime.Serialization.ImportOptions> zdefiniowane, a następnie ustaw właściwość jako nowe wystąpienie klasy <xref:System.Runtime.Serialization.ImportOptions> klasy.  
   
-5.  Ustaw <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> właściwość <xref:System.Runtime.Serialization.ImportOptions> z <xref:System.Runtime.Serialization.XsdDataContractImporter> do nowego wystąpienia surogatu.  
+5. Ustaw <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> właściwość <xref:System.Runtime.Serialization.ImportOptions> z <xref:System.Runtime.Serialization.XsdDataContractImporter> do nowego wystąpienia surogatu.  
   
-6.  Dodaj <xref:System.Runtime.Serialization.XsdDataContractImporter> do kolekcji zwróconej przez <xref:System.ServiceModel.Description.MetadataExporter.State%2A> właściwość <xref:System.ServiceModel.Description.WsdlImporter> (odziedziczone <xref:System.ServiceModel.Description.MetadataExporter> klasy.)  
+6. Dodaj <xref:System.Runtime.Serialization.XsdDataContractImporter> do kolekcji zwróconej przez <xref:System.ServiceModel.Description.MetadataExporter.State%2A> właściwość <xref:System.ServiceModel.Description.WsdlImporter> (odziedziczone <xref:System.ServiceModel.Description.MetadataExporter> klasy.)  
   
-7.  Użyj <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> metody <xref:System.ServiceModel.Description.WsdlImporter> Aby zaimportować wszystkie kontrakty danych w schemacie. Podczas ostatniego kroku generowania kodu ze schematów załadowany przez wywołanie surogatu.  
+7. Użyj <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> metody <xref:System.ServiceModel.Description.WsdlImporter> Aby zaimportować wszystkie kontrakty danych w schemacie. Podczas ostatniego kroku generowania kodu ze schematów załadowany przez wywołanie surogatu.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ Kontrakt danych *zastępczy* jest funkcją zaawansowaną utworzonych na podstawi
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>Zastępczy na potrzeby eksportowania metadanych  
   
-1.  Utwórz nową <xref:System.ServiceModel.Description.WsdlExporter> lub użyj `wsdlExporter` parametr przekazany do <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> metody.  
+1. Utwórz nową <xref:System.ServiceModel.Description.WsdlExporter> lub użyj `wsdlExporter` parametr przekazany do <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> metody.  
   
-2.  Użyj <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> funkcji, aby sprawdzić, czy <xref:System.Runtime.Serialization.XsdDataContractExporter> został zdefiniowany.  
+2. Użyj <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> funkcji, aby sprawdzić, czy <xref:System.Runtime.Serialization.XsdDataContractExporter> został zdefiniowany.  
   
-3.  Jeśli <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> zwraca `false`, Utwórz nową <xref:System.Runtime.Serialization.XsdDataContractExporter> za pomocą wygenerowanego schematów XML z <xref:System.ServiceModel.Description.WsdlExporter>i dodaj go do kolekcji zwróconej przez <xref:System.ServiceModel.Description.MetadataExporter.State%2A> właściwość <xref:System.ServiceModel.Description.WsdlExporter>. W przeciwnym razie użyj eksportera, zwrócone przez `out` parametru <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metody.  
+3. Jeśli <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> zwraca `false`, Utwórz nową <xref:System.Runtime.Serialization.XsdDataContractExporter> za pomocą wygenerowanego schematów XML z <xref:System.ServiceModel.Description.WsdlExporter>i dodaj go do kolekcji zwróconej przez <xref:System.ServiceModel.Description.MetadataExporter.State%2A> właściwość <xref:System.ServiceModel.Description.WsdlExporter>. W przeciwnym razie użyj eksportera, zwrócone przez `out` parametru <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> metody.  
   
-4.  Jeśli <xref:System.Runtime.Serialization.XsdDataContractExporter> nie ma przypisanego <xref:System.Runtime.Serialization.ExportOptions> zdefiniowane, a następnie ustaw <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> właściwość nowe wystąpienie klasy <xref:System.Runtime.Serialization.ExportOptions> klasy.  
+4. Jeśli <xref:System.Runtime.Serialization.XsdDataContractExporter> nie ma przypisanego <xref:System.Runtime.Serialization.ExportOptions> zdefiniowane, a następnie ustaw <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> właściwość nowe wystąpienie klasy <xref:System.Runtime.Serialization.ExportOptions> klasy.  
   
-5.  Ustaw <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> właściwość <xref:System.Runtime.Serialization.ExportOptions> z <xref:System.Runtime.Serialization.XsdDataContractExporter> do nowego wystąpienia surogatu. Kolejnych kroków eksportowania metadanych nie wymagają zmiany.  
+5. Ustaw <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> właściwość <xref:System.Runtime.Serialization.ExportOptions> z <xref:System.Runtime.Serialization.XsdDataContractExporter> do nowego wystąpienia surogatu. Kolejnych kroków eksportowania metadanych nie wymagają zmiany.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

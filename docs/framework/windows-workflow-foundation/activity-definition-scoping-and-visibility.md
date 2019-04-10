@@ -1,20 +1,20 @@
 ---
-title: Działanie definicji zakresu i widoczność
+title: Wyznaczanie zakresu i widoczność definicji działania
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723845"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325218"
 ---
-# <a name="activity-definition-scoping-and-visibility"></a>Działanie definicji zakresu i widoczność
+# <a name="activity-definition-scoping-and-visibility"></a>Wyznaczanie zakresu i widoczność definicji działania
 Działanie definicji zakresu i widoczność, podobnie jak wyznaczanie zakresu i widoczność obiektu, jest możliwość dostęp do elementów członkowskich działanie innych obiektów lub działań. Definicja działanie odbywa się przez następujące implementacje:  
   
-1.  Określanie elementów członkowskich (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, i <xref:System.Activities.ActivityDelegate> obiektów i działania podrzędne) udostępnia działanie w swoim użytkownikom.  
+1. Określanie elementów członkowskich (<xref:System.Activities.Argument>, <xref:System.Activities.Variable>, i <xref:System.Activities.ActivityDelegate> obiektów i działania podrzędne) udostępnia działanie w swoim użytkownikom.  
   
-2.  Implementowanie logiki wykonywania działania  
+2. Implementowanie logiki wykonywania działania  
   
  Implementacja może obejmować elementy członkowskie, które nie są widoczne dla konsumentów, działania, ale są raczej szczegóły implementacji.  Podobnie jak w definicji typu, model działania umożliwia autorowi kwalifikowania widoczność elementu członkowskiego działań dotyczących definicji działania zostały zdefiniowane.  Ten widoczność reguluje aspekty użycia elementu członkowskiego, takie jak zakresu danych.  
   
@@ -27,9 +27,9 @@ Działanie definicji zakresu i widoczność, podobnie jak wyznaczanie zakresu i 
 ### <a name="activity-members"></a>Działania elementów członkowskich  
  Model działania definiuje argumentów, zmienne, delegaty i działania podrzędne, które działania sprawia, że dostępne dla klientów. Każda z tych elementów członkowskich mogą być deklarowane jako `public` lub `private`. Publiczne elementy członkowskie są konfigurowane przez konsumenta aktywności, natomiast `private` członkowie korzystać z implementacją rozwiązane przez autora działania. Reguły widoczności danych określania zakresu są następujące:  
   
-1.  Publiczne elementy członkowskie i publiczne elementy członkowskie działania podrzędne publicznych odwoływać się do publicznego zmiennych.  
+1. Publiczne elementy członkowskie i publiczne elementy członkowskie działania podrzędne publicznych odwoływać się do publicznego zmiennych.  
   
-2.  Składowe prywatne i publiczne elementy członkowskie działania podrzędne publiczne można odwoływać się do argumentów i zmiennych prywatnych.  
+2. Składowe prywatne i publiczne elementy członkowskie działania podrzędne publiczne można odwoływać się do argumentów i zmiennych prywatnych.  
   
  Element członkowski, który można ustawić przez konsumenta działanie nigdy nie powinno się prywatnych.  
   

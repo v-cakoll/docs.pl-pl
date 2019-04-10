@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331718"
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrowe X.509 często są używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. W tym temacie krótko opisano funkcje cyfrowego certyfikatu X.509 oraz sposobu ich używania w programie WCF i zawiera łącza do tematów, opisano te pojęcia dalsze lub które pokazują sposób wykonywania typowych zadań przy użyciu programu WCF i certyfikatów.  
@@ -90,13 +90,13 @@ Program Windows Communication Foundation (WCF) zabezpieczeń, certyfikaty cyfrow
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Aby utworzyć łańcuch zaufania za pomocą polecenia cmdlet New-SelfSignedCertificate  
   
-1.  Tworzenie tymczasowego certyfikat głównego urzędu certyfikacji (podpisem) przy użyciu polecenia cmdlet New-SelfSignedCertificate. Zapisz klucz prywatny do dysku.  
+1. Tworzenie tymczasowego certyfikat głównego urzędu certyfikacji (podpisem) przy użyciu polecenia cmdlet New-SelfSignedCertificate. Zapisz klucz prywatny do dysku.  
   
-2.  Użyj nowego certyfikatu do wystawienia innego certyfikatu, który zawiera klucz publiczny.  
+2. Użyj nowego certyfikatu do wystawienia innego certyfikatu, który zawiera klucz publiczny.  
   
-3.  Zaimportuj certyfikat głównego urzędu certyfikacji do magazynu zaufanych głównych urzędów certyfikacji.  
+3. Zaimportuj certyfikat głównego urzędu certyfikacji do magazynu zaufanych głównych urzędów certyfikacji.  
   
-4.  Aby uzyskać instrukcje krok po kroku, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Aby uzyskać instrukcje krok po kroku, zobacz [jak: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Który certyfikat do użycia?  
  Często zadawane pytania dotyczące certyfikatów są certyfikatu do użycia i dlaczego. Odpowiedź zależy od tego, czy programowania klienta lub usługę. Poniższe informacje zamieszczono ogólne wskazówki i nie jest wyczerpująca odpowiedzi na te pytania.  

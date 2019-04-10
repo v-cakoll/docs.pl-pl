@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143913"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322644"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Instrukcje: Stosowanie modyfikatorów i właściwości „GenerateMember"
 Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarczane przez środowisko projektowania: `GenerateMember` i `Modifiers`. `GenerateMember` Właściwość określa, kiedy Windows Forms Designer generuje zmienną składową dla składnika. `Modifiers` Właściwość jest modyfikator dostępu przypisane do tej zmiennej elementu członkowskiego. Jeśli wartość `GenerateMember` właściwość `false`, wartość `Modifiers` właściwość nie ma wpływu.  
@@ -30,11 +30,11 @@ Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarcz
   
 ### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Aby określić, czy składnik jest elementem członkowskim formularza  
   
-1.  Otwórz formularz Windows Forms Designer.  
+1. Otwórz formularz Windows Forms Designer.  
   
-2.  Otwórz **przybornika**i w formularzu, należy umieścić trzy <xref:System.Windows.Forms.Button> kontrolki.  
+2. Otwórz **przybornika**i w formularzu, należy umieścić trzy <xref:System.Windows.Forms.Button> kontrolki.  
   
-3.  Ustaw `GenerateMember` i `Modifiers` właściwości dla każdego <xref:System.Windows.Forms.Button> kontroli zgodnie z poniższą tabelą.  
+3. Ustaw `GenerateMember` i `Modifiers` właściwości dla każdego <xref:System.Windows.Forms.Button> kontroli zgodnie z poniższą tabelą.  
   
     |Nazwa przycisku|Wartość GenerateMember|Wartość modyfikatorów|  
     |-----------------|--------------------------|---------------------|  
@@ -42,13 +42,13 @@ Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarcz
     |`button2`|`true`|`protected`|  
     |`button3`|`false`|Nie wprowadzono zmian|  
   
-4.  Skompiluj rozwiązanie.  
+4. Skompiluj rozwiązanie.  
   
-5.  W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku.  
+5. W **Eksploratora rozwiązań**, kliknij przycisk **Pokaż wszystkie pliki** przycisku.  
   
-6.  Otwórz **Form1** węzła, a następnie w **Edytor kodu**, otwórz **Form1.Designer.vb** lub **Form1.Designer.cs** pliku. Ten plik zawiera kod wyemitowane przez Windows Forms Designer.  
+6. Otwórz **Form1** węzła, a następnie w **Edytor kodu**, otwórz **Form1.Designer.vb** lub **Form1.Designer.cs** pliku. Ten plik zawiera kod wyemitowane przez Windows Forms Designer.  
   
-7.  Znajdź deklaracje dla trzech przycisków. Poniższy przykład kodu pokazuje różnice określony przez `GenerateMember` i `Modifiers` właściwości.  
+7. Znajdź deklaracje dla trzech przycisków. Poniższy przykład kodu pokazuje różnice określony przez `GenerateMember` i `Modifiers` właściwości.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  

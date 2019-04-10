@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312166"
 ---
 # <a name="how-to-enable-streaming"></a>Instrukcje: włączanie przesyłania strumieniowego
 Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu transferu buforowane lub przesyłane strumieniowo. W domyślny tryb zbuforowany transferu wiadomości musi być całkowicie dostarczana przed odbiorca może go odczytać. W transmisji strumieniowej tryb transferu, można rozpocząć przetworzyć komunikatu przed przekazaniem całkowicie odbiornika. Tryb przesyłania strumieniowego jest przydatne, gdy informacje jest przekazywany jest długi i mogą być przetwarzane pojedynczo. Tryb przesyłania strumieniowego jest również przydatne, gdy komunikat jest zbyt duży, aby całkowicie buforowany.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu
   
 ### <a name="to-stream-data"></a>Przesyłanie strumieniowe danych  
   
-1.  Przesyłanie strumieniowe danych `OperationContract` dla usługi musi spełnić dwa wymagania:  
+1. Przesyłanie strumieniowe danych `OperationContract` dla usługi musi spełnić dwa wymagania:  
   
     1.  Parametr, który przechowuje dane, które mają być przesyłane strumieniowo musi być jedynym parametrem w metodzie. Na przykład jeśli komunikat wejściowy jest repliką strumieniowe przesyłanie, operacja musi mieć dokładnie jeden parametr wejściowy. Podobnie jeśli komunikat wyjściowy jest przesyłane strumieniowo, operacja musi mieć dokładnie jeden wyjściowy parametru lub wartości zwracanej.  
   
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu
   
      `GetStream` Operacja odbiera niektórych buforowanych danych wejściowych jako `string`, które są buforowane, a następnie zwraca `Stream`, który jest przesyłany strumieniowo. Z drugiej strony `UploadStream` przyjmuje `Stream` (przesyłane strumieniowo) i zwraca `bool` (buforowanej). `EchoStream` przyjmuje i zwraca `Stream` jest przykładem operacji, których dane wejściowe i wyjściowe komunikaty są zarówno przesyłane strumieniowo. Na koniec `GetReversedStream` nie dane wejściowe przyjmuje i zwraca `Stream` (przesyłane strumieniowo).  
   
-2.  Przesyłania strumieniowego musi być włączona w powiązaniu. Możesz ustawić `TransferMode` właściwość, która może mieć jedną z następujących wartości:  
+2. Przesyłania strumieniowego musi być włączona w powiązaniu. Możesz ustawić `TransferMode` właściwość, która może mieć jedną z następujących wartości:  
   
     1.  `Buffered`,  
   
@@ -60,14 +60,14 @@ Windows Communication Foundation (WCF) można wysyłać wiadomości przy użyciu
          [!code-csharp[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming_code/cs/c_howto_enablestreaming_code.cs#3)]
          [!code-vb[c_HowTo_EnableStreaming_code#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming_code/vb/c_howto_enablestreaming_code.vb#3)]  
   
-3.  Operacje `GetStream`, `UploadStream`, i `EchoStream` wszystko zaradzenia wysyłanie danych bezpośrednio z pliku lub zapisywania odebranych danych bezpośrednio do pliku. Poniższy kod jest `GetStream`.  
+3. Operacje `GetStream`, `UploadStream`, i `EchoStream` wszystko zaradzenia wysyłanie danych bezpośrednio z pliku lub zapisywania odebranych danych bezpośrednio do pliku. Poniższy kod jest `GetStream`.  
   
      [!code-csharp[c_HowTo_EnableStreaming#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#4)]
      [!code-vb[c_HowTo_EnableStreaming#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#4)]  
   
 ### <a name="writing-a-custom-stream"></a>Zapisywanie niestandardowych strumienia  
   
-1.  Specjalnego przetwarzania każdego fragmentu strumienia danych podczas ich przesyłania lub odebraniu wyprowadzić klasę niestandardowe strumienia z <xref:System.IO.Stream>. Na przykład niestandardowe strumienia poniższy kod zawiera `GetReversedStream` metody i `ReverseStream` klasy —.  
+1. Specjalnego przetwarzania każdego fragmentu strumienia danych podczas ich przesyłania lub odebraniu wyprowadzić klasę niestandardowe strumienia z <xref:System.IO.Stream>. Na przykład niestandardowe strumienia poniższy kod zawiera `GetReversedStream` metody i `ReverseStream` klasy —.  
   
      `GetReversedStream` Tworzy i zwraca nowe wystąpienie klasy `ReverseStream`. Rzeczywiste przetwarzanie odbywa się zgodnie z system odczytuje z `ReverseStream` obiektu. `ReverseStream.Read` Metoda odczytuje fragmentów bajtów z pliku podstawowego, cofa ich, a następnie zwraca bajtów odwróconej. Ta metoda nie odwrotnego zawartości całego pliku; Odwraca ono jednym fragmencie bajtów w danym momencie. W tym przykładzie przedstawiono sposób wykonywania przetwarzania strumienia, ponieważ zawartość jest do odczytu lub zapisu ze strumienia.  
   

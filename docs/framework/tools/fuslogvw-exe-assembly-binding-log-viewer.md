@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0219699a7369b3c1fe3fd92caa68a80eef235c2e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329521"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Podgląd dziennika powiązań zasobów)
 Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Błąd wykonywalnych języka wspólnego do zlokalizowania zestawu zwykle pojawia się jako <xref:System.TypeLoadException> w aplikacji.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>Aby zmienić widok dziennika lokalizacji  
   
-1.  Wybierz **domyślne** przycisk opcji, aby wyświetlić błędy powiązania dla wszystkich typów aplikacji. Domyślnie wpisy dziennika są przechowywane na dysku w katalogach użytkowników, w pamięci podręcznej wininet.  
+1. Wybierz **domyślne** przycisk opcji, aby wyświetlić błędy powiązania dla wszystkich typów aplikacji. Domyślnie wpisy dziennika są przechowywane na dysku w katalogach użytkowników, w pamięci podręcznej wininet.  
   
-2.  Wybierz **niestandardowe** przycisk opcji, aby wyświetlić błędy powiązania w określonym niestandardowym katalogu, który określisz. Należy określić niestandardową lokalizację, w której chcesz środowiska uruchomieniowego do przechowywania dzienników, ustawiając niestandardową lokalizację dziennika w **ustawienia dziennika** okno dialogowe prawidłowej nazwy katalogu. Ten katalog powinien być pusty i zawierać tylko pliki, które generuje środowisko uruchomieniowe. Jeśli zawiera plik wykonywalny, który generuje błąd, który ma zostać zapisany, błąd nie zostanie zapisany, ponieważ narzędzie spróbuje utworzyć katalog o takiej samej nazwie jak plik wykonywalny. Ponadto próba uruchomienia pliku wykonywalnego z lokalizacji dziennika nie powiedzie się.  
+2. Wybierz **niestandardowe** przycisk opcji, aby wyświetlić błędy powiązania w określonym niestandardowym katalogu, który określisz. Należy określić niestandardową lokalizację, w której chcesz środowiska uruchomieniowego do przechowywania dzienników, ustawiając niestandardową lokalizację dziennika w **ustawienia dziennika** okno dialogowe prawidłowej nazwy katalogu. Ten katalog powinien być pusty i zawierać tylko pliki, które generuje środowisko uruchomieniowe. Jeśli zawiera plik wykonywalny, który generuje błąd, który ma zostać zapisany, błąd nie zostanie zapisany, ponieważ narzędzie spróbuje utworzyć katalog o takiej samej nazwie jak plik wykonywalny. Ponadto próba uruchomienia pliku wykonywalnego z lokalizacji dziennika nie powiedzie się.  
   
     > [!NOTE]
     >  Domyślna lokalizacja powiązania jest preferowana nad niestandardową lokalizacją powiązania. Środowisko uruchomieniowe przechowuje w pamięci podręcznej wininet domyślną lokalizację powiązania i dlatego czyści ją automatycznie. Jeśli określisz niestandardową lokalizację powiązania, jesteś także odpowiedzialny za jej czyszczenie.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>Aby wyświetlić szczegóły, dotyczące określonego błędu  
   
-1.  Wybierz nazwę aplikacji dla żądnego wpisu w przeglądarce.  
+1. Wybierz nazwę aplikacji dla żądnego wpisu w przeglądarce.  
   
-2.  Kliknij przycisk **Wyświetl dziennik** przycisku. Można także kliknąć dwukrotnie wybrany wpis.  
+2. Kliknij przycisk **Wyświetl dziennik** przycisku. Można także kliknąć dwukrotnie wybrany wpis.  
   
      W narzędziu są wyświetlane następujące szczegółowe informacje o błędzie wybranego powiązania:  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>Aby usunąć pojedynczy wpis z dziennika  
   
-1.  Wybierz wpis w przeglądarce.  
+1. Wybierz wpis w przeglądarce.  
   
-2.  Kliknij przycisk **Usuń wpis** przycisku.  
+2. Kliknij przycisk **Usuń wpis** przycisku.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Aby usunąć wszystkie wpisy z dziennika  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>Aby włączyć niestandardową ścieżkę dziennika  
   
-1.  Wybierz **włącz niestandardową ścieżkę dziennika** przycisku opcji.  
+1. Wybierz **włącz niestandardową ścieżkę dziennika** przycisku opcji.  
   
-2.  Wprowadź ścieżkę do **niestandardowa ścieżka dziennika** pola tekstowego.  
+2. Wprowadź ścieżkę do **niestandardowa ścieżka dziennika** pola tekstowego.  
   
 > [!NOTE]
 >  [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE), aby przechowywać swój dziennik powiązań. Z powodu okazjonalnego uszkodzenia w pamięci podręcznej programu IE [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) może czasami przestać pokazywać nowe dzienniki powiązań w oknie przeglądania. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie wystąpi, jeśli używana jest niestandardowa ścieżka dziennika).  Aby naprawić uszkodzenie i umożliwić programowi fusion ponowne wyświetlanie dzienników powiązań, należy wyczyścić pamięć podręczną programu IE poprzez usunięcie tymczasowych plików internetowych w oknie Opcji internetowych programu IE.  
@@ -221,9 +221,9 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Aby włączyć rejestrowanie dla aplikacji działających w kontenerze aplikacji systemu Windows  
   
-1.  Należy włączyć niestandardową ścieżkę dziennika, jak opisano w poprzedniej procedurze. Domyślnie aplikacje, które są uruchomione w kontenerze aplikacji systemu Windows mają ograniczony dostęp do dysku twardego. Katalog, który zostanie określony, będzie miał dostęp do odczytu i zapisu dla wszystkich aplikacji z kontenera aplikacji.  
+1. Należy włączyć niestandardową ścieżkę dziennika, jak opisano w poprzedniej procedurze. Domyślnie aplikacje, które są uruchomione w kontenerze aplikacji systemu Windows mają ograniczony dostęp do dysku twardego. Katalog, który zostanie określony, będzie miał dostęp do odczytu i zapisu dla wszystkich aplikacji z kontenera aplikacji.  
   
-2.  Wybierz **Włącz imersywne rejestrowanie** pole wyboru.  
+2. Wybierz **Włącz imersywne rejestrowanie** pole wyboru.  
   
     > [!NOTE]
     >  To pole jest włączone tylko w systemie Windows 8 lub nowszym.  

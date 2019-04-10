@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171161"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330457"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia zdarzenia trasowane w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje zdarzenia trasowane terminologii, w tym artykule opisano sposób zdarzenia trasowane są przesyłane za pośrednictwem drzewa elementów, podsumowano, jak obsługiwać zdarzenia trasowane i wyjaśniono, jak tworzyć własne niestandardowe zdarzenia trasowane.
@@ -204,17 +204,17 @@ Dane wejściowe zdarzenia Propagacja i tunelowanie
   
  Kolejność przetwarzania zdarzeń jest następująca:  
   
-1.  `PreviewMouseDown` (tunelowania) na element główny.  
+1. `PreviewMouseDown` (tunelowania) na element główny.  
   
-2.  `PreviewMouseDown` (tunelowania) w elemencie pośrednich #1.  
+2. `PreviewMouseDown` (tunelowania) w elemencie pośrednich #1.  
   
-3.  `PreviewMouseDown` (tunelowania) w elemencie źródła #2.  
+3. `PreviewMouseDown` (tunelowania) w elemencie źródła #2.  
   
-4.  `MouseDown` (bąbelkowy) w elemencie źródła #2.  
+4. `MouseDown` (bąbelkowy) w elemencie źródła #2.  
   
-5.  `MouseDown` (bąbelkowy) w elemencie pośrednich #1.  
+5. `MouseDown` (bąbelkowy) w elemencie pośrednich #1.  
   
-6.  `MouseDown` (bąbelkowy) na element główny.  
+6. `MouseDown` (bąbelkowy) na element główny.  
   
  Procedury obsługi delegata zdarzenia trasowanego udostępniający odwołania do dwóch obiektów: obiektu, który podniósł zdarzenie i obiekt, w której został wywołany program obsługi. Obiekt, w której został wywołany program obsługi jest obiektem, który został zgłoszony przez `sender` parametru. Obiekt, w którym zdarzenie został wywołany po raz pierwszy, jest zgłaszany przez <xref:System.Windows.RoutedEventArgs.Source%2A> właściwości danych zdarzenia. Zdarzenia trasowanego nadal można podniesione i obsługiwane przez ten sam obiekt, w którym to przypadku `sender` i <xref:System.Windows.RoutedEventArgs.Source%2A> są identyczne (jest to w przypadku kroki 3 i 4 w zdarzeniu przetwarzania listy przykład).  
   

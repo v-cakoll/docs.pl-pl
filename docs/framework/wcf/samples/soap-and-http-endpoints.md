@@ -2,12 +2,12 @@
 title: Punkty końcowe protokołów SOAP i HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307447"
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
 W tym przykładzie pokazano, jak zaimplementować usługę opartego na protokole RPC i udostępnić ją w formacie protokołu SOAP i format "Zwykłego starego kodu XML" (POX) za pomocą modelu programowania w sieci Web WCF. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki, aby uzyskać więcej informacji o wiązaniu HTTP dla usługi. Ten przykład koncentruje się na szczegółowe informacje, które odnoszą się do udostępniania tej samej usługi za pośrednictwem protokołu SOAP i HTTP z użyciem różnych powiązania.  
@@ -36,21 +36,21 @@ W tym przykładzie pokazano, jak zaimplementować usługę opartego na protokole
   
 #### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Otwórz rozwiązanie dla przykładowej punktów końcowych HTTP i SOAP.  
+1. Otwórz rozwiązanie dla przykładowej punktów końcowych HTTP i SOAP.  
   
-2.  Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
+2. Naciśnij klawisze CTRL + SHIFT + B, aby skompilować rozwiązanie.  
   
-3.  Jeśli nie jest jeszcze otwarty, naciśnij klawisze CTRL + W, S, aby otworzyć **Eksploratora rozwiązań** okna.  
+3. Jeśli nie jest jeszcze otwarty, naciśnij klawisze CTRL + W, S, aby otworzyć **Eksploratora rozwiązań** okna.  
   
-4.  Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projektu, umieść kursor nad **debugowania** menu kontekstowego, aby **uruchomić nowy Wystąpienie** zostanie wyświetlone menu kontekstowe. Kliknij przycisk **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie oprogramowania ASP.NET development server, który hostuje usługę.  
+4. Z **Eksploratora rozwiązań** okna, kliknij prawym przyciskiem myszy **usługi** projektu, umieść kursor nad **debugowania** menu kontekstowego, aby **uruchomić nowy Wystąpienie** zostanie wyświetlone menu kontekstowe. Kliknij przycisk **Uruchom nowe wystąpienie**. Spowoduje to uruchomienie oprogramowania ASP.NET development server, który hostuje usługę.  
   
-5.  Z okna Eksploratora rozwiązań kliknij prawym przyciskiem myszy projekt klienta i umieść kursor nad **debugowania** menu kontekstowego, aby **Uruchom nowe wystąpienie** zostanie wyświetlone menu kontekstowe. Kliknij przycisk **Uruchom nowe wystąpienie**.  
+5. Z okna Eksploratora rozwiązań kliknij prawym przyciskiem myszy projekt klienta i umieść kursor nad **debugowania** menu kontekstowego, aby **Uruchom nowe wystąpienie** zostanie wyświetlone menu kontekstowe. Kliknij przycisk **Uruchom nowe wystąpienie**.  
   
-6.  Okna konsoli klienta pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
+6. Okna konsoli klienta pojawia się i zawiera identyfikator URI uruchomioną usługę i identyfikator URI elementu HTML pomocy strony dla uruchomionej usługi. W dowolnym momencie możesz wyświetlić stronę pomocy HTML, wpisując identyfikator URI strony pomocy w przeglądarce.  
   
-7.  Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
+7. Po uruchomieniu przykładu klienta zapisuje stan bieżącego działania.  
   
-8.  Naciśnij dowolny klawisz, aby zakończyć aplikację konsoli klienta.  
+8. Naciśnij dowolny klawisz, aby zakończyć aplikację konsoli klienta.  
   
 9. Naciśnij klawisze SHIFT + F5, aby zatrzymać debugowanie usługi.  
   

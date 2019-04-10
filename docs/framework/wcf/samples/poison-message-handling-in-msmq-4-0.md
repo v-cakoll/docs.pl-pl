@@ -2,12 +2,12 @@
 title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846230"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316469"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 Niniejszy przykład pokazuje sposób wykonywania skażonych komunikatów w usłudze. Ten przykład jest oparty na [dokonana transakcja powiązania usługi MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W tym przykładzie użyto `netMsmqBinding`. Usługa jest aplikacji konsoli Self-Hosted umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.
@@ -27,13 +27,13 @@ Niniejszy przykład pokazuje sposób wykonywania skażonych komunikatów w usłu
 
  Gdy komunikat jest oznaczony jako intoksykowane, wiadomość została omówiona zgodnie z ustawieniami <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> wyliczenia. Zgodnie z możliwe wartości:
 
--   Odporność (ustawienie domyślne): aby błędów odbiornik, a także hosta usługi.
+-   Odporność (ustawienie domyślne): Aby błędów odbiornik, a także hosta usługi.
 
--   Upuść: Aby porzucić komunikatu.
+-   Upuść: Można usunąć wiadomości.
 
--   Przenieś: Można przenieść komunikatu do kolejki podrzędnej Zarządzanie skażonymi komunikatami. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Przenieś: Przenoszenie wiadomości do podrzędnej kolejki Zarządzanie skażonymi komunikatami. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
--   Odrzuć: Aby odrzucić wiadomości, wysyłania wiadomości do nadawcy w wiadomości utraconych kolejki. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
+-   Odrzuć: Aby odrzucić wiadomości, wysyła komunikat do kolejki utraconych wiadomości przez nadawcę. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
  Przykład demonstruje użycie `Move` dyspozycja dla Zarządzanie skażonymi komunikatami. `Move` powoduje, że komunikat, aby przejść do skażone kolejki podrzędnej.
 
@@ -273,9 +273,9 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
 
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2.  Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
+2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
 
     1.  Otwórz Menedżera serwera w programie Visual Studio 2012.
 
@@ -287,15 +287,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     5.  Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
-3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu komputera, należy zmienić nazwy kolejki, aby odzwierciedlić rzeczywiste nazwy hosta zamiast nazwy localhost i postępuj zgodnie z instrukcjami w [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Do uruchomienia przykładu w konfiguracji o jednym lub wielu komputera, należy zmienić nazwy kolejki, aby odzwierciedlić rzeczywiste nazwy hosta zamiast nazwy localhost i postępuj zgodnie z instrukcjami w [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
- Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślnie, tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Wiadomość użytkownika wewnętrzny certyfikat usługi kolejkowania nie istnieje".
+ Domyślnie `netMsmqBinding` powiązania transportu, zabezpieczeń jest włączone. Dwie właściwości `MsmqAuthenticationMode` i `MsmqProtectionLevel`, wspólnie określić typ zabezpieczeń transportu. Domyślnie, tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i funkcji podpisywania należy do domeny. Po uruchomieniu tego przykładu na komputerze, który nie jest częścią domeny, zostanie wyświetlony następujący błąd: "Użytkownika wewnętrznego kolejkowania certyfikatu nie istnieje".
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej
 
-1.  Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu, ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższym Przykładowa konfiguracja:
+1. Jeśli komputer nie jest częścią domeny, należy wyłączyć zabezpieczenia transportu, ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższym Przykładowa konfiguracja:
 
     ```xml
     <bindings>
@@ -309,12 +309,12 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      Upewnij się, że punkt końcowy jest skojarzony z powiązaniem przez ustawienie atrybutu bindingConfiguration punktu końcowego.
 
-2.  Upewnij się, zmień konfigurację na PoisonMessageServer, serwera i klienta, przed uruchomieniem przykładu.
+2. Upewnij się, zmień konfigurację na PoisonMessageServer, serwera i klienta, przed uruchomieniem przykładu.
 
     > [!NOTE]
     >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel`, i `Message` security `None`.  
   
-3.  Aby Meta wymiany danych do pracy zarejestrujemy adres URL dla wiązania http. Wymaga to, że usługa jest uruchomiona w oknie wiersza polecenia z podwyższonym poziomem uprawnień. W przeciwnym razie użytkownik uzyska wyjątek, takich jak: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3. Aby Meta wymiany danych do pracy zarejestrujemy adres URL dla wiązania http. Wymaga to, że usługa jest uruchomiona w oknie wiersza polecenia z podwyższonym poziomem uprawnień. W przeciwnym razie użytkownik uzyska wyjątek, takich jak: `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

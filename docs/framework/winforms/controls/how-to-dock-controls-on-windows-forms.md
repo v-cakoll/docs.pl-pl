@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317262"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Instrukcje: dokowanie kontrolek w Formularzach systemu Windows
 Można dokowanie formantów do krawędzi formularza lub je wypełnić kontener formantu (formularza lub kontrolki kontenera). Na przykład Windows Explorer dokowane jego <xref:System.Windows.Forms.TreeView> kontrolki do lewej części okna i jego <xref:System.Windows.Forms.ListView> kontrolki po prawej stronie okna. Użyj <xref:System.Windows.Forms.Control.Dock%2A> właściwości dla wszystkich widocznych kontrolek Windows Forms do definiowania tryb dokowania.  
@@ -23,13 +23,13 @@ Można dokowanie formantów do krawędzi formularza lub je wypełnić kontener f
   
 ### <a name="to-dock-a-control"></a>Aby zadokować kontrolki  
   
-1.  Wybierz formant, który chcesz zadokować.  
+1. Wybierz formant, który chcesz zadokować.  
   
-2.  W oknie dialogowym właściwości kliknij strzałkę po prawej stronie <xref:System.Windows.Forms.Control.Dock%2A> właściwości.  
+2. W oknie dialogowym właściwości kliknij strzałkę po prawej stronie <xref:System.Windows.Forms.Control.Dock%2A> właściwości.  
   
      Zostanie wyświetlony Edytor, pokazujący szereg pola reprezentujące krawędzie i środek formularza.  
   
-3.  Kliknij przycisk, który reprezentuje krawędzi formularza, które chcesz zadokować formantu. Aby wypełnić zawartość formularza kontrolki lub kontrolki kontenera, kliknij pole Centrum. Kliknij przycisk **(Brak)** wyłączyć dokowania.  
+3. Kliknij przycisk, który reprezentuje krawędzi formularza, które chcesz zadokować formantu. Aby wypełnić zawartość formularza kontrolki lub kontrolki kontenera, kliknij pole Centrum. Kliknij przycisk **(Brak)** wyłączyć dokowania.  
   
      Kontrolka jest automatycznie dopasowane granice zadokowany krawędzi.  
   

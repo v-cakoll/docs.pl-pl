@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314883"
 ---
 # <a name="accessing-services-using-a-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta
 Aplikacje klienckie należy utworzyć, konfigurowanie i komunikować się z usługami za pomocą obiektów klienta lub kanału WCF. [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md) temat zawiera omówienie obiektów i kroki związane z tworzeniem podstawowych obiektów klienta i kanału i korzystanie z nich.  
@@ -83,11 +83,11 @@ Aplikacje klienckie należy utworzyć, konfigurowanie i komunikować się z usł
   
  Jeśli przy użyciu podejścia jawne, aplikacja musi wykonać następujące kroki w kolejności:  
   
-1.  Wywołaj opcję <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (lub asynchronicznej wersji).  
+1. Wywołaj opcję <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (lub asynchronicznej wersji).  
   
-2.  Po zwróceniu mieć inicjatory, wywołaj albo <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody <xref:System.ServiceModel.IClientChannel> obiektu lub na <xref:System.ServiceModel.IClientChannel> obiekt zwracany z <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> właściwości.  
+2. Po zwróceniu mieć inicjatory, wywołaj albo <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody <xref:System.ServiceModel.IClientChannel> obiektu lub na <xref:System.ServiceModel.IClientChannel> obiekt zwracany z <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> właściwości.  
   
-3.  Wywoływanie operacji.  
+3. Wywoływanie operacji.  
   
  Zaleca się, że aplikacje wysokiej jakości kontrolowania procesu interfejsu użytkownika przez przyjęcie podejścia jawnego.  
   

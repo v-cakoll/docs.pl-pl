@@ -1,15 +1,15 @@
 ---
-title: Obsługa nowych funkcji Foundation 4.5 w Rehostowanym projektancie przepływu pracy
+title: Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714947"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324165"
 ---
-# <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji Foundation 4.5 w Rehostowanym projektancie przepływu pracy
+# <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowych funkcji w programie Workflow Foundation 4.5 w rehostowanym projektancie przepływu pracy
 Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń środowiska projektanta przepływu pracy. W tym temacie przedstawiono, które z tych funkcji są obsługiwane w rehostowanym projektancie i te, które nie są obecnie obsługiwane.
 
 > [!NOTE]
@@ -18,7 +18,7 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
 ## <a name="activities"></a>Kategoria Activities
  Wbudowana biblioteka działań zawiera nowe działania i nowe funkcje dla istniejących działań. Wszystkie te nowe działania są obsługiwane w rehostowanym projektancie. Aby uzyskać więcej informacji na temat tych nowych działań, zobacz [działania](whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) części [What's New in Windows Workflow Foundation w .NET 4.5](whats-new-in-wf-in-dotnet.md).
 
-## <a name="c-expressions"></a>C# Expressions
+## <a name="c-expressions"></a>Wyrażenia języka C#
  Przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wszystkie wyrażenia w przepływach pracy można zapisać tylko w języku Visual Basic. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], wyrażeń języka Visual Basic są używane tylko w przypadku projektów utworzonych za pomocą języka Visual Basic. Projekty języka Visual C# teraz używać języka C# dla wyrażenia. Podczas tworzenia przepływów pracy w programie Visual Studio 2012, w pełni funkcjonalny edytor wyrażeń języka C# znajduje się które możliwości, takie jak intellisense i wyróżnianie gramatyki. Przepływ pracy projektów języka C# utworzone w poprzednich wersjach, które używają wyrażeń języka Visual Basic będą nadal działać.
 
 > [!WARNING]
@@ -124,13 +124,13 @@ Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-
 ### <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów  
  Przepływy pracy automatu stanów zostały wprowadzone w ramach programu .NET Framework 4.0.1 w [programu Microsoft .NET Framework 4 platformy Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Ta aktualizacja zawierała kilka nowych klas i działań, które mogą deweloperom tworzenie przepływów pracy automatu stanów. Te klasy i działania zostały zaktualizowane w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aktualizacje obejmują:  
   
-1.  Możliwość ustawienia punktów przerwania na Stanach  
+1. Możliwość ustawienia punktów przerwania na Stanach  
   
-2.  Możliwość kopiowania i wklejania przejść w Projektancie przepływu pracy  
+2. Możliwość kopiowania i wklejania przejść w Projektancie przepływu pracy  
   
-3.  Wsparcie tworzenia udostępnionych przejść wyzwalaczy  
+3. Wsparcie tworzenia udostępnionych przejść wyzwalaczy  
   
-4.  Działania używany do tworzenia przepływów pracy automatu stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, i <xref:System.Activities.Statements.Transition>  
+4. Działania używany do tworzenia przepływów pracy automatu stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, i <xref:System.Activities.Statements.Transition>  
   
  Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Samouczek wprowadzający](getting-started-tutorial.md) kroku [jak: Tworzenie przepływu pracy automatu stanów](how-to-create-a-state-machine-workflow.md).  
   

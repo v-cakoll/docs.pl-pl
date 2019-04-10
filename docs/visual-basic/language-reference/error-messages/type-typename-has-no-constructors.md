@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311656"
 ---
 # <a name="type-typename-has-no-constructors"></a>Typ "\<typename >" nie ma konstruktorów
 Typ nie obsługuje wywołania `Sub New()`. Jedną z możliwych przyczyn jest kompilatora uszkodzony lub plik binarny.  
@@ -21,13 +21,13 @@ Typ nie obsługuje wywołania `Sub New()`. Jedną z możliwych przyczyn jest kom
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Jeśli typ jest w innym projekcie lub w pliku odwołania, należy ponownie zainstalować projektu lub pliku.  
+1. Jeśli typ jest w innym projekcie lub w pliku odwołania, należy ponownie zainstalować projektu lub pliku.  
   
-2.  Jeśli typ znajduje się w tym samym projekcie, należy ponownie skompilować zestawu zawierającego typ.  
+2. Jeśli typ znajduje się w tym samym projekcie, należy ponownie skompilować zestawu zawierającego typ.  
   
-3.  Jeśli ten błąd wystąpi, zainstaluj ponownie kompilator Visual Basic.  
+3. Jeśli ten błąd wystąpi, zainstaluj ponownie kompilator Visual Basic.  
   
-4.  Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
+4. Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 

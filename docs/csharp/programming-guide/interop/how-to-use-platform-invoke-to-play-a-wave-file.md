@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 209a0f03197e0f77e23be0dc1170789688f3e09a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323814"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Instrukcje: Użycie wywołania platformy do odtwarzania pliku Wave (C# Programming Guide)
 Poniższy przykład kodu C# ilustruje sposób użycia platform wywołania usług do odtwarzania pliku wave dźwięku w systemie operacyjnym Windows.  
@@ -31,15 +31,15 @@ Poniższy przykład kodu C# ilustruje sposób użycia platform wywołania usług
   
 ### <a name="to-compile-the-code"></a>Aby skompilować kod  
   
-1.  Utwórz nowy projekt aplikacji Windows w języku C# w programie Visual Studio i nadaj mu nazwę **WinSound**.  
+1. Utwórz nowy projekt aplikacji Windows w języku C# w programie Visual Studio i nadaj mu nazwę **WinSound**.  
   
-2.  Skopiuj kod powyżej i Wklej zawartość `Form1.cs` pliku.  
+2. Skopiuj kod powyżej i Wklej zawartość `Form1.cs` pliku.  
   
-3.  Skopiuj poniższy kod, a następnie wklej je `Form1.Designer.cs` pliku w `InitializeComponent()` metody, istniejący kod.  
+3. Skopiuj poniższy kod, a następnie wklej je `Form1.Designer.cs` pliku w `InitializeComponent()` metody, istniejący kod.  
   
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-4.  Skompiluj i uruchom kod.  
+4. Skompiluj i uruchom kod.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Aby uzyskać więcej informacji, zobacz [zabezpieczeń na platformie .NET](../../../standard/security/index.md).  
@@ -48,5 +48,5 @@ Poniższy przykład kodu C# ilustruje sposób użycia platform wywołania usług
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Przegląd współdziałania](../../../csharp/programming-guide/interop/interoperability-overview.md)
-- [Im bliżej wywołania platformy](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
-- [Marshaling danych w wywołaniu platformy](../../../framework/interop/marshaling-data-with-platform-invoke.md)
+- [Szczegóły wywołania platformy](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
+- [Organizowanie danych w wywołaniu platformy](../../../framework/interop/marshaling-data-with-platform-invoke.md)

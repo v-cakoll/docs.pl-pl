@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Utwórz działanie'
+title: 'Instrukcje: Tworzenie działania'
 ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315143"
 ---
-# <a name="how-to-create-an-activity"></a>Instrukcje: Utwórz działanie
+# <a name="how-to-create-an-activity"></a>Instrukcje: Tworzenie działania
 
 Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logika wykonania działania, które można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie pokazano, jak utworzyć dwóch działań. Pierwsze działanie jest proste działania, które używa kodu, aby zaimplementować logikę jego wykonywania. Implementacja drugiego działania jest zdefiniowana za pomocą innych działań. Te działania są używane w kolejnych krokach samouczka.
 
@@ -21,26 +21,26 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
 
 ## <a name="create-the-activity-library-project"></a>Utwórz projekt biblioteki działań
 
-1.  Otwórz program Visual Studio i wybierz polecenie **New** > **projektu** z **pliku** menu.
+1. Otwórz program Visual Studio i wybierz polecenie **New** > **projektu** z **pliku** menu.
 
-2.  W **nowy projekt** okna dialogowego, w obszarze **zainstalowane** kategorii, wybierz opcję **Visual C#** > **przepływu pracy** (lub **Języka Visual Basic** > **przepływu pracy**).
+2. W **nowy projekt** okna dialogowego, w obszarze **zainstalowane** kategorii, wybierz opcję **Visual C#** > **przepływu pracy** (lub **Języka Visual Basic** > **przepływu pracy**).
 
     > [!NOTE]
     > Jeśli nie widzisz **przepływu pracy** kategorii szablonu, użytkownik może być konieczne zainstalowanie **Windows Workflow Foundation** składnika programu Visual Studio. Wybierz **Otwórz Instalator programu Visual Studio** linku w lewej części **nowy projekt** okna dialogowego. Instalator programu Visual Studio wybierz **poszczególne składniki** kartę. Następnie w obszarze **działań programistycznych** kategorii, wybierz opcję **Windows Workflow Foundation** składnika. Wybierz **Modyfikuj** do instalacji składnika należy.
 
 3. Wybierz **Biblioteka działań** szablonu projektu. Typ `NumberGuessWorkflowActivities` w **nazwa** pole, a następnie kliknij przycisk **OK**.
 
-4.  Kliknij prawym przyciskiem myszy **Activity1.xaml** w **Eksploratora rozwiązań** i wybierz polecenie **Usuń**. Kliknij przycisk **OK** o potwierdzenie.
+4. Kliknij prawym przyciskiem myszy **Activity1.xaml** w **Eksploratora rozwiązań** i wybierz polecenie **Usuń**. Kliknij przycisk **OK** o potwierdzenie.
 
 ## <a name="create-the-readint-activity"></a>Utwórz działanie readint —
 
-1.  Wybierz **Dodaj nowy element** z **projektu** menu.
+1. Wybierz **Dodaj nowy element** z **projektu** menu.
 
-2.  W **zainstalowane** > **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działanie kodu** z **przepływu pracy** listy.
+2. W **zainstalowane** > **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działanie kodu** z **przepływu pracy** listy.
 
-3.  Typ `ReadInt` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.
+3. Typ `ReadInt` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.
 
-4.  Zastąp istniejące `ReadInt` definicji przy użyciu następującej definicji.
+4. Zastąp istniejące `ReadInt` definicji przy użyciu następującej definicji.
 
      [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
@@ -50,21 +50,21 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
 
 ## <a name="create-the-prompt-activity"></a>Utwórz działanie monitu
 
-1.  Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania projektu. Kompilowanie projektu zapewniającą `ReadInt` działania w tym projekcie ma być używany do tworzenia niestandardowych działań w tym kroku.
+1. Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania projektu. Kompilowanie projektu zapewniającą `ReadInt` działania w tym projekcie ma być używany do tworzenia niestandardowych działań w tym kroku.
 
-2.  Wybierz **Dodaj nowy element** z **projektu** menu.
+2. Wybierz **Dodaj nowy element** z **projektu** menu.
 
-3.  W **zainstalowane** > **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działania** z **przepływu pracy** listy.
+3. W **zainstalowane** > **wspólne elementy** węzeł **przepływu pracy**. Wybierz **działania** z **przepływu pracy** listy.
 
-4.  Typ `Prompt` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.
+4. Typ `Prompt` do **nazwa** pole, a następnie kliknij przycisk **Dodaj**.
 
-5.  Kliknij dwukrotnie **Prompt.xaml** w **Eksploratora rozwiązań** do wyświetlenia w projektancie, jeśli nie jest już wyświetlany.
+5. Kliknij dwukrotnie **Prompt.xaml** w **Eksploratora rozwiązań** do wyświetlenia w projektancie, jeśli nie jest już wyświetlany.
 
-6.  Kliknij przycisk **argumenty** w lewym dolnym rogu projektanta działania, aby wyświetlić **argumenty** okienka.
+6. Kliknij przycisk **argumenty** w lewym dolnym rogu projektanta działania, aby wyświetlić **argumenty** okienka.
 
-7.  Kliknij przycisk **utworzenia argumentu**.
+7. Kliknij przycisk **utworzenia argumentu**.
 
-8.  Typ `BookmarkName` do **nazwa** wybierz opcję **w** z **kierunek** listy rozwijanej wybierz **ciąg** z **Typ argumentu** listy rozwijanej, a następnie klawisz **Enter** można zapisać argumentu.
+8. Typ `BookmarkName` do **nazwa** wybierz opcję **w** z **kierunek** listy rozwijanej wybierz **ciąg** z **Typ argumentu** listy rozwijanej, a następnie klawisz **Enter** można zapisać argumentu.
 
 9. Kliknij przycisk **utworzenia argumentu**.
 

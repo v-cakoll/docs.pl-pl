@@ -2,21 +2,21 @@
 title: 'Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354495"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325205"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Instrukcje: Tworzenie oznaczonych przyjaznych zestawów (C#)
 W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie użyć tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>Tworzenie zestawu podpisanego za pomocą i zestaw przyjazny  
   
-1.  Otwórz wiersz polecenia.  
+1. Otwórz wiersz polecenia.  
   
-2.  Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
+2. Za pomocą następującej sekwencji poleceń narzędzie silnych nazw do wygenerowania pliku klucza i wyświetlić swój klucz publiczny. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
     1.  Wygeneruj klucz silnej nazwy dla tego przykładu i zapisz go w pliku FriendAssemblies.snk:  
   
@@ -30,7 +30,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  Utwórz plik języka C# o nazwie `friend_signed_A` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
+3. Utwórz plik języka C# o nazwie `friend_signed_A` zawierający poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować friend_signed_B jako przyjaznego zestawu.  
   
      Narzędzie silnych nazw generuje nowy klucz publiczny, za każdym razem, gdy działa. W związku z tym jak pokazano w poniższym przykładzie, za pomocą klucza publicznego, który zostanie wygenerowany, musisz zastąpić klucza publicznego w poniższym kodzie.  
   
@@ -51,13 +51,13 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
     }  
     ```  
   
-4.  Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
+4. Skompiluj i podpisać friend_signed_A przy użyciu następującego polecenia.  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  Utwórz plik języka C# o nazwie `friend_signed_B` i zawiera następujący kod. Ponieważ friend_signed_A określa friend_signed_B jako zestaw przyjazny, kod w friend_signed_B mogą uzyskiwać dostęp do `internal` typów i elementów członkowskich z friend_signed_A. Plik zawiera następujący kod.  
+5. Utwórz plik języka C# o nazwie `friend_signed_B` i zawiera następujący kod. Ponieważ friend_signed_A określa friend_signed_B jako zestaw przyjazny, kod w friend_signed_B mogą uzyskiwać dostęp do `internal` typów i elementów członkowskich z friend_signed_A. Plik zawiera następujący kod.  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
     }  
     ```  
   
-6.  Skompiluj i podpisać friend_signed_B przy użyciu następującego polecenia.  
+6. Skompiluj i podpisać friend_signed_B przy użyciu następującego polecenia.  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
   
      Nazwa zestawu, który został wygenerowany przez kompilator musi odpowiadać przekazany do nazwy przyjaznego zestawu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu. Należy jawnie określić nazwę zestawu wyjściowego (.exe lub .dll), za pomocą `/out` — opcja kompilatora.  Aby uzyskać więcej informacji, zobacz [/out (opcje kompilatora C#)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md).  
   
-7.  Uruchom plik friend_signed_B.exe.  
+7. Uruchom plik friend_signed_B.exe.  
   
      Program wyświetla ciąg "Class1.Test".  
   
@@ -95,6 +95,6 @@ W tym przykładzie pokazano, jak przyjaznych zestawów za pomocą zestawów o si
 - [Przyjazne zestawy](../../../../standard/assembly/friend-assemblies.md)
 - [Instrukcje: Tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
-- [Sn.exe (narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md)
+- [Sn.exe (Narzędzie silnych nazw)](../../../../framework/tools/sn-exe-strong-name-tool.md)
 - [Tworzenie i używanie zestawów o silnej nazwie](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

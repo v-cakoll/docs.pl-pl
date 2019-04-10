@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166403"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305978"
 ---
 # <a name="how-to-create-application-settings"></a>Instrukcje: Tworzenie ustawień aplikacji
 Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wiązania ich z właściwościami w formularzu lub kontrolki formularza tak, aby te ustawienia są ładowane i zapisywane automatycznie w czasie wykonywania.  
@@ -24,19 +24,19 @@ Przy użyciu kodu zarządzanego, można tworzyć nowych ustawień aplikacji i wi
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Aby programowo utworzyć nowe ustawienia aplikacji  
   
-1.  Dodaj nową klasę do projektu i zmień jego nazwę. Do wykonania tej procedury, firma Microsoft będzie wywoływać tej klasy `MyUserSettings`. Zmiana definicji klasy, aby klasa pochodzi od klasy <xref:System.Configuration.ApplicationSettingsBase>.  
+1. Dodaj nową klasę do projektu i zmień jego nazwę. Do wykonania tej procedury, firma Microsoft będzie wywoływać tej klasy `MyUserSettings`. Zmiana definicji klasy, aby klasa pochodzi od klasy <xref:System.Configuration.ApplicationSettingsBase>.  
   
-2.  Zdefiniuj właściwość od tej klasy otoki dla każdego ustawienia aplikacji, potrzebujesz, a następnie Zastosuj tę właściwość z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, w zależności od zakresu ustawienia. Aby uzyskać więcej informacji na temat zakresu ustawień, zobacz [Przegląd ustawień aplikacji](application-settings-overview.md). W razie kod powinien wyglądać następująco:  
+2. Zdefiniuj właściwość od tej klasy otoki dla każdego ustawienia aplikacji, potrzebujesz, a następnie Zastosuj tę właściwość z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>, w zależności od zakresu ustawienia. Aby uzyskać więcej informacji na temat zakresu ustawień, zobacz [Przegląd ustawień aplikacji](application-settings-overview.md). W razie kod powinien wyglądać następująco:  
   
      [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  W aplikacji, należy utworzyć wystąpienie tej klasy otoki. Będzie najczęściej od prywatnej składowej formularza głównego. Po zdefiniowaniu klasy należy powiązać go z właściwością; w tym przypadku <xref:System.Windows.Forms.Form.BackColor%2A> właściwości formularza. Można to zrobić do formularza `Load` programu obsługi zdarzeń.  
+3. W aplikacji, należy utworzyć wystąpienie tej klasy otoki. Będzie najczęściej od prywatnej składowej formularza głównego. Po zdefiniowaniu klasy należy powiązać go z właściwością; w tym przypadku <xref:System.Windows.Forms.Form.BackColor%2A> właściwości formularza. Można to zrobić do formularza `Load` programu obsługi zdarzeń.  
   
      [!code-csharp[ApplicationSettings.Create#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  
   
-4.  Jeśli podasz sposób, aby zmienić ustawienia w czasie wykonywania, należy zapisać bieżące ustawienia użytkownika na dysku w przypadku, gdy formularz zostanie zamknięty, w przeciwnym razie te zmiany zostaną utracone.  
+4. Jeśli podasz sposób, aby zmienić ustawienia w czasie wykonywania, należy zapisać bieżące ustawienia użytkownika na dysku w przypadku, gdy formularz zostanie zamknięty, w przeciwnym razie te zmiany zostaną utracone.  
   
      [!code-csharp[ApplicationSettings.Create#3](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#3)]
      [!code-vb[ApplicationSettings.Create#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#3)]  

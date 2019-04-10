@@ -2,12 +2,12 @@
 title: Zadanie 2. Hostowanie projektanta przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299270"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Zadanie 2. Hostowanie projektanta przepływu pracy
 W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] w aplikacji Windows Presentation Foundation (WPF).  
@@ -16,19 +16,19 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
   
 ### <a name="to-host-the-workflow-designer"></a>Do obsługi projektanta przepływów pracy  
   
-1.  Otwórz HostingApplication projektu utworzonego w sekcji [zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
+1. Otwórz HostingApplication projektu utworzonego w sekcji [zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).  
   
-2.  Dopasuj rozmiar okna, aby ułatwić użyj [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Aby to zrobić, wybierz **MainWindow** w projektancie, naciśnij klawisz F4, aby wyświetlić **właściwości** okna i w **układ** sekcji istnieje, należy ustawić **szerokość** wartość 600 i **wysokość** wartości 350.  
+2. Dopasuj rozmiar okna, aby ułatwić użyj [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Aby to zrobić, wybierz **MainWindow** w projektancie, naciśnij klawisz F4, aby wyświetlić **właściwości** okna i w **układ** sekcji istnieje, należy ustawić **szerokość** wartość 600 i **wysokość** wartości 350.  
   
-3.  Ustaw nazwę siatki, wybierając **siatki** panelu w Projektancie (kliknij pole wewnątrz **MainWindow**) i ustawienie **nazwa** właściwość w górnej części  **Właściwości** okna "grid1".  
+3. Ustaw nazwę siatki, wybierając **siatki** panelu w Projektancie (kliknij pole wewnątrz **MainWindow**) i ustawienie **nazwa** właściwość w górnej części  **Właściwości** okna "grid1".  
   
-4.  W **właściwości** okna, kliknij przycisk wielokropka (**...** ) obok pozycji `ColumnDefinitions` właściwości, aby otworzyć **— Edytor kolekcji** okno dialogowe.  
+4. W **właściwości** okna, kliknij przycisk wielokropka (**...** ) obok pozycji `ColumnDefinitions` właściwości, aby otworzyć **— Edytor kolekcji** okno dialogowe.  
   
-5.  W **— Edytor kolekcji** okno dialogowe, kliknij przycisk **Dodaj** przycisk trzy razy, aby wstawić trzy kolumny do układu. Pierwsza kolumna będzie zawierać **przybornika**, druga kolumna będzie obsługiwać [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], a trzecia kolumna stosowanych w odniesieniu do Inspektora właściwości.  
+5. W **— Edytor kolekcji** okno dialogowe, kliknij przycisk **Dodaj** przycisk trzy razy, aby wstawić trzy kolumny do układu. Pierwsza kolumna będzie zawierać **przybornika**, druga kolumna będzie obsługiwać [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], a trzecia kolumna stosowanych w odniesieniu do Inspektora właściwości.  
   
-6.  Ustaw `Width` właściwość w środkowej kolumnie na wartość "4 *".  
+6. Ustaw `Width` właściwość w środkowej kolumnie na wartość "4 *".  
   
-7.  Kliknij przycisk **OK** , aby zapisać zmiany. Następujące XAML zostanie dodany do Twojego pliku MainWindow.xaml:  
+7. Kliknij przycisk **OK** , aby zapisać zmiany. Następujące XAML zostanie dodany do Twojego pliku MainWindow.xaml:  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
     </Grid>  
     ```  
   
-8.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**. Należy zmodyfikować kod, wykonując następujące czynności:  
+8. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**. Należy zmodyfikować kod, wykonując następujące czynności:  
   
     1.  Dodaj następujące przestrzenie nazw:  
   

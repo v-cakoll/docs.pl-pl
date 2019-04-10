@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aad068b5857eb956ded63fa2a57cb163d3cf5c58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822576"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322696"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>Do składowej wystąpienia klasy nie można odwołać się z obrębu udostępnionej metody lub udostępnionego inicjatora składowej bez jawnego wystąpienia klasy
 Wykonano do odwoływania się do elementu członkowskiego klasy z w ramach procedury udostępnianej nieudostępnione. W poniższym przykładzie pokazano takiej sytuacji.  
@@ -37,11 +37,11 @@ End Class
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Zdecyduj, czy chcesz, aby element członkowski współużytkowane przez wszystkie wystąpienia klasy lub przechowywać poszczególne dla każdego wystąpienia.  
+1. Zdecyduj, czy chcesz, aby element członkowski współużytkowane przez wszystkie wystąpienia klasy lub przechowywać poszczególne dla każdego wystąpienia.  
   
-2.  Pojedyncza kopia elementu członkowskiego do współdzielenia pośród wszystkich wystąpień, dodać `Shared` — słowo kluczowe do deklaracji elementu członkowskiego. Zachowaj `Shared` słowa kluczowego w zgłoszeniu procedury.  
+2. Pojedyncza kopia elementu członkowskiego do współdzielenia pośród wszystkich wystąpień, dodać `Shared` — słowo kluczowe do deklaracji elementu członkowskiego. Zachowaj `Shared` słowa kluczowego w zgłoszeniu procedury.  
   
-3.  Jeśli chcesz, aby każde wystąpienie ma swój własny pojedyncza kopia elementu członkowskiego, nie należy określać `Shared` deklaracji elementu członkowskiego. Usuń `Shared` słowo kluczowe z deklaracja procedury.  
+3. Jeśli chcesz, aby każde wystąpienie ma swój własny pojedyncza kopia elementu członkowskiego, nie należy określać `Shared` deklaracji elementu członkowskiego. Usuń `Shared` słowo kluczowe z deklaracja procedury.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125979"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332082"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: tworzenie list wzorzec-szczegół za pomocą kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -27,26 +27,26 @@ ms.locfileid: "59125979"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Aby utworzyć listę wzorzec szczegół za pomocą projektanta  
   
-1.  Dodaj dwie <xref:System.Windows.Forms.DataGrid> formantów do formularza. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md). W programie Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika** domyślnie. Aby uzyskać więcej informacji, zobacz [jak: Dodaj elementy do przybornika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
+1. Dodaj dwie <xref:System.Windows.Forms.DataGrid> formantów do formularza. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md). W programie Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> formantu nie znajduje się w **przybornika** domyślnie. Aby uzyskać więcej informacji, zobacz [jak: Dodaj elementy do przybornika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100)).  
   
     > [!NOTE]
     >  Poniższe kroki nie mają zastosowania do programu Visual Studio 2005, który używa **źródeł danych** okna dla powiązania danych w czasie projektowania. Aby uzyskać więcej informacji, zobacz [powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) i [jak: Wyświetlanie powiązanych danych w Windows Forms aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120)).  
   
-2.  Przeciągnij dwóch lub więcej tabel z **Eksploratora serwera** do formularza.  
+2. Przeciągnij dwóch lub więcej tabel z **Eksploratora serwera** do formularza.  
   
-3.  Z **danych** menu, wybierz opcję **Generowanie zestawu danych**.  
+3. Z **danych** menu, wybierz opcję **Generowanie zestawu danych**.  
   
-4.  Ustaw relacje między tabelami przy użyciu projektanta XML. Aby uzyskać więcej informacji, zobacz "jak: Tworzenie relacji jeden do wielu w schematów XML i zestawy danych"w witrynie MSDN.  
+4. Ustaw relacje między tabelami przy użyciu projektanta XML. Aby uzyskać więcej informacji, zobacz "jak: Tworzenie relacji jeden do wielu w schematów XML i zestawy danych"w witrynie MSDN.  
   
-5.  Zapisz relacje, wybierając **Zapisz wszystko** z **pliku** menu.  
+5. Zapisz relacje, wybierając **Zapisz wszystko** z **pliku** menu.  
   
-6.  Konfigurowanie <xref:System.Windows.Forms.DataGrid> formant, który chcesz wyznaczyć głównego siatki w następujący sposób:  
+6. Konfigurowanie <xref:System.Windows.Forms.DataGrid> formant, który chcesz wyznaczyć głównego siatki w następujący sposób:  
   
     1.  Wybierz <xref:System.Data.DataSet> z listy rozwijanej w <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości.  
   
     2.  Wybieranie tabeli głównej (na przykład "klienci") z listy rozwijanej w <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości.  
   
-7.  Konfigurowanie <xref:System.Windows.Forms.DataGrid> formant, który chcesz wyznaczyć na siatce szczegółów w następujący sposób:  
+7. Konfigurowanie <xref:System.Windows.Forms.DataGrid> formant, który chcesz wyznaczyć na siatce szczegółów w następujący sposób:  
   
     1.  Wybierz <xref:System.Data.DataSet> z listy rozwijanej w <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości.  
   

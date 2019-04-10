@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313804"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Instrukcje: Wywoływanie metody rozszerzenia (Visual Basic)
 Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy. Po metody rozszerzenia są deklarowane i dostosowane do zakresu, można też wywołać, takich jak metoda wystąpienia typu, który stanowi rozszerzenie. Aby uzyskać więcej informacji na temat pisania metodę rozszerzenia, zobacz [jak: Zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md).  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>Aby wywołać metodę rozszerzenia  
   
-1.  Zadeklaruj zmienną, która ma typ danych pierwszy parametr metody rozszerzenia. Aby uzyskać `PrintAndPunctuate`, potrzebujesz <xref:System.String> zmiennej:  
+1. Zadeklaruj zmienną, która ma typ danych pierwszy parametr metody rozszerzenia. Aby uzyskać `PrintAndPunctuate`, potrzebujesz <xref:System.String> zmiennej:  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  Czy zmienna spowoduje wywołanie metody rozszerzenia, a jego wartość jest związana z pierwszego parametru `aString`. Zostanie wyświetlona następująca instrukcja wywoływania `Ready?`.  
+2. Czy zmienna spowoduje wywołanie metody rozszerzenia, a jego wartość jest związana z pierwszego parametru `aString`. Zostanie wyświetlona następująca instrukcja wywoływania `Ready?`.  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  Zadeklaruj innej zmiennej ciągu i wywołanie metody ponownie, aby zobaczyć, czy działa z dowolnym ciągiem.  
+3. Zadeklaruj innej zmiennej ciągu i wywołanie metody ponownie, aby zobaczyć, czy działa z dowolnym ciągiem.  
   
     ```  
     Dim example2 = " or not"  

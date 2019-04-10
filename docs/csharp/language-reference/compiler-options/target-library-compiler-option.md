@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 0bdf8d95004ca11e3d6b9b27568f7310a802a28b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e0935965e9225ab524290429803fe4c9ccc80c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313648"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target: library (opcje kompilatora C#)
 **-Target: library** opcji powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL), a nie plik wykonywalny (EXE).  
@@ -35,11 +35,11 @@ ms.locfileid: "54542447"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony.  
+1. Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **aplikacji** stronę właściwości.  
+2. Kliknij przycisk **aplikacji** stronę właściwości.  
   
-3.  Modyfikowanie **typ danych wyjściowych** właściwości.  
+3. Modyfikowanie **typ danych wyjściowych** właściwości.  
   
  Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

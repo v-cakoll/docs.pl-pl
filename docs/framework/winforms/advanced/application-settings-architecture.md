@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312569"
 ---
 # <a name="application-settings-architecture"></a>Architektura ustawień aplikacji
 W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje zaawansowanych funkcji architektury, takich jak ustawienia pogrupowanych i klucze ustawienia.  
@@ -100,11 +100,11 @@ W tym temacie opisano, jak działa Architektura ustawień aplikacji i analizuje 
 ### <a name="settings-serialization"></a>Ustawienia serializacji  
  Gdy <xref:System.Configuration.LocalFileSettingsProvider> należy zapisać ustawienia dysku, wykonuje następujące czynności:  
   
-1.  Używa odbicia, aby sprawdzić wszystkie właściwości zdefiniowane w Twojej <xref:System.Configuration.ApplicationSettingsBase> klasy i znajdowania tych, które są stosowane z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Używa odbicia, aby sprawdzić wszystkie właściwości zdefiniowane w Twojej <xref:System.Configuration.ApplicationSettingsBase> klasy i znajdowania tych, które są stosowane z oboma <xref:System.Configuration.ApplicationScopedSettingAttribute> lub <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Serializuje właściwości na dysku. Najpierw próbuje wywołać <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> lub <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> na skojarzonej z typem <xref:System.ComponentModel.TypeConverter>. Jeśli to się nie powiedzie, używa serializacji XML zamiast tego.  
+2. Serializuje właściwości na dysku. Najpierw próbuje wywołać <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> lub <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> na skojarzonej z typem <xref:System.ComponentModel.TypeConverter>. Jeśli to się nie powiedzie, używa serializacji XML zamiast tego.  
   
-3.  Określa ustawienia, które go, w której pliki na podstawie atrybutu tego ustawienia.  
+3. Określa ustawienia, które go, w której pliki na podstawie atrybutu tego ustawienia.  
   
  W przypadku zastosowania klasy ustawienia, można użyć <xref:System.Configuration.SettingsSerializeAsAttribute> do oznaczania ustawienie binarne lub niestandardowej serializacji przy użyciu <xref:System.Configuration.SettingsSerializeAs> wyliczenia. Aby uzyskać więcej informacji na temat tworzenia własnych klas ustawień w kodzie, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).  
   

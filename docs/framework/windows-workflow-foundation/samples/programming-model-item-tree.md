@@ -2,12 +2,12 @@
 title: Drzewo elementów modelu programowania
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321136"
 ---
 # <a name="programming-model-item-tree"></a>Drzewo elementów modelu programowania
 W tym przykładzie pokazano, jak nawigować po <xref:System.Activities.Presentation.Model.ModelItem> drzewa za pomocą powiązania dane deklaratywne w widoku drzewa Windows Presentation Foundation (WPF).
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Otwórz rozwiązanie ProgrammingModelItemTree.sln w programie Visual Studio 2010.
+1. Otwórz rozwiązanie ProgrammingModelItemTree.sln w programie Visual Studio 2010.
 
-2.  Skompiluj rozwiązanie, wybierając **Kompiluj rozwiązanie** z **kompilacji** menu.
+2. Skompiluj rozwiązanie, wybierając **Kompiluj rozwiązanie** z **kompilacji** menu.
 
-3.  Naciśnij klawisz F5, aby uruchomić aplikację. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Następnie zostanie wyświetlony formularz.
+3. Naciśnij klawisz F5, aby uruchomić aplikację. [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] Następnie zostanie wyświetlony formularz.
 
-4.  Kliknij przycisk **obciążenia WF** przycisk, aby załadować <xref:System.Activities.Presentation.Model.ModelItem> i powiąż go w widoku drzewa.
+4. Kliknij przycisk **obciążenia WF** przycisk, aby załadować <xref:System.Activities.Presentation.Model.ModelItem> i powiąż go w widoku drzewa.
 
-5.  Klikając **drzewo elementów modelu zmiany** przycisk wykonuje poprzedni kod, aby dodać element do drzewa i ustawić właściwość.
+5. Klikając **drzewo elementów modelu zmiany** przycisk wykonuje poprzedni kod, aby dodać element do drzewa i ustawić właściwość.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

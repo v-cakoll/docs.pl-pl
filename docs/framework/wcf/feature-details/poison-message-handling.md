@@ -2,12 +2,12 @@
 title: Obsługa komunikatów zanieczyszczonych
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305029"
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył maksymalną liczbę prób dostarczenia do aplikacji. Ta sytuacja może wystąpić, gdy aplikacja w kolejce nie może przetworzyć komunikatu z powodu błędów. Aby spełniać wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty, w ramach transakcji. {Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, więc, że komunikat zostanie ponowiony w ramach nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może utknąć w pętli, odbierania i przerywanie ten sam komunikat, dopóki nie przekroczono maksymalną liczbę prób dostarczenia i wyniki Zarządzanie skażonymi komunikatami.  
@@ -66,17 +66,17 @@ A *Zarządzanie skażonymi komunikatami* jest komunikat, który przekroczył mak
   
  Aplikacja może wymagać pewnego rodzaju automatycznych obsługi skażone komunikaty przenosi skażone komunikaty do kolejki Zarządzanie skażonymi komunikatami, tak, że usługi mogą uzyskiwać dostęp do pozostałej części wiadomości w kolejce. Jest to tylko scenariusz przy użyciu mechanizmu obsługi błędów do nasłuchiwania wiadomości poison wyjątki, gdy <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> ustawienie ma wartość <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. W przykładzie poison wiadomości dla wersji 3.0 pokazano to zachowanie. Poniżej opisano czynności wymagane do obsługi skażone komunikaty, łącznie z najlepszymi rozwiązaniami:  
   
-1.  Upewnij się, że ustawienia skażone odzwierciedla wymagania aplikacji. Podczas pracy z ustawieniami, upewnij się, zrozumieć różnice między możliwości usługi kolejkowania komunikatów na [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Upewnij się, że ustawienia skażone odzwierciedla wymagania aplikacji. Podczas pracy z ustawieniami, upewnij się, zrozumieć różnice między możliwości usługi kolejkowania komunikatów na [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-2.  W razie potrzeby Implementowanie `IErrorHandler` do obsługi błędów poison wiadomości. Ponieważ ustawienie `ReceiveErrorHandling` do `Fault` wymaga mechanizm ręcznie przenieść skażone wiadomości w kolejce lub zewnętrznego problemu zależnych zwykle jest używane do implementowania `IErrorHandler` podczas `ReceiveErrorHandling` jest ustawiona na `Fault`, jako pokazano w poniższym kodzie.  
+2. W razie potrzeby Implementowanie `IErrorHandler` do obsługi błędów poison wiadomości. Ponieważ ustawienie `ReceiveErrorHandling` do `Fault` wymaga mechanizm ręcznie przenieść skażone wiadomości w kolejce lub zewnętrznego problemu zależnych zwykle jest używane do implementowania `IErrorHandler` podczas `ReceiveErrorHandling` jest ustawiona na `Fault`, jako pokazano w poniższym kodzie.  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Utwórz `PoisonBehaviorAttribute` używanego zachowania usługi. Instaluje zachowanie `IErrorHandler` na Dyspozytor. Zobacz poniższy przykład kodu.  
+3. Utwórz `PoisonBehaviorAttribute` używanego zachowania usługi. Instaluje zachowanie `IErrorHandler` na Dyspozytor. Zobacz poniższy przykład kodu.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Upewnij się, że usługa jest oznaczony za pomocą atrybutu skażone zachowanie.  
+4. Upewnij się, że usługa jest oznaczony za pomocą atrybutu skażone zachowanie.  
 
  Ponadto jeśli `ReceiveErrorHandling` ustawiono `Fault`, `ServiceHost` błędów w przypadku napotkania Zarządzanie skażonymi komunikatami. Można podpiąć zdarzenie uszkodzoną i wyłączenie usługi, akcje naprawcze i ponownie uruchomić. Na przykład `LookupId` w <xref:System.ServiceModel.MsmqPoisonMessageException> propagowane do `IErrorHandler` można zauważyć i kiedy błędy hosta usług, można użyć `System.Messaging` interfejsu API do odbierania wiadomości z kolejki przy użyciu `LookupId` do usunięcia komunikatu z kolejki i przechowywać wiadomości w niektórych magazynu zewnętrznego lub innej kolejki. Następnie można ponownie uruchomić `ServiceHost` Wznowienie normalnego przetwarzania. [Obsługa zanieczyszczonych komunikatów, obsługa w usłudze MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) przedstawia tego zachowania.  
   

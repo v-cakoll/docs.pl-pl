@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841007"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320694"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Przewodnik: Deklarowanie i wywoływanie zdarzeń (Visual Basic)
 W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o nazwie `Widget`. Po wykonaniu kroków, warto przeczytać temat Pomocnika [instruktażu: Obsługa zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), który pokazuje, jak używać zdarzeń z `Widget` obiektów, aby zapewnić informacje o stanie w aplikacji.  
@@ -28,11 +28,11 @@ W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o na
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Aby zbudować przykład kodu, w tym temacie  
   
-1.  Otwórz nowy projekt aplikacji Windows Visual Basic i Utwórz formularz o nazwie `Form1`.  
+1. Otwórz nowy projekt aplikacji Windows Visual Basic i Utwórz formularz o nazwie `Form1`.  
   
-2.  Dodawanie dwóch przycisków i etykiety w celu `Form1`.  
+2. Dodawanie dwóch przycisków i etykiety w celu `Form1`.  
   
-3.  Nazwy obiektów, jak pokazano w poniższej tabeli.  
+3. Nazwy obiektów, jak pokazano w poniższej tabeli.  
   
     |Obiekt|Właściwość|Ustawienie|  
     |------------|--------------|-------------|  
@@ -40,7 +40,7 @@ W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o na
     |`Button2`|`Text`|Anuluj|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  Na **projektu** menu, wybierz **Dodaj klasę** można dodać klasę o nazwie `Widget.vb` do projektu.  
+4. Na **projektu** menu, wybierz **Dodaj klasę** można dodać klasę o nazwie `Widget.vb` do projektu.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Aby zadeklarować zdarzenia dla klasy elementu Widget  
   
@@ -57,11 +57,11 @@ W tym instruktażu pokazano, jak deklarowanie i wywoływanie zdarzeń klasy o na
   
 #### <a name="to-raise-the-percentdone-event"></a>Aby zgłosić zdarzenie PercentDone  
   
-1.  Aby uprościć dostęp do `Timer` Dodaj właściwość używana przez tę klasę `Imports` instrukcji na górze sekcji deklaracji klasy modułu, powyżej `Class Widget` instrukcji.  
+1. Aby uprościć dostęp do `Timer` Dodaj właściwość używana przez tę klasę `Imports` instrukcji na górze sekcji deklaracji klasy modułu, powyżej `Class Widget` instrukcji.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  Dodaj następujący kod do `Widget` klasy:  
+2. Dodaj następujący kod do `Widget` klasy:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   

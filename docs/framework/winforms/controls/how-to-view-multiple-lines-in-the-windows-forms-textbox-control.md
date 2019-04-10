@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324191"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows
 Domyślnie w formularzach Windows <xref:System.Windows.Forms.TextBox> kontrolka Wyświetla pojedynczą linie tekstu i nie są wyświetlane paski przewijania. Jeśli tekst jest dłuższy niż dostępna ilość miejsca, tylko część tekstu jest widoczna. To zachowanie domyślne można zmienić, ustawiając <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, i <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwości odpowiednie wartości.  
@@ -29,9 +29,9 @@ Domyślnie w formularzach Windows <xref:System.Windows.Forms.TextBox> kontrolka 
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>Aby wyświetlić wiele wierszy w formancie TextBox  
   
-1.  Ustaw <xref:System.Windows.Forms.TextBox.Multiline%2A> właściwość `true`. Jeśli <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest `true` (ustawienie domyślne), następnie pojawi się jako jeden lub więcej akapitów tekstu w kontrolce; w przeciwnym razie zostanie wyświetlony jako listy, w której niektóre linie mogą zostać obcięte na brzegu kontrolki.  
+1. Ustaw <xref:System.Windows.Forms.TextBox.Multiline%2A> właściwość `true`. Jeśli <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> jest `true` (ustawienie domyślne), następnie pojawi się jako jeden lub więcej akapitów tekstu w kontrolce; w przeciwnym razie zostanie wyświetlony jako listy, w której niektóre linie mogą zostać obcięte na brzegu kontrolki.  
   
-2.  Ustaw <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwość do odpowiedniej wartości.  
+2. Ustaw <xref:System.Windows.Forms.TextBox.ScrollBars%2A> właściwość do odpowiedniej wartości.  
   
     |Wartość|Opis|  
     |-----------|-----------------|  
@@ -39,7 +39,7 @@ Domyślnie w formularzach Windows <xref:System.Windows.Forms.TextBox> kontrolka 
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|Użyj tej wartości, jeśli chcesz wyświetlić listę wierszy, z których część może być dłuższy niż szerokość <xref:System.Windows.Forms.TextBox> kontroli.|  
     |<xref:System.Windows.Forms.ScrollBars.Both>|Użyj tej wartości, jeśli lista może być dłuższa niż wysokość formantu.|  
   
-3.  Ustaw <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość do odpowiedniej wartości.  
+3. Ustaw <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> właściwość do odpowiedniej wartości.  
   
     |Wartość|Opis|  
     |-----------|-----------------|  

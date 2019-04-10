@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99fa1fcb300d523d74a07da09e5a04848364607e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333174"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Instrukcje: Tworzenie klasy za pomocą modelu CodeDOM
 Poniższe procedury pokazują, jak utworzyć i skompilować wykresu CodeDOM, który generuje klasę zawierający dwa pola, trzy właściwości, metody, Konstruktor i punktu wejścia.  
   
-1.  Utwórz aplikację konsolową, która będzie używać kodu CodeDOM, aby wygenerować kod źródłowy dla klasy.  
+1. Utwórz aplikację konsolową, która będzie używać kodu CodeDOM, aby wygenerować kod źródłowy dla klasy.  
   
      W tym przykładzie Generowanie klasy o nazwie `Sample`, i wygenerowany kod jest klasę o nazwie `CodeDOMCreatedClass` w pliku o nazwie SampleCode.  
   
-2.  Podczas generowania klasy, zainicjować wykresu CodeDOM i definiowanie elementów członkowskich, Konstruktor i punktu wejścia przy użyciu metod CodeDOM (`Main` metoda) wygenerowanej klasy.  
+2. Podczas generowania klasy, zainicjować wykresu CodeDOM i definiowanie elementów członkowskich, Konstruktor i punktu wejścia przy użyciu metod CodeDOM (`Main` metoda) wygenerowanej klasy.  
   
      W tym przykładzie, wygenerowana klasa ma dwa pola, trzy właściwości, Konstruktor, metody i `Main` metody.  
   
-3.  Podczas generowania klasy, utworzyć dostawcy kodu specyficznego dla języka i wywołanie jego <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę w celu wygenerowania kodu z wykresu.  
+3. Podczas generowania klasy, utworzyć dostawcy kodu specyficznego dla języka i wywołanie jego <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> metodę w celu wygenerowania kodu z wykresu.  
   
-4.  Skompiluj i uruchom aplikację do generowania kodu.  
+4. Skompiluj i uruchom aplikację do generowania kodu.  
   
      W tym przykładzie wygenerowany kod znajduje się w pliku o nazwie SampleCode. Skompiluj i wykonać ten kod, aby wyświetlić przykładowe dane wyjściowe.  
   
@@ -87,12 +87,12 @@ Poniższe procedury pokazują, jak utworzyć i skompilować wykresu CodeDOM, kt�
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>Aby utworzyć wykres i generowania kodu  
   
-1.  Dodaj metody, utworzony w poprzednich krokach do `Main` metody zdefiniowanej w pierwszym kroku.  
+1. Dodaj metody, utworzony w poprzednich krokach do `Main` metody zdefiniowanej w pierwszym kroku.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  Skompilować i uruchomić generowania klasy.  
+2. Skompilować i uruchomić generowania klasy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu zawiera kod z poprzednich kroków.  

@@ -2,12 +2,12 @@
 title: Zmienne i argumenty
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320746"
 ---
 # <a name="variables-and-arguments"></a>Zmienne i argumenty
 W Windows Workflow Foundation (WF), zmienne reprezentują przechowywania danych i argumenty reprezentują przepływ danych do i z działania. Działanie ma zestawu argumentów i stanowią one podpis działania. Ponadto działanie może zachować listę zmiennych, do których Deweloper można dodawać i usuwać zmiennych podczas projektowania przepływu pracy. Argument jest powiązany za pomocą wyrażenia, która nie zwraca wartości.  
@@ -63,11 +63,11 @@ Variable<string> var = new Variable<string>
   
  Środowisko wykonawcze przepływów pracy zapewnia następujące gwarancje, dotyczące czas przenoszenia danych do i z działań:  
   
-1.  Po uruchomieniu działania wykonywania jest obliczany wartości wszystkich argumentów wejściowych i wejścia/wyjścia. Na przykład, niezależnie od tego, kiedy <xref:System.Activities.Argument.Get%2A> jest wywoływana, wartość zwracana jest ten, który jest obliczana przez środowisko wykonawcze przed jej wywołanie `Execute`.  
+1. Po uruchomieniu działania wykonywania jest obliczany wartości wszystkich argumentów wejściowych i wejścia/wyjścia. Na przykład, niezależnie od tego, kiedy <xref:System.Activities.Argument.Get%2A> jest wywoływana, wartość zwracana jest ten, który jest obliczana przez środowisko wykonawcze przed jej wywołanie `Execute`.  
   
-2.  Gdy <xref:System.Activities.InOutArgument%601.Set%2A> jest wywoływana, środowisko uruchomieniowe ustawia wartość natychmiast.  
+2. Gdy <xref:System.Activities.InOutArgument%601.Set%2A> jest wywoływana, środowisko uruchomieniowe ustawia wartość natychmiast.  
   
-3.  Argumenty mogą opcjonalnie mieć ich <xref:System.Activities.Argument.EvaluationOrder%2A> określony. <xref:System.Activities.Argument.EvaluationOrder%2A> jest liczony od zera wartość, która określa kolejność szacowania argumentu. Domyślnie kolejność oceny argument jest nieokreślony i jest równa <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> wartość. Ustaw <xref:System.Activities.Argument.EvaluationOrder%2A> na wartość większą lub równą zero, aby określić kolejność obliczania dla tego argumentu. Windows Workflow Foundation ocenia argumenty w kolejności określonej wersji ewaluacyjnej, w kolejności rosnącej. Należy pamiętać, że argumenty z kolejnością nieokreślony oceny są obliczane przed elementami o kolejność oceny określonej.  
+3. Argumenty mogą opcjonalnie mieć ich <xref:System.Activities.Argument.EvaluationOrder%2A> określony. <xref:System.Activities.Argument.EvaluationOrder%2A> jest liczony od zera wartość, która określa kolejność szacowania argumentu. Domyślnie kolejność oceny argument jest nieokreślony i jest równa <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> wartość. Ustaw <xref:System.Activities.Argument.EvaluationOrder%2A> na wartość większą lub równą zero, aby określić kolejność obliczania dla tego argumentu. Windows Workflow Foundation ocenia argumenty w kolejności określonej wersji ewaluacyjnej, w kolejności rosnącej. Należy pamiętać, że argumenty z kolejnością nieokreślony oceny są obliczane przed elementami o kolejność oceny określonej.  
   
  Autor aktywności można użyć silnie typizowane mechanizm do udostępniania jej argumentów. Jest to realizowane przez zadeklarowanie właściwości typu <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601>, i <xref:System.Activities.InOutArgument%601>. Dzięki temu Autor działania ustalenie określonej umowy o dane przesyłane do i z działania.  
   

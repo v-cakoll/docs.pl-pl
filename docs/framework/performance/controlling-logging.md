@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312101"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 Śledzenia zdarzeń systemu Windows (ETW) można użyć do rejestrowania zdarzeń środowiska uruchomieniowego języka wspólnego (CLR). Można tworzyć i przeglądać ślady za pomocą następujących narzędzi:  
@@ -45,7 +45,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Logman  
   
-1.  W wierszu polecenia wpisz polecenie:  
+1. W wierszu polecenia wpisz polecenie:  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -61,7 +61,7 @@ Provider                                 GUID
   
     -   `-ct perf` Parametr określa, że `QueryPerformanceCounter` funkcja będzie służyć do rejestrowania znacznika czasu dla każdego zdarzenia.  
   
-2.  Aby zatrzymać rejestrowanie zdarzeń, wpisz polecenie:  
+2. Aby zatrzymać rejestrowanie zdarzeń, wpisz polecenie:  
   
      `logman stop clrevents -ets`  
   
@@ -69,13 +69,13 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Xperf  
   
-1.  W wierszu polecenia wpisz polecenie:  
+1. W wierszu polecenia wpisz polecenie:  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
      w przypadku identyfikatora GUID dostawcy CLR ETW identyfikatora GUID, a `0x1CCBD:5` śledzenie wszystkiego na poziomie 5 i niższych (informacja pełna).  
   
-2.  Aby zatrzymać śledzenie, wpisz polecenie:  
+2. Aby zatrzymać śledzenie, wpisz polecenie:  
   
      `Xperf -stop clr`  
   

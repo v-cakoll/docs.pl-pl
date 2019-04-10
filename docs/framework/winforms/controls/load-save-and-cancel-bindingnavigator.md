@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304782"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Instrukcje: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
 <xref:System.Windows.Forms.BindingNavigator> Formant jest specjalny <xref:System.Windows.Forms.ToolStrip> formant, który jest przeznaczony do nawigowania i manipulowanie nimi formantów w formularzu, które są powiązane z danymi.  
@@ -24,21 +24,21 @@ ms.locfileid: "59098718"
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Aby dodać obciążenia, Zapisz i przyciski do składnika BindingNavigator "Anuluj"  
   
-1.  Dodaj <xref:System.Windows.Forms.TextBox> formantu do formularza.  
+1. Dodaj <xref:System.Windows.Forms.TextBox> formantu do formularza.  
   
-2.  Powiązać <xref:System.Windows.Forms.BindingSource>, która jest powiązana ze źródłem danych. W tym przykładzie <xref:System.Windows.Forms.BindingSource> jest powiązana z bazą danych.  
+2. Powiązać <xref:System.Windows.Forms.BindingSource>, która jest powiązana ze źródłem danych. W tym przykładzie <xref:System.Windows.Forms.BindingSource> jest powiązana z bazą danych.  
   
-3.  Po wygenerowaniu karty zestaw danych i tabeli, przeciągnij <xref:System.Windows.Forms.BindingNavigator> formantu do formularza.  
+3. Po wygenerowaniu karty zestaw danych i tabeli, przeciągnij <xref:System.Windows.Forms.BindingNavigator> formantu do formularza.  
   
-4.  Ustaw <xref:System.Windows.Forms.BindingNavigator> kontrolki <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> właściwości <xref:System.Windows.Forms.BindingSource> w formularzu, który jest powiązany z kontrolki.  
+4. Ustaw <xref:System.Windows.Forms.BindingNavigator> kontrolki <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> właściwości <xref:System.Windows.Forms.BindingSource> w formularzu, który jest powiązany z kontrolki.  
   
-5.  Wybierz <xref:System.Windows.Forms.BindingNavigator> kontroli.  
+5. Wybierz <xref:System.Windows.Forms.BindingNavigator> kontroli.  
   
-6.  Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) więc **zadania BindingNavigator** pojawi się okno dialogowe i wybierz **Edytuj elementy**.  
+6. Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) więc **zadania BindingNavigator** pojawi się okno dialogowe i wybierz **Edytuj elementy**.  
   
      **Edytor kolekcji elementów** pojawia się.  
   
-7.  W **Edytor kolekcji elementów**, wykonaj następujące czynności:  
+7. W **Edytor kolekcji elementów**, wykonaj następujące czynności:  
   
     1.  Dodaj <xref:System.Windows.Forms.ToolStripSeparator> i trzema <xref:System.Windows.Forms.ToolStripButton> elementów, wybierając odpowiedni typ <xref:System.Windows.Forms.ToolStripItem> i klikając **Dodaj** przycisku.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59098718"
   
     5.  Kliknij przycisk **OK** aby zamknąć okno dialogowe. Przyciski są dodawane do <xref:System.Windows.Forms.ToolStrip>.  
   
-8.  Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**.  
+8. Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**.  
   
 9. W edytorze kodu Znajdź wiersz kodu, który ładuje dane do karty tabeli. Ten kod został wygenerowany podczas tworzenia powiązań danych, w kroku 2. Kod powinien być podobny do następującego: `TableAdapterName.Fill(DataSetName.TableName)`. Będzie ono najbardziej prawdopodobnie w formie <xref:System.Windows.Forms.Form.Load> zdarzeń.  
   

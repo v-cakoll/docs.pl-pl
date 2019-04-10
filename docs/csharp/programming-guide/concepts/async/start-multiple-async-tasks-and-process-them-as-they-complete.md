@@ -2,12 +2,12 @@
 title: Przetwarzanie zadań asynchronicznych po ich zakończeniu
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152370"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304861"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich, po ich zakończeniu (C#)
 
@@ -25,17 +25,17 @@ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka a
 > [!TIP]
 > Jeśli nie chcesz wczytać projekt, możesz przejrzeć plik MainWindow.xaml.cs na końcu tego tematu.
 
-1.  Wyodrębnij pliki z pobranego z pliku zip, a następnie uruchom program Visual Studio.
+1. Wyodrębnij pliki z pobranego z pliku zip, a następnie uruchom program Visual Studio.
 
-2.  Na pasku menu wybierz **pliku** > **Otwórz** > **projekt/rozwiązanie**.
+2. Na pasku menu wybierz **pliku** > **Otwórz** > **projekt/rozwiązanie**.
 
-3.  W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod został pobrany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningCS.
+3. W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod został pobrany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningCS.
 
-4.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla **ProcessTasksAsTheyFinish** projektu, a następnie wybierz **Ustaw jako projekt startowy**.
+4. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **ProcessTasksAsTheyFinish** projektu, a następnie wybierz **Ustaw jako projekt startowy**.
 
-5.  Wybierz **F5** klawisz, aby uruchomić program (lub naciśnij **Ctrl**+**F5** kluczy, aby uruchomić program bez debugowania go).
+5. Wybierz **F5** klawisz, aby uruchomić program (lub naciśnij **Ctrl**+**F5** kluczy, aby uruchomić program bez debugowania go).
 
-6.  Uruchom projekt kilka razy, aby sprawdzić, czy pobrane długości nie pojawiają się zawsze w tej samej kolejności.
+6. Uruchom projekt kilka razy, aby sprawdzić, czy pobrane długości nie pojawiają się zawsze w tej samej kolejności.
 
 ## <a name="create-the-program-yourself"></a>Utwórz program, samodzielnie
 

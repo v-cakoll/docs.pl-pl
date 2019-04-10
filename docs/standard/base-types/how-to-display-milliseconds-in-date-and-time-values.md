@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie liczby milisekund w wartości daty i godziny'
+title: 'Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643770"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314935"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Instrukcje: Wyświetlanie liczby milisekund w wartości daty i godziny
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny
 Domyślne metody formatowania daty i czasu, takie jak <xref:System.DateTime.ToString?displayProperty=nameWithType>, zawierają godziny, minuty i sekundy wartości czasu, ale wykluczają składnik milisekund. W tym temacie pokazano jak dołączyć datę i składnik czasu w milisekundach w sformatowanym ciągu daty i czasu.  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>Aby wyświetlić składnik milisekund wartości DateTime  
   
-1.  Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
+1. Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType>.  
   
-2.  W celu wyodrębnienia ciągu reprezentującego składnik czasu w milisekundach, należy wywołać wartość daty i godziny metody <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%2A> i przekazać wzorzec w niestandardowym formacie `fff` lub `FFF`, oddzielnie lub z innym niestandardowym specyfikatorem formatu, jak parametr `format`.  
+2. W celu wyodrębnienia ciągu reprezentującego składnik czasu w milisekundach, należy wywołać wartość daty i godziny metody <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%2A> i przekazać wzorzec w niestandardowym formacie `fff` lub `FFF`, oddzielnie lub z innym niestandardowym specyfikatorem formatu, jak parametr `format`.  
   
 ## <a name="example"></a>Przykład  
  W przykładzie wyświetlono składnik wartości milisekund <xref:System.DateTime> i <xref:System.DateTimeOffset> w konsoli, zarówno samodzielnie, jak i uwzględniając dłuższy ciąg daty i czasu.  

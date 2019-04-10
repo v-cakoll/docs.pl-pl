@@ -9,19 +9,19 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331081"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X.509 do programu Windows Communication Foundation (WCF), kod aplikacji należy określić nazwę magazynu certyfikatów i lokalizacji. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X.509 w magazynie certyfikatów, WCF musi mieć uprawnienie, aby to zrobić. Domyślnie tylko właściciel i konto systemowe dostęp klucza prywatnego certyfikatu.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>Aby Udostępnianie certyfikatów X.509 w architekturze WCF  
   
-1.  Należy podać konto, które WCF działa dostęp do odczytu do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509.  
+1. Należy podać konto, które WCF działa dostęp do odczytu do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509.  
   
     1.  Ustal, czy WCF wymaga dostęp do odczytu do klucza prywatnego dla certyfikatu X.509.  
   

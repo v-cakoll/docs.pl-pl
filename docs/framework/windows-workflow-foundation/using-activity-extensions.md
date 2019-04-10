@@ -2,27 +2,27 @@
 title: Używanie rozszerzeń działania
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
-ms.openlocfilehash: 420bd25a94f67169d299bbac64dae06e15c5b0b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321292"
 ---
 # <a name="using-activity-extensions"></a>Używanie rozszerzeń działania
 Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pracy, które zezwala na hostów w celu zapewnienia dodatkowych funkcji, która nie jest jawnie modelowane w przepływie pracy.  W tym temacie opisano sposób tworzenia i liczbę przypadków, gdy działanie wykonuje za pomocą rozszerzenia.
 
 ### <a name="to-use-an-activity-extension-to-count-executions"></a>Liczba wykonań przy użyciu rozszerzenia działania
 
-1.  Otwórz program Visual Studio 2010. Wybierz **nowe**, **projektu**. W obszarze **Visual C#** węzeł **przepływu pracy**.  Wybierz **Aplikacja konsoli przepływu pracy** z listy szablonów. Nadaj projektowi nazwę `Extensions`. Kliknij przycisk **OK** do tworzenia projektu.
+1. Open Visual Studio 2010. Wybierz **nowe**, **projektu**. W obszarze **Visual C#** węzeł **przepływu pracy**.  Wybierz **Aplikacja konsoli przepływu pracy** z listy szablonów. Nadaj projektowi nazwę `Extensions`. Kliknij przycisk **OK** do tworzenia projektu.
 
-2.  Dodaj `using` instrukcja w pliku Program.cs **System.Collections.Generic** przestrzeni nazw.
+2. Dodaj `using` instrukcja w pliku Program.cs **System.Collections.Generic** przestrzeni nazw.
 
     ```
     using System.Collections.Generic;
     ```
 
-3.  W pliku Program.cs, Utwórz nową klasę o nazwie **ExecutionCountExtension**. Poniższy kod tworzy rozszerzenia przepływu pracy, który śledzi identyfikatorów wystąpień podczas jego **zarejestrować** metoda jest wywoływana.
+3. W pliku Program.cs, Utwórz nową klasę o nazwie **ExecutionCountExtension**. Poniższy kod tworzy rozszerzenia przepływu pracy, który śledzi identyfikatorów wystąpień podczas jego **zarejestrować** metoda jest wywoływana.
 
     ```
     // This extension collects a list of workflow Ids
@@ -56,7 +56,7 @@ Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pr
     }
     ```
 
-4.  Utwórz działanie, które zużywa **ExecutionCountExtension**. Poniższy kod definiuje działanie, które pobiera **ExecutionCountExtension** obiektu na podstawie czasu wykonywania i wywołuje jego **zarejestrować** metody, gdy działanie wykonuje.
+4. Utwórz działanie, które zużywa **ExecutionCountExtension**. Poniższy kod definiuje działanie, które pobiera **ExecutionCountExtension** obiektu na podstawie czasu wykonywania i wywołuje jego **zarejestrować** metody, gdy działanie wykonuje.
 
     ```
     // Activity that consumes an extension provided by the host. If the extension is available
@@ -75,7 +75,7 @@ Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pr
     }
     ```
 
-5.  Implementowanie działania w **Main** metoda części pliku program.cs. Poniższy kod zawiera metody do generowania dwóch różnych przepływów pracy, wykonaj kilka razy każdego przepływu pracy i wyświetlić dane wynikowe, który jest zawarty w rozszerzeniu.
+5. Implementowanie działania w **Main** metoda części pliku program.cs. Poniższy kod zawiera metody do generowania dwóch różnych przepływów pracy, wykonaj kilka razy każdego przepływu pracy i wyświetlić dane wynikowe, który jest zawarty w rozszerzeniu.
 
     ```
     class Program

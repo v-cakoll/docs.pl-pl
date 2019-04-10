@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 456dbdab3070e88fe0bc6572c998ce54e3c19c00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166957"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322878"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>Instrukcje: Wyślij dane przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura jest często używane dane do strony sieci Web. 
   
 ## <a name="to-send-data-to-a-host-server"></a>Do przesyłania danych do serwera hosta  
   
-1.  Tworzenie <xref:System.Net.WebRequest> wystąpienia, wywołując <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> za pomocą identyfikatora URI zasobu, takiego jak skrypt lub strony ASP.NET, który akceptuje dane. Na przykład: 
+1. Tworzenie <xref:System.Net.WebRequest> wystąpienia, wywołując <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> za pomocą identyfikatora URI zasobu, takiego jak skrypt lub strony ASP.NET, który akceptuje dane. Na przykład: 
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
@@ -34,7 +34,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     > Program .NET Framework zawiera klasy pochodne klasy specyficzne dla protokołu <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> klas pochodnych identyfikatorów URI, które zaczynają się od *http:*, *https:*, *ftp:* , a *pliku:*.
     Jeśli musisz set lub odczytu właściwości specyficzne dla protokołu, należy rzutować swoje <xref:System.Net.WebRequest> lub <xref:System.Net.WebResponse> obiektu z typem obiektów specyficznych dla protokołu. Aby uzyskać więcej informacji, zobacz [programowanie protokołów podłączanych](programming-pluggable-protocols.md). 
   
-2.  Ustaw wszystkie wartości właściwości, które są potrzebne w Twojej `WebRequest` obiektu. Na przykład, aby włączyć uwierzytelnianie, należy ustawić <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> właściwości wystąpienia <xref:System.Net.NetworkCredential> klasy:
+2. Ustaw wszystkie wartości właściwości, które są potrzebne w Twojej `WebRequest` obiektu. Na przykład, aby włączyć uwierzytelnianie, należy ustawić <xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> właściwości wystąpienia <xref:System.Net.NetworkCredential> klasy:
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -44,7 +44,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-3.  Określ metodę protokołu, który zezwala na dane mają być wysyłane z żądaniem, takich jak HTTP `POST` metody:  
+3. Określ metodę protokołu, który zezwala na dane mają być wysyłane z żądaniem, takich jak HTTP `POST` metody:  
   
     ```csharp  
     request.Method = "POST";  
@@ -54,7 +54,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     request.Method = "POST"  
     ```  
   
-4.  Ustaw <xref:System.Web.HttpRequest.ContentLength> liczbę bajtów w przypadku dołączania do żądania. Na przykład: 
+4. Ustaw <xref:System.Web.HttpRequest.ContentLength> liczbę bajtów w przypadku dołączania do żądania. Na przykład: 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -64,7 +64,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  Ustaw <xref:System.Web.HttpRequest.ContentType> właściwość do odpowiedniej wartości. Na przykład:
+5. Ustaw <xref:System.Web.HttpRequest.ContentType> właściwość do odpowiedniej wartości. Na przykład:
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -74,7 +74,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  Strumień, że przechowuje dane żądania przez wywołanie metody GET <xref:System.Net.WebRequest.GetRequestStream%2A> metody. Na przykład:
+6. Strumień, że przechowuje dane żądania przez wywołanie metody GET <xref:System.Net.WebRequest.GetRequestStream%2A> metody. Na przykład:
   
     ```csharp  
     Stream dataStream = request.GetRequestStream();  
@@ -84,7 +84,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  Zapisane dane <xref:System.IO.Stream> obiektu zwróconego przez `GetRequestStream` metody. Na przykład:
+7. Zapisane dane <xref:System.IO.Stream> obiektu zwróconego przez `GetRequestStream` metody. Na przykład:
   
     ```csharp  
     dataStream.Write(byteArray, 0, byteArray.Length);  
@@ -94,7 +94,7 @@ Poniższa procedura opisuje kroki, aby wysłać dane do serwera. Ta procedura je
     dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  Zamknij strumień żądań przez wywołanie metody <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> metody. Na przykład:
+8. Zamknij strumień żądań przez wywołanie metody <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> metody. Na przykład:
   
     ```csharp  
     dataStream.Close();  

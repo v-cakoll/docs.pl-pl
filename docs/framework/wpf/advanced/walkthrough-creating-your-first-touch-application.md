@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie pierwszej aplikacji dotykowej'
+title: 'Przewodnik: tworzenie pierwszej aplikacji dotykowej'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326986"
 ---
-# <a name="walkthrough-creating-your-first-touch-application"></a>Przewodnik: Tworzenie pierwszej aplikacji dotykowej
+# <a name="walkthrough-creating-your-first-touch-application"></a>Przewodnik: tworzenie pierwszej aplikacji dotykowej
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia aplikacjom odpowiadanie na touch. Na przykład możesz wchodzić w interakcje z aplikacją przy użyciu jednej lub więcej palców urządzenia dotykowe, takiego jak ekranu dotykowego, w tym przewodniku tworzy aplikację, która umożliwia użytkownikowi przenoszenie, zmienianie rozmiaru lub Obracanie pojedynczego obiektu za pomocą dotyku.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
@@ -33,24 +33,24 @@ ms.locfileid: "57374157"
   
 #### <a name="to-create-the-application"></a>Aby utworzyć aplikację  
   
-1.  Utwórz nowy projekt aplikacji WPF w języku Visual Basic lub Visual C# o nazwie `BasicManipulation`. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+1. Utwórz nowy projekt aplikacji WPF w języku Visual Basic lub Visual C# o nazwie `BasicManipulation`. Aby uzyskać więcej informacji, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-2.  Zastąp zawartość pliku MainWindow.xaml następujące XAML.  
+2. Zastąp zawartość pliku MainWindow.xaml następujące XAML.  
   
      Ten kod znaczników tworzy prostą aplikację, która zawiera czerwonego <xref:System.Windows.Shapes.Rectangle> na <xref:System.Windows.Controls.Canvas>. <xref:System.Windows.UIElement.IsManipulationEnabled%2A> Właściwość <xref:System.Windows.Shapes.Rectangle> jest ustawiona na wartość true, dzięki czemu będzie ona otrzymywać do manipulowania zdarzenia. Aplikacja subskrybuje <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, i <xref:System.Windows.UIElement.ManipulationInertiaStarting> zdarzenia. Te zdarzenia zawiera logikę do przenoszenia <xref:System.Windows.Shapes.Rectangle> po użytkownik modyfikuje je.  
   
      [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Jeśli używasz języka Visual Basic w pierwszym wierszu pliku MainWindow.xaml, Zastąp `x:Class="BasicManipulation.MainWindow"` z `x:Class="MainWindow"`.  
+3. Jeśli używasz języka Visual Basic w pierwszym wierszu pliku MainWindow.xaml, Zastąp `x:Class="BasicManipulation.MainWindow"` z `x:Class="MainWindow"`.  
   
-4.  W `MainWindow` klasy, Dodaj następujący kod <xref:System.Windows.UIElement.ManipulationStarting> programu obsługi zdarzeń.  
+4. W `MainWindow` klasy, Dodaj następujący kod <xref:System.Windows.UIElement.ManipulationStarting> programu obsługi zdarzeń.  
   
      <xref:System.Windows.UIElement.ManipulationStarting> Wystąpi zdarzenie po [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wykryje, że touch danych wejściowych, który rozpoczyna się do manipulowania obiektu. Kod określa, że pozycja operowanie atrybutami powinny być względem <xref:System.Windows.Window> , ustawiając <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> właściwości.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
-5.  W `MainWindow` klasy, Dodaj następujący kod <xref:System.Windows.Input.ManipulationDelta> programu obsługi zdarzeń.
+5. W `MainWindow` klasy, Dodaj następujący kod <xref:System.Windows.Input.ManipulationDelta> programu obsługi zdarzeń.
 
      <xref:System.Windows.Input.ManipulationDelta> Zdarzenie występuje, gdy odrywania danych wejściowych zmienia pozycję i może wystąpić wiele razy podczas manipulowania. Zdarzenia może również wystąpić po palcem jest wywoływane. Na przykład, jeśli użytkownik przeciąga palcem na ekranie <xref:System.Windows.Input.ManipulationDelta> zdarzeń powtarza się wielokrotnie jako przenosi finger. Gdy użytkownik zgłasza palcem na ekranie <xref:System.Windows.Input.ManipulationDelta> zdarzeń będzie się powtarzał do symulacji bezwładności.
 
@@ -59,14 +59,14 @@ ms.locfileid: "57374157"
      [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
-6.  W `MainWindow` klasy, Dodaj następujący kod <xref:System.Windows.UIElement.ManipulationInertiaStarting> programu obsługi zdarzeń.
+6. W `MainWindow` klasy, Dodaj następujący kod <xref:System.Windows.UIElement.ManipulationInertiaStarting> programu obsługi zdarzeń.
 
      <xref:System.Windows.UIElement.ManipulationInertiaStarting> Zdarzenie występuje, gdy użytkownik zgłasza wszystkich palców od ekranu. Kod ustawia prędkości początkowej oraz prędkości dla przepływu, rozszerzenia i obracania prostokąta.
 
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
-7.  Skompiluj i uruchom projekt.
+7. Skompiluj i uruchom projekt.
 
      Powinien zostać wyświetlony czerwony kwadrat są wyświetlane w oknie.
 

@@ -2,12 +2,12 @@
 title: Wybór i sprawdzanie poprawności certyfikatu
 ms.date: 03/30/2017
 ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
-ms.openlocfilehash: 2f28e9b77abbd53200ecf8128c942ce6348a7460
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79cc46d91f6b1818154bac6f62df2acbac36fe20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318354"
 ---
 # <a name="certificate-selection-and-validation"></a>Wybór i sprawdzanie poprawności certyfikatu
 <xref:System.Net> Klasy obsługują kilka sposobów, aby wybrać i zweryfikować <xref:System.Security.Cryptography.X509Certificates> dla połączeń Secure Socket Layer (SSL). Klient może wybrać jeden lub kilka certyfikatów, aby uwierzytelniać się z serwerem. Serwer może wymagać, że jeden lub więcej określonych atrybutów do uwierzytelniania certyfikatu klienta.  
@@ -29,11 +29,11 @@ ms.locfileid: "59111348"
 ## <a name="client-certificate-selection"></a>Wyboru certyfikatu klienta  
  .NET Framework wybiera certyfikat klienta do przedstawienia na serwer w następujący sposób:  
   
-1.  Jeśli certyfikat klienta został przedstawiony wcześniej do serwera, certyfikat są buforowane, gdy najpierw przedstawiony zostanie ponownie użyty dla kolejnych żądań certyfikatów.  
+1. Jeśli certyfikat klienta został przedstawiony wcześniej do serwera, certyfikat są buforowane, gdy najpierw przedstawiony zostanie ponownie użyty dla kolejnych żądań certyfikatów.  
   
-2.  Jeśli obiekt delegowany jest obecny, zawsze używać wynikiem delegata jako certyfikat klienta do wybrania. Spróbuj użyć pamięci podręcznej certyfikatu, jeśli jest to możliwe, ale nie należy używać pamięci podręcznej poświadczenia anonimowe, jeśli pełnomocnik ma zwróciła wartość null i kolekcję certyfikatów nie jest pusty.  
+2. Jeśli obiekt delegowany jest obecny, zawsze używać wynikiem delegata jako certyfikat klienta do wybrania. Spróbuj użyć pamięci podręcznej certyfikatu, jeśli jest to możliwe, ale nie należy używać pamięci podręcznej poświadczenia anonimowe, jeśli pełnomocnik ma zwróciła wartość null i kolekcję certyfikatów nie jest pusty.  
   
-3.  Jeśli jest to pierwsze wyzwanie dla certyfikatu klienta, Framework wylicza certyfikaty <xref:System.Security.Cryptography.X509Certificates.X509Certificate> lub <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy obiektów skojarzonych z tym połączeniem szuka dopasowania między listy wystawców certyfikatów, dostarczone przez serwer i nazwę wystawcy certyfikatu klienta. Pierwszy certyfikat, który odpowiada są wysyłane do serwera. Jeśli nie dopasowania certyfikatu lub kolekcję certyfikatów jest pusty, a następnie poświadczenia anonimowe są wysyłane do serwera.  
+3. Jeśli jest to pierwsze wyzwanie dla certyfikatu klienta, Framework wylicza certyfikaty <xref:System.Security.Cryptography.X509Certificates.X509Certificate> lub <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy obiektów skojarzonych z tym połączeniem szuka dopasowania między listy wystawców certyfikatów, dostarczone przez serwer i nazwę wystawcy certyfikatu klienta. Pierwszy certyfikat, który odpowiada są wysyłane do serwera. Jeśli nie dopasowania certyfikatu lub kolekcję certyfikatów jest pusty, a następnie poświadczenia anonimowe są wysyłane do serwera.  
   
 ## <a name="tools-for-certificate-configuration"></a>Narzędzia do konfiguracji certyfikatu  
  Wiele narzędzi, są dostępne dla klienta i serwera konfiguracji certyfikatu.  

@@ -2,12 +2,12 @@
 title: 'Instrukcje: używanie programu Svcutil.exe do pobierania dokumentów metadanych'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328351"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Instrukcje: używanie programu Svcutil.exe do pobierania dokumentów metadanych
 Umożliwia Svcutil.exe do pobierania metadanych z uruchomionymi usługami i zapisać metadane do plików lokalnych. HTTP i HTTPS URL schematów, Svcutil.exe podejmie próbę pobrania metadanych przy użyciu usługi WS-MetadataExchange i [odnajdywania usług sieci Web XML](https://go.microsoft.com/fwlink/?LinkId=94950). Dla innych schematów adresów URL Svcutil.exe używa tylko protokołu WS-MetadataExchange.  
@@ -23,11 +23,11 @@ Umożliwia Svcutil.exe do pobierania metadanych z uruchomionymi usługami i zapi
   
 ## <a name="to-download-metadata-using-svcutilexe"></a>Aby pobrać metadane przy użyciu Svcutil.exe  
   
-1.  Znajdź narzędzia Svcutil.exe w następującej lokalizacji:  
+1. Znajdź narzędzia Svcutil.exe w następującej lokalizacji:  
   
      C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  W wierszu polecenia Uruchom narzędzie przy użyciu następującego formatu.  
+2. W wierszu polecenia Uruchom narzędzie przy użyciu następującego formatu.  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
@@ -35,7 +35,7 @@ Umożliwia Svcutil.exe do pobierania metadanych z uruchomionymi usługami i zapi
   
      Należy określić `/t:metadata` umożliwiający pobranie metadanych. W przeciwnym razie wygenerowany kod klienta i konfiguracji.  
   
-3.  <`url`> Argument określa adres URL punktu końcowego usługi, który udostępnia metadane lub dokumentu z metadanymi hostowanego w trybie online. <`epr`> Argument określa ścieżkę do pliku XML, który zawiera WS-Addressing `EndpointAddress` dla punktu końcowego usługi, która obsługuje WS-MetadataExchange.  
+3. <`url`> Argument określa adres URL punktu końcowego usługi, który udostępnia metadane lub dokumentu z metadanymi hostowanego w trybie online. <`epr`> Argument określa ścieżkę do pliku XML, który zawiera WS-Addressing `EndpointAddress` dla punktu końcowego usługi, która obsługuje WS-MetadataExchange.  
   
  Aby uzyskać więcej opcji dotyczących używania tego narzędzia do pobierania metadanych, zobacz [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

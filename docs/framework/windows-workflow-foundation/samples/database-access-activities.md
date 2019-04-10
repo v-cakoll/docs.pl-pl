@@ -2,12 +2,12 @@
 title: Działania dostępu do bazy danych
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066093"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322605"
 ---
 # <a name="database-access-activities"></a>Działania dostępu do bazy danych
 Działania dostępu do bazy danych umożliwiają dostęp do bazy danych w przepływie pracy. Te działania, Zezwalaj na dostęp do bazy danych do pobierania lub modyfikowanie informacji i użycia [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.  
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>Aby uruchomić plik Setup.cmd
 
-1.  Otwórz wiersz polecenia.
+1. Otwórz wiersz polecenia.
 
-2.  Przejdź do folderu przykładu DbActivities.
+2. Przejdź do folderu przykładu DbActivities.
 
-3.  Wpisz "plik setup.cmd", a następnie naciśnij klawisz ENTER.
+3. Wpisz "plik setup.cmd", a następnie naciśnij klawisz ENTER.
 
     > [!NOTE]
     >  Plik Setup.cmd próbuje zainstalować przykład wystąpienia SqlExpress komputera lokalnego. Jeśli chcesz zainstalować go w inne wystąpienie programu SQL server, należy edytować plik Setup.cmd z nową nazwą wystąpienia.
 
 ##### <a name="to-uninstall-the-sample-database"></a>Aby odinstalować przykładowej bazy danych
 
-1.  Uruchom Cleanup.cmd z tym samym folderze, w wierszu polecenia.
+1. Uruchom Cleanup.cmd z tym samym folderze, w wierszu polecenia.
 
 ##### <a name="to-run-the-sample"></a>Aby uruchomić przykład
 
-1.  Otwórz rozwiązanie w programie Visual Studio 2010
+1. Otwórz rozwiązanie w programie Visual Studio 2010
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Do uruchomienia przykładu bez debugowania, naciśnij kombinację klawiszy CTRL + F5.
+3. Do uruchomienia przykładu bez debugowania, naciśnij kombinację klawiszy CTRL + F5.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

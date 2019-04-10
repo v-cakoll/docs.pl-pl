@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191591"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316742"
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
 W tym temacie przedstawiono Animacja kluczowych klatek. Animacje kluczowych klatek — umożliwiają animowanie za pomocą więcej niż dwóch wartości docelowych i kontrolować metodę interpolacji animacji.  
@@ -259,9 +259,9 @@ Kluczowych krzywej składanej kontrolką punkty (0,25, 0,5) i (0,75, 1.0)
   
  Na poniższej liście opisano procedury, za pomocą którego klucza czasu są rozwiązywane ramek kluczowych animacji kluczowych klatek.  
   
-1.  Rozwiąż <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+1. Rozwiąż <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
-2.  Określić animacji *całkowity czas interpolacji*, całkowity czas potrzebny do ukończenia iteracji do przodu animacji kluczowych klatek.  
+2. Określić animacji *całkowity czas interpolacji*, całkowity czas potrzebny do ukończenia iteracji do przodu animacji kluczowych klatek.  
   
     1.  Jeśli animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A> nie <xref:System.Windows.Duration.Automatic%2A> lub <xref:System.Windows.Duration.Forever%2A>, Czas całkowity interpolacji to wartość zmiennej animacji <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwości.  
   
@@ -269,19 +269,19 @@ Kluczowych krzywej składanej kontrolką punkty (0,25, 0,5) i (0,75, 1.0)
   
     3.  W przeciwnym razie całkowitej interpolacji czasu wynosi 1 s.  
   
-3.  Użyj interpolacji łączna wartość czasu można rozpoznać <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+3. Użyj interpolacji łączna wartość czasu można rozpoznać <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
-4.  Rozwiąż ostatniej ramki kluczowe, jeśli jeszcze nie został rozwiązany w poprzednich krokach. Jeśli <xref:System.Windows.Media.Animation.KeyTime> ostatniej ramki kluczowe jest <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> lub <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, czas jego usunięciu będzie równy czasowi interpolacji całkowitej.  
+4. Rozwiąż ostatniej ramki kluczowe, jeśli jeszcze nie został rozwiązany w poprzednich krokach. Jeśli <xref:System.Windows.Media.Animation.KeyTime> ostatniej ramki kluczowe jest <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> lub <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, czas jego usunięciu będzie równy czasowi interpolacji całkowitej.  
   
      Jeśli <xref:System.Windows.Media.Animation.KeyTime> pierwszej ramki kluczowe jest <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> i tą animację ma więcej niż na klatek kluczowych rozwiązać jego <xref:System.Windows.Media.Animation.KeyTime> wartość równa zeru; Jeśli istnieje tylko jeden klatek kluczowych i jego <xref:System.Windows.Media.Animation.KeyTime> wartość jest <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, jest ono rozwiązane w sumie interpolacji czasu, zgodnie z opisem w poprzednim kroku.  
   
-5.  Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości: każdy posiadają równa część dostępny czas.  W trakcie tego procesu nierozpoznanych <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości tymczasowo są traktowane jako <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości i get tymczasowego rozwiązane czasu.  
+5. Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości: każdy posiadają równa część dostępny czas.  W trakcie tego procesu nierozpoznanych <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości tymczasowo są traktowane jako <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości i get tymczasowego rozwiązane czasu.  
   
-6.  Rozwiąż <xref:System.Windows.Media.Animation.KeyTime> wartości kluczowych klatek z nieokreślony czas klucza przy użyciu klatek kluczowych zadeklarowana najbliżej nich, które zostały rozwiązane <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+6. Rozwiąż <xref:System.Windows.Media.Animation.KeyTime> wartości kluczowych klatek z nieokreślony czas klucza przy użyciu klatek kluczowych zadeklarowana najbliżej nich, które zostały rozwiązane <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
-7.  Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Użyj <xref:System.Windows.Media.Animation.KeyTime> wartości między sąsiednimi klucza ramek, aby określić czas rozwiązania.  Celem jest zapewnienie stałej w czasie zbliżonym do czasu rozwiązania klatek kluczowych szybkość animacji.  
+7. Rozwiąż pozostałe <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> wartości. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Użyj <xref:System.Windows.Media.Animation.KeyTime> wartości między sąsiednimi klucza ramek, aby określić czas rozwiązania.  Celem jest zapewnienie stałej w czasie zbliżonym do czasu rozwiązania klatek kluczowych szybkość animacji.  
   
-8.  Sortowanie klatek kluczowych w kolejności czas rozwiązania (klucz podstawowy) i kolejności deklaracji (klucz pomocniczy), czyli, użyj stabilne sortowanie oparte na rozwiązany klatek kluczowych <xref:System.Windows.Media.Animation.KeyTime> wartości.  
+8. Sortowanie klatek kluczowych w kolejności czas rozwiązania (klucz podstawowy) i kolejności deklaracji (klucz pomocniczy), czyli, użyj stabilne sortowanie oparte na rozwiązany klatek kluczowych <xref:System.Windows.Media.Animation.KeyTime> wartości.  
   
 ## <a name="see-also"></a>Zobacz także
 

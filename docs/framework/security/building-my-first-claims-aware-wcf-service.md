@@ -3,12 +3,12 @@ title: Tworzenie pierwszej usługi WCF obsługującej oświadczenia
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13a17473388582e5fa72cd8d335b6a05204ea509
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306617"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Tworzenie pierwszej usługi WCF obsługującej oświadczenia
 ## <a name="applies-to"></a>Dotyczy:  
@@ -22,11 +22,11 @@ ms.locfileid: "59144470"
   
  ![Diagram przedstawiający składników WIF podstawowe oświadczenia pamiętać usługi WCF.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
-1.  Klient usługi WCF (czasami nazywany agentem) używa programu WIF w celu wysłania poświadczeń do usługi STS i po pomyślnym uwierzytelnieniu usługa STS wystawia mu token.  
+1. Klient usługi WCF (czasami nazywany agentem) używa programu WIF w celu wysłania poświadczeń do usługi STS i po pomyślnym uwierzytelnieniu usługa STS wystawia mu token.  
   
-2.  Agent wysyła ten token wystawiony przez usługę STS do usługi WCF.  
+2. Agent wysyła ten token wystawiony przez usługę STS do usługi WCF.  
   
-3.  Usługa WCF obsługująca oświadczenia jest skonfigurowana do ufania usłudze STS i wystawianym przez nią tokenem. Usługa WCF obsługująca oświadczenia używa programu WIF do weryfikacji i analizy tokenu. Deweloperzy Użyj odpowiedniego interfejsu API programu WIF i typy, na przykład **ClaimsPrincipal** do potrzeb aplikacji, takich jak zaimplementowanie dla niej autoryzacji.  
+3. Usługa WCF obsługująca oświadczenia jest skonfigurowana do ufania usłudze STS i wystawianym przez nią tokenem. Usługa WCF obsługująca oświadczenia używa programu WIF do weryfikacji i analizy tokenu. Deweloperzy Użyj odpowiedniego interfejsu API programu WIF i typy, na przykład **ClaimsPrincipal** do potrzeb aplikacji, takich jak zaimplementowanie dla niej autoryzacji.  
   
  Począwszy od .NET 4.5, WIF jest częścią pakietu .NET Framework. Klasy programu WIF bezpośrednio dostępne w ramach pozwala znacznie głębszą integrację tożsamości opartej na oświadczeniach na platformie .NET, ułatwiając korzystanie z oświadczeń. Mając program WIF 4.5, nie trzeba instalować żadnych składników zewnętrznych, aby rozpocząć projektowanie aplikacji internetowych obsługujących oświadczenia. Klasy programu WIF rozciągają się obecnie na rozmaite zestawy, z których najważniejsze to System.Security.Claims, System.IdentityModel i System.IdentityModel.Services.  
   

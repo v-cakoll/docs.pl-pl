@@ -2,12 +2,12 @@
 title: Buforowanie
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 63363df6d5af2f9f160b0cec5d209c2fc2cc1e10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f4df661ad5d831158da55fe3890805ccc5cd695f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114312"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307213"
 ---
 # <a name="pooling"></a>Buforowanie
 Niniejszy przykład pokazuje, jak rozszerzyć Windows Communication Foundation (WCF) do obsługi buforowanie obiektu. W przykładzie pokazano, jak utworzyć atrybut, który przypomina składniowo i semantycznie `ObjectPoolingAttribute` atrybutu funkcjonalność usług dla przedsiębiorstw. Buforowanie obiektu może zapewnić znaczne zwiększenie wydajności na wydajność aplikacji. Jednak jeśli nie jest poprawnie użyty może mieć odwrotny efekt. Buforowanie obiektu pomaga zmniejszyć koszty ponowne utworzenie często używanych obiektów, które wymagają rozbudowane inicjowania. Jednak jeśli wywołanie metody do obiektu puli zajmuje znaczną ilość czasu na ukończenie, buforowanie obiektu kolejki dodatkowych żądań tak szybko, jak Osiągnięto maksymalny rozmiar puli. Ten sposób może nie obsługiwać żądania tworzenia obiektu zgłaszając wyjątek limitu czasu.  
@@ -237,11 +237,11 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Jeśli używasz Svcutil.exe ponownego generowania konfiguracji dla tego przykładu, należy zmodyfikować nazwę punktu końcowego w konfiguracji klienta, aby dopasować kod klienta.  

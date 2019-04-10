@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225966"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317210"
 ---
 # <a name="optimizing-performance-text"></a>Optymalizacja wydajności: Tekst
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obejmuje obsługę prezentacji zawartość tekstu przy użyciu bogate [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] kontrolki. Ogólnie rzecz biorąc można podzielić renderowanie tekstu w trzech warstwach:  
   
-1.  Za pomocą <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> obiektów.  
+1. Za pomocą <xref:System.Windows.Documents.Glyphs> i <xref:System.Windows.Media.GlyphRun> obiektów.  
   
-2.  Za pomocą <xref:System.Windows.Media.FormattedText> obiektu.  
+2. Za pomocą <xref:System.Windows.Media.FormattedText> obiektu.  
   
-3.  Korzystanie z kontrolek wysokiego poziomu, takie jak <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów.  
+3. Korzystanie z kontrolek wysokiego poziomu, takie jak <xref:System.Windows.Controls.TextBlock> i <xref:System.Windows.Documents.FlowDocument> obiektów.  
   
  Ten temat zawiera tekst zalecenia dotyczące wydajności renderowania.  
 

@@ -2,17 +2,17 @@
 title: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374894"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324789"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (Visual Basic)
 Po dołączeniu asynchronicznego kodu w aplikacji należy wziąć pod uwagę i ewentualnie zapobiec współużytkowaniu wątkowości, która odwołuje się do ponownego wprowadzania operacji asynchronicznej, zanim została ukończona. Jeśli nie zidentyfikujesz i obsłużysz możliwości współużytkowania wątkowości, może to spowodować nieoczekiwane wyniki.  
   
- **W tym temacie**  
+ **W tym temacie:**  
   
 -   [Uznawanie współużytkowania wątkowości](#BKMK_RecognizingReentrancy)  
   
@@ -136,7 +136,7 @@ End Sub
   
  Aby skonfigurować ten scenariusz, należy wprowadzić następujące zmiany do kodu podstawowego, który znajduje się w [recenzowanie i uruchamianie aplikacji przykładowych](#BKMD_SettingUpTheExample). Możesz również pobrać gotową aplikację z [próbki asynchroniczne: Współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa tego projektu to CancelAndRestart.  
   
-1.  Zadeklaruj <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
+1. Zadeklaruj <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  W `StartButton_Click`, określić, czy operacja jest już w toku. Jeśli wartość `cts` jest `Nothing`, żadna operacja nie jest już aktywny. Jeśli wartość nie jest `Nothing`, operacja, która jest już uruchomiona zostanie anulowane.  
+2. W `StartButton_Click`, określić, czy operacja jest już w toku. Jeśli wartość `cts` jest `Nothing`, żadna operacja nie jest już aktywny. Jeśli wartość nie jest `Nothing`, operacja, która jest już uruchomiona zostanie anulowane.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  Ustaw `cts` na inną wartość, która reprezentuje bieżący proces.  
+3. Ustaw `cts` na inną wartość, która reprezentuje bieżący proces.  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  Na koniec `StartButton_Click`, bieżący proces się zakończy, więc ustaw wartość `cts` do `Nothing`.  
+4. Na koniec `StartButton_Click`, bieżący proces się zakończy, więc ustaw wartość `cts` do `Nothing`.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a> Pobieranie aplikacji  
   
-1.  Pobierz skompresowany plik z [próbki asynchroniczne: Współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
+1. Pobierz skompresowany plik z [próbki asynchroniczne: Współużytkowania wątkowości w aplikacjach pulpitu .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).  
   
-2.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
+2. Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
-3.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
+3. Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-4.  Przejdź do folderu, który posiada zdekompresowany kod przykładu, a następnie otwórz plik rozwiązania (.sln).  
+4. Przejdź do folderu, który posiada zdekompresowany kod przykładu, a następnie otwórz plik rozwiązania (.sln).  
   
-5.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, który chcesz uruchomić, a następnie wybierz **Ustaw jako projekt startowy**.  
+5. W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, który chcesz uruchomić, a następnie wybierz **Ustaw jako projekt startowy**.  
   
-6.  Wybierz kombinację klawiszy CTRL + F5 Aby skompilować i uruchomić projekt.  
+6. Wybierz kombinację klawiszy CTRL + F5 Aby skompilować i uruchomić projekt.  
   
 ### <a name="BKMK_BuildingTheApp"></a> Kompilowanie aplikacji  
  W poniższej sekcji przedstawiono kod, aby zbudować przykład jako aplikację WPF.  
   
 ##### <a name="to-build-a-wpf-app"></a>Aby utworzyć aplikację WPF  
   
-1.  Uruchom program Visual Studio.  
+1. Uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **New**, **projektu**.  
+2. Na pasku menu wybierz **pliku**, **New**, **projektu**.  
   
      **Nowy projekt** zostanie otwarte okno dialogowe.  
   
-3.  W **zainstalowane szablony** okienku rozwiń **języka Visual Basic**, a następnie rozwiń węzeł **Windows**.  
+3. W **zainstalowane szablony** okienku rozwiń **języka Visual Basic**, a następnie rozwiń węzeł **Windows**.  
   
-4.  Na liście typów projektów, wybierz opcję **aplikacji WPF**.  
+4. Na liście typów projektów, wybierz opcję **aplikacji WPF**.  
   
-5.  Nadaj projektowi nazwę `WebsiteDownloadWPF`, a następnie wybierz **OK** przycisku.  
+5. Nadaj projektowi nazwę `WebsiteDownloadWPF`, a następnie wybierz **OK** przycisku.  
   
      Nowy projekt, który pojawia się w **Eksploratora rozwiązań**.  
   
-6.  W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
+6. W edytorze programu Visual Studio Code wybierz **MainWindow.xaml** kartę.  
   
      Jeśli karta nie jest widoczna, otwórz menu skrótów dla pliku MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz **Wyświetl kod**.  
   
-7.  W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.  
+7. W **XAML** wyświetlić pliku mainwindow.XAML, Zastąp kod następującym kodem.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      Proste okno, które zawiera pole tekstowe i przycisk pojawia się w **projektowania** widoku MainWindow.xaml.  
   
-8.  Dodaj odwołanie do <xref:System.Net.Http>.  
+8. Dodaj odwołanie do <xref:System.Net.Http>.  
   
 9. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.vb, a następnie wybierz **Wyświetl kod**.  
   

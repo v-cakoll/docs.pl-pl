@@ -2,12 +2,12 @@
 title: 'Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 47bdb9a2c3e1042443480bc2308c0039dfb19e74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff8782571bccabe17e9c01331339cf729ff6620a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314987"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (C#)
 Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest często używana do przechowywania danych w arkuszu kalkulacyjnym lub inne dane tabelaryczne, który jest reprezentowany przez wierszy i kolumn. Za pomocą <xref:System.String.Split%2A> metodę, aby rozdzielić pola, jest bardzo proste w celu wykonywania zapytań i manipulowania plików CSV za pomocą LINQ. W rzeczywistości tej samej techniki można zmieniać kolejność części ze strukturą wiersza tekstu. nie jest ograniczona do plików CSV.  
@@ -16,7 +16,7 @@ Plik wartości rozdzielanych przecinkami (CSV) to plik tekstowy, który jest cz�
   
 ### <a name="to-create-the-data-file"></a>Aby utworzyć plik danych  
   
-1.  Skopiuj następujące wiersze do zwykły plik tekstowy o nazwie spreadsheet1.csv. Zapisz plik w folderze projektu.  
+1. Skopiuj następujące wiersze do zwykły plik tekstowy o nazwie spreadsheet1.csv. Zapisz plik w folderze projektu.  
   
     ```  
     Adams,Terry,120  

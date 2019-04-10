@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305341"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Instrukcje: Anulowanie zapytania PLINQ
 W poniższych przykładach pokazano dwa sposoby Anulowanie zapytania PLINQ. Pierwszy przykład pokazuje, jak anulować kwerendę, która składa się przede wszystkim z przechodzenia danych. Drugi przykład pokazuje, jak anulować kwerendę, która zawiera funkcję użytkownika, która jest obliczeniowo kosztowne.  
@@ -34,9 +34,9 @@ W poniższych przykładach pokazano dwa sposoby Anulowanie zapytania PLINQ. Pier
   
  Ogólne wskazówki na temat anulowania jest następująca:  
   
-1.  Jeśli wykonujesz anulowania pełnomocnika użytkownika informowało PLINQ o zewnętrznej <xref:System.Threading.CancellationToken> i zgłosić <xref:System.OperationCanceledException>(externalCT).  
+1. Jeśli wykonujesz anulowania pełnomocnika użytkownika informowało PLINQ o zewnętrznej <xref:System.Threading.CancellationToken> i zgłosić <xref:System.OperationCanceledException>(externalCT).  
   
-2.  Jeśli żadne inne wyjątki są zgłaszane następuje anulowanie, następnie należy obsługiwać <xref:System.OperationCanceledException> zamiast <xref:System.AggregateException>.  
+2. Jeśli żadne inne wyjątki są zgłaszane następuje anulowanie, następnie należy obsługiwać <xref:System.OperationCanceledException> zamiast <xref:System.AggregateException>.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia sposób obsługi anulowania, gdy masz obciążającymi funkcji w kodzie użytkownika.  

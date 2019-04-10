@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 82d0499cb40f79a3110b8432fbee66774bcc14a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332238"
 ---
 # <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy systemu Windows
 Ważną funkcją formularzy Windows Forms <xref:System.Windows.Forms.MonthCalendar> formant jest, że użytkownik może wybrać zakres dat. Ta funkcja jest ulepszoną funkcję wybór daty <xref:System.Windows.Forms.DateTimePicker> formant, który tylko umożliwia użytkownikowi wybranie wartości daty/godziny w pojedynczej. Możesz ustawić zakresu dat lub pobrać zaznaczony zakres ustawiony przez użytkownika za pomocą właściwości <xref:System.Windows.Forms.MonthCalendar> kontroli. Poniższy przykład kodu demonstruje sposób ustawiania zaznaczony zakres.  
   
 ### <a name="to-select-a-range-of-dates"></a>Aby wybrać zakres dat  
   
-1.  Utwórz <xref:System.DateTime> obiekty reprezentujące daty imię i nazwisko w zakresie.  
+1. Utwórz <xref:System.DateTime> obiekty reprezentujące daty imię i nazwisko w zakresie.  
   
     ```vb  
     Dim projectStart As Date = New DateTime(2001, 2, 13)  
@@ -40,7 +40,7 @@ Ważną funkcją formularzy Windows Forms <xref:System.Windows.Forms.MonthCalend
     DateTime projectEnd = DateTime(2001, 2, 28);  
     ```  
   
-2.  Ustaw <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> właściwości.  
+2. Ustaw <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> właściwości.  
   
     ```vb  
     MonthCalendar1.SelectionRange = New SelectionRange(projectStart, projectEnd)  

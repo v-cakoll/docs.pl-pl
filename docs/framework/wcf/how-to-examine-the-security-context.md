@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305107"
 ---
 # <a name="how-to-examine-the-security-context"></a>Instrukcje: Badanie kontekstu zabezpieczeń
 Podczas programowania usług Windows Communication Foundation (WCF), Usługa kontekstu zabezpieczeń umożliwia określenie szczegółowe informacje dotyczące poświadczeń klienta i oświadczeń używany do uwierzytelniania w usłudze. Jest to wykonywane przy użyciu właściwości <xref:System.ServiceModel.ServiceSecurityContext> klasy.  
@@ -29,13 +29,13 @@ Podczas programowania usług Windows Communication Foundation (WCF), Usługa kon
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>Aby ustalić tożsamość elementu wywołującego  
   
-1.  Drukuj wartość <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> właściwości.  
+1. Drukuj wartość <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> właściwości.  
   
 ### <a name="to-parse-the-claims-of-a-caller"></a>Aby przeanalizować oświadczenia obiekt wywołujący  
   
-1.  Zwraca bieżący <xref:System.IdentityModel.Policy.AuthorizationContext> klasy. Użyj <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> właściwość zwraca bieżący kontekst zabezpieczeń usługi, a następnie wrócisz `AuthorizationContext` przy użyciu <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> właściwości.  
+1. Zwraca bieżący <xref:System.IdentityModel.Policy.AuthorizationContext> klasy. Użyj <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> właściwość zwraca bieżący kontekst zabezpieczeń usługi, a następnie wrócisz `AuthorizationContext` przy użyciu <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> właściwości.  
   
-2.  Analizowanie kolekcję <xref:System.IdentityModel.Claims.ClaimSet> obiektów zwróconych przez <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> właściwość <xref:System.IdentityModel.Policy.AuthorizationContext> klasy.  
+2. Analizowanie kolekcję <xref:System.IdentityModel.Claims.ClaimSet> obiektów zwróconych przez <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> właściwość <xref:System.IdentityModel.Policy.AuthorizationContext> klasy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład drukuje wartości <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> właściwości bieżącego kontekstu zabezpieczeń i <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> właściwość, wartość zasobu, oświadczenia, a <xref:System.IdentityModel.Claims.Claim.Right%2A> właściwości każdego oświadczenia w bieżącym zabezpieczeń kontekst.  

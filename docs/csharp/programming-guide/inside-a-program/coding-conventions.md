@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 4bb5a8134bb9cbcdb70830628895338ec83b28a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55716a9955d12ef3a926efe352a0078044de9990
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614123"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326804"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>konwencje kodowania C# (Przewodnik programowania w języku C#)
  Konwencje kodowania służą do następujących celów:  
@@ -135,7 +135,7 @@ ms.locfileid: "54614123"
   
 ### <a name="-and-124124-operators"></a>& & i &#124; &#124; operatorów  
   
--   Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań, należy użyć [ && ](../../../csharp/language-reference/operators/conditional-and-operator.md) zamiast [ & ](../../../csharp/language-reference/operators/and-operator.md) i [ &#124; &#124; ](../../../csharp/language-reference/operators/conditional-or-operator.md)zamiast [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) podczas wykonywania porównań, jak pokazano w poniższym przykładzie.  
+-   Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań, należy użyć [ && ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) zamiast [ & ](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) i [ &#124; &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)zamiast [ &#124; ](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) podczas wykonywania porównań, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -198,5 +198,5 @@ ms.locfileid: "54614123"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Visual Basic — konwencje kodowania](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
+- [Visual Basic — Konwencje kodowania](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [Wytyczne dotyczące bezpiecznego programowania](../../../standard/security/secure-coding-guidelines.md)

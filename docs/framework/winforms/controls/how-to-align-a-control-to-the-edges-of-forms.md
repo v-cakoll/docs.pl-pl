@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning on forms
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
-ms.openlocfilehash: 990fc996cfb5ecf4d9fde255ad026e3f46a24718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185786"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329976"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>Instrukcje: wyrównywanie kontrolki z krawędziami formularzy
 Ułatwia kontrolki wyrównane do krawędzi formularzy, ustawiając <xref:System.Windows.Forms.Control.Dock%2A> właściwości. Ta właściwość wskazuje, której formant znajduje się w formularzu. <xref:System.Windows.Forms.Control.Dock%2A> Właściwość można ustawić następujące wartości:  
@@ -33,7 +33,7 @@ Ułatwia kontrolki wyrównane do krawędzi formularzy, ustawiając <xref:System.
   
 ### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a>Aby ustawić właściwość dokowania dla formantu w czasie wykonywania  
   
-1.  Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość odpowiednią wartość w kodzie.  
+1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość odpowiednią wartość w kodzie.  
   
     ```vb  
     ' To set the Dock property internally.  

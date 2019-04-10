@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201536"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329963"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201536"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Aby dodać tabelę do formantu DataGrid w Projektancie  
   
-1.  Aby wyświetlić dane w tabeli, najpierw musisz powiązać <xref:System.Windows.Forms.DataGrid> kontrolki do zestawu danych. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych przy użyciu narzędzia Projektant](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1. Aby wyświetlić dane w tabeli, najpierw musisz powiązać <xref:System.Windows.Forms.DataGrid> kontrolki do zestawu danych. Aby uzyskać więcej informacji, zobacz [jak: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych przy użyciu narzędzia Projektant](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2.  Wybierz <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości w oknie dialogowym właściwości, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji Właściwość do wyświetlenia **Edytor kolekcji Element DataGridTableStyle**.  
+2. Wybierz <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości w oknie dialogowym właściwości, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji Właściwość do wyświetlenia **Edytor kolekcji Element DataGridTableStyle**.  
   
-3.  Edytor kolekcji kliknij **Dodaj** do wstawienia styl tabeli.  
+3. Edytor kolekcji kliknij **Dodaj** do wstawienia styl tabeli.  
   
-4.  Kliknij przycisk **OK** aby zamknąć Edytor kolekcji, a następnie otworzyć go ponownie, klikając przycisk wielokropka obok pozycji <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości.  
+4. Kliknij przycisk **OK** aby zamknąć Edytor kolekcji, a następnie otworzyć go ponownie, klikając przycisk wielokropka obok pozycji <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości.  
   
      Po ponownym otwarciu edytora kolekcji wszystkie tabele danych powiązane z formantem pojawi się na liście rozwijanej <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwości stylu tabeli.  
   
-5.  W **członków** okno Edytor kolekcji, kliknij przycisk Styl tabeli.  
+5. W **członków** okno Edytor kolekcji, kliknij przycisk Styl tabeli.  
   
-6.  W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> wartość tabeli, którą chcesz wyświetlić.  
+6. W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> wartość tabeli, którą chcesz wyświetlić.  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Aby dodać kolumnę do formantu DataGrid w Projektancie  
   
-1.  W **członków** pole **Edytor kolekcji Element DataGridTableStyle**, wybierz styl odpowiedniej tabeli. W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> kolekcji, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png " vbEllipsesButton")) obok właściwości, aby wyświetlić **DataGridColumnStyle — Edytor kolekcji**.  
+1. W **członków** pole **Edytor kolekcji Element DataGridTableStyle**, wybierz styl odpowiedniej tabeli. W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> kolekcji, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png " vbEllipsesButton")) obok właściwości, aby wyświetlić **DataGridColumnStyle — Edytor kolekcji**.  
   
-2.  Edytor kolekcji kliknij **Dodaj** wstawić styl kolumny lub kliknij strzałkę w dół obok pozycji **Dodaj** do określenia typu kolumny.  
+2. Edytor kolekcji kliknij **Dodaj** wstawić styl kolumny lub kliknij strzałkę w dół obok pozycji **Dodaj** do określenia typu kolumny.  
   
      W polu listy rozwijanej można wybrać opcję <xref:System.Windows.Forms.DataGridTextBoxColumn> lub <xref:System.Windows.Forms.DataGridBoolColumn> typu.  
   
-3.  Kliknij przycisk OK, aby zamknąć **DataGridColumnStyle — Edytor kolekcji**, a następnie otwórz go ponownie, klikając przycisk wielokropka obok <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości.  
+3. Kliknij przycisk OK, aby zamknąć **DataGridColumnStyle — Edytor kolekcji**, a następnie otwórz go ponownie, klikając przycisk wielokropka obok <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości.  
   
      Po ponownym otwarciu edytora kolekcji żadnych kolumn danych w tabeli powiązane dane będą wyświetlane na liście rozwijanej <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> właściwość style kolumny.  
   
-4.  W **członków** okno Edytor kolekcji, kliknij przycisk Styl kolumny.  
+4. W **członków** okno Edytor kolekcji, kliknij przycisk Styl kolumny.  
   
-5.  W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> wartości w kolumnie, którą chcesz wyświetlić.  
+5. W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> wartości w kolumnie, którą chcesz wyświetlić.  
   
 ## <a name="see-also"></a>Zobacz także
 

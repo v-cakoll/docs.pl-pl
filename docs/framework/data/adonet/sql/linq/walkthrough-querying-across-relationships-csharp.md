@@ -2,12 +2,12 @@
 title: 'Przewodnik: Wykonywanie zapytań w relacjach (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325374"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Przewodnik: Wykonywanie zapytań w relacjach (C#)
 W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
@@ -51,16 +51,16 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Dostęp do obiektów kolejności przy użyciu obiektów klienta  
   
-1.  Modyfikowanie `Main` metody, wpisując lub wklejając następujący kod do metody:  
+1. Modyfikowanie `Main` metody, wpisując lub wklejając następujący kod do metody:  
   
      [!code-csharp[DLinqWalk2CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#3)]  
   
-2.  Naciśnij klawisz F5, aby debugować aplikację.  
+2. Naciśnij klawisz F5, aby debugować aplikację.  
   
     > [!NOTE]
     >  Kod SQL w oknie konsoli można wyeliminować, zakomentowując `db.Log = Console.Out;`.  
   
-3.  Naciśnij klawisz Enter w oknie konsoli, aby zatrzymać debugowanie.  
+3. Naciśnij klawisz Enter w oknie konsoli, aby zatrzymać debugowanie.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Tworzenie silnie Typizowanego widoku bazy danych  
  Jest znacznie łatwiejsze do uruchamiania w silnie typizowanym widoku bazy danych. Zdecydowanie wpisując <xref:System.Data.Linq.DataContext> obiektu, nie trzeba wywołania <xref:System.Data.Linq.DataContext.GetTable%2A>. Silnie typizowane tabel można używać wszystkie zapytania, korzystając z silnie typizowaną <xref:System.Data.Linq.DataContext> obiektu.  
@@ -69,21 +69,21 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Do silnie typu obiektu DataContext  
   
-1.  Dodaj następujący kod powyżej `Customer` deklaracji klasy.  
+1. Dodaj następujący kod powyżej `Customer` deklaracji klasy.  
   
      [!code-csharp[DLinqWalk2CS#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#4)]  
   
-2.  Modyfikowanie `Main` metoda do użycia w silnie typizowany <xref:System.Data.Linq.DataContext> w następujący sposób:  
+2. Modyfikowanie `Main` metoda do użycia w silnie typizowany <xref:System.Data.Linq.DataContext> w następujący sposób:  
   
      [!code-csharp[DLinqWalk2CS#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#5)]  
   
-3.  Naciśnij klawisz F5, aby debugować aplikację.  
+3. Naciśnij klawisz F5, aby debugować aplikację.  
   
      Dane wyjściowe z okna konsoli jest:  
   
      `ID=WHITC`  
   
-4.  Naciśnij klawisz Enter w oknie konsoli, aby zatrzymać debugowanie.  
+4. Naciśnij klawisz Enter w oknie konsoli, aby zatrzymać debugowanie.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Następnym instruktażu ([instruktażu: Manipulowanie danych (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) pokazuje, jak wykonywać operacje na danych. Ten przewodnik nie wymaga zapisania dwa przewodniki w tej serii, które zostały już wykonane.  

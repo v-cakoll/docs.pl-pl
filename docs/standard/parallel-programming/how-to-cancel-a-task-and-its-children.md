@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324479"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Instrukcje: Anulowanie zadania i jego elementów podrzędnych
 Te przykłady przedstawiają sposób wykonywania następujących zadań:  
   
-1.  Tworzenie i uruchamianie można anulować zadania.  
+1. Tworzenie i uruchamianie można anulować zadania.  
   
-2.  Przekaż token anulowania w swoim delegacie użytkownika i opcjonalnie wystąpienia zadania.  
+2. Przekaż token anulowania w swoim delegacie użytkownika i opcjonalnie wystąpienia zadania.  
   
-3.  Zwróć uwagę, a odpowiedź na żądanie anulowania w swoim delegacie użytkownika.  
+3. Zwróć uwagę, a odpowiedź na żądanie anulowania w swoim delegacie użytkownika.  
   
-4.  Opcjonalnie Zwróć uwagę na wątku wywołującym czy zadanie zostało anulowane.  
+4. Opcjonalnie Zwróć uwagę na wątku wywołującym czy zadanie zostało anulowane.  
   
  Wątek wywołujący nie kończy wymuszone zadania; tylko sygnalizuje, że zażądano anulowania. Jeśli zadanie jest już uruchomiony, jest do pełnomocnika użytkownika Zwróć uwagę, żądania i odpowiednio reagować. Czy zażądano anulowania przed uruchomieniem zadania, pełnomocnika użytkownika nigdy nie jest wykonywana, a obiekt zadania przechodzi do stanu Canceled.  
   

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
-ms.openlocfilehash: b56a421dd7b34bf006e1e6609bbb8ecc5f56e0bf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971263"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316027"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Instrukcje: Użyj mojej Namespace (C# Programming Guide)
 <xref:Microsoft.VisualBasic.MyServices> Przestrzeni nazw (`My` w języku Visual Basic) udostępnia proste i intuicyjne szereg klas .NET Framework, dzięki któremu można napisać kod, który wchodzi w interakcję z komputera, aplikacji, ustawień, zasobów i tak dalej. Mimo że początkowo przeznaczona dla języka Visual Basic `MyServices` przestrzeni nazw mogą być używane w aplikacji w języku C#.  
@@ -22,9 +22,9 @@ ms.locfileid: "56971263"
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>Aby dodać odwołanie do biblioteki języka Visual Basic  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** , a następnie wybierz węzeł **Dodaj odwołanie**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** , a następnie wybierz węzeł **Dodaj odwołanie**.  
   
-2.  Gdy **odwołania** pojawi się okno dialogowe, przewiń listę w dół i wybierz Microsoft.VisualBasic.dll.  
+2. Gdy **odwołania** pojawi się okno dialogowe, przewiń listę w dół i wybierz Microsoft.VisualBasic.dll.  
   
      Możesz również umieścić następujący wiersz w `using` sekcji przy uruchamianiu programu.  
   
@@ -42,5 +42,5 @@ ms.locfileid: "56971263"
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
+- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
 - [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)

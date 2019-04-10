@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328312"
 ---
 # <a name="memory-mapped-files"></a>Pliki mapowane w pamięci
 Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To mapowanie między pliku i pamięci miejsca umożliwia aplikacji, w tym wiele procesów można modyfikować plik przez odczyt i zapis bezpośrednio do pamięci. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć kodu zarządzanego dostępu do zamapowanych w pamięci plików w taki sam sposób, że funkcji natywnych Windows dostęp do plików zamapowanych w pamięci, zgodnie z opisem w [pliki Managing Memory-Mapped](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
@@ -96,29 +96,29 @@ Plik mapowany w pamięci zawiera zawartość pliku w pamięci wirtualnej. To map
   
  Poniższy przykład składa się z trzech osobnych procesach (aplikacje konsoli), wartościami logicznymi zapisu w pliku mapowanych na pamięć. Występuje następującą sekwencję czynności:  
   
-1.  `Process A` Tworzy plik mapowany w pamięci i zapisuje wartość.  
+1. `Process A` Tworzy plik mapowany w pamięci i zapisuje wartość.  
   
-2.  `Process B` Otwiera plik mapowany w pamięci i zapisuje wartość.  
+2. `Process B` Otwiera plik mapowany w pamięci i zapisuje wartość.  
   
-3.  `Process C` Otwiera plik mapowany w pamięci i zapisuje wartość.  
+3. `Process C` Otwiera plik mapowany w pamięci i zapisuje wartość.  
   
-4.  `Process A` odczytuje i wyświetla wartości z pliku mapowanych na pamięć.  
+4. `Process A` odczytuje i wyświetla wartości z pliku mapowanych na pamięć.  
   
-5.  Po `Process A` zostało zakończone z plikiem mapowane w pamięci, plik jest natychmiast odzyskiwane przez wyrzucanie elementów bezużytecznych.  
+5. Po `Process A` zostało zakończone z plikiem mapowane w pamięci, plik jest natychmiast odzyskiwane przez wyrzucanie elementów bezużytecznych.  
   
  Aby uruchomić ten przykład, wykonaj następujące czynności:  
   
-1.  Kompiluj aplikacje, a następnie otwórz trzy okna wiersza polecenia.  
+1. Kompiluj aplikacje, a następnie otwórz trzy okna wiersza polecenia.  
   
-2.  W pierwszym oknie wiersza polecenia, uruchom `Process A`.  
+2. W pierwszym oknie wiersza polecenia, uruchom `Process A`.  
   
-3.  W drugim oknie wiersza polecenia, uruchom `Process B`.  
+3. W drugim oknie wiersza polecenia, uruchom `Process B`.  
   
-4.  Wróć do `Process A` i naciśnij klawisz ENTER.  
+4. Wróć do `Process A` i naciśnij klawisz ENTER.  
   
-5.  W trzecim okno wiersza polecenia, uruchom `Process C`.  
+5. W trzecim okno wiersza polecenia, uruchom `Process C`.  
   
-6.  Wróć do `Process A` i naciśnij klawisz ENTER.  
+6. Wróć do `Process A` i naciśnij klawisz ENTER.  
   
  Dane wyjściowe `Process A` jest następująca:  
   

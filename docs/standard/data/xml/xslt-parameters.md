@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191889"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306318"
 ---
 # <a name="xslt-parameters"></a>Parametry XSLT
 Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody. Kwalifikowana nazwa i identyfikator URI przestrzeni nazw są skojarzone z obiektem parametrów w tym czasie.  
   
 ### <a name="to-use-an-xslt-parameter"></a>Aby użyć parametru XSLT  
   
-1.  Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> obiektu i dodawanie przy użyciu parametru <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody.  
+1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> obiektu i dodawanie przy użyciu parametru <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metody.  
   
-2.  Wywołaj parametru z arkusza stylów.  
+2. Wywołaj parametru z arkusza stylów.  
   
-3.  Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="parameter-types"></a>Typy parametrów  
  Obiekt parametr powinien odpowiadać typowi W3C. W poniższej tabeli przedstawiono odpowiednie typy W3C równoważnymi klasami programu Microsoft .NET (typ) i czy typ W3C jest typu XPath lub XSLT.  
@@ -36,7 +36,7 @@ Parametry XSLT są dodawane do <xref:System.Xml.Xsl.XsltArgumentList> przy użyc
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **[] Parametrem XPathNavigator**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
   
  * Jest odpowiednikiem zestawu węzłów, który zawiera jeden węzeł.  
   

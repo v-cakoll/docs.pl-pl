@@ -10,29 +10,29 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839000"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316456"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów (Visual Basic)
 Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru nie można zdefiniować przeciążoną wersją, biorąc Jednowymiarowa tablica dla tablicy parametrów. Aby uzyskać więcej informacji, zobacz "Niejawne przeciążenia dla parametru ParamArray" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>Aby przeciążanie procedury, która przyjmuje zmienną liczbę parametrów  
   
-1.  Upewnić się, że procedury i wywoływać metodę kod logiki korzyści z przeciążone wersje ponad `ParamArray` parametru. Zobacz "Przeciążenia i ParamArrays" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
+1. Upewnić się, że procedury i wywoływać metodę kod logiki korzyści z przeciążone wersje ponad `ParamArray` parametru. Zobacz "Przeciążenia i ParamArrays" w [zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md).  
   
-2.  Ustal, które numery podane wartości procedura powinna obsługiwać w części zmiennej listy parametrów. Może to obejmować przypadku żadnej wartości i może zawierać przypadku pojedynczą tablicę jednowymiarową.  
+2. Ustal, które numery podane wartości procedura powinna obsługiwać w części zmiennej listy parametrów. Może to obejmować przypadku żadnej wartości i może zawierać przypadku pojedynczą tablicę jednowymiarową.  
   
-3.  Dla każdego dopuszczalna liczba podanych wartości zapisu `Sub` lub `Function` instrukcji deklaracji, która definiuje odpowiednie listy parametrów. Nie używaj albo `Optional` lub `ParamArray` — słowo kluczowe w tej wersji przeciążona.  
+3. Dla każdego dopuszczalna liczba podanych wartości zapisu `Sub` lub `Function` instrukcji deklaracji, która definiuje odpowiednie listy parametrów. Nie używaj albo `Optional` lub `ParamArray` — słowo kluczowe w tej wersji przeciążona.  
   
-4.  W każdym zgłoszeniu, należy poprzedzić `Sub` lub `Function` — słowo kluczowe z [przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe.  
+4. W każdym zgłoszeniu, należy poprzedzić `Sub` lub `Function` — słowo kluczowe z [przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe.  
   
-5.  Po każdym zgłoszeniu należy napisać kod procedury, który powinien zostać wykonany, gdy kod wywołujący dostarcza wartości odpowiadające liście parametrów tej deklaracji.  
+5. Po każdym zgłoszeniu należy napisać kod procedury, który powinien zostać wykonany, gdy kod wywołujący dostarcza wartości odpowiadające liście parametrów tej deklaracji.  
   
-6.  Zakończenie każdej procedury z `End Sub` lub `End Function` instrukcji zgodnie z potrzebami.  
+6. Zakończenie każdej procedury z `End Sub` lub `End Function` instrukcji zgodnie z potrzebami.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano zdefiniowane za pomocą procedury [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru, a następnie zbiór równoważny, procedur przeciążona.  
@@ -58,10 +58,10 @@ Jeśli procedura ma [ParamArray](../../../../visual-basic/language-reference/mod
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Parametry opcjonalne](./optional-parameters.md)
-- [Tablice parametrów](./parameter-arrays.md)
+- [Parameter — Tablice](./parameter-arrays.md)
 - [Przeciążanie procedury](./procedure-overloading.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
 - [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: Wywoływanie procedury przeciążonej](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: Przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Rozpoznanie przeciążenia](./overload-resolution.md)

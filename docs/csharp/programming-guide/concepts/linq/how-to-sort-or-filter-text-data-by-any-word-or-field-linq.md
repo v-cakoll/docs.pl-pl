@@ -2,19 +2,19 @@
 title: 'Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: 1b2378a3f9d589640d50ca3cc80d5e82ba386bd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 243ff37e38b2e88b55962980e91a1ab6dcebab3c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747976"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304873"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ) (C#)
 Poniższy przykład pokazuje sposób sortowania wierszami strukturalnych, takie jak wartości rozdzielanych przecinkami, według dowolnego pola w wierszu. Pole może być określana dynamicznie w czasie wykonywania. Załóżmy, że pola w scores.csv reprezentuje numer identyfikacyjny Studenta, następuje serię czterech wyniki testów.  
   
 ### <a name="to-create-a-file-that-contains-data"></a>Aby utworzyć plik zawierający dane  
   
-1.  Kopiowanie danych scores.csv z tematu [jak: Dołącz zawartość z niepodobnych plików (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) i zapisz go do folderu rozwiązania.  
+1. Kopiowanie danych scores.csv z tematu [jak: Dołącz zawartość z niepodobnych plików (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) i zapisz go do folderu rozwiązania.  
   
 ## <a name="example"></a>Przykład  
   

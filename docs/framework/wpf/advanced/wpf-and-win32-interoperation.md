@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171895"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314415"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF i Win32 — Współdziałanie
 Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywnej można ponownie użyć niektóre z tym kodem.  
@@ -44,7 +44,7 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
  Za pomocą dowolnych podejście działa najlepiej dla Ciebie.  
   
 > [!NOTE]
->  Jeśli nie używasz [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] wcześniej, takich jak można zauważyć pewne "new" słowa kluczowe `gcnew` i `nullptr` w przykładach współdziałanie kodu. Te słowa kluczowe zastępują starsza składnia podwójnego podkreślenia (`__gc`) i zapewnia bardziej naturalny składni dla kodu zarządzanego w [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Aby dowiedzieć się więcej na temat [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] funkcje zarządzanych, zobacz [Component Extensions dla platform środowiska uruchomieniowego](/cpp/windows/component-extensions-for-runtime-platforms) i [Hello C + +/ CLI](https://go.microsoft.com/fwlink/?LinkId=98739).  
+>  Jeśli nie używasz [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] wcześniej, takich jak można zauważyć pewne "new" słowa kluczowe `gcnew` i `nullptr` w przykładach współdziałanie kodu. Te słowa kluczowe zastępują starsza składnia podwójnego podkreślenia (`__gc`) i zapewnia bardziej naturalny składni dla kodu zarządzanego w [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Aby dowiedzieć się więcej na temat [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] funkcje zarządzanych, zobacz [Component Extensions dla platform środowiska uruchomieniowego](/cpp/windows/component-extensions-for-runtime-platforms) i [Witaj, C++sposób niezamierzony](https://go.microsoft.com/fwlink/?LinkId=98739).  
   
 <a name="hwnds"></a>   
 ## <a name="how-wpf-uses-hwnds"></a>Jak WPF używa parametrów hWnd  
@@ -58,15 +58,15 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>Hosting zawartości WPF w oknie Win32 firmy Microsoft  
  Kluczem do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okno jest <xref:System.Windows.Interop.HwndSource> klasy. Ta klasa jest zawijany [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna, tak, aby [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości można zintegrować swoje [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] jako okna podrzędnego. Następujące podejście łączy w sobie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w jednej aplikacji.  
   
-1.  Wdrożenie usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości (element główny zawartości) jako klasa zarządzana. Zazwyczaj klasa dziedziczy z jednej z klas, które mogą zawierać wiele elementów podrzędnych i/lub używany jako element główny, takich jak <xref:System.Windows.Controls.DockPanel> lub <xref:System.Windows.Controls.Page>. W kolejnych krokach tej klasy jest nazywane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości klasy i wystąpienia klasy są określane jako [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości obiektów.  
+1. Wdrożenie usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości (element główny zawartości) jako klasa zarządzana. Zazwyczaj klasa dziedziczy z jednej z klas, które mogą zawierać wiele elementów podrzędnych i/lub używany jako element główny, takich jak <xref:System.Windows.Controls.DockPanel> lub <xref:System.Windows.Controls.Page>. W kolejnych krokach tej klasy jest nazywane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości klasy i wystąpienia klasy są określane jako [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości obiektów.  
   
-2.  Implementowanie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji za pomocą [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Jeśli rozpoczynasz z istniejącym niezarządzanych [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] aplikacji, można zwykle włączyć go do wywoływania z kodu zarządzanego, zmieniając ustawienia projektu w celu uwzględnienia `/clr` flagi kompilatora (co może być konieczna Obsługa pełnegozakresu`/clr`kompilacja nie została opisana w tym temacie).  
+2. Implementowanie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji za pomocą [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)]. Jeśli rozpoczynasz z istniejącym niezarządzanych [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] aplikacji, można zwykle włączyć go do wywoływania z kodu zarządzanego, zmieniając ustawienia projektu w celu uwzględnienia `/clr` flagi kompilatora (co może być konieczna Obsługa pełnegozakresu`/clr`kompilacja nie została opisana w tym temacie).  
   
-3.  Ustaw model wątków do pojedynczego wątku apartamentu (STA). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa tego modelu wątkowości.  
+3. Ustaw model wątków do pojedynczego wątku apartamentu (STA). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa tego modelu wątkowości.  
   
-4.  Obsługa powiadomień WM_CREATE w swojej procedurę okna.  
+4. Obsługa powiadomień WM_CREATE w swojej procedurę okna.  
   
-5.  W ramach programu obsługi (lub funkcję, która wywołuje program obsługi) wykonaj następujące czynności:  
+5. W ramach programu obsługi (lub funkcję, która wywołuje program obsługi) wykonaj następujące czynności:  
   
     1.  Utwórz nową <xref:System.Windows.Interop.HwndSource> obiekt z okna nadrzędnego HWND jako jego `parent` parametru.  
   
@@ -76,11 +76,11 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
   
     4.  <xref:System.Windows.Interop.HwndSource> Obiektu <xref:System.Windows.Interop.HwndSource.Handle%2A> właściwość zawiera uchwyt okna (HWND). Aby uzyskać HWND, używanego w niezarządzanych części aplikacji, należy rzutować `Handle.ToPointer()` do HWND.  
   
-6.  Implementowanie zarządzanych klasę, która zawiera pole statyczne, który zawiera odwołanie do usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości obiektu. Ta klasa pozwala uzyskać odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiekt zawartości z usługi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu, ale bardziej istotne uniemożliwia swoje <xref:System.Windows.Interop.HwndSource> miałyby przypadkowo bezużyteczne.  
+6. Implementowanie zarządzanych klasę, która zawiera pole statyczne, który zawiera odwołanie do usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości obiektu. Ta klasa pozwala uzyskać odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiekt zawartości z usługi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu, ale bardziej istotne uniemożliwia swoje <xref:System.Windows.Interop.HwndSource> miałyby przypadkowo bezużyteczne.  
   
-7.  Otrzymywanie powiadomień z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości obiektu, dołączając program obsługi do co najmniej jeden z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości zdarzenia obiektu.  
+7. Otrzymywanie powiadomień z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości obiektu, dołączając program obsługi do co najmniej jeden z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości zdarzenia obiektu.  
   
-8.  Komunikować się z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiekt zawartości za pomocą odwołania, która przechowywana w polu statycznym zestaw właściwości, metody wywołania, itp.  
+8. Komunikować się z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiekt zawartości za pomocą odwołania, która przechowywana w polu statycznym zestaw właściwości, metody wywołania, itp.  
   
 > [!NOTE]
 >  Można wykonać niektóre lub wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość definicji klasy dla jednego kroku w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] przy użyciu domyślnej klasy częściowej klasy zawartości, jeśli utworzyć osobny zestaw, a następnie Odwołaj się do niego. Mimo że zazwyczaj zawierają <xref:System.Windows.Application> obiektu jako część kompilacji [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] w zespół, możesz nie znajdą się za pomocą tego <xref:System.Windows.Application> jako część współdziałanie, po prostu używasz przynajmniej jednej z klas głównych dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki określonego Aby przez aplikację i odwoływać się do ich klas częściowych. W pozostałej części procedura jest zasadniczo podobny, jak opisano powyżej.  
@@ -91,17 +91,17 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>Hosting okna Microsoft Win32 w WPF  
  Kluczem do hostowania [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna w innych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość jest <xref:System.Windows.Interop.HwndHost> klasy. Ta klasa jest zawijany okna [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów, które mogą być dodawane do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] drzewo elementów. <xref:System.Windows.Interop.HwndHost> obsługuje również [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] umożliwiające wykonywanie zadań takich jak przetwarzanie komunikatów dla hostowanej okna. Podstawowa procedura jest:  
   
-1.  Utwórz obrębu drzewa dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji (może być za pomocą kodu lub języka znaczników). Znaleźć właściwe i dopuszczalna punktu w drzewie elementów gdzie <xref:System.Windows.Interop.HwndHost> implementacja może być dodany jako element podrzędny. W pozostałej części tych kroków ten element nazywa się z rezerwacją elementu.  
+1. Utwórz obrębu drzewa dla [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji (może być za pomocą kodu lub języka znaczników). Znaleźć właściwe i dopuszczalna punktu w drzewie elementów gdzie <xref:System.Windows.Interop.HwndHost> implementacja może być dodany jako element podrzędny. W pozostałej części tych kroków ten element nazywa się z rezerwacją elementu.  
   
-2.  Pochodzi od <xref:System.Windows.Interop.HwndHost> do tworzenia obiektu, który zawiera Twoje [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] zawartości.  
+2. Pochodzi od <xref:System.Windows.Interop.HwndHost> do tworzenia obiektu, który zawiera Twoje [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] zawartości.  
   
-3.  W tej klasie hosta, należy zastąpić <xref:System.Windows.Interop.HwndHost> metoda <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Zwróć HWND hostowanej okna. Możesz chcieć opakować rzeczywiste kontrolkach jako okna podrzędnego okna zwracanego; OPAKOWYWANIE formantów w oknie hosta zapewnia prosty sposób swoje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości otrzymywać powiadomienia z formantów. Ta technika pozwala rozwiązać niektórych [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] problemy dotyczące obsługi komunikatów na granicy obsługiwanego formantu.  
+3. W tej klasie hosta, należy zastąpić <xref:System.Windows.Interop.HwndHost> metoda <xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>. Zwróć HWND hostowanej okna. Możesz chcieć opakować rzeczywiste kontrolkach jako okna podrzędnego okna zwracanego; OPAKOWYWANIE formantów w oknie hosta zapewnia prosty sposób swoje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości otrzymywać powiadomienia z formantów. Ta technika pozwala rozwiązać niektórych [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] problemy dotyczące obsługi komunikatów na granicy obsługiwanego formantu.  
   
-4.  Zastąp <xref:System.Windows.Interop.HwndHost> metody <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> i <xref:System.Windows.Interop.HwndHost.WndProc%2A>. W tym miejscu jest przetwarzanie oczyszczania i usuń odwołania do zawartości hostowanej, szczególnie w przypadku, gdy tworzone odwołania do obiektów niezarządzanych.  
+4. Zastąp <xref:System.Windows.Interop.HwndHost> metody <xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A> i <xref:System.Windows.Interop.HwndHost.WndProc%2A>. W tym miejscu jest przetwarzanie oczyszczania i usuń odwołania do zawartości hostowanej, szczególnie w przypadku, gdy tworzone odwołania do obiektów niezarządzanych.  
   
-5.  W pliku związanym z kodem Utwórz wystąpienie obiektu hostingu klasy formantu i Uczyń elementem podrzędnym elementu z rezerwacją. Zwykle takie jak należy użyć procedury obsługi zdarzeń <xref:System.Windows.FrameworkElement.Loaded>, lub użyj konstruktora klasy częściowej. Ale można również dodawać współdziałanie zawartości za pośrednictwem zachowania w czasie wykonywania.  
+5. W pliku związanym z kodem Utwórz wystąpienie obiektu hostingu klasy formantu i Uczyń elementem podrzędnym elementu z rezerwacją. Zwykle takie jak należy użyć procedury obsługi zdarzeń <xref:System.Windows.FrameworkElement.Loaded>, lub użyj konstruktora klasy częściowej. Ale można również dodawać współdziałanie zawartości za pośrednictwem zachowania w czasie wykonywania.  
   
-6.  Proces wybranych komunikatów okien, takie jak powiadomień dotyczących formantu karty. Dostępne są dwie opcje. Obie udostępniają identyczne dostęp do strumienia komunikatów, więc ulubionego jest głównie kwestią programowania wygody.  
+6. Proces wybranych komunikatów okien, takie jak powiadomień dotyczących formantu karty. Dostępne są dwie opcje. Obie udostępniają identyczne dostęp do strumienia komunikatów, więc ulubionego jest głównie kwestią programowania wygody.  
   
     -   Implementowanie przetwarzania komunikatów o dla wszystkich komunikatów (nie tylko zamknięcie wiadomości) w zastąpienie metody <xref:System.Windows.Interop.HwndHost> metoda <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
@@ -109,7 +109,7 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
   
     -   Nie można przetwarzać komunikaty z systemu windows, które są spoza procesu za pomocą polecenia <xref:System.Windows.Interop.HwndHost.WndProc%2A>.  
   
-7.  Komunikują się z oknem hostowanej przy użyciu platformy wywołania do wywoływania niezarządzanego `SendMessage` funkcji.  
+7. Komunikują się z oknem hostowanej przy użyciu platformy wywołania do wywoływania niezarządzanego `SendMessage` funkcji.  
   
  Wykonaj następujące kroki tworzy aplikację, która działa z danymi wejściowymi z myszy. Można dodać obsługę tabulacji okna hostowanej przez zaimplementowanie <xref:System.Windows.Interop.IKeyboardInputSink> interfejsu.  
   

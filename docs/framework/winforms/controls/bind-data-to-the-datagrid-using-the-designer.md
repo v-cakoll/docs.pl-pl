@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321851"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: wiązanie danych z kontrolką DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
 Projektant umożliwia łączenie <xref:System.Windows.Forms.DataGridView> kontrolki źródła danych na kilka różnych odmian, w tym baz danych, obiekty biznesowe lub usług sieci Web. Gdy powiąże formant ze źródłem danych przy użyciu narzędzia Projektant kontrolki zostanie automatycznie powiązany <xref:System.Windows.Forms.BindingSource> składnik, który reprezentuje źródło danych. Ponadto kolumny są automatycznie generowane w formancie do dopasowania informacji o schemacie, dostarczone przez źródło danych.  
@@ -27,19 +27,19 @@ Projektant umożliwia łączenie <xref:System.Windows.Forms.DataGridView> kontro
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>Aby powiązać formant ze źródłem danych  
   
-1.  Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym rogu <xref:System.Windows.Forms.DataGridView> kontroli.  
+1. Kliknij symbol tagu inteligentnego (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) w prawym górnym rogu <xref:System.Windows.Forms.DataGridView> kontroli.  
   
-2.  Kliknij strzałkę listy rozwijanej dla **wybierz źródło danych** opcji.  
+2. Kliknij strzałkę listy rozwijanej dla **wybierz źródło danych** opcji.  
   
-3.  Jeśli projekt nie ma źródła danych, kliknij przycisk **Dodaj źródło danych projektu** i postępuj zgodnie z instrukcjami, wskazane przez kreatora.  
+3. Jeśli projekt nie ma źródła danych, kliknij przycisk **Dodaj źródło danych projektu** i postępuj zgodnie z instrukcjami, wskazane przez kreatora.  
   
      Aby uzyskać więcej informacji, zobacz [Kreatora konfiguracji źródła danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120)). Nowego źródła danych będą wyświetlane w **wybierz źródło danych** okna listy rozwijanej. Jeśli nowe źródło danych zawiera tylko jednego członka, takiego jak tabela pojedynczej bazy danych, formant będzie automatycznie wiązany tego członka. W przeciwnym razie przejdź do następnego kroku.  
   
-4.  Rozwiń **innych źródeł danych** i **zdroje dat projektu** węzłów, jeśli nie są jeszcze rozwinięte, a następnie wybierz źródło danych, aby powiązać formant.  
+4. Rozwiń **innych źródeł danych** i **zdroje dat projektu** węzłów, jeśli nie są jeszcze rozwinięte, a następnie wybierz źródło danych, aby powiązać formant.  
   
-5.  Jeśli źródło danych zawiera więcej niż jeden element członkowski, np. Jeśli utworzono <xref:System.Data.DataSet?displayProperty=nameWithType> zawierający wiele tabel, rozwiń węzeł źródła danych, a następnie wybierz określonego członka, aby powiązać.  
+5. Jeśli źródło danych zawiera więcej niż jeden element członkowski, np. Jeśli utworzono <xref:System.Data.DataSet?displayProperty=nameWithType> zawierający wiele tabel, rozwiń węzeł źródła danych, a następnie wybierz określonego członka, aby powiązać.  
   
-6.  Aby tworzenie relacji wzorzec/szczegół w **wybierz źródło danych** okna listy rozwijanej na sekundę <xref:System.Windows.Forms.DataGridView> sterowania, a następnie rozwiń <xref:System.Windows.Forms.BindingSource> utworzone dla tabeli nadrzędnej, a następnie wybierz pokrewnej tabeli podrzędnej na liście wyświetlane.  
+6. Aby tworzenie relacji wzorzec/szczegół w **wybierz źródło danych** okna listy rozwijanej na sekundę <xref:System.Windows.Forms.DataGridView> sterowania, a następnie rozwiń <xref:System.Windows.Forms.BindingSource> utworzone dla tabeli nadrzędnej, a następnie wybierz pokrewnej tabeli podrzędnej na liście wyświetlane.  
   
     > [!NOTE]
     >  Jeśli projekt zawiera już źródło danych, można również użyć **źródeł danych** okna, aby utworzyć formularz danych. Aby uzyskać więcej informacji, zobacz [okna źródeł danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120)).  

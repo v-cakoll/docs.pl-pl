@@ -6,12 +6,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 5e468641efd4627c887d9a980fc4ed1129196e20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658250"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306654"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Przy użyciu typów dopuszczających wartości zerowe (C# Programming Guide)
 
@@ -66,6 +66,9 @@ Typem wartościowym niebędącym jest niejawnie konwertowany na odpowiedni typ d
 Jednoargumentowy wstępnie zdefiniowanych i operatory binarne i zdefiniowane przez użytkownika operatory, które istnieją w przypadku typów wartości może również używane przez typy dopuszczające wartości null. Te operatory generuje wartość null, jeśli jeden lub oba operandy są null; w przeciwnym razie operator używa wartości zawartej do obliczania wyniku. Na przykład:  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
+
+> [!NOTE]
+> Dla `bool?` typ, jest wstępnie zdefiniowane `&` i `|` operatory nie są zgodne z zasadami opisanymi w tej sekcji: wynik oceny — operator może być inna niż null, nawet, jeśli jeden z argumentów ma wartość null. Aby uzyskać więcej informacji, zobacz [Nullable logiczna operatorów logicznych](../../language-reference/operators/boolean-logical-operators.md#nullable-boolean-logical-operators) części [logiczna operatorów logicznych](../../language-reference/operators/boolean-logical-operators.md) artykułu.
   
 Dla operatorów relacyjnych (`<`, `>`, `<=`, `>=`), jeśli jeden lub oba argumenty mają wartość null, wynik jest `false`. Nie przyjęto założenie, że ponieważ danym porównaniu (na przykład `<=`) zwraca `false`, przeciwne porównania (`>`) zwraca `true`. W poniższym przykładzie pokazano, że jest 10
 
@@ -75,6 +78,8 @@ Dla operatorów relacyjnych (`<`, `>`, `<=`, `>=`), jeśli jeden lub oba argumen
 [!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
 Powyższy przykład pokazuje, że porównanie równości dwa typy dopuszczające wartość null, które są zarówno null daje w wyniku `true`.
+
+Aby uzyskać więcej informacji, zobacz [zniesione operatory](~/_csharplang/spec/expressions.md#lifted-operators) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="boxing-and-unboxing"></a>Konwersja boxing i konwersja unboxing
 
@@ -87,31 +92,8 @@ Rozpakowywanie z opakowanym typem wartościowym do odpowiedniego typu dopuszczaj
 
 [!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
 
-## <a name="the-bool-type"></a>Wartość logiczna? Typ
-
-`bool?` Typu dopuszczającego wartość null może zawierać trzy różne wartości: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md), i [null](../../language-reference/keywords/null.md). `bool?` Typu przypomina logiczna typ zmiennej, który jest używany w języku SQL. Aby upewnij się, że wyniki generowane przez `&` i `|` operatory są zgodne z przechowywanymi w trzech typu Boolean w języku SQL, znajdują się następujące operatory wstępnie zdefiniowane:
-
-- `bool? operator &(bool? x, bool? y)`  
-- `bool? operator |(bool? x, bool? y)`  
-  
-Semantyka te operatory jest zdefiniowane w poniższej tabeli:  
-  
-|x|t|x i y|x&#124;y|  
-|-------|-------|---------|--------------|  
-|true|true|true|true|  
-|true|false|false|true|  
-|true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
-|null|true|null|true|  
-|null|false|false|null|  
-|null|null|null|null|  
-
-Należy pamiętać, że te dwa operatory nie są zgodne z zasadami opisanymi w [operatory](#operators) sekcji: wynik oceny — operator może być inna niż null, nawet, jeśli jeden z argumentów ma wartość null.
-  
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy dopuszczające wartości zerowe](index.md)
+- [Typy dopuszczające wartości null](index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Co dokładnie "podniesiony" oznacza?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

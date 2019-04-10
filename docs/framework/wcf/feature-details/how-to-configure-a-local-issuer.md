@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306992"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Instrukcje: konfigurowanie lokalnego wystawcy
 W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokalnego dla wystawionych tokenów.  
@@ -27,14 +27,14 @@ W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokal
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Aby skonfigurować wystawcy lokalnego w kodzie  
   
-1.  Utwórz zmienną typu <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1. Utwórz zmienną typu <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
-2.  Ustaw zmienną na wystąpienie zwrócone w wyniku <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> właściwość `ClientCredentials` klasy. To wystąpienie jest zwracany przez <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwość klienta (odziedziczone <xref:System.ServiceModel.ClientBase%601>) lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> właściwość <xref:System.ServiceModel.ChannelFactory>:  
+2. Ustaw zmienną na wystąpienie zwrócone w wyniku <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> właściwość `ClientCredentials` klasy. To wystąpienie jest zwracany przez <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwość klienta (odziedziczone <xref:System.ServiceModel.ClientBase%601>) lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> właściwość <xref:System.ServiceModel.ChannelFactory>:  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-3.  Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> właściwość nowe wystąpienie klasy <xref:System.ServiceModel.EndpointAddress>, przy użyciu adresu wystawcy lokalnego jako argumentu do konstruktora.  
+3. Ustaw <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> właściwość nowe wystąpienie klasy <xref:System.ServiceModel.EndpointAddress>, przy użyciu adresu wystawcy lokalnego jako argumentu do konstruktora.  
   
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
      [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
@@ -49,27 +49,27 @@ W tym temacie opisano sposób konfigurowania klienta do używania wystawcy lokal
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
      [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
   
-4.  Ustaw powiązanie wystawcy lokalnego przy użyciu <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> właściwości.  
+4. Ustaw powiązanie wystawcy lokalnego przy użyciu <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A> właściwości.  
   
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  Opcjonalna. Dodawanie zachowania punktu końcowego skonfigurowanego dla wystawcy lokalnego, dodając takie zachowania do kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości.  
+5. Opcjonalna. Dodawanie zachowania punktu końcowego skonfigurowanego dla wystawcy lokalnego, dodając takie zachowania do kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> właściwości.  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>Konfigurowanie lokalnego wystawcy w konfiguracji  
   
-1.  Tworzenie [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) element jako element podrzędny elementu [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) element, który jest elementem podrzędnym [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu w zachowanie punktu końcowego.  
+1. Tworzenie [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) element jako element podrzędny elementu [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) element, który jest elementem podrzędnym [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementu w zachowanie punktu końcowego.  
   
-2.  Ustaw `address` atrybutu adres wystawcy lokalnego, która będzie akceptować żądania tokenu.  
+2. Ustaw `address` atrybutu adres wystawcy lokalnego, która będzie akceptować żądania tokenu.  
   
-3.  Ustaw `binding` i `bindingConfiguration` atrybuty wartości, które odwołują się odpowiednie powiązanie do użycia przy komunikacji z punktem końcowym wystawcy lokalnego.  
+3. Ustaw `binding` i `bindingConfiguration` atrybuty wartości, które odwołują się odpowiednie powiązanie do użycia przy komunikacji z punktem końcowym wystawcy lokalnego.  
   
-4.  Opcjonalna. Ustaw [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) element jako element podrzędny <`localIssuer`> element i określ informacje o tożsamości dla wystawcy lokalnego.  
+4. Opcjonalna. Ustaw [ \<tożsamości >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) element jako element podrzędny <`localIssuer`> element i określ informacje o tożsamości dla wystawcy lokalnego.  
   
-5.  Opcjonalna. Ustaw [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) element jako element podrzędny <`localIssuer`> element i określić dodatkowych nagłówków, które są wymagane do prawidłowego adresowania wystawcy lokalnego.  
+5. Opcjonalna. Ustaw [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) element jako element podrzędny <`localIssuer`> element i określić dodatkowych nagłówków, które są wymagane do prawidłowego adresowania wystawcy lokalnego.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Należy pamiętać, że jeśli wystawcy adres i powiązanie są określone dla danego powiązania, wystawcy lokalnego nie jest używany dla punktów końcowych, korzystające z tego wiązania. Klienci, którzy oczekują zawsze używaj wystawcy lokalnego należy upewnić się, że nie używaj takiego powiązania lub mogą modyfikować powiązania tak, aby adres wystawcy jest `null`.  

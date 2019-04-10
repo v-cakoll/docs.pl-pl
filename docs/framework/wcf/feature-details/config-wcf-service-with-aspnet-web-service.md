@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 8955018124f4e60b0a7c74ad70210b4369676ef5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325192"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Instrukcje: konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi ASP.NET w Internecie
 Aby skonfigurować punkt końcowy usługi Windows Communication Foundation (WCF), aby współdziałać z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web, należy użyć <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typ jako typ powiązania punktu końcowego usługi.  
@@ -21,23 +21,23 @@ Aby skonfigurować punkt końcowy usługi Windows Communication Foundation (WCF)
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Dodawanie punktu końcowego WCF, która jest zgodna z klientami usługi sieci Web platformy ASP.NET w kodzie  
   
-1.  Utwórz nową <xref:System.ServiceModel.BasicHttpBinding> wystąpienia  
+1. Utwórz nową <xref:System.ServiceModel.BasicHttpBinding> wystąpienia  
   
-2.  Opcjonalnie włączyć zabezpieczenia transportu dla tego powiązania punktu końcowego usługi przez ustawianie trybu zabezpieczeń dla wiązania <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Aby uzyskać więcej informacji, zobacz [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2. Opcjonalnie włączyć zabezpieczenia transportu dla tego powiązania punktu końcowego usługi przez ustawianie trybu zabezpieczeń dla wiązania <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Aby uzyskać więcej informacji, zobacz [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-3.  Dodaj nowy punkt końcowy aplikacji do hosta usługi przy użyciu wystąpienia powiązania, który został utworzony. Aby uzyskać szczegółowe informacje dotyczące sposobu dodawania punktu końcowego usługi w kodzie, zobacz [jak: Tworzenie punktu końcowego usługi w kodzie](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+3. Dodaj nowy punkt końcowy aplikacji do hosta usługi przy użyciu wystąpienia powiązania, który został utworzony. Aby uzyskać szczegółowe informacje dotyczące sposobu dodawania punktu końcowego usługi w kodzie, zobacz [jak: Tworzenie punktu końcowego usługi w kodzie](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
-4.  Włączanie punktu końcowego metadanych HTTP/GET dla Twojej usługi. Aby uzyskać szczegółowe informacje, zobacz [jak: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+4. Włączanie punktu końcowego metadanych HTTP/GET dla Twojej usługi. Aby uzyskać szczegółowe informacje, zobacz [jak: Publikowanie metadanych dla usługi przy użyciu kodu](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Dodawanie punktu końcowego WCF, która jest zgodna z klientami usługi sieci Web platformy ASP.NET w pliku konfiguracji  
   
-1.  Utwórz nową <xref:System.ServiceModel.BasicHttpBinding> Konfiguracja powiązania. Aby uzyskać więcej informacji, zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+1. Utwórz nową <xref:System.ServiceModel.BasicHttpBinding> Konfiguracja powiązania. Aby uzyskać więcej informacji, zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-2.  Opcjonalnie włączyć zabezpieczenia transportu dla tej konfiguracji powiązania punktu końcowego usługi przez ustawianie trybu zabezpieczeń dla wiązania <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Aby uzyskać więcej informacji, zobacz [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).  
+2. Opcjonalnie włączyć zabezpieczenia transportu dla tej konfiguracji powiązania punktu końcowego usługi przez ustawianie trybu zabezpieczeń dla wiązania <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Aby uzyskać więcej informacji, zobacz [Transport Security](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-3.  Skonfiguruj nowy punkt końcowy aplikacji dla usługi przy użyciu konfiguracji powiązania, który został utworzony. Aby uzyskać szczegółowe informacje dotyczące sposobu dodawania punktu końcowego usługi w pliku konfiguracji, zobacz [jak: Tworzenie punktu końcowego usługi w konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
+3. Skonfiguruj nowy punkt końcowy aplikacji dla usługi przy użyciu konfiguracji powiązania, który został utworzony. Aby uzyskać szczegółowe informacje dotyczące sposobu dodawania punktu końcowego usługi w pliku konfiguracji, zobacz [jak: Tworzenie punktu końcowego usługi w konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
-4.  Włączanie punktu końcowego metadanych HTTP/GET dla Twojej usługi. Aby uzyskać szczegółowe informacje, zobacz [jak: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+4. Włączanie punktu końcowego metadanych HTTP/GET dla Twojej usługi. Aby uzyskać szczegółowe informacje, zobacz [jak: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu demonstruje sposób dodawania punktu końcowego WCF, która jest zgodna z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sieci Web obsługi klientów w kodzie i można również w plikach konfiguracji.  

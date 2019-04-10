@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839850"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315507"
 ---
 # <a name="-optioninfer"></a>-optioninfer —
 Umożliwia użycie wnioskowania o typie lokalnym w deklaracjach zmiennych.  
@@ -38,9 +38,9 @@ Umożliwia użycie wnioskowania o typie lokalnym w deklaracjach zmiennych.
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>Aby ustawić - optioninfer — w środowisku IDE programu Visual Studio  
   
-1.  Wybierz projekt w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.  
+1. Wybierz projekt w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.  
   
-2.  Na **skompilować** Zmień wartość w **Option infer** pole.  
+2. Na **skompilować** Zmień wartość w **Option infer** pole.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje `test.vb` z włączoną wnioskowanie o typie lokalnym.  
@@ -51,14 +51,14 @@ vbc -optioninfer+ test.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)
+- [-optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Infer — Instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Domyślne ustawienia programu Visual Basic, Projekty, okno dialogowe Opcje](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
 - [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

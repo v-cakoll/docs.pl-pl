@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332147"
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie jest nieznany lub Brak. Wartość null nie jest ciągiem pustym (dla typów danych znaku lub daty/godziny) ani wartość zero (w przypadku liczbowych typów danych). Specyfikacji ANSI SQL-92 z informacją o wartości null musi być taka sama dla wszystkich typów danych, tak, aby spójną wszystkie wartości null. <xref:System.Data.SqlTypes> Przestrzeń nazw zawiera semantyka wartości null, implementując <xref:System.Data.SqlTypes.INullable> interfejsu. Typy wszystkich danych w <xref:System.Data.SqlTypes> ma swój własny `IsNull` właściwości i `Null` wartość, którą można przypisać do wystąpienia tego typu danych.  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Ponadto obowiązują następujące reguły dla wystąpienia `DataRow.["columnName"]` null przypisania:  
   
-1.  Wartość domyślna *domyślne* wartość `DbNull.Value` wszystkie z wyjątkiem silnie typizowanych kolumn o wartości null gdzie jest odpowiedni silnie typizowane wartości null.  
+1. Wartość domyślna *domyślne* wartość `DbNull.Value` wszystkie z wyjątkiem silnie typizowanych kolumn o wartości null gdzie jest odpowiedni silnie typizowane wartości null.  
   
-2.  Wartości null są nigdy zapisywane podczas serializacji, aby pliki XML (jak "xsi: nil").  
+2. Wartości null są nigdy zapisywane podczas serializacji, aby pliki XML (jak "xsi: nil").  
   
-3.  Wszystkich wartości innych niż null, w tym wartości domyślne, są zawsze zapisywane podczas serializacji XML. To różni się od semantyki XSD/XML, gdzie wartość null (xsi: nil) jest jawne, a wartość domyślna to niejawne (Jeśli nie jest obecny w pliku XML, sprawdzanie poprawności analizator pobrać go ze skojarzonego schematu XSD). Dotyczy to przeciwieństwo `DataTable`: wartość null jest niejawny, i wartość domyślna to jawne.  
+3. Wszystkich wartości innych niż null, w tym wartości domyślne, są zawsze zapisywane podczas serializacji XML. To różni się od semantyki XSD/XML, gdzie wartość null (xsi: nil) jest jawne, a wartość domyślna to niejawne (Jeśli nie jest obecny w pliku XML, sprawdzanie poprawności analizator pobrać go ze skojarzonego schematu XSD). Dotyczy to przeciwieństwo `DataTable`: wartość null jest niejawny, i wartość domyślna to jawne.  
   
-4.  Wszystkie brakujące wartości kolumn dla wierszy odczytywać dane wejściowe XML są przypisane wartości NULL. Wiersze utworzone za pomocą <xref:System.Data.DataTable.NewRow%2A> lub podobne metody są przypisywane DataColumn wartości domyślnej.  
+4. Wszystkie brakujące wartości kolumn dla wierszy odczytywać dane wejściowe XML są przypisane wartości NULL. Wiersze utworzone za pomocą <xref:System.Data.DataTable.NewRow%2A> lub podobne metody są przypisywane DataColumn wartości domyślnej.  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> Metoda zwraca `true` dla obu `DbNull.Value` i `INullable.Null`.  
+5. <xref:System.Data.DataRow.IsNull%2A> Metoda zwraca `true` dla obu `DbNull.Value` i `INullable.Null`.  
   
 ## <a name="assigning-null-values"></a>Przypisywanie wartości Null  
  Wartością domyślną dla każdego <xref:System.Data.SqlTypes> wystąpienie ma wartość null.  

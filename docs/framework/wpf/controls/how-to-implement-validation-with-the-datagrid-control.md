@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305960"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid
 <xref:System.Windows.Controls.DataGrid> Control umożliwia wykonywanie walidacji na poziomie komórki i wierszy. Z weryfikacją poziomie komórki sprawdzania poprawności poszczególnych właściwości powiązany obiekt danych po użytkownik aktualizuje wartość. Z weryfikacją na poziomie wiersza Sprawdź wszystkie dane obiektów po użytkownik zatwierdzenia zmian w wierszu. Można również przekazać niestandardowe wizualną opinię błędy sprawdzania poprawności lub użyć domyślnej wizualną opinię, <xref:System.Windows.Controls.DataGrid> zawiera formant.  
@@ -42,14 +42,14 @@ ms.locfileid: "59086810"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Aby sprawdzić poprawność wielu wartości w jednym wierszu  
   
-1.  Implementowanie <xref:System.Windows.Controls.ValidationRule> podklasy, która sprawdza wiele właściwości powiązany obiekt danych. W swojej <xref:System.Windows.Controls.ValidationRule.Validate%2A> rzutowania implementacji metody `value` wartości parametru <xref:System.Windows.Data.BindingGroup> wystąpienia. Mogą uzyskiwać dostęp do obiektu danych za pośrednictwem <xref:System.Windows.Data.BindingGroup.Items%2A> właściwości.  
+1. Implementowanie <xref:System.Windows.Controls.ValidationRule> podklasy, która sprawdza wiele właściwości powiązany obiekt danych. W swojej <xref:System.Windows.Controls.ValidationRule.Validate%2A> rzutowania implementacji metody `value` wartości parametru <xref:System.Windows.Data.BindingGroup> wystąpienia. Mogą uzyskiwać dostęp do obiektu danych za pośrednictwem <xref:System.Windows.Data.BindingGroup.Items%2A> właściwości.  
   
      Poniższy przykład ilustruje ten proces, aby sprawdzić czy `StartDate` wartości właściwości dla `Course` obiekt jest wcześniejsza niż jego `EndDate` wartości właściwości.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Dodaj regułę walidacji do <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> kolekcji. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Właściwości zapewnia bezpośredni dostęp do <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> właściwość <xref:System.Windows.Data.BindingGroup> wystąpienia, który grupuje wszystkie powiązania, które są używane przez kontrolkę.  
+2. Dodaj regułę walidacji do <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> kolekcji. <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Właściwości zapewnia bezpośredni dostęp do <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> właściwość <xref:System.Windows.Data.BindingGroup> wystąpienia, który grupuje wszystkie powiązania, które są używane przez kontrolkę.  
   
      Poniższy przykład ustawia <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> właściwości w XAML. <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> Właściwość jest ustawiona na <xref:System.Windows.Controls.ValidationStep.UpdatedValue> tak, aby sprawdzanie występuje tylko wtedy, gdy powiązany obiekt danych jest aktualizowany.  
   

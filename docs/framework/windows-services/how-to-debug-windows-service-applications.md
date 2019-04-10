@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 7782c60832be487a258b51eab0b050e0a850d20d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321448"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Instrukcje: Debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowanie usługi jest tak proste jak debugowanie innych typów aplikacji Visual Studio. Aby debugować usługę, należy uruchomić usługę i następnie dołączyć debuger do procesu, w którym jest uruchomiony. Następnie można debugować aplikację za pomocą wszystkich standardowych funkcji debugowania programu Visual Studio.  
@@ -36,23 +36,23 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
   
 ### <a name="to-debug-a-service"></a>Aby debugować usługę  
   
-1.  Tworzenie usługi w konfiguracji debugowania.  
+1. Tworzenie usługi w konfiguracji debugowania.  
   
-2.  Zainstaluj swoje usługi. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2. Zainstaluj swoje usługi. Aby uzyskać więcej informacji, zobacz [jak: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Uruchom usługę z **Menedżera sterowania usługami**, **Eksploratora serwera**, lub z kodu. Aby uzyskać więcej informacji, zobacz [jak: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Uruchom usługę z **Menedżera sterowania usługami**, **Eksploratora serwera**, lub z kodu. Aby uzyskać więcej informacji, zobacz [jak: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Uruchom program Visual Studio przy użyciu poświadczeń administracyjnych, dzięki czemu możesz dołączyć do procesów systemowych.  
+4. Uruchom program Visual Studio przy użyciu poświadczeń administracyjnych, dzięki czemu możesz dołączyć do procesów systemowych.  
   
-5.  (Opcjonalnie) Na pasku menu programu Visual Studio, wybierz **narzędzia**, **opcje**. W **opcje** okna dialogowego wybierz **debugowanie**, **symbole**, wybierz opcję **serwery symboli firmy Microsoft** pole wyboru, a następnie wybierz pozycję **OK** przycisku.  
+5. (Opcjonalnie) Na pasku menu programu Visual Studio, wybierz **narzędzia**, **opcje**. W **opcje** okna dialogowego wybierz **debugowanie**, **symbole**, wybierz opcję **serwery symboli firmy Microsoft** pole wyboru, a następnie wybierz pozycję **OK** przycisku.  
   
-6.  Na pasku menu wybierz **dołączyć do procesu** z **debugowania** lub **narzędzia** menu. (Klawiatura: Ctrl+Alt+P)  
+6. Na pasku menu wybierz **dołączyć do procesu** z **debugowania** lub **narzędzia** menu. (Klawiatura: Ctrl+Alt+P)  
   
      **Procesy** pojawi się okno dialogowe.  
   
-7.  Wybierz **Pokaż procesy wszystkich użytkowników** pole wyboru.  
+7. Wybierz **Pokaż procesy wszystkich użytkowników** pole wyboru.  
   
-8.  W **dostępne procesy** sekcji, wybierz proces danej usługi, a następnie wybierz **Dołącz**.  
+8. W **dostępne procesy** sekcji, wybierz proces danej usługi, a następnie wybierz **Dołącz**.  
   
     > [!TIP]
     >  Proces będzie mieć taką samą nazwę jak plik wykonywalny dla usługi.  
@@ -77,7 +77,7 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Instrukcje: Uruchom usługę Windows jako aplikację konsolową w języku  
   
-1.  Dodaj metodę z uruchomioną usługą <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody:  
+1. Dodaj metodę z uruchomioną usługą <xref:System.ServiceProcess.ServiceBase.OnStart%2A> i <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metody:  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
     }  
     ```  
   
-2.  Ponowne zapisywanie adresów `Main` metody w następujący sposób:  
+2. Ponowne zapisywanie adresów `Main` metody w następujący sposób:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,11 +105,11 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
     }
     ```  
   
-3.  W **aplikacji** na karcie właściwości projektu, ustaw **typ danych wyjściowych** do **aplikację Konsolową**.  
+3. W **aplikacji** na karcie właściwości projektu, ustaw **typ danych wyjściowych** do **aplikację Konsolową**.  
   
-4.  Wybierz **Rozpocznij debugowanie** (F5).  
+4. Wybierz **Rozpocznij debugowanie** (F5).  
   
-5.  Aby ponownie uruchomić program jako usługę Windows, należy go zainstalować i uruchomić go w zwykły sposób usługi Windows. Nie jest konieczne zmiany można cofnąć.  
+5. Aby ponownie uruchomić program jako usługę Windows, należy go zainstalować i uruchomić go w zwykły sposób usługi Windows. Nie jest konieczne zmiany można cofnąć.  
   
  W niektórych przypadkach, np. Jeśli chcesz debugować problem, który występuje tylko podczas uruchamiania systemu należy użyć debugera Windows. [Pobierz zestaw Windows Driver Kit (WDK)](/windows-hardware/drivers/download-the-wdk) zobaczyć [sposób debugowania usług Windows](https://support.microsoft.com/kb/824344).  
   

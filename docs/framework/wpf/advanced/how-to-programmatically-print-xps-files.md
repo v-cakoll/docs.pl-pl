@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312075"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Instrukcje: Programowe drukowanie plików XPS
 Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metodę, aby wydrukować [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] plików bez otwierania <xref:System.Windows.Controls.PrintDialog> lub w zasadzie dowolnego [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] na wszystkich.  
@@ -25,13 +25,13 @@ Możesz użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A
 ## <a name="example"></a>Przykład  
  Główne kroki, aby za pomocą parametru trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metody są następujące. W poniższym przykładzie zwraca szczegółowe informacje.  
   
-1.  Określ, czy drukarka występuje XPSDrv drukarki. (Zobacz [Omówienie drukowania](printing-overview.md) więcej informacji na temat XPSDrv.)  
+1. Określ, czy drukarka występuje XPSDrv drukarki. (Zobacz [Omówienie drukowania](printing-overview.md) więcej informacji na temat XPSDrv.)  
   
-2.  Jeśli drukarka jest drukarki XPSDrv, ustawić komórka wątku pojedynczego wątku.  
+2. Jeśli drukarka jest drukarki XPSDrv, ustawić komórka wątku pojedynczego wątku.  
   
-3.  Utwórz wystąpienie serwera wydruku, a obiekt kolejki wydruku.  
+3. Utwórz wystąpienie serwera wydruku, a obiekt kolejki wydruku.  
   
-4.  Wywołaj metodę, określając nazwę zadania, plików, które mają być drukowane i <xref:System.Boolean> flaga oznaczająca, czy drukarka jest XPSDrv.  
+4. Wywołaj metodę, określając nazwę zadania, plików, które mają być drukowane i <xref:System.Boolean> flaga oznaczająca, czy drukarka jest XPSDrv.  
   
  W poniższym przykładzie pokazano, jak dzielić na partie Drukuj wszystkie [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] plików w katalogu. Mimo że aplikacja monituje użytkownika o określ katalog, parametr trzech <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> metoda nie wymaga [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Może służyć w dowolnej ścieżce kodu których masz [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] nazwa pliku i ścieżkę, którą można przekazać do niego.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202147"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295955"
 ---
 # <a name="animation-tips-and-tricks"></a>Porady i triki animacyjne
 Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]kilka porad i wskazówek, które mogą ułatwić animacji działać lepiej i pozwala zaoszczędzić Rozczarowanie.  
@@ -71,9 +71,9 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
  Jeśli klikniesz drugi przycisk, podczas pierwszego <xref:System.Windows.Media.Animation.Storyboard> jest odtwarzany, można by oczekiwać następujące zachowanie:  
   
-1.  Pierwszy scenorysu kończy i wysyła do jego pierwotnej pozycji prostokąt, ponieważ ma animacji <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> z <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
+1. Pierwszy scenorysu kończy i wysyła do jego pierwotnej pozycji prostokąt, ponieważ ma animacji <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> z <xref:System.Windows.Media.Animation.FillBehavior.Stop>.  
   
-2.  Drugi scenorysu staje się skuteczny i animuje od bieżącej pozycji, która jest teraz 0 do 500.  
+2. Drugi scenorysu staje się skuteczny i animuje od bieżącej pozycji, która jest teraz 0 do 500.  
   
  **Ale to nie co się dzieje.** Zamiast tego prostokąta nie jest przenoszony wrócili, kontynuuje po prawej stronie. Wynika to z drugiej animacji używa bieżącej wartości animacji pierwszy jako jej wartość początkową i animuje z tej wartości do 500. Po drugiej animacji zastępuje pierwsze, ponieważ <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> jest używany, <xref:System.Windows.Media.Animation.FillBehavior> pierwszego animacji nie ma znaczenia.  
   

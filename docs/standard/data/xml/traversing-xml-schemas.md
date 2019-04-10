@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305042"
 ---
 # <a name="traversing-xml-schemas"></a>Przechodzenie schematów XML
 Przechodzenie przez schemat XML przy użyciu schematu Object Model (model SOM) interfejsu API zapewnia dostęp do elementów, atrybutów i typy przechowywanych w SOM. Przechodzenie przez XML schematu ładowany SOM jest także pierwszym krokiem podczas edytowania schematu XML przy użyciu interfejsu API SOM.  
@@ -43,19 +43,19 @@ Przechodzenie przez schemat XML przy użyciu schematu Object Model (model SOM) i
   
  Przykład przechodzi przez schemat klienta w poniższych krokach.  
   
-1.  Dodaje nowy schemat klienta <xref:System.Xml.Schema.XmlSchemaSet> obiektu, a następnie kompiluje go. Wszelkie ostrzeżenia sprawdzania poprawności schematu i błędów napotkanych odczytywania lub skompilowanie schematu są obsługiwane przez <xref:System.Xml.Schema.ValidationEventHandler> delegować.  
+1. Dodaje nowy schemat klienta <xref:System.Xml.Schema.XmlSchemaSet> obiektu, a następnie kompiluje go. Wszelkie ostrzeżenia sprawdzania poprawności schematu i błędów napotkanych odczytywania lub skompilowanie schematu są obsługiwane przez <xref:System.Xml.Schema.ValidationEventHandler> delegować.  
   
-2.  Pobiera skompilowana klasa <xref:System.Xml.Schema.XmlSchema> obiektu z <xref:System.Xml.Schema.XmlSchemaSet> przez Iterowanie <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> właściwości. Ponieważ schemat jest kompilowany, właściwości (PSCI) po-Schema-kompilacja-zestaw informacji są dostępne.  
+2. Pobiera skompilowana klasa <xref:System.Xml.Schema.XmlSchema> obiektu z <xref:System.Xml.Schema.XmlSchemaSet> przez Iterowanie <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> właściwości. Ponieważ schemat jest kompilowany, właściwości (PSCI) po-Schema-kompilacja-zestaw informacji są dostępne.  
   
-3.  Iteruje przez każdy <xref:System.Xml.Schema.XmlSchemaElement> w <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> kolekcji po-schema-kompilacja <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> kolekcji pisania nazwę każdego elementu w konsoli.  
+3. Iteruje przez każdy <xref:System.Xml.Schema.XmlSchemaElement> w <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A> kolekcji po-schema-kompilacja <xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType> kolekcji pisania nazwę każdego elementu w konsoli.  
   
-4.  Pobiera typ złożony `Customer` elementu za pomocą <xref:System.Xml.Schema.XmlSchemaComplexType> klasy.  
+4. Pobiera typ złożony `Customer` elementu za pomocą <xref:System.Xml.Schema.XmlSchemaComplexType> klasy.  
   
-5.  Jeśli typ złożony zawiera atrybuty, pobiera <xref:System.Collections.IDictionaryEnumerator> wyliczania każdego <xref:System.Xml.Schema.XmlSchemaAttribute> i zapisuje jego nazwę do konsoli.  
+5. Jeśli typ złożony zawiera atrybuty, pobiera <xref:System.Collections.IDictionaryEnumerator> wyliczania każdego <xref:System.Xml.Schema.XmlSchemaAttribute> i zapisuje jego nazwę do konsoli.  
   
-6.  Pobiera cząstki sequence użycia typu złożonego <xref:System.Xml.Schema.XmlSchemaSequence> klasy.  
+6. Pobiera cząstki sequence użycia typu złożonego <xref:System.Xml.Schema.XmlSchemaSequence> klasy.  
   
-7.  Iteruje przez każdy <xref:System.Xml.Schema.XmlSchemaElement> w <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> kolekcji pisania nazwę każdego elementu podrzędnego w konsoli.  
+7. Iteruje przez każdy <xref:System.Xml.Schema.XmlSchemaElement> w <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType> kolekcji pisania nazwę każdego elementu podrzędnego w konsoli.  
   
  Oto przykład kompletny kod.  
   

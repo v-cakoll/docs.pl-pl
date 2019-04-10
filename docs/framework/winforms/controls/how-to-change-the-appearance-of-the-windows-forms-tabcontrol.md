@@ -11,35 +11,35 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: c84ce67225b70933e65b8f88da1eaef6b1f3de99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59133136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331341"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows
 Można zmienić wygląd karty w formularzach Windows Forms za pomocą właściwości <xref:System.Windows.Forms.TabControl> i <xref:System.Windows.Forms.TabPage> obiektów, które składają się na poszczególnych kartach formantu. Przez ustawienie tych właściwości, można wyświetlanie obrazów na kartach, wyświetlanie kart w pionie zamiast w poziomie, wyświetlić wiele wierszy kart i włączyć lub wyłączyć karty programowo.  
   
 ### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a>Aby wyświetlić ikonę na części etykieta karty  
   
-1.  Dodaj <xref:System.Windows.Forms.ImageList> formantu do formularza.  
+1. Dodaj <xref:System.Windows.Forms.ImageList> formantu do formularza.  
   
-2.  Dodawanie obrazów do listy obrazów.  
+2. Dodawanie obrazów do listy obrazów.  
   
      Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnika ImageList](imagelist-component-windows-forms.md) i [jak: Dodawanie lub usuwanie obrazów za pomocą Windows składnika ImageList formularzy](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
   
-3.  Ustaw <xref:System.Windows.Forms.TabControl.ImageList%2A> właściwość <xref:System.Windows.Forms.TabControl> do <xref:System.Windows.Forms.ImageList> kontroli.  
+3. Ustaw <xref:System.Windows.Forms.TabControl.ImageList%2A> właściwość <xref:System.Windows.Forms.TabControl> do <xref:System.Windows.Forms.ImageList> kontroli.  
   
-4.  Ustaw <xref:System.Windows.Forms.TabPage.ImageIndex%2A> właściwość <xref:System.Windows.Forms.TabPage> do indeksu odpowiedniego obrazu na liście.  
+4. Ustaw <xref:System.Windows.Forms.TabPage.ImageIndex%2A> właściwość <xref:System.Windows.Forms.TabPage> do indeksu odpowiedniego obrazu na liście.  
   
 ### <a name="to-create-multiple-rows-of-tabs"></a>Aby utworzyć wiele wierszy kart  
   
-1.  Dodaj numer strony kart, które chcesz.  
+1. Dodaj numer strony kart, które chcesz.  
   
-2.  Ustaw <xref:System.Windows.Forms.TabControl.Multiline%2A> właściwość <xref:System.Windows.Forms.TabControl> do `true`.  
+2. Ustaw <xref:System.Windows.Forms.TabControl.Multiline%2A> właściwość <xref:System.Windows.Forms.TabControl> do `true`.  
   
-3.  Jeśli karty nie ma już w wielu wierszach, ustaw <xref:System.Windows.Forms.Control.Width%2A> właściwość <xref:System.Windows.Forms.TabControl> być mniejsza niż wszystkie karty.  
+3. Jeśli karty nie ma już w wielu wierszach, ustaw <xref:System.Windows.Forms.Control.Width%2A> właściwość <xref:System.Windows.Forms.TabControl> być mniejsza niż wszystkie karty.  
   
 ### <a name="to-arrange-tabs-on-the-side-of-the-control"></a>Aby rozmieścić karty boku kontrolki  
   
@@ -47,7 +47,7 @@ Można zmienić wygląd karty w formularzach Windows Forms za pomocą właściwo
   
 ### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a>Aby programowo włączyć lub wyłączyć wszystkie kontrolki na karcie  
   
-1.  Ustaw <xref:System.Windows.Forms.TabPage.Enabled%2A> właściwość <xref:System.Windows.Forms.TabPage> do `true` lub `false`.  
+1. Ustaw <xref:System.Windows.Forms.TabPage.Enabled%2A> właściwość <xref:System.Windows.Forms.TabPage> do `true` lub `false`.  
   
     ```vb  
     TabPage1.Enabled = False  

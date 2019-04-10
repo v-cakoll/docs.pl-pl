@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314077"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB — Struktura
 Zawiera informacje o jeden atrybut w zestawie i składa się z trzech `DWORD`s. Każdy `DWORD` to przesunięcie buforu znaków, utworzona przez testowany `CurrentIntoBuffer` metody [ienumidentity_attribute —](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) interfejsu  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>Przykład  
  W poniższym przykładzie pokazano kilka podstawowe kroki, które ostatecznie powoduje wypełnione `IDENTITY_ATTRIBUTE_BLOB` strukturę:  
   
-1.  Uzyskaj [ireferenceidentity —](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) dla zestawu.  
+1. Uzyskaj [ireferenceidentity —](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) dla zestawu.  
   
-2.  Wywołaj `IReferenceIdentity::EnumAttributes` metody i uzyskać [ienumidentity_attribute —](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Wywołaj `IReferenceIdentity::EnumAttributes` metody i uzyskać [ienumidentity_attribute —](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Tworzenie buforu znaków i zrzutowania go `IDENTITY_ATTRIBUTE_BLOB` struktury.  
+3. Tworzenie buforu znaków i zrzutowania go `IDENTITY_ATTRIBUTE_BLOB` struktury.  
   
-4.  Wywołaj `CurrentIntoBuffer` metody `IEnumIDENTITY_ATTRIBUTE` interfejsu. Ta metoda kopiuje atrybuty `Namespace`, `Name`, i `Value` do buforu znaków. Trzy przesunięcia do tych ciągów staną się dostępne w `IDENTITY_ATTRIBUTE_BLOB` struktury.  
+4. Wywołaj `CurrentIntoBuffer` metody `IEnumIDENTITY_ATTRIBUTE` interfejsu. Ta metoda kopiuje atrybuty `Namespace`, `Name`, i `Value` do buforu znaków. Trzy przesunięcia do tych ciągów staną się dostępne w `IDENTITY_ATTRIBUTE_BLOB` struktury.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

@@ -2,12 +2,12 @@
 title: Zabezpieczenia odnajdywania — przykład
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160767"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318406"
 ---
 # <a name="discovery-security-sample"></a>Zabezpieczenia odnajdywania — przykład
 Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestniczą w procesie odnajdowania, można zabezpieczyć. Udoskonalanie komunikaty odnajdywania Dzięki zabezpieczeniom zmniejsza różne rodzaje ataków (komunikat zmiany, odmowa usługi, oparte na metodzie powtórzeń, fałszowanie adresów). W tym przykładzie implementuje niestandardowe kanały, które obliczeń i sprawdzanie podpisów komunikat w formacie compact podpisu (opisanej w sekcji 8.2 specyfikacji WS-Discovery). Przykład obsługuje zarówno [specyfikacji odnajdywania 2005](https://go.microsoft.com/fwlink/?LinkId=177912) i [wersji 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -60,11 +60,11 @@ Specyfikacja odnajdywania nie jest wymagane, czy punkty końcowe, które uczestn
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Wykonaj skrypt Setup.bat jest z wiersza polecenia dla deweloperów programu Visual Studio. W przykładzie użyto certyfikaty do podpisywania i Sprawdź komunikaty. Skrypt tworzy certyfikaty przy użyciu Makecert.exe, a następnie instaluje je przy użyciu Certmgr.exe. Skrypt musi być uruchamiane z uprawnieniami administratora.  
+1. Wykonaj skrypt Setup.bat jest z wiersza polecenia dla deweloperów programu Visual Studio. W przykładzie użyto certyfikaty do podpisywania i Sprawdź komunikaty. Skrypt tworzy certyfikaty przy użyciu Makecert.exe, a następnie instaluje je przy użyciu Certmgr.exe. Skrypt musi być uruchamiane z uprawnieniami administratora.  
   
-2.  Aby skompilować i uruchomić przykład, otwórz plik Security.sln w programie Visual Studio, a następnie wybierz **Kompiluj wszystko ponownie**. Aktualizowanie właściwości rozwiązania, aby uruchomić wiele projektów: Wybierz **Start** dla wszystkich projektów, z wyjątkiem DiscoverySecureChannels. Rozwiązania będą działać normalnie.  
+2. Aby skompilować i uruchomić przykład, otwórz plik Security.sln w programie Visual Studio, a następnie wybierz **Kompiluj wszystko ponownie**. Aktualizowanie właściwości rozwiązania, aby uruchomić wiele projektów: Wybierz **Start** dla wszystkich projektów, z wyjątkiem DiscoverySecureChannels. Rozwiązania będą działać normalnie.  
   
-3.  Po wykonaniu czynności przy użyciu przykładu należy wykonać skrypt Cleanup.bat, który usuwa certyfikaty utworzone dla tego przykładu.  
+3. Po wykonaniu czynności przy użyciu przykładu należy wykonać skrypt Cleanup.bat, który usuwa certyfikaty utworzone dla tego przykładu.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 35515d37756c46d7d38ca272d76da3126fde385f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320655"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
 Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać wdrożone. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] a .NET Framework zawierają kilka technologie wdrażania. Technologie wdrażania, które jest używane do wdrażania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacja jest zależna od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrożenia i jak są używane w połączeniu z wymagań związanych z wdrażaniem każdego [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] typu aplikacji.  
@@ -102,9 +102,9 @@ Po są wbudowane aplikacje Windows Presentation Foundation (WPF), muszą zostać
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] można wdrożyć na klientach przy użyciu dowolnej techniki wdrażania. Jednak [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] jest zalecane, ponieważ zapewnia następujące możliwości:  
   
-1.  Aktualizacje automatyczne po opublikowaniu nowej wersji.  
+1. Aktualizacje automatyczne po opublikowaniu nowej wersji.  
   
-2.  Podniesienie uprawnień dla [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uruchomiona z pełnym zaufaniem.  
+2. Podniesienie uprawnień dla [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] uruchomiona z pełnym zaufaniem.  
   
  Domyślnie ClickOnce publikowanie aplikacji pliki z rozszerzeniem .deploy. Może być problematyczne, ale można go wyłączyć. Aby uzyskać więcej informacji, zobacz [serwera i problemy z konfiguracją klienta we wdrożeniach ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   

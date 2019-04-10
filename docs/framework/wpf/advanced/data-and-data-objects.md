@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312062"
 ---
 # <a name="data-and-data-objects"></a>Dane i obiekty danych
 Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowywane w obiekcie danych.  Model obiektu danych składa się z co najmniej jedną z następujących par:  
@@ -87,11 +87,11 @@ Dane są przesyłane w ramach operacji przeciągania i upuszczania są przechowy
 ### <a name="removing-data-from-a-data-object"></a>Usuwanie danych z obiektu danych  
  Danych nie można bezpośrednio usunąć z obiektu danych.  Aby skutecznie usunięcie danych z obiektu danych, wykonaj następujące kroki:  
   
-1.  Utwórz nowy obiekt danych, która będzie zawierać tylko dane, które mają zostać zachowane.  
+1. Utwórz nowy obiekt danych, która będzie zawierać tylko dane, które mają zostać zachowane.  
   
-2.  "Kopiuj" żądane dane z stary obiekt danych do nowego obiektu danych.  Aby skopiować dane, użyj jednej z <xref:System.Windows.DataObject.GetData%2A> metody pobierania <xref:System.Object> , zawierający dane pierwotne, a następnie użyj jednej z <xref:System.Windows.DataObject.SetData%2A> metody, aby dodać dane do nowego obiektu danych.  
+2. "Kopiuj" żądane dane z stary obiekt danych do nowego obiektu danych.  Aby skopiować dane, użyj jednej z <xref:System.Windows.DataObject.GetData%2A> metody pobierania <xref:System.Object> , zawierający dane pierwotne, a następnie użyj jednej z <xref:System.Windows.DataObject.SetData%2A> metody, aby dodać dane do nowego obiektu danych.  
   
-3.  Zastąp nowym stary obiekt danych.  
+3. Zastąp nowym stary obiekt danych.  
   
 > [!NOTE]
 >  <xref:System.Windows.DataObject.SetData%2A> Metody tylko dodać dane do obiektu danych; nie zastępują danych, nawet jeśli dane i format danych są dokładnie takie same jak poprzedniego wywołania. Wywoływanie <xref:System.Windows.DataObject.SetData%2A> dwa razy dla tych samych danych i danych spowoduje format w formacie data/data, dwa razy w obiekcie danych.

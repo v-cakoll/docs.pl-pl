@@ -2,12 +2,12 @@
 title: 'Przewodnik: Manipulowanie danymi (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143289"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330782"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Przewodnik: Manipulowanie danymi (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz dotyczący dodawania, modyfikowania i usuwania danych w bazie danych. Kopię przykładowej bazy danych Northwind użyje do dodawania klienta, Zmień nazwę klienta i usunąć zamówienie.  
@@ -53,30 +53,30 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
   
-1.  W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
+1. W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
   
-2.  W **typów projektów** okienka **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
+2. W **typów projektów** okienka **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
   
-3.  W **szablony** okienku kliknij **aplikację Konsolową**.  
+3. W **szablony** okienku kliknij **aplikację Konsolową**.  
   
-4.  W **nazwa** wpisz **LinqDataManipulationApp**.  
+4. W **nazwa** wpisz **LinqDataManipulationApp**.  
   
-5.  W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
+5. W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
   
-6.  Kliknij przycisk **OK**.  
+6. Kliknij przycisk **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Dodawanie odwołania do zapytań LINQ i dyrektywy  
  W tym instruktażu wykorzystano zestawów, które nie mogą być instalowane domyślnie w projekcie. Jeśli System.Data.Linq nie jest wymieniony jako odwołanie w projekcie, należy dodać ją, zgodnie z opisem w poniższych krokach:  
   
 #### <a name="to-add-systemdatalinq"></a>To add System.Data.Linq  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
   
-2.  W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
+2. W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
   
      Zestaw został dodany do projektu.  
   
-3.  Dodaj następujące dyrektywy, w górnej części pliku Program.cs:  
+3. Dodaj następujące dyrektywy, w górnej części pliku Program.cs:  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
@@ -85,9 +85,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Aby dodać plik kodu northwind do projektu  
   
-1.  Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.  
+1. Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.  
   
-2.  W **Dodaj istniejący element** okno dialogowe, przejdź do c:\linqtest6\northwind.cs, a następnie kliknij przycisk **Dodaj**.  
+2. W **Dodaj istniejący element** okno dialogowe, przejdź do c:\linqtest6\northwind.cs, a następnie kliknij przycisk **Dodaj**.  
   
      Plik northwind.cs zostanie dodany do projektu.  
   
@@ -96,11 +96,11 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>Aby skonfigurować i przetestować połączenie z bazą danych  
   
-1.  Wpisz lub wklej następujący kod do `Main` metody w klasie Program:  
+1. Wpisz lub wklej następujący kod do `Main` metody w klasie Program:  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2.  Naciśnij klawisz F5, aby przetestować aplikację na tym etapie.  
+2. Naciśnij klawisz F5, aby przetestować aplikację na tym etapie.  
   
      A **konsoli** zostanie otwarte okno.  
   
@@ -113,13 +113,13 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-add-a-new-customer-entity-object"></a>Aby dodać nowy obiekt jednostki klienta  
   
-1.  Utwórz nową `Customer` , dodając następujący kod przed `Console.ReadLine();` w `Main` metody:  
+1. Utwórz nową `Customer` , dodając następujący kod przed `Console.ReadLine();` w `Main` metody:  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2.  Naciśnij klawisz F5, aby debugować rozwiązanie.  
+2. Naciśnij klawisz F5, aby debugować rozwiązanie.  
   
-3.  Naciśnij klawisz Enter w **konsoli** okna, aby zatrzymać debugowanie i kontynuować instruktażu.  
+3. Naciśnij klawisz Enter w **konsoli** okna, aby zatrzymać debugowanie i kontynuować instruktażu.  
   
 ## <a name="updating-an-entity"></a>Aktualizowanie jednostki  
  W poniższych krokach będą pobierane `Customer` i zmodyfikować jedną z jej właściwości.  
@@ -146,17 +146,17 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-submit-changes-to-the-database"></a>Aby przesłać zmiany do bazy danych  
   
-1.  Wstaw poniższy kod tuż nad `Console.ReadLine`:  
+1. Wstaw poniższy kod tuż nad `Console.ReadLine`:  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2.  Wstaw następujący kod (po `SubmitChanges`) do wyświetlenia przed i po nim skutki przesyłanie zmian:  
+2. Wstaw następujący kod (po `SubmitChanges`) do wyświetlenia przed i po nim skutki przesyłanie zmian:  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3.  Naciśnij klawisz F5, aby debugować rozwiązanie.  
+3. Naciśnij klawisz F5, aby debugować rozwiązanie.  
   
-4.  Naciśnij klawisz Enter w **konsoli** okna, aby zamknąć aplikację.  
+4. Naciśnij klawisz Enter w **konsoli** okna, aby zamknąć aplikację.  
   
 > [!NOTE]
 >  Po dodaniu nowego klienta, przesyłając żądanie zmiany, nie można wykonać tego rozwiązania jest ponownie. Aby wykonać ponownie rozwiązanie, należy zmienić nazwę klienta i identyfikator klienta, które mają zostać dodane.  

@@ -2,12 +2,12 @@
 title: Programowanie asynchroniczne z Async i Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324724"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programowanie asynchroniczne z Async i Await (Visual Basic)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -108,19 +108,19 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  Liczby w diagramie odpowiadają poniższym krokom.  
   
-1.  Program obsługi zdarzeń wywołuje i czeka `AccessTheWebAsync` metody asynchronicznej.  
+1. Program obsługi zdarzeń wywołuje i czeka `AccessTheWebAsync` metody asynchronicznej.  
   
-2.  `AccessTheWebAsync` Tworzy <xref:System.Net.Http.HttpClient> wystąpienie i wywołania <xref:System.Net.Http.HttpClient.GetStringAsync%2A> asynchronicznej metody do pobierania zawartości witryny sieci Web jako ciąg.  
+2. `AccessTheWebAsync` Tworzy <xref:System.Net.Http.HttpClient> wystąpienie i wywołania <xref:System.Net.Http.HttpClient.GetStringAsync%2A> asynchronicznej metody do pobierania zawartości witryny sieci Web jako ciąg.  
   
-3.  Coś się dzieje w `GetStringAsync` , co wstrzymuje jej postęp. Być może metoda musi czekać na pobranie strony internetowej lub inne działanie blokujące. Aby uniknąć blokowania zasobów,, `GetStringAsync` oddaje kontrole wywołującemu, `AccessTheWebAsync`.  
+3. Coś się dzieje w `GetStringAsync` , co wstrzymuje jej postęp. Być może metoda musi czekać na pobranie strony internetowej lub inne działanie blokujące. Aby uniknąć blokowania zasobów,, `GetStringAsync` oddaje kontrole wywołującemu, `AccessTheWebAsync`.  
   
      `GetStringAsync` Zwraca <xref:System.Threading.Tasks.Task%601> gdzie TResult jest ciągiem, a `AccessTheWebAsync` przypisuje zadania `getStringTask` zmiennej. Zadanie przedstawia ciągły proces wywołania metody `GetStringAsync`, z zobowiązaniem utworzenia faktycznej wartości ciągu po ukończeniu pracy.  
   
-4.  Ponieważ `getStringTask` nie miało jeszcze, `AccessTheWebAsync` można kontynuować inne prace, które nie są zależne od wyniku końcowego `GetStringAsync`. Że praca jest reprezentowana przez wywołanie metody synchronicznej `DoIndependentWork`.  
+4. Ponieważ `getStringTask` nie miało jeszcze, `AccessTheWebAsync` można kontynuować inne prace, które nie są zależne od wyniku końcowego `GetStringAsync`. Że praca jest reprezentowana przez wywołanie metody synchronicznej `DoIndependentWork`.  
   
-5.  `DoIndependentWork` jest metodą synchroniczną, która działa i wraca do.  
+5. `DoIndependentWork` jest metodą synchroniczną, która działa i wraca do.  
   
-6.  `AccessTheWebAsync` ma za mało pracy, która może wykonywać bez wyniku z `getStringTask`. `AccessTheWebAsync` dalej chce obliczyć i zwracać długość pobranego ciągu, ale metoda nie może obliczyć tej wartości dopóki metoda ma ciąg.  
+6. `AccessTheWebAsync` ma za mało pracy, która może wykonywać bez wyniku z `getStringTask`. `AccessTheWebAsync` dalej chce obliczyć i zwracać długość pobranego ciągu, ale metoda nie może obliczyć tej wartości dopóki metoda ma ciąg.  
   
      W związku z tym `AccessTheWebAsync` stosuje await operator, aby zawiesić postęp i oddać kontrolę do metody, która wywołała `AccessTheWebAsync`. `AccessTheWebAsync` Zwraca `Task<int>` (`Task(Of Integer)` w języku Visual Basic) do obiektu wywołującego. Zadanie przedstawia obietnicę utworzenia w wyniku liczby całkowitej, która jest długością pobranego ciągu.  
   
@@ -129,9 +129,9 @@ Dim urlContents As String = Await client.GetStringAsync()
   
      Przetwarzanie wzorca jest kontynuowane wewnątrz elementu wywołującego (programu obsługi zdarzeń w tym przykładzie). Obiekt wywołujący może wykonywać inne czynności, które nie są zależne od wyników `AccessTheWebAsync` przed oczekiwaniem na wynik lub obiekt wywołujący może czekać natychmiast.   Program obsługi zdarzeń oczekuje na `AccessTheWebAsync`, i `AccessTheWebAsync` oczekuje na `GetStringAsync`.  
   
-7.  `GetStringAsync` kończy i produkuje wynik w postaci ciągu. Wynikowy ciąg nie jest zwracany przez wywołanie `GetStringAsync` w taki sposób, jakiego można by oczekiwać. (Należy pamiętać, że metoda zwróciła już zadanie w kroku 3). Zamiast tego wynikowy ciąg jest zapisywany w zadaniu, które reprezentuje ukończenie metody, `getStringTask`. Operator "await" pobiera wyniki z `getStringTask`. Instrukcja przypisania przypisuje wynik pobrany `urlContents`.  
+7. `GetStringAsync` kończy i produkuje wynik w postaci ciągu. Wynikowy ciąg nie jest zwracany przez wywołanie `GetStringAsync` w taki sposób, jakiego można by oczekiwać. (Należy pamiętać, że metoda zwróciła już zadanie w kroku 3). Zamiast tego wynikowy ciąg jest zapisywany w zadaniu, które reprezentuje ukończenie metody, `getStringTask`. Operator "await" pobiera wyniki z `getStringTask`. Instrukcja przypisania przypisuje wynik pobrany `urlContents`.  
   
-8.  Gdy `AccessTheWebAsync` ma wynik ciągu, metoda może obliczyć długość ciągu. Następnie praca `AccessTheWebAsync` jest również zakończona i czekający program obsługi zdarzenia może wznowić działanie. W pełnym przykładzie na końcu tematu można zobaczyć, że program obsługi zdarzeń pobiera i drukuje wynikową wartość długości.  
+8. Gdy `AccessTheWebAsync` ma wynik ciągu, metoda może obliczyć długość ciągu. Następnie praca `AccessTheWebAsync` jest również zakończona i czekający program obsługi zdarzenia może wznowić działanie. W pełnym przykładzie na końcu tematu można zobaczyć, że program obsługi zdarzeń pobiera i drukuje wynikową wartość długości.  
   
  Jeśli dopiero zaczynasz przygodę z programowaniem asynchronicznym, zastanów się przez chwilę, jaka jest różnica między zachowaniem synchronicznym i asynchronicznym. Metoda synchroniczna kończy działanie, gdy praca jest zakończona (krok 5), natomiast metoda asynchroniczna zwraca wartość zadania, gdy jej praca jest zawieszona (kroki 3 i 6). Gdy metoda async ukończy pracę, zadanie jest oznaczane jako ukończone, a wynik, o ile istnieje, jest zapisywany w zadaniu.  
   
@@ -164,7 +164,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
--   [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
+-   [Await — Operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
   
 ## <a name="BKMK_ReturnTypesandParameters"></a> Typy zwracane i parametry  
  W programowaniu .NET Framework, metoda async zwykle zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Wewnątrz metody asynchronicznej `Await` operator jest stosowany do zadania, który jest zwracany z wywołania do innej metody async.  
@@ -315,5 +315,5 @@ End Class
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await — Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)

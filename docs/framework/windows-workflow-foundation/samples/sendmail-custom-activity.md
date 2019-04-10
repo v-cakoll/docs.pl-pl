@@ -2,12 +2,12 @@
 title: Niestandardowe działanie SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181293"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321864"
 ---
 # <a name="sendmail-custom-activity"></a>Niestandardowe działanie SendMail
 W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która pochodzi od klasy <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail przy użyciu protokołu SMTP do użycia w aplikacji przepływu pracy. Niestandardowe działanie korzysta z możliwości <xref:System.Net.Mail.SmtpClient> asynchroniczne wysyłanie wiadomości e-mail i Wyślij wiadomość e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje użytkowników końcowych, takich jak przetestować tryb zastępowania tokenu, Szablony plików i przetestować ścieżki docelowej.  
@@ -21,7 +21,7 @@ W tym przykładzie pokazano, jak utworzyć niestandardowe działanie, która poc
 |EnableSsl|bool|Określa, czy <xref:System.Net.Mail.SmtpClient> używa protokołu Secure Sockets Layer (SSL) do szyfrowania połączenia.|  
 |UserName|String|Nazwa użytkownika, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
 |Hasło|String|Hasło, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
-|Temat|<xref:System.Activities.InArgument%601>\<ciąg >|Temat wiadomości.|  
+|Podmiot|<xref:System.Activities.InArgument%601>\<ciąg >|Temat wiadomości.|  
 |Treść|<xref:System.Activities.InArgument%601>\<ciąg >|Treść wiadomości.|  
 |Załączniki|<xref:System.Activities.InArgument%601>\<ciąg >|Kolekcja załącznika używany do przechowywania danych dołączone do tej wiadomości e-mail.|  
 |Z|<xref:System.Net.Mail.MailAddress>|Adres początkowy dla tej wiadomości e-mail.|  
@@ -111,7 +111,7 @@ new SendMail
   
 -   [Konfigurowanie usługi SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [Usługi IIS 7.0: Konfigurowanie poczty E-Mail SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0: Konfigurowanie wiadomości E-Mail SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
 -   [Jak zainstalować usługę SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
@@ -119,17 +119,17 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Aby uruchomić ten przykład  
   
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania SendMail.sln.  
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania SendMail.sln.  
   
-2.  Upewnij się, że masz dostęp do prawidłowego serwera SMTP. Zobacz instrukcje dotyczące konfiguracji.  
+2. Upewnij się, że masz dostęp do prawidłowego serwera SMTP. Zobacz instrukcje dotyczące konfiguracji.  
   
-3.  Skonfiguruj program za pomocą adres swojego serwera i z adresów e-mail.  
+3. Skonfiguruj program za pomocą adres swojego serwera i z adresów e-mail.  
   
      Aby prawidłowo uruchomić ten przykład, może być konieczne skonfigurowanie wartości od i do adresów e-mail i adres serwera SMTP w pliku Program.cs i Sequence.xaml. Trzeba będzie zmienić adres w obu lokalizacjach, ponieważ program wysyła wiadomość e-mail na dwa różne sposoby  
   
-4.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
+4. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-5.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
+5. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306199"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "59084027"
   
 ### <a name="to-add-buttons-at-design-time"></a>Aby dodać przyciski w czasie projektowania  
   
-1.  Wybierz <xref:System.Windows.Forms.ToolBar> kontroli.  
+1. Wybierz <xref:System.Windows.Forms.ToolBar> kontroli.  
   
-2.  W **właściwości** okna, kliknij przycisk <xref:System.Windows.Forms.ToolBar.Buttons%2A> właściwość, aby go zaznaczyć, a następnie kliknij przycisk **wielokropka** (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png " vbEllipsesButton")) przycisk, aby otworzyć **ToolBarButton — Edytor kolekcji**.  
+2. W **właściwości** okna, kliknij przycisk <xref:System.Windows.Forms.ToolBar.Buttons%2A> właściwość, aby go zaznaczyć, a następnie kliknij przycisk **wielokropka** (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png " vbEllipsesButton")) przycisk, aby otworzyć **ToolBarButton — Edytor kolekcji**.  
   
-3.  Użyj **Dodaj** i **Usuń** przycisków, aby dodawać i usuwać przycisków z <xref:System.Windows.Forms.ToolBar> kontroli.  
+3. Użyj **Dodaj** i **Usuń** przycisków, aby dodawać i usuwać przycisków z <xref:System.Windows.Forms.ToolBar> kontroli.  
   
-4.  Konfigurowanie właściwości poszczególnych przycisków w **właściwości** okna, w którym jest wyświetlana w okienku po prawej stronie edytora. W poniższej tabeli przedstawiono niektóre ważne właściwości do uwzględnienia.  
+4. Konfigurowanie właściwości poszczególnych przycisków w **właściwości** okna, w którym jest wyświetlana w okienku po prawej stronie edytora. W poniższej tabeli przedstawiono niektóre ważne właściwości do uwzględnienia.  
   
     |Właściwość|Opis|  
     |--------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "59084027"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|Ciąg tekstowy wyświetlany przez przycisk.|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|Tekst, który jest wyświetlany jako etykietka narzędzia dla przycisku.|  
   
-5.  Kliknij przycisk **OK** aby zamknąć okno dialogowe i utworzyć panele określony.  
+5. Kliknij przycisk **OK** aby zamknąć okno dialogowe i utworzyć panele określony.  
   
 ## <a name="see-also"></a>Zobacz także
 

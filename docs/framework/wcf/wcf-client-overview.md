@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312335"
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
 W tej sekcji opisano działanie aplikacji klienckich, jak konfigurować, tworzenie i używanie klienta programu Windows Communication Foundation (WCF) oraz sposób zabezpieczania aplikacji klienckich.  
@@ -20,13 +20,13 @@ W tej sekcji opisano działanie aplikacji klienckich, jak konfigurować, tworzen
 ## <a name="using-wcf-client-objects"></a>Używanie obiektów klienta WCF  
  Aplikacja kliencka jest zarządzanej aplikacji, która używa klienta programu WCF do komunikowania się z inną aplikacją. Można utworzyć klienta aplikacji dla usługi WCF wymaga wykonania następujących czynności:  
   
-1.  Uzyskaj kontraktu usługi, powiązania i informacje o adresie dla punktu końcowego usługi.  
+1. Uzyskaj kontraktu usługi, powiązania i informacje o adresie dla punktu końcowego usługi.  
   
-2.  Utworzenie klienta WCF, za pomocą tych informacji.  
+2. Utworzenie klienta WCF, za pomocą tych informacji.  
   
-3.  Wywoływanie operacji.  
+3. Wywoływanie operacji.  
   
-4.  Zamknij obiektu klienta programu WCF.  
+4. Zamknij obiektu klienta programu WCF.  
   
  W poniższych sekcjach omówiono te kroki i podaj krótkie instrukcje na następujące zagadnienia:  
   

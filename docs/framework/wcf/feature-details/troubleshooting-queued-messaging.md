@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów obsługi komunikatów kolejek
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463114"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322046"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Rozwiązywanie problemów obsługi komunikatów kolejek
 Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczącej korzystania z kolejek w Windows Communication Foundation (WCF).  
@@ -96,9 +96,9 @@ Ta sekcja zawiera typowe pytania i rozwiązywanie problemów z pomocy dotyczące
   
  **ODP.:** Najbardziej typową przyczyną jest uprawnień.  
   
-1.  Upewnij się, że `NetMsmqActivator` proces jest uruchomiony i tożsamość `NetMsmqActivator` proces otrzymuje odczytu i wyszukiwanie uprawnień w kolejce.  
+1. Upewnij się, że `NetMsmqActivator` proces jest uruchomiony i tożsamość `NetMsmqActivator` proces otrzymuje odczytu i wyszukiwanie uprawnień w kolejce.  
   
-2.  Jeśli `NetMsmqActivator` jest monitorowanie kolejek na komputerze zdalnym, upewnij się, że `NetMsmqActivator` nie jest uruchomiony tokenu ograniczone. Aby uruchomić `NetMsmqActivator` nieograniczony tokenem:  
+2. Jeśli `NetMsmqActivator` jest monitorowanie kolejek na komputerze zdalnym, upewnij się, że `NetMsmqActivator` nie jest uruchomiony tokenu ograniczone. Aby uruchomić `NetMsmqActivator` nieograniczony tokenem:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **ODP.:** Tryb certyfikatu nie można używać magazynu certyfikatów komputera lokalnego. Musisz skopiować certyfikat z magazynu certyfikatów komputera w magazynie bieżącego użytkownika za pomocą przystawki certyfikatów. Aby uzyskać certyfikat w przystawce:  
   
-1.  Kliknij przycisk **Start**, wybierz opcję **Uruchom**, typ `mmc`i kliknij przycisk **OK**.  
+1. Kliknij przycisk **Start**, wybierz opcję **Uruchom**, typ `mmc`i kliknij przycisk **OK**.  
   
-2.  W **programu Microsoft Management Console**, otwórz **pliku** menu, a następnie wybierz **Dodaj/Usuń przystawkę**.  
+2. W **programu Microsoft Management Console**, otwórz **pliku** menu, a następnie wybierz **Dodaj/Usuń przystawkę**.  
   
-3.  W **Dodaj/Usuń przystawkę** okno dialogowe, kliknij przycisk **Dodaj** przycisku.  
+3. W **Dodaj/Usuń przystawkę** okno dialogowe, kliknij przycisk **Dodaj** przycisku.  
   
-4.  W **Dodawanie przystawki autonomicznej** okno dialogowe, wybierz opcję certyfikaty i kliknij przycisk **Dodaj**.  
+4. W **Dodawanie przystawki autonomicznej** okno dialogowe, wybierz opcję certyfikaty i kliknij przycisk **Dodaj**.  
   
-5.  W **certyfikaty** przystawki okno dialogowe, zaznacz **Moje konto użytkownika** i kliknij przycisk **Zakończ**.  
+5. W **certyfikaty** przystawki okno dialogowe, zaznacz **Moje konto użytkownika** i kliknij przycisk **Zakończ**.  
   
-6.  Następnie dodaj sekundy certyfikatów w przystawce przy użyciu poprzednich kroków, ale tym razem wybierz pozycję **konto komputera** i kliknij przycisk **dalej**.  
+6. Następnie dodaj sekundy certyfikatów w przystawce przy użyciu poprzednich kroków, ale tym razem wybierz pozycję **konto komputera** i kliknij przycisk **dalej**.  
   
-7.  Wybierz **komputera lokalnego** i kliknij przycisk **Zakończ**. Możesz teraz przeciągać i upuszczać certyfikaty z magazynu certyfikatów komputera w magazynie bieżącego użytkownika.  
+7. Wybierz **komputera lokalnego** i kliknij przycisk **Zakończ**. Możesz teraz przeciągać i upuszczać certyfikaty z magazynu certyfikatów komputera w magazynie bieżącego użytkownika.  
   
  **PYT.:** Kiedy Moja Usługa odczytuje z kolejki na inny komputer w trybie grupy roboczej, wyświetlany wyjątek "odmowa dostępu".  
   

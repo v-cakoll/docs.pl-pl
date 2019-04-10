@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322385"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (opcje kompilatora C#)
 **-Win32res** Opcja wstawia zasób Win32 w pliku wyjściowym.  
@@ -38,11 +38,11 @@ ms.locfileid: "54544708"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony.  
+1. Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **aplikacji** stronę właściwości.  
+2. Kliknij przycisk **aplikacji** stronę właściwości.  
   
-3.  Kliknij pozycję **pliku zasobów** przycisku i wybierz plik za pomocą pola kombi.  
+3. Kliknij pozycję **pliku zasobów** przycisku i wybierz plik za pomocą pola kombi.  
   
 ## <a name="example"></a>Przykład  
  Skompilować `in.cs` i dołączyć plik zasobów Win32 `rf.res` do produkcji `in.exe`:  
@@ -54,4 +54,4 @@ csc -win32res:rf.res in.cs
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

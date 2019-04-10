@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295713"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static — Rozszerzenie znaczników
 Odwołuje się do dowolnej jednostki kodu przez wartość statyczną, która jest zdefiniowana w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— sposób zgodne. Właściwość statyczna, do którego istnieje odwołanie może służyć do zapewnienia wartości właściwości w XAML.  
@@ -55,13 +55,13 @@ Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem zn
 
 Istnieją dwa inne zastosowania XAML, które są technicznie możliwa. Jednak te zastosowania są mniej typowe, ponieważ są one niepotrzebne powielenie informacji:  
 
-1.  Składnia elementu obiektu.
+1. Składnia elementu obiektu.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  Atrybut składni z jawną właściwością elementu członkowskiego dla ciągu inicjującego.
+2. Atrybut składni z jawną właściwością elementu członkowskiego dla ciągu inicjującego.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

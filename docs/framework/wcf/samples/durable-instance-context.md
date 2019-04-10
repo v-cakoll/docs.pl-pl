@@ -2,12 +2,12 @@
 title: Kontekst niezawodnej instancji
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160969"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316937"
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 Niniejszy przykład pokazuje sposób dostosowywania środowiska uruchomieniowego Windows Communication Foundation (WCF), aby włączyć kontekst niezawodnej instancji. Jako jej zapasowy magazyn (SQL Server 2005 Express w tym przypadku) używa programu SQL Server 2005. Jednak także zapewnia możliwość dostępu do magazynu niestandardowego mechanizmów.  
@@ -23,9 +23,9 @@ Niniejszy przykład pokazuje sposób dostosowywania środowiska uruchomieniowego
   
  Według opisu w poprzednich do osiągnięcia celu, łatwo można wyróżnić dwa kroki:  
   
-1.  Zmienić komunikat, który przechodzi na potrzeby przesyłu, żeby identyfikator kontekstu.  
+1. Zmienić komunikat, który przechodzi na potrzeby przesyłu, żeby identyfikator kontekstu.  
   
-2.  Zmień zachowanie lokalnej usługi, aby zaimplementować logikę niestandardową wystąpień.  
+2. Zmień zachowanie lokalnej usługi, aby zaimplementować logikę niestandardową wystąpień.  
   
  Ponieważ pierwszy z nich na liście ma wpływ na wiadomości na łączu powinny zostać wdrożone jako niestandardowy kanał i być podłączony do warstwy kanału. Ten ostatni ma wpływ tylko na zachowanie lokalnej usługi i może być implementowana przez rozszerzenie kilka punktów rozszerzeń usługi. W kolejnych sekcjach opisano każdy z tych rozszerzeń.  
   
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Musi działać program SQL Server 2005 lub SQL Express 2005, aby uruchomić ten przykład. Jeśli używasz programu SQL Server 2005, należy zmodyfikować konfigurację parametrów połączenia usługi. Podczas uruchamiania między komputerami, programu SQL Server jest wymagana tylko na komputerze z serwerem.  

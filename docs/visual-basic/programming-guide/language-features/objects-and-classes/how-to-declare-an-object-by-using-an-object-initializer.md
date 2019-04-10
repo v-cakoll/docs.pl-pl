@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 314706207800b2e86aa0032a52d8c50fbb726887
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305315"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>Instrukcje: Deklarowanie obiektu za pomocą inicjatora obiektów (Visual Basic)
 Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w pojedynczej instrukcji. Ponadto należy zainicjować co najmniej jednego członka wystąpienia w tym samym czasie, bez wywoływania sparametryzowania konstruktora.  
@@ -27,33 +27,33 @@ Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w po
   
 ### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>Aby utworzyć obiekt klasy o nazwie za pomocą inicjatora obiektów  
   
-1.  Rozpocznij zgłoszenia w tak, jakby planuje użyć konstruktora.  
+1. Rozpocznij zgłoszenia w tak, jakby planuje użyć konstruktora.  
   
      `Dim student1 As New Student`  
   
-2.  Wpisz słowo kluczowe `With`, a następnie listy inicjowania w nawiasach klamrowych.  
+2. Wpisz słowo kluczowe `With`, a następnie listy inicjowania w nawiasach klamrowych.  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  Na liście inicjowania obejmują każdej właściwości, którą chcesz zainicjować i przypisać jej wartość początkową. Nazwa właściwości jest poprzedzony przez okres.  
+3. Na liście inicjowania obejmują każdej właściwości, którą chcesz zainicjować i przypisać jej wartość początkową. Nazwa właściwości jest poprzedzony przez okres.  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      Można zainicjować co najmniej jednego członka klasy.  
   
-4.  Alternatywnie można zadeklarować nowe wystąpienie klasy i następnie przypisać jej wartości. Najpierw należy zadeklarować wystąpienie `Student`:  
+4. Alternatywnie można zadeklarować nowe wystąpienie klasy i następnie przypisać jej wartości. Najpierw należy zadeklarować wystąpienie `Student`:  
   
      `Dim student2 As Student`  
   
-5.  Rozpocznij tworzenie wystąpienia `Student` w normalny sposób.  
+5. Rozpocznij tworzenie wystąpienia `Student` w normalny sposób.  
   
      `Dim student2 As Student = New Student`  
   
-6.  Typ `With` i następnie inicjatora obiektu można zainicjować co najmniej jednego członka nowego wystąpienia.  
+6. Typ `With` i następnie inicjatora obiektu można zainicjować co najmniej jednego członka nowego wystąpienia.  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7.  Można uprościć definicji w poprzednim kroku, pomijając `As Student`. Jeśli to zrobisz, kompilator Określa `student3` jest wystąpieniem `Student` przy użyciu wnioskowanie o typie lokalnym.  
+7. Można uprościć definicji w poprzednim kroku, pomijając `As Student`. Jeśli to zrobisz, kompilator Określa `student3` jest wystąpieniem `Student` przy użyciu wnioskowanie o typie lokalnym.  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
@@ -62,6 +62,6 @@ Inicjatory obiektów umożliwiają deklarowanie i tworzy wystąpienie klasy w po
 ## <a name="see-also"></a>Zobacz także
 
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Instrukcje: Tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Instrukcje: tworzenie listy elementów](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
 - [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

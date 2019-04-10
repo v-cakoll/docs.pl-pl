@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: b2ee31f6f6c746c276428222aa1d3c33c55f34bf
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306589"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework (C# Programming Guide)
 W poniższej procedurze przedstawiono sposób dodawania zdarzenia, które są zgodne ze standardem [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] wzorzec do klas i struktur. Wszystkie zdarzenia w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas są oparte na <xref:System.EventHandler> delegować, która została zdefiniowana w następujący sposób:  
@@ -26,7 +26,7 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>Do publikowania zdarzeń oparta na wzorcu EventHandler  
   
-1.  (Pomiń ten krok i przejdź do kroku 3a, jeśli nie masz do wysyłania niestandardowych danych za pomocą zdarzenia). Deklarowanie klasy dla niestandardowych danych w zakresie, który jest widoczny dla obu wydawcy i subskrybenta klasy. Następnie dodaj wymagane elementy członkowskie do przechowywania danych zdarzenia niestandardowego. W tym przykładzie zwracany jest prosty ciąg.  
+1. (Pomiń ten krok i przejdź do kroku 3a, jeśli nie masz do wysyłania niestandardowych danych za pomocą zdarzenia). Deklarowanie klasy dla niestandardowych danych w zakresie, który jest widoczny dla obu wydawcy i subskrybenta klasy. Następnie dodaj wymagane elementy członkowskie do przechowywania danych zdarzenia niestandardowego. W tym przykładzie zwracany jest prosty ciąg.  
   
     ```csharp  
     public class CustomEventArgs : EventArgs  
@@ -43,13 +43,13 @@ public delegate void EventHandler(object sender, EventArgs e);
     }  
     ```  
   
-2.  (Pomiń ten krok, jeśli używasz wersji ogólnych <xref:System.EventHandler%601> .) Należy zadeklarować delegata w klasie publikowania. Nadaj mu nazwę, która kończy się *EventHandler*. Drugi parametr określa swój niestandardowy typ EventArgs.  
+2. (Pomiń ten krok, jeśli używasz wersji ogólnych <xref:System.EventHandler%601> .) Należy zadeklarować delegata w klasie publikowania. Nadaj mu nazwę, która kończy się *EventHandler*. Drugi parametr określa swój niestandardowy typ EventArgs.  
   
     ```csharp  
     public delegate void CustomEventHandler(object sender, CustomEventArgs a);  
     ```  
   
-3.  Zadeklaruj zdarzenie w klasie publikacji przy użyciu jednej z następujących czynności.  
+3. Zadeklaruj zdarzenie w klasie publikacji przy użyciu jednej z następujących czynności.  
   
     1.  Jeśli nie masz żadnych niestandardowej klasy EventArgs, typu zdarzenia będą delegata EventHandler nieogólnego. Nie trzeba zadeklarować obiektu delegowanego, ponieważ jest już zadeklarowana w <xref:System> przestrzeni nazw, która jest dołączana w przypadku utworzenia projektu języka C#. Dodaj następujący kod do klasy wydawcy.  
   

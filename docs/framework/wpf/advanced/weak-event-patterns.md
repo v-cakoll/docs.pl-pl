@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139259"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316170"
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączone do źródła zdarzeń, nie jest niszczony w połączeniu z obiekt odbiornik, który jest dołączony program obsługi do źródła. Taka sytuacja może prowadzić do przecieków pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadzono szablon projektu, który może służyć do rozwiązania tego problemu, przesyłając klasy Menedżera dedykowane dla określonych zdarzeń i implementowania interfejsu na odbiorniki dla tego zdarzenia. Ten wzorzec projektowy jest znany jako *słaby wzorzec zdarzeń*.  
@@ -50,11 +50,11 @@ W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączo
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Przy użyciu istniejącej klasy Menedżer zdarzeń słabych  
   
-1.  Znajdowanie istniejącego zdarzenia słabe menedżera.  
+1. Znajdowanie istniejącego zdarzenia słabe menedżera.  
   
      Listę menedżerów zdarzeń słabych, które są uwzględniane przy użyciu platformy WPF, na ten temat można znaleźć w hierarchii dziedziczenia w <xref:System.Windows.WeakEventManager> klasy.  
   
-2.  Użyj nowego menedżera zdarzeń słabych zamiast zaczep zdarzenia normalny.  
+2. Użyj nowego menedżera zdarzeń słabych zamiast zaczep zdarzenia normalny.  
   
      Na przykład, jeśli kod używa następującego wzorca do subskrybowania zdarzenia:  
   
@@ -82,7 +82,7 @@ W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączo
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Za pomocą klasy ogólnej słabe Menedżer zdarzeń  
   
-1.  Używać ogólnych <xref:System.Windows.WeakEventManager%602> klasy zamiast zaczep zdarzenia normalny.  
+1. Używać ogólnych <xref:System.Windows.WeakEventManager%602> klasy zamiast zaczep zdarzenia normalny.  
   
      Kiedy używać <xref:System.Windows.WeakEventManager%602> rejestrowanie detektorów zdarzeń, podaj źródło zdarzenia i <xref:System.EventArgs> typu jako parametrów typu klasy i wywołania <xref:System.Windows.WeakEventManager%602.AddHandler%2A> jak pokazano w poniższym kodzie:  
   
@@ -92,19 +92,19 @@ W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączo
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Tworzenie niestandardowych słabe klasy Menedżer zdarzeń  
   
-1.  Skopiuj następujący szablon klasy do projektu.  
+1. Skopiuj następujący szablon klasy do projektu.  
   
      Ta klasa dziedziczy <xref:System.Windows.WeakEventManager> klasy.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Zastąp `SomeEventWeakEventManager` nazwa własną nazwą.  
+2. Zastąp `SomeEventWeakEventManager` nazwa własną nazwą.  
   
-3.  Zastąp te trzy nazwy opisane wcześniej przy użyciu odpowiadających im nazw do zdarzenia. (`SomeEvent`, `EventSource`, i `SomeEventEventArgs`)  
+3. Zastąp te trzy nazwy opisane wcześniej przy użyciu odpowiadających im nazw do zdarzenia. (`SomeEvent`, `EventSource`, i `SomeEventEventArgs`)  
   
-4.  Ustaw widoczność (publiczne / wewnętrzne / prywatne) klasy menedżera zdarzeń słabych na taką samą widoczność jak zdarzenia, którymi zarządza.  
+4. Ustaw widoczność (publiczne / wewnętrzne / prywatne) klasy menedżera zdarzeń słabych na taką samą widoczność jak zdarzenia, którymi zarządza.  
   
-5.  Użyj nowego menedżera zdarzeń słabych zamiast zaczep zdarzenia normalny.  
+5. Użyj nowego menedżera zdarzeń słabych zamiast zaczep zdarzenia normalny.  
   
      Na przykład, jeśli kod używa następującego wzorca do subskrybowania zdarzenia:  
   

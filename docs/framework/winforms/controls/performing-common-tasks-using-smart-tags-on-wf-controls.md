@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 3b20e903ce7eef7c69f55328f459d52537a1e85d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318250"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Przewodnik: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows
 Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istnieje wiele zadań, które należy wykonać wielokrotnie. Oto niektóre z często wykonywanych zadań, które można napotkać:  
@@ -44,26 +44,26 @@ Podczas przygotowywania formularzy i kontrolek dla aplikacji Windows Forms, istn
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz projekt aplikacji systemu Windows o nazwie "SmartTagsExample" (**pliku** > **New** > **projektu**  >   **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
+1. Utwórz projekt aplikacji systemu Windows o nazwie "SmartTagsExample" (**pliku** > **New** > **projektu**  >   **Visual C#** lub **języka Visual Basic** > **Classic Desktop** > **Windows Forms aplikacji**).  
   
-2.  Wybierz formularz w **Windows Forms Designer**.  
+2. Wybierz formularz w **Windows Forms Designer**.  
   
 ## <a name="using-smart-tags"></a>Za pomocą tagów inteligentnych  
  Tagi inteligentne są zawsze dostępne w czasie projektowania dla formantów, które oferują je.  
   
 #### <a name="to-use-smart-tags"></a>Tagi inteligentne  
   
-1.  Przeciągnij <xref:System.Windows.Forms.TabControl> z **przybornika** do formularza. Należy pamiętać glif tagów inteligentnych (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) wyświetlany na stronie z <xref:System.Windows.Forms.TabControl>.  
+1. Przeciągnij <xref:System.Windows.Forms.TabControl> z **przybornika** do formularza. Należy pamiętać glif tagów inteligentnych (![symbol tagu inteligentnego](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) wyświetlany na stronie z <xref:System.Windows.Forms.TabControl>.  
   
-2.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **Dodaj zakładkę** elementu. Sprawdź, czy nowa strona karty zostanie dodany do <xref:System.Windows.Forms.TabControl>.  
+2. Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **Dodaj zakładkę** elementu. Sprawdź, czy nowa strona karty zostanie dodany do <xref:System.Windows.Forms.TabControl>.  
   
-3.  Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
+3. Przeciągnij <xref:System.Windows.Forms.TableLayoutPanel> z kontrolować **przybornika** do formularza.  
   
-4.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **Dodaj kolumnę** elementu. Sprawdź, czy nowa kolumna zostanie dodana do <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
+4. Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **Dodaj kolumnę** elementu. Sprawdź, czy nowa kolumna zostanie dodana do <xref:System.Windows.Forms.TableLayoutPanel> kontroli.  
   
-5.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza.  
+5. Przeciągnij <xref:System.Windows.Forms.SplitContainer> z kontrolować **przybornika** do formularza.  
   
-6.  Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **orientacji poziomej rozdzielacza** elementu. Zauważ, że <xref:System.Windows.Forms.SplitContainer> pasek podziału kontrolki jest teraz orientacji poziomej.  
+6. Kliknij symbol tagu inteligentnych. W menu skrótów, która pojawia się obok glif, wybierz **orientacji poziomej rozdzielacza** elementu. Zauważ, że <xref:System.Windows.Forms.SplitContainer> pasek podziału kontrolki jest teraz orientacji poziomej.  
   
 ## <a name="see-also"></a>Zobacz także
 

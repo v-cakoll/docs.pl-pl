@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307531"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Instrukcje: bezpieczne punkty końcowe metadanych
 Metadane usługi mogą zawierać poufne informacje, o swojej aplikacji, w której złośliwy użytkownik może używać. Osoby korzystające z usługi może wymagać mechanizm bezpiecznego uzyskiwania metadanych dotyczących usługi. W związku z tym czasami jest niezbędne do opublikowania przy użyciu bezpiecznego punktu końcowego metadanych.  
@@ -21,39 +21,39 @@ Metadane usługi mogą zawierać poufne informacje, o swojej aplikacji, w które
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>Aby utworzyć bezpieczne HTTPS GET punkt końcowy metadanych w kodzie  
   
-1.  Konfigurowanie portu z odpowiedniego certyfikatu X.509. Certyfikat musi pochodzić z zaufanego urzędu i musi mieć zamierzone użycie "Autoryzacja usługi". Do dołączenia certyfikatu do portu, należy użyć narzędzia HttpCfg.exe. Zobacz [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1. Konfigurowanie portu z odpowiedniego certyfikatu X.509. Certyfikat musi pochodzić z zaufanego urzędu i musi mieć zamierzone użycie "Autoryzacja usługi". Do dołączenia certyfikatu do portu, należy użyć narzędzia HttpCfg.exe. Zobacz [jak: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
     > [!IMPORTANT]
     >  Podmiot certyfikatu lub jej systemu nazw domen (DNS) musi odpowiadać nazwie komputera. Jest to ważne, ponieważ jeden z pierwszych kroków, które wykonuje mechanizm HTTPS jest aby sprawdzić, czy certyfikat został wystawiony na ten sam identyfikator URI (Uniform Resource) jako adres, na którym jest wywoływana.  
   
-2.  Utwórz nowe wystąpienie klasy <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy.  
+2. Utwórz nowe wystąpienie klasy <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy.  
   
-3.  Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> właściwość <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy `true`.  
+3. Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> właściwość <xref:System.ServiceModel.Description.ServiceMetadataBehavior> klasy `true`.  
   
-4.  Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwość do odpowiedniego adresu URL. Należy pamiętać, że jeśli określisz adresem bezwzględnym, adres URL musi rozpoczynać się ze schematem "https://". Jeśli określisz adres względny, musisz podać adres bazowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adresem domyślnym jest "", lub bezpośrednio na adres podstawowy protokół HTTPS dla usługi.  
+4. Ustaw <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> właściwość do odpowiedniego adresu URL. Należy pamiętać, że jeśli określisz adresem bezwzględnym, adres URL musi rozpoczynać się ze schematem "https://". Jeśli określisz adres względny, musisz podać adres bazowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adresem domyślnym jest "", lub bezpośrednio na adres podstawowy protokół HTTPS dla usługi.  
   
-5.  Dodaj wystąpienie do kolekcji zachowań, <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> właściwość <xref:System.ServiceModel.Description.ServiceDescription> klasy wraca, jak pokazano w poniższym kodzie.  
+5. Dodaj wystąpienie do kolekcji zachowań, <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> właściwość <xref:System.ServiceModel.Description.ServiceDescription> klasy wraca, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[c_HowToSecureEndpoint#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosecureendpoint/cs/source.cs#1)]
      [!code-vb[c_HowToSecureEndpoint#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosecureendpoint/vb/source.vb#1)]  
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Aby utworzyć bezpieczne HTTPS GET punkt końcowy metadanych w konfiguracji  
   
-1.  Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element pliku konfiguracji usługi.  
+1. Dodaj [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) element pliku konfiguracji usługi.  
   
-2.  Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) elementu [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
+2. Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) elementu [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) elementu.  
   
-3.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu `<serviceBehaviors>` elementu.  
+3. Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) elementu `<serviceBehaviors>` elementu.  
   
-4.  Ustaw `name` atrybutu `<behavior>` element do odpowiedniej wartości. `name` Atrybut jest wymagany. W poniższym przykładzie użyto wartości `mySvcBehavior`.  
+4. Ustaw `name` atrybutu `<behavior>` element do odpowiedniej wartości. `name` Atrybut jest wymagany. W poniższym przykładzie użyto wartości `mySvcBehavior`.  
   
-5.  Dodaj [ \<serviceMetadata w pliku >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) do `<behavior>` elementu.  
+5. Dodaj [ \<serviceMetadata w pliku >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) do `<behavior>` elementu.  
   
-6.  Ustaw atrybut `httpsGetEnabled` elementu `<serviceMetadata>` na `true`.  
+6. Ustaw atrybut `httpsGetEnabled` elementu `<serviceMetadata>` na `true`.  
   
-7.  Ustaw `httpsGetUrl` atrybutu `<serviceMetadata>` element do odpowiedniej wartości. Należy pamiętać, że jeśli określisz adresem bezwzględnym, adres URL musi rozpoczynać się ze schematem "https://". Jeśli określisz adres względny, musisz podać adres bazowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adresem domyślnym jest "", lub bezpośrednio na adres podstawowy protokół HTTPS dla usługi.  
+7. Ustaw `httpsGetUrl` atrybutu `<serviceMetadata>` element do odpowiedniej wartości. Należy pamiętać, że jeśli określisz adresem bezwzględnym, adres URL musi rozpoczynać się ze schematem "https://". Jeśli określisz adres względny, musisz podać adres bazowy HTTPS dla hosta usługi. Jeśli ta właściwość nie jest ustawiona, adresem domyślnym jest "", lub bezpośrednio na adres podstawowy protokół HTTPS dla usługi.  
   
-8.  Zachowanie za pomocą usługi, należy ustawić `behaviorConfiguration` atrybutu [ \<usługi >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) element z wartością atrybutu nazwy elementu zachowanie. Poniższy kod konfiguracji przedstawia kompletny przykład.  
+8. Zachowanie za pomocą usługi, należy ustawić `behaviorConfiguration` atrybutu [ \<usługi >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) element z wartością atrybutu nazwy elementu zachowanie. Poniższy kod konfiguracji przedstawia kompletny przykład.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

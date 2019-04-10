@@ -3,12 +3,12 @@ title: Niestandardowe programy obsługi tokenów
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312114"
 ---
 # <a name="custom-token-handlers"></a>Niestandardowe programy obsługi tokenów
 W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one używane do przetwarzania tokenów. Temat obejmuje także, co jest potrzebne utworzyć niestandardowe programy obsługi tokenów dla tokenu typów, które nie są obsługiwane w WIF domyślnie.  
@@ -42,9 +42,9 @@ W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one u�
   
 #### <a name="adding-a-custom-token-handler"></a>Dodawanie programu obsługi tokenów niestandardowych  
   
-1.  Utwórz nową klasę, która pochodzi od klasy <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
+1. Utwórz nową klasę, która pochodzi od klasy <xref:System.IdentityModel.Tokens.SecurityTokenHandler>.  
   
-2.  Zastąpić następujące metody i podaj Twojej własnej implementacji:  
+2. Zastąpić następujące metody i podaj Twojej własnej implementacji:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one u�
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* plików w ramach  **\<system.identityModel >** sekcji, która ma zastosowanie do programu WIF. Na przykład, następujące znaczniki konfiguracji Określa nowy token programu obsługi o nazwie **MyCustomTokenHandler** które znajdują się na **CustomToken** przestrzeni nazw.  
+3. Dodaj odwołanie do nowego niestandardowego programu obsługi tokenów w *Web.config* lub *App.config* plików w ramach  **\<system.identityModel >** sekcji, która ma zastosowanie do programu WIF. Na przykład, następujące znaczniki konfiguracji Określa nowy token programu obsługi o nazwie **MyCustomTokenHandler** które znajdują się na **CustomToken** przestrzeni nazw.  
   
     ```xml  
     <system.identityModel>  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174138"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321043"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: uwierzytelnianie za pomocą nazwy użytkownika i hasła
 
@@ -21,7 +21,7 @@ W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Aby skonfigurować usługi WCF w celu uwierzytelnienia przy użyciu Windows domena nazwa użytkownika i hasło
   
-1.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.WSHttpBinding>, ustawianie trybu zabezpieczeń wiązania <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>ustaw `ClientCredentialType` wiązania <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>i Dodaj punkt końcowy usługi za pomocą skonfigurowanego powiązania host usługi, jak pokazano w poniższym kodzie:  
+1. Utwórz wystąpienie obiektu <xref:System.ServiceModel.WSHttpBinding>, ustawianie trybu zabezpieczeń wiązania <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>ustaw `ClientCredentialType` wiązania <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>i Dodaj punkt końcowy usługi za pomocą skonfigurowanego powiązania host usługi, jak pokazano w poniższym kodzie:  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation
     // ...  
     ```  
   
-2.  Określ certyfikat używany do szyfrowania nazwy użytkownika i hasło informacje przesyłane przez sieć. Ten kod powinien natychmiast wykonaj powyższy kod. W poniższym przykładzie użyto certyfikatu, który jest tworzony przez plik setup.bat z [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md) próbki:  
+2. Określ certyfikat używany do szyfrowania nazwy użytkownika i hasło informacje przesyłane przez sieć. Ten kod powinien natychmiast wykonaj powyższy kod. W poniższym przykładzie użyto certyfikatu, który jest tworzony przez plik setup.bat z [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md) próbki:  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>Aby wywołać usługę, przekazując nazwę użytkownika i hasło  
   
-1.  Aplikacja kliencka musi monit o wprowadzenie nazwy użytkownika i hasła. Poniższy kod monituje użytkownika o nazwę użytkownika i hasło.  
+1. Aplikacja kliencka musi monit o wprowadzenie nazwy użytkownika i hasła. Poniższy kod monituje użytkownika o nazwę użytkownika i hasło.  
   
     > [!WARNING]
     >  Ten kod nie należy używać w środowisku produkcyjnym, ponieważ hasło jest wyświetlane podczas wprowadzania.  
@@ -61,7 +61,7 @@ W tym temacie pokazano, jak włączyć usługę Windows Communication Foundation
             }  
     ```  
   
-2.  Utwórz wystąpienie obiektu serwera proxy klienta, określając poświadczenia klienta, jak pokazano w poniższym kodzie:  
+2. Utwórz wystąpienie obiektu serwera proxy klienta, określając poświadczenia klienta, jak pokazano w poniższym kodzie:  
   
     ```  
     string username;  

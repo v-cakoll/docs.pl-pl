@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304990"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Instrukcje: Wiązanie z usługą internetową
 W tym przykładzie pokazano, jak powiązać obiekty zwrócone przez wywołania metody usługi sieci Web.  
@@ -24,13 +24,13 @@ W tym przykładzie pokazano, jak powiązać obiekty zwrócone przez wywołania m
   
  Przed wywołaniem usługi sieci Web, należy utworzyć odwołanie do niej. Aby utworzyć odwołanie sieci Web za pomocą usługi MTPS [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], wykonaj następujące kroki:  
   
-1.  Otwórz projekt w programie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
+1. Otwórz projekt w programie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
   
-2.  Z **projektu** menu, kliknij przycisk **Dodaj odwołanie sieci Web**.  
+2. Z **projektu** menu, kliknij przycisk **Dodaj odwołanie sieci Web**.  
   
-3.  W oknie dialogowym Ustaw **adresu URL** do [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3. W oknie dialogowym Ustaw **adresu URL** do [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
   
-4.  Naciśnij klawisz **Przejdź** i następnie **Dodaj odwołanie**.  
+4. Naciśnij klawisz **Przejdź** i następnie **Dodaj odwołanie**.  
   
  Następnie należy wywołać metody usługi sieci Web i ustaw <xref:System.Windows.FrameworkElement.DataContext%2A> właściwej opcji kontroli lub okna, aby zwracany obiekt. **Getcontent elementu** metoda usługi MTPS przyjmuje odwołanie do **getContentRequest** obiektu. W związku z tym w poniższym przykładzie najpierw ustawiono obiektu żądania:  
   

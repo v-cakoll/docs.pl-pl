@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313480"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>Pierwsza instrukcja tego elementu "Sub New" musi być jawnym wywołaniem elementu "MyBase.New" lub "MyClass.New", ponieważ "\<constructorname >" w klasie bazowej\<baseclassname > "z"\<derivedclassname > "jest oznaczony jako przestarzały:"\< komunikat o błędzie > "
 Konstruktor klasy nie jawnie wywołać konstruktora klasy bazowej i Konstruktor niejawne klasy bazowej jest oznaczona za pomocą <xref:System.ObsoleteAttribute> atrybut i dyrektywy traktowanie jej jako błąd.  
@@ -25,9 +25,9 @@ Konstruktor klasy nie jawnie wywołać konstruktora klasy bazowej i Konstruktor 
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Sprawdź komunikat o błędzie w cudzysłowach i podjąć odpowiednie działania.  
+1. Sprawdź komunikat o błędzie w cudzysłowach i podjąć odpowiednie działania.  
   
-2.  Obejmują wywołania `MyBase.New()` lub `MyClass.New()` jako pierwsza instrukcja `Sub New` w klasie pochodnej.  
+2. Obejmują wywołania `MyBase.New()` lub `MyClass.New()` jako pierwsza instrukcja `Sub New` w klasie pochodnej.  
   
 ## <a name="see-also"></a>Zobacz także
 

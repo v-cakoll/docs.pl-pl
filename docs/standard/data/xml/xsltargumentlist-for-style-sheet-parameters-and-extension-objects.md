@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322412"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń
 <xref:System.Xml.Xsl.XsltArgumentList> Klasa zawiera rozszerzalny język arkusza stylów dla parametrów przekształcenia (XSLT) i obiekty rozszerzeń XSLT. Przy przekazywaniu do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody te parametry i rozszerzenie obiekty mogą być wywoływane z arkuszy stylów.  
@@ -50,11 +50,11 @@ ms.locfileid: "45988091"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>Aby użyć parametru XSLT, użytkownik musi wykonać następujące czynności:  
   
-1.  Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> i dodawanie obiektów przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
+1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> i dodawanie obiektów przy użyciu <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>.  
   
-2.  Parametry wywołań z arkusza stylów.  
+2. Parametry wywołań z arkusza stylów.  
   
-3.  Przekaż <xref:System.Xml.Xsl.XsltArgumentList> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody.  
+3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie użyto <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> metodę, aby utworzyć parametr do przechowywania daty obliczony rabat. Data rabatu jest obliczana za 20 dni od daty zamówienia.  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>Aby użyć obiektu rozszerzenia XSLT, użytkownik musi wykonać następujące czynności:  
   
-1.  Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> i dodać za pomocą obiektu rozszerzenia <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
+1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> i dodać za pomocą obiektu rozszerzenia <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>.  
   
-2.  Wywołanie obiektu rozszerzenia z arkusza stylów.  
+2. Wywołanie obiektu rozszerzenia z arkusza stylów.  
   
-3.  Przekaż <xref:System.Xml.Xsl.XsltArgumentList> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody.  
+3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> do <xref:System.Xml.Xsl.XslTransform.Transform%2A> metody.  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie obliczany obwód koła, biorąc pod uwagę jego usługi radius.  

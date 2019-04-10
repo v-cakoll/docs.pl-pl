@@ -2,19 +2,19 @@
 title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514780"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323749"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
 W tym przykładzie pokazano, jak można scalić plików, które zawierają wiersze tekstu, a następnie Sortuj wyniki. W szczególności pokazują sposób wykonywania prostych łączenia, Unii i część wspólną na dwa zestawy wierszy tekstu.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i plików tekstowych  
   
-1.  Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
+1. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ W tym przykładzie pokazano, jak można scalić plików, które zawierają wiers
     Garcia, Debra  
     ```  
   
-2.  Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu. Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
+2. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu. Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
   
     ```  
     Liu, Jinghao  

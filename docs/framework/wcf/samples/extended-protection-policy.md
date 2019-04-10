@@ -2,12 +2,12 @@
 title: Zasady ochrony rozszerzonej
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785456"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328754"
 ---
 # <a name="extended-protection-policy"></a>Zasady ochrony rozszerzonej
 Rozszerzona ochrona jest inicjatywy zabezpieczeń, ochrony przed atakami typu man-in--middle (MITM). Ataki MITM to zagrożenie bezpieczeństwa, w którym MITM przyjmuje poświadczeń klienta i przekazuje je do serwera.  
@@ -26,25 +26,25 @@ Rozszerzona ochrona jest inicjatywy zabezpieczeń, ochrony przed atakami typu ma
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Zainstalować Internetowe usługi informacyjne z **Panel sterowania**, **dodawania/usuwania programów**, **funkcji Windows**.  
+1. Zainstalować Internetowe usługi informacyjne z **Panel sterowania**, **dodawania/usuwania programów**, **funkcji Windows**.  
   
-2.  Zainstaluj **uwierzytelniania Windows** w **funkcji Windows**, **Internetowe usługi informacyjne**, **usługi World Wide Web**,  **Zabezpieczenia**, i **uwierzytelniania Windows**.  
+2. Zainstaluj **uwierzytelniania Windows** w **funkcji Windows**, **Internetowe usługi informacyjne**, **usługi World Wide Web**,  **Zabezpieczenia**, i **uwierzytelniania Windows**.  
   
-3.  Zainstaluj **Windows Communication Foundation HTTP aktywacji** w **funkcji Windows**, **Microsoft .NET Framework 3.5.1**, i **komunikacji Windows Aktywacja Foundation HTTP**.  
+3. Zainstaluj **Windows Communication Foundation HTTP aktywacji** w **funkcji Windows**, **Microsoft .NET Framework 3.5.1**, i **komunikacji Windows Aktywacja Foundation HTTP**.  
   
-4.  Ten przykładowy skrypt wymaga klienta do nawiązania bezpiecznego kanału z serwerem, dzięki czemu wymaga obecności certyfikatu serwera, które mogą być instalowane z Menedżera usług Internet Information Services (IIS).  
+4. Ten przykładowy skrypt wymaga klienta do nawiązania bezpiecznego kanału z serwerem, dzięki czemu wymaga obecności certyfikatu serwera, które mogą być instalowane z Menedżera usług Internet Information Services (IIS).  
   
     1.  Otwórz Menedżera usług IIS. Otwórz **certyfikaty serwera**, który pojawia się w **widok funkcji** karcie po wybraniu węzła głównego (nazwa komputera).  
   
     2.  Na potrzeby testowania w tym przykładzie, należy utworzyć certyfikat z podpisem własnym. Jeśli chcesz, aby program Internet Explorer będzie wyświetlany monit o certyfikat nie jest bezpieczne, należy zainstalować certyfikat w magazynie zaufanego certyfikatu głównego urzędu.  
   
-5.  Otwórz **akcje** okienko dla domyślnej witryny sieci Web. Kliknij przycisk **edytowanie witryny**, **powiązania**. Dodawanie protokół HTTPS jako typu Jeśli nie są jeszcze zainstalowane, numer portu 443. Przypisz certyfikat SSL utworzony w poprzednim kroku.  
+5. Otwórz **akcje** okienko dla domyślnej witryny sieci Web. Kliknij przycisk **edytowanie witryny**, **powiązania**. Dodawanie protokół HTTPS jako typu Jeśli nie są jeszcze zainstalowane, numer portu 443. Przypisz certyfikat SSL utworzony w poprzednim kroku.  
   
-6.  Tworzenie usługi. Tworzy katalog wirtualny w usługach IIS i kopiuje pliki .dll i .svc .config zgodnie z wymaganiami dla usługa jest hostowana w sieci Web.  
+6. Tworzenie usługi. Tworzy katalog wirtualny w usługach IIS i kopiuje pliki .dll i .svc .config zgodnie z wymaganiami dla usługa jest hostowana w sieci Web.  
   
-7.  Otwórz Menedżera usług IIS. Kliknij prawym przyciskiem myszy katalog wirtualny (**ExtendedProtection**), która została utworzona w poprzednim kroku. Wybierz **Konwertuj na aplikację**.  
+7. Otwórz Menedżera usług IIS. Kliknij prawym przyciskiem myszy katalog wirtualny (**ExtendedProtection**), która została utworzona w poprzednim kroku. Wybierz **Konwertuj na aplikację**.  
   
-8.  Otwórz **uwierzytelniania** modułu w Menedżerze usług IIS dla tego katalogu wirtualnego i Włącz **uwierzytelniania Windows**.  
+8. Otwórz **uwierzytelniania** modułu w Menedżerze usług IIS dla tego katalogu wirtualnego i Włącz **uwierzytelniania Windows**.  
   
 9. Otwórz **Zaawansowane ustawienia** w obszarze **uwierzytelniania Windows** dla tego katalogu wirtualnego i ustaw ją na **wymagane**.  
   

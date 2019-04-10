@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299452"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debugowanie błędów uwierzytelniania systemu Windows
 Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfejs dostawcy obsługi zabezpieczeń (SSPI) obsługuje zabezpieczenia procesów. Po wystąpieniu błędów zabezpieczeń w warstwie interfejsu SSPI, są one udostępniane przez Windows Communication Foundation (WCF). Ten temat zawiera framework i zestaw pytań, aby łatwiej diagnozować błędy.  
@@ -25,11 +25,11 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
 ## <a name="debugging-methodology"></a>Metodologia debugowania  
  Metoda podstawowa jest w następujący sposób:  
   
-1.  Ustal, czy korzystasz z uwierzytelniania Windows. Jeśli używasz innego systemu w tym temacie nie ma zastosowania.  
+1. Ustal, czy korzystasz z uwierzytelniania Windows. Jeśli używasz innego systemu w tym temacie nie ma zastosowania.  
   
-2.  Jeśli masz pewność, że używasz uwierzytelniania Windows, należy określić, czy konfiguracji usługi WCF używa protokołu Kerberos, bezpośrednio lub Negotiate.  
+2. Jeśli masz pewność, że używasz uwierzytelniania Windows, należy określić, czy konfiguracji usługi WCF używa protokołu Kerberos, bezpośrednio lub Negotiate.  
   
-3.  Po określeniu, czy konfiguracja używa protokołu Kerberos lub NTLM, można zrozumieć, komunikaty o błędach w odpowiednim kontekście.  
+3. Po określeniu, czy konfiguracja używa protokołu Kerberos lub NTLM, można zrozumieć, komunikaty o błędach w odpowiednim kontekście.  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Dostępność protokołu Kerberos i NTLM  
  Dostawca obsługi zabezpieczeń Kerberos wymaga kontrolera domeny do działania jako centrum dystrybucji kluczy (KDC) protokołu Kerberos. Protokół Kerberos jest dostępna tylko wtedy, gdy klient i usługa są przy użyciu tożsamości domeny. W przypadku innych kombinacji konta NTLM jest używana zgodnie z opisem w poniższej tabeli.  
@@ -81,15 +81,15 @@ Korzystając z uwierzytelniania Windows jako mechanizm bezpieczeństwa, interfej
   
  Aby zaimplementować protokół Kerberos za pomocą negocjowania poświadczeń, wykonaj następujące czynności:  
   
-1.  Implementowanie delegowanie, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> do <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
+1. Implementowanie delegowanie, ustawiając <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> do <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>.  
   
-2.  Wymagaj negocjacji interfejsu SSPI:  
+2. Wymagaj negocjacji interfejsu SSPI:  
   
     1.  Jeśli używasz standardowego powiązania zestawu `NegotiateServiceCredential` właściwość `true`.  
   
     2.  Jeśli używasz niestandardowego powiązania, ustaw `AuthenticationMode` atrybutu `Security` elementu `SspiNegotiated`.  
   
-3.  Wymagaj negocjacji interfejsu SSPI do używania protokołu Kerberos, nie można przydzielać korzystanie z uwierzytelniania NTLM:  
+3. Wymagaj negocjacji interfejsu SSPI do używania protokołu Kerberos, nie można przydzielać korzystanie z uwierzytelniania NTLM:  
   
     1.  Wykonaj następujące czynności w kodzie za pomocą następującej instrukcji: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   

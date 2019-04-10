@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d8e3398-00d8-47d5-a084-214f9859d3d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1017a0326691c2e0f01e2a16df5db566786ee688
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 764b0d535413fc1e5e23a2e47221789aa807ff38
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321734"
 ---
 # <a name="accessing-custom-attributes"></a>Uzyskiwanie dostępu do atrybutów niestandardowych
 Po atrybuty zostały skojarzone z elementami program, odbicie może służyć do kwerendy ich istnienie i wartości. W .NET Framework w wersji 1.0 i 1.1 atrybuty niestandardowe są badane w kontekście wykonywania. .NET Framework w wersji 2.0 zapewnia nowy kontekst obciążenia kontekstu reflection-only, którego można użyć, aby sprawdzić kod, którego nie można załadować do wykonania.  
@@ -56,13 +56,13 @@ public class LocalizationExtenderProvider
   
  Jeśli środowisko wykonawcze próbuje pobrać atrybutów niestandardowych dla tego typu atrybutu niestandardowego publicznych <xref:System.ComponentModel.DescriptionAttribute> dołączone do **getlanguage —** metody wykonuje następujące czynności:  
   
-1.  Środowisko uruchomieniowe sprawdza, czy argument typu **DescriptionAttribute** do **Type.GetCustomAttributes**(typ *typu*) nie jest publiczny i dlatego jest widoczny i dostępny.  
+1. Środowisko uruchomieniowe sprawdza, czy argument typu **DescriptionAttribute** do **Type.GetCustomAttributes**(typ *typu*) nie jest publiczny i dlatego jest widoczny i dostępny.  
   
-2.  Środowisko uruchomieniowe sprawdza, czy typ zdefiniowany przez użytkownika **MyDescriptionAttribute** , jest tworzony na podstawie **DescriptionAttribute** jest widoczny i dostępny w ramach **System.Web.DLL**zestawu, w której jest podłączony do metody **getlanguage —**().  
+2. Środowisko uruchomieniowe sprawdza, czy typ zdefiniowany przez użytkownika **MyDescriptionAttribute** , jest tworzony na podstawie **DescriptionAttribute** jest widoczny i dostępny w ramach **System.Web.DLL**zestawu, w której jest podłączony do metody **getlanguage —**().  
   
-3.  Środowisko uruchomieniowe sprawdza, czy konstruktora **MyDescriptionAttribute** jest widoczny i dostępny w ramach **System.Web.DLL** zestawu.  
+3. Środowisko uruchomieniowe sprawdza, czy konstruktora **MyDescriptionAttribute** jest widoczny i dostępny w ramach **System.Web.DLL** zestawu.  
   
-4.  Środowisko wykonawcze wywołuje konstruktor **MyDescriptionAttribute** z parametrami atrybutu niestandardowego i zwraca nowy obiekt do obiektu wywołującego.  
+4. Środowisko wykonawcze wywołuje konstruktor **MyDescriptionAttribute** z parametrami atrybutu niestandardowego i zwraca nowy obiekt do obiektu wywołującego.  
   
  Atrybut niestandardowy model odbicia mogą spowodować przeciek tych wystąpień typów zdefiniowanych przez użytkownika spoza zestawu, w którym typ jest zdefiniowany. To nie różni się od członków w bibliotece środowiska uruchomieniowego systemu, które zwracają wystąpień typów zdefiniowanych przez użytkownika, takie jak <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> tablicę **RuntimeMethodInfo** obiektów. Aby zapobiec klienta z odnajdywanie informacji o typie atrybutów niestandardowych zdefiniowanych przez użytkownika, należy zdefiniować członkom typów można niepublicznych.  
   

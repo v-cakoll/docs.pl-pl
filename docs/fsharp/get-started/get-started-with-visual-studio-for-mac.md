@@ -2,12 +2,12 @@
 title: Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputerów Mac
 description: Dowiedz się, jak używać F# z programem Visual Studio dla komputerów Mac.
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604174"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331874"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy z usługą F# w programie Visual Studio dla komputerów Mac
 
@@ -19,7 +19,7 @@ Jednym z najprostszych projektów w programie Visual Studio dla komputerów Mac 
 
 1. Na **pliku** menu wskaż **nowe rozwiązanie**.
 
-2.  W oknie dialogowym Nowy projekt istnieją 2 różnych szablonów dla aplikacji konsoli.  Jest węzłem Other -> .NET, który jest przeznaczony dla .NET Framework.  Ten szablon jest w ramach platformy .NET Core -> Aplikacja, która jest przeznaczony dla platformy .NET Core.  Albo szablonu powinny działać na potrzeby tego artykułu.
+2. W oknie dialogowym Nowy projekt istnieją 2 różnych szablonów dla aplikacji konsoli.  Jest węzłem Other -> .NET, który jest przeznaczony dla .NET Framework.  Ten szablon jest w ramach platformy .NET Core -> Aplikacja, która jest przeznaczony dla platformy .NET Core.  Albo szablonu powinny działać na potrzeby tego artykułu.
 
 3. W obszarze aplikacji konsoli, zmień C# do F# w razie potrzeby.  Wybierz **dalej** przycisk umożliwiający przenoszenie do przodu!  
 

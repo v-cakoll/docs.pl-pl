@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b41ded25bd4eb704c6f0d67c8da1c0e6643cac5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125661"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323723"
 ---
 # <a name="custom-rendering-ink"></a>Niestandardowy atrament renderowania
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Właściwości pociągnięcia umożliwia określenie wyglądu pociągnięcia, takie jak rozmiar, kolor i kształt, ale mogą zaistnieć sytuacje, które chcesz dostosować wygląd poza to, co <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Zezwalaj. Można dostosować wygląd pisma odręcznego za renderowaniem w wygląd Aerograf, paint ropa naftowa i innych skutków. Windows Presentation Foundation (WPF) pozwala na niestandardowe renderowanie pisma odręcznego poprzez implementację niestandardową <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i <xref:System.Windows.Ink.Stroke> obiektu.  
@@ -37,11 +37,11 @@ ms.locfileid: "59125661"
   
  Istnieją trzy klasy do zaimplementowania podczas dynamiczne renderowanie pisma odręcznego.  
   
-1.  **DynamicRenderer**: Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Ta klasa jest wyspecjalizowanego <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> która renderuje obrysu zgodnie z jej rysowania. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Jest renderowanie w oddzielnym wątku, więc powierzchni pisma odręcznego pojawia się na zbieranie pisma odręcznego, nawet wtedy, gdy wątek interfejsu użytkownika aplikacji jest zablokowany. Aby uzyskać więcej informacji na temat modelu wątkowości, zobacz [Model wątkowości typu atrament](the-ink-threading-model.md). Aby dostosować dynamiczne renderowanie pociągnięcia, należy zastąpić <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> metody.  
+1. **DynamicRenderer**: Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Ta klasa jest wyspecjalizowanego <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> która renderuje obrysu zgodnie z jej rysowania. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> Jest renderowanie w oddzielnym wątku, więc powierzchni pisma odręcznego pojawia się na zbieranie pisma odręcznego, nawet wtedy, gdy wątek interfejsu użytkownika aplikacji jest zablokowany. Aby uzyskać więcej informacji na temat modelu wątkowości, zobacz [Model wątkowości typu atrament](the-ink-threading-model.md). Aby dostosować dynamiczne renderowanie pociągnięcia, należy zastąpić <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.OnDraw%2A> metody.  
   
-2.  **Pociągnięcia**: Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Ink.Stroke>. Ta klasa jest odpowiedzialny za statyczne renderowanie <xref:System.Windows.Input.StylusPoint> danych po został przekształcony w <xref:System.Windows.Ink.Stroke> obiektu. Zastąp <xref:System.Windows.Ink.Stroke.DrawCore%2A> metoda zapewnienie tego statyczne renderowania obrysu jest spójna z renderowania dynamicznego.  
+2. **Pociągnięcia**: Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Ink.Stroke>. Ta klasa jest odpowiedzialny za statyczne renderowanie <xref:System.Windows.Input.StylusPoint> danych po został przekształcony w <xref:System.Windows.Ink.Stroke> obiektu. Zastąp <xref:System.Windows.Ink.Stroke.DrawCore%2A> metoda zapewnienie tego statyczne renderowania obrysu jest spójna z renderowania dynamicznego.  
   
-3.  **Inkcanvas —:** Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas>. Przypisz dostosowane <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwości. Zastąpienie <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metody i dodać niestandardowe obrysu <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwości. Zapewnia to, że wygląd pisma odręcznego są spójne.  
+3. **Inkcanvas —:** Implementowanie klasy, która pochodzi od klasy <xref:System.Windows.Controls.InkCanvas>. Przypisz dostosowane <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> do <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A> właściwości. Zastąpienie <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> metody i dodać niestandardowe obrysu <xref:System.Windows.Controls.InkCanvas.Strokes%2A> właściwości. Zapewnia to, że wygląd pisma odręcznego są spójne.  
   
 <a name="ImplementingADynamicRenderer"></a>   
 ## <a name="implementing-a-dynamic-renderer"></a>Implementowanie dynamicznych programu renderującego  

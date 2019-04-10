@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-ms.openlocfilehash: 41157d12f1133878e133895ed0f803bc7018af51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d327605c084cd5fb1c65fbb786e871b421730b83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313323"
 ---
 # <a name="programming-wcf-security"></a>Programowanie zabezpieczeń WCF
 W tym temacie opisano podstawowe zadania programowania, służące do tworzenia bezpiecznych aplikacji Windows Communication Foundation (WCF). W tym temacie omówiono uwierzytelniania, poufności i integralności, nazywane zbiorczo *transferu zabezpieczeń*. W tym temacie nie omówiono autoryzacji (kontrola dostępu do zasobów lub usług); Aby uzyskać informacje dotyczące autoryzacji, zobacz [autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
@@ -25,11 +25,11 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
 ## <a name="setting-the-security-mode"></a>Ustawianie trybu zabezpieczeń  
  Poniżej opisano ogólne kroki do programowania za pomocą tryb zabezpieczeń programu WCF:  
   
-1.  Wybierz jeden z wstępnie zdefiniowanych powiązań odpowiednią do wymagań aplikacji. Aby uzyskać listę opcji powiązania, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md). Prawie każde powiązanie ma domyślnie włączoną obsługą zabezpieczeń. Jedynym wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding> klasy (przy użyciu konfiguracji [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1. Wybierz jeden z wstępnie zdefiniowanych powiązań odpowiednią do wymagań aplikacji. Aby uzyskać listę opcji powiązania, zobacz [powiązania System-Provided](../../../../docs/framework/wcf/system-provided-bindings.md). Prawie każde powiązanie ma domyślnie włączoną obsługą zabezpieczeń. Jedynym wyjątkiem jest <xref:System.ServiceModel.BasicHttpBinding> klasy (przy użyciu konfiguracji [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      Powiązanie, którą wybierzesz określa transportu. Na przykład <xref:System.ServiceModel.WSHttpBinding> korzysta z protokołu HTTP jako transportu; <xref:System.ServiceModel.NetTcpBinding> używa protokołu TCP.  
   
-2.  Wybierz jeden z trybów zabezpieczeń dla wiązania. Należy pamiętać, że powiązanie, którą wybierzesz Określa tryb dostępne opcje. Na przykład <xref:System.ServiceModel.WSDualHttpBinding> nie zezwala na zabezpieczenia transportu (nie jest to opcja). Podobnie, ani <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ani <xref:System.ServiceModel.NetNamedPipeBinding> umożliwia zabezpieczenie wiadomości.  
+2. Wybierz jeden z trybów zabezpieczeń dla wiązania. Należy pamiętać, że powiązanie, którą wybierzesz Określa tryb dostępne opcje. Na przykład <xref:System.ServiceModel.WSDualHttpBinding> nie zezwala na zabezpieczenia transportu (nie jest to opcja). Podobnie, ani <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ani <xref:System.ServiceModel.NetNamedPipeBinding> umożliwia zabezpieczenie wiadomości.  
   
      Dostępne są trzy opcje:  
   
@@ -47,9 +47,9 @@ W tym temacie opisano podstawowe zadania programowania, służące do tworzenia 
   
          Ten wybór korzysta z warstwy transportowej do bezpiecznego transferu komunikatów, podczas każdej wiadomości zawiera bogaty poświadczenia muszą innych usług. To połączenie zalet wydajności zabezpieczenia transportu z zalet zaawansowanych poświadczenia zabezpieczeń wiadomości. Ta opcja jest dostępna w następujących powiązań: <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding>, i <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Jeśli zdecydujesz się użyć zabezpieczeń transportu dla protokołu HTTP (innymi słowy, HTTPS), możesz skonfigurować hosta za pomocą certyfikatu SSL i Włącz protokół SSL na porcie. Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3. Jeśli zdecydujesz się użyć zabezpieczeń transportu dla protokołu HTTP (innymi słowy, HTTPS), możesz skonfigurować hosta za pomocą certyfikatu SSL i Włącz protokół SSL na porcie. Aby uzyskać więcej informacji, zobacz [zabezpieczenia transportu HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
-4.  Jeśli używasz <xref:System.ServiceModel.WSHttpBinding> i nie ma potrzeby ustanawiania sesji bezpiecznego, ustaw <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwość `false`.  
+4. Jeśli używasz <xref:System.ServiceModel.WSHttpBinding> i nie ma potrzeby ustanawiania sesji bezpiecznego, ustaw <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> właściwość `false`.  
   
      Bezpiecznej sesji występuje, gdy klient i usługa utworzyć kanał za pomocą klucza symetrycznego (klient i serwer, użyj tego samego klucza długości konwersacji, do czasu zamknięcia okna dialogowego).  
   

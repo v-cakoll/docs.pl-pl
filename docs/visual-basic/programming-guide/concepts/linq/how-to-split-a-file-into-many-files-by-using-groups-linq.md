@@ -2,19 +2,19 @@
 title: 'Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828553"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306322"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Visual Basic)
 Ten przykład przedstawia sposób Scalanie zawartości dwóch plików, a następnie utwórz zestaw nowych plików, które organizują dane w nowy sposób.  
   
 ### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych  
   
-1.  Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
+1. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names1.txt i zapisz go w folderze projektu:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ Ten przykład przedstawia sposób Scalanie zawartości dwóch plików, a następ
     Garcia, Debra  
     ```  
   
-2.  Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu: Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
+2. Skopiuj te nazwy do pliku tekstowego, który nosi nazwę names2.txt i zapisz go w folderze projektu: Należy zauważyć, że te dwa pliki nazwy niektórych wspólnych.  
   
     ```  
     Liu, Jinghao  

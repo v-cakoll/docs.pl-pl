@@ -2,19 +2,19 @@
 title: Przegląd przepływu komunikatu
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312647"
 ---
 # <a name="message-flow-overview"></a>Przegląd przepływu komunikatu
 W rozproszonym systemie zawierający wzajemnie połączonych usług należy określić przyczynowego relacje między usługami. Jest ważne poznać różne składniki, które były częścią przepływu żądania w celu obsługi scenariuszy o kluczowym znaczeniu, takich jak kondycja, monitorowanie, rozwiązywanie problemów i główny ustalić przyczynę problemu. Aby włączyć korelacja różnych usług w programie .NET Framework 4 ślady Dodaliśmy obsługę funkcji za pomocą następujących funkcji:
 
 -   Śledzenie analityczne: Wysoka wydajność i funkcję śledzenia niski poziom szczegółowości przy użyciu śledzenie zdarzeń dla Windows (ETW).
 
--   Działanie end-to-end model usług WCF/WF: Ta funkcja obsługuje korelacji śledzenia generowane przez <xref:System.ServiceModel> i <xref:System.Workflow.ComponentModel> przestrzeni nazw.
+-   Model działania end-to-end dla usług WCF/WF: Ta funkcja obsługuje korelacji śledzenia generowane przez <xref:System.ServiceModel> i <xref:System.Workflow.ComponentModel> przestrzeni nazw.
 
 -   ETW śledzenia dla WF: Ta funkcja używa rekordów śledzenia generowanych przez usługi WF, aby zapewnić wgląd w bieżący stan i postęp przepływu pracy.
 
@@ -22,15 +22,15 @@ W rozproszonym systemie zawierający wzajemnie połączonych usług należy okre
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>Aby włączyć śledzenia przepływu komunikatów w ramach samouczka Wprowadzenie
 
-1.  Otwórz Podgląd zdarzeń, klikając **Start**, **Uruchom**i wprowadzając `eventvwr.exe`.
+1. Otwórz Podgląd zdarzeń, klikając **Start**, **Uruchom**i wprowadzając `eventvwr.exe`.
 
-2.  Jeśli nie zostały włączone śledzenie danych analitycznych, rozwiń **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacje serwera aplikacji** . Wybierz **widoku**, **Pokaż analityczne i debugowania dzienniki**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik**. Pozostaw otwarte Podgląd zdarzeń, dzięki czemu można wyświetlić ślady.
+2. Jeśli nie zostały włączone śledzenie danych analitycznych, rozwiń **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacje serwera aplikacji** . Wybierz **widoku**, **Pokaż analityczne i debugowania dzienniki**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Włącz dziennik**. Pozostaw otwarte Podgląd zdarzeń, dzięki czemu można wyświetlić ślady.
 
-3.  Otwórz plik, który został utworzony w [Samouczek wprowadzający](../../../../docs/framework/wcf/getting-started-tutorial.md) w programie Visual Studio 2012. Należy pamiętać, że należy uruchomić program Visual Studio 2012 jako administrator, aby tworzyć usługi. Jeśli masz zainstalowanych przykładów WCF, możesz otworzyć [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), zawierającą ukończone projekt utworzony w tym samouczku.
+3. Otwórz plik, który został utworzony w [Samouczek wprowadzający](../../../../docs/framework/wcf/getting-started-tutorial.md) w programie Visual Studio 2012. Należy pamiętać, że należy uruchomić program Visual Studio 2012 jako administrator, aby tworzyć usługi. Jeśli masz zainstalowanych przykładów WCF, możesz otworzyć [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), zawierającą ukończone projekt utworzony w tym samouczku.
 
-4.  Kliknij prawym przyciskiem myszy **usługi** projektu, a następnie wybierz **Dodaj**, **nowy element**. Wybierz **pliku konfiguracji aplikacji** i kliknij przycisk **OK**.
+4. Kliknij prawym przyciskiem myszy **usługi** projektu, a następnie wybierz **Dodaj**, **nowy element**. Wybierz **pliku konfiguracji aplikacji** i kliknij przycisk **OK**.
 
-5.  Dodaj następujący kod do pliku App.Config utworzonego w poprzednim kroku.
+5. Dodaj następujący kod do pliku App.Config utworzonego w poprzednim kroku.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ W rozproszonym systemie zawierający wzajemnie połączonych usług należy okre
     </system.serviceModel>
     ```
 
-6.  Wykonywanie aplikacji serwera bez debugowania, naciskając klawisze CTRL + F5. Wykonaj projekt klienta, klikając prawym przyciskiem myszy **klienta** projektu i wybierając polecenie **debugowania**, **Uruchom nowe wystąpienie**.
+6. Wykonywanie aplikacji serwera bez debugowania, naciskając klawisze CTRL + F5. Wykonaj projekt klienta, klikając prawym przyciskiem myszy **klienta** projektu i wybierając polecenie **debugowania**, **Uruchom nowe wystąpienie**.
 
-7.  Aby śledzić zdarzenia od klienta do serwera, Dodaj następujący element do pliku konfiguracji aplikacji w projekcie klienta.
+7. Aby śledzić zdarzenia od klienta do serwera, Dodaj następujący element do pliku konfiguracji aplikacji w projekcie klienta.
 
     ```xml
     <diagnostics>
@@ -50,7 +50,7 @@ W rozproszonym systemie zawierający wzajemnie połączonych usług należy okre
     </diagnostics>
     ```
 
-8.  W pliku Program.cs w kliencie Dodaj następującą instrukcję Using.
+8. W pliku Program.cs w kliencie Dodaj następującą instrukcję Using.
 
     ```csharp
     using System.Diagnostics;

@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-ms.openlocfilehash: b531ca761e6f90ea70d13ed844c9c39faa83e44b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321750"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argument nie jest opcjonalny (Visual Basic)
 Liczba i typy argumentów musi odpowiadać wartości oczekiwanych. Nieprawidłowa liczba argumentów jest albo pominięty argument nie jest opcjonalna. Argument tylko wtedy można pominąć po wywołaniu procedury zdefiniowanych przez użytkownika, jeśli została zadeklarowana `Optional` w definicji procedury.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Należy podać wszystkie wymagane argumenty.  
+1. Należy podać wszystkie wymagane argumenty.  
   
-2.  Upewnij się, został pominięty argumenty są opcjonalne. Jeśli nie, albo podać argument w wywołaniu lub Zadeklaruj parametr `Optional` w definicji.  
+2. Upewnij się, został pominięty argumenty są opcjonalne. Jeśli nie, albo podać argument w wywołaniu lub Zadeklaruj parametr `Optional` w definicji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Error — Typy](../../../visual-basic/programming-guide/language-features/error-types.md)

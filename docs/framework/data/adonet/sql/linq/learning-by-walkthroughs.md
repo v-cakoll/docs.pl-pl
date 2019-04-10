@@ -2,12 +2,12 @@
 title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189008"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329313"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) i zawiera łącza do kilku klasy podstawowej wskazówki umożliwiające uzyskiwanie informacji o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -53,13 +53,13 @@ ms.locfileid: "59189008"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Aby sprawdzić lub zmienić bazy danych logowania  
   
-1.  Na Windows **Start** menu wskaż **wszystkie programy**, **Microsoft SQL Server 2005**, wskaż polecenie **narzędzia konfiguracji**, a następnie kliknij przycisk **Menedżera konfiguracji SQL Server**.  
+1. Na Windows **Start** menu wskaż **wszystkie programy**, **Microsoft SQL Server 2005**, wskaż polecenie **narzędzia konfiguracji**, a następnie kliknij przycisk **Menedżera konfiguracji SQL Server**.  
   
-2.  W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
+2. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
   
-3.  W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **właściwości**.  
+3. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **właściwości**.  
   
-4.  Kliknij przycisk **logowanie** kartę i sprawdź, jak chcesz zalogować się do serwera.  
+4. Kliknij przycisk **logowanie** kartę i sprawdź, jak chcesz zalogować się do serwera.  
   
      W większości przypadków **systemu lokalnego** działa.  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59189008"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Aby włączyć protokół nazwanych potoków  
   
-1.  W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, rozwiń węzeł **konfiguracja sieci programu SQL Server 2005**, a następnie kliknij przycisk **protokoły dla SQLEXPRESS**.  
+1. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, rozwiń węzeł **konfiguracja sieci programu SQL Server 2005**, a następnie kliknij przycisk **protokoły dla SQLEXPRESS**.  
   
-2.  Upewnij się, że w okienku po prawej stronie **potoków nazwanych** jest włączony protokół. Jeśli nie, kliknij prawym przyciskiem myszy **nazwane potoki** a następnie kliknij przycisk **Włącz**.  
+2. Upewnij się, że w okienku po prawej stronie **potoków nazwanych** jest włączony protokół. Jeśli nie, kliknij prawym przyciskiem myszy **nazwane potoki** a następnie kliknij przycisk **Włącz**.  
   
      Trzeba będzie zatrzymać i ponownie uruchomić usługę. Wykonaj kroki opisane w następnym bloku.  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59189008"
   
 ##### <a name="to-stop-and-restart-the-service"></a>Aby zatrzymać i ponownie uruchom usługę  
   
-1.  W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
+1. W okienku po lewej stronie **Menedżera konfiguracji SQL Server**, kliknij przycisk **usług SQL Server 2005**.  
   
-2.  W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **zatrzymać**.  
+2. W okienku po prawej stronie kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **zatrzymać**.  
   
-3.  Kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **ponowne uruchomienie**.  
+3. Kliknij prawym przyciskiem myszy **programu SQL Server (SQLEXPRESS)**, a następnie kliknij przycisk **ponowne uruchomienie**.  
   
 ## <a name="see-also"></a>Zobacz także
 

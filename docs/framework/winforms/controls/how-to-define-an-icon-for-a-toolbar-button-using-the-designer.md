@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 6657a9bbb850a24ae47be11854d6affd2a02f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118277"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323710"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Instrukcje: określanie ikony dla przycisku ToolBar przy użyciu narzędzia Projektant
 > [!NOTE]
@@ -29,17 +29,17 @@ ms.locfileid: "59118277"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Aby ustawić ikony dla przycisku kontrolki toolbar w czasie projektowania  
   
-1.  Dodawanie obrazów do <xref:System.Windows.Forms.ImageList> składnika. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie obrazów ImageList przy użyciu narzędzia Projektant](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
+1. Dodawanie obrazów do <xref:System.Windows.Forms.ImageList> składnika. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie obrazów ImageList przy użyciu narzędzia Projektant](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
-2.  Wybierz <xref:System.Windows.Forms.ToolBar> kontrolkę w formularzu.  
+2. Wybierz <xref:System.Windows.Forms.ToolBar> kontrolkę w formularzu.  
   
-3.  W **właściwości** oknie <xref:System.Windows.Forms.ToolBar> kontrolki <xref:System.Windows.Forms.ToolBar.ImageList%2A> właściwość <xref:System.Windows.Forms.ImageList> składnika.  
+3. W **właściwości** oknie <xref:System.Windows.Forms.ToolBar> kontrolki <xref:System.Windows.Forms.ToolBar.ImageList%2A> właściwość <xref:System.Windows.Forms.ImageList> składnika.  
   
-4.  Kliknij przycisk <xref:System.Windows.Forms.ToolBar> kontrolki <xref:System.Windows.Forms.ToolBar.Buttons%2A> właściwość, aby go zaznaczyć, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) przycisk, aby otworzyć **ToolBarButton — Edytor kolekcji**.  
+4. Kliknij przycisk <xref:System.Windows.Forms.ToolBar> kontrolki <xref:System.Windows.Forms.ToolBar.Buttons%2A> właściwość, aby go zaznaczyć, a następnie kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) przycisk, aby otworzyć **ToolBarButton — Edytor kolekcji**.  
   
-5.  Użyj **Dodaj** przycisk, aby dodać przyciski do <xref:System.Windows.Forms.ToolBar> kontroli.  
+5. Użyj **Dodaj** przycisk, aby dodać przyciski do <xref:System.Windows.Forms.ToolBar> kontroli.  
   
-6.  W **właściwości** wyświetlone w okienku po prawej stronie okno **ToolBarButton — Edytor kolekcji**ustaw <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> właściwości przycisku paska narzędzi na jedną z wartości na liście, który jest rysowana od obrazy dodane do <xref:System.Windows.Forms.ImageList> składnika.  
+6. W **właściwości** wyświetlone w okienku po prawej stronie okno **ToolBarButton — Edytor kolekcji**ustaw <xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A> właściwości przycisku paska narzędzi na jedną z wartości na liście, który jest rysowana od obrazy dodane do <xref:System.Windows.Forms.ImageList> składnika.  
   
 ## <a name="see-also"></a>Zobacz także
 

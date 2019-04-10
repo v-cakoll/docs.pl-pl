@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330106"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows
 Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwieństwie do innych formantów składniki nie udostępniają interfejs użytkownika dla użytkownika i dlatego nie powinny być wyświetlane na powierzchni projektanta formularzy Windows. Po dodaniu składnika do formularza Windows Forms Designer przedstawia o zmiennych rozmiarach na pasku w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu kontrolki do zasobnika składnika można wybrać składnik i ustaw jego właściwości, tak jak inne kontrolki, w formularzu.  
@@ -29,9 +29,9 @@ Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwień
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Aby dodać składnik do formularza Windows  
   
-1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Otwórz formularz. Aby uzyskać więcej informacji, zobacz [jak: Wyświetlanie formularzy Windows w Projektancie](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  W **przybornika**, kliknij składnik i przeciągnij go do formularza.  
+2. W **przybornika**, kliknij składnik i przeciągnij go do formularza.  
   
      Składnik jest wyświetlana w zasobniku składnika.  
   
@@ -42,11 +42,11 @@ Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwień
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Aby programowo dodać składnik do formularza Windows  
   
-1.  Utwórz wystąpienie obiektu <xref:System.Windows.Forms.Timer> klasy w kodzie.  
+1. Utwórz wystąpienie obiektu <xref:System.Windows.Forms.Timer> klasy w kodzie.  
   
-2.  Ustaw `Interval` właściwości, aby ustalić czas między taktami czasomierza.  
+2. Ustaw `Interval` właściwości, aby ustalić czas między taktami czasomierza.  
   
-3.  Skonfiguruj inne wymagane właściwości składnika.  
+3. Skonfiguruj inne wymagane właściwości składnika.  
   
      Poniższy kod ilustruje tworzenie <xref:System.Windows.Forms.Timer> z jego `Interval` zestawu właściwości.  
   

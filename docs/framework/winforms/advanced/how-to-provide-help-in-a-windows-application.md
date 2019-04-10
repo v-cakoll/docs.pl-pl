@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129483"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312722"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Instrukcje: Zapewnianie pomocy w aplikacji Windows
 Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby dołączyć tematów pomocy w pliku pomocy do określonych formantów na formularzach Windows Forms. Może to być plik Pomocy HTML lub HTMLHelp 1.x lub większa formatu.  
@@ -23,17 +23,17 @@ Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby
   
 ### <a name="to-provide-help"></a>Zapewnienie pomocy  
   
-1.  Z **przybornika**, przeciągnij <xref:System.Windows.Forms.HelpProvider> składnika do formularza.  
+1. Z **przybornika**, przeciągnij <xref:System.Windows.Forms.HelpProvider> składnika do formularza.  
   
      Składnik będą znajdować się w pasku w dolnej części projektanta Windows Forms.  
   
-2.  W **właściwości** oknie <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwość chm, .col lub .htm w pliku pomocy.  
+2. W **właściwości** oknie <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> właściwość chm, .col lub .htm w pliku pomocy.  
   
-3.  Wybierz inny formant na formularzu, a następnie w **właściwości** oknie <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> właściwości.  
+3. Wybierz inny formant na formularzu, a następnie w **właściwości** oknie <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> właściwości.  
   
      Jest to ciąg przekazany przez <xref:System.Windows.Forms.HelpProvider> składnik do pliku pomocy wezwać odpowiedniego tematu Pomocy.  
   
-4.  W **właściwości** oknie <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> właściwości na wartość <xref:System.Windows.Forms.HelpNavigator> wyliczenia.  
+4. W **właściwości** oknie <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> właściwości na wartość <xref:System.Windows.Forms.HelpNavigator> wyliczenia.  
   
      Określa sposób, w którym **HelpKeyword** właściwość jest przekazywana do systemu pomocy. W poniższej tabeli przedstawiono ustawienia możliwe i ich opisy.  
   

@@ -2,12 +2,12 @@
 title: 'Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075206"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295539"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji
 Jest to jedna z dwóch tematy porad, które pokazują Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.  
@@ -92,15 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>Publikowanie metadanych dla usługi WCF, za pomocą pliku konfiguracji aplikacji  
   
-1.  W pliku App.config, po upływie `</services>` elementu, Utwórz `<behaviors>` elementu.  
+1. W pliku App.config, po upływie `</services>` elementu, Utwórz `<behaviors>` elementu.  
 
-2.  W ramach `<behaviors>` elementu Dodawanie `<serviceBehaviors>` elementu.  
+2. W ramach `<behaviors>` elementu Dodawanie `<serviceBehaviors>` elementu.  
 
-3.  Dodaj `<behavior>` elementu `<serviceBehaviors>` elementu i określić wartość dla `name` atrybutu `<behavior>` elementu.  
+3. Dodaj `<behavior>` elementu `<serviceBehaviors>` elementu i określić wartość dla `name` atrybutu `<behavior>` elementu.  
 
-4.  Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled` Umożliwia usłudze odpowiadanie na żądania metadanych przez żądanie HTTP GET. `policyVersion` informuje usługę do odpowiadają WS-Policy w wersji 1.5 podczas generowania metadanych.  
+4. Dodaj `<serviceMetadata>` elementu `<behavior>` elementu. Ustaw `httpGetEnabled` atrybutu `true` i `policyVersion` atrybutu Policy15. `httpGetEnabled` Umożliwia usłudze odpowiadanie na żądania metadanych przez żądanie HTTP GET. `policyVersion` informuje usługę do odpowiadają WS-Policy w wersji 1.5 podczas generowania metadanych.  
 
-5.  Dodaj `behaviorConfiguration` atrybutu `<service>` elementu i określ `name` atrybutu `<behavior>` elementu dodany w kroku 1, jak pokazano w poniższym przykładzie kodu.  
+5. Dodaj `behaviorConfiguration` atrybutu `<service>` elementu i określ `name` atrybutu `<behavior>` elementu dodany w kroku 1, jak pokazano w poniższym przykładzie kodu.  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  Dodaj jeden lub kilka `<endpoint>` elementy z zamówienia równa `IMetadataExchange`, jak pokazano w poniższym przykładzie kodu.  
+6. Dodaj jeden lub kilka `<endpoint>` elementy z zamówienia równa `IMetadataExchange`, jak pokazano w poniższym przykładzie kodu.  
   
     ```xml  
     <services>  
@@ -138,7 +138,7 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  W przypadku punktów końcowych metadanych, dodane w poprzednim kroku, ustawić `binding` atrybut do jednego z następujących czynności:  
+7. W przypadku punktów końcowych metadanych, dodane w poprzednim kroku, ustawić `binding` atrybut do jednego z następujących czynności:  
   
     -   `mexHttpBinding` dla publikacji HTTP.  
   
@@ -148,7 +148,7 @@ namespace Metadata.Samples
   
     -   `mexTcpBinding` dla publikacji TCP.  
   
-8.  Dla punktów końcowych metadanych, dodane w poprzednim kroku należy ustawić adres równe:  
+8. Dla punktów końcowych metadanych, dodane w poprzednim kroku należy ustawić adres równe:  
   
     -   Pusty ciąg do użycia jako punkt publikacji aplikacji hosta, adres podstawowy, jeśli podstawowy adres jest taki sam jak powiązanie metadanych.  
   
@@ -162,7 +162,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>Aby użyć domyślnych punktów końcowych  
   
-1.  Aby skonfigurować usługę korzystającą z domyślnych punktów końcowych metadanych, określ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> w konfiguracji pliku co w poprzednim przykładzie, ale nie określono żadnych punktów końcowych. Plik konfiguracji będzie następnie wyglądać następująco.  
+1. Aby skonfigurować usługę korzystającą z domyślnych punktów końcowych metadanych, określ <xref:System.ServiceModel.Description.ServiceMetadataBehavior> w konfiguracji pliku co w poprzednim przykładzie, ale nie określono żadnych punktów końcowych. Plik konfiguracji będzie następnie wyglądać następująco.  
   
     ```xml  
     <configuration>  

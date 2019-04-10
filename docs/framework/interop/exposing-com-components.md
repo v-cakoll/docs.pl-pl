@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44dcd118be62214b82a68efa77aecb4a605fdb71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218397"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320915"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Udostępnianie składników COM programowi.NET Framework
 Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący składnik COM do zarządzanego kodu. Aby uzyskać informacje na temat pisania serwerów COM, który jest ściśle zintegrowane z .NET Framework, zobacz [zagadnień projektowych dotyczących współdziałanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100)).
@@ -22,19 +22,19 @@ Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący s
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>Aby udostępnić składników COM programowi .NET Framework  
   
-1.  [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md).  
+1. [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md).  
   
      Środowisko uruchomieniowe języka wspólnego wymaga metadanych dla wszystkich typów, w tym typy modelu COM. Istnieje kilka sposobów, aby uzyskać zestaw zawierający typy modelu COM importowanych w metadanych.  
   
-2.  [Używanie typów modelu COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
+2. [Używanie typów modelu COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).  
   
      Można sprawdzić typy modelu COM, aktywować wystąpienia i wywoływać metody na obiekt COM w taki sam sposób jak w przypadku dowolnego typu zarządzanego.  
   
-3.  [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md).  
+3. [Kompilowanie projektu międzyoperacyjnego](compiling-an-interop-project.md).  
   
      [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Udostępnia kompilatory dla kilku języków zgodny z Common Language Specification (CLS), w tym [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C#i C++.  
   
-4.  [Wdrażanie aplikacji międzyoperacyjnych](deploying-an-interop-application.md).  
+4. [Wdrażanie aplikacji międzyoperacyjnych](deploying-an-interop-application.md).  
   
      Aplikacje międzyoperacyjne najlepiej są wdrażane jako [o silnej nazwie](../app-domains/strong-named-assemblies.md), podpisane zestawów w globalnej pamięci podręcznej.  
   

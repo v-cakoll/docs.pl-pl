@@ -2,12 +2,12 @@
 title: 'Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305970"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie
 Dla dużych przedsiębiorstw często wymagają, że aplikacje są opracowywane zgodne z zasadami zabezpieczeń organizacji. Temacie opisano kroki umożliwiające tworzenie i instalowanie klienta weryfikacji punktu końcowego, który może służyć do sprawdzania poprawności wszystkie aplikacje klienckie usługi Windows Communication Foundation (WCF) zainstalowane na komputerach.  
@@ -25,23 +25,23 @@ Dla dużych przedsiębiorstw często wymagają, że aplikacje są opracowywane z
   
 ### <a name="to-create-the-endpoint-validator"></a>Aby utworzyć punkt końcowy modułu sprawdzania poprawności  
   
-1.  Tworzenie <xref:System.ServiceModel.Description.IEndpointBehavior> czynności żądaną sprawdzania poprawności w <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> metody. Poniższy kod zawiera przykład. ( `InternetClientValidatorBehavior` Jest pobierana z [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) próbki.)  
+1. Tworzenie <xref:System.ServiceModel.Description.IEndpointBehavior> czynności żądaną sprawdzania poprawności w <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A> metody. Poniższy kod zawiera przykład. ( `InternetClientValidatorBehavior` Jest pobierana z [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) próbki.)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  Utwórz nową <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> które rejestruje moduł weryfikacji punktu końcowego utworzonego w kroku 1. Poniższy przykład kodu pokazuje to. (Trwa oryginalny kod w tym przykładzie [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) przykładowe.)  
+2. Utwórz nową <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> które rejestruje moduł weryfikacji punktu końcowego utworzonego w kroku 1. Poniższy przykład kodu pokazuje to. (Trwa oryginalny kod w tym przykładzie [weryfikacji zabezpieczeń](../../../../docs/framework/wcf/samples/security-validation.md) przykładowe.)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Upewnij się, że skompilowany zestaw jest podpisany silną nazwą. Aby uzyskać więcej informacji, zobacz [narzędzie silnych nazw (SN. Z rozszerzeniem EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) i polecenia kompilatora dla danego języka.  
+3. Upewnij się, że skompilowany zestaw jest podpisany silną nazwą. Aby uzyskać więcej informacji, zobacz [narzędzie silnych nazw (SN. Z rozszerzeniem EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) i polecenia kompilatora dla danego języka.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Aby zainstalować moduł weryfikacji do komputera docelowego  
   
-1.  Zainstaluj punkt końcowy modułu sprawdzania poprawności, przy użyciu odpowiedniego mechanizmu. W przedsiębiorstwie to może być za pomocą zasad grupy i Systems Management Server (SMS).  
+1. Zainstaluj punkt końcowy modułu sprawdzania poprawności, przy użyciu odpowiedniego mechanizmu. W przedsiębiorstwie to może być za pomocą zasad grupy i Systems Management Server (SMS).  
   
-2.  Zainstaluj silnej nazwy zestawu w globalnej pamięci podręcznej przy użyciu [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
+2. Zainstaluj silnej nazwy zestawu w globalnej pamięci podręcznej przy użyciu [Gacutil.exe (Global Assembly Cache Tool)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
-3.  Użyj <xref:System.Configuration?displayProperty=nameWithType> typów w przestrzeni nazw, aby:  
+3. Użyj <xref:System.Configuration?displayProperty=nameWithType> typów w przestrzeni nazw, aby:  
   
     1.  Dodaj rozszerzenie [ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md) sekcji przy użyciu w pełni kwalifikowaną nazwę typu i Zablokuj elementu.  
   

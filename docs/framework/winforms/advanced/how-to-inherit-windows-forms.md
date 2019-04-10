@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314546"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Instrukcje: Dziedziczenie formularzy systemu Windows
 Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy jest wygodny sposób zduplikowane starań bez przechodzenia przez proces całkowicie ponownego tworzenia formularza, za każdym razem, gdy jej potrzebujesz.  
@@ -25,9 +25,9 @@ Tworzenie nowych formularzy Windows przez dziedziczenie z formularzy podstawowy 
   
 ### <a name="to-inherit-a-form-programmatically"></a>Programowe dziedziczyć formularza  
   
-1.  W klasie Dodaj odwołanie do przestrzeni nazw zawierający formularz, który chcesz dziedziczyć.  
+1. W klasie Dodaj odwołanie do przestrzeni nazw zawierający formularz, który chcesz dziedziczyć.  
   
-2.  W definicji klasy Dodaj odwołanie do formularza, aby dziedziczyć. Odwołania powinny zawierać przestrzeń nazw zawierająca formularz, następuje kropka, a następnie nazwa podstawowa samego formularza.  
+2. W definicji klasy Dodaj odwołanie do formularza, aby dziedziczyć. Odwołania powinny zawierać przestrzeń nazw zawierająca formularz, następuje kropka, a następnie nazwa podstawowa samego formularza.  
   
     ```vb  
     Public Class Form2  

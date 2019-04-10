@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325699"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Dublowanie bazy danych w programie SQL Server
 Funkcja dublowania baz danych w programie SQL Server pozwala na zachowanie kopiowania lub dublowania bazy danych programu SQL Server na serwerze wstrzymania. Dublowanie gwarantuje, że dwie oddzielne kopie danych istnieją przez cały czas, zapewniając wysoką dostępność i ukończyć nadmiarowości danych. .NET Data Provider for SQL Server obsługuje niejawne dublowania bazy danych, tak aby deweloper nie trzeba podejmować żadnych działań lub pisania kodu, gdy został skonfigurowany dla bazy danych programu SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiekt obsługuje tryb jawne połączenie, który umożliwia podanie nazwy serwera partnerskiego trybu failover, w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
  Poniższy uproszczony sekwencja zdarzeń dla <xref:System.Data.SqlClient.SqlConnection> obiektu, który jest przeznaczony dla skonfigurowano obsługę dublowania bazy danych:  
   
-1.  Aplikacja kliencka połączy się z główną bazą danych, a serwer odsyła nazwę serwera partnera, który następnie jest buforowana na kliencie.  
+1. Aplikacja kliencka połączy się z główną bazą danych, a serwer odsyła nazwę serwera partnera, który następnie jest buforowana na kliencie.  
   
-2.  Jeśli serwer zawierający dublowanej bazy danych ulegnie awarii lub połączenie zostało przerwane, stan połączenia i transakcji zostaną utracone. Aplikacja kliencka próbuje ponownie ustanowić połączenia z główną bazą danych i kończy się niepowodzeniem.  
+2. Jeśli serwer zawierający dublowanej bazy danych ulegnie awarii lub połączenie zostało przerwane, stan połączenia i transakcji zostaną utracone. Aplikacja kliencka próbuje ponownie ustanowić połączenia z główną bazą danych i kończy się niepowodzeniem.  
   
-3.  Następnie aplikacja kliencka przezroczyste próbuje nawiązać połączenie z duplikatu bazy danych na serwerze partnerskim. Jeśli się powiedzie, połączenie jest przekierowywane do duplikatu bazy danych, które następnie staje się nowej nazwy głównej bazy danych.  
+3. Następnie aplikacja kliencka przezroczyste próbuje nawiązać połączenie z duplikatu bazy danych na serwerze partnerskim. Jeśli się powiedzie, połączenie jest przekierowywane do duplikatu bazy danych, które następnie staje się nowej nazwy głównej bazy danych.  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>Określanie serwera partnerskiego trybu Failover w parametrach połączenia  
  Jeśli podasz nazwę serwera partnerskiego trybu failover w parametrach połączenia klienta przezroczyste prób połączenia z serwera partnerskiego trybu failover, jeśli główna baza danych jest niedostępny przy pierwszym połączeniu z aplikacji klienckiej.  

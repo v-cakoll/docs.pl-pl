@@ -2,12 +2,12 @@
 title: POSIADANIE (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 19da828d3c7e7763c3dd9ba0e34da8849f90cf0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7b147a84a43677afa53f7872f8042f1cf44137cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316183"
 ---
 # <a name="having-entity-sql"></a>POSIADANIE (jednostka SQL)
 Określa warunek wyszukiwania dla grupy lub agregacji.  
@@ -40,9 +40,9 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operatorów HAVING i GROUP BY w celu określenia warunku wyszukiwania dla grupy lub agregacji. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#HAVING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#having)]  
   

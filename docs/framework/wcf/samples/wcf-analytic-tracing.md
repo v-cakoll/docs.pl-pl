@@ -2,12 +2,12 @@
 title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229176"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332316"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia w strumieniu analityczne śladów, które zapisuje ETW w Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają Uzyskaj wgląd w swoje usługi bez konieczności płacenia spadek wysokiej wydajności. Ten przykład ilustruje sposób używania <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z usługi WCF.  
@@ -43,31 +43,31 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Za pomocą programu Visual Studio 2012, otwórz plik rozwiązania WCFAnalyticTracingExtensibility.sln.  
+1. Za pomocą programu Visual Studio 2012, otwórz plik rozwiązania WCFAnalyticTracingExtensibility.sln.  
   
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
+3. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
      W przeglądarce internetowej kliknij **Calculator.svc**. Identyfikator URI dokumentu WSDL usługi powinna zostać wyświetlona w przeglądarce. Skopiuj ten identyfikator URI.  
   
-4.  Uruchom klienta testowego WCF (WcfTestClient.exe).  
+4. Uruchom klienta testowego WCF (WcfTestClient.exe).  
   
      Testowy klient WCF (WcfTestClient.exe) znajduje się w `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Katalog instalacji programu Visual Studio 2012 domyślny jest `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5.  W kliencie testowym WCF, należy dodać usługę, wybierając **pliku**, a następnie **Dodaj usługę**.  
+5. W kliencie testowym WCF, należy dodać usługę, wybierając **pliku**, a następnie **Dodaj usługę**.  
   
      W polu wejściowym, należy dodać adres punktu końcowego.  
   
-6.  Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
+6. Kliknij przycisk **OK** aby zamknąć okno dialogowe.  
   
      Usługa ICalculator zostanie dodany do okienka po lewej stronie w obszarze **Moje projekty usług**.  
   
-7.  Otwórz aplikację Podgląd zdarzeń.  
+7. Otwórz aplikację Podgląd zdarzeń.  
   
      Przed wywołaniem usługi, Uruchom Podgląd zdarzeń i upewnij się, że w dzienniku zdarzeń nasłuchuje śledzenia zdarzeń wysyłanego z usługi WCF.  
   
-8.  Z **Start** menu, wybierz opcję **narzędzia administracyjne**, a następnie **Podgląd zdarzeń**. Włącz **analityczne** i **debugowania** dzienniki.  
+8. Z **Start** menu, wybierz opcję **narzędzia administracyjne**, a następnie **Podgląd zdarzeń**. Włącz **analityczne** i **debugowania** dzienniki.  
   
 9. W widoku drzewa w Podglądzie zdarzeń, przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie **Aplikacje serwera aplikacji**. Kliknij prawym przyciskiem myszy **aplikacje serwera aplikacji**, wybierz opcję **widoku**, a następnie **Pokaż analityczne i debugowania dzienniki**.  
   
@@ -97,13 +97,13 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
   
 #### <a name="to-clean-up-optional"></a>Aby wyczyścić (opcjonalnie)  
   
-1.  Otwórz **Podgląd zdarzeń**.  
+1. Otwórz **Podgląd zdarzeń**.  
   
-2.  Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.  
+2. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, a następnie  **Aplikacje serwera**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **wyłączanie dziennika**.  
   
-3.  Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**,  **Aplikacje serwera**, a następnie **analityczne**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.  
+3. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**,  **Aplikacje serwera**, a następnie **analityczne**. Kliknij prawym przyciskiem myszy **analityczne** i wybierz **Wyczyść dziennik**.  
   
-4.  Kliknij przycisk **wyczyść** można wyczyścić zdarzenia.  
+4. Kliknij przycisk **wyczyść** można wyczyścić zdarzenia.  
   
 ## <a name="known-issue"></a>Znany problem  
  Jest to znany problem w **Podgląd zdarzeń** go mogą spowodować awarię zdekodować zdarzenia ETW. Może zostać wyświetlony komunikat o błędzie informujący, że: "Opisu Identyfikatora zdarzenia \<id > ze źródła, nie można odnaleźć aplikacji serwera firmy Microsoft-Windows-aplikacji. Składnik, który wywołuje to zdarzenie nie jest zainstalowany na komputerze lokalnym albo instalacja jest uszkodzona. Można zainstalować lub naprawić składnik na komputerze lokalnym." Jeśli wystąpi ten błąd, wybierz **Odśwież** z **akcje** menu. Następnie należy się poprawnie dekodowane zdarzenia.  

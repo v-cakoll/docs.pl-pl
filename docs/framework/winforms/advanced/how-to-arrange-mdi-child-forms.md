@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160111"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317236"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>Instrukcje: Rozmieszczanie formularzy podrzędnych MDI
 Aplikacje mają często poleceń menu Akcje, takie jak kafelków, Cascade i rozmieszczanie, które sterowania układem Otwórz formularzy podrzędnych MDI. Możesz użyć <xref:System.Windows.Forms.Form.LayoutMdi%2A> metody przy użyciu jednego z <xref:System.Windows.Forms.MdiLayout> wartości wyliczenia, aby zmienić kolejność formularze podrzędne MDI nadrzędnego formularza.  
@@ -24,7 +24,7 @@ Aplikacje mają często poleceń menu Akcje, takie jak kafelków, Cascade i rozm
   
 ### <a name="to-arrange-child-forms"></a>Aby aranżowanie formularzy podrzędnych  
   
-1.  W metodzie, użyj <xref:System.Windows.Forms.Form.LayoutMdi%2A> metodę, aby ustawić <xref:System.Windows.Forms.MdiLayout> wyliczenia do formularza nadrzędnego MDI. W poniższym przykładzie użyto <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> wartość wyliczenia okien podrzędnych formularza nadrzędnego MDI (`Form1`). Wyliczenia jest używana w kodzie podczas obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia **Windows Cascade** elementu menu.  
+1. W metodzie, użyj <xref:System.Windows.Forms.Form.LayoutMdi%2A> metodę, aby ustawić <xref:System.Windows.Forms.MdiLayout> wyliczenia do formularza nadrzędnego MDI. W poniższym przykładzie użyto <xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType> wartość wyliczenia okien podrzędnych formularza nadrzędnego MDI (`Form1`). Wyliczenia jest używana w kodzie podczas obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzenia **Windows Cascade** elementu menu.  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -41,7 +41,7 @@ Aplikacje mają często poleceń menu Akcje, takie jak kafelków, Cascade i rozm
     > [!NOTE]
     >  Można również podzielić windows i windows rozmieszczenie jako ikony, zmieniając <xref:System.Windows.Forms.MdiLayout> wartość wyliczenia używane.  
   
-2.  Jeśli używasz Visual C#, umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
+2. Jeśli używasz Visual C#, umieść następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

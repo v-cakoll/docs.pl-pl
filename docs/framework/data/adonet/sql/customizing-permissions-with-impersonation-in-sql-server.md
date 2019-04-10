@@ -2,12 +2,12 @@
 title: Dostosowywanie uprawnień personifikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326973"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Dostosowywanie uprawnień personifikacji w programie SQL Server
 Wiele aplikacji używa procedur składowanych na dostęp do danych, opierając się na łańcucha własności, aby ograniczyć dostęp do tabel podstawowych. Można przyznać uprawnień wykonywanie procedur składowanych, odwoływanie lub odmówienia uprawnień do tabel podstawowych. SQL Server nie sprawdza uprawnienia obiektu wywołującego, jeśli procedura składowana i tabele mają tego samego właściciela. Jednak tworzenie łańcucha własności nie działa w przypadku obiektów mieć różnych właścicieli lub w przypadku dynamiczny język SQL.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Istnieją trzy kroki związane ze stosowaniem EXECUTE AS klauzuli w procedurze.  
   
-1.  Utwórz użytkownika serwera proxy w bazie danych, która nie jest zamapowany na nazwę logowania. Nie jest to wymagane, ale pomaga związane z zarządzaniem uprawnieniami.  
+1. Utwórz użytkownika serwera proxy w bazie danych, która nie jest zamapowany na nazwę logowania. Nie jest to wymagane, ale pomaga związane z zarządzaniem uprawnieniami.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Przyznaj użytkownikowi proxy wystarczających uprawnień.  
+1. Przyznaj użytkownikowi proxy wystarczających uprawnień.  
   
-2.  Dodaj EXECUTE AS klauzuli, która procedura składowana lub funkcja zdefiniowana przez użytkownika.  
+2. Dodaj EXECUTE AS klauzuli, która procedura składowana lub funkcja zdefiniowana przez użytkownika.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

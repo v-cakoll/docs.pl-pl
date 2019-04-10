@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324135"
 ---
 # <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
 
@@ -28,13 +28,13 @@ W programie Visual Studio 2005 można dodać otoki COM jako odwołanie do projek
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Aby utworzyć wywoływana otoka środowiska uruchomieniowego przy użyciu programu Visual Studio
 
-1.  Otwórz projekt dla aplikacji zarządzanej.
+1. Otwórz projekt dla aplikacji zarządzanej.
 
-2.  Na **projektu** menu, kliknij przycisk **Pokaż wszystkie pliki**.
+2. Na **projektu** menu, kliknij przycisk **Pokaż wszystkie pliki**.
 
-3.  Na **projektu** menu, kliknij przycisk **Dodaj odwołanie**.
+3. Na **projektu** menu, kliknij przycisk **Dodaj odwołanie**.
 
-4.  W oknie dialogowym Dodaj odwołanie, kliknij przycisk **COM** , a następnie wybierz składnik, należy użyć, a następnie kliknij przycisk **OK**.
+4. W oknie dialogowym Dodaj odwołanie, kliknij przycisk **COM** , a następnie wybierz składnik, należy użyć, a następnie kliknij przycisk **OK**.
 
      W **Eksploratora rozwiązań**, należy pamiętać, że składnik COM został dodany do folderu odwołań w projekcie.
 
@@ -53,15 +53,15 @@ Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Możesz rozpocz�
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Aby utworzyć wywołalne opakowanie COM za pomocą programu Visual Studio  
   
-1.  Utwórz projekt biblioteki klas dla zarządzanej klasy, która ma zostać uruchomiony w kodzie natywnym. Klasa musi mieć domyślnego konstruktora.  
+1. Utwórz projekt biblioteki klas dla zarządzanej klasy, która ma zostać uruchomiony w kodzie natywnym. Klasa musi mieć domyślnego konstruktora.  
   
      Sprawdź, czy masz pełną Czteroczęściowy numer wersji zestawu w pliku AssemblyInfo. Ta liczba jest wymagany do obsługi przechowywania wersji w rejestrze systemu Windows. Aby uzyskać więcej informacji na temat numerów wersji, zobacz [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2.  Na **projektu** menu, kliknij przycisk **właściwości**.  
+2. Na **projektu** menu, kliknij przycisk **właściwości**.  
   
-3.  Kliknij przycisk **skompilować** kartę.  
+3. Kliknij przycisk **skompilować** kartę.  
   
-4.  Wybierz **Zarejestruj dla współdziałania COM** pole wyboru.  
+4. Wybierz **Zarejestruj dla współdziałania COM** pole wyboru.  
   
  Podczas kompilowania projektu zestawu jest automatycznie rejestrowane dla współdziałania z modelem COM. Jeśli tworzysz natywnych aplikacji w programie Visual Studio 2005, można użyć zestawu, klikając **Dodaj odwołanie** na **projektu** menu.  
   

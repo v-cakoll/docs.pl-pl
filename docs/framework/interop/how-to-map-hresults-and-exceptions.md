@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 609f7f6e5460bf315b87725405496e95abbfdd95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102768"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306550"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Instrukcje: Mapowanie wyników HRESULT i wyjątków
 Metody modelu COM, raportowanie błędów przez zwrócenie wartości HRESULT; metod .NET zgłoszenie ich przez zgłaszanie wyjątków. Środowisko wykonawcze obsługuje przejścia między nimi. Każda klasa wyjątków w programie .NET Framework jest mapowany na HRESULT.  
@@ -31,7 +31,7 @@ Metody modelu COM, raportowanie błędów przez zwrócenie wartości HRESULT; me
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Tworzenie nowej klasy wyjątku i Mapuj na HRESULT  
   
-1.  Użyj poniższego kodu, aby utworzyć nową klasę wyjątków, o nazwie `NoAccessException` i mapowanie ich na HRESULT `E_ACCESSDENIED`.  
+1. Użyj poniższego kodu, aby utworzyć nową klasę wyjątków, o nazwie `NoAccessException` i mapowanie ich na HRESULT `E_ACCESSDENIED`.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  

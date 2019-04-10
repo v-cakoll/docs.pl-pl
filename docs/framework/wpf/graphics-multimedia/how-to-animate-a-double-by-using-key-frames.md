@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305588"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Instrukcje: Animowanie elementu double przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak animować wartość właściwości, która przyjmuje <xref:System.Double> przy użyciu klatek kluczowych.  
@@ -22,11 +22,11 @@ W tym przykładzie pokazano, jak animować wartość właściwości, która przy
 ## <a name="example"></a>Przykład  
  Poniższy przykład powoduje przeniesienie prostokąt na ekranie. W przykładzie użyto <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Media.TranslateTransform.X%2A> właściwość <xref:System.Windows.Media.TranslateTransform> dotyczą <xref:System.Windows.Shapes.Rectangle>. Animacja jest powtarzany na czas nieokreślony, używa trzech ramek kluczowych w następujący sposób:  
   
-1.  Podczas pierwszego trzy sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> klasy, aby przenieść prostokąt na ścieżce według stałej stawki z punktu początkowego do 500 pozycji. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> utworzyć płynne przejście liniowy między wartościami.  
+1. Podczas pierwszego trzy sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> klasy, aby przenieść prostokąt na ścieżce według stałej stawki z punktu początkowego do 500 pozycji. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame> utworzyć płynne przejście liniowy między wartościami.  
   
-2.  Na koniec czwarte sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> klasy nagle przenieść prostokąt na pozycji dalej. Dyskretne klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> tworzenie nagłe skoki między wartościami. W tym przykładzie prostokąta znajduje się na pozycji początkowej i następnie nagle pojawia się na 500 pozycji.  
+2. Na koniec czwarte sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> klasy nagle przenieść prostokąt na pozycji dalej. Dyskretne klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame> tworzenie nagłe skoki między wartościami. W tym przykładzie prostokąta znajduje się na pozycji początkowej i następnie nagle pojawia się na 500 pozycji.  
   
-3.  W ostatnim dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> klasy, aby przenieść prostokąt z powrotem do jego pozycja początkowa. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartością <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> właściwości. W tym przykładzie rozpoczyna się powoli przenosząc i następnie przyspiesza wykładniczo w kierunku końca odcinka czasu.  
+3. W ostatnim dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> klasy, aby przenieść prostokąt z powrotem do jego pozycja początkowa. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartością <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A> właściwości. W tym przykładzie rozpoczyna się powoli przenosząc i następnie przyspiesza wykładniczo w kierunku końca odcinka czasu.  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]

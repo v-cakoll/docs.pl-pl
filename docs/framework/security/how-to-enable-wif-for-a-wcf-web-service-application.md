@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Włączanie programu WIF dla aplikacji usługi sieci Web WCF'
+title: 'Instrukcje: Włączanie programu WIF dla aplikacji usługi internetowej WCF'
 ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
-ms.openlocfilehash: c3d22d812fdd5a1fc7567b3da34e7fd5a59531cd
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323307"
 ---
-# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Instrukcje: Włączanie programu WIF dla aplikacji usługi sieci Web WCF
+# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Instrukcje: Włączanie programu WIF dla aplikacji usługi internetowej WCF
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -18,7 +18,7 @@ ms.locfileid: "48584217"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Podsumowanie  
- Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku służące do włączania środowiska WIF w usłudze internetowej WCF. Znajdują się tu również instrukcje testowania aplikacji pozwalające sprawdzić, czy usługa internetowa poprawnie przedstawia oświadczenia w trakcie działania aplikacji. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ Niniejszy instruktaż zawiera szczegółowe procedury krok po kroku służące do włączania środowiska WIF w usłudze internetowej WCF. Znajdują się tu również instrukcje testowania aplikacji pozwalające sprawdzić, czy usługa internetowa poprawnie przedstawia oświadczenia w trakcie działania aplikacji. Instruktaż nie zawiera szczegółowych instrukcji tworzenia usługi tokenów zabezpieczających (STS). Zamiast tego wykorzystuje deweloperską usługę STS wbudowaną w narzędziu Tożsamość i dostęp. Deweloperska usługa STS nie wykonuje faktycznego uwierzytelniania i jest przeznaczona tylko do celów testowych. Narzędzie Tożsamość i dostęp jest koniecznie do ukończenia całego instruktażu. Można go pobrać z następującej lokalizacji: [Narzędzie tożsamość i dostęp](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Spis treści  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48584217"
 ## <a name="overview"></a>Omówienie  
  Ten instruktaż ma pokazać, jak programista może używać funkcji federacyjnego uwierzytelniania podczas tworzenia usług WCF. Oto kilka najważniejszych zalet stosowania mechanizmu federacji w usługach WCF:  
   
-1.  Wyprowadzenie logiki uwierzytelniania poza kod usługi WCF  
+1. Wyprowadzenie logiki uwierzytelniania poza kod usługi WCF  
   
-2.  Wykorzystanie istniejących rozwiązań do zarządzania tożsamościami  
+2. Wykorzystanie istniejących rozwiązań do zarządzania tożsamościami  
   
-3.  Współpraca z innymi systemami zarządzania tożsamością  
+3. Współpraca z innymi systemami zarządzania tożsamością  
   
-4.  Elastyczność i odporność na przyszłe zmiany  
+4. Elastyczność i odporność na przyszłe zmiany  
   
  Środowisko WIF wraz z towarzyszącym narzędziem Tożsamość i dostęp ułatwia tworzenie oraz testowanie usług WCF dzięki wykorzystaniu funkcjonalności federacyjnego uwierzytelniania. Pokazano to poniżej.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "48584217"
   
 #### <a name="to-create-a-simple-wcf-service"></a>Aby utworzyć prostą usługę WCF  
   
-1.  Uruchom program Visual Studio w trybie podwyższonych uprawnień jako administrator.  
+1. Uruchom program Visual Studio w trybie podwyższonych uprawnień jako administrator.  
   
-2.  W programie Visual Studio, kliknij przycisk **pliku**, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
+2. W programie Visual Studio, kliknij przycisk **pliku**, kliknij przycisk **New**, a następnie kliknij przycisk **projektu**.  
   
-3.  W **nowy projekt** okna, kliknij przycisk **aplikacja usługi WCF**.  
+3. W **nowy projekt** okna, kliknij przycisk **aplikacja usługi WCF**.  
   
-4.  W **nazwa**, wprowadź `TestService` i naciśnij klawisz **OK**.  
+4. W **nazwa**, wprowadź `TestService` i naciśnij klawisz **OK**.  
   
-5.  Kliknij prawym przyciskiem myszy **TestService** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
+5. Kliknij prawym przyciskiem myszy **TestService** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
   
-6.  **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**. Narzędzie tożsamości i dostępu umożliwia skonfigurowanie usługi architektura korzystanie ze środowiska WIF oraz w celu oddelegowania procesów uwierzytelniania do lokalnej deweloperskiej usługi STS (**LocalSTS**), dodając elementy konfiguracji do *Web.config* pliku.  
+6. **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**. Narzędzie tożsamości i dostępu umożliwia skonfigurowanie usługi architektura korzystanie ze środowiska WIF oraz w celu oddelegowania procesów uwierzytelniania do lokalnej deweloperskiej usługi STS (**LocalSTS**), dodając elementy konfiguracji do *Web.config* pliku.  
   
-7.  W *Service1.svc.cs* Dodaj `using` dyrektywy dla **System.Security.Claims** przestrzeni nazw i Zastąp istniejący kod następującym, a następnie zapisz plik:  
+7. W *Service1.svc.cs* Dodaj `using` dyrektywy dla **System.Security.Claims** przestrzeni nazw i Zastąp istniejący kod następującym, a następnie zapisz plik:  
   
     ```csharp  
     public class Service1 : IService1  
@@ -115,7 +115,7 @@ ms.locfileid: "48584217"
   
      `ComputeResponse` Metoda wyświetlenie właściwości różnych oświadczeń wystawianych przez **LocalSTS**.  
   
-8.  W *IService1.cs* pliku, Zastąp istniejący kod poniższym kodem, a następnie zapisz plik:  
+8. W *IService1.cs* pliku, Zastąp istniejący kod poniższym kodem, a następnie zapisz plik:  
   
     ```csharp  
     [ServiceContract]  
@@ -138,18 +138,18 @@ ms.locfileid: "48584217"
   
 #### <a name="to-create-a-client-application"></a>Aby utworzyć aplikację kliencką  
   
-1.  W programie Visual Studio, kliknij prawym przyciskiem myszy rozwiązanie, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **nowy projekt**.  
+1. W programie Visual Studio, kliknij prawym przyciskiem myszy rozwiązanie, kliknij przycisk **Dodaj**, a następnie kliknij przycisk **nowy projekt**.  
   
-2.  W **Dodaj nowy projekt** wybierz **aplikację Konsolową** z **Visual C#** szablony list, wprowadź `Client`, a następnie naciśnij klawisz **OK**. Nowy projekt zostanie utworzony w folderze rozwiązania.  
+2. W **Dodaj nowy projekt** wybierz **aplikację Konsolową** z **Visual C#** szablony list, wprowadź `Client`, a następnie naciśnij klawisz **OK**. Nowy projekt zostanie utworzony w folderze rozwiązania.  
   
-3.  Kliknij prawym przyciskiem myszy **odwołania** w obszarze **klienta** projektu, a następnie kliknij przycisk **Dodaj odwołanie do usługi**.  
+3. Kliknij prawym przyciskiem myszy **odwołania** w obszarze **klienta** projektu, a następnie kliknij przycisk **Dodaj odwołanie do usługi**.  
   
-4.  W **Dodaj odwołanie do usługi** okna, kliknij strzałkę listy rozwijanej **odnajdź** przycisk, a następnie kliknij przycisk **usługi w rozwiązaniu**. **Adres** zostaną wypełnione automatycznie w usłudze WCF utworzonej wcześniej, oraz **Namespace** zostanie ustawiony na **ServiceReference1**. Kliknij przycisk **OK**.  
+4. W **Dodaj odwołanie do usługi** okna, kliknij strzałkę listy rozwijanej **odnajdź** przycisk, a następnie kliknij przycisk **usługi w rozwiązaniu**. **Adres** zostaną wypełnione automatycznie w usłudze WCF utworzonej wcześniej, oraz **Namespace** zostanie ustawiony na **ServiceReference1**. Kliknij przycisk **OK**.  
   
     > [!IMPORTANT]
     >  Zarówno **TestService** i **LocalSTS** musi być uruchomiona po dodaniu odwołania do usługi do klienta.  
   
-5.  Program Visual Studio wygeneruje klasy serwera proxy dla usługi WCF i doda wszystkie niezbędne parametry odwołań. Również doda elementy *App.config* pliku, aby skonfigurować klienta w celu pobrania tokenu z STS do uwierzytelniania w usłudze. Po zakończeniu tego procesu **Program.cs** plik zostanie otwarty. Dodaj `using` dyrektywy dla **System.ServiceModel** i inny wpis dla **Client.ServiceReference1**, Zastąp **Main** metody za pomocą następującego kodu, a następnie Zapisz plik:  
+5. Program Visual Studio wygeneruje klasy serwera proxy dla usługi WCF i doda wszystkie niezbędne parametry odwołań. Również doda elementy *App.config* pliku, aby skonfigurować klienta w celu pobrania tokenu z STS do uwierzytelniania w usłudze. Po zakończeniu tego procesu **Program.cs** plik zostanie otwarty. Dodaj `using` dyrektywy dla **System.ServiceModel** i inny wpis dla **Client.ServiceReference1**, Zastąp **Main** metody za pomocą następującego kodu, a następnie Zapisz plik:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -209,7 +209,7 @@ ms.locfileid: "48584217"
     }  
     ```  
   
-6.  Otwórz *App.config* pliku i Dodaj następujący kod XML jako pierwszy element podrzędny w obszarze `<system.serviceModel>` elementu, a następnie zapisz plik:  
+6. Otwórz *App.config* pliku i Dodaj następujący kod XML jako pierwszy element podrzędny w obszarze `<system.serviceModel>` elementu, a następnie zapisz plik:  
   
     ```xml  
     <behaviors>  
@@ -227,18 +227,18 @@ ms.locfileid: "48584217"
   
      Spowoduje to wyłączenie mechanizmu sprawdzania poprawności certyfikatów.  
   
-7.  Kliknij prawym przyciskiem myszy **TestService** rozwiązań i kliknij przycisk **Ustaw projekty startowe**. **Projekt startowy** zostanie otwarta strona właściwości. W **projekt startowy** strony właściwości, wybierz opcję **wiele projektów startowych** kliknięcie w **akcji** dla każdego projektu i wybierz pole **Start** z menu rozwijanego. Kliknij przycisk **OK** Aby zapisać ustawienia.  
+7. Kliknij prawym przyciskiem myszy **TestService** rozwiązań i kliknij przycisk **Ustaw projekty startowe**. **Projekt startowy** zostanie otwarta strona właściwości. W **projekt startowy** strony właściwości, wybierz opcję **wiele projektów startowych** kliknięcie w **akcji** dla każdego projektu i wybierz pole **Start** z menu rozwijanego. Kliknij przycisk **OK** Aby zapisać ustawienia.  
   
-8.  Skompiluj rozwiązanie.  
+8. Skompiluj rozwiązanie.  
   
 ## <a name="step-3--test-your-solution"></a>Krok 3 — Przetestowanie rozwiązania  
  W tym kroku przetestujesz aplikację WCF korzystającą ze środowiska WIF i sprawdzisz, czy są prezentowane oświadczenia.  
   
 #### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>Aby przetestować aplikację WCF używającą środowiska WIF pod kątem oświadczeń  
   
-1.  Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinno zostać wyświetlone okno konsoli i następujący tekst: **naciśnij klawisz Enter, aby wywołać usługę, dowolny klawisz, aby zakończyć pracę aplikacji:**  
+1. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Powinno zostać wyświetlone okno konsoli i następujący tekst: **Naciśnij klawisz Enter, aby wywołać usługę, lub dowolny klawisz, aby zakończyć pracę aplikacji:**  
   
-2.  Naciśnij klawisz **Enter**, oraz następujące informacje o oświadczeniach powinien zostać wyświetlony w konsoli:  
+2. Naciśnij klawisz **Enter**, oraz następujące informacje o oświadczeniach powinien zostać wyświetlony w konsoli:  
   
     ```  
     Computed by Service1  
@@ -255,4 +255,4 @@ ms.locfileid: "48584217"
     > [!IMPORTANT]
     >  Zarówno **TestService** i **LocalSTS** musi działać przed naciśnięciem **Enter**. Strony sieci Web powinna zostać otwarta przez usługę i sprawdź, czy **LocalSTS** działa w obszarze powiadomień (na pasku systemowym).  
   
-3.  Jeśli te oświadczenia widać w konsoli, dokonano pomyślnego uwierzytelnienia w usłudze STS pozwalającego na wyświetlanie oświadczeń z usługi WCF.
+3. Jeśli te oświadczenia widać w konsoli, dokonano pomyślnego uwierzytelnienia w usłudze STS pozwalającego na wyświetlanie oświadczeń z usługi WCF.

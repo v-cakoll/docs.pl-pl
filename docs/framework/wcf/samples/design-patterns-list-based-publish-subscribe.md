@@ -2,12 +2,12 @@
 title: 'Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2d8041bf3efefa085e94636624e92abb573c1820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196921"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312049"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Wzorce projektowania: Publikowanie/subskrybowanie oparte na liście
 W tym przykładzie pokazano wzorzec listy publikowanie/subskrybowanie oparte na zaimplementowane jako program Windows Communication Foundation (WCF).  
@@ -112,23 +112,23 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>Aby skonfigurować i skompilować przykład  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Test, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc`. Strona potwierdzenia powinna być wyświetlana w odpowiedzi.  
+1. Test, czy można uzyskać dostęp do usługi, za pomocą przeglądarki, wpisując następujący adres: `http://localhost/servicemodelsamples/service.svc`. Strona potwierdzenia powinna być wyświetlana w odpowiedzi.  
   
-2.  Uruchom Client.exe z \client\bin\\, jest dostępna z folderu specyficzny dla języka. Aktywność klienta jest wyświetlany w oknie konsoli klienta. Uruchom kilka klientów.  
+2. Uruchom Client.exe z \client\bin\\, jest dostępna z folderu specyficzny dla języka. Aktywność klienta jest wyświetlany w oknie konsoli klienta. Uruchom kilka klientów.  
   
-3.  Uruchom Datasource.exe z \datasource\bin\\, jest dostępna z folderu specyficzny dla języka. W oknie konsoli wyświetlane jest działanie źródła danych. Gdy źródło danych wysyła informacje do usługi, powinien zostać przekazany do każdego klienta.  
+3. Uruchom Datasource.exe z \datasource\bin\\, jest dostępna z folderu specyficzny dla języka. W oknie konsoli wyświetlane jest działanie źródła danych. Gdy źródło danych wysyła informacje do usługi, powinien zostać przekazany do każdego klienta.  
   
-4.  W przypadku klienta, źródła danych i usługi, programy nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. W przypadku klienta, źródła danych i usługi, programy nie mogła nawiązać połączenia, zobacz [Rozwiązywanie problemów z porady dotyczące przykłady WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Do uruchomienia przykładu na komputerach  
   
-1.  Skonfiguruj komputer usługi:  
+1. Skonfiguruj komputer usługi:  
   
     1.  Na komputerze usługi należy utworzyć katalog wirtualny o nazwie ServiceModelSamples. Zadanie wsadowe pliku Setupvroot.bat z [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) może służyć do tworzenia katalogu na dysku i katalogu wirtualnego.  
   
@@ -136,21 +136,21 @@ public class PriceChangeEventArgs : EventArgs
   
     3.  Test, aby uzyskać dostęp do usługi z komputera klienckiego za pomocą przeglądarki.  
   
-2.  Konfigurowanie komputerów klienckich:  
+2. Konfigurowanie komputerów klienckich:  
   
     1.  Skopiuj pliki programu klienta z folderu \client\bin\ w folderze specyficzny dla języka na komputerach klienckich.  
   
     2.  W każdym pliku konfiguracji klienta należy zmienić wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
   
-3.  Skonfiguruj maszyny źródła danych:  
+3. Skonfiguruj maszyny źródła danych:  
   
     1.  Skopiuj pliki programu źródła danych z folderu \datasource\bin\ w folderze specyficzny dla języka na maszynie źródłowej danych.  
   
     2.  W pliku konfiguracji źródła danych Zmień wartość adresu definicji punktu końcowego, aby dopasować nowy adres usługi. Zastąp wszystkie odwołania do "localhost" w pełni kwalifikowaną nazwę domeny w adresie.  
   
-4.  Na komputerach klienckich należy uruchomić Client.exe z poziomu wiersza polecenia.  
+4. Na komputerach klienckich należy uruchomić Client.exe z poziomu wiersza polecenia.  
   
-5.  Na maszynie źródłowej danych uruchom Datasource.exe z poziomu wiersza polecenia.  
+5. Na maszynie źródłowej danych uruchom Datasource.exe z poziomu wiersza polecenia.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

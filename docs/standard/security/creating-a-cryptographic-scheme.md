@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321656"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Tworzenie schematu kryptograficznego
 Można łączyć kryptograficznych składników .NET Framework do tworzenia różnych systemów do szyfrowania i odszyfrowywania danych.  
   
  Prosty schemat szyfrowania szyfrowanie i odszyfrowywanie danych może określić następujące czynności:  
   
-1.  Każda ze stron generowana jest para kluczy publiczny/prywatny.  
+1. Każda ze stron generowana jest para kluczy publiczny/prywatny.  
   
-2.  Strony wymiany kluczy publicznych.  
+2. Strony wymiany kluczy publicznych.  
   
-3.  Każda ze stron generuje klucz tajny dla celów szyfrowania TripleDES, na przykład i szyfruje nowo utworzony klucz przy użyciu klucza publicznego drugiej strony.  
+3. Każda ze stron generuje klucz tajny dla celów szyfrowania TripleDES, na przykład i szyfruje nowo utworzony klucz przy użyciu klucza publicznego drugiej strony.  
   
-4.  Każda strona wysyła dane do drugiego i łączy klucz tajny drugiej strony z własną, w szczególności kolejności, aby utworzyć nowy klucz tajny.  
+4. Każda strona wysyła dane do drugiego i łączy klucz tajny drugiej strony z własną, w szczególności kolejności, aby utworzyć nowy klucz tajny.  
   
-5.  Strony następnie zainicjuj konwersacji za pomocą szyfrowania symetrycznego.  
+5. Strony następnie zainicjuj konwersacji za pomocą szyfrowania symetrycznego.  
   
  Tworzenie schematu kryptograficznego nie jest prostym zadaniem.
   

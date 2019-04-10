@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: c450de0eb3eead3a2d3b21c3635caa71d92ce07f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212807"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325062"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  
@@ -50,9 +50,9 @@ Powiązania to obiekty, które są używane do określania szczegółów komunik
 ## <a name="using-bindings"></a>Za pomocą powiązań  
  Za pomocą powiązań pociąga za sobą dwa podstawowe kroki:  
   
-1.  Wybierz lub zdefiniuj powiązania. Jest to najłatwiejsza metoda wybierz jedno z powiązań dostarczanych przez system, dołączone do programu WCF i użyć go przy użyciu ustawień domyślnych. Możesz również wybrać powiązania dostarczane przez system i resetowania wartości właściwości ze swoimi potrzebami. Alternatywnie można utworzyć powiązania niestandardowego lub powiązania zdefiniowane przez użytkownika mają wyższy stopień kontroli i dostosowywania.  
+1. Wybierz lub zdefiniuj powiązania. Jest to najłatwiejsza metoda wybierz jedno z powiązań dostarczanych przez system, dołączone do programu WCF i użyć go przy użyciu ustawień domyślnych. Możesz również wybrać powiązania dostarczane przez system i resetowania wartości właściwości ze swoimi potrzebami. Alternatywnie można utworzyć powiązania niestandardowego lub powiązania zdefiniowane przez użytkownika mają wyższy stopień kontroli i dostosowywania.  
   
-2.  Tworzenie punktu końcowego, który używa powiązania wybrane lub zdefiniowany.  
+2. Tworzenie punktu końcowego, który używa powiązania wybrane lub zdefiniowany.  
   
 ## <a name="code-and-configuration"></a>Kod i Konfiguracja  
  Można zdefiniować powiązania na dwa sposoby: za pomocą kodu lub konfiguracji. Te dwie metody nie są zależne od tego, czy przy użyciu powiązania dostarczane przez system lub niestandardowego powiązania. Ogólnie rzecz biorąc przy użyciu kodu zapewnia pełną kontrolę nad definicji powiązania w czasie projektowania. Z drugiej strony, przy użyciu konfiguracji umożliwia administratora systemu lub użytkownika usługi WCF lub klienta w celu zmiany parametrów powiązania, bez konieczności ponownego kompilowania aplikacji usługi. Ta elastyczność często jest pożądane, ponieważ nie istnieje żaden sposób przewidzieć wymagania dotyczące określonego komputera, na których ma zostać wdrożona aplikacja WCF. Zachowanie powiązania (i adresowania) informacji z kodu pozwala im można zmienić bez konieczności ponownej kompilacji lub ponownego wdrażania aplikacji. Należy pamiętać, że powiązań zdefiniowanych w kodzie są tworzone po powiązania określone w konfiguracji, dzięki czemu powiązań zdefiniowanych przez kod zastąpić wszelkie powiązań zdefiniowanych przez konfigurację.  

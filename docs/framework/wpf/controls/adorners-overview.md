@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227694"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320473"
 ---
 # <a name="adorners-overview"></a>Przegląd Moduły indeksowania układu
 Moduły definiowania układu są specjalnym typem <xref:System.Windows.FrameworkElement>, który jest używany w celu zapewnienia podpowiedzi wizualne dla użytkownika. Wśród innych zastosowań moduły definiowania układu może służyć do dodawania funkcjonalności dojść do elementów lub podaj informacje o kontrolce stanie.  
@@ -74,9 +74,9 @@ Moduły definiowania układu są specjalnym typem <xref:System.Windows.Framework
 ## <a name="adorning-a-single-uielement"></a>Adorning pojedynczy element interfejsu użytkownika  
  Aby powiązać moduł definiowania układu do określonego <xref:System.Windows.UIElement>, wykonaj następujące kroki:  
   
-1.  Wywołanie metody statycznej <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> można pobrać <xref:System.Windows.Documents.AdornerLayer> dla obiektu <xref:System.Windows.UIElement> do być powiązany. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> przeprowadza górę drzewa wizualnego, rozpoczynając od określonego <xref:System.Windows.UIElement>i zwraca pierwszą warstwą moduł definiowania układu kodu znajdzie. (Jeśli nie warstwy moduł definiowania układu kodu nie zostaną znalezione, metoda zwraca wartość null.)  
+1. Wywołanie metody statycznej <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> można pobrać <xref:System.Windows.Documents.AdornerLayer> dla obiektu <xref:System.Windows.UIElement> do być powiązany. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> przeprowadza górę drzewa wizualnego, rozpoczynając od określonego <xref:System.Windows.UIElement>i zwraca pierwszą warstwą moduł definiowania układu kodu znajdzie. (Jeśli nie warstwy moduł definiowania układu kodu nie zostaną znalezione, metoda zwraca wartość null.)  
   
-2.  Wywołaj <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z obiektem docelowym <xref:System.Windows.UIElement>.  
+2. Wywołaj <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z obiektem docelowym <xref:System.Windows.UIElement>.  
   
  Poniższy przykład tworzy powiązanie SimpleCircleAdorner (pokazany powyżej), aby <xref:System.Windows.Controls.TextBox> o nazwie *myTextBox*.  
   
@@ -90,9 +90,9 @@ Moduły definiowania układu są specjalnym typem <xref:System.Windows.Framework
 ## <a name="adorning-the-children-of-a-panel"></a>Adorning elementy podrzędne panelu  
  Aby powiązać moduł definiowania układu z elementami podrzędnymi <xref:System.Windows.Controls.Panel>, wykonaj następujące kroki:  
   
-1.  Wywołaj `static` metoda <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> można odnaleźć warstwy moduł definiowania układu dla elementu, którego elementy podrzędne, które mają być powiązany.  
+1. Wywołaj `static` metoda <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> można odnaleźć warstwy moduł definiowania układu dla elementu, którego elementy podrzędne, które mają być powiązany.  
   
-2.  Wyliczyć elementy podrzędne elementu nadrzędnego, a wywołanie <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z każdego elementu podrzędnego.  
+2. Wyliczyć elementy podrzędne elementu nadrzędnego, a wywołanie <xref:System.Windows.Documents.AdornerLayer.Add%2A> metodę, aby powiązać moduł definiowania układu z każdego elementu podrzędnego.  
   
  Poniższy przykład tworzy powiązanie SimpleCircleAdorner (pokazany powyżej), z elementami podrzędnymi <xref:System.Windows.Controls.StackPanel> o nazwie *myStackPanel*.  
   

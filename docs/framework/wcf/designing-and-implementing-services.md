@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319680"
 ---
 # <a name="designing-and-implementing-services"></a>Projektowanie i implementowanie usług
 W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług WCF. Kontrakt usługi określa punkt końcowy komunikuje na zewnątrz. Na poziomie bardziej konkretne takie jak żądanie/nietypizowana odpowiedź, jednokierunkowe i dwukierunkowego jest poufności informacji na temat zestawu specyficzne komunikaty dotyczące podzielone na podstawowe wiadomości programu exchange wzorców (MEPs). Kontrakt usługi to zestaw logicznie powiązanych wymianę komunikatów, operacja usługi czy exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście akceptują jeden komunikat (tak, aby obiekt wywołujący może poinformować o powitania) i może być lub może nie zwrócić komunikat (w zależności od grzecznościowy operacji).  
@@ -38,13 +38,13 @@ W tej sekcji dowiesz się, jak zdefiniować i implementowanie kontraktów usług
   
  Na przykład może być kontrakt zamówienia zakupu `CreateOrder` operacji, który akceptuje dane wejściowe informacji o zamówieniach typów i zwraca informacje o powodzeniu lub niepowodzeniu, tym identyfikator zamówienia. Może także mieć `GetOrderStatus` operacji, która akceptuje identyfikator zamówienia i zwraca informacje o stanie zamówienia. Określ tego rodzaju kontraktu usługi:  
   
-1.  Kontrakt zamówienia zakupu składa się z `CreateOrder` i `GetOrderStatus` operacji.  
+1. Kontrakt zamówienia zakupu składa się z `CreateOrder` i `GetOrderStatus` operacji.  
   
-2.  Czy operacje mają określone komunikaty wejściowe i wyjściowe komunikaty.  
+2. Czy operacje mają określone komunikaty wejściowe i wyjściowe komunikaty.  
   
-3.  Dane, które może wykonywać te komunikaty.  
+3. Dane, które może wykonywać te komunikaty.  
   
-4.  Podzielone na kategorie instrukcji dotyczących infrastruktury komunikacji konieczne pomyślnie przetwarzania komunikatów. Na przykład, obejmują one czy i jakie rodzaje zabezpieczeń są wymagane do nawiązania komunikacji pomyślnie.  
+4. Podzielone na kategorie instrukcji dotyczących infrastruktury komunikacji konieczne pomyślnie przetwarzania komunikatów. Na przykład, obejmują one czy i jakie rodzaje zabezpieczeń są wymagane do nawiązania komunikacji pomyślnie.  
   
  W celu przekazania tego rodzaju informacji do innych aplikacji na wiele platform (w tym platformy firmy Microsoft), kontraktów usług XML są publicznie wyrażone w standardowych formatów XML, takie jak [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) () WSDL) i [schematu XML](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), między innymi. Deweloperów na wielu platformach, można użyć tych informacji zamówienia publicznego do tworzenia aplikacji, które mogą się komunikować z usługą, zarówno ponieważ rozumieją języka specyfikacji, a te języki są ustalono, aby umożliwić współdziałanie poprzez opisanie publicznych formularzy, formatów i protokołów obsługiwanych przez usługę. Aby uzyskać więcej informacji na temat usługi WCF obsługi tego rodzaju informacje, zobacz [metadanych](../../../docs/framework/wcf/feature-details/metadata.md).  
   

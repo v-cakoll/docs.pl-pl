@@ -3,12 +3,12 @@ title: 'Instrukcje: Debugowanie aplikacji obsługujących oświadczenia i usług
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453396"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321552"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Instrukcje: Debugowanie aplikacji obsługujących oświadczenia i usług za pomocą śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
@@ -59,9 +59,9 @@ ms.locfileid: "49453396"
   
 #### <a name="to-configure-wif-tracing-using-webconfig-configuration-file"></a>Aby skonfigurować śledzenia programu WIF, przy użyciu pliku konfiguracji Web.config  
   
-1.  Otwórz katalog główny **Web.config** lub **App.config** plik konfiguracji w edytorze programu Visual Studio przez dwukrotne kliknięcie go w **Eksploratora rozwiązań**. Jeśli rozwiązanie nie ma **Web.config** lub **App.config** konfiguracji pliku, dodaj ją, klikając prawym przyciskiem rozwiązania w **Eksploratora rozwiązań** i klikając  **Dodaj**, klikając **nowy element...** . Na **nowy element** okno dialogowe, wybierz **pliku konfiguracji aplikacji** dla **App.config** lub **pliku konfiguracji sieci Web** dla **Web.config** z listy i kliknij przycisk **OK**.  
+1. Otwórz katalog główny **Web.config** lub **App.config** plik konfiguracji w edytorze programu Visual Studio przez dwukrotne kliknięcie go w **Eksploratora rozwiązań**. Jeśli rozwiązanie nie ma **Web.config** lub **App.config** konfiguracji pliku, dodaj ją, klikając prawym przyciskiem rozwiązania w **Eksploratora rozwiązań** i klikając  **Dodaj**, klikając **nowy element...** . Na **nowy element** okno dialogowe, wybierz **pliku konfiguracji aplikacji** dla **App.config** lub **pliku konfiguracji sieci Web** dla **Web.config** z listy i kliknij przycisk **OK**.  
   
-2.  Dodania wpisów konfiguracji, które podobny do następującego pliku konfiguracji wewnątrz  **\<konfiguracji >** węzła w końcu pliku konfiguracji:  
+2. Dodania wpisów konfiguracji, które podobny do następującego pliku konfiguracji wewnątrz  **\<konfiguracji >** węzła w końcu pliku konfiguracji:  
   
     ```xml  
     <system.diagnostics>  
@@ -76,31 +76,31 @@ ms.locfileid: "49453396"
     </system.diagnostics>  
     ```  
   
-3.  Powyższa konfiguracja powoduje, że program WIF generowanie zdarzeń śledzenia pełne i zaloguj się do *WIFTrace.e2e* pliku. Aby uzyskać pełną listę wartości **switchValue** przełącznika, można znaleźć w tabeli Poziom śledzenia w następującym temacie: [Konfigurowanie śledzenia](../wcf/diagnostics/tracing/configuring-tracing.md).  
+3. Powyższa konfiguracja powoduje, że program WIF generowanie zdarzeń śledzenia pełne i zaloguj się do *WIFTrace.e2e* pliku. Aby uzyskać pełną listę wartości **switchValue** przełącznika, można znaleźć w tabeli Poziom śledzenia w następującym temacie: [Konfigurowanie śledzenia](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Krok 2: analizowanie za pomocą narzędzia podglądu śledzenia plików śledzenia programu WIF  
  W tym kroku użyjesz Trace Viewer Tool (SvcTraceViewer.exe) do analizowania dzienników śledzenia programu WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Aby analizować dzienniki śledzenia programu WIF, za pomocą narzędzia podglądu śledzenia (SvcTraceViewer.exe)  
   
-1.  Narzędzie do śledzenia (SvcTraceViewer.exe) jest dostarczany jako część zestawu Windows SDK. Jeśli jeszcze nie zainstalowano zestawu Windows SDK, możesz ją pobrać tutaj: [zestawu Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
+1. Narzędzie do śledzenia (SvcTraceViewer.exe) jest dostarczany jako część zestawu Windows SDK. Jeśli jeszcze nie zainstalowano zestawu Windows SDK, możesz ją pobrać tutaj: [Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
-2.  Uruchom narzędzie przeglądarki danych śledzenia (SvcTraceViewer.exe). Jest ona zazwyczaj dostępna w **Bin** folderze ścieżka instalacji.  
+2. Uruchom narzędzie przeglądarki danych śledzenia (SvcTraceViewer.exe). Jest ona zazwyczaj dostępna w **Bin** folderze ścieżka instalacji.  
   
-3.  Otwórz plik dziennika śledzenia programu WIF, na przykład WIFTrace.e2e, wybierając **pliku**, **Otwórz...** Opcja menu lub za pomocą **Ctrl + O** skrótów. Plik dziennika śledzenia zostanie otwarty w narzędziu przeglądarki danych śledzenia.  
+3. Otwórz plik dziennika śledzenia programu WIF, na przykład WIFTrace.e2e, wybierając **pliku**, **Otwórz...** Opcja menu lub za pomocą **Ctrl + O** skrótów. Plik dziennika śledzenia zostanie otwarty w narzędziu przeglądarki danych śledzenia.  
   
-4.  Przejrzyj wpisy w **działania** kartę. Każdy wpis powinien zawierać numer działania, Liczba śladów, które zostały zarejestrowane, czas trwania działania i jego znaczniki czasu rozpoczęcia i zakończenia.  
+4. Przejrzyj wpisy w **działania** kartę. Każdy wpis powinien zawierać numer działania, Liczba śladów, które zostały zarejestrowane, czas trwania działania i jego znaczniki czasu rozpoczęcia i zakończenia.  
   
-5.  Kliknij pozycję **działania** kartę. Powinny być widoczne wpisy szczegółowe śledzenie, w obszarze głównym narzędzia. Użyj **poziom** listy rozwijanej w menu, aby filtrować określony poziom ślady, na przykład: **wszystkich**, **ostrzeżenie**, **błędy**, **Informacji**itp.  
+5. Kliknij pozycję **działania** kartę. Powinny być widoczne wpisy szczegółowe śledzenie, w obszarze głównym narzędzia. Użyj **poziom** listy rozwijanej, aby filtrować określony poziom ślady, na przykład w menu: **Wszystkie**, **ostrzeżenie**, **błędy**, **informacji**itp.  
   
-6.  Polecenie śledzenia określonych wpisów, aby zapoznać się z informacjami w dolnym obszarze narzędzia. Szczegółowe informacje można wyświetlić przy użyciu **sformatowany** i **XML** widoku przez wybranie odpowiednich kart.  
+6. Polecenie śledzenia określonych wpisów, aby zapoznać się z informacjami w dolnym obszarze narzędzia. Szczegółowe informacje można wyświetlić przy użyciu **sformatowany** i **XML** widoku przez wybranie odpowiednich kart.  
   
 ## <a name="step-3--identify-solutions-to-fix-wif-related-issues"></a>Krok 3: określenie rozwiązań, aby naprawić program WIF problemy związane z usługą  
  W tym kroku możesz zidentyfikować rozwiązania problemów dotyczących programu WIF, identyfikowane za pomocą programu WIF w dzienniku śledzenia i narzędzie do śledzenia. Zawiera opis ogólnego mapowania środowiska WIF powiązane wyjątki potencjalnych rozwiązań lub wymagane akcje, aby rozwiązać ten problem.  
   
 #### <a name="to-identify-solutions-to-fix-wif-related-issues"></a>Aby zidentyfikować rozwiązania, aby naprawić program WIF problemy związane z usługą  
   
-1.  Przejrzyj poniższą tabelę wyjątków programu WIF i wymaganych działań do rozwiązania problemów.  
+1. Przejrzyj poniższą tabelę wyjątków programu WIF i wymaganych działań do rozwiązania problemów.  
   
 |**Identyfikator błędu**|**Komunikat o błędzie**|**Wymagana akcja naprawić błąd**|  
 |-|-|-|  

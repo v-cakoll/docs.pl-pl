@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313661"
 ---
 # <a name="create-resource-files-for-net-apps"></a>Tworzenie plików zasobów dla aplikacji .NET
 
@@ -31,7 +31,7 @@ W plikach zasobów, aby były łatwo dostępne dla aplikacji, może zawierać za
 
 - Programistyczne tworzenie pliku binarnego (.resources). Następnie można osadzać plik wykonywalny aplikacji lub biblioteki aplikacji przy użyciu kompilatora języka lub osadzić w zestawie satelickim przy użyciu [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Aby uzyskać więcej informacji, zobacz [zasoby w plikach Resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) sekcji.
 
-- Użyj [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) do tworzenia pliku zasobów i umieścić go w swoim projekcie. Visual Studio zawiera Edytor zasobów, która umożliwia dodawanie, usuwanie i modyfikowanie zasobów. W czasie kompilacji pliku zasobów jest automatycznie konwertowany do binarnego pliku Resources i osadzone w zestawie aplikacji lub zestawie satelickim. Aby uzyskać więcej informacji, zobacz [pliki zasobów w programie Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) sekcji.
+- Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) do tworzenia pliku zasobów i umieścić go w swoim projekcie. Visual Studio zawiera Edytor zasobów, która umożliwia dodawanie, usuwanie i modyfikowanie zasobów. W czasie kompilacji pliku zasobów jest automatycznie konwertowany do binarnego pliku Resources i osadzone w zestawie aplikacji lub zestawie satelickim. Aby uzyskać więcej informacji, zobacz [pliki zasobów w programie Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) sekcji.
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>Zasoby w plikach tekstowych
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> Ponieważ pliki resx składa się z poprawnie sformułowany kod XML w wstępnie zdefiniowany format, zaleca się praca z plikami .resx ręcznie, szczególnie w przypadku, gdy pliki resx zawiera zasobów innych niż ciągi. Zamiast tego [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) zapewnia przejrzyste interfejs do tworzenia i manipulowania pliki resx. Aby uzyskać więcej informacji, zobacz [pliki zasobów w programie Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) sekcji. Można również tworzyć i programowo manipulować pliki resx. Aby uzyskać więcej informacji, zobacz [Praca z programowo plików resx](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
+> Ponieważ pliki resx składa się z poprawnie sformułowany kod XML w wstępnie zdefiniowany format, zaleca się praca z plikami .resx ręcznie, szczególnie w przypadku, gdy pliki resx zawiera zasobów innych niż ciągi. Zamiast tego [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) zapewnia przejrzyste interfejs do tworzenia i manipulowania pliki resx. Aby uzyskać więcej informacji, zobacz [pliki zasobów w programie Visual Studio](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles) sekcji. Można również tworzyć i programowo manipulować pliki resx. Aby uzyskać więcej informacji, zobacz [Praca z programowo plików resx](../../../docs/framework/resources/working-with-resx-files-programmatically.md).
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>Zasoby w plikach Resources
@@ -198,7 +198,7 @@ Możesz użyć <xref:System.Resources.ResourceWriter?displayProperty=nameWithTyp
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Pliki zasobów w programie Visual Studio
 
-Po dodaniu pliku zasobu do Twojej [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) projektu, Visual Studio tworzy plik resx w katalogu projektu. Program Visual Studio oferuje edytory zasobów, które umożliwiają dodawanie ciągi, obrazy i obiekty binarne. Ponieważ edytory są przeznaczone do obsługi tylko w przypadku danych statycznych, nie można ich używać do przechowywania obiektów programowych; należy zapisywać dane obiektu do jednej z pliku ResX lub do Resources plików programowo. Aby uzyskać więcej informacji, zobacz [Praca z programowo plików resx](../../../docs/framework/resources/working-with-resx-files-programmatically.md) i [zasoby w plikach Resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) sekcji.
+Po dodaniu pliku zasobu do Twojej [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) projektu, Visual Studio tworzy plik resx w katalogu projektu. Program Visual Studio oferuje edytory zasobów, które umożliwiają dodawanie ciągi, obrazy i obiekty binarne. Ponieważ edytory są przeznaczone do obsługi tylko w przypadku danych statycznych, nie można ich używać do przechowywania obiektów programowych; należy zapisywać dane obiektu do jednej z pliku ResX lub do Resources plików programowo. Aby uzyskać więcej informacji, zobacz [Praca z programowo plików resx](../../../docs/framework/resources/working-with-resx-files-programmatically.md) i [zasoby w plikach Resources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles) sekcji.
 
 W przypadku dodawania zlokalizowanych zasobów, nadaj im taką samą nazwę pliku głównego, jak głównego pliku zasobów. Należy także określić ich kultury w nazwie pliku. Na przykład jeśli dodasz plik zasobów o nazwie Resources.resx, mogą również utworzyć pliki zasobów o nazwie Resources.en US.resx i Resources.fr-FR.resx, aby pomieścić zlokalizowane zasoby dla języka angielskiego (Stany Zjednoczone) i francuski (Francja) kultur, odpowiednio. Należy również określić kulturę domyślną na swojej aplikacji. Jest to kultura, którego zasoby są używane, jeśli można znaleźć nie zlokalizowane zasoby dla określonej kultury. Aby określić domyślną kulturę, w Eksploratorze rozwiązań w programie Visual Studio, kliknij prawym przyciskiem myszy nazwę projektu, wskaż polecenie aplikacji, kliknij przycisk **informacje o zestawie**i wybierz odpowiedni język/kulturę w **niezależny od język** listy.
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313947"
 ---
 # <a name="custom-animations-overview"></a>Przegląd Niestandardowe animacje
 W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji systemu, tworząc niestandardowe klatki kluczowe animacji klas, lub za pomocą wywołania zwrotnego w poszczególnych klatkach pomijają je.  
@@ -99,9 +99,9 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
   
  Zalecane paradygmat (używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animacji) jest użycie dwóch poziomach dziedziczenia:  
   
-1.  Utwórz abstrakcyjną  *\<typ >* klasy podstawy animacji, która pochodzi od klasy <xref:System.Windows.Media.Animation.AnimationTimeline>. Ta klasa powinien przesłonić <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> metody. Należy również wprowadzenie nowej metody abstrakcyjne GetCurrentValueCore i Zastąp <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> tak, aby typy wartość domyślna, pochodzenia i domyślne parametry wartości docelowej jest sprawdzane, a następnie wywołuje GetCurrentValueCore.  
+1. Utwórz abstrakcyjną  *\<typ >* klasy podstawy animacji, która pochodzi od klasy <xref:System.Windows.Media.Animation.AnimationTimeline>. Ta klasa powinien przesłonić <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> metody. Należy również wprowadzenie nowej metody abstrakcyjne GetCurrentValueCore i Zastąp <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> tak, aby typy wartość domyślna, pochodzenia i domyślne parametry wartości docelowej jest sprawdzane, a następnie wywołuje GetCurrentValueCore.  
   
-2.  Tworzenie innej klasy, która dziedziczy z nowego  *\<typ >* klasy podstawy animacji i zastępuje <xref:System.Windows.Freezable.CreateInstanceCore%2A> metody, metoda GetCurrentValueCore, która zostanie wprowadzona i <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> właściwości.  
+2. Tworzenie innej klasy, która dziedziczy z nowego  *\<typ >* klasy podstawy animacji i zastępuje <xref:System.Windows.Freezable.CreateInstanceCore%2A> metody, metoda GetCurrentValueCore, która zostanie wprowadzona i <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> właściwości.  
   
  **Alternatywnych metod**  
   

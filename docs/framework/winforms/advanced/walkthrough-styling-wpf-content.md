@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 887a157494c2992c1ae5868229c442f31fafb276
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312153"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Przewodnik: Nadawanie stylu zawartości WPF
 W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presentation Foundation (WPF) hostowanych w formularzu Windows.
@@ -47,34 +47,34 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
   
 #### <a name="to-create-wpf-control-types"></a>Aby utworzyć typy kontrolek WPF  
   
-1.  Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> projektu do rozwiązania. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1. Dodaj nowe WPF <xref:System.Windows.Controls.UserControl> projektu do rozwiązania. Użyj domyślnej nazwy dla kontrolek typu `UserControl1.xaml`. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie nowej zawartości WPF na formularzach Windows Forms w czasie projektowania](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
+2. W widoku Projekt, upewnij się, że `UserControl1` jest zaznaczone. Aby uzyskać więcej informacji, zobacz [jak: Wybierz i Przesuń elementy na powierzchni projektowej](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).  
   
-3.  W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `200`.  
+3. W **właściwości** okna, ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> właściwości `200`.  
   
-4.  Dodaj <xref:System.Windows.Controls.Button?displayProperty=nameWithType> kontrolę <xref:System.Windows.Controls.UserControl> i ustaw wartość <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości **anulować**.  
+4. Dodaj <xref:System.Windows.Controls.Button?displayProperty=nameWithType> kontrolę <xref:System.Windows.Controls.UserControl> i ustaw wartość <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości **anulować**.  
   
-5.  Dodaj drugą <xref:System.Windows.Controls.Button?displayProperty=nameWithType> kontrolę <xref:System.Windows.Controls.UserControl> i ustaw wartość <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości **OK**.  
+5. Dodaj drugą <xref:System.Windows.Controls.Button?displayProperty=nameWithType> kontrolę <xref:System.Windows.Controls.UserControl> i ustaw wartość <xref:System.Windows.Controls.ContentControl.Content%2A> właściwości **OK**.  
   
-6.  Skompiluj projekt.  
+6. Skompiluj projekt.  
   
 ## <a name="applying-a-style-to-a-wpf-control"></a>Zastosować styl do kontrolki WPF  
  Można stosować różne style do formantu WPF, aby zmienić wygląd i zachowanie.  
   
 #### <a name="to-apply-a-style-to-a-wpf-control"></a>Aby zastosować styl do kontrolki WPF  
   
-1.  Otwórz `Form1` w programie Windows Forms Designer.  
+1. Otwórz `Form1` w programie Windows Forms Designer.  
   
-2.  W **przybornika**, kliknij dwukrotnie `UserControl1` do utworzenia wystąpienia `UserControl1` w formularzu.  
+2. W **przybornika**, kliknij dwukrotnie `UserControl1` do utworzenia wystąpienia `UserControl1` w formularzu.  
   
      Wystąpienie `UserControl1` znajduje się w nowym <xref:System.Windows.Forms.Integration.ElementHost> formantu o nazwie `elementHost1`.  
   
-3.  W panelu tagi inteligentne dla `elementHost1`, kliknij przycisk **Edytuj hostowana zawartość** z listy rozwijanej.  
+3. W panelu tagi inteligentne dla `elementHost1`, kliknij przycisk **Edytuj hostowana zawartość** z listy rozwijanej.  
   
      `UserControl1` zostanie otwarty w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  W widoku XAML, Wstaw następujące XAML po `<UserControl>` tagu początkowego.  
+4. W widoku XAML, Wstaw następujące XAML po `<UserControl>` tagu początkowego.  
   
      Ta XAML tworzy gradient kontrastujące obramowaniem gradientu. Po kliknięciu formantu gradientów zostały zmienione, aby wygenerować się po naciśnięciu przycisku. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonów i stylów](../../wpf/controls/styling-and-templating.md).  
   
@@ -126,7 +126,7 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
 </UserControl.Resources>  
 ```  
   
-1.  Zastosuj `SimpleButton` style zdefiniowane w poprzednim kroku, aby przycisk Anuluj, wstawiając następujące XAML w `<Button>` tag przycisk Anuluj.  
+1. Zastosuj `SimpleButton` style zdefiniowane w poprzednim kroku, aby przycisk Anuluj, wstawiając następujące XAML w `<Button>` tag przycisk Anuluj.  
   
     ```  
     Style="{StaticResource SimpleButton}  
@@ -139,15 +139,15 @@ W tym instruktażu pokazano, jak stosowanie stylów do formantu Windows Presenta
                 Style="{StaticResource SimpleButton}">Cancel</Button>  
 ```  
   
-1.  Skompiluj projekt.  
+1. Skompiluj projekt.  
   
-2.  Otwórz `Form1` w programie Windows Forms Designer.  
+2. Otwórz `Form1` w programie Windows Forms Designer.  
   
-3.  Nowy styl jest stosowany do kontrolki przycisku.  
+3. Nowy styl jest stosowany do kontrolki przycisku.  
   
-4.  Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie** do uruchomienia aplikacji.  
+4. Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie** do uruchomienia aplikacji.  
   
-5.  Kliknij przycisk OK lub Anuluj i wyświetlać różnice.  
+5. Kliknij przycisk OK lub Anuluj i wyświetlać różnice.  
   
 ## <a name="see-also"></a>Zobacz także
 

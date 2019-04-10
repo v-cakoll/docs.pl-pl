@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314662"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)
 W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
@@ -53,15 +53,15 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Dostęp do obiektów kolejności przy użyciu obiektów klienta  
   
-1.  Modyfikowanie `Sub Main` metody, wpisując lub wklejając następujący kod do metody:  
+1. Modyfikowanie `Sub Main` metody, wpisując lub wklejając następujący kod do metody:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Naciśnij klawisz F5, aby debugować aplikację.  
+2. Naciśnij klawisz F5, aby debugować aplikację.  
   
      Dwie nazwy wyświetlane w oknie komunikatu, a w oknie konsoli wyświetlane wygenerowanego kodu SQL.  
   
-3.  Zamknij okno komunikatu, aby zatrzymać debugowanie.  
+3. Zamknij okno komunikatu, aby zatrzymać debugowanie.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Tworzenie silnie Typizowanego widoku bazy danych  
  Jest znacznie łatwiejsze do uruchamiania w silnie typizowanym widoku bazy danych. Zdecydowanie wpisując <xref:System.Data.Linq.DataContext> obiektu, nie trzeba wywołania <xref:System.Data.Linq.DataContext.GetTable%2A>. Silnie typizowane tabel można używać wszystkie zapytania, korzystając z silnie typizowaną <xref:System.Data.Linq.DataContext> obiektu.  
@@ -70,23 +70,23 @@ W tym instruktażu pokazano użycie [!INCLUDE[vbtecdlinq](../../../../../../incl
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>Do silnie typu obiektu DataContext  
   
-1.  Dodaj następujący kod powyżej `Customer` deklaracji klasy.  
+1. Dodaj następujący kod powyżej `Customer` deklaracji klasy.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Modyfikowanie `Sub Main` do użycia w silnie typizowany <xref:System.Data.Linq.DataContext> w następujący sposób:  
+2. Modyfikowanie `Sub Main` do użycia w silnie typizowany <xref:System.Data.Linq.DataContext> w następujący sposób:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Naciśnij klawisz F5, aby debugować aplikację.  
+3. Naciśnij klawisz F5, aby debugować aplikację.  
   
      Dane wyjściowe z okna konsoli jest:  
   
      `ID=WHITC`  
   
-4.  Naciśnij klawisz Enter w oknie konsoli, aby zamknąć aplikację.  
+4. Naciśnij klawisz Enter w oknie konsoli, aby zamknąć aplikację.  
   
-5.  Na **pliku** menu, kliknij przycisk **Zapisz wszystko** Jeśli chcesz zapisać tę aplikację.  
+5. Na **pliku** menu, kliknij przycisk **Zapisz wszystko** Jeśli chcesz zapisać tę aplikację.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Następnym instruktażu ([instruktażu: Manipulowanie danych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) pokazuje, jak wykonywać operacje na danych. Ten przewodnik nie wymaga zapisania dwa przewodniki w tej serii, które zostały już wykonane.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49999ae8b66b01ca71c0027bdf43c13272fbe8a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39e053ea9ca0b2fdc548a4b9447d34e852816a61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622627"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324503"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, aby podpisać dokument XML lub części dokumentu XML przy użyciu podpisu cyfrowego.  Podpisy cyfrowe XML (XMLDSIG) pozwalają zweryfikować, że dane nie została zmodyfikowana po podpisaniu.  Aby uzyskać więcej informacji na temat standardowych XMLDSIG zobacz zalecenia konsorcjum World Wide Web Consortium (W3C) [składni podpisu XML i przetwarzanie](https://www.w3.org/TR/xmldsig-core/).  
@@ -32,42 +32,42 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw, a
   
 ### <a name="to-digitally-sign-an-xml-document"></a>Aby cyfrowo podpisać dokument XML  
   
-1.  Utwórz <xref:System.Security.Cryptography.CspParameters> obiektu i określ nazwę kontenera kluczy.  
+1. Utwórz <xref:System.Security.Cryptography.CspParameters> obiektu i określ nazwę kontenera kluczy.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#2)]
      [!code-vb[HowToSignXMLDocumentRSA#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#2)]  
   
-2.  Generowanie asymetrycznego klucza <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  Klucz są automatycznie zapisywane w kontenerze kluczy, jeśli przekazujesz <xref:System.Security.Cryptography.CspParameters> obiekt do konstruktora obiektu <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  Ten klucz będzie używany do podpisywania dokumentów XML.  
+2. Generowanie asymetrycznego klucza <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  Klucz są automatycznie zapisywane w kontenerze kluczy, jeśli przekazujesz <xref:System.Security.Cryptography.CspParameters> obiekt do konstruktora obiektu <xref:System.Security.Cryptography.RSACryptoServiceProvider> klasy.  Ten klucz będzie używany do podpisywania dokumentów XML.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#3)]
      [!code-vb[HowToSignXMLDocumentRSA#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#3)]  
   
-3.  Utwórz <xref:System.Xml.XmlDocument> obiektu, ładując plik XML z dysku.  <xref:System.Xml.XmlDocument> Obiekt zawiera element XML do szyfrowania.  
+3. Utwórz <xref:System.Xml.XmlDocument> obiektu, ładując plik XML z dysku.  <xref:System.Xml.XmlDocument> Obiekt zawiera element XML do szyfrowania.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#4)]
      [!code-vb[HowToSignXMLDocumentRSA#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#4)]  
   
-4.  Utwórz nową <xref:System.Security.Cryptography.Xml.SignedXml> i przekazać <xref:System.Xml.XmlDocument> obiektu do niego.  
+4. Utwórz nową <xref:System.Security.Cryptography.Xml.SignedXml> i przekazać <xref:System.Xml.XmlDocument> obiektu do niego.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#5)]
      [!code-vb[HowToSignXMLDocumentRSA#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#5)]  
   
-5.  Dodaj klucz RSA podpisywania, który <xref:System.Security.Cryptography.Xml.SignedXml> obiektu.  
+5. Dodaj klucz RSA podpisywania, który <xref:System.Security.Cryptography.Xml.SignedXml> obiektu.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#6)]
      [!code-vb[HowToSignXMLDocumentRSA#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#6)]  
   
-6.  Utwórz <xref:System.Security.Cryptography.Xml.Reference> obiekt, który opisano, czego się.  Aby zalogować się w całym dokumencie, należy ustawić <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> właściwość `""`.  
+6. Utwórz <xref:System.Security.Cryptography.Xml.Reference> obiekt, który opisano, czego się.  Aby zalogować się w całym dokumencie, należy ustawić <xref:System.Security.Cryptography.Xml.Reference.Uri%2A> właściwość `""`.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#7)]
      [!code-vb[HowToSignXMLDocumentRSA#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#7)]  
   
-7.  Dodaj <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> obiekt <xref:System.Security.Cryptography.Xml.Reference> obiektu.  Przekształcenie umożliwia weryfikatora do reprezentowania danych XML w identyczny sposób, że osoby podpisującej używane.  Dane XML mogą być reprezentowane w różny sposób, aby ten krok jest niezbędny do weryfikacji.  
+7. Dodaj <xref:System.Security.Cryptography.Xml.XmlDsigEnvelopedSignatureTransform> obiekt <xref:System.Security.Cryptography.Xml.Reference> obiektu.  Przekształcenie umożliwia weryfikatora do reprezentowania danych XML w identyczny sposób, że osoby podpisującej używane.  Dane XML mogą być reprezentowane w różny sposób, aby ten krok jest niezbędny do weryfikacji.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#8)]
      [!code-vb[HowToSignXMLDocumentRSA#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#8)]  
   
-8.  Dodaj <xref:System.Security.Cryptography.Xml.Reference> obiekt <xref:System.Security.Cryptography.Xml.SignedXml> obiektu.  
+8. Dodaj <xref:System.Security.Cryptography.Xml.Reference> obiekt <xref:System.Security.Cryptography.Xml.SignedXml> obiektu.  
   
      [!code-csharp[HowToSignXMLDocumentRSA#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToSignXMLDocumentRSA/cs/sample.cs#9)]
      [!code-vb[HowToSignXMLDocumentRSA#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToSignXMLDocumentRSA/vb/sample.vb#9)]  

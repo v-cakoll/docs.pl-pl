@@ -2,29 +2,29 @@
 title: 'Instrukcje: Hostowanie usługi WCF napisanej dla platformy .NET Framework 3.5 w usługach IIS działających na platformie .NET Framework 4'
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: 83343cef119f6c8b97fd8f1be50c229c64b10227
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4f0cb584f7759a6fe52a4bec4306a7d714d3906
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331536"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>Instrukcje: Hostowanie usługi WCF napisanej dla platformy .NET Framework 3.5 w usługach IIS działających na platformie .NET Framework 4
-Odnośnie do hostowania napisany za pomocą usługi Windows Communication Foundation (WCF) [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] na uruchomionej maszynie [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], mogą wystąpić <xref:System.ServiceModel.ProtocolException> z następującym tekstem.  
+W przypadku hostowania napisane przy użyciu usługi Windows Communication Foundation (WCF) [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] na temat używania maszyny [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], może wystąpić <xref:System.ServiceModel.ProtocolException> z następującym tekstem.  
   
 ```Output  
 Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
- Lub Jeśli spróbujesz przejdź do pliku svc usługi może pojawić się Strona błędu z następującym tekstem.  
+ Lub jeśli zostanie podjęta próba przejść do pliku .svc usługi może być wyświetlona strona błędu z następującym tekstem.  
   
 ```Output  
 The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
- Te błędy, ponieważ domena aplikacji, usługi IIS działają w ramach działa [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] i oczekuje, że usługa WCF uruchamiana [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. W tym temacie opisano zmiany wymagane do pobrania usługi do uruchomienia.  
+ Te błędy, ponieważ działa domeny aplikacji, usługi IIS są uruchomione w ramach [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] i usługi WCF oczekuje działała [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. W tym temacie wyjaśniono zmiany wymagane do pobrania usługi do uruchomienia.  
   
- Znajdź następny <`compilers`> elementu i zmień opcję CompilerVersion dostawcy wartości 4.0. Domyślnie są dwa <`compiler`> elementy w obszarze <`compilers`> elementu. Należy zaktualizować opcja dostawcy CompilerVersion zarówno, jak pokazano w poniższym przykładzie.  
+ Znajdź następne <`compilers`> element i zmień opcję dostawcy CompilerVersion wartości 4.0. Domyślnie istnieją dwa <`compiler`> elementy w obszarze <`compilers`> element. Należy zaktualizować opcja dostawcy CompilerVersion dla obu, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <system.codedom>  
@@ -46,9 +46,9 @@ The application domain or application pool is currently running version 4.0 or l
   
 ### <a name="add-the-required-targetframework-attribute"></a>Dodaj atrybut targetFramework wymagane  
   
-1.  Otwórz plik Web.config usługi i Wyszukaj <`compilation`> elementu.  
+1. Otwórz plik Web.config usługi i poszukaj <`compilation`> element.  
   
-2.  Dodaj `targetFramework` atrybutu <`compilation`> element, jak pokazano w poniższym przykładzie.  
+2. Dodaj `targetFramework` atrybutu <`compilation`> elementu, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <compilation debug="false"  
@@ -64,7 +64,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3.  Znajdź <`compilers`> elementu i zmień opcję CompilerVersion dostawcy wartości 4.0. Domyślnie są dwa <`compiler`> elementy w obszarze <`compilers`> elementu. Należy zaktualizować opcja dostawcy CompilerVersion zarówno, jak pokazano w poniższym przykładzie.  
+3. Znajdź <`compilers`> element i zmień opcję dostawcy CompilerVersion wartości 4.0. Domyślnie istnieją dwa <`compiler`> elementy w obszarze <`compilers`> element. Należy zaktualizować opcja dostawcy CompilerVersion dla obu, jak pokazano w poniższym przykładzie.  
   
     ```xml  
     <system.codedom>  

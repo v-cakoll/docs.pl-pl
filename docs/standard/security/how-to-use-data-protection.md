@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698400"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314463"
 ---
 # <a name="how-to-use-data-protection"></a>Instrukcje: Stosowanie ochrony danych
 .NET Framework zapewnia dostęp do ochrony danych interfejsu API (DPAPI), co pozwala na szyfrowanie danych, korzystając z informacji z bieżącego konta użytkownika lub komputera.  Korzystając z interfejsu DPAPI złagodzić się trudne problem jawnie generowania i przechowywania klucza kryptograficznego.  
@@ -34,25 +34,25 @@ ms.locfileid: "54698400"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>Aby szyfrować dane w pamięci przy użyciu ochrony danych  
   
-1.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> metody podczas przekazując tablicę bajtów do szyfrowania, entropii i zakresu ochrony pamięci.  
+1. Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> metody podczas przekazując tablicę bajtów do szyfrowania, entropii i zakresu ochrony pamięci.  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>Aby odszyfrować dane w pamięci przy użyciu ochrony danych  
   
-1.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> metody podczas przekazywania tablica bajtów do odszyfrowania i zakresu ochrony pamięci.  
+1. Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> metody podczas przekazywania tablica bajtów do odszyfrowania i zakresu ochrony pamięci.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>Do szyfrowania danych do pliku lub strumienia za pomocą ochrony danych  
   
-1.  Utwórz losowe entropii.  
+1. Utwórz losowe entropii.  
   
-2.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedData.Protect%2A> metody podczas przekazując tablicę bajtów do szyfrowania, entropii i zakresu ochrony danych.  
+2. Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedData.Protect%2A> metody podczas przekazując tablicę bajtów do szyfrowania, entropii i zakresu ochrony danych.  
   
-3.  Zaszyfrowane dane należy zapisać do pliku lub strumienia.  
+3. Zaszyfrowane dane należy zapisać do pliku lub strumienia.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>Aby odszyfrować dane z pliku lub strumienia za pomocą ochrony danych  
   
-1.  Przeczytaj zaszyfrowane dane z pliku lub strumienia.  
+1. Przeczytaj zaszyfrowane dane z pliku lub strumienia.  
   
-2.  Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> metody podczas przekazywania tablica bajtów do odszyfrowania i zakresu ochrony danych.  
+2. Wywołaj statyczną <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> metody podczas przekazywania tablica bajtów do odszyfrowania i zakresu ochrony danych.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu pokazuje dwa rodzaje szyfrowania i odszyfrowywania.  Po pierwsze w przykładzie kodu szyfruje i odszyfrowuje w pamięci tablica bajtów.  Następnie w przykładzie kodu szyfruje kopiowania tablicy bajtów, zapisuje w pliku, służy do ładowania danych z kopii pliku, a następnie odszyfrowuje dane.  W przykładzie wyświetlono oryginalne dane, zaszyfrowane dane i odszyfrowane dane.  

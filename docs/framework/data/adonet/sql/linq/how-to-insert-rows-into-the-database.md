@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169601"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328598"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Instrukcje: Wstawianie wierszy do bazy danych
 Wstawianie wierszy w bazie danych przez dodawanie obiektów do powiązanych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> kolekcji, a następnie przesyłanie zmian do bazy danych. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy zmiany w środowisku SQL odpowiednie `INSERT` poleceń.  
@@ -24,11 +24,11 @@ Wstawianie wierszy w bazie danych przez dodawanie obiektów do powiązanych [!IN
   
 ### <a name="to-insert-a-row-into-the-database"></a>Aby wstawić wiersza do bazy danych  
   
-1.  Utwórz nowy obiekt, który zawiera kolumny danych do przesłania.  
+1. Utwórz nowy obiekt, który zawiera kolumny danych do przesłania.  
   
-2.  Dodaj nowy obiekt do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` kolekcję skojarzoną z tabeli docelowej w bazie danych.  
+2. Dodaj nowy obiekt do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` kolekcję skojarzoną z tabeli docelowej w bazie danych.  
   
-3.  Przesyłanie zmian do bazy danych.  
+3. Przesyłanie zmian do bazy danych.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu tworzy nowy obiekt typu `Order` i wypełnia ją odpowiednimi wartościami. Następnie dodaje nowy obiekt do `Order` kolekcji. Na koniec przesyła zmiany do bazy danych jako nowy wiersz w `Orders` tabeli.  

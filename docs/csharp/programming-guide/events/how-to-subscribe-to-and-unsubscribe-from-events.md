@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 4d06899303110d0b06729f2a02c47b9096bec724
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981806"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306602"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń (C# Programming Guide)
 Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać kod niestandardowy, który jest wywoływana, gdy zdarzenie jest zgłaszane. Na przykład może subskrybować przycisku `click` zdarzeń, aby zapewnić aplikacji zrobić coś, co jest przydatne, gdy użytkownik kliknie przycisk.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Aby subskrybować zdarzenia przy użyciu programu Visual Studio IDE  
   
-1.  Jeśli nie widzisz **właściwości** okna w **projektowania** wyświetlić, kliknij prawym przyciskiem myszy formularza lub kontrolki, dla której chcesz utworzyć program obsługi zdarzeń, a następnie wybierz pozycję **właściwości**.  
+1. Jeśli nie widzisz **właściwości** okna w **projektowania** wyświetlić, kliknij prawym przyciskiem myszy formularza lub kontrolki, dla której chcesz utworzyć program obsługi zdarzeń, a następnie wybierz pozycję **właściwości**.  
   
-2.  W górnej części **właściwości** okna, kliknij przycisk **zdarzenia** ikony.  
+2. W górnej części **właściwości** okna, kliknij przycisk **zdarzenia** ikony.  
   
-3.  Kliknij dwukrotnie zdarzenie, które chcesz utworzyć, na przykład `Load` zdarzeń.  
+3. Kliknij dwukrotnie zdarzenie, które chcesz utworzyć, na przykład `Load` zdarzeń.  
   
      Visual C# tworzy metodę programu obsługi zdarzeń pusty i dodaje go do kodu. Alternatywnie można dodać kod ręcznie w **kodu** widoku. Na przykład następujące wiersze kodu Zadeklaruj metodę programu obsługi zdarzeń, która zostanie wywołana kiedy `Form` klasy wywołuje `Load` zdarzeń.  
   
@@ -37,7 +37,7 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
   
 ### <a name="to-subscribe-to-events-programmatically"></a>Aby subskrybować zdarzenia programowe  
   
-1.  Zdefiniuj metodę programu obsługi zdarzeń, którego podpis odpowiadają podpisowi delegata zdarzenia. Na przykład, jeśli zdarzenie jest oparty na <xref:System.EventHandler> typ delegata, poniższy kod przedstawia szkieletu metody:  
+1. Zdefiniuj metodę programu obsługi zdarzeń, którego podpis odpowiadają podpisowi delegata zdarzenia. Na przykład, jeśli zdarzenie jest oparty na <xref:System.EventHandler> typ delegata, poniższy kod przedstawia szkieletu metody:  
   
     ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
@@ -46,7 +46,7 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
     }  
     ```  
   
-2.  Użyj operator przypisania dodawania (`+=`) do dołączenia programu obsługi zdarzeń do zdarzenia. W poniższym przykładzie przyjęto założenie, że obiekt o nazwie `publisher` posiada zdarzenie o nazwie `RaiseCustomEvent`. Należy pamiętać, że klasy subskrybenta wymaga odwołania do klasy wydawcy Aby subskrybować ze zdarzeniami.  
+2. Użyj operator przypisania dodawania (`+=`) do dołączenia programu obsługi zdarzeń do zdarzenia. W poniższym przykładzie przyjęto założenie, że obiekt o nazwie `publisher` posiada zdarzenie o nazwie `RaiseCustomEvent`. Należy pamiętać, że klasy subskrybenta wymaga odwołania do klasy wydawcy Aby subskrybować ze zdarzeniami.  
   
     ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
@@ -102,7 +102,7 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
 ## <a name="see-also"></a>Zobacz także
 
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)
-- [event](../../../csharp/language-reference/keywords/event.md)
-- [Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [-= — Operator (odwołanie w C#)](../../language-reference/operators/subtraction-assignment-operator.md)
+- [zdarzenie](../../../csharp/language-reference/keywords/event.md)
+- [Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi platformy .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Operator -= (odwołanie w C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+=, operator](../../../csharp/language-reference/operators/addition-assignment-operator.md)

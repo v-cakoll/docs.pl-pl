@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115734"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320889"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych przy użyciu narzędzia Projektant
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115734"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>Aby powiązanie danych kontrolki DataGrid z pojedynczej tabeli w Projektancie  
   
-1.  Ustaw dla formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
+1. Ustaw dla formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
   
-2.  Jeśli źródło danych zestawu danych, ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwość na nazwę tabeli dla powiązania.  
+2. Jeśli źródło danych zestawu danych, ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwość na nazwę tabeli dla powiązania.  
   
-3.  W przypadku zestawu danych lub widoku danych, na podstawie tabeli zestawu danych źródła danych należy dodać kod do formularza, aby wypełnić dataset.  
+3. W przypadku zestawu danych lub widoku danych, na podstawie tabeli zestawu danych źródła danych należy dodać kod do formularza, aby wypełnić dataset.  
   
      Dokładne kod, który możesz użyć zależy od tego, gdzie zestaw danych jest wprowadzenie danych. Jeśli trwa wypełnianie zestawu danych bezpośrednio z bazy danych, zazwyczaj wywołujesz `Fill` metody w obrębie adaptera danych, jak w poniższym przykładzie kodu, który wypełnia zestaw danych o nazwie `DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115734"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  (Opcjonalnie) Dodaj style odpowiedniej tabeli i kolumn do siatki.  
+4. (Opcjonalnie) Dodaj style odpowiedniej tabeli i kolumn do siatki.  
   
      Jeśli nie ma żadnych style tabeli, tabeli, zostanie wyświetlony, ale z minimalnym formatowania i widoczne dla wszystkich kolumn.  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>Aby powiązanie danych kontrolki DataGrid z wielu tabel w zestawie danych w Projektancie  
   
-1.  Ustaw dla formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
+1. Ustaw dla formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> właściwości do obiektu zawierającego elementy danych, aby powiązać.  
   
-2.  Jeśli zestaw danych zawiera tabele powiązane (to znaczy, jeśli zawiera on obiektu relacji), ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwość na nazwę tabeli nadrzędnej.  
+2. Jeśli zestaw danych zawiera tabele powiązane (to znaczy, jeśli zawiera on obiektu relacji), ustaw <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwość na nazwę tabeli nadrzędnej.  
   
-3.  Pisz kod, aby wypełnić dataset.  
+3. Pisz kod, aby wypełnić dataset.  
   
 ## <a name="see-also"></a>Zobacz także
 

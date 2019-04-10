@@ -1,27 +1,27 @@
 ---
-title: Jak ustalić jaka wersja WPF jest zainstalowana
+title: 'Instrukcje: Ustalanie zainstalowanej wersji WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - version [WPF], finding
 ms.assetid: 99971cef-e218-4f9f-a4c1-350332741860
-ms.openlocfilehash: c59fa0d0a4d94c6e6a2ab72a4cd7a3c066649fb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ffbd9a4c7f66dff9c8773dff4259551e20aa963d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545854"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305679"
 ---
-# <a name="how-to-determine-the-installed-version-of-wpf"></a>Jak ustalić jaka wersja WPF jest zainstalowana
-Numer wersji dla bieżącej wersji zainstalowanego [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] znajduje się w **rejestru**.  
+# <a name="how-to-determine-the-installed-version-of-wpf"></a>Instrukcje: Ustalanie zainstalowanej wersji WPF
+Numer wersji dla bieżącej zainstalowanej wersji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] znajduje się w **rejestru**.  
   
- Aby określić numer wersji:  
+ Aby znaleźć numer wersji:  
   
-1.  Na **Start** menu, kliknij przycisk **Uruchom**.  
+1. Na **Start** menu, kliknij przycisk **Uruchom**.  
   
-2.  W **Otwórz**, typ **regedit.exe**.  
+2. W **Otwórz**, typ **regedit.exe**.  
   
-3.  Otwórz następujący klucz:  
+3. Otwórz następujący klucz:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v3.0\Setup\Windows Presentation Foundation`  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Numer wersji jest zapisany w **wersji** wartość.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Numer wersji jest przechowywany w **wersji** wartość.

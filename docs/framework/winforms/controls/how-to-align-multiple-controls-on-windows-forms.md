@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209544"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307746"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Instrukcje: wyrównywanie kontrolek na formularzach systemu Windows
 Aby ustandaryzować układ interfejsu użytkownika (UI), oparte na Windows aplikacji, można umieścić grup formantów za pomocą jednego polecenia.  
@@ -22,11 +22,11 @@ Aby ustandaryzować układ interfejsu użytkownika (UI), oparte na Windows aplik
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>Aby wyrównywanie formantów na formularzu  
   
-1.  Otwieranie formularza zawiera kontrolki, aby umieścić w **Windows Forms Designer**.  
+1. Otwieranie formularza zawiera kontrolki, aby umieścić w **Windows Forms Designer**.  
   
-2.  Zaznacz formanty, które mają być wyrównane tak, aby pierwszy formant, którą wybierzesz kontrolki podstawowej, do której inne powinno być wyrównane.  
+2. Zaznacz formanty, które mają być wyrównane tak, aby pierwszy formant, którą wybierzesz kontrolki podstawowej, do której inne powinno być wyrównane.  
   
-3.  Na **Format** menu wskaż **Wyrównaj**, a następnie kliknij jedną z dostępnych opcji siedem.  
+3. Na **Format** menu wskaż **Wyrównaj**, a następnie kliknij jedną z dostępnych opcji siedem.  
   
 ## <a name="see-also"></a>Zobacz także
 

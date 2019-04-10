@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317782"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>Instrukcje: Ustawianie właściwości ProtectionLevel
 Można ustawić poziom ochrony przez zastosowanie odpowiedniego atrybutu i ustawienie właściwości. Można ustawić ochrony na poziomie usługi, aby wpływają na wszystkie elementy w każdej wiadomości lub ochrony można ustawić na coraz bardziej szczegółowym poziomie, od metody części wiadomości. Aby uzyskać więcej informacji na temat `ProtectionLevel` właściwości, zobacz [zrozumieć poziom ochrony](../../../docs/framework/wcf/understanding-protection-level.md).  
@@ -23,20 +23,20 @@ Można ustawić poziom ochrony przez zastosowanie odpowiedniego atrybutu i ustaw
   
 ### <a name="to-sign-all-messages-for-a-service"></a>Aby zarejestrować wszystkie komunikaty dla usługi  
   
-1.  Utwórz interfejs dla usługi.  
+1. Utwórz interfejs dla usługi.  
   
-2.  Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> atrybutu w usłudze i ustaw <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> właściwości <xref:System.Net.Security.ProtectionLevel.Sign>, jak pokazano w poniższym kodzie (jest to domyślny poziom <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>).  
+2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> atrybutu w usłudze i ustaw <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> właściwości <xref:System.Net.Security.ProtectionLevel.Sign>, jak pokazano w poniższym kodzie (jest to domyślny poziom <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>).  
   
      [!code-csharp[C_ProtectionLevel#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#1)]
      [!code-vb[C_ProtectionLevel#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#1)]  
   
 ### <a name="to-sign-all-message-parts-for-an-operation"></a>Aby zarejestrować wszystkie części komunikatu dla operacji  
   
-1.  Tworzenie interfejsu usługi i stosowanie <xref:System.ServiceModel.ServiceContractAttribute> atrybutu do interfejsu.  
+1. Tworzenie interfejsu usługi i stosowanie <xref:System.ServiceModel.ServiceContractAttribute> atrybutu do interfejsu.  
   
-2.  Dodaj deklarację metody interfejsu.  
+2. Dodaj deklarację metody interfejsu.  
   
-3.  Zastosuj <xref:System.ServiceModel.OperationContractAttribute> atrybutu do metody, a następnie ustaw <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> właściwości <xref:System.Net.Security.ProtectionLevel.Sign>, jak pokazano w poniższym kodzie.  
+3. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> atrybutu do metody, a następnie ustaw <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> właściwości <xref:System.Net.Security.ProtectionLevel.Sign>, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[C_ProtectionLevel#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#2)]
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
@@ -46,16 +46,16 @@ Można ustawić poziom ochrony przez zastosowanie odpowiedniego atrybutu i ustaw
   
 #### <a name="to-protect-a-fault-message"></a>Aby chronić komunikatu o błędzie  
   
-1.  Utwórz typ, który reprezentuje komunikat o błędzie. Poniższy przykład tworzy klasę o nazwie `MathFault` przy użyciu dwóch pól.  
+1. Utwórz typ, który reprezentuje komunikat o błędzie. Poniższy przykład tworzy klasę o nazwie `MathFault` przy użyciu dwóch pól.  
   
-2.  Zastosuj <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu typu i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do każdego pola, które powinny być Zserializowany, jak pokazano w poniższym kodzie.  
+2. Zastosuj <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu typu i <xref:System.Runtime.Serialization.DataMemberAttribute> atrybutu do każdego pola, które powinny być Zserializowany, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[C_ProtectionLevel#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#3)]
      [!code-vb[C_ProtectionLevel#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#3)]  
   
-3.  W interfejsie, który zwróci błąd, należy zastosować <xref:System.ServiceModel.FaultContractAttribute> atrybutu do metody, która zwróci błąd i ustawić `detailType` parametr typu klasy błędów.  
+3. W interfejsie, który zwróci błąd, należy zastosować <xref:System.ServiceModel.FaultContractAttribute> atrybutu do metody, która zwróci błąd i ustawić `detailType` parametr typu klasy błędów.  
   
-4.  Również w konstruktorze, należy ustawić <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> właściwości <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, jak pokazano w poniższym kodzie.  
+4. Również w konstruktorze, należy ustawić <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> właściwości <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, jak pokazano w poniższym kodzie.  
   
      [!code-csharp[C_ProtectionLevel#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#4)]
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
@@ -65,13 +65,13 @@ Można ustawić poziom ochrony przez zastosowanie odpowiedniego atrybutu i ustaw
   
 #### <a name="to-protect-a-message-body"></a>Aby chronić treść komunikatu  
   
-1.  Utwórz typ, który reprezentuje komunikat. Poniższy przykład tworzy `Company` klasy przy użyciu dwóch pól `CompanyName` i `CompanyID`.  
+1. Utwórz typ, który reprezentuje komunikat. Poniższy przykład tworzy `Company` klasy przy użyciu dwóch pól `CompanyName` i `CompanyID`.  
   
-2.  Zastosuj <xref:System.ServiceModel.MessageContractAttribute> do klasy atrybutu i ustaw <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> właściwość <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+2. Zastosuj <xref:System.ServiceModel.MessageContractAttribute> do klasy atrybutu i ustaw <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> właściwość <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-3.  Zastosuj <xref:System.ServiceModel.MessageHeaderAttribute> atrybutu do pola, które będą wyrażone jako nagłówek wiadomości oraz ustawić `ProtectionLevel` właściwość <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
+3. Zastosuj <xref:System.ServiceModel.MessageHeaderAttribute> atrybutu do pola, które będą wyrażone jako nagłówek wiadomości oraz ustawić `ProtectionLevel` właściwość <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  
   
-4.  Zastosuj <xref:System.ServiceModel.MessageBodyMemberAttribute> do dowolnego pola, które będą wyrażone jako część treści wiadomości oraz ustawić `ProtectionLevel` właściwości <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, jak pokazano w poniższym przykładzie.  
+4. Zastosuj <xref:System.ServiceModel.MessageBodyMemberAttribute> do dowolnego pola, które będą wyrażone jako część treści wiadomości oraz ustawić `ProtectionLevel` właściwości <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  

@@ -2,12 +2,12 @@
 title: Przykład technologii serializacji podstawowej
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315013"
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
 [Pobierz przykładowe](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54681706"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>Aby skompilować przykład za pomocą wiersza polecenia  
   
-1.  Przejdź do jednego z podkatalogi specyficzne dla języka w katalogu Technologies\Serialization\Runtime Serialization\Basic, za pomocą wiersza polecenia.  
+1. Przejdź do jednego z podkatalogi specyficzne dla języka w katalogu Technologies\Serialization\Runtime Serialization\Basic, za pomocą wiersza polecenia.  
   
-2.  Typ **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** lub **msbuild SerializationVB.sln**, w zależności od wybranych przez siebie język programowania, w Wiersz polecenia.  
+2. Typ **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** lub **msbuild SerializationVB.sln**, w zależności od wybranych przez siebie język programowania, w Wiersz polecenia.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Aby skompilować przykład za pomocą programu Visual Studio  
   
-1.  Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
+1. Otwórz [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] i przejdź do jednej z podkatalogi specyficzny dla języka dla próbki.  
   
-2.  Kliknij dwukrotnie ikonę PLiku SerializationCS.sln, SerializationJSL.sln lub SerializationVB.sln, w zależności od wybranych przez siebie język programowania, aby otworzyć go w programie Visual Studio.  
+2. Kliknij dwukrotnie ikonę PLiku SerializationCS.sln, SerializationJSL.sln lub SerializationVB.sln, w zależności od wybranych przez siebie język programowania, aby otworzyć go w programie Visual Studio.  
   
-3.  W **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.  
+3. W **kompilacji** menu, wybierz opcję **Kompiluj rozwiązanie**.  
   
  Przykładowa aplikacja zostanie utworzona w podkatalogu \bin lub \bin\Debug domyślny.  
   
 ### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Przejdź do katalogu zawierającego wbudowanych PLiku wykonywalnego.  
+1. Przejdź do katalogu zawierającego wbudowanych PLiku wykonywalnego.  
   
-2.  Typ **Serialization.exe**, wraz z wartościami parametru wymagasz, w wierszu polecenia.  
+2. Typ **Serialization.exe**, wraz z wartościami parametru wymagasz, w wierszu polecenia.  
   
     > [!NOTE]
     >  W tym przykładzie tworzy aplikację konsoli. Należy uruchomić go za pomocą wiersza polecenia, aby można było wyświetlić dane wyjściowe.  
@@ -64,19 +64,19 @@ ms.locfileid: "54681706"
   
 -   Środowisko wykonawcze serializacji  
   
-    -   <xref:System.Runtime.Serialization.IFormatter>Odnosi się do albo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> lub <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> obiektu.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Umożliwia odwoływanie się do albo <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> lub <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> obiektu.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>Służy do serializacji połączonej listy w strumieniu w formacie binarnym. Binarny program formatujący używa formatu tylko <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> rozumie typu. Jednak dane są zwięzły.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Służy do serializacji połączonej listy w strumieniu w formacie binarnym. Binarny program formatujący używa formatu tylko <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> rozumie typu. Jednak dane są zwięzły.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>Służy do serializacji połączonej listy w strumieniu w formacie protokołu SOAP. Protokołu SOAP jest to standardowy format.  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Służy do serializacji połączonej listy w strumieniu w formacie protokołu SOAP. Protokołu SOAP jest to standardowy format.  
   
 -   We/Wy strumienia  
   
-    -   <xref:System.IO.Stream>Służy do serializacji i deserializacji. Typ określonego strumienia używane w tym przykładzie jest <xref:System.IO.FileStream> typu. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.  
+    -   <xref:System.IO.Stream> Używany do serializacji i deserializacji. Typ określonego strumienia używane w tym przykładzie jest <xref:System.IO.FileStream> typu. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.  
   
-    -   <xref:System.IO.File>Służy do tworzenia <xref:System.IO.FileStream> obiektów do odczytywania i tworzenia PLików na dysku.  
+    -   <xref:System.IO.File> Użyty do utworzenia <xref:System.IO.FileStream> obiektów do odczytywania i tworzenia plików na dysku.  
   
-    -   <xref:System.IO.FileStream>Służy do serializacji i deserializacji połączonej listy.  
+    -   <xref:System.IO.FileStream> Używany do serializacji i deserializacji połączonej listy.  
   
 ## <a name="see-also"></a>Zobacz także
 

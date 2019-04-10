@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313375"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
-Program .NET Framework jest niezależny od języka. Oznacza to, że jako deweloper możesz tworzyć w jednym z wielu języków, których platformą docelową .NET Framework, takich jak C#, C + +/ CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i Windows PowerShell. Dostępne typy i członków bibliotek klas opracowanych dla programu .NET Framework bez znajomości języka, w którym zostały one pierwotnie napisane i bez konieczności którąkolwiek z Konwencji języka oryginału. Jeśli jesteś deweloperem składnika, dostęp do danego składnika jest możliwy przez dowolną aplikację .NET Framework, niezależnie od języka.  
+Program .NET Framework jest niezależny od języka. Oznacza to, że jako deweloper możesz tworzyć w jednym z wielu języków, których platformą docelową .NET Framework, takich jak C#, C++sposób niezamierzony, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i Windows PowerShell. Dostępne typy i członków bibliotek klas opracowanych dla programu .NET Framework bez znajomości języka, w którym zostały one pierwotnie napisane i bez konieczności którąkolwiek z Konwencji języka oryginału. Jeśli jesteś deweloperem składnika, dostęp do danego składnika jest możliwy przez dowolną aplikację .NET Framework, niezależnie od języka.  
   
 > [!NOTE]
 >  To pierwsza część w tym artykule omówiono tworzenie składników niezależnych od języka — czyli składników, które mogą być używane przez aplikacje napisane w dowolnym języku. Można również utworzyć pojedynczy składnik lub aplikację z kodu źródłowego napisanego w wielu językach; zobacz [współdziałanie między językami](#CrossLang) w drugiej części tego artykułu.  
@@ -54,7 +54,7 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że jako dewelop
   
     -   [Typy ogólne i członkowie](#Generics)  
   
-    -   [Konstruktory](#ctors)  
+    -   [Konstruktorów](#ctors)  
   
     -   [Właściwości](#properties)  
   
@@ -110,8 +110,8 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że jako dewelop
 |Atrybuty|[Atrybuty](#attributes)|Atrybuty powinny być typu <xref:System.Attribute?displayProperty=nameWithType>, lub typu z niego dziedziczącego.|41|  
 |Atrybuty|[Atrybuty](#attributes)|Specyfikacja CLS zezwala tylko na podzestaw kodowań atrybutów niestandardowych. Jedyne typy, które mają się pojawiać w tych kodowaniach to (zobacz część IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> , a każdy typ wyliczeniowy oparty na zgodny ze specyfikacją CLS podstawowym typie integer.|34|  
 |Atrybuty|[Atrybuty](#attributes)|Specyfikacja CLS nie zezwala na Modyfikatory widoczne publicznie (`modreq`, zob. partycja II), ale zezwala na Modyfikatory opcjonalne (`modopt`, zob. partycja II) nie rozumie.|35|  
-|Konstruktorów|[Konstruktory](#ctors)|Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)|21|  
-|Konstruktorów|[Konstruktory](#ctors)|Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie.|22|  
+|Konstruktorów|[Konstruktorów](#ctors)|Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)|21|  
+|Konstruktorów|[Konstruktorów](#ctors)|Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie.|22|  
 |Wyliczenia|[Wyliczenia](#enums)|Podstawowym typem wyliczenia będzie wbudowany typ liczby całkowitej ze specyfikacją CLS, nazwy pola będzie "value__" i pole to będzie oznakowane `RTSpecialName`.|7|  
 |Wyliczenia|[Wyliczenia](#enums)|Istnieją dwa odrębne rodzaje wyliczeń, wskazywane przez obecność lub Brak <xref:System.FlagsAttribute?displayProperty=nameWithType> atrybut niestandardowy (zobacz Biblioteka partycja IV). Reprezentuje nazwane wartości liczb całkowitych; inne reprezentuje nazwane flagi bitowe, które mogą być połączone do generowania wartości nienazwanej. Wartość `enum` nie jest ograniczona do określonej wartości.|8|  
 |Wyliczenia|[Wyliczenia](#enums)|Literał statycznego pola elementu enum ma typ wyliczenia Enum.|9|  
@@ -517,13 +517,13 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że jako dewelop
   
  Aby utworzyć składniki zgodne ze specyfikacją CLS:  
   
-1.  Użyj <xref:System.CLSCompliantAttribute> aby oznaczyć zestaw jako zgodny ze specyfikacją CLS.  
+1. Użyj <xref:System.CLSCompliantAttribute> aby oznaczyć zestaw jako zgodny ze specyfikacją CLS.  
   
-2.  Oznacz zgodni typów w zestawie, które nie są zgodne ze specyfikacją CLS jako niezgodne.  
+2. Oznacz zgodni typów w zestawie, które nie są zgodne ze specyfikacją CLS jako niezgodne.  
   
-3.  Umożliwia oznaczenie wszystkich członków publicznie narażonych w typach zgodnych ze specyfikacją CLS jako niezgodne.  
+3. Umożliwia oznaczenie wszystkich członków publicznie narażonych w typach zgodnych ze specyfikacją CLS jako niezgodne.  
   
-4.  Zapewniają zgodne ze specyfikacją CLS alternatywę dla członków innych niż zgodne ze specyfikacją CLS.  
+4. Zapewniają zgodne ze specyfikacją CLS alternatywę dla członków innych niż zgodne ze specyfikacją CLS.  
   
  Jeśli już pomyślnie oznaczone wszystkie niezgodne typy i elementy członkowskie, kompilator nie powinien emitować żadnych ostrzeżeń o braku zgodności. Jednakże należy wskazać składniki, które nie są zgodne ze specyfikacją CLS i wyświetlić ich alternatywy zgodne ze specyfikacją CLS w dokumentacji produktu.  
   

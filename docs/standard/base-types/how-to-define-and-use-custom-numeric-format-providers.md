@@ -1,5 +1,5 @@
 ---
-title: 'Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego'
+title: 'Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318380"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką kontrolę nad reprezentację ciągu wartości liczbowych. Obsługuje następujące funkcje dostosowywania format wartości liczbowe:  
   
 -   Ciągi standardowego formatu liczb, które zawierają zestaw wstępnie zdefiniowanych formatów do konwertowania liczb na jego reprezentację ciągu. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -37,9 +37,9 @@ ms.locfileid: "43879039"
   
 ### <a name="to-define-a-custom-format-provider"></a>Aby zdefiniować dostawcę formatu niestandardowego  
   
-1.  Definiowanie klasy, która implementuje <xref:System.IFormatProvider> i <xref:System.ICustomFormatter> interfejsów.  
+1. Definiowanie klasy, która implementuje <xref:System.IFormatProvider> i <xref:System.ICustomFormatter> interfejsów.  
   
-2.  Implementowanie <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. <xref:System.IFormatProvider.GetFormat%2A> jest metodą wywołania zwrotnego, metoda formatowania (takie jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda) wywołuje w celu pobrania obiektu, który jest faktycznie odpowiedzialny za wykonanie, niestandardowe formatowanie. Typowa implementacja metody <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
+2. Implementowanie <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. <xref:System.IFormatProvider.GetFormat%2A> jest metodą wywołania zwrotnego, metoda formatowania (takie jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda) wywołuje w celu pobrania obiektu, który jest faktycznie odpowiedzialny za wykonanie, niestandardowe formatowanie. Typowa implementacja metody <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
   
     1.  Określa, czy <xref:System.Type> przekazano obiekt jako metoda parametr reprezentuje <xref:System.ICustomFormatter> interfejsu.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879039"
   
     3.  Jeśli parametr nie reprezentuje <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca `null`.  
   
-3.  Implementowanie <xref:System.ICustomFormatter.Format%2A> metody. Ta metoda jest wywoływana <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody i jest odpowiedzialna za zwrócenie ciąg reprezentujący liczbę. Implementacja metody zwykle obejmuje następujące czynności:  
+3. Implementowanie <xref:System.ICustomFormatter.Format%2A> metody. Ta metoda jest wywoływana <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody i jest odpowiedzialna za zwrócenie ciąg reprezentujący liczbę. Implementacja metody zwykle obejmuje następujące czynności:  
   
     1.  Opcjonalnie, upewnij się, że metoda rzeczywiście jest przeznaczona do świadczenia usług formatowania, sprawdzając `provider` parametru. Obiekty, które implementują zarówno formatowania <xref:System.IFormatProvider> i <xref:System.ICustomFormatter>, wiąże się to testowanie `provider` parametr dla porównania z bieżącym obiektem formatowania.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879039"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Aby użyć obiektów niestandardowych formatowania liczbowego  
   
-1.  Utwórz nowe wystąpienie klasy formatowania niestandardowego.  
+1. Utwórz nowe wystąpienie klasy formatowania niestandardowego.  
   
-2.  Wywołaj <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda formatowania, niestandardowy obiekt formatowania formatowania specyfikator przekazywania (lub <xref:System.String.Empty?displayProperty=nameWithType>, jeśli nie jest on używany) oraz wartości numerycznych do sformatowania.  
+2. Wywołaj <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda formatowania, niestandardowy obiekt formatowania formatowania specyfikator przekazywania (lub <xref:System.String.Empty?displayProperty=nameWithType>, jeśli nie jest on używany) oraz wartości numerycznych do sformatowania.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie zdefiniowano dostawcy niestandardowego formatu liczb, o nazwie `TelephoneFormatter` Konwertuje liczbę, która reprezentuje numer telefonu w Stanach Zjednoczonych, jego format NANP lub E.123. Metoda obsługuje dwa specyfikatorów formatu "N" (której dane wyjściowe są w formacie NANP) i "I" (która generuje formacie międzynarodowym E.123).  

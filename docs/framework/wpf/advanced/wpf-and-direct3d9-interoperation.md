@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307733"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF i Direct3D9 — Współdziałanie
 Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF). W tym temacie opisano sposób tworzenia zawartości Direct3D9 tak, aby skutecznie współdziała również z WPF.  
@@ -112,13 +112,13 @@ Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundatio
   
  Aby uniknąć spadek wydajności, należy napisać kod, szczególnie w przypadku wielu monitorów. Na poniższej liście przedstawiono jeden ze sposobów pisania kodu wielu monitorów.  
   
-1.  Znajdź punkt <xref:System.Windows.Interop.D3DImage> w miejsce na ekranie za pomocą `Visual.ProjectToScreen` metody.  
+1. Znajdź punkt <xref:System.Windows.Interop.D3DImage> w miejsce na ekranie za pomocą `Visual.ProjectToScreen` metody.  
   
-2.  Użyj `MonitorFromPoint` GDI metody do znalezienia monitor, który jest wyświetlany punkt.  
+2. Użyj `MonitorFromPoint` GDI metody do znalezienia monitor, który jest wyświetlany punkt.  
   
-3.  Użyj `IDirect3D9::GetAdapterMonitor` metody do znalezienia monitor kartę Direct3D9, w której znajduje się na.  
+3. Użyj `IDirect3D9::GetAdapterMonitor` metody do znalezienia monitor kartę Direct3D9, w której znajduje się na.  
   
-4.  Jeśli karta nie jest taka sama jak karty przy użyciu buforu zapasowego, Utwórz nowy buforu zapasowego na nowy monitor i przypisz ją do <xref:System.Windows.Interop.D3DImage> buforu zapasowego.  
+4. Jeśli karta nie jest taka sama jak karty przy użyciu buforu zapasowego, Utwórz nowy buforu zapasowego na nowy monitor i przypisz ją do <xref:System.Windows.Interop.D3DImage> buforu zapasowego.  
   
 > [!NOTE]
 >  Jeśli <xref:System.Windows.Interop.D3DImage> pokrywającej monitory wydajności będzie wolny, z wyjątkiem w przypadku WDDM i `IDirect3D9Ex` na tej samej karcie. Nie istnieje żaden sposób, aby zwiększyć wydajność w takiej sytuacji.  

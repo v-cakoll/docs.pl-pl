@@ -2,12 +2,12 @@
 title: Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331263"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch
 W tym przykładzie pokazano sposób, w jaki <xref:System.Activities.Statements.TryCatch> działanie może być używane w ramach działania przepływu sterowania złożonego.
@@ -31,11 +31,11 @@ W tym przykładzie pokazano sposób, w jaki <xref:System.Activities.Statements.T
 
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania FlowchartWithFaultHandling.sln.
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania FlowchartWithFaultHandling.sln.
 
-2.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
+2. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.
 
-3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.
+3. Aby uruchomić rozwiązanie, naciśnij klawisz F5.
 
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

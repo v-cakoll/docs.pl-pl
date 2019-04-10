@@ -2,12 +2,12 @@
 title: 'Instrukcje: Aktualizacja dynamiczna'
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 3ae446da5e19b0c4c0c121d44892e4a13ec70dd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320759"
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
 W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie aktualizować konfiguracji routingu. W tym przykładzie początkowej konfiguracji routingu jest uzyskiwana z pliku konfiguracji i kieruje wszystkie wiadomości w usłudze Kalkulator regularCalc; jednak jest następnie aktualizowany programowo Aby zmienić docelowy punkt końcowy usługi roundingCalc.  
@@ -22,7 +22,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie
   
 ### <a name="implement-initial-configuration"></a>Implementowanie konfiguracji początkowej  
   
-1.  Utwórz podstawową konfigurację usługi Routing, określając punktów końcowych usługi udostępniane przez usługę. Poniższy przykład definiuje pojedynczą usługę punktu końcowego, na który będzie używany do odbierania komunikatów. Definiuje również punkt końcowy klienta, która będzie służyć do wysyłania komunikatów do regularCalc.  
+1. Utwórz podstawową konfigurację usługi Routing, określając punktów końcowych usługi udostępniane przez usługę. Poniższy przykład definiuje pojedynczą usługę punktu końcowego, na który będzie używany do odbierania komunikatów. Definiuje również punkt końcowy klienta, która będzie służyć do wysyłania komunikatów do regularCalc.  
   
     ```xml  
     <services>  
@@ -49,7 +49,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie
     </client>  
     ```  
   
-2.  Zdefiniuj filtr używany do przesyłania wiadomości do docelowych punktów końcowych. Na przykład filtr MatchAll służy do rozsyłania wszystkich wiadomości do regularCalcEndpoint zdefiniowany wcześniej. W poniższym przykładzie zdefiniowano filtr i tabelę filtru.  
+2. Zdefiniuj filtr używany do przesyłania wiadomości do docelowych punktów końcowych. Na przykład filtr MatchAll służy do rozsyłania wszystkich wiadomości do regularCalcEndpoint zdefiniowany wcześniej. W poniższym przykładzie zdefiniowano filtr i tabelę filtru.  
   
     ```xml  
     <filters>  
@@ -64,7 +64,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie
     </filterTables>  
     ```  
   
-3.  Aby ocenić komunikaty przychodzące filtry zawartych w tabeli filtru, należy skojarzyć tabelę filtru z punktami końcowymi usługi za pomocą zachowania routingu. W poniższym przykładzie pokazano kojarzenie "filterTable1" z punktu końcowego usługi.  
+3. Aby ocenić komunikaty przychodzące filtry zawartych w tabeli filtru, należy skojarzyć tabelę filtru z punktami końcowymi usługi za pomocą zachowania routingu. W poniższym przykładzie pokazano kojarzenie "filterTable1" z punktu końcowego usługi.  
   
     ```xml  
     <behaviors>  
@@ -80,7 +80,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie
 ## <a name="implement-dynamic-configuration"></a>Implementowanie dynamiczną konfigurację  
  Dynamiczna konfiguracja usługa routingu można wykonać tylko w kodzie przez utworzenie nowego <xref:System.ServiceModel.Routing.RoutingConfiguration> i przy użyciu <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> zastąpienie bieżącej konfiguracji.  W tym przykładzie usługa routingu jest samodzielnie hostowany w aplikacji konsoli. Po uruchomieniu aplikacji, można zmodyfikować konfiguracji routingu, wprowadzając "regularne" lub "zaokrąglania" w oknie konsoli aby skonfigurować docelowego punktu końcowego, że komunikaty są kierowane do; podano regularCalc po "regularne", w przeciwnym razie jest wprowadzana roundingCalc po "zaokrąglania".  
   
-1.  Następujące instrukcje using muszą zostać dodane w celu obsługi usługi routingu.  
+1. Następujące instrukcje using muszą zostać dodane w celu obsługi usługi routingu.  
   
     ```csharp  
     using System;  
@@ -92,7 +92,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie
     using System.ServiceModel.Routing;  
     ```  
   
-2.  Poniższy kod jest używany na potrzeby samodzielnego hostowania usługa routingu jako aplikację konsolową w języku. Usługa routingu przy użyciu konfiguracji opisanej w poprzednim kroku, który jest zawarty w pliku konfiguracji aplikacji jest inicjowana. While pętla zawiera kod używany w celu zmiany konfiguracji routingu.  
+2. Poniższy kod jest używany na potrzeby samodzielnego hostowania usługa routingu jako aplikację konsolową w języku. Usługa routingu przy użyciu konfiguracji opisanej w poprzednim kroku, który jest zawarty w pliku konfiguracji aplikacji jest inicjowana. While pętla zawiera kod używany w celu zmiany konfiguracji routingu.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -117,7 +117,7 @@ W tym temacie przedstawiono podstawowe kroki wymagane do tworzenia i dynamicznie
     }  
     ```  
   
-3.  Aby dynamicznie aktualizować konfiguracji routingu, należy utworzyć nową konfigurację routingu. Ten element musi zawierać wszystkie punkty końcowe, filtry i tabel filtrów, które są wymagane dla nowej konfiguracji routingu, jak całkowicie zastąpi istniejącą konfigurację routingu. Aby można było korzystać z nowej konfiguracji routingu, należy wywołać <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> i przekaż nową konfigurację.  
+3. Aby dynamicznie aktualizować konfiguracji routingu, należy utworzyć nową konfigurację routingu. Ten element musi zawierać wszystkie punkty końcowe, filtry i tabel filtrów, które są wymagane dla nowej konfiguracji routingu, jak całkowicie zastąpi istniejącą konfigurację routingu. Aby można było korzystać z nowej konfiguracji routingu, należy wywołać <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> i przekaż nową konfigurację.  
   
      Dodaj następujący kod do while pętli zdefiniowany wcześniej, aby umożliwić usłudze ponownego oparte na danych wejściowych użytkownika.  
   

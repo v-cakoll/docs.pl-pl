@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169614"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313960"
 ---
 # <a name="documents-in-wpf"></a>Dokumenty w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje szeroką gamę funkcji dokumentu, które umożliwiają tworzenie zawartości o wysokiej wierności, która została zaprojektowana jako łatwiej uzyskuje się dostęp i odczytu niż w poprzednich generacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Oprócz rozszerzone możliwości i jakość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] również udostępnia zintegrowane usługi do wyświetlania dokumentu, pakowania i zabezpieczeń. Ten temat zawiera wprowadzenie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] typów dokumentów i pakowania w usłudze dokumentu.  
@@ -89,9 +89,9 @@ ms.locfileid: "59169614"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  Dla bezpieczeństwa <xref:System.IO.Packaging.PackageDigitalSignature> ("podpis cyfrowy") może być skojarzony z części pakietu. Element <xref:System.IO.Packaging.PackageDigitalSignature> zawiera [509], zapewnia dwie funkcje:  
   
-1.  Identyfikowanie i uwierzytelnianie inicjatorem części.  
+1. Identyfikowanie i uwierzytelnianie inicjatorem części.  
   
-2.  Sprawdza, czy części nie zostały zmodyfikowane.  
+2. Sprawdza, czy części nie zostały zmodyfikowane.  
   
  Podpis cyfrowy nie uniemożliwia część jest modyfikowany, ale sprawdzanie poprawności względem podpisu cyfrowego zakończy się niepowodzeniem, jeśli część jest w żaden sposób modyfikowany. Aplikacja może wtedy podjąć odpowiednie działania — na przykład Blokuj otwieranie części lub powiadamia użytkownika, że część została zmodyfikowana i nie jest bezpieczna.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169614"
   
  Relacje pakietu umożliwiają wykrywalny dodawania i skojarzyć dodatkowe informacje z poszczególnymi częściami lub cały pakiet. Pakiet relacje są używane dwie podstawowe funkcje:  
   
-1.  Definiowanie relacji zależności z jednej strony do innej części.  
+1. Definiowanie relacji zależności z jednej strony do innej części.  
   
-2.  Definiowanie relacji informacje, które dodawać notatki lub inne dane związane z części.  
+2. Definiowanie relacji informacje, które dodawać notatki lub inne dane związane z części.  
   
  A <xref:System.IO.Packaging.PackageRelationship> zapewnia to szybki i wykrywalny do definiowania zależności i dodać inne informacje skojarzone z części pakietu lub pakiet jako całości.  
   

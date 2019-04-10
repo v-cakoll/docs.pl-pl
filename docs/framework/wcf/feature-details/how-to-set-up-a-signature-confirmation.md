@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315819"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Instrukcje: konfigurowanie potwierdzenia sygnatury
 *Potwierdzenie podpisu* jest mechanizm dla inicjatora wiadomości upewnić się, czy odebrano odpowiedź został wygenerowany w odpowiedzi na pierwotny komunikat nadawcy. Potwierdzenie podpisu jest zdefiniowana w specyfikacji WS-Security 1.1. Jeśli punkt końcowy obsługuje WS-Security w wersji 1.0, nie można użyć potwierdzenia podpisu.  
@@ -22,29 +22,29 @@ ms.locfileid: "59176166"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>Aby włączyć potwierdzenia podpisu w kodzie  
   
-1.  Utworzenie wystąpienia <xref:System.ServiceModel.Channels.BindingElementCollection> klasy.  
+1. Utworzenie wystąpienia <xref:System.ServiceModel.Channels.BindingElementCollection> klasy.  
   
-2.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> klasy.  
+2. Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> klasy.  
   
-3.  Ustaw <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> do `true`.  
+3. Ustaw <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> do `true`.  
   
-4.  Dodaj element zabezpieczeń do kolekcji powiązania.  
+4. Dodaj element zabezpieczeń do kolekcji powiązania.  
   
-5.  Tworzenie niestandardowego powiązania, jak to określono w [jak: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+5. Tworzenie niestandardowego powiązania, jak to określono w [jak: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>Aby włączyć potwierdzenia podpisu w konfiguracji  
   
-1.  Dodaj `<customBinding>` elementu `<bindings>` sekcję pliku konfiguracji.  
+1. Dodaj `<customBinding>` elementu `<bindings>` sekcję pliku konfiguracji.  
   
-2.  Dodaj `<binding>` element i ustaw nazwę atrybutu do odpowiedniej wartości.  
+2. Dodaj `<binding>` element i ustaw nazwę atrybutu do odpowiedniej wartości.  
   
-3.  Dodaj odpowiedni element kodowania. W poniższym przykładzie dodano `<TextMessageEncoding>` elementu.  
+3. Dodaj odpowiedni element kodowania. W poniższym przykładzie dodano `<TextMessageEncoding>` elementu.  
   
-4.  Dodaj `<security>` element podrzędny i ustaw `requireSignatureConfirmation` atrybutu `true`.  
+4. Dodaj `<security>` element podrzędny i ustaw `requireSignatureConfirmation` atrybutu `true`.  
   
-5.  Opcjonalna. Aby włączyć potwierdzenia podpisu podczas uruchamiania, należy dodać [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element podrzędny i ustaw `equireSignatureConfirmation` atrybutu `true`.  
+5. Opcjonalna. Aby włączyć potwierdzenia podpisu podczas uruchamiania, należy dodać [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) element podrzędny i ustaw `equireSignatureConfirmation` atrybutu `true`.  
   
-6.  Dodaj element odpowiednie transportu. W poniższym przykładzie dodano [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. Dodaj element odpowiednie transportu. W poniższym przykładzie dodano [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

@@ -2,12 +2,12 @@
 title: Proces zakupów firmowych
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313336"
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupów firmowych
 W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania dla procesu zakupu propozycji (RFP) na podstawie z automatycznego najlepszym wyborem propozycji. Łączy ona <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i niestandardowe działanie, aby utworzyć przepływ pracy, który reprezentuje proces.
@@ -50,25 +50,25 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
 ## <a name="description-of-the-process"></a>Opis procesu  
  Niniejszy przykład pokazuje implementację programu Windows Workflow Foundation (WF) w celu zbierania propozycji od dostawców na potrzeby ogólnego firmy.  
   
-1.  Pracownik firmy X tworzy żądanie propozycji (RFP).  
+1. Pracownik firmy X tworzy żądanie propozycji (RFP).  
   
     1.  Typy pracowników RFP tytuł i opis.  
   
     2.  Pracownik wybiera dostawców, które chce zaprosić do przesyłania propozycji.  
   
-2.  Pracownik przesyła propozycji.  
+2. Pracownik przesyła propozycji.  
   
     1.  Tworzone jest wystąpienie przepływu pracy.  
   
     2.  Przepływ pracy czeka, aż wszyscy dostawcy do przedstawienia ich propozycji.  
   
-3.  Po otrzymaniu wszystkich propozycji przepływ pracy wykonuje iterację przez wszystkie odebrane propozycje i wybiera najlepszą z nich.  
+3. Po otrzymaniu wszystkich propozycji przepływ pracy wykonuje iterację przez wszystkie odebrane propozycje i wybiera najlepszą z nich.  
   
     1.  Każdy dostawca ma reputację (w tym przykładzie są przechowywane na liście reputację w VendorRepository.cs).  
   
     2.  Łączna wartość propozycji jest określana przez (wartość wpisana w przez dostawcę) * (Dostawca w zarejestrowany reputacji) / 100.  
   
-4.  Oryginalny osoby żądającej widoczne przesłane propozycji. Najlepszą propozycję są prezentowane w specjalnej sekcji w raporcie.  
+4. Oryginalny osoby żądającej widoczne przesłane propozycji. Najlepszą propozycję są prezentowane w specjalnej sekcji w raporcie.  
   
 ## <a name="process-definition"></a>Definicji procesu  
  Podstawowe zasady logiczne próbki używa <xref:System.Activities.Statements.ParallelForEach%601> działanie, które oczekuje na oferty z każdego dostawcy (przy użyciu niestandardowego działania, który tworzy zakładki) i rejestruje propozycji dostawcy jako RFP (przy użyciu <xref:System.Activities.Statements.InvokeMethod> działanie).  
@@ -143,15 +143,15 @@ W tym przykładzie przedstawiono sposób tworzenia bardzo podstawowe żądania d
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
-1.  Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania PurchaseProcess.sln.  
+1. Za pomocą programu Visual Studio 2010, otwórz plik rozwiązania PurchaseProcess.sln.  
   
-2.  Aby wykonać projektu sieci Web klienta, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **klienta sieci Web** projektu. Wybierz **Ustaw jako projekt startowy**.  
+2. Aby wykonać projektu sieci Web klienta, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **klienta sieci Web** projektu. Wybierz **Ustaw jako projekt startowy**.  
   
-3.  Aby wykonać projekt klienta WinForms, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **WinForms klienta** projektu. Wybierz **Ustaw jako projekt startowy**.  
+3. Aby wykonać projekt klienta WinForms, otwórz **Eksploratora rozwiązań** i kliknij prawym przyciskiem myszy **WinForms klienta** projektu. Wybierz **Ustaw jako projekt startowy**.  
   
-4.  Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
+4. Aby skompilować rozwiązanie, naciśnij klawisze CTRL + SHIFT + B.  
   
-5.  Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
+5. Aby uruchomić rozwiązanie, naciśnij kombinację klawiszy CTRL + F5.  
   
 ### <a name="web-client-options"></a>Opcje klienta sieci Web  
   

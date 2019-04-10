@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323372"
 ---
 # <a name="single-bulk-copy-operations"></a>Pojedyncze operacje kopiowania zbiorczego
 Najprostszą metodą do wykonywania operacji kopiowania zbiorczego SQL Server jest na wykonanie jednej operacji w bazie danych. Domyślnie operacji kopiowania zbiorczego jest wykonywane jako operacja izolowane: operacja kopiowania odbywa się w sposób nietransakcyjnej ma możliwości, aby przerzucić go na tworzeniu kopii.  
@@ -22,19 +22,19 @@ Najprostszą metodą do wykonywania operacji kopiowania zbiorczego SQL Server je
   
  Ogólne kroki umożliwiające wykonywanie operacji kopiowania zbiorczego są następujące:  
   
-1.  Połącz się na serwerze źródłowym i uzyskać dane do skopiowania. Dane mogą pochodzić również z innych źródeł, jeśli można go pobrać z <xref:System.Data.IDataReader> lub <xref:System.Data.DataTable> obiektu.  
+1. Połącz się na serwerze źródłowym i uzyskać dane do skopiowania. Dane mogą pochodzić również z innych źródeł, jeśli można go pobrać z <xref:System.Data.IDataReader> lub <xref:System.Data.DataTable> obiektu.  
   
-2.  Połączenie z serwerem docelowym (chyba że chcesz **SqlBulkCopy** ustanowić połączenie dla Ciebie).  
+2. Połączenie z serwerem docelowym (chyba że chcesz **SqlBulkCopy** ustanowić połączenie dla Ciebie).  
   
-3.  Utwórz <xref:System.Data.SqlClient.SqlBulkCopy> obiektu, ustawienie wszelkie wymagane właściwości.  
+3. Utwórz <xref:System.Data.SqlClient.SqlBulkCopy> obiektu, ustawienie wszelkie wymagane właściwości.  
   
-4.  Ustaw **DestinationTableName** operacji wstawiania właściwości, aby wskazać, tabela docelowa dla zbiorczego.  
+4. Ustaw **DestinationTableName** operacji wstawiania właściwości, aby wskazać, tabela docelowa dla zbiorczego.  
   
-5.  Wywołanie jednej z **WriteToServer** metody.  
+5. Wywołanie jednej z **WriteToServer** metody.  
   
-6.  Opcjonalnie można zaktualizować właściwości i wywołania **WriteToServer** ponownie zgodnie z potrzebami.  
+6. Opcjonalnie można zaktualizować właściwości i wywołania **WriteToServer** ponownie zgodnie z potrzebami.  
   
-7.  Wywołaj <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, lub zawijania operacje kopiowania masowego w ramach `Using` instrukcji.  
+7. Wywołaj <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>, lub zawijania operacje kopiowania masowego w ramach `Using` instrukcji.  
   
 > [!CAUTION]
 >  Zaleca się, że są zgodne typy danych kolumn źródłowych i docelowych. Jeśli nie są zgodne z typami danych, **SqlBulkCopy** stara się przekonwertować wartość każdego źródłowego na docelowy typ danych, za pomocą reguł stosowanych przez <xref:System.Data.SqlClient.SqlParameter.Value%2A>. Konwersje może wpłynąć na wydajność, a także może spowodować nieoczekiwane błędy. Na przykład `Double` można przekonwertować na typ danych `Decimal` — typ danych większość czasu, ale nie zawsze.  

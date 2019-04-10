@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326869"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład, aby zarezerwować drukarki do wyłącznego użytku określony dział po 17: 00. Takim wydziale musi innej kolejki drukarki niż innych działów obsługi użycia. Kolejka dla innych działów będzie miał ustawienie będzie niedostępna po 17: 00, podczas gdy kolejka dla działu favored mógł zostać ustawiony jako dostępny przez cały czas.  
@@ -29,9 +29,9 @@ Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właści
   
  Istnieją dwa główne kroki dla tego rodzaju funkcji w następujący sposób.  
   
-1.  Odczyt <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> i <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> właściwości <xref:System.Printing.PrintQueue> do ustalenia, czy bieżący czas jest między nimi.  
+1. Odczyt <xref:System.Printing.PrintQueue.StartTimeOfDay%2A> i <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A> właściwości <xref:System.Printing.PrintQueue> do ustalenia, czy bieżący czas jest między nimi.  
   
-2.  Odczyt <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> i <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> właściwości <xref:System.Printing.PrintSystemJobInfo> do ustalenia, czy bieżący czas jest między nimi.  
+2. Odczyt <xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A> i <xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A> właściwości <xref:System.Printing.PrintSystemJobInfo> do ustalenia, czy bieżący czas jest między nimi.  
   
  Ale komplikacji wynikać z faktu, że te właściwości są <xref:System.DateTime> obiektów. Zamiast tego są one <xref:System.Int32> obiektów, które express godzinę jako liczbę minut, które upłynęły od północy. Ponadto to nie jest o północy w bieżącej strefie czasowej, ale o północy czasu UTC (Coordinated Universal Time).  
   

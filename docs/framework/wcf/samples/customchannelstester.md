@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: c91632c1967645b4319bca14be66fb0052ad741f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192835"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312673"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 `CustomChannelsTester` To narzędzie, które można użyć do testowania implementacji usługi niestandardowym kanale z zestawem kontraktów predefiniowaną usługę. Można wybrać zestaw kontraktów usług i przekazać go do narzędzia, za pomocą pliku XML. Narzędzie generuje następnie usługi i klienta, który korzysta z implementacjami niestandardowym kanale podczas wymiany komunikatów.  
   
 ### <a name="to-build-the-tool"></a>Aby utworzyć narzędzie  
   
-1.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Skompilować rozwiązanie generuje trzy pliki: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd. Plik SampleRun.cmd zawiera przykładowy wiersz polecenia, który pokazuje, jak używać tego narzędzia do testowania [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki.  
+2. Skompilować rozwiązanie generuje trzy pliki: CustomChannelsTester.exe, TestSpec.xml and SampleRun.cmd. Plik SampleRun.cmd zawiera przykładowy wiersz polecenia, który pokazuje, jak używać tego narzędzia do testowania [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki.  
   
 ### <a name="to-run-the-tool"></a>Aby uruchomić narzędzie  
   

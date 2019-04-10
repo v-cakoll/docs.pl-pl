@@ -2,12 +2,12 @@
 title: ZainstalujF#
 description: Dowiedz się, jak zainstalować F# zależności od używanego środowiska.
 ms.date: 08/28/2018
-ms.openlocfilehash: 873d3021ba884ec81992469e5d0f3b7c18b1e0f4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331978"
 ---
 # <a name="install-f"></a>Zainstaluj F\#
 
@@ -15,7 +15,7 @@ Możesz zainstalować F# na wiele sposobów, w zależności od środowiska.
 
 ## <a name="install-f-with-visual-studio"></a>Zainstaluj F# za pomocą programu Visual Studio
 
-Jeśli masz pobieranie [programu Visual Studio](https://visualstudio.microsoft.com/) po raz pierwszy zostanie najpierw zainstalować Instalatora programu Visual Studio. Zainstaluj odpowiednie jednostki SKU programu Visual Studio z poziomu Instalatora. Jeśli masz już zainstalowany, kliknij przycisk **Modyfikuj**.
+Jeśli masz pobieranie [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) po raz pierwszy zostanie najpierw zainstalować Instalatora programu Visual Studio. Zainstaluj odpowiednie jednostki SKU programu Visual Studio z poziomu Instalatora. Jeśli masz już zainstalowany, kliknij przycisk **Modyfikuj**.
 
 Następnie zobaczysz listę obciążeń. Wybierz **ASP.NET i tworzenie aplikacji internetowych** które zainstaluje F# pomocy technicznej i .NET Core obsługuje dla projektów ASP.NET Core.
 
@@ -23,7 +23,7 @@ Następnie kliknij przycisk **Modyfikuj** w dolnym po prawej stronie.  Spowoduje
 
 ## <a name="install-f-with-visual-studio-for-mac"></a>Zainstaluj F# z programem Visual Studio dla komputerów Mac
 
-F#jest instalowany domyślnie w [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/), niezależnie od tego, która Konfiguracja wybierzesz.
+F#jest instalowany domyślnie w [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), niezależnie od tego, która Konfiguracja wybierzesz.
 
 Po zakończeniu instalacji wybierz pozycję "Uruchom Visual Studio". Można również uruchomić go za pomocą wyszukiwania w systemie macOS.
 
@@ -31,7 +31,7 @@ Po zakończeniu instalacji wybierz pozycję "Uruchom Visual Studio". Można rów
 
 Konieczne jest posiadanie [zainstalowane narzędzie git](https://git-scm.com/download) i dostępne w zmiennej PATH, aby użyć szablonów projektu. Możesz sprawdzić, czy jest poprawnie zainstalowany, wpisując `git --version` w wierszu polecenia i naciskając klawisz **Enter**.
 
-### <a name="macostabmacos"></a>[macOS](#tab/macos)
+### [<a name="macos"></a>macOS](#tab/macos)
 
 [Narzędzie mono](https://www.mono-project.com) służy do [ F# Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. Najprostszym sposobem zainstalowania platformy Mono w systemie macOS jest za pośrednictwem Homebrew. Po prostu wpisz następujące polecenie w terminalu:
 
@@ -41,7 +41,7 @@ brew install mono
 
 Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
 
-### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+### [<a name="linux"></a>Linux](#tab/linux)
 
 [Narzędzie mono](https://www.mono-project.com) służy do [ F# Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. W przypadku systemie Debian lub Ubuntu, można użyć następujących czynności:
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
 
-### <a name="windowstabwindows"></a>[Windows](#tab/windows)
+### [<a name="windows"></a>Windows](#tab/windows)
 
 Zainstaluj [programu Visual Studio z F# obsługuje](#install-f-with-visual-studio). Spowoduje to zainstalowanie wszystkich składników niezbędnych do zapisu, skompilowania i wykonania F# kodu.
 

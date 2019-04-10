@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151232"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304834"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Instrukcje: Wywoływanie funkcji definiowanych przez model jako metod obiektu
 W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako metodę na <xref:System.Data.Objects.ObjectContext> obiektu lub metody statycznej na klasę niestandardową. A *funkcja zdefiniowana przez model* jest funkcją, która jest zdefiniowana w modelu koncepcyjnym. Procedury przedstawione w tym temacie opisano sposób wywołać te funkcje bezpośrednio, zamiast wywoływania ich z LINQ do zapytań jednostki. Aby dowiedzieć się, jak wywoływanie funkcji definiowanych przez model w składniku LINQ do jednostek zapytań, zobacz [jak: Wywoływanie funkcji definiowanych przez Model w zapytaniach](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -21,19 +21,19 @@ W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako 
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Aby wywołać funkcję definiowanych przez model jako metodę do obiektu ObjectContext  
   
-1.  Dodać plik źródłowy rozszerzenie pochodzi od klasy częściowej <xref:System.Data.Objects.ObjectContext> klasy, generowane automatycznie za pomocą narzędzi Entity Framework. Definiowanie klasy zastępczej CLR w pliku źródłowym oddzielne uniemożliwi zmiany są utracone podczas ponownego generowania pliku.  
+1. Dodać plik źródłowy rozszerzenie pochodzi od klasy częściowej <xref:System.Data.Objects.ObjectContext> klasy, generowane automatycznie za pomocą narzędzi Entity Framework. Definiowanie klasy zastępczej CLR w pliku źródłowym oddzielne uniemożliwi zmiany są utracone podczas ponownego generowania pliku.  
   
-2.  Dodaj wspólnego języka wspólnego (CLR) metodę swoje <xref:System.Data.Objects.ObjectContext> klasę, która wykonuje następujące czynności:  
+2. Dodaj wspólnego języka wspólnego (CLR) metodę swoje <xref:System.Data.Objects.ObjectContext> klasę, która wykonuje następujące czynności:  
   
     -   Mapy do funkcji zdefiniowanych w modelu koncepcyjnym. Aby zmapować metody, należy najpierw zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> do metody. Należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametrów atrybutu są odpowiednio nazwę przestrzeni nazw modelu koncepcyjnego i nazwy funkcji w modelu koncepcyjnym. Funkcja rozpoznawania nazw dla programu LINQ jest uwzględniana wielkość liter.  
   
     -   Zwraca wyniki <xref:System.Linq.IQueryProvider.Execute%2A> metodę, która jest zwracana przez <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> właściwości.  
   
-3.  Wywołaj metodę jako członka w wystąpieniu <xref:System.Data.Objects.ObjectContext> klasy.  
+3. Wywołaj metodę jako członka w wystąpieniu <xref:System.Data.Objects.ObjectContext> klasy.  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>Aby wywołać funkcję definiowanych przez model jako metody statycznej na klasę niestandardową  
   
-1.  Dodaj klasę do aplikacji przy użyciu statycznej metody, która wykonuje następujące czynności:  
+1. Dodaj klasę do aplikacji przy użyciu statycznej metody, która wykonuje następujące czynności:  
   
     -   Mapy do funkcji zdefiniowanych w modelu koncepcyjnym. Aby zmapować metody, należy najpierw zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> do metody. Należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametrów atrybutu są odpowiednio nazwę przestrzeni nazw modelu koncepcyjnego i nazwy funkcji w modelu koncepcyjnym.  
   
@@ -41,7 +41,7 @@ W tym temacie opisano sposób wywołania funkcji definiowanych przez model jako 
   
     -   Zwraca wyniki <xref:System.Linq.IQueryProvider.Execute%2A> metodę, która jest zwracana przez <xref:System.Linq.IQueryable.Provider%2A> właściwości.  
   
-2.  Wywołać metodę jako członek statycznej metody dla niestandardowej klasy  
+2. Wywołać metodę jako członek statycznej metody dla niestandardowej klasy  
   
 ## <a name="example"></a>Przykład  
  **Wywoływanie funkcji definiowanych przez Model jako metodę do obiektu ObjectContext**  

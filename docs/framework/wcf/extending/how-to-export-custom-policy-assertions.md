@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306225"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: eksportowanie niestandardowych asercji zasad
 Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usługi. Aplikacje usługi można użyć niestandardowych asercji zasad w metadanych usługi do komunikacji z punktu końcowego, binding lub umowy informacje o dostosowaniu do aplikacji klienckiej. Windows Communication Foundation (WCF) umożliwia eksportowanie asercji w wyrażeniach zasad dołączone w powiązaniach WSDL na punkt końcowy, operacji lub tematów wiadomości, w zależności od możliwości i wymagania, które komunikują się.  
@@ -23,28 +23,28 @@ Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usł
   
 ### <a name="to-export-custom-policy-assertions"></a>Aby Eksportowanie niestandardowych asercji zasad  
   
-1.  Implementowanie <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejsu na <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. Poniższy przykład kodu pokazuje implementację asercję zasad niestandardowych na poziomie powiązania.  
+1. Implementowanie <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> interfejsu na <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>. Poniższy przykład kodu pokazuje implementację asercję zasad niestandardowych na poziomie powiązania.  
   
      [!code-csharp[CustomPolicySample#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/policyexporter.cs#14)]
      [!code-vb[CustomPolicySample#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/custompolicysample/vb/policyexporter.vb#14)]  
   
-2.  Wstaw element powiązania do endpoint powiązanie albo programowo lub za pomocą pliku konfiguracji aplikacji. Zobacz poniższe procedury.  
+2. Wstaw element powiązania do endpoint powiązanie albo programowo lub za pomocą pliku konfiguracji aplikacji. Zobacz poniższe procedury.  
   
 ### <a name="to-insert-a-binding-element-using-an-application-configuration-file"></a>Aby wstawić element powiązania przy użyciu pliku konfiguracji aplikacji  
   
-1.  Implementowanie <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> odniesieniu do danego elementu powiązania asercji zasad niestandardowych.  
+1. Implementowanie <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> odniesieniu do danego elementu powiązania asercji zasad niestandardowych.  
   
-2.  Dodaj rozszerzenie elementu powiązania do plików konfiguracji przy użyciu [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elementu.  
+2. Dodaj rozszerzenie elementu powiązania do plików konfiguracji przy użyciu [ \<bindingElementExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md) elementu.  
   
-3.  Tworzenie niestandardowego powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+3. Tworzenie niestandardowego powiązania za pomocą <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
 ### <a name="to-insert-a-binding-element-programmatically"></a>Aby programowo wstawić element powiązania  
   
-1.  Utwórz nową <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i dodać go do <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
+1. Utwórz nową <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType> i dodać go do <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>.  
   
-2.  Dodawanie niestandardowego powiązania z kroku 1. do nowego punktu końcowego i dodać ten nowy punkt końcowy usługi <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> przez wywołanie metody <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metody.  
+2. Dodawanie niestandardowego powiązania z kroku 1. do nowego punktu końcowego i dodać ten nowy punkt końcowy usługi <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> przez wywołanie metody <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> metody.  
   
-3.  Otwórz <xref:System.ServiceModel.ServiceHost>. W poniższym przykładzie kodu pokazano tworzenie powiązania niestandardowego i programowe wstawianie elementów wiązania.  
+3. Otwórz <xref:System.ServiceModel.ServiceHost>. W poniższym przykładzie kodu pokazano tworzenie powiązania niestandardowego i programowe wstawianie elementów wiązania.  
   
      [!code-csharp[s_imperative#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_imperative/cs/service.cs#1)]
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  

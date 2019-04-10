@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c262e8a20eb9a805f6c64cac412f0d0fd6eeb80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e378eb36e633575d5afa886e886aed302cbdab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310988"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego
 Przekazywanie dalej typu umożliwia przeniesienie typu do innego zestawu bez konieczności ponownego kompilowania aplikacji, które używają oryginalnego zestawu.  
@@ -30,9 +30,9 @@ Przekazywanie dalej typu umożliwia przeniesienie typu do innego zestawu bez kon
 ## <a name="forwarding-types"></a>Typy przekazywania  
  Istnieją cztery kroki przekazywania typu:  
   
-1.  Przenieść kod źródłowy dla typu z oryginalnego zestawu do zestawu docelowego.  
+1. Przenieść kod źródłowy dla typu z oryginalnego zestawu do zestawu docelowego.  
   
-2.  W zestawie, w którym typ używany do można znaleźć, Dodaj <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> dla typu, który został przeniesiony. Poniższy kod przedstawia atrybut typu o nazwie `Example` , została przeniesiona.  
+2. W zestawie, w którym typ używany do można znaleźć, Dodaj <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> dla typu, który został przeniesiony. Poniższy kod przedstawia atrybut typu o nazwie `Example` , została przeniesiona.  
   
     ```csharp  
     [assembly:TypeForwardedToAttribute(typeof(Example))]  
@@ -42,9 +42,9 @@ Przekazywanie dalej typu umożliwia przeniesienie typu do innego zestawu bez kon
     [assembly:TypeForwardedToAttribute(Example::typeid)]  
     ```  
   
-3.  Skompiluj zestaw, który zawiera teraz typu.  
+3. Skompiluj zestaw, który zawiera teraz typu.  
   
-4.  Zestaw, gdzie typ używany w zlokalizowanym z odwołania do zestawu, który teraz zawiera typ należy ponownie skompilować. Na przykład, jeśli kompilujesz z pliku C# z wiersza polecenia, użyj [/Reference (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) opcję, aby określić zestaw, który zawiera typu. W języku C++, użyj [#using](/cpp/preprocessor/hash-using-directive-cpp) dyrektywy w pliku źródłowym, aby określić zestaw, który zawiera typu.  
+4. Zestaw, gdzie typ używany w zlokalizowanym z odwołania do zestawu, który teraz zawiera typ należy ponownie skompilować. Na przykład, jeśli kompilujesz z pliku C# z wiersza polecenia, użyj [/Reference (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) opcję, aby określić zestaw, który zawiera typu. W języku C++, użyj [#using](/cpp/preprocessor/hash-using-directive-cpp) dyrektywy w pliku źródłowym, aby określić zestaw, który zawiera typu.  
   
 ## <a name="see-also"></a>Zobacz także
 

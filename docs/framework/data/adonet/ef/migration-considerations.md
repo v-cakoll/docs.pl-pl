@@ -2,12 +2,12 @@
 title: Zagadnienia dotyczące migracji (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310424"
 ---
 # <a name="migration-considerations-entity-framework"></a>Zagadnienia dotyczące migracji (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej istotna te korzyści jest możliwość stosowania modelu koncepcyjnego do oddzielnych struktur danych używanych przez aplikację ze schematu w źródle danych. Dzięki temu można łatwo wprowadzić przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian wyrównującej do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -31,11 +31,11 @@ ms.locfileid: "59089890"
 > [!NOTE]
 >  Wszystkie te zadania są wykonywane automatycznie, gdy jest możliwe użycie narzędzi modelu Entity Data Model, począwszy od programu Visual Studio 2008. Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).  
   
-1.  Uaktualnienie aplikacji.  
+1. Uaktualnienie aplikacji.  
   
      Projekt, który został utworzony przy użyciu wcześniejszej wersji programu Visual Studio i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] musi zostać uaktualniony, aby użyć programu Visual Studio 2008 z dodatkiem SP1 i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] począwszy od wersji 3.5 z dodatkiem SP1.  
   
-2.  Zdefiniuj modeli i mapowania.  
+2. Zdefiniuj modeli i mapowania.  
   
      Modelu i mapowania plików definiowania jednostek w modelu koncepcyjnego; struktury w źródle danych, takich jak tabele, procedur przechowywanych i widoków; i mapowanie między struktury źródła danych i jednostek. Aby uzyskać więcej informacji, zobacz [jak: Ręcznie zdefiniować modelu i mapowania plików](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100)).  
   
@@ -44,11 +44,11 @@ ms.locfileid: "59089890"
     > [!NOTE]
     >  Projektant modelu danych jednostki może służyć do zmiany nazwy jednostki w modelu koncepcyjnym, aby dopasować istniejących obiektów. Aby uzyskać więcej informacji, zobacz [projektancie Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)).  
   
-3.  Zdefiniowanie ciągu połączenia.  
+3. Zdefiniowanie ciągu połączenia.  
   
      [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Używa parametrów połączenia specjalnie sformatowanego, podczas wykonywania zapytań względem modelu koncepcyjnego. Te parametry połączenia hermetyzuje informacje o modelu i mapowania plików oraz połączenia ze źródłem danych. Aby uzyskać więcej informacji, zobacz [jak: Zdefiniowanie ciągu połączenia](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md).  
   
-4.  Konfigurowanie projektu Visual Studio.  
+4. Konfigurowanie projektu Visual Studio.  
   
      Odwołuje się do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zestawów i modelu i mapowania plików musi zostać dodany do projektu programu Visual Studio. Możesz dodać te pliki mapowania do projektu, aby upewnić się, że są one wdrażane za pomocą aplikacji w lokalizacji, która jest wskazywany w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [jak: Ręczne konfigurowanie projektu programu Entity Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100)).  
   

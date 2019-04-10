@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213301"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331679"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Instrukcje: Usuwanie wierszy z bazy danych
 Wierszy w bazie danych można usunąć przez usunięcie odpowiednich [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiektów z kolekcją związane z tabeli. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy zmiany, aby odpowiednie SQL `DELETE` poleceń.  
@@ -32,11 +32,11 @@ Wierszy w bazie danych można usunąć przez usunięcie odpowiednich [!INCLUDE[v
   
 ### <a name="to-delete-a-row-in-the-database"></a>Aby usunąć wiersz w bazie danych  
   
-1.  Odpytywanie bazy danych dla wiersza do usunięcia.  
+1. Odpytywanie bazy danych dla wiersza do usunięcia.  
   
-2.  Wywołaj <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> metody.  
+2. Wywołaj <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> metody.  
   
-3.  Przesyłanie zmian do bazy danych.  
+3. Przesyłanie zmian do bazy danych.  
   
 ## <a name="example"></a>Przykład  
  W pierwszym przykładzie kod wysyła zapytanie do bazy danych, aby uzyskać szczegóły zamówienia, które należą do 11000 # zamówienia, oznacza tych informacji do usunięcia i przesyła te zmiany w bazie danych.  

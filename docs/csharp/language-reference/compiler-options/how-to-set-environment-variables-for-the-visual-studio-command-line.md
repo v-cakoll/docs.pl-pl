@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322124"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio
 
@@ -33,11 +33,11 @@ Jeśli bieżącą wersję programu Visual Studio jest zainstalowany na komputerz
   
 ### <a name="to-run-vsdevcmdbat"></a>Aby uruchomić VsDevCmd.BAT  
   
-1.  Z **Start** menu Otwórz **wiersz polecenia programisty dla programu VS 2017**.  Jest on **programu Visual Studio 2017** folderu.
+1. Z **Start** menu Otwórz **wiersz polecenia programisty dla programu VS 2017**.  Jest on **programu Visual Studio 2017** folderu.
   
-2.  Zmiany do programu Visual Studio \Program Files\Microsoft\\*wersji*\\*oferty*\Common7\Tools lub \Program pliki (x86) \Microsoft Visual Studio\\ *Wersji*\\*oferty*podkatalogu \Common7\Tools instalacji.  (*Wersji* jest *2017* dla bieżącej wersji. *Oferta* jest jednym z *Enterprise*, *Professional* lub *społeczności*.)
+2. Zmiany do programu Visual Studio \Program Files\Microsoft\\*wersji*\\*oferty*\Common7\Tools lub \Program pliki (x86) \Microsoft Visual Studio\\ *Wersji*\\*oferty*podkatalogu \Common7\Tools instalacji.  (*Wersji* jest *2017* dla bieżącej wersji. *Oferta* jest jednym z *Enterprise*, *Professional* lub *społeczności*.)
   
-3.  Uruchom VsDevCmd.bat, wpisując **VsDevCmd**.  
+3. Uruchom VsDevCmd.bat, wpisując **VsDevCmd**.  
   
     > [!CAUTION]
     >  VsDevCmd.bat mogą się różnić między komputerami. Nie zastępuj uszkodzony lub plik VsDevCmd.bat VsDevCmd.bat z innego komputera. Zamiast tego Uruchom ponownie Instalatora, aby zastąpić brakujący plik.  

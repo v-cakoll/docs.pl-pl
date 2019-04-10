@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132590"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328780"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Instrukcje: Animowanie punktu przy użyciu klatek kluczowych
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Point>.  
@@ -22,11 +22,11 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.P
 ## <a name="example"></a>Przykład  
  Poniższy przykład powoduje przeniesienie elipsę trójkątna ścieżce. W przykładzie użyto <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames> klasy, aby animować <xref:System.Windows.Media.EllipseGeometry.Center%2A> właściwość <xref:System.Windows.Media.EllipseGeometry>. Ta animacja używa trzech ramek kluczowych w następujący sposób:  
   
-1.  Podczas pierwszego pół sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.LinearPointKeyFrame> klasy, aby przenieść elipsy na ścieżce według stałej stawki z pozycji początkowej. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearPointKeyFrame> utworzyć płynne interpolacji liniowej między wartościami.  
+1. Podczas pierwszego pół sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.LinearPointKeyFrame> klasy, aby przenieść elipsy na ścieżce według stałej stawki z pozycji początkowej. Liniowy klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.LinearPointKeyFrame> utworzyć płynne interpolacji liniowej między wartościami.  
   
-2.  Podczas koniec następnego pół sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> klasy nagle przenieść elipsy wzdłuż ścieżki do następnego położenia. Dyskretne klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> tworzenie nagłe skoki między wartościami.  
+2. Podczas koniec następnego pół sekundy używa wystąpienia <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> klasy nagle przenieść elipsy wzdłuż ścieżki do następnego położenia. Dyskretne klatek kluczowych, takich jak <xref:System.Windows.Media.Animation.DiscretePointKeyFrame> tworzenie nagłe skoki między wartościami.  
   
-3.  Podczas końcowego dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplinePointKeyFrame> klasy, aby przenieść elipsę z powrotem do jego pozycja początkowa. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplinePointKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartościami <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> właściwości. W tym przykładzie animacji rozpocznie się powoli i przyspiesza wykładniczo w kierunku końca odcinka czasu.  
+3. Podczas końcowego dwie sekundy, używa wystąpienia <xref:System.Windows.Media.Animation.SplinePointKeyFrame> klasy, aby przenieść elipsę z powrotem do jego pozycja początkowa. Ramek kluczowych krzywej składanej, takich jak <xref:System.Windows.Media.Animation.SplinePointKeyFrame> Tworzenie zmiennej przejścia między wartościami zgodnie z wartościami <xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A> właściwości. W tym przykładzie animacji rozpocznie się powoli i przyspiesza wykładniczo w kierunku końca odcinka czasu.  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

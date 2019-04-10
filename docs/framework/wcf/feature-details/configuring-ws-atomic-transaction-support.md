@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203538"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315182"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Konfigurowanie obsługi protokołu WS-Atomic Transaction
 W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-AT) za pomocą narzędzia konfiguracji WS-AT.  
@@ -56,19 +56,19 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
   
  Musisz już posiadać wymaganych certyfikatów, aby ustanowić zaufanie. Aby dowiedzieć się, jak utworzyć i zainstalować nowe certyfikaty przed następujące czynności, zobacz [jak: Tworzenie i instalowanie certyfikatów tymczasowych klienta programu WCF podczas tworzenia](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
-1.  Na komputerze A przy użyciu przystawki MMC Certyfikaty importowania istniejącego certyfikatu (certA) LocalMachine\MY (węzeł osobiste) i Magazyn LocalMachine\ROOT (węzeł urząd certyfikacji zaufany główny urząd certyfikacji). Aby zaimportować certyfikat do określonego węzła, kliknij prawym przyciskiem myszy węzeł, a następnie wybierz **wszystkie zadania/Import**.  
+1. Na komputerze A przy użyciu przystawki MMC Certyfikaty importowania istniejącego certyfikatu (certA) LocalMachine\MY (węzeł osobiste) i Magazyn LocalMachine\ROOT (węzeł urząd certyfikacji zaufany główny urząd certyfikacji). Aby zaimportować certyfikat do określonego węzła, kliknij prawym przyciskiem myszy węzeł, a następnie wybierz **wszystkie zadania/Import**.  
   
-2.  Na komputerze B, za pomocą przystawki MMC certyfikatów utworzyć lub uzyskać certB certyfikatu z kluczem prywatnym i zaimportuj go do LocalMachine\MY (węzeł osobiste) i magazynem LocalMachine\ROOT (węzeł urząd certyfikacji zaufany główny urząd certyfikacji).  
+2. Na komputerze B, za pomocą przystawki MMC certyfikatów utworzyć lub uzyskać certB certyfikatu z kluczem prywatnym i zaimportuj go do LocalMachine\MY (węzeł osobiste) i magazynem LocalMachine\ROOT (węzeł urząd certyfikacji zaufany główny urząd certyfikacji).  
   
-3.  Eksportuj do pliku klucza publicznego firmy certA, jeśli nie zostało to zrobione już.  
+3. Eksportuj do pliku klucza publicznego firmy certA, jeśli nie zostało to zrobione już.  
   
-4.  Eksportuj do pliku klucza publicznego firmy certB, jeśli nie zostało to zrobione już.  
+4. Eksportuj do pliku klucza publicznego firmy certB, jeśli nie zostało to zrobione już.  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>Ustanawianie wzajemnego zaufania między maszynami  
   
-1.  Na komputerze A należy zaimportować plik reprezentacja certB do LocalMachine\MY i LocalMachine\ROOT magazynów. To deklaruje maszyny certB relacji zaufania, aby komunikować się z nim.  
+1. Na komputerze A należy zaimportować plik reprezentacja certB do LocalMachine\MY i LocalMachine\ROOT magazynów. To deklaruje maszyny certB relacji zaufania, aby komunikować się z nim.  
   
-2.  Na komputerze B należy zaimportować plik certA firmy do LocalMachine\MY i LocalMachine\ROOT magazynów. Oznacza to tego komputera B certA zaufania do komunikowania się z nim.  
+2. Na komputerze B należy zaimportować plik certA firmy do LocalMachine\MY i LocalMachine\ROOT magazynów. Oznacza to tego komputera B certA zaufania do komunikowania się z nim.  
   
  Po wykonaniu tych kroków, zaufanie jest ustanawiane między dwoma komputerami, a następnie takie grupy można skonfigurować do komunikowania się ze sobą przy użyciu WS-AT.  
   
@@ -77,9 +77,9 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
   
  Można to skonfigurować za pomocą przystawki programu MMC WS-AT. Aby uzyskać więcej informacji o tym narzędziu, zobacz [przystawki MMC konfiguracji WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) tematu. Poniżej opisano sposób ustanowić zaufanie między dwa komputery z systemem usługi MSDTC.  
   
-1.  Konfigurowanie ustawień maszyny A. Jako "Certyfikat punktu końcowego" Wybierz certA. W przypadku "Autoryzacji certyfikatów" Wybierz certB.  
+1. Konfigurowanie ustawień maszyny A. Jako "Certyfikat punktu końcowego" Wybierz certA. W przypadku "Autoryzacji certyfikatów" Wybierz certB.  
   
-2.  Konfigurowanie ustawień maszyny B. Jako "Certyfikat punktu końcowego" Wybierz certB. W przypadku "Autoryzacji certyfikatów" Wybierz certA.  
+2. Konfigurowanie ustawień maszyny B. Jako "Certyfikat punktu końcowego" Wybierz certB. W przypadku "Autoryzacji certyfikatów" Wybierz certA.  
   
 > [!NOTE]
 >  Po jednej maszynie wysyła wiadomość do innego komputera, nadawca próbuje Sprawdź, czy nazwa podmiotu certyfikatu adresata i nazwę adresata odpowiadają. Jeśli nie są zgodne, weryfikacja certyfikatu nie powiedzie się i dwóch maszyn nie mogą komunikować się.  
@@ -98,13 +98,13 @@ W tym temacie opisano sposób konfigurowania obsługi WS-AtomicTransaction (WS-A
   
  Usługa protokołu WS-AT obsługuje także zintegrowane śledzenie elementu ServiceModel za pośrednictwem sesji śledzenia zdarzeń systemu Windows. Zapewnia to bardziej szczegółowe, dotyczące komunikacji ślady oprócz istniejących śledzeniach transakcji.  Aby włączyć te dodatkowe dane śledzenia, wykonaj następujące kroki  
   
-1.  Otwórz **uruchomienia/Start** menu, w polu wejściowym wpisz "regedit" i wybierz **OK**.  
+1. Otwórz **uruchomienia/Start** menu, w polu wejściowym wpisz "regedit" i wybierz **OK**.  
   
-2.  W **Edytora rejestru**, przejdź do następującego folderu w okienku po lewej stronie Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
+2. W **Edytora rejestru**, przejdź do następującego folderu w okienku po lewej stronie Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
-3.  Kliknij prawym przyciskiem myszy `ServiceModelDiagnosticTracing` wartość w okienku po prawej stronie, a następnie wybierz pozycję **Modyfikuj**.  
+3. Kliknij prawym przyciskiem myszy `ServiceModelDiagnosticTracing` wartość w okienku po prawej stronie, a następnie wybierz pozycję **Modyfikuj**.  
   
-4.  W **dane wartości** pole wprowadzania, wprowadź jedną z poniższych prawidłowych wartości, aby określić poziom śledzenia, aby włączyć.  
+4. W **dane wartości** pole wprowadzania, wprowadź jedną z poniższych prawidłowych wartości, aby określić poziom śledzenia, aby włączyć.  
   
 -   0: wyłączone  
   

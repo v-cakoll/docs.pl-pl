@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 6a4d8a6fea56c01d23d3cdb98ae9e12619e99ff5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328234"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 
@@ -67,7 +67,7 @@ Możesz rozpocząć kodowanie swoją aplikację w zwykły .NET (zwykle w .NET Co
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 — pisanie plików Dockerfile](./media/image4.png)
 
@@ -206,13 +206,13 @@ Początkowy pliku Dockerfile może wyglądać mniej więcej tak:
 
 A Oto szczegółowe informacje, wiersz po wierszu:
 
-1.  Rozpocząć etap za pomocą "małe" obrazu podstawowego tylko do środowiska uruchomieniowego, mu **podstawowy** dla odwołania.
-2.  Tworzenie **App** katalogu na obrazie.
-3.  Uwidocznić port **80**.
+1. Rozpocząć etap za pomocą "małe" obrazu podstawowego tylko do środowiska uruchomieniowego, mu **podstawowy** dla odwołania.
+2. Tworzenie **App** katalogu na obrazie.
+3. Uwidocznić port **80**.
 <!-- skip -->
-5.  Rozpocznij nowy etap z obrazem "large" Tworzenie/publikowania go wywoływać **kompilacji** dla odwołania.
-6.  Utwórz katalog **/src** na obrazie.
-7.  Maksymalnie 16 wiersza, skopiuj przywoływane projekty **.csproj** plików, aby można było później przywrócić pakietów.
+5. Rozpocznij nowy etap z obrazem "large" Tworzenie/publikowania go wywoływać **kompilacji** dla odwołania.
+6. Utwórz katalog **/src** na obrazie.
+7. Maksymalnie 16 wiersza, skopiuj przywoływane projekty **.csproj** plików, aby można było później przywrócić pakietów.
 <!-- skip -->
 17. Przywracanie pakietów dla **Catalog.API** projektów i projektów występujących w odwołaniu.
 18. Kopiowanie **wszystkich drzewo katalogów dla rozwiązania** (z wyjątkiem plików/katalogów, zawarte w **.dockerignore** plik) z do **/src** katalogu na obrazie.

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319862"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>Instrukcje: dodawanie paneli do kontrolki StatusBar
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227798"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>Dodawanie paneli do paska stanu  
   
-1.  W procedurze tworzenia paneli paska stanu przez dodanie ich do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Określ ustawienia właściwości dla poszczególnych paneli przy użyciu jej indeksu przekazany przez <xref:System.Windows.Forms.StatusBar.Panels%2A> właściwości.  
+1. W procedurze tworzenia paneli paska stanu przez dodanie ich do <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>. Określ ustawienia właściwości dla poszczególnych paneli przy użyciu jej indeksu przekazany przez <xref:System.Windows.Forms.StatusBar.Panels%2A> właściwości.  
   
      W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji ikony jest **Moje dokumenty** folderu. Ta lokalizacja jest używana, ponieważ można założyć, że większość komputerów z systemem operacyjnym Windows będzie zawierać tego folderu. Wybranie tej lokalizacji również umożliwia użytkownikom z poziomami dostępu minimalny system bezpiecznego uruchamiania aplikacji. Poniższy przykład wymaga formularza z <xref:System.Windows.Forms.StatusBar> formant został już dodany.  
   

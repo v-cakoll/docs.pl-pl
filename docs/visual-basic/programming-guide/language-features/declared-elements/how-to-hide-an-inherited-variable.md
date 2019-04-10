@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331705"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Instrukcje: Ukrywanie dziedziczonej zmiennej (Visual Basic)
 Klasa pochodna dziedziczy wszystkie definicje klasy bazowej. Jeśli chcesz zdefiniować zmienną przy użyciu tej samej nazwie jako element klasy podstawowej, można ukryć, lub *w tle*, ten element klasy bazowej podczas definiowania zmiennej w klasie pochodnej. Jeśli to zrobisz, kod w klasie pochodnej uzyskuje dostęp do zmiennej, chyba że jawnie pomija mechanizm przesłaniania.  
@@ -25,11 +25,11 @@ Klasa pochodna dziedziczy wszystkie definicje klasy bazowej. Jeśli chcesz zdefi
   
 ### <a name="to-hide-an-inherited-variable"></a>Aby ukrywanie dziedziczonej zmiennej  
   
-1.  Upewnij się, że zmiennej, którą chcesz ukryć zadeklarowano na poziomie klasy (poza dowolnej procedury). W przeciwnym razie nie trzeba je ukryć.  
+1. Upewnij się, że zmiennej, którą chcesz ukryć zadeklarowano na poziomie klasy (poza dowolnej procedury). W przeciwnym razie nie trzeba je ukryć.  
   
-2.  Wewnątrz klasy pochodnej, należy napisać [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) deklarowanie zmiennej. Użyj takiej samej nazwie, jak w przypadku dziedziczonej zmiennej.  
+2. Wewnątrz klasy pochodnej, należy napisać [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) deklarowanie zmiennej. Użyj takiej samej nazwie, jak w przypadku dziedziczonej zmiennej.  
   
-3.  Obejmują [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md) — słowo kluczowe w deklaracji.  
+3. Obejmują [cieni](../../../../visual-basic/language-reference/modifiers/shadows.md) — słowo kluczowe w deklaracji.  
   
      Gdy kod w klasie pochodnej odwołuje się do nazwy zmiennej, kompilator rozpoznaje odwołanie do zmiennej.  
   
@@ -59,9 +59,9 @@ Klasa pochodna dziedziczy wszystkie definicje klasy bazowej. Jeśli chcesz zdefi
 
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Przesłanianie w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Różnice między przesłanianiem i zastępowaniem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
+- [Różnice między zasłanianiem i przesłanianiem](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Instrukcje: Dostęp do zmiennej ukrytej przez klasę pochodną](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Me, My, MyBase, i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

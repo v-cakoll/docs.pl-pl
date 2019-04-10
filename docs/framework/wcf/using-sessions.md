@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320928"
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
 W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wiadomości do konwersacji. Sesje WCF są inne niż dostępne w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji obsługują różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje umożliwiające w sesji programu WCF aplikacji i sposobu ich używania.  
@@ -53,9 +53,9 @@ W aplikacjach Windows Communication Foundation (WCF) *sesji* koreluje grupę wia
   
  Gdy usługa WCF akceptuje sesji klienta, są domyślnie włączone następujące funkcje:  
   
-1.  Wszystkie wywołania między obiektem platformy WCF klienta są obsługiwane przez tego samego wystąpienia usługi.  
+1. Wszystkie wywołania między obiektem platformy WCF klienta są obsługiwane przez tego samego wystąpienia usługi.  
   
-2.  Różne powiązania oparte na sesji zapewniają dodatkowe funkcje.  
+2. Różne powiązania oparte na sesji zapewniają dodatkowe funkcje.  
   
 ## <a name="system-provided-session-types"></a>Sesja dostarczane przez system typów  
  Powiązanie oparte na sesji obsługuje domyślne skojarzenie wystąpienia usługi w określonej sesji. Jednak różnych powiązania oparte na sesji obsługują różne funkcje oprócz włączenia oparte na sesji kontroli wystąpień opisany wcześniej.  

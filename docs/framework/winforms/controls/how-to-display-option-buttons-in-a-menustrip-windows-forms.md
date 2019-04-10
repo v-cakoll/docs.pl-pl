@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: 61feda3f49c9a9e03a606c0284629f809d6876b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115534"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306238"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Instrukcje: Wyświetlanie przycisków opcji w formancie MenuStrip (formularze Windows)
 Przyciski opcji, znany także jako przyciski radiowe są podobne do pola wyboru, z tą różnicą, że użytkownicy mogą wybrać tylko jedną na raz. Mimo że domyślnie <xref:System.Windows.Forms.ToolStripMenuItem> klasa nie zapewnia zachowanie przycisku opcji, klasa zapewnia zachowanie pola wyboru, które można dostosować, aby zaimplementować zachowanie przycisku opcji elementów menu w <xref:System.Windows.Forms.MenuStrip> kontroli.  
@@ -25,46 +25,46 @@ Przyciski opcji, znany także jako przyciski radiowe są podobne do pola wyboru,
   
 ### <a name="to-implement-option-button-selection-behavior"></a>Aby zaimplementować zachowanie podczas zaznaczania przycisku opcji  
   
-1.  Inicjowanie <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> właściwość `true` umożliwiające wybór elementu.  
+1. Inicjowanie <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> właściwość `true` umożliwiające wybór elementu.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#110](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#110)]
      [!code-vb[ToolStripRadioButtonMenuItem#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#110)]  
   
-2.  Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> metodę, aby wyczyścić zaznaczenie poprzednio wybranego elementu, gdy nowy element jest wybrany.  
+2. Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> metodę, aby wyczyścić zaznaczenie poprzednio wybranego elementu, gdy nowy element jest wybrany.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#120](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#120)]
      [!code-vb[ToolStripRadioButtonMenuItem#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#120)]  
   
-3.  Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> metodę, aby upewnić się, że kliknięcie pozycji elementu, który został już wybrany nie spowoduje wyczyszczenie zaznaczenia.  
+3. Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> metodę, aby upewnić się, że kliknięcie pozycji elementu, który został już wybrany nie spowoduje wyczyszczenie zaznaczenia.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#130](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#130)]
      [!code-vb[ToolStripRadioButtonMenuItem#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#130)]  
   
 ### <a name="to-modify-the-appearance-of-the-option-button-items"></a>Aby zmienić wygląd elementów przycisku opcji  
   
-1.  Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> metodę, aby zastąpić za pomocą przycisku opcji znacznik wyboru domyślnego <xref:System.Windows.Forms.RadioButtonRenderer> klasy.  
+1. Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> metodę, aby zastąpić za pomocą przycisku opcji znacznik wyboru domyślnego <xref:System.Windows.Forms.RadioButtonRenderer> klasy.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#140](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#140)]
      [!code-vb[ToolStripRadioButtonMenuItem#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#140)]  
   
-2.  Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, i <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> metod w celu śledzenia stanu myszy oraz upewnij się, że <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> metoda maluje stan prawidłowy przycisku opcji.  
+2. Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, i <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> metod w celu śledzenia stanu myszy oraz upewnij się, że <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> metoda maluje stan prawidłowy przycisku opcji.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#150](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#150)]
      [!code-vb[ToolStripRadioButtonMenuItem#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#150)]  
   
 ### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a>Aby wyłączyć opcje w podmenu, gdy element nadrzędny nie jest zaznaczone.  
   
-1.  Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwość tak, aby element jest wyłączony, gdy ma ona nadrzędnego elementu zarówno <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> wartość `true` i <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> wartość `false`.  
+1. Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> właściwość tak, aby element jest wyłączony, gdy ma ona nadrzędnego elementu zarówno <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> wartość `true` i <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> wartość `false`.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#160](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#160)]
      [!code-vb[ToolStripRadioButtonMenuItem#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#160)]  
   
-2.  Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> metodę, aby subskrybować <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> zdarzenia nadrzędnego elementu.  
+2. Zastąp <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> metodę, aby subskrybować <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> zdarzenia nadrzędnego elementu.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#170](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#170)]
      [!code-vb[ToolStripRadioButtonMenuItem#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#170)]  
   
-3.  W obsłudze dla elementu nadrzędnego <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> zdarzenia Unieważnij element, aby zaktualizować wyświetlane dane z nowy stan włączony.  
+3. W obsłudze dla elementu nadrzędnego <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> zdarzenia Unieważnij element, aby zaktualizować wyświetlane dane z nowy stan włączony.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#180](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  

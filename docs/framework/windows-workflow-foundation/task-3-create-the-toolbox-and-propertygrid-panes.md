@@ -2,12 +2,12 @@
 title: Zadanie 3. Tworzenie okienka PropertyGrid i przybornika
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306023"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Zadanie 3. Tworzenie okienka PropertyGrid i przybornika
 W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je do rehostowanym [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je d
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>Aby utworzyć przybornik i dodaj go do siatki  
   
-1.  Otwórz projekt HostingApplication uzyskany postępując zgodnie z procedurą opisaną w artykule [zadanie 2: Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md).  
+1. Otwórz projekt HostingApplication uzyskany postępując zgodnie z procedurą opisaną w artykule [zadanie 2: Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md).  
   
-2.  W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**.  
+2. W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**.  
   
-3.  Dodaj `GetToolboxControl` metody `MainWindow` klasy, która tworzy <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, dodaje nowy **przybornika** kategorię, aby **przybornika**i przypisuje <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> typy działań do tej kategorii.  
+3. Dodaj `GetToolboxControl` metody `MainWindow` klasy, która tworzy <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, dodaje nowy **przybornika** kategorię, aby **przybornika**i przypisuje <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> typy działań do tej kategorii.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je d
     }  
     ```  
   
-4.  Dodaj prywatnej `AddToolbox` metody `MainWindow` klasy, która umieszcza **przybornika** w lewej kolumnie siatki.  
+4. Dodaj prywatnej `AddToolbox` metody `MainWindow` klasy, która umieszcza **przybornika** w lewej kolumnie siatki.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je d
     }  
     ```  
   
-5.  Dodaj wywołanie do `AddToolBox` method in Class metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
+5. Dodaj wywołanie do `AddToolBox` method in Class metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je d
     }  
     ```  
   
-6.  Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika** zawierający <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> działań powinien być wyświetlany.  
+6. Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika** zawierający <xref:System.Activities.Statements.Assign> i <xref:System.Activities.Statements.Sequence> działań powinien być wyświetlany.  
   
 ### <a name="to-create-the-propertygrid"></a>Aby utworzyć PropertyGrid  
   
-1.  W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**.  
+1. W **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**.  
   
-2.  Dodaj `AddPropertyInspector` metody `MainWindow` klasy, aby umieścić **PropertyGrid** w okienku po prawej stronie kolumny w siatce.  
+2. Dodaj `AddPropertyInspector` metody `MainWindow` klasy, aby umieścić **PropertyGrid** w okienku po prawej stronie kolumny w siatce.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je d
     }  
     ```  
   
-3.  Dodaj wywołanie do `AddPropertyInspector` method in Class metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
+3. Dodaj wywołanie do `AddPropertyInspector` method in Class metoda `MainWindow()` konstruktora klasy, jak pokazano w poniższym kodzie.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ W tym zadaniu utworzysz **przybornika** i **PropertyGrid** okienka i dodać je d
     }  
     ```  
   
-4.  Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika**, kanwą przepływu pracy i **PropertyGrid** okienka powinny być wyświetlane wszystkie i przeciągnięcie <xref:System.Activities.Statements.Assign> działania lub <xref:System.Activities.Statements.Sequence> działania na kanwę projektu siatki właściwości, należy zaktualizować w zależności od działania wyróżnione.  
+4. Naciśnij klawisz F5, aby skompilować i uruchomić rozwiązanie. **Przybornika**, kanwą przepływu pracy i **PropertyGrid** okienka powinny być wyświetlane wszystkie i przeciągnięcie <xref:System.Activities.Statements.Assign> działania lub <xref:System.Activities.Statements.Sequence> działania na kanwę projektu siatki właściwości, należy zaktualizować w zależności od działania wyróżnione.  
   
 ## <a name="example"></a>Przykład  
  Plik MainWindow.xaml.cs teraz powinien zawierać następujący kod.  

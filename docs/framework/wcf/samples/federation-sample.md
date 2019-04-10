@@ -2,12 +2,12 @@
 title: Federacja — przykład
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311464"
 ---
 # <a name="federation-sample"></a>Federacja — przykład
 Niniejszy przykład pokazuje zabezpieczeń.  
@@ -67,17 +67,17 @@ Niniejszy przykład pokazuje zabezpieczeń.
   
  Kolejność zdarzeń przy uzyskiwaniu dostępu do `BuyBook` operacja jest w następujący sposób:  
   
-1.  Klient uwierzytelnia się do usługi STS HomeRealm przy użyciu poświadczeń Windows.  
+1. Klient uwierzytelnia się do usługi STS HomeRealm przy użyciu poświadczeń Windows.  
   
-2.  HomeRealm usługi STS wystawia token, który może służyć do uwierzytelniania usługi STS księgarni.  
+2. HomeRealm usługi STS wystawia token, który może służyć do uwierzytelniania usługi STS księgarni.  
   
-3.  Klient jest uwierzytelniany przy użyciu tokenu wystawionego przez usługę STS HomeRealm usługi STS księgarni.  
+3. Klient jest uwierzytelniany przy użyciu tokenu wystawionego przez usługę STS HomeRealm usługi STS księgarni.  
   
-4.  Księgarni Usługa STS wystawia token, który może służyć do uwierzytelniania w usłudze księgarni.  
+4. Księgarni Usługa STS wystawia token, który może służyć do uwierzytelniania w usłudze księgarni.  
   
-5.  Klient uwierzytelnia się w usłudze księgarni przy użyciu tokenu wystawionego przez usługę STS księgarni.  
+5. Klient uwierzytelnia się w usłudze księgarni przy użyciu tokenu wystawionego przez usługę STS księgarni.  
   
-6.  Klient uzyskuje dostęp do `BuyBook` operacji.  
+6. Klient uzyskuje dostęp do `BuyBook` operacji.  
   
  Zobacz następujące instrukcje dotyczące sposobu konfigurowania i przeprowadzania tego przykładu.  
   
@@ -86,18 +86,18 @@ Niniejszy przykład pokazuje zabezpieczeń.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Otwórz okno polecenia zestawu SDK. W ścieżce próbki należy uruchomić Setup.bat. Tworzy katalogi wirtualne wymagane dla przykładu i instaluje wymagane certyfikaty z odpowiednimi uprawnieniami.  
+1. Otwórz okno polecenia zestawu SDK. W ścieżce próbki należy uruchomić Setup.bat. Tworzy katalogi wirtualne wymagane dla przykładu i instaluje wymagane certyfikaty z odpowiednimi uprawnieniami.  
   
     > [!NOTE]
     >  Plik wsadowy Setup.bat jest przeznaczony do uruchamiania z wierszem polecenia Windows SDK. Wymaga to, że zmienna środowiskowa MSSDK odwołują się do katalogu, w którym jest zainstalowany zestaw SDK. Ta zmienna środowiskowa jest automatycznie ustawiana w wierszu polecenia Windows SDK. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], należy upewnić się, że zgodność z narzędziami zarządzania usług IIS 6.0 jest zainstalowany, ponieważ konfigurowania używa skrypty administratora usług IIS. Uruchamianie skryptu konfiguracji [!INCLUDE[wv](../../../../includes/wv-md.md)] wymaga uprawnień administratora.  
   
-2.  Otwórz FederationSample.sln w programie Visual Studio i wybierz **Kompiluj rozwiązanie** z **kompilacji** menu. Kompilacje wspólne pliki projektu, księgarni usługi STS księgarni, HomeRealm STS i ich wdrażania w usługach IIS. To również kompilacji aplikacji klienckiej księgarni i umieszcza BookStoreClient.exe wykonywalny w folderze FederationSample\BookStoreClient\bin\Debug.  
+2. Otwórz FederationSample.sln w programie Visual Studio i wybierz **Kompiluj rozwiązanie** z **kompilacji** menu. Kompilacje wspólne pliki projektu, księgarni usługi STS księgarni, HomeRealm STS i ich wdrażania w usługach IIS. To również kompilacji aplikacji klienckiej księgarni i umieszcza BookStoreClient.exe wykonywalny w folderze FederationSample\BookStoreClient\bin\Debug.  
   
-3.  Double-click BookStoreClient.exe. Zostanie wyświetlone okno BookStoreClient.  
+3. Double-click BookStoreClient.exe. Zostanie wyświetlone okno BookStoreClient.  
   
-4.  Możesz przeglądać dostępne w księgarni książki, klikając **Przeglądaj książki**.  
+4. Możesz przeglądać dostępne w księgarni książki, klikając **Przeglądaj książki**.  
   
-5.  Aby dokonać zakupu wybranej książki, wybierz książkę na liście, a następnie kliknij przycisk **kupić książki**. Aplikacja uruchamia się i jest uwierzytelniany przy użyciu uwierzytelniania Windows za pomocą usługi tokenu zabezpieczającego HomeRealm.  
+5. Aby dokonać zakupu wybranej książki, wybierz książkę na liście, a następnie kliknij przycisk **kupić książki**. Aplikacja uruchamia się i jest uwierzytelniany przy użyciu uwierzytelniania Windows za pomocą usługi tokenu zabezpieczającego HomeRealm.  
   
      Próbka jest skonfigurowane tak, aby umożliwić użytkownikom kupowanie książek, które koszt 15 USD lub mniej. Podjęto próbę kupowanie książek, które są droższe niż 15 USD wyniki w kliencie pobieranie komunikat Odmowa dostępu z usługi Store książek.  
   
@@ -106,7 +106,7 @@ Niniejszy przykład pokazuje zabezpieczeń.
   
 #### <a name="to-clean-up"></a>Aby wyczyścić  
   
-1.  Uruchom Cleanup.bat. Usuwa katalogi wirtualne, które były tworzone podczas konfiguracji i usuwa również zainstalowane podczas instalacji certyfikaty.  
+1. Uruchom Cleanup.bat. Usuwa katalogi wirtualne, które były tworzone podczas konfiguracji i usuwa również zainstalowane podczas instalacji certyfikaty.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330340"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Tryby uwierzytelniania elementu SecurityBindingElement
 Windows Communication Foundation (WCF) udostępnia kilka tryby, według których klientów i usług uwierzytelniania ze sobą. Możesz utworzyć zabezpieczeń elementy powiązania dla tych trybów uwierzytelniania przy użyciu metody statycznej na <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy lub przy użyciu konfiguracji. W tym temacie krótko opisano tryby uwierzytelniania 18.  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF) udostępnia kilka tryby, według których
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>Aby ustawić konfigurację trybu uwierzytelniania  
   
-1.  Aby [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu Dodawanie [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1. Aby [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu Dodawanie [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
-2.  Dodanie elementu podrzędnego [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu `<customBinding>` elementu.  
+2. Dodanie elementu podrzędnego [ \<powiązania >](../../../../docs/framework/misc/binding.md) elementu `<customBinding>` elementu.  
   
-3.  Dodaj `<security>` elementu `<binding>` elementu.  
+3. Dodaj `<security>` elementu `<binding>` elementu.  
   
-4.  Ustaw `authenticationMode` atrybutu do jednej z wartości opisanych poniżej. Na przykład, poniższy kod ustawia tryb `AnonymousForCertificate`.  
+4. Ustaw `authenticationMode` atrybutu do jednej z wartości opisanych poniżej. Na przykład, poniższy kod ustawia tryb `AnonymousForCertificate`.  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) udostępnia kilka tryby, według których
   
 #### <a name="to-set-the-mode-programmatically"></a>Aby programowo ustawić tryb  
   
-1.  Określić zwracany typ, który może być jednym z następujących czynności: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, lub <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+1. Określić zwracany typ, który może być jednym z następujących czynności: <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>, <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>, lub <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-2.  Wywołanie odpowiedniej metody statycznej z <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy. Na przykład, poniższy kod wywoła <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> metody.  
+2. Wywołanie odpowiedniej metody statycznej z <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy. Na przykład, poniższy kod wywoła <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> metody.  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  Element powiązania służy do tworzenia niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+3. Element powiązania służy do tworzenia niestandardowego powiązania. Aby uzyskać więcej informacji, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="mode-descriptions"></a>Tryb opisów  
   

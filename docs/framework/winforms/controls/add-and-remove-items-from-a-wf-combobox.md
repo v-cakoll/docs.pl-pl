@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322735"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
 Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdzić pola listy w na różne sposoby, ponieważ te kontrolki mogą być powiązane z różnymi źródłami danych. Jednak w tym temacie przedstawiono najprostszą metodą i wymaga żadne wiązanie danych. Elementy wyświetlane są zwykle ciągów; Jednak każdy obiekt może być używany. Tekst, który jest wyświetlany w kontrolce jest wartość zwrócona przez obiekt `ToString` metody.  
   
 ### <a name="to-add-items"></a>Aby dodać elementy  
   
-1.  Dodaj ciąg lub obiekt do listy przy użyciu `Add` metody `ObjectCollection` klasy. Kolekcja jest wskazywane za pomocą `Items` właściwości:  
+1. Dodaj ciąg lub obiekt do listy przy użyciu `Add` metody `ObjectCollection` klasy. Kolekcja jest wskazywane za pomocą `Items` właściwości:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdz
   
      - lub —  
   
-2.  Wstaw ciąg lub obiekt w żądany moment na liście z `Insert` metody:  
+2. Wstaw ciąg lub obiekt w żądany moment na liście z `Insert` metody:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdz
   
      - lub —  
   
-3.  Przypisz całej tablicy, aby `Items` kolekcji:  
+3. Przypisz całej tablicy, aby `Items` kolekcji:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdz
   
 ### <a name="to-remove-an-item"></a>Aby usunąć element  
   
-1.  Wywołaj `Remove` lub `RemoveAt` metodę, aby usunąć elementy.  
+1. Wywołaj `Remove` lub `RemoveAt` metodę, aby usunąć elementy.  
   
      `Remove` ma jeden argument, który określa element do usunięcia.`RemoveAt` Usuwa element o określonym indeksie.  
   
@@ -122,7 +122,7 @@ Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdz
   
 ### <a name="to-remove-all-items"></a>Aby usunąć wszystkie elementy  
   
-1.  Wywołaj `Clear` metodę, aby usunąć wszystkie elementy z kolekcji:  
+1. Wywołaj `Clear` metodę, aby usunąć wszystkie elementy z kolekcji:  
   
     ```vb  
     ListBox1.Items.Clear()  

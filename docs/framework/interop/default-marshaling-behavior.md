@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c15e24fbe2a131435fe71782c8a55f416f71d62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129327"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315767"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojarzone z parametrami metody zachowuje się jak przekazuje między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolować takie kierowania działań jako przekształcenia typu danych, / / wywoływany można zmienić danych przekazanych do niego i zwracają te zmiany do obiektu wywołującego, a w ramach której okolicznościach Organizator udostępnia optymalizację wydajności.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Jeśli interfejs nie jest od znanych obiektu, organizator wykonuje następujące czynności:  
   
-1.  Organizator wysyła zapytanie do obiektu **IProvideClassInfo2** interfejsu. Jeśli nie dostarczono, organizator używa CLSID zwróciło **IProvideClassInfo2.GetGUID** do identyfikowania coclass, zapewniając interfejs. O identyfikatorze CLSID Organizator można zlokalizować otoki z rejestru, jeśli zestaw został wcześniej zarejestrowany.  
+1. Organizator wysyła zapytanie do obiektu **IProvideClassInfo2** interfejsu. Jeśli nie dostarczono, organizator używa CLSID zwróciło **IProvideClassInfo2.GetGUID** do identyfikowania coclass, zapewniając interfejs. O identyfikatorze CLSID Organizator można zlokalizować otoki z rejestru, jeśli zestaw został wcześniej zarejestrowany.  
   
-2.  Organizator zapytania dla interfejsu **IProvideClassInfo** interfejsu. Jeśli nie dostarczono, organizator używa **ITypeInfo** zwróciło **IProvideClassInfo.GetClassinfo** ustalenie, identyfikator CLSID klasy uwidaczniania interfejsu. Organizator można użyć identyfikatora CLSID, do lokalizowania metadane dla otoki.  
+2. Organizator zapytania dla interfejsu **IProvideClassInfo** interfejsu. Jeśli nie dostarczono, organizator używa **ITypeInfo** zwróciło **IProvideClassInfo.GetClassinfo** ustalenie, identyfikator CLSID klasy uwidaczniania interfejsu. Organizator można użyć identyfikatora CLSID, do lokalizowania metadane dla otoki.  
   
-3.  Jeśli organizator nadal nie można określić klasę, opakowuje interfejs za pomocą klasy otoki ogólnych o nazwie **.__ComObject**.  
+3. Jeśli organizator nadal nie można określić klasę, opakowuje interfejs za pomocą klasy otoki ogólnych o nazwie **.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Organizowanie domyślne dotyczące delegatów  
  Zarządzane delegata jest organizowana jako interfejsem COM lub wskaźnika funkcji jest oparte na mechanizmie wywołania:  

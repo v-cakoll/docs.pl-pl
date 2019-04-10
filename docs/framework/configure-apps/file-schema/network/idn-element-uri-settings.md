@@ -2,12 +2,12 @@
 title: <idn> Element (ustawienia identyfikatora Uri)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129405"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321760"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN >, Element (ustawienia identyfikatora Uri)
 Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazwy domeny.  
@@ -50,13 +50,13 @@ Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane 
   
  Aby włączyć obsługę IRI, wymagane są następujące dwie zmiany:  
   
-1.  Dodaj następujący wiersz do pliku machine.config w katalogu .NET Framework 2.0  
+1. Dodaj następujący wiersz do pliku machine.config w katalogu .NET Framework 2.0  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Określić, czy analizy Zinternacjonalizowanych nazw domen (IDN) stosowane do nazwy domeny i czy powinny być stosowane IRI podczas analizowania reguły. Można to zrobić w pliku machine.config lub w pliku app.config.  
+2. Określić, czy analizy Zinternacjonalizowanych nazw domen (IDN) stosowane do nazwy domeny i czy powinny być stosowane IRI podczas analizowania reguły. Można to zrobić w pliku machine.config lub w pliku app.config.  
   
  Istnieją trzy możliwe wartości IDN w zależności od serwerów DNS, które są używane:  
   

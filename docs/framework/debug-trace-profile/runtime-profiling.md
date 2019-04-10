@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141391"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306394"
 ---
 # <a name="runtime-profiling"></a>Profilowanie środowiska uruchomieniowego
 Profilowanie jest metoda zbierania danych wydajności w każdym scenariuszu rozwoju lub wdrożenia. Ta sekcja dotyczy dla deweloperów i administratorów, którzy chcą zebrać informacje dotyczące wydajności aplikacji.  
@@ -28,19 +28,19 @@ Profilowanie jest metoda zbierania danych wydajności w każdym scenariuszu rozw
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Aby uruchomić Perfmon.exe w systemach Windows Vista i nowsze wersje  
   
-1.  W wierszu polecenia wpisz **monitora wydajności**. **Monitora wydajności** pojawi się konsola.  
+1. W wierszu polecenia wpisz **monitora wydajności**. **Monitora wydajności** pojawi się konsola.  
   
-2.  W **narzędzia do monitorowania** folderu, kliknij przycisk **monitora wydajności**.  
+2. W **narzędzia do monitorowania** folderu, kliknij przycisk **monitora wydajności**.  
   
-3.  Na pasku narzędzi Monitora wydajności kliknij **Dodaj** ikonę (znak plus), jeśli jest obecna. Jeśli nie jest obecny, kliknij prawym przyciskiem myszy w oknie monitora i wybierz **Dodaj liczniki** opcji.  
+3. Na pasku narzędzi Monitora wydajności kliknij **Dodaj** ikonę (znak plus), jeśli jest obecna. Jeśli nie jest obecny, kliknij prawym przyciskiem myszy w oknie monitora i wybierz **Dodaj liczniki** opcji.  
   
      Spowoduje to otwarcie **Dodaj liczniki** okno dialogowe. **Dostępne liczniki** polu listy są wyświetlane obiekty dostępne wydajności. Istnieje kilka wstępnie zdefiniowanych obiektów dla aplikacji programu .NET Framework, w tym w zakresie zarządzania pamięcią (**pamięć .NET CLR**), interoperacyjności (**.NET CLR Interop**), obsługa wyjątków (**Wyjątki .NET CLR**), a wielowątkowości (**.NET CLR LocksAndThreads**). Każdy obiekt wydajności zawiera wiele liczników wydajności poszczególnych. Aby uzyskać listę dostępnych w Monitorze wydajności liczników wydajności, zobacz [liczniki wydajności](../../../docs/framework/debug-trace-profile/performance-counters.md).  
   
-4.  Zaznacz pole wyboru obok nazwy obiekt wydajności, aby wyświetlić listę liczników wydajności poszczególnych, które obsługuje.  
+4. Zaznacz pole wyboru obok nazwy obiekt wydajności, aby wyświetlić listę liczników wydajności poszczególnych, które obsługuje.  
   
-5.  Kliknij licznik wydajności, który chcesz wyświetlić.  
+5. Kliknij licznik wydajności, który chcesz wyświetlić.  
   
-6.  W **wystąpienia wybranego obiektu** pola listy, kliknij przycisk  **\<wszystkie wystąpienia >** umożliwia określenie, że monitorowanie licznika wydajności dla środowiska uruchomieniowego języka wspólnego globalnie (to znaczy na Podstawa całego systemu).  
+6. W **wystąpienia wybranego obiektu** pola listy, kliknij przycisk  **\<wszystkie wystąpienia >** umożliwia określenie, że monitorowanie licznika wydajności dla środowiska uruchomieniowego języka wspólnego globalnie (to znaczy na Podstawa całego systemu).  
   
      —lub—  
   

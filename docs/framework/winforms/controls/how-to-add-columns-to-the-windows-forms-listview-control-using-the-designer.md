@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding column headers
 - columns [Windows Forms], adding to ListView controls
 ms.assetid: 5b1a8b4d-587e-479a-95c1-f9b90884f13a
-ms.openlocfilehash: 9ddff31e4d66ffef2600a1246b35c0a66154c341
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 48fd223c8e770e64513d79ef9d24f93321c98332
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322098"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetlić wiele kolumn dla każdej listy elementów w **szczegóły** widoku. Kolumny można użyć, aby wyświetlić kilka rodzajów informacji na temat każdego elementu listy. Na przykład można wyświetlić listę plików, nazwy pliku, typu pliku, rozmiar i Data ostatniej modyfikacji pliku. Aby uzyskać informacje o wprowadzaniu kolumny, gdy są one tworzone, zobacz [jak: Wyświetlanie podelementów w kolumnach za pomocą Windows formantu ListView formularzy](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
@@ -22,13 +22,13 @@ Formularze Windows <xref:System.Windows.Forms.ListView> formant może wyświetli
   
 ### <a name="to-add-columns-in-the-designer"></a>Aby dodać kolumny w Projektancie  
   
-1.  W **właściwości** okna, ustaw dla formantu <xref:System.Windows.Forms.ListView.View%2A> właściwość <xref:System.Windows.Forms.View.Details>.  
+1. W **właściwości** okna, ustaw dla formantu <xref:System.Windows.Forms.ListView.View%2A> właściwość <xref:System.Windows.Forms.View.Details>.  
   
-2.  W **właściwości** okna, kliknij przycisk **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.ListView.Columns%2A> właściwości.  
+2. W **właściwości** okna, kliknij przycisk **wielokropka** przycisku (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) obok pozycji <xref:System.Windows.Forms.ListView.Columns%2A> właściwości.  
   
      **ColumnHeader — Edytor kolekcji** pojawia się.  
   
-3.  Użyj **Dodaj** przycisk, aby dodać nowe kolumny. Można wybrać nagłówek kolumny i ustawianie jego tekstu (podpis kolumny), wyrównanie tekstu i szerokość.  
+3. Użyj **Dodaj** przycisk, aby dodać nowe kolumny. Można wybrać nagłówek kolumny i ustawianie jego tekstu (podpis kolumny), wyrównanie tekstu i szerokość.  
   
 ## <a name="see-also"></a>Zobacz także
 

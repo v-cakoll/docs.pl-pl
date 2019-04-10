@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 229d3efb6566605fb9f03ad2012793fe2e4cb17b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155184"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330080"
 ---
 # <a name="how-to-view-assembly-contents"></a>Instrukcje: Wyświetlanie zawartości zestawu
 Możesz użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić informacje o Microsoft intermediate language (MSIL) w pliku. Jeśli plik sprawdzane jest zestawem, te informacje mogą obejmować zestawu atrybutów, a także odwołania do innych modułach i zestawach. Te informacje mogą być pomocne w określeniu, czy plik jest zestaw lub częścią zespołu i tego, czy plik ma odwołania do innych modułów lub zestawów.  
   
 ### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Aby wyświetlić zawartość zestawu przy użyciu Ildasm.exe  
   
-1.  Typ **ildasm** \< *nazwy zestawu*> w tym celu w wierszu polecenia. Na przykład następujące polecenie dezasembluje `Hello.exe` zestawu.  
+1. Typ **ildasm** \< *nazwy zestawu*> w tym celu w wierszu polecenia. Na przykład następujące polecenie dezasembluje `Hello.exe` zestawu.  
   
     ```  
     ildasm Hello.exe  
@@ -36,7 +36,7 @@ Możesz użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildas
   
 ### <a name="to-view-assembly-manifest-information"></a>Aby wyświetlić dane manifestu zestawu  
   
-1.  Kliknij ikonę MANIFESTU w oknie dezasembler MSIL.  
+1. Kliknij ikonę MANIFESTU w oknie dezasembler MSIL.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład rozpoczyna się od podstawowych programu "Hello, World". Po kompilacji program, należy użyć Ildasm.exe dezasemblować zestawu Hello.exe i wyświetlić manifest zestawu.  

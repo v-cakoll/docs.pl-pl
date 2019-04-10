@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331315"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target: exe (opcje kompilatora C#)
 **-Target: exe** opcja powoduje, że kompilator, aby utworzyć plik wykonywalny (EXE), aplikacji konsoli.  
@@ -37,11 +37,11 @@ ms.locfileid: "54697884"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **właściwości** strony.  
+1. Otwórz projekt **właściwości** strony.  
   
-2.  Kliknij przycisk **aplikacji** stronę właściwości.  
+2. Kliknij przycisk **aplikacji** stronę właściwości.  
   
-3.  Modyfikowanie **typ danych wyjściowych** właściwości.  
+3. Modyfikowanie **typ danych wyjściowych** właściwości.  
   
  Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.OutputType%2A>.  
   

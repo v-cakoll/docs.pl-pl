@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332394"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Powoduje, że kompilator zgłaszaj błędy jeśli zmienne nie są deklarowane, zanim zostaną użyte.  
@@ -34,11 +34,11 @@ Powoduje, że kompilator zgłaszaj błędy jeśli zmienne nie są deklarowane, z
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Aby ustawić - optionexplicit — w środowisku IDE programu Visual Studio  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
+1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
   
-2.  Kliknij przycisk **skompilować** kartę.  
+2. Kliknij przycisk **skompilować** kartę.  
   
-3.  Zmodyfikuj wartość w **Option Explicit** pole.  
+3. Zmodyfikuj wartość w **Option Explicit** pole.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje, kiedy `-optionexplicit-` jest używany.  
@@ -47,10 +47,10 @@ Powoduje, że kompilator zgłaszaj błędy jeśli zmienne nie są deklarowane, z
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
-- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
-- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer —](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Explicit — Instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Domyślne ustawienia programu Visual Basic, Projekty, okno dialogowe Opcje](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

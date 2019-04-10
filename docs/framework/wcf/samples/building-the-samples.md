@@ -2,12 +2,12 @@
 title: Kompilowanie przykładów programu Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317860"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>Kompilowanie przykładów programu Windows Communication Foundation
 
@@ -18,9 +18,9 @@ Mogą być wbudowane przykładów Windows Communication Foundation (WCF), za pom
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>Aby skompilować przykład za pomocą wiersza polecenia
 
-1.  Otwórz wiersz polecenia dla deweloperów programu Visual Studio i przejdź do podkatalogu specyficzny dla języka, w lokalizacji katalogu, w której zainstalowany próbki.
+1. Otwórz wiersz polecenia dla deweloperów programu Visual Studio i przejdź do podkatalogu specyficzny dla języka, w lokalizacji katalogu, w której zainstalowany próbki.
 
-2.  Typ `msbuild` w wierszu polecenia. Pliki programu klienta zostały opracowane w celu *client\bin* i plików programu usługi zostały opracowane w celu *service\bin*. Jeśli usługa jest obsługiwana przez Internetowe usługi informacyjne (IIS), plików programu usługi są również kopiowane do *servicemodelsamples* katalogu i jego *\bin* podkatalogu.
+2. Typ `msbuild` w wierszu polecenia. Pliki programu klienta zostały opracowane w celu *client\bin* i plików programu usługi zostały opracowane w celu *service\bin*. Jeśli usługa jest obsługiwana przez Internetowe usługi informacyjne (IIS), plików programu usługi są również kopiowane do *servicemodelsamples* katalogu i jego *\bin* podkatalogu.
 
 > [!NOTE]
 > Listy ACL należy ustawić na *%systemdrive%\inetpub\wwwroot* udzielenia modyfikowania uprawnień do konta, w którym są uruchomione. W przeciwnym razie niektóre po awarii zdarzeń kompilacji. Alternatywnie można pozostawić listy ACL, i uruchom wiersz polecenia zestawu SDK jako administrator.
@@ -50,9 +50,9 @@ Mogą być wbudowane przykładów Windows Communication Foundation (WCF), za pom
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>Aby ponownie wygenerować pliki klienta i konfiguracji
 
-1.  Otwórz wiersz polecenia z zestawu SDK i przejdź do podkatalogu specyficzny dla języka, w lokalizacji katalogu, w której zainstalowany próbki.
+1. Otwórz wiersz polecenia z zestawu SDK i przejdź do podkatalogu specyficzny dla języka, w lokalizacji katalogu, w której zainstalowany próbki.
 
-2.  Jeśli usługa jest typem hostowanych w sieci Web, użyj następującego polecenia.
+2. Jeśli usługa jest typem hostowanych w sieci Web, użyj następującego polecenia.
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

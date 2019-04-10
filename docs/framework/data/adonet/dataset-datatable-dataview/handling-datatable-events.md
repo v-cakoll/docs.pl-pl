@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098926"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312829"
 ---
 # <a name="handling-datatable-events"></a>Obsługa zdarzeń elementu DataTable
 <xref:System.Data.DataTable> Obiekt zawiera szereg zdarzeń, które mogą być przetwarzane przez aplikację. W poniższej tabeli opisano `DataTable` zdarzenia.  
@@ -47,21 +47,21 @@ ms.locfileid: "59098926"
 ## <a name="sequence-of-operations"></a>Sekwencja operacji  
  Oto sekwencja operacji, które występują podczas `DataRow` dodane, zmodyfikowane lub usunięte:  
   
-1.  Utwórz rekord proponowanych i zastosować zmiany.  
+1. Utwórz rekord proponowanych i zastosować zmiany.  
   
-2.  Sprawdź ograniczenia w kolumnach-expression.  
+2. Sprawdź ograniczenia w kolumnach-expression.  
   
-3.  Wywoływanie `RowChanging` lub `RowDeleting` zdarzeń, jeśli ma to zastosowanie.  
+3. Wywoływanie `RowChanging` lub `RowDeleting` zdarzeń, jeśli ma to zastosowanie.  
   
-4.  Ustaw proponowany rekord bieżącego rekordu.  
+4. Ustaw proponowany rekord bieżącego rekordu.  
   
-5.  Zaktualizuj wszystkie indeksy.  
+5. Zaktualizuj wszystkie indeksy.  
   
-6.  Wywoływanie `ListChanged` skojarzone zdarzenia dla `DataView` obiektów i `PropertyChanged` skojarzone zdarzenia dla `DataRowView` obiektów.  
+6. Wywoływanie `ListChanged` skojarzone zdarzenia dla `DataView` obiektów i `PropertyChanged` skojarzone zdarzenia dla `DataRowView` obiektów.  
   
-7.  Należy ocenić wszystkie kolumny wyrażenia, ale opóźnienie sprawdzanie żadnych ograniczeń na tych kolumnach.  
+7. Należy ocenić wszystkie kolumny wyrażenia, ale opóźnienie sprawdzanie żadnych ograniczeń na tych kolumnach.  
   
-8.  Wywoływanie `ListChanged` skojarzone zdarzenia dla `DataView` obiektów i `PropertyChanged` skojarzone zdarzenia dla `DataRowView` obiektów wpływ ocen kolumnę wyrażenia.  
+8. Wywoływanie `ListChanged` skojarzone zdarzenia dla `DataView` obiektów i `PropertyChanged` skojarzone zdarzenia dla `DataRowView` obiektów wpływ ocen kolumnę wyrażenia.  
   
 9. Wywoływanie `RowChanged` lub `RowDeleted` zdarzeń, jeśli ma to zastosowanie.  
   

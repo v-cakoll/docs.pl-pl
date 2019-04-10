@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207548"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331471"
 ---
 # <a name="how-to-set-the-input-mask"></a>Instrukcje: ustawienie maski wprowadzania
 Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, który obsługuje składni deklaratywnej akceptowanie lub odrzucanie dane wejściowe użytkownika. Ustawiając właściwość maski, można określić danych wejściowych użytkownika dozwolony bez konieczności pisania wszelkie logikę niestandardowego sprawdzania poprawności w aplikacji. Aby uzyskać więcej informacji, zobacz sekcję Uwagi <xref:System.Windows.Forms.MaskedTextBox> klasy.  
@@ -21,18 +21,18 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
   
 #### <a name="to-set-the-mask-property-manually"></a>Aby ręcznie ustawić właściwość maski  
   
-1.  W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
+1. W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
   
-2.  W **właściwości** oknie Znajdź <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
+2. W **właściwości** oknie Znajdź <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> właściwości.  
   
-3.  Wpisz maskę, który ma. Na przykład wpisz `###`.  
+3. Wpisz maskę, który ma. Na przykład wpisz `###`.  
   
 ## <a name="using-the-input-mask-dialog-box"></a>Za pomocą okna dialogowego maska wprowadzania  
  Maska wprowadzania, okno dialogowe zawiera kilka wstępnie zdefiniowanych maski wprowadzania. Można również zmienić maski wstępnie zdefiniowanych lub ręcznie wprowadź własne maski.  
   
 #### <a name="to-open-the-input-mask-dialog-box"></a>Aby otworzyć okno dialogowe maska wprowadzania  
   
-1.  W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
+1. W **projektowania** widoku, wybierz opcję <xref:System.Windows.Forms.MaskedTextBox>.  
   
     1.  Kliknij tag, aby otworzyć **zadania MaskedTextBox** panelu.  
   
@@ -48,18 +48,18 @@ Formant pola tekstowego maskowanego jest formant pola tekstowego rozszerzonego, 
   
 #### <a name="to-use-the-input-mask-dialog-box"></a>Aby użyć okna dialogowego maska wprowadzania  
   
-1.  (Opcjonalnie) Kliknij jeden z wstępnie zdefiniowanych masek na liście.  
+1. (Opcjonalnie) Kliknij jeden z wstępnie zdefiniowanych masek na liście.  
   
-2.  (Opcjonalnie) Wstępnie zdefiniowane maska w edycji **maski** pole.  
+2. (Opcjonalnie) Wstępnie zdefiniowane maska w edycji **maski** pole.  
   
-3.  (Opcjonalnie) Wpisz nową maskę w **maski** pole. Oznacza to nie trzeba użyć jednego z wstępnie zdefiniowanych maski.  
+3. (Opcjonalnie) Wpisz nową maskę w **maski** pole. Oznacza to nie trzeba użyć jednego z wstępnie zdefiniowanych maski.  
   
     > [!NOTE]
     >  Okno (wersja zapoznawcza) zawiera znaki, które użytkownik będzie widział w <xref:System.Windows.Forms.MaskedTextBox>. Te znaki znajdują się wskazówki pomagające użytkownik może wprowadzić poprawne dane.  
   
-4.  Zaznacz lub wyczyść **ValidatingType użyj** pole wyboru. **ValidatingType użyj** pole wyboru określa, czy typ danych służy do Sprawdź danych wejściowych przez użytkownika. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości.  
+4. Zaznacz lub wyczyść **ValidatingType użyj** pole wyboru. **ValidatingType użyj** pole wyboru określa, czy typ danych służy do Sprawdź danych wejściowych przez użytkownika. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> właściwości.  
   
-5.  Kliknij przycisk **OK**.  
+5. Kliknij przycisk **OK**.  
   
      Maska jest wprowadzana w **maski** właściwość **właściwości** okna.  
   

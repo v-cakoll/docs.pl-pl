@@ -2,12 +2,12 @@
 title: Rejestrowanie procedur składowanych w programie SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313921"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Rejestrowanie procedur składowanych w programie SQL Server
  Podpis cyfrowy jest szyfrowane przy użyciu klucza prywatnego osoby podpisującej podsumowanie danych. Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowe dla jego elementów nośnych lub właściciela. Możesz zarejestrować procedury składowane, funkcje (z wyjątkiem funkcji z wartościami przechowywanymi w tabeli śródwierszowych), wyzwalacze i zestawów.  
@@ -23,25 +23,25 @@ ms.locfileid: "59094622"
   
  Istnieją dwie czynności związane z rejestracją modułu:  
   
-1.  Utwórz certyfikat za pomocą instrukcji języka Transact-SQL `CREATE CERTIFICATE [certificateName]` instrukcji. Ta instrukcja oferuje kilka opcji do ustawiania datę początkową i końcową i hasła. Data wygaśnięcia domyślną jest jeden rok.  
+1. Utwórz certyfikat za pomocą instrukcji języka Transact-SQL `CREATE CERTIFICATE [certificateName]` instrukcji. Ta instrukcja oferuje kilka opcji do ustawiania datę początkową i końcową i hasła. Data wygaśnięcia domyślną jest jeden rok.  
   
-1.  Utwórz procedurę za pomocą certyfikatu za pomocą języka Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` instrukcji.  
+1. Utwórz procedurę za pomocą certyfikatu za pomocą języka Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` instrukcji.  
 
 Gdy moduł został podpisany, jeden lub więcej podmiotów zabezpieczeń należy utworzyć w celu przechowywania dodatkowe uprawnienia, które powinny być skojarzone z certyfikatem.  
 
 Jeśli moduł wymaga dodatkowych uprawnień na poziomie bazy danych:  
   
-1.  Utwórz użytkownika bazy danych, skojarzone z tym certyfikatem, za pomocą instrukcji języka Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` instrukcji. Ten użytkownik istnieje tylko w bazie danych i nie jest skojarzony z logowaniem, chyba, że nazwa logowania została również utworzona na podstawie tego samego certyfikatu.  
+1. Utwórz użytkownika bazy danych, skojarzone z tym certyfikatem, za pomocą instrukcji języka Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` instrukcji. Ten użytkownik istnieje tylko w bazie danych i nie jest skojarzony z logowaniem, chyba, że nazwa logowania została również utworzona na podstawie tego samego certyfikatu.  
   
-1.  Przyznaj użytkownikowi certyfikatu wymagane uprawnienia na poziomie bazy danych.  
+1. Przyznaj użytkownikowi certyfikatu wymagane uprawnienia na poziomie bazy danych.  
   
 Jeśli moduł wymaga dodatkowych uprawnień na poziomie serwera:  
   
-1.  Skopiuj certyfikat `master` bazy danych.  
+1. Skopiuj certyfikat `master` bazy danych.  
  
-1.  Utwórz dane logowania skojarzonego z tym certyfikatem, za pomocą instrukcji języka Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrukcji.  
+1. Utwórz dane logowania skojarzonego z tym certyfikatem, za pomocą instrukcji języka Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrukcji.  
   
-1.  Przyznaj logowania certyfikatu wymagane uprawnienia na poziomie serwera.  
+1. Przyznaj logowania certyfikatu wymagane uprawnienia na poziomie serwera.  
   
 > [!NOTE]  
 >  Certyfikat nie może udzielać uprawnień użytkownika, który miał odwołano przy użyciu instrukcji DENY uprawnienia. ODMÓW zawsze ma pierwszeństwo przed udzielanie, uniemożliwiając dziedziczy uprawnienia przyznane użytkownikowi certyfikatu przez obiekt wywołujący.  

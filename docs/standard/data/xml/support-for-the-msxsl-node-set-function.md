@@ -1,18 +1,18 @@
 ---
-title: 'Obsługa msxsl: node-set() — funkcja'
+title: Obsługa funkcji msxsl:node-set()
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a37220816ab320340b2dd5c048cc4ff2ad9724a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330236"
 ---
-# <a name="support-for-the-msxslnode-set-function"></a>Obsługa msxsl: node-set() — funkcja
+# <a name="support-for-the-msxslnode-set-function"></a>Obsługa funkcji msxsl:node-set()
 `msxsl:node-set` Funkcja umożliwia konwertowanie wynikowego fragmentu drzewa w zestawie węzłów. Węzeł wynikowy ustawić opcji zawsze zawiera jeden węzeł i węzeł główny drzewa.  
   
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "44252782"
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `$var` to zmienna, która jest węzeł drzewa w arkuszu stylów. Dla każdej instrukcji w połączeniu z `node-set` funkcja zezwala użytkownikowi na iterację w tym węźle drzewa jako zestaw węzłów.  
   
-## <a name="nodesetxsl"></a>NodeSet.xsl  
+## <a name="nodesetxsl"></a>nodeset.xsl  
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -38,7 +38,7 @@ ms.locfileid: "44252782"
     <xsl:template match="/">  
         <authors>  
             <xsl:for-each select="msxsl:node-set($books)/book">   
-                <author><xsl:value-of select="@author"/)</author>  
+                <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
     </xsl:template>  

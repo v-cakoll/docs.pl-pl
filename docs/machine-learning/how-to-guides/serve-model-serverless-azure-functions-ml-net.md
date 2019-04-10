@@ -3,12 +3,12 @@ title: Wdrażanie modelu strukturze ML.NET do usługi Azure Functions
 description: Obsługiwać model analizy tonacji strukturze ML.NET uczenia maszynowego do przewidywania w Internecie przy użyciu usługi Azure Functions
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: db29e37660665b02ab93a07b37418f0c4c20a608
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788655"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330639"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>Instrukcje: Model w strukturze ML.NET użycie w usłudze Azure Functions
 
@@ -21,7 +21,7 @@ Obecnie używasz w tym przykładzie porad i pokrewnych **strukturze ML.NET wersj
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) za pomocą obciążenia "Programowanie dla wielu platform .NET Core" i "Programowanie na platformie Azure" zainstalowane. 
+- [Visual Studio 2017 15.6 lub nowszym](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) za pomocą obciążenia "Programowanie dla wielu platform .NET Core" i "Programowanie na platformie Azure" zainstalowane. 
 - [Narzędzia usługi Azure Functions](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - Program PowerShell
 - Wstępnie uczonego modelu. 

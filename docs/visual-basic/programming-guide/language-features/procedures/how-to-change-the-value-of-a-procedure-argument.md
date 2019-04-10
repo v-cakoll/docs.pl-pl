@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837504"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316625"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Instrukcje: Zmień wartość argumentu procedury (Visual Basic)
 Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z parametrów zdefiniowanych w procedurze. W niektórych przypadkach kod procedury można zmienić wartości bazowe argumentu w wywoływanym kodzie. W innych przypadkach procedura może zmienić tylko w swojej lokalnej kopii argumentu.  
@@ -31,13 +31,13 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>Aby zmienić podstawowej wartości argumentu w wywoływanym kodzie procedury  
   
-1.  W deklaracji procedury, należy określić [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) parametru odpowiadającego atrybutowi argument.  
+1. W deklaracji procedury, należy określić [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) parametru odpowiadającego atrybutowi argument.  
   
-2.  W wywoływanym kodzie należy przekazać można modyfikować elementu programistycznego jako argument.  
+2. W wywoływanym kodzie należy przekazać można modyfikować elementu programistycznego jako argument.  
   
-3.  W wywoływanym kodzie nie należy umieszczać argument w nawiasach na liście argumentów.  
+3. W wywoływanym kodzie nie należy umieszczać argument w nawiasach na liście argumentów.  
   
-4.  W kodzie procedury należy użyć nazwy parametru do przypisania wartości do elementu bazowego w wywoływanym kodzie.  
+4. W kodzie procedury należy użyć nazwy parametru do przypisania wartości do elementu bazowego w wywoływanym kodzie.  
   
  Zobacz przykład dalej na dół demonstracyjne.  
   
@@ -46,13 +46,13 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>Aby zmienić kopię argumentu procedury w kodzie procedury  
   
-1.  W deklaracji procedury, należy określić [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) parametru odpowiadającego atrybutowi argument.  
+1. W deklaracji procedury, należy określić [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) parametru odpowiadającego atrybutowi argument.  
   
      —lub—  
   
      W wywoływanym kodzie należy ująć argument w nawiasach na liście argumentów. Zmusza to Visual Basic do przekazywania argumentu przez wartość, nawet wtedy, gdy odpowiedni parametr określa `ByRef`.  
   
-2.  W kodzie procedury należy użyć nazwy parametru do przypisania wartości do lokalnej kopi argumentu. Podstawową wartość w kod wywołujący nie jest zmieniany.  
+2. W kodzie procedury należy użyć nazwy parametru do przypisania wartości do lokalnej kopi argumentu. Podstawową wartość w kod wywołujący nie jest zmieniany.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia dwie procedury używające zmiennej tablicy i działać na jego elementach. `increase` Procedura dodaje po prostu jednym do każdego elementu. `replace` Procedury przypisuje nową tablicę z parametrem `a()` , a następnie dodaje je do każdego elementu.  
@@ -85,7 +85,7 @@ Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z
 - [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)
 - [Różnice między argumentami modyfikowalnymi i niemodyfikowalnymi](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [Różnice między przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [Instrukcje: Chronienie argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Instrukcje: Wymuszanie być przekazywany przez wartość argumentu](./how-to-force-an-argument-to-be-passed-by-value.md)
-- [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)
+- [Instrukcje: Ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Instrukcje: Wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Przekazywanie argumentów przez pozycję i przez nazwę](./passing-arguments-by-position-and-by-name.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

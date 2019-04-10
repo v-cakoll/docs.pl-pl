@@ -1,5 +1,5 @@
 ---
-title: 'Nie można zapisać do pliku wyjściowego „<filename>”: <error>'
+title: 'Nie można zapisać do pliku wyjściowego "<filename>": <error>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827201"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318224"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>Nie można zapisać do pliku wyjściowego "\<nazwa pliku >": \<błąd >
 Wystąpił problem podczas tworzenia pliku.  
@@ -31,31 +31,31 @@ Wystąpił problem podczas tworzenia pliku.
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Skompiluj program ponownie, aby zobaczyć, jeśli błąd będzie się powtarzać.  
+1. Skompiluj program ponownie, aby zobaczyć, jeśli błąd będzie się powtarzać.  
   
-2.  Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
+2. Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
   
-3.  Jeśli błąd będzie się powtarzać, uruchom ponownie komputer.  
+3. Jeśli błąd będzie się powtarzać, uruchom ponownie komputer.  
   
-4.  Jeśli ten błąd wystąpi, zainstaluj ponownie Visual Basic.  
+4. Jeśli ten błąd wystąpi, zainstaluj ponownie Visual Basic.  
   
-5.  Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
+5. Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>Aby sprawdzić atrybutów plików w Eksploratorze plików  
   
-1.  Otwórz folder, który Cię interesuje.  
+1. Otwórz folder, który Cię interesuje.  
   
-2.  Kliknij przycisk **widoków** ikonę i wybierz polecenie **szczegóły**.  
+2. Kliknij przycisk **widoków** ikonę i wybierz polecenie **szczegóły**.  
   
-3.  Kliknij prawym przyciskiem myszy nagłówek kolumny, a następnie wybierz **atrybuty** z listy rozwijanej.  
+3. Kliknij prawym przyciskiem myszy nagłówek kolumny, a następnie wybierz **atrybuty** z listy rozwijanej.  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>Do zmiany atrybutów pliku lub folderu  
   
-1.  W **Eksploratora plików**, kliknij prawym przyciskiem myszy plik lub folder i wybierz polecenie **właściwości**.  
+1. W **Eksploratora plików**, kliknij prawym przyciskiem myszy plik lub folder i wybierz polecenie **właściwości**.  
   
-2.  W **atrybuty** części **ogólne** kartę, usuń zaznaczenie **tylko do odczytu** pole.  
+2. W **atrybuty** części **ogólne** kartę, usuń zaznaczenie **tylko do odczytu** pole.  
   
-3.  Naciśnij klawisz **OK**.  
+3. Naciśnij klawisz **OK**.  
   
 ## <a name="see-also"></a>Zobacz także
 

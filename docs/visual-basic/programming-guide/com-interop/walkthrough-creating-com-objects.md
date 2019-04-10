@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331900"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Przewodnik: Tworzenie obiektów COM z Visual Basic
 Podczas tworzenia nowych aplikacji lub składników, najlepiej utworzyć zestawów .NET Framework. Jednakże Visual Basic również ułatwia udostępnianie składników .NET Framework, dla modelu COM. Dzięki temu można zapewnić nowych składników dla starszych zestawów aplikacji, które wymagają składników COM. W tym instruktażu przedstawiono sposób użycia języka Visual Basic do udostępnienia [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] obiekty jako obiekty COM, zarówno z i bez szablonu klasy COM.  
@@ -27,61 +27,61 @@ Podczas tworzenia nowych aplikacji lub składników, najlepiej utworzyć zestaw�
   
 ### <a name="to-create-a-com-object-by-using-the-com-class-template"></a>Aby utworzyć obiekt COM za pomocą szablonu klasy modelu COM  
   
-1.  Otwórz nowy projekt aplikacji Windows z **pliku** menu, klikając **nowy projekt**.  
+1. Otwórz nowy projekt aplikacji Windows z **pliku** menu, klikając **nowy projekt**.  
   
-2.  W **nowy projekt** okno dialogowe, w obszarze **typów projektów** pola, należy sprawdzić, czy wybrano Windows. Wybierz **biblioteki klas** z **szablony** listy, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.  
+2. W **nowy projekt** okno dialogowe, w obszarze **typów projektów** pola, należy sprawdzić, czy wybrano Windows. Wybierz **biblioteki klas** z **szablony** listy, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.  
   
-3.  Wybierz **Dodaj nowy element** z **projektu** menu. **Dodaj nowy element** zostanie wyświetlone okno dialogowe.  
+3. Wybierz **Dodaj nowy element** z **projektu** menu. **Dodaj nowy element** zostanie wyświetlone okno dialogowe.  
   
-4.  Wybierz **klasa COM —** z **szablony** listy, a następnie kliknij przycisk **Dodaj**. Visual Basic dodaje nową klasę i konfiguruje nowy projekt dla współdziałania z modelem COM.  
+4. Wybierz **klasa COM —** z **szablony** listy, a następnie kliknij przycisk **Dodaj**. Visual Basic dodaje nową klasę i konfiguruje nowy projekt dla współdziałania z modelem COM.  
   
-5.  Dodaj kod, takie jak właściwości, metody i zdarzenia do klasy COM.  
+5. Dodaj kod, takie jak właściwości, metody i zdarzenia do klasy COM.  
   
-6.  Wybierz **kompilacji ClassLibrary1** z **kompilacji** menu. Visual Basic kompilacji zestawu i rejestruje obiekt COM w systemie operacyjnym.  
+6. Wybierz **kompilacji ClassLibrary1** z **kompilacji** menu. Visual Basic kompilacji zestawu i rejestruje obiekt COM w systemie operacyjnym.  
   
 ## <a name="creating-com-objects-without-the-com-class-template"></a>Tworzenie obiektów COM bez szablonu klasy modelu COM  
  Można również utworzyć klasę modelu COM ręcznie, zamiast używać szablonu klasy COM. Ta procedura jest pomocna podczas pracy z poziomu wiersza polecenia, lub gdy chcesz mieć większą kontrolę nad jak obiekty COM są zdefiniowane.  
   
 #### <a name="to-set-up-your-project-to-generate-a-com-object"></a>Aby skonfigurować projekt do wygenerowania obiektów COM  
   
-1.  Otwórz nowy projekt aplikacji Windows z **pliku** menu, klikając **NewProject**.  
+1. Otwórz nowy projekt aplikacji Windows z **pliku** menu, klikając **NewProject**.  
   
-2.  W **nowy projekt** okno dialogowe, w obszarze **typów projektów** pola, należy sprawdzić, czy wybrano Windows. Wybierz **biblioteki klas** z **szablony** listy, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.  
+2. W **nowy projekt** okno dialogowe, w obszarze **typów projektów** pola, należy sprawdzić, czy wybrano Windows. Wybierz **biblioteki klas** z **szablony** listy, a następnie kliknij przycisk **OK**. Zostanie wyświetlony nowy projekt.  
   
-3.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie kliknij przycisk **właściwości**. **Projektanta projektu** jest wyświetlana.  
+3. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy projekt, a następnie kliknij przycisk **właściwości**. **Projektanta projektu** jest wyświetlana.  
   
-4.  Kliknij przycisk **skompilować** kartę.  
+4. Kliknij przycisk **skompilować** kartę.  
   
-5.  Wybierz **Zarejestruj dla współdziałania COM** pole wyboru.  
+5. Wybierz **Zarejestruj dla współdziałania COM** pole wyboru.  
   
 #### <a name="to-set-up-the-code-in-your-class-to-create-a-com-object"></a>Aby skonfigurować kod w swojej klasie, można utworzyć obiektu COM  
   
-1.  W **Eksploratora rozwiązań**, kliknij dwukrotnie **Class1.vb** do wyświetlenia jego kodu.  
+1. W **Eksploratora rozwiązań**, kliknij dwukrotnie **Class1.vb** do wyświetlenia jego kodu.  
   
-2.  Zmień nazwę klasy, która ma `ComClass1`.  
+2. Zmień nazwę klasy, która ma `ComClass1`.  
   
-3.  Dodaj następujące stałe do `ComClass1`. Będą one przechowywane w stałych Unikatowy identyfikator globalny (GUID), które obiekty COM są wymagane do.  
+3. Dodaj następujące stałe do `ComClass1`. Będą one przechowywane w stałych Unikatowy identyfikator globalny (GUID), które obiekty COM są wymagane do.  
   
      [!code-vb[VbVbalrInterop#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#2)]  
   
-4.  Na **narzędzia** menu, kliknij przycisk **Utwórz Guid**. W **Utwórz GUID** okno dialogowe, kliknij przycisk **Format rejestru** a następnie kliknij przycisk **kopiowania**. Kliknij przycisk **zakończenia**.  
+4. Na **narzędzia** menu, kliknij przycisk **Utwórz Guid**. W **Utwórz GUID** okno dialogowe, kliknij przycisk **Format rejestru** a następnie kliknij przycisk **kopiowania**. Kliknij przycisk **zakończenia**.  
   
-5.  Zastąp ciąg pusty dla `ClassId` przy użyciu identyfikatora GUID, nawiasy klamrowe usuwanie wiodące i końcowe. Na przykład, jeśli identyfikator GUID udostępnione przez Guidgen jest `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` , a następnie kod powinien wyglądać następująco.  
+5. Zastąp ciąg pusty dla `ClassId` przy użyciu identyfikatora GUID, nawiasy klamrowe usuwanie wiodące i końcowe. Na przykład, jeśli identyfikator GUID udostępnione przez Guidgen jest `"{2C8B0AEE-02C9-486e-B809-C780A11530FE}"` , a następnie kod powinien wyglądać następująco.  
   
      [!code-vb[VbVbalrInterop#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#3)]  
   
-6.  Powtórz poprzednie kroki dla `InterfaceId` i `EventsId` stałych, jak w poniższym przykładzie.  
+6. Powtórz poprzednie kroki dla `InterfaceId` i `EventsId` stałych, jak w poniższym przykładzie.  
   
      [!code-vb[VbVbalrInterop#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#4)]  
   
     > [!NOTE]
     >  Upewnij się, że identyfikator GUID w faktycznej nowych i unikatowych; w przeciwnym razie składnika COM mogą powodować konflikt z innymi składnikami COM.  
   
-7.  Dodaj `ComClass` atrybutu `ComClass1`, określając identyfikatorów GUID dla Identyfikatora klasy, identyfikator interfejsu i identyfikator zdarzenia, jak w poniższym przykładzie:  
+7. Dodaj `ComClass` atrybutu `ComClass1`, określając identyfikatorów GUID dla Identyfikatora klasy, identyfikator interfejsu i identyfikator zdarzenia, jak w poniższym przykładzie:  
   
      [!code-vb[VbVbalrInterop#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#5)]  
   
-8.  Klasy COM musi mieć bez parametrów `Public Sub New()` konstruktora lub klasa nie zarejestruje poprawnie. Dodaj konstruktor bez parametrów do klasy:  
+8. Klasy COM musi mieć bez parametrów `Public Sub New()` konstruktora lub klasa nie zarejestruje poprawnie. Dodaj konstruktor bez parametrów do klasy:  
   
      [!code-vb[VbVbalrInterop#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#6)]  
   
@@ -93,8 +93,8 @@ Podczas tworzenia nowych aplikacji lub składników, najlepiej utworzyć zestaw�
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
-- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Przewodnik: implementowanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [#Region, dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md)
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Przewodnik: Wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [#Region — dyrektywa](../../../visual-basic/language-reference/directives/region-directive.md)
 - [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

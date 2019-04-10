@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199716"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314233"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows
 Czasami jest to przydatne sprawdzić każdy węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> kontroli w celu wykonywania pewnych obliczeń na podstawie wartości węzła. Tę operację można wykonać przy użyciu procedury cykliczne (cykliczne method in Class metoda C# i C++) który iteruje po każdym węźle w każdej kolekcji drzewa.  
@@ -24,9 +24,9 @@ Czasami jest to przydatne sprawdzić każdy węzeł w formularzach Windows <xref
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Aby Iterowanie wszystkich węzłów kontrolki TreeView  
   
-1.  Tworzenie procedury cykliczne (cykliczne method in Class metoda C# i C++), które testują każdego węzła.  
+1. Tworzenie procedury cykliczne (cykliczne method in Class metoda C# i C++), które testują każdego węzła.  
   
-2.  Wywołania tej procedury.  
+2. Wywołania tej procedury.  
   
      Poniższy przykład pokazuje, jak drukowanie każdego <xref:System.Windows.Forms.TreeNode> obiektu <xref:System.Windows.Forms.TreeNode.Text%2A> właściwości:  
   

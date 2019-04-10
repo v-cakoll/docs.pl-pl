@@ -2,12 +2,12 @@
 title: Elementy DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198000"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313518"
 ---
 # <a name="diffgrams"></a>Elementy DiffGram
 Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna wersja elementów danych. <xref:System.Data.DataSet> Używa formatu w formacie DiffGram do ładowania i utrzymują się jego zawartość i do wykonywania serializacji jego zawartość dla transportu połączenia sieciowego. Gdy <xref:System.Data.DataSet> są zapisywane jako element w formacie DiffGram, wypełnia ją w formacie DiffGram wszystkie niezbędne informacje dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, w tym wartości kolumn z obu **oryginalnego** i **bieżącego** wersji wierszy, informacje o błędzie wiersza i kolejności wierszy.  
@@ -20,26 +20,26 @@ Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna 
   
 ### <a name="to-generate-a-diffgram"></a>Aby wygenerować obiektu Diffgram  
   
-1.  Wygeneruj listę tabel głównych (czyli tabele bez żadnych nadrzędnego).  
+1. Wygeneruj listę tabel głównych (czyli tabele bez żadnych nadrzędnego).  
   
-2.  Dla każdej tabeli i jego elementy podrzędne na liście zapisać bieżącą wersję wszystkich wierszy w pierwszej sekcji w formacie Diffgram.  
+2. Dla każdej tabeli i jego elementy podrzędne na liście zapisać bieżącą wersję wszystkich wierszy w pierwszej sekcji w formacie Diffgram.  
   
-3.  Dla każdej tabeli w <xref:System.Data.DataSet>, zapisać oryginalną wersję wszystkich wierszy, jeśli istnieją w  **\<przed >** części w formacie Diffgram.  
+3. Dla każdej tabeli w <xref:System.Data.DataSet>, zapisać oryginalną wersję wszystkich wierszy, jeśli istnieją w  **\<przed >** części w formacie Diffgram.  
   
-4.  Dla wierszy, które mają błędy, pisanie zawartości w błąd  **\<błędy >** części w formacie Diffgram.  
+4. Dla wierszy, które mają błędy, pisanie zawartości w błąd  **\<błędy >** części w formacie Diffgram.  
   
  Format Diffgram są przetwarzane w kolejności od początku pliku XML na końcu.  
   
 ### <a name="to-process-a-diffgram"></a>Do przetworzenia w formacie Diffgram  
   
-1.  Proces w pierwszej sekcji Format Diffgram, która zawiera bieżącą wersję wierszy.  
+1. Proces w pierwszej sekcji Format Diffgram, która zawiera bieżącą wersję wierszy.  
   
-2.  Przetwarzanie drugi lub  **\<przed >** sekcji, który zawiera oryginalną wersję wiersz zmodyfikowany i usunięte wiersze.  
+2. Przetwarzanie drugi lub  **\<przed >** sekcji, który zawiera oryginalną wersję wiersz zmodyfikowany i usunięte wiersze.  
   
     > [!NOTE]
     >  Jeśli wiersz jest oznaczony jako usunięty, operacja usuwania może usunąć wiersza elementy podrzędne, w zależności od `Cascade` właściwości bieżącego <xref:System.Data.DataSet>.  
   
-3.  Proces  **\<błędy >** sekcji. Ustaw informacje o błędzie dla określonego wiersza i kolumny dla każdego elementu w tej sekcji.  
+3. Proces  **\<błędy >** sekcji. Ustaw informacje o błędzie dla określonego wiersza i kolumny dla każdego elementu w tej sekcji.  
   
 > [!NOTE]
 >  Jeśli ustawisz <xref:System.Data.XmlWriteMode> na format Diffgram, zawartość elementu docelowego <xref:System.Data.DataSet> a oryginalny wskaźnik <xref:System.Data.DataSet> mogą się różnić.  

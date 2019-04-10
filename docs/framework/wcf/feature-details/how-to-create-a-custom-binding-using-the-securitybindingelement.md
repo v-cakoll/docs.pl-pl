@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316807"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement
 Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane przez system, które można skonfigurować, ale nie zapewniają pełną elastyczność podczas konfigurowania wszystkich opcji zabezpieczeń, które obsługuje usługi WCF. W tym temacie pokazano, jak utworzyć niestandardowego powiązania bezpośrednio z poziomu powiązania poszczególnych elementów i opisano niektóre ustawienia zabezpieczeń, które można określić podczas tworzenia takiego powiązania. Aby uzyskać więcej informacji na temat tworzenia powiązań niestandardowych, zobacz [rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) obejmuje kilka powiązania dostarczane pr
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>Aby utworzyć niestandardowego powiązania, który używa element SymmetricSecurityBindingElement  
   
-1.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.BindingElementCollection> klasy o nazwie `outputBec`.  
+1. Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.BindingElementCollection> klasy o nazwie `outputBec`.  
   
-2.  Wywołanie metody statycznej `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, która zwraca wystąpienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> klasy.  
+2. Wywołanie metody statycznej `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`, która zwraca wystąpienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> klasy.  
   
-3.  Dodaj <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> do kolekcji (`outputBec`) przez wywołanie metody `Add` metody <xref:System.Collections.ObjectModel.Collection%601> z <xref:System.ServiceModel.Channels.BindingElement> klasy.  
+3. Dodaj <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> do kolekcji (`outputBec`) przez wywołanie metody `Add` metody <xref:System.Collections.ObjectModel.Collection%601> z <xref:System.ServiceModel.Channels.BindingElement> klasy.  
   
-4.  Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> klasy i dodać go do kolekcji (`outputBec`). Określa kodowanie używanym przez wiązanie.  
+4. Utwórz wystąpienie obiektu <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> klasy i dodać go do kolekcji (`outputBec`). Określa kodowanie używanym przez wiązanie.  
   
-5.  Tworzenie <xref:System.ServiceModel.Channels.HttpTransportBindingElement> i dodaj go do kolekcji (`outputBec`). To ustawienie określa, że powiązanie korzysta z protokołu HTTP.  
+5. Tworzenie <xref:System.ServiceModel.Channels.HttpTransportBindingElement> i dodaj go do kolekcji (`outputBec`). To ustawienie określa, że powiązanie korzysta z protokołu HTTP.  
   
-6.  Tworzenie nowego niestandardowego powiązania, tworząc wystąpienie <xref:System.ServiceModel.Channels.CustomBinding> klasy i przekazywanie kolekcji `outputBec` do konstruktora.  
+6. Tworzenie nowego niestandardowego powiązania, tworząc wystąpienie <xref:System.ServiceModel.Channels.CustomBinding> klasy i przekazywanie kolekcji `outputBec` do konstruktora.  
   
-7.  Wynikowy niestandardowego powiązania udostępnia wiele takie same charakterystyki jak standardowy <xref:System.ServiceModel.WSHttpBinding>. Określa zabezpieczenia na poziomie komunikatu i poświadczenia Windows, ale wyłącza bezpiecznych sesji, wymaga poświadczeń usługi określonego poza pasmem, a nie szyfruje podpisów. Ostatni mogą być kontrolowane tylko przez ustawienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> właściwości, jak pokazano w kroku 4. Pozostałe dwa można sterować przy użyciu ustawień w powiązaniu standardowych.  
+7. Wynikowy niestandardowego powiązania udostępnia wiele takie same charakterystyki jak standardowy <xref:System.ServiceModel.WSHttpBinding>. Określa zabezpieczenia na poziomie komunikatu i poświadczenia Windows, ale wyłącza bezpiecznych sesji, wymaga poświadczeń usługi określonego poza pasmem, a nie szyfruje podpisów. Ostatni mogą być kontrolowane tylko przez ustawienie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> właściwości, jak pokazano w kroku 4. Pozostałe dwa można sterować przy użyciu ustawień w powiązaniu standardowych.  
   
 ## <a name="example"></a>Przykład  
   

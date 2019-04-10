@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331867"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania
 Ułatwia kontrolki wyrównane do krawędzi formularzy, ustawiając <xref:System.Windows.Forms.Control.Dock%2A>. Ta właściwość wskazuje, której formant znajduje się w formularzu. <xref:System.Windows.Forms.Control.Dock%2A> Właściwość można ustawić następujące wartości:  
@@ -31,15 +31,15 @@ Ułatwia kontrolki wyrównane do krawędzi formularzy, ustawiając <xref:System.
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Aby ustawić właściwość dokowania dla formantu w czasie projektowania  
   
-1.  W programie Windows Forms Designer wybierz formant.  
+1. W programie Windows Forms Designer wybierz formant.  
   
-2.  W **właściwości** , kliknij listę rozwijaną pola obok <xref:System.Windows.Forms.Control.Dock%2A> właściwości.  
+2. W **właściwości** , kliknij listę rozwijaną pola obok <xref:System.Windows.Forms.Control.Dock%2A> właściwości.  
   
      Graficzny interfejs reprezentujący sześć najbardziej <xref:System.Windows.Forms.Control.Dock%2A> wyświetlane ustawienia.  
   
-3.  Wybierz odpowiednie ustawienie.  
+3. Wybierz odpowiednie ustawienie.  
   
-4.  Formant teraz zostanie zadokowany w sposób określony w ustawieniu.  
+4. Formant teraz zostanie zadokowany w sposób określony w ustawieniu.  
   
 ## <a name="see-also"></a>Zobacz także
 

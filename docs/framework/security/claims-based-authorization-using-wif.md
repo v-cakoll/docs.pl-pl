@@ -1,16 +1,16 @@
 ---
-title: Za pomocą programu WIF autoryzacja oparta na oświadczeniach
+title: Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872931"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312179"
 ---
-# <a name="claims-based-authorization-using-wif"></a>Za pomocą programu WIF autoryzacja oparta na oświadczeniach
+# <a name="claims-based-authorization-using-wif"></a>Autoryzacja oparta na oświadczeniach przy użyciu programu WIF
 W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów może uzyskać dostęp uwierzytelniona tożsamość i jakie operacje może wykonywać w odniesieniu do tych zasobów. Niewłaściwa lub słaba autoryzacja może doprowadzić do ujawnienia informacji i nieuprawnionej modyfikacji danych. W tym temacie opisano dostępne sposoby zaimplementowania autoryzacji dla aplikacji i usług internetowych programu ASP.NET obsługujących oświadczenia, za pomocą programu Windows Identity Foundation (WIF) i usługi tokenu zabezpieczającego (STS), na przykład usługi kontroli dostępu (ACS) systemu Microsoft Azure.  
   
 ## <a name="overview"></a>Omówienie  
@@ -42,7 +42,7 @@ W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów mo�
   
 -   **Podczas wystawiania tokenu**. Gdy użytkownik jest uwierzytelniany, oświadczenie roli mogą być wystawiane przez usługę STS dostawcy tożsamości lub dostawcy federacyjnego takich jak Windows Azure Access Control Service (ACS).  
   
--   **Przekształcenie dowolnych oświadczeń w oświadczenia typu roli za pomocą ClaimsAuthenticationManager**. ClaimsAuthenticationManager jest składnikiem, który wchodzi w skład programu WIF. Pozwala na przechwytywanie żądań, gdy uruchamiają one aplikację, sprawdzanie tokenów i przekształcanie ich przez dodawanie, zmienianie lub usuwanie oświadczeń. Aby uzyskać więcej informacji o sposobie używania składnika ClaimsAuthenticationManager do przekształcania oświadczeń, zobacz [instrukcje: Implementowanie roli na podstawie kontroli dostępu (RBAC) w obsługującej oświadczenia ASP.NET aplikacji przy użyciu programu WIF i usługi ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+-   **Przekształcenie dowolnych oświadczeń w oświadczenia typu roli za pomocą ClaimsAuthenticationManager**. ClaimsAuthenticationManager jest składnikiem, który wchodzi w skład programu WIF. Pozwala na przechwytywanie żądań, gdy uruchamiają one aplikację, sprawdzanie tokenów i przekształcanie ich przez dodawanie, zmienianie lub usuwanie oświadczeń. Aby uzyskać więcej informacji o sposobie używania składnika ClaimsAuthenticationManager do przekształcania oświadczeń, zobacz [How to: Implementowanie roli na podstawie kontroli dostępu (RBAC) w aplikacji ASP.NET pamiętać oświadczenia, za pomocą programu WIF i usługi ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
 -   **Zmapowanie dowolnych oświadczeń na typ roli przy użyciu sekcji konfiguracji samlSecurityTokenRequirement**— podejście deklaratywne, w którym przekształcenie oświadczeń jest wykonywane przy użyciu tylko konfiguracji i bez kodowania jest wymagana.  
   
@@ -50,14 +50,14 @@ W aplikacji jednostki uzależnionej autoryzacja określa, do jakich zasobów mo�
 ## <a name="claims-based-authorization"></a>Autoryzacja oparta na oświadczeniach  
  Autoryzacja oparta na oświadczeniach to podejście, w którym decyzja o udzieleniu lub odmowie dostępu opiera się na dowolnej logice korzystającej z danych dostępnych w oświadczeniach. Należy przypomnieć, że w przypadku podejścia RBAC jedynym używanym oświadczeniem jest oświadczenie typu roli. Oświadczenie to jest używane do sprawdzenia, czy użytkownik należy do określonej roli, czy nie. Następujące kroki ilustrują proces podejmowania decyzji dotyczących autoryzacji przy użyciu podejścia opartego na oświadczeniach:  
   
-1.  Aplikacja odbiera żądanie, które wymaga, aby użytkownik został uwierzytelniony.  
+1. Aplikacja odbiera żądanie, które wymaga, aby użytkownik został uwierzytelniony.  
   
-2.  Program WIF przekierowuje użytkownika do jego dostawcy tożsamości, po jego uwierzytelnianiu tworzone jest żądanie aplikacji ze skojarzonym z nim tokenem zabezpieczającym, który reprezentuje użytkownika, zawierającym oświadczenia dotyczące użytkownika. Program WIF kojarzy te oświadczenia z podmiotem zabezpieczeń, który reprezentuje użytkownika.  
+2. Program WIF przekierowuje użytkownika do jego dostawcy tożsamości, po jego uwierzytelnianiu tworzone jest żądanie aplikacji ze skojarzonym z nim tokenem zabezpieczającym, który reprezentuje użytkownika, zawierającym oświadczenia dotyczące użytkownika. Program WIF kojarzy te oświadczenia z podmiotem zabezpieczeń, który reprezentuje użytkownika.  
   
-3.  Aplikacja przekazuje oświadczenia do mechanizmu logiki podejmowania decyzji. Może to być kod wewnątrzpamięciowy, wywołanie usługi sieci Web, zapytanie skierowane do bazy danych, zaawansowany aparat reguł lub użycie składnika ClaimsAuthorizationManager.  
+3. Aplikacja przekazuje oświadczenia do mechanizmu logiki podejmowania decyzji. Może to być kod wewnątrzpamięciowy, wywołanie usługi sieci Web, zapytanie skierowane do bazy danych, zaawansowany aparat reguł lub użycie składnika ClaimsAuthorizationManager.  
   
-4.  Mechanizm podejmowania decyzji oblicza wynik na podstawie oświadczeń.  
+4. Mechanizm podejmowania decyzji oblicza wynik na podstawie oświadczeń.  
   
-5.  Dostęp jest udzielany, jeśli wynikiem jest „prawda”; jeśli wynikiem jest „fałsz”, następuje odmowa dostępu. Na przykład reguła może wymagać, aby użytkownik był w wieku 21 lub starszy i mieszkał w stanie Waszyngton.  
+5. Dostęp jest udzielany, jeśli wynikiem jest „prawda”; jeśli wynikiem jest „fałsz”, następuje odmowa dostępu. Na przykład reguła może wymagać, aby użytkownik był w wieku 21 lub starszy i mieszkał w stanie Waszyngton.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> przydaje się do eksternalizacji logiki podejmowania decyzji dla autoryzacji opartej na oświadczeniach w aplikacjach. ClaimsAuthorizationManager jest składnikiem programu WIF, który wchodzi w skład platformy .NET 4.5. Składnik ClaimsAuthorizationManager pozwala na przechwytywanie żądań przychodzących i zaimplementowanie dowolnej logiki wybranej do podejmowania decyzji dotyczących autoryzacji na podstawie oświadczeń przychodzących. Staje się to ważne, jeśli logika autoryzacji musi zostać zmieniona. W takim przypadku użycie składnika ClaimsAuthorizationManager nie wpływa na integralność aplikacji, zmniejszając w ten sposób prawdopodobieństwo wystąpienia błędu aplikacji w wyniku zmiany. Aby dowiedzieć się więcej o sposobie używania składnika ClaimsAuthorizationManager do implementacji kontroli dostępu opartej na oświadczeniach, zobacz [instrukcje: Implementowanie autoryzacji opartej na oświadczeniach oświadczenia pamiętać ASP.NET aplikacji za pomocą programu WIF i usługi ACS](https://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> przydaje się do eksternalizacji logiki podejmowania decyzji dla autoryzacji opartej na oświadczeniach w aplikacjach. ClaimsAuthorizationManager jest składnikiem programu WIF, który wchodzi w skład platformy .NET 4.5. Składnik ClaimsAuthorizationManager pozwala na przechwytywanie żądań przychodzących i zaimplementowanie dowolnej logiki wybranej do podejmowania decyzji dotyczących autoryzacji na podstawie oświadczeń przychodzących. Staje się to ważne, jeśli logika autoryzacji musi zostać zmieniona. W takim przypadku użycie składnika ClaimsAuthorizationManager nie wpływa na integralność aplikacji, zmniejszając w ten sposób prawdopodobieństwo wystąpienia błędu aplikacji w wyniku zmiany. Aby dowiedzieć się więcej o sposobie używania składnika ClaimsAuthorizationManager do implementacji kontroli dostępu opartej na oświadczeniach, zobacz [How to: Implementowanie oświadczeń autoryzacji w aplikacji ASP.NET pamiętać oświadczenia, za pomocą programu WIF i usługi ACS](https://go.microsoft.com/fwlink/?LinkID=247446).

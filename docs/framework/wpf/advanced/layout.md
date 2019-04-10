@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330496"
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] system układu. Zrozumienie, jak i kiedy układ obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,17 +64,17 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
   
  Każdym razem, gdy program element podrzędny <xref:System.Windows.UIElement> zmienia jego pozycję go może potencjalnie do wyzwolenia nowy przebieg przez system układu. W związku z tym ważne jest zrozumienie, zdarzenia, które można wywołać systemu układu, niepotrzebne wywołanie może spowodować niską wydajność aplikacji. Poniżej opisano proces, który występuje, gdy system układu jest wywoływana.  
   
-1.  Element podrzędny <xref:System.Windows.UIElement> rozpoczyna proces układ przez pierwszy jej podstawowe właściwości mierzone.  
+1. Element podrzędny <xref:System.Windows.UIElement> rozpoczyna proces układ przez pierwszy jej podstawowe właściwości mierzone.  
   
-2.  Właściwości zdefiniowane w ustalania rozmiaru <xref:System.Windows.FrameworkElement> są oceniane, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Właściwości zdefiniowane w ustalania rozmiaru <xref:System.Windows.FrameworkElement> są oceniane, takich jak <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, i <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.Dock> kierunku lub układania <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>— Logika charakterystyczna zostanie zastosowana, takich jak <xref:System.Windows.Controls.Dock> kierunku lub układania <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Zawartości są ułożone po zostały zmierzone wszystkie elementy podrzędne.  
+4. Zawartości są ułożone po zostały zmierzone wszystkie elementy podrzędne.  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A> Kolekcji jest rysowana na ekranie.  
+5. <xref:System.Windows.Controls.Panel.Children%2A> Kolekcji jest rysowana na ekranie.  
   
-6.  Ten proces jest wywoływana ponownie, jeśli jest to dodatkowe <xref:System.Windows.Controls.Panel.Children%2A> są dodawane do kolekcji, <xref:System.Windows.FrameworkElement.LayoutTransform%2A> zostanie zastosowana, lub <xref:System.Windows.UIElement.UpdateLayout%2A> metoda jest wywoływana.  
+6. Ten proces jest wywoływana ponownie, jeśli jest to dodatkowe <xref:System.Windows.Controls.Panel.Children%2A> są dodawane do kolekcji, <xref:System.Windows.FrameworkElement.LayoutTransform%2A> zostanie zastosowana, lub <xref:System.Windows.UIElement.UpdateLayout%2A> metoda jest wywoływana.  
   
  Ten proces i jak jest wywoływana, są zdefiniowane bardziej szczegółowo w poniższych sekcjach.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331809"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa jakie tryb zabezpieczeń do użycia i określa, czy klient musi podać poświadczenia. Zabezpieczanie klienta, w związku z tym, proces jest prosty: metadane uzyskane z usługi (jeśli jest publikowany) oraz tworzyć klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia usługi bezpiecznego zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
@@ -33,9 +33,9 @@ W Windows Communication Foundation (WCF), usługa decyduje o wymagania dotycząc
 ## <a name="setting-a-client-credential"></a>Ustawianie poświadczeń klienta  
  Ustawianie poświadczeń klienta na komputerze klienckim składa się z dwóch kroków:  
   
-1.  Określić *typu poświadczeń klienta* usługa wymaga. Jest to realizowane za pomocą jednej z dwóch metod. Po pierwsze, w przypadku dokumentacji z twórcą usługi go określić poświadczeń klienta wymaga usługi typu (jeśli istnieje). Po drugie Jeśli masz tylko plik konfiguracji, które są generowane przez narzędzia Svcutil.exe, można sprawdzić poszczególnych powiązań, aby ustalić, jaki typ poświadczeń jest wymagany.  
+1. Określić *typu poświadczeń klienta* usługa wymaga. Jest to realizowane za pomocą jednej z dwóch metod. Po pierwsze, w przypadku dokumentacji z twórcą usługi go określić poświadczeń klienta wymaga usługi typu (jeśli istnieje). Po drugie Jeśli masz tylko plik konfiguracji, które są generowane przez narzędzia Svcutil.exe, można sprawdzić poszczególnych powiązań, aby ustalić, jaki typ poświadczeń jest wymagany.  
   
-2.  Określ poświadczenie rzeczywistym klientem. Poświadczenia klienta faktycznie jest nazywany *wartości poświadczeń klienta* odróżniający go od typu. Na przykład, jeśli typ poświadczeń klienta Określa certyfikat, musisz podać certyfikat X.509 wystawiony przez urząd certyfikacji usługi relacji zaufania.  
+2. Określ poświadczenie rzeczywistym klientem. Poświadczenia klienta faktycznie jest nazywany *wartości poświadczeń klienta* odróżniający go od typu. Na przykład, jeśli typ poświadczeń klienta Określa certyfikat, musisz podać certyfikat X.509 wystawiony przez urząd certyfikacji usługi relacji zaufania.  
   
 ### <a name="determining-the-client-credential-type"></a>Określanie typu poświadczeń klienta  
  W przypadku konfiguracji narzędzia Svcutil.exe wygenerowanych plików, sprawdź [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji, aby określić, jakiego typu poświadczeń klienta jest wymagany. W ramach tej sekcji są elementy wiązania, które określają wymagania w zakresie zabezpieczeń. W szczególności sprawdź \<zabezpieczeń > Element każdego powiązania. Ten element zawiera `mode` atrybut, który można ustawić jedną z trzech wartości (`Message`, `Transport`, lub `TransportWithMessageCredential`). Wartość atrybutu określa tryb, a tryb Określa, które z elementów podrzędnych ma znaczenie.  

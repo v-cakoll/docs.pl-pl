@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325361"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania
 Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugowania zachowania w czasie projektowania. Jest to szczególnie istotne w przypadku tworzenia niestandardowego projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [instruktażu: Tworzenie Windows Forms kontroli wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md).  
@@ -58,13 +58,13 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
   
 #### <a name="to-create-the-control-library-project"></a>Aby utworzyć projekt Biblioteka formantów  
   
-1.  Dodaj **Biblioteka formantów Windows** projektu do rozwiązania.  
+1. Dodaj **Biblioteka formantów Windows** projektu do rozwiązania.  
   
-2.  Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [jak: Dodaj nowe elementy projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Nazwij nowy plik źródłowy podstawowego elementu "DebugControl".  
+2. Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [jak: Dodaj nowe elementy projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Nazwij nowy plik źródłowy podstawowego elementu "DebugControl".  
   
-3.  Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [jak: Usuń Delete i wykluczyć elementy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
+3. Za pomocą **Eksploratora rozwiązań**, usunąć projekt domyślny formant przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [jak: Usuń Delete i wykluczyć elementy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
-4.  Skompiluj rozwiązanie.  
+4. Skompiluj rozwiązanie.  
   
 ## <a name="checkpoint"></a>Punkt kontrolny  
  W tym momencie można wyświetlić niestandardową kontrolkę w **przybornika**.  
@@ -78,7 +78,7 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
   
 #### <a name="to-add-a-property-to-your-custom-control"></a>Aby dodać właściwość do formantu niestandardowego  
   
-1.  Otwórz **DebugControl** w **Edytor kodu**. Dodaj następujący kod do definicji klasy:  
+1. Otwórz **DebugControl** w **Edytor kodu**. Dodaj następujący kod do definicji klasy:  
   
     ```vb  
     Private demoStringValue As String = Nothing  
@@ -112,42 +112,42 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
     }  
     ```  
   
-2.  Skompiluj rozwiązanie.  
+2. Skompiluj rozwiązanie.  
   
 ## <a name="adding-your-custom-control-to-the-host-form"></a>Dodawanie niestandardowego formantu do formularza hosta  
  Do debugowania zachowania w czasie projektowania niestandardową kontrolkę, spowoduje umieszczenie wystąpienia klasy kontrolki niestandardowej w formularzu hosta.  
   
 #### <a name="to-add-your-custom-control-to-the-host-form"></a>Aby dodać niestandardową kontrolkę w formularzu hosta  
   
-1.  W projekcie "DebuggingExample" Otwórz formularz Form1 w **Windows Forms Designer**.  
+1. W projekcie "DebuggingExample" Otwórz formularz Form1 w **Windows Forms Designer**.  
   
-2.  W **przybornika**, otwórz **składniki DebugControlLibrary** kartę, a następnie przeciągnij **DebugControl** wystąpienia do formularza.  
+2. W **przybornika**, otwórz **składniki DebugControlLibrary** kartę, a następnie przeciągnij **DebugControl** wystąpienia do formularza.  
   
-3.  Znajdź `DemoString` właściwości niestandardowe w **właściwości** okna. Należy pamiętać, że można zmienić jego wartość, jak w przypadku wszystkich innych właściwości. Należy również zauważyć, że w przypadku `DemoString` właściwości jest zaznaczone, ciąg opisu właściwości, pojawia się w dolnej części **właściwości** okna.  
+3. Znajdź `DemoString` właściwości niestandardowe w **właściwości** okna. Należy pamiętać, że można zmienić jego wartość, jak w przypadku wszystkich innych właściwości. Należy również zauważyć, że w przypadku `DemoString` właściwości jest zaznaczone, ciąg opisu właściwości, pojawia się w dolnej części **właściwości** okna.  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>Konfigurowanie projektu dla debugowania w czasie projektowania  
  Do debugowania zachowania w czasie projektowania formantu niestandardowego, będzie debugować osobnego wystąpienia programu Visual Studio, który jest uruchomiony formantu niestandardowego kodu.  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>Aby skonfigurować projekt do debugowania w czasie projektowania  
   
-1.  Kliknij prawym przyciskiem myszy **DebugControlLibrary** projektu w **Eksploratora rozwiązań** i wybierz **właściwości**.  
+1. Kliknij prawym przyciskiem myszy **DebugControlLibrary** projektu w **Eksploratora rozwiązań** i wybierz **właściwości**.  
   
-2.  W **DebugControlLibrary** arkusza właściwości, wybierz opcję **debugowania** kartę.  
+2. W **DebugControlLibrary** arkusza właściwości, wybierz opcję **debugowania** kartę.  
   
      W **Akcja uruchamiania** zaznacz **uruchomienia programu zewnętrznego**. Można więc debugowanie osobnego wystąpienia programu Visual Studio, kliknij przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) przycisk, aby przejść do środowiska IDE programu Visual Studio. Nazwa pliku wykonywalnego jest **devenv.exe**, a jeśli został zainstalowany w lokalizacji domyślnej, jego ścieżka jest %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.  
   
-3.  Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+3. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-4.  Kliknij prawym przyciskiem myszy **DebugControlLibrary** projektu, a następnie wybierz **Ustaw jako projekt startowy** umożliwiające tej konfiguracji debugowania.  
+4. Kliknij prawym przyciskiem myszy **DebugControlLibrary** projektu, a następnie wybierz **Ustaw jako projekt startowy** umożliwiające tej konfiguracji debugowania.  
   
 ## <a name="debugging-your-custom-control-at-design-time"></a>Debugowanie niestandardowego formantu w czasie projektowania  
  Teraz można przystąpić do debugowania niestandardową kontrolkę, jak działa w trybie projektowania. Podczas uruchamiania sesji debugowania, zostanie utworzone nowe wystąpienie programu Visual Studio, a następnie użyje ładowanie rozwiązań "DebuggingExample". Po otwarciu formularza Form1 w **projektanta formularzy**, wystąpienie niestandardową kontrolkę zostanie utworzona i zostanie uruchomione.  
   
 #### <a name="to-debug-your-custom-control-at-design-time"></a>Aby debugować niestandardową kontrolkę w czasie projektowania  
   
-1.  Otwórz **DebugControl** pliku źródłowego w **Edytor kodu** i umieść punkt przerwania na `Set` akcesor `DemoString` właściwości.  
+1. Otwórz **DebugControl** pliku źródłowego w **Edytor kodu** i umieść punkt przerwania na `Set` akcesor `DemoString` właściwości.  
   
-2.  Naciśnij klawisz F5, aby rozpocząć sesję debugowania. Należy pamiętać, że tworzone jest nowe wystąpienie programu Visual Studio. Można rozróżnić wystąpień na dwa sposoby:  
+2. Naciśnij klawisz F5, aby rozpocząć sesję debugowania. Należy pamiętać, że tworzone jest nowe wystąpienie programu Visual Studio. Można rozróżnić wystąpień na dwa sposoby:  
   
     -   Wystąpienie debugowania zawiera wyraz **systemem** na pasku tytułu  
   
@@ -155,13 +155,13 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
   
      Punkt przerwania jest ustawiony za wystąpienie debugowania.  
   
-3.  Nowe wystąpienie programu Visual Studio Otwórz rozwiązanie "DebuggingExample". Rozwiązanie można łatwo znaleźć, wybierając **ostatnich projektów** z **pliku** menu. Plik rozwiązania "DebuggingExample.sln" będą wyświetlane zgodnie z ostatnio używanych plików.  
+3. Nowe wystąpienie programu Visual Studio Otwórz rozwiązanie "DebuggingExample". Rozwiązanie można łatwo znaleźć, wybierając **ostatnich projektów** z **pliku** menu. Plik rozwiązania "DebuggingExample.sln" będą wyświetlane zgodnie z ostatnio używanych plików.  
   
-4.  Otwórz formularz Form1 w **projektanta formularzy** i wybierz **DebugControl** kontroli.  
+4. Otwórz formularz Form1 w **projektanta formularzy** i wybierz **DebugControl** kontroli.  
   
-5.  Zmień wartość właściwości `DemoString` właściwości. Pamiętaj, że po zatwierdzeniu zmiany wystąpienie debugowania programu Visual Studio uzyskuje fokus wykonywania zatrzymuje się na punkt przerwania. Możesz pojedynczy krok za pomocą metody dostępu właściwości podobnie jak usługi będzie inny kod.  
+5. Zmień wartość właściwości `DemoString` właściwości. Pamiętaj, że po zatwierdzeniu zmiany wystąpienie debugowania programu Visual Studio uzyskuje fokus wykonywania zatrzymuje się na punkt przerwania. Możesz pojedynczy krok za pomocą metody dostępu właściwości podobnie jak usługi będzie inny kod.  
   
-6.  Po zakończeniu sesji debugowania możesz wyjść, odrzucanie hostowanej wystąpieniu programu Visual Studio lub klikając **Zatrzymaj debugowanie** przycisk wystąpienie debugowania.  
+6. Po zakończeniu sesji debugowania możesz wyjść, odrzucanie hostowanej wystąpieniu programu Visual Studio lub klikając **Zatrzymaj debugowanie** przycisk wystąpienie debugowania.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Teraz, aby można było debugować Kontrolki niestandardowe, w czasie projektowania, istnieje wiele możliwości rozszerzania kontroli nad interakcji ze środowiskiem IDE programu Visual Studio.  

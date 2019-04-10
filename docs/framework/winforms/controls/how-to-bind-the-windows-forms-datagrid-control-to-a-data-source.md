@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332576"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176686"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Do wiązania danych w formancie DataGrid programowe  
   
-1.  Pisz kod, aby wypełnić dataset.  
+1. Pisz kod, aby wypełnić dataset.  
   
      W przypadku zestawu danych lub widoku danych, na podstawie tabeli zestawu danych źródła danych należy dodać kod do formularza, aby wypełnić dataset.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176686"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  Wywołaj <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody przekazanie jej w źródle danych i element członkowski danych. Jeśli jest konieczne jawne przekazywanie element członkowski danych, należy przekazać pusty ciąg.  
+2. Wywołaj <xref:System.Windows.Forms.DataGrid> kontrolki <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody przekazanie jej w źródle danych i element członkowski danych. Jeśli jest konieczne jawne przekazywanie element członkowski danych, należy przekazać pusty ciąg.  
   
     > [!NOTE]
     >  Siatki są wiązane po raz pierwszy, można ustawić formantu <xref:System.Windows.Forms.DataGrid.DataSource%2A> i <xref:System.Windows.Forms.DataGrid.DataMember%2A> właściwości. Jednak nie można zresetować te właściwości, gdy zostały ustawione. Dlatego zalecane jest, aby zawsze używać <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> metody.  
@@ -101,7 +101,7 @@ ms.locfileid: "59176686"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  (Opcjonalnie) Dodaj style odpowiedniej tabeli i kolumn do siatki. Jeśli nie ma żadnych style tabeli, tabeli, zostanie wyświetlony, ale z minimalnym formatowania i widoczne dla wszystkich kolumn.  
+3. (Opcjonalnie) Dodaj style odpowiedniej tabeli i kolumn do siatki. Jeśli nie ma żadnych style tabeli, tabeli, zostanie wyświetlony, ale z minimalnym formatowania i widoczne dla wszystkich kolumn.  
   
 ## <a name="see-also"></a>Zobacz także
 

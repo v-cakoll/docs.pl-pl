@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: 2c1416566ca59a44b36457c710955de863013417
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980731"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332212"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Możesz wysyłać argumenty do `Main` metoda definiując metodę na jeden z następujących sposobów:  
@@ -51,23 +51,23 @@ long num = Convert.ToInt64(s);
   
  Aby skompilować i uruchomić aplikację z poziomu wiersza polecenia, wykonaj następujące kroki:  
   
-1.  Wklej następujący kod do dowolnego edytora tekstów, a następnie zapisz plik jako plik tekstowy o nazwie `Factorial.cs`.  
+1. Wklej następujący kod do dowolnego edytora tekstów, a następnie zapisz plik jako plik tekstowy o nazwie `Factorial.cs`.  
   
      [!code-csharp[csProgGuideMain#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#16)]  
   
-2.  Z **Start** ekranu lub **Start** menu, Otwórz program Visual Studio **wiersz polecenia dla deweloperów** okna, a następnie przejdź do folderu, który zawiera plik, który został właśnie utworzony.  
+2. Z **Start** ekranu lub **Start** menu, Otwórz program Visual Studio **wiersz polecenia dla deweloperów** okna, a następnie przejdź do folderu, który zawiera plik, który został właśnie utworzony.  
   
-3.  Wprowadź następujące polecenie, aby skompilować aplikację.  
+3. Wprowadź następujące polecenie, aby skompilować aplikację.  
   
      `csc Factorial.cs`  
   
      Jeśli aplikacja nie ma żadnych błędów kompilacji, plik wykonywalny, który nosi nazwę `Factorial.exe` zostanie utworzony.  
   
-4.  Wprowadź następujące polecenie, aby obliczyć silnię 3:  
+4. Wprowadź następujące polecenie, aby obliczyć silnię 3:  
   
      `Factorial 3`  
   
-5.  Polecenie generuje dane wyjściowe: `The factorial of 3 is 6.`  
+5. Polecenie generuje dane wyjściowe: `The factorial of 3 is 6.`  
   
 > [!NOTE]
 >  Podczas uruchamiania aplikacji w programie Visual Studio, można określić argumenty wiersza poleceń w [strona debugowania, Projektant projektu](/visualstudio/ide/reference/debug-page-project-designer).  
@@ -79,7 +79,7 @@ long num = Convert.ToInt64(s);
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Instrukcje: Wyświetlanie argumentów wiersza poleceń](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [Instrukcje: Dostęp do argumentów wiersza polecenia za pomocą foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [Instrukcje: wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
 - [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)

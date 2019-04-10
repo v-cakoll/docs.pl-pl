@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169744"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317301"
 ---
 # <a name="application-settings-for-custom-controls"></a>Ustawienia aplikacji dotyczące kontrolek niestandardowych
 Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawienia aplikacji, gdy kontrolki znajdują się w aplikacji innych firm Kontrolki niestandardowe.  
@@ -22,9 +22,9 @@ Należy wykonać niektóre zadania, aby zapewnić możliwość utrzymania ustawi
   
  Ponadto należy zaimplementować następujące czynności w kolejności dla ustawienia aplikacji dotyczące kontrolek niestandardowych działać poprawnie w czasie projektowania środowiskach, takich jak Visual Studio:  
   
-1.  Klasa ustawień niestandardowych aplikacji, za pomocą konstruktora przyjmującego <xref:System.ComponentModel.IComponent> jako jeden parametr. Użyj tej klasy, aby zapisać i załadować wszystkie ustawienia aplikacji. Podczas tworzenia nowego wystąpienia tej klasy, należy przekazać niestandardową kontrolkę za pomocą konstruktora.  
+1. Klasa ustawień niestandardowych aplikacji, za pomocą konstruktora przyjmującego <xref:System.ComponentModel.IComponent> jako jeden parametr. Użyj tej klasy, aby zapisać i załadować wszystkie ustawienia aplikacji. Podczas tworzenia nowego wystąpienia tej klasy, należy przekazać niestandardową kontrolkę za pomocą konstruktora.  
   
-2.  Tworzenie tej klasy ustawienia niestandardowe, po utworzeniu kontrolki i umieszczane na formularzu, takie jak w postaci <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
+2. Tworzenie tej klasy ustawienia niestandardowe, po utworzeniu kontrolki i umieszczane na formularzu, takie jak w postaci <xref:System.Windows.Forms.Form.Load> programu obsługi zdarzeń.  
   
  Aby uzyskać instrukcje na temat tworzenia klasy ustawień niestandardowych, zobacz [jak: Tworzenie ustawień aplikacji](how-to-create-application-settings.md).  
   

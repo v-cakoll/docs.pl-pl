@@ -2,12 +2,12 @@
 title: Debugowanie drzew w programie Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 308b377af00a3d12523f8f8d469c50808f216030
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95a01a98e771e04afd296428ed56e9518bad9ac2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330414"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debugowanie drzew w programie Visual Studio (C#)
 Można analizować struktury i zawartości drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażeń, można użyć `DebugView` właściwość, która jest dostępna tylko w trybie debugowania. Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowania w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
@@ -16,11 +16,11 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="to-open-a-visualizer-for-an-expression-tree"></a>Aby otworzyć wizualizatora drzewa wyrażeń  
   
-1.  Kliknij ikonę lupy, która pojawia się obok `DebugView` właściwość drzewo wyrażenia w **DataTips**, **Obejrzyj** oknie **automatyczne** okna, lub **Lokalne** okna.  
+1. Kliknij ikonę lupy, która pojawia się obok `DebugView` właściwość drzewo wyrażenia w **DataTips**, **Obejrzyj** oknie **automatyczne** okna, lub **Lokalne** okna.  
   
      Zostanie wyświetlona lista wizualizatorów.  
   
-2.  Kliknij pozycję Wizualizator, którego chcesz użyć.  
+2. Kliknij pozycję Wizualizator, którego chcesz użyć.  
   
  Każdy typ wyrażenia jest wyświetlany w wizualizatorze, zgodnie z opisem w poniższych sekcjach.  
   
@@ -31,7 +31,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="examples"></a>Przykłady  
   
-|Wyrażenie|`DebugView` Właściwość|  
+|Wyrażenie|`DebugView` property|  
 |----------------|--------------------------|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int), "num");`|`$num`|  
 |`ParameterExpression numParam =  Expression.Parameter(typeof(int));`|`$var1`|  
@@ -52,7 +52,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="examples"></a>Przykłady  
   
-|Wyrażenie|`DebugView` Właściwość|  
+|Wyrażenie|`DebugView` property|  
 |----------------|--------------------------|  
 |`int num = 10; ConstantExpression expr = Expression.Constant(num);`|10|  
 |`double num = 10; ConstantExpression expr = Expression.Constant(num);`|10D|  
@@ -62,7 +62,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="examples"></a>Przykłady  
   
-|Wyrażenie|`DebugView` Właściwość|  
+|Wyrażenie|`DebugView` property|  
 |----------------|--------------------------|  
 |`BlockExpression block = Expression.Block(Expression.Constant("test"));`|`.Block() {`<br /><br /> `"test"`<br /><br /> `}`|  
 |`BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("test"));`|`.Block<System.Object>() {`<br /><br /> `"test"`<br /><br /> `}`|  
@@ -74,7 +74,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="examples"></a>Przykłady  
   
-|Wyrażenie|`DebugView` Właściwość|  
+|Wyrażenie|`DebugView` property|  
 |----------------|--------------------------|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1));`|`.Lambda #Lambda1<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
 |`LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), "SampleLambda", null);`|`.Lambda SampleLambda<System.Func'1[System.Int32]>() {`<br /><br /> `1`<br /><br /> `}`|  
@@ -88,7 +88,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="examples"></a>Przykłady  
   
-|Wyrażenie|`DebugView` Właściwość|  
+|Wyrażenie|`DebugView` property|  
 |----------------|--------------------------|  
 |`LabelTarget target = Expression.Label(typeof(int), "SampleLabel"); BlockExpression block = Expression.Block( Expression.Goto(target, Expression.Constant(0)), Expression.Label(target, Expression.Constant(-1)));`|`.Block() {`<br /><br /> `.Goto SampleLabel { 0 };`<br /><br /> `.Label`<br /><br /> `-1`<br /><br /> `.LabelTarget SampleLabel:`<br /><br /> `}`|  
 |`LabelTarget target = Expression.Label(); BlockExpression block = Expression.Block( Expression.Goto(target5), Expression.Label(target5));`|`.Block() {`<br /><br /> `.Goto #Label1 { };`<br /><br /> `.Label`<br /><br /> `.LabelTarget #Label1:`<br /><br /> `}`|  
@@ -98,7 +98,7 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
   
 ### <a name="examples"></a>Przykłady  
   
-|Wyrażenie|`DebugView` Właściwość|  
+|Wyrażenie|`DebugView` property|  
 |----------------|--------------------------|  
 |`Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));`|`1 #+ 2`|  
 |`Expression expr = Expression.ConvertChecked( Expression.Constant(10.0), typeof(int));`|`#(System.Int32)10D`|  
@@ -106,5 +106,5 @@ Można analizować struktury i zawartości drzew wyrażeń podczas debugowania a
 ## <a name="see-also"></a>Zobacz także
 
 - [Drzewa wyrażeń (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
-- [Tworzenie niestandardowych wizualizatorów](/visualstudio/debugger/create-custom-visualizers-of-data)
+- [Debugowanie w Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Tworzenie niestandardowych Wizualizatorów](/visualstudio/debugger/create-custom-visualizers-of-data)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 653169dfe0e590181d3ee225e77d71e9dbe11ccd
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759070"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304847"
 ---
 # <a name="error-creating-win32-resources-error-message"></a>Wystąpił błąd podczas tworzenia zasobów Win32: \<komunikat o błędzie >
 Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd podczas tworzenia zasobu w pamięci. Może to być problem ze środowiskiem lub komputer może być mało pamięci.  
@@ -21,9 +21,9 @@ Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Ali
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Aby uzyskać dokładniejsze objaśnienie i porady.  
+1. Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Aby uzyskać dokładniejsze objaśnienie i porady.  
   
-2.  Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
+2. Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 

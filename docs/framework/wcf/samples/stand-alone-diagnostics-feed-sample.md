@@ -2,12 +2,12 @@
 title: Przykład autonomicznego kanału diagnostycznego
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 841bcd38516251fe1de306cbf52371d027b8cb36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2737621a98f6a7e89ef3aee01fd1ad7a2a60f9b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102144"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316560"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
 Ten przykład przedstawia sposób tworzenia RSS/źródła danych Atom w syndykacji dostępne przy użyciu programu Windows Communication Foundation (WCF). Jest to podstawowa programu "Hello World", który zawiera podstawowe informacje o modelu obiektów i sposób konfigurowania usługi Windows Communication Foundation (WCF).  
@@ -76,13 +76,13 @@ foreach (SyndicationItem i in feed.Items)
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że adres odpowiednie uprawnienia rejestracji dla protokołu HTTP i HTTPS na komputerze, jak wyjaśniono w konfiguracji zgodnie z instrukcjami w [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że adres odpowiednie uprawnienia rejestracji dla protokołu HTTP i HTTPS na komputerze, jak wyjaśniono w konfiguracji zgodnie z instrukcjami w [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Skompiluj rozwiązanie.  
+2. Skompiluj rozwiązanie.  
   
-3.  Uruchom aplikację konsolową.  
+3. Uruchom aplikację konsolową.  
   
-4.  Gdy jest uruchomiona aplikacja konsoli, przejdź do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` przy użyciu przeglądarki obsługującej RSS.  
+4. Gdy jest uruchomiona aplikacja konsoli, przejdź do `http://localhost:8000/diagnostics/feed/?format=atom` lub `http://localhost:8000/diagnostics/feed/?format=rss` przy użyciu przeglądarki obsługującej RSS.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

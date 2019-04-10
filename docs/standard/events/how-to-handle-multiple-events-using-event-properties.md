@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592224"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330119"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Instrukcje: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia
 Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia w klasie, która wywołuje zdarzenia, a następnie ustawić delegatów dla właściwości zdarzenia w klasach, które obsługują zdarzenia. Aby zaimplementować w klasie wiele właściwości zdarzeń, klasa musi wewnętrznie przechowywać i zachowywać zdefiniowanego delegata dla każdego zdarzenia. Typowym podejściem jest implementacja kolekcji delegata, która jest indeksowana przy użyciu klucza zdarzenia.  
@@ -30,15 +30,15 @@ Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>Do obsługi wielu zdarzeń przy użyciu właściwości zdarzenia  
   
-1.  Zdefiniuj kolekcje delegata w klasie, która wywołuje zdarzenia.  
+1. Zdefiniuj kolekcje delegata w klasie, która wywołuje zdarzenia.  
   
-2.  Zdefiniuj klucz dla każdego zdarzenia.  
+2. Zdefiniuj klucz dla każdego zdarzenia.  
   
-3.  Zdefiniuj właściwości zdarzenia w klasie, która wywołuje zdarzenia.  
+3. Zdefiniuj właściwości zdarzenia w klasie, która wywołuje zdarzenia.  
   
-4.  Użyj kolekcji delegata do implementacji metod dodawania i usuwania akcesora dla właściwości zdarzenia.  
+4. Użyj kolekcji delegata do implementacji metod dodawania i usuwania akcesora dla właściwości zdarzenia.  
   
-5.  Użyj publicznych zdarzeń właściwości, aby dodawać i usuwać delegatów obsługi zdarzeń w klasach, które obsługują zdarzenia.  
+5. Użyj publicznych zdarzeń właściwości, aby dodawać i usuwać delegatów obsługi zdarzeń w klasach, które obsługują zdarzenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład napisany w języku C# implementuje właściwości zdarzenia `MouseDown` i `MouseUp`, z wykorzystaniem <xref:System.ComponentModel.EventHandlerList> do przechowywania każdego zdarzenia delegata. Słowa kluczowe w konstrukcji właściwości zdarzenia są pogrubione.  
@@ -55,4 +55,4 @@ Aby użyć właściwości zdarzeń należy zdefiniować właściwości zdarzenia
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Zdarzenia](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A>
-- [Instrukcje: Deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Instrukcje: Deklarowanie zdarzeń niestandardowych w celu oszczędzania pamięci](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

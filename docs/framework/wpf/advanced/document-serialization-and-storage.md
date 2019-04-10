@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215953"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295903"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświetlanie dokumentów wysokiej jakości.  Ulepszone funkcje, które obsługują Naprawiono dokumenty i dokumenty przepływu, zaawansowane wyświetlania formantów, w połączeniu z zaawansowanych 2D i funkcje grafiki 3D aplikacji .NET Framework na nowy poziom jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem programu .NET Framework i możliwość efektywnie zapisywanie i ładowanie dokumentów z magazynu danych jest niezbędne do niemal wszystkich aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
@@ -65,11 +65,11 @@ Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświe
 ### <a name="creating-a-plug-in-serializer"></a>Tworzenie wtyczki serializatora  
  Zarówno serializatorów wtyczka połączone serializatory korzystanie z tych samych metod publicznych narażonych i zdarzeń i podobnie, można zaprojektować do działania synchronicznie lub asynchronicznie.  Istnieją trzy podstawowe kroki, które zwykle używany do tworzenia serializatora wtyczki:  
   
-1.  Wdrożenie i Debuguj element serializujący najpierw jako połączony element serializujący.  Początkowo tworzenia serializatora skompilowane i połączone bezpośrednio w aplikacji test zapewnia pełny dostęp do punktów przerwania i innych usług debugowania przydatne do testowania.  
+1. Wdrożenie i Debuguj element serializujący najpierw jako połączony element serializujący.  Początkowo tworzenia serializatora skompilowane i połączone bezpośrednio w aplikacji test zapewnia pełny dostęp do punktów przerwania i innych usług debugowania przydatne do testowania.  
   
-2.  Po serializator jest w pełni przetestowane, <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfejs jest dodawany do tworzenia dodatku typu plug-in.  <xref:System.Windows.Documents.Serialization.ISerializerFactory> Interfejsu zezwala na pełny dostęp do wszystkich obiektów .NET Framework, która zawiera drzewo logiczne <xref:System.Windows.UIElement> obiektów <xref:System.Windows.Documents.IDocumentPaginatorSource>, i <xref:System.Windows.Media.Visual> elementów.  Ponadto <xref:System.Windows.Documents.Serialization.ISerializerFactory> zapewnia te same synchroniczne i asynchroniczne metody i zdarzenia używane przez połączone serializatory.  Ponieważ dużych dokumentów może trwać do wypełniania wyjściowego, operacje asynchroniczne są zalecane do obsługi interakcji z użytkownikiem odpowiada i oferty z opcją "Anuluj", jeśli wystąpi problem, z magazynem danych.  
+2. Po serializator jest w pełni przetestowane, <xref:System.Windows.Documents.Serialization.ISerializerFactory> interfejs jest dodawany do tworzenia dodatku typu plug-in.  <xref:System.Windows.Documents.Serialization.ISerializerFactory> Interfejsu zezwala na pełny dostęp do wszystkich obiektów .NET Framework, która zawiera drzewo logiczne <xref:System.Windows.UIElement> obiektów <xref:System.Windows.Documents.IDocumentPaginatorSource>, i <xref:System.Windows.Media.Visual> elementów.  Ponadto <xref:System.Windows.Documents.Serialization.ISerializerFactory> zapewnia te same synchroniczne i asynchroniczne metody i zdarzenia używane przez połączone serializatory.  Ponieważ dużych dokumentów może trwać do wypełniania wyjściowego, operacje asynchroniczne są zalecane do obsługi interakcji z użytkownikiem odpowiada i oferty z opcją "Anuluj", jeśli wystąpi problem, z magazynem danych.  
   
-3.  Po utworzeniu dodatku typu plug-in serializator skrypt instalacji został zaimplementowany dla dystrybucji i instalacji (i odinstalowywania) wtyczki (zobacz powyżej, "[Instalowanie wtyczki Serializatory](#InstallingPluginSerializers)").  
+3. Po utworzeniu dodatku typu plug-in serializator skrypt instalacji został zaimplementowany dla dystrybucji i instalacji (i odinstalowywania) wtyczki (zobacz powyżej, "[Instalowanie wtyczki Serializatory](#InstallingPluginSerializers)").  
   
 ## <a name="see-also"></a>Zobacz także
 

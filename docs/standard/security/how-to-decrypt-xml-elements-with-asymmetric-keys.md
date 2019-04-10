@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd5de491-dafe-4b94-966d-99714b2e754a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 647ac3898924810eb16cbeb8c67f00e6465c8d80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 303c7db984b682d24a8f0e00160eb2d0827a84e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314428"
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych
 Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do szyfrowania i odszyfrowywania elementu w dokumencie XML.  Szyfrowanie XML to standardowy sposób wymiany ani nie przechowują zaszyfrowane dane XML, nie martwiąc się o łatwo odczytywanych danych.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz zalecenia konsorcjum World Wide Web Consortium (W3C) [składni podpisu XML i przetwarzanie](https://www.w3.org/TR/xmldsig-core/).  
@@ -32,32 +32,32 @@ Można użyć klas w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do
   
 ### <a name="to-decrypt-an-xml-element-with-an-asymmetric-key"></a>Aby odszyfrować XML element przy użyciu klucza asymetrycznego  
   
-1.  Utwórz <xref:System.Security.Cryptography.CspParameters> obiektu i określ nazwę kontenera kluczy.  
+1. Utwórz <xref:System.Security.Cryptography.CspParameters> obiektu i określ nazwę kontenera kluczy.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#2)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#2)]  
   
-2.  Pobrać wcześniej wygenerowany klucz asymetryczny z kontenera przy użyciu <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu.  Klucz jest automatycznie pobierany z kontenera kluczy, jeśli przekazujesz <xref:System.Security.Cryptography.CspParameters> obiekt <xref:System.Security.Cryptography.RSACryptoServiceProvider> konstruktora.  
+2. Pobrać wcześniej wygenerowany klucz asymetryczny z kontenera przy użyciu <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiektu.  Klucz jest automatycznie pobierany z kontenera kluczy, jeśli przekazujesz <xref:System.Security.Cryptography.CspParameters> obiekt <xref:System.Security.Cryptography.RSACryptoServiceProvider> konstruktora.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#3)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#3)]  
   
-3.  Utwórz nową <xref:System.Security.Cryptography.Xml.EncryptedXml> obiektu do odszyfrowania dokumentu.  
+3. Utwórz nową <xref:System.Security.Cryptography.Xml.EncryptedXml> obiektu do odszyfrowania dokumentu.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#5)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#5)]  
   
-4.  Dodaj mapowanie klucz/nazwę do skojarzenia klucza RSA z elementem w dokumencie, który powinien być odszyfrowane.  Należy użyć takiej samej nazwie klucz który jest używany podczas szyfrowania dokumentu.  Należy pamiętać, że ta nazwa jest oddzielona od Nazwa służąca do identyfikacji klucza w kontenerze kluczy określonym w kroku 1.  
+4. Dodaj mapowanie klucz/nazwę do skojarzenia klucza RSA z elementem w dokumencie, który powinien być odszyfrowane.  Należy użyć takiej samej nazwie klucz który jest używany podczas szyfrowania dokumentu.  Należy pamiętać, że ta nazwa jest oddzielona od Nazwa służąca do identyfikacji klucza w kontenerze kluczy określonym w kroku 1.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#6)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#6)]  
   
-5.  Wywołaj <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> metodę, aby odszyfrować <`EncryptedData`> element.  Ta metoda używa klucza RSA do odszyfrowania klucza sesji i automatycznie używa klucza sesji, aby odszyfrować XML element.  Automatycznie zastępuje <`EncryptedData`> element z oryginalnej postaci zwykłego tekstu.  
+5. Wywołaj <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> metodę, aby odszyfrować <`EncryptedData`> element.  Ta metoda używa klucza RSA do odszyfrowania klucza sesji i automatycznie używa klucza sesji, aby odszyfrować XML element.  Automatycznie zastępuje <`EncryptedData`> element z oryginalnej postaci zwykłego tekstu.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#7)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#7)]  
   
-6.  Zapisz dokument XML.  
+6. Zapisz dokument XML.  
   
      [!code-csharp[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/cs/sample.cs#8)]
      [!code-vb[HowToDecryptXMLElementAsymmetric#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToDecryptXMLElementAsymmetric/vb/sample.vb#8)]  

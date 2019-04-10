@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315157"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do komentarzowi użytemu w programie Microsoft Outlook przy użyciu **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. Taki układ odbywa się głównie za pośrednictwem dokowanie kontrolek za pomocą formularza.  
@@ -30,7 +30,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Aby utworzyć programowo interfejsu użytkownika w stylu programu Outlook  
   
-1.  W formularzu należy zadeklarować każdego formantu, który składa się z poziomu interfejsu użytkownika. W tym przykładzie użyj <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, i <xref:System.Windows.Forms.RichTextBox> formantów, aby mógł naśladować interfejsu użytkownika programu Microsoft Outlook.  
+1. W formularzu należy zadeklarować każdego formantu, który składa się z poziomu interfejsu użytkownika. W tym przykładzie użyj <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, i <xref:System.Windows.Forms.RichTextBox> formantów, aby mógł naśladować interfejsu użytkownika programu Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Tworzenie procedury, która definiuje interfejs użytkownika. Poniższy kod ustawia właściwości, dzięki czemu formularz będzie przypominał interfejsu użytkownika w programie Microsoft Outlook. Jednak za pomocą innych formantów lub dokowanie ich inaczej, jest równie proste do tworzenia innych interfejsów użytkownika, które są równie elastyczne.  
+2. Tworzenie procedury, która definiuje interfejs użytkownika. Poniższy kod ustawia właściwości, dzięki czemu formularz będzie przypominał interfejsu użytkownika w programie Microsoft Outlook. Jednak za pomocą innych formantów lub dokowanie ich inaczej, jest równie proste do tworzenia innych interfejsów użytkownika, które są równie elastyczne.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
     }  
     ```  
   
-3.  W języku Visual Basic należy dodać wywołanie procedury nowo utworzoną `New()` procedury. W elemencie wizualnym C#, Dodaj następujący wiersz kodu do konstruktora dla klasy formularza.  
+3. W języku Visual Basic należy dodać wywołanie procedury nowo utworzoną `New()` procedury. W elemencie wizualnym C#, Dodaj następujący wiersz kodu do konstruktora dla klasy formularza.  
   
     ```vb  
     ' Add this to the New procedure.  

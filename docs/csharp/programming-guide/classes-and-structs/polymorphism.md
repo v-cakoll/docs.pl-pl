@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203392"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322085"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest wyrazem greckim, co oznacza "wiele kształcie" i ma dwa różne aspekty:  
@@ -22,9 +22,9 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
   
  Metody wirtualne umożliwiają pracować z grupami powiązanych obiektów w jednolity sposób. Na przykład załóżmy, że masz rysunku aplikacji, która umożliwia użytkownikowi tworzenie różne rodzaje kształtów na powierzchnię rysunku. Nie wiesz, w czasie kompilacji które określonych rodzajów kształtów spowoduje utworzenie użytkownika. Jednak aplikacja ma do śledzenia różnych typów kształty, które są tworzone i ma je zaktualizować w odpowiedzi na akcje myszy użytkownika. Polimorfizm można użyć, aby rozwiązać ten problem w dwa podstawowe kroki:  
   
-1.  Tworzenie hierarchii klas, w którym każda klasa kształt pochodzi od klasy wspólną klasę bazową.  
+1. Tworzenie hierarchii klas, w którym każda klasa kształt pochodzi od klasy wspólną klasę bazową.  
   
-2.  Użyj metody wirtualnej można wywołać metody odpowiedniej dla dowolnej klasy pochodnej za pomocą jednego wywołania metody klasy bazowej.  
+2. Użyj metody wirtualnej można wywołać metody odpowiedniej dla dowolnej klasy pochodnej za pomocą jednego wywołania metody klasy bazowej.  
   
  Najpierw należy utworzyć klasę bazową, która wywołuje `Shape`i klas pochodnych, takich jak `Rectangle`, `Circle`, i `Triangle`. Nadaj `Shape` wywołuje metodę wirtualną klasy `Draw`, i zastąpienie go w każdej klasie pochodnej, aby narysować określonych kształtów, klasa reprezentuje. Utwórz `List<Shape>` obiektu i dodać do niego koła, trójkąt i prostokąt. Aby zaktualizować powierzchni do rysowania, użyj [foreach](../../../csharp/language-reference/keywords/foreach-in.md) pętli do iteracji przez listę i wywołania `Draw` metody na każdym `Shape` obiektu na liście. Mimo że każdy obiekt na liście ma zadeklarowany typ `Shape`, jest typu run-time (wersja przesłonięte metody w każdej klasie pochodnej), który zostanie wywołany.  
   
@@ -34,7 +34,7 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
   
 ## <a name="polymorphism-overview"></a>Polimorfizm — omówienie  
   
-### <a name="virtual-members"></a>Wirtualne elementy członkowskie  
+### <a name="virtual-members"></a>Wirtualne składowe  
  Klasa pochodna dziedziczy z klasy bazowej, uzyskuje się wszystkie metody, pola, właściwości i zdarzeń klasy podstawowej. Projektant klasy pochodne mogą wybrać opcję  
   
 -   Przesłoń składowe wirtualnego w klasie bazowej  
@@ -93,15 +93,15 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
   
 -   [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Instrukcje: Przesłanianie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Instrukcje: Przesłonięcie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Klasy abstrakcyjne i zapieczętowane oraz składowe klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)
 - [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
-- [Typy](../../../csharp/programming-guide/types/index.md)
+- [Types](../../../csharp/programming-guide/types/index.md)

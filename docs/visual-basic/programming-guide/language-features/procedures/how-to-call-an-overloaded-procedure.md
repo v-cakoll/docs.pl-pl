@@ -8,23 +8,23 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: 9dda0fbc0cffe8904ab97c46cea40d5cf00c91e9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317814"
 ---
 # <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Instrukcje: Wywoływanie procedury przeciążenia (Visual Basic)
 Zaletą przeciążanie procedury trwa elastyczność wywołania. Kod wywołujący można uzyskać informacji potrzebnych do przekazania do procedury, a następnie wywołać nazwę samą procedurą, niezależnie od tego, jakie argumentów, go przechodzi.  
   
 ### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Aby wywołać procedurę, który ma więcej niż jedna wersja zdefiniowane  
   
-1.  W wywoływanym kodzie określają, jakie dane do przekazania do procedury.  
+1. W wywoływanym kodzie określają, jakie dane do przekazania do procedury.  
   
-2.  Po wywołaniu procedury należy zapisać w normalny sposób prezentowania danych na liście argumentów. Upewnij się, że argumenty odpowiada liście parametrów, w wersjach zdefiniowane w procedurze.  
+2. Po wywołaniu procedury należy zapisać w normalny sposób prezentowania danych na liście argumentów. Upewnij się, że argumenty odpowiada liście parametrów, w wersjach zdefiniowane w procedurze.  
   
-3.  Nie trzeba ustalić, która wersja procedury do wywołania. Visual Basic przekazuje sterowanie do wersji dopasowania listy argumentów.  
+3. Nie trzeba ustalić, która wersja procedury do wywołania. Visual Basic przekazuje sterowanie do wersji dopasowania listy argumentów.  
   
      Poniższy przykład wywołuje `post` procedury zadeklarowanych w [jak: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md). Uzyskuje identyfikator klienta, określa, czy jest `String` lub `Integer`, a następnie w obu przypadkach wywołuje tę samą procedurę.  
   
@@ -39,8 +39,8 @@ Zaletą przeciążanie procedury trwa elastyczność wywołania. Kod wywołując
 - [Przeciążanie procedury](./procedure-overloading.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
 - [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Instrukcje: Przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: Przeciążanie procedury korzystającej z nieskończonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)
 - [Rozpoznanie przeciążenia](./overload-resolution.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

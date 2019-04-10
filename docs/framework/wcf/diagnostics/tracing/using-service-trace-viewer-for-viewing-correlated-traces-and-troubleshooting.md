@@ -2,12 +2,12 @@
 title: Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160670"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329053"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów
 W tym temacie opisano format danych śledzenia, jak wyświetlać i metod, które umożliwiają rozwiązywanie problemów z aplikacji przeglądarki danych śledzenia usługi.  
@@ -152,17 +152,17 @@ Na poniższej ilustracji przedstawiono działania klienta WCF, wyświetlane prze
   
  W usłudze modelu działania mapuje do koncepcji usługi WCF w następujący sposób:  
   
-1.  Firma Microsoft może utworzyć, a następnie otwórz ServiceHost (może to spowodować kilka działań związanych z hostem, na przykład w przypadku zabezpieczeń).  
+1. Firma Microsoft może utworzyć, a następnie otwórz ServiceHost (może to spowodować kilka działań związanych z hostem, na przykład w przypadku zabezpieczeń).  
   
-2.  Tworzymy nasłuchiwania na działanie dla każdego odbiornik elementu ServiceHost (z przesyłania do i z otwartego elementu ServiceHost).  
+2. Tworzymy nasłuchiwania na działanie dla każdego odbiornik elementu ServiceHost (z przesyłania do i z otwartego elementu ServiceHost).  
   
-3.  Jeśli odbiornik wykryje żądanie komunikacji zainicjowane przez klienta, przesyłania czynnością "Bajtów otrzymywać" w jakiej są przetwarzane wszystkie bajtów wysłanych z klienta. W przypadku tego działania widać błędów połączenia, które wystąpiło podczas interakcji z usługi klienta.  
+3. Jeśli odbiornik wykryje żądanie komunikacji zainicjowane przez klienta, przesyłania czynnością "Bajtów otrzymywać" w jakiej są przetwarzane wszystkie bajtów wysłanych z klienta. W przypadku tego działania widać błędów połączenia, które wystąpiło podczas interakcji z usługi klienta.  
   
-4.  Dla każdego zestawu bajtów, które zostanie odebrana, umożliwiająca wiadomość możemy przetworzyć tych bajtów w działaniu "Procesu komunikat", gdzie możemy utworzyć obiekt komunikatów WCF. W przypadku tego działania widzimy błędy związane z koperty nieprawidłowy lub uszkodzony komunikat.  
+4. Dla każdego zestawu bajtów, które zostanie odebrana, umożliwiająca wiadomość możemy przetworzyć tych bajtów w działaniu "Procesu komunikat", gdzie możemy utworzyć obiekt komunikatów WCF. W przypadku tego działania widzimy błędy związane z koperty nieprawidłowy lub uszkodzony komunikat.  
   
-5.  Gdy komunikat jest sformułowany, możemy przenieść do działania procesu akcji. Jeśli `propagateActivity` ustawiono `true` na klienta i usługi, to działanie ma ten sam identyfikator jak wartość zdefiniowana w kliencie i opisem w poprzedniej sekcji. Z tego etapu Zaczniemy do korzystania z bezpośrednia korelacja między punktami końcowymi, ponieważ wszystkie dane śledzenia emitowane w programie WCF that are related to żądanie znajdują się w tej samej działania, w tym przetwarzanie komunikatów odpowiedzi.  
+5. Gdy komunikat jest sformułowany, możemy przenieść do działania procesu akcji. Jeśli `propagateActivity` ustawiono `true` na klienta i usługi, to działanie ma ten sam identyfikator jak wartość zdefiniowana w kliencie i opisem w poprzedniej sekcji. Z tego etapu Zaczniemy do korzystania z bezpośrednia korelacja między punktami końcowymi, ponieważ wszystkie dane śledzenia emitowane w programie WCF that are related to żądanie znajdują się w tej samej działania, w tym przetwarzanie komunikatów odpowiedzi.  
   
-6.  Dla akcji poza procesem możemy utworzyć aktywności "Wykonywanie kodu użytkownika" do izolowania danych śledzenia emitowane w kodzie użytkownika z tymi emitowane w programie WCF. W poprzednim przykładzie śledzenia "Usługa wysyła odpowiedź Dodaj" w działaniu "Użytkownika wykonaj kod" w aktywności propagowane przez klienta, nie jest emitowane, jeśli ma to zastosowanie.  
+6. Dla akcji poza procesem możemy utworzyć aktywności "Wykonywanie kodu użytkownika" do izolowania danych śledzenia emitowane w kodzie użytkownika z tymi emitowane w programie WCF. W poprzednim przykładzie śledzenia "Usługa wysyła odpowiedź Dodaj" w działaniu "Użytkownika wykonaj kod" w aktywności propagowane przez klienta, nie jest emitowane, jeśli ma to zastosowanie.  
   
  Na ilustracji poniżej pierwsze działanie po lewej stronie jest działania głównego (0000), który jest domyślne działanie. Następne trzy działania są można otworzyć elementu ServiceHost. Działanie w kolumnie 5 jest odbiornik i pozostałych działań (od 6 do 8) opisano WCF przetwarzania wiadomości w bajtach przetwarzania aktywację kodu użytkownika.  
 

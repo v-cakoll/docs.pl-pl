@@ -2,12 +2,12 @@
 title: Informacje o wywołującym
 description: Opisuje sposób używania Caller — atrybuty Argument informacji, aby uzyskać informacje o wywołującym z metody.
 ms.date: 04/25/2017
-ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890309"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316157"
 ---
 # <a name="caller-information"></a>Informacje o wywołującym
 
@@ -28,24 +28,22 @@ Poniższy przykład pokazuje, jak można wykorzystać te atrybuty do śledzenia 
 ```fsharp
 open System.Diagnostics
 open System.Runtime.CompilerServices
+open System.Runtime.InteropServices
 
 type Tracer() =
     member __.DoTrace(message: string,
-                      [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string,
-                      [<CallerLineNumber>] ?line: int) =
+                      [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
+                      [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
+                      [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
-        match (memberName, path, line) with
-        | Some m, Some p, Some l ->
-            Trace.WriteLine(sprintf "Member name: %s" m)
-            Trace.WriteLine(sprintf "Source file path: %s" p)
-            Trace.WriteLine(sprintf "Source line number: %d" l)
-        | _,_,_ -> ()
+        Trace.WriteLine(sprintf "Member name: %s" memberName)
+        Trace.WriteLine(sprintf "Source file path: %s" path)
+        Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Caller — atrybuty informacji dotyczą wyłącznie następujące parametry opcjonalne. Należy podać wartość dla każdego opcjonalnego parametru. Atrybuty informacji o obiekcie wywołującym spowodować, że kompilator, aby zapisać odpowiednie wartości dla każdego opcjonalnego parametru dekorowane za pomocą atrybutów informacji o obiekcie wywołującym.
+Caller — atrybuty informacji dotyczą wyłącznie następujące parametry opcjonalne. Atrybuty informacji o obiekcie wywołującym spowodować, że kompilator, aby zapisać odpowiednie wartości dla każdego opcjonalnego parametru dekorowane za pomocą atrybutów informacji o obiekcie wywołującym.
 
 Wartości informacji o obiekcie wywołującym są emitowane jako literały do języka pośredniego (IL, Intermediate Language) w czasie kompilacji. W przeciwieństwie do wyników [ślad stosu](/dotnet/api/system.diagnostics.stacktrace) właściwość dla wyjątków, na wyniki nie ma wpływu zasłanianie.
 

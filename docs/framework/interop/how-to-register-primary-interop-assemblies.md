@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218544"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314753"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych
 
@@ -36,7 +36,7 @@ Użyj [narzędzie rejestracji zestawów (Regasm.exe)](../../../docs/framework/to
 
 ## <a name="to-register-a-primary-interop-assembly"></a>Aby zarejestrować się podstawowy zestaw międzyoperacyjny
 
-1.  W wierszu polecenia wpisz polecenie:
+1. W wierszu polecenia wpisz polecenie:
 
      **regasm** *assemblyname*
 
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie przy użyciu podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Programowanie za pomocą podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Lokalizowanie podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
 - [Redystrybucja podstawowych zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

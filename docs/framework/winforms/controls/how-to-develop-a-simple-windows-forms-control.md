@@ -9,19 +9,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328143"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows
 W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu Windows Forms. Prosty formant opracowanych w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwości, które mają być zmienione. Nie podnieść lub obsługi zdarzeń.  
   
 ### <a name="to-create-a-simple-custom-control"></a>Aby utworzyć prosty formant niestandardowy  
   
-1.  Definiowanie klasy, która jest pochodną <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+1. Definiowanie klasy, która jest pochodną <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
     ```vb  
     Public Class FirstControl  
@@ -34,26 +34,26 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
     public class FirstControl:Control {}  
     ```  
   
-2.  Zdefiniuj właściwości. (Nie wymagane do zdefiniowania właściwości, ponieważ formant dziedziczy wiele właściwości z <xref:System.Windows.Forms.Control> klasy, ale większość niestandardowe formanty ogólnie zdefiniować dodatkowe właściwości.) Poniższy fragment kodu definiuje właściwość o nazwie `TextAlignment` , `FirstControl` jest używany do formatowania wyświetlania <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control>. Aby uzyskać więcej informacji na temat definiowania właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
+2. Zdefiniuj właściwości. (Nie wymagane do zdefiniowania właściwości, ponieważ formant dziedziczy wiele właściwości z <xref:System.Windows.Forms.Control> klasy, ale większość niestandardowe formanty ogólnie zdefiniować dodatkowe właściwości.) Poniższy fragment kodu definiuje właściwość o nazwie `TextAlignment` , `FirstControl` jest używany do formatowania wyświetlania <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control>. Aby uzyskać więcej informacji na temat definiowania właściwości, zobacz [Przegląd właściwości](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
      Po ustawieniu właściwości, która zmienia wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> metodę, aby odświeżyć formantu. <xref:System.Windows.Forms.Control.Invalidate%2A> jest zdefiniowany w klasie bazowej <xref:System.Windows.Forms.Control>.  
   
-3.  Zastąp chronionego <xref:System.Windows.Forms.Control.OnPaint%2A> metody dziedziczone z <xref:System.Windows.Forms.Control> zapewnienie logikę renderowania formantu. Jeśli nie zastąpisz <xref:System.Windows.Forms.Control.OnPaint%2A>, formant nie będzie można narysować sam. W poniższy fragment kodu <xref:System.Windows.Forms.Control.OnPaint%2A> metoda Wyświetla <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control> z wyrównaniem, określony przez `alignmentValue` pola.  
+3. Zastąp chronionego <xref:System.Windows.Forms.Control.OnPaint%2A> metody dziedziczone z <xref:System.Windows.Forms.Control> zapewnienie logikę renderowania formantu. Jeśli nie zastąpisz <xref:System.Windows.Forms.Control.OnPaint%2A>, formant nie będzie można narysować sam. W poniższy fragment kodu <xref:System.Windows.Forms.Control.OnPaint%2A> metoda Wyświetla <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control> z wyrównaniem, określony przez `alignmentValue` pola.  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Podaj atrybuty kontrolki. Atrybuty Włącz projektanta wizualnego wyświetlić kontrolki i ich właściwości i zdarzenia odpowiednio w czasie projektowania. Poniższy fragment kodu, ma zastosowanie atrybutów, które mają `TextAlignment` właściwości. W projektancie, takich jak Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> atrybutu (pokazano we fragmencie kodu) powoduje, że właściwości, które mają być wyświetlane w obszarze kategoria logiczna. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Atrybutu powoduje, że opisowy ciąg, który będzie wyświetlany w dolnej części **właściwości** okna po `TextAlignment` właściwości jest zaznaczone. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+4. Podaj atrybuty kontrolki. Atrybuty Włącz projektanta wizualnego wyświetlić kontrolki i ich właściwości i zdarzenia odpowiednio w czasie projektowania. Poniższy fragment kodu, ma zastosowanie atrybutów, które mają `TextAlignment` właściwości. W projektancie, takich jak Visual Studio <xref:System.ComponentModel.CategoryAttribute.Category%2A> atrybutu (pokazano we fragmencie kodu) powoduje, że właściwości, które mają być wyświetlane w obszarze kategoria logiczna. <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Atrybutu powoduje, że opisowy ciąg, który będzie wyświetlany w dolnej części **właściwości** okna po `TextAlignment` właściwości jest zaznaczone. Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty czasu projektowania dla składników](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  (opcjonalnie) Zawierają zasoby dla kontrolki. Możesz podać zasobu, takie jak mapy bitowej kontrolki przy użyciu opcji kompilatora (`/res` dla języka C#) do zasobów pakietu przy użyciu kontrolki. W czasie wykonywania, można pobrać zasobu za pomocą metody <xref:System.Resources.ResourceManager> klasy. Aby uzyskać więcej informacji na temat tworzenia i używania zasobów, zobacz [zasoby w aplikacjach pulpitu](../../resources/index.md).  
+5. (opcjonalnie) Zawierają zasoby dla kontrolki. Możesz podać zasobu, takie jak mapy bitowej kontrolki przy użyciu opcji kompilatora (`/res` dla języka C#) do zasobów pakietu przy użyciu kontrolki. W czasie wykonywania, można pobrać zasobu za pomocą metody <xref:System.Resources.ResourceManager> klasy. Aby uzyskać więcej informacji na temat tworzenia i używania zasobów, zobacz [zasoby w aplikacjach pulpitu](../../resources/index.md).  
   
-6.  Skompiluj i wdróż formantu. Aby skompilować i wdrożyć `FirstControl,` wykonaj następujące czynności:  
+6. Skompiluj i wdróż formantu. Aby skompilować i wdrożyć `FirstControl,` wykonaj następujące czynności:  
   
     1.  Zapisz kod w następującym przykładzie do pliku źródłowego (na przykład FirstControl.cs lub FirstControl.vb).  
   
@@ -79,9 +79,9 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
   
 #### <a name="to-compile-and-run-this-sample"></a>Aby skompilować i uruchomić ten przykład  
   
-1.  Zapisz kod w przykładzie poniżej do pliku źródłowego (SimpleForm.cs lub SimpleForms.vb).  
+1. Zapisz kod w przykładzie poniżej do pliku źródłowego (SimpleForm.cs lub SimpleForms.vb).  
   
-2.  Skompilować kod źródłowy do zestawu pliku wykonywalnego, wykonując następujące polecenie z katalogu, który zawiera plik źródłowy.  
+2. Skompilować kod źródłowy do zestawu pliku wykonywalnego, wykonując następujące polecenie z katalogu, który zawiera plik źródłowy.  
   
     ```console  
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
@@ -93,7 +93,7 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
   
      CustomWinControls.dll jest zestawem, który zawiera klasę `FirstControl`. Ten zestaw musi być w tym samym katalogu co plik źródłowy do formularza, który uzyskuje dostęp do niego (SimpleForm.cs lub SimpleForms.vb).  
   
-3.  Wykonaj SimpleForm.exe przy użyciu następującego polecenia.  
+3. Wykonaj SimpleForm.exe przy użyciu następującego polecenia.  
   
     ```console
     SimpleForm  

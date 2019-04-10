@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836451"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320421"
 ---
 # <a name="xslt-extension-objects"></a>Obiekty rozszerzeń XSLT
 Obiekty rozszerzeń są używane do rozszerzania funkcji arkuszy stylów. Obiekty rozszerzeń są obsługiwane przez <xref:System.Xml.Xsl.XsltArgumentList> klasy.  
@@ -32,11 +32,11 @@ Obiekty rozszerzeń są używane do rozszerzania funkcji arkuszy stylów. Obiekt
   
 ### <a name="to-use-an-xslt-extension-object"></a>Używanie obiektu rozszerzenia XSLT  
   
-1.  Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> obiektu i dodać za pomocą obiektu rozszerzenia <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody.  
+1. Tworzenie <xref:System.Xml.Xsl.XsltArgumentList> obiektu i dodać za pomocą obiektu rozszerzenia <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> metody.  
   
-2.  Wywołanie obiektu rozszerzenia z arkusza stylów.  
+2. Wywołanie obiektu rozszerzenia z arkusza stylów.  
   
-3.  Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
+3. Przekaż <xref:System.Xml.Xsl.XsltArgumentList> obiekt <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,12 +2,12 @@
 title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324763"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 Można skonfigurować przycisk, który służy do anulowania aplikacji asynchronicznej, jeśli nie chcesz czekać na zakończenie jego działania. Postępując zgodnie z przykładami w tym temacie, można dodać przycisk anulowania do aplikacji, która pobiera zawartość jednej witryny sieci Web lub listę witryn sieci Web.  
@@ -23,15 +23,15 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
  Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
-1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
+1. Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
+2. Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-3.  W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
+3. W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
   
-4.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelATask** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
+4. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelATask** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   
-5.  Wybierz klawisz F5, aby uruchomić projekt.  
+5. Wybierz klawisz F5, aby uruchomić projekt.  
   
      Wybierz klawisze Ctrl + F5, aby uruchomić projekt bez debugowania go.  
   
@@ -44,7 +44,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
   
  Następnie należy dodać następujące zmiany w pliku MainWindow.xaml.vb tego projektu.  
   
-1.  Zadeklaruj `CancellationTokenSource` zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod, które do niego dostęp.  
+1. Zadeklaruj `CancellationTokenSource` zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod, które do niego dostęp.  
   
     ```vb  
     Class MainWindow  
@@ -53,7 +53,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Dodaj następującą obsługę zdarzeń dla **anulować** przycisku. Obsługa zdarzeń używa <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metodę, aby powiadomić `cts` po użytkownik zażąda anulowania.  
+2. Dodaj następującą obsługę zdarzeń dla **anulować** przycisku. Obsługa zdarzeń używa <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> metodę, aby powiadomić `cts` po użytkownik zażąda anulowania.  
   
     ```vb  
     ' ***Add an event handler for the Cancel button.  
@@ -65,7 +65,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
     End Sub  
     ```  
   
-3.  Utwórz następujące zmiany w zdarzeniu Obsługa **Start** przycisku `startButton_Click`.  
+3. Utwórz następujące zmiany w zdarzeniu Obsługa **Start** przycisku `startButton_Click`.  
   
     -   Utwórz wystąpienie `CancellationTokenSource`, `cts`.  
   
@@ -93,7 +93,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
         End Try  
         ```  
   
-4.  W `AccessTheWebAsync`, użyj <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> przeciążenia `GetAsync` method in Class metoda <xref:System.Net.Http.HttpClient> typu, aby pobrać zawartość witryny sieci Web. Przekaż `ct`, <xref:System.Threading.CancellationToken> parametru `AccessTheWebAsync`, jako drugi argument. Token niesie komunikat, jeśli użytkownik wybierze **anulować** przycisku.  
+4. W `AccessTheWebAsync`, użyj <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> przeciążenia `GetAsync` method in Class metoda <xref:System.Net.Http.HttpClient> typu, aby pobrać zawartość witryny sieci Web. Przekaż `ct`, <xref:System.Threading.CancellationToken> parametru `AccessTheWebAsync`, jako drugi argument. Token niesie komunikat, jeśli użytkownik wybierze **anulować** przycisku.  
   
      Poniższy kod przedstawia zmiany w `AccessTheWebAsync`.  
   
@@ -121,7 +121,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
     End Function  
     ```  
   
-5.  Jeśli nie anulujesz programu, wygeneruje następujące wyniki.  
+5. Jeśli nie anulujesz programu, wygeneruje następujące wyniki.  
   
     ```  
     Ready to download.  
@@ -141,15 +141,15 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
 ### <a name="downloading-the-example"></a>Pobieranie przykładu  
  Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka asynchroniczna: Poprawnie Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) a następnie wykonaj poniższe kroki.  
   
-1.  Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
+1. Dekompresuje plik który został pobrany, a następnie uruchom program Visual Studio.  
   
-2.  Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
+2. Na pasku menu wybierz **pliku**, **Otwórz**, **projekt/rozwiązanie**.  
   
-3.  W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
+3. W **Otwórz projekt** okno dialogowe, otwórz folder, który zawiera przykładowy kod, który został zdekompresowany, a następnie otwórz plik rozwiązania (.sln) dla AsyncFineTuningVB.  
   
-4.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelAListOfTasks** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
+4. W **Eksploratora rozwiązań**, otwórz menu skrótów dla **CancelAListOfTasks** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   
-5.  Wybierz klawisz F5, aby uruchomić projekt.  
+5. Wybierz klawisz F5, aby uruchomić projekt.  
   
      Wybierz klawisze Ctrl + F5, aby uruchomić projekt bez debugowania go.  
   
@@ -158,7 +158,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
 ### <a name="building-the-example"></a>Budowanie przykładu  
  Aby rozszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instrukcjami w sekcji "Pobieranie przykładu", ale wybierając **CancelATask** jako **projekt startowy**. Dodaj następujące zmiany do tego projektu. Gwiazdka oznacza zmiany w programie.  
   
-1.  Dodaj metodę, aby utworzyć listę adresów internetowych.  
+1. Dodaj metodę, aby utworzyć listę adresów internetowych.  
   
     ```vb  
     ' ***Add a method that creates a list of web addresses.  
@@ -178,14 +178,14 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
     End Function  
     ```  
   
-2.  Wywołaj metodę `AccessTheWebAsync`.  
+2. Wywołaj metodę `AccessTheWebAsync`.  
   
     ```vb  
     ' ***Call SetUpURLList to make a list of web addresses.  
     Dim urlList As List(Of String) = SetUpURLList()  
     ```  
   
-3.  Dodaj następującą pętlę w `AccessTheWebAsync` Aby przetwarzać każdy adresu sieci web, na liście.  
+3. Dodaj następującą pętlę w `AccessTheWebAsync` Aby przetwarzać każdy adresu sieci web, na liście.  
   
     ```vb  
     ' ***Add a loop to process the list of web addresses.  
@@ -203,7 +203,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
     Next  
     ```  
   
-4.  Ponieważ `AccessTheWebAsync` Wyświetla długości, metoda nie musi niczego zwracać. Usuń instrukcję return, a następnie zmień zwracany typ metody do <xref:System.Threading.Tasks.Task> zamiast <xref:System.Threading.Tasks.Task%601>.  
+4. Ponieważ `AccessTheWebAsync` Wyświetla długości, metoda nie musi niczego zwracać. Usuń instrukcję return, a następnie zmień zwracany typ metody do <xref:System.Threading.Tasks.Task> zamiast <xref:System.Threading.Tasks.Task%601>.  
   
     ```vb  
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task  
@@ -215,7 +215,7 @@ Można skonfigurować przycisk, który służy do anulowania aplikacji asynchron
     Await AccessTheWebAsync(cts.Token)  
     ```  
   
-5.  Jeśli nie anulujesz programu, wygeneruje następujące wyniki.  
+5. Jeśli nie anulujesz programu, wygeneruje następujące wyniki.  
   
     ```  
     Length of the downloaded string: 35939.  

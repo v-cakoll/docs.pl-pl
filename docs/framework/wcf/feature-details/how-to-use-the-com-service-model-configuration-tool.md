@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196895"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322592"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Instrukcje: używanie narzędzia konfiguracji modelu usług COM+
 Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które będą dostępne jako usługi sieci Web za pomocą narzędzia wiersza polecenia w konfiguracji modelu usług COM + (ComSvcConfig.exe).  
@@ -19,11 +19,11 @@ Po wybraniu odpowiedni tryb hostingu skonfiguruj interfejsy aplikacji, które b�
   
  Korzystając z ComSvcConfig.exe na komputerze z Windows 7 można skonfigurować usługę sieci web, aby korzystać z najnowszej wersji modelu usługi (obecnie 4.5), wykonaj następujące czynności:  
   
-1.  Ustaw klucz rejestru `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` wartość DWORD 0x00000001  
+1. Ustaw klucz rejestru `[HKEY_LOCAL_COMPUTER\SOFTWARE\Microsoft\.NETFramework]\OnlyUseLatestCLR` wartość DWORD 0x00000001  
   
-2.  Uruchom comsvcconfig.exe  
+2. Uruchom comsvcconfig.exe  
   
-3.  Przywróć klucz rejestru, dodanej w kroku 1 do oryginalnej wartości lub usuń go, jeśli nie istnieje.  
+3. Przywróć klucz rejestru, dodanej w kroku 1 do oryginalnej wartości lub usuń go, jeśli nie istnieje.  
   
 > [!IMPORTANT]
 >  Ważne jest przywrócenie tego klucza rejestru. Jest to klucz zgodności. Przywracanie nie ta zmiana może spowodować problemy z innymi aplikacjami .NET na maszynie).  

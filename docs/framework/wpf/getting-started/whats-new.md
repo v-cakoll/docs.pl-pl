@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325829"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Nowości w WPF w wersji 4.5
 <a name="introduction"></a> Ten temat zawiera informacje o nowych i ulepszonych funkcji w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w wersji 4.5.  
@@ -56,9 +56,9 @@ ms.locfileid: "59227486"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>Nowe funkcje VirtualizingPanel  
   
-1.  Można określić czy <xref:System.Windows.Controls.VirtualizingPanel>, takich jak <xref:System.Windows.Controls.VirtualizingStackPanel>, wyświetla elementy częściowe za pomocą <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> dołączona właściwość. Jeśli <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ustawiono <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> będą wyświetlane tylko elementy, które są całkowicie widoczna. Jeśli <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ustawiono <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> może wyświetlać elementy częściowo widoczny.  
+1. Można określić czy <xref:System.Windows.Controls.VirtualizingPanel>, takich jak <xref:System.Windows.Controls.VirtualizingStackPanel>, wyświetla elementy częściowe za pomocą <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> dołączona właściwość. Jeśli <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ustawiono <xref:System.Windows.Controls.ScrollUnit.Item>, <xref:System.Windows.Controls.VirtualizingPanel> będą wyświetlane tylko elementy, które są całkowicie widoczna. Jeśli <xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A> ustawiono <xref:System.Windows.Controls.ScrollUnit.Pixel>, <xref:System.Windows.Controls.VirtualizingPanel> może wyświetlać elementy częściowo widoczny.  
   
-2.  Można określić rozmiar pamięci podręcznej przed i po nim okienka ekranu podczas <xref:System.Windows.Controls.VirtualizingPanel> jest wirtualizacja za pomocą <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> dołączona właściwość.  Pamięć podręczna jest ilość miejsca na powyżej lub poniżej okienka ekranu, w której elementy są bez wirtualizacji.  Używanie pamięci podręcznej, aby uniknąć generowania elementów interfejsu użytkownika, ponieważ są one przewijane do widoku może poprawić wydajność. Pamięć podręczna jest wypełniana z niższym priorytetem, dzięki czemu aplikacja nie przestać odpowiadać podczas operacji. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Właściwość określa jednostkę miary, który jest używany przez <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
+2. Można określić rozmiar pamięci podręcznej przed i po nim okienka ekranu podczas <xref:System.Windows.Controls.VirtualizingPanel> jest wirtualizacja za pomocą <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A> dołączona właściwość.  Pamięć podręczna jest ilość miejsca na powyżej lub poniżej okienka ekranu, w której elementy są bez wirtualizacji.  Używanie pamięci podręcznej, aby uniknąć generowania elementów interfejsu użytkownika, ponieważ są one przewijane do widoku może poprawić wydajność. Pamięć podręczna jest wypełniana z niższym priorytetem, dzięki czemu aplikacja nie przestać odpowiadać podczas operacji. <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType> Właściwość określa jednostkę miary, który jest używany przez <xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>.  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>Powiązanie z właściwościami statycznymi  
@@ -86,11 +86,11 @@ ms.locfileid: "59227486"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>Wiązać z typami ICustomTypeProvider tej implementacji  
  WPF obsługuje powiązanie danych do obiektów, które implementują <xref:System.Reflection.ICustomTypeProvider>, znanego również jako niestandardowych typów.  Można użyć niestandardowych typów w następujących przypadkach.  
   
-1.  Jako <xref:System.Windows.PropertyPath> w powiązaniu danych. Na przykład <xref:System.Windows.Data.Binding.Path%2A> właściwość <xref:System.Windows.Data.Binding> można odwoływać się do właściwości typu niestandardowego.  
+1. Jako <xref:System.Windows.PropertyPath> w powiązaniu danych. Na przykład <xref:System.Windows.Data.Binding.Path%2A> właściwość <xref:System.Windows.Data.Binding> można odwoływać się do właściwości typu niestandardowego.  
   
-2.  Jako wartość <xref:System.Windows.DataTemplate.DataType%2A> właściwości.  
+2. Jako wartość <xref:System.Windows.DataTemplate.DataType%2A> właściwości.  
   
-3.  Jako typ, który określa automatycznie wygenerowanych kolumn w <xref:System.Windows.Controls.DataGrid>.  
+3. Jako typ, który określa automatycznie wygenerowanych kolumn w <xref:System.Windows.Controls.DataGrid>.  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>Trwa pobieranie informacji o wiązaniach danych z wyrażenia wiązania  

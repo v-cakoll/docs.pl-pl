@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212092"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317894"
 ---
 # <a name="how-to-validate-application-settings"></a>Instrukcje: Walidacja ustawień aplikacji
 W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim zostaną utrwalone.  
@@ -78,7 +78,7 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>Aby zweryfikować ustawienia aplikacji, zmieniając ustawienie  
   
-1.  Jeśli jesteś C# dla deweloperów w formularza lub formantu `Load` zdarzeń, Dodaj program obsługi zdarzeń dla <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> zdarzeń.  
+1. Jeśli jesteś C# dla deweloperów w formularza lub formantu `Load` zdarzeń, Dodaj program obsługi zdarzeń dla <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> zdarzeń.  
   
      —lub—  
   
@@ -97,7 +97,7 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
     End Sub   
     ```  
   
-2.  Definiowanie procedury obsługi zdarzeń, a następnie napisać kod wewnątrz niej, aby wykonać sprawdzanie na datę urodzenia granic.  
+2. Definiowanie procedury obsługi zdarzeń, a następnie napisać kod wewnątrz niej, aby wykonać sprawdzanie na datę urodzenia granic.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>Występuje, aby zweryfikować ustawienia aplikacji, podczas zapisywania  
   
-1.  W formularzu lub kontrolki `Load` zdarzeń, Dodaj program obsługi zdarzeń dla <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> zdarzeń.  
+1. W formularzu lub kontrolki `Load` zdarzeń, Dodaj program obsługi zdarzeń dla <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> zdarzeń.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ W tym temacie pokazano, jak sprawdzanie poprawności ustawień aplikacji, zanim 
     End Sub  
     ```  
   
-2.  Definiowanie procedury obsługi zdarzeń, a następnie napisać kod wewnątrz niej, aby wykonać sprawdzanie na datę urodzenia granic.  
+2. Definiowanie procedury obsługi zdarzeń, a następnie napisać kod wewnątrz niej, aby wykonać sprawdzanie na datę urodzenia granic.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e696a6add8d5182fbf78cbbab26de47e0c0f684
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306537"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] wraz ze swoimi aplikacjami.
@@ -117,23 +117,23 @@ Użycie technologii ClickOnce, InstallAware, InstallShield lub WiX do wdrożenia
 
  W programie Visual Studio, aby wybrać wdrażanie ClickOnce i dodać zależność od programu .NET Framework:
 
-1.  Otwórz projekt aplikacji którą chcesz opublikować.
+1. Otwórz projekt aplikacji którą chcesz opublikować.
 
-2.  W Eksploratorze rozwiązań Otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.
+2. W Eksploratorze rozwiązań Otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.
 
-3.  Wybierz **Publikuj** okienka.
+3. Wybierz **Publikuj** okienka.
 
-4.  Wybierz **wymagania wstępne** przycisku.
+4. Wybierz **wymagania wstępne** przycisku.
 
-5.  W **wymagania wstępne** okna dialogowego pole, upewnij się, że **Utwórz program instalacyjny, aby zainstalować wstępnie wymagane składniki** pole wyboru jest zaznaczone.
+5. W **wymagania wstępne** okna dialogowego pole, upewnij się, że **Utwórz program instalacyjny, aby zainstalować wstępnie wymagane składniki** pole wyboru jest zaznaczone.
 
-6.  Na liście wymagań wstępnych Znajdź i wybierz wersję programu .NET Framework, który został użyty do utworzenia projektu.
+6. Na liście wymagań wstępnych Znajdź i wybierz wersję programu .NET Framework, który został użyty do utworzenia projektu.
 
-7.  Wybierz opcję, aby określić lokalizację źródłową wymagań wstępnych, a następnie wybierz **OK**.
+7. Wybierz opcję, aby określić lokalizację źródłową wymagań wstępnych, a następnie wybierz **OK**.
 
      Jeśli podasz adres URL dla lokalizacji pobierania .NET Framework, można określić witrynę Microsoft Download Center lub własnej witryny. Jeśli umieszczasz pakiet redystrybucyjny na własnym serwerze, musi to być Instalator w trybie offline, a nie Instalator sieci web. Możesz tylko połączyć Instalator sieci web w Microsoft Download Center. Adres URL można także określić dysk, na którym jest rozpowszechniana własną aplikację.
 
-8.  W **stron właściwości** okna dialogowego wybierz **OK**.
+8. W **stron właściwości** okna dialogowego wybierz **OK**.
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>InstallAware wdrożenia
@@ -142,19 +142,19 @@ InstallAware tworzy aplikację Windows (APPX), Instalator Windows (MSI), kodu na
 ### <a name="installshield-deployment"></a>Wdrażanie InstallShield
  W programie Visual Studio, aby wybrać wdrażanie InstallShield i dodać zależność od programu .NET Framework:
 
-1.  Na pasku menu programu Visual Studio, wybierz **pliku**, **New**, **projektu**.
+1. Na pasku menu programu Visual Studio, wybierz **pliku**, **New**, **projektu**.
 
-2.  W okienku po lewej stronie **nowy projekt** okna dialogowego wybierz **inne typy projektów**, **instalacja i wdrożenie**, **InstallShield LE**.
+2. W okienku po lewej stronie **nowy projekt** okna dialogowego wybierz **inne typy projektów**, **instalacja i wdrożenie**, **InstallShield LE**.
 
-3.  W **nazwa** polu, wpisz nazwę dla projektu, a następnie wybierz **OK**.
+3. W **nazwa** polu, wpisz nazwę dla projektu, a następnie wybierz **OK**.
 
-4.  Jeśli tworzysz projekt instalacji i wdrożenia po raz pierwszy, wybierz opcję **przejdź do programu InstallShield** lub **Włącz InstallShield Limited Edition** pobierania programu InstallShield Limited Edition dla używanej wersji programu Microsoft Visual Studio. Uruchom ponownie program Visual Studio.
+4. Jeśli tworzysz projekt instalacji i wdrożenia po raz pierwszy, wybierz opcję **przejdź do programu InstallShield** lub **Włącz InstallShield Limited Edition** pobierania programu InstallShield Limited Edition dla używanej wersji programu Microsoft Visual Studio. Uruchom ponownie program Visual Studio.
 
-5.  Przejdź do **Asystent projektu** kreatora i wybierz polecenie **pliki aplikacji** można dodać danych wyjściowych projektu. Inne atrybuty projektu można skonfigurować za pomocą tego kreatora.
+5. Przejdź do **Asystent projektu** kreatora i wybierz polecenie **pliki aplikacji** można dodać danych wyjściowych projektu. Inne atrybuty projektu można skonfigurować za pomocą tego kreatora.
 
-6.  Przejdź do **wymagania dotyczące instalacji** i wybierz systemy operacyjne oraz wersję programu .NET Framework, którą chcesz zainstalować.
+6. Przejdź do **wymagania dotyczące instalacji** i wybierz systemy operacyjne oraz wersję programu .NET Framework, którą chcesz zainstalować.
 
-7.  Otwórz menu skrótów projektu Instalatora i wybierz polecenie **kompilacji**.
+7. Otwórz menu skrótów projektu Instalatora i wybierz polecenie **kompilacji**.
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Wdrożenie XML Instalatora Windows (WiX)

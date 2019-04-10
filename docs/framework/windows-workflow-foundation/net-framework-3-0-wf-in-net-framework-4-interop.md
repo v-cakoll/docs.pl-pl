@@ -2,12 +2,12 @@
 title: Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086690"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329417"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Używanie działań WF programu .NET Framework 3.0 w .NET Framework 4 przy użyciu działań Interop
 <xref:System.Activities.Statements.Interop> Działanie jest [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działania (WF 4.5), który otacza [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) działania w ramach [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Działanie WF 3 może być czynnością pojedynczego typu liść lub całe drzewo działań. Wykonanie (w tym unieważnienie i obsługa wyjątków) oraz trwałości [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działanie występuje w kontekście [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wystąpienia przepływu pracy, który jest wykonywany.  
@@ -34,22 +34,22 @@ ms.locfileid: "49086690"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Ograniczenia przy użyciu WF 3 działania w ramach działań Interop  
  Działania WF 3 dostarczane przez system nie może być bezpośrednio ujęte w <xref:System.Activities.Statements.Interop> działania. W przypadku niektórych działań WF 3 takich jak <xref:System.Workflow.Activities.DelayActivity>, jest to spowodowane jest analogiczne działanie WF 4.5. Dla innych użytkowników jest to spowodowane funkcjonalność działania nie jest obsługiwana. Wiele działań WF 3 dostarczane przez system mogą być używane w przepływach pracy opakowane przez <xref:System.Activities.Statements.Interop> działania podlegają następującym ograniczeniom:  
   
-1.  <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.Receive> nie można używać w <xref:System.Activities.Statements.Interop> działania.  
+1. <xref:System.ServiceModel.Activities.Send> i <xref:System.ServiceModel.Activities.Receive> nie można używać w <xref:System.Activities.Statements.Interop> działania.  
   
-2.  <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, i <xref:System.Workflow.Activities.WebServiceFaultActivity> nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity>, <xref:System.Workflow.Activities.WebServiceOutputActivity>, i <xref:System.Workflow.Activities.WebServiceFaultActivity> nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
   
-3.  <xref:System.Workflow.Activities.InvokeWorkflowActivity> Nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> Nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
   
-4.  <xref:System.Workflow.ComponentModel.SuspendActivity> Nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> Nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
   
-5.  Działań dotyczących wynagrodzenie, nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
+5. Działań dotyczących wynagrodzenie, nie można używać wewnątrz <xref:System.Activities.Statements.Interop> działania.  
   
  Dostępne są także niektóre zachowania charakterystyki informacje dotyczące używania działań WF 3 w ramach <xref:System.Activities.Statements.Interop> działania:  
   
-1.  WF 3 działań zawartych w <xref:System.Activities.Statements.Interop> działania są inicjowane, gdy <xref:System.Activities.Statements.Interop> jest wykonywane działanie. W programie WF 4.5 ma nie fazy inicjowania dla wystąpienia przepływu pracy, przed jej wykonanie.  
+1. WF 3 działań zawartych w <xref:System.Activities.Statements.Interop> działania są inicjowane, gdy <xref:System.Activities.Statements.Interop> jest wykonywane działanie. W programie WF 4.5 ma nie fazy inicjowania dla wystąpienia przepływu pracy, przed jej wykonanie.  
   
-2.  Środowisko uruchomieniowe programu WF 4.5 jest nie punktu kontrolnego stanu wystąpienia przepływu pracy, po rozpoczęciu transakcji, niezależnie od tego, gdzie rozpoczyna się w tej transakcji (wewnątrz lub poza <xref:System.Activities.Statements.Interop> działanie).  
+2. Środowisko uruchomieniowe programu WF 4.5 jest nie punktu kontrolnego stanu wystąpienia przepływu pracy, po rozpoczęciu transakcji, niezależnie od tego, gdzie rozpoczyna się w tej transakcji (wewnątrz lub poza <xref:System.Activities.Statements.Interop> działanie).  
   
-3.  Rekordy śledzenia 3 WF działań w ramach <xref:System.Activities.Statements.Interop> działania zostały udostępnione firmie WF 4.5 śledzenia uczestników jako <xref:System.Activities.Tracking.InteropTrackingRecord> obiektów. <xref:System.Activities.Tracking.InteropTrackingRecord> jest pochodną z <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+3. Rekordy śledzenia 3 WF działań w ramach <xref:System.Activities.Statements.Interop> działania zostały udostępnione firmie WF 4.5 śledzenia uczestników jako <xref:System.Activities.Tracking.InteropTrackingRecord> obiektów. <xref:System.Activities.Tracking.InteropTrackingRecord> jest pochodną z <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  Niestandardowe działanie WF 3 mogą uzyskać dostęp do danych przy użyciu funkcji kolejek przepływu pracy w środowisku współdziałanie w taki sam sposób jak w ramach środowiska uruchomieniowego przepływu pracy WF 3. Wymagane są bez zmian w kodzie działań niestandardowych. Na tym hoście danych polega na umieszczonych w kolejce do kolejki przepływu pracy WF 3 wznawianie <xref:System.Activities.Bookmark>. Nazwa zakładki jest to forma ciągu <xref:System.IComparable> Nazwa kolejki przepływu pracy.
+4. Niestandardowe działanie WF 3 mogą uzyskać dostęp do danych przy użyciu funkcji kolejek przepływu pracy w środowisku współdziałanie w taki sam sposób jak w ramach środowiska uruchomieniowego przepływu pracy WF 3. Wymagane są bez zmian w kodzie działań niestandardowych. Na tym hoście danych polega na umieszczonych w kolejce do kolejki przepływu pracy WF 3 wznawianie <xref:System.Activities.Bookmark>. Nazwa zakładki jest to forma ciągu <xref:System.IComparable> Nazwa kolejki przepływu pracy.

@@ -2,12 +2,12 @@
 title: 'Przewodnik: Używanie tylko procedur składowanych (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332706"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Przewodnik: Używanie tylko procedur składowanych (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusz do uzyskiwania dostępu do danych, wykonując procedury składowane tylko. To podejście jest często używana przez administratorów baz danych, aby ograniczyć sposób dostępu do magazynu danych.  
@@ -60,17 +60,17 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązanie  
   
-1.  W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
+1. W programie Visual Studio **pliku** menu wskaż **New**, a następnie kliknij przycisk **projektu**.  
   
-2.  W **typów projektów** okienka **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
+2. W **typów projektów** okienka **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#** .  
   
-3.  W **szablony** okienku kliknij **aplikacja interfejsu Windows Forms**.  
+3. W **szablony** okienku kliknij **aplikacja interfejsu Windows Forms**.  
   
-4.  W **nazwa** wpisz **SprocOnlyApp**.  
+4. W **nazwa** wpisz **SprocOnlyApp**.  
   
-5.  W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
+5. W **lokalizacji** upewnij się, którym chcesz przechowywać swoje pliki projektu.  
   
-6.  Kliknij przycisk **OK**.  
+6. Kliknij przycisk **OK**.  
   
      Zostanie otwarty projektant formularzy Windows.  
   
@@ -79,9 +79,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-add-systemdatalinqdll"></a>To add System.Data.Linq.dll  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania**, a następnie kliknij przycisk **Dodaj odwołanie**.  
   
-2.  W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
+2. W **Dodaj odwołanie** okno dialogowe, kliknij przycisk **.NET**, kliknij zestaw System.Data.Linq, a następnie kliknij przycisk **OK**.  
   
      Zestaw został dodany do projektu.  
   
@@ -90,9 +90,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Aby dodać plik kodu northwind do projektu  
   
-1.  Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.  
+1. Na **projektu** menu, kliknij przycisk **Dodaj istniejący element**.  
   
-2.  W **Dodaj istniejący element** przenieść c:\linqtest7\northwind.cs okno dialogowe, a następnie kliknij przycisk **Dodaj**.  
+2. W **Dodaj istniejący element** przenieść c:\linqtest7\northwind.cs okno dialogowe, a następnie kliknij przycisk **Dodaj**.  
   
      Plik northwind.cs zostanie dodany do projektu.  
   
@@ -101,9 +101,9 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-create-the-database-connection"></a>Aby utworzyć połączenie z bazą danych  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.cs**, a następnie kliknij przycisk **Wyświetl kod**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1.cs**, a następnie kliknij przycisk **Wyświetl kod**.  
   
-2.  Wpisz następujący kod do `Form1` klasy:  
+2. Wpisz następujący kod do `Form1` klasy:  
   
      [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
   
@@ -112,42 +112,42 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-set-up-the-user-interface"></a>Aby skonfigurować interfejs użytkownika  
   
-1.  Wróć do Windows Forms Designer (**Form1.cs[Design]**).  
+1. Wróć do Windows Forms Designer (**Form1.cs[Design]**).  
   
-2.  Na **widoku** menu, kliknij przycisk **przybornika**.  
+2. Na **widoku** menu, kliknij przycisk **przybornika**.  
   
      Przybornik zostaje otwarty.  
   
     > [!NOTE]
     >  Kliknij przycisk **autoukrywania** pinezki, aby nie zamykaj przybornika podczas wykonywania pozostałych kroków w tej sekcji.  
   
-3.  Przeciągnij z przybornika na dwa przyciski, dwóch pól tekstowych i dwie etykiety **Form1**.  
+3. Przeciągnij z przybornika na dwa przyciski, dwóch pól tekstowych i dwie etykiety **Form1**.  
   
      Kontrolki będą ułożone, jak pokazano na ilustracji towarzyszącej. Rozwiń **Form1** tak, aby łatwo mieści się kontrolki.  
   
-4.  Kliknij prawym przyciskiem myszy **label1**, a następnie kliknij przycisk **właściwości**.  
+4. Kliknij prawym przyciskiem myszy **label1**, a następnie kliknij przycisk **właściwości**.  
   
-5.  Zmiana **tekstu** właściwość **label1** do **wprowadź OrderID:**.  
+5. Zmiana **tekstu** właściwość **label1** do **wprowadź OrderID:**.  
   
-6.  W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:**.  
+6. W ten sam sposób, aby uzyskać **etykiety 2**, zmienić **tekstu** właściwość **etykiety 2** do **wprowadź CustomerID:**.  
   
-7.  W ten sam sposób, jak zmienić **tekstu** właściwość **button1** do **Orderdetails**.  
+7. W ten sam sposób, jak zmienić **tekstu** właściwość **button1** do **Orderdetails**.  
   
-8.  Zmiana **tekstu** właściwość **button2** do **historii zamówień**.  
+8. Zmiana **tekstu** właściwość **button2** do **historii zamówień**.  
   
      Tak, aby cały tekst jest widoczne, mogą zostać poszerzone formanty przycisków.  
   
 #### <a name="to-handle-button-clicks"></a>Do obsługi kliknięcia przycisków  
   
-1.  Kliknij dwukrotnie **Orderdetails** na **Form1** aby otworzyć program obsługi zdarzeń przycisku button1 w edytorze kodu.  
+1. Kliknij dwukrotnie **Orderdetails** na **Form1** aby otworzyć program obsługi zdarzeń przycisku button1 w edytorze kodu.  
   
-2.  Wpisz następujący kod do `button1` procedury obsługi:  
+2. Wpisz następujący kod do `button1` procedury obsługi:  
   
      [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
   
-3.  Teraz kliknij dwukrotnie **button2** na **Form1** otworzyć `button2` procedury obsługi  
+3. Teraz kliknij dwukrotnie **button2** na **Form1** otworzyć `button2` procedury obsługi  
   
-4.  Wpisz następujący kod do `button2` procedury obsługi:  
+4. Wpisz następujący kod do `button2` procedury obsługi:  
   
      [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
   
@@ -156,33 +156,33 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 #### <a name="to-test-the-application"></a>Aby przetestować aplikację  
   
-1.  Naciśnij klawisz F5, aby rozpocząć debugowanie.  
+1. Naciśnij klawisz F5, aby rozpocząć debugowanie.  
   
      Zostanie wyświetlony formularz Form1.  
   
-2.  W **wprowadź OrderID** wpisz `10249`, a następnie kliknij przycisk **Orderdetails**.  
+2. W **wprowadź OrderID** wpisz `10249`, a następnie kliknij przycisk **Orderdetails**.  
   
      Okno komunikatu Wyświetla listę produktów dołączone w kolejności 10249.  
   
      Kliknij przycisk **OK** aby zamknąć okno komunikatu.  
   
-3.  W **wprowadź CustomerID** wpisz `ALFKI`, a następnie kliknij przycisk **historii zamówień**.  
+3. W **wprowadź CustomerID** wpisz `ALFKI`, a następnie kliknij przycisk **historii zamówień**.  
   
      Pojawi się komunikat zawierający listę historii zamówień klienta Customer ALFKI.  
   
      Kliknij przycisk **OK** aby zamknąć okno komunikatu.  
   
-4.  W **wprowadź OrderID** wpisz `123`, a następnie kliknij przycisk **Orderdetails**.  
+4. W **wprowadź OrderID** wpisz `123`, a następnie kliknij przycisk **Orderdetails**.  
   
      Okno komunikatu zostanie wyświetlone "Brak wyników".  
   
      Kliknij przycisk **OK** aby zamknąć okno komunikatu.  
   
-5.  Na **debugowania** menu, kliknij przycisk **Zatrzymaj debugowanie**.  
+5. Na **debugowania** menu, kliknij przycisk **Zatrzymaj debugowanie**.  
   
      Powoduje zamknięcie sesji debugowania.  
   
-6.  Jeśli zakończysz, eksperymentowanie, możesz kliknąć **Zamknij projekt** na **pliku** menu i zapisać projekt, po wyświetleniu monitu.  
+6. Jeśli zakończysz, eksperymentowanie, możesz kliknąć **Zamknij projekt** na **pliku** menu i zapisać projekt, po wyświetleniu monitu.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Ten projekt można zwiększyć, dokonując pewnych zmian. Na przykład możesz wyświetlić listę dostępnych procedur składowanych w polu listy i użytkownik powinien wybrać, które procedury musisz wykonać. Można również przesyłać strumieniowo dane wyjściowe raportów do pliku tekstowego.  

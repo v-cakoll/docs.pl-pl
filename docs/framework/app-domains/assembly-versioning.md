@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 841420e609ece83d77bb82f0493d625231d86ec7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305198"
 ---
 # <a name="assembly-versioning"></a>Przechowywanie wersji zestawu
 Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieniowego języka wspólnego odbywa się na poziomie zestawów. Konkretna wersja zestawu oraz wersje zestawów zależnych są rejestrowane w manifeście zestawu. Domyślna zasada dotycząca wersji środowiska dla środowiska uruchomieniowego stanowi, że aplikacje są uruchamiane tylko w wersjach, w których zostały skompilowane i przetestowane, chyba że inaczej stanowią jawnie zasady dotyczące wersji określone w plikach konfiguracji (plik konfiguracji aplikacji, plik zasad wydawcy i plik konfiguracji administratora komputera).  
@@ -25,13 +25,13 @@ Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieni
   
  W celu rozpoznania żądania powiązania zestawu środowisko uruchomieniowe wykonuje kilka czynności:  
   
-1.  Sprawdza oryginalne odwołanie do zestawu w celu ustalenia wersji zestawu, którą należy powiązać.  
+1. Sprawdza oryginalne odwołanie do zestawu w celu ustalenia wersji zestawu, którą należy powiązać.  
   
-2.  Szuka wszystkich właściwych plików konfiguracji, do których trzeba zastosować zasady dotyczące wersji.  
+2. Szuka wszystkich właściwych plików konfiguracji, do których trzeba zastosować zasady dotyczące wersji.  
   
-3.  Na podstawie oryginalnego odwołania do zestawu ustala poprawny zestaw oraz wszelkie przekierowania określone w plikach konfiguracji, po czym ustala wersję, która ma zostać powiązana z wywołującym zestawem.  
+3. Na podstawie oryginalnego odwołania do zestawu ustala poprawny zestaw oraz wszelkie przekierowania określone w plikach konfiguracji, po czym ustala wersję, która ma zostać powiązana z wywołującym zestawem.  
   
-4.  Sprawdza, czy globalnej pamięci podręcznej zestawów, bazy kodów określone w plikach konfiguracji, a następnie katalog i podkatalogi, przy użyciu zasad sondowania wyjaśnionych aplikacji wyjaśnione w [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+4. Sprawdza, czy globalnej pamięci podręcznej zestawów, bazy kodów określone w plikach konfiguracji, a następnie katalog i podkatalogi, przy użyciu zasad sondowania wyjaśnionych aplikacji wyjaśnione w [jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
  Poniższa ilustracja przedstawia następujące kroki:  
   

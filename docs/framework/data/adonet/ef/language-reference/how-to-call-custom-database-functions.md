@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119668"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311490"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Instrukcje: Wywoływanie niestandardowych funkcji bazy danych
 W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zdefiniowane w bazie danych z w ramach programu LINQ do zapytań jednostki.  
@@ -21,17 +21,17 @@ W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zd
   
 ### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>Aby wywołać funkcje niestandardowe, które są zdefiniowane w bazie danych  
   
-1.  Tworzenie funkcji niestandardowej w bazie danych.  
+1. Tworzenie funkcji niestandardowej w bazie danych.  
   
      Aby uzyskać więcej informacji na temat tworzenia funkcji niestandardowych w programie SQL Server, zobacz [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
-2.  Deklarowanie funkcji w język definicji schematu magazynu (SSDL) pliku edmx. Nazwa funkcji musi być taka sama jak nazwa funkcji zadeklarowanych w bazie danych.  
+2. Deklarowanie funkcji w język definicji schematu magazynu (SSDL) pliku edmx. Nazwa funkcji musi być taka sama jak nazwa funkcji zadeklarowanych w bazie danych.  
   
      Aby uzyskać więcej informacji, zobacz [elementu — funkcja (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
-3.  Dodaj odpowiadającą im metodę do klasy w kodzie aplikacji i zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> metody należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametry atrybutu jest nazwa przestrzeni nazw modelu koncepcyjnego i nazwą funkcji w treści koncepcyjnej model, odpowiednio. Funkcja rozpoznawania nazw dla programu LINQ jest uwzględniana wielkość liter.  
+3. Dodaj odpowiadającą im metodę do klasy w kodzie aplikacji i zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> metody należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametry atrybutu jest nazwa przestrzeni nazw modelu koncepcyjnego i nazwą funkcji w treści koncepcyjnej model, odpowiednio. Funkcja rozpoznawania nazw dla programu LINQ jest uwzględniana wielkość liter.  
   
-4.  Wywołaj metodę w zapytaniu składnika LINQ to Entities.  
+4. Wywołaj metodę w zapytaniu składnika LINQ to Entities.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak wywołać funkcję niestandardową bazę danych z w LINQ do kwerendy jednostek. W przykładzie użyto modelu szkoły. Aby uzyskać informacje na temat modelu szkoły, zobacz [tworzenie przykładowej bazy danych School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) i [generowania edmx School pliku](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  

@@ -2,12 +2,12 @@
 title: Znane typy
 ms.date: 03/30/2017
 ms.assetid: 88d83720-ca38-4b2c-86a6-f149ed1d89ec
-ms.openlocfilehash: 2d2818dc78829bd201aeeba9b0df1d2f3b356250
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f2a5e6d5f5755d15bdc642ea3e64fb44af05cdab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327740"
 ---
 # <a name="known-types"></a>Znane typy
 W tym przykładzie pokazano, jak Podaj informacje o typach pochodnych w kontraktu danych. Kontrakty danych umożliwia przekazanie ze strukturą danych do i z usługi. W programowanie zorientowane obiektowo, typu, który dziedziczy z innego typu, może służyć zamiast oryginalnego typu. Podczas programowania zorientowanego na usługi, schematów, a nie typy są przekazywane, a w związku z tym, nie są zachowywane relacji między typami. <xref:System.Runtime.Serialization.KnownTypeAttribute> Atrybut umożliwia informacji na temat typów pochodnych, które mają zostać uwzględnione w kontraktu danych. Mechanizm ten nie jest używany, typem pochodnym nie wysyłane lub odbierane, gdy oczekiwany jest typ podstawowy.  
@@ -156,11 +156,11 @@ No magnitude was sent from the service
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

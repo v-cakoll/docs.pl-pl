@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312244"
 ---
 # <a name="overload-resolution-visual-basic"></a>Rozpoznanie przeciążenia (Visual Basic)
 Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest zdefiniowana w kilku przeciążone wersje, kompilator należy zdecydować, której przeciążenia do wywołania. Dzieje się tak, wykonując następujące czynności:  
   
-1.  **Ułatwienia dostępu.** Eliminuje to żadnego przeciążenia z poziomem dostępu, który uniemożliwia jej wywołanie kodu wywołującego.  
+1. **Ułatwienia dostępu.** Eliminuje to żadnego przeciążenia z poziomem dostępu, który uniemożliwia jej wywołanie kodu wywołującego.  
   
-2.  **Liczba parametrów.** Eliminuje to wszystkie przeciążenia, które definiuje szereg różnych parametrów nie są określane w wywołaniu.  
+2. **Liczba parametrów.** Eliminuje to wszystkie przeciążenia, które definiuje szereg różnych parametrów nie są określane w wywołaniu.  
   
-3.  **Typ danych parametru.** Kompilator preferuje wystąpienia metod za pośrednictwem metody rozszerzenia. Jeśli zostanie znaleziony dowolnej metody wystąpienia, która wymaga tylko poszerzeniem konwersji, w celu dopasowania wywołania procedury, wszystkie metody rozszerzenia są odrzucane i kompilator będzie kontynuowane z użyciem kandydatów metody wystąpienia. Jeśli żadna metoda wystąpienia zostanie znaleziony, jest kontynuowane przy użyciu wystąpienia i metody rozszerzenia.  
+3. **Typ danych parametru.** Kompilator preferuje wystąpienia metod za pośrednictwem metody rozszerzenia. Jeśli zostanie znaleziony dowolnej metody wystąpienia, która wymaga tylko poszerzeniem konwersji, w celu dopasowania wywołania procedury, wszystkie metody rozszerzenia są odrzucane i kompilator będzie kontynuowane z użyciem kandydatów metody wystąpienia. Jeśli żadna metoda wystąpienia zostanie znaleziony, jest kontynuowane przy użyciu wystąpienia i metody rozszerzenia.  
   
      W tym kroku pozwala wyeliminować żadnego przeciążenia, dla którego typy danych, wywoływania argumentów nie można przekonwertować na typy parametrów zdefiniowanych w przeciążenia.  
   
-4.  **Konwersje zawężające.** Eliminuje to żadnego przeciążenia, który wymaga konwersji zawężającej od wywołującego typy argumentów do parametrów zdefiniowanych typów. Jest to istotne, czy przełączyć kontrola typów ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On` lub `Off`.  
+4. **Konwersje zawężające.** Eliminuje to żadnego przeciążenia, który wymaga konwersji zawężającej od wywołującego typy argumentów do parametrów zdefiniowanych typów. Jest to istotne, czy przełączyć kontrola typów ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On` lub `Off`.  
   
-5.  **Co najmniej rozszerzanie.** Kompilator traktuje pozostałe przeciążeń w pary. Dla każdej pary porównuje typy danych zdefiniowanych parametrów. Jeśli jedno z przeciążeń wszystkich typów są rozszerzane odpowiadające typy w innym, kompilator eliminuje te ostatnie. Oznacza to, że zachowuje przeciążenia, które wymaga minimalnej liczbie rozszerzanie.  
+5. **Co najmniej rozszerzanie.** Kompilator traktuje pozostałe przeciążeń w pary. Dla każdej pary porównuje typy danych zdefiniowanych parametrów. Jeśli jedno z przeciążeń wszystkich typów są rozszerzane odpowiadające typy w innym, kompilator eliminuje te ostatnie. Oznacza to, że zachowuje przeciążenia, które wymaga minimalnej liczbie rozszerzanie.  
   
-6.  **Pojedynczy Release Candidate.** Kontynuuje considering przeciążenia w parach, dopóki tylko jeden przeciążenia pozostaje i jest rozpoznawana jako wywołanie tego przeciążenia. Jeśli kompilator nie może ograniczyć przeciążenia do pojedynczego Release candidate, spowoduje wygenerowanie błędu.  
+6. **Pojedynczy Release Candidate.** Kontynuuje considering przeciążenia w parach, dopóki tylko jeden przeciążenia pozostaje i jest rozpoznawana jako wywołanie tego przeciążenia. Jeśli kompilator nie może ograniczyć przeciążenia do pojedynczego Release candidate, spowoduje wygenerowanie błędu.  
   
  Na poniższej ilustracji przedstawiono proces, który określa, który zestaw przeciążone wersje do wywołania.  
   
@@ -61,13 +61,13 @@ Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest z
 ## <a name="see-also"></a>Zobacz także
 
 - [Parametry opcjonalne](./optional-parameters.md)
-- [Tablice parametrów](./parameter-arrays.md)
+- [Parameter — Tablice](./parameter-arrays.md)
 - [Przeciążanie procedury](./procedure-overloading.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
 - [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Instrukcje: Wywoływanie procedury przeciążonej](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: Przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: Przeciążanie procedury korzystającej z nieskończonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Metody rozszerzeń](./extension-methods.md)

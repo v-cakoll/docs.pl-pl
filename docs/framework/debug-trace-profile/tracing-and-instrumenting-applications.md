@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298913"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Śledzenie i instrumentacja aplikacji
 Śledzenie jest sposobem monitorowania wykonywanie aplikacji, gdy jest on uruchomiony. Możesz dodać Instrumentacji śledzenia i debugowania aplikacji .NET Framework, Opracuj go, gdy zarówno podczas opracowywania aplikacji, jak i po jej wdrożeniu, można użyć tego instrumentacji. Możesz użyć <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType>, i <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> klasy do rejestrowania informacji o błędach oraz wykonywania aplikacji w dzienniki, pliki tekstowe lub innych urządzeń do późniejszej analizy.  
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Fazy kod śledzenia  
  Dostępne są trzy etapy śledzenia kodu:  
   
-1.  **Instrumentacja** — możesz dodać kod śledzenia do aplikacji.  
+1. **Instrumentacja** — możesz dodać kod śledzenia do aplikacji.  
   
-2.  **Śledzenie** — kod śledzenia zapisuje informacje w określonym obiekcie docelowym.  
+2. **Śledzenie** — kod śledzenia zapisuje informacje w określonym obiekcie docelowym.  
   
-3.  **Analiza** — ocena informacje śledzenia do identyfikowania i lepsze poznanie problemów w aplikacji.  
+3. **Analiza** — ocena informacje śledzenia do identyfikowania i lepsze poznanie problemów w aplikacji.  
   
  Podczas tworzenia aplikacji wszystkie debugowania i śledzenia danych wyjściowych metody zapisywać informacje w oknie danych wyjściowych w programie Visual Studio domyślnie. We wdrożonej aplikacji metody zapisać informacje śledzenia do obiektów docelowych, które określisz. Aby uzyskać więcej informacji na temat określania celu dane wyjściowe śledzenia i debugowania, zobacz [detektorów śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>Aby użyć śledzenia w aplikacji  
   
-1.  Należy wziąć pod uwagę, które śledzenia danych wyjściowych, że chcesz otrzymywać u klienta po wdrożeniu aplikacji.  
+1. Należy wziąć pod uwagę, które śledzenia danych wyjściowych, że chcesz otrzymywać u klienta po wdrożeniu aplikacji.  
   
-2.  Utwórz zestaw parametrów. Aby uzyskać więcej informacji, zobacz [jak: Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Utwórz zestaw parametrów. Aby uzyskać więcej informacji, zobacz [jak: Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Dodawanie instrukcji śledzenia do kodu aplikacji.  
+3. Dodawanie instrukcji śledzenia do kodu aplikacji.  
   
-4.  Określ, gdzie dane wyjściowe śledzenia są wyświetlane, a następnie dodać odpowiednie odbiorników. Aby uzyskać więcej informacji, zobacz [tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Określ, gdzie dane wyjściowe śledzenia są wyświetlane, a następnie dodać odpowiednie odbiorników. Aby uzyskać więcej informacji, zobacz [tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Testowanie i debugowanie aplikacji i kod śledzenia, które zawiera.  
+5. Testowanie i debugowanie aplikacji i kod śledzenia, które zawiera.  
   
-6.  Kompilowanie aplikacji na kod wykonywalny przy użyciu jednej z następujących procedur:  
+6. Kompilowanie aplikacji na kod wykonywalny przy użyciu jednej z następujących procedur:  
   
     -   Użyj **kompilacji** menu wraz z **debugowania** strony **stron właściwości** okno dialogowe w **Eksploratora rozwiązań**. Użyj tego ustawienia podczas kompilowania w programie Visual Studio.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Użyj **śledzenia** i **debugowania** dyrektywy kompilatora wiersza polecenia metody kompilowania. Aby uzyskać więcej informacji, zobacz [kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Użyj tego ustawienia podczas kompilowania z wiersza polecenia.  
   
-7.  Jeśli wystąpi problem w czasie wykonywania, włącz przełącznik odpowiednie śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Jeśli wystąpi problem w czasie wykonywania, włącz przełącznik odpowiednie śledzenia. Aby uzyskać więcej informacji, zobacz [Konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      Kod śledzenia zapisuje komunikaty dotyczące śledzenia w określonym miejscu docelowym, na przykład, ekran, plik tekstowy lub dziennik zdarzeń. Typ odbiornika zostało uwzględnione w **Trace.Listeners** Określa, kolekcji docelowej.  
   
-8.  Analizowanie komunikatów śledzenia do identyfikowania i zrozumienia problemu w aplikacji.  
+8. Analizowanie komunikatów śledzenia do identyfikowania i zrozumienia problemu w aplikacji.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentacji Śledź i aplikacji rozproszonych  
  Podczas tworzenia aplikacji rozproszonej może być trudno testowanie aplikacji w taki sposób, w którym będzie on używany. Kilka zespołów programistycznych wykorzystuje funkcję, aby przetestować wszystkie możliwe kombinacje systemów operacyjnych lub przeglądarek sieci Web (w tym wszystkie opcje zlokalizowane) lub do symulacji dużą liczbę użytkowników, którzy będą uzyskiwać dostęp do aplikacji, w tym samym czasie. W tych okolicznościach nie można przetestować, jak aplikacja rozproszona odpowie na dużej ilości danych, różne konfiguracje i zachowania unikatowy użytkownika końcowego. Ponadto wiele części aplikacji rozproszonej jest bez interfejsu użytkownika można wchodzić w interakcje bezpośrednio lub Wyświetl działania tych części.  

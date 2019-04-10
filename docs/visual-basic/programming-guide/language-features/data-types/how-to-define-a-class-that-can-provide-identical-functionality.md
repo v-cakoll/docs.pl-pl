@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 1bc82fe9ecee577125c4353677fb19cd3a57b0cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837068"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318454"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Instrukcje: Definiowanie klasy, która może zapewnić identyczną funkcjonalność różnych typów danych (Visual Basic)
 Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić identyczną funkcjonalność różnych typów danych. Aby to zrobić, należy określić co najmniej jeden *parametry typu* w definicji. Klasy mogą następnie służyć jako szablon dla obiektów, które używają różnych typów danych. Nosi nazwę klasy zdefiniowanej w ten sposób *klasy generycznej*.  
@@ -42,13 +42,13 @@ Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>Aby zdefiniować klasę z parametrem typu  
   
-1.  Zdefiniuj klasę w normalny sposób.  
+1. Zdefiniuj klasę w normalny sposób.  
   
-2.  Dodaj `(Of` *typeparameter* `)` zaraz po nazwie klasy, aby określić parametr typu.  
+2. Dodaj `(Of` *typeparameter* `)` zaraz po nazwie klasy, aby określić parametr typu.  
   
-3.  Jeśli masz więcej niż jeden parametr typu, należy utworzyć listę rozdzielonych przecinkami wewnątrz nawiasów. Nie powtarzaj `Of` — słowo kluczowe.  
+3. Jeśli masz więcej niż jeden parametr typu, należy utworzyć listę rozdzielonych przecinkami wewnątrz nawiasów. Nie powtarzaj `Of` — słowo kluczowe.  
   
-4.  Jeśli Twój kod wykonuje operacje na parametr typu innego niż przypisanie proste, postępuj zgodnie z tego parametru typu z `As` klauzuli, aby dodać co najmniej jedno *ograniczenia*. Ograniczenie gwarantuje, że podany dla tego parametru typu typ spełnia wymagania, takie jak następujące:  
+4. Jeśli Twój kod wykonuje operacje na parametr typu innego niż przypisanie proste, postępuj zgodnie z tego parametru typu z `As` klauzuli, aby dodać co najmniej jedno *ograniczenia*. Ograniczenie gwarantuje, że podany dla tego parametru typu typ spełnia wymagania, takie jak następujące:  
   
     -   Obsługuje operacji, takich jak `>`, który wykonuje kod  
   
@@ -58,9 +58,9 @@ Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić
   
      Jeśli nie określisz żadnych ograniczeń, tylko operacji i kod użytkownika może używać elementów członkowskich są obsługiwane przez [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md). Aby uzyskać więcej informacji, zobacz [lista typów](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5.  Identyfikowanie każdy członek klasy, która ma być deklarowany za pomocą podanego typu i Zadeklaruj go `As` `typeparameter`. Dotyczy to pamięci wewnętrznej, procedury parametrów i zwracanych wartości.  
+5. Identyfikowanie każdy członek klasy, która ma być deklarowany za pomocą podanego typu i Zadeklaruj go `As` `typeparameter`. Dotyczy to pamięci wewnętrznej, procedury parametrów i zwracanych wartości.  
   
-6.  Pamiętaj, że kod używa tylko operacje i metody, które są obsługiwane przez dowolny typ danych, można dostarczyć do `itemType`.  
+6. Pamiętaj, że kod używa tylko operacje i metody, które są obsługiwane przez dowolny typ danych, można dostarczyć do `itemType`.  
   
      W poniższym przykładzie zdefiniowano klasę, która zarządza listą bardzo proste. Przechowuje listę w tablicy wewnętrznej `items`oraz przy użyciu kodu można zadeklarować typ danych elementów listy. Sparametryzowania konstruktora umożliwia przy użyciu kodu, aby ustawić górną granicę `items`, i ustawia domyślny konstruktor, to do 9 (w sumie 10 elementów).  
   
@@ -78,8 +78,8 @@ Można zdefiniować klasę, w którym możesz tworzyć obiekty, które zapewnić
 
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [Niezależność od języka i składniki niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)
-- [z](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [Niezależność od języka i elementy niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md)
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Lista typów](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Instrukcje: używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Instrukcje: Używanie klasy ogólnej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

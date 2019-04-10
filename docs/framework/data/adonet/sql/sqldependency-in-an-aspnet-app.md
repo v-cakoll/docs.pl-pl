@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313596"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>Element SqlDependency w aplikacji ASP.NET
 W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient.SqlDependency> pośrednio, wykorzystując platformę ASP.NET <xref:System.Web.Caching.SqlCacheDependency> obiektu. <xref:System.Web.Caching.SqlCacheDependency> Obiektu używa <xref:System.Data.SqlClient.SqlDependency> do nasłuchiwania powiadomień i poprawnie zaktualizować pamięci podręcznej.  
@@ -24,11 +24,11 @@ W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient
 ## <a name="creating-the-sample-application"></a>Tworzenie przykładowej aplikacji  
  Wykonaj następujące kroki, aby utworzyć i uruchamianie przykładowej aplikacji:  
   
-1.  Utwórz nową witrynę sieci Web platformy ASP.NET.  
+1. Utwórz nową witrynę sieci Web platformy ASP.NET.  
   
-2.  Dodaj <xref:System.Web.UI.WebControls.Label> i <xref:System.Web.UI.WebControls.GridView> formantu do strony Default.aspx.  
+2. Dodaj <xref:System.Web.UI.WebControls.Label> i <xref:System.Web.UI.WebControls.GridView> formantu do strony Default.aspx.  
   
-3.  Otwórz moduł klasy strony i dodaj następujące dyrektywy:  
+3. Otwórz moduł klasy strony i dodaj następujące dyrektywy:  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ W przykładzie w tej sekcji pokazano sposób użycia <xref:System.Data.SqlClient
     using System.Web.Caching;  
     ```  
   
-4.  Dodaj następujący kod na stronie `Page_Load` zdarzeń:  
+4. Dodaj następujący kod na stronie `Page_Load` zdarzeń:  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  Dodaj dwie metody pomocnika, `GetConnectionString` i `GetSQL`. Parametry połączenia, definicja używa zintegrowanych zabezpieczeń. Należy sprawdzić, czy konto, którego używasz, ma uprawnienia niezbędne bazy danych oraz że przykładowej bazy danych, **AdventureWorks**, ma włączone powiadomienia.
+5. Dodaj dwie metody pomocnika, `GetConnectionString` i `GetSQL`. Parametry połączenia, definicja używa zintegrowanych zabezpieczeń. Należy sprawdzić, czy konto, którego używasz, ma uprawnienia niezbędne bazy danych oraz że przykładowej bazy danych, **AdventureWorks**, ma włączone powiadomienia.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

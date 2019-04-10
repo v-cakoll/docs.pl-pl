@@ -2,19 +2,19 @@
 title: 'Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: fca8db41a415965f10990069682c561f680bf386
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1de2abb8ababd794cd644733b6e4ab0ed42b1810
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321461"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych
 Poniższa procedura zawiera kroki, aby utworzyć uczestnika stanów trwałych. Zobacz [uczestniczących w trwałości](https://go.microsoft.com/fwlink/?LinkID=177735) próbki i [rozszerzalności Store](store-extensibility.md) tematu w przykładowej implementacji uczestnicy stanów trwałych.  
   
-1.  Utwórz klasę pochodząca od <xref:System.Activities.Persistence.PersistenceParticipant> lub <xref:System.Activities.Persistence.PersistenceIOParticipant> klasy. Klasa PersistenceIOParticipant zapewnia ten sam punkty rozszerzeń jako klasa PersistenceParticipant, oprócz możliwości udziału w operacji We/Wy. Postępuj zgodnie z co najmniej jeden z następujących czynności.  
+1. Utwórz klasę pochodząca od <xref:System.Activities.Persistence.PersistenceParticipant> lub <xref:System.Activities.Persistence.PersistenceIOParticipant> klasy. Klasa PersistenceIOParticipant zapewnia ten sam punkty rozszerzeń jako klasa PersistenceParticipant, oprócz możliwości udziału w operacji We/Wy. Postępuj zgodnie z co najmniej jeden z następujących czynności.  
   
-2.  Implementowanie <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> metody. **CollectValues** metoda ma słownika dwa parametry: jeden do przechowywania wartości odczytu/zapisu, a druga do przechowywania wartości tylko do zapisu (używane w dalszej części zapytania). W przypadku tej metody należy wypełnić słowników z danymi, które są specyficzne dla uczestnika stanów trwałych. Każdy słownik zawiera nazwę wartości klucza oraz sama wartość jak <xref:System.Runtime.DurableInstancing.InstanceValue> obiektu.  
+2. Implementowanie <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> metody. **CollectValues** metoda ma słownika dwa parametry: jeden do przechowywania wartości odczytu/zapisu, a druga do przechowywania wartości tylko do zapisu (używane w dalszej części zapytania). W przypadku tej metody należy wypełnić słowników z danymi, które są specyficzne dla uczestnika stanów trwałych. Każdy słownik zawiera nazwę wartości klucza oraz sama wartość jak <xref:System.Runtime.DurableInstancing.InstanceValue> obiektu.  
   
      Wartości w słowniku readWriteValues są dostarczane w **InstanceValue** obiektów. Wartości w słowniku tylko do zapisu jest spakowany jako **InstanceValue** obiektów z InstanceValueOptions.Optional i InstanceValueOption.WriteOnly zestawu. Każdy **InstanceValue** dostarczone przez **CollectValues** implementacje we wszystkich uczestników stanu trwałego musi mieć unikatową nazwę.  
   
@@ -22,7 +22,7 @@ Poniższa procedura zawiera kroki, aby utworzyć uczestnika stanów trwałych. Z
     protected virtual void CollectValues (out IDictionary<XName,Object> readWriteValues, out IDictionary<XName,Object> writeOnlyValues)  
     ```  
   
-3.  Implementowanie <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> metody. **MapValues** metoda przyjmuje dwa parametry, które są podobne do parametrów, **CollectValues** metoda otrzymuje. Wszystkie wartości są zbierane w **CollectValues** etapu są przekazywane za pośrednictwem tych parametrów słownika. Nowe wartości dodanej przez **MapValues** etapu są dodawane do wartości tylko do zapisu.  Słownik tylko do zapisu jest używany do przekazywania danych do zewnętrznego źródła, nie są bezpośrednio związane z wartości wystąpienia. Każdej wartości dostarczone przez implementacje **MapValues** metoda we wszystkich uczestników stanu trwałego musi mieć unikatową nazwę.  
+3. Implementowanie <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> metody. **MapValues** metoda przyjmuje dwa parametry, które są podobne do parametrów, **CollectValues** metoda otrzymuje. Wszystkie wartości są zbierane w **CollectValues** etapu są przekazywane za pośrednictwem tych parametrów słownika. Nowe wartości dodanej przez **MapValues** etapu są dodawane do wartości tylko do zapisu.  Słownik tylko do zapisu jest używany do przekazywania danych do zewnętrznego źródła, nie są bezpośrednio związane z wartości wystąpienia. Każdej wartości dostarczone przez implementacje **MapValues** metoda we wszystkich uczestników stanu trwałego musi mieć unikatową nazwę.  
   
     ```  
     protected virtual IDictionary<XName,Object> MapValues (IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)  
@@ -30,19 +30,19 @@ Poniższa procedura zawiera kroki, aby utworzyć uczestnika stanów trwałych. Z
   
      <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> Metoda oferuje funkcje, <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> nie, w tym, że umożliwia ona zależność od innej wartości, dostarczone przez inną uczestnika stanów trwałych, które nie zostały przetworzone przez <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> jeszcze.  
   
-4.  Implementowanie **PublishValues** metody. **PublishValues** metoda otrzymuje słownik zawierający wszystkie wartości, które są ładowane w trwałości sklepie.  
+4. Implementowanie **PublishValues** metody. **PublishValues** metoda otrzymuje słownik zawierający wszystkie wartości, które są ładowane w trwałości sklepie.  
   
     ```  
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  Implementowanie **BeginOnSave** metodę, jeśli uczestnik jest uczestnika stanów trwałych operacji We/Wy. Ta metoda jest wywoływana podczas operacji zapisu. W przypadku tej metody należy wykonać adjunct operacji We/Wy do utrwalania (wystąpienia przepływu pracy zapisywanie).  Jeśli host używa transakcji do odpowiedniego polecenia trwałości, Transaction.Current jest podawany tej samej transakcji.  Ponadto PersistenceIOParticipants może anonsować wymagane spójności transakcyjnej, w których przypadku hosta tworzy transakcji dla odcinek trwałości, jeśli jeden będzie nie używane.  
+5. Implementowanie **BeginOnSave** metodę, jeśli uczestnik jest uczestnika stanów trwałych operacji We/Wy. Ta metoda jest wywoływana podczas operacji zapisu. W przypadku tej metody należy wykonać adjunct operacji We/Wy do utrwalania (wystąpienia przepływu pracy zapisywanie).  Jeśli host używa transakcji do odpowiedniego polecenia trwałości, Transaction.Current jest podawany tej samej transakcji.  Ponadto PersistenceIOParticipants może anonsować wymagane spójności transakcyjnej, w których przypadku hosta tworzy transakcji dla odcinek trwałości, jeśli jeden będzie nie używane.  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  
     ```  
   
-6.  Implementowanie **BeginOnLoad** metodę, jeśli uczestnik jest uczestnika stanów trwałych operacji We/Wy. Ta metoda jest wywoływana podczas operacji ładowania. W przypadku tej metody należy wykonywać operacji We/Wy adjunct ładowanie wystąpienia przepływu pracy. Jeśli host używa transakcji do odpowiedniego polecenia trwałości, Transaction.Current jest podawany tej samej transakcji. Ponadto uczestnicy stanów trwałych operacji We/Wy może anonsować wymagane spójności transakcyjnej, w których przypadku hosta tworzy transakcji dla odcinek trwałości, jeśli jeden będzie nie używane.  
+6. Implementowanie **BeginOnLoad** metodę, jeśli uczestnik jest uczestnika stanów trwałych operacji We/Wy. Ta metoda jest wywoływana podczas operacji ładowania. W przypadku tej metody należy wykonywać operacji We/Wy adjunct ładowanie wystąpienia przepływu pracy. Jeśli host używa transakcji do odpowiedniego polecenia trwałości, Transaction.Current jest podawany tej samej transakcji. Ponadto uczestnicy stanów trwałych operacji We/Wy może anonsować wymagane spójności transakcyjnej, w których przypadku hosta tworzy transakcji dla odcinek trwałości, jeśli jeden będzie nie używane.  
   
     ```  
     protected virtual IAsyncResult BeginOnLoad (IDictionary<XName,Object> readWriteValues, TimeSpan timeout, AsyncCallback callback, Object state)  

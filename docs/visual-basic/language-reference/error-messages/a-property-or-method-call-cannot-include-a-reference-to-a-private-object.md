@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 0a8d6603bf5c97b966d29f000b21435cec8040d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 04124ca044ad8dbff58f85230d7e10ea336d41e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840955"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341481"
 ---
-# <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a><span data-ttu-id="f6d86-102">Właściwość lub wywołanie metody nie może zawierać odwołania do obiektu prywatnego jako do argumentu lub jako do wartości zwracanej</span><span class="sxs-lookup"><span data-stu-id="f6d86-102">A property or method call cannot include a reference to a private object, either as an argument or as a return value</span></span>
-<span data-ttu-id="f6d86-103">Wśród możliwe przyczyny tego błędu są:</span><span class="sxs-lookup"><span data-stu-id="f6d86-103">Among the possible causes of this error are:</span></span>  
+# <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a><span data-ttu-id="d7d5f-102">Właściwość lub wywołanie metody nie może zawierać odwołania do obiektu prywatnego jako do argumentu lub jako do wartości zwracanej</span><span class="sxs-lookup"><span data-stu-id="d7d5f-102">A property or method call cannot include a reference to a private object, either as an argument or as a return value</span></span>
+<span data-ttu-id="d7d5f-103">Wśród możliwe przyczyny tego błędu są:</span><span class="sxs-lookup"><span data-stu-id="d7d5f-103">Among the possible causes of this error are:</span></span>  
   
--   <span data-ttu-id="f6d86-104">Klient wywoływane właściwości lub metody składnika spoza procesu i Próbowano przekazać odwołanie do obiektu prywatnego jako jeden z argumentów.</span><span class="sxs-lookup"><span data-stu-id="f6d86-104">A client invoked a property or method of an out-of-process component and attempted to pass a reference to a private object as one of the arguments.</span></span>  
+-   <span data-ttu-id="d7d5f-104">Klient wywoływane właściwości lub metody składnika spoza procesu i Próbowano przekazać odwołanie do obiektu prywatnego jako jeden z argumentów.</span><span class="sxs-lookup"><span data-stu-id="d7d5f-104">A client invoked a property or method of an out-of-process component and attempted to pass a reference to a private object as one of the arguments.</span></span>  
   
--   <span data-ttu-id="f6d86-105">Składnik spoza procesu wywołano metodę wywołania zwrotnego na jego klienta i Próbowano przekazać odwołanie do obiektu prywatnego.</span><span class="sxs-lookup"><span data-stu-id="f6d86-105">An out-of-process component invoked a call-back method on its client and attempted to pass a reference to a private object.</span></span>  
+-   <span data-ttu-id="d7d5f-105">Składnik spoza procesu wywołano metodę wywołania zwrotnego na jego klienta i Próbowano przekazać odwołanie do obiektu prywatnego.</span><span class="sxs-lookup"><span data-stu-id="d7d5f-105">An out-of-process component invoked a call-back method on its client and attempted to pass a reference to a private object.</span></span>  
   
--   <span data-ttu-id="f6d86-106">Składnik spoza procesu próbował przekazać odwołanie do obiektu prywatnego jako argument zdarzenia, który został on wywoływanie.</span><span class="sxs-lookup"><span data-stu-id="f6d86-106">An out-of-process component attempted to pass a reference to a private object as an argument of an event it was raising.</span></span>  
+-   <span data-ttu-id="d7d5f-106">Składnik spoza procesu próbował przekazać odwołanie do obiektu prywatnego jako argument zdarzenia, który został on wywoływanie.</span><span class="sxs-lookup"><span data-stu-id="d7d5f-106">An out-of-process component attempted to pass a reference to a private object as an argument of an event it was raising.</span></span>  
   
--   <span data-ttu-id="f6d86-107">Klient próbował przypisać odwołanie do obiektu prywatnego `ByRef` argument był on obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="f6d86-107">A client attempted to assign a private object reference to a `ByRef` argument of an event it was handling.</span></span>  
+-   <span data-ttu-id="d7d5f-107">Klient próbował przypisać odwołanie do obiektu prywatnego `ByRef` argument był on obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d7d5f-107">A client attempted to assign a private object reference to a `ByRef` argument of an event it was handling.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f6d86-108">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="f6d86-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d7d5f-108">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="d7d5f-108">To correct this error</span></span>  
   
-1.  <span data-ttu-id="f6d86-109">Usuń odwołanie.</span><span class="sxs-lookup"><span data-stu-id="f6d86-109">Remove the reference.</span></span>  
+1. <span data-ttu-id="d7d5f-109">Usuń odwołanie.</span><span class="sxs-lookup"><span data-stu-id="d7d5f-109">Remove the reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f6d86-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f6d86-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7d5f-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d7d5f-110">See also</span></span>
 
-- [<span data-ttu-id="f6d86-111">Private</span><span class="sxs-lookup"><span data-stu-id="f6d86-111">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)
+- [<span data-ttu-id="d7d5f-111">Private</span><span class="sxs-lookup"><span data-stu-id="d7d5f-111">Private</span></span>](../../../visual-basic/language-reference/modifiers/private.md)

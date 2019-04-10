@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
-ms.openlocfilehash: 19943f44431a50111552f0f60d46af420a7966bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 335c85d5234df4dd00d0ee65b2077996411081b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097307"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335683"
 ---
-# <a name="how-to-build-an-entityconnection-connection-string"></a><span data-ttu-id="9c222-102">Instrukcje: Tworzenie parametrów połączenia EntityConnection</span><span class="sxs-lookup"><span data-stu-id="9c222-102">How to: Build an EntityConnection Connection String</span></span>
-<span data-ttu-id="9c222-103">W tym temacie zawiera przykład sposobu tworzenia <xref:System.Data.EntityClient.EntityConnection>.</span><span class="sxs-lookup"><span data-stu-id="9c222-103">This topic provides an example of how to build an <xref:System.Data.EntityClient.EntityConnection>.</span></span>  
+# <a name="how-to-build-an-entityconnection-connection-string"></a><span data-ttu-id="138f9-102">Instrukcje: Tworzenie parametrów połączenia EntityConnection</span><span class="sxs-lookup"><span data-stu-id="138f9-102">How to: Build an EntityConnection Connection String</span></span>
+<span data-ttu-id="138f9-103">W tym temacie zawiera przykład sposobu tworzenia <xref:System.Data.EntityClient.EntityConnection>.</span><span class="sxs-lookup"><span data-stu-id="138f9-103">This topic provides an example of how to build an <xref:System.Data.EntityClient.EntityConnection>.</span></span>  
   
-### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="9c222-104">Aby uruchomić kod w tym przykładzie</span><span class="sxs-lookup"><span data-stu-id="9c222-104">To run the code in this example</span></span>  
+### <a name="to-run-the-code-in-this-example"></a><span data-ttu-id="138f9-104">Aby uruchomić kod w tym przykładzie</span><span class="sxs-lookup"><span data-stu-id="138f9-104">To run the code in this example</span></span>  
   
-1.  <span data-ttu-id="9c222-105">Dodaj [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) do projektu i skonfiguruj projekt, aby użyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9c222-105">Add the [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) to your project and configure your project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="9c222-106">Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="9c222-106">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
+1. <span data-ttu-id="138f9-105">Dodaj [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) do projektu i skonfiguruj projekt, aby użyć [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span><span class="sxs-lookup"><span data-stu-id="138f9-105">Add the [AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) to your project and configure your project to use the [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].</span></span> <span data-ttu-id="138f9-106">Aby uzyskać więcej informacji, zobacz [jak: Użyj Kreatora modelu danych jednostki](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="138f9-106">For more information, see [How to: Use the Entity Data Model Wizard](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100)).</span></span>  
   
-2.  <span data-ttu-id="9c222-107">Na stronie kodowej dla aplikacji, Dodaj następujący kod `using` instrukcji (`Imports` w języku Visual Basic):</span><span class="sxs-lookup"><span data-stu-id="9c222-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
+2. <span data-ttu-id="138f9-107">Na stronie kodowej dla aplikacji, Dodaj następujący kod `using` instrukcji (`Imports` w języku Visual Basic):</span><span class="sxs-lookup"><span data-stu-id="138f9-107">In the code page for your application, add the following `using` statements (`Imports` in Visual Basic):</span></span>  
   
      [!code-csharp[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#namespaces)]
      [!code-vb[DP EntityServices Concepts#Namespaces](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#namespaces)]  
   
-## <a name="example"></a><span data-ttu-id="9c222-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="9c222-108">Example</span></span>  
- <span data-ttu-id="9c222-109">Poniższy przykład inicjuje <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> źródłowy dostawca następnie inicjuje <xref:System.Data.EntityClient.EntityConnectionStringBuilder?displayProperty=nameWithType> obiektu i przekazuje ten obiekt do konstruktora obiektu <xref:System.Data.EntityClient.EntityConnection>.</span><span class="sxs-lookup"><span data-stu-id="9c222-109">The following example initializes the <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> for the underlying provider, then initializes the <xref:System.Data.EntityClient.EntityConnectionStringBuilder?displayProperty=nameWithType> object and passes this object to the constructor of the <xref:System.Data.EntityClient.EntityConnection>.</span></span>  
+## <a name="example"></a><span data-ttu-id="138f9-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="138f9-108">Example</span></span>  
+ <span data-ttu-id="138f9-109">Poniższy przykład inicjuje <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> źródłowy dostawca następnie inicjuje <xref:System.Data.EntityClient.EntityConnectionStringBuilder?displayProperty=nameWithType> obiektu i przekazuje ten obiekt do konstruktora obiektu <xref:System.Data.EntityClient.EntityConnection>.</span><span class="sxs-lookup"><span data-stu-id="138f9-109">The following example initializes the <xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType> for the underlying provider, then initializes the <xref:System.Data.EntityClient.EntityConnectionStringBuilder?displayProperty=nameWithType> object and passes this object to the constructor of the <xref:System.Data.EntityClient.EntityConnection>.</span></span>  
   
  [!code-csharp[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/source.cs#buildingconnectionstringwithentitycommand)]
  [!code-vb[DP EntityServices Concepts#BuildingConnectionStringWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#buildingconnectionstringwithentitycommand)]  
   
-## <a name="see-also"></a><span data-ttu-id="9c222-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9c222-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="138f9-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="138f9-110">See also</span></span>
 
-- [<span data-ttu-id="9c222-111">Instrukcje: Obiekt EntityConnection za pomocą kontekstu obiektów</span><span class="sxs-lookup"><span data-stu-id="9c222-111">How to: Use EntityConnection with an Object Context</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
-- [<span data-ttu-id="9c222-112">Dostawca EntityClient dla programu Entity Framework</span><span class="sxs-lookup"><span data-stu-id="9c222-112">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+- [<span data-ttu-id="138f9-111">Instrukcje: Obiekt EntityConnection za pomocą kontekstu obiektów</span><span class="sxs-lookup"><span data-stu-id="138f9-111">How to: Use EntityConnection with an Object Context</span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
+- [<span data-ttu-id="138f9-112">Dostawca EntityClient dla programu Entity Framework</span><span class="sxs-lookup"><span data-stu-id="138f9-112">EntityClient Provider for the Entity Framework</span></span>](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodaj ekran powitalny do aplikacji WPF'
+title: 'Instrukcje: Dodawanie ekranu powitalnego do aplikacji WPF'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 545fce07d0fab3dca8116f2cacfc068b62cbbde2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3120ee64d65822d323800a89466c6b707169aaaa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307505"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="28095-102">Instrukcje: Dodaj ekran powitalny do aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="28095-102">How to: Add a Splash Screen to a WPF Application</span></span>
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="1c057-102">Instrukcje: Dodawanie ekranu powitalnego do aplikacji WPF</span><span class="sxs-lookup"><span data-stu-id="1c057-102">How to: Add a Splash Screen to a WPF Application</span></span>
 
-<span data-ttu-id="28095-103">W tym temacie przedstawiono sposób dodawania oknem uruchamiania lub *ekran powitalny*, do aplikacji Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="28095-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>
+<span data-ttu-id="1c057-103">W tym temacie przedstawiono sposób dodawania oknem uruchamiania lub *ekran powitalny*, do aplikacji Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="1c057-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>
 
-## <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="28095-104">Aby dodać istniejący obraz jako ekran powitalny</span><span class="sxs-lookup"><span data-stu-id="28095-104">To add an existing image as a splash screen</span></span>
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="1c057-104">Aby dodać istniejący obraz jako ekran powitalny</span><span class="sxs-lookup"><span data-stu-id="1c057-104">To add an existing image as a splash screen</span></span>
 
-1.  <span data-ttu-id="28095-105">Utwórz lub Znajdź obraz, który chcesz użyć dla ekranu powitalnego.</span><span class="sxs-lookup"><span data-stu-id="28095-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="28095-106">Możesz użyć dowolnego format obrazu, który jest obsługiwany przez Windows Imaging Component (WIC).</span><span class="sxs-lookup"><span data-stu-id="28095-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="28095-107">Na przykład można użyć formatu BMP, GIF, JPEG, PNG lub TIFF.</span><span class="sxs-lookup"><span data-stu-id="28095-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>
+1. <span data-ttu-id="1c057-105">Utwórz lub Znajdź obraz, który chcesz użyć dla ekranu powitalnego.</span><span class="sxs-lookup"><span data-stu-id="1c057-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="1c057-106">Możesz użyć dowolnego format obrazu, który jest obsługiwany przez Windows Imaging Component (WIC).</span><span class="sxs-lookup"><span data-stu-id="1c057-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="1c057-107">Na przykład można użyć formatu BMP, GIF, JPEG, PNG lub TIFF.</span><span class="sxs-lookup"><span data-stu-id="1c057-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>
 
-2.  <span data-ttu-id="28095-108">Dodaj plik obrazu do projektu aplikacji WPF.</span><span class="sxs-lookup"><span data-stu-id="28095-108">Add the image file to the WPF Application project.</span></span>
+2. <span data-ttu-id="1c057-108">Dodaj plik obrazu do projektu aplikacji WPF.</span><span class="sxs-lookup"><span data-stu-id="1c057-108">Add the image file to the WPF Application project.</span></span>
 
-3.  <span data-ttu-id="28095-109">W **Eksploratora rozwiązań**, wybierz obraz.</span><span class="sxs-lookup"><span data-stu-id="28095-109">In **Solution Explorer**, select the image.</span></span>
+3. <span data-ttu-id="1c057-109">W **Eksploratora rozwiązań**, wybierz obraz.</span><span class="sxs-lookup"><span data-stu-id="1c057-109">In **Solution Explorer**, select the image.</span></span>
 
-4.  <span data-ttu-id="28095-110">W oknie dialogowym właściwości kliknij strzałkę listy rozwijanej dla **Build Action** właściwości.</span><span class="sxs-lookup"><span data-stu-id="28095-110">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>
+4. <span data-ttu-id="1c057-110">W oknie dialogowym właściwości kliknij strzałkę listy rozwijanej dla **Build Action** właściwości.</span><span class="sxs-lookup"><span data-stu-id="1c057-110">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>
 
-5.  <span data-ttu-id="28095-111">Wybierz **ekranu powitalnego** z listy rozwijanej.</span><span class="sxs-lookup"><span data-stu-id="28095-111">Select **SplashScreen** from the drop-down list.</span></span>
+5. <span data-ttu-id="1c057-111">Wybierz **ekranu powitalnego** z listy rozwijanej.</span><span class="sxs-lookup"><span data-stu-id="1c057-111">Select **SplashScreen** from the drop-down list.</span></span>
 
-6.  <span data-ttu-id="28095-112">Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="28095-112">Press **F5** to build and run the application.</span></span>
+6. <span data-ttu-id="1c057-112">Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="1c057-112">Press **F5** to build and run the application.</span></span>
 
-     <span data-ttu-id="28095-113">Obraz ekranu powitalnego pojawia się w środku ekranu, a następnie stopniowo zmienia się po wyświetleniu okna głównego aplikacji.</span><span class="sxs-lookup"><span data-stu-id="28095-113">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>
+     <span data-ttu-id="1c057-113">Obraz ekranu powitalnego pojawia się w środku ekranu, a następnie stopniowo zmienia się po wyświetleniu okna głównego aplikacji.</span><span class="sxs-lookup"><span data-stu-id="1c057-113">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>
 
-## <a name="to-exclude-the-splash-screen-from-build"></a><span data-ttu-id="28095-114">Aby wykluczyć ekran powitalny z kompilacji</span><span class="sxs-lookup"><span data-stu-id="28095-114">To exclude the splash screen from build</span></span>
+## <a name="to-exclude-the-splash-screen-from-build"></a><span data-ttu-id="1c057-114">Aby wykluczyć ekran powitalny z kompilacji</span><span class="sxs-lookup"><span data-stu-id="1c057-114">To exclude the splash screen from build</span></span>
 
-1.  <span data-ttu-id="28095-115">W **Eksploratora rozwiązań**, wybierz obraz ekranu powitalnego.</span><span class="sxs-lookup"><span data-stu-id="28095-115">In **Solution Explorer**, select the splash screen image.</span></span>
+1. <span data-ttu-id="1c057-115">W **Eksploratora rozwiązań**, wybierz obraz ekranu powitalnego.</span><span class="sxs-lookup"><span data-stu-id="1c057-115">In **Solution Explorer**, select the splash screen image.</span></span>
 
-2.  <span data-ttu-id="28095-116">W **właściwości** oknie **Build Action** do **Brak**.</span><span class="sxs-lookup"><span data-stu-id="28095-116">In the **Properties** window, set the **Build Action** to **None**.</span></span>
+2. <span data-ttu-id="1c057-116">W **właściwości** oknie **Build Action** do **Brak**.</span><span class="sxs-lookup"><span data-stu-id="1c057-116">In the **Properties** window, set the **Build Action** to **None**.</span></span>
 
-## <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="28095-117">Aby usunąć ekran powitalny aplikacji</span><span class="sxs-lookup"><span data-stu-id="28095-117">To remove the splash screen from an application</span></span>
+## <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="1c057-117">Aby usunąć ekran powitalny aplikacji</span><span class="sxs-lookup"><span data-stu-id="1c057-117">To remove the splash screen from an application</span></span>
 
-<span data-ttu-id="28095-118">W **Eksploratora rozwiązań**, Usuń obraz ekranu powitalnego.</span><span class="sxs-lookup"><span data-stu-id="28095-118">In **Solution Explorer**, delete the splash screen image.</span></span>
+<span data-ttu-id="1c057-118">W **Eksploratora rozwiązań**, Usuń obraz ekranu powitalnego.</span><span class="sxs-lookup"><span data-stu-id="1c057-118">In **Solution Explorer**, delete the splash screen image.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="28095-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="28095-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c057-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1c057-119">See also</span></span>
 
 - <xref:System.Windows.SplashScreen>
-- <span data-ttu-id="28095-120">[Instrukcje: Dodaj istniejące elementy do projektu](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="28095-120">[How to: Add Existing Items to a Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span></span>
+- [<span data-ttu-id="1c057-120">Instrukcje: Dodaj istniejące elementy do projektu</span><span class="sxs-lookup"><span data-stu-id="1c057-120">How to: Add Existing Items to a Project</span></span>](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

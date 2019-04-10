@@ -8,68 +8,68 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176374"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323606"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a><span data-ttu-id="f5879-102">Instrukcje: włączanie styli wizualnych w aplikacji hybrydowej</span><span class="sxs-lookup"><span data-stu-id="f5879-102">How to: Enable Visual Styles in a Hybrid Application</span></span>
-<span data-ttu-id="f5879-103">W tym temacie przedstawiono sposób włączania [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sterowania hostowaną w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f5879-103">This topic shows how to enable [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual styles on a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hosted in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a><span data-ttu-id="5fd3f-102">Instrukcje: włączanie styli wizualnych w aplikacji hybrydowej</span><span class="sxs-lookup"><span data-stu-id="5fd3f-102">How to: Enable Visual Styles in a Hybrid Application</span></span>
+<span data-ttu-id="5fd3f-103">W tym temacie przedstawiono sposób włączania [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual style na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sterowania hostowaną w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— na podstawie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-103">This topic shows how to enable [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visual styles on a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control hosted in a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-based application.</span></span>  
   
- <span data-ttu-id="f5879-104">Jeśli Twoja aplikacja wywołuje <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody, większość swojej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek będzie automatycznie używać stylów wizualnych, gdy aplikacja jest uruchamiana na [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f5879-104">If your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method, most of your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls will automatically use visual styles when your application is run on [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span> <span data-ttu-id="f5879-105">Aby uzyskać więcej informacji, zobacz [renderowanie kontrolek przy użyciu stylów wizualnych](../../winforms/controls/rendering-controls-with-visual-styles.md).</span><span class="sxs-lookup"><span data-stu-id="f5879-105">For more information, see [Rendering Controls with Visual Styles](../../winforms/controls/rendering-controls-with-visual-styles.md).</span></span>  
+ <span data-ttu-id="5fd3f-104">Jeśli Twoja aplikacja wywołuje <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody, większość swojej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek będzie automatycznie używać stylów wizualnych, gdy aplikacja jest uruchamiana na [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span><span class="sxs-lookup"><span data-stu-id="5fd3f-104">If your application calls the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method, most of your [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controls will automatically use visual styles when your application is run on [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].</span></span> <span data-ttu-id="5fd3f-105">Aby uzyskać więcej informacji, zobacz [renderowanie kontrolek przy użyciu stylów wizualnych](../../winforms/controls/rendering-controls-with-visual-styles.md).</span><span class="sxs-lookup"><span data-stu-id="5fd3f-105">For more information, see [Rendering Controls with Visual Styles](../../winforms/controls/rendering-controls-with-visual-styles.md).</span></span>  
   
- <span data-ttu-id="f5879-106">Aby uzyskać kompletny kod listę zadań przedstawionych w tym temacie, zobacz [Włączanie stylów wizualnych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159986).</span><span class="sxs-lookup"><span data-stu-id="f5879-106">For a complete code listing of the tasks illustrated in this topic, see [Enabling Visual Styles in a Hybrid Application Sample](https://go.microsoft.com/fwlink/?LinkID=159986).</span></span>  
+ <span data-ttu-id="5fd3f-106">Aby uzyskać kompletny kod listę zadań przedstawionych w tym temacie, zobacz [Włączanie stylów wizualnych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159986).</span><span class="sxs-lookup"><span data-stu-id="5fd3f-106">For a complete code listing of the tasks illustrated in this topic, see [Enabling Visual Styles in a Hybrid Application Sample](https://go.microsoft.com/fwlink/?LinkID=159986).</span></span>  
   
-## <a name="enabling-windows-forms-visual-styles"></a><span data-ttu-id="f5879-107">Włączanie Windows Forms stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="f5879-107">Enabling Windows Forms Visual Styles</span></span>  
+## <a name="enabling-windows-forms-visual-styles"></a><span data-ttu-id="5fd3f-107">Włączanie Windows Forms stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="5fd3f-107">Enabling Windows Forms Visual Styles</span></span>  
   
-#### <a name="to-enable-windows-forms-visual-styles"></a><span data-ttu-id="f5879-108">Aby włączyć stylów wizualnych Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f5879-108">To enable Windows Forms visual styles</span></span>  
+#### <a name="to-enable-windows-forms-visual-styles"></a><span data-ttu-id="5fd3f-108">Aby włączyć stylów wizualnych Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5fd3f-108">To enable Windows Forms visual styles</span></span>  
   
-1.  <span data-ttu-id="f5879-109">Tworzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projekt aplikacji o nazwie `HostingWfWithVisualStyles`.</span><span class="sxs-lookup"><span data-stu-id="f5879-109">Create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Application project named `HostingWfWithVisualStyles`.</span></span>  
+1. <span data-ttu-id="5fd3f-109">Tworzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] projekt aplikacji o nazwie `HostingWfWithVisualStyles`.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-109">Create a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Application project named `HostingWfWithVisualStyles`.</span></span>  
   
-2.  <span data-ttu-id="f5879-110">W Eksploratorze rozwiązań należy dodać odwołania do następujących zestawów.</span><span class="sxs-lookup"><span data-stu-id="f5879-110">In Solution Explorer, add references to the following assemblies.</span></span>  
+2. <span data-ttu-id="5fd3f-110">W Eksploratorze rozwiązań należy dodać odwołania do następujących zestawów.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-110">In Solution Explorer, add references to the following assemblies.</span></span>  
   
-    -   <span data-ttu-id="f5879-111">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="f5879-111">WindowsFormsIntegration</span></span>  
+    -   <span data-ttu-id="5fd3f-111">WindowsFormsIntegration</span><span class="sxs-lookup"><span data-stu-id="5fd3f-111">WindowsFormsIntegration</span></span>  
   
-    -   <span data-ttu-id="f5879-112">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="f5879-112">System.Windows.Forms</span></span>  
+    -   <span data-ttu-id="5fd3f-112">System.Windows.Forms</span><span class="sxs-lookup"><span data-stu-id="5fd3f-112">System.Windows.Forms</span></span>  
   
-3.  <span data-ttu-id="f5879-113">W przyborniku, kliknij dwukrotnie <xref:System.Windows.Controls.Grid> ikonę, aby umieścić <xref:System.Windows.Controls.Grid> element na powierzchni projektowej.</span><span class="sxs-lookup"><span data-stu-id="f5879-113">In the Toolbox, double-click the <xref:System.Windows.Controls.Grid> icon to place a <xref:System.Windows.Controls.Grid> element on the design surface.</span></span>  
+3. <span data-ttu-id="5fd3f-113">W przyborniku, kliknij dwukrotnie <xref:System.Windows.Controls.Grid> ikonę, aby umieścić <xref:System.Windows.Controls.Grid> element na powierzchni projektowej.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-113">In the Toolbox, double-click the <xref:System.Windows.Controls.Grid> icon to place a <xref:System.Windows.Controls.Grid> element on the design surface.</span></span>  
   
-4.  <span data-ttu-id="f5879-114">W oknie właściwości ustaw wartości <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A> właściwości **automatycznie**.</span><span class="sxs-lookup"><span data-stu-id="f5879-114">In the Properties window, set the values of the <xref:System.Windows.FrameworkElement.Height%2A> and <xref:System.Windows.FrameworkElement.Width%2A> properties to **Auto**.</span></span>  
+4. <span data-ttu-id="5fd3f-114">W oknie właściwości ustaw wartości <xref:System.Windows.FrameworkElement.Height%2A> i <xref:System.Windows.FrameworkElement.Width%2A> właściwości **automatycznie**.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-114">In the Properties window, set the values of the <xref:System.Windows.FrameworkElement.Height%2A> and <xref:System.Windows.FrameworkElement.Width%2A> properties to **Auto**.</span></span>  
   
-5.  <span data-ttu-id="f5879-115">W widoku projektu lub XAML, wybierz <xref:System.Windows.Window>.</span><span class="sxs-lookup"><span data-stu-id="f5879-115">In Design view or XAML view, select the <xref:System.Windows.Window>.</span></span>  
+5. <span data-ttu-id="5fd3f-115">W widoku projektu lub XAML, wybierz <xref:System.Windows.Window>.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-115">In Design view or XAML view, select the <xref:System.Windows.Window>.</span></span>  
   
-6.  <span data-ttu-id="f5879-116">W oknie dialogowym właściwości kliknij **zdarzenia** kartę.</span><span class="sxs-lookup"><span data-stu-id="f5879-116">In the Properties window, click the **Events** tab.</span></span>  
+6. <span data-ttu-id="5fd3f-116">W oknie dialogowym właściwości kliknij **zdarzenia** kartę.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-116">In the Properties window, click the **Events** tab.</span></span>  
   
-7.  <span data-ttu-id="f5879-117">Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="f5879-117">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
+7. <span data-ttu-id="5fd3f-117">Kliknij dwukrotnie <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-117">Double-click the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>
   
-8.  <span data-ttu-id="f5879-118">W MainWindow.xaml.vb lub MainWindow.xaml.cs, Wstaw następujący kod do obsługi <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="f5879-118">In MainWindow.xaml.vb or MainWindow.xaml.cs, insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
+8. <span data-ttu-id="5fd3f-118">W MainWindow.xaml.vb lub MainWindow.xaml.cs, Wstaw następujący kod do obsługi <xref:System.Windows.FrameworkElement.Loaded> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-118">In MainWindow.xaml.vb or MainWindow.xaml.cs, insert the following code to handle the <xref:System.Windows.FrameworkElement.Loaded> event.</span></span>  
   
      [!code-csharp[HostingWfWithVisualStyles#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfWithVisualStyles/CSharp/HostingWfWithVisualStyles/Window1.xaml.cs#11)]
      [!code-vb[HostingWfWithVisualStyles#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfWithVisualStyles/VisualBasic/HostingWfWithVisualStyles/Window1.xaml.vb#11)]  
   
-9. <span data-ttu-id="f5879-119">Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="f5879-119">Press F5 to build and run the application.</span></span>  
+9. <span data-ttu-id="5fd3f-119">Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-119">Press F5 to build and run the application.</span></span>  
   
-     <span data-ttu-id="f5879-120">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Kontroli jest malowane przy użyciu stylów wizualnych.</span><span class="sxs-lookup"><span data-stu-id="f5879-120">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with visual styles.</span></span>  
+     <span data-ttu-id="5fd3f-120">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Kontroli jest malowane przy użyciu stylów wizualnych.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-120">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with visual styles.</span></span>  
   
-## <a name="disabling-windows-forms-visual-styles"></a><span data-ttu-id="f5879-121">Wyłączanie Windows Forms stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="f5879-121">Disabling Windows Forms Visual Styles</span></span>  
- <span data-ttu-id="f5879-122">Aby wyłączyć stylów wizualnych, po prostu usuń wywołanie funkcji <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="f5879-122">To disable visual styles, simply remove the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
+## <a name="disabling-windows-forms-visual-styles"></a><span data-ttu-id="5fd3f-121">Wyłączanie Windows Forms stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="5fd3f-121">Disabling Windows Forms Visual Styles</span></span>  
+ <span data-ttu-id="5fd3f-122">Aby wyłączyć stylów wizualnych, po prostu usuń wywołanie funkcji <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-122">To disable visual styles, simply remove the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
   
-#### <a name="to-disable-windows-forms-visual-styles"></a><span data-ttu-id="f5879-123">Aby wyłączyć stylów wizualnych Windows Forms</span><span class="sxs-lookup"><span data-stu-id="f5879-123">To disable Windows Forms visual styles</span></span>  
+#### <a name="to-disable-windows-forms-visual-styles"></a><span data-ttu-id="5fd3f-123">Aby wyłączyć stylów wizualnych Windows Forms</span><span class="sxs-lookup"><span data-stu-id="5fd3f-123">To disable Windows Forms visual styles</span></span>  
   
-1.  <span data-ttu-id="f5879-124">Otwórz pliku MainWindow.xaml.vb lub MainWindow.xaml.cs w edytorze kodu.</span><span class="sxs-lookup"><span data-stu-id="f5879-124">Open MainWindow.xaml.vb or MainWindow.xaml.cs in the Code Editor.</span></span>  
+1. <span data-ttu-id="5fd3f-124">Otwórz pliku MainWindow.xaml.vb lub MainWindow.xaml.cs w edytorze kodu.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-124">Open MainWindow.xaml.vb or MainWindow.xaml.cs in the Code Editor.</span></span>  
   
-2.  <span data-ttu-id="f5879-125">Komentarz wywołanie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="f5879-125">Comment out the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
+2. <span data-ttu-id="5fd3f-125">Komentarz wywołanie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-125">Comment out the call to the <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> method.</span></span>  
   
-3.  <span data-ttu-id="f5879-126">Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="f5879-126">Press F5 to build and run the application.</span></span>  
+3. <span data-ttu-id="5fd3f-126">Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-126">Press F5 to build and run the application.</span></span>  
   
-     <span data-ttu-id="f5879-127">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Kontroli jest malowany domyślnego stylu systemu.</span><span class="sxs-lookup"><span data-stu-id="f5879-127">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with the default system style.</span></span>  
+     <span data-ttu-id="5fd3f-127">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Kontroli jest malowany domyślnego stylu systemu.</span><span class="sxs-lookup"><span data-stu-id="5fd3f-127">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] control is painted with the default system style.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5879-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f5879-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5fd3f-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5fd3f-128">See also</span></span>
 
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [<span data-ttu-id="f5879-129">Renderowanie formantów przy użyciu stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="f5879-129">Rendering Controls with Visual Styles</span></span>](../../winforms/controls/rendering-controls-with-visual-styles.md)
-- [<span data-ttu-id="f5879-130">Przewodnik: hostowanie kontrolki Windows Forms w WPF</span><span class="sxs-lookup"><span data-stu-id="f5879-130">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [<span data-ttu-id="5fd3f-129">Renderowanie formantów przy użyciu stylów wizualnych</span><span class="sxs-lookup"><span data-stu-id="5fd3f-129">Rendering Controls with Visual Styles</span></span>](../../winforms/controls/rendering-controls-with-visual-styles.md)
+- [<span data-ttu-id="5fd3f-130">Przewodnik: hostowanie kontrolki Windows Forms w WPF</span><span class="sxs-lookup"><span data-stu-id="5fd3f-130">Walkthrough: Hosting a Windows Forms Control in WPF</span></span>](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

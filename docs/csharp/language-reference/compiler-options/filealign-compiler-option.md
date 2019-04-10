@@ -16,46 +16,46 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660180"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328702"
 ---
-# <a name="-filealign-c-compiler-options"></a><span data-ttu-id="87f91-102">-filealign (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="87f91-102">-filealign (C# Compiler Options)</span></span>
-<span data-ttu-id="87f91-103">**- Filealign** pozwala określić rozmiar sekcji w pliku danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="87f91-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  
+# <a name="-filealign-c-compiler-options"></a><span data-ttu-id="6cc13-102">-filealign (opcje kompilatora C#)</span><span class="sxs-lookup"><span data-stu-id="6cc13-102">-filealign (C# Compiler Options)</span></span>
+<span data-ttu-id="6cc13-103">**- Filealign** pozwala określić rozmiar sekcji w pliku danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="6cc13-103">The **-filealign** option lets you specify the size of sections in your output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="87f91-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="87f91-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6cc13-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6cc13-104">Syntax</span></span>  
   
 ```console  
 -filealign:number  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="87f91-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="87f91-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="6cc13-105">Argumenty</span><span class="sxs-lookup"><span data-stu-id="6cc13-105">Arguments</span></span>  
  `number`  
- <span data-ttu-id="87f91-106">Wartość, która określa rozmiar sekcji w pliku wyjściowym.</span><span class="sxs-lookup"><span data-stu-id="87f91-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="87f91-107">Prawidłowe wartości to 512, 1024, 2048, 4096 i 8192.</span><span class="sxs-lookup"><span data-stu-id="87f91-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="87f91-108">Te wartości są w bajtach.</span><span class="sxs-lookup"><span data-stu-id="87f91-108">These values are in bytes.</span></span>  
+ <span data-ttu-id="6cc13-106">Wartość, która określa rozmiar sekcji w pliku wyjściowym.</span><span class="sxs-lookup"><span data-stu-id="6cc13-106">A value that specifies the size of sections in the output file.</span></span> <span data-ttu-id="6cc13-107">Prawidłowe wartości to 512, 1024, 2048, 4096 i 8192.</span><span class="sxs-lookup"><span data-stu-id="6cc13-107">Valid values are 512, 1024, 2048, 4096, and 8192.</span></span> <span data-ttu-id="6cc13-108">Te wartości są w bajtach.</span><span class="sxs-lookup"><span data-stu-id="6cc13-108">These values are in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="87f91-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="87f91-109">Remarks</span></span>  
- <span data-ttu-id="87f91-110">Każda sekcja będzie wyrównany na granicy, która jest wielokrotnością liczby **- filealign** wartość.</span><span class="sxs-lookup"><span data-stu-id="87f91-110">Each section will be aligned on a boundary that is a multiple of the **-filealign** value.</span></span> <span data-ttu-id="87f91-111">Nie jest stałą domyślnie.</span><span class="sxs-lookup"><span data-stu-id="87f91-111">There is no fixed default.</span></span> <span data-ttu-id="87f91-112">Jeśli **- filealign** nie zostanie określony, środowisko uruchomieniowe języka wspólnego, wybiera domyślny w czasie kompilacji.</span><span class="sxs-lookup"><span data-stu-id="87f91-112">If **-filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6cc13-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6cc13-109">Remarks</span></span>  
+ <span data-ttu-id="6cc13-110">Każda sekcja będzie wyrównany na granicy, która jest wielokrotnością liczby **- filealign** wartość.</span><span class="sxs-lookup"><span data-stu-id="6cc13-110">Each section will be aligned on a boundary that is a multiple of the **-filealign** value.</span></span> <span data-ttu-id="6cc13-111">Nie jest stałą domyślnie.</span><span class="sxs-lookup"><span data-stu-id="6cc13-111">There is no fixed default.</span></span> <span data-ttu-id="6cc13-112">Jeśli **- filealign** nie zostanie określony, środowisko uruchomieniowe języka wspólnego, wybiera domyślny w czasie kompilacji.</span><span class="sxs-lookup"><span data-stu-id="6cc13-112">If **-filealign** is not specified, the common language runtime picks a default at compile time.</span></span>  
   
- <span data-ttu-id="87f91-113">Określając rozmiar sekcji, wpływają na rozmiar pliku wyjściowego.</span><span class="sxs-lookup"><span data-stu-id="87f91-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="87f91-114">Modyfikowanie sekcji rozmiaru może być przydatne w przypadku programów, które będą uruchamiane w mniejszych urządzeniach.</span><span class="sxs-lookup"><span data-stu-id="87f91-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
+ <span data-ttu-id="6cc13-113">Określając rozmiar sekcji, wpływają na rozmiar pliku wyjściowego.</span><span class="sxs-lookup"><span data-stu-id="6cc13-113">By specifying the section size, you affect the size of the output file.</span></span> <span data-ttu-id="6cc13-114">Modyfikowanie sekcji rozmiaru może być przydatne w przypadku programów, które będą uruchamiane w mniejszych urządzeniach.</span><span class="sxs-lookup"><span data-stu-id="6cc13-114">Modifying section size may be useful for programs that will run on smaller devices.</span></span>  
   
- <span data-ttu-id="87f91-115">Użyj [DUMPBIN](/cpp/build/reference/dumpbin-options) Aby wyświetlić informacje o sekcji w pliku danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="87f91-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
+ <span data-ttu-id="6cc13-115">Użyj [DUMPBIN](/cpp/build/reference/dumpbin-options) Aby wyświetlić informacje o sekcji w pliku danych wyjściowych.</span><span class="sxs-lookup"><span data-stu-id="6cc13-115">Use [DUMPBIN](/cpp/build/reference/dumpbin-options) to see information about sections in your output file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="87f91-116">Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio</span><span class="sxs-lookup"><span data-stu-id="87f91-116">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6cc13-116">Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio</span><span class="sxs-lookup"><span data-stu-id="6cc13-116">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="87f91-117">Otwórz projekt **właściwości** strony.</span><span class="sxs-lookup"><span data-stu-id="87f91-117">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="6cc13-117">Otwórz projekt **właściwości** strony.</span><span class="sxs-lookup"><span data-stu-id="6cc13-117">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="87f91-118">Kliknij przycisk **kompilacji** stronę właściwości.</span><span class="sxs-lookup"><span data-stu-id="87f91-118">Click the **Build** property page.</span></span>  
+2. <span data-ttu-id="6cc13-118">Kliknij przycisk **kompilacji** stronę właściwości.</span><span class="sxs-lookup"><span data-stu-id="6cc13-118">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="87f91-119">Kliknij przycisk **zaawansowane** przycisku.</span><span class="sxs-lookup"><span data-stu-id="87f91-119">Click the **Advanced** button.</span></span>  
+3. <span data-ttu-id="6cc13-119">Kliknij przycisk **zaawansowane** przycisku.</span><span class="sxs-lookup"><span data-stu-id="6cc13-119">Click the **Advanced** button.</span></span>  
   
-4.  <span data-ttu-id="87f91-120">Modyfikowanie **wyrównanie pliku** właściwości.</span><span class="sxs-lookup"><span data-stu-id="87f91-120">Modify the **File Alignment** property.</span></span>  
+4. <span data-ttu-id="6cc13-120">Modyfikowanie **wyrównanie pliku** właściwości.</span><span class="sxs-lookup"><span data-stu-id="6cc13-120">Modify the **File Alignment** property.</span></span>  
   
- <span data-ttu-id="87f91-121">Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span><span class="sxs-lookup"><span data-stu-id="87f91-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
+ <span data-ttu-id="6cc13-121">Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span><span class="sxs-lookup"><span data-stu-id="6cc13-121">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="87f91-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="87f91-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6cc13-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6cc13-122">See also</span></span>
 
-- [<span data-ttu-id="87f91-123">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="87f91-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="87f91-124">Zarządzanie właściwościami projektu i rozwiązania</span><span class="sxs-lookup"><span data-stu-id="87f91-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="6cc13-123">Opcje kompilatora C#</span><span class="sxs-lookup"><span data-stu-id="6cc13-123">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="6cc13-124">Zarządzanie właściwościami projektów i rozwiązań</span><span class="sxs-lookup"><span data-stu-id="6cc13-124">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

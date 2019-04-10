@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920561"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327870"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalowanie programu .NET Framework dla deweloperów
 
@@ -107,7 +107,7 @@ Dostępne są dwa rodzaje pakiet redystrybucyjny instalatorów:
 
 Sieci web, jak i offline instalatory są przeznaczone dla komputerów x86 i x64 64 (zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md)), ale nie obsługują komputerów z procesorem Itanium.
 
-1.  Otwórz stronę pobierania dla wersji .NET Framework, którą chcesz zainstalować:
+1. Otwórz stronę pobierania dla wersji .NET Framework, którą chcesz zainstalować:
 
     - .NET framework 4.7.2 ([Instalator sieci web](https://go.microsoft.com/fwlink/?LinkId=863262) lub [Instalator w trybie offline](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Pakiety językowe są pliki wykonywalne, które zawierają zlokalizowane zasoby 
 > [!IMPORTANT]
 > Pakiety językowe nie zawierają składników programu .NET Framework, które są wymagane do uruchamiania aplikacji, więc przed zainstalowaniem pakietu językowego należy uruchomić w sieci web lub Instalatora w trybie offline. Już zainstalowano pakiet językowy, odinstaluj je, zainstaluj program .NET Framework i ponownie zainstalować pakiet językowy.
 
-1.  Otwórz stronę pobierania pakietu językowego dla wersji .NET Framework, którą zainstalowałeś:
+1. Otwórz stronę pobierania pakietu językowego dla wersji .NET Framework, którą zainstalowałeś:
 
     - [Pakiety językowe .NET framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Pakiety językowe są pliki wykonywalne, które zawierają zlokalizowane zasoby 
 
     - [Pakiety językowe .NET framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  Na liście Język wybierz język, który chcesz pobrać, a następnie odczekaj kilka sekund dla strony, aby załadować ponownie w tym języku.
+2. Na liście Język wybierz język, który chcesz pobrać, a następnie odczekaj kilka sekund dla strony, aby załadować ponownie w tym języku.
 
-3.  Wybierz **Pobierz**.
+3. Wybierz **Pobierz**.
 
 Poniższa tabela zawiera listę obsługiwanych języków.
 

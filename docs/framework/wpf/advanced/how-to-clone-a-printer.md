@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104094"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310463"
 ---
 # <a name="how-to-clone-a-printer"></a>Instrukcje: Klonowanie drukarki
 Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Zazwyczaj te wszystkie są instalowane przy użyciu ustawień konfiguracyjnych niemal identyczne. Instalowanie poszczególnych drukarki może być czasochłonne i podatne. <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Przestrzeni nazw i <xref:System.Printing.PrintServer.InstallPrintQueue%2A> klasy, które są udostępniane za pomocą programu Microsoft .NET Framework umożliwia natychmiastowe zainstalować dowolną liczbę dodatkowych kolejek drukowania, które są klonowane z istniejącej kolejki wydruku.  
@@ -24,9 +24,9 @@ Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Za
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie druga kolejki wydruku został sklonowany z istniejącej kolejki wydruku. Drugi różni się od pierwszego tylko w przypadku nazwy, lokalizacji, port i udostępniony stan. Oto główne kroki w ten sposób.  
   
-1.  Utwórz <xref:System.Printing.PrintQueue> obiektu dla istniejącej drukarki, która ma być klonowane.  
+1. Utwórz <xref:System.Printing.PrintQueue> obiektu dla istniejącej drukarki, która ma być klonowane.  
   
-2.  Tworzenie <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> z <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> z <xref:System.Printing.PrintQueue>. <xref:System.Collections.DictionaryEntry.Value%2A> Właściwości każdego wpisu, w tym słowniku jest obiektem, jednego z typów pochodnych typu <xref:System.Printing.IndexedProperties.PrintProperty>. Istnieją dwa sposoby, aby ustawić wartość wpisu w tym słowniku.  
+2. Tworzenie <xref:System.Printing.IndexedProperties.PrintPropertyDictionary> z <xref:System.Printing.PrintSystemObject.PropertiesCollection%2A> z <xref:System.Printing.PrintQueue>. <xref:System.Collections.DictionaryEntry.Value%2A> Właściwości każdego wpisu, w tym słowniku jest obiektem, jednego z typów pochodnych typu <xref:System.Printing.IndexedProperties.PrintProperty>. Istnieją dwa sposoby, aby ustawić wartość wpisu w tym słowniku.  
   
     -   Użyj słownika **Usuń** i <xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A> metody Usuń wpis, a następnie dodaj go ponownie z wymaganą wartość.  
   
@@ -34,17 +34,17 @@ Większość firm w pewnym momencie kupić wiele drukarek tego samego modelu. Za
   
      W poniższym przykładzie przedstawiono w obu kierunkach.  
   
-3.  Tworzenie <xref:System.Printing.IndexedProperties.PrintBooleanProperty> obiektu i ustaw jego <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> do "IsShared" i jego <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> do `true`.  
+3. Tworzenie <xref:System.Printing.IndexedProperties.PrintBooleanProperty> obiektu i ustaw jego <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> do "IsShared" i jego <xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A> do `true`.  
   
-4.  Użyj <xref:System.Printing.IndexedProperties.PrintBooleanProperty> obiektu jako wartość <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>firmy wpis "IsShared".  
+4. Użyj <xref:System.Printing.IndexedProperties.PrintBooleanProperty> obiektu jako wartość <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>firmy wpis "IsShared".  
   
-5.  Tworzenie <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu i ustaw jego <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> do "Nazwa_udziału" i jego <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> do odpowiedniej <xref:System.String>.  
+5. Tworzenie <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu i ustaw jego <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> do "Nazwa_udziału" i jego <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> do odpowiedniej <xref:System.String>.  
   
-6.  Użyj <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu jako wartość <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>firmy wpis "Nazwa_udziału".  
+6. Użyj <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu jako wartość <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>firmy wpis "Nazwa_udziału".  
   
-7.  Utworzyć kolejną <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu i ustaw jego <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> do "Lokalizacja" i jego <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> do odpowiedniej <xref:System.String>.  
+7. Utworzyć kolejną <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu i ustaw jego <xref:System.Printing.IndexedProperties.PrintProperty.Name%2A> do "Lokalizacja" i jego <xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A> do odpowiedniej <xref:System.String>.  
   
-8.  Drugą <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu jako wartość <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>firmy wpis "Lokalizacja".  
+8. Drugą <xref:System.Printing.IndexedProperties.PrintStringProperty> obiektu jako wartość <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>firmy wpis "Lokalizacja".  
   
 9. Utwórz tablicę <xref:System.String>s. Każdy element jest nazwa portu na serwerze.  
   

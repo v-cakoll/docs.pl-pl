@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333515"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312881"
 ---
 # <a name="-operator-c-reference"></a>| Operator (C# odwołania)
 
@@ -22,7 +22,7 @@ Operatory binarne `|` są wstępnie zdefiniowane dla typów całkowitych i `bool
 
 ## <a name="remarks"></a>Uwagi
 
-Plik binarny `|` operator ocenia oba operandy niezależnie od tego, pierwszy z nich wartości, w przeciwieństwie do [operator warunkowy OR](conditional-or-operator.md) `||`.
+Plik binarny `|` operator ocenia oba operandy niezależnie od tego, pierwszy z nich wartości, w przeciwieństwie do [operator warunkowy OR](boolean-logical-operators.md#conditional-logical-or-operator-) `||`.
 
 W typach definiowanych przez użytkownika można przeciążać operator `|` (zobacz [operator](../keywords/operator.md)).
 
@@ -32,6 +32,6 @@ W typach definiowanych przez użytkownika można przeciążać operator `|` (zob
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [Odwołanie w C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [C#Operatory](index.md)
+- [Operatory języka C#](index.md)

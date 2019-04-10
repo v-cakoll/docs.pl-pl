@@ -3,19 +3,19 @@ title: 'Instrukcje: Wyświetlanie stanu zalogowania przy użyciu programu WIF'
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 7d3d23dc1f2e081c0a7c53fbdfaef749c9729fd4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311035"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Instrukcje: Wyświetlanie stanu zalogowania przy użyciu programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
   
 -   Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® formularzy sieci Web  
+-   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Podsumowanie  
  W tym temacie opisano sposób wyświetlania znak w stanie w aplikacji ASP.NET z włączoną obsługą programu WIF. Program WIF oferuje mechanizm do tworzenia Twojej aplikacji obsługujących oświadczenia i zarządzanie uwierzytelniania i autoryzacji dla zasobów aplikacji.  
@@ -56,48 +56,48 @@ ms.locfileid: "48584406"
   
 #### <a name="to-install-the-identity-and-access-extension"></a>Aby zainstalować rozszerzenie tożsamościami i dostępem  
   
-1.  Uruchom program Visual Studio w trybie podwyższonych uprawnień jako administrator.  
+1. Uruchom program Visual Studio w trybie podwyższonych uprawnień jako administrator.  
   
-2.  W programie Visual Studio, kliknij przycisk **narzędzia** i kliknij przycisk **Menedżera rozszerzeń**. **Menedżera rozszerzeń** zostanie wyświetlone okno.  
+2. W programie Visual Studio, kliknij przycisk **narzędzia** i kliknij przycisk **Menedżera rozszerzeń**. **Menedżera rozszerzeń** zostanie wyświetlone okno.  
   
-3.  W **Menedżera rozszerzeń**, kliknij przycisk **rozszerzeń Online** menu po lewej stronie, następnie wybierz pozycję **galerii Visual Studio**.  
+3. W **Menedżera rozszerzeń**, kliknij przycisk **rozszerzeń Online** menu po lewej stronie, następnie wybierz pozycję **galerii Visual Studio**.  
   
-4.  W prawym górnym rogu **Menedżera rozszerzeń**, wyszukaj *tożsamościami i dostępem*.  
+4. W prawym górnym rogu **Menedżera rozszerzeń**, wyszukaj *tożsamościami i dostępem*.  
   
-5.  **Tożsamościami i dostępem** element zostanie wyświetlony w wynikach wyszukiwania. Kliknij go, a następnie kliknij przycisk **Pobierz**.  
+5. **Tożsamościami i dostępem** element zostanie wyświetlony w wynikach wyszukiwania. Kliknij go, a następnie kliknij przycisk **Pobierz**.  
   
-6.  **Pobierz i zainstaluj** zostanie wyświetlone okno dialogowe. Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **zainstalować**.  
+6. **Pobierz i zainstaluj** zostanie wyświetlone okno dialogowe. Jeśli akceptujesz postanowienia licencyjne, kliknij przycisk **zainstalować**.  
   
-7.  Gdy **tożsamościami i dostępem** instalacja rozszerzenia została ukończona, uruchom program Visual Studio w trybie administratora.  
+7. Gdy **tożsamościami i dostępem** instalacja rozszerzenia została ukończona, uruchom program Visual Studio w trybie administratora.  
   
 ## <a name="step-2--create-a-relying-party-aspnet-application"></a>Krok 2 — Tworzenie aplikacji jednostki uzależnionej strona ASP.NET  
  Tym kroku opisano sposób tworzenia jednostki uzależnionej ze stron aplikacji formularzy sieci Web ASP.NET, która integruje się z programu WIF.  
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
+1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
-2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
+2. W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
-3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+3. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
 ## <a name="step-3--enable-local-development-sts-to-authenticate-users"></a>Krok 3 — Włączanie lokalnej deweloperskiej usługi STS do uwierzytelniania kont użytkowników  
  W tym kroku opisano, jak włączyć lokalnej deweloperskiej usługi STS w aplikacji. Lokalnej deweloperskiej usługi STS jest włączona, przy użyciu rozszerzenia tożsamości i dostępu dla programu Visual Studio.  
   
 #### <a name="to-enable-local-development-sts-in-your-aspnet-application"></a>Aby włączyć lokalnej deweloperskiej usługi STS w aplikacji programu ASP.NET  
   
-1.  W programie Visual Studio, kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
+1. W programie Visual Studio, kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
   
-2.  **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
+2. **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
   
 ## <a name="step-4--modify-your-aspnet-application-to-display-sign-in-status"></a>Krok 4 — zmodyfikować aplikację ASP.NET w celu wyświetlania logowania w stan  
  W tym kroku opisano, jak zmodyfikować aplikację ASP.NET w celu dynamicznego wyświetlania, czy bieżący użytkownik jest zalogowany. Po skonfigurowaniu dostawcy usługi STS program WIF obsługuje oświadczenia przychodzące. Teraz należy skonfigurować kod aplikacji, aby wyświetlić wynik uwierzytelniania.  
   
 #### <a name="to-display-sign-in-status"></a>Aby wyświetlić logowania w stan  
   
-1.  W programie Visual Studio, otwórz **Default.aspx** plik **TestApp** projektu.  
+1. W programie Visual Studio, otwórz **Default.aspx** plik **TestApp** projektu.  
   
-2.  Zastąp istniejący kod znaczników w **Default.aspx** pliku następującym kodem:  
+2. Zastąp istniejący kod znaczników w **Default.aspx** pliku następującym kodem:  
   
     ```  
     <%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -114,12 +114,12 @@ ms.locfileid: "48584406"
     </html>  
     ```  
   
-3.  Zapisz **Default.aspx**, a następnie otwórz jego kod związany z pliku o nazwie **Default.aspx.cs**.  
+3. Zapisz **Default.aspx**, a następnie otwórz jego kod związany z pliku o nazwie **Default.aspx.cs**.  
   
     > [!NOTE]
     >  **Default.aspx.cs** może być ukryty pod **Default.aspx** w Eksploratorze rozwiązań. Jeśli **Default.aspx.cs** nie jest widoczny, rozwiń węzeł **Default.aspx** , klikając trójkąta obok niej.  
   
-4.  Zastąp istniejący kod w **Default.aspx.cs** następującym kodem:  
+4. Zastąp istniejący kod w **Default.aspx.cs** następującym kodem:  
   
     ```csharp  
     using System;  
@@ -144,13 +144,13 @@ ms.locfileid: "48584406"
     }  
     ```  
   
-5.  Zapisz **Default.aspx.cs**i utworzyć aplikację.  
+5. Zapisz **Default.aspx.cs**i utworzyć aplikację.  
   
 ## <a name="step-5--test-the-integration-between-wif-and-your-aspnet-application"></a>Krok 5: Testowanie integracji między programu WIF i aplikacji ASP.NET  
  W tym kroku opisano, jak można przetestować integrację programu WIF i aplikacji ASP.NET.  
   
 #### <a name="to-test-the-integration-between-wif-and-aspnet"></a>Aby przetestować integrację programu WIF i platformy ASP.NET  
   
-1.  W programie Visual Studio, naciśnij klawisz **F5** można rozpocząć debugowania aplikacji. Jeśli nie znaleziono żadnych błędów, zostanie otwarte nowe okno przeglądarki.  
+1. W programie Visual Studio, naciśnij klawisz **F5** można rozpocząć debugowania aplikacji. Jeśli nie znaleziono żadnych błędów, zostanie otwarte nowe okno przeglądarki.  
   
-2.  Możesz zauważyć, że przeglądarki dyskretnie przekierowuje żądanie do usługi STS, a następnie spowoduje otwarcie strony Default.aspx. Jeśli program WIF jest poprawnie skonfigurowany, powinien zostać wyświetlony witryny, wyświetl następujący tekst: **"Użytkownik jest zalogowany"**.
+2. Możesz zauważyć, że przeglądarki dyskretnie przekierowuje żądanie do usługi STS, a następnie spowoduje otwarcie strony Default.aspx. Jeśli program WIF jest poprawnie skonfigurowany, powinny pojawić się witryny, wyświetl następujący tekst: **"Użytkownik jest zalogowany"**.

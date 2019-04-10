@@ -12,29 +12,29 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: cf5352ff60aabe45473c3c9103e8369597db2e8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106759"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331003"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Instrukcje: wiązanie z usługą sieci Web za pomocą kontrolki BindingSource formularzy systemu Windows
 Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywołaniem usługi sieci Web XML, możesz użyć <xref:System.Windows.Forms.BindingSource> składnika. Ta procedura jest podobna do powiązania <xref:System.Windows.Forms.BindingSource> składnik do typu. Należy utworzyć serwer proxy po stronie klienta, który zawiera metody i typy udostępnianych przez usługę sieci Web. Możesz wygenerować, serwer proxy po stronie klienta z usługi sieci Web (.asmx), samego lub plik sieci Web Services Description Language (WSDL). Ponadto serwer proxy po stronie klienta, należy ujawnić pola złożone typy używane przez usługę sieci Web jako właściwości publiczne. Następnie Powiąż <xref:System.Windows.Forms.BindingSource> do jednego z typów ujawnione w sieci Web usługi serwera proxy.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Aby utworzyć i powiązać serwer proxy po stronie klienta  
   
-1.  Tworzenie formularza Windows w katalogu, co pozwala przy użyciu odpowiedniego obszaru nazw.  
+1. Tworzenie formularza Windows w katalogu, co pozwala przy użyciu odpowiedniego obszaru nazw.  
   
-2.  Dodaj <xref:System.Windows.Forms.BindingSource> składnika do formularza.  
+2. Dodaj <xref:System.Windows.Forms.BindingSource> składnika do formularza.  
   
-3.  Otwórz [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] wiersz polecenia i przejdź do formularza znajdujący się w katalogu.  
+3. Otwórz [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] wiersz polecenia i przejdź do formularza znajdujący się w katalogu.  
   
-4.  Za pomocą narzędzia WSDL wprowadź `wsdl` adres URL .asmx lub pliku WSDL usługi sieci Web, a następnie przestrzeni nazw aplikacji i opcjonalnie język, w którym pracujesz.  
+4. Za pomocą narzędzia WSDL wprowadź `wsdl` adres URL .asmx lub pliku WSDL usługi sieci Web, a następnie przestrzeni nazw aplikacji i opcjonalnie język, w którym pracujesz.  
   
      Poniższy przykład kodu wykorzystuje usługę sieci Web, znajduje się w `http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`. Na przykład typ C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, lub dla języka Visual Basic typu `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Przekazanie ścieżki jako argument do języka WSDL narzędzie wygeneruje serwer proxy po stronie klienta w tym samym katalogu i przestrzeni nazw jako aplikację w wybranym języku. Jeśli używasz programu Visual Studio, należy dodać plik do projektu.  
   
-5.  Wybierz typ serwera proxy po stronie klienta, aby powiązać.  
+5. Wybierz typ serwera proxy po stronie klienta, aby powiązać.  
   
      Zazwyczaj jest to typ zwracany przez metodę, oferowane przez usługę sieci Web. Pola wybranego typu muszą być widoczne jako właściwości publiczne dla powiązania celów.  
   
@@ -42,7 +42,7 @@ Jeśli chcesz powiązać kontrolkę formularza Windows wyniki uzyskane z wywoła
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6.  Ustaw <xref:System.Windows.Forms.BindingSource.DataSource%2A> właściwość <xref:System.Windows.Forms.BindingSource> do typu, to znaczy ma zawarte w serwer proxy po stronie klienta dla usługi sieci Web.  
+6. Ustaw <xref:System.Windows.Forms.BindingSource.DataSource%2A> właściwość <xref:System.Windows.Forms.BindingSource> do typu, to znaczy ma zawarte w serwer proxy po stronie klienta dla usługi sieci Web.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]

@@ -3,12 +3,12 @@ title: Omówienie modułu uwierzytelniania WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092474"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310255"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Omówienie modułu uwierzytelniania WSFederation
 Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjnego w aplikacjach ASP.NET, za pośrednictwem modułu uwierzytelniania WS-Federated (WS-Rozproszona). Ten temat pomoże zrozumieć, jak federacyjnego działania uwierzytelniania i jak z niej korzystać.  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) obejmuje obsługę uwierzytelniania federacyjn
   
  ![Scenariusz uwierzytelniania federacyjnego](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Klient w domenie zaufania firmy Fabrikam wysyła żądanie do aplikacji w domenie Contoso zaufania jednostki uzależnionej strona (RP).  
+1. Klient w domenie zaufania firmy Fabrikam wysyła żądanie do aplikacji w domenie Contoso zaufania jednostki uzależnionej strona (RP).  
   
-2.  Jednostki Uzależnionej przekierowuje klienta do usługi STS w domenie zaufania firmy Contoso. Ta usługa STS nie ma informacji o kliencie.  
+2. Jednostki Uzależnionej przekierowuje klienta do usługi STS w domenie zaufania firmy Contoso. Ta usługa STS nie ma informacji o kliencie.  
   
-3.  Usługa tokenu Zabezpieczającego firmy Contoso przekierowuje klienta do usługi STS w domenie zaufania firmy Fabrikam, za pomocą którego zaufania domeny Contoso ma relację zaufania.  
+3. Usługa tokenu Zabezpieczającego firmy Contoso przekierowuje klienta do usługi STS w domenie zaufania firmy Fabrikam, za pomocą którego zaufania domeny Contoso ma relację zaufania.  
   
-4.  Fabrikam STS weryfikuje tożsamość klienta i wystawia token zabezpieczający do usługi STS firmy Contoso.  
+4. Fabrikam STS weryfikuje tożsamość klienta i wystawia token zabezpieczający do usługi STS firmy Contoso.  
   
-5.  Usługa tokenu Zabezpieczającego firmy Contoso używa tokenu firmy Fabrikam, aby utworzyć swój własny token, który może być używany przez jednostkę Uzależnioną i wysyła je do jednostki Uzależnionej.  
+5. Usługa tokenu Zabezpieczającego firmy Contoso używa tokenu firmy Fabrikam, aby utworzyć swój własny token, który może być używany przez jednostkę Uzależnioną i wysyła je do jednostki Uzależnionej.  
   
-6.  Jednostki Uzależnionej wyodrębnia klienta oświadczenia w tokenie zabezpieczającym i sprawia, że decyzji o autoryzacji.  
+6. Jednostki Uzależnionej wyodrębnia klienta oświadczenia w tokenie zabezpieczającym i sprawia, że decyzji o autoryzacji.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Za pomocą modułu uwierzytelnianie Sfederowane za pomocą platformy ASP.NET  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-Rozproszona) jest moduł HTTP, które umożliwia dodanie federacyjnego uwierzytelniania [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji. Uwierzytelnianie federacyjne umożliwia logiki uwierzytelniania są obsługiwane przez usługę STS i pozwala skupić się na pisaniu logiki biznesowej.  
   
  Możesz skonfigurować Rozproszona WS, aby określić usługi STS, do których powinno zostać przekierowane nieuwierzytelnionych żądań. Program WIF umożliwia uwierzytelnianie użytkowników na dwa sposoby:  
   
-1.  Przekierowanie pasywnym: Gdy nieuwierzytelniony użytkownik próbuje uzyskać dostęp do chronionego zasobu, i chcesz po prostu przekierowywać je do usługi STS, bez konieczności strony logowania, to właściwe podejście. Usługa STS weryfikuje tożsamość użytkownika i wystawia token zabezpieczający, który zawiera odpowiednie oświadczenia dla tego użytkownika. Ta opcja wymaga usługi WS-Rozproszona mają zostać dodane w potoku moduły HTTP. Narzędzie tożsamości i dostępu dla programu Visual Studio 2012 umożliwia modyfikowanie pliku konfiguracji aplikacji do używania protokołu WS-Rozproszona i utworzyć Federację z usługą STS. Aby uzyskać więcej informacji, zobacz [narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Przekierowanie pasywnym: Gdy nieuwierzytelniony użytkownik próbuje uzyskać dostęp do chronionego zasobu, i chcesz po prostu przekierowywać je do usługi STS, bez konieczności strony logowania, to właściwe podejście. Usługa STS weryfikuje tożsamość użytkownika i wystawia token zabezpieczający, który zawiera odpowiednie oświadczenia dla tego użytkownika. Ta opcja wymaga usługi WS-Rozproszona mają zostać dodane w potoku moduły HTTP. Narzędzie tożsamości i dostępu dla programu Visual Studio 2012 umożliwia modyfikowanie pliku konfiguracji aplikacji do używania protokołu WS-Rozproszona i utworzyć Federację z usługą STS. Aby uzyskać więcej informacji, zobacz [narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Możesz wywołać <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> metody lub <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> metody z kodu powiązanego do strony logowania w aplikacji jednostki Uzależnionej.  
+2. Możesz wywołać <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> metody lub <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> metody z kodu powiązanego do strony logowania w aplikacji jednostki Uzależnionej.  
   
  W pasywnym przekierowanie cała komunikacja odbywa się za pośrednictwem odpowiedzi/przekierowanie z klienta (zazwyczaj przeglądarki). Rozproszona WS można dodać do potoku HTTP aplikacji, których ona obserwuje dla nieuwierzytelniony użytkownik zażąda i przekierowuje użytkowników do usługi STS określisz.  
   

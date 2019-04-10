@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319407"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (opcje kompilatora C#)
 **-Lib** opcja określa lokalizację zestawów, do których odwołuje się poprzez [— odwołanie (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) opcji.  
@@ -34,13 +34,13 @@ ms.locfileid: "54677878"
 ## <a name="remarks"></a>Uwagi  
  Kompilator wyszukuje odwołania do zestawów, które nie są w pełni kwalifikowane w następującej kolejności:  
   
-1.  Bieżący katalog roboczy. Jest to katalog, w którym kompilator jest wywoływany.  
+1. Bieżący katalog roboczy. Jest to katalog, w którym kompilator jest wywoływany.  
   
-2.  Katalogu środowiska CLR systemu.  
+2. Katalogu środowiska CLR systemu.  
   
-3.  Katalogi określone przez **-lib**.  
+3. Katalogi określone przez **-lib**.  
   
-4.  Katalogi określone przez zmienną środowiskową LIB.  
+4. Katalogi określone przez zmienną środowiskową LIB.  
   
  Użyj **— dokumentacja** do określenia odwołania do zestawu.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677878"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
-1.  Otwórz projekt **stron właściwości** okno dialogowe.  
+1. Otwórz projekt **stron właściwości** okno dialogowe.  
   
-2.  Kliknij przycisk **ścieżka odwołań** stronę właściwości.  
+2. Kliknij przycisk **ścieżka odwołań** stronę właściwości.  
   
-3.  Zmodyfikuj zawartość pola listy.  
+3. Zmodyfikuj zawartość pola listy.  
   
  Aby uzyskać informacje na temat sposobu programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   
@@ -70,4 +70,4 @@ csc -lib:c:\ -reference:t2.dll t2.cs
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

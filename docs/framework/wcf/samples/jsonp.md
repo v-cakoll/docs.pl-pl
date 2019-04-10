@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329664"
 ---
 # <a name="jsonp"></a>JSONP
 Niniejszy przykład pokazuje sposób obsługi formatu JSON przy użyciu dopełnienie (JSONP) w usługach REST programu WCF. JSONP jest Konwencji, używane do wywołania między domenami skryptów przez generowanie tagi skryptu w bieżącym dokumencie. Wynik jest zwracany dla funkcji określonego wywołania zwrotnego. JSONP opiera się na koncepcji, takich jak tagi `<script src="http://..." >` ocenić skryptów z dowolnej domeny, a skrypt pobierane przez tych znaczników jest szacowana w zakresie, w którym innych funkcji może być już zdefiniowane.
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
   
-1.  Otwórz rozwiązanie dla przykładu JSONP.  
+1. Otwórz rozwiązanie dla przykładu JSONP.  
   
-2.  Naciśnij klawisz F5, aby uruchomić `http://localhost:26648/JSONPClientPage.aspx` w przeglądarce.  
+2. Naciśnij klawisz F5, aby uruchomić `http://localhost:26648/JSONPClientPage.aspx` w przeglądarce.  
   
-3.  Należy zauważyć, że po załadowaniu strony danych wejściowych tekst "Name" i "Address" zostaną wypełnione wartościami.  Te wartości zostały dostarczone z wywołania do usługi WCF, po zakończeniu przeglądarki, renderowanie strony.
+3. Należy zauważyć, że po załadowaniu strony danych wejściowych tekst "Name" i "Address" zostaną wypełnione wartościami.  Te wartości zostały dostarczone z wywołania do usługi WCF, po zakończeniu przeglądarki, renderowanie strony.

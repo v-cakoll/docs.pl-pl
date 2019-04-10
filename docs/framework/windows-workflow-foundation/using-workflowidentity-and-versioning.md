@@ -1,15 +1,15 @@
 ---
-title: Za pomocą obiektu WorkflowIdentity i wersjonowanie
+title: Używanie obiektu WorkflowIdentity i wersjonowanie
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 64abab815c523abce88b00515239155499de9c4c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708174"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327493"
 ---
-# <a name="using-workflowidentity-and-versioning"></a>Za pomocą obiektu WorkflowIdentity i wersjonowanie
+# <a name="using-workflowidentity-and-versioning"></a>Używanie obiektu WorkflowIdentity i wersjonowanie
 <xref:System.Activities.WorkflowIdentity> Umożliwia dla przepływu pracy deweloperów aplikacji, aby skojarzyć nazwę i <xref:System.Version> przy użyciu definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. W tym temacie przedstawiono jako omówienie sposobu użycia <xref:System.Activities.WorkflowIdentity> z <xref:System.Activities.WorkflowApplication> hostingu. Aby uzyskać informacji na temat wykonywania side-by-side definicji przepływu pracy w usłudze przepływu pracy, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Aby uzyskać informacji na temat aktualizacji dynamicznej, zobacz [aktualizacji dynamicznej](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>W tym temacie:  
@@ -146,14 +146,14 @@ wfApp.Load(instance);
  **SqlWorkflowInstanceStore ma wersję bazy danych "4.0.0.0". Nie można uruchomić InstancePersistenceCommand "System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand" przed tą wersją bazy danych.  Uaktualnij bazę danych do "4.5.0.0".**  
 ### <a name="ToUpgrade"></a> Aby uaktualnić schemat bazy danych  
   
-1.  Otwórz program SQL Server Management Studio i połącz się z serwera bazy danych trwałości, na przykład **. \SQLEXPRESS**.  
+1. Otwórz program SQL Server Management Studio i połącz się z serwera bazy danych trwałości, na przykład **. \SQLEXPRESS**.  
   
-2.  Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do następującego folderu: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2. Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do następującego folderu: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
   
-3.  Wybierz **SqlWorkflowInstanceStoreSchemaUpgrade.sql** i kliknij przycisk **Otwórz**.  
+3. Wybierz **SqlWorkflowInstanceStoreSchemaUpgrade.sql** i kliknij przycisk **Otwórz**.  
   
-4.  Wybierz nazwę bazy danych trwałości w **baz danych dostępności** listy rozwijanej.  
+4. Wybierz nazwę bazy danych trwałości w **baz danych dostępności** listy rozwijanej.  
   
-5.  Wybierz **Execute** z **zapytania** menu.  
+5. Wybierz **Execute** z **zapytania** menu.  
   
  Po wykonaniu kwerendy schemat bazy danych jest uaktualniany, a jeśli to konieczne, można wyświetlić domyślną tożsamość przepływ pracy został przypisany do wystąpienia utrwalonych przepływu pracy. Rozwiń węzeł bazy danych trwałości w **baz danych** węźle **Eksplorator obiektów**, a następnie rozwiń węzeł **widoków** węzła. Kliknij prawym przyciskiem myszy **System.Activities.DurableInstancing.Instances** i wybierz polecenie **zaznacz 1000 pierwszych wierszy**. Przewiń do końca kolumn i należy pamiętać, że sześciu dodatkowe kolumny do widoku: **IdentityName**, **IdentityPackage**, **kompilacji**, **głównych**, **pomocnicza**, i **poprawki**. Utrwalonych przepływów pracy będzie mieć wartość **NULL** dla tych pól, reprezentujący identyfikator przepływu pracy o wartości null.

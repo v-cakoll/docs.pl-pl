@@ -2,12 +2,12 @@
 title: Usługa routera odnajdywania
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318770"
 ---
 # <a name="discovery-router-service"></a>Usługa routera odnajdywania
 W tym przykładzie przedstawiono sposób przekazywania komunikatów odnajdywania do innego punktu końcowego.  
@@ -22,13 +22,13 @@ W tym przykładzie przedstawiono sposób przekazywania komunikatów odnajdywania
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Skompiluj przykład.  
+1. Skompiluj przykład.  
   
-2.  Uruchom plik wykonywalny DiscoveryRouter.  
+2. Uruchom plik wykonywalny DiscoveryRouter.  
   
-3.  Uruchomić pliku wykonywalnego usługi z katalogu kompilacji.  
+3. Uruchomić pliku wykonywalnego usługi z katalogu kompilacji.  
   
-4.  Uruchom ten plik. Należy pamiętać, że klient zlokalizuje usługi.  
+4. Uruchom ten plik. Należy pamiętać, że klient zlokalizuje usługi.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

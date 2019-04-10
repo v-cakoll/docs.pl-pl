@@ -2,25 +2,25 @@
 title: 'Instrukcje: tworzenie kontraktu „żądanie-odpowiedź”'
 ms.date: 03/30/2017
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
-ms.openlocfilehash: 9954be556df13193c290a55616ad83ef07e0af7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7a446db49dcc6a12b900292f1b19c9973835f2c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327480"
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Instrukcje: tworzenie kontraktu „żądanie-odpowiedź”
 Kontraktu "żądanie-odpowiedź" Określa metodę, która zwraca odpowiedź. Odpowiedź musi być wysyłane i skorelowane żądanie zgodnie z warunkami niniejszej Umowy. Nawet jeśli metoda nie zwraca żadnej odpowiedzi (`void` w języku C# lub `Sub` w języku Visual Basic), infrastruktury, tworzy i wysyła pustego komunikatu do obiektu wywołującego. Aby uniemożliwić wysyłanie odpowiedzi pusty komunikat, należy użyć kontraktu jednokierunkowego dla tej operacji.  
   
 ### <a name="to-create-a-request-reply-contract"></a>Tworzenie kontraktu "żądanie-odpowiedź"  
   
-1.  Tworzenie interfejsu w wybranym języku programowania.  
+1. Tworzenie interfejsu w wybranym języku programowania.  
   
-2.  Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> atrybutu do interfejsu.  
+2. Zastosuj <xref:System.ServiceModel.ServiceContractAttribute> atrybutu do interfejsu.  
   
-3.  Zastosuj <xref:System.ServiceModel.OperationContractAttribute> atrybut do każdej metody, które mogą być wywoływane przez klientów.  
+3. Zastosuj <xref:System.ServiceModel.OperationContractAttribute> atrybut do każdej metody, które mogą być wywoływane przez klientów.  
   
-4.  Opcjonalna. Ustaw wartość <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwość `true` aby uniemożliwić wysyłanie odpowiedzi pusty komunikat. Domyślnie wszystkie operacje są kontraktów "żądanie odpowiedź".  
+4. Opcjonalna. Ustaw wartość <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> właściwość `true` aby uniemożliwić wysyłanie odpowiedzi pusty komunikat. Domyślnie wszystkie operacje są kontraktów "żądanie odpowiedź".  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład definiuje kontrakt usługi Kalkulator, która zapewnia `Add` i `Subtract` metody. `Multiply` Metoda nie jest częścią kontraktu, ponieważ nie jest oznaczony za <xref:System.ServiceModel.OperationContractAttribute> klasy, a zatem nie jest dostępna dla klientów.  

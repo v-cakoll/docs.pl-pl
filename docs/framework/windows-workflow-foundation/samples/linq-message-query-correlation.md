@@ -2,12 +2,12 @@
 title: Korelacja zapytania komunikatów LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 7881140f2926bc27073a0be425a63566f313b50c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327675"
 ---
 # <a name="linq-message-query-correlation"></a>Korelacja zapytania komunikatów LINQ
 W tym przykładzie pokazano, jak zrobić korelacja oparta na zawartości, przy użyciu niestandardowego <xref:System.ServiceModel.Dispatcher.MessageQuery> wdrożenia, a nie dostarczane przez system <xref:System.ServiceModel.XPathMessageQuery>.  
@@ -20,13 +20,13 @@ W tym przykładzie pokazano, jak zrobić korelacja oparta na zawartości, przy u
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Ten przykład przedstawia usługi przepływu pracy za pomocą punktów końcowych HTTP. Można dodać do uruchomienia tego przykładowego, odpowiednie listy ACL adresu URL (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) szczegóły), albo przez uruchomienie programu Visual Studio jako Administrator, wykonując następujące polecenie w wierszu podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, Twoja domena i nazwa użytkownika są zastępowane.  
+1. Ten przykład przedstawia usługi przepływu pracy za pomocą punktów końcowych HTTP. Można dodać do uruchomienia tego przykładowego, odpowiednie listy ACL adresu URL (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) szczegóły), albo przez uruchomienie programu Visual Studio jako Administrator, wykonując następujące polecenie w wierszu podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, Twoja domena i nazwa użytkownika są zastępowane.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  Po dodaniu listy ACL adresu URL, wykonaj następujące kroki.  
+2. Po dodaniu listy ACL adresu URL, wykonaj następujące kroki.  
   
     1.  Skompiluj rozwiązanie.  
   

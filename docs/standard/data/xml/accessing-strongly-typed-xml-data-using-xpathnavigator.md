@@ -1,5 +1,5 @@
 ---
-title: Uzyskiwanie dostępu do silnie Typizowanych danych XML, przy użyciu klasy XPathNavigator
+title: Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,14 +8,14 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd0719fbc84159fdf751b136c2a65b0ce40b42ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1905e9f1d80931bd15cff5f3d0a92ceee29435ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319888"
 ---
-# <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do silnie Typizowanych danych XML, przy użyciu klasy XPathNavigator
+# <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do silnie typizowanych danych XML przy użyciu klasy XPathNavigator
 Jako wystąpienia w modelu danych XPath 2.0 <xref:System.Xml.XPath.XPathNavigator> klasy może zawierać silnie typizowane dane, który jest mapowany do typowych języka wspólnego (CLR). Zgodnie z modelu danych XPath 2.0 tylko elementów i atrybutów może zawierać silnie typizowane dane. <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia mechanizmy do uzyskiwania dostępu do danych w ramach <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu jako silnie typizowane dane, a także mechanizmów do konwertowania z jednego typu danych.  
   
 ## <a name="type-information-exposed-by-xpathnavigator"></a>Informacje o typie udostępnianych przez klasy XPathNavigator  
@@ -52,11 +52,11 @@ Jako wystąpienia w modelu danych XPath 2.0 <xref:System.Xml.XPath.XPathNavigato
 ## <a name="the-post-schema-validation-infoset-psvi"></a>Zestaw w informacji sprawdzania poprawności schematu Post (PSVI)  
  Procesor schematu XML akceptuje zestaw informacji XML, jako dane wejściowe i konwertuje ją na wpis schematu sprawdzania poprawności zestaw informacji (PSVI). PSVI jest oryginalnym danych wejściowych XML zestaw informacji z nowe elementy informacje dodane i nowy właściwości dodawane do istniejących elementów informacji. Istnieją trzy klasy szerokiego informacji dodawanych do zestaw informacji XML w PSVI, które są udostępniane przez <xref:System.Xml.XPath.XPathNavigator>.  
   
-1.  Wyniki sprawdzania poprawności: Informacje dotyczące tego, czy element lub atrybut został pomyślnie zweryfikowany czy nie. To jest uwidaczniany przez <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> właściwość <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
+1. Wyniki sprawdzania poprawności: Informacje dotyczące tego, czy element lub atrybut został pomyślnie zweryfikowany czy nie. To jest uwidaczniany przez <xref:System.Xml.Schema.IXmlSchemaInfo.Validity%2A> właściwość <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
-2.  Domyślne informacje: Wskazanie, czy wartość elementu lub atrybutu uzyskano przy użyciu wartości domyślnych, określona w schemacie, czy nie. To jest uwidaczniany przez <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> właściwość <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
+2. Domyślne informacje: Wskazanie, czy wartość elementu lub atrybutu uzyskano przy użyciu wartości domyślnych, określona w schemacie, czy nie. To jest uwidaczniany przez <xref:System.Xml.Schema.IXmlSchemaInfo.IsDefault%2A> właściwość <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
-3.  Deklaracje typów: Odwołania do składników schematu, które mogą być definicje typów lub elementów i atrybutów deklaracji. <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> Właściwość <xref:System.Xml.XPath.XPathNavigator> zawiera informacje o określonym typie węzła, jeśli jest on prawidłowy. W przypadku ważności węzeł jest nieznany, takie jak kiedy została zweryfikowana następnie później edytować. a następnie <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> właściwość jest ustawiona na `null` , ale informacje o typie jest nadal dostępne z poziomu różnych właściwości obiektu <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
+3. Deklaracje typów: Odwołania do składników schematu, które mogą być definicje typów lub elementów i atrybutów deklaracji. <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> Właściwość <xref:System.Xml.XPath.XPathNavigator> zawiera informacje o określonym typie węzła, jeśli jest on prawidłowy. W przypadku ważności węzeł jest nieznany, takie jak kiedy została zweryfikowana następnie później edytować. a następnie <xref:System.Xml.XPath.XPathNavigator.XmlType%2A> właściwość jest ustawiona na `null` , ale informacje o typie jest nadal dostępne z poziomu różnych właściwości obiektu <xref:System.Xml.XPath.XPathNavigator.SchemaInfo%2A> właściwość <xref:System.Xml.XPath.XPathNavigator> klasy.  
   
  W poniższym przykładzie pokazano, korzystając z informacji udostępnianych przez zestaw wpis schematu sprawdzania poprawności informacji <xref:System.Xml.XPath.XPathNavigator>.  
   

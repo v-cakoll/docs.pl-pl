@@ -2,12 +2,12 @@
 title: 'Instrukcje: Marka, model i mapowanie plików zasobów osadzonych'
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329534"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>Instrukcje: Marka, model i mapowanie plików zasobów osadzonych
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Umożliwia wdrażanie modelu i mapowania plików jako zasoby osadzone w aplikacji. W tej samej domenie aplikacji, ponieważ połączenie jednostki musi można załadować zestawu z osadzonym modelem i mapowania plików. Aby uzyskać więcej informacji, zobacz [parametry połączenia](../../../../../docs/framework/data/adonet/ef/connection-strings.md). Domyślnie [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] narzędzia osadzić modelu i mapowania plików. Podczas definiowania ręcznie modelu i mapowania plików, użyj tej procedury, aby upewnić się, że pliki są wdrażane jako zasoby osadzone, wraz z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
@@ -17,13 +17,13 @@ ms.locfileid: "59138596"
   
 ### <a name="to-embed-model-and-mapping-files"></a>Aby osadzić modelu i mapowania plików  
   
-1.  W **Eksploratora rozwiązań**, wybierz plik koncepcyjnej (.csdl).  
+1. W **Eksploratora rozwiązań**, wybierz plik koncepcyjnej (.csdl).  
   
-2.  W **właściwości** Ustaw okienku **Build Action** do **zasób osadzony**.  
+2. W **właściwości** Ustaw okienku **Build Action** do **zasób osadzony**.  
   
-3.  Powtórz kroki 1 i 2 dla pliku magazynu (ssdl) i pliku mapowania (MSL albo identyfikatorem).  
+3. Powtórz kroki 1 i 2 dla pliku magazynu (ssdl) i pliku mapowania (MSL albo identyfikatorem).  
   
-4.  W **Eksploratora rozwiązań**, kliknij dwukrotnie plik App.config, a następnie zmodyfikuj `Metadata` parametru w `connectionString` atrybutu na podstawie jednej z następujących formatów:  
+4. W **Eksploratora rozwiązań**, kliknij dwukrotnie plik App.config, a następnie zmodyfikuj `Metadata` parametru w `connectionString` atrybutu na podstawie jednej z następujących formatów:  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   

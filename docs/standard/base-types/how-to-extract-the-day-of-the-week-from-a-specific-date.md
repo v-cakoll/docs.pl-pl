@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327766"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty
 .NET Framework ułatwia ustalenie porządkowe dzień tygodnia dla określonej daty i wyświetlić nazwę zlokalizowanej dzień tygodnia dla określonej daty. Wartość wyliczana, który wskazuje dzień tygodnia odpowiadający określonej daty jest dostępne z <xref:System.DateTime.DayOfWeek%2A> lub <xref:System.DateTimeOffset.DayOfWeek%2A> właściwości. Pobieranie nazwy dnia tygodnia jest operacją formatowania, które mogą być wykonywane przez wywołanie metody formatowania, takie jak wartości daty i godziny `ToString` metody lub <xref:System.String.Format%2A?displayProperty=nameWithType> metody. W tym temacie przedstawiono sposób wykonywania tych operacji formatowania.  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>Aby wyodrębnić liczbę określającą dzień tygodnia z określonej daty  
   
-1.  Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Użyj <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> właściwość służąca do pobierania <xref:System.DayOfWeek> wartość, która wskazuje dzień tygodnia.  
+2. Użyj <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> właściwość służąca do pobierania <xref:System.DayOfWeek> wartość, która wskazuje dzień tygodnia.  
   
-3.  W razie potrzeby rzutowania (w języku C#) lub przekonwertować (w języku Visual Basic) <xref:System.DayOfWeek> wartości na liczbę całkowitą.  
+3. W razie potrzeby rzutowania (w języku C#) lub przekonwertować (w języku Visual Basic) <xref:System.DayOfWeek> wartości na liczbę całkowitą.  
   
  Poniższy przykład Wyświetla całkowitą reprezentującą dzień tygodnia z określonej daty.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537975"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>Aby wyodrębnić nazwy dnia tygodnia z określonej daty  
   
-1.  Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Można wyodrębnić nazwy dnia tygodnia bieżącej kultury lub określonej kultury:  
+2. Można wyodrębnić nazwy dnia tygodnia bieżącej kultury lub określonej kultury:  
   
     1.  Aby wyodrębnić nazwy dnia tygodnia bieżącej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metodę wystąpienia, a następnie przekazać ten ciąg "ddd" jako `format` parametru. W poniższym przykładzie pokazano wywołanie metody <xref:System.DateTime.ToString%28System.String%29> metody.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537975"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>Aby wyodrębnić Pełna nazwa dnia tygodnia z określonej daty  
   
-1.  Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
+1. Jeśli pracujesz z ciągiem znaków reprezentującym datę, należy przekonwertować ciąg do wartości <xref:System.DateTime> lub <xref:System.DateTimeOffset> przy użyciu statycznej metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>.  
   
-2.  Można wyodrębnić Pełna nazwa dnia tygodnia bieżącej kultury lub określonej kultury:  
+2. Można wyodrębnić Pełna nazwa dnia tygodnia bieżącej kultury lub określonej kultury:  
   
     1.  Aby wyodrębnić nazwy dnia tygodnia bieżącej kultury, należy wywołać wartość daty i godziny <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> lub <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> metodę wystąpienia, a następnie przekazać ten ciąg "dddd" jako `format` parametru. W poniższym przykładzie pokazano wywołanie metody <xref:System.DateTime.ToString%28System.String%29> metody.  
   

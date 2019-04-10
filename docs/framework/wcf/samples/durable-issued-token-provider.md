@@ -2,12 +2,12 @@
 title: Niezawodny dostawca wystawionych tokenów
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103262"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329755"
 ---
 # <a name="durable-issued-token-provider"></a>Niezawodny dostawca wystawionych tokenów
 Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostawca wystawionych tokenów.  
@@ -114,7 +114,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostaw
   
 #### <a name="to-develop-a-custom-token-provider"></a>Tworzenie niestandardowego dostawcy tokenów  
   
-1.  Pisania niestandardowego dostawcy tokenów.  
+1. Pisania niestandardowego dostawcy tokenów.  
   
      Przykład implementuje niestandardowego dostawcę tokenów, który zwraca token zabezpieczający pobrane z pamięci podręcznej.  
   
@@ -133,7 +133,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostaw
     }  
     ```  
   
-2.  Napisz Menedżer tokenów zabezpieczeń niestandardowych.  
+2. Napisz Menedżer tokenów zabezpieczeń niestandardowych.  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> Służy do tworzenia <xref:System.IdentityModel.Selectors.SecurityTokenProvider> dla określonego <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> przekazanego do niej w `CreateSecurityTokenProvider` metody. Menedżer tokenów zabezpieczeń umożliwia również tworzenie wystawców uwierzytelnienia tokenu i serializatorów tokenu, ale te nie są objęte tego przykładu. W tym przykładzie Menedżer tokenów zabezpieczeń niestandardowe dziedziczy <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> klasy i zastąpień `CreateSecurityTokenProvider` żądana jest metoda, aby zwrócić niestandardowego dostawcy tokenów gdy przekazany wymagania tokenu wskazują, że wystawiony token.  
   
@@ -162,7 +162,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostaw
     }  
     ```  
   
-3.  Wpisz poświadczenia niestandardowego klienta.  
+3. Wpisz poświadczenia niestandardowego klienta.  
   
      Klasa poświadczeń klienta jest używany do reprezentowania poświadczenia, które są skonfigurowane dla serwera proxy klienta i tworzy bezpieczeństwo Menedżer tokenów, który jest używany do uzyskiwania wystawców uwierzytelnienia tokenu, dostawcy tokenów i tokenów serializatory.  
   
@@ -204,7 +204,7 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostaw
     }  
     ```  
   
-4.  Implementowanie pamięci podręcznej tokenu. W przykładowej implementacji użyto abstrakcyjna klasa bazowa, za pomocą którego odbiorców tokenu pamięć podręczna wchodzić w interakcje z pamięcią podręczną.  
+4. Implementowanie pamięci podręcznej tokenu. W przykładowej implementacji użyto abstrakcyjna klasa bazowa, za pomocą którego odbiorców tokenu pamięć podręczna wchodzić w interakcje z pamięcią podręczną.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Ten przykład demonstruje sposób implementacji niestandardowego klienta, dostaw
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Uruchom plik Setup.cmd plik do tworzenia wymaganych certyfikatów.  
+1. Uruchom plik Setup.cmd plik do tworzenia wymaganych certyfikatów.  
   
-2.  Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Upewnij się, że wszystkie projekty w rozwiązaniu są kompilowane (udostępnione, RSTRSTR, usługi, SecurityTokenService i klienta).  
+2. Aby skompilować rozwiązanie, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md). Upewnij się, że wszystkie projekty w rozwiązaniu są kompilowane (udostępnione, RSTRSTR, usługi, SecurityTokenService i klienta).  
   
-3.  Upewnij się, że Service.exe i SecurityTokenService.exe są uruchomione z uprawnieniami administratora.  
+3. Upewnij się, że Service.exe i SecurityTokenService.exe są uruchomione z uprawnieniami administratora.  
   
-4.  Uruchom Client.exe.  
+4. Uruchom Client.exe.  
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
-1.  Uruchom Cleanup.cmd w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+1. Uruchom Cleanup.cmd w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 > [!IMPORTANT]
 >  Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

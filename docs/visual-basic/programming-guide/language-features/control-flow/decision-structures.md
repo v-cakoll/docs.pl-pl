@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825381"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318939"
 ---
 # <a name="decision-structures-visual-basic"></a>Struktury decyzji (Visual Basic)
 Visual Basic umożliwia warunki badania i wykonywać różne operacje, w zależności od wyników tego testu. Możesz sprawdzić warunku jest wartość true lub false dla różnych wartości wyrażenia lub różne wyjątki generowane, gdy wykonać serię instrukcji.  
   
  Poniższa ilustracja przedstawia strukturę decyzji, które sprawdza, czy warunek jest spełniony i wykonują różne akcje zależnie od tego, czy jest wartość PRAWDA lub FAŁSZ.  
   
- ![Schemat blokowy If... Następnie... Konstrukcja ELSE](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "ifthenelse —")  
-Wykonywanie różnych akcji, gdy warunek ma wartość PRAWDA, a jeśli ma wartość false  
+ ![Schemat blokowy If... Następnie... Budowa else.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If...Then...Else Construction  
  `If...Then...Else` konstrukcje umożliwiają testowanie dla co najmniej jeden warunek i uruchomić jedną lub więcej instrukcji w zależności od każdego warunku. Można przetestować warunki i akcje w następujący sposób:  
@@ -52,4 +51,4 @@ Wykonywanie różnych akcji, gdy warunek ma wartość PRAWDA, a jeśli ma warto�
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [If, operator](../../../../visual-basic/language-reference/operators/if-operator.md)
+- [If — operator](../../../../visual-basic/language-reference/operators/if-operator.md)

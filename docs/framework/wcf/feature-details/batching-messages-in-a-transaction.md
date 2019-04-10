@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310528"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Tworzenie partii komunikatów w ramach transakcji
 Umieszczonych w kolejce aplikacji używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie wiadomości. Transakcje, jednak są kosztownych operacji i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów, aby zwiększyć przepływność komunikatów jest korzystać z aplikacji, Odczyt i przetwarzanie wielu komunikatów w ramach jednej transakcji. Jest to kompromis między wydajnością i odzyskiwanie: w miarę zwiększania liczby wiadomości w partii to samo dotyczy ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesji. A *sesji* to grupa pokrewne wiadomości, które są przetwarzane przez jedną aplikację i zadeklarowane jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy pokrewne wiadomości, które muszą być przetwarzane razem. Na przykład jest online zakupów witryna sieci Web. *Partie* będą używani do przetwarzania wielu, niepowiązanych komunikatów w taki sposób, że wzrost komunikatu przepływności. Aby uzyskać więcej informacji o sesjach, zobacz [grupowanie komunikatów w kolejce w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez jedną aplikację i zadeklarowane jako pojedynczą jednostkę, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposobu uruchamiania aplikacji.  
@@ -31,11 +31,11 @@ Umieszczonych w kolejce aplikacji używać transakcji, aby zapewnić poprawnoś�
 ## <a name="leaving-batching-mode"></a>Pozostawienie tryb dzielenia na partie  
  Jeśli wiadomość w usłudze batch spowoduje przerwanie transakcji, wykonywane są następujące kroki:  
   
-1.  Całą partię komunikatów jest wycofywana.  
+1. Całą partię komunikatów jest wycofywana.  
   
-2.  Komunikaty są odczytywane po kolei, dopóki liczba wiadomości, przeczytaj przekracza dwukrotnie maksymalny rozmiar partii.  
+2. Komunikaty są odczytywane po kolei, dopóki liczba wiadomości, przeczytaj przekracza dwukrotnie maksymalny rozmiar partii.  
   
-3.  Tryb partii jest ponowne wprowadzenie.  
+3. Tryb partii jest ponowne wprowadzenie.  
   
 ## <a name="choosing-the-batch-size"></a>Wybierając rozmiar partii  
  Rozmiar partii jest zależne od aplikacji. Metoda empiryczne jest najlepszym sposobem na rozmiar optymalne partii dla aplikacji. Należy pamiętać, wybierając rozmiar partii, aby wybrać rozmiar zgodnie z modelem rzeczywiste wdrożenie Twojej aplikacji. Na przykład podczas wdrażania aplikacji, jeśli potrzebujesz programu SQL server na komputerze zdalnym i transakcji, która obejmuje kolejki i programu SQL server, następnie rozmiar partii najlepiej zależy od tego dokładnej konfiguracji uruchamiania.  

@@ -2,12 +2,12 @@
 title: '- (Negatywna) (Jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: 208e54ef-4741-4ec5-89d6-6ff700863cb0
-ms.openlocfilehash: 343f53b2a6fc54a5be6f8673348384567b48262b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e5512546faeaa9760dcf135165a999a6f95322b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311009"
 ---
 # <a name="--negative-entity-sql"></a>-(Ujemnej) (jednostka SQL)
 Zwraca wartość ujemną wartość wyrażenia liczbowego.  
@@ -31,9 +31,9 @@ Zwraca wartość ujemną wartość wyrażenia liczbowego.
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operator arytmetyczny, aby zwrócić wartość ujemną wartość wyrażenia liczbowego. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#NEGATIVE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#negative)]  
   

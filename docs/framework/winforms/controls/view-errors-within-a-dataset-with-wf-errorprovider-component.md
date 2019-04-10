@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 190b53a248a77f03dd5d8cb13cb59a439fa9960d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157628"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310450"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows
 Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> składnika, aby wyświetlić błędy kolumny w ramach zestawu danych lub innego źródła danych. Aby uzyskać <xref:System.Windows.Forms.ErrorProvider> składnika, aby wyświetlić błędy danych na formularzu, nie musi być bezpośrednio powiązany z kontrolką. Gdy jest powiązany ze źródłem danych, ona wyświetlona ikona błędu obok żadnego formantu, który jest powiązany z tego samego źródła danych.  
@@ -24,7 +24,7 @@ Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> sk�
   
 ### <a name="to-display-data-errors"></a>Aby wyświetlić błędy danych  
   
-1.  Powiąż składnik do określonej kolumny w tabeli danych.  
+1. Powiąż składnik do określonej kolumny w tabeli danych.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> sk�
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  Ustaw <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> właściwości formularza.  
+2. Ustaw <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> właściwości formularza.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ Można używać formularzy Windows <xref:System.Windows.Forms.ErrorProvider> sk�
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  Ustaw pozycję bieżącego rekordu do wiersza, który zawiera błąd kolumny.  
+3. Ustaw pozycję bieżącego rekordu do wiersza, który zawiera błąd kolumny.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  

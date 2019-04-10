@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310359"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>Instrukcje: używanie dostawcy członkostwa platformy ASP.NET
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy członkostwa jest funkcją, która umożliwia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deweloperom tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie unikatowych użytkowników kombinacji nazwy i hasła. Za pomocą tej funkcji każdy użytkownik może ustanowić konto w witrynie i logowanie za wyłączny dostęp do witryn i usług. Jest to w przeciwieństwie do zabezpieczeń Windows, która wymaga od użytkowników mają konta w domenie Windows. Zamiast tego można użyć każdemu użytkownikowi, który dostarcza swoje poświadczenia (kombinacja nazwy i hasła użytkownika), lokacji i jej usługi.  
@@ -27,13 +27,13 @@ ms.locfileid: "59140611"
   
 ### <a name="to-configure-the-membership-provider"></a>Aby skonfigurować dostawcy członkostwa  
   
-1.  W pliku Web.config w obszarze <`system.web`> element, Utwórz <`membership`> element.  
+1. W pliku Web.config w obszarze <`system.web`> element, Utwórz <`membership`> element.  
   
-2.  W obszarze `<membership>` elementu, Utwórz `<providers>` elementu.  
+2. W obszarze `<membership>` elementu, Utwórz `<providers>` elementu.  
   
-3.  Jako element podrzędny <`providers`> elementu Dodawanie `<clear />` element, aby opróżnić kolekcja dostawców.  
+3. Jako element podrzędny <`providers`> elementu Dodawanie `<clear />` element, aby opróżnić kolekcja dostawców.  
   
-4.  W obszarze `<clear />` elementu, Utwórz <`add`> element z następującymi atrybutami Ustaw odpowiednie wartości: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, i `passwordFormat`. `name` Atrybut jest używany później jako wartość w pliku konfiguracji. Poniższy przykład ustawia ją na `SqlMembershipProvider`.  
+4. W obszarze `<clear />` elementu, Utwórz <`add`> element z następującymi atrybutami Ustaw odpowiednie wartości: `name`, `type`, `connectionStringName`, `applicationName`, `enablePasswordRetrieval`, `enablePasswordReset`, `requiresQuestionAndAnswer` , `requiresUniqueEmail`, i `passwordFormat`. `name` Atrybut jest używany później jako wartość w pliku konfiguracji. Poniższy przykład ustawia ją na `SqlMembershipProvider`.  
   
      Sekcja konfiguracji można znaleźć w poniższym przykładzie.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "59140611"
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>Aby skonfigurować zabezpieczenia usługi do akceptowania kombinacja nazwy i hasła użytkownika  
   
-1.  W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
+1. W pliku konfiguracji w obszarze [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) elementu Dodawanie [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) elementu.  
   
-2.  Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) do sekcji wiązania. Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+2. Dodaj [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) do sekcji wiązania. Aby uzyskać więcej informacji na temat tworzenia elementu powiązania WCF zobacz [jak: Określanie wiązań usługi w konfiguracji](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
-3.  Ustaw atrybut `mode` elementu `<security>` na `Message`.  
+3. Ustaw atrybut `mode` elementu `<security>` na `Message`.  
   
-4.  Ustaw `clientCredentialType` atrybut <`message`> elementu `UserName`. Określa, że pary nazwa/hasło użytkownika będzie służyć jako poświadczeń klienta.  
+4. Ustaw `clientCredentialType` atrybut <`message`> elementu `UserName`. Określa, że pary nazwa/hasło użytkownika będzie służyć jako poświadczeń klienta.  
   
      Poniższy przykład pokazuje kod konfiguracji dla wiązania.  
   
@@ -85,22 +85,22 @@ ms.locfileid: "59140611"
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>Aby skonfigurować usługę do używania dostawcy członkostwa  
   
-1.  Jako element podrzędny `<system.serviceModel>` elementu Dodawanie [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) — element  
+1. Jako element podrzędny `<system.serviceModel>` elementu Dodawanie [ \<zachowania >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) — element  
   
-2.  Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do <`behaviors`> element.  
+2. Dodaj [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) do <`behaviors`> element.  
   
-3.  Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw `name` atrybutu do odpowiedniej wartości.  
+3. Dodaj [ \<zachowanie >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) i ustaw `name` atrybutu do odpowiedniej wartości.  
   
-4.  Dodaj [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) do <`behavior`> element.  
+4. Dodaj [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) do <`behavior`> element.  
   
-5.  Dodaj [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) do `<serviceCredentials>` elementu.  
+5. Dodaj [ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md) do `<serviceCredentials>` elementu.  
   
-6.  Ustaw `userNamePasswordValidationMode` atrybutu `MembershipProvider`.  
+6. Ustaw `userNamePasswordValidationMode` atrybutu `MembershipProvider`.  
   
     > [!IMPORTANT]
     >  Jeśli `userNamePasswordValidationMode` wartość nie jest ustawiona, usługi WCF korzysta z uwierzytelniania Windows zamiast [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa.  
   
-7.  Ustaw `membershipProviderName` atrybutu Nazwa dostawcy (określone podczas dodawania dostawcy w pierwszej procedurze w tym temacie). W poniższym przykładzie przedstawiono `<serviceCredentials>` fragmentu do tego punktu.  
+7. Ustaw `membershipProviderName` atrybutu Nazwa dostawcy (określone podczas dodawania dostawcy w pierwszej procedurze w tym temacie). W poniższym przykładzie przedstawiono `<serviceCredentials>` fragmentu do tego punktu.  
   
     ```xml  
     <behaviors>  

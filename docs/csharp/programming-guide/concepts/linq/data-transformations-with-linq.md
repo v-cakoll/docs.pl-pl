@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: be488b262764480b519e291727a21830d7a18e8f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326063"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dotyczy nie tylko podczas pobierania danych. Należy również zaawansowane narzędzie do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, można użyć sekwencji źródłowej, jak dane wejściowe i zmodyfikuj go na wiele sposobów, aby utworzyć nową sekwencję danych wyjściowych. Można zmodyfikować sekwencji bez modyfikowania samych elementów, sortowania i grupowania. Ale być może z najbardziej zaawansowanych funkcji [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest możliwość tworzenia nowych typów. Jest to realizowane w [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli. Na przykład należy wykonać następujące zadania:  
@@ -44,14 +44,14 @@ ms.locfileid: "57201433"
 ## <a name="selecting-a-subset-of-each-source-element"></a>Wybranie podzestawu każdego elementu źródłowego  
  Istnieją dwa podstawowe sposoby, aby wybrać podzestawu każdego elementu w sekwencji źródłowej:  
   
-1.  Aby wybrać tylko jeden element członkowski elementu źródłowego, należy użyć operacji kropka. W poniższym przykładzie przyjęto założenie, że `Customer` obiekt zawiera kilka właściwości publicznej, w tym ciągu o nazwie `City`. Po wykonaniu tego zapytania powoduje wygenerowanie danych wyjściowych sekwencją ciągów.  
+1. Aby wybrać tylko jeden element członkowski elementu źródłowego, należy użyć operacji kropka. W poniższym przykładzie przyjęto założenie, że `Customer` obiekt zawiera kilka właściwości publicznej, w tym ciągu o nazwie `City`. Po wykonaniu tego zapytania powoduje wygenerowanie danych wyjściowych sekwencją ciągów.  
   
     ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2.  Aby utworzyć elementów, które zawierają więcej niż jedną właściwość z elementu źródłowego, należy użyć inicjatora obiektów, przy użyciu nazwanego obiektu lub typu anonimowego. Poniższy przykład pokazuje użycie typu anonimowego do hermetyzacji dwie właściwości każdego z nich `Customer` elementu:  
+2. Aby utworzyć elementów, które zawierają więcej niż jedną właściwość z elementu źródłowego, należy użyć inicjatora obiektów, przy użyciu nazwanego obiektu lub typu anonimowego. Poniższy przykład pokazuje użycie typu anonimowego do hermetyzacji dwie właściwości każdego z nich `Customer` elementu:  
   
     ```csharp
     var query = from cust in Customer  
@@ -100,8 +100,8 @@ ms.locfileid: "57201433"
 ## <a name="see-also"></a>Zobacz także
 
 - [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
+- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
 - [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [select, klauzula](../../../../csharp/language-reference/keywords/select-clause.md)
+- [select — Klauzula](../../../../csharp/language-reference/keywords/select-clause.md)

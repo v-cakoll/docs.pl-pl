@@ -5,31 +5,31 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
-ms.openlocfilehash: 00c1a58bd58b67f35d6e5782f53eb15693485ca5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326557"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>Instrukcje: Zmiana wartości istniejącego ustawienia w czasie projektowania
 Visual Studio umożliwia edytowanie wartości istniejącego ustawienia w projekcie.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-c"></a>Aby zmienić wartość istniejącego ustawienia w czasie projektowania w języku C\#
   
-1.  W **Eksploratora rozwiązań**, rozwiń węzeł **właściwości** węzła projektu.  
+1. W **Eksploratora rozwiązań**, rozwiń węzeł **właściwości** węzła projektu.  
   
-2.  Kliknij dwukrotnie plik .settings, w której chcesz dodać nowe ustawienie. Domyślna nazwa dla tego pliku jest Settings.settings.  
+2. Kliknij dwukrotnie plik .settings, w której chcesz dodać nowe ustawienie. Domyślna nazwa dla tego pliku jest Settings.settings.  
   
-3.  Projektant ustawień zawiera ustawienie, dla którego chcesz zmienić wartość, a następnie wpisz nową wartość w kolumnie wartości.  
+3. Projektant ustawień zawiera ustawienie, dla którego chcesz zmienić wartość, a następnie wpisz nową wartość w kolumnie wartości.  
   
 ### <a name="to-change-the-value-of-an-existing-setting-at-design-time-in-visual-basic"></a>Aby zmienić wartość istniejącego ustawienia w czasie projektowania w języku Visual Basic  
   
-1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu i wybierz polecenie **właściwości**.  
+1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy węzeł projektu i wybierz polecenie **właściwości**.  
   
-2.  W **właściwości** wybierz opcję **ustawienia** kartę.  
+2. W **właściwości** wybierz opcję **ustawienia** kartę.  
   
-3.  Projektant ustawień zawiera ustawienie, dla którego chcesz zmienić wartość, a następnie wpisz nową wartość w kolumnie wartości.  
+3. Projektant ustawień zawiera ustawienie, dla którego chcesz zmienić wartość, a następnie wpisz nową wartość w kolumnie wartości.  
   
 ## <a name="see-also"></a>Zobacz także
 

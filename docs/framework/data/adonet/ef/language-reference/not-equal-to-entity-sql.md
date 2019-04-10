@@ -2,12 +2,12 @@
 title: '! = (Nie równa się) (jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
-ms.openlocfilehash: 3d6e391e708b81c45af82280f200aebdaef41421
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310970"
 ---
 # <a name="-not-equal-to-entity-sql"></a>! = (Nie równa się) (jednostka SQL)
 Porównuje dwa wyrażenia w celu ustalenia, czy po lewej stronie wyrażenia nie jest równa wyrażenie prawej krawędzi. ! = — Operator (nie równa się) jest funkcjonalnym odpowiednikiem < > — operator.  
@@ -30,9 +30,9 @@ expression <> expression
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa! = — operator do porównywania dwóch wyrażeń w celu ustalenia, czy po lewej stronie wyrażenia nie jest równa wyrażenie prawej krawędzi. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#NOT_EQUALS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#not_equals)]  
   

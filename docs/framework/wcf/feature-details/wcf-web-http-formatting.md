@@ -2,12 +2,12 @@
 title: Formatowanie kodu HTTP dla sieci Web WCF
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094453"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331042"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatowanie kodu HTTP dla sieci Web WCF
 Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określanie najlepszy format dla operacji usługi do zwrócenia w odpowiedzi. Obsługiwane są dwie metody, określając odpowiedni format: automatyczne i jawne.  
@@ -15,13 +15,13 @@ Model programowania protokołu HTTP sieci Web WCF umożliwia dynamiczne określa
 ## <a name="automatic-formatting"></a>Formatowanie automatyczne  
  Po włączeniu automatycznego formatowania wybiera najlepszy format, w której ma zostać zwrócone w odpowiedzi. Określa najlepszy format, sprawdzając poniższe czynności:  
   
-1.  Do typów nośników w nagłówku Accept komunikatu żądania.  
+1. Do typów nośników w nagłówku Accept komunikatu żądania.  
   
-2.  Typ zawartości komunikatu żądania.  
+2. Typ zawartości komunikatu żądania.  
   
-3.  Domyślny format ustawienie w operacji.  
+3. Domyślny format ustawienie w operacji.  
   
-4.  Domyślny format w WebHttpBehavior.  
+4. Domyślny format w WebHttpBehavior.  
   
  Wiadomość dotycząca żądania zawiera nagłówek Accept infrastruktury usług Windows Communication Foundation (WCF) wyszukuje typ, który ją obsługuje. Jeśli `Accept` nagłówek określa priorytety dla jego typów nośników, są uwzględniane. Jeśli nie formatu odpowiedniego znajduje się w `Accept` nagłówka typu zawartości komunikatu żądania jest używana. Jeśli nie odpowiednie content-type jest określona, jest używany domyślny format ustawienie dla tej operacji. Domyślny format została ustawiona za pomocą `ResponseFormat` parametru <xref:System.ServiceModel.Web.WebGetAttribute> i <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybutów. Jeśli nie domyślny format jest określona w operacji, wartość <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> właściwość jest używana. Automatyczne formatowanie opiera się na <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> właściwości. Jeśli ta właściwość jest równa `true`, infrastruktura WCF Określa format najlepszy do użycia. Automatyczne wybieranie formatu jest domyślnie wyłączona dla zapewnienia zgodności. Można włączyć automatyczne wybieranie formatu programowo lub za pomocą konfiguracji. Poniższy przykład pokazuje, jak włączyć automatyczne wybieranie formatu w kodzie.  
   

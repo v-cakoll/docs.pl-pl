@@ -3,23 +3,23 @@ title: Co nowego w języku C# 7.0 — przewodnik po języku C#
 description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 8cf9994f74781584b3d7500c09656d4798af32ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654188"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326544"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
 C# 7.0 dodaje wiele nowych funkcji do języka C#:
-* [`out` Zmienne](#out-variables)
+* [`out` zmienne](#out-variables)
     - Można zadeklarować `out` wartości wbudowanych jako argumenty do metody, gdzie są używane.
 * [Krotki](#tuples)
     - Można tworzyć lekkie, bez nazwy typów, które zawierają wiele pola publiczne. Kompilatory i narzędzia IDE zrozumieć semantykę tych typów.
-* [Odrzucenia](#discards)
+* [Odrzuca](#discards)
     - Odrzuca są tymczasowego, tylko do zapisu zmienne używane w przypisania, jeśli nie dba o wartość przypisana. Są one najbardziej użyteczne, gdy dekonstrukcja krotek i typy zdefiniowane przez użytkownika, a także podczas wywoływania metody z `out` parametrów.
-* [Dopasowanie do wzorca](#pattern-matching)
+* [Dopasowanie wzorca](#pattern-matching)
     - Można utworzyć logikę rozgałęziania, na podstawie dowolnego typu i wartości elementów członkowskich tych typów.
 * [`ref` Zmienne lokalne i](#ref-locals-and-returns)
     - Metoda zmienne lokalne i wartości zwracane mogą być odwołania do innych magazynów.
@@ -27,7 +27,7 @@ C# 7.0 dodaje wiele nowych funkcji do języka C#:
     - Można zagnieżdżać funkcji w innych funkcjach, aby ograniczyć ich zakres i widoczność.
 * [Więcej elementy członkowskie z wyrażeniem](#more-expression-bodied-members)
     - Zwiększył się listę elementów członkowskich, które można tworzyć za pomocą wyrażeń.
-* [`throw` Expressions](#throw-expressions)
+* [`throw` Wyrażenia](#throw-expressions)
     - W konstrukcji kodu, które wcześniej nie były dozwolone, ponieważ może generować wyjątki `throw` został instrukcję. 
 * [Uogólnionego asynchroniczne typy zwracane](#generalized-async-return-types)
     - Metody zadeklarowane za pomocą `async` modyfikator może zwrócić inne typy oprócz `Task` i `Task<T>`.
@@ -170,7 +170,7 @@ Ta funkcja umożliwia algorytmy, które używają i zwracać odwołań do zmienn
 
 Można zadeklarować wartość zwracana jako `ref` i zmodyfikować tę wartość w macierzy, jak pokazano w poniższym kodzie:
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 C# Język ma kilka reguł, które można chronić przed używaniem `ref` zmiennych lokalnych i zwraca:
 

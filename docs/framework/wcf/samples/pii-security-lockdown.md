@@ -2,12 +2,12 @@
 title: Blokada zabezpieczeń PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122060"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326648"
 ---
 # <a name="pii-security-lockdown"></a>Blokada zabezpieczeń PII
 W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezpieczeniami usługi Windows Communication Foundation (WCF) przez:  
@@ -41,11 +41,11 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Aby zaszyfrować wartości w sekcji appSettings w pliku Web.config dla przykładu  
   
-1.  Otwórz wiersz polecenia przy użyciu Start -> Uruchom... Wpisz `cmd` i kliknij przycisk **OK**.  
+1. Otwórz wiersz polecenia przy użyciu Start -> Uruchom... Wpisz `cmd` i kliknij przycisk **OK**.  
   
-2.  Przejdź do bieżącego katalogu .NET Framework, wydając polecenie: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2. Przejdź do bieżącego katalogu .NET Framework, wydając polecenie: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
-3.  Szyfrowanie ustawienia konfiguracji appSettings w folderze Web.config przy wykonaniu poniższego polecenia: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3. Szyfrowanie ustawienia konfiguracji appSettings w folderze Web.config przy wykonaniu poniższego polecenia: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
  Więcej informacji o szyfrowaniu sekcje pliki konfiguracji można znaleźć, przeczytaj instrukcje na interfejsie DPAPI w konfiguracji platformy ASP.NET ([tworzenie zabezpieczanie aplikacji ASP.NET: Uwierzytelniania, autoryzacji i bezpieczna komunikacja](https://go.microsoft.com/fwlink/?LinkId=95137)) i porad na RSA w konfiguracji platformy ASP.NET ([How to: Szyfrowanie sekcji konfiguracyjnych w programie ASP.NET 2.0 przy użyciu RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
@@ -130,17 +130,17 @@ W tym przykładzie pokazano, jak kontrolować kilka funkcji związanych z zabezp
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Edytowanie pliku Machine.config można ustawić `enableLoggingKnownPii` atrybutu `true`, dodając węzły nadrzędne, jeśli to konieczne.  
+2. Edytowanie pliku Machine.config można ustawić `enableLoggingKnownPii` atrybutu `true`, dodając węzły nadrzędne, jeśli to konieczne.  
   
-3.  Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>Aby wyczyścić próbki  
   
-1.  Edytowanie pliku Machine.config można ustawić `enableLoggingKnownPii` atrybutu `false`.  
+1. Edytowanie pliku Machine.config można ustawić `enableLoggingKnownPii` atrybutu `false`.  
   
 ## <a name="see-also"></a>Zobacz także
 

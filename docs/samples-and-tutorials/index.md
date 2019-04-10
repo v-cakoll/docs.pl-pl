@@ -4,12 +4,12 @@ description: Informacji na temat samouczki i przykłady kodu dla platformy .NET 
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558965"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330821"
 ---
 # <a name="net-samples-and-tutorials"></a>Samouczki i przykłady kodu platformy .NET
 
@@ -53,11 +53,11 @@ Ten przykład przedstawia składnię i funkcje dla C# indeksatorów. [Ukończone
 
 Ten przykład przedstawia składnię i funkcje dla C# delegaci i zdarzenia. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) jest dostępny w repozytorium dotnet/samples w witrynie GitHub. A [druga próba](https://github.com/dotnet/samples/tree/master/csharp/events) koncentruje się na zdarzenia jest również w tym samym repozytorium.
 
-**[Expression Trees](../csharp/expression-trees.md)**
+**[Drzewa wyrażeń](../csharp/expression-trees.md)**
 
 Niniejszy przykład pokazuje wiele problemów, które można rozwiązać za pomocą drzewa wyrażeń. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
-**Przykłady LINQ**
+**Przykłady interfejsów LINQ**
 
 Ta seria przykłady pokazują wiele funkcji, z Language Integrated Query (LINQ). [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/core/linq/csharp) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
@@ -67,11 +67,11 @@ Ta seria przykłady pokazują wiele funkcji, z Language Integrated Query (LINQ).
 
 ### <a name="tutorials"></a>Samouczki
 
-**[Aplikacja konsolowa](../csharp/tutorials/console-teleprompter.md)**
+**[Aplikacja konsoli](../csharp/tutorials/console-teleprompter.md)**
 
 Ten samouczek pokazuje, konsola operacje We/Wy, struktury aplikacji konsoli i podstawy opartego na zadaniach asynchronicznego modelu programowania. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
-**[REST Client](../csharp/tutorials/console-webapiclient.md)**
+**[Klient REST](../csharp/tutorials/console-webapiclient.md)**
 
 Ten samouczek pokazuje, komunikacji w sieci web, serializację JSON i funkcje zorientowane obiektowo C# języka. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
@@ -112,6 +112,6 @@ Wiele tematów Pokaż kod źródłowy i przykłady, które są dostępne do wyś
 1. Nawigowanie w foldery z repozytorium do lokalizacji próbki. Względna ścieżka do lokalizacji próbki jest wyświetlany na pasku adresu przeglądarki, gdy kliknij link do przykładu.
 1. Aby uruchomić przykład, istnieje kilka opcji:
    * Użyj [narzędzi interfejsu wiersza polecenia dotnet](../core/tools/index.md): W oknie konsoli przejdź do folderu przykładu, a następnie użyj polecenia interfejsu wiersza polecenia platformy dotnet.
-   * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/) lub [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): Otwórz przykładową, wybierając **Plik > Otwórz > Projekt/rozwiązanie** z paska menu, przejdź do folderu przykładowego projektu i wybierz plik projektu (*.csproj* lub *.fsproj*).
+   * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Otwórz przykładową, wybierając **Plik > Otwórz > Projekt/rozwiązanie** z paska menu, przejdź do folderu przykładowego projektu i wybierz plik projektu (*.csproj* lub *.fsproj*).
    * Use [Visual Studio Code](https://code.visualstudio.com/): Otwórz przykładową, wybierając **Plik > Otwórz Folder** z paska menu i wybraniu folderu projektu przykładowego.
    * Użyj inne środowisko IDE, który obsługuje projektów .NET Core.

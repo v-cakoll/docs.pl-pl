@@ -2,12 +2,12 @@
 title: ORDER BY (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 3f5d3c9a65bd9ac412a908a3e850a7e01d2ee6cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116665"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328481"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (jednostka SQL)
 Określa porządek sortowania na obiekty zwrócone w instrukcji SELECT.  
@@ -118,9 +118,9 @@ SELECT C2.FirstName, C2.LastName
 ## <a name="example"></a>Przykład  
  Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytanie używa operatora w klauzuli ORDER BY, aby określić kolejność sortowania na obiekty zwrócone w instrukcji SELECT. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#ORDERBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#orderby)]  
   

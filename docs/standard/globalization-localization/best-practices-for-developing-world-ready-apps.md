@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442493"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310541"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych
 
@@ -71,7 +71,7 @@ W tej sekcji opisano najważniejsze praktyki do naśladowania podczas tworzenia 
 
 8. Użyj <xref:System.Resources.ResourceManager?displayProperty=nameWithType> klasy do pobrania zasobów na podstawie kultury.
 
-9. Użyj [programu Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) do tworzenia formularzy Windows oknach dialogowych, aby mogły być lokalizowane za pomocą [Edytor zasobów formularzy systemu Windows (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Nie Koduj okien dialogowych kontrolek Windows ręcznie.
+9. Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) do tworzenia formularzy Windows oknach dialogowych, aby mogły być lokalizowane za pomocą [Edytor zasobów formularzy systemu Windows (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Nie Koduj okien dialogowych kontrolek Windows ręcznie.
 
 10. Przygotuj do profesjonalnej lokalizacji (tłumaczenia).
 
@@ -103,5 +103,5 @@ W tej sekcji opisano najważniejsze praktyki do naśladowania podczas tworzenia 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)
+- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)
 - [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

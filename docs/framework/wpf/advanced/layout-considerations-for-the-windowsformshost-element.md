@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168990"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327857"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Opcje układu dla elementu WindowsFormsHost
 W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.WindowsFormsHost> element wchodzi w interakcję z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] system układu.  
@@ -84,13 +84,13 @@ W tym temacie opisano sposób, w jaki <xref:System.Windows.Forms.Integration.Win
 ### <a name="sizing-algorithm"></a>Algorytm zmiany rozmiaru  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element używa następującej procedury, aby rozmiar kontrolki hostowanej:  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Zastępuje element <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody.  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Zastępuje element <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metody.  
   
-2.  Określanie rozmiaru obsługiwanego formantu <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metoda wywołuje obsługiwanego formantu <xref:System.Windows.Forms.Control.GetPreferredSize%2A> metody z ograniczeniem translacji z ograniczenia przekazany do <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metody.  
+2. Określanie rozmiaru obsługiwanego formantu <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metoda wywołuje obsługiwanego formantu <xref:System.Windows.Forms.Control.GetPreferredSize%2A> metody z ograniczeniem translacji z ograniczenia przekazany do <xref:System.Windows.FrameworkElement.MeasureOverride%2A> metody.  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Metoda próbuje ustawić hostowanej kontroli do powiązanych dany rozmiar.  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Metoda próbuje ustawić hostowanej kontroli do powiązanych dany rozmiar.  
   
-4.  Jeśli kontrolka hostowanej <xref:System.Windows.Forms.Control.Size%2A> właściwość odpowiada określonym ograniczeniem, obsługiwanego formantu ma rozmiar do ograniczenia.  
+4. Jeśli kontrolka hostowanej <xref:System.Windows.Forms.Control.Size%2A> właściwość odpowiada określonym ograniczeniem, obsługiwanego formantu ma rozmiar do ograniczenia.  
   
  Jeśli <xref:System.Windows.Forms.Control.Size%2A> właściwości jest niezgodny z określonym ograniczeniem, obsługiwanego formantu nie obsługuje ciągłego zmiany rozmiaru. Na przykład <xref:System.Windows.Forms.MonthCalendar> kontrolka zezwala na tylko dyskretnych rozmiarów. Dozwolone rozmiary dla tego formantu składają się z liczb całkowitych (reprezentująca liczbę miesięcy) na szerokość i wysokość. W przypadkach, takich jak ta <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu zachowuje się w następujący sposób:  
   

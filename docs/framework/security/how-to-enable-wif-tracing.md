@@ -3,12 +3,12 @@ title: 'Instrukcje: Włączanie śledzenia programu WIF'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605179"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310268"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Instrukcje: Włączanie śledzenia programu WIF
 ## <a name="applies-to"></a>Dotyczy:  
@@ -55,19 +55,19 @@ ms.locfileid: "54605179"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>Aby utworzyć prostą aplikację platformy ASP.NET  
   
-1.  Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
+1. Uruchom program Visual Studio, a następnie kliknij przycisk **pliku**, **New**, a następnie **projektu**.  
   
-2.  W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
+2. W **nowy projekt** okna, kliknij przycisk **aplikacji formularzy sieci Web ASP.NET**.  
   
-3.  W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
+3. W **nazwa**, wprowadź `TestApp` i naciśnij klawisz **OK**.  
   
-4.  Kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
+4. Kliknij prawym przyciskiem myszy **TestApp** projekt **Eksploratora rozwiązań**, a następnie wybierz **tożsamościami i dostępem**.  
   
-5.  **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
+5. **Tożsamościami i dostępem** zostanie wyświetlone okno. W obszarze **dostawców**, wybierz opcję **testować swoją aplikację za pomocą lokalnej deweloperskiej usługi STS**, następnie kliknij przycisk **Zastosuj**.  
   
-6.  Utwórz nowy folder w nazwie **dzienniki** w katalogu głównym **C:** dysku, jak pokazano: **C:\logs**  
+6. Utwórz nowy folder w nazwie **dzienniki** w katalogu głównym **C:** dysku, jak pokazano: **C:\logs**  
   
-7.  Dodaj następujący kod  **\<system.diagnostics >** elementu *Web.config* pliku konfiguracji, natychmiast po zamykającym  **\</configSections >** elementu, jak pokazano:  
+7. Dodaj następujący kod  **\<system.diagnostics >** elementu *Web.config* pliku konfiguracji, natychmiast po zamykającym  **\</configSections >** elementu, jak pokazano:  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605179"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>Aby przetestować aplikację ASP.NET z włączoną obsługą programu WIF do śledzenia pomyślnych  
   
-1.  Uruchom rozwiązanie, naciskając klawisz **F5** klucza. Użytkownik powinien być prezentowane z domyślną stronę główną struktury ASP.NET i automatycznie uwierzytelniana przy użyciu nazwy użytkownika *Terry*, która jest domyślny użytkownik, który jest zwracany za pomocą deweloperskiej usługi STS.  
+1. Uruchom rozwiązanie, naciskając klawisz **F5** klucza. Użytkownik powinien być prezentowane z domyślną stronę główną struktury ASP.NET i automatycznie uwierzytelniana przy użyciu nazwy użytkownika *Terry*, która jest domyślny użytkownik, który jest zwracany za pomocą deweloperskiej usługi STS.  
   
-2.  Zamknij okno przeglądarki, a następnie przejdź do **C:\logs** folderu. Otwórz **C:\logs\WIF.xml** plików za pomocą edytora tekstów.  
+2. Zamknij okno przeglądarki, a następnie przejdź do **C:\logs** folderu. Otwórz **C:\logs\WIF.xml** plików za pomocą edytora tekstów.  
   
-3.  Sprawdzanie **WIF.xml** i sprawdzić, czy zawiera on zapisów, poczynając od  **\<E2ETraceEvent >**. Ślady te będą zawierać  **\<TraceRecord >** elementy z opisami do śledzenia działania, takie jak **sprawdzania poprawności SecurityToken**.
+3. Sprawdzanie **WIF.xml** i sprawdzić, czy zawiera on zapisów, poczynając od  **\<E2ETraceEvent >**. Ślady te będą zawierać  **\<TraceRecord >** elementy z opisami do śledzenia działania, takie jak **sprawdzania poprawności SecurityToken**.

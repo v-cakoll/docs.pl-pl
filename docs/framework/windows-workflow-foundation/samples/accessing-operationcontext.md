@@ -2,12 +2,12 @@
 title: Uzyskiwanie dostępu do elementu OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864303"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327961"
 ---
 # <a name="accessing-operationcontext"></a>Uzyskiwanie dostępu do elementu OperationContext
 W tym przykładzie przedstawiono sposób działania dotyczące komunikatów (<xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.Send>) może służyć za pomocą działania niestandardowego zakresu dostępu do <xref:System.ServiceModel.OperationContext.Current%2A> i dołączyć lub pobrać nagłówek niestandardowy komunikat w wiadomości wychodzące lub przychodzące.  
@@ -20,13 +20,13 @@ W tym przykładzie przedstawiono sposób działania dotyczące komunikatów (<xr
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej  
   
-1.  Ten przykład przedstawia usługi przepływu pracy za pomocą punktów końcowych HTTP. Można dodać do uruchomienia tego przykładowego, odpowiednie listy ACL adresu URL (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) szczegóły), albo przez uruchomienie programu Visual Studio jako Administrator, wykonując następujące polecenie w wierszu podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, Twoja domena i nazwa użytkownika są zastępowane.  
+1. Ten przykład przedstawia usługi przepływu pracy za pomocą punktów końcowych HTTP. Można dodać do uruchomienia tego przykładowego, odpowiednie listy ACL adresu URL (zobacz [Konfigurowanie protokołów HTTP i HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) szczegóły), albo przez uruchomienie programu Visual Studio jako Administrator, wykonując następujące polecenie w wierszu podwyższonym poziomem uprawnień, aby dodać odpowiednie listy ACL. Upewnij się, Twoja domena i nazwa użytkownika są zastępowane.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  Po dodaniu listy ACL adresu URL, wykonaj następujące kroki.  
+2. Po dodaniu listy ACL adresu URL, wykonaj następujące kroki.  
   
     1.  Skompiluj rozwiązanie.  
   

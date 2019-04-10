@@ -2,12 +2,12 @@
 title: '-target: winmdobj (opcje kompilatora C#)'
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
-ms.openlocfilehash: 4000394a35c8990d3c5793c1313fc768a61c3271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc85bf582d737114bc0e621a9568bbb9acb791b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608969"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319303"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target: winmdobj (opcje kompilatora C#)
 Jeśli używasz **-target: winmdobj** — opcja kompilatora, kompilator tworzy plik pośredni .winmdobj, który można przekonwertować na plik binarny (.winmd) środowiska wykonawczego Windows. Plik .winmd może następnie być używany przez programy JavaScript i C++, oprócz programów zarządzanych języka.  
@@ -29,11 +29,11 @@ Jeśli używasz **-target: winmdobj** — opcja kompilatora, kompilator tworzy p
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>Aby ustawić tę opcję kompilatora w programie Visual Studio IDE dla aplikacji magazynu systemu Windows  
   
-1.  W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.  
+1. W **Eksploratora rozwiązań**, otwórz menu skrótów dla projektu, a następnie wybierz **właściwości**.  
   
-2.  Wybierz **aplikacji** kartę.  
+2. Wybierz **aplikacji** kartę.  
   
-3.  W **typ danych wyjściowych** wybierz **plik WinMD**.  
+3. W **typ danych wyjściowych** wybierz **plik WinMD**.  
   
      **Plik WinMD** opcja jest dostępna tylko w przypadku [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] szablonów aplikacji.  
   

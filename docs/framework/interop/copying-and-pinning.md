@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fcc5d3a561eea1e38d0b8a4790af13143cad92d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326284"
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
 Podczas przekazywania danych, organizator międzyoperacyjny można skopiować lub przypiąć dane są przekazywane. Kopiowanie danych umieszcza kopię danych z jednej lokalizacji pamięci w innej lokalizacji w pamięci. Na poniższej ilustracji przedstawiono różnice między kopiowanie typu wartości i kopiowanie typu przekazywane przez odwołanie z kodu zarządzanego do niezarządzanej pamięci.  
   
- ![Typy przekazywane według wartości i według odwołania wartości](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Typy wartości przekazywane według wartości i według odwołania  
+ ![Diagram, który pokazuje, jak typy wartości i odwołań są kopiowane.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Przekazywane przez wartość argumenty metody są przekazywania do kodu niezarządzanego jako wartości na stosie. Proces kopiowania jest bezpośrednie. Argumenty przekazywane przez odwołanie, są przekazywane jako wskaźniki na stosie. Typy odwołań również są przekazywane według wartości i według odwołania. Jak pokazano na poniższej ilustracji, typy odwołań, przekazać przez wartość są kopiowane lub przypięty.  
+ Przekazywane przez wartość argumenty metody są przekazywania do kodu niezarządzanego jako wartości na stosie. Proces kopiowania jest bezpośrednie. Argumenty przekazywane przez odwołanie, są przekazywane jako wskaźniki na stosie. Typy odwołań również są przekazywane według wartości i według odwołania. Jak pokazano na poniższej ilustracji, typy odwołań, przekazać przez wartość są kopiowane lub przypiąć: 
   
- ![Usługa międzyoperacyjna modelu COM](./media/interopmarshalpin.gif "interopmarshalpin")  
-Typy odwołań przekazywane według wartości i według odwołania  
+ ![Diagram przedstawiający odwołania typów przekazywane według wartości i według odwołania.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  Przypinanie tymczasowo blokuje danych w jego bieżącej lokalizacji pamięci, dlatego zachowywanie ich z są przemieszczane przez moduł zbierający elementy bezużyteczne wykonywalnych języka wspólnego. Organizator Przypina dane, aby zmniejszyć obciążenie kopiowania i zwiększyć wydajność. Typ danych określa, czy jest kopiowany lub przypiąć podczas organizowania procesu.  Przypinanie jest wykonywane automatycznie podczas marshaling dla obiektów, takich jak <xref:System.String>, ale można też ręcznie przypiąć przy użyciu pamięci <xref:System.Runtime.InteropServices.GCHandle> klasy.  
   

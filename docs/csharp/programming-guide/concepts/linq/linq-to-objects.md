@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326635"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 Termin "LINQ do obiektów" odnosi się do korzystania z LINQ zapytania ze wszystkimi <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> kolekcji bezpośrednio, bez użycia pośrednie dostawcy LINQ lub interfejsu API, takie jak [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) lub [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md). LINQ umożliwia zapytania wszelkie przeliczalne kolekcje, takie jak <xref:System.Collections.Generic.List%601>, <xref:System.Array>, lub <xref:System.Collections.Generic.Dictionary%602>. Kolekcja może być zdefiniowana przez użytkownika lub mogą być zwrócone przez interfejs API programu .NET Framework.  
@@ -16,11 +16,11 @@ Termin "LINQ do obiektów" odnosi się do korzystania z LINQ zapytania ze wszyst
   
  Ponadto zapytań LINQ oferuje trzy główne zalety w porównaniu z tradycyjnym `foreach` pętli:  
   
-1.  Są one bardziej zwięzły, czytelny, szczególnie w przypadku, gdy wiele warunków filtrowania.  
+1. Są one bardziej zwięzły, czytelny, szczególnie w przypadku, gdy wiele warunków filtrowania.  
   
-2.  Zapewniają zaawansowane filtrowanie, porządkowanie i możliwości przy minimalnej ilości kodu aplikacji grupowania.  
+2. Zapewniają zaawansowane filtrowanie, porządkowanie i możliwości przy minimalnej ilości kodu aplikacji grupowania.  
   
-3.  Można ich przenieść do innych źródeł danych przy użyciu niewielkich modyfikacji.  
+3. Można ich przenieść do innych źródeł danych przy użyciu niewielkich modyfikacji.  
   
  Ogólnie rzecz biorąc, tym bardziej złożone operację, którą chcesz wykonać na danych, więcej korzyści będą weź pod uwagę przy użyciu LINQ zamiast iteracji tradycyjnych technik.  
   
@@ -36,10 +36,10 @@ Termin "LINQ do obiektów" odnosi się do korzystania z LINQ zapytania ze wszyst
  [LINQ i katalogi plików (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  W tym artykule wyjaśniono, jak LINQ może służyć do interakcji z systemami plików. Zawiera także łącza do tematów, które pokazują te pojęcia.  
   
- [Porady: zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [Instrukcje: Zapytanie w ArrayList za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  Pokazuje, jak zapytanie w ArrayList w języku C#.  
   
- [Porady: dodawanie metod niestandardowych do kwerend LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [Instrukcje: Dodawanie metod niestandardowych do kwerend LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Wyjaśnia, jak rozszerzyć zbiór metod, które służy do zapytań LINQ, dodając metody rozszerzenia umożliwiające <xref:System.Collections.Generic.IEnumerable%601> interfejsu.  
   
  [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  

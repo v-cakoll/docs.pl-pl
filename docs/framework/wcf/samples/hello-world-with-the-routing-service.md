@@ -2,21 +2,21 @@
 title: Program Hello World z usługą routingu
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: b84d4dc17db5bb422ba86fbab9c25d3348be7488
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329742"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Program Hello World z usługą routingu
 Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (WCF). Usługa routingu jest składnikiem usługi WCF, który ułatwia to dołączenie routerem na podstawie zawartości do aplikacji. W tym przykładzie dostosowuje się standardowej próbki Kalkulator WCF do komunikowania się za pomocą usługi routingu. W tym przykładzie klient Kalkulator jest skonfigurowany do wysyłania wiadomości do punktu końcowego uwidocznionego przez router. Usługa routingu jest skonfigurowana do akceptowania wszystkie komunikaty wysyłane do niej i przekazują je do punktu końcowego, który odnosi się do usługi kalkulatora. Ten sposób wiadomości wysłanych z klienta są odebrany przez router i ponownie kierowane do rzeczywistej usługi kalkulatora. Komunikaty z Kalkulatora usługi są wysyłane do routera, który z kolei przekazuje je do klienta kalkulatora.
 
 ### <a name="to-use-this-sample"></a>Aby użyć tego przykładu
 
-1.  Using Visual Studio 2012, open HelloRoutingService.sln.
+1. Using Visual Studio 2012, open HelloRoutingService.sln.
 
-2.  Naciśnij klawisz F5 lub CTRL + SHIFT + B.
+2. Naciśnij klawisz F5 lub CTRL + SHIFT + B.
 
     > [!NOTE]
     >  Jeśli użytkownik naciśnie klawisz F5, rozpoczyna się automatycznie klienta Kalkulator. Jeśli użytkownik naciśnie klawisz CTRL + SHIFT + B (Kompilacja), należy uruchomić następujące aplikacje samodzielnie.
@@ -25,7 +25,7 @@ Niniejszy przykład pokazuje usługi routingu Windows Communication Foundation (
     > 2.  Kalkulator usługi (. / CalculatorService/bin/service.exe)
     > 3.  Usługa routingu (. / RoutingService/bin/RoutingService.exe)
 
-3.  Naciśnij klawisz ENTER, aby uruchomić klienta.
+3. Naciśnij klawisz ENTER, aby uruchomić klienta.
 
      Powinny zostać wyświetlone następujące dane wyjściowe:
 

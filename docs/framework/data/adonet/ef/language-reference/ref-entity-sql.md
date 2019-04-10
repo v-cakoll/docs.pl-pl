@@ -2,12 +2,12 @@
 title: REF (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: c3bb22badcfadb92c8687a4eff3a5c7aad1ff1ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090315"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330665"
 ---
 # <a name="ref-entity-sql"></a>REF (jednostka SQL)
 Zwraca odwołanie do wystąpienia jednostki.  
@@ -33,9 +33,9 @@ REF( expression )
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki używa operatora REF zwrócić odwołanie do argumentu wejściowego jednostki. Tego samego zapytania wyłuskań odwołanie, ponieważ używamy operacji wyodrębniania właściwości (.) do dostępu do właściwości jednostki produktu. Zapytanie jest oparty na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1.  Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Postępuj zgodnie z procedurą w [jak: Wykonywanie zapytania, które zwraca wyniki PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
-2.  Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
+2. Przekaż poniższe zapytanie jako argument do `ExecutePrimitiveTypeQuery` metody:  
   
  [!code-csharp[DP EntityServices Concepts 2#REF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#ref)]  
   

@@ -2,12 +2,12 @@
 title: Transfer
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311022"
 ---
 # <a name="transfer"></a>Transfer
 W tym temacie opisano transfer w modelu śledzenie aktywności Windows Communication Foundation (WCF).  
@@ -42,21 +42,21 @@ W tym temacie opisano transfer w modelu śledzenie aktywności Windows Communica
 ## <a name="activity-transfer-sequence"></a>Seria przeniesienia działania  
  Poprawnie sformułowany działania sekwencji transferu obejmuje następujące kroki.  
   
-1.  Rozpocznij nowe działanie wybrać nowy gAId.  
+1. Rozpocznij nowe działanie wybrać nowy gAId.  
   
-2.  Emituj śledzenia przeniesienia do tego nowego gAId z bieżący identyfikator działania  
+2. Emituj śledzenia przeniesienia do tego nowego gAId z bieżący identyfikator działania  
   
-3.  Ustaw nowy identyfikator w protokole TLS  
+3. Ustaw nowy identyfikator w protokole TLS  
   
-4.  Emituj Rozpocznij śledzenie w celu określenia początku nowe działanie przez.  
+4. Emituj Rozpocznij śledzenie w celu określenia początku nowe działanie przez.  
   
-5.  Powrót do oryginalnego działania składa się z następujących czynności:  
+5. Powrót do oryginalnego działania składa się z następujących czynności:  
   
-6.  Emituj śledzenia transferu do oryginalnego gAId  
+6. Emituj śledzenia transferu do oryginalnego gAId  
   
-7.  Emituj Zatrzymaj śledzenie, aby wskazać koniec nowe działanie  
+7. Emituj Zatrzymaj śledzenie, aby wskazać koniec nowe działanie  
   
-8.  Ustaw TLS gAId stary.  
+8. Ustaw TLS gAId stary.  
   
  Poniższy przykład kodu pokazuje, jak to zrobić. W tym przykładzie przyjęto założenie, wywołania blokowania jest wykonywane podczas przenoszenia do nowego działania i zawiera wstrzymań/wznowień ślady.  
   

@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f61640687447550ee853e0c233c2dfc615ba3c9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8dc05d27b0316c82c5314a766fcad929dc5f3698
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331055"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only
 Kontekst ładowania tylko odbicie umożliwia analizowanie zestawy skompilowane dla innych platform lub w przypadku innych wersji systemu .NET Framework. Tylko można zbadać kodu załadowanego w tym kontekście; Nie można wykonać. Oznacza to, że nie można utworzyć obiektów, ponieważ nie można wykonać konstruktorów. Ponieważ nie można wykonać kod, zależności nie są ładowane automatycznie. Jeśli musisz zbadać je, należy załadować je samodzielnie.  
   
 ### <a name="to-load-an-assembly-into-the-reflection-only-load-context"></a>Ładowanie zestawów do kontekstu ładowania tylko odbicie  
   
-1.  Użyj <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> przeciążenia metody, aby załadować zestawu, biorąc pod uwagę jego nazwę wyświetlaną lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metodę, aby załadować zestaw podanej ścieżce. Jeśli zestaw jest obrazem binarnym, użyj <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> przeciążenie metody.  
+1. Użyj <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.String%29> przeciążenia metody, aby załadować zestawu, biorąc pod uwagę jego nazwę wyświetlaną lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metodę, aby załadować zestaw podanej ścieżce. Jeśli zestaw jest obrazem binarnym, użyj <xref:System.Reflection.Assembly.ReflectionOnlyLoad%28System.Byte%5B%5D%29> przeciążenie metody.  
   
     > [!NOTE]
     >  Za pomocą kontekstu reflection-only nie można załadować wersji biblioteki mscorlib.dll z wersji programu .NET Framework niż wersja w kontekście wykonywania.  
   
-2.  Jeśli zestaw ma zależności, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> metoda nie ładuje je. Jeśli musisz zbadać je, należy załadować je samodzielnie.  
+2. Jeśli zestaw ma zależności, <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> metoda nie ładuje je. Jeśli musisz zbadać je, należy załadować je samodzielnie.  
   
-3.  Ustal, czy zestaw jest ładowany do kontekstu reflection-only przy użyciu zestawu <xref:System.Reflection.Assembly.ReflectionOnly%2A> właściwości.  
+3. Ustal, czy zestaw jest ładowany do kontekstu reflection-only przy użyciu zestawu <xref:System.Reflection.Assembly.ReflectionOnly%2A> właściwości.  
   
-4.  Jeśli atrybuty zostały zastosowane do zestawu lub typów w zestawie, należy zbadać te atrybuty, używając <xref:System.Reflection.CustomAttributeData> klasy, aby upewnić się, że nie są podejmowane próby wykonania kodu w kontekstu reflection-only. Użyj odpowiedniego przeciążenia <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> metodę, aby uzyskać <xref:System.Reflection.CustomAttributeData> obiektów reprezentujących atrybuty stosowane do zestawu, elementu członkowskiego, modułu lub parametr.  
+4. Jeśli atrybuty zostały zastosowane do zestawu lub typów w zestawie, należy zbadać te atrybuty, używając <xref:System.Reflection.CustomAttributeData> klasy, aby upewnić się, że nie są podejmowane próby wykonania kodu w kontekstu reflection-only. Użyj odpowiedniego przeciążenia <xref:System.Reflection.CustomAttributeData.GetCustomAttributes%2A?displayProperty=nameWithType> metodę, aby uzyskać <xref:System.Reflection.CustomAttributeData> obiektów reprezentujących atrybuty stosowane do zestawu, elementu członkowskiego, modułu lub parametr.  
   
     > [!NOTE]
     >  Atrybuty stosowane do zestawu lub jego zawartość może być zdefiniowane w zestawie lub może być zdefiniowana w innym zestawie ładowane do kontekstu reflection-only. Nie ma możliwości z wyprzedzeniem sprawdzić, gdzie są zdefiniowane atrybuty.  

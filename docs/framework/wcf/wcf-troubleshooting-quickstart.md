@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320005"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie wymieniono znane problemy, których klienci mają wystąpiły podczas tworzenia usług WCF klientów i usług. Jeśli ten problem, który zostały przekroczone nie ma na tej liście, zalecamy Konfigurowanie śledzenia dla Twojej usługi. Spowoduje to wygenerowanie pliku śledzenia można wyświetlić w podglądzie pliku śledzenia i uzyskać szczegółowe informacje dotyczące wyjątków, które mogą mieć miejsce w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia zobacz: [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na temat przeglądarka plików śledzenia zobacz: [Usługa Trace Viewer Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
   
-1.  [Po zainstalowaniu, Windows 7 i IIS, gdy próbuję przejdź do usługi WCF pojawia się następujący komunikat o błędzie: Błąd HTTP 404.3 — nie znaleziono](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [Po zainstalowaniu, Windows 7 i IIS, gdy próbuję przejdź do usługi WCF pojawia się następujący komunikat o błędzie: Błąd HTTP 404.3 — nie znaleziono](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      Błąd HTTP 404.3 — nie nie może zostać wyświetlona strona FoundThe żądasz, ze względu na konfigurację rozszerzenia. Jeśli strona znajduje się skrypt, należy dodać program obsługi. Jeśli plik powinny być pobierane, Dodaj mapowanie MIME. InformationModule StaticFileModule szczegółowy komunikat o błędzie.  
   
-2.  [Czasami pojawia się messagesecurityexception — na drugie żądanie Jeśli mojego klienta jest w stanie bezczynności przez jakiś czas, po pierwszym żądaniu. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [Czasami pojawia się messagesecurityexception — na drugie żądanie Jeśli mojego klienta jest w stanie bezczynności przez jakiś czas, po pierwszym żądaniu. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Moja usługa zaczyna odrzucać nowych klientów po około 10 klientów wchodzą w interakcje z nią. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [Moja usługa zaczyna odrzucać nowych klientów po około 10 klientów wchodzą w interakcje z nią. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [W innym miejscu niż plik konfiguracji aplikacji WCF można załadować konfiguracji mojej usługi?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [W innym miejscu niż plik konfiguracji aplikacji WCF można załadować konfiguracji mojej usługi?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [Moja usługa i klient świetnie współpracują, ale nie można pobrać ich pracę, gdy klient znajduje się na innym komputerze? Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [Moja usługa i klient świetnie współpracują, ale nie można pobrać ich pracę, gdy klient znajduje się na innym komputerze? Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [Kiedy mogę zgłosić FaultException —\<wyjątku > w przypadku, gdy typ jest wyjątek, czy mogę otrzymać typem ogólnym FaultException — na komputerze klienckim i typu ogólnego. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [Kiedy mogę zgłosić FaultException —\<wyjątku > w przypadku, gdy typ jest wyjątek, czy mogę otrzymać typem ogólnym FaultException — na komputerze klienckim i typu ogólnego. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [Wydaje się, jak jednokierunkowe, a operacje "żądanie-odpowiedź" zwracają przybliżeniu z taką samą szybkością, gdy odpowiedź nie zawiera żadnych danych. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [Wydaje się, jak jednokierunkowe, a operacje "żądanie-odpowiedź" zwracają przybliżeniu z taką samą szybkością, gdy odpowiedź nie zawiera żadnych danych. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [Używam certyfikatu X.509 przy użyciu usługi i uzyskać System.Security.Cryptography.CryptographicException. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [Używam certyfikatu X.509 przy użyciu usługi i uzyskać System.Security.Cryptography.CryptographicException. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [Pierwszy parametr operację po zmianie z wielkie litery na małe litery; teraz mojego klienta zgłasza wyjątek. Co się dzieje?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   

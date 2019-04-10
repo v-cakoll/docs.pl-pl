@@ -1,17 +1,17 @@
 ---
-title: Środowisko programistyczne dla aplikacji platformy Docker
+title: Środowisko deweloperskie dla aplikacji platformy Docker
 description: Ustal, jakimi najważniejszych opcjach narzędzia do programowania, które obsługują programowanie platformy Docker w cyklu życia.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a2fcbe3b9380083622b6ce72cea4bab17d7c2ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318824"
 ---
-# <a name="development-environment-for-docker-apps"></a>Środowisko programistyczne dla aplikacji platformy Docker
+# <a name="development-environment-for-docker-apps"></a>Środowisko deweloperskie dla aplikacji platformy Docker
 
 ## <a name="development-tools-choices-ide-or-editor"></a>Opcje narzędzia do opracowywania: Środowiskiem IDE lub edytorem
 
@@ -33,7 +33,7 @@ Zalecane jest użycie programu Visual Studio 2017 (lub późniejszy) za pomocą 
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Program Visual Studio for Mac (komputerze deweloperskim Mac)
 
-Możesz użyć [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/) podczas tworzenia aplikacji opartych na platformie Docker. Program Visual Studio for Mac oferuje rozbudowane środowisko IDE, w porównaniu do programu Visual Studio Code dla komputerów Mac.
+Możesz użyć [programu Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) podczas tworzenia aplikacji opartych na platformie Docker. Program Visual Studio for Mac oferuje rozbudowane środowisko IDE, w porównaniu do programu Visual Studio Code dla komputerów Mac.
 
 ## <a name="language-and-framework-choices"></a>Opcje języka i struktury
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545822"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318978"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
 
@@ -24,7 +24,7 @@ Gdy kompilator języka C# napotka `#if` dyrektywy, a następnie po pewnym czasie
 #endif
 ```
 
-Można używać operatorów [ == ](../operators/equality-operators.md#equality-operator-) (równości) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) tylko do testowania [true](../keywords/true.md) lub [false](../keywords/false.md). PRAWDA oznacza, że symbol jest zdefiniowany. Wykonywanie instrukcji `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/conditional-and-operator.md) (a) [ &#124; &#124; ](../operators/conditional-or-operator.md) (lub) i [!](../operators/logical-negation-operator.md) (nie) do oceny, czy zostały zdefiniowane wiele symboli. Można także grupować symboli i operatorów, za pomocą nawiasów.
+Można używać operatorów [ == ](../operators/equality-operators.md#equality-operator-) (równości) i [! =](../operators/equality-operators.md#inequality-operator-) (nierówność) tylko do testowania [true](../keywords/true.md) lub [false](../keywords/false.md). PRAWDA oznacza, że symbol jest zdefiniowany. Wykonywanie instrukcji `#if DEBUG` ma takie samo znaczenie jak `#if (DEBUG == true)`. Można używać operatorów [ && ](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (a) [ &#124; &#124; ](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (lub) i [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nie) do oceny, czy zostały zdefiniowane wiele symboli. Można także grupować symboli i operatorów, za pomocą nawiasów.
 
 ## <a name="remarks"></a>Uwagi
 
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
+- [Odwołanie w C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dyrektywy preprocesora C#](index.md)
+- [Dyrektywy preprocesora języka C#](index.md)
 - [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

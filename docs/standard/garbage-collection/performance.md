@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397988"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310567"
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
 <a name="top"></a> W tym temacie opisano problemy związane z wyrzucania elementów kolekcji oraz użycia pamięci. Ona rozwiązuje problemy, które odnoszą się do zarządzanej sterty i wyjaśnia, jak można zminimalizować wpływ wyrzucania elementów bezużytecznych na swoich aplikacjach. Każde wydanie zawiera łącza do procedur służących do badania problemów.  
@@ -84,7 +84,7 @@ ms.locfileid: "47397988"
 -   [Użycie procesora CPU podczas wyrzucania elementów bezużytecznych jest zbyt wysoka](#Issue_HighCPU)  
   
 <a name="Issue_OOM"></a>   
-### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problem: Zostanie zgłoszony wyjątek braku pamięci  
+### <a name="issue-an-out-of-memory-exception-is-thrown"></a>Problem: Wyjątek braku pamięci  
  Istnieją dwa przypadki uzasadnione dla zarządzanej <xref:System.OutOfMemoryException> zgłoszenie:  
   
 -   Mało pamięci wirtualnej.  
@@ -128,7 +128,7 @@ ms.locfileid: "47397988"
 |[Sprawdź odwołania do obiektów.](#ObjRef)<br /><br /> [Ustal, czy finalizator został uruchomiony.](#Induce)<br /><br /> [Ustal, czy istnieją obiekty oczekujące na można sfinalizować.](#Finalize)|  
   
 <a name="Issue_Fragmentation"></a>   
-### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problem: Zarządzanego stosu jest zbyt pofragmentowana.  
+### <a name="issue-the-managed-heap-is-too-fragmented"></a>Problem: Zarządzanego stosu jest zbyt dużej fragmentacji  
  Poziom fragmentacji jest obliczana jako stosunek wolnego miejsca na dysku łączna ilość przydzielonej pamięci do generowania. Generacji 2 akceptowalny poziom fragmentacji jest nie więcej niż 20%. Ponieważ generacji 2 można uzyskać bardzo duże, stosunek fragmentacji jest ważniejsza niż wartość bezwzględna.  
   
  O dużej ilości wolnego miejsca w generacji 0 nie jest problemem, ponieważ jest generowanie gdzie są przydzielane nowych obiektów.  
@@ -172,7 +172,7 @@ ms.locfileid: "47397988"
 |[Określ czas, wyrzucanie elementów bezużytecznych.](#TimeInGC)<br /><br /> [Określ, co spowodowało wyrzucania elementów bezużytecznych.](#Triggered)|  
   
 <a name="Issue_Gen0"></a>   
-### <a name="issue-generation-0-is-too-big"></a>Problem: Generacji 0 jest zbyt duży  
+### <a name="issue-generation-0-is-too-big"></a>Problem: Generacja 0 jest zbyt duży  
  Może mieć większą liczbę obiektów w systemie 64-bitowych, szczególnie w przypadku, gdy używasz wyrzucanie elementów bezużytecznych serwera zamiast wyrzucanie elementów bezużytecznych jest generacji 0. Jest to spowodowane próg wyzwolenia generację 0 wyrzucania elementów bezużytecznych jest wyższa w tych środowiskach i uzyskać znacznie większe generacji 0. Lepsza wydajność aplikacji przydziela większej ilości pamięci, zanim zostanie wywołany wyrzucania elementów bezużytecznych.  
   
 <a name="Issue_HighCPU"></a>   
@@ -278,7 +278,7 @@ ms.locfileid: "47397988"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>Aby ustalić, czy wyjątek braku pamięci jest zarządzany  
   
-1.  W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane typ wyjątku drukowania (**pe**) polecenia:  
+1. W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane typ wyjątku drukowania (**pe**) polecenia:  
   
      **! pe**  
   
@@ -292,9 +292,9 @@ ms.locfileid: "47397988"
     StackTrace (generated):  
     ```  
   
-2.  Dane wyjściowe nie określony wyjątek, należy określić, który wątek wyjątku braku pamięci pochodzi z. Wpisz następujące polecenie w debugerze, aby wyświetlić wszystkie wątki z ich stosów wywołań:  
+2. Dane wyjściowe nie określony wyjątek, należy określić, który wątek wyjątku braku pamięci pochodzi z. Wpisz następujące polecenie w debugerze, aby wyświetlić wszystkie wątki z ich stosów wywołań:  
   
-     **~\*KB**  
+     **~\*kb**  
   
      Wątek przy użyciu stosu, który ma wywołań wyjątków jest wskazywany przez `RaiseTheException` argumentu. Jest to obiektu zarządzanego wyjątku.  
   
@@ -302,9 +302,9 @@ ms.locfileid: "47397988"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Następujące polecenie służy do porzucenia wyjątków zagnieżdżonych.  
+3. Następujące polecenie służy do porzucenia wyjątków zagnieżdżonych.  
   
-     **! pe-zagnieżdżonych**  
+     **! pe -zagnieżdżonych**  
   
      Jeśli nie możesz znaleźć wszystkie wyjątki, wyjątek braku pamięci pochodzi z niezarządzanego kodu.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "47397988"
   
 -   Użyj **vmstat** polecenia:  
   
-     **! vmstat**  
+     **!vmstat**  
   
      Największego wolnego region jest największą wartość w kolumnie maksymalna, jak pokazano w następujących danych wyjściowych.  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397988"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>Aby ustalić, czy jest wystarczająca ilość fizycznej pamięci  
   
-1.  Uruchamianie Menedżera zadań Windows.  
+1. Uruchamianie Menedżera zadań Windows.  
   
-2.  Na **wydajności** kartę, sprawdź wartość zatwierdzone. (W Windows 7, Przyjrzyj się **zatwierdzenia (KB)** w **grupy systemowej**.)  
+2. Na **wydajności** kartę, sprawdź wartość zatwierdzone. (W Windows 7, Przyjrzyj się **zatwierdzenia (KB)** w **grupy systemowej**.)  
   
      Jeśli **całkowita** jest bliska **Limit**, kończy się w pamięci fizycznej.  
   
@@ -494,13 +494,13 @@ ms.locfileid: "47397988"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>Aby ustalić, czy istnieją obiekty oczekujące na sfinalizowana  
   
-1.  W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
+1. W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
-     **! finalizequeue**  
+     **!finalizequeue**  
   
      Spójrz na liczbę obiektów, które są gotowe do finalizacji. Jeśli liczba jest wysokie, należy zbadać, dlaczego te finalizatory nie postępu na wszystkich lub nie postęp szybkiego wystarczająco.  
   
-2.  Aby uzyskać dane wyjściowe wątków, wpisz następujące polecenie:  
+2. Aby uzyskać dane wyjściowe wątków, wpisz następujące polecenie:  
   
      **wątki — specjalne**  
   
@@ -554,7 +554,7 @@ ms.locfileid: "47397988"
   
 -   Oblicz przestrzeni używanej przez generacji 0:  
   
-     **? 49e05d04 0x49521f8c**  
+     **? 49e05d04-0x49521f8c**  
   
      Wynik jest następujący. Generacji 0 to około 9 MB.  
   
@@ -698,7 +698,7 @@ ms.locfileid: "47397988"
   
 -   W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie, aby wyświetlić wszystkie wątki z ich stosów wywołań:  
   
-     **~\*KB**  
+     **~\*kb**  
   
      To polecenie wyświetla dane wyjściowe podobne do następujących.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deserializacji obiektu'
+title: 'Instrukcje: deserializowanie obiektu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: d0b953e4f570f349edeb80fc2316530494905ec0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53b4a3e3848c1aa92bfa9fbd80bb031125257fc2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583314"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298139"
 ---
-# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="ee06d-102">Instrukcje: Deserializacji obiektu</span><span class="sxs-lookup"><span data-stu-id="ee06d-102">How to: Deserialize an Object</span></span>
-<span data-ttu-id="ee06d-103">Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzony obiekt PLiku lub strumienia.</span><span class="sxs-lookup"><span data-stu-id="ee06d-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="ee06d-104">Po transport format jest określony, można wywołać <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> lub <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metod, zgodnie z potrzebami.</span><span class="sxs-lookup"><span data-stu-id="ee06d-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
+# <a name="how-to-deserialize-an-object"></a><span data-ttu-id="57899-102">Instrukcje: deserializowanie obiektu</span><span class="sxs-lookup"><span data-stu-id="57899-102">How to: Deserialize an Object</span></span>
+<span data-ttu-id="57899-103">Podczas deserializacji obiektu, format transportu Określa, czy zostanie utworzony obiekt PLiku lub strumienia.</span><span class="sxs-lookup"><span data-stu-id="57899-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="57899-104">Po transport format jest określony, można wywołać <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> lub <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metod, zgodnie z potrzebami.</span><span class="sxs-lookup"><span data-stu-id="57899-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>  
   
-### <a name="to-deserialize-an-object"></a><span data-ttu-id="ee06d-105">Do deserializacji obiektu</span><span class="sxs-lookup"><span data-stu-id="ee06d-105">To deserialize an object</span></span>  
+### <a name="to-deserialize-an-object"></a><span data-ttu-id="57899-105">Do deserializacji obiektu</span><span class="sxs-lookup"><span data-stu-id="57899-105">To deserialize an object</span></span>  
   
-1.  <span data-ttu-id="ee06d-106">Budowy <xref:System.Xml.Serialization.XmlSerializer> przy użyciu typu obiektu do deserializacji.</span><span class="sxs-lookup"><span data-stu-id="ee06d-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
+1. <span data-ttu-id="57899-106">Budowy <xref:System.Xml.Serialization.XmlSerializer> przy użyciu typu obiektu do deserializacji.</span><span class="sxs-lookup"><span data-stu-id="57899-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>  
   
-2.  <span data-ttu-id="ee06d-107">Wywołaj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metodę tworzenia repliki obiektu.</span><span class="sxs-lookup"><span data-stu-id="ee06d-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="ee06d-108">Podczas deserializacji, należy rzutować zwracany obiekt na typ pierwotny, jak pokazano w następującym przykładzie deserializuje obiekt do pliku (chociaż może on również zostać przeprowadzona deserializacja strumienia).</span><span class="sxs-lookup"><span data-stu-id="ee06d-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object into a file (although it could also be deserialized into a stream).</span></span>  
+2. <span data-ttu-id="57899-107">Wywołaj <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> metodę tworzenia repliki obiektu.</span><span class="sxs-lookup"><span data-stu-id="57899-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="57899-108">Podczas deserializacji, należy rzutować zwracany obiekt na typ pierwotny, jak pokazano w następującym przykładzie deserializuje obiekt do pliku (chociaż może on również zostać przeprowadzona deserializacja strumienia).</span><span class="sxs-lookup"><span data-stu-id="57899-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object into a file (although it could also be deserialized into a stream).</span></span>  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -51,7 +51,7 @@ ms.locfileid: "54583314"
     mySerializer.Deserialize(myFileStream)  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ee06d-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ee06d-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57899-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="57899-109">See also</span></span>
 
-- [<span data-ttu-id="ee06d-110">Wprowadzenie do serializacji XML</span><span class="sxs-lookup"><span data-stu-id="ee06d-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [<span data-ttu-id="ee06d-111">Instrukcje: Serializacja obiektu</span><span class="sxs-lookup"><span data-stu-id="ee06d-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [<span data-ttu-id="57899-110">Wprowadzenie do serializacji XML</span><span class="sxs-lookup"><span data-stu-id="57899-110">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [<span data-ttu-id="57899-111">Instrukcje: serializowanie obiektu</span><span class="sxs-lookup"><span data-stu-id="57899-111">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)

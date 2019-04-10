@@ -16,42 +16,42 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172190"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311048"
 ---
-# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="9894c-102">Instrukcje: niestandardowy rysunek kontrolki ToolStrip</span><span class="sxs-lookup"><span data-stu-id="9894c-102">How to: Custom Draw a ToolStrip Control</span></span>
-<span data-ttu-id="9894c-103"><xref:System.Windows.Forms.ToolStrip> Kontrolki skojarzone renderowania klasy (związane z malowaniem) dysponować następującymi elementami:</span><span class="sxs-lookup"><span data-stu-id="9894c-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
+# <a name="how-to-custom-draw-a-toolstrip-control"></a><span data-ttu-id="275a7-102">Instrukcje: niestandardowy rysunek kontrolki ToolStrip</span><span class="sxs-lookup"><span data-stu-id="275a7-102">How to: Custom Draw a ToolStrip Control</span></span>
+<span data-ttu-id="275a7-103"><xref:System.Windows.Forms.ToolStrip> Kontrolki skojarzone renderowania klasy (związane z malowaniem) dysponować następującymi elementami:</span><span class="sxs-lookup"><span data-stu-id="275a7-103">The <xref:System.Windows.Forms.ToolStrip> controls have the following associated rendering (painting) classes:</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> <span data-ttu-id="9894c-104">udostępnia wygląd i rodzaj systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="9894c-104">provides the appearance and style of your operating system.</span></span>  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> <span data-ttu-id="275a7-104">udostępnia wygląd i rodzaj systemu operacyjnego.</span><span class="sxs-lookup"><span data-stu-id="275a7-104">provides the appearance and style of your operating system.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> <span data-ttu-id="9894c-105">udostępnia wygląd i styl pakietu Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="9894c-105">provides the appearance and style of Microsoft Office.</span></span>  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> <span data-ttu-id="275a7-105">udostępnia wygląd i styl pakietu Microsoft Office.</span><span class="sxs-lookup"><span data-stu-id="275a7-105">provides the appearance and style of Microsoft Office.</span></span>  
   
--   <xref:System.Windows.Forms.ToolStripRenderer> <span data-ttu-id="9894c-106">jest abstrakcyjna klasa bazowa dla innych klas dwóch renderowania.</span><span class="sxs-lookup"><span data-stu-id="9894c-106">is the abstract base class for the other two rendering classes.</span></span>  
+-   <xref:System.Windows.Forms.ToolStripRenderer> <span data-ttu-id="275a7-106">jest abstrakcyjna klasa bazowa dla innych klas dwóch renderowania.</span><span class="sxs-lookup"><span data-stu-id="275a7-106">is the abstract base class for the other two rendering classes.</span></span>  
   
- <span data-ttu-id="9894c-107">Do niestandardowego rysowania (określana także jako rysowanie przez właściciela) <xref:System.Windows.Forms.ToolStrip>, można zastąpić jedną z klas programu renderującego i zmienić aspektów logiki renderowania.</span><span class="sxs-lookup"><span data-stu-id="9894c-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
+ <span data-ttu-id="275a7-107">Do niestandardowego rysowania (określana także jako rysowanie przez właściciela) <xref:System.Windows.Forms.ToolStrip>, można zastąpić jedną z klas programu renderującego i zmienić aspektów logiki renderowania.</span><span class="sxs-lookup"><span data-stu-id="275a7-107">To custom draw (also known as owner draw) a <xref:System.Windows.Forms.ToolStrip>, you can override one of the renderer classes and change an aspect of the rendering logic.</span></span>  
   
- <span data-ttu-id="9894c-108">W poniższych procedurach opisano różne aspekty Rysowanie niestandardowe.</span><span class="sxs-lookup"><span data-stu-id="9894c-108">The following procedures describe various aspects of custom drawing.</span></span>  
+ <span data-ttu-id="275a7-108">W poniższych procedurach opisano różne aspekty Rysowanie niestandardowe.</span><span class="sxs-lookup"><span data-stu-id="275a7-108">The following procedures describe various aspects of custom drawing.</span></span>  
   
-### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="9894c-109">Aby przełączać się między podane renderowania</span><span class="sxs-lookup"><span data-stu-id="9894c-109">To switch between the provided renderers</span></span>  
+### <a name="to-switch-between-the-provided-renderers"></a><span data-ttu-id="275a7-109">Aby przełączać się między podane renderowania</span><span class="sxs-lookup"><span data-stu-id="275a7-109">To switch between the provided renderers</span></span>  
   
--   <span data-ttu-id="9894c-110">Ustaw <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> właściwości <xref:System.Windows.Forms.ToolStripRenderMode> wartość, która ma.</span><span class="sxs-lookup"><span data-stu-id="9894c-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
+-   <span data-ttu-id="275a7-110">Ustaw <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> właściwości <xref:System.Windows.Forms.ToolStripRenderMode> wartość, która ma.</span><span class="sxs-lookup"><span data-stu-id="275a7-110">Set the <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> property to the <xref:System.Windows.Forms.ToolStripRenderMode> value you want.</span></span>  
   
-     <span data-ttu-id="9894c-111">Za pomocą <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, statycznej <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> określa modułu renderowania dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="9894c-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="9894c-112">Inne wartości <xref:System.Windows.Forms.ToolStripRenderMode> są <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, i <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span><span class="sxs-lookup"><span data-stu-id="9894c-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
+     <span data-ttu-id="275a7-111">Za pomocą <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, statycznej <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> określa modułu renderowania dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="275a7-111">With <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>, the static <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> determines the renderer for your application.</span></span> <span data-ttu-id="275a7-112">Inne wartości <xref:System.Windows.Forms.ToolStripRenderMode> są <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, i <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span><span class="sxs-lookup"><span data-stu-id="275a7-112">The other values of <xref:System.Windows.Forms.ToolStripRenderMode> are <xref:System.Windows.Forms.ToolStripRenderMode.Custom>, <xref:System.Windows.Forms.ToolStripRenderMode.Professional>, and <xref:System.Windows.Forms.ToolStripRenderMode.System>.</span></span>  
   
-### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="9894c-113">Aby zmienić program Microsoft Office — styl obramowania bezpośrednio</span><span class="sxs-lookup"><span data-stu-id="9894c-113">To change the Microsoft Office–style borders to straight</span></span>  
+### <a name="to-change-the-microsoft-officestyle-borders-to-straight"></a><span data-ttu-id="275a7-113">Aby zmienić program Microsoft Office — styl obramowania bezpośrednio</span><span class="sxs-lookup"><span data-stu-id="275a7-113">To change the Microsoft Office–style borders to straight</span></span>  
   
--   <span data-ttu-id="9894c-114">Zastąp <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ale nie wywołuj klasy bazowej.</span><span class="sxs-lookup"><span data-stu-id="9894c-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
+-   <span data-ttu-id="275a7-114">Zastąp <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, ale nie wywołuj klasy bazowej.</span><span class="sxs-lookup"><span data-stu-id="275a7-114">Override <xref:System.Windows.Forms.ToolStripProfessionalRenderer.OnRenderToolStripBorder%2A?displayProperty=nameWithType>, but do not call the base class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9894c-115">Dostępna jest wersja tej metody dla <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, i <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span><span class="sxs-lookup"><span data-stu-id="9894c-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
+>  <span data-ttu-id="275a7-115">Dostępna jest wersja tej metody dla <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, i <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span><span class="sxs-lookup"><span data-stu-id="275a7-115">There is a version of this method for <xref:System.Windows.Forms.ToolStripRenderer>, <xref:System.Windows.Forms.ToolStripSystemRenderer>, and <xref:System.Windows.Forms.ToolStripProfessionalRenderer>.</span></span>  
   
-### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="9894c-116">Aby zmienić professionalcolortable —</span><span class="sxs-lookup"><span data-stu-id="9894c-116">To change the ProfessionalColorTable</span></span>  
+### <a name="to-change-the-professionalcolortable"></a><span data-ttu-id="275a7-116">Aby zmienić professionalcolortable —</span><span class="sxs-lookup"><span data-stu-id="275a7-116">To change the ProfessionalColorTable</span></span>  
   
--   <span data-ttu-id="9894c-117">Zastąp <xref:System.Windows.Forms.ProfessionalColorTable> i zmienić kolory mają.</span><span class="sxs-lookup"><span data-stu-id="9894c-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
+-   <span data-ttu-id="275a7-117">Zastąp <xref:System.Windows.Forms.ProfessionalColorTable> i zmienić kolory mają.</span><span class="sxs-lookup"><span data-stu-id="275a7-117">Override <xref:System.Windows.Forms.ProfessionalColorTable> and change the colors you want.</span></span>  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As _  
@@ -105,21 +105,21 @@ ms.locfileid: "59172190"
     End Class  
     ```  
   
-### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="9894c-118">Aby zmienić renderowania dla wszystkich kontrolek ToolStrip w aplikacji</span><span class="sxs-lookup"><span data-stu-id="9894c-118">To change the rendering for all ToolStrip controls in your application</span></span>  
+### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a><span data-ttu-id="275a7-118">Aby zmienić renderowania dla wszystkich kontrolek ToolStrip w aplikacji</span><span class="sxs-lookup"><span data-stu-id="275a7-118">To change the rendering for all ToolStrip controls in your application</span></span>  
   
-1.  <span data-ttu-id="9894c-119">Użyj <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> właściwość, aby wybrać jeden z podane renderowania.</span><span class="sxs-lookup"><span data-stu-id="9894c-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
+1. <span data-ttu-id="275a7-119">Użyj <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> właściwość, aby wybrać jeden z podane renderowania.</span><span class="sxs-lookup"><span data-stu-id="275a7-119">Use the <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> property to choose one of the provided renderers.</span></span>  
   
-2.  <span data-ttu-id="9894c-120">Użyj <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> można przypisać niestandardowego modułu renderowania.</span><span class="sxs-lookup"><span data-stu-id="9894c-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
+2. <span data-ttu-id="275a7-120">Użyj <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> można przypisać niestandardowego modułu renderowania.</span><span class="sxs-lookup"><span data-stu-id="275a7-120">Use <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> to assign a custom renderer.</span></span>  
   
-3.  <span data-ttu-id="9894c-121">Upewnij się, że <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> jest ustawiona na wartość domyślną <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span><span class="sxs-lookup"><span data-stu-id="9894c-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
+3. <span data-ttu-id="275a7-121">Upewnij się, że <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> jest ustawiona na wartość domyślną <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span><span class="sxs-lookup"><span data-stu-id="275a7-121">Ensure that <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> is set to the default value of <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>.</span></span>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="9894c-122">Aby wyłączyć kolory Microsoft Office dla całej aplikacji</span><span class="sxs-lookup"><span data-stu-id="9894c-122">To turn off the Microsoft Office colors for the entire application</span></span>  
+### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a><span data-ttu-id="275a7-122">Aby wyłączyć kolory Microsoft Office dla całej aplikacji</span><span class="sxs-lookup"><span data-stu-id="275a7-122">To turn off the Microsoft Office colors for the entire application</span></span>  
   
--   <span data-ttu-id="9894c-123">Ustaw <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> do `false`.</span><span class="sxs-lookup"><span data-stu-id="9894c-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
+-   <span data-ttu-id="275a7-123">Ustaw <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> do `false`.</span><span class="sxs-lookup"><span data-stu-id="275a7-123">Set <xref:System.Windows.Forms.ToolStripManager.VisualStylesEnabled%2A?displayProperty=nameWithType> to `false`.</span></span>  
   
-### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="9894c-124">Aby wyłączyć kolory Microsoft Office dla jednego formantu ToolStrip</span><span class="sxs-lookup"><span data-stu-id="9894c-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
+### <a name="to-turn-off-the-microsoft-office-colors-for-one-toolstrip-control"></a><span data-ttu-id="275a7-124">Aby wyłączyć kolory Microsoft Office dla jednego formantu ToolStrip</span><span class="sxs-lookup"><span data-stu-id="275a7-124">To turn off the Microsoft Office colors for one ToolStrip control</span></span>  
   
--   <span data-ttu-id="9894c-125">Użyj kodu, podobnie jak w poniższym przykładzie kodu.</span><span class="sxs-lookup"><span data-stu-id="9894c-125">Use code similar to the following code example.</span></span>  
+-   <span data-ttu-id="275a7-125">Użyj kodu, podobnie jak w poniższym przykładzie kodu.</span><span class="sxs-lookup"><span data-stu-id="275a7-125">Use code similar to the following code example.</span></span>  
   
     ```vb  
     Dim colorTable As ProfessionalColorTable()  
@@ -133,11 +133,11 @@ ms.locfileid: "59172190"
     toolStrip.Renderer = new ToolStripProfessionalRenderer(colorTable);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9894c-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9894c-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="275a7-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="275a7-126">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [<span data-ttu-id="9894c-127">Formanty z wbudowaną obsługą rysowania przez właściciela</span><span class="sxs-lookup"><span data-stu-id="9894c-127">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
-- [<span data-ttu-id="9894c-128">Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="9894c-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [<span data-ttu-id="9894c-129">ToolStrip, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="9894c-129">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="275a7-127">Formanty z wbudowaną obsługą rysowania przez właściciela</span><span class="sxs-lookup"><span data-stu-id="275a7-127">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
+- [<span data-ttu-id="275a7-128">Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="275a7-128">How to: Create and Set a Custom Renderer for the ToolStrip Control in Windows Forms</span></span>](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [<span data-ttu-id="275a7-129">ToolStrip, kontrolka — omówienie</span><span class="sxs-lookup"><span data-stu-id="275a7-129">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)

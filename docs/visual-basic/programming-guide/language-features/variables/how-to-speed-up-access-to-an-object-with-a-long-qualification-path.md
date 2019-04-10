@@ -8,27 +8,27 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299140"
 ---
-# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="7ce56-102">Instrukcje: Przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ce56-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
-<span data-ttu-id="7ce56-103">Jeśli często uzyskujesz dostęp do obiektu, który wymaga ścieżką kwalifikacji kilka metod i właściwości, można przyspieszyć swój kod, powtarzając nie ścieżką kwantyfikacji.</span><span class="sxs-lookup"><span data-stu-id="7ce56-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
+# <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a><span data-ttu-id="07f0f-102">Instrukcje: Przyspieszanie dostępu do obiektu z długą ścieżką kwantyfikacji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07f0f-102">How to: Speed Up Access to an Object with a Long Qualification Path (Visual Basic)</span></span>
+<span data-ttu-id="07f0f-103">Jeśli często uzyskujesz dostęp do obiektu, który wymaga ścieżką kwalifikacji kilka metod i właściwości, można przyspieszyć swój kod, powtarzając nie ścieżką kwantyfikacji.</span><span class="sxs-lookup"><span data-stu-id="07f0f-103">If you frequently access an object that requires a qualification path of several methods and properties, you can speed up your code by not repeating the qualification path.</span></span>  
   
- <span data-ttu-id="7ce56-104">Istnieją dwa sposoby, można uniknąć powtarzania ścieżką kwantyfikacji.</span><span class="sxs-lookup"><span data-stu-id="7ce56-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="7ce56-105">Obiekt można przypisać do zmiennej lub może używać go w `With`... `End With` bloku.</span><span class="sxs-lookup"><span data-stu-id="7ce56-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
+ <span data-ttu-id="07f0f-104">Istnieją dwa sposoby, można uniknąć powtarzania ścieżką kwantyfikacji.</span><span class="sxs-lookup"><span data-stu-id="07f0f-104">There are two ways you can avoid repeating the qualification path.</span></span> <span data-ttu-id="07f0f-105">Obiekt można przypisać do zmiennej lub może używać go w `With`... `End With` bloku.</span><span class="sxs-lookup"><span data-stu-id="07f0f-105">You can assign the object to a variable, or you can use it in a `With`...`End With` block.</span></span>  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="7ce56-106">Aby przyspieszyć dostęp do obiektów kwalifikowaną silnie, przypisując go do zmiennej</span><span class="sxs-lookup"><span data-stu-id="7ce56-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a><span data-ttu-id="07f0f-106">Aby przyspieszyć dostęp do obiektów kwalifikowaną silnie, przypisując go do zmiennej</span><span class="sxs-lookup"><span data-stu-id="07f0f-106">To speed up access to a heavily qualified object by assigning it to a variable</span></span>  
   
-1.  <span data-ttu-id="7ce56-107">Zadeklaruj zmienną typu obiektu, którego uzyskujesz dostęp do często.</span><span class="sxs-lookup"><span data-stu-id="7ce56-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="7ce56-108">Określ ścieżkę kwalifikacji w inicjowania część deklaracji.</span><span class="sxs-lookup"><span data-stu-id="7ce56-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
+1. <span data-ttu-id="07f0f-107">Zadeklaruj zmienną typu obiektu, którego uzyskujesz dostęp do często.</span><span class="sxs-lookup"><span data-stu-id="07f0f-107">Declare a variable of the type of the object that you are accessing frequently.</span></span> <span data-ttu-id="07f0f-108">Określ ścieżkę kwalifikacji w inicjowania część deklaracji.</span><span class="sxs-lookup"><span data-stu-id="07f0f-108">Specify the qualification path in the initialization part of the declaration.</span></span>  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  <span data-ttu-id="7ce56-109">Dostęp do elementów członkowskich obiektu za pomocą zmiennej.</span><span class="sxs-lookup"><span data-stu-id="7ce56-109">Use the variable to access the object's members.</span></span>  
+2. <span data-ttu-id="07f0f-109">Dostęp do elementów członkowskich obiektu za pomocą zmiennej.</span><span class="sxs-lookup"><span data-stu-id="07f0f-109">Use the variable to access the object's members.</span></span>  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -36,15 +36,15 @@ ms.locfileid: "58816294"
     ctrlActv.Show()  
     ```  
   
-### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="7ce56-110">Aby przyspieszyć dostęp do obiektów kwalifikowaną silnie korzystając z... Blok końcowy z</span><span class="sxs-lookup"><span data-stu-id="7ce56-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
+### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a><span data-ttu-id="07f0f-110">Aby przyspieszyć dostęp do obiektów kwalifikowaną silnie korzystając z... Blok końcowy z</span><span class="sxs-lookup"><span data-stu-id="07f0f-110">To speed up access to a heavily qualified object by using a With...End With block</span></span>  
   
-1.  <span data-ttu-id="7ce56-111">Umieść ścieżką kwantyfikacji w `With` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="7ce56-111">Put the qualification path in a `With` statement.</span></span>  
+1. <span data-ttu-id="07f0f-111">Umieść ścieżką kwantyfikacji w `With` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="07f0f-111">Put the qualification path in a `With` statement.</span></span>  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  <span data-ttu-id="7ce56-112">Dostęp do członków obiektu wewnątrz `With` block przed `End With` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="7ce56-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
+2. <span data-ttu-id="07f0f-112">Dostęp do członków obiektu wewnątrz `With` block przed `End With` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="07f0f-112">Access the object's members inside the `With` block, before the `End With` statement.</span></span>  
   
     ```  
         .Text = "Test"  
@@ -53,7 +53,7 @@ ms.locfileid: "58816294"
     End With  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="7ce56-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7ce56-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07f0f-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="07f0f-113">See also</span></span>
 
-- [<span data-ttu-id="7ce56-114">Zmienne obiektów</span><span class="sxs-lookup"><span data-stu-id="7ce56-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [<span data-ttu-id="7ce56-115">With...End With, instrukcja</span><span class="sxs-lookup"><span data-stu-id="7ce56-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [<span data-ttu-id="07f0f-114">Zmienne obiektów</span><span class="sxs-lookup"><span data-stu-id="07f0f-114">Object Variables</span></span>](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
+- [<span data-ttu-id="07f0f-115">With...End With — Instrukcja</span><span class="sxs-lookup"><span data-stu-id="07f0f-115">With...End With Statement</span></span>](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)

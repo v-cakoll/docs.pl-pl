@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF'
+title: 'Przewodnik: rozmieszczanie kontrolek Windows Forms w WPF'
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: bfb0aba2798179c31674377104bbff633b6f48fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d2bd3a7d4b8e84542f1c5fa3dbb15f1a9753a180
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168587"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Przewodnik: Kontrolek rozmieszczanie Windows Forms w WPF
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Przewodnik: rozmieszczanie kontrolek Windows Forms w WPF
 W tym instruktażu dowiesz się, jak używać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcji układu, aby zorganizować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrolek w aplikacji hybrydowych.  
   
  Zadania zilustrowane w tym przewodniku obejmują:  
@@ -91,7 +91,7 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Formant jest widoczny w <xref:System.Windows.Controls.Canvas>. Hostowanej kontroli ma rozmiar na podstawie jego zawartości i <xref:System.Windows.Forms.Integration.WindowsFormsHost> element ma rozmiar umożliwiających obsługiwanego formantu.  
+2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> Formant jest widoczny w <xref:System.Windows.Controls.Canvas>. Hostowanej kontroli ma rozmiar na podstawie jego zawartości i <xref:System.Windows.Forms.Integration.WindowsFormsHost> element ma rozmiar umożliwiających obsługiwanego formantu.  
   
 ## <a name="sizing-to-content"></a>Ustalanie rozmiaru zawartości  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element gwarantuje zmieniania rozmiaru do prawidłowego wyświetlenia jego zawartości hostowanej kontroli.  
@@ -156,7 +156,6 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Za pośrednictwem elementu label jest malowany element.
-
 
 ## <a name="docking"></a>Dokowanie
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> obsługuje element [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dokowania. Ustaw <xref:System.Windows.Controls.DockPanel.Dock%2A> dołączona właściwość, aby zadokować obsługiwanego formantu w <xref:System.Windows.Controls.DockPanel> elementu.
@@ -224,7 +223,6 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 
 2.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. Nie jest obracany hostowanej kontroli, ale jego otaczających elementów są obracane kąt 180 stopni. Może być konieczne zmiany rozmiaru okna, aby wyświetlić elementy.
 
-
 ## <a name="setting-padding-and-margins"></a>Dopełnienie ustawienia zaznaczania i marginesów
  Wypełnienie i marginesów w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu są podobne do wypełnienia zaznaczania i marginesów w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Po prostu ustaw <xref:System.Windows.Controls.Control.Padding%2A> i <xref:System.Windows.FrameworkElement.Margin%2A> właściwości <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu.
 
@@ -259,10 +257,11 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 4.  Naciśnij klawisz F5, aby skompilować i uruchomić aplikację. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Wstawia element <xref:System.Windows.Controls.DockPanel>, i <xref:System.Windows.Forms.FlowLayoutPanel> rozmieszcza jego formantów podrzędnych w domyślnym <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Opcje układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Windows rozmieszczanie formantów formularzy w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

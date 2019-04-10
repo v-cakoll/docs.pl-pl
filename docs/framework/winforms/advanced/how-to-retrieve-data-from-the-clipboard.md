@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobieranie danych ze Schowka'
+title: 'Instrukcje: Pobieranie danych ze schowka'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 0ed79197190e9f646b5f94ff56e62b19fe4f366a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723858"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201614"
 ---
-# <a name="how-to-retrieve-data-from-the-clipboard"></a>Instrukcje: Pobieranie danych ze Schowka
+# <a name="how-to-retrieve-data-from-the-clipboard"></a>Instrukcje: Pobieranie danych ze schowka
 <xref:System.Windows.Forms.Clipboard> Klasa zawiera metody, które służy do interakcji z funkcją Schowka systemu operacyjnego Windows. Wiele aplikacji używa Schowka jako tymczasowy repozytorium danych. Na przykład edytory użyć Schowka podczas operacji kopiowania i wklejania. Schowek jest również przydatne w przypadku przenoszenia informacji z jednej aplikacji do innej.  
   
  Niektóre aplikacje przechowują dane do Schowka w wielu formatach, aby zwiększyć liczbę inne aplikacje, które potencjalnie mogą używać danych. Format Schowka jest ciągiem, który identyfikuje format. Aplikacja, która używa formatu zidentyfikowanych można pobrać skojarzone dane do Schowka. <xref:System.Windows.Forms.DataFormats> Klasa udostępnia wstępnie zdefiniowany format nazw do użycia. Można również użyć własnych nazw formatu lub użyć typu obiektu jako jego format. Aby uzyskać informacje dotyczące dodawania danych do Schowka, zobacz [jak: Dodawanie danych do Schowka](how-to-add-data-to-the-clipboard.md).  
@@ -57,5 +57,6 @@ ms.locfileid: "57723858"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Operacje przeciągania i upuszczania oraz obsługa schowka](drag-and-drop-operations-and-clipboard-support.md)
-- [Instrukcje: Dodawanie danych do Schowka](how-to-add-data-to-the-clipboard.md)
+- [Instrukcje: Dodawanie danych do schowka](how-to-add-data-to-the-clipboard.md)

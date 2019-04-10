@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji'
+title: 'Instrukcje: dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji'
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 188e88d40536b1d31c72f404957ef2de4ff87b1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 26a7b0d3fef67cf9dae0913e22e3cd7ec443c111
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202979"
 ---
-# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Instrukcje: Dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji
+# <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Instrukcje: dodawanie punktu końcowego AJAX ASP.NET przy użyciu konfiguracji
 Windows Communication Foundation (WCF) pozwala utworzyć usługę, która sprawia, że obsługą ASP.NET AJAX punkt końcowy dostępny, którą można wywołać z kodu JavaScript w witrynie sieci Web klienta. Aby utworzyć punkt końcowy, można za pomocą pliku konfiguracji, jak wszystkie inne punkty końcowe usług Windows Communication Foundation (WCF) lub należy użyć metody, która nie wymaga żadnych elementów konfiguracji. W tym temacie przedstawiono metody konfiguracji.  
   
  Część procedury, która umożliwia punkt końcowy usługi staną się obsługą ASP.NET AJAX składa się z Konfigurowanie punkt końcowy do użycia <xref:System.ServiceModel.WebHttpBinding> i dodawanie [ \<enableWebScript >](../../../../docs/framework/configure-apps/file-schema/wcf/enablewebscript.md) zachowanie punktu końcowego. Po skonfigurowaniu punktu końcowego, kroki do wdrażania i obsługi usługi są podobne do tych używanych przez żadnej usługi WCF. Aby uzyskać przykład pracy, zobacz [AJAX usługi za pomocą żądania HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
@@ -105,5 +105,6 @@ Windows Communication Foundation (WCF) pozwala utworzyć usługę, która sprawi
 1.  Konfigurowany jest punkt końcowy adresem pusty względem pliku SVC, dzięki czemu usługa jest teraz dostępny i może być wywoływany przez wysyłanie żądań do service.svc/\<operacji > — na przykład service.svc/Add dla `Add` operacji. Używając go, wprowadzając adres URL punktu końcowego w kolekcji skryptów kontrolki Menedżera skryptów AJAX programu ASP.NET. Aby uzyskać przykład, zobacz [AJAX usługi za pomocą żądania HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tworzenie usług WCF w technologii AJAX na platformie ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [Instrukcje: Migrowanie usług internetowych platformy ASP.NET z włączoną obsługą technologii AJAX do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [Instrukcje: migrowanie usług internetowych obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

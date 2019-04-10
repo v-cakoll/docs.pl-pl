@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Powiąż formant programu Windows Forms z typem przy użyciu narzędzia Projektant'
+title: 'Instrukcje: wiązanie kontrolki formularzy systemu Windows z typem przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b10b443581a261a753c9f9d940a774159dc9d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202303"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Instrukcje: Powiąż formant programu Windows Forms z typem przy użyciu narzędzia Projektant
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Instrukcje: wiązanie kontrolki formularzy systemu Windows z typem przy użyciu narzędzia Projektant
 Podczas tworzenia formantów, które współdziałają z danymi, czasami konieczne Powiąż formant typu, a nie obiekt. Zazwyczaj konieczne powiązanie z typem formantu w czasie projektowania, gdy dane nie mogą być dostępne, ale nadal chcesz formantów powiązanych z danymi do wyświetlania danych z interfejsu publicznego typu. Poniższe procedury pokazują, jak utworzyć nową <xref:System.Windows.Forms.BindingSource> oznacza to powiązane z typem, a następnie jak powiązać z jednej z właściwości typu do <xref:System.Windows.Forms.TextBox.Text%2A> właściwość <xref:System.Windows.Forms.TextBox>.  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>Aby powiązać BindingSource — typ  
@@ -52,6 +52,7 @@ Podczas tworzenia formantów, które współdziałają z danymi, czasami koniecz
 4.  W **edytora typów Interfejsu DataSource**, rozwiń węzeł <xref:System.Windows.Forms.BindingSource> dodane wcześniej, a następnie wybierz pozycję Właściwości powiązanej typ, który chcesz powiązać <xref:System.Windows.Forms.TextBox.Text%2A> właściwość <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Zobacz także
-- [BindingSource, składnik](bindingsource-component.md)
-- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [Wiązanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+
+- [BindingSource — Składnik](bindingsource-component.md)
+- [Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

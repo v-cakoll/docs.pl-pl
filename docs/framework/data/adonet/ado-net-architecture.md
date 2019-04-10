@@ -2,12 +2,12 @@
 title: Architektura ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202641"
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych tradycyjnie opierało się głównie na modelu opartego na połączeniach, dwuwarstwowy. Jak przetwarzanie danych coraz większym stopniu korzysta z architektury wielowarstwowej, programistów przełączenie się do odłączonego podejście, aby zapewnić lepszą skalowalność dla swoich aplikacji.  
@@ -15,7 +15,7 @@ Przetwarzanie danych tradycyjnie opierało się głównie na modelu opartego na 
 ## <a name="adonet-components"></a>ADO.NET Components  
  Dwa główne składniki [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] do uzyskiwania dostępu do danych i manipulowania nimi są [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawców danych i <xref:System.Data.DataSet>.  
   
-### <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework  
+### <a name="net-framework-data-providers"></a>Dostawcy danych .NET Framework  
  Dostawcy danych .NET Framework są składnikami, które zostały jawnie zaprojektowane do manipulowania danymi i szybkie tylko do przodu, tylko do odczytu dostępu do danych. `Connection` Obiektu zapewnia łączność ze źródłem danych. `Command` Obiekt umożliwia dostęp do bazy danych poleceń, aby zwrócić dane, modyfikowania danych, uruchamianie procedur składowanych i wysyłać lub odbierać informacje o parametrach. `DataReader` Zapewnia strumienia o wysokiej wydajności, dane ze źródła danych. Na koniec `DataAdapter` zapewnia połączenie między `DataSet` obiektu i źródła danych. `DataAdapter` Używa `Command` obiektów do wykonywania poleceń SQL w źródle danych, zarówno obciążenie `DataSet` z danymi i uzgadniają zmiany, które zostały wprowadzone do danych w `DataSet` wstecz do źródła danych. Aby uzyskać więcej informacji, zobacz [dostawcy danych .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) i [pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
   
 ### <a name="the-dataset"></a>Zestaw danych  
@@ -57,5 +57,6 @@ Architektura ADO.NET
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] i klasy XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zbiegają się w `DataSet` obiektu. `DataSet` Można wypełnić danymi ze źródła XML, czy jest pliku lub strumienia XML. `DataSet` Może być zapisana jako World Wide Web Consortium (W3C) XML zgodne, który zawiera jego schematu XML definicji język (XSD) schematu, niezależnie od źródła danych w `DataSet`. Ze względu na format serializacji natywnej `DataSet` język XML, jest to doskonałe medium do przenoszenia danych między warstwami, dzięki czemu `DataSet` optymalnym wyborem dla kontekstu danych i schematu usług zdalnych do i z usługi sieci Web XML. Aby uzyskać więcej informacji, zobacz [dokumenty i dane XML](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

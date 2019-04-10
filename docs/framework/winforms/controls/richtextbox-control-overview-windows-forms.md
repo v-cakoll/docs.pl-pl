@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201601"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox — Informacje o formancie [Formularze systemu Windows]
 Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. <xref:System.Windows.Forms.RichTextBox> Kontroli działanie jest <xref:System.Windows.Forms.TextBox> kontroli jest, ale można również wyświetlać czcionki, kolory i łącza; ładowanie z pliku; tekstu i obrazów osadzonych i znaleźć określonych znaków. <xref:System.Windows.Forms.RichTextBox> Kontroli zazwyczaj służy do zapewnienia manipulacja tekstem i wyświetlić funkcje podobne do aplikacji edytora tekstów, takiego jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontroli <xref:System.Windows.Forms.RichTextBox> formant może wyświetlić paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> formant, ustawienie domyślne jest do wyświetlenia zarówno poziome i pionowe paski przewijania, zgodnie z potrzebami i ma ustawienia dodatkowe paska przewijania.  
@@ -25,6 +25,7 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant jest używany
  Można cofnąć i wykonaj ponownie większość operacji edycji w <xref:System.Windows.Forms.RichTextBox> kontroli przez wywołanie metody <xref:System.Windows.Forms.TextBoxBase.Undo%2A> i <xref:System.Windows.Forms.RichTextBox.Redo%2A> metody. <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Metody umożliwia określenie, czy kontrolka zostanie zastosowana Ostatnia operacja wycofywania użytkownika.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
 - [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)

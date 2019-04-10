@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Nawigowanie po danych za pomocą kontrolki BindingNavigator formularzy Windows Forms'
+title: 'Instrukcje: nawigowanie w danych za pomocą kontrolki BindingNavigator formularzy systemu Windows'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: 5fd1caabbc876d5b71deae2d9b1b9cf232d17700
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fe1d037d7d72f41b602abe823a26655750338d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723247"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202160"
 ---
-# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Instrukcje: Nawigowanie po danych za pomocą kontrolki BindingNavigator formularzy Windows Forms
+# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Instrukcje: nawigowanie w danych za pomocą kontrolki BindingNavigator formularzy systemu Windows
 Pojawienie się <xref:System.Windows.Forms.BindingNavigator> kontroli w formularzach Windows Forms umożliwia deweloperom zapewni użytkownikom końcowym proste dane nawigacji i manipulowania interfejsu użytkownika w formularzach tworzą.  
   
  <xref:System.Windows.Forms.BindingNavigator> Formant jest <xref:System.Windows.Forms.ToolStrip> sterowania za pomocą przycisków wstępnie skonfigurować pod kątem nawigację do pierwszego, last, następnej i poprzedniej rekordu w zestawie danych, jak również przycisków, aby dodawać i usuwać rekordy. Dodawanie przycisków do <xref:System.Windows.Forms.BindingNavigator> kontroli jest łatwe, ponieważ jest on <xref:System.Windows.Forms.ToolStrip> kontroli. Aby uzyskać przykłady, zobacz [jak: Dodaj obciążenia, Zapisz i Anuluj przycisków Windows kontrolki BindingNavigator formularzy](load-save-and-cancel-bindingnavigator.md).  
@@ -54,6 +54,7 @@ Pojawienie się <xref:System.Windows.Forms.BindingNavigator> kontroli w formular
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)
-- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md)
+- [ToolStrip — Formant](toolstrip-control-windows-forms.md)

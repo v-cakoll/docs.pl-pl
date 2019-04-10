@@ -1,15 +1,15 @@
 ---
-title: Walidacja zabezpieczeń
+title: Weryfikacja zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: 594f7588f81ce04cef9e1f7f04a7ad9d75ce7a19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202875"
 ---
-# <a name="security-validation"></a>Walidacja zabezpieczeń
+# <a name="security-validation"></a>Weryfikacja zabezpieczeń
 W tym przykładzie pokazano, jak umożliwia zachowanie niestandardowe sprawdzanie poprawności usługi na komputerze, aby upewnić się, że spełniają określone kryteria. W tym przykładzie usług są weryfikowane przez niestandardowe zachowanie przez skanowanie za pomocą każdego punktu końcowego w usłudze i sprawdzanie, czy zawierają one elementy bezpiecznego powiązania. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
@@ -107,4 +107,5 @@ public void Validate(ServiceDescription serviceDescription,
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ServiceValidation`  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przykłady monitorowania AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

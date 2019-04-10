@@ -1,30 +1,28 @@
 ---
-title: 'Przewodnik: Hosting zawartości WPF w Win32'
+title: 'Przewodnik: hostowanie zawartości WPF w Win32'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 1f1ac68e49b5f84a41e3091b1a81010e7aa7cc0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3396604d94b2b0fb3f4a178d3bb3a25b00ef91ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166650"
 ---
-# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: Hosting zawartości WPF w Win32
+# <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: hostowanie zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywne dodać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje do aplikacji, zamiast ponownego zapisywania adresów oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia prosty mechanizm do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
   
  W tym samouczku opisano sposób pisania aplikacji przykładowej, [Hosting zawartości WPF w przykładzie oknie Win32](https://go.microsoft.com/fwlink/?LinkID=160004), które hosty [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna. Możesz rozszerzyć ten przykład do obsługi dowolnej [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna. Ponieważ spowodowałoby to łączenie kodu zarządzanego i niezarządzanego, aplikacja została napisana [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)].  
-  
- 
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Wymagania  
  W tym samouczku założono podstawowe znajomość zarówno [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania. Aby uzyskać wstęp do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programowania, zobacz [wprowadzenie](../getting-started/index.md). Wprowadzenie do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programowania, możesz powinny odwoływać się dowolny wiele książek, w tym temacie, w szczególności *programowania Windows* przez Charles Petzold.  
   
- Ponieważ znajdująca się w tym samouczku przykład jest zaimplementowana w [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], w tym samouczku założono znajomość użytkowania [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] plus znajomości programowania kodu zarządzanego. Znajomość [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] jest przydatna, ale nie są niezbędne.  
+ Ponieważ znajdująca się w tym samouczku przykład jest zaimplementowana w [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)], w tym samouczku założono znajomość użytkowania [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] programu [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] plus znajomości programowania kodu zarządzanego. Znajomość [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] jest przydatna, ale nie są niezbędne.  
   
 > [!NOTE]
 >  Ten samouczek zawiera szereg przykładów kodu z próbki skojarzone. Jednak aby zwiększyć czytelność, nie obejmuje pełny przykładowy kod. Aby uzyskać kompletny przykładowy kod, zobacz [Hosting zawartości WPF w przykładzie oknie Win32](https://go.microsoft.com/fwlink/?LinkID=160004).  
@@ -231,4 +229,4 @@ ms.locfileid: "57363166"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Interop.HwndSource>
-- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
+- [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)

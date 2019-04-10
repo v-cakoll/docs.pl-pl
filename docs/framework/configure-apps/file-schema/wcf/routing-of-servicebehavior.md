@@ -2,12 +2,12 @@
 title: <routing> z <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 3f23cbb45aa72b1aae18c845e68b426a4214d499
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202511"
 ---
 # <a name="routing-of-servicebehavior"></a>\<Routing > z \<serviceBehavior >
 Udostępnia wykonawczej usługa routingu umożliwia dynamiczne modyfikowanie konfiguracji routingu.  
@@ -56,4 +56,3 @@ Udostępnia wykonawczej usługa routingu umożliwia dynamiczne modyfikowanie kon
  Po dodaniu do konfiguracji zachowania usługi, ten element konfiguracji umożliwia routingu dla usługi. Możesz określić rzeczywistego tabeli routingu do użycia przez usługę, w tym elemencie.  
   
  Korzystając z tej sekcji konfiguracji, można zmienić ustawienia routingu na bieżąco po zmianie deseń wdrożenia. W czasie wykonywania można zarejestrować rozszerzenia routingu z nowymi ustawieniami routingu i usługa routingu rozpocznie się za pomocą informacji zaktualizowanej konfiguracji dla nowych komunikatów i sesje, przy równoczesnym zachowaniu aktywne komunikaty/sesji przy użyciu dowolne reguły były w miejsce, w momencie rozpoczęcia pracy.  Daje możliwość robienia bezpiecznej sesji, odtwarzanie bez ponownej konfiguracji usługi routingu podczas wykonywania.  
-  

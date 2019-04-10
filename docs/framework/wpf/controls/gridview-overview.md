@@ -6,18 +6,16 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201302"
 ---
 # <a name="gridview-overview"></a>GridView — Przegląd
 <xref:System.Windows.Controls.GridView> tryb widoku to jeden z trybów wyświetlania dla <xref:System.Windows.Controls.ListView> kontroli. <xref:System.Windows.Controls.GridView> Klasy i jej klasy pomocnicze umożliwiają Ty i Twoi użytkownicy elementu przeglądać kolekcje w tabeli, która zwykle używa przyciski jako nagłówków kolumn interaktywne. W tym temacie przedstawiono <xref:System.Windows.Controls.GridView> klasy i opisano jego użycia.  
-  
-  
-  
+
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## <a name="what-is-a-gridview-view"></a>Co to jest widok GridView  
  <xref:System.Windows.Controls.GridView> Widoku tryb Wyświetla listę elementów danych przez powiązanie pola danych do kolumn i wyświetlając nagłówek kolumny w celu identyfikacji pola. Wartość domyślna <xref:System.Windows.Controls.GridView> styl implementuje przyciski jako nagłówków kolumn. Za pomocą przycisków dla nagłówków kolumn, można zaimplementować możliwości interakcji użytkownika ważne; na przykład użytkownicy będą mogli kliknąć nagłówek kolumny, aby posortować <xref:System.Windows.Controls.GridView> danych zgodnie z zawartością określonej kolumny.  
@@ -125,6 +123,7 @@ ms.locfileid: "58185444"
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Controls.GridViewColumn>
@@ -132,6 +131,6 @@ ms.locfileid: "58185444"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [ListView — omówienie](listview-overview.md)
+- [ListView — Przegląd](listview-overview.md)
 - [Sortowanie kolumny GridView po kliknięciu nagłówka](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Tematy z instrukcjami](listview-how-to-topics.md)
+- [— Tematy porad](listview-how-to-topics.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202563"
 ---
 # <a name="serialization"></a>Serializacja
 W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] możliwości serializacji. Sekcjach poniżej zawierają informacje dotyczące sposobu dodawania serializacji podczas generowania kodu w czasie projektowania i zachowania czasu wykonywania serializacji [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] klasy.  
@@ -73,6 +73,7 @@ W tym temacie opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlin
  [!code-vb[DLinqSerialization#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (Narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
 - [Instrukcje: Umożliwianie serializacji jednostek](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)

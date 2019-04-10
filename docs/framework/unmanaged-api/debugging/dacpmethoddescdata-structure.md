@@ -1,5 +1,5 @@
 ---
-title: Struktura DacpMethodDescData
+title: DacpMethodDescData, struktura
 ms.date: 02/01/2019
 api.name:
 - DacpMethodDescData Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203200"
 ---
-# <a name="dacpmethoddescdata-structure"></a>Struktura DacpMethodDescData
+# <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData, struktura
 
 Definiuje bufora transportu dla metody środowiska uruchomieniowego informacje.
 
@@ -73,7 +73,6 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Rejit informacji dla żądanego adresu natywnego.                                             |
 | `cJittedRejitVersions`       | Liczba przypadków, gdy metoda została rejitted za pomocą Instrumentacji.                           |
 
-
 ## <a name="remarks"></a>Uwagi
 
 Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dostępna za pośrednictwem wszystkich nagłówków lub pliki biblioteki. Aby go użyć, definiują strukturę, jak określono powyżej.
@@ -85,6 +84,7 @@ Ta struktura znajduje się wewnątrz środowiska uruchomieniowego i nie jest dos
 **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
+
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Standardowe typy danych](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj właściwość przy użyciu AnimationClock'
+title: 'Instrukcje: Animowanie właściwości przy użyciu elementu AnimationClock'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201367"
 ---
-# <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Instrukcje: Animuj właściwość przy użyciu AnimationClock
+# <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Instrukcje: Animowanie właściwości przy użyciu elementu AnimationClock
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.Clock> obiektów, aby animować właściwości.  
   
  Istnieją trzy sposoby, aby animować właściwości zależności:  
@@ -37,6 +37,7 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.C
  Aby uzyskać przykład pokazujący sposób interaktywnie kontrolować <xref:System.Windows.Media.Animation.Clock> po jego uruchomieniu, zobacz [interaktywnie kontrolować zegar](how-to-interactively-control-a-clock.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)
 - [Animowanie właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md)
-- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)
+- [Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Dodawanie tabel i kolumn do formantu DataGrid formularzy Windows przy użyciu narzędzia Projektant'
+title: 'Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], adding to DataGrid control
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 741da635ec187d8605a9f67aa010ff49a83ba86b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201536"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: Dodawanie tabel i kolumn do formantu DataGrid formularzy Windows przy użyciu narzędzia Projektant
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 
 > [!NOTE]
 >  <xref:System.Windows.Forms.DataGridView> Kontroli zastępuje i dodaje funkcjonalność do <xref:System.Windows.Forms.DataGrid> kontrolować; jednak <xref:System.Windows.Forms.DataGrid> kontrolki została zachowana na potrzeby zgodności z poprzednimi wersjami i użycia w przyszłości, jeśli wybierzesz. Aby uzyskać więcej informacji, zobacz [różnice między Windows Forms formantami DataGridView i DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -58,5 +58,6 @@ ms.locfileid: "57725353"
 5.  W **właściwości** okno Edytor kolekcji, wybierz opcję <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> wartości w kolumnie, którą chcesz wyświetlić.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy systemu Windows](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

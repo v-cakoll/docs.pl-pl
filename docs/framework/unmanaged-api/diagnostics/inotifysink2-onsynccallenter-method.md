@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 088d5a86b8517949d82f64b2d1dbb192b1b8ff0c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 78aaa5d8031e7b554eee2a147d9940ff8d7f7e02
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201900"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter — Metoda
 Pobiera element wywoływany w przypadku wprowadzania wywołanie.  
@@ -55,6 +55,7 @@ HRESULT OnSyncCallEnter
  **Nagłówek:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Zobacz także
-- [INotifySink2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [INotifySource2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [INotifyConnection2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+
+- [INotifySink2 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

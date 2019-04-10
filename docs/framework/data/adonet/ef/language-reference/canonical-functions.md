@@ -2,12 +2,12 @@
 title: Funkcje Canonical
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202940"
 ---
 # <a name="canonical-functions"></a>Funkcje Canonical
 W tej sekcji omówiono funkcje canonical, które są obsługiwane przez wszystkich dostawców danych i może być używany przez wszystkie technologie zapytań. Nie można rozszerzyć funkcje Canonical przez dostawcę.  
@@ -48,7 +48,8 @@ W tej sekcji omówiono funkcje canonical, które są obsługiwane przez wszystki
  W tym artykule omówiono funkcje nie sklasyfikowane jako bitowe, daty/godziny, ciąg, matematyczne lub agregacji.  
   
 ## <a name="see-also"></a>Zobacz także
-- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Model koncepcyjny Canonical do mapowania funkcji serwera SQL](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
 - [Funkcje zdefiniowane przez użytkownika](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)

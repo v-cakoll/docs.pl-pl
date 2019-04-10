@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe86fbe7ee51e5f53eeea74d7d5a56046de5e00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201276"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo — Metoda
 Pobiera szczegółowe informacje dotyczące obiektu array.  
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] Tablica, która zawiera liczby całkowite, każda reprezentująca dolna granica wymiaru tablicy.  
   
  `ppData`  
- [out] Wskaźnik na adres surowy bufor dla tablicy, która jest poukładany zgodnie z konwencją języka C++.  
+ [out] Wskaźnik na adres surowy bufor dla tablicy, która jest poukładany zgodnie z opisem w C++ Konwencji.  
   
 ## <a name="remarks"></a>Uwagi  
  `pDimensionSizes` i `pDimensionLowerBounds` są równoległe tablic, więc elementy znajdujące się w ten sam indeks tablic są właściwości tego samego obiektu.  
@@ -67,5 +67,6 @@ HRESULT GetArrayObjectInfo(
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
-- [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+
+- [ICorProfilerInfo — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 — Interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a93e73fa8345b48e604d6f63d16170d850ead451
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b95625cfe17b36c0244e6780a08dcf50ce50763d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201861"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess — Funkcja
 Zamyka bieżący proces niezarządzany.  
@@ -59,4 +59,5 @@ void STDMETHODCALLTYPE CorExitProcess (
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

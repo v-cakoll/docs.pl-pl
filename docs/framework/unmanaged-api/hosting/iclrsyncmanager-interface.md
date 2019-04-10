@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203096"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager — Interfejs
 Definiuje metody, które umożliwiają hosta, aby uzyskać informacje o żądanych zadań i wykrył zakleszczenie w jego implementacja synchronizacji.  
@@ -45,7 +45,8 @@ Definiuje metody, które umożliwiają hosta, aby uzyskać informacje o żądany
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Threading.Thread>
-- [IHostSyncManager, interfejs](ihostsyncmanager-interface.md)
+- [IHostSyncManager — Interfejs](ihostsyncmanager-interface.md)
 - [Zarządzana i niezarządzana wątkowość](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
-- [Hosting, interfejsy](hosting-interfaces.md)
+- [Hosting — Interfejsy](hosting-interfaces.md)

@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583564"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202654"
 ---
-# <a name="getnames-function"></a>Funkcja GetNames
+# <a name="getnames-function"></a>GetNames, funkcja
 Pobiera podzbiór lub wszystkie nazwy właściwości obiektu. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -80,7 +80,6 @@ Nazwane zwracane są kontrolowane przez kombinacja flag i parametry. Na przykła
 
 Flaga wartości w `lFlags` pól bitowych
 
-
 Flagi, które mogą być przekazywane jako `lEnumFlags` należą pola bitowe, które są zdefiniowane w *WbemCli.h* pliku nagłówkowego, lecz można również zdefiniować je jako stałe w kodzie.  Można łączyć z jedną flagę z każdej grupy za pomocą jakakolwiek Flaga w żadnej innej grupy. Jednak flagi z tej samej grupy wzajemnie się wykluczają. 
 
 | Flagi grupy 1 |Wartość  |Opis  |
@@ -112,4 +111,5 @@ Funkcja zawsze przydziela nową `SAFEARRAY` Jeśli zwróci ona `WBEM_S_NO_ERROR`
  **Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Usługi WMI i liczniki wydajności (niezarządzany wykaz interfejsów API)](index.md)

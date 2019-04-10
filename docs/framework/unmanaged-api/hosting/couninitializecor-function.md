@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dca4fd4a4d20627bef8f7fedd5a801ba07e8e19b
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202719"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor — Funkcja
 `CoUninitializeCor` jest przestarzały.  
@@ -37,4 +37,5 @@ STDAPI_(void) CoUninitializeCor(void);
  Środowisko uruchomieniowe języka wspólnego nie może być zwolnione z procesu. Aby całkowicie usunąć środowisko uruchomieniowe z uruchomionego procesu, należy zamknąć ten proces.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Statyczne funkcje globalne metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

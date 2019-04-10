@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166936"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Presentation Foundation (WPF) za pośrednictwem systemu windows. Głównym celem okna jest do hostowania zawartości, która wizualizuje dane oraz umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemem windows w aplikacje autonomiczne.  
   
 > [!NOTE]
 >  Hostowana w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, w tym [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] i utracić wprowadzone [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] stron, nie udostępniają ich własnych systemu windows. Zamiast tego są hostowane w systemie windows, dostarczone przez [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Zobacz [WPF XAML Browser Applications Overview](wpf-xaml-browser-applications-overview.md).  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Klasy okna  
  Na poniższym rysunku przedstawiono części składowe okna:  
@@ -109,9 +108,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla programu MSBuild  
  Określa sposób implementacji okna, jak została ona skonfigurowana do [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Okna, która jest zdefiniowana przy użyciu zarówno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i związane z kodem:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementów.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementów.  
   
--   Pliki związane z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementów.  
+-   Pliki związane z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` elementów.  
   
  Jest to pokazane w następującym [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] pliku projektu.  
   
@@ -130,8 +129,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Okres istnienia okna  
  Jak za pomocą dowolnej klasy okna ma okres istnienia, który rozpoczyna się, gdy najpierw zostanie uruchomiony, po upływie którego otwarte, aktywowane i dezaktywowane i zamknięte po pewnym czasie.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>Otwierając okno  
  Aby otworzyć okno, należy najpierw utworzyć jego wystąpienie, które przedstawiono w poniższym przykładzie.  
@@ -258,9 +256,8 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- <xref:System.Windows.Window.Closing> Programu obsługi zdarzeń jest przekazywany <xref:System.ComponentModel.CancelEventArgs>, który implementuje `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość, która jest ustawiona na `true` zapobiegające zamknięcia okna.  
+
+ <xref:System.Windows.Window.Closing> Programu obsługi zdarzeń jest przekazywany <xref:System.ComponentModel.CancelEventArgs>, który implementuje `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość, która jest ustawiona na `true` zapobiegające zamknięcia okna.  
   
  Jeśli <xref:System.Windows.Window.Closing> nie jest obsługiwany lub jest obsługiwane, ale nie zostało anulowane, okno zostanie zamknięte. Tuż przed, w rzeczywistości powoduje zamknięcie okna <xref:System.Windows.Window.Closed> jest wywoływane. W tym momencie okna nie można zablokować zamknięcia.  
   
@@ -401,8 +398,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
  Możesz zmienić wygląd obszaru klienckiego okna przez dodanie zawartości określonego okna, takie jak przyciski, etykiety i pola tekstowe. Aby skonfigurować obszaru nieklienckiego <xref:System.Windows.Window> udostępnia kilka właściwości, które zawierają <xref:System.Windows.Window.Icon%2A> można ustawić ikonę okna i <xref:System.Windows.Window.Title%2A> można ustawić tytułu.  
   
  Możesz również zmienić wygląd i zachowanie obramowania obszaru nieklienckiego, konfigurując tryb zmiany rozmiaru okna, styl okna, czy jest on wyświetlany jako przycisk na pasku zadań pulpitu.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Zmiana rozmiaru w trybie  
  W zależności od <xref:System.Windows.Window.WindowStyle%2A> właściwości, można kontrolować, jak (i czy) użytkownicy mogą zmieniać rozmiar okna. Wybór styl okna wpływa na, czy użytkownik może zmienić rozmiar okna, przeciągając jego obramowania przy użyciu myszy czy **Minimalizuj**, **Maksymalizuj**, i **rozmiar** przycisków pojawiają się na obszaru nieklienckiego i, jeśli pojawią się, czy są włączone.  
@@ -484,9 +480,10 @@ Domyślny wygląd okna zawiera przycisk na pasku zadań, tak jak pokazano na pon
  Okna dialogowe są okna, które są często używane do zbierania informacji od użytkownika do ukończenia funkcji. Na przykład, gdy użytkownik chce, aby otworzyć plik, **Otwórz plik** okno dialogowe jest zwykle wyświetlany przez aplikację można pobrać nazwy pliku od użytkownika. Aby uzyskać więcej informacji, zobacz [Przegląd okien dialogowych](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Okna dialogowe — omówienie](dialog-boxes-overview.md)
+- [Przegląd okien dialogowych](dialog-boxes-overview.md)
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)

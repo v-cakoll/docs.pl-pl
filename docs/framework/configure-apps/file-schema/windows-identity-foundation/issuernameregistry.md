@@ -3,12 +3,12 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: db4e0492772d6fd0e155843422b7350aa630f713
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202524"
 ---
 # <a name="issuernameregistry"></a>\<issuerNameRegistry>
 Konfiguruje rejestru nazwy wystawcy, który jest używany przez programy obsługi w kolekcji programu obsługi tokenów.  
@@ -42,7 +42,7 @@ Konfiguruje rejestru nazwy wystawcy, który jest używany przez programy obsług
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-| — typ|Typ, który pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerNameRegistry> klasy. Aby uzyskać więcej informacji o sposobie określania niestandardowej `type`, zobacz [odwołań do niestandardowego typu].|  
+|— typ|Typ, który pochodzi od klasy <xref:System.IdentityModel.Tokens.IssuerNameRegistry> klasy. Aby uzyskać więcej informacji o sposobie określania niestandardowej `type`, zobacz [odwołań do niestandardowego typu].|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -78,5 +78,6 @@ Konfiguruje rejestru nazwy wystawcy, który jest używany przez programy obsług
 ```  
   
 ## <a name="see-also"></a>Zobacz także
+
 - <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
 - <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

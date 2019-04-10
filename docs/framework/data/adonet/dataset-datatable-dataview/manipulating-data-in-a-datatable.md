@@ -1,15 +1,15 @@
 ---
-title: Manipulowanie danymi w elemencie DataTable
+title: Operowanie na danych w elemencie DataTable
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: 54ebde293dd6701b8018e77c6bf8d773a4931e2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96be67859d9fd136d7ad370ae06d9fcf33426f53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202576"
 ---
-# <a name="manipulating-data-in-a-datatable"></a>Manipulowanie danymi w elemencie DataTable
+# <a name="manipulating-data-in-a-datatable"></a>Operowanie na danych w elemencie DataTable
 Po utworzeniu <xref:System.Data.DataTable> w <xref:System.Data.DataSet>, można wykonać tego samego działania, które jak w przypadku tabeli w bazie danych. Możesz dodawać, wyświetlać, edytowania i usuwania danych w tabeli; można monitorować, błędów i zdarzeń; i można wyszukiwać dane w tabeli. Podczas modyfikowania danych w **DataTable**, możesz również sprawdzić czy zmiany są dokładne i określenia, czy programowo zaakceptować lub odrzucić zmiany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
@@ -38,6 +38,7 @@ Po utworzeniu <xref:System.Data.DataTable> w <xref:System.Data.DataSet>, można 
  Wyjaśnia, jak o zaakceptowanie lub odrzucenie zmiany wprowadzone do wiersza.  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

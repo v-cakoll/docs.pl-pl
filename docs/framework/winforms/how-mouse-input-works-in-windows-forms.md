@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203018"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Działanie myszy w formularzach systemu Windows
 Otrzymywanie i obsługę wejście myszy jest ważnym elementem każdej aplikacji Windows. Obsługa zdarzeń myszy do wykonania akcji w aplikacji lub za pomocą informacji o lokalizacji myszy do testowania trafień lub innych działań. Ponadto można zmienić sposób kontrolki w aplikacji obsługi myszy w danych wejściowych. W tym temacie opisano te zdarzenia myszy w szczegółów i jak uzyskać i zmieniać ustawień systemowych myszy. Aby uzyskać więcej informacji na temat danych dostarczanych za pomocą myszy wywoływania zdarzeń i kolejności, w którym zdarzenia kliknięcia myszą, zobacz [zdarzeń myszy w formularzach Windows Forms](mouse-events-in-windows-forms.md).  
@@ -53,6 +53,7 @@ Otrzymywanie i obsługę wejście myszy jest ważnym elementem każdej aplikacji
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Pobiera liczbę wierszy do przewijania podczas obracania kółka myszy.|  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)
-- [Przechwytywanie myszy w formularzach Windows Forms](mouse-capture-in-windows-forms.md)
-- [Wskaźniki myszy w formularzach Windows Forms](mouse-pointers-in-windows-forms.md)
+- [Przechwytywanie myszy w formularzach systemu Windows](mouse-capture-in-windows-forms.md)
+- [Wskaźniki myszy w formularzach systemu Windows](mouse-pointers-in-windows-forms.md)

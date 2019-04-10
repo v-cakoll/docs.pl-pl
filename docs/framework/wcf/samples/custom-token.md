@@ -2,12 +2,12 @@
 title: Token niestandardowy
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: f056e54197a98a0218ef94e4df2fc46745a08985
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201770"
 ---
 # <a name="custom-token"></a>Token niestandardowy
 Niniejszy przykład pokazuje, jak dodać niestandardową implementację tokenu w aplikacji Windows Communication Foundation (WCF). W przykładzie użyto `CreditCardToken` można bezpiecznie przekazać informacje o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowane przy użyciu elementu powiązania zabezpieczeń symetryczne, wraz z treści wiadomości i innych nagłówków wiadomości. Jest to przydatne w przypadkach, gdzie wbudowany tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczającego niestandardowe z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontraktu, który definiuje wzorzec komunikacji "żądanie-odpowiedź".
@@ -628,4 +628,3 @@ string GetCallerCreditCardNumber()
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
 1.  Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
-  

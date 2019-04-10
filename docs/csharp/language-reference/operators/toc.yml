@@ -3,8 +3,11 @@ items:
   href: index.md
   items:
   - name: Operatory arytmetyczne
-    displayName: ++, --, +, -, *, /, %
+    displayName: ++, --, +, -, *, /, %, +=, -=, *=, /=, %=
     href: arithmetic-operators.md
+  - name: Operatory logiczne (Boolean)
+    displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+    href: boolean-logical-operators.md
   - name: Operatory równości
     displayName: ==, !=
     href: equality-operators.md
@@ -24,18 +27,12 @@ items:
     href: subtraction-operator.md
   - name: '* Operator'
     href: multiplication-operator.md
-  - name: /, operator
-    href: arithmetic-operators.md#division-operator-
-  - name: '%, operator'
-    href: arithmetic-operators.md#remainder-operator-
   - name: '&, operator'
     href: and-operator.md
   - name: '|, operator'
     href: or-operator.md
   - name: ^, operator
     href: xor-operator.md
-  - name: '! Operator'
-    href: logical-negation-operator.md
   - name: ~, operator
     href: bitwise-complement-operator.md
   - name: =, operator
@@ -46,22 +43,10 @@ items:
     href: greater-than-operator.md
   - name: '?: Operator'
     href: conditional-operator.md
-  - name: ++, operator
-    href: arithmetic-operators.md#increment-operator-
-  - name: --, operator
-    href: arithmetic-operators.md#decrement-operator---
-  - name: '&&, operator'
-    href: conditional-and-operator.md
-  - name: '||, operator'
-    href: conditional-or-operator.md
   - name: <<, operator
     href: left-shift-operator.md
   - name: '>> Operator'
     href: right-shift-operator.md
-  - name: ==, operator
-    href: equality-operators.md#equality-operator-
-  - name: '!=, operator'
-    href: equality-operators.md#inequality-operator-
   - name: <=, operator
     href: less-than-equal-operator.md
   - name: '>=, operator'
@@ -72,10 +57,6 @@ items:
     href: subtraction-assignment-operator.md
   - name: '*=, operator'
     href: multiplication-assignment-operator.md
-  - name: /=, operator
-    href: arithmetic-operators.md#compound-assignment
-  - name: '%=, operator'
-    href: arithmetic-operators.md#compound-assignment
   - name: '&=, operator'
     href: and-assignment-operator.md
   - name: '|=, operator'
@@ -92,9 +73,9 @@ items:
     href: null-coalescing-operator.md
   - name: =>, operator
     href: lambda-operator.md
-ms.openlocfilehash: 9ede047a86a760150563480442a3f82ff32c4fd4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: f2554167da2c1e51227d8f745496839c5c60fac2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545679"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307538"

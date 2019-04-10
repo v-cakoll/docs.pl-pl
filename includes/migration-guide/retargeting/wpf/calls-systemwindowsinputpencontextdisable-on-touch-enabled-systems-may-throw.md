@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 0778285ef1b5702bd79743038a1bd21ba04612d6
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3cd5052dffcb059c240a310e0b89384f28409264
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234549"
 ---
-### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a><span data-ttu-id="3bcbb-101">Wywołania System.Windows.Input.PenContext.Disable w systemach z obsługą dotykową może zgłaszać ArgumentException</span><span class="sxs-lookup"><span data-stu-id="3bcbb-101">Calls to System.Windows.Input.PenContext.Disable on touch-enabled systems may throw an ArgumentException</span></span>
+### <a name="calls-to-systemwindowsinputpencontextdisable-on-touch-enabled-systems-may-throw-an-argumentexception"></a><span data-ttu-id="b8262-101">Wywołania System.Windows.Input.PenContext.Disable w systemach z obsługą dotykową może zgłaszać ArgumentException</span><span class="sxs-lookup"><span data-stu-id="b8262-101">Calls to System.Windows.Input.PenContext.Disable on touch-enabled systems may throw an ArgumentException</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="3bcbb-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="3bcbb-102">Details</span></span>|<span data-ttu-id="3bcbb-103">W niektórych okolicznościach wywołania wewnętrznego <strong>System.Windows.Intput.PenContext.Disable</strong> metody w systemach z obsługą dotykową może zgłaszać nieobsługiwany <code>T:System.ArgumentException</code> ze względu na współużytkowania wątkowości.</span><span class="sxs-lookup"><span data-stu-id="3bcbb-103">Under some circumstances, calls to the internal <strong>System.Windows.Intput.PenContext.Disable</strong> method on touch-enabled systems may throw an unhandled <code>T:System.ArgumentException</code> because of reentrancy.</span></span>|
-|<span data-ttu-id="3bcbb-104">Sugestia</span><span class="sxs-lookup"><span data-stu-id="3bcbb-104">Suggestion</span></span>|<span data-ttu-id="3bcbb-105">Ten problem został rozwiązany w programie .NET Framework 4.7.</span><span class="sxs-lookup"><span data-stu-id="3bcbb-105">This issue has been addressed in the .NET Framework 4.7.</span></span> <span data-ttu-id="3bcbb-106">Aby zapobiec wyjątek, uaktualnienie do wersji programu .NET Framework, począwszy od programu .NET Framework 4.7.</span><span class="sxs-lookup"><span data-stu-id="3bcbb-106">To prevent the exception, upgrade to a version of the .NET Framework starting with the .NET Framework 4.7.</span></span>|
-|<span data-ttu-id="3bcbb-107">Zakres</span><span class="sxs-lookup"><span data-stu-id="3bcbb-107">Scope</span></span>|<span data-ttu-id="3bcbb-108">Krawędź</span><span class="sxs-lookup"><span data-stu-id="3bcbb-108">Edge</span></span>|
-|<span data-ttu-id="3bcbb-109">Wersja</span><span class="sxs-lookup"><span data-stu-id="3bcbb-109">Version</span></span>|<span data-ttu-id="3bcbb-110">4.6.1</span><span class="sxs-lookup"><span data-stu-id="3bcbb-110">4.6.1</span></span>|
-|<span data-ttu-id="3bcbb-111">Typ</span><span class="sxs-lookup"><span data-stu-id="3bcbb-111">Type</span></span>|<span data-ttu-id="3bcbb-112">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="3bcbb-112">Retargeting</span></span>|
-
+|<span data-ttu-id="b8262-102">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="b8262-102">Details</span></span>|<span data-ttu-id="b8262-103">W niektórych okolicznościach wywołania wewnętrznego <strong>System.Windows.Intput.PenContext.Disable</strong> metody w systemach z obsługą dotykową może zgłaszać nieobsługiwany <code>T:System.ArgumentException</code> ze względu na współużytkowania wątkowości.</span><span class="sxs-lookup"><span data-stu-id="b8262-103">Under some circumstances, calls to the internal <strong>System.Windows.Intput.PenContext.Disable</strong> method on touch-enabled systems may throw an unhandled <code>T:System.ArgumentException</code> because of reentrancy.</span></span>|
+|<span data-ttu-id="b8262-104">Sugestia</span><span class="sxs-lookup"><span data-stu-id="b8262-104">Suggestion</span></span>|<span data-ttu-id="b8262-105">Ten problem został rozwiązany w programie .NET Framework 4.7.</span><span class="sxs-lookup"><span data-stu-id="b8262-105">This issue has been addressed in the .NET Framework 4.7.</span></span> <span data-ttu-id="b8262-106">Aby zapobiec wyjątek, uaktualnienie do wersji programu .NET Framework, począwszy od programu .NET Framework 4.7.</span><span class="sxs-lookup"><span data-stu-id="b8262-106">To prevent the exception, upgrade to a version of the .NET Framework starting with the .NET Framework 4.7.</span></span>|
+|<span data-ttu-id="b8262-107">Zakres</span><span class="sxs-lookup"><span data-stu-id="b8262-107">Scope</span></span>|<span data-ttu-id="b8262-108">Krawędź</span><span class="sxs-lookup"><span data-stu-id="b8262-108">Edge</span></span>|
+|<span data-ttu-id="b8262-109">Wersja</span><span class="sxs-lookup"><span data-stu-id="b8262-109">Version</span></span>|<span data-ttu-id="b8262-110">4.6.1</span><span class="sxs-lookup"><span data-stu-id="b8262-110">4.6.1</span></span>|
+|<span data-ttu-id="b8262-111">Typ</span><span class="sxs-lookup"><span data-stu-id="b8262-111">Type</span></span>|<span data-ttu-id="b8262-112">Przekierowanie</span><span class="sxs-lookup"><span data-stu-id="b8262-112">Retargeting</span></span>|

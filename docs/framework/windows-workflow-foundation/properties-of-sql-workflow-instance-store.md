@@ -1,31 +1,32 @@
 ---
-title: Właściwości Store wystąpienia przepływu pracy SQL
+title: Właściwości magazynu wystąpień przepływu pracy SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
-ms.openlocfilehash: 7490528d31d76c62b15b32cc1f809ecfe9126eca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae96b08b8b9bb620ae3e86376bb0be4691d4caa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222123"
 ---
-# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="75ce8-102">Właściwości Store wystąpienia przepływu pracy SQL</span><span class="sxs-lookup"><span data-stu-id="75ce8-102">Properties of SQL Workflow Instance Store</span></span>
-<span data-ttu-id="75ce8-103">Tematy w tej sekcji zawierają szczegółowe informacje dotyczące właściwości Store wystąpienia przepływu pracy SQL.</span><span class="sxs-lookup"><span data-stu-id="75ce8-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
+# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="21499-102">Właściwości magazynu wystąpień przepływu pracy SQL</span><span class="sxs-lookup"><span data-stu-id="21499-102">Properties of SQL Workflow Instance Store</span></span>
+<span data-ttu-id="21499-103">Tematy w tej sekcji zawierają szczegółowe informacje dotyczące właściwości Store wystąpienia przepływu pracy SQL.</span><span class="sxs-lookup"><span data-stu-id="21499-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="75ce8-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="75ce8-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="21499-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="21499-104">In This Section</span></span>  
   
--   [<span data-ttu-id="75ce8-105">Opcja kodowania wystąpienia</span><span class="sxs-lookup"><span data-stu-id="75ce8-105">Instance Encoding Option</span></span>](instance-encoding-option.md)  
+-   [<span data-ttu-id="21499-105">Opcja kodowania wystąpienia</span><span class="sxs-lookup"><span data-stu-id="21499-105">Instance Encoding Option</span></span>](instance-encoding-option.md)  
   
--   [<span data-ttu-id="75ce8-106">Działanie ukończenia wystąpienia</span><span class="sxs-lookup"><span data-stu-id="75ce8-106">Instance Completion Action</span></span>](instance-completion-action.md)  
+-   [<span data-ttu-id="21499-106">Działanie ukończenia wystąpienia</span><span class="sxs-lookup"><span data-stu-id="21499-106">Instance Completion Action</span></span>](instance-completion-action.md)  
   
--   [<span data-ttu-id="75ce8-107">Działanie zablokowanego wyjątku wystąpienia</span><span class="sxs-lookup"><span data-stu-id="75ce8-107">Instance Locked Exception Action</span></span>](instance-locked-exception-action.md)  
+-   [<span data-ttu-id="21499-107">Działanie zablokowanego wyjątku wystąpienia</span><span class="sxs-lookup"><span data-stu-id="21499-107">Instance Locked Exception Action</span></span>](instance-locked-exception-action.md)  
   
--   [<span data-ttu-id="75ce8-108">Okres odnowienia blokady hosta</span><span class="sxs-lookup"><span data-stu-id="75ce8-108">Host Lock Renewal Period</span></span>](host-lock-renewal-period.md)  
+-   [<span data-ttu-id="21499-108">Okres odnowienia blokady hosta</span><span class="sxs-lookup"><span data-stu-id="21499-108">Host Lock Renewal Period</span></span>](host-lock-renewal-period.md)  
   
--   [<span data-ttu-id="75ce8-109">Okres wykrywania wystąpień możliwych do uruchomienia</span><span class="sxs-lookup"><span data-stu-id="75ce8-109">Runnable Instances Detection Period</span></span>](runnable-instances-detection-period.md)  
+-   [<span data-ttu-id="21499-109">Okres wykrywania wystąpień możliwych do uruchomienia</span><span class="sxs-lookup"><span data-stu-id="21499-109">Runnable Instances Detection Period</span></span>](runnable-instances-detection-period.md)  
   
--   [<span data-ttu-id="75ce8-110">Parametry połączenia i nazwa parametrów połączenia</span><span class="sxs-lookup"><span data-stu-id="75ce8-110">Connection String and Connection String Name</span></span>](connection-string-and-connection-string-name.md)  
+-   [<span data-ttu-id="21499-110">Parametry połączenia i nazwa parametrów połączenia</span><span class="sxs-lookup"><span data-stu-id="21499-110">Connection String and Connection String Name</span></span>](connection-string-and-connection-string-name.md)  
   
-## <a name="see-also"></a><span data-ttu-id="75ce8-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="75ce8-111">See also</span></span>
-- [<span data-ttu-id="75ce8-112">Windows Server App Fabric wystąpienia Store</span><span class="sxs-lookup"><span data-stu-id="75ce8-112">Windows Server App Fabric Instance Store</span></span>](https://go.microsoft.com/fwlink/?LinkId=201201)
-- [<span data-ttu-id="75ce8-113">Danych trwałości programu AppFabric programu SQL Server</span><span class="sxs-lookup"><span data-stu-id="75ce8-113">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkId=201202)
+## <a name="see-also"></a><span data-ttu-id="21499-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="21499-111">See also</span></span>
+
+- [<span data-ttu-id="21499-112">Windows Server App Fabric wystąpienia Store</span><span class="sxs-lookup"><span data-stu-id="21499-112">Windows Server App Fabric Instance Store</span></span>](https://go.microsoft.com/fwlink/?LinkId=201201)
+- [<span data-ttu-id="21499-113">Danych trwałości programu AppFabric programu SQL Server</span><span class="sxs-lookup"><span data-stu-id="21499-113">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkId=201202)

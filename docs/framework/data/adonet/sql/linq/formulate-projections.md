@@ -5,75 +5,76 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
-ms.openlocfilehash: 9b32ee4c7745fda482561311dc116e0e38b49ab7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223306"
 ---
-# <a name="formulate-projections"></a><span data-ttu-id="1122d-102">Formułowanie projekcji</span><span class="sxs-lookup"><span data-stu-id="1122d-102">Formulate Projections</span></span>
-<span data-ttu-id="1122d-103">W poniższych przykładach pokazano sposób, w jaki `select` instrukcji w C# i `Select` instrukcji w języku Visual Basic można łączyć z innymi funkcjami do formularza projekcje zapytania.</span><span class="sxs-lookup"><span data-stu-id="1122d-103">The following examples show how the `select` statement in C# and `Select` statement in Visual Basic can be combined with other features to form query projections.</span></span>  
+# <a name="formulate-projections"></a><span data-ttu-id="9ef19-102">Formułowanie projekcji</span><span class="sxs-lookup"><span data-stu-id="9ef19-102">Formulate Projections</span></span>
+<span data-ttu-id="9ef19-103">W poniższych przykładach pokazano sposób, w jaki `select` instrukcji w C# i `Select` instrukcji w języku Visual Basic można łączyć z innymi funkcjami do formularza projekcje zapytania.</span><span class="sxs-lookup"><span data-stu-id="9ef19-103">The following examples show how the `select` statement in C# and `Select` statement in Visual Basic can be combined with other features to form query projections.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1122d-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-104">Example</span></span>  
- <span data-ttu-id="1122d-105">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) do zwrócenia sekwencji skontaktuj się z nazwy `Customers`.</span><span class="sxs-lookup"><span data-stu-id="1122d-105">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) to return a sequence of contact names for `Customers`.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-104">Example</span></span>  
+ <span data-ttu-id="9ef19-105">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) do zwrócenia sekwencji skontaktuj się z nazwy `Customers`.</span><span class="sxs-lookup"><span data-stu-id="9ef19-105">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) to return a sequence of contact names for `Customers`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#57](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#57)]
  [!code-vb[DLinqQueryExamples#57](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#57)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-106">Example</span></span>  
- <span data-ttu-id="1122d-107">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* do zwrócenia sekwencji skontaktuj się z nazwy i numery telefonu `Customers`.</span><span class="sxs-lookup"><span data-stu-id="1122d-107">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a sequence of contact names and telephone numbers for `Customers`.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-106">Example</span></span>  
+ <span data-ttu-id="9ef19-107">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* do zwrócenia sekwencji skontaktuj się z nazwy i numery telefonu `Customers`.</span><span class="sxs-lookup"><span data-stu-id="9ef19-107">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a sequence of contact names and telephone numbers for `Customers`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#58](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#58)]
  [!code-vb[DLinqQueryExamples#58](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#58)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-108">Example</span></span>  
- <span data-ttu-id="1122d-109">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* do zwrócenia sekwencji nazwy i numery telefonów dla pracowników.</span><span class="sxs-lookup"><span data-stu-id="1122d-109">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a sequence of names and telephone numbers for employees.</span></span> <span data-ttu-id="1122d-110">`FirstName` i `LastName` pola są połączone w jedno pole (`Name`), a `HomePhone` pola została zmieniona na `Phone` w wynikowej sekwencji.</span><span class="sxs-lookup"><span data-stu-id="1122d-110">The `FirstName` and `LastName` fields are combined into a single field (`Name`), and the `HomePhone` field is renamed to `Phone` in the resulting sequence.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-108">Example</span></span>  
+ <span data-ttu-id="9ef19-109">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* do zwrócenia sekwencji nazwy i numery telefonów dla pracowników.</span><span class="sxs-lookup"><span data-stu-id="9ef19-109">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a sequence of names and telephone numbers for employees.</span></span> <span data-ttu-id="9ef19-110">`FirstName` i `LastName` pola są połączone w jedno pole (`Name`), a `HomePhone` pola została zmieniona na `Phone` w wynikowej sekwencji.</span><span class="sxs-lookup"><span data-stu-id="9ef19-110">The `FirstName` and `LastName` fields are combined into a single field (`Name`), and the `HomePhone` field is renamed to `Phone` in the resulting sequence.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#59](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#59)]
  [!code-vb[DLinqQueryExamples#59](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#59)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-111">Example</span></span>  
- <span data-ttu-id="1122d-112">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* celu zwrócenia sekwencji wszystkich `ProductID`s i obliczonej wartości o nazwie `HalfPrice`.</span><span class="sxs-lookup"><span data-stu-id="1122d-112">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a sequence of all `ProductID`s and a calculated value named `HalfPrice`.</span></span> <span data-ttu-id="1122d-113">Ta wartość jest równa `UnitPrice` podzielonej przez 2.</span><span class="sxs-lookup"><span data-stu-id="1122d-113">This value is set to the `UnitPrice` divided by 2.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-111">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-111">Example</span></span>  
+ <span data-ttu-id="9ef19-112">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* celu zwrócenia sekwencji wszystkich `ProductID`s i obliczonej wartości o nazwie `HalfPrice`.</span><span class="sxs-lookup"><span data-stu-id="9ef19-112">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a sequence of all `ProductID`s and a calculated value named `HalfPrice`.</span></span> <span data-ttu-id="9ef19-113">Ta wartość jest równa `UnitPrice` podzielonej przez 2.</span><span class="sxs-lookup"><span data-stu-id="9ef19-113">This value is set to the `UnitPrice` divided by 2.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#60](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#60)]
  [!code-vb[DLinqQueryExamples#60](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#60)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-114">Example</span></span>  
- <span data-ttu-id="1122d-115">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *instrukcji warunkowej* celu zwrócenia sekwencji nazwę produktu i dostępność produktu.</span><span class="sxs-lookup"><span data-stu-id="1122d-115">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and a *conditional statement* to return a sequence of product name and product availability.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-114">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-114">Example</span></span>  
+ <span data-ttu-id="9ef19-115">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *instrukcji warunkowej* celu zwrócenia sekwencji nazwę produktu i dostępność produktu.</span><span class="sxs-lookup"><span data-stu-id="9ef19-115">The following example uses the `Select` clause in Visual Basic (`select` clause in C#) and a *conditional statement* to return a sequence of product name and product availability.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#61](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#61)]
  [!code-vb[DLinqQueryExamples#61](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#61)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-116">Example</span></span>  
- <span data-ttu-id="1122d-117">W poniższym przykładzie użyto języka Visual Basic `Select` — klauzula (`select` w klauzuli C#) i *znany typ* (nazwa) w celu zwrócenia sekwencji nazw pracowników.</span><span class="sxs-lookup"><span data-stu-id="1122d-117">The following example uses a Visual Basic `Select` clause (`select` clause in C#) and a *known type* (Name) to return a sequence of the names of employees.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-116">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-116">Example</span></span>  
+ <span data-ttu-id="9ef19-117">W poniższym przykładzie użyto języka Visual Basic `Select` — klauzula (`select` w klauzuli C#) i *znany typ* (nazwa) w celu zwrócenia sekwencji nazw pracowników.</span><span class="sxs-lookup"><span data-stu-id="9ef19-117">The following example uses a Visual Basic `Select` clause (`select` clause in C#) and a *known type* (Name) to return a sequence of the names of employees.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#62](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#62)]
  [!code-vb[DLinqQueryExamples#62](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#62)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-118">Example</span></span>  
- <span data-ttu-id="1122d-119">W poniższym przykładzie użyto `Select` i `Where` w języku Visual Basic (`select` i `where` w C#) do zwrócenia *filtrowane sekwencji* nazw kontaktu dla klientów w Londynie.</span><span class="sxs-lookup"><span data-stu-id="1122d-119">The following example uses `Select` and `Where` in Visual Basic (`select` and `where` in C#) to return a *filtered sequence* of contact names for customers in London.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-118">Example</span></span>  
+ <span data-ttu-id="9ef19-119">W poniższym przykładzie użyto `Select` i `Where` w języku Visual Basic (`select` i `where` w C#) do zwrócenia *filtrowane sekwencji* nazw kontaktu dla klientów w Londynie.</span><span class="sxs-lookup"><span data-stu-id="9ef19-119">The following example uses `Select` and `Where` in Visual Basic (`select` and `where` in C#) to return a *filtered sequence* of contact names for customers in London.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#63](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#63)]
  [!code-vb[DLinqQueryExamples#63](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#63)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-120">Example</span></span>  
- <span data-ttu-id="1122d-121">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* do zwrócenia *ukształtowane podzbioru* danych dotyczących klientów.</span><span class="sxs-lookup"><span data-stu-id="1122d-121">The following example uses a `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a *shaped subset* of the data about customers.</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-120">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-120">Example</span></span>  
+ <span data-ttu-id="9ef19-121">W poniższym przykładzie użyto `Select` klauzuli w języku Visual Basic (`select` w klauzuli C#) i *typy anonimowe* do zwrócenia *ukształtowane podzbioru* danych dotyczących klientów.</span><span class="sxs-lookup"><span data-stu-id="9ef19-121">The following example uses a `Select` clause in Visual Basic (`select` clause in C#) and *anonymous types* to return a *shaped subset* of the data about customers.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#64](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#64)]
  [!code-vb[DLinqQueryExamples#64](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#64)]  
   
-## <a name="example"></a><span data-ttu-id="1122d-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="1122d-122">Example</span></span>  
- <span data-ttu-id="1122d-123">W poniższym przykładzie użyto zapytań zagnieżdżonej, aby zostały zwrócone następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="1122d-123">The following example uses nested queries to return the following results:</span></span>  
+## <a name="example"></a><span data-ttu-id="9ef19-122">Przykład</span><span class="sxs-lookup"><span data-stu-id="9ef19-122">Example</span></span>  
+ <span data-ttu-id="9ef19-123">W poniższym przykładzie użyto zapytań zagnieżdżonej, aby zostały zwrócone następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="9ef19-123">The following example uses nested queries to return the following results:</span></span>  
   
--   <span data-ttu-id="1122d-124">Sekwencja wszystkich zamówień i odpowiadające im `OrderID`s.</span><span class="sxs-lookup"><span data-stu-id="1122d-124">A sequence of all orders and their corresponding `OrderID`s.</span></span>  
+-   <span data-ttu-id="9ef19-124">Sekwencja wszystkich zamówień i odpowiadające im `OrderID`s.</span><span class="sxs-lookup"><span data-stu-id="9ef19-124">A sequence of all orders and their corresponding `OrderID`s.</span></span>  
   
--   <span data-ttu-id="1122d-125">Podsekwencji elementy w kolejności, dla którego jest rabat.</span><span class="sxs-lookup"><span data-stu-id="1122d-125">A subsequence of the items in the order for which there is a discount.</span></span>  
+-   <span data-ttu-id="9ef19-125">Podsekwencji elementy w kolejności, dla którego jest rabat.</span><span class="sxs-lookup"><span data-stu-id="9ef19-125">A subsequence of the items in the order for which there is a discount.</span></span>  
   
--   <span data-ttu-id="1122d-126">Ilość pieniądze zapisane, jeżeli nie dołączono kosztu wysyłki.</span><span class="sxs-lookup"><span data-stu-id="1122d-126">The amount of money saved if the cost of shipping is not included.</span></span>  
+-   <span data-ttu-id="9ef19-126">Ilość pieniądze zapisane, jeżeli nie dołączono kosztu wysyłki.</span><span class="sxs-lookup"><span data-stu-id="9ef19-126">The amount of money saved if the cost of shipping is not included.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  
   
-## <a name="see-also"></a><span data-ttu-id="1122d-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1122d-127">See also</span></span>
-- [<span data-ttu-id="1122d-128">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="1122d-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="9ef19-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9ef19-127">See also</span></span>
+
+- [<span data-ttu-id="9ef19-128">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="9ef19-128">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

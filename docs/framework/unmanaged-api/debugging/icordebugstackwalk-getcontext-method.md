@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cd15e3dc8bd9a0bc4ac43860c82a2aab382f7ed
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bba1e6c113fb4caa0db8963e238d3eceba0cc8ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224861"
 ---
-# <a name="icordebugstackwalkgetcontext-method"></a><span data-ttu-id="a95af-102">ICorDebugStackWalk::GetContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="a95af-102">ICorDebugStackWalk::GetContext Method</span></span>
-<span data-ttu-id="a95af-103">Zwraca kontekst dla bieżącej ramki [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="a95af-103">Returns the context for the current frame in the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object.</span></span>  
+# <a name="icordebugstackwalkgetcontext-method"></a><span data-ttu-id="44b41-102">ICorDebugStackWalk::GetContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="44b41-102">ICorDebugStackWalk::GetContext Method</span></span>
+<span data-ttu-id="44b41-103">Zwraca kontekst dla bieżącej ramki [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="44b41-103">Returns the context for the current frame in the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a95af-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a95af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="44b41-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="44b41-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext([in]  ULONG32 contextFlags,  
@@ -36,43 +36,44 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
                    [out, size_is(contextBufSize)] BYTE contextBuf[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a95af-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a95af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="44b41-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="44b41-105">Parameters</span></span>  
  `contextFlags`  
- <span data-ttu-id="a95af-106">[in] Flagi, które wskazują żądanej zawartości buforu kontekstu (zdefiniowane w pliku WinNT.h).</span><span class="sxs-lookup"><span data-stu-id="a95af-106">[in] Flags that indicate the requested contents of the context buffer (defined in WinNT.h).</span></span>  
+ <span data-ttu-id="44b41-106">[in] Flagi, które wskazują żądanej zawartości buforu kontekstu (zdefiniowane w pliku WinNT.h).</span><span class="sxs-lookup"><span data-stu-id="44b41-106">[in] Flags that indicate the requested contents of the context buffer (defined in WinNT.h).</span></span>  
   
  `contextBufSize`  
- <span data-ttu-id="a95af-107">[in] Przydzielony rozmiar buforu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="a95af-107">[in] The allocated size of the context buffer.</span></span>  
+ <span data-ttu-id="44b41-107">[in] Przydzielony rozmiar buforu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="44b41-107">[in] The allocated size of the context buffer.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="a95af-108">[out] Rzeczywisty rozmiar kontekstu.</span><span class="sxs-lookup"><span data-stu-id="a95af-108">[out] The actual size of the context.</span></span> <span data-ttu-id="a95af-109">Ta wartość musi być mniejsza niż lub równy rozmiarowi buforu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="a95af-109">This value must be less than or equal to the size of the context buffer.</span></span>  
+ <span data-ttu-id="44b41-108">[out] Rzeczywisty rozmiar kontekstu.</span><span class="sxs-lookup"><span data-stu-id="44b41-108">[out] The actual size of the context.</span></span> <span data-ttu-id="44b41-109">Ta wartość musi być mniejsza niż lub równy rozmiarowi buforu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="44b41-109">This value must be less than or equal to the size of the context buffer.</span></span>  
   
  `contextBuf`  
- <span data-ttu-id="a95af-110">[out] Buforu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="a95af-110">[out] The context buffer.</span></span>  
+ <span data-ttu-id="44b41-110">[out] Buforu kontekstu.</span><span class="sxs-lookup"><span data-stu-id="44b41-110">[out] The context buffer.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a95af-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a95af-111">Return Value</span></span>  
- <span data-ttu-id="a95af-112">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="a95af-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="44b41-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="44b41-111">Return Value</span></span>  
+ <span data-ttu-id="44b41-112">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="44b41-112">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="a95af-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="a95af-113">HRESULT</span></span>|<span data-ttu-id="a95af-114">Opis</span><span class="sxs-lookup"><span data-stu-id="a95af-114">Description</span></span>|  
+|<span data-ttu-id="44b41-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="44b41-113">HRESULT</span></span>|<span data-ttu-id="44b41-114">Opis</span><span class="sxs-lookup"><span data-stu-id="44b41-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a95af-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="a95af-115">S_OK</span></span>|<span data-ttu-id="a95af-116">Kontekst dla bieżącej ramki została pomyślnie zwrócona.</span><span class="sxs-lookup"><span data-stu-id="a95af-116">The context for the current frame was successfully returned.</span></span>|  
-|<span data-ttu-id="a95af-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="a95af-117">E_FAIL</span></span>|<span data-ttu-id="a95af-118">Nie można zwrócić kontekstu.</span><span class="sxs-lookup"><span data-stu-id="a95af-118">The context could not be returned.</span></span>|  
-|<span data-ttu-id="a95af-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)</span><span class="sxs-lookup"><span data-stu-id="a95af-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)</span></span>|<span data-ttu-id="a95af-120">Buforu kontekstu jest za mały.</span><span class="sxs-lookup"><span data-stu-id="a95af-120">The context buffer is too small.</span></span>|  
-|<span data-ttu-id="a95af-121">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="a95af-121">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="a95af-122">Wskaźnik ramki jest już na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.</span><span class="sxs-lookup"><span data-stu-id="a95af-122">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
+|<span data-ttu-id="44b41-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="44b41-115">S_OK</span></span>|<span data-ttu-id="44b41-116">Kontekst dla bieżącej ramki została pomyślnie zwrócona.</span><span class="sxs-lookup"><span data-stu-id="44b41-116">The context for the current frame was successfully returned.</span></span>|  
+|<span data-ttu-id="44b41-117">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="44b41-117">E_FAIL</span></span>|<span data-ttu-id="44b41-118">Nie można zwrócić kontekstu.</span><span class="sxs-lookup"><span data-stu-id="44b41-118">The context could not be returned.</span></span>|  
+|<span data-ttu-id="44b41-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)</span><span class="sxs-lookup"><span data-stu-id="44b41-119">HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)</span></span>|<span data-ttu-id="44b41-120">Buforu kontekstu jest za mały.</span><span class="sxs-lookup"><span data-stu-id="44b41-120">The context buffer is too small.</span></span>|  
+|<span data-ttu-id="44b41-121">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="44b41-121">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="44b41-122">Wskaźnik ramki jest już na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.</span><span class="sxs-lookup"><span data-stu-id="44b41-122">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="a95af-123">Wyjątki</span><span class="sxs-lookup"><span data-stu-id="a95af-123">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="44b41-123">Wyjątki</span><span class="sxs-lookup"><span data-stu-id="44b41-123">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a95af-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a95af-124">Remarks</span></span>  
- <span data-ttu-id="a95af-125">Ponieważ odwijanie przywraca tylko podzbiór rejestrów, takich jak rejestrów trwałej kontekst może nie odpowiadają dokładnie stanu rejestru w momencie wywołania.</span><span class="sxs-lookup"><span data-stu-id="a95af-125">Because unwinding restores only a subset of the registers, such as non-volatile registers, the context may not exactly match the register state at the time of the call.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="44b41-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="44b41-124">Remarks</span></span>  
+ <span data-ttu-id="44b41-125">Ponieważ odwijanie przywraca tylko podzbiór rejestrów, takich jak rejestrów trwałej kontekst może nie odpowiadają dokładnie stanu rejestru w momencie wywołania.</span><span class="sxs-lookup"><span data-stu-id="44b41-125">Because unwinding restores only a subset of the registers, such as non-volatile registers, the context may not exactly match the register state at the time of the call.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a95af-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a95af-126">Requirements</span></span>  
- <span data-ttu-id="a95af-127">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a95af-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="44b41-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="44b41-126">Requirements</span></span>  
+ <span data-ttu-id="44b41-127">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44b41-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a95af-128">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a95af-128">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="44b41-128">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="44b41-128">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a95af-129">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a95af-129">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="44b41-129">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="44b41-129">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a95af-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a95af-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="44b41-130">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="44b41-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a95af-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a95af-131">See also</span></span>
-- [<span data-ttu-id="a95af-132">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="a95af-132">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="a95af-133">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="a95af-133">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="44b41-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="44b41-131">See also</span></span>
+
+- [<span data-ttu-id="44b41-132">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="44b41-132">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="44b41-133">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="44b41-133">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

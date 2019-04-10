@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee20ddd337e99836e74fe95e88e9e49a9a783ea7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 093b21a439b96c9fe2f971300f314d1b75527f1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207204"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a><span data-ttu-id="f4f03-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span><span class="sxs-lookup"><span data-stu-id="f4f03-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span></span>
-<span data-ttu-id="f4f03-103">Pobiera ciąg nazwy kultury zestawu.</span><span class="sxs-lookup"><span data-stu-id="f4f03-103">Gets the culture name string of the assembly.</span></span>  
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a><span data-ttu-id="fe5e2-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span><span class="sxs-lookup"><span data-stu-id="fe5e2-102">ICorDebugMergedAssemblyRecord::GetCulture Method</span></span>
+<span data-ttu-id="fe5e2-103">Pobiera ciąg nazwy kultury zestawu.</span><span class="sxs-lookup"><span data-stu-id="fe5e2-103">Gets the culture name string of the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f4f03-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f4f03-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe5e2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fe5e2-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCulture(  
@@ -24,31 +24,32 @@ HRESULT GetCulture(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f4f03-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f4f03-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fe5e2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fe5e2-105">Parameters</span></span>  
  `cchCulture`  
- <span data-ttu-id="f4f03-106">[in] Liczba znaków w `szCulture` buforu.</span><span class="sxs-lookup"><span data-stu-id="f4f03-106">[in] The number of characters in the `szCulture` buffer.</span></span>  
+ <span data-ttu-id="fe5e2-106">[in] Liczba znaków w `szCulture` buforu.</span><span class="sxs-lookup"><span data-stu-id="fe5e2-106">[in] The number of characters in the `szCulture` buffer.</span></span>  
   
  `pcchCulture`  
- <span data-ttu-id="f4f03-107">[out] Liczba znaków rzeczywiście zapisanych na `szCulture` buforu.</span><span class="sxs-lookup"><span data-stu-id="f4f03-107">[out] The number of characters actually written to the `szCulture` buffer.</span></span>  
+ <span data-ttu-id="fe5e2-107">[out] Liczba znaków rzeczywiście zapisanych na `szCulture` buforu.</span><span class="sxs-lookup"><span data-stu-id="fe5e2-107">[out] The number of characters actually written to the `szCulture` buffer.</span></span>  
   
  `szCulture`  
- <span data-ttu-id="f4f03-108">[out] Tablica znaków, który zawiera nazwę kultury.</span><span class="sxs-lookup"><span data-stu-id="f4f03-108">[out] A character array that contains the culture name.</span></span>  
+ <span data-ttu-id="fe5e2-108">[out] Tablica znaków, który zawiera nazwę kultury.</span><span class="sxs-lookup"><span data-stu-id="fe5e2-108">[out] A character array that contains the culture name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f4f03-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f4f03-109">Remarks</span></span>  
- <span data-ttu-id="f4f03-110">Nazwa kultury jest unikatowy ciąg, który identyfikuje kultury, na przykład "en US" (w przypadku kultury angielski (Stany Zjednoczone)) lub "neutralnej" (dla kultury neutralnej).</span><span class="sxs-lookup"><span data-stu-id="f4f03-110">The culture name is a unique string that identifies a culture, such as "en-US" (for the English (United States) culture), or "neutral" (for a neutral culture).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fe5e2-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fe5e2-109">Remarks</span></span>  
+ <span data-ttu-id="fe5e2-110">Nazwa kultury jest unikatowy ciąg, który identyfikuje kultury, na przykład "en US" (w przypadku kultury angielski (Stany Zjednoczone)) lub "neutralnej" (dla kultury neutralnej).</span><span class="sxs-lookup"><span data-stu-id="fe5e2-110">The culture name is a unique string that identifies a culture, such as "en-US" (for the English (United States) culture), or "neutral" (for a neutral culture).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f4f03-111">Ta metoda jest tylko dostępne z architekturą .NET Native.</span><span class="sxs-lookup"><span data-stu-id="f4f03-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="fe5e2-111">Ta metoda jest tylko dostępne z architekturą .NET Native.</span><span class="sxs-lookup"><span data-stu-id="fe5e2-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f4f03-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f4f03-112">Requirements</span></span>  
- <span data-ttu-id="f4f03-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f4f03-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe5e2-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fe5e2-112">Requirements</span></span>  
+ <span data-ttu-id="fe5e2-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe5e2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f4f03-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f4f03-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="fe5e2-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fe5e2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="f4f03-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f4f03-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fe5e2-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fe5e2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="f4f03-116">**Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f4f03-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="fe5e2-116">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="fe5e2-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4f03-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f4f03-117">See also</span></span>
-- [<span data-ttu-id="f4f03-118">ICorDebugMergedAssemblyRecord, interfejs</span><span class="sxs-lookup"><span data-stu-id="f4f03-118">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [<span data-ttu-id="f4f03-119">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="f4f03-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="fe5e2-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fe5e2-117">See also</span></span>
+
+- [<span data-ttu-id="fe5e2-118">ICorDebugMergedAssemblyRecord, interfejs</span><span class="sxs-lookup"><span data-stu-id="fe5e2-118">ICorDebugMergedAssemblyRecord Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
+- [<span data-ttu-id="fe5e2-119">Debugowanie — Interfejsy</span><span class="sxs-lookup"><span data-stu-id="fe5e2-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

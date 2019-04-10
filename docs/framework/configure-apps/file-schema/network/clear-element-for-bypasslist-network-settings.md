@@ -1,5 +1,5 @@
 ---
-title: <clear> — Element dla listy obejść (Ustawienia sieci)
+title: <clear> Element dla bypasslist (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -10,51 +10,51 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: b3a1d8a0801168283f83160242c4e9d7e151f847
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7499d15f1d57887ffc3e78b83ed686c0c0f46cf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203525"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="cb4fc-102">\<Wyczyść >, Element dla bypasslist (ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="cb4fc-102">\<clear> Element for bypasslist (Network Settings)</span></span>
-<span data-ttu-id="cb4fc-103">Czyści listę obejścia serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-103">Clears the proxy bypass list.</span></span>  
+# <a name="clear-element-for-bypasslist-network-settings"></a><span data-ttu-id="20014-102">\<Wyczyść >, Element dla bypasslist (ustawienia sieci)</span><span class="sxs-lookup"><span data-stu-id="20014-102">\<clear> Element for bypasslist (Network Settings)</span></span>
+<span data-ttu-id="20014-103">Czyści listę obejścia serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="20014-103">Clears the proxy bypass list.</span></span>  
   
- <span data-ttu-id="cb4fc-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="cb4fc-104">\<configuration></span></span>  
-<span data-ttu-id="cb4fc-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="cb4fc-105">\<system.net></span></span>  
-<span data-ttu-id="cb4fc-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="cb4fc-106">\<defaultProxy></span></span>  
-<span data-ttu-id="cb4fc-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="cb4fc-107">\<bypasslist></span></span>  
-<span data-ttu-id="cb4fc-108">\<clear></span><span class="sxs-lookup"><span data-stu-id="cb4fc-108">\<clear></span></span>  
+ <span data-ttu-id="20014-104">\<Konfiguracja ></span><span class="sxs-lookup"><span data-stu-id="20014-104">\<configuration></span></span>  
+<span data-ttu-id="20014-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="20014-105">\<system.net></span></span>  
+<span data-ttu-id="20014-106">\<defaultProxy></span><span class="sxs-lookup"><span data-stu-id="20014-106">\<defaultProxy></span></span>  
+<span data-ttu-id="20014-107">\<bypasslist></span><span class="sxs-lookup"><span data-stu-id="20014-107">\<bypasslist></span></span>  
+<span data-ttu-id="20014-108">\<clear></span><span class="sxs-lookup"><span data-stu-id="20014-108">\<clear></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb4fc-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="cb4fc-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="20014-109">Składnia</span><span class="sxs-lookup"><span data-stu-id="20014-109">Syntax</span></span>  
   
 ```xml  
 <clear/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="cb4fc-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="cb4fc-110">Attributes and Elements</span></span>  
- <span data-ttu-id="cb4fc-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="20014-110">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="20014-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="20014-111">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="20014-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="cb4fc-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="cb4fc-112">Attributes</span></span>  
- <span data-ttu-id="cb4fc-113">Brak.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-113">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="20014-112">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="20014-112">Attributes</span></span>  
+ <span data-ttu-id="20014-113">Brak.</span><span class="sxs-lookup"><span data-stu-id="20014-113">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="cb4fc-114">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="cb4fc-114">Child Elements</span></span>  
- <span data-ttu-id="cb4fc-115">Brak.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="20014-114">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="20014-114">Child Elements</span></span>  
+ <span data-ttu-id="20014-115">Brak.</span><span class="sxs-lookup"><span data-stu-id="20014-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="cb4fc-116">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="cb4fc-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="20014-116">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="20014-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="cb4fc-117">**Element**</span><span class="sxs-lookup"><span data-stu-id="cb4fc-117">**Element**</span></span>|<span data-ttu-id="cb4fc-118">**Opis**</span><span class="sxs-lookup"><span data-stu-id="cb4fc-118">**Description**</span></span>|  
+|**<span data-ttu-id="20014-117">Element</span><span class="sxs-lookup"><span data-stu-id="20014-117">Element</span></span>**|**<span data-ttu-id="20014-118">Opis</span><span class="sxs-lookup"><span data-stu-id="20014-118">Description</span></span>**|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="cb4fc-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="cb4fc-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="cb4fc-120">Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
+|[<span data-ttu-id="20014-119">bypasslist</span><span class="sxs-lookup"><span data-stu-id="20014-119">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="20014-120">Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.</span><span class="sxs-lookup"><span data-stu-id="20014-120">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cb4fc-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cb4fc-121">Remarks</span></span>  
- <span data-ttu-id="cb4fc-122">`clear` Element czyści wszystkie wpisy z listy obejścia.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-122">The `clear` element clears all entries from the bypass list.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="20014-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="20014-121">Remarks</span></span>  
+ <span data-ttu-id="20014-122">`clear` Element czyści wszystkie wpisy z listy obejścia.</span><span class="sxs-lookup"><span data-stu-id="20014-122">The `clear` element clears all entries from the bypass list.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="cb4fc-123">Pliki konfiguracji</span><span class="sxs-lookup"><span data-stu-id="cb4fc-123">Configuration Files</span></span>  
- <span data-ttu-id="cb4fc-124">Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="cb4fc-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="20014-123">Pliki konfiguracji</span><span class="sxs-lookup"><span data-stu-id="20014-123">Configuration Files</span></span>  
+ <span data-ttu-id="20014-124">Ten element może być użyty w pliku konfiguracji aplikacji lub w pliku konfiguracji komputera (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="20014-124">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb4fc-125">Przykład</span><span class="sxs-lookup"><span data-stu-id="cb4fc-125">Example</span></span>  
- <span data-ttu-id="cb4fc-126">Poniższy przykład czyści listę obejścia, a następnie dodaje dwa adresy do listy pomijania.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="cb4fc-127">Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpoczyna się których adresy IP 192.168.</span><span class="sxs-lookup"><span data-stu-id="cb4fc-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
+## <a name="example"></a><span data-ttu-id="20014-125">Przykład</span><span class="sxs-lookup"><span data-stu-id="20014-125">Example</span></span>  
+ <span data-ttu-id="20014-126">Poniższy przykład czyści listę obejścia, a następnie dodaje dwa adresy do listy pomijania.</span><span class="sxs-lookup"><span data-stu-id="20014-126">The following example clears the bypass list and then adds two addresses to the bypass list.</span></span> <span data-ttu-id="20014-127">Pierwszy pomija serwera proxy dla wszystkich serwerów w domenie contoso.com. drugi pomija serwera proxy dla wszystkich serwerom rozpoczyna się których adresy IP 192.168.</span><span class="sxs-lookup"><span data-stu-id="20014-127">The first bypasses the proxy for all servers in the contoso.com domain; the second bypasses the proxy for all servers whose IP address begins with 192.168.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,6 +70,7 @@ ms.locfileid: "55276344"
 </configuration>   
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cb4fc-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="cb4fc-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20014-128">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="20014-128">See also</span></span>
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="cb4fc-129">Schemat ustawień sieci</span><span class="sxs-lookup"><span data-stu-id="cb4fc-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="20014-129">Schemat ustawień sieci</span><span class="sxs-lookup"><span data-stu-id="20014-129">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

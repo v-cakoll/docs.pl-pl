@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1cecbbd7509fcd4f79aeb6e2711e8b7604c2f3a9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6fc141cbebe08f8d0974788409d5aef0f68d2878
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205124"
 ---
-# <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a><span data-ttu-id="d52a8-102">ICorConfiguration::SetDebuggerThreadControl — Metoda</span><span class="sxs-lookup"><span data-stu-id="d52a8-102">ICorConfiguration::SetDebuggerThreadControl Method</span></span>
-<span data-ttu-id="d52a8-103">Ustawia interfejs wywołania zwrotnego, że usług debugowania wywoła jako środowisko uruchomieniowe języka wspólnego wątków (CLR) są zablokowane i odblokowany do debugowania.</span><span class="sxs-lookup"><span data-stu-id="d52a8-103">Sets the callback interface that the debugging services will call as common language runtime (CLR) threads are blocked and unblocked for debugging.</span></span>  
+# <a name="icorconfigurationsetdebuggerthreadcontrol-method"></a><span data-ttu-id="bd912-102">ICorConfiguration::SetDebuggerThreadControl — Metoda</span><span class="sxs-lookup"><span data-stu-id="bd912-102">ICorConfiguration::SetDebuggerThreadControl Method</span></span>
+<span data-ttu-id="bd912-103">Ustawia interfejs wywołania zwrotnego, że usług debugowania wywoła jako środowisko uruchomieniowe języka wspólnego wątków (CLR) są zablokowane i odblokowany do debugowania.</span><span class="sxs-lookup"><span data-stu-id="bd912-103">Sets the callback interface that the debugging services will call as common language runtime (CLR) threads are blocked and unblocked for debugging.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d52a8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d52a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bd912-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="bd912-104">Syntax</span></span>  
   
 ```  
 HRESULT SetDebuggerThreadControl (  
@@ -35,18 +35,19 @@ HRESULT SetDebuggerThreadControl (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d52a8-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d52a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="bd912-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="bd912-105">Parameters</span></span>  
  `pDebuggerThreadControl`  
- <span data-ttu-id="d52a8-106">[in] Wskaźnik do [idebuggerthreadcontrol —](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) obiektu, która powiadamia hosta, dotyczące blokowania i odblokowywania wątków przez usług debugowania.</span><span class="sxs-lookup"><span data-stu-id="d52a8-106">[in] A pointer to an [IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) object that notifies the host about the blocking and unblocking of threads by the debugging services.</span></span>  
+ <span data-ttu-id="bd912-106">[in] Wskaźnik do [idebuggerthreadcontrol —](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) obiektu, która powiadamia hosta, dotyczące blokowania i odblokowywania wątków przez usług debugowania.</span><span class="sxs-lookup"><span data-stu-id="bd912-106">[in] A pointer to an [IDebuggerThreadControl](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md) object that notifies the host about the blocking and unblocking of threads by the debugging services.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d52a8-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d52a8-107">Requirements</span></span>  
- <span data-ttu-id="d52a8-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d52a8-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bd912-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bd912-107">Requirements</span></span>  
+ <span data-ttu-id="bd912-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bd912-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d52a8-109">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d52a8-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bd912-109">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bd912-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d52a8-110">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d52a8-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bd912-110">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bd912-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d52a8-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d52a8-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="bd912-111">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="bd912-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d52a8-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d52a8-112">See also</span></span>
-- [<span data-ttu-id="d52a8-113">ICorConfiguration, interfejs</span><span class="sxs-lookup"><span data-stu-id="d52a8-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bd912-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="bd912-112">See also</span></span>
+
+- [<span data-ttu-id="bd912-113">ICorConfiguration — Interfejs</span><span class="sxs-lookup"><span data-stu-id="bd912-113">ICorConfiguration Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource'
+title: 'Instrukcje: odzwierciedlanie aktualizacji źródła danych w kontrolce formularzy systemu Windows za pomocą elementu BindingSource'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,33 +12,34 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-ms.openlocfilehash: 06204c909987041ac6bf4e64e6f72a850910ca67
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 16dbe4da1efecd120d4da4d66c3d79ec907b92a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218655"
 ---
-# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a><span data-ttu-id="2ef3f-102">Instrukcje: Odzwierciedlanie aktualizacji źródła danych w kontrolce Windows Forms przy użyciu kontrolki BindingSource</span><span class="sxs-lookup"><span data-stu-id="2ef3f-102">How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource</span></span>
-<span data-ttu-id="2ef3f-103">Korzystając z formantów powiązanych z danymi, czasami konieczne reagowanie na zmiany w źródle danych, gdy źródło danych nie powoduje zmiany listy zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="2ef3f-103">When you use data-bound controls, you sometimes have to respond to changes in the data source when the data source does not raise list-changed events.</span></span> <span data-ttu-id="2ef3f-104">Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika można powiązać źródła danych do kontrolki formularzy Windows może powiadomić kontrolkę źródle danych została zmieniona przez wywołanie metody <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> — metoda.</span><span class="sxs-lookup"><span data-stu-id="2ef3f-104">When you use the <xref:System.Windows.Forms.BindingSource> component to bind your data source to a Windows Forms control, you can notify the control that your data source has changed by calling the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method.</span></span>  
+# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a><span data-ttu-id="c6bbe-102">Instrukcje: odzwierciedlanie aktualizacji źródła danych w kontrolce formularzy systemu Windows za pomocą elementu BindingSource</span><span class="sxs-lookup"><span data-stu-id="c6bbe-102">How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource</span></span>
+<span data-ttu-id="c6bbe-103">Korzystając z formantów powiązanych z danymi, czasami konieczne reagowanie na zmiany w źródle danych, gdy źródło danych nie powoduje zmiany listy zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="c6bbe-103">When you use data-bound controls, you sometimes have to respond to changes in the data source when the data source does not raise list-changed events.</span></span> <span data-ttu-id="c6bbe-104">Kiedy używasz <xref:System.Windows.Forms.BindingSource> składnika można powiązać źródła danych do kontrolki formularzy Windows może powiadomić kontrolkę źródle danych została zmieniona przez wywołanie metody <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> — metoda.</span><span class="sxs-lookup"><span data-stu-id="c6bbe-104">When you use the <xref:System.Windows.Forms.BindingSource> component to bind your data source to a Windows Forms control, you can notify the control that your data source has changed by calling the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2ef3f-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="2ef3f-105">Example</span></span>  
- <span data-ttu-id="2ef3f-106">Poniższy przykład kodu demonstruje sposób użycia <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> metody powiadamianie powiązanego formantu o aktualizacji w źródle danych.</span><span class="sxs-lookup"><span data-stu-id="2ef3f-106">The following code example demonstrates using the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method to notify a bound control about an update in the data source.</span></span>  
+## <a name="example"></a><span data-ttu-id="c6bbe-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="c6bbe-105">Example</span></span>  
+ <span data-ttu-id="c6bbe-106">Poniższy przykład kodu demonstruje sposób użycia <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> metody powiadamianie powiązanego formantu o aktualizacji w źródle danych.</span><span class="sxs-lookup"><span data-stu-id="c6bbe-106">The following code example demonstrates using the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method to notify a bound control about an update in the data source.</span></span>  
   
  [!code-cpp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="2ef3f-107">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="2ef3f-107">Compiling the Code</span></span>  
- <span data-ttu-id="2ef3f-108">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="2ef3f-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c6bbe-107">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="c6bbe-107">Compiling the Code</span></span>  
+ <span data-ttu-id="c6bbe-108">Ten przykład wymaga:</span><span class="sxs-lookup"><span data-stu-id="c6bbe-108">This example requires:</span></span>  
   
--   <span data-ttu-id="2ef3f-109">Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="2ef3f-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="c6bbe-109">Odwołania do zestawów systemu, System.Drawing i przestrzeń nazw System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="c6bbe-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="2ef3f-110">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="2ef3f-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="2ef3f-111">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="2ef3f-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="c6bbe-110">Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="c6bbe-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="c6bbe-111">Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.</span><span class="sxs-lookup"><span data-stu-id="c6bbe-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2ef3f-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2ef3f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6bbe-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c6bbe-112">See also</span></span>
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [<span data-ttu-id="2ef3f-113">BindingSource, składnik</span><span class="sxs-lookup"><span data-stu-id="2ef3f-113">BindingSource Component</span></span>](bindingsource-component.md)
-- [<span data-ttu-id="2ef3f-114">Instrukcje: Powiązanie z typem formantu Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2ef3f-114">How to: Bind a Windows Forms Control to a Type</span></span>](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [<span data-ttu-id="c6bbe-113">BindingSource — Składnik</span><span class="sxs-lookup"><span data-stu-id="c6bbe-113">BindingSource Component</span></span>](bindingsource-component.md)
+- [<span data-ttu-id="c6bbe-114">Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem</span><span class="sxs-lookup"><span data-stu-id="c6bbe-114">How to: Bind a Windows Forms Control to a Type</span></span>](how-to-bind-a-windows-forms-control-to-a-type.md)

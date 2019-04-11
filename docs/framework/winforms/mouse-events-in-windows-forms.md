@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333681"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Zdarzenia myszy w formularzach systemu Windows
 Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji kursora myszy wskaźnik i stan przycisku myszy. Ten temat zawiera szczegółowe informacje dotyczące sposobu uzyskania tych informacji ze zdarzeń myszy i wyjaśnia kolejność, w której kliknięcie myszą zdarzenia są wywoływane w kontrolkach formularzy Windows Forms. Aby uzyskać listę i opis wszystkich zdarzeń myszy, zobacz [sposób działania wejście myszy w formularzach Windows Forms](how-mouse-input-works-in-windows-forms.md).  Zobacz też [Przegląd obsługi zdarzeń (Windows Forms)](event-handlers-overview-windows-forms.md) i [Przegląd zdarzeń (systemu Windows Windows Forms)](events-overview-windows-forms.md).  
@@ -36,31 +36,31 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
 ## <a name="standard-click-event-behavior"></a>Standardowa kliknij zachowania zdarzenia  
  Jeśli chcesz obsługiwać zdarzenia w odpowiedniej kolejności kliknięcie myszą, musisz znać kolejność, w której kliknij zdarzenia są wywoływane w kontrolkach formularzy Windows Forms. Wszystkie formularze Windows, które kontrolki podnieść kliknij przycisk zdarzenia w tej samej kolejności przycisk myszy jest wciśnięty i wydania (niezależnie od tego, który przycisk myszy), z wyjątkiem w przypadku, gdy podane poniżej dla pojedynczych formantów. Na poniższej liście przedstawiono kolejność zdarzeń wywołanych dla kliknięcia jednego przycisku myszy:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> zdarzenie.  
+1. <xref:System.Windows.Forms.Control.MouseDown> zdarzenie.  
   
-2.  <xref:System.Windows.Forms.Control.Click> zdarzenie.  
+2. <xref:System.Windows.Forms.Control.Click> zdarzenie.  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> zdarzenie.  
+3. <xref:System.Windows.Forms.Control.MouseClick> zdarzenie.  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
+4. <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
   
  Poniżej przedstawiono kolejność zdarzeń wywołanych dla przez kliknięcie przycisku myszy w podwójne:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> zdarzenie.  
+1. <xref:System.Windows.Forms.Control.MouseDown> zdarzenie.  
   
-2.  <xref:System.Windows.Forms.Control.Click> zdarzenie.  
+2. <xref:System.Windows.Forms.Control.Click> zdarzenie.  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> zdarzenie.  
+3. <xref:System.Windows.Forms.Control.MouseClick> zdarzenie.  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
+4. <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> zdarzenie.  
+5. <xref:System.Windows.Forms.Control.MouseDown> zdarzenie.  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> zdarzenie. (To może się różnić, w zależności od tego, czy w danym kontroli ma <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> określony bit stylu do `true`. Aby uzyskać więcej informacji o sposobie ustawiania <xref:System.Windows.Forms.ControlStyles> bit, zobacz <xref:System.Windows.Forms.Control.SetStyle%2A> metody.)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> zdarzenie. (To może się różnić, w zależności od tego, czy w danym kontroli ma <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> określony bit stylu do `true`. Aby uzyskać więcej informacji o sposobie ustawiania <xref:System.Windows.Forms.ControlStyles> bit, zobacz <xref:System.Windows.Forms.Control.SetStyle%2A> metody.)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzenie.  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzenie.  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
+8. <xref:System.Windows.Forms.Control.MouseUp> zdarzenie.  
   
  Dla przykładu kodu, który demonstruje kolejność myszy zdarzenia kliknięcia, zobacz [jak: Dane wejściowe podane dojście do użytkownika, zdarzenia w Windows Forms kontrolki](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -122,21 +122,21 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
 ### <a name="painting-behavior-of-toggle-controls"></a>Malowanie zachowanie kontrolki przełącznika  
  Przełącz formanty, takie jak formanty pochodząca od <xref:System.Windows.Forms.ButtonBase> klasy, mają następujące zachowanie szczególne malowania w połączeniu z myszy zdarzenia kliknięcia:  
   
-1.  Użytkownik naciśnie przycisk myszy.  
+1. Użytkownik naciśnie przycisk myszy.  
   
-2.  Malowanie kontrolki w stanie po naciśnięciu.  
+2. Malowanie kontrolki w stanie po naciśnięciu.  
   
-3.  <xref:System.Windows.Forms.Control.MouseDown> Zdarzenie jest wywoływane.  
+3. <xref:System.Windows.Forms.Control.MouseDown> Zdarzenie jest wywoływane.  
   
-4.  Użytkownik zwolni przycisk myszy.  
+4. Użytkownik zwolni przycisk myszy.  
   
-5.  Malowanie kontrolki w stanie podniesione.  
+5. Malowanie kontrolki w stanie podniesione.  
   
-6.  <xref:System.Windows.Forms.Control.Click> Zdarzenie jest wywoływane.  
+6. <xref:System.Windows.Forms.Control.Click> Zdarzenie jest wywoływane.  
   
-7.  <xref:System.Windows.Forms.Control.MouseClick> Zdarzenie jest wywoływane.  
+7. <xref:System.Windows.Forms.Control.MouseClick> Zdarzenie jest wywoływane.  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> Zdarzenie jest wywoływane.  
+8. <xref:System.Windows.Forms.Control.MouseUp> Zdarzenie jest wywoływane.  
   
     > [!NOTE]
     >  Gdy użytkownik przesuwa wskaźnik myszy poza formant przełączania, gdy przycisk myszy jest wciśnięty (np. przesuwanie wskaźnika myszy <xref:System.Windows.Forms.Button> kontroli, gdy naciśnięcia), kontrolki przełącznika namaluje w wypukły stanu i tylko <xref:System.Windows.Forms.Control.MouseUp> wystąpi zdarzenie. <xref:System.Windows.Forms.Control.Click> Lub <xref:System.Windows.Forms.Control.MouseClick> zdarzenia nie będzie występować w tej sytuacji.  

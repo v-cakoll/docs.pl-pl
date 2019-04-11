@@ -1,17 +1,19 @@
 ---
 title: Wariancje w interfejsach (C#)
-ms.date: 07/20/2015
+ms.date: 04/10/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ffe437fc88722b9f38aa2fde6cdd87ed2e2060be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469551"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480784"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Wariancje w interfejsach (C#)
 
-.NET framework 4 wprowadzono wariancji obsługę kilka istniejących interfejsów ogólnych. Obsługa wariancja umożliwia niejawną konwersję klas, które implementują te interfejsy. Następujące interfejsy są teraz wariant:
+.NET framework 4 wprowadzono wariancji obsługę kilka istniejących interfejsów ogólnych. Obsługa wariancja umożliwia niejawną konwersję klas, które implementują te interfejsy. 
+
+Rozpoczęcie przeczytania artykułu z .NET Framework 4, następujące interfejsy są wariant:
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T jest kowariantny)
 
@@ -27,6 +29,12 @@ ms.locfileid: "57469551"
 
 - <xref:System.IComparable%601> (T jest kontrawariantny)
 
+Począwszy od programu .NET Framework 4.5, następujące interfejsy są wariant:
+
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T jest kontrawariantny)
+
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T jest kontrawariantny)
+
 Kowariancja zezwala na metodę, aby mieć zwracanego typu bardziej pochodnego niż określone przez parametr typu ogólnego interfejsu. Aby zilustrować funkcji KOWARIANCJA, należy wziąć pod uwagę te ogólne interfejsy: `IEnumerable<Object>` i `IEnumerable<String>`. `IEnumerable<String>` Interfejsu nie dziedziczy `IEnumerable<Object>` interfejsu. Jednak `String` typ dziedziczyć `Object` typu, a w niektórych przypadkach możesz chcieć przypisać obiekty te interfejsy do siebie nawzajem. Jest to pokazane w poniższym przykładzie kodu.
 
 ```csharp
@@ -34,7 +42,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-We wcześniejszych wersjach programu .NET Framework, ten kod powoduje błąd kompilacji w języku C# za pomocą `Option Strict On`. Teraz możesz używać, ale `strings` zamiast `objects`, jak pokazano w poprzednim przykładzie, ponieważ <xref:System.Collections.Generic.IEnumerable%601> interfejsu jest kowariantny.
+We wcześniejszych wersjach programu .NET Framework, ten kod powoduje błąd kompilacji w C# i, jeśli `Option Strict` jest włączona, w języku Visual Basic. Teraz możesz używać, ale `strings` zamiast `objects`, jak pokazano w poprzednim przykładzie, ponieważ <xref:System.Collections.Generic.IEnumerable%601> interfejsu jest kowariantny.
 
 Kontrawariancja umożliwia metodę, aby mieć typy argumentów, które są mniej pochodnego niż określona przez parametr ogólny interfejsu. Aby zilustrować kontrawariancja, załóżmy, że utworzono `BaseComparer` klasy do porównywania wystąpień `BaseClass` klasy. `BaseComparer` Klasy implementuje `IEqualityComparer<BaseClass>` interfejsu. Ponieważ <xref:System.Collections.Generic.IEqualityComparer%601> interfejs jest obecnie kontrawariantny, możesz użyć `BaseComparer` do porównywania wystąpień klas, które dziedziczą `BaseClass` klasy. Jest to pokazane w poniższym przykładzie kodu.
 

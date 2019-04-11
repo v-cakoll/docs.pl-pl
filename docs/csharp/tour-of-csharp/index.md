@@ -3,12 +3,12 @@ title: Przewodnik po przykładzie C# - C# przewodnik
 description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152064"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481096"
 ---
 # <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka
 
@@ -52,27 +52,27 @@ Dane wyjściowe programu jest generowany przez `WriteLine` metody `Console` klas
 Istnieje o wiele więcej, aby dowiedzieć się więcej na temat C#.  Poniższe tematy zawierają omówienie elementów C# języka. Te przeglądy będzie podawanie ogólnych informacji o wszystkich elementach języka i zapewnić informacje niezbędne do Dowiedz się więcej na elementy C# języka:
 
 * [Struktura programu](program-structure.md)
-    - Dowiedz się, podstawowych pojęć organizacji w C# języka: ***programy***, ***przestrzenie nazw***, ***typy***, ***członków***i ***zestawy***.
+  - Dowiedz się, podstawowych pojęć organizacji w C# języka: ***programy***, ***przestrzenie nazw***, ***typy***, ***członków***i ***zestawy***.
 * [Typy i zmienne](types-and-variables.md)
-    - Dowiedz się więcej o ***typy wartości***, ***typy odwołań***, i ***zmienne*** w C# języka.
+  - Dowiedz się więcej o ***typy wartości***, ***typy odwołań***, i ***zmienne*** w C# języka.
 * [Wyrażenia](expressions.md)
-    - ***Wyrażenia*** są konstruowane na podstawie ***operandów*** i ***operatorów***. Wyrażenia dają wartość.
+  - ***Wyrażenia*** są konstruowane na podstawie ***operandów*** i ***operatorów***. Wyrażenia dają wartość.
 * [Instrukcje](statements.md)
-    - Możesz użyć ***instrukcji*** do działania programu express.
+  - Możesz użyć ***instrukcji*** do działania programu express.
 * [Klasy i obiekty](classes-and-objects.md)
-    - ***Klasy*** są najbardziej podstawowe języka C# dla typów. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***członków***, które są uwzględniane w tym temacie.
+  - ***Klasy*** są najbardziej podstawowe języka C# dla typów. ***Obiekty*** są wystąpieniami klasy. Klasy są tworzone przy użyciu ***członków***, które są uwzględniane w tym temacie.
 * [Struktury](structs.md)
-    - ***Struktury*** są struktur danych, które w przeciwieństwie do klasy, są typami wartości.
+  - ***Struktury*** są struktur danych, które w przeciwieństwie do klasy, są typami wartości.
 * [Tablice](arrays.md)
-    - ***Tablicy*** to struktura danych, która zawiera szereg zmiennych, które są dostępne za pośrednictwem obliczanej indeksów.
+  - ***Tablicy*** to struktura danych, która zawiera szereg zmiennych, które są dostępne za pośrednictwem obliczanej indeksów.
 * [Interfejsy](interfaces.md)
-    - ***Interfejsu*** definiuje kontrakt, który może być implementowany przez klas i struktur. Interfejs może zawierać metody, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji członków definiuje — jedynie określa elementy członkowskie, które muszą być dostarczane przez klasy lub struktury, które implementują interfejs.
+  - ***Interfejsu*** definiuje kontrakt, który może być implementowany przez klas i struktur. Interfejs może zawierać metody, właściwości, zdarzeń i indeksatorów. Interfejs nie zawiera implementacji członków definiuje — jedynie określa elementy członkowskie, które muszą być dostarczane przez klasy lub struktury, które implementują interfejs.
 * [Wyliczenia](enums.md)
-    - ***Typu wyliczeniowego*** jest typem wartości odrębnych z szeregu nazwanych stałych.
+  - ***Typu wyliczeniowego*** jest typem wartości odrębnych z szeregu nazwanych stałych.
 * [Delegaty](delegates.md)
-    - A ***typ delegowany*** reprezentuje odwołania do metod z określonego parametru listy i typ zwracany. Delegatów można umożliwić traktować metod jako jednostki, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, w przeciwieństwie do innych języków, ale w przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo i bezpieczny typowo.
+  - A ***typ delegowany*** reprezentuje odwołania do metod z określonego parametru listy i typ zwracany. Delegatów można umożliwić traktować metod jako jednostki, które mogą być przypisane do zmiennych i przekazywane jako parametry. Delegaty są podobne do koncepcji wskaźników funkcji, w przeciwieństwie do innych języków, ale w przeciwieństwie do wskaźników funkcji, obiekty delegowane są zorientowane obiektowo i bezpieczny typowo.
 * [Atrybuty](attributes.md)
-     * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacje na temat typów, składniki i innych jednostek.
+  * ***Atrybuty*** Włącz programy określić dodatkowe deklaratywne informacje na temat typów, składniki i innych jednostek.
 
 > [!div class="step-by-step"]
 > [Next](program-structure.md)

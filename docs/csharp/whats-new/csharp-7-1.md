@@ -1,37 +1,39 @@
 ---
-title: Nowości w języku C# 7.1
-description: Przegląd nowych funkcji w języku C# 7.1.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+title: Co nowego C# 7.1
+description: Omówienie nowych funkcji w C# 7.1.
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728657"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480966"
 ---
-# <a name="whats-new-in-c-71"></a>Nowości w języku C# 7.1
+# <a name="whats-new-in-c-71"></a>Co nowego C# 7.1
 
-C# 7.1 to pierwszy punkt wersji języka C#. Umożliwia oznaczanie okresach wydania zwiększona dla języka. Służy nowe funkcje wcześniej, najlepszym rozwiązaniem, gdy każda nowa funkcja jest gotowe. C# 7.1 dodaje możliwość konfigurowania kompilatora do dopasowania określonej wersji języka. Który umożliwia decyzja o uaktualnienie narzędzia decyzja o uaktualnienie wersji językowych.
+C#7.1 to pierwsze wydanie punkt do C# języka. Oznacza cykl zwiększone wersji języka. Umożliwia nowe funkcje wcześniej, najlepiej w przypadku każdej nowej funkcji jest gotowy. C#7.1 dodaje możliwość konfigurowania kompilatora odpowiadający określonej wersji języka. Która pozwala oddzielić decyzja do uaktualnienia narzędzi od decyzji o uaktualnienie wersji językowych.
 
-C# 7.1 dodaje [wybór wersji języka](../language-reference/configure-language-version.md) element konfiguracji, trzy nowe funkcje językowe i nowe zachowanie kompilatora.
+C#7.1 dodaje [wybór wersji języka](../language-reference/configure-language-version.md) element konfiguracji, trzy nowe funkcje języka i nowe zachowanie kompilatora.
 
-Dostępne są następujące nowe funkcje językowe w tej wersji:
+Dostępne są następujące nowe funkcje języka w tej wersji:
 
-* [`async` `Main` — Metoda](#async-main)
+* [`async` `Main` — metoda](#async-main)
   - Punkt wejścia dla aplikacji może mieć `async` modyfikator.
-* [`default` Wyrażenia dosłowne](#default-literal-expressions)
-  - Gdy typ docelowy można wywnioskować, można użyć wyrażenia dosłowne domyślne w wyrażeniach wartości domyślne.
-* [Nazwy elementów wywnioskowanych spójnej kolekcji](#inferred-tuple-element-names)
-  - Od zainicjowania spójnej kolekcji w wielu przypadkach można wywnioskować nazwy elementów spójnej kolekcji.
+* [`default` wyrażenia literału](#default-literal-expressions)
+  - Można używać wyrażeń literał domyślny w wyrażeniach wartości domyślne, gdy można wywnioskować typu docelowego.
+* [Wywnioskowane nazwy elementów krotki](#inferred-tuple-element-names)
+  - Od inicjowania krotki w wielu przypadkach można wywnioskować nazwami elementów krotki.
+* [Dopasowania do wzorca w parametrach typu ogólnego](#pattern-matching-on-generic-type-parameters)
+  - Wyrażenia dopasowania wzorca można użyć zmiennych, którego typem jest parametr typu ogólnego.
 
-Na koniec kompilator ma dwie opcje `/refout` i `/refonly` tego formantu [odwołania generowanie zestawów](#reference-assembly-generation).
+Na koniec, kompilator zawiera dwie pozycje `/refout` i `/refonly` tej kontrolki [odwoływać się do generowania zestawu](#reference-assembly-generation).
 
-Aby korzystać z najnowszych funkcji w wersji punktu, należy [skonfigurować kompilatora wersji języka](../language-reference/configure-language-version.md) i wybierz wersję.
+Korzystanie z najnowszych funkcji w wersji punktu należy [skonfigurować wersję językową kompilatora](../language-reference/configure-language-version.md) i wybierz wersję.
 
-## <a name="async-main"></a>Asynchroniczne głównego
+## <a name="async-main"></a>Asynchroniczna funkcja main
 
-*Async głównego* metoda pozwala na użycie `await` w Twojej `Main` metody.
-Wcześniej będzie potrzebny do zapisania:
+*Asynchroniczna funkcja main* metoda umożliwia użycie `await` w swojej `Main` metody.
+Wcześniej należy napisać:
 
 ```csharp
 static int Main()
@@ -40,7 +42,7 @@ static int Main()
 }
 ```
 
-Możesz teraz zapisać:
+Teraz można napisać:
 
 ```csharp
 static async Task<int> Main()
@@ -51,7 +53,7 @@ static async Task<int> Main()
 }
 ```
 
-Jeśli program nie zwraca kod zakończenia, mogą zadeklarować `Main` metodę zwracającą <xref:System.Threading.Tasks.Task>:
+Jeśli program nie zwraca kod zakończenia, możesz zadeklarować `Main` metodę, która zwraca <xref:System.Threading.Tasks.Task>:
 
 ```csharp
 static async Task Main()
@@ -60,30 +62,30 @@ static async Task Main()
 }
 ```
 
-Możesz przeczytać dodatkowe informacje szczegółowe informacje w [async głównego](../programming-guide/main-and-command-args/index.md) w Podręczniku programowania.
+Możesz dowiedzieć się więcej o szczegółach w [asynchroniczna funkcja main](../programming-guide/main-and-command-args/index.md) artykułu w Podręczniku programowania.
 
-## <a name="default-literal-expressions"></a>Wyrażenia dosłowne domyślne
+## <a name="default-literal-expressions"></a>Wyrażenia literału domyślnego
 
-Wyrażenia dosłowne domyślne są ulepszeniem wyrażenia wartości domyślnej.
-Wyrażenia te zainicjować zmiennej przy użyciu wartości domyślnej. Gdzie należy wcześniej zapisać:
+Wyrażenia literału domyślnego stanowią rozszerzenie wyrażenia wartości domyślnych.
+Te wyrażenia Zainicjuj zmienną do wartości domyślnej. Gdzie należy wcześniej napisać:
 
 ```csharp
 Func<string, bool> whereClause = default(Func<string, bool>);
 ```
 
-Teraz można pominąć inicjowanie typ po prawej stronie:
+Można teraz pominąć typ po prawej stronie inicjowania:
 
 ```csharp
 Func<string, bool> whereClause = default;
 ```
 
-Użytkownik może dowiedzieć się więcej o to rozszerzenie w temacie C# przewodnik programowania w języku na [domyślna wartość wyrażenia](../programming-guide/statements-expressions-operators/default-value-expressions.md).
+Dowiedz się więcej na temat to rozszerzenie w C# przewodnik programowania w artykule dotyczącym [domyślna wartość wyrażenia](../programming-guide/statements-expressions-operators/default-value-expressions.md).
 
-To rozszerzenie zmieniają się także niektóre reguły analizy [słowo kluczowe default](../language-reference/keywords/default.md).
+To ulepszenie zmienia się również niektóre reguły analizy składni dla [default — słowo kluczowe](../language-reference/keywords/default.md).
 
-## <a name="inferred-tuple-element-names"></a>Nazwy elementów wywnioskowanych spójnej kolekcji
+## <a name="inferred-tuple-element-names"></a>Wywnioskowane nazwy elementów krotki
 
-Ta funkcja jest mała rozszerzenie funkcji krotek wprowadzono w języku C# w wersji 7.0. Wiele razy podczas inicjowania krotka zmiennych po prawej stronie przypisania są takie same jak nazwy, którą chcesz spójnej kolekcji elementów:
+Ta funkcja jest mały ulepszenie funkcji krotek, wprowadzona w C# 7.0. Wiele razy podczas inicjowania spójną kolekcję zmiennych po prawej stronie przypisania są takie same jak nazwy, które Twoim zdaniem elementów krotki:
 
 ```csharp
 int count = 5;
@@ -91,7 +93,7 @@ string label = "Colors used in the map";
 var pair = (count: count, label: label);
 ```
 
-Nazwy elementów spójnej kolekcji można wywnioskować na podstawie zmiennych używaną do inicjalizacji spójna kolekcja znajdująca się w języku C# 7.1:
+Nazwy elementów krotki można wywnioskować na podstawie zmiennych, używane do zainicjowania spójna kolekcja znajdująca się w C# 7.1:
 
 ```csharp
 int count = 5;
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-Dowiedz się więcej o tej funkcji w [krotek](../tuples.md) tematu.
+Dowiedz się więcej na temat tej funkcji w [krotek](../tuples.md) artykułu.
 
-## <a name="reference-assembly-generation"></a>Generowanie odwołania do zestawu
+## <a name="pattern-matching-on-generic-type-parameters"></a>Dopasowania do wzorca w parametrach typu ogólnego
 
-Dostępne są dwie opcje kompilatora nowe, które generują *tylko do odwołania zestawów*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) i [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
-W połączonych tematach opisano te opcje i zestawy referencyjne bardziej szczegółowo.
+Począwszy od C# 7.1, wyrażenie nie zawiera wzorca `is` i `switch` typu wzorzec może być typem parametru typu ogólnego. Może to być najbardziej przydatne, gdy sprawdzanie typów, które mogą być albo `struct` lub `class` typów i chcesz uniknąć pakowania.
+
+## <a name="reference-assembly-generation"></a>Generowanie zestawu odwołania
+
+Istnieją dwie nowe opcje kompilatora, które generują *tylko do odwołania zestawów*: [jest opcja](../language-reference/compiler-options/refout-compiler-option.md) i [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Połączonych artykułów opisano te opcje i zestawy odwołań bardziej szczegółowo.

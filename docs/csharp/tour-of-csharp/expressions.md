@@ -3,12 +3,12 @@ title: C#Wyrażenia — Przewodnik po przykładzie C# języka
 description: bloki konstrukcyjne są wyrażenia, argumenty operacji i operatory C# języka
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846600"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480758"
 ---
 # <a name="expressions"></a>Wyrażenia
 
@@ -28,68 +28,68 @@ Większość operatorów może być *przeciążona*. Przeciążanie operatora um
 Poniżej znajduje się podsumowanie operatorów języka C#. Kategorie operatorów wypisane są w kolejności pierwszeństwa od najwyższego do najniższego. Operatory w tej samej kategorii mają takie samo pierwszeństwo. Pod każdą z kategorii znajduje się lista wyrażeń znajdujących się w niej, wraz z opisem danego typu wyrażenia.
 
 * Podstawowy
-    - `x.m`: Dostęp do elementu członkowskiego
-    - `x(...)`: Wywołanie metody i delegata
-    - `x[...]`: Dostęp do tablicy i indeksatora
-    - `x++`: Postinkrementacja
-    - `x--`: Postdekrementacja
-    - `new T(...)`: Utworzenie obiektu i delegata
-    - `new T(...){...}`: Utworzenie obiektu za pomocą inicjatora
-    - `new {...}`:  Inicjator obiektu anonimowego
-    - `new T[...]`: Do utworzenia tablicy
-    - `typeof(T)`: Uzyskaj <xref:System.Type> dla obiektu `T`
-    - `checked(x)`: Obliczenie wyrażenia w kontekście sprawdzanym
-    - `unchecked(x)`: Obliczenie wyrażenia w kontekście niesprawdzanym
-    - `default(T)`: Uzyskanie wartości domyślnej typu `T`
-    - `delegate {...}`: Funkcja anonimowa (metoda anonimowa)
+  - `x.m`: Dostęp do elementu członkowskiego
+  - `x(...)`: Wywołanie metody i delegata
+  - `x[...]`: Dostęp do tablicy i indeksatora
+  - `x++`: Postinkrementacja
+  - `x--`: Postdekrementacja
+  - `new T(...)`: Utworzenie obiektu i delegata
+  - `new T(...){...}`: Utworzenie obiektu za pomocą inicjatora
+  - `new {...}`:  Inicjator obiektu anonimowego
+  - `new T[...]`: Do utworzenia tablicy
+  - `typeof(T)`: Uzyskaj <xref:System.Type> dla obiektu `T`
+  - `checked(x)`: Obliczenie wyrażenia w kontekście sprawdzanym
+  - `unchecked(x)`: Obliczenie wyrażenia w kontekście niesprawdzanym
+  - `default(T)`: Uzyskanie wartości domyślnej typu `T`
+  - `delegate {...}`: Funkcja anonimowa (metoda anonimowa)
 * Jednoargumentowy
-    - `+x`: Tożsamość
-    - `-x`: Negacja
-    - `!x`: Negacja logiczna
-    - `~x`: Negacja bitowa
-    - `++x`: Preinkrementacja
-    - `--x`: Predekrementacja
-    - `(T)x`: Jawna konwersja `x` na typ `T`
-    - `await x`: Asynchronicznie poczekaj na ukończenie `x`
+  - `+x`: Tożsamość
+  - `-x`: Negacja
+  - `!x`: Negacja logiczna
+  - `~x`: Negacja bitowa
+  - `++x`: Preinkrementacja
+  - `--x`: Predekrementacja
+  - `(T)x`: Jawnie przekonwertować `x` na typ `T`
+  - `await x`: Asynchronicznie poczekaj na ukończenie `x`
 * Mnożeniowy
-    - `x * y`: Mnożenie
-    - `x / y`: Dzielenie
-    - `x % y`: Reszta
+  - `x * y`: Mnożenie
+  - `x / y`: Dzielenie
+  - `x % y`: Reszta
 * Dodatku
-    - `x + y`: Dodawanie, łączenie ciągów, łączenie delegatów
-    - `x – y`: Odejmowanie, usuwanie delegata
+  - `x + y`: Dodawanie, łączenie ciągów, łączenie delegatów
+  - `x – y`: Odejmowanie, usuwanie delegata
 * Shift
-    - `x << y`: Przesunięcie w lewo
-    - `x >> y`: Przesunięcie w prawo
+  - `x << y`: Przesunięcie w lewo
+  - `x >> y`: Przesunięcie w prawo
 * Relacyjne i badania typu
-    - `x < y`: Mniejsze niż
-    - `x > y`: Większe niż
-    - `x <= y`: Mniejsze niż lub równe
-    - `x >= y`: Większe niż lub równe
-    - `x is T`: Zwróć `true` Jeśli `x` jest `T`, `false` inaczej
-    - `x as T`: Zwróć `x` wpisanych w formie `T`, lub `null` Jeśli `x` nie jest `T`
+  - `x < y`: Mniejsze niż
+  - `x > y`: Większe niż
+  - `x <= y`: Mniejsze niż lub równe
+  - `x >= y`: Większe niż lub równe
+  - `x is T`: Zwróć `true` Jeśli `x` jest `T`, `false` inaczej
+  - `x as T`: Zwróć `x` wpisanych w formie `T`, lub `null` Jeśli `x` nie jest `T`
 * Równości
-    - `x == y`: Równa się
-    - `x != y`: Nie równa się
+  - `x == y`: Równa się
+  - `x != y`: Nie równa się
 * Logicznego AND
-    - `x & y`: Liczba całkowita bitowe i logicznych logiczne AND
+  - `x & y`: Liczba całkowita bitowe i logicznych logiczne AND
 * Logicznego XOR
-    - `x ^ y`: Bitowe XOR dla wartości całkowitych, logiczne XOR dla wartości binarnych
+  - `x ^ y`: Bitowe XOR dla wartości całkowitych, logiczne XOR dla wartości binarnych
 * Logicznego OR
-    - `x | y`: Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych
+  - `x | y`: Bitowe OR dla wartości całkowitych, logiczne OR dla wartości binarnych
 * Warunkowego AND
-    - `x && y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `false`
+  - `x && y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `false`
 * Warunkowego OR
-    - `x || y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `true`
+  - `x || y`: Ocenia `y` tylko wtedy, gdy `x` nie jest `true`
 * Łączenia wartości null
-    - `x ?? y`: Daje w wyniku `y` Jeśli `x` ma wartość null, aby `x` inaczej
+  - `x ?? y`: Daje w wyniku `y` Jeśli `x` ma wartość null, aby `x` inaczej
 * Warunkowe
-    - `x ? y : z`: Ocenia `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
+  - `x ? y : z`: Ocenia `y` Jeśli `x` jest `true`, `z` Jeśli `x` jest `false`
 * Przypisania lub funkcji anonimowej
-    - `x = y`: Przypisanie
-    - `x op= y`: Złożone przypisanie; obsługiwane operatory to
-        - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: Funkcja anonimowa (wyrażenie lambda)
+  - `x = y`: Przypisanie
+  - `x op= y`: Złożone przypisanie; obsługiwane operatory to
+    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
+  - `(T x) => y`: Funkcja anonimowa (wyrażenie lambda)
 
 > [!div class="step-by-step"]
 > [Poprzednie](types-and-variables.md)

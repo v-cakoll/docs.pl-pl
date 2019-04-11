@@ -9,87 +9,90 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 7b9485c1bc2f87ca9f007a4e1ce2f63c055100c1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815982"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480771"
 ---
 # <a name="-netcf"></a>-netcf
-Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
--netcf  
-```  
-  
-## <a name="remarks"></a>Uwagi  
- `-netcf` Opcji powoduje, że kompilator języka Visual Basic do obiektu docelowego [!INCLUDE[Compact](~/includes/compact-md.md)] zamiast pełnego [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funkcje języka, które są dostępne tylko w pełni [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] jest wyłączona.  
-  
- `-netcf` Opcja jest przeznaczona do użycia z [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Funkcje języka, wyłączona przez `-netcf` są te same funkcje języka, nie znajduje się w nim docelowych i związanych z `-sdkpath`.  
-  
+
+Ustawia kompilatora z docelowym [!INCLUDE[Compact](~/includes/compact-md.md)].
+
+## <a name="syntax"></a>Składnia
+
+```
+-netcf
+```
+
+## <a name="remarks"></a>Uwagi
+
+`-netcf` Opcji powoduje, że kompilator języka Visual Basic do obiektu docelowego [!INCLUDE[Compact](~/includes/compact-md.md)] zamiast pełnego [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Funkcje języka, które są dostępne tylko w pełni [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] jest wyłączona.
+
+`-netcf` Opcja jest przeznaczona do użycia z [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Funkcje języka, wyłączona przez `-netcf` są te same funkcje języka, nie znajduje się w nim docelowych i związanych z `-sdkpath`.
+
 > [!NOTE]
->  `-netcf` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia. `-netcf` Ustawiono opcję po załadowaniu projektu urządzenia języka Visual Basic.  
-  
- `-netcf` Opcji zmienia się następujące funkcje języka:  
-  
--   [Zakończenia \<— słowo kluczowe > instrukcji](../../../visual-basic/language-reference/statements/end-keyword-statement.md) słowo kluczowe, które kończy wykonania programu, jest wyłączona. Następujący program kompiluje i uruchamia bez `-netcf` , ale nie powiedzie się w czasie kompilacji za pomocą `-netcf`.  
-  
-     [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]  
-  
--   Późne powiązania wszystkich formularzach jest wyłączona. Błędy czasu kompilacji są generowane, gdy zostaną napotkane rozpoznawanym scenariuszy późnego wiązania. Następujący program kompiluje i uruchamia bez `-netcf` , ale nie powiedzie się w czasie kompilacji za pomocą `-netcf`.  
-  
-     [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]  
-  
--   [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), i [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) Modyfikatory są wyłączone. Składnia [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) instrukcji został też zmodyfikowany do `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Poniższy kod ilustruje efekt `-netcf` podczas kompilacji.  
-  
-     [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]  
-  
--   Przy użyciu słów kluczowych Visual Basic 6.0, które zostały usunięte z Visual Basic generuje inny błąd podczas `-netcf` jest używany. Ma to wpływ na komunikaty o błędach dla następujących słów kluczowych:  
-  
-    -   `Open`  
-  
-    -   `Close`  
-  
-    -   `Put`  
-  
-    -   `Print`  
-  
-    -   `Write`  
-  
-    -   `Input`  
-  
-    -   `Lock`  
-  
-    -   `Unlock`  
-  
-    -   `Seek`  
-  
-    -   `Width`  
-  
-    -   `Name`  
-  
-    -   `FreeFile`  
-  
-    -   `EOF`  
-  
-    -   `Loc`  
-  
-    -   `LOF`  
-  
-    -   `Line`  
-  
-## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `Myfile.vb` z [!INCLUDE[Compact](~/includes/compact-md.md)], przy użyciu wersji biblioteki mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej z [!INCLUDE[Compact](~/includes/compact-md.md)] na dysku C. Zazwyczaj używasz najnowszej wersji [!INCLUDE[Compact](~/includes/compact-md.md)].  
-  
-```console  
-vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  
-```  
-  
+> `-netcf` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia. `-netcf` Ustawiono opcję po załadowaniu projektu urządzenia języka Visual Basic.
+
+`-netcf` Opcji zmienia się następujące funkcje języka:
+
+- [Zakończenia \<— słowo kluczowe > instrukcji](../../../visual-basic/language-reference/statements/end-keyword-statement.md) słowo kluczowe, które kończy wykonania programu, jest wyłączona. Następujący program kompiluje i uruchamia bez `-netcf` , ale nie powiedzie się w czasie kompilacji za pomocą `-netcf`.
+
+  [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
+
+- Późne powiązania wszystkich formularzach jest wyłączona. Błędy czasu kompilacji są generowane, gdy zostaną napotkane rozpoznawanym scenariuszy późnego wiązania. Następujący program kompiluje i uruchamia bez `-netcf` , ale nie powiedzie się w czasie kompilacji za pomocą `-netcf`.
+
+  [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
+
+- [Automatycznie](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), i [Unicode](../../../visual-basic/language-reference/modifiers/unicode.md) Modyfikatory są wyłączone. Składnia [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) instrukcji został też zmodyfikowany do `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. Poniższy kod ilustruje efekt `-netcf` podczas kompilacji.
+
+  [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
+
+- Przy użyciu słów kluczowych Visual Basic 6.0, które zostały usunięte z Visual Basic generuje inny błąd podczas `-netcf` jest używany. Ma to wpływ na komunikaty o błędach dla następujących słów kluczowych:
+
+  - `Open`
+
+  - `Close`
+
+  - `Put`
+
+  - `Print`
+
+  - `Write`
+
+  - `Input`
+
+  - `Lock`
+
+  - `Unlock`
+
+  - `Seek`
+
+  - `Width`
+
+  - `Name`
+
+  - `FreeFile`
+
+  - `EOF`
+
+  - `Loc`
+
+  - `LOF`
+
+  - `Line`
+
+## <a name="example"></a>Przykład
+
+Poniższy kod kompiluje `Myfile.vb` z [!INCLUDE[Compact](~/includes/compact-md.md)], przy użyciu wersji biblioteki mscorlib.dll i Microsoft.VisualBasic.dll znajduje się w katalogu instalacji domyślnej z [!INCLUDE[Compact](~/includes/compact-md.md)] na dysku C. Zazwyczaj używasz najnowszej wersji [!INCLUDE[Compact](~/includes/compact-md.md)].
+
+```console
+vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
+```
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)

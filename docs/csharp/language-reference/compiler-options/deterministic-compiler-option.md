@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499855"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480667"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Powoduje, że kompilator generuje zestawu, którego dane wyjściowe dla bajt jest identyczna w kompilacjach identycznych danych wejściowych. 
+Powoduje, że kompilator generuje zestawu, którego dane wyjściowe dla bajt jest identyczna w kompilacjach identycznych danych wejściowych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,24 +37,24 @@ Kompilator traktuje następujące dane wejściowe na potrzeby determinizm:
 - Dokładne wersję kompilatora, używane, a jego przywoływanych zestawów.
 - Ścieżka bieżącego katalogu.
 - Binarny zawartość wszystkich plików jawnie przekazywane do kompilator bezpośrednio lub pośrednio, w tym:
-    - Pliki źródłowe
-    - przywoływanych zestawach
-    - Moduły odwołania
-    - Resources
-    - Plik klucza silnej nazwy
-    - @ pliki odpowiedzi
-    - Analizatory
-    - Zestawy reguł
-    - Dodatkowe pliki, które mogą być używane przez analizatorów
+  - Pliki źródłowe
+  - przywoływanych zestawach
+  - Moduły odwołania
+  - Zasoby
+  - Plik klucza silnej nazwy
+  - @ pliki odpowiedzi
+  - Analizatory
+  - Zestawy reguł
+  - Dodatkowe pliki, które mogą być używane przez analizatorów
 - Bieżącą kulturą (język, w których dane diagnostyczne i wyjątków są produkowane wiadomości).
 - Domyślnym kodowaniem (lub bieżącej stronie kodowej) Jeśli nie określono kodowanie.
 - Istnienie, nie istnieje i zawartość plików na ścieżki wyszukiwania kompilatora (określone, na przykład przez `/lib` lub `/recurse`).
 - Platforma CLR, na którym jest uruchamiany kompilator.
 - Wartość `%LIBPATH%`, co może wpłynąć na ładowanie zależności analizatora.
 
-W przypadku publicznie dostępnego źródła kompilacji deterministycznej może służyć do ustalenia, czy plik binarny jest kompilowany z zaufanego źródła. Również może być przydatne w systemie kompilacji ciągłej do określenia, czy należy wykonać kroki kompilacji, które są zależne od zmian w pliku binarnym. 
+W przypadku publicznie dostępnego źródła kompilacji deterministycznej może służyć do ustalenia, czy plik binarny jest kompilowany z zaufanego źródła. Również może być przydatne w systemie kompilacji ciągłej do określenia, czy należy wykonać kroki kompilacji, które są zależne od zmian w pliku binarnym.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)

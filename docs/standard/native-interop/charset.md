@@ -4,12 +4,12 @@ description: Dowiedz się, jak różne wartości CharSet można zmienić, jak .N
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0b9ea8498b56e6d14770cf57e7e82b9992b1ee50
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: f436bbbf435df07d242f9bf295b0264c4cfd5b3b
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299880"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480849"
 ---
 # <a name="charsets-and-marshalling"></a>Zestawów znaków i kierowania
 
@@ -17,10 +17,10 @@ Sposób `char` wartości `string` obiekty, i `System.Text.StringBuilder` obiekty
 
 W poniższej tabeli przedstawiono mapowania między każdym charset i jak znak lub ciąg są reprezentowane przy/wycofany z tym zestaw znaków:
 
-| CharSet | Windows            | Unix                                   | Narzędzie mono w systemach Unix        |
-|---------|--------------------|----------------------------------------|---------------------|
-| Ansi    | `char` (ANSI)      | `char` (ANSI w systemie macOS, UTF-8 w systemie Linux) | `char` (UTF-8)      |
-| Unicode | `wchar_t` (UTF-16) | `char16_t` (UTF-16)                    | `char16_t` (UTF-16) |
-| Auto    | `wchar_t` (UTF-16) | `char16_t` (UTF-16)                    | `char` (UTF-8)      |
+| CharSet | Windows            | UNIX w programie .NET Core 2.2 i starszych wersji | Narzędzie mono i Unix w programie .NET Core 3.0 i nowszych |
+|---------|--------------------|-----------------------------|------------------------------------------|
+| Ansi    | `char` (ANSI)      | `char` (UTF-8)              | `char` (UTF-8)                           |
+| Unicode | `wchar_t` (UTF-16) | `char16_t` (UTF-16)         | `char16_t` (UTF-16)                      |
+| Auto    | `wchar_t` (UTF-16) | `char16_t` (UTF-16)         | `char` (UTF-8)                           |
 
 Upewnij się, że wiesz, jakie reprezentacji z natywną reprezentację oczekuje, że podczas pobierania usługi zestaw znaków.

@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159747"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481122"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -232,13 +232,13 @@ Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.
 
 - Następnym ekranem jest elementu powiązania zabezpieczeń opcjonalne, która zapewnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufności. Następujące elementy powiązania zabezpieczeń są dostarczane przez Windows Communication Foundation (WCF):
 
-    - <xref:System.ServiceModel.Channels.SecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 
 - Następnie opcjonalne wzorce wiadomości są określone przez powiązanie elementów:
 
@@ -246,35 +246,35 @@ Powiązanie niestandardowe jest konstruowany przy użyciu jednej z <xref:System.
 
 - Następnie są uaktualnienia opcjonalne transportu/pomocników elementy powiązania:
 
-    - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+  - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
-    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
 
-    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
+  - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>
 
 - Następnym ekranem jest element powiązania z kodowania komunikatu wymagane. Możesz użyć własnego transportu lub użyj jednej z następującym komunikatem kodowanie powiązań:
 
-    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+  - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
 - W dolnej części jest element wymagany transportu. Można używać własnego transportu lub użyj jednego z dostarczonych przez Windows Communication Foundation (WCF) elementów powiązania transportu:
 
-    - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 
-    - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>
 
-    - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+  - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
 
-    - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+  - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 
 Poniższa tabela podsumowuje opcje dla każdej warstwy.
 

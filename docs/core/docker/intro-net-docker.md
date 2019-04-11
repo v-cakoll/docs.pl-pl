@@ -3,12 +3,12 @@ title: Wprowadzenie do platformy Docker
 description: Ten artykuł zawiera omówienie i wprowadzenie do platformy Docker w kontekście aplikacji .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817258"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480732"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -55,8 +55,11 @@ Różne usługi platformy Azure obsługują kontenery. Tworzenie obrazu platform
 * [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Skalowanie i organizowanie kontenerów systemu Linux przy użyciu platformy Kubernetes.
 
-* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+* [Usługa Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Wdrażanie aplikacji sieci web lub interfejsów API przy użyciu kontenerów systemu Linux w środowisku PaaS.
+
+* [Usługa Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+Hosta kontenera w chmurze bez żadnych wyższego poziomu usługi zarządzania.
 
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Uruchamiaj powtarzalne zadania obliczeniowe przy użyciu kontenerów.

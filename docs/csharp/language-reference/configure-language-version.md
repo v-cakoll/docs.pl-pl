@@ -2,12 +2,12 @@
 title: Wybierz C# wersji językowej - C# przewodnik
 description: Konfigurowanie kompilatora przeprowadzić weryfikacji składni przy użyciu określonej wersji kompilatora
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212030"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480745"
 ---
 # <a name="select-the-c-language-version"></a>Wybierz C# wersja językowa
 
@@ -80,7 +80,7 @@ Wartość `latest` korzysta z najnowszą wersją pomocniczą C# języka. Prawid�
 
 ## <a name="configure-multiple-projects"></a>Konfigurowanie wielu projektów
 
-Możesz utworzyć **Directory.build.props** pliku, który zawiera `<LangVersion>` element, aby skonfigurować wiele katalogów. Należy zwykle to zrobić w katalogu rozwiązania. Dodaj następujące polecenie, aby **Directory.build.props** pliku w katalogu rozwiązania:
+Możesz utworzyć **Directory.Build.props** pliku, który zawiera `<LangVersion>` element, aby skonfigurować wiele katalogów. Należy zwykle to zrobić w katalogu rozwiązania. Dodaj następujące polecenie, aby **Directory.Build.props** pliku w katalogu rozwiązania:
 
 ```xml
 <Project>

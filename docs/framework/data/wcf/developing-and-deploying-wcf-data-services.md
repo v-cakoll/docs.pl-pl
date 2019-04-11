@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: a3eaea7218b3226fde43aa76bbafe602fc198947
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329326"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481382"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
 
@@ -53,17 +53,17 @@ Podczas tworzenia usługi danych programu WCF jako [!INCLUDE[vstecasp](../../../
 
      Należy pamiętać o następujących ograniczeniach, gdy używasz serwera wdrożeniowego programu Visual Studio do projektowania usługi danych:
 
-    -   Dostęp do tego serwera można uzyskać tylko na komputerze lokalnym.
+    - Dostęp do tego serwera można uzyskać tylko na komputerze lokalnym.
 
-    -   Ten serwer nasłuchuje na `localhost` i na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+    - Ten serwer nasłuchuje na `localhost` i na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
-    -   Ten serwer uruchamia usługę danych w kontekście bieżącego konta użytkownika. Na przykład jeśli używasz jako użytkownik na poziomie administratora, Usługa danych uruchomiona w serwera wdrożeniowego programu Visual Studio mają uprawnienia na poziomie administratora. Może to spowodować, że usługa danych będzie mogła uzyskać dostęp do zasobów, do których nie ma praw dostępu w przypadku jej wdrożenia na serwerze IIS.
+    - Ten serwer uruchamia usługę danych w kontekście bieżącego konta użytkownika. Na przykład jeśli używasz jako użytkownik na poziomie administratora, Usługa danych uruchomiona w serwera wdrożeniowego programu Visual Studio mają uprawnienia na poziomie administratora. Może to spowodować, że usługa danych będzie mogła uzyskać dostęp do zasobów, do których nie ma praw dostępu w przypadku jej wdrożenia na serwerze IIS.
 
-    -   Ten serwer nie oferuje dodatkowych funkcji programu IIS, takich jak uwierzytelnianie.
+    - Ten serwer nie oferuje dodatkowych funkcji programu IIS, takich jak uwierzytelnianie.
 
-    -   Ten serwer nie obsługuje fragmentarycznych strumieni HTTP, które są wysyłane jest domyślnie przez klienta usługi danych WCF, podczas uzyskiwania dostępu do dużych danych binarnych z usługi danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
+    - Ten serwer nie obsługuje fragmentarycznych strumieni HTTP, które są wysyłane jest domyślnie przez klienta usługi danych WCF, podczas uzyskiwania dostępu do dużych danych binarnych z usługi danych. Aby uzyskać więcej informacji, zobacz [dostawca przesyłania strumieniowego](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).
 
-    -   Ten serwer ma problemy z przetworzeniem okres (`.`) znak w adresie URL, mimo że ten znak jest obsługiwany przez usługi danych WCF w wartościach klucza.
+    - Ten serwer ma problemy z przetworzeniem okres (`.`) znak w adresie URL, mimo że ten znak jest obsługiwany przez usługi danych WCF w wartościach klucza.
 
     > [!TIP]
     > Mimo że serwera wdrożeniowego programu Visual Studio można użyć do testowania usług danych podczas projektowania, należy przetestować je ponownie po wdrożeniu na serwerze sieci Web, na którym są uruchomione usługi IIS.
@@ -76,44 +76,44 @@ Podczas tworzenia usługi danych programu WCF jako [!INCLUDE[vstecasp](../../../
 
 Podczas projektowania usługi danych należy wziąć pod uwagę następujące kwestie:
 
--   Określ wymagania zabezpieczeń usługi danych, jeśli planujesz uwierzytelnianie użytkowników lub ograniczenie dostępu w przypadku określonych użytkowników. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).
+- Określ wymagania zabezpieczeń usługi danych, jeśli planujesz uwierzytelnianie użytkowników lub ograniczenie dostępu w przypadku określonych użytkowników. Aby uzyskać więcej informacji, zobacz [zabezpieczania usług danych WCF](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).
 
--   Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
+- Program inspekcji HTTP może być bardzo pomocny podczas debugowania usługi danych, umożliwiając inspekcję zawartości komunikatów żądań i odpowiedzi. Dowolnego analizatora pakietów sieciowych, który może wyświetlać pakiety nieprzetworzone, można używać do inspekcji żądań HTTP i odpowiedzi z usługi danych.
 
--   Podczas debugowania usługi danych, można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwość <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybut w klasie usługi danych `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowanie usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
+- Podczas debugowania usługi danych, można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwość <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybut w klasie usługi danych `true`. Aby uzyskać więcej informacji, zobacz wpis [debugowanie usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=201868). Możesz również włączyć śledzenie w programie WCF, aby wyświetlić wyjątki wywoływane w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Usługa danych zazwyczaj projektuje się jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć usługę danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu witryny sieci Web w programie Visual Studio. Aby uzyskać informacje o różnicach między dwoma typami projektów, zobacz [Web Application Projects versus projektów witryny sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
+- Usługa danych zazwyczaj projektuje się jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć usługę danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu witryny sieci Web w programie Visual Studio. Aby uzyskać informacje o różnicach między dwoma typami projektów, zobacz [Web Application Projects versus projektów witryny sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110)).
 
--   Podczas tworzenia usługi danych przy użyciu **Dodaj nowy element** okno dialogowe w programie Visual Studio, Usługa danych jest hostowana przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w usługach IIS. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i IIS są domyślnym hostem dla usługi danych, obsługiwane są inne opcje hostingu. Aby uzyskać więcej informacji, zobacz [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
+- Podczas tworzenia usługi danych przy użyciu **Dodaj nowy element** okno dialogowe w programie Visual Studio, Usługa danych jest hostowana przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w usługach IIS. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i IIS są domyślnym hostem dla usługi danych, obsługiwane są inne opcje hostingu. Aby uzyskać więcej informacji, zobacz [Hosting usługi danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
 ## <a name="deploy-wcf-data-services"></a>Wdrażanie usług danych WCF
 
 Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór procesu hostującego usługę danych. Visual Studio można użyć do wdrożenia usługi danych na następujących platformach:
 
--   **Serwer sieci Web hostowany w programie IIS**
+- **Serwer sieci Web hostowany w programie IIS**
 
-     Jeśli usługa danych jest opracowana jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, można je było wdrożyć do serwera sieci Web usług IIS przy użyciu standardu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] procesów wdrażania.  Program Visual Studio zapewnia Poniższe technologie wdrażania programu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], w zależności od używanego z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, który hostuje usługę danych, w której przeprowadzasz wdrożenie.
+    Jeśli usługa danych jest opracowana jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, można je było wdrożyć do serwera sieci Web usług IIS przy użyciu standardu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] procesów wdrażania.  Program Visual Studio zapewnia Poniższe technologie wdrażania programu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], w zależności od używanego z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, który hostuje usługę danych, w której przeprowadzasz wdrożenie.
 
-    -   **Technologie wdrażania aplikacji internetowych programu ASP.NET**
+  - **Technologie wdrażania aplikacji internetowych programu ASP.NET**
 
-        -   [Instrukcje: Utwórz pakiet wdrażania sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [Instrukcje: Utwórz pakiet wdrażania sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-        -   [Instrukcje: Wdrażanie sieci Web projektu za pomocą jednego kliknięcia publikowania w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Instrukcje: Wdrażanie sieci Web projektu za pomocą jednego kliknięcia publikowania w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
-    -   **Technologie wdrażania witryn sieci Web programu ASP.NET**
+  - **Technologie wdrażania witryn sieci Web programu ASP.NET**
 
-        -   [Instrukcje: Skopiuj pliki witryny sieci Web za pomocą narzędzia kopiowania witryny internetowej](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [Instrukcje: Skopiuj pliki witryny sieci Web za pomocą narzędzia kopiowania witryny internetowej](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-        -   [Instrukcje: Publikowanie witryny sieci Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [Instrukcje: Publikowanie witryny sieci Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-        -   [Przewodnik: Wdrażanie aplikacji sieci Web platformy ASP.NET przy użyciu polecenia XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [Przewodnik: Wdrażanie aplikacji sieci Web platformy ASP.NET przy użyciu polecenia XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      Aby uzyskać więcej informacji o opcjach wdrażania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji, zobacz [Przegląd wdrażania sieci Web dla programu Visual Studio i platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
     > Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych WCF działającej na serwerze IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
--   **System Microsoft Azure**
+- **System Microsoft Azure**
 
      Usługi danych można wdrożyć na platformie Windows Azure przy użyciu narzędzia Windows Azure Tools dla programu Visual Studio. Możesz pobrać program Windows Azure Tools dla programu Visual Studio z [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat wdrażania usługi danych na platformie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -121,9 +121,9 @@ Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór proc
 
 Podczas wdrażania usługi danych należy wziąć pod uwagę następujące kwestie:
 
--   Podczas wdrażania usługi danych, która używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy bazy danych programu SQL Server, może być również konieczne rozpropagowanie struktur danych, dane, lub obu z danymi wdrożenie usługi. Program Visual Studio może automatycznie tworzyć skrypty (pliki SQL), aby to zrobić w docelowej bazie danych i skrypty te mogą być zawarte w pakiet wdrażania sieci Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Wdrażanie bazy danych z projektu aplikacji sieci Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Aby uzyskać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, można to zrobić pomocą **Database Publishing Wizard** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [publikowania bazy danych SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Podczas wdrażania usługi danych, która używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy bazy danych programu SQL Server, może być również konieczne rozpropagowanie struktur danych, dane, lub obu z danymi wdrożenie usługi. Program Visual Studio może automatycznie tworzyć skrypty (pliki SQL), aby to zrobić w docelowej bazie danych i skrypty te mogą być zawarte w pakiet wdrażania sieci Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [jak: Wdrażanie bazy danych z projektu aplikacji sieci Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Aby uzyskać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, można to zrobić pomocą **Database Publishing Wizard** w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [publikowania bazy danych SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
--   Ponieważ WCF Data Services zawierają podstawową implementację programu WCF, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonej w programie IIS działającym w systemie Windows Server. Aby uzyskać więcej informacji o używaniu programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
+- Ponieważ WCF Data Services zawierają podstawową implementację programu WCF, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonej w programie IIS działającym w systemie Windows Server. Aby uzyskać więcej informacji o używaniu programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 
 ## <a name="see-also"></a>Zobacz także
 

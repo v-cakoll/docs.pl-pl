@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227200"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335085"
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
 Windows Presentation Foundation (WPF) obsługuje nawigacji w stylu przeglądarki, który może służyć w dwóch rodzajów aplikacji: aplikacje autonomiczne i [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Do zawartości pakietów do nawigacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia <xref:System.Windows.Controls.Page> klasy. Możesz przejść z jednego <xref:System.Windows.Controls.Page> do innego deklaratywne, przy użyciu <xref:System.Windows.Documents.Hyperlink>, lub programowo, za pomocą <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] używa dziennika, do zapamiętania stron, które przejście z i przejdź z powrotem do ich.  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF) obsługuje nawigacji w stylu przeglądarki
   
  Domyślnie tekst dla każdego <xref:System.Windows.Controls.Page> wyświetlany w **ostatnie strony** listę [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] jest [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla <xref:System.Windows.Controls.Page>. W wielu przypadkach nie jest to szczególnie istotne dla użytkownika. Na szczęście możesz zmienić tekst przy użyciu jednej z następujących opcji:  
   
-1.  Dołączony `JournalEntry.Name` wartość atrybutu.  
+1. Dołączony `JournalEntry.Name` wartość atrybutu.  
   
-2.  `Page.Title` Wartość atrybutu.  
+2. `Page.Title` Wartość atrybutu.  
   
-3.  `Page.WindowTitle` Wartość atrybutu i [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla bieżącego <xref:System.Windows.Controls.Page>.  
+3. `Page.WindowTitle` Wartość atrybutu i [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] dla bieżącego <xref:System.Windows.Controls.Page>.  
   
-4.  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Dla bieżącego <xref:System.Windows.Controls.Page>. (Domyślnie)  
+4. [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] Dla bieżącego <xref:System.Windows.Controls.Page>. (Domyślnie)  
   
  Kolejność, w którym te opcje wymieniono jest zgodna z kolejnością pierwszeństwo służące do znajdowania tekstu. Na przykład jeśli `JournalEntry.Name` jest ustawiony, inne wartości są ignorowane.  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF) obsługuje nawigacji w stylu przeglądarki
   
  Na szczęście arkusza zapewnia obsługę zapamiętywanie danych między <xref:System.Windows.Controls.Page> dokonywania nawigacji, włącznie z danymi formantu. W szczególności wpisu dziennika dla każdego <xref:System.Windows.Controls.Page> działa jako kontener tymczasowego dla skojarzonego <xref:System.Windows.Controls.Page> stanu. Poniższe kroki opisują, jak ta funkcja jest używana podczas <xref:System.Windows.Controls.Page> jest przejście od:  
   
-1.  Wpis dla bieżącego <xref:System.Windows.Controls.Page> jest dodawany do dziennika.  
+1. Wpis dla bieżącego <xref:System.Windows.Controls.Page> jest dodawany do dziennika.  
   
-2.  Stan <xref:System.Windows.Controls.Page> są przechowywane z wpisu dziennika dla tej strony, która jest dodawana do tyłu stosu.  
+2. Stan <xref:System.Windows.Controls.Page> są przechowywane z wpisu dziennika dla tej strony, która jest dodawana do tyłu stosu.  
   
-3.  Nowy <xref:System.Windows.Controls.Page> jest przejście.  
+3. Nowy <xref:System.Windows.Controls.Page> jest przejście.  
   
  Po stronie <xref:System.Windows.Controls.Page> jest przejście do, przy użyciu arkusza, poniższe kroki wykonane:  
   
-1.  <xref:System.Windows.Controls.Page> Konkretyzacji (wpis dziennika najważniejsze na stosie wstecz).  
+1. <xref:System.Windows.Controls.Page> Konkretyzacji (wpis dziennika najważniejsze na stosie wstecz).  
   
-2.  <xref:System.Windows.Controls.Page> Jest odświeżane przy użyciu stanu, w którym została zapisana przy użyciu wpisu dziennika dla <xref:System.Windows.Controls.Page>.  
+2. <xref:System.Windows.Controls.Page> Jest odświeżane przy użyciu stanu, w którym została zapisana przy użyciu wpisu dziennika dla <xref:System.Windows.Controls.Page>.  
   
-3.  <xref:System.Windows.Controls.Page> Jest kierowana do.  
+3. <xref:System.Windows.Controls.Page> Jest kierowana do.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] automatycznie używa tej obsługi stosowania następujące elementy sterujące na <xref:System.Windows.Controls.Page>:  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: a36cdf9f8cce935c8310e2ce9ffc79f67d077fe6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225147"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344354"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] są używane do identyfikowania i ładowanie plików na wiele sposobów, w tym następujące:  
@@ -234,15 +234,15 @@ W konsoli Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri#plural](..
   
  Aby określić typ pliku, który pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] jest rozpoznawana jako [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] dla plików zasobów w lokalnych zestawów i plików zawartości przy użyciu następujących algorytmów heurystycznych:  
   
-1.  Metadane zestawu dla sondy <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut, który odpowiada pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
+1. Metadane zestawu dla sondy <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut, który odpowiada pakietowi [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)].  
   
-2.  Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut zostanie znaleziony, ścieżki pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do zawartości pliku.  
+2. Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut zostanie znaleziony, ścieżki pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do zawartości pliku.  
   
-3.  Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut nie zostanie znaleziony, pliki zasobów zestawu, które są kompilowane do zestawu lokalnego sondowania.  
+3. Jeśli <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut nie zostanie znaleziony, pliki zasobów zestawu, które są kompilowane do zestawu lokalnego sondowania.  
   
-4.  Jeśli plik zasobu, który odpowiada ścieżce pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zostanie znaleziony, ścieżki pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do pliku zasobów.  
+4. Jeśli plik zasobu, który odpowiada ścieżce pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] zostanie znaleziony, ścieżki pakietu [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] odwołuje się do pliku zasobów.  
   
-5.  Jeśli zasób nie zostanie znaleziony, utworzone wewnętrznie <xref:System.Uri> jest nieprawidłowy.  
+5. Jeśli zasób nie zostanie znaleziony, utworzone wewnętrznie <xref:System.Uri> jest nieprawidłowy.  
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] rozwiązania nie dotyczy [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)] odwołujące się do następujących:  
   

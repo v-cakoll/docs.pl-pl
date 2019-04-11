@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166936"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296124"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Presentation Foundation (WPF) za pośrednictwem systemu windows. Głównym celem okna jest do hostowania zawartości, która wizualizuje dane oraz umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacje zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemem windows w aplikacje autonomiczne.  
@@ -348,23 +348,23 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
   
  **Dla właściwości wysokości:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Dla właściwości szerokości:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
+1. <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
+2. <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
+3. <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
-4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
+4. <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
  Kolejność pierwszeństwa można również określić rozmiaru okna, jeśli go jest zmaksymalizowane, która jest zarządzana przy użyciu <xref:System.Windows.Window.WindowState%2A> właściwości.  
   

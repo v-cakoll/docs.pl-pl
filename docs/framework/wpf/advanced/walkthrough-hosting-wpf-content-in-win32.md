@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3396604d94b2b0fb3f4a178d3bb3a25b00ef91ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166650"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296111"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Przewodnik: hostowanie zawartości WPF w Win32
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferuje rozbudowane środowisko do tworzenia aplikacji. Jednak jeśli masz znaczne inwestycje [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywne dodać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje do aplikacji, zamiast ponownego zapisywania adresów oryginalnego kodu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia prosty mechanizm do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna.  
@@ -33,13 +33,13 @@ ms.locfileid: "59166650"
   
  Kluczem do hostowania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości na [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okno jest <xref:System.Windows.Interop.HwndSource> klasy. Ta klasa jest zawijany [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość w [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna, dzięki któremu można zintegrować swoje [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] jako okna podrzędnego. Następujące podejście łączy w sobie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w jednej aplikacji.  
   
-1.  Wdrożenie usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość jako klasa zarządzana.  
+1. Wdrożenie usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartość jako klasa zarządzana.  
   
-2.  Implementowanie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji za pomocą [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Jeśli jesteś już z istniejącą aplikacją i niezarządzane [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] kodu, można zwykle włączyć go do wywoływania z kodu zarządzanego, zmieniając ustawienia projektu w celu uwzględnienia `/clr` flagi kompilatora.  
+2. Implementowanie [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji za pomocą [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]. Jeśli jesteś już z istniejącą aplikacją i niezarządzane [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] kodu, można zwykle włączyć go do wywoływania z kodu zarządzanego, zmieniając ustawienia projektu w celu uwzględnienia `/clr` flagi kompilatora.  
   
-3.  Ustaw model wątkowy jednowątkowego apartamentu (STA).  
+3. Ustaw model wątkowy jednowątkowego apartamentu (STA).  
   
-4.  Obsługa [WM_CREATE](/windows/desktop/winmsg/wm-create)powiadomień w procedurę okna i wykonaj następujące czynności:  
+4. Obsługa [WM_CREATE](/windows/desktop/winmsg/wm-create)powiadomień w procedurę okna i wykonaj następujące czynności:  
   
     1.  Utwórz nową <xref:System.Windows.Interop.HwndSource> obiekt z okna nadrzędnego jako jego `parent` parametru.  
   
@@ -49,13 +49,13 @@ ms.locfileid: "59166650"
   
     4.  Uzyskaj HWND zawartości. <xref:System.Windows.Interop.HwndSource.Handle%2A> Właściwość <xref:System.Windows.Interop.HwndSource> obiekt zawiera uchwyt okna (HWND). Aby uzyskać HWND, używanego w niezarządzanych części aplikacji, należy rzutować `Handle.ToPointer()` do HWND.  
   
-5.  Implementowanie zarządzanych klasę, która zawiera pole statyczne do przechowywania odwołań do Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Ta klasa pozwala uzyskać odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości z usługi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu.  
+5. Implementowanie zarządzanych klasę, która zawiera pole statyczne do przechowywania odwołań do Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Ta klasa pozwala uzyskać odwołanie do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości z usługi [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu.  
   
-6.  Przypisz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości do pola statycznego.  
+6. Przypisz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości do pola statycznego.  
   
-7.  Otrzymywanie powiadomień z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, dołączając program obsługi do co najmniej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia.  
+7. Otrzymywanie powiadomień z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, dołączając program obsługi do co najmniej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zdarzenia.  
   
-8.  Komunikować się z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości za pomocą odwołania, która przechowywana w polu statycznym, aby ustawić właściwości i tak dalej.  
+8. Komunikować się z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości za pomocą odwołania, która przechowywana w polu statycznym, aby ustawić właściwości i tak dalej.  
   
 > [!NOTE]
 >  Można również użyć [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] implementacji usługi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Jednak trzeba będzie skompilować go oddzielnie jako [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)] i odwołania, który [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] z Twojej [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji. W pozostałej części procedura jest podobne do opisanych powyżej.
@@ -77,13 +77,13 @@ ms.locfileid: "59166650"
 ### <a name="the-basic-application"></a>Podstawowa aplikacja
  Punkt początkowy dla aplikacji hosta polegało na utworzeniu szablonu programu Visual Studio 2005.
 
-1.  Otwórz program Visual Studio 2005, a następnie wybierz pozycję **nowy projekt** z **pliku** menu.
+1. Otwórz program Visual Studio 2005, a następnie wybierz pozycję **nowy projekt** z **pliku** menu.
 
-2.  Wybierz **Win32** z listy [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] typów projektów. Jeśli nie jest językiem domyślnym [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], można znaleźć tych typów projektów, w obszarze **inne języki**.
+2. Wybierz **Win32** z listy [!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)] typów projektów. Jeśli nie jest językiem domyślnym [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)], można znaleźć tych typów projektów, w obszarze **inne języki**.
 
-3.  Wybierz **projekt systemu Win32** szablonu, Przypisz nazwę do projektu i kliknij przycisk **OK** można uruchomić **Kreatora aplikacji Win32**.
+3. Wybierz **projekt systemu Win32** szablonu, Przypisz nazwę do projektu i kliknij przycisk **OK** można uruchomić **Kreatora aplikacji Win32**.
 
-4.  Zaakceptuj ustawienia domyślne kreatora, a następnie kliknij przycisk **Zakończ** Aby uruchomić projekt.
+4. Zaakceptuj ustawienia domyślne kreatora, a następnie kliknij przycisk **Zakończ** Aby uruchomić projekt.
 
  Ten szablon tworzy podstawową [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji, w tym:
 
@@ -97,13 +97,13 @@ ms.locfileid: "59166650"
 
  Pierwsza to do skompilowania projektu jako kod zarządzany. Domyślnie projekt kompiluje jako kod niezarządzany. Jednak ponieważ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest implementowana w kodzie zarządzanym, projekt musi zostać skompilowany w związku z tym.
 
-1.  Kliknij prawym przyciskiem myszy nazwę projektu w **Eksploratora rozwiązań** i wybierz **właściwości** z menu kontekstowego, aby uruchomić **stron właściwości** okno dialogowe.
+1. Kliknij prawym przyciskiem myszy nazwę projektu w **Eksploratora rozwiązań** i wybierz **właściwości** z menu kontekstowego, aby uruchomić **stron właściwości** okno dialogowe.
 
-2.  Wybierz **właściwości konfiguracji** w widoku drzewa w okienku po lewej stronie.
+2. Wybierz **właściwości konfiguracji** w widoku drzewa w okienku po lewej stronie.
 
-3.  Wybierz **środowiska uruchomieniowego języka wspólnego** pomoc techniczną od **domyślne wartości projektu** listy w okienku po prawej stronie.
+3. Wybierz **środowiska uruchomieniowego języka wspólnego** pomoc techniczną od **domyślne wartości projektu** listy w okienku po prawej stronie.
 
-4.  Wybierz **wsparcie CLR (/ clr)** w polu listy rozwijanej.
+4. Wybierz **wsparcie CLR (/ clr)** w polu listy rozwijanej.
 
 > [!NOTE]
 >  Tej flagi kompilatora pozwala na korzystanie z kodu zarządzanego w aplikacji, ale niezarządzanego kodu będzie nadal kompilować tak jak poprzednio.

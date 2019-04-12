@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 62997821-e0c6-4c4d-9fb7-1273fb5e5d18
-ms.openlocfilehash: b68595285eb5ec06be86c771733f7bb9036c9f21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c8df3d57e5a6ff1f0021381db189025719808641
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154976"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517450"
 ---
 # <a name="how-to-execute-data-service-queries-wcf-data-services"></a>Instrukcje: Wykonywanie zapytań usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Umożliwia wykonywanie zapytań usługi danych z aplikacji klienta opartego na programie .NET Framework przy użyciu klas usługi danych wygenerowanego klienta. Zapytania można wykonywać przy użyciu jednej z następujących metod:  
@@ -32,20 +32,20 @@ ms.locfileid: "59154976"
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje jak zdefiniować i wykonać zapytanie LINQ, które zwraca wszystkie `Customers` korzystająca z usługi danych Northwind.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomerslinq)]
- [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomerslinq)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomerslinq)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomersLinq](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomerslinq)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak używać kontekstu, `Add Data Service Reference` narzędzie generuje niejawnie wykonanie zapytania zwracającego wszystkie `Customers` korzystająca z usługi danych Northwind. Identyfikator URI żądanego `Customers` zestaw jednostek jest wyznaczany automatycznie na podstawie kontekstu. Zapytanie jest wykonywane niejawnie, gdy wystąpi wyliczenia.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomers)]
- [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomers)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomers)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomers](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomers)]  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak używać <xref:System.Data.Services.Client.DataServiceContext> jawnie wykonanie zapytania zwracającego wszystkie `Customers` korzystająca z usługi danych Northwind.  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersexplicit)]
- [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersexplicit)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersexplicit)]
+ [!code-vb[Astoria Northwind Client#GetAllCustomersExplicit](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersexplicit)]  
   
 ## <a name="see-also"></a>Zobacz także
 

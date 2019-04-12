@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć klasyfikatora obrazu niestandardowego st
 ms.date: 04/05/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 775f26d0e2453a0027f1e54ddc05f51e596ad540
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 9b9ac1f1f15b4003a19a3d30d6cadf3e86946376
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427516"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517970"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>Samouczek: Tworzenie klasyfikatora obrazu niestandardowego strukturze ML.NET z TensorFlow
 
@@ -104,6 +104,7 @@ Korzysta z warstwą [algorytmu regresji logistycznej wielomian](https://en.wikip
 
 Istnieją dwa źródła danych: `.tsv` plików i pliki obrazów.  `tags.tsv` Plik zawiera dwie kolumny: pierwszy z nich jest zdefiniowany jako `ImagePath` , a drugi jest `Label` odpowiadający obrazu. Następujący przykład pliku nie ma wiersz nagłówka i wygląda następująco:
 
+<!-- markdownlint-disable MD010 -->
 ```tsv
 broccoli.jpg    food
 pizza.jpg   food
@@ -114,6 +115,7 @@ teddy4.jpg  toy
 toaster.jpg appliance
 toaster2.png    appliance
 ```
+<!-- markdownlint-enable MD010 -->
 
 Szkolenia i testowania obrazów znajdują się w folderach zasoby, które, konieczne będzie pobranie w formie pliku zip. Te obrazy należy do Wikimedia Commons.
 > *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208), repozytorium wolnych nośników.* Pobrane 10:48, 17 października 2018 r. od:  

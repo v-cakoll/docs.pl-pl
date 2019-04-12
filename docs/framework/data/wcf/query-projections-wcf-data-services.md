@@ -10,12 +10,12 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: a05b2ce89d17b8de61ba78f925370aa22f463655
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365155"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517177"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projekcje zapytania (WCF Data Services)
 
@@ -52,8 +52,8 @@ W przypadku przynajmniej jednej właściwości zdefiniowane w usłudze danych ty
 
 W poniższym przykładzie użyto anonimowe zapytania LINQ, która projektów związanych z adresem właściwości `Customers` typu w nowym `CustomerAddress` typ, który jest zdefiniowany na kliencie i jest określane jako typ jednostki:
 
-[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#selectcustomeraddressspecific)]
-[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#selectcustomeraddressspecific)]
+[!code-csharp[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#selectcustomeraddressspecific)]
+[!code-vb[Astoria Northwind Client#SelectCustomerAddressSpecific](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#selectcustomeraddressspecific)]
 
 W tym przykładzie wzór inicjatora obiektu jest używany do utworzenia nowego wystąpienia `CustomerAddress` typu zamiast wywoływania konstruktora. Konstruktory nie są obsługiwane podczas projekcji do typów jednostek, ale mogą być używane podczas projekcji do typu innego niż jednostka i anonimowe. Ponieważ `CustomerAddress` jest typem jednostki, zmiany mogą być wykonywane i wysyłane z powrotem do usługi danych.
 
@@ -67,8 +67,8 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
 
 - Przykład:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithinitializer)]
-   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithinitializer)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithinitializer)]
+   [!code-vb[Astoria Northwind Client#ProjectWithInitializer](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithinitializer)]
 
 - Typ jednostki: Obsługiwane
 
@@ -78,8 +78,8 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
 
 - Przykład:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithconstructor)]
-   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithconstructor)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithconstructor)]
+   [!code-vb[Astoria Northwind Client#ProjectWithConstructor](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithconstructor)]
 
 - Typ jednostki: Element <xref:System.NotSupportedException> jest wywoływane.
 
@@ -89,8 +89,8 @@ Poniżej opisano zachowania podczas przedstawiania wyników na typy jednostek i 
 
 - Przykład:
 
-   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#projectwithtransform)]
-   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#projectwithtransform)]
+   [!code-csharp[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#projectwithtransform)]
+   [!code-vb[Astoria Northwind Client#ProjectWithTransform](~/samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#projectwithtransform)]
 
 - Typ jednostki: Ta transformacja nie jest obsługiwana dla typów jednostek, ponieważ może to prowadzić do nieporozumień i potencjalnie zastąpienie danych w źródle danych, który należy do innej jednostki. Element <xref:System.NotSupportedException> jest wywoływane.
 

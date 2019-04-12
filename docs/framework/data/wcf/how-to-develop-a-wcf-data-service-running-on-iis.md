@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Tworzenie usługi danych WCF działającej na serwerze IIS'
+title: 'Instrukcje: Tworzenie usługi danych WCF działającej na serwerze IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201077"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517849"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Porady: Tworzenie usługi danych WCF działającej na serwerze IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Instrukcje: Tworzenie usługi danych WCF działającej na serwerze IIS
 
 W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usługi danych, która jest oparta na bazie danych Northwind, która jest hostowana przez aplikację sieci Web programu ASP.NET, która jest uruchomiona na Internet Information Services (IIS). Aby uzyskać przykład sposobu tworzenia tych samych Usługa danych Northwind jako aplikację sieci Web programu ASP.NET, która działa na serwerze ASP.NET Development Server, zobacz [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 
@@ -25,13 +25,13 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
  W tym temacie przedstawiono sposób tworzenia usługi danych przy użyciu dostawcy środowiska Entity Framework. Innych dostawców usług danych są dostępne. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Po utworzeniu usługi, musisz jawnie określić dostęp do zasobów usługi danych. Aby uzyskać więcej informacji, zobacz [porady: Włączanie dostępu do usługi danych](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+ Po utworzeniu usługi, musisz jawnie określić dostęp do zasobów usługi danych. Aby uzyskać więcej informacji, zobacz [jak: Zapewnianie dostępu do usługi danych](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Utwórz aplikację sieci web ASP.NET, która działa na serwerze IIS
 
 1. W programie Visual Studio na **pliku** menu, wybierz opcję **New** > **projektu**.
 
-2. W **nowy projekt** okno dialogowe, wybierz opcję **zainstalowane** > [**Visual C#** lub **języka Visual Basic**] > **wsieciWeb** kategorii.
+2. W **nowy projekt** okno dialogowe, wybierz opcję **zainstalowane** > [**Visual C#**  lub **języka Visual Basic**] > **sieci Web**  kategorii.
 
 3. Wybierz **aplikacji sieci Web ASP.NET** szablonu.
 
@@ -132,7 +132,7 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
 5. Połączenia z bazą danych modelu danych, wykonując jedną z następujących czynności, a następnie kliknij przycisk **dalej**:
 
-    -   Jeśli nie masz połączenia z bazą danych już skonfigurowane, kliknij przycisk **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [porady: tworzenie połączeń bazy danych SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). To wystąpienie programu SQL Server musi mieć bazie danych Northwind dołączone.
+    -   Jeśli nie masz połączenia z bazą danych już skonfigurowane, kliknij przycisk **nowe połączenie** i Utwórz nowe połączenie. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie połączeń bazy danych SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). To wystąpienie programu SQL Server musi mieć bazie danych Northwind dołączone.
 
          \- lub —
 
@@ -159,8 +159,8 @@ W tym temacie pokazano, jak używać usługi danych WCF w celu utworzenia usług
 
 4. W kodzie dla usługi danych, Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który jest kontenerem jednostki w modelu danych, który w tym przypadku jest `NorthwindEntities`. Definicja klasy powinna wyglądać to następujące czynności:
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>Zobacz także
 

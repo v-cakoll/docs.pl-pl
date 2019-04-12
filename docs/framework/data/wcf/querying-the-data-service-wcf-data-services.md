@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: abae49e709fa2e77d641d991dd6e09cf82216732
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175984"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517294"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Wykonywanie zapytań usługi danych (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka kliencka pozwala na wykonywanie zapytań względem usługi danych przy użyciu dobrze znanych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] wzorców programowania, w tym za pomocą zapytanie o języku zintegrowanym (LINQ). Biblioteka klienta tłumaczy kwerendę, która jest zdefiniowana na komputerze klienckim jako wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> klasy do komunikatu żądania HTTP GET. Biblioteka odbiera komunikat odpowiedzi i przekształca je w wystąpieniach klas usługi danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> do której <xref:System.Data.Services.Client.DataServiceQuery%601> należy.  
@@ -38,8 +38,8 @@ ms.locfileid: "59175984"
   
  Następujące zapytanie, gdy jest wykonywany, zwraca wszystkie `Customers` jednostki w usłudze danych Northwind:  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersspecific)]  
- [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersspecific)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]  
+ [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]  
   
  Aby uzyskać więcej informacji, zobacz [jak: Wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md).  
   
@@ -48,8 +48,8 @@ ms.locfileid: "59175984"
 ## <a name="linq-queries"></a>Zapytania LINQ  
  Ponieważ <xref:System.Data.Services.Client.DataServiceQuery%601> klasy implementuje <xref:System.Linq.IQueryable%601> interfejs zdefiniowany przez LINQ, [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta jest w stanie przekształcić zapytania LINQ w odniesieniu do zestawu danych dotyczących jednostki w identyfikator URI, który reprezentuje wyrażenie zapytania, oceniane pod kątem usługi danych zasób. Poniższy przykład to zapytanie LINQ, który jest odpowiednikiem poprzedniego <xref:System.Data.Services.Client.DataServiceQuery%601> zwracającego `Orders` , kosztują Fracht ponad 30 USD i zamówień wyniki według Fracht kosztów:  
   
- [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]  
- [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]  
+ [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]  
   
  To zapytanie LINQ są tłumaczone na następującej kwerendy identyfikatora URI, który jest wykonywany na podstawie Northwind [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) usługi danych:  
   
@@ -65,13 +65,13 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="adding-query-options"></a>Dodawanie opcji zapytania  
  Obsługa zapytań usługi danych wszystkie zapytania opcje [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zapewnia s. Należy wywołać <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metodę, aby dołączyć opcje zapytania do <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Zwraca nowy <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia, który jest odpowiednikiem wartości oryginalnego zapytania zestaw opcji — ale z nową kwerendę. Następujące zapytanie po wykonaniu zwraca `Orders` , są filtrowane według `Freight` wartości i według `OrderID`malejąco:  
   
- [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
- [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]  
+ [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]  
   
  Możesz użyć `$orderby` zapytania możliwość zarówno w kolejności według i filtrowanie zapytania według jedną właściwość, jak w poniższym przykładzie, filtry i porządkuje zwracanego `Orders` obiektów na podstawie wartości z `Freight` właściwości:  
   
- [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
- [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
+ [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
+ [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]  
   
  Możesz wywołać <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metoda pod rząd w celu utworzenia wyrażeń złożonych zapytań. Aby uzyskać więcej informacji, zobacz [jak: Dodawanie opcji zapytania do zapytania usługi danych](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md).  
   
@@ -84,16 +84,16 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="client-versus-server-execution"></a>Klient, a wykonanie serwera  
  Klient wykonuje zapytanie w dwóch częściach. Zawsze, gdy jest to możliwe, wyrażenia w zapytaniu najpierw są obliczane na komputerze klienckim, a następnie generowane i wysyłane do usługi danych w wersji ewaluacyjnej względem danych w usłudze zapytań w oparciu o identyfikatorze URI. Należy wziąć pod uwagę następujące zapytanie LINQ:  
   
- [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryclientevalspecific)]  
- [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryclientevalspecific)]  
+ [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryclientevalspecific)]  
+ [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryclientevalspecific)]  
   
  W tym przykładzie wyrażenie `(basePrice – (basePrice * discount))` jest oceniany na komputerze klienckim. W związku z tym rzeczywisty identyfikator URI zapytania `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` wysyłanego do danych usługi zawiera już obliczona wartość dziesiętna `90` w klauzuli filtru. Inne części wyrażenie filtrowania, w tym wyrażeniu podciąg, są oceniane przez usługę danych. Wyrażeń, które są obliczane na kliencie postępuj zgodnie z wspólnego języka semantykę środowiska uruchomieniowego (języka wspólnego CLR), natomiast wyrażeń wysyłane do usługi danych zależą od implementacji usługi danych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu. Należy także pamiętać o scenariusze, w którym oddzielne oceny może spowodować nieoczekiwane wyniki, takie jak kiedy klient i usługa wykonania oceny na podstawie czasu w różnych strefach czasowych.  
   
 ## <a name="query-responses"></a>Odpowiedzi na kwerendy  
  Po wykonaniu <xref:System.Data.Services.Client.DataServiceQuery%601> zwraca <xref:System.Collections.Generic.IEnumerable%601> typu żądanej jednostki. Tego wyniku kwerendy mogą być rzutowane na <xref:System.Data.Services.Client.QueryOperationResponse%601> obiektu, jak w poniższym przykładzie:  
   
- [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getresponsespecific)]
- [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getresponsespecific)]  
+ [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getresponsespecific)]
+ [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getresponsespecific)]  
   
  Wystąpień typu jednostki, które reprezentują jednostki w usłudze danych są tworzone na komputerze klienckim w procesie nazywanym materializacja obiektu. Aby uzyskać więcej informacji, zobacz [Materializacja obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md). <xref:System.Data.Services.Client.QueryOperationResponse%601> Obiekt implementuje <xref:System.Collections.Generic.IEnumerable%601> zapewniać dostęp do wyników zapytania.  
   
@@ -134,9 +134,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [Instrukcje: Dodawanie opcji zapytania do zapytania usługi danych](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Instrukcje: Określanie liczby jednostek zwróconych przez zapytanie](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Instrukcje: Określenie liczby jednostek zwróconych przez zapytanie](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Instrukcje: Określanie poświadczeń klienta dla żądania usługi danych](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Instrukcje: Określanie poświadczeń klienta usługi danych żądania](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
  [Instrukcje: Ustawianie nagłówków w żądaniu klienta](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   

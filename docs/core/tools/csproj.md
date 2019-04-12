@@ -1,13 +1,13 @@
 ---
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
-ms.date: 09/22/2017
-ms.openlocfilehash: 49a7198dc593708abaa83e65af463ea0a7571a55
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.date: 04/08/2019
+ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481317"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517333"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -15,7 +15,7 @@ W tym dokumencie opisano zmiany, które zostały dodane w plikach projektu jako 
 
 ## <a name="implicit-package-references"></a>Odwołania do pakietu niejawne
 
-Metapakiety niejawnie są określone w oparciu o framework(s) docelowej, określone w `<TargetFramework>` lub `<TargetFrameworks>` właściwości pliku projektu. `<TargetFrameworks>` jest ignorowana, jeśli `<TargetFramework>` jest określony, niezależnie od kolejności.
+Metapakiety niejawnie są określone w oparciu o framework(s) docelowej, określone w `<TargetFramework>` lub `<TargetFrameworks>` właściwości pliku projektu. `<TargetFrameworks>` jest ignorowana, jeśli `<TargetFramework>` jest określony, niezależnie od kolejności. Aby uzyskać więcej informacji, zobacz [pakiety, metapakiety i struktury](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -31,13 +31,36 @@ Metapakiety niejawnie są określone w oparciu o framework(s) docelowej, określ
 
 ### <a name="recommendations"></a>Zalecenia
 
-Ponieważ `Microsoft.NETCore.App` lub `NetStandard.Library` metapakiety niejawnie są wywoływane, Oto nasze zalecane najlepsze rozwiązania:
+Ponieważ `Microsoft.NETCore.App` lub `NETStandard.Library` metapakiety niejawnie są wywoływane, Oto nasze zalecane najlepsze rozwiązania:
 
-* Podczas określania wartości docelowej platformy .NET Core lub .NET Standard, nigdy nie mają wyraźne odniesienie do `Microsoft.NETCore.App` lub `NetStandard.Library` metapakiety za pośrednictwem `<PackageReference>` elementu w pliku projektu.
+* Podczas określania wartości docelowej platformy .NET Core lub .NET Standard, nigdy nie mają wyraźne odniesienie do `Microsoft.NETCore.App` lub `NETStandard.Library` metapakiety za pośrednictwem `<PackageReference>` elementu w pliku projektu.
 * Jeśli potrzebujesz określonej wersji środowiska uruchomieniowego podczas określania wartości docelowej platformy .NET Core, należy użyć `<RuntimeFrameworkVersion>` właściwość w projekcie (na przykład `1.0.4`) zamiast odwoływać się do meta Microsoft.aspnetcore.all.
   * Może się to zdarzyć, jeśli używasz [niezależna wdrożeń](../deploying/index.md#self-contained-deployments-scd) i należy określona poprawka wersję 1.0.0 LTS środowiska uruchomieniowego, na przykład.
-* Jeśli potrzebujesz określonej wersji `NetStandard.Library` meta Microsoft.aspnetcore.all podczas przeznaczonych dla platformy .NET Standard, możesz użyć `<NetStandardImplicitPackageVersion>` właściwości i wersji zestawu.
-* Nie jawnie dodać lub zaktualizować odwołania do albo `Microsoft.NETCore.App` lub `NetStandard.Library` meta Microsoft.aspnetcore.all w projektach .NET Framework. Jeśli jakakolwiek wersja `NetStandard.Library` jest wymagana, gdy przy użyciu pakietu NuGet oparte na .NET Standard, NuGet automatycznie instaluje tę wersję.
+* Jeśli potrzebujesz określonej wersji `NETStandard.Library` meta Microsoft.aspnetcore.all podczas przeznaczonych dla platformy .NET Standard, możesz użyć `<NetStandardImplicitPackageVersion>` właściwości i wersji zestawu.
+* Nie jawnie dodać lub zaktualizować odwołania do albo `Microsoft.NETCore.App` lub `NETStandard.Library` meta Microsoft.aspnetcore.all w projektach .NET Framework. Jeśli jakakolwiek wersja `NETStandard.Library` jest wymagana, gdy przy użyciu pakietu NuGet oparte na .NET Standard, NuGet automatycznie instaluje tę wersję.
+
+## <a name="implicit-version-for-some-package-references"></a>Niejawne wersji niektóre odwołania do pakietu
+
+Większość użycia [ `<PackageReference>` ](#packagereference) wymagane ustawienie `Version` atrybutu, aby określić wersję pakietu NuGet, który ma być używany. Korzystając z platformy .NET Core 2.1 lub 2,2 i odwołujący się [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) lub [pakiet](/aspnet/core/fundamentals/metapackage), jednak ten atrybut nie jest konieczne. .NET Core SDK automatycznie wybrać wersję te pakiety, które powinny być używane.
+
+### <a name="recommendation"></a>Zalecenie
+
+Podczas odwoływania się do `Microsoft.AspNetCore.App` lub `Microsoft.AspNetCore.All` pakietów, nie należy określać ich wersji. Jeśli wersja jest określony, zestaw SDK może generować ostrzeżenie NETSDK1071. Aby usunąć to ostrzeżenie, Usuń wersję pakietu jak w poniższym przykładzie:
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> Znany problem: zestaw SDK programu .NET Core 2.1 obsługiwana tylko w tej składni projekt używa również Microsoft.NET.Sdk.Web. Ten problem jest rozwiązany w .NET Core 2.2 SDK.
+
+Te odwołania do platformy ASP.NET Core metapakiety ma nieco inne zachowanie z większości zwykłych pakietów NuGet. [Zależny od struktury wdrożeń](../deploying/index.md#framework-dependent-deployments-fdd) aplikacji używających tych metapakiety automatycznie korzystać z udostępnionej platformy ASP.NET Core. Gdy używasz metapakiety **nie** zasoby z pakietów platformy ASP.NET Core NuGet, do którego istnieje odwołanie, są wdrażane przy użyciu aplikacji — udostępnionej platformy ASP.NET Core zawiera te zasoby. Zasoby w ramach udostępnionego są zoptymalizowane pod kątem platformy docelowej poprawić czas uruchamiania aplikacji. Aby uzyskać więcej informacji na temat struktury udostępnione Zobacz [tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md).
+
+Jeśli jakaś wersja *jest* określone, jest ona traktowana jako *minimalne* wersję udostępnionej platformy ASP.NET Core dla wdrożeń zależny od struktury oraz *dokładnie* wersji niezależne wdrożenia. Może to mieć następujące konsekwencje:
+
+* Jeśli na zainstalowana wersja programu ASP.NET Core serwer jest starsza niż wersja określona w funkcji PackageReference, nie może uruchomić procesu platformy .NET Core. Aktualizacje meta Microsoft.aspnetcore.all są często dostępne w witrynie NuGet.org, zanim aktualizacje zostały udostępnione w środowiskach, takich jak Azure hostingu. Aktualizowanie wersji na PackageReference do platformy ASP.NET Core może spowodować awarię wdrożonej aplikacji.
+* Jeśli aplikacja jest wdrażana jako [niezależna wdrożenia](../deploying/index.md#self-contained-deployments-scd), aplikacja nie może zawierać najnowsze aktualizacje zabezpieczeń w programie .NET Core. Jeśli wersja nie jest określona, zestaw SDK automatycznie dołączać najnowszą wersję platformy ASP.NET Core we wdrożeniu niezależna.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Kompilacja domyślna obejmuje w projektach .NET Core
 
@@ -384,7 +407,7 @@ Każdy atrybut ma właściwości, które sterują jej zawartość i innej, aby w
 Uwagi:
 
 * `AssemblyVersion` i `FileVersion` domyślny ma wartość `$(Version)` bez sufiksu. Na przykład jeśli `$(Version)` jest `1.2.3-beta.4`, a następnie wartość będzie wynosić `1.2.3`.
-* `InformationalVersion` Wartością domyślną jest wartość `$(Version)`.
+* `InformationalVersion` Wartość domyślna to wartość `$(Version)`.
 * `InformationalVersion` ma `$(SourceRevisionId)` dołączona, jeśli właściwość jest obecny. Można je wyłączyć, używając `IncludeSourceRevisionInInformationalVersion`.
 * `Copyright` i `Description` właściwości są używane również do metadanych NuGet.
 * `Configuration` jest współużytkowany z procesu kompilacji i ustawić za pomocą `--configuration` parametru `dotnet` poleceń.

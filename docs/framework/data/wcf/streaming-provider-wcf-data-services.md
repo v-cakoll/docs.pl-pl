@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298880"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517593"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (WCF Data Services)
 Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne może reprezentować strumieni wideo i audio, obrazy, pliki dokumentów lub inne typy nośników binarnego. Gdy jednostki w modelu danych zawiera jedną lub więcej właściwości binarnych, Usługa danych zwraca te dane binarne zakodowanymi w formacie base-64, wewnątrz wpisu w źródle danych odpowiedzi. Ponieważ ładowania i serializacja dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, które są niezależne od jednostki, do której należy. Jest to realizowane przez oddzielenie danych binarnych z jednostki w co najmniej jeden strumień danych.  
@@ -46,7 +46,7 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
  **Dostawca programu Entity Framework**  
  Aby wskazać, że jednostka jest nośnika wpisu łącza nośnika, należy dodać `HasStream` atrybutu do definicji typu jednostki w modelu koncepcyjnym, jak w poniższym przykładzie:  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Musisz również dodać przestrzeń nazw `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` do jednostki lub w katalogu głównym pliku edmx lub .csdl, który definiuje model danych.  
   
@@ -74,8 +74,8 @@ Usługa danych mogą uwidocznić dane binarne dużego obiektu. Te dane binarne m
 ## <a name="creating-the-streaming-data-service"></a>Tworzenie usługi danych przesyłania strumieniowego  
  Aby zapewnić [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dostęp do aparatu plików wykonywalnych <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementacji usługi danych, którą tworzysz musi implementować też <xref:System.IServiceProvider> interfejsu. Poniższy przykład pokazuje, jak zaimplementować <xref:System.IServiceProvider.GetService%2A> metodę, aby zwrócić wystąpienia `PhotoServiceStreamProvider` klasę, która implementuje <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  Aby uzyskać ogólne informacje o sposobie tworzenia usługi danych, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   

@@ -4,12 +4,12 @@ description: Dowiedz się, jak wywoływać funkcje natywne za pośrednictwem met
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 9602b9c8649b97a8be1c26a202a0a910a1547877
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149698"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517866"
 ---
 # <a name="platform-invoke-pinvoke"></a>Wywołanie platformy (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 Poprzedni przykład jest proste, ale stażysta co jest potrzebne do wywoływania funkcji niezarządzanych z kodu zarządzanego. Rozważmy kroki przykładu:
 
 *   #1. wiersz zawiera za pomocą instrukcji for `System.Runtime.InteropServices` przestrzeni nazw, który zawiera wszystkie elementy, które są potrzebne.
-*   Wprowadza wiersza #7 `DllImport` atrybutu. Ten atrybut jest niezwykle istotne, ponieważ informuje, środowisko uruchomieniowe, należy go załadować niezarządzaną biblioteką DLL. Przekazany ciąg jest biblioteką DLL, funkcja naszym docelowym znajduje się w.
+*   Wprowadza wiersza #7 `DllImport` atrybutu. Ten atrybut jest niezwykle istotne, ponieważ informuje, środowisko uruchomieniowe, należy go załadować niezarządzaną biblioteką DLL. Przekazany ciąg jest biblioteką DLL, funkcja naszym docelowym znajduje się w. Ponadto określa, które [zestaw znaków](./charset.md) na potrzeby kierowania ciągi. Ponadto określa, że ta funkcja wywołuje [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) i środowiska uruchomieniowego należy przechwytywać tego kodu błędu, dzięki czemu użytkownik może pobrać go za pomocą <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
 *   Wiersz #8 jest crux pracy P/Invoke. Definiuje metody zarządzanej, która ma **dokładnie tym samym podpisie** , niezarządzanych. Deklaracja ma nowe słowo kluczowe, które można zauważyć, `extern`informuje środowisko uruchomieniowe, to jest metody zewnętrznej oraz że po jej wywołaniu, środowisko wykonawcze powinno znajduje się w biblioteki DLL określonej w `DllImport` atrybutu.
 
 Rest przykładu jest po prostu wywołania metody, tak jak każda inna metoda zarządzanych.

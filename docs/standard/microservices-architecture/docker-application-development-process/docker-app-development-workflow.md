@@ -4,12 +4,12 @@ description: Poznaj szczegóły przepływu pracy do tworzenia aplikacji opartych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 6a4d8a6fea56c01d23d3cdb98ae9e12619e99ff5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 97b8c40f0926edaf9ab743ac45ba498c96257622
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328234"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517983"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
 

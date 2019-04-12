@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 1464880e92753d2774b1ca60d55c71a88d8e9b15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519402"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517944"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting usługi danych (WCF Data Services)
 Korzystając z usług danych WCF, można utworzyć usługę, która udostępnia dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta usługa danych jest zdefiniowany jako klasę, która dziedziczy z <xref:System.Data.Services.DataService%601>. Ta klasa udostępnia funkcje wymagane do przetwarzania komunikatów żądań, przeprowadzania aktualizacji względem źródła danych i generowanie wiadomości odpowiedzi, zgodnie z wymaganiami protokołu OData. Jednak usługa danych nie można powiązać i nasłuchiwanie przychodzących żądań HTTP na gnieździe sieci. Dla tej funkcji wymagane usługi danych opiera się na składniku hostingowych.
@@ -52,8 +52,8 @@ Kiedy używasz **Dodaj nowy element** okna dialogowego w programie Visual Studio
 
  Strona związanym z kodem `.svc` plik zawiera klasę, która jest implementacją usługi danych, która jest zdefiniowana w następujący sposób usługi Northwind przykładowe dane:
 
- [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
- [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+ [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+ [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
  Ponieważ usługa danych zachowuje się jak usługi WCF, Usługa danych integruje się z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i korzysta z modelu programowania w sieci Web WCF. Aby uzyskać więcej informacji, zobacz [usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) i [modelu programowania protokołu HTTP sieci Web programu WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 

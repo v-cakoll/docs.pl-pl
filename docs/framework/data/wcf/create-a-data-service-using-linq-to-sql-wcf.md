@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, LINQ to SQL
 - WCF Data Services, providers
 ms.assetid: 3b01c2fd-8c6e-4bf5-b38f-9e61bdc3c328
-ms.openlocfilehash: 7447a9f2ab0b2a9cca396ee947a0eb5fe2cc8715
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b33eb8f470fc8ce3851c7843de992b39e86ce018
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608576"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518223"
 ---
 # <a name="how-to-create-a-data-service-using-a-linq-to-sql-data-source-wcf-data-services"></a>Instrukcje: Tworzenie usługi danych przy użyciu LINQ do SQL źródła danych (WCF Data Services)
 
@@ -43,8 +43,8 @@ Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dostawca
 
 8. Zastąp zawartość pliku z kodem Northwind.cs następującym kodem. Ten kod implementuje dostawcy odbicia, rozszerzając <xref:System.Data.Linq.DataContext> i klas danych generowanych przez LINQ to SQL:
 
-     [!code-csharp[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria linq provider/cs/northwind.cs#linq2sqlprovider)]
-     [!code-vb[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria linq provider/vb/northwind.vb#linq2sqlprovider)]
+     [!code-csharp[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_linq_provider/cs/northwind.cs#linq2sqlprovider)]
+     [!code-vb[Astoria Linq Provider#Linq2SqlProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_linq_provider/vb/northwind.vb#linq2sqlprovider)]
 
 ### <a name="to-create-a-data-service-by-using-a-linq-to-sql-based-data-model"></a>Aby utworzyć usługę danych za pomocą LINQ do modelu danych programu SQL
 
@@ -65,8 +65,8 @@ Usługi danych WCF przedstawia dane jednostki w postaci usługi danych. Dostawca
 
 5. W kodzie dla usługi danych, Zastąp kod symbolu zastępczego `InitializeService` funkcji następującym kodem:
 
-     [!code-csharp[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria linq provider/cs/northwind.svc.cs#enableaccess)]
-     [!code-vb[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria linq provider/vb/northwind.svc.vb#enableaccess)]
+     [!code-csharp[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_linq_provider/cs/northwind.svc.cs#enableaccess)]
+     [!code-vb[Astoria Linq Provider#EnableAccess](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_linq_provider/vb/northwind.svc.vb#enableaccess)]
 
      Dzięki temu autoryzowanych klientów dostępu do zasobów dla trzech zestawów określonej jednostki.
 

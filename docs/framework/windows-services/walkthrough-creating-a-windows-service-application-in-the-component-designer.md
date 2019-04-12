@@ -1,6 +1,6 @@
 ---
 title: 'Samouczek: Tworzenie aplikacji usługi Windows'
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 7952256d1b225fe22cd189833a046590cdf0a9f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200678"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518035"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Samouczek: Tworzenie aplikacji usługi Windows
 
@@ -73,21 +73,7 @@ W tej sekcji dodasz niestandardowy dziennik zdarzeń do usługi Windows. <xref:S
 
 4. Zdefiniować niestandardowy dziennik zdarzeń. Aby uzyskać C#, zmodyfikować istniejący `MyNewService()` Konstruktor; dla języka Visual Basic należy dodać `New()` konstruktora:
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. Dodaj `using` instrukcję, aby **MyNewService.cs** (jeśli jeszcze nie istnieje), lub `Imports` instrukcji **MyNewService.vb**, dla <xref:System.Diagnostics?displayProperty=nameWithType> przestrzeni nazw:
@@ -182,10 +168,7 @@ Zamiast uruchamiać swoją pracę w wątku głównym, można uruchamiać zadania
 
 Wstaw wiersz kodu w <xref:System.ServiceProcess.ServiceBase.OnStop%2A> metodę, która dodaje wpis w dzienniku zdarzeń, gdy usługa zostanie zatrzymana:
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>Zdefiniuj inne akcje usługi
@@ -265,6 +248,9 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
     End Structure
     ```
 
+    > [!NOTE]
+    > Korzysta z Menedżera sterowania usługami `dwWaitHint` i `dwCheckpoint` członkowie [struktury SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) określić ilość czasu oczekiwania dla usługi Windows uruchomić lub zamknąć. Jeśli Twoje `OnStart` i `OnStop` metody trwają długo, usługi mogą żądać więcej czasu, przez wywołanie metody `SetServiceStatus` ponownie, używając zwiększona `dwCheckPoint` wartość.
+
 3. W `MyNewService` klasy, Zadeklaruj [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) funkcji przy użyciu [wywołania platformy](../interop/consuming-unmanaged-dll-functions.md):
 
     ```csharp
@@ -336,9 +322,6 @@ Ustawienia stanu SERVICE_START_PENDING i SERVICE_STOP_PENDING można zaimplement
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> Korzysta z Menedżera sterowania usługami `dwWaitHint` i `dwCheckpoint` członkowie [struktury SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status) określić ilość czasu oczekiwania dla usługi Windows uruchomić lub zamknąć. Jeśli Twoje `OnStart` i `OnStop` metody trwają długo, usługi mogą żądać więcej czasu, przez wywołanie metody `SetServiceStatus` ponownie, używając zwiększona `dwCheckPoint` wartość.
-
 ## <a name="add-installers-to-the-service"></a>Dodawanie instalatorów do usługi
 
 Przed uruchomieniem usługi Windows, musisz zainstalować go, który rejestruje je z Menedżerem sterowania usługami. Dodawanie instalatorów do projektu w celu obsługi szczegółów rejestracji.
@@ -391,24 +374,8 @@ Każda usługa Windows ma wpis rejestru, w obszarze **HKEY_LOCAL_MACHINE\SYSTEM\
 
 1. Wybierz **Program.cs**, lub **MyNewService.Designer.vb**, następnie wybierz **Wyświetl kod** z menu skrótów. W `Main` metodę, Zmień kod, aby dodać parametr wejściowy i przekaż go do konstruktora usługi:
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. W **MyNewService.cs**, lub **MyNewService.vb**, zmień `MyNewService` konstruktora, aby przetworzyć parametr wejściowy w następujący sposób:
 

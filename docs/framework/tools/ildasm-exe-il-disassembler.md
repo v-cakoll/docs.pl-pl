@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488516"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517541"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -69,7 +69,7 @@ Poniższe opcje są prawidłowe dla *.exe*, *.dll*, i *winmd* plików dla pliku 
 |**/classlist**|Dołącza listę klas zdefiniowanych w module.|
 |**/ kreska**|Używa deklaracji przekazującej klasy.|
 |**/headers**|Dołącza informacje nagłówka pliku do wyjścia.|
-|**/ item:** `class`[**::** `member`[`(sig`]]|W zależności od określonego argumentu dezasembluje następujące obiekty:<br /><br /> -Dezasembluje określoną klasę `class`.<br />-Dezasembluje określoną klasę `member` z `class`.<br />-Dezasembluje `member` z `class` o określonej sygnaturze `sig`. Format `sig` jest:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Uwaga** w programie .NET Framework w wersjach 1.0 i 1.1, `sig` musi następować nawias zamykający: `(sig)`. Począwszy od programu Net Framework 2.0, nawias zamykający musi zostać pominięty: (`sig`.|
+|**/ item:** `class`[**::** `member`[`(sig`]]|W zależności od określonego argumentu dezasembluje następujące obiekty:<br /><br /> -Dezasembluje określoną klasę `class`.<br />-Dezasembluje określoną klasę `member` z `class`.<br />-Dezasembluje `member` z `class` o określonej sygnaturze `sig`. Format `sig` jest:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Uwaga** w programie .NET Framework w wersjach 1.0 i 1.1, `sig` musi następować nawias zamykający: `(sig)`. Począwszy od programu Net Framework 2.0, nawias zamykający musi zostać pominięty: `(sig`.|
 |**/noil**|Wyłącza wyjście kodu zestawu IL.|
 |**/ stats**|Zawiera dane statystyczne dotyczące obrazu.|
 |**/typelist**|Generuje pełną listę typów, aby zachować kolejność typów w rundzie.|

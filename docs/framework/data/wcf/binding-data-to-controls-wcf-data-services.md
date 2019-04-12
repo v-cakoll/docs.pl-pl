@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226667"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517879"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Powiązywanie danych z kontrolkami (WCF Data Services)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można powiązać formanty, takie jak `ComboBox` i `ListView` formanty do wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasy. Ta kolekcja, która dziedziczy z <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, zawiera dane z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta klasa reprezentuje kolekcję danych dynamicznych, która zapewnia powiadomienia, gdy elementy Pobierz dodane lub usunięte. Jeśli używasz wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> dla powiązania danych [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienckie obsługę następujących zdarzeń, aby upewnić się, że obiekty są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> pozostają zsynchronizowane z danymi w powiązanej elementu interfejsu użytkownika.  
@@ -29,21 +29,21 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można p
   
  Poniższy przykład pokazuje, jak utworzyć wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601> oparte na podany <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601> zwracającego wszystkich klientów z powiązane zamówienia:  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders2.cs#customersorders2binding)]
- [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders2.cs#customersorders2binding)]
+ [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Powiązywanie danych z programu Windows Presentation Foundation elementów  
  Ponieważ <xref:System.Data.Services.Client.DataServiceCollection%601> klasa dziedziczy <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, można powiązać obiekty do elementu, lub kontrolki w aplikacji Windows Presentation Foundation (WPF), tak jak w przypadku korzystania z <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy dla wiązania. Aby uzyskać więcej informacji, zobacz [powiązanie danych (Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md). Jednym ze sposobów, aby powiązać dane usługi danych z formantów WPF jest ustaw `DataContext` właściwość elementu do wystąpienia <xref:System.Data.Services.Client.DataServiceCollection%601> klasę, która zawiera wynik zapytania. W tym przypadku używasz <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> właściwość umożliwiająca ustawienie obiektu źródła kontrolki. Użyj <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A> właściwości w celu określenia, która właściwość powiązany obiekt, do wyświetlenia. Element są wiązane do powiązanego obiektu, który jest zwracany przez właściwość nawigacji, podaj ścieżkę w powiązaniu zdefiniowane dla <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> właściwości. Ta ścieżka jest określana względem obiektu głównego ustawione przez <xref:System.Windows.FrameworkElement.DataContext%2A> właściwości kontrolki nadrzędnej. Poniższy przykład ustawia <xref:System.Windows.FrameworkElement.DataContext%2A> właściwość <xref:System.Windows.Controls.StackPanel> elementu, aby powiązać formant nadrzędny <xref:System.Data.Services.Client.DataServiceCollection%601> obiektów klienta:  
   
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
   
  W poniższym przykładzie pokazano definicji XAML powiązania elementu podrzędnego <xref:System.Windows.Controls.DataGrid> i <xref:System.Windows.Controls.ComboBox> kontrolki:  
   
- [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml#masterdetailxaml)]  
+ [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml#masterdetailxaml)]  
   
  Aby uzyskać więcej informacji, zobacz [jak: Powiąż dane z programu Windows Presentation Foundation elementy](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
   
@@ -57,16 +57,16 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można p
   
  Poniższy przykład tworzy powiązanie <xref:System.Data.Services.Client.DataServiceCollection%601> do <xref:System.Windows.Forms.ComboBox> sterowania:  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabindingspecific)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabindingspecific)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabindingspecific)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabindingspecific)]  
   
  Kiedy używasz **Dodaj odwołanie do usługi** okna dialogowego, można wygenerować klas usługi danych klienta, tworzone jest źródło danych również oznacza to projekt na podstawie wygenerowanej <xref:System.Data.Services.Client.DataServiceContext>. Z tego źródła danych można utworzyć elementy interfejsu użytkownika lub formantów, które wyświetlają dane z usługi danych poprzez przeciąganie elementów z **źródeł danych** okna do projektanta. Te elementy stają się elementów w interfejsie użytkownika aplikacji, które są powiązane ze źródłem danych. Aby uzyskać więcej informacji, zobacz [jak: Wiązanie danych przy użyciu źródła danych projektu](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md).  
   
 ## <a name="binding-paged-data"></a>Powiązanie stronicowanych danych  
  Usługi danych można skonfigurować tak, aby ograniczyć ilość pobranych danych, która jest zwracana w komunikacie pojedynczą odpowiedź. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Gdy usługa danych jest stronicowanie danych odpowiedzi, poszczególne odpowiedzi zawiera łącze, które służy do zwracania następnej strony wyników. Aby uzyskać więcej informacji, zobacz [ładowanie zawartości odroczone](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md). W takim przypadku należy jawnie załadować stron, wywołując <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A> metody <xref:System.Data.Services.Client.DataServiceCollection%601> , przekazując uzyskiwane z identyfikator URI <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A> właściwości, jak w poniższym przykładzie:  
   
- [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
- [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
+ [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
+ [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
   
  Powiązane obiekty są ładowane w podobny sposób. Aby uzyskać więcej informacji, zobacz [jak: Powiąż dane z programu Windows Presentation Foundation elementy](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
   
@@ -90,9 +90,9 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można p
   
  W poniższym przykładzie <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> dostosowanych do wywoływania akcji <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> i <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> metodę, aby usunąć `Orders_Details` jednostek, które należą do usuniętej `Orders` jednostki. Ta akcja jest wykonywane, ponieważ jednostki zależne nie są automatycznie usuwane po usunięciu obiektu nadrzędnego.  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
   
  Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie zachowania powiązania danych](../../../../docs/framework/data/wcf/how-to-customize-data-binding-behaviors-wcf-data-services.md).  
   
@@ -115,5 +115,5 @@ Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można p
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Ręczne generowanie klas usługi danych klienta](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
-- [Instrukcje: Dodawanie odwołania do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+- [Instrukcje: Ręczne Generowanie klas usługi danych klienta](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+- [Instrukcje: Dodaj odwołanie do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

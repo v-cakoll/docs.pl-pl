@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: dc2fc5de591429d76210b1dacf69485bb3b11b2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189082"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517320"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje formaty Atom i JavaScript Object Notation (JSON) dla źródła danych. Gdy używasz źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zapewnia standardową metodę do serializowania danych, takich jak jednostek i relacji w formacie XML, które mogą być zawarte w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje mapowanie właściwości jednostki domyślne między danych, które znajduje się w jednostkach i elementów Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -33,11 +33,11 @@ ms.locfileid: "59189082"
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework  
  Model danych używany z [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy jest reprezentowana jako kod XML w pliku edmx. W tym przypadku atrybutów, które definiują niestandardowego źródła danych są dodawane do `EntityType` i `Property` elementy, które reprezentują typy jednostek i właściwości w modelu danych. Te atrybuty Dostosowywanie źródła danych nie są zdefiniowane w [ \[MC CSDL\]: Koncepcyjny formatu pliku definicji schematu](https://go.microsoft.com/fwlink/?LinkId=159072), który jest w formacie, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] używa dostawcy w celu zdefiniowania modelu danych. W związku z tym, należy zadeklarować atrybutów dostosowywania kanału informacyjnego w przestrzeni nazw określonego schematu, która jest zdefiniowana jako `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Poniższy fragment XML zawiera atrybuty kanału informacyjnego dostosowania stosowane do `Property` elementy `Products` typu jednostki, które definiują `ProductName`, `ReorderLevel`, i `UnitsInStock` właściwości.  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
  Te atrybuty generuje następujące dane niestandardowe źródło danych dla `Products` zestawu jednostek. W kanale, dostosowanych danych `ProductName` wartość właściwości jest wyświetlana zarówno w `author` elementu i `ProductName` element właściwości i `UnitsInStock` właściwości są wyświetlane w element niestandardowy, który ma własną unikatową przestrzeń nazw z `ReorderLevel` właściwości jako atrybut:  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
  Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie źródła danych za pomocą dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
@@ -65,12 +65,12 @@ ms.locfileid: "59189082"
 > [!NOTE]
 >  Model danych w tym przykładzie jest zdefiniowana w temacie [jak: Tworzenie usługi danych przy użyciu dostawcy odbicia](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md).  
   
- [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
- [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
+ [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
+ [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
   
  Te atrybuty generuje następujące dane niestandardowe źródło danych dla `Orders` zestawu jednostek. W tym dostosowane kanału informacyjnego, `OrderId` wartość właściwości jest wyświetlana tylko w `title` elementu `entry` i `Customer` Wyświetla wartość właściwości, zarówno w `author` elementu i `Customer` element właściwości:  
   
- [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
  Aby uzyskać więcej informacji, zobacz [jak: Dostosowywanie źródła danych za pomocą dostawcy odbicia](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md).  
   

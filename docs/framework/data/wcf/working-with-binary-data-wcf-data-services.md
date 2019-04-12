@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170329"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517242"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danymi binarnymi (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteka klienta umożliwia pobieranie i aktualizację danych binarnych pochodzących ze [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w jednym z następujących sposobów:  
@@ -30,7 +30,7 @@ ms.locfileid: "59170329"
 ## <a name="entity-metadata"></a>Metadane jednostki  
  Jednostki, która ma powiązane multimediów strumieniowych zasobu jest wskazywane WE metadanych usługi danych przez `HasStream` zastosowany do typu jednostki, która jest nośnika wpisu łącza nośnika. W poniższym przykładzie `PhotoInfo` jednostka jest wpisu łącza nośnika, zawierającej powiązanych zasobów nośników, wskazywanym przez `HasStream` atrybutu.  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Pozostałe przykłady w tym temacie pokazano, jak dostępu i zmiany strumień zasobu multimediów. Pełny przykład sposobu korzystania z multimediów strumieniowych zasobów w aplikacji klienckiej .NET Framework za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta, zobacz wpis [uzyskiwania dostępu do Stream zasobu multimediów od klienta](https://go.microsoft.com/fwlink/?LinkID=201637).  
   
@@ -43,14 +43,14 @@ ms.locfileid: "59170329"
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Uzyskiwanie identyfikatora URI binarne Stream  
  Podczas pobierania niektórych rodzajów zasobów nośników, takich jak obrazy i inne pliki multimedialne, często jest łatwiejszy w użyciu identyfikator URI zasobu multimediów w Twojej aplikacji, niż Obsługa sam strumień danych binarnych. Aby uzyskać identyfikator URI skojarzony z danym wpisu łącza nośnika strumienia zasobu, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia jednostki. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metodę, aby uzyskać identyfikator URI multimediów strumieniowych zasobu, który jest używany do tworzenia nowego obrazu na komputerze klienckim:  
   
- [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photowindow.xaml.cs#getreadstreamuri)]
- [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photowindow.xaml.vb#getreadstreamuri)]  
+ [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photowindow.xaml.cs#getreadstreamuri)]
+ [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photowindow.xaml.vb#getreadstreamuri)]  
   
 ### <a name="downloading-the-binary-resource-stream"></a>Pobieranie Stream zasób binarny  
  Podczas pobierania strumienia binarnego, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia wpisu łącza nośnika. Ta metoda wysyła żądanie do usługi danych, która zwraca <xref:System.Data.Services.Client.DataServiceStreamResponse> obiektu, który zawiera odwołanie do strumienia, który zawiera zasób. Użyj tej metody, gdy aplikacja wymaga zasób binarny jako <xref:System.IO.Stream>. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metodę, która pobierze strumień, który jest używany do tworzenia nowego obrazu na komputerze klienckim:  
   
- [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria streaming client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
- [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria streaming client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
+ [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_streaming_client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
+ [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_streaming_client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
   
 > [!NOTE]
 >  Nagłówek Content-Length w komunikacie odpowiedzi, który zawiera pary binarne nie jest ustawiony przez usługę danych. Ta wartość może nie odzwierciedlać rzeczywiste długość strumienia danych binarnych.  
@@ -58,8 +58,8 @@ ms.locfileid: "59170329"
 ### <a name="uploading-a-media-resource-as-a-stream"></a>Przekazywania zasobu multimediów jako Stream  
  Aby wstawić lub zaktualizować zasobu multimediów, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metody <xref:System.Data.Services.Client.DataServiceContext> wystąpienie, które służy do śledzenia jednostki. Ta metoda wysyła żądanie do usługi danych, która zawiera zasób nośnika odczytany ze strumienia podane. Poniższy przykład pokazuje sposób wywoływania <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metodę, aby wysłać obrazu do usługi danych:  
   
- [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photodetailswindow.xaml.cs#setsavestream)]
- [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photodetailswindow.xaml.vb#setsavestream)]  
+ [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photodetailswindow.xaml.cs#setsavestream)]
+ [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photodetailswindow.xaml.vb#setsavestream)]  
   
  W tym przykładzie <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metoda jest wywoływana przez podanie wartości `true` dla `closeStream` parametru. Gwarantuje to, że <xref:System.Data.Services.Client.DataServiceContext> zamyka strumień przekazane dane binarne do usługi danych.  
   
@@ -69,4 +69,4 @@ ms.locfileid: "59170329"
 ## <a name="see-also"></a>Zobacz także
 
 - [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Wiązanie danych z kontrolką](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

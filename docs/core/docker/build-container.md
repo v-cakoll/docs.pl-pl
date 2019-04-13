@@ -4,12 +4,12 @@ description: W tym samouczku dowiesz się, jak konteneryzowanie aplikacji .NET C
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b6aacb48d97c6403e2eefe45c2f477cdf64f941e
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59518171"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553839"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Samouczek: Konteneryzowanie .NET Core aplikacji
 
@@ -41,11 +41,11 @@ Jeśli masz platformy .NET Core zainstalowany, użyj `dotnet --info` polecenie, 
 Jeśli używasz zestawu SDK, która jest nowsza, takich jak 3.0, upewnij się, czy aplikacja jest zmuszony do używania 2,2 zestawu SDK. Utwórz plik o nazwie `global.json` w katalogu roboczym i wklej następujący kod json:
 
 ```json
-{                                             
-  "sdk": {                                    
-    "version": "2.2.100"                      
-  }                                           
-}                                             
+{
+  "sdk": {
+    "version": "2.2.100"
+  }
+}
 ```
 
 Zapisz ten plik. Obecność pliku spowoduje to wymuszenie platformy .NET Core, aby użyć wersji 2.2 dla każdego `dotnet` polecenie wywołane z tego katalogu i poniżej.
@@ -176,7 +176,6 @@ myimage                                 latest              d51bb4452469        
 
 Zwróć uwagę, że dwa obrazy współużytkować ten sam **identyfikator obrazu** wartość. Wartość jest taka sama oba obrazy, ponieważ tylko polecenia w *pliku Dockerfile* został podstawą nowy obraz istniejącego obrazu. Dodajmy dwa polecenia, aby *pliku Dockerfile*. Każde polecenie tworzy nową warstwę obrazu za pomocą polecenia końcowego reprezentujący obraz **myimage** wskaż repozytorium.
 
-
 ```dockerfile
 COPY app/bin/Release/netcoreapp2.2/publish/ app/
 
@@ -256,7 +255,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 ### <a name="connect-to-a-container"></a>Łączenie do kontenera
 
-Po uruchomieniu kontenera możesz połączyć się do niej, aby wyświetlić dane wyjściowe. Użyj `docker start` i `docker attach` poleceń, aby rozpocząć, kontener i wgląd w dane ze strumienia wyjściowego. W tym przykładzie <kbd>klawisze CTRL + C</kbd> polecenie jest używane do odłączenia uruchomionego kontenera. To, że faktycznie zakończenie procesu w kontenerze, w której zostanie zatrzymane kontenera. `--sig-proxy=false` Parametru gwarantuje, że <kbd>klawisze CTRL + C</kbd> lokacji nie zatrzyma proces w kontenerze. 
+Po uruchomieniu kontenera możesz połączyć się do niej, aby wyświetlić dane wyjściowe. Użyj `docker start` i `docker attach` poleceń, aby rozpocząć, kontener i wgląd w dane ze strumienia wyjściowego. W tym przykładzie <kbd>klawisze CTRL + C</kbd> polecenie jest używane do odłączenia uruchomionego kontenera. To, że faktycznie zakończenie procesu w kontenerze, w której zostanie zatrzymane kontenera. `--sig-proxy=false` Parametru gwarantuje, że <kbd>klawisze CTRL + C</kbd> lokacji nie zatrzyma proces w kontenerze.
 
 Po odłączeniu z kontenera, ponownie dołączyć, aby sprawdzić, czy jest nadal uruchomiona i zliczania.
 
@@ -322,8 +321,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="change-the-entrypoint"></a>Zmiana punktu wejścia
 
-`docker run` Polecenie umożliwia również modyfikowanie `ENTRYPOINT` polecenia *pliku Dockerfile* i uruchom coś innego, ale tylko dla tego kontenera. Na przykład następujące polecenie do uruchomienia `bash` lub `cmd.exe`. Edytuj polecenia zgodnie z potrzebami. 
-
+`docker run` Polecenie umożliwia również modyfikowanie `ENTRYPOINT` polecenia *pliku Dockerfile* i uruchom coś innego, ale tylko dla tego kontenera. Na przykład następujące polecenie do uruchomienia `bash` lub `cmd.exe`. Edytuj polecenia zgodnie z potrzebami.
 
 #### <a name="windows"></a>Windows
 W tym przykładzie `ENTRYPOINT` jest zmieniana na `cmd.exe`. <kbd>CTRL + C,</kbd> jest wciśnięty, aby zakończyć proces i zatrzymać kontenera.

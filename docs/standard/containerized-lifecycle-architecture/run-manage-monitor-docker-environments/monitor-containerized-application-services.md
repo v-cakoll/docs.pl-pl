@@ -4,55 +4,36 @@ description: Dowiedz się, niektóre kluczowe aspekty monitorowania kontenera ar
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 925db543617deb28590cf6631ebbda3ee96836c4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4553a35c8db6cfc46187525ef2ffc65cb3ba07c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975748"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672051"
 ---
 # <a name="monitor-containerized-application-services"></a>Monitorowanie usług konteneryzowanych aplikacji
 
 Koniecznie dla aplikacji, podzielić na wiele kontenerów oraz mikrousług sposób monitorowanie i analizowanie zachowanie całej aplikacji.
 
-## <a name="microsoft-application-insights"></a>Microsoft Application Insights
+## <a name="azure-monitor"></a>Azure Monitor
 
-[Usługa Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview) jest rozszerzalną usługą analizy, który monitoruje działającą aplikację. Pomaga wykrywać i diagnozować problemy z wydajnością i zrozumienie, jak użytkownicy w rzeczywistości korzystają z aplikacją. Jest ona przeznaczona dla deweloperów z zamiarem pomaga usprawnić wydajność i użyteczność swoje aplikacje lub usługi. Usługa Application Insights w programach zarówno autonomiczne, jak i usług sieci web/aplikacji na różnych platformach, takich jak .NET, Java, Node.js i wielu innych platform hostowanych lokalnie lub w chmurze.
+[Usługa Azure Monitor](https://azure.microsoft.com/services/monitor/) jest rozszerzalną usługą analizy, który monitoruje działającą aplikację. Pomaga wykrywać i diagnozować problemy z wydajnością i zrozumienie, jak użytkownicy w rzeczywistości korzystają z aplikacją. Jest ona przeznaczona dla deweloperów z zamiarem pomaga usprawnić wydajność i użyteczność swoje aplikacje lub usługi. Usługa Azure Monitor współpracuje z zarówno autonomiczne, jak i usług sieci web/aplikacji na różnych platformach, takich jak .NET, Java, Node.js i wielu innych platform hostowanych lokalnie lub w chmurze.
 
-### <a name="analyzing-docker-apps-in-qa-environments-using-application-insights"></a>Analizowanie aplikacji platformy Docker w środowisku kontroli jakości za pomocą usługi Application Insights
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
-W odniesieniu do platformy Docker, możesz wykresu zdarzenia cyklu życia i liczniki wydajności z kontenerów platformy Docker w usłudze Application Insights. Wystarczy uruchomić [obrazu platformy Docker programu Application Insights](https://hub.docker.com/r/microsoft/applicationinsights/) jako kontenerów w hoście, a zostaną wyświetlone liczniki wydajności dla hosta, jak również jak w przypadku obrazów platformy Docker. Ten obraz platformy Docker Insights aplikacji (rysunek 6 - 1) ułatwia monitorowanie aplikacji konteneryzowanych za zbieranie danych telemetrycznych dotyczących wydajności i działania (Twoje maszyny wirtualne systemu Linux) hosta platformy Docker, kontenery platformy Docker i aplikacje uruchomione w ramach ich.
+- **Omówienie usługi Azure Monitor** \
+  <https://docs.microsoft.com/azure/azure-monitor/overview>
 
-![przykład](./media/image1.png)
+- **Co to jest usługa Application Insights?** \
+  <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
-**Rysunek 6-1**. Monitorowanie hostów platformy Docker i kontenerów w usłudze Application Insights
+- **Co to jest Azure monitorowanie metryk?** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/data-platform-metrics>
 
-Po uruchomieniu [obrazu platformy Docker programu Application Insights](https://hub.docker.com/r/microsoft/applicationinsights/) na hoście platformy Docker, korzystają z następujących wartości:
+- **Rozwiązanie do monitorowania kontenerów w usłudze Azure Monitor** \
+  <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
-- Cykl życia telemetrii dotyczącej wszystkie kontenery działające na hoście — uruchamianie, zatrzymywanie i tak dalej.
-
-- Liczniki wydajności dla wszystkich kontenerów: Procesor CPU, pamięci, użycie sieci i więcej.
-
-- Jeśli zainstalowano także [zestawu SDK usługi Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net) w aplikacji działających w kontenerach, wszystkie dane telemetryczne aplikacji, które będą miały dodatkowych właściwości identyfikowanie kontenera i hostów maszyn. Tak na przykład w przypadku wystąpienia aplikacji działających w więcej niż jednego hosta, możesz łatwo będzie filtrującą dane telemetrii aplikacji przez hosta.
-
-### <a name="setting-up-application-insights-to-monitor-docker-applications-and-docker-hosts"></a>Konfigurowanie usługi Application Insights do monitorowania aplikacji platformy Docker i hostów platformy Docker
-
-Aby utworzyć zasób usługi Application Insights, postępuj zgodnie z instrukcjami artykuły znajdujące się w opisane poniżej. Witryna Azure portal utworzy skrypt niezbędne dla Ciebie.
-
-- **Monitorowanie aplikacji Docker w usłudze Application Insights:** \
-  <https://docs.microsoft.com/azure/application-insights/app-insights-docker>
-
-- **Obraz platformy Docker Insights aplikacji w usłudze Docker Hub i GitHub:** \
-  <https://hub.docker.com/r/microsoft/applicationinsights/> i \
-  <https://github.com/Microsoft/ApplicationInsights-Docker>
-
-- **Konfigurowanie usługi Application Insights dla aplikacji sieci web platformy ASP.NET i ASP.NET Core** \
-  <https://docs.microsoft.com/azure/application-insights/app-insights-asp-net>
-
-- **Usługa Application Insights dla stron sieci web:**  
-  <https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
-
-## <a name="security-backup-and-monitoring-services"></a>Zabezpieczenia, kopia zapasowa i monitorowania usług
+## <a name="security-and-backup-services"></a>Usługi zabezpieczeń i kopii zapasowej
 
 Istnieje wiele zadań pomocy technicznej z dużą liczbą szczegółowe informacje, które trzeba obsługiwać, aby upewnić się, że infrastruktura i aplikacje znajdują się w górnym więcej warunek do obsługi wymagań biznesowych i sytuacji staje się bardziej skomplikowane, w obszarze mikrousług, więc należy sposób ma wysokiego poziomu i szczegółowe widoki, gdy trzeba podjąć działania.
 
@@ -67,12 +48,6 @@ Platforma Azure oferuje narzędzia do zarządzania i zapewnić spójny widok czt
   - Unikaj firm kosztownych przerw w działaniu, cele zapewniania zgodności i chronić dane przed oprogramowaniem wymuszającym okup i błędami ludzkimi.
   - Zachowaj dane kopii zapasowej szyfrowane podczas przesyłania i magazynowanych.
   - Zapewnia dostęp na podstawie uwierzytelniania wieloskładnikowego, aby zapobiec nieautoryzowanemu użyciu.
-
-- **Monitorowanie**. Za pomocą [monitorowania platformy Azure](https://azure.microsoft.com/solutions/monitoring/), [usługi Log Analytics](https://azure.microsoft.com/services/log-analytics/), i [usługi Application Insights](https://azure.microsoft.com/services/application-insights/).
-  - Zyskaj pełny wgląd w kondycję i wydajność obciążeń platformy Azure, aplikacji i infrastruktury.
-  - Zbieranie danych z dowolnego źródła i uzyskuj szczegółowe informacje na maszyny wirtualne, kontenery i aplikacje.
-  - Zawiera informacje potrzebne przy użyciu zapytania interakcyjne oraz wyszukiwanie pełnotekstowe. 
-  - Analiza głównej przyczyny za pomocą zaawansowanej Analityki, w tym algorytmów uczenia maszynowego.
 
 - **Zasobów lokalnych**. Za pomocą [prawdziwie spójna chmura hybrydowa](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 

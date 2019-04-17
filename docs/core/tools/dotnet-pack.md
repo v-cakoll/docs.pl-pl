@@ -2,12 +2,12 @@
 title: polecenie pakietu DotNet
 description: Polecenie pakietu dotnet tworzy pakiety NuGet do projektu .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 6ee987576e29d366bd6821d2757965454411adea
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611968"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672129"
 ---
 # <a name="dotnet-pack"></a>pakietu DotNet
 
@@ -213,5 +213,5 @@ Możesz podać właściwości programu MSBuild do `dotnet pack` polecenie, aby u
 * Pakiet projekt za pomocą [pliku .nuspec](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec):
 
   ```console
-  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  dotnet pack ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
   ```

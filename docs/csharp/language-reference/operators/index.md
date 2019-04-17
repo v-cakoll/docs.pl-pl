@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308656"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672293"
 ---
 # <a name="c-operators"></a>Operatory języka C#
 
@@ -159,6 +159,14 @@ Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet ni�
 
 [x &#124; y](or-operator.md) — logicznych lub bitowe OR. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.
 
+## <a name="true-operator"></a>TRUE — operator
+
+[True](../keywords/true-false-operators.md) operator zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie true. 
+
+## <a name="false-operator"></a>False operator
+
+[False](../keywords/true-false-operators.md) operator zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie false. 
+
 ## <a name="conditional-and-operator"></a>Operator warunkowy AND
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
@@ -213,7 +221,7 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [C#](../../index.md)
 - [Operatory z możliwością przeciążenia](../../programming-guide/statements-expressions-operators/overloadable-operators.md)

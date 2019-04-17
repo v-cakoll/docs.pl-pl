@@ -1,15 +1,15 @@
 ---
-title: Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
+title: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konteneryzowanych
 description: Ustal, jakimi oferty firmy Microsoft do obsługi cykl życia aplikacji platformy Docker.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680203"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672267"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft oraz narzędzi dla aplikacji konteneryzowanych
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680203"
 
 Rysunek 3-1 przedstawiono głównych filarach w cyklu życia aplikacji platformy Docker według rodzaju pracy dostarczane przez wiele zespołów (Tworzenie aplikacji, procesy infrastruktury DevOps i zarządzanie infrastrukturą IT i operacje). Zazwyczaj w przedsiębiorstwie, profile "osoby" odpowiada za dla każdego obszaru są różne. Dlatego są umiejętności.
 
-![Narzędzia firmy Microsoft. W przypadku obciążeń programowanie/projektu: Aparat platformy docker for Windows, VS i VS Code, .NET Core usługi Azure Kubernetes Service. W przypadku obciążeń statku-kompilacji/Test: Usługa Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes Service. Uruchom/Monitor/Zarządzanie obciążenia: Application Insights, Azure Portal usługi Azure Kubernetes usługi Service Fabric, innych orkiestratorów.](./media/image1.png)
+![Narzędzia firmy Microsoft. W przypadku obciążeń programowanie/projektu: Aparat platformy docker for Windows, VS i VS Code, .NET Core usługi Azure Kubernetes Service. W przypadku obciążeń statku-kompilacji/Test: Usługa Azure DevOps, Team Foundation Server, Docker CLI, Azure Kubernetes Service. Uruchom/Monitor/Zarządzanie obciążenia: Usługa Azure Monitor, Azure Portal usługi Azure Kubernetes usługi Service Fabric, innych orkiestratorów.](./media/image1.png)
 
 **Rysunek 3-1.** Głównych filarach w cykl życia konteneryzowanych aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi
 
@@ -51,7 +51,7 @@ Platformy firmy Microsoft oraz narzędzi dla konteneryzowanych aplikacji platfor
 
   - **Narzędzia typu open-source** AKS ponieważ ujawnia standardowe punkty końcowe interfejsu API dla aparatu aranżacji, że najbardziej popularne narzędzia są zgodne z usługi AKS i w większości przypadków, będą fabrycznie działać — wizualizatorów, monitorowania, w tym narzędzia wiersza polecenia i nawet przyszłych narzędzi w miarę ich udostępniania.
 
-  - **Usługa Application Insights** soution jest Azure do monitorowania sprzedażą evironment sieci produkcyjnych. Aby monitorować aplikacji platformy Docker w środowisku produkcyjnym, należy po prostu konfigurowania tego zestawu SDK do usługi, dzięki czemu można uzyskać dane dzienników generowanych przez system z aplikacji.
+  - **Usługa Azure Monitor** jest Azure rozwiązanie służące do monitorowania sprzedażą środowiska produkcyjnego. Aby monitorować aplikacji platformy Docker w środowisku produkcyjnym, należy po prostu konfigurowania tego zestawu SDK do usługi, dzięki czemu można uzyskać dane dzienników generowanych przez system z aplikacji.
 
 W związku z tym firma Microsoft oferuje pełny podstawę dla end-to-end konteneryzowanych Docker cyklu życia aplikacji. Jest jednak *zbiór produkty i technologie umożliwiające opcjonalnie wybierz i zintegrować z istniejącym narzędzi i procesów*. Elastyczność w szerokim podejście wraz z siły szczegółowo możliwości firmy Microsoft należy umieścić w silną pozycję opracowywania konteneryzowanych aplikacji platformy Docker.
 

@@ -3,12 +3,12 @@ title: C#Typy i zmienne — Przewodnik po przykładzie C# języka
 description: Informacje na temat definiowania typów i zadeklarowania zmiennych wC#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481083"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672371"
 ---
 # <a name="types-and-variables"></a>Typy i zmienne
 
@@ -18,31 +18,42 @@ C#dla typów wartości są podzielone na *typów prostych*, *typach wyliczeniowy
 
 Poniżej znajdują się z omówieniem C#przez system typów.
 
-* Typy wartości
-  - Typy proste
+* [Typy wartości][ValueTypes]
+  - [Typy proste][SimpleTypes]
     * Podpisana całkowitego: `sbyte`, `short`, `int`, `long`
     * Całkowite bez znaku: `byte`, `ushort`, `uint`, `ulong`
     * Znaki Unicode: `char`
     * Liczba zmiennoprzecinkowa IEEE: `float`, `double`
     * Decimal wysokiej precyzji: `decimal`
-    * Boolean: `bool`
-  - Typach wyliczeniowych
+    * Atrybut typu wartość logiczna: `bool`
+  - [Typach wyliczeniowych][EnumTypes]
     * Typy zdefiniowane przez użytkownika w postaci `enum E {...}`
-  - Typy — struktura
+  - [Typy — struktura][StructTypes]
     * Typy zdefiniowane przez użytkownika w postaci `struct S {...}`
-  - Typy o wartości zerowalnej
+  - [Typy o wartości zerowalnej][NullableTypes]
     * Rozszerzenia z innych typów wartości za pomocą `null` wartość
-* Typy odwołań
-  - Typy klas
+* [Typy odwołań][ReferenceTypes]
+  - [Typy klas][ClassTypes]
     * Ultimate klasa bazowa innych typów: `object`
     * Ciągi Unicode: `string`
     * Typy zdefiniowane przez użytkownika w postaci `class C {...}`
-  - Typy interfejsów
+  - [Typy interfejsów][InterfaceTypes]
     * Typy zdefiniowane przez użytkownika w postaci `interface I {...}`
-  - Typy tablic
+  - [Typy tablic][ArrayTypes]
     * Jedno - i są one wielowymiarowe, na przykład `int[]` i `int[,]`
-  - Typy delegatów
+  - [Typy delegatów][DelegateTypes]
     * Typy zdefiniowane przez użytkownika w postaci `delegate int D(...)`
+
+[ValueTypes]: ../language-reference/keywords/value-types-table.md
+[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[EnumTypes]: ../language-reference/keywords/enum.md
+[StructTypes]: ../language-reference/keywords/struct.md
+[NullableTypes]: ../programming-guide/nullable-types/index.md
+[ReferenceTypes]: ../language-reference/keywords/reference-types.md
+[ClassTypes]: ../language-reference/keywords/class.md
+[InterfaceTypes]: ../language-reference/keywords/interface.md
+[DelegateTypes]: ../language-reference/keywords/delegate.md
+[ArrayTypes]: ../programming-guide/arrays/index.md
 
 Osiem typów całkowitych zapewniają obsługę wartości 8-bitową, 16-bitowych, 32-bitowych i 64-bitowe podpisane lub niepodpisane formularza.
 

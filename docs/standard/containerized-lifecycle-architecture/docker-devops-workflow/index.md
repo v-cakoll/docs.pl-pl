@@ -1,23 +1,23 @@
 ---
-title: Przepływ pracy DevOps aplikacji platformy docker przy użyciu narzędzi firmy Microsoft
+title: Przepływ pracy DevOps dla aplikacji platformy Docker z wykorzystaniem narzędzi firmy Microsoft
 description: Konteneryzowane cyklem życia aplikacji platformy Docker za pomocą platformy firmy Microsoft i narzędzi DevOps przepływu pracy z narzędziami firmy Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663928"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672306"
 ---
-# <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Przepływ pracy DevOps aplikacji platformy docker przy użyciu narzędzi firmy Microsoft
+# <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Przepływ pracy DevOps dla aplikacji platformy Docker z wykorzystaniem narzędzi firmy Microsoft
 
-*Microsoft Visual Studio, usługom DevOps platformy Azure, Team Foundation Server i usługi Application Insights zapewnienia kompleksowej ekosystemu opracowywania i operacjami IT, które wyposaż swój zespół w narzędzia do zarządzania projektami i szybkiego tworzenia, testowania i wdrażania konteneryzowanych aplikacji.*
+*Microsoft Visual Studio, usługom DevOps platformy Azure, Team Foundation Server i usługi Azure Monitor zapewnić kompleksowe ekosystemu do opracowywania i operacjami IT, które wyposaż swój zespół w narzędzia do zarządzania projektami i szybko tworzyć, testować i wdrażać kontenerowych nimi aplikacje.*
 
 Za pomocą programu Visual Studio i usługom DevOps platformy Azure w chmurze, wraz z Team Foundation Server w środowisku lokalnym zespoły deweloperów mogą wydajnie tworzenia, testowania i wersji konteneryzowanych aplikacji, których platformą docelową Windows lub Linux.
 
-Narzędzia Microsoft można zautomatyzować potoku dla określonej implementacji konteneryzowanych aplikacji — Docker, platformy .NET Core lub dowolnej kombinacji z innymi platformami — od globalnej kompilacje i ciągłej integracji (CI) i testy usługom DevOps platformy Azure lub zespołowi Foundation Server, do ciągłego wdrażania (polecenie CD) do platformy Docker, środowisk (tworzenia, wdrażania przejściowego, produkcji), a do przesyłania informacji analitycznych dotyczących usług do zespołu programistycznego za pomocą usługi Application Insights. Każde zatwierdzenie kodu można zainicjować kompilacji (CI) i automatycznie wdrażać usługi dla określonych środowisk konteneryzowanych (polecenie CD).
+Narzędzia Microsoft można zautomatyzować potoku dla określonej implementacji konteneryzowanych aplikacji — Docker, platformy .NET Core lub dowolnej kombinacji z innymi platformami — od globalnej kompilacje i ciągłej integracji (CI) i testy usługom DevOps platformy Azure lub zespołowi Foundation Server, do ciągłego wdrażania (polecenie CD) do platformy Docker, środowisk (tworzenia, wdrażania przejściowego, produkcji), a do przesyłania informacji analitycznych dotyczących usług do zespołu programistycznego za pośrednictwem usługi Azure Monitor. Każde zatwierdzenie kodu można zainicjować kompilacji (CI) i automatycznie wdrażać usługi dla określonych środowisk konteneryzowanych (polecenie CD).
 
 Deweloperzy i testerzy mogą łatwo i szybko aprowizować środowiska deweloperskie i testowe środowiska przypominającej środowisko produkcyjne na podstawie platformy Docker przy użyciu szablonów w systemie Microsoft Azure.
 

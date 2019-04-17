@@ -4,12 +4,12 @@ description: Mikrousługi mają być tak zaprojektowana, radzić sobie ze przej�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c1881392532231bc83227776a647f4dde0a196ad
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614041"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672358"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w ramach mikrousług
 
@@ -42,7 +42,7 @@ Dzienniki zawierają informacje dotyczące sposobu aplikacja lub usługa jest ur
 
 W monolitycznych aplikacji serwerowych można po prostu zapisują dzienniki w pliku na dysku (plik dziennika), a następnie analizować za pomocą dowolnego narzędzia. Ponieważ wykonanie aplikacji jest ograniczony do stałej server lub maszyny Wirtualnej, zazwyczaj nie jest zbyt złożona, aby analizować przepływu zdarzeń. Jednak w których wielu usług są wykonywane na wielu węzłach w klastrze usługi orchestrator aplikacji rozproszonej, móc skorelować zdarzenia rozproszonej jest trudne.
 
-Aplikacją opartą na mikrousługach powinna nie próbuje zapisać w strumieniu wyjściowym zdarzeń lub logfiles samodzielnie, a nawet spróbuj do zarządzania routingiem zdarzeń w centralnym miejscu. Powinny być przezroczyste, co oznacza, że każdy proces powinien zapisać jej strumienia zdarzeń do wyjścia standardowego, które mają być zbierane przez infrastrukturę środowiska wykonywania gdzie działa pod. Na przykład te routery strumienia zdarzeń [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), który służy do zbierania strumieni zdarzeń z wielu źródeł i publikuje go w danych wyjściowych systemy. Obejmują one proste standardowe dane wyjściowe w środowisku deweloperskim lub systemów w chmurze, takich jak [usługi Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (dla aplikacji w środowisku lokalnym) i [diagnostyki Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Dostępne są także dobry dziennika firm analizy platform i narzędzi, które można wyszukiwać, alertów i raportów, i dzienniki monitora, nawet w czasie rzeczywistym, takich jak [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Aplikacją opartą na mikrousługach powinna nie próbuje zapisać w strumieniu wyjściowym zdarzeń lub logfiles samodzielnie, a nawet spróbuj do zarządzania routingiem zdarzeń w centralnym miejscu. Powinny być przezroczyste, co oznacza, że każdy proces powinien zapisać jej strumienia zdarzeń do wyjścia standardowego, które mają być zbierane przez infrastrukturę środowiska wykonywania gdzie działa pod. Na przykład te routery strumienia zdarzeń [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), który służy do zbierania strumieni zdarzeń z wielu źródeł i publikuje go w danych wyjściowych systemy. Obejmują one proste standardowe dane wyjściowe w środowisku deweloperskim lub systemów w chmurze, takich jak [usługi Azure Monitor](https://azure.microsoft.com/services/monitor//) i [diagnostyki Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview). Dostępne są także dobry dziennika firm analizy platform i narzędzi, które można wyszukiwać, alertów i raportów, i dzienniki monitora, nawet w czasie rzeczywistym, takich jak [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Zarządzanie informacjami o Kondycja i Diagnostyka koordynatorów
 
@@ -67,8 +67,8 @@ Różne koordynatorów może brzmią podobnie, ale dane diagnostyczne i kontrole
 - **Co to jest Azure Diagnostics** \
   <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Łączenie komputerów Windows do usługi Log Analytics na platformie Azure** \
-  <https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents>
+- **Łączenie komputerów Windows do usługi Azure Monitor** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **Rejestrowanie tym, co oznacza: Za pomocą blok semantycznego rejestrowania aplikacji** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480836"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672462"
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#)
 
@@ -144,7 +144,7 @@ W poniższym przykładzie przedstawiono porównanie `null` sprawdza, czy:
  
 ### <a name="var" /> wzorzec var </a>
 
-Dopasowanie do wzorca za pomocą wzorca var zawsze kończy się powodzeniem dla wyrażeń inną niż null; Jeśli *expr* jest `null`, `is` wyrażenie jest `false`. Wartość inną niż null *expr* jest zawsze przypisywana do zmiennej lokalnej taki sam typ co typ czasu środowiska uruchomieniowego *expr*.  Jego składnia jest następująca:
+`var` Wzorzec jest wychwytywania dla dowolnego typu lub wartości. Wartość *expr* jest zawsze przypisywana do zmiennej lokalnej taki sam typ co typ czasu kompilacji *expr*. Wynik `is` wyrażenie ma zawsze wartość `true`. Jego składnia jest następująca:
 
 ```csharp 
    expr is var varname
@@ -160,7 +160,7 @@ W poniższym przykładzie użyto wzorca var można przypisać wyrażenia do zmie
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../../../csharp/language-reference/index.md)
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [typeof](../../../csharp/language-reference/keywords/typeof.md)
 - [as](../../../csharp/language-reference/keywords/as.md)

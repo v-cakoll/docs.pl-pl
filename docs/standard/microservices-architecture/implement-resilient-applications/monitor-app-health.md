@@ -4,12 +4,12 @@ description: Zapoznaj się z jednym ze sposobów wdrażania, monitorowania kondy
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 1ea4798c0d5bd2513867e5c59354c4e3d88612d9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: deebcf6771d24be34050dd7fdfb807a681ebce1f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611474"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672207"
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -269,23 +269,20 @@ Należy pamiętać, że usługi Azure Service Fabric udostępnia swoje własne [
 
 Ostatnia część monitorowania jest wizualizacja strumienia zdarzeń, raporty dotyczące wydajności i alerty po wykryciu problemu. Można użyć różnych rozwiązań dla systemów monitorowania.
 
-Można użyć prostej aplikacji niestandardowych, przedstawiający stan usług, takich jak niestandardowa strona wyświetlana podczas wyjaśniających [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). Lub za pomocą bardziej zaawansowanych narzędzi, takich jak Azure Application Insights można zgłaszać alerty w oparciu o strumień zdarzeń.
+Można użyć prostej aplikacji niestandardowych, przedstawiający stan usług, takich jak niestandardowa strona wyświetlana podczas wyjaśniających [AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks). Można także użyć bardziej zaawansowanych narzędzi, takich jak [usługi Azure Monitor](https://azure.microsoft.com/services/monitor/) można zgłaszać alerty w oparciu o strumień zdarzeń.
 
 Na koniec jeśli są przechowywane wszystkie strumienie zdarzeń, służy Microsoft Power BI ani innych rozwiązań, takich jak Kibana lub Splunk umożliwiają wizualizację danych.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **HealthChecks i HealthChecks UI dla platformy ASP.NET Core**
-    [https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks )
+- **HealthChecks i HealthChecks UI dla platformy ASP.NET Core** \
+  <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
--   **Wprowadzenie do monitorowania kondycji usługi Service Fabric**
-    [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
+- **Wprowadzenie do monitorowania kondycji usługi Service Fabric** \
+  [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
--   **Usługi Azure Application Insights**
-    <https://azure.microsoft.com/services/application-insights/>
-
--   **Microsoft Operations Management Suite**
-    <https://www.microsoft.com/en-us/cloud-platform/operations-management-suite>
+- **Azure Monitor**
+  <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](implement-circuit-breaker-pattern.md)

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: c099bde5a90e7e95eb5d9da6aacf763054a865ae
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201329"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612007"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Test biblioteki .NET Standard z platformą .NET Core w programie Visual Studio 2017
 
@@ -150,11 +150,13 @@ Przebieg testu miał żadne błędy, ale zmień je nieco, tak aby jednej z metod
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " };
    ```
+
    ```vb
    Dim words() As String = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
                       "1234", ".", ";", " " }
 
    ```
+
 1. Uruchom test, wybierając **Test** > **Uruchom** > **wszystkie testy** z paska menu. **Eksplorator testów** okno wskazuje, że dwóch testów zakończyła się pomyślnie i jeden nie powiodło się.
 
    ![Okno Eksploratora testów za pomocą testy zakończone niepowodzeniem](./media/testing-library-with-visual-studio/failed-test-window.png)

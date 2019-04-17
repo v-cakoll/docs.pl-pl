@@ -1,15 +1,15 @@
 ---
-title: Co dzień do czynienia złożoności biznesowych w Mikrousługach przy użyciu wzorców CQRS i DDD
+title: Rozwiązywanie problemów ze złożonościami biznesowymi w mikrousłudze z wzorcami DDD i CQRS
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Dowiedz się, jak analizować złożone scenariusze zastosowania wzorców CQRS i DDD
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 8f2297121429acad4222f72ac4fea54e8469b215
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f17acd6765de96bf8cec28c4e212733822fa0b73
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464674"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611110"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Złożoność firm czoła w Mikrousługach przy użyciu wzorców CQRS i DDD
 
@@ -32,44 +32,44 @@ DDD to duże temat bogaty zestaw zasoby szkoleniowe. Można uruchomić z książ
 ##### <a name="ddd-domain-driven-design"></a>DDD (projektowania opartego na domenie)
 
 - **Eric Evans. Język domeny** \
-  [https://domainlanguage.com/](https://domainlanguage.com/)
+  <https://domainlanguage.com/>
 
 - **Martin Fowler. Projektowania opartego na domenie** \
-  [https://martinfowler.com/tags/domain%20driven%20design.html](https://martinfowler.com/tags/domain%20driven%20design.html)
+  <https://martinfowler.com/tags/domain%20driven%20design.html>
 
 - **Jimmy Bogard. Wzmocnienie domenę: podstawowe informacje** \
-  [https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
+  <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
 ##### <a name="ddd-books"></a>Książki DDD
 
 - **Eric Evans. Projektowania opartego na domenie: Co dzień do czynienia złożoności serce oprogramowania** \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Eric Evans. Informacje dotyczące projektowania opartego na domenie: Definicje i wzorzec podsumowania** \
-  [https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/](https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/)
+  <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
 - **Vaughn Vernon. Implementowanie projektu opartego na domenach** \
-  [https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
+  <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
 - **Vaughn Vernon. Projektowania opartego na domenie, destylowany** \
-  [https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
+  <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
 - **Jimmy Nilsson. Stosowanie projektowania opartego na domenie i wzorców** \
-  [https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/](https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/)
+  <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
 - **Torre'a de la Cesarowi. Przewodnik N-warstwowe dotycząca architektury zorientowanej na domeny przy użyciu platformy .NET** \
-  [https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/](https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/)
+  <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
 - **Abel Avram i Floyd Marinescu. Domain-Driven projektowania szybko** \
-  [https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/](https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/)
+  <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
 - **Scott Millett, Dostosuj Nick — wzorce, zasady i praktyki projektowania opartego na domenie** \
-  [http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html](http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html)
+  <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
 
 ##### <a name="ddd-training"></a>Szkolenie DDD
 
 - **Julie Lerman i Steve Smith. Podstawowe informacje dotyczące projektowania opartego na domenie** \
-  [https://bit.ly/PS-DDD](https://bit.ly/PS-DDD)
+  <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]
 >[Poprzednie](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)

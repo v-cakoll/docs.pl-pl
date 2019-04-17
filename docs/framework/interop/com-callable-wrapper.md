@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309488"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613255"
 ---
 # <a name="com-callable-wrapper"></a>Wywoływana otoka COM
 
@@ -182,7 +182,7 @@ Aby uzyskać identyfikator DispId składowej interfejsu w czasie wykonywania, mo
 
 Podwójne interfejsy umożliwiają wczesne i późne powiązania do składowych interfejsu klienci COM. W czasie projektowania i podczas testowania może być przydatne go ustawić podwójnego interfejsu klasy. Klasa zarządzana (i jej klasy bazowe), nigdy nie będą modyfikowane, ta opcja jest również dopuszczalne. We wszystkich innych przypadkach należy unikać ustawiania interfejsu klasy na podwójne.
 
-Odpowiednie w rzadkich przypadkach; może być automatycznie generowane podwójnego interfejsu jednak częściej tworzy złożoności związane z wersją. Na przykład Klienci COM za pomocą interfejsu klasy pochodnej klasy łatwo może przerwać ze zmianami do klasy bazowej. Jeśli strona trzecia udostępnia klasę bazową, układ interfejsu klasy jest poza Twoją kontrolą. Bardziej szczegółowo, w przeciwieństwie do interfejsu tylko do wysyłania podwójnego interfejsu (**ClassInterfaceType.AutoDual**) zawiera opis interfejsu klasy w wyeksportowanej biblioteki typów. Opis taki zachęca klientów z późnym wiązaniem do pamięci podręcznej DISPID w czasie wykonywania.
+Odpowiednie w rzadkich przypadkach; może być automatycznie generowane podwójnego interfejsu jednak częściej tworzy złożoności związane z wersją. Na przykład Klienci COM za pomocą interfejsu klasy pochodnej klasy łatwo może przerwać ze zmianami do klasy bazowej. Jeśli strona trzecia udostępnia klasę bazową, układ interfejsu klasy jest poza Twoją kontrolą. Bardziej szczegółowo, w przeciwieństwie do interfejsu tylko do wysyłania podwójnego interfejsu (**ClassInterfaceType.AutoDual**) zawiera opis interfejsu klasy w wyeksportowanej biblioteki typów. Opis taki zachęca klientów z późnym wiązaniem do pamięci podręcznej DISPID na czas kompilacji.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Upewnij się, że wszystkie powiadomienia o zdarzeniach modelu COM z późnym wiązaniem.
 

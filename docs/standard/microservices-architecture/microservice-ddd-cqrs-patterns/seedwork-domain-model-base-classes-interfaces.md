@@ -1,17 +1,17 @@
 ---
-title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy dla modelu domeny)
+title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Użyj koncepcji seedwork jako punktu wyjścia, aby uruchomić implementacji modelu zorientowanej na wzorzec DDD domeny.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: bea2dbbc926f351179d11eaacd0dbb89fe036b12
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545731"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611071"
 ---
-# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy dla modelu domeny)
+# <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 
 Folder rozwiązania zawiera *SeedWork* folderu. Ten folder zawiera niestandardowe klasy bazowej, która służy jako podstawa dla domen, jednostek i obiektów wartości. Użyj tych klas bazowych, więc nie trzeba nadmiarowy kod w klasie obiektów w każdej domenie. Folder dla tych typów klasy jest nazywany *SeedWork* i nie mielibyśmy mieć czegoś podobnego *Framework*. Jest on nazywany *SeedWork* ponieważ folder zawiera tylko mały podzbiór klasy wielokrotnego użytku, które naprawdę nie należy traktować platformę. *Seedwork* termin wprowadzone przez [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) i spopularyzowany przez [Martina Fowlera](https://martinfowler.com/bliki/Seedwork.html) , ale można też nazwać tego folderu wspólnego, SharedKernel, lub podobne.
 
@@ -140,7 +140,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Martin Fowler. Interfejs rozdzielonych.** \
-  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
 >[Poprzednie](net-core-microservice-domain-model.md)

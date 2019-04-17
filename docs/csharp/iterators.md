@@ -3,16 +3,16 @@ title: Iteratory
 description: Dowiedz się, jak używać wbudowanych C# Iteratory oraz jak tworzyć swoje własne metody iteratora niestandardowych.
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155223"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613437"
 ---
 # <a name="iterators"></a>Iteratory
 
-Prawie każdy program, który napiszesz będzie miał pewne konieczność iteracji po kolekcji. Napiszesz kod, który sprawdza, czy każdy element w kolekcji. 
+Prawie każdy program, który napiszesz będzie miał pewne konieczność iteracji po kolekcji. Napiszesz kod, który sprawdza, czy każdy element w kolekcji.
 
 Utworzysz też metody iteratora, które są metodami, które tworzy iterator dla elementów tej klasy. Mogą one być używane dla:
 
@@ -28,7 +28,7 @@ W tym samouczku składa się z wielu kroków. Po każdym kroku możesz uruchomi�
 ## <a name="iterating-with-foreach"></a>Iterowanie za pomocą instrukcji foreach
 
 Wyliczanie kolekcji jest prosty: `foreach` — Słowo kluczowe wylicza kolekcji, wykonywania osadzona instrukcja jeden raz dla każdego elementu w kolekcji:
- 
+
 ```csharp
 foreach (var item in collection)
 {
@@ -42,7 +42,7 @@ Oba te interfejsy mają również odpowiedniki nieogólnego: `IEnumerable` i `IE
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>Wyliczenie źródeł za pomocą metody iteratora
 
-Kolejną atrakcyjną funkcją C# języka umożliwia tworzenie metody tworzące źródła dla wyliczenia. Są one określane jako *metody iteracyjne*. Metoda iteratora jest definiuje sposób generowania obiekty w kolejności, w przypadku żądania. Możesz użyć `yield return` kontekstowymi słowami kluczowymi, aby zdefiniować metodę iteratora. 
+Kolejną atrakcyjną funkcją C# języka umożliwia tworzenie metody tworzące źródła dla wyliczenia. Są one określane jako *metody iteracyjne*. Metoda iteratora jest definiuje sposób generowania obiekty w kolejności, w przypadku żądania. Możesz użyć `yield return` kontekstowymi słowami kluczowymi, aby zdefiniować metodę iteratora.
 
 Można zapisać tę metodę, aby utworzyć sekwencję liczb całkowitych z zakresu od 0 do 9:
 
@@ -82,9 +82,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-    
+
     index = 100;
     while (index++ < 110)
         yield return index;
@@ -113,12 +113,12 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
-    // generates a compile time error: 
+
+    // generates a compile time error:
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
-    return items;  
+    return items;
 }
 ```
 
@@ -132,15 +132,15 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
+
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
     foreach (var item in items)
         yield return item;
 }
 ```
- 
+
 Czasami prawidłowej odpowiedzi jest podzielić metodę iteratora na dwa sposoby. Jedną, która używa `return`oraz drugiego, który używa `yield return`. Rozważmy sytuację, w których warto zwrócić pustą kolekcję lub 5 pierwszych liczby nieparzyste, w oparciu o argument logiczny. Można napisać, jako tych dwóch metod:
 
 ```csharp
@@ -160,12 +160,12 @@ private IEnumerable<int> IteratorMethod()
             yield return index;
 }
 ```
- 
+
 Spójrz na powyższych metod. Pierwszy używa standardowych `return` instrukcji, aby zwrócić pustą kolekcję lub iteratora, tworzone przez metodę drugiego. W drugiej metodzie `yield return` instrukcję, aby utworzyć żądany sekwencji.
 
 ## <a name="deeper-dive-into-foreach"></a>Bardziej zgłębić temat do `foreach`
 
-`foreach` Instrukcji rozwija się na standardowych idiom, który używa `IEnumerable<T>` i `IEnumerator<T>` interfejsy do iteracji dla wszystkich elementów w kolekcji. Minimalizuje błędy, które deweloperzy mogą stosować przez nie został poprawnie zarządzanie zasobami. 
+`foreach` Instrukcji rozwija się na standardowych idiom, który używa `IEnumerable<T>` i `IEnumerator<T>` interfejsy do iteracji dla wszystkich elementów w kolekcji. Minimalizuje błędy, które deweloperzy mogą stosować przez nie został poprawnie zarządzanie zasobami.
 
 Kompilator tłumaczy `foreach` pętli wyświetlane w pierwszym przykładzie w sposób podobny do tej konstrukcji:
 
@@ -198,14 +198,14 @@ Dokładne kod wygenerowany przez kompilator jest nieco bardziej skomplikowane i 
 ```csharp
 {
     var enumerator = collection.GetEnumerator();
-    try 
+    try
     {
         while (enumerator.MoveNext())
         {
             var item = enumerator.Current;
             Console.WriteLine(item.ToString());
         }
-    } finally 
+    } finally
     {
         // dispose of enumerator.
     }
@@ -215,26 +215,27 @@ Dokładne kod wygenerowany przez kompilator jest nieco bardziej skomplikowane i 
 Sposób, w którym moduł wyliczający jest usunięty zależy cechy typu `enumerator`. W przypadku ogólnych `finally` klauzula jest rozszerzany, aby:
 
 ```csharp
-finally 
+finally
 {
    (enumerator as IDisposable)?.Dispose();
-} 
+}
 ```
 
 Jednak jeśli typ `enumerator` jest typie zapieczętowanym i istnieje niejawna konwersja z typu `enumerator` do `IDisposable`, `finally` klauzuli rozwija do pustego bloku:
+
 ```csharp
-finally 
+finally
 {
-} 
+}
 ```
 
 Jeśli istnieje niejawna konwersja z typu `enumerator` do `IDisposable`, i `enumerator` jest typem wartości niedopuszczającym wartości `finally` klauzula jest rozszerzany, aby:
 
 ```csharp
-finally 
+finally
 {
    ((IDisposable)enumerator).Dispose();
-} 
+}
 ```
 
-Szczęście nie trzeba pamiętać te szczegóły. `foreach` Instrukcja obsługuje te szczegóły skutecznego dla Ciebie. Kompilator wygeneruje poprawny kod dla każdej z tych konstrukcji. 
+Szczęście nie trzeba pamiętać te szczegóły. `foreach` Instrukcja obsługuje te szczegóły skutecznego dla Ciebie. Kompilator wygeneruje poprawny kod dla każdej z tych konstrukcji.

@@ -1,17 +1,17 @@
 ---
-title: Mikrousługi tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontraktów "
+title: Tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontaktów w mikrousługach
 description: Tworzenie mikrousług interfejsów API i kontrakty, uwzględniając rozwój i przechowywanie wersji, ponieważ ulegnie zmianie.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f42de3895f7f9affe09891fd89621fbb414313e9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466052"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612111"
 ---
-# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Mikrousługi tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontraktów "
+# <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontaktów w mikrousługach
 
 Mikrousługi interfejsu API jest Umowa między usługą i swoich klientów. Będzie można rozwijać mikrousługi niezależnie, tylko wtedy, gdy nie przerywaj, jej kontrakt interfejsu API, dlatego jest tak ważny kontrakt. W przypadku zmiany umowy, wpłynie to na aplikację kliencką lub bramy interfejsu API.
 
@@ -28,13 +28,13 @@ Na koniec, jeśli użytkownik korzysta z architektury REST [Hipermediach](https:
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Scott Hanselman. Przechowywanie wersji internetowy interfejs API RESTful platformy ASP.NET Core łatwe** \
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Przechowywanie wersji internetowego interfejsu API RESTful** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding. Przechowywanie wersji, Hipermediach i REST** \
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
 >[Poprzednie](asynchronous-message-based-communication.md)

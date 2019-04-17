@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-ms.openlocfilehash: a3c2dc725d5747c638acba9311ae78272cf63de0
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 997ce7399dc9742076932b213811abd1f847e60b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186016"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613294"
 ---
 # <a name="long-c-reference"></a>long (odwołanie w C#)
 
@@ -66,6 +66,7 @@ public static void SampleMethod(long l) {}
 SampleMethod(5);    // Calls the method with the int parameter
 SampleMethod(5L);   // Calls the method with the long parameter
 ```
+
 Jeśli literał liczby całkowitej nie sufiksu, jego typ jest pierwszym następujące typy, w których jej wartość może być reprezentowana:
 
 1. [int](int.md)

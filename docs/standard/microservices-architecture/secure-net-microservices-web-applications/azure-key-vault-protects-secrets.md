@@ -1,15 +1,15 @@
 ---
-title: Za pomocą usługi Azure Key Vault do ochrony wpisu tajnego w czasie produkcji
+title: Korzystanie z usługi Azure Key Vault w celu ochrony kluczy tajnych w czasie tworzenia
 description: Zabezpieczenia w Mikrousługach .NET i aplikacji sieci Web — usługi Azure Key Vault jest doskonałym sposobem obsługi wpisów tajnych aplikacji, które całkowicie są kontrolowane przez administratorów. Administratorzy mogą nawet przypisać i odwoływać rozwoju wartości bez konieczności je obsłużyć deweloperów.
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6addede70ddee3168d4612aab80b0edd28e804c6
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466130"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613775"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>Użyj usługi Azure Key Vault do ochrony wpisu tajnego w czasie produkcji
 
@@ -50,7 +50,7 @@ Kluczy tajnych przechowywanych jako zmienne środowiskowe ani przechowywane prze
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** repozytorium GitHub. \
-  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[Poprzednie](developer-app-secrets-storage.md)

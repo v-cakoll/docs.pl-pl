@@ -1,17 +1,17 @@
 ---
-title: Architektura Mikrousług
+title: Architektura mikrousług
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Widok 30.000 stopy architektury Mikrousług.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6a3262c65fb221f3b9e058a581b5dc6bfed92076
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 10d00ddc6255e6897bed3e826becff9aa8397e4e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465194"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611916"
 ---
-# <a name="microservices-architecture"></a>Architektura Mikrousług
+# <a name="microservices-architecture"></a>Architektura mikrousług
 
 Jak wskazuje nazwa, architektura mikrousług jest podejście do kompilowania aplikacji serwera jako zestaw małych usług. Oznacza to, że architektura mikrousług jest zorientowany głównie na zaplecze, chociaż to podejście jest również używany fronton. Każda usługa jest uruchamiana we własnym procesie i komunikuje się z innymi procesami przy użyciu protokołów, takich jak HTTP/HTTPS, funkcja WebSockets, lub [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol). Każda mikrousługa implementuje określonej domeny end-to-end lub funkcję biznesową w obrębie granicy kontekstu, a każda musi być opracowana autonomicznie i być niezależnie do wdrożenia. Na koniec poszczególne mikrousługi powinny odpowiadać jej modelu danych pokrewne domeny i logika domeny (niezależność danych i zarządzania danymi zdecentralizowane) i mogą być oparte na różne technologie przechowywania danych (SQL, NoSQL) i w różnych językach programowania.
 
@@ -46,19 +46,19 @@ Z tych opcji tylko pierwsze trzy są objęte lub wprowadzone w tym przewodniku. 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Mark Russinovich. Mikrousługi: Rewolucja w aplikacjach obsługiwana przez chmurę** \
-  [https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
+  <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
 - **Martin Fowler. Mikrousługi** \
-  [https://www.martinfowler.com/articles/microservices.html](https://www.martinfowler.com/articles/microservices.html)
+  <https://www.martinfowler.com/articles/microservices.html>
 
 - **Martin Fowler. Wymagania wstępne dotyczące Mikrousług** \
-  [https://martinfowler.com/bliki/MicroservicePrerequisites.html](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
+  <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
 - **Jimmy Nilsson. Chunk Cloud Computing** \
-  [https://www.infoq.com/articles/CCC-Jimmy-Nilsson](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
+  <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
 - **Torre'a de la Cesarowi. Kontenerowych nimi cykl życia aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi** (do pobrania Książka elektroniczna) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
 >[Poprzednie](service-oriented-architecture.md)

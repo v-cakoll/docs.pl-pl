@@ -3,12 +3,12 @@ title: chronionych wewnętrznych - C# odwołania
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 09685e38e879de787b0f6bab8c189a8815433904
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 090baae7fe0e49289059e060d5dcba7b037ae47a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238653"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613307"
 ---
 # <a name="protected-internal-c-reference"></a>chronionych wewnętrznych (odwołanie w C#)
 
@@ -55,6 +55,7 @@ class DerivedClass : BaseClass
     }
 }
 ```
+
 Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly2.cs`.
 Pierwszy plik zawiera klasę bazową publicznych `BaseClass`oraz inną klasę `TestAccess`. `BaseClass` jest właścicielem wewnętrzny elementu członkowskiego chronionego `myValue`, który jest dostępny po `TestAccess` typu.
 W drugim pliku, próba uzyskania dostępu do `myValue` za pośrednictwem wystąpienia `BaseClass` wystąpi błąd, podczas dostępu do tego elementu członkowskiego przez wystąpienie klasy pochodnej, `DerivedClass` zakończy się powodzeniem.

@@ -1,17 +1,17 @@
 ---
-title: Mikrousługi .NET. Architektura konteneryzowanych aplikacji .NET
+title: Mikrousługi .NET. architektura konteneryzowanych aplikacji .NET
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Mikrousługi są moduły i niezależnie do wdrożenia usługi. Kontenery platformy docker (dla systemu Linux i Windows) można uprościć wdrażanie i testowanie przez tworzenie pakietów usługi i jego zależności w pojedynczą jednostkę, który następnie jest uruchamiany w środowisku izolowanym.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 9a544172e180bbd3ae5eb2281e73e36407ffc003
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 8497f5cbd15fae6e289791393ea779833be27be6
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463647"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613736"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET
 
 ![Okładki książki](./media/cover-small.png)
 
@@ -58,7 +58,7 @@ Ten przewodnik koncentruje się na cykl życia aplikacji, infrastruktury DevOps 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Kontenerowych nimi cykl życia aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi** (do pobrania Książka elektroniczna)  
-    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+    <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien używać tego przewodnika
 

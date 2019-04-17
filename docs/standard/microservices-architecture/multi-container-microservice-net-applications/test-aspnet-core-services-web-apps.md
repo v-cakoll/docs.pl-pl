@@ -1,17 +1,17 @@
 ---
-title: Testowanie aplikacji internetowych i usług platformy ASP.NET Core
+title: Testowanie aplikacji internetowych i usług ASP.NET Core
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Eksplorowanie architektury do testowania aplikacji internetowych i usług platformy ASP.NET Core w kontenerach.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3adf711fd00ac0ab57764a67a08ce453318fd965
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 106e38a3cf3a121c4d7f879b718c832d27e0910f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463140"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611513"
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług platformy ASP.NET Core
+# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług ASP.NET Core
 
 Kontrolery są centralnym elementem interfejsu API platformy ASP.NET Core usług i aplikacji sieci Web programu ASP.NET MVC. W efekcie powinien mieć pewność, której działają zgodnie z przeznaczeniem dla aplikacji. Testy automatyczne udostępnić Ci ten zaufania i umożliwić wykrycie błędów, zanim dotrą produkcji.
 
@@ -104,25 +104,25 @@ public class PrimeWebDefaultRequestShould
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Steve Smith. Kontrolery testów** (platformy ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
 - **Steve Smith. Testowanie integracji** (platformy ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/test/integration-tests](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+    [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **Testowanie jednostek w .NET Core za pomocą polecenia dotnet test** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Oficjalna witryna. \
-    [https://xunit.github.io/](https://xunit.github.io/)
+    <https://xunit.github.io/>
 
 - **O teście jednostkowym.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**. Repozytorium GitHub. \
-    [https://github.com/moq/moq](https://github.com/moq/moq)
+    <https://github.com/moq/moq>
 
 - **NUnit**. Oficjalna witryna. \
-    [https://www.nunit.org/](https://www.nunit.org/)
+    <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Wdrażanie usługi testów na aplikację obsługującą wiele kontenerów
 
@@ -203,10 +203,10 @@ Jak widać, te narzędzia docker-compose plików Uruchom mikrousług pamięci po
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Plik README testy** w ramach aplikacji eShopOnContainers repozytorium w serwisie GitHub \
-    [https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
 - **Plik README testy obciążenia** w ramach aplikacji eShopOnContainers repozytorium w serwisie GitHub \
-    [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
 > [Poprzednie](subscribe-events.md)

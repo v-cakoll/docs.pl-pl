@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147479"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613879"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernizowanie aplikacji za pomocą monitorowania i telemetrii
 
@@ -69,31 +69,31 @@ Można użyć do rozwiązania monitorowanie kontenerów usługi Log Analytics:
 
 -   **Omówienie monitorowania na platformie Microsoft Azure**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Co to jest usługa Application Insights?**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **Co to jest usługa Log Analytics?**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Rozwiązanie do monitorowania kontenerów w usłudze Log Analytics**
+-   **Rozwiązanie do monitorowania kontenerów w usłudze Azure Monitor**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Omówienie usługi Azure Monitor**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **Co to jest Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **Monitorowanie kontenerów systemu Windows Server w usłudze Service Fabric za pomocą pakietu OMS**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[Poprzednie](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Po
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: afd3148f77dc4222a077f7ce020260ee889e92cb
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 962d12c054bed3b2623283e17f83b8466ab2811b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466143"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613281"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -109,7 +109,7 @@ Jak wspomniano wcześniej, w sekcji architektury, może mieć różne podejścia
 
 - Za pomocą [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). To jest tabela transakcji do przechowywania zdarzeń integracji (Rozszerzanie lokalnej transakcji).
 
-W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli nie *najlepsze*. Jednak w wielu scenariuszach aplikacji, nie można zaimplementować pełnego ES. ES oznacza przechowywanie tylko domeny zdarzenia w transakcji bazy danych, zamiast przechowywania danych bieżącego stanu. Przechowywanie tylko domeny zdarzenia może mieć wiele korzyści, takich jak o historii dostępności systemu i możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełnego ES wymaga Przekształcanie większość systemu i wprowadza wiele złożoności i wymagania. Na przykład chcesz korzystać z bazy danych, które celowo do określania źródła zdarzeń, takich jak [Store zdarzeń](https://eventstore.org/), lub korzystający z dokumentów bazy danych, takich jak usługi Azure Cosmos DB, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest to doskonałe podejście do problemu, ale nie najprostszym rozwiązaniu, chyba że znasz już określania źródła zdarzeń.
+W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji, nie można zaimplementować pełnego ES. ES oznacza przechowywanie tylko domeny zdarzenia w transakcji bazy danych, zamiast przechowywania danych bieżącego stanu. Przechowywanie tylko domeny zdarzenia może mieć wiele korzyści, takich jak o historii dostępności systemu i możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełnego ES wymaga Przekształcanie większość systemu i wprowadza wiele złożoności i wymagania. Na przykład chcesz korzystać z bazy danych, które celowo do określania źródła zdarzeń, takich jak [Store zdarzeń](https://eventstore.org/), lub korzystający z dokumentów bazy danych, takich jak usługi Azure Cosmos DB, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest to doskonałe podejście do problemu, ale nie najprostszym rozwiązaniu, chyba że znasz już określania źródła zdarzeń.
 
 Możliwość użycia dziennika transakcji wyszukiwania początkowo wygląda bardzo przejrzysty. Jednak aby użyć tego podejścia, mikrousług ma zostać dołączone do dziennika transakcji RDBMS, takie jak dziennik transakcji programu SQL Server. Prawdopodobnie nie jest to pożądane. Inny wadą jest to, że aktualizacje niskiego poziomu, rejestrowane w dzienniku transakcji może nie być tym samym poziomie, jako zdarzenia wysokiego poziomu integracji. Jeśli tak, proces odtwarzania te operacje dziennika transakcji może być trudne.
 
@@ -325,16 +325,16 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Rozwidlone w ramach aplikacji eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)** \
-    [https://go.particular.net/eShopOnContainers](https://go.particular.net/eShopOnContainers)
+    <https://go.particular.net/eShopOnContainers>
 
 - **Aktivita typu EventDriven komunikatów** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **Jimmy Bogard. Refaktoryzacja kierunku odporności na błędy: Ocena sprzężenia** \
-    [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+    <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **Publikowanie/subskrybowanie kanałów** \
-    [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Komunikacja między ograniczone konteksty** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
@@ -343,19 +343,19 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Philip Brown. Integrowanie strategii ograniczone konteksty** \
-    [https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
+    <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
 - **Chris Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowane, określania źródła zdarzeń i podejście CQRS — część 2** \
-    [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
+    <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Chris Richardson. Wzorzec określania źródła zdarzeń** \
-    [https://microservices.io/patterns/data/event-sourcing.html](https://microservices.io/patterns/data/event-sourcing.html)
+    <https://microservices.io/patterns/data/event-sourcing.html>
 
 - **Wprowadzenie do określania źródła zdarzeń** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Bazy danych zdarzeń Store**. Oficjalna witryna. \
-    [https://geteventstore.com/](https://geteventstore.com/)
+    <https://geteventstore.com/>
 
 - **Patrick Nommensen. Zarządzanie oparte na zdarzeniach danych dla Mikrousług** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
@@ -364,25 +364,25 @@ Jeśli flaga "redelivered" jest ustawiona, odbiorca musi uwzględniać który, p
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **Co to jest kolejnego elementu teorii CAP?** \
-    [https://www.quora.com/What-Is-CAP-Theorem-1](https://www.quora.com/What-Is-CAP-Theorem-1)
+    <https://www.quora.com/What-Is-CAP-Theorem-1>
 
 - **Podstawy spójności danych** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick Saling. Kolejnego elementu teorii CAP: Dlaczego "wszystko, co jest różne" chmura i Internet** \
-    [https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
+    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewera. LIMIT dwunastu latach później: Jak "Zasady" zostały zmienione** \
-    [https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
+    <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**  \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Przewodnik niezawodność** (dokumentacja RabbitMQ) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 - **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów** \
-    [https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
+    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **Przewodnik niezawodność** (dokumentacja RabbitMQ) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)

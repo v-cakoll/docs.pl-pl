@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214874"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611539"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi — funkcja
+
 Tworzy połączenie za pomocą modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>Składnia
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>Parametry
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in] Wskaźnik do prawidłowego `BSTR` zawierającą hasło. A `null` wskazuje bieżącego kontekstu zabezpieczeń. Ciąg pusty ("") wskazuje prawidłowe hasło o zerowej długości.
 
 `strLocale`\
-[in] Wskaźnik do prawidłowego `BSTR` oznacza to poprawne ustawienia regionalne na potrzeby pobierania informacji. W przypadku identyfikatorów ustawień regionalnych firmy Microsoft jest format ciągu "MS\_*xxx*", gdzie *xxx* jest ciągiem w postaci szesnastkowej, która wskazuje identyfikator ustawień regionalnych (LCID). Jeśli określono nieprawidłowe ustawienia regionalne, metoda zwraca `WBEM_E_INVALID_PARAMETER` z wyjątkiem na Windows 7, w których domyślne ustawienia regionalne serwera jest używana zamiast tego. Jeśli "null1, bieżących ustawień regionalnych jest używany. 
- 
+[in] Wskaźnik do prawidłowego `BSTR` oznacza to poprawne ustawienia regionalne na potrzeby pobierania informacji. W przypadku identyfikatorów ustawień regionalnych firmy Microsoft jest format ciągu "MS\_*xxx*", gdzie *xxx* jest ciągiem w postaci szesnastkowej, która wskazuje identyfikator ustawień regionalnych (LCID). Jeśli określono nieprawidłowe ustawienia regionalne, metoda zwraca `WBEM_E_INVALID_PARAMETER` z wyjątkiem na Windows 7, w których domyślne ustawienia regionalne serwera jest używana zamiast tego. Jeśli "null1, bieżących ustawień regionalnych jest używany.
+
 `lSecurityFlags`\
 [in] Flagi do przekazania do `ConnectServerWmi` metody. Wartość zero (0) dla tego parametru powoduje wywołanie `ConnectServerWmi` zwracanie tylko wtedy, gdy zostanie nawiązane połączenie z serwerem. Może to spowodować, że aplikacja nie odpowiada je na czas nieokreślony Jeśli serwer jest uszkodzony. Prawidłowe wartości to:
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*nazwy domeny* | Jest używane uwierzytelnianie programu NT LAN Manager, a ten parametr zawiera nazwę domeny uwierzytelnianie NTLM. |
 
 `pCtx`\
-[in] Typowo, ten parametr jest `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wymagany przez dostawców klasy dynamicznej co najmniej jeden obiekt. 
+[in] Typowo, ten parametr jest `null`. W przeciwnym razie jest wskaźnikiem do [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) wymagany przez dostawców klasy dynamicznej co najmniej jeden obiekt.
 
 `ppNamespace`\
 [out] Gdy funkcja zwróci wartość, otrzymuje wskaźnik [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) obiekt powiązany z określonego obszaru nazw. Jest ustawiona, aby wskazywał `null` po wystąpieniu błędu.

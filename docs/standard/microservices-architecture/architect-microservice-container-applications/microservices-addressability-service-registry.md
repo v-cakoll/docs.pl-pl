@@ -1,17 +1,17 @@
 ---
-title: Adresowanie Mikrousług i rejestr usług
+title: Adresowanie mikrousług i rejestr usług
 description: Poznaj rolę rejestry obrazów kontenera w architekturze mikrousług.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 9bfd2a834039af9f71d263df3606d1b65a2d784f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ea25612417f5b0c23eca2a36b52db6f303a4bb45
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466351"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612566"
 ---
-# <a name="microservices-addressability-and-the-service-registry"></a>Adresowanie Mikrousług i rejestr usług
+# <a name="microservices-addressability-and-the-service-registry"></a>Adresowanie mikrousług i rejestr usług
 
 Każda mikrousługa ma unikatową nazwę (adres URL), który jest używany do rozpoznawania lokalizacji. Twoje mikrousług należy adresowalnych wszędzie tam, gdzie jest uruchomiony. Jeśli musisz myśleć o komputera, którym jest uruchomiona określonego mikrousług, mogą wystąpić zły szybko. W ten sam sposób, że DNS jest rozpoznawana jako adres URL dla danego komputera z mikrousług musi mieć unikatową nazwę, tak, aby jego bieżącej lokalizacji wykrywalne. Mikrousługi należy adresowalnych nazw, które były niezależnie od infrastruktury, które działają w. Oznacza to, że istnieje interakcji między jak usługa zostanie wdrożona, i jak okaże się, ponieważ musi istnieć [rejestr usług](https://microservices.io/patterns/service-registry.html). W tym samym względzie w przypadku awarii komputera Usługa rejestru musi umożliwiać wskazać, gdzie usługa jest obecnie uruchomiona.
 
@@ -24,13 +24,13 @@ Należy pamiętać, że nakładają się na niektórych rejestr usług i wzorzec
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Chris Richardson. Wzorzec: Rejestr usług** \
-  [https://microservices.io/patterns/service-registry.html](https://microservices.io/patterns/service-registry.html)
+  <https://microservices.io/patterns/service-registry.html>
 
 - **Rozwiązanie Auth0. Rejestr usług** \
-  [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+  <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
 - **Gabriel Schenker. Odnajdowanie usługi** \
-  [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
+  <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](maintain-microservice-apis.md)

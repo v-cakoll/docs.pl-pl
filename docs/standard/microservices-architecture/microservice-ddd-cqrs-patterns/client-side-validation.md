@@ -1,17 +1,17 @@
 ---
-title: Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
+title: Weryfikacja po stronie klienta (weryfikacja w warstwach prezentacji)
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Zapoznaj się z kluczowymi założeniami programu weryfikacji po stronie klienta.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: ddf53456f9356817d28cd0bfa75df3296fb5d722
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633832"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612618"
 ---
-# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (Weryfikacja w warstwach prezentacji)
+# <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (weryfikacja w warstwach prezentacji)
 
 Nawet wtedy, gdy źródło prawdziwych danych jest modelem domeny i ostatecznie konieczne jest posiadanie weryfikacji na poziomie modelu domeny, sprawdzania poprawności, nadal mogą być obsługiwane na poziomie modelu domeny (po stronie serwera) i interfejsu użytkownika (po stronie klienta).
 
@@ -33,23 +33,23 @@ Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju ap
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 - **Wywołanie zwrotne weryfikacji** \
-  [https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+  <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>Sprawdzanie poprawności w aplikacji platformy ASP.NET Core
 
 - **Rick Anderson. Dodawanie walidacji** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Sprawdzanie poprawności w SPA, Web apps (Angular 2, TypeScript, JavaScript)
 
 - **Ado Kukic. Platformy angular 2 formularz weryfikacji** \
-  [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
+  <https://scotch.io/tutorials/angular-2-form-validation>
 
 - **Weryfikacji formularza** \
-  [https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+  <https://angular.io/guide/form-validation>
 
 - **Sprawdzanie poprawności.** Szybka i bezproblemowa dokumentację. \
-  [https://breeze.github.io/doc-js/validation.html](https://breeze.github.io/doc-js/validation.html)
+  <https://breeze.github.io/doc-js/validation.html>
 
 Podsumowując poniżej przedstawiono najważniejsze pojęcia związane z weryfikacją:
 

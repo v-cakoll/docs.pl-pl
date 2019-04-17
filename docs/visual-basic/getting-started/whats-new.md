@@ -8,56 +8,44 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 7a676981a090d0ac02c1a1af4b0824d914d1e8fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5b1547f596a0ff1c52a402f90457dced6ef604a0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814019"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611799"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w języku Visual Basic
 
 Ten temat zawiera listę nazw funkcji klucza dla każdej wersji programu Visual Basic z szczegółowe opisy nowych i ulepszonych funkcji w najnowszych wersjach języka.
-  
+
 ## <a name="current-version"></a>Bieżąca wersja
 
-Visual Basic należy zachować 15,8 / Visual Studio 2017 w wersji 15.8  
-W przypadku nowych funkcji, zobacz [15.8 Visual Basic](#visual-basic-158)
+Visual Basic należy zachować 15,8 / Visual Studio 2017 w wersji 15.8 dla nowych funkcji, zobacz [15.8 Visual Basic](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Poprzednie wersje
 
-Visual Basic 15.5 / Visual Studio 2017 w wersji 15.5  
-Aby przejrzeć nowe funcje, zobacz [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.5 / Visual Studio 2017 w wersji 15.5 dla nowych funkcji, zobacz [15.5 Visual Basic](#visual-basic-155)
 
-Visual Basic 15.3 / Visual Studio 2017 w wersji 15.3  
-Aby przejrzeć nowe funkcje, zobacz [Visual Basic 15.3](#visual-basic-153)
+Visual Basic 15.3 / Visual Studio 2017 w wersji 15.3 dla nowych funkcji, zobacz [15.3 programu Visual Basic](#visual-basic-153)
 
-Visual Basic 2017 / Visual Studio 2017  
-Aby przejrzeć nowe funkcje, zobacz [Visual Basic 2017](#visual-basic-2017)
+Visual Basic 2017 / Visual Studio 2017 dla nowych funkcji, zobacz [2017 Visual Basic](#visual-basic-2017)
 
-Visual Basic / Visual Studio 2015   
-Aby przejrzeć nowe funkcje, zobacz [Visual Basic 14](#visual-basic-14)
+Visual Basic / Visual Studio 2015 r. Aby uzyskać nowe funkcje, zobacz [14 Visual Basic](#visual-basic-14)
 
-Visual Basic / Visual Studio 2013  
-Wersje zapoznawcze technologii platformy kompilatora .NET ("Roslyn")
+Visual Basic / Visual Studio 2013 technologii zawiera wersje zapoznawcze platformy kompilatora .NET ("Roslyn")
 
-Visual Basic / Visual Studio 2012   
-Słowa kluczowe `Async` i `await`, iteratory, atrybuty informacji obiektów wywołujących
+Visual Basic / Visual Studio 2012 `Async` i `await` słów kluczowych, Iteratory, caller — atrybuty informacji
 
-Visual Basic, Visual Studio 2010   
-Właściwości zaimplementowane automatycznie, inicjatory kolekcji, niejawnej kontynuacji wiersza, dynamiczne, ogólna Company/ma przeciwwskazań wariancji, dostęp do globalnej przestrzeni nazw
+Visual Basic, Visual Studio 2010 automatycznie implementowanych właściwości, inicjatory kolekcji, niejawnej kontynuacji wiersza, dynamiczne, ogólna Company/ma przeciwwskazań wariancji, dostęp do globalnej przestrzeni nazw
 
-Visual Basic / Visual Studio 2008   
-Language Integrated Query (LINQ), literałów XML, wnioskowanie o typie lokalnym, obiekt inicjatorów, typów anonimowych, metody rozszerzające, lokalnego `var` wnioskowanie, wyrażeń lambda, typu `if` operatora, metod częściowych, typy o wartości zerowalnej  
+Visual Basic / Visual Studio 2008 Language Integrated Query (LINQ), literałów XML, wnioskowanie o typie lokalnym, obiekt inicjatorów, typów anonimowych, metody rozszerzające, lokalnego `var` wnioskowanie, wyrażeń lambda, typu `if` operator częściowe metody, typy o wartości zerowalnej
 
-Visual Basic / Visual Studio 2005   
-`My` Typu i pomocnika typów (dostęp do aplikacji, komputer, system plików, użycia sieci)
+Visual Basic / Visual Studio 2005 `My` typu i pomocnika typów (dostęp do aplikacji, komputer, system plików, użycia sieci)
 
-Visual Basic / Visual Studio .NET 2003   
-Operatory przesunięcia bitowego, deklaracja zmiennej pętli
+Visual Basic / Visual Studio .NET 2003 Bit-shift — operatory pętli deklarację zmiennej
 
-Visual Basic / Visual Studio .NET 2002   
-Pierwsze wydanie programu Visual Basic .NET
+Visual Basic / Visual Studio .NET 2002 kanał pierwszego wydania programu Visual Basic .NET
 
 ## <a name="visual-basic-158"></a>Visual Basic 15.8
 
@@ -80,7 +68,7 @@ Tego rodzaju optymalizacji umożliwia kod wymagany do uruchomienia szybciej — 
 
 ```vb
 Dim s As Single = 173.7619
-Dim d As Double = s 
+Dim d As Double = s
 
 Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
 Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
@@ -115,7 +103,8 @@ W wersji +Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako sepa
 
 ```vb
 Dim number As Integer = &H_C305_F860
-``` 
+```
+
 Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (\*.vbproj):
 
 ```xml
@@ -132,7 +121,7 @@ Gdy przypiszesz wartość elementów krotki ze zmiennych, Visual Basic wnioskuje
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-**Dodatkowe przełączniki kompilatora**  
+**Dodatkowe przełączniki kompilatora**
 
 Visual Basic obsługuje teraz kompilatora wiersza polecenia [ **- opcji refout** ](../reference/command-line-compiler/refout-compiler-option.md) i [ **jest opcja refonly -** ](../reference/command-line-compiler/refonly-compiler-option.md) opcje kompilatora, aby kontrolować dane wyjściowe zestawy referencyjne. **-opcji refout** definiuje katalogu wyjściowego zestawu odwołania i **jest opcja refonly -** Określa, że zestaw odwołania na wyjściu przez kompilację.
 
@@ -145,14 +134,14 @@ Kolekcje są uproszczone danych struktury, które najczęściej umożliwia zwrac
 - Definiowanie niestandardowego typu ( `Class` lub `Structure`). Jest to rozwiązanie niewielkich.
 
 - Definiują jedną lub więcej `ByRef` parametry oprócz zwracanie wartości z metody.
- 
+
 Obsługa języka Visual Basic dla krotki pozwala szybko zdefiniować krotki, opcjonalnie przypisać nazwy semantycznego do jego wartości i szybko pobrać jego wartości. Poniższy przykład zawija wywołanie do <xref:System.Int32.TryParse%2A> metodę i zwraca spójną kolekcję.
 
 [!code-vb[Tuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
 Można następnie wywołać metodę i obsługiwać zwracane spójna kolekcja znajdująca się z kodem, jak pokazano poniżej.
 
-[!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)] 
+[!code-vb[ReturnTuple](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
 **Literały binarne oraz separatory cyfr**
 
@@ -186,73 +175,89 @@ Aby uzyskać więcej informacji, zobacz [odwołania Return Values](../programmin
 
 ## <a name="visual-basic-14"></a>Visual Basic, 14
 
-[Nameof](../../csharp/language-reference/keywords/nameof.md)  
- Można uzyskać nazwy niekwalifikowanej ciąg typu lub elementu członkowskiego do użytku w komunikacie o błędzie, bez twardych kodowanie ciągu.  Dzięki temu kodzie zachować poprawne podczas refaktoryzacji.  Ta funkcja jest również przydatne w przypadku Podłączanie łącza MVC model-view-controller i wyzwalanie zdarzenia zmiany właściwości.  
-  
-[Interpolacja ciągów](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
- Wyrażenie interpolacji ciągu służy do konstruowania ciągów.  Wyrażenie ciągu interpolowanego wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciąg interpolowany łatwiej zrozumieć względem argumentów niż [formatowania złożonego](../../standard/base-types/composite-format.md).  
-  
-[Dostęp do elementu członkowskiego warunkowe null i indeksowania](../language-reference/operators/null-conditional-operators.md)  
-Możesz sprawdzić o wartości null w sposób bardzo małe, składni przed wykonaniem dostęp do elementu członkowskiego (`?.`) lub indeksu (`?[]`) operacji.  Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.  W przypadku o wartości null po lewej stronie operatora lub obiektu odwołania operacji zwraca wartość null.  
-  
-[Literały ciągu wielowierszowy](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Literały ciągu może zawierać sekwencje nowego wiersza.  Możesz nie jest już konieczne starego obejść użycia `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
-  
-**Komentarze**  
-Po kontynuacji wiersza niejawne, wewnątrz wyrażenia inicjatora, a wśród warunki wyrażenia LINQ, można umieścić komentarze.  
-  
-**Inteligentniejsze rozwiązania w pełni kwalifikowana nazwa**  
- Podany kod taki jak `Threading.Thread.Sleep(1000)`, Visual Basic, używany do wyszukiwania przestrzeni nazw "Wątkowości" odnajdywanie było niejednoznaczne między System.Threading i System.Windows.Threading, a następnie zgłaszanie błędu.  Visual Basic traktuje teraz zarówno możliwe przestrzenie nazw ze sobą.  Jeśli możesz wyświetlić na liście uzupełniania, Edytor programu Visual Studio Wyświetla listę elementów członkowskich z obu typów na liście uzupełniania.  
-  
- **Literały daty pierwszego roku**  
- Masz literały daty w formacie rrrr mm-dd `#2015-03-17 16:10 PM#`.  
-  
- **Właściwości interfejsu tylko do odczytu**  
- Można zaimplementować tylko do odczytu właściwości interfejsu przy użyciu właściwości odczytu i zapisu.  Interfejs gwarantuje minimalny zestaw funkcji, a nie zatrzymuje klasa implementująca z zezwalającej na właściwość należy ustawić.  
-  
- [TypeOf \<expr > IsNot \<typ >](../../visual-basic/language-reference/operators/typeof-operator.md)  
- Aby uzyskać więcej czytelność kodu, można teraz używać `TypeOf` z `IsNot`.  
-  
- [Ostrzeżenie #Disable \<ID > i ostrzeżenie #Enable \<identyfikator >](../../visual-basic/language-reference/directives/index.md)  
- Można wyłączyć i Włącz określone ostrzeżenia dotyczące regionów, w pliku źródłowym.  
-  
- **Ulepszenia komentarzy dokumentacji XML**  
- Podczas pisania komentarzy dokumentacji, otrzymujesz Edytor smart i Obsługa sprawdzania poprawności nazwy parametrów, odpowiednich, Obsługa narzędzia build `crefs` (Ogólne, operatory, itp.), kolorowanie i refaktoryzacji.  
-  
- [Definicje częściowe moduł i interfejsu](../../visual-basic/language-reference/modifiers/partial.md)  
- Oprócz klasy i struktury można zadeklarować moduły częściowe i interfejsy.  
-  
- [Dyrektywy #Region wewnątrz treści metod](../../visual-basic/language-reference/directives/region-directive.md)  
- Możesz umieścić #Region... ograniczniki #End Region, w dowolnym miejscu pliku wewnątrz funkcji, a nawet, dzieląc go w funkcji jednostki.  
-  
- [Definicje zastąpienia są niejawnie przeciążenia](../../visual-basic/language-reference/modifiers/overrides.md)  
- Jeśli dodasz `Overrides` modyfikator do definicji, kompilator niejawnie dodaje `Overloads` tak, aby mniejszej ilości kodu można wpisać w typowych przypadkach.  
-  
- **CObj dozwolone w argumentach atrybutów**  
- Kompilator używać, aby zapewnić błąd, że CObj(...) nie jest stałą, gdy są używane w konstrukcji atrybutu.  
-  
- **Deklarowanie i używanie niejednoznaczne metody z różnych interfejsów**  
- Wcześniej następujący kod zwróciło błędy, które uniemożliwiały deklarowanie `IMock` lub wywoływania `GetDetails` (jeśli zostały one zgłoszone w języku C#):  
-  
-```vb  
-Interface ICustomer  
-  Sub GetDetails(x As Integer)  
-End Interface  
-  
-Interface ITime  
-  Sub GetDetails(x As String)  
-End Interface  
-  
-Interface IMock : Inherits ICustomer, ITime  
-  Overloads Sub GetDetails(x As Char)  
-End Interface  
-  
-Interface IMock2 : Inherits ICustomer, ITime  
-End Interface  
-```  
-  
- Teraz to kompilator użyje reguł rozwiązywania normalne przeciążenia wybranie najbardziej odpowiedniej `GetDetails` do wywołania, i można zadeklarować interfejsu relacje w języku Visual Basic, podobnie jak pokazano w przykładzie.  
-  
+[Nameof](../../csharp/language-reference/keywords/nameof.md)
+
+Można uzyskać nazwy niekwalifikowanej ciąg typu lub elementu członkowskiego do użytku w komunikacie o błędzie, bez twardych kodowanie ciągu.  Dzięki temu kodzie zachować poprawne podczas refaktoryzacji.  Ta funkcja jest również przydatne w przypadku Podłączanie łącza MVC model-view-controller i wyzwalanie zdarzenia zmiany właściwości.
+
+[Interpolacja ciągów](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
+
+Wyrażenie interpolacji ciągu służy do konstruowania ciągów.  Wyrażenie ciągu interpolowanego wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciąg interpolowany łatwiej zrozumieć względem argumentów niż [formatowania złożonego](../../standard/base-types/composite-format.md).
+
+[Dostęp do elementu członkowskiego warunkowe null i indeksowania](../language-reference/operators/null-conditional-operators.md)
+
+Możesz sprawdzić o wartości null w sposób bardzo małe, składni przed wykonaniem dostęp do elementu członkowskiego (`?.`) lub indeksu (`?[]`) operacji.  Operatory te pomagają ograniczyć ilość kodu potrzebnego do sprawdzenia wystąpień wartości „null”, zwłaszcza w przypadku wchodzenia głębiej w struktury danych.  W przypadku o wartości null po lewej stronie operatora lub obiektu odwołania operacji zwraca wartość null.
+
+[Literały ciągu wielowierszowy](../../visual-basic/programming-guide/language-features/strings/string-basics.md)
+
+Literały ciągu może zawierać sekwencje nowego wiersza.  Możesz nie jest już konieczne starego obejść użycia `<xml><![CDATA[...text with newlines...]]></xml>.Value`
+
+**Komentarze**
+
+Po kontynuacji wiersza niejawne, wewnątrz wyrażenia inicjatora, a wśród warunki wyrażenia LINQ, można umieścić komentarze.
+
+**Inteligentniejsze rozwiązania w pełni kwalifikowana nazwa**
+
+Podany kod taki jak `Threading.Thread.Sleep(1000)`, Visual Basic, używany do wyszukiwania przestrzeni nazw "Wątkowości" odnajdywanie było niejednoznaczne między System.Threading i System.Windows.Threading, a następnie zgłaszanie błędu.  Visual Basic traktuje teraz zarówno możliwe przestrzenie nazw ze sobą.  Jeśli możesz wyświetlić na liście uzupełniania, Edytor programu Visual Studio Wyświetla listę elementów członkowskich z obu typów na liście uzupełniania.
+
+**Literały daty pierwszego roku**
+
+Masz literały daty w formacie rrrr mm-dd `#2015-03-17 16:10 PM#`.
+
+**Właściwości interfejsu tylko do odczytu**
+
+Można zaimplementować tylko do odczytu właściwości interfejsu przy użyciu właściwości odczytu i zapisu.  Interfejs gwarantuje minimalny zestaw funkcji, a nie zatrzymuje klasa implementująca z zezwalającej na właściwość należy ustawić.
+
+[TypeOf \<expr > IsNot \<typ >](../../visual-basic/language-reference/operators/typeof-operator.md)
+
+Aby uzyskać więcej czytelność kodu, można teraz używać `TypeOf` z `IsNot`.
+
+[Ostrzeżenie #Disable \<ID > i ostrzeżenie #Enable \<identyfikator >](../../visual-basic/language-reference/directives/index.md)
+
+Można wyłączyć i Włącz określone ostrzeżenia dotyczące regionów, w pliku źródłowym.
+
+**Ulepszenia komentarzy dokumentacji XML**
+
+Podczas pisania komentarzy dokumentacji, otrzymujesz Edytor smart i Obsługa sprawdzania poprawności nazwy parametrów, odpowiednich, Obsługa narzędzia build `crefs` (Ogólne, operatory, itp.), kolorowanie i refaktoryzacji.
+
+[Definicje częściowe moduł i interfejsu](../../visual-basic/language-reference/modifiers/partial.md)
+
+Oprócz klasy i struktury można zadeklarować moduły częściowe i interfejsy.
+
+[Dyrektywy #Region wewnątrz treści metod](../../visual-basic/language-reference/directives/region-directive.md)
+
+Możesz umieścić #Region... ograniczniki #End Region, w dowolnym miejscu pliku wewnątrz funkcji, a nawet, dzieląc go w funkcji jednostki.
+
+[Definicje zastąpienia są niejawnie przeciążenia](../../visual-basic/language-reference/modifiers/overrides.md)
+
+Jeśli dodasz `Overrides` modyfikator do definicji, kompilator niejawnie dodaje `Overloads` tak, aby mniejszej ilości kodu można wpisać w typowych przypadkach.
+
+**CObj dozwolone w argumentach atrybutów**
+
+Kompilator używać, aby zapewnić błąd, że CObj(...) nie jest stałą, gdy są używane w konstrukcji atrybutu.
+
+**Deklarowanie i używanie niejednoznaczne metody z różnych interfejsów**
+
+Wcześniej następujący kod zwróciło błędy, które uniemożliwiały deklarowanie `IMock` lub wywoływania `GetDetails` (jeśli zostały one zgłoszone w języku C#):
+
+```vb
+Interface ICustomer
+  Sub GetDetails(x As Integer)
+End Interface
+
+Interface ITime
+  Sub GetDetails(x As String)
+End Interface
+
+Interface IMock : Inherits ICustomer, ITime
+  Overloads Sub GetDetails(x As Char)
+End Interface
+
+Interface IMock2 : Inherits ICustomer, ITime
+End Interface
+```
+
+Teraz to kompilator użyje reguł rozwiązywania normalne przeciążenia wybranie najbardziej odpowiedniej `GetDetails` do wywołania, i można zadeklarować interfejsu relacje w języku Visual Basic, podobnie jak pokazano w przykładzie.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Co nowego w programie Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)

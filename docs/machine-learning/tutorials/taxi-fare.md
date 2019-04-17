@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 49770672ebcff98d8779a888372b5c9f40a55b1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295981"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611812"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>Samouczek: Przewidywanie ceny za pomocą uczeń regresji za pomocą platformy ML.NET
 
@@ -148,7 +148,7 @@ Firma Microsoft kończy się sukcesem dwa parametry do `Train` metoda; `MLContex
 
 ## <a name="load-and-transform-data"></a>Obciążenia i przekształcania danych
 
-Ładowanie danych za pomocą `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView>. 
+Ładowanie danych za pomocą `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView>.
 
 Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
@@ -231,6 +231,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 }
 ```
+
 `Evaluate` Metoda wykonuje następujące zadania:
 
 * Ładuje zestawy danych testowych.
@@ -302,12 +303,12 @@ Ponieważ chcemy, aby załadować modelu z pliku zip wcześniej zapisany, utworz
 Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.PredictionEngine%602> Jest otoką, który jest zwracany z `CreatePredictionEngine` metody. Możemy dodać następujący kod, aby utworzyć `PredictionEngine` w następnym wierszu `TestSinglePrediction` metody:
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
-  
+
 Ten samouczek używa test dwustronnej tej klasy. Później możesz dodać inne scenariusze, aby eksperymentować z modelu. Dodaj podróży do testowania uczonego modelu prognozowania kosztu `TestSinglePrediction` metody przez utworzenie wystąpienia `TaxiTrip`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- Firma Microsoft może używać, aby przewidzieć opłatę, w oparciu o jedno wystąpienie danych taksówek w podróży. Aby uzyskać prognozę, użyj <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> na danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
+Firma Microsoft może używać, aby przewidzieć opłatę, w oparciu o jedno wystąpienie danych taksówek w podróży. Aby uzyskać prognozę, użyj <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> na danych. Należy pamiętać, że dane wejściowe to ciąg, a model zawiera cechowania. Potok jest zsynchronizowany podczas uczenia i przewidywania. Nie trzeba napisać kod przetwarzania wstępnego cechowania specjalnie dla prognoz i zajmuje się tego samego interfejsu API i usługi batch jednorazowe prognozy.
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
@@ -322,6 +323,7 @@ Gratulacje! Już teraz pomyślnie wbudowany model uczenia maszynowego do przewid
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+
 > [!div class="checklist"]
 > * Omówienie problemu
 > * Wybierz zadanie uczenia odpowiedniej maszyny
@@ -334,5 +336,6 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > * Na użytek modelu prognozy
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej.
+
 > [!div class="nextstepaction"]
-> [Klastrowanie irysów](iris-clustering.md)
+> [Klastrowanie zestawu danych Iris](iris-clustering.md)

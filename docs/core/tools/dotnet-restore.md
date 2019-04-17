@@ -2,12 +2,12 @@
 title: polecenie restore DotNet
 description: Dowiedz się, jak przywrócić zależności i narzędzi specyficznych dla projektu za pomocą polecenia dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170785"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613973"
 ---
 # <a name="dotnet-restore"></a>DotNet restore
 
@@ -20,17 +20,21 @@ ms.locfileid: "53170785"
 ## <a name="synopsis"></a>Streszczenie
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity] [--interactive]
 dotnet restore [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
     [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Opis
@@ -119,7 +123,7 @@ Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m
 
 `--interactive`
 
-Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji (na przykład w celu ukończenia uwierzytelniania). Ponieważ 2.1.400 platformy .NET Core.
+Umożliwia polecenie, aby zatrzymać i czeka na dane wejściowe użytkownika lub akcji (na przykład w celu ukończenia uwierzytelniania). Since .NET Core 2.1.400.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

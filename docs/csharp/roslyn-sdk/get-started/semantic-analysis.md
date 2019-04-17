@@ -3,12 +3,12 @@ title: Rozpoczynanie pracy z usługą analiza semantyki
 description: Ten samouczek zawiera omówienie pracy z semantycznego analizy przy użyciu zestawu .NET SDK kompilatora.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760056"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611747"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Rozpoczynanie pracy z usługą analiza semantyki
 
@@ -56,7 +56,7 @@ Następnie kompilacji <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation> z d
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> Metoda dodaje odwołania do kompilacji. <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> Metoda ładuje zestaw jako odwołanie. 
+<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> Metoda dodaje odwołania do kompilacji. <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> Metoda ładuje zestaw jako odwołanie.
 
 ## <a name="querying-the-semantic-model"></a>Zapytania semantycznego modelu analizy biznesowej
 
@@ -159,4 +159,5 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
+
 Semantyczne interfejsu API został użyty do znalezienia i wyświetlać informacje na temat symboli, które są dostępne w ramach tego programu.

@@ -2,12 +2,12 @@
 title: polecenia DotNet
 description: Więcej informacji na temat polecenia dotnet (ogólny sterownik dla narzędzi interfejsu wiersza polecenia platformy .NET Core) i sposób jej użycia.
 ms.date: 06/04/2018
-ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185639"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613008"
 ---
 # <a name="dotnet-command"></a>polecenia DotNet
 
@@ -20,20 +20,26 @@ ms.locfileid: "58185639"
 ## <a name="synopsis"></a>Streszczenie
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
     [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
     [-h|--help] [--info] [-v|--verbosity] [--version]
 ```
+
 ---
 
 ## <a name="description"></a>Opis
@@ -165,7 +171,7 @@ Drukuje wersję zestawu .NET Core SDK w użyciu.
 
 ---
 
-## <a name="dotnet-commands"></a>polecenia DotNet
+## <a name="dotnet-commands"></a>Polecenia dotnet
 
 ### <a name="general"></a>Ogólne
 

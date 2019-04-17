@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357862"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611396"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Opakowanie i wdrażanie zasobów w aplikacjach .NET
 
@@ -226,6 +226,7 @@ Po uruchomieniu tego przykładu z systemu, w której język jest inna niż rosyj
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>Sugerowane alternatywne opakowanie
 
 Ograniczenia czasu i budżetu może uniemożliwić tworzenie zestaw zasobów do każdej przeszczepiania, którą obsługuje aplikacja. Zamiast tego można utworzyć zestawu satelickiego pojedynczej kultury nadrzędnej, czy wszystkie powiązane podhodowli może użyć. Można na przykład można podać jako pojedynczy angielskiej satelicki (en) pobierany przez użytkowników, którzy żądają specyficzne dla regionu angielski zasobów i zestawem pojedynczego satelickim niemiecki (de) dla użytkowników, którzy żądają niemieckiego zasoby specyficzne dla regionu. Na przykład żądania dla języka niemieckiego jak używany w Niemczech (de-DE), Austria (de-AT), a także Szwajcarii (de-CH) może spowodować powrót do zestawu satelickiego niemiecki (de). Domyślne zasoby są końcowego rezerwowe, powinien być zasoby, które będzie wymagane przez większość użytkowników aplikacji, więc wybrać dokładnie te zasoby. Ta metoda służy do wdrażania zasobów, które są mniej kulturalnie określonych, ale mogą znacznie zmniejszyć koszty lokalizacja Twojej aplikacji.

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341728"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611786"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>What's new in .NET Core 3.0 (wersja zapoznawcza 2)
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -166,20 +166,20 @@ Podczas `dotnet build` lub `dotnet publish`, plik wykonywalny jest tworzony, pod
 
 ## <a name="build-copies-dependencies"></a>Kopiuje zależności kompilacji
 
-`dotnet build` teraz kopiuje zależności NuGet dla aplikacji z pamięcią podręczną programu NuGet do folderu wyjściowego kompilacji. Wcześniej zależności zostały skopiowane tylko jako część `dotnet publish`. 
+`dotnet build` teraz kopiuje zależności NuGet dla aplikacji z pamięcią podręczną programu NuGet do folderu wyjściowego kompilacji. Wcześniej zależności zostały skopiowane tylko jako część `dotnet publish`.
 
 Istnieją pewne operacje takie jak łączenie i razor strony publikowania, który nadal będzie wymagać publikowania.
 
 ## <a name="local-dotnet-tools"></a>Narzędzia do lokalnego dotnet
 
->[!WARNING]
->Nastąpiła zmiana w lokalnym narzędzia .NET Core między .NET Core 3.0 w wersji zapoznawczej 1 i .NET Core 3.0 w wersji zapoznawczej 2.  Jeśli wypróbowane lokalne narzędzia w wersji zapoznawczej 1, uruchamiając polecenie, takie jak `dotnet tool restore` lub `dotnet tool install`, należy usunąć folder pamięci podręcznej narzędzia lokalnym przed narzędzia lokalnych będą działać poprawnie w wersji zapoznawczej 2. Ten folder znajduje się w:
+> [!WARNING]
+> Nastąpiła zmiana w lokalnym narzędzia .NET Core między .NET Core 3.0 w wersji zapoznawczej 1 i .NET Core 3.0 w wersji zapoznawczej 2.  Jeśli wypróbowane lokalne narzędzia w wersji zapoznawczej 1, uruchamiając polecenie, takie jak `dotnet tool restore` lub `dotnet tool install`, należy usunąć folder pamięci podręcznej narzędzia lokalnym przed narzędzia lokalnych będą działać poprawnie w wersji zapoznawczej 2. Ten folder znajduje się w:
 >
->Na komputerze mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+> Na komputerze mac, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->W systemie Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Na Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->Jeśli ten folder nie zostaną usunięte, zostanie wyświetlony błąd.
+> Jeśli ten folder nie zostaną usunięte, zostanie wyświetlony błąd.
 
 .NET Core 2.1 obsługiwana globalnego narzędzia, .NET Core 3.0 to ma teraz lokalne narzędzia. Lokalne narzędzia są podobne do narzędzia globalnych, ale są skojarzone z określonej lokalizacji na dysku. Dzięki temu projektów i narzędzi na repozytorium. Wszystkie zainstalowane lokalnie narzędzie nie jest globalnie dostępna. Narzędzia są dystrybuowane jako pakiety NuGet.
 
@@ -309,10 +309,12 @@ Podziel się swoją opinię na [dotnet/winforms](https://github.com/dotnet/winfo
 
 [Projekt pakietu aplikacji Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), dostępne w programie Visual Studio 2019 r, pozwala na tworzenie pakietów MSIX [niezależna](../deploying/index.md#self-contained-deployments-scd) aplikacji .NET Core.
 
->Uwaga: Plik projektu .NET Core, musisz określić obsługiwane środowiska uruchomieniowe w `<RuntimeIdentifiers>` właściwości:
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> Plik projektu .NET Core, musisz określić obsługiwane środowiska uruchomieniowe w `<RuntimeIdentifiers>` właściwości:
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>Szybkie wbudowanej obsługi formatu JSON
 
@@ -421,7 +423,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-`Utf8JsonWriter` Akceptuje `IBufferWriter<byte>` jako lokalizacja danych wyjściowych synchronicznie zapisać dane json, a jako obiekt wywołujący należy podać konkretną implementację. Platforma nie zawiera implementację tego interfejsu. Na przykład `IBufferWriter<byte>`, zobacz [https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)
+`Utf8JsonWriter` Akceptuje `IBufferWriter<byte>` jako lokalizacja danych wyjściowych synchronicznie zapisać dane json, a jako obiekt wywołujący należy podać konkretną implementację. Platforma nie zawiera implementację tego interfejsu. Na przykład `IBufferWriter<byte>`, zobacz <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.
 
 ### <a name="jsondocument"></a>JsonDocument
 
@@ -466,7 +468,7 @@ Unloadability zestawu jest nową funkcją `AssemblyLoadContext`. Ta nowa funkcja
 
 Ta nowa funkcja może służyć do scenariuszy, podobnie do:
 
-* Wtyczka scenariuszy, w której dodatek dynamicznej, ładowanie i zwalnianie jest wymagana. 
+* Wtyczka scenariuszy, w której dodatek dynamicznej, ładowanie i zwalnianie jest wymagana.
 * Dynamiczne kompilowanie, uruchamianie i następnie opróżnianie kodu. Przydatne w przypadku witryn sieci web, skryptów aparatów itp.
 * Ładowanie zestawów do introspekcji (na przykład ReflectionOnlyLoad), mimo że [MetadataLoadContext](#type-metadataloadcontext) (wydane w wersji zapoznawczej 1) będzie lepszym rozwiązaniem w wielu przypadkach.
 
@@ -484,7 +486,7 @@ Możesz zobaczyć przykład korzystając z modelu COM za pomocą [kodu źródło
 
 ## <a name="type-sequencereader"></a>Wpisz: SequenceReader
 
-W programie .NET Core 3.0 `System.Buffers.SequenceReader` dodano, który może służyć jako czytnik `ReadOnlySequence<T>`. Umożliwia to łatwe w użyciu o wysokiej wydajności, niski alokacji analizowanie `System.IO.Pipelines` dane, które mogą przechodzić przez kilka buforów zapasowy. 
+W programie .NET Core 3.0 `System.Buffers.SequenceReader` dodano, który może służyć jako czytnik `ReadOnlySequence<T>`. Umożliwia to łatwe w użyciu o wysokiej wydajności, niski alokacji analizowanie `System.IO.Pipelines` dane, które mogą przechodzić przez kilka buforów zapasowy.
 
 Poniższy przykład dzieli dane wejściowe `Sequence` na prawidłowe `CR/LF` rozdzielonych wiersze:
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ Wcześniej, .NET Core obsługiwana tylko przy użyciu `SerialPort` typu na Windo
 
 ## <a name="more-bcl-improvements"></a>Więcej udoskonaleń BCL
 
-`Span<T>`, `Memory<T>`, I w środowisku .NET Core 3.0 zostały zoptymalizowane powiązanych typów, które zostały wprowadzone w programie .NET Core 2.1. Typowe operacje takie jak span konstrukcji, dzielenie, analizowania i formatowanie teraz działać lepiej. 
+`Span<T>`, `Memory<T>`, I w środowisku .NET Core 3.0 zostały zoptymalizowane powiązanych typów, które zostały wprowadzone w programie .NET Core 2.1. Typowe operacje takie jak span konstrukcji, dzielenie, analizowania i formatowanie teraz działać lepiej.
 
 Ponadto takie jak typy `String` przejrzane czyni je bardziej efektywnymi, gdy jest używana jako klucze o ulepszenia w obszarze cover `Dictionary<TKey, TValue>` i innych kolekcji. Bez zmian w kodzie są wymagane do korzystania z tych ulepszeń.
 
@@ -751,7 +753,7 @@ Po skonfigurowaniu przyciągania w systemie, uruchom następujące polecenie, ab
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 .NET Core w zainstalowanych przy użyciu pakietu przystawki domyślnego polecenia .NET Core po `dotnet-sdk.dotnet`, a nie po prostu `dotnet`. Polecenie namespaced ma, nie będzie ona konflikt z globalnie zainstalowanej wersji platformy .NET Core, które mogą wiązać Ciebie. To polecenie może być aliasem do `dotnet` za pomocą:
 
 ```console

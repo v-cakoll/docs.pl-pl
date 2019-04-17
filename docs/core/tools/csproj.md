@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517333"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611097"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -325,8 +325,10 @@ Rozdzielaną średnikami listę znaczników, który wyznacza pakietu.
 Określa ścieżkę wyjściową, w którym spakowany pakiet zostanie porzucony. Wartość domyślna to `$(OutputPath)`.
 
 ### <a name="includesymbols"></a>IncludeSymbols
+Ta wartość logiczna wskazuje, czy pakiet powinien Utwórz pakiet dodatkowych symboli, gdy projekt jest pakowany. Format pakietu symboli jest kontrolowana przez `SymbolPackageFormat` właściwości.
 
-Ta wartość logiczna wskazuje, czy pakiet powinien Utwórz pakiet dodatkowych symboli, gdy projekt jest pakowany. Ten pakiet będzie miał *. symbols.nupkg* rozszerzenia i skopiuje pliki PDB wraz z biblioteki DLL i inne pliki wyjściowe.
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+Określa format pakietu symboli. Jeśli "symbols.nupkg" symbole starszej wersji pakietu zostanie utworzona z *. symbols.nupkg* rozszerzenia zawierającego pliki PDB, pliki dll i inne pliki wyjściowe. Jeśli "snupkg" snupkg symbol zostanie utworzony pakiet zawierający przenośnych plików PDB. Wartością domyślną jest "symbols.nupkg".
 
 ### <a name="includesource"></a>IncludeSource
 

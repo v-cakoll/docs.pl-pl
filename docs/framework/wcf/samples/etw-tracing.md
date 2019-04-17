@@ -2,12 +2,12 @@
 title: Śledzenie za pomocą funkcji ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: b445606677fba23ec81e896cce564330cedd6a19
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59300687"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613749"
 ---
 # <a name="etw-tracing"></a>Śledzenie za pomocą funkcji ETW
 Ten przykład demonstruje sposób implementacji śledzenia End-to-End (E2E) przy użyciu śledzenie zdarzeń dla Windows (ETW) i `ETWTraceListener` która jest dostarczana z tego przykładu. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) oraz śledzenie.  
@@ -50,7 +50,7 @@ Ten przykład demonstruje sposób implementacji śledzenia End-to-End (E2E) przy
  Przed rozpoczęciem korzystania z tego odbiornika można uruchomić sesji śledzenia zdarzeń systemu Windows. Za pomocą Logman.exe lub Tracelog.exe można uruchomić tej sesji. Plik SetupETW.bat jest dołączone do tego przykładu tak, aby skonfigurować sesję śledzenia funkcji ETW, wraz z plikiem CleanupETW.bat zamykania sesji i uzupełniania pliku dziennika.  
   
 > [!NOTE]
->  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu. Aby uzyskać więcej informacji o tych narzędziach zobacz [https://go.microsoft.com/fwlink/?LinkId=56580](https://go.microsoft.com/fwlink/?LinkId=56580)  
+>  Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu. Aby uzyskać więcej informacji o tych narzędziach zobacz <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  Korzystając z ETWTraceListener, ślady są rejestrowane w plikach binarnych ETL. Z włączonym śledzeniem elementu ServiceModel jest włączone, wszystkie ślady wygenerowanego pojawiają się w tym samym pliku. Użyj [narzędzie śledzenia usług (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) dotyczące wyświetlania plików dziennika ETL i .svclog. Podgląd tworzy widok end-to-end, co system, który pozwala na śledzenie komunikatów ze źródła do miejsca docelowego i punktem zużycia.  
   

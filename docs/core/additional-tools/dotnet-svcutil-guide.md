@@ -4,12 +4,12 @@ description: Omówienie narzędzia dotnet svcutil Microsoft WCF, który dodaje f
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: a1361c30e6b529d68dc93a65c645d31ca6c8e564
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747239"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612823"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Narzędzia dotnet svcutil WCF dla platformy .NET Core
 
@@ -66,6 +66,7 @@ dotnet new web
 
 3. Zainstaluj [ `dotnet-svcutil` pakietu NuGet](https://nuget.org/packages/dotnet-svcutil) jako narzędzie interfejsu wiersza polecenia:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet tool install --global dotnet-svcutil
 ```
@@ -89,14 +90,17 @@ dotnet restore
 
 4. Uruchom _narzędzia svcutil dotnet_ polecenie, aby wygenerować plik odwołanie do usługi sieci web w następujący sposób:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil http://contoso.com/SayHello.svc
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil http://contoso.com/SayHello.svc
 ```
+
 ---
 
 Wygenerowany plik jest zapisywany jako _HelloSvcutil/ServiceReference/Reference.cs_. _Narzędzia svcutil dotnet_ narzędzie automatycznie dodaje również do projektu odpowiednich pakietów WCF wymagane przez kod serwera proxy jako odwołania do pakietu.
@@ -149,14 +153,17 @@ Powinny zostać wyświetlone następujące dane wyjściowe: "Hello dotnet-svcuti
 
 Aby uzyskać szczegółowy opis `dotnet-svcutil` narzędzia parametrów, wywołaj narzędzie przekazywania parametru pomocy w następujący sposób:
 # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+
 ```console
 dotnet-svcutil --help
 ```
 
 # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+
 ```console
 dotnet svcutil --help
 ```
+
 ---
 
 ## <a name="feedback--questions"></a>Opinie i pytania

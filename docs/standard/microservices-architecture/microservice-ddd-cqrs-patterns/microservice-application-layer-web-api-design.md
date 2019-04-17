@@ -4,12 +4,12 @@ description: 'Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | B
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4a6a7faac6d0419d88e613ca23d9862475659918
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9177ac9a79afaea01f0ec21b0a64bad5a94e9966
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464206"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612241"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Projektowanie warstwy aplikacji mikrousług i internetowego interfejsu API
 
@@ -38,13 +38,13 @@ Zajęłoby innego przewodnika, aby omówić stałe. W związku z tym ten przewod
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **SOLID: Obiektowo podstawowych zasad** \
-  [https://deviq.com/solid/](https://deviq.com/solid/)
+  <https://deviq.com/solid/>
 
 - **Inwersja kontroli kontenerów i wzorzec wstrzykiwanie zależności** \
-  [https://martinfowler.com/articles/injection.html](https://martinfowler.com/articles/injection.html)
+  <https://martinfowler.com/articles/injection.html>
 
 - **Steve Smith. Nowością jest pośredniczącego** \
-  [https://ardalis.com/new-is-glue](https://ardalis.com/new-is-glue)
+  <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
 > [Poprzednie](nosql-database-persistence-infrastructure.md)

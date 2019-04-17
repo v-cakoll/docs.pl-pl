@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 9eea7f76d386816aad060e9b99cea6b906a09ab9
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322124"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612124"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio
 
@@ -28,23 +28,24 @@ Plik VsDevCmd.bat ustawia odpowiednie zmienne środowiskowe umożliwiające komp
 
 > [!NOTE]
 > Plik VsDevCmd.bat jest nowy plik dostarczane z programem Visual Studio 2017. Program Visual Studio 2015 i starsze wersje używane VSVARS32.bat, w tym samym celu. Ten plik został zapisany w programie Visual Studio \Program Files\Microsoft\\*wersji*\Common7\Tools lub Program Files (x86) \Microsoft Visual Studio\\*wersji*\Common7\Tools.
-  
+
 Jeśli bieżącą wersję programu Visual Studio jest zainstalowany na komputerze, który ma także wcześniejszej wersji programu Visual Studio, nie należy uruchamiać VsDevCmd.bat i VSVARS32. BAT z różnych wersji, w tym samym oknie wiersza polecenia. Zamiast tego należy uruchamiać polecenie dla każdej wersji w osobnym oknie.
-  
-### <a name="to-run-vsdevcmdbat"></a>Aby uruchomić VsDevCmd.BAT  
-  
+
+### <a name="to-run-vsdevcmdbat"></a>Aby uruchomić VsDevCmd.BAT
+
 1. Z **Start** menu Otwórz **wiersz polecenia programisty dla programu VS 2017**.  Jest on **programu Visual Studio 2017** folderu.
-  
+
 2. Zmiany do programu Visual Studio \Program Files\Microsoft\\*wersji*\\*oferty*\Common7\Tools lub \Program pliki (x86) \Microsoft Visual Studio\\ *Wersji*\\*oferty*podkatalogu \Common7\Tools instalacji.  (*Wersji* jest *2017* dla bieżącej wersji. *Oferta* jest jednym z *Enterprise*, *Professional* lub *społeczności*.)
-  
-3. Uruchom VsDevCmd.bat, wpisując **VsDevCmd**.  
-  
+
+3. Uruchom VsDevCmd.bat, wpisując **VsDevCmd**.
+
     > [!CAUTION]
-    >  VsDevCmd.bat mogą się różnić między komputerami. Nie zastępuj uszkodzony lub plik VsDevCmd.bat VsDevCmd.bat z innego komputera. Zamiast tego Uruchom ponownie Instalatora, aby zastąpić brakujący plik.  
+    > VsDevCmd.bat mogą się różnić między komputerami. Nie zastępuj uszkodzony lub plik VsDevCmd.bat VsDevCmd.bat z innego komputera. Zamiast tego Uruchom ponownie Instalatora, aby zastąpić brakujący plik.
 
 ### <a name="available-options-for-vsdevcmdbat"></a>Dostępne opcje VsDevCmd.BAT
 
 Aby wyświetlić dostępne opcje VsDevCmd.BAT, uruchom polecenie `-help` opcji:
+
 ```console
 VsDevCmd.bat -help
 ```

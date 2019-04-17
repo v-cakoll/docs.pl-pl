@@ -4,12 +4,12 @@ description: Suwerenność danych przypadająca na mikrousługę jest jednym z p
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 8db5e4ae8e0da63493a09c76614d898358bdea98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1b0b1fbb72f759eb337c0c1a9c465cc4088d8eff
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464038"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611240"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Suwerenność danych przypadająca na mikrousługę
 
@@ -50,16 +50,16 @@ DDD korzyści płynące z mikrousług uzyskując rzeczywistych granic w formie r
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Chris Richardson. Wzorzec: Bazy danych na usługę** \
-  [https://microservices.io/patterns/data/database-per-service.html](https://microservices.io/patterns/data/database-per-service.html)
+  <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Martin Fowler. BoundedContext** \
-  [https://martinfowler.com/bliki/BoundedContext.html](https://martinfowler.com/bliki/BoundedContext.html)
+  <https://martinfowler.com/bliki/BoundedContext.html>
 
 - **Martin Fowler. PolyglotPersistence** \
-  [https://martinfowler.com/bliki/PolyglotPersistence.html](https://martinfowler.com/bliki/PolyglotPersistence.html)
+  <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
 - **Alberto Brandolini. Strategiczne projektowania, które za pomocą kontekstu mapowania opartego na domenach** \
-  [https://www.infoq.com/articles/ddd-contextmapping](https://www.infoq.com/articles/ddd-contextmapping)
+  <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]
 >[Poprzednie](microservices-architecture.md)

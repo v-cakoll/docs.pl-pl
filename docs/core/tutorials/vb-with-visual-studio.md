@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846288"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612683"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie aplikacji Visual Basic Witaj, świecie przy użyciu zestawu .NET Core SDK w programie Visual Studio 2017
 
@@ -31,7 +31,7 @@ Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj nastę
 1. Launch Visual Studio 2017. Wybierz **pliku** > **New** > **projektu** z paska menu. W *nowy projekt** okno dialogowe, wybierz opcję **języka Visual Basic** węzła następuje **platformy .NET Core** węzła. Następnie wybierz pozycję **Aplikacja konsoli (.NET Core)** szablonu projektu. W **nazwa** tekstu wpisz "nazwę HelloWorld". Wybierz przycisk **OK**.
 
    ![Okno dialogowe nowego projektu za pomocą aplikacji Konsolowej wybrane](./media/vb-with-visual-studio/visual-studio-new-project.png)
-   
+
 1. Program Visual Studio używa tego szablonu do utworzenia projektu. Szablon aplikacji konsoli Visual Basic dla platformy .NET Core automatycznie definiuje klasę, `Program`, z jednej metody `Main`, która przyjmuje <xref:System.String> tablic jako argumentu. `Main` jest punkt wejścia aplikacji, metody, która jest wywoływana automatycznie w czasie wykonywania po jej uruchomieniu aplikacji. Argumenty wiersza polecenia, dostarczana, gdy aplikacja zostanie uruchomiona, są dostępne w *args* tablicy.
 
    ![Program Visual Studio i nowego projektu HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
@@ -44,6 +44,7 @@ Rozpocznij od utworzenia prostej aplikacji konsoli "Hello World". Wykonaj nastę
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
+
    Ten kod monituje użytkownika o naciśnij dowolny klawisz, a następnie zatrzymuje program, dopóki nie zostanie naciśnięty klawisz.
 
 1. Na pasku menu wybierz **kompilacji** > **Kompiluj rozwiązanie**. Program to kompilowany na język pośredni (IL), który jest konwertowany na kod binarny przez kompilator just-in-time (JIT).

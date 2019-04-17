@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c5d8f50c7b9967eba0ec01c9e864a02b6a3b201a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200743"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611942"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Kiedy nie należy wdrażać kontenerów systemu Windows
 
@@ -41,7 +41,7 @@ Dodatkowe scenariusze nieobsługiwane i żądań od społeczności można znale�
 
 -   **Maszyny wirtualne i kontenery na platformie Azure**
 
-    [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
+    <https://azure.microsoft.com/overview/containers/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](deploy-existing-net-apps-as-windows-containers.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140858"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613593"
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Definiuje składnika języka i typu zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W tym przypadku obiekt potencjalnie podnoszonego zdarzenia ani docelowym wystąpienia obsługi definiuje lub w przeciwnym razie jego "właścicielem" zdarzenie.  
@@ -64,9 +64,9 @@ ms.locfileid: "59140858"
   
  Wzorzec jest w następujący sposób:  
   
--   Metoda **Dodaj*EventName*obsługi** z dwoma parametrami. Pierwszy parametr musi ustalić zdarzenie, a zdarzeniu zidentyfikowani muszą odpowiadać nazwom z ***EventName*** w nazwie metody. Drugi parametr jest program obsługi do dodania. Metoda musi być `public` i `static`, bez wartości zwracanej.  
+-   Metoda **Dodaj*EventName*obsługi** z dwoma parametrami. Pierwszy parametr jest wystąpienie, do którego jest dodawany program obsługi zdarzeń. Drugi parametr jest program obsługi zdarzeń do dodania. Metoda musi być `public` i `static`, bez wartości zwracanej.  
   
--   Metoda **Usuń*EventName*obsługi** z dwoma parametrami. Pierwszy parametr musi ustalić zdarzenie, a zdarzeniu zidentyfikowani muszą odpowiadać nazwom z ***EventName*** w nazwie metody. Drugi parametr jest obsługa do usunięcia. Metoda musi być `public` i `static`, bez wartości zwracanej.  
+-   Metoda **Usuń*EventName*obsługi** z dwoma parametrami. Pierwszy parametr jest wystąpienie, z którego program obsługi zdarzeń jest usuwany. Drugi parametr jest program obsługi zdarzeń do usunięcia. Metoda musi być `public` i `static`, bez wartości zwracanej.  
   
  **Dodaj*EventName*obsługi** metody dostępu ułatwia [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] podczas przetwarzania dołączone atrybuty są deklarowane w elemencie programu obsługi zdarzeń. **Dodaj*EventName*obsługi** i **Usuń*EventName*obsługi** metody umożliwiają również kod dostępu do magazynu programu obsługi zdarzeń dla dołączone zdarzenie.  
   
@@ -91,6 +91,6 @@ ms.locfileid: "59140858"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)
 - [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)

@@ -4,12 +4,12 @@ description: Dowiedz się, różnice i wykorzystuje wzorzec bramy interfejsu API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 0e2db3629d504065a122a69b916f19aa3b838aab
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f1deb453519eec23e4c9bc8c19800e9caedf0c10
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462958"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611825"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API i bezpośrednia komunikacja klienta z mikrousługą
 
@@ -173,25 +173,25 @@ Po początkowej architektura i wzorce wyjaśnienie sekcje, w kolejnych sekcjach 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Charles Richardson. Wzorzec: Brama interfejsu API / zaplecza dla frontonu** \
-  [https://microservices.io/patterns/apigateway.html](https://microservices.io/patterns/apigateway.html)
+  <https://microservices.io/patterns/apigateway.html>
 
 - **Wzorzec bramy interfejsu API** \
-  [https://docs.microsoft.com/azure/architecture/microservices/gateway](https://docs.microsoft.com/azure/architecture/microservices/gateway)
+  <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
 - **Wzorzec agregacji i kompozycji** \
-  [https://microservices.io/patterns/data/api-composition.html](https://microservices.io/patterns/data/api-composition.html)
+  <https://microservices.io/patterns/data/api-composition.html>
 
 - **Usługa Azure API Management** \
-  [https://azure.microsoft.com/services/api-management/](https://azure.microsoft.com/services/api-management/)
+  <https://azure.microsoft.com/services/api-management/>
 
 - **Udi Dahan. Kompozycja korzystający z usługi** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemensa Vastersa. Obsługa komunikatów i Mikrousług w 2016 GOTO (wideo)** \
-  [https://www.youtube.com/watch?v=rXi5CLjIQ9k](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+  <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Brama interfejsu API w skrócie** (seria samouczków bramy interfejsu API platformy ASP.net Core) \
-  [https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
+  <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
 >[Poprzednie](identify-microservice-domain-model-boundaries.md)

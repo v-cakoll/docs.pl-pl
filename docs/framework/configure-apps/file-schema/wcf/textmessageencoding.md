@@ -2,12 +2,12 @@
 title: <textMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e9942ce3ccbec949160ee70dd103d3c1799bd44d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6e6d1907d89a09a72594a836f2192e9ad9c4290
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186306"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614119"
 ---
 # <a name="textmessageencoding"></a>\<textMessageEncoding>
 Określa kodowanie znaków i wiadomości versioning używany dla wiadomości tekstowych XML.  
@@ -36,7 +36,7 @@ Określa kodowanie znaków i wiadomości versioning używany dla wiadomości tek
 |---------------|-----------------|  
 |maxReadPoolSize|Liczba całkowita określająca ile komunikatów można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 64.|  
 |maxWritePoolSize|Liczba całkowita określająca ile komunikatów można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary pul powoduje, że system bardziej odporne na skoki działania kosztem większy zestaw roboczy. Wartość domyślna to 16.|  
-|messageVersion|Określa wersję SOAP komunikatów wysyłanych za pomocą tego powiązania. Prawidłowe wartości to:<br /><br /> -Soap11Addressing10<br />-Soap12Addressing10<br /><br /> Wartość domyślna to Soap12Addressing10. Ten atrybut jest typu <xref:System.ServiceModel.Channels.MessageVersion>.|  
+|messageVersion|Określa wersję SOAP komunikatów wysyłanych za pomocą tego powiązania. Prawidłowe wartości to:<br /><br /> -Soap11Addressing10<br />-Soap12Addressing10<br />-Soap11<br />-Soap12<br /><br />Wartość domyślna to Soap12Addressing10. Ten atrybut jest typu <xref:System.ServiceModel.Channels.MessageVersion>.|  
 |writeEncoding|Określa kodowanie do użycia w celu emisji komunikatów w powiązaniu zestawu znaków. Prawidłowe wartości to:<br /><br /> -   UnicodeFffeTextEncoding: Unicode BigEndian z kodowaniem<br />-   Utf16TextEncoding: Kodowanie Unicode<br />-   Utf8TextEncoding: 8-bitowego kodowania<br /><br /> The default is Utf8TextEncoding. Ten atrybut jest typu <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  

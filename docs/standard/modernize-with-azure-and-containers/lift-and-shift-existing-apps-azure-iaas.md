@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą chmury platfor
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f9ff19c8e346560960a09d3b7c52976c478f2f3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266627"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612878"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Lift- and -shift istniejących aplikacji .NET do usługi Azure IaaS (obsługa infrastruktury chmury)
 
@@ -85,27 +85,27 @@ Rysunek 2 – 3 pokazuje wykonywanie wielu migracji maszyn wirtualnych przy uży
 
 - **Usługa Azure Migrate arkusz danych**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    <https://aka.ms/azuremigration\_datasheet>
 
 - **Usługa Azure Migrate**
 
-    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+    <https://aka.ms/azuremigrate>
 
 - **Centrum migracji platformy Azure**
 
-    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
+    <https://azure.microsoft.com/migration/>
 
 - **Migrowanie na platformę Azure z usługą Site Recovery**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure>
 
 - **Omówienie usługi w usłudze Azure Site Recovery**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-overview>
 
 - **Migrowanie maszyn wirtualnych na platformie AWS do maszyn wirtualnych platformy Azure**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 
 >[!div class="step-by-step"]
 >[Poprzednie](index.md)

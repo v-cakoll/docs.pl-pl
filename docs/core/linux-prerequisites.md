@@ -4,12 +4,12 @@ description: Obsługiwane wersje systemu Linux i zależności platformy .NET Cor
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 29256259c66b909ad65691230bd652f38583184e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084915"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612228"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Wymagania wstępne dla platformy .NET Core w systemie Linux
 
@@ -23,7 +23,7 @@ W tym artykule przedstawiono zależności niezbędne do tworzenia aplikacji plat
 
 ## <a name="supported-linux-versions"></a>Obsługiwane wersje systemu Linux
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET core 2.x traktuje Linux jako jeden system operacyjny. Brak pojedynczej kompilacji systemu Linux (na architektura mikroukładu) obsługiwane dystrybucje systemu Linux. 
 
@@ -44,7 +44,7 @@ W tym artykule przedstawiono zależności niezbędne do tworzenia aplikacji plat
 
 Zobacz [obsługiwane wersje systemu operacyjnego platformy .NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) i [obsługiwane wersje systemu operacyjnego platformy .NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) pełną listę platformy .NET Core 2.1 i .NET Core 2.2 obsługiwane systemy operacyjne, dystrybucji i wersji, z obsługuje wersje systemów operacyjnych i łącza zasad cyklu życia.
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Łącza pobierania oraz więcej informacji, zobacz [pobiera .NET Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1) lub [platformy .NET Core 1.0 pliki do pobrania](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
@@ -61,7 +61,7 @@ Zobacz [obsługiwane wersje systemu operacyjnego platformy .NET Core 2.1](https:
 
 Zobacz [obsługiwanych wersjach systemu operacyjnego programu .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) kompletną listę platformy .NET Core 1.x obsługiwane systemy operacyjne, poza pomocy technicznej systemu operacyjnego, wersji i łączy zasady cyklu życia.
 
-# [<a name="net-core-30-preview-1"></a>.NET core 3.0 w wersji zapoznawczej 1](#tab/netcore30)
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET core 3.0 w wersji zapoznawczej 1](#tab/netcore30)
 
 .NET core 3.0 w wersji zapoznawczej 1 traktuje systemu Linux jako jeden system operacyjny. Brak pojedynczej kompilacji systemu Linux (na architektura mikroukładu) obsługiwane dystrybucje systemu Linux. 
 
@@ -144,7 +144,7 @@ W systemie Linux istnieją dwie opcje pakiet Instalatora:
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Skrypty instalacji przy użyciu skryptu Instalatora platformy .NET Core
 
-[Skryptów instalacji dotnet](./tools/dotnet-install-script.md) są używane do wykonywania instalacji bez uprawnień administratora, łańcuch narzędzi interfejsu wiersza polecenia i udostępnionego środowiska uruchomieniowego. Możesz pobrać skrypt z [ https://dot.net/v1/dotnet-install.sh ](https://dot.net/v1/dotnet-install.sh).
+[Skryptów instalacji dotnet](./tools/dotnet-install-script.md) są używane do wykonywania instalacji bez uprawnień administratora, łańcuch narzędzi interfejsu wiersza polecenia i udostępnionego środowiska uruchomieniowego. Możesz pobrać skrypt z <https://dot.net/v1/dotnet-install.sh>.
 
 Domyślnie skrypt zainstalowanie najnowszej wersji "LTS", która jest obecnie .NET Core 1.1. Aby zainstalować program .NET Core 2.1, uruchom skrypt przy użyciu następującego przełącznika:
 

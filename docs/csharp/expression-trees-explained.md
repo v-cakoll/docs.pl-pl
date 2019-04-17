@@ -3,12 +3,12 @@ title: Drzewa wyrażeń — objaśnienie
 description: Informacje na temat drzew wyrażeń i jak są one przydatne do przekształcania algorytmy dla zewnętrznych wykonania i kontroli kodu przed jej wykonanie.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481434"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613424"
 ---
 # <a name="expression-trees-explained"></a>Drzewa wyrażeń — objaśnienie
 
@@ -23,6 +23,7 @@ Oto wiersz kodu:
 ```csharp
 var sum = 1 + 2;
 ```
+
 W przypadku analizowania to jako drzewa wyrażenie drzewa zawiera kilka węzłów.
 Węzeł najbardziej zewnętrznej jest deklaracja zmiennej instrukcji z przypisaniem (`var sum = 1 + 2;`) tego węzła najbardziej zewnętrznej zawiera kilka węzłów podrzędnych: deklaracja zmiennej, operator przypisania i wyrażenie reprezentujące po prawej stronie znaku równości. Czy wyrażenie jest dalsze podzielone na wyrażeniach, które reprezentują operacja dodawania i lewy i prawy argumenty operacji dodawania.
 

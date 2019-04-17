@@ -4,12 +4,12 @@ description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Do
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c56e497ffb6466840d034458daaebf9fe0c8f03
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464908"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611487"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projektowanie mikrousługi zorientowanej na wzorzec DDD
 
@@ -96,13 +96,13 @@ W tym projekcie warstwy powinny być niezależne dla poszczególnych mikrousług
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **DevIQ. Zasada nieznajomości trwałości** \
-  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
+  <https://deviq.com/persistence-ignorance/>
 
 - **Oren Eini. Nieznajomości infrastruktury** \
-  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
+  <https://ayende.com/blog/3137/infrastructure-ignorance>
 
 - **Angel Lopez. Architektury warstwowej w projektowania opartego na domenie** \
-  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](cqrs-microservice-reads.md)

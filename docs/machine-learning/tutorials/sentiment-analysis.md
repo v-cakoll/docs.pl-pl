@@ -4,12 +4,12 @@ description: Dowiedz się, jak używać strukturze ML.NET w scenariuszu klasyfik
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303118"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612098"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Samouczek: Użyj strukturze ML.NET w scenariuszu klasyfikacji binarnej analizy tonacji
 
@@ -33,7 +33,7 @@ Ten samouczek zawiera informacje na temat wykonywania następujących czynności
 
 ## <a name="sentiment-analysis-sample-overview"></a>Omówienie przykładowych analizy tonacji
 
-Próbka jest aplikacją konsoli, która używa strukturze ML.NET do nauczenia modelu, która klasyfikuje i przewiduje wskaźniki nastrojów klientów, jak dodatnie lub ujemne. Zestaw danych tonacji Yelp pochodzi z uniwersytet kalifornijski-Irvine (UCI), która zostanie podzielona na szkolenie zestaw danych i zestawy danych testowych. Przykład oblicza model z zestawu danych testowych do analizy jakości dostawców. 
+Próbka jest aplikacją konsoli, która używa strukturze ML.NET do nauczenia modelu, która klasyfikuje i przewiduje wskaźniki nastrojów klientów, jak dodatnie lub ujemne. Zestaw danych tonacji Yelp pochodzi z uniwersytet kalifornijski-Irvine (UCI), która zostanie podzielona na szkolenie zestaw danych i zestawy danych testowych. Przykład oblicza model z zestawu danych testowych do analizy jakości dostawców.
 
 Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) repozytorium.
 
@@ -53,7 +53,7 @@ Fazy przepływu pracy są następujące:
 2. **Przygotowywanie danych**
    * **Ładowanie danych**
    * **Wyodrębnianie funkcji (przekształcania danych)**
-3. **Kompilowanie i szkolenie** 
+3. **Kompilowanie i szkolenie**
    * **Uczenie modelu**
    * **Ocena modelu**
 4. **Wdrażanie modelu**
@@ -96,7 +96,7 @@ Algorytmy klasyfikacji są często jednym z następujących typów:
 * Plik binarny: A i B.
 * Kontra: wielu kategorii, które można przewidzieć przy użyciu pojedynczego modelu.
 
-Ponieważ komentarze witryny sieci Web muszą być klasyfikowane jako dodatnie lub ujemne, użycie algorytmu klasyfikacji binarnej. 
+Ponieważ komentarze witryny sieci Web muszą być klasyfikowane jako dodatnie lub ujemne, użycie algorytmu klasyfikacji binarnej.
 
 ## <a name="create-a-console-application"></a>Tworzenie aplikacji konsolowej
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>Ładowanie danych
 
-Ponieważ utworzone wcześniej `SentimentData` typ modelu danych jest zgodny schemat zestawu danych, inicjowanie, mapowanie i ładowanie na jeden wiersz kodu za pomocą zestawu danych można łączyć `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView>. 
+Ponieważ utworzone wcześniej `SentimentData` typ modelu danych jest zgodny schemat zestawu danych, inicjowanie, mapowanie i ładowanie na jeden wiersz kodu za pomocą zestawu danych można łączyć `MLContext.Data.LoadFromTextFile` otoki dla [metoda LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29). Zwraca <xref:Microsoft.Data.DataView.IDataView>.
 
- Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
+Jako dane wejściowe i wyjściowe `Transforms`, `DataView` jest typem potoku danych podstawowych porównywalne do `IEnumerable` dla `LINQ`.
 
 W strukturze ML.NET dane są podobne do widoku SQL. Jest opóźnieniem ocenianą informatycznych i heterogenicznych. Obiekt jest pierwszą częścią potoku i służy do ładowania danych. W tym samouczku ładuje zestaw danych o komentarze i odpowiednie toksyczne lub inne niż toksyczne tonacji. Służy do tworzenia modelu i szkoleń.
 
- Dodaj następujący kod jako pierwsza linia `LoadData` metody:
+Dodaj następujący kod jako pierwsza linia `LoadData` metody:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>Podziel zestaw danych dla modelu, szkolenia i testowania
 
-Następnie należy zarówno zestaw danych szkoleniowych do nauczenia modelu, jak i zestawy danych testowych do ewaluacji modelu. Użyj `MLContext.BinaryClassification.TrainTestSplit` który opakowuje <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> Podziel załadowanego zestawu danych na szkolenie i testowanie zestawy danych i zwrócić wewnątrz <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. Zestaw testów przy użyciu część danych można określić `testFraction`parametru. Wartość domyślna wynosi 10%, ale w tym przypadku użyj 20% do użycia większej ilości danych do celów oceny.  
+Następnie należy zarówno zestaw danych szkoleniowych do nauczenia modelu, jak i zestawy danych testowych do ewaluacji modelu. Użyj `MLContext.BinaryClassification.TrainTestSplit` który opakowuje <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> Podziel załadowanego zestawu danych na szkolenie i testowanie zestawy danych i zwrócić wewnątrz <xref:Microsoft.ML.TrainCatalogBase.TrainTestData>. Zestaw testów przy użyciu część danych można określić `testFraction`parametru. Wartość domyślna wynosi 10%, ale w tym przypadku użyj 20% do użycia większej ilości danych do celów oceny.
 
 Aby podzielić dane załadowane do wymaganych zestawów danych, Dodaj następujący kod w następnym wierszu `LoadData` metody:
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-Należy zauważyć, że dwa parametry są przekazywane do metody Train; `MLContext` kontekstu (`mlContext`), a `IDataView`dla zestawu danych szkoleniowych (`splitTrainSet`). 
+Należy zauważyć, że dwa parametry są przekazywane do metody Train; `MLContext` kontekstu (`mlContext`), a `IDataView`dla zestawu danych szkoleniowych (`splitTrainSet`).
 
 ## <a name="extract-and-transform-the-data"></a>Wyodrębnianie i przekształcania danych
 
@@ -353,7 +354,7 @@ Dodaj wywołanie do nowej metody z `Main` metody, po prawej stronie w obszarze `
 Gdy `model` jest `transformer` który operuje na wiele wierszy danych, to bardzo typowy scenariusz w środowisku produkcyjnym jest na potrzeby prognoz na poszczególne przykłady. <xref:Microsoft.ML.PredictionEngine%602> Jest otoką, który jest zwracany z `CreatePredictionEngine` metody. Możemy dodać następujący kod, aby utworzyć `PredictionEngine` jako pierwszy wiersz w `Predict` metody:
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 Dodaj komentarz do testowania uczonego modelu prognozowania w `Predict` metody przez utworzenie wystąpienia `SentimentData`:
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-Gratulacje! Model uczenia maszynowego dla klasyfikacji i prognozowanie tonacji wiadomości teraz zostały pomyślnie skompilowane. 
+Gratulacje! Model uczenia maszynowego dla klasyfikacji i prognozowanie tonacji wiadomości teraz zostały pomyślnie skompilowane.
 
 Tworzenie modeli pomyślne jest procesem iteracyjnym. Ten model jest początkowa niższa jakość samouczek używa małych zestawów danych na przeszkolenie szybkiego modelu. Jeśli nie jesteś zadowolony z jakość modelu, możesz spróbować ją ulepszyć, zapewniając większych zestawów danych szkoleniowych lub wybierając szkolenia różnych algorytmów przy użyciu różnych funkcji hyper parametrów dla każdego algorytmu.
 
@@ -459,6 +460,7 @@ Kod źródłowy można znaleźć w tym samouczku na [dotnet/samples](https://git
 ## <a name="next-steps"></a>Następne kroki
 
 W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+
 > [!div class="checklist"]
 > * Omówienie problemu
 > * Wybieranie algorytmu uczenia maszynowego odpowiednie
@@ -470,5 +472,6 @@ W niniejszym samouczku zawarto informacje na temat wykonywania następujących c
 > * Wdrażanie i przewidywanie załadować modelu
 
 Przejdź do następnego samouczka, aby dowiedzieć się więcej
+
 > [!div class="nextstepaction"]
 > [Klasyfikacja problemu](github-issue-classification.md)

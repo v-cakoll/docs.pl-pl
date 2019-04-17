@@ -2,12 +2,12 @@
 title: polecenie pakietu DotNet
 description: Polecenie pakietu dotnet tworzy pakiety NuGet do projektu .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6ee987576e29d366bd6821d2757965454411adea
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464479"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611968"
 ---
 # <a name="dotnet-pack"></a>pakietu DotNet
 
@@ -20,17 +20,21 @@ ms.locfileid: "58464479"
 ## <a name="synopsis"></a>Streszczenie
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
     [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Opis
@@ -109,6 +113,7 @@ Możesz podać właściwości programu MSBuild do `dotnet pack` polecenie, aby u
 
 > [!NOTE]
 > Projekty sieci Web nie są packable domyślnie. Aby zastąpić domyślne zachowanie, dodaj następującą właściwość do Twojej *.csproj* pliku:
+>
 > ```xml
 > <PropertyGroup>
 >    <IsPackable>true</IsPackable>

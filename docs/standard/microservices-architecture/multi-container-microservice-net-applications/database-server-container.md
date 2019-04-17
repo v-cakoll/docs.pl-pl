@@ -1,17 +1,17 @@
 ---
-title: Za pomocą serwera bazy danych uruchomionego jako kontener
+title: Korzystanie z serwera bazy danych uruchomionego jako kontener
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Za pomocą serwera bazy danych uruchomionego jako kontener? tylko w celach deweloperskich! Dowiedz się, dlaczego.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2adc58339012095c9dc58d633a9b3815cf7aba3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463348"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611279"
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Za pomocą serwera bazy danych uruchomionego jako kontener
+# <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych uruchomionego jako kontener
 
 Bazy danych (SQL Server, PostgreSQL, MySQL itp.) mogą mieć na regularne autonomicznymi serwerami lokalnymi klastrami lub usługi PaaS w chmurze, takich jak bazy danych SQL Azure. Jednak w przypadku środowiska deweloperskie i testowe, o bazy danych zainstalowany jako kontenerów jest wygodne, ponieważ nie masz wszelkich zależności zewnętrznych, a po prostu `docker-compose up` polecenie uruchamia całej aplikacji. Tych baz danych w postaci kontenerów jest również bardzo przydatne na potrzeby testów integracji, ponieważ baza danych jest uruchomiona w kontenerze i zawsze jest wypełniana przy użyciu tych samych danych przykładowych, aby testy mogą być bardziej przewidywalne.
 
@@ -48,10 +48,10 @@ O programu SQL Server uruchomionego jako kontener nie jest po prostu użyteczne 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Uruchamianie obrazu platformy Docker programu SQL Server w systemie Linux, Mac lub Windows** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
 - **Połączenie i wykonywać zapytania programu SQL Server w systemie Linux przy użyciu narzędzia sqlcmd** \
-    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
+    [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Rozmieszczanie za pomocą danych testowych podczas uruchamiania aplikacji sieci Web
 
@@ -165,7 +165,7 @@ Po uruchomieniu usługi Redis w środowisku produkcyjnym zaleca się wyszukać r
 
 Usługa redis zapewnia obrazu platformy Docker przy użyciu usługi Redis. Ten obraz jest dostępny z usługi Docker Hub pod tym adresem URL:
 
-[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
+<https://hub.docker.com/\_/redis/>
 
 Można bezpośrednio uruchomić kontener platformy Docker, Redis, wykonując następujące polecenie interfejsu wiersza polecenia platformy Docker w wierszu polecenia:
 

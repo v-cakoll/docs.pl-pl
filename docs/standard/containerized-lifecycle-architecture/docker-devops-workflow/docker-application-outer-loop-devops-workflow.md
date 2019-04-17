@@ -1,17 +1,17 @@
 ---
-title: Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
+title: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 description: Poznaj procedurę "zewnętrzna pętla" przepływ pracy DevOps
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 7193200d74eeac23e9cba11b3ed2056458c9984e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462984"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613021"
 ---
-# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki w przepływie pracy DevOps zewnętrznej pętli dla aplikacji platformy Docker
+# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 
 Rysunek 5-1 przedstawiono kroki przepływu pracy DevOps zewnętrzna pętla wchodzących w skład sceny end-to-end.
 
@@ -90,13 +90,13 @@ Te zadania programu Visual Studio Team Services kompilacji hostów/maszyn wirtua
 > [! Informacje o] Aby przeczytać więcej na temat złożenia ciągłej integracji usługi Azure DevOps usług Docker potoku i wyświetlić przewodniki, odwiedź te witryny:
 >
 > - Uruchamianie agenta programu Visual Studio Team Services (teraz usługom DevOps platformy Azure) jako kontener platformy Docker: \
->   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Tworzenie obrazów Docker systemu Linux w programie .NET Core dzięki usługom DevOps platformy Azure: \
->   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 >
 > - Tworzenie opartych na systemie Linux usługi Visual Studio Team kompilacji maszyny z obsługą platformy Docker: \
->   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>Integracja, testowanie i weryfikowanie aplikacji platformy Docker z wieloma kontenerami
 

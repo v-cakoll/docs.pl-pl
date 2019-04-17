@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122151"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611915"
 ---
 # <a name="bindings-and-security"></a>Wiązania i zabezpieczenia
 Powiązania dostarczane przez system, dołączone za pomocą programu Windows Communication Foundation (WCF) oferują szybki sposób program aplikacji WCF. Z jednym wyjątkiem wszystkie powiązania ma domyślny schemat zabezpieczeń włączone. W tym temacie pomaga wybrać odpowiednie powiązanie dla wymagania w zakresie zabezpieczeń.  
@@ -39,7 +39,7 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
   
 -   Ulepszenia usługi (WSE) internetowych.  
   
--   Profil podstawowe, zgodnie z definicją w współdziałania usług sieci Web (WS-I) specyfikacji ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Profil podstawowe, zgodnie z definicją w współdziałania usług sieci Web (WS-I) specyfikacji (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   Profil zabezpieczeń podstawowe, zgodnie z definicją w WS-I.  
   
@@ -205,8 +205,8 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
 |Typ|Opis|  
 |----------|-----------------|  
 |Brak|Określa, klient musi przedstawić żadnych poświadczeń. Przekłada się to anonimowym klientem.|  
-|Podstawowy|Uwierzytelnianie podstawowe. Aby uzyskać więcej informacji zobacz RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane, dostępne pod adresem [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Podsumowanie|Uwierzytelnianie szyfrowane. Aby uzyskać więcej informacji zobacz RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane, dostępne pod adresem [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Podstawowy|Uwierzytelnianie podstawowe. Aby uzyskać więcej informacji zobacz RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane, dostępne pod adresem <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Podsumowanie|Uwierzytelnianie szyfrowane. Aby uzyskać więcej informacji zobacz RFC 2617 — uwierzytelnianie HTTP: Podstawowe i uwierzytelnianie szyfrowane, dostępne pod adresem <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|Uwierzytelniania NT LAN Manager (NTLM).|  
 |Windows|Uwierzytelnianie Windows.|  
 |Certyfikat|Uwierzytelnianie jest wykonywane przy użyciu certyfikatu.|  
@@ -228,6 +228,6 @@ Powiązania dostarczane przez system, dołączone za pomocą programu Windows Co
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Wybieranie typu poświadczeń](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Zachowania zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -1,15 +1,15 @@
 ---
-title: Wdrażanie bramy interfejsu API za pomocą Ocelot
+title: Wdrażanie bram interfejsu API za pomocą rozwiązania Ocelot
 description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą Ocelot i sposobu użycia Ocelot w środowiskach opartych na kontenerach.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5d4f2a3b2551f8da83359b26578d45559721f7df
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464544"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613723"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementowanie bramy interfejsu API za pomocą Ocelot
 
@@ -85,6 +85,7 @@ public async Task<IActionResult> GetItemById(int id)
     return NotFound();
 }
 ```
+
 Żądanie HTTP zostaną uruchomione, który rodzaj C# uzyskiwanie dostępu do bazy danych mikrousług i wszelkie dodatkowe wymagane działania kodu.
 
 Dotyczące adresu URL mikrousług, gdy kontenery są wdrażane Tworzenie lokalnego komputera (lokalnego hosta platformy Docker), każda mikrousługa kontener ma zawsze to port wewnętrzny (zwykle jest to port 80) określona w pliku dockerfile i tak jak w poniższym pliku dockerfile:
@@ -564,16 +565,16 @@ W ramach aplikacji eShopOnContainers plików kodu źródłowego oryginalnych pli
 Istnieją inne ważne funkcje zbadaniu i użyć w przypadku użycia Ocelot bramy interfejsu API, opisane w poniższych łączy.
 
 - **Odnajdowanie usługi integracji Ocelot z Konsul lub Eureka po stronie klienta** \
-  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
 - **Pamięć podręczna w warstwie bramy interfejsu API** \
-  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
 - **Rejestrowanie na poziomie warstwy bramy interfejsu API** \
-  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
 - **Jakość usług (ponownych prób i wyłączniki) w warstwie bramy interfejsu API** \
-  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
 - **Ograniczanie szybkości** \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )

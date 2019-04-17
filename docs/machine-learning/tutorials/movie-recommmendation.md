@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311100"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612280"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Samouczek: Utwórz polecania filmów za pomocą platformy ML.NET
 
@@ -161,7 +161,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > Ta metoda zapewni błąd do momentu dodania instrukcji return w poniższych krokach.
 
-Inicjowanie zmiennych ścieżki danych, Załaduj dane z plików *.csv i zwróć `Train` i `Test` dane jako `IDataView` obiektów przez dodanie poniższego jako następnego wiersza kodu w `LoadData()`:
+Inicjowanie zmiennych ścieżki danych, Załaduj dane z \*plików CSV i zwrócenie `Train` i `Test` dane jako `IDataView` obiektów przez dodanie poniższego jako następnego wiersza kodu w `LoadData()`:
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > Ta metoda zapewni błąd do momentu dodania instrukcji return w poniższych krokach.
 
 Zdefiniować przekształceń danych, dodając następujący kod do `BuildAndTrainModel()`:
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 Ponieważ `userId` i `movieId` reprezentują użytkowników i tytułów filmów, nie rzeczywiste wartości, użyj [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) metoda przekształcania każdego `userId` i każdy `movieId` do klucza typu liczbowego `Feature`kolumny (formacie akceptowanym przez algorytmy zalecenie) i dodaj je jako nowe kolumny zestawu danych:
@@ -217,7 +217,7 @@ Wybieranie algorytmu uczenia maszynowego, a następnie dołącza je do definicji
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) jest algorytm szkolenia zalecenia.  [Macierz Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) jest typowym podejściem do zalecenia, gdy masz dane, w jaki użytkownicy, które oceniły produktów w przeszłości jest tak w przypadku zestawów danych w ramach tego samouczka. Istnieją inne algorytmy zalecenie używane w przypadku różnych dostępnych danych (zobacz [inne algorytmy zalecenie](#other-recommendation-algorithms) sekcji poniżej, aby dowiedzieć się więcej). 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) jest algorytm szkolenia zalecenia.  [Macierz Factorization](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems)) jest typowym podejściem do zalecenia, gdy masz dane, w jaki użytkownicy, które oceniły produktów w przeszłości jest tak w przypadku zestawów danych w ramach tego samouczka. Istnieją inne algorytmy zalecenie używane w przypadku różnych dostępnych danych (zobacz [inne algorytmy zalecenie](#other-recommendation-algorithms) sekcji poniżej, aby dowiedzieć się więcej).
 
 W tym przypadku `Matrix Factorization` algorytm używa metodę o nazwie "współpracy filtering", która zakłada się, że jeśli 1 użytkownik ma ten sam opinia jako 2 użytkownika dotyczących niektórych problemów, a następnie 1 użytkownika jest bardziej prawdopodobne, że ten sam sposób jak 2 użytkowników o innym problemem.
 
@@ -242,7 +242,7 @@ Dodaj następujący kod jako następnego wiersza kodu w `Main()` metodę do wywo
 
 ## <a name="evaluate-your-model"></a>Ocena modelu
 
-Gdy masz uczony model, korzystanie z Twoich danych testu do oceny, jak działa model. 
+Gdy masz uczony model, korzystanie z Twoich danych testu do oceny, jak działa model.
 
 Tworzenie `EvaluateModel()` metody tuż za `BuildAndTrainModel()` metody, używając następującego kodu:
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-Przekształcanie `Test` danych przez dodanie poniższego kodu `EvaluateModel()`:
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+Przekształcanie `Test` danych przez dodanie poniższego kodu `EvaluateModel()`: [!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) metoda wykonuje prognozy dla wielu podać wiersze danych wejściowych zestawu testów.
 
@@ -315,6 +314,7 @@ Tworzenie modeli pomyślne jest procesem iteracyjnym. Ten model jest początkowa
 Teraz można użyć uczonego modelu do prognozowania na nowych danych.
 
 Tworzenie `UseModelForSinglePrediction()` metody tuż za `EvaluateModel()` metody, używając następującego kodu:
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ Dodawanie większej ilości danych szkoleniowych, który ma wystarczającej licz
 
 ### <a name="features"></a>Funkcje
 
-W tym samouczku używasz tylko trzy `Features` (`user id`, `movie id`, i `rating`) są dostarczane przez zestaw danych. 
+W tym samouczku używasz tylko trzy `Features` (`user id`, `movie id`, i `rating`) są dostarczane przez zestaw danych.
 
-Gdy jest to dobry początek, w rzeczywistości możesz chcieć dodać inne atrybuty lub `Features` (na przykład, wiek, płeć, geolokalizacja itp.), jeśli są one uwzględnione w zestawie danych. Dodawanie istotniejsze `Features` może zwiększyć wydajność modelu zalecenia. 
+Gdy jest to dobry początek, w rzeczywistości możesz chcieć dodać inne atrybuty lub `Features` (na przykład, wiek, płeć, geolokalizacja itp.), jeśli są one uwzględnione w zestawie danych. Dodawanie istotniejsze `Features` może zwiększyć wydajność modelu zalecenia.
 
 Jeśli nie wiesz o tym, które `Features` może być najbardziej istotne dla zadania machine learning, można również skorzystać z funkcji wkład obliczeń (FCC) i [znaczenie permutacji funkcji](../how-to-guides/determine-global-feature-importance-in-model.md), który zapewnia strukturze ML.NET Odkryj najbardziej duży wpływ `Features`.
 
@@ -445,7 +445,7 @@ Na przykład w tym samouczku algorytm są następujące opcje:
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100

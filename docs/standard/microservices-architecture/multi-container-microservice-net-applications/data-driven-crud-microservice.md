@@ -1,17 +1,17 @@
 ---
-title: Tworzenie prostego mikrousługi CRUD na podstawie danych
+title: Tworzenie prostej mikrousługi CRUD na podstawie danych
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Omówienie tworzenia prostych operacji CRUD (opartej na danych) mikrousług w kontekście aplikacji mikrousług.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5c16b38d7720fb739aa0711d4511afacd7b92c7a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 21a06036609ec4c84b496d58423a111ee658f3aa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465311"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612267"
 ---
-# <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD na podstawie danych
+# <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostej mikrousługi CRUD na podstawie danych
 
 Tej sekcji przedstawiono sposób w celu utworzenia prostej mikrousługi, który wykonuje tworzenia, odczytu, aktualizacji i operacje usuwania (CRUD) w źródle danych.
 
@@ -213,10 +213,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wykonywanie zapytania o dane** \
-  [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
+  [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
 - **Zapisywanie danych** \
-  [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
+  [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Zmienne ciągów i środowisko połączenia bazy danych używanych przez kontenery platformy Docker
 
@@ -297,13 +297,13 @@ Opisany mechanizm kontroli wersji jest prosty i zależy od serwera kieruje żąd
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Scott Hanselman. Przechowywanie wersji internetowy interfejs API RESTful platformy ASP.NET Core łatwe** \
-  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
 - **Przechowywanie wersji internetowego interfejsu API RESTful** \
-  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
 - **Roy Fielding. Przechowywanie wersji, Hipermediach i REST** \
-  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generowanie metadanych opis struktury Swagger z internetowego interfejsu API platformy ASP.NET Core
 
@@ -313,7 +313,7 @@ Serce struktury Swagger jest specyfikacją struktury Swagger, czyli metadane opi
 
 Specyfikacja to podstawa specyfikację OpenAPI (OAS) i jest tworzone w otwarte, przejrzyste i współpracy społeczności, aby ustandaryzować sposób, w jaki zdefiniowano interfejsów RESTful.
 
-Specyfikacja definiuje strukturę jak usługi mogą być wykrywane i jak zrozumieć jej możliwości. Aby uzyskać więcej informacji, w tym edytora sieci web i przykłady specyfikacji Swagger z firm, takich jak Spotify, Uber, Slack i firmy Microsoft, w witrynie programu Swagger ([https://swagger.io](https://swagger.io)).
+Specyfikacja definiuje strukturę jak usługi mogą być wykrywane i jak zrozumieć jej możliwości. Aby uzyskać więcej informacji, w tym edytora sieci web i przykłady specyfikacji Swagger z firm, takich jak Spotify, Uber, Slack i firmy Microsoft, w witrynie programu Swagger (<https://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Dlaczego warto używać struktury Swagger?
 
@@ -423,13 +423,13 @@ Jest to proste. A ponieważ automatycznie jest generowany, po dodaniu więcej fu
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Strony sieci Web ASP.NET API pomocy korzystające z programu Swagger** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 - **Wprowadzenie do pakietu Swashbuckle i ASP.NET Core** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
 - **Rozpoczynanie pracy z usługą NSwag i ASP.NET Core** \
-  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
 > [Poprzednie](microservice-application-design.md)

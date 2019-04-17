@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610811"
+---
 # <a name="contributing"></a>Współtworzenie
 
 Dziękujemy za zainteresowanie Współtworzenie dokumentacji platformy .NET!
@@ -24,7 +32,7 @@ Zagadnienia i zadania dla tych repozytoriów są śledzone w tym miejscu.
 
 Potrzebujesz podstawową wiedzę na temat [Git i GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Krok 1:** Pomiń ten krok w przypadku niewielkich zmian. Jeśli interesują w pisaniu nowych treści lub dokładnie zmieniającego istniejącej zawartości, należy otworzyć [problem](https://github.com/dotnet/docs/issues) opisujący, co chcesz zrobić.
+**Krok 1:** Pomiń ten krok w przypadku niewielkich zmian (na przykład, jeśli masz poprawianie pisowni lub od razu otwierania żądania ściągnięcia do rozwiązania problemu, który można znaleźć w dokumentacji). Jeśli interesują w pisaniu nowych treści lub dokładnie zmieniającego istniejącej zawartości, należy otworzyć [problem](https://github.com/dotnet/docs/issues) opisujący, co chcesz zrobić.
 Zawartość wewnątrz **docs** folderu jest podzielona na sekcje, które są odzwierciedlone w tabeli z treści (TOC). Zdefiniuj lokalizację tematu w spisie treści. Uzyskiwanie opinii na temat swojej propozycji.
 
 —lub—

@@ -4,12 +4,12 @@ description: Dowiedz się, przenoszenie i shift i modernizacji istniejących apl
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324698"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613099"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów Windows (wersja 2)
 
@@ -91,7 +91,7 @@ Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest opcjonaln
 
 Tabela 1-1 w tym artykule opisano najważniejsze zalety i wybór każde podejście migracji lub modernizacji.
 
-| **Obsługa infrastruktury chmury** <br /> *Lift- and -shift* | **Zoptymalizowane pod kątem chmury** <br /> *Modernizuj* | **Cloud-Native** <br /> *Modernizacja, przekształcanie i ponowne zapisywanie adresów* |
+| **Obsługa infrastruktury chmury** <br /> *Lift- and -shift* | **Cloud-Optimized** <br /> *Modernizuj* | **Cloud-Native** <br /> *Modernizacja, przekształcanie i ponowne zapisywanie adresów* |
 |---|---|---|
 | **Aplikacji obliczeniowych elementów docelowych** |
 | Aplikacje wdrożone maszyny wirtualne na platformie Azure | Monolityczne lub aplikacji N-warstwowych wdrożone maszyny wirtualne i wystąpienia kontenera platformy Azure (ACI) oraz usługi Azure App Service za pomocą kontenerów, usługi Azure Service Fabric lub AKS (usługi Azure Kubernetes Service) | Konteneryzowane mikrousługi w usłudze Azure Kubernetes Service (AKS), Usługa Service Fabric i/lub mikrousług bezserwerowe, oparte na usłudze Azure Functions. |
@@ -99,7 +99,7 @@ Tabela 1-1 w tym artykule opisano najważniejsze zalety i wybór każde podejśc
 | SQL lub dowolnym relacyjnej bazy danych na maszynie Wirtualnej | Wystąpienie usługi Azure SQL Database Managed lub innej bazy danych zarządzanej w chmurze. | Ziarna karę baz danych, na mikrousługach, na podstawie usługi Azure SQL Database, Azure Cosmos DB lub innej bazy danych zarządzanej w chmurze |
 | **Zalety**|
 | <li>Nie transformować żadnego nowego kodu <li> Co najmniej nakładu pracy dla szybkiej migracji <li> Najmniej uniwersalność w obsługiwane na platformie Azure <li> Gwarancje dostępności podstawowe <li> Po przeniesieniu do chmury, łatwiej jest je modernizowanie nawet więcej | <li> Nie transformować <li> Zmiany w minimalnym kodu/konfiguracji <li> Ulepszone wdrażanie i elastyczność DevOps do zwolnienia z powodu kontenerów <li> Zwiększona gęstość i niższe koszty wdrożenia <li> Przenośność aplikacji i zależności <li> Elastyczność cele hosta: Metody PaaS lub IaaS | <li> Architekt chmury, otrzymasz najlepszych korzyści z chmury, ale nowy kod jest wymagany <li> Metod natywnych dla chmury Mikrousług <li> Nowoczesne aplikacje o znaczeniu krytycznym, odporne na błędy dla chmury doskonale skalowalnej <li> W pełni zarządzane usługi <li> Zoptymalizowane pod kątem skalowania <li> Zoptymalizowane pod kątem elastyczności autonomicznego przez podsystem <li> Oparta na wdrożenia i metodyki DevOps |
-| **Wyzwania** |
+| **Challenges** |
 | <li> Mniejszą wartość chmury, innego niż przesunięcie kosztów operacyjnych lub zamyka centrów danych <li> Odbywa się trochę: Bez systemu operacyjnego i stosowanie poprawek oprogramowania pośredniczącego; może używać rozwiązań infrastruktury, takich jak narzędzia Terraform, Spinnaker lub Puppet | <li> Konteneryzowania jest dodatkowy krok w krzywą uczenia się dla deweloperów i operacji IT <li> Potoki metodyki DevOps i ciągłej integracji/ciągłego Dostarczania jest zazwyczaj "musisz" dla tej metody. Jeśli nie jest aktualnie obecna w kulturze organizacji, może być dodatkowym wyzwaniem| <li> Wymaga rearchitecture dla natywnych aplikacji w chmurze i architektur mikrousług i zazwyczaj wymaga znaczących kodu zdebugować podczas modernizacji lub refaktoryzacji (dłuższego czasu i budżetu) <li> Potoki metodyki DevOps i ciągłej integracji/ciągłego Dostarczania jest zazwyczaj "musisz" dla tej metody. Jeśli nie jest aktualnie obecna w kulturze organizacji, może być dodatkowym wyzwaniem|
 > **Tabela 1-1.** Korzyści i problemy ścieżki modernizacji istniejących aplikacji .NET i usługi
 
@@ -170,13 +170,13 @@ Ten przewodnik nie pokazuje sposób tworzenia aplikacji natywnych dla chmury, ta
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Kontenerowych nimi cykl życia aplikacji platformy Docker przy użyciu platformy firmy Microsoft i narzędzi** (do pobrania Książka elektroniczna) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **Mikrousługi .NET: Architektura konteneryzowanych aplikacji .NET** (do pobrania Książka elektroniczna) \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **Tworzenie architektury nowoczesnych aplikacji sieci web platformy ASP.NET Core oraz platforma Azure** (do pobrania Książka elektroniczna) \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien używać tego przewodnika
 

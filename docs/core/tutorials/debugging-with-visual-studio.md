@@ -3,12 +3,12 @@ title: Debugowanie aplikacji Hello World platformy .NET Core za pomocą programu
 description: Dowiedz się, jak debugować aplikację Hello World w języku C# lub Visual Basic w programie Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463426"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610720"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debugowanie usługi C# lub Visual Basic .NET Core aplikacji Hello World przy użyciu programu Visual Studio 2017
 
@@ -154,6 +154,7 @@ Aby ustawić warunkowego punktu przerwania i testowania, co się stanie po użyt
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![Zwraca wartość true po instrukcji jest wykonywany — Visual Basic okno bezpośrednie](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Wybierz **Kontynuuj** przycisk na pasku narzędzi, aby kontynuować wykonywanie programów.

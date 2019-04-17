@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32b68078306c2cf7ffe07870de9c4e3150adafe9
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843192"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612865"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Określanie w pełni kwalifikowanych nazw typów
 
@@ -186,6 +186,7 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
     Version=1.0.0.0
 ```
+
 ## <a name="specifying-generic-types"></a>Określanie typów ogólnych
 
 SimpleTypeSpec\`numer reprezentuje to otwarty typ ogólny z od 1 do *n* parametrów typu genetycznego. Na przykład, można pobrać odwołania do otwarty typ ogólny listy\<T > lub zamknięty typ ogólny List\<ciągu >, użyj ``Type.GetType("System.Collections.Generic.List`1")`` można pobrać odwołania do typu ogólnego słownika\<TKey, TValue >, użyj ``Type.GetType("System.Collections.Generic.Dictionary`2")``.

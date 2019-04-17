@@ -1,17 +1,17 @@
 ---
-title: Odporność i wysoka dostępność w mikrousługach
+title: Odporność i wysoka dostępność w ramach mikrousług
 description: Mikrousługi mają być tak zaprojektowana, radzić sobie ze przejściowe problemy z siecią i błędów zależności, które muszą być odporne na błędy w celu uzyskania wysokiej dostępności.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c1881392532231bc83227776a647f4dde0a196ad
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465818"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614041"
 ---
-# <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w mikrousługach
+# <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysoka dostępność w ramach mikrousług
 
 Zajmowanie się nieoczekiwanych awarii jest jednym z najtrudniejszych problemów do rozwiązania, szczególnie w rozproszonym systemie. Obejmuje większość kodu, który napisać deweloperów, obsługa wyjątków i jest to również gdzie najlepiej jest zużywany czas podczas testowania. Problem polega na bardziej skomplikowane niż pisanie kodu w celu obsługi błędów. Co się stanie, gdy maszyna, na którym jest uruchomione mikrousługa nie powiedzie się? Nie tylko potrzebne wykryć ten błąd mikrousługi (twardego problem samodzielnie), ale należy również coś o ponowne uruchomienie usługi mikrousług.
 
@@ -59,22 +59,22 @@ Różne koordynatorów może brzmią podobnie, ale dane diagnostyczne i kontrole
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **12 Factor aplikacji. XI. Dzienniki: Traktuj dzienniki jako strumieni zdarzeń** \
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - **Biblioteka programu Microsoft diagnostycznych użyciu struktury EventFlow** repozytorium GitHub. \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **Co to jest Azure Diagnostics** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
 - **Łączenie komputerów Windows do usługi Log Analytics na platformie Azure** \
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+  <https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents>
 
 - **Rejestrowanie tym, co oznacza: Za pomocą blok semantycznego rejestrowania aplikacji** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** oficjalna witryna. \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - **EventSource — klasa** interfejsu API dla zdarzenia śledzenia dla Windows (ETW) \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

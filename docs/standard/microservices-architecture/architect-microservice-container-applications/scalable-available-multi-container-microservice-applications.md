@@ -1,17 +1,17 @@
 ---
-title: Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
+title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Odkryj opcje do organizowania mikrousług i wielokontenerowych aplikacji pod kątem wysokiej skalowalności i dostępności oraz możliwości usługi Azure Dev miejsca do magazynowania podczas tworzenia cyklem życia aplikacji platformy Kubernetes.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 6fa25c1d35e276473f4fcac344efbc5cafbc4b3f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1452f25f96a5e277d8cfcd53f03e90675e9f9372
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465441"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613268"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
+# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
 Przy użyciu koordynatorów aplikacji gotowych do produkcji jest istotne, jeśli aplikacja jest oparta na mikrousługach lub po prostu podzielone między wiele kontenerów. Jak wprowadzona wcześniej w podejściu opartych na mikrousługach, każda mikrousługa jest właścicielem jej modelu i danych tak, aby go autonomicznego od środowisk programowania i wdrażania punktu widzenia. Ale nawet w przypadku bardziej tradycyjny aplikację która składa się z wielu usług (np. SOA), będziesz również mieć wiele kontenerów i usług wchodzących w skład aplikacji biznesowej, które muszą zostać wdrożone jako rozproszony system. Tego rodzaju systemy są złożone i skalowanie w poziomie i zarządzać; w związku z tym bezwzględnie konieczne koordynatora, jeśli chcesz mieć aplikację obsługującą wiele kontenerów gotowe do produkcji i skalowalny.
 
@@ -148,13 +148,13 @@ Aby uzyskać więcej informacji Sprawdź artykuł [programowanie zespołowe za p
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wprowadzenie do korzystania z usługi Azure Kubernetes Service (AKS)** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Kubernetes** oficjalna witryna. \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
 >[!div class="step-by-step"]
 >[Poprzednie](resilient-high-availability-microservices.md)

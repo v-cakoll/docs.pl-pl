@@ -4,12 +4,12 @@ description: Modernizacja istniejących aplikacji .NET za pomocą kontenerów w 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216668"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611253"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -102,8 +102,8 @@ Dla platformy .NET Core (dla wielu platform dla systemów Linux i Windows) tagi 
 
 > | **Tag** | **Wersja i system**
 > |---|---|
-> | **Microsoft/DotNet:2.0.0-Runtime** | .NET Core 2.0 runtime-only on Linux |
-> | **Microsoft/DotNet:2.0.0-Runtime-nanoserver** | .NET core 2.0 na serwerze Windows Nano Server jest tylko do środowiska uruchomieniowego |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 runtime-only on Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 na serwerze Windows Nano Server jest tylko do środowiska uruchomieniowego |
 
 ### <a name="multi-arch-images"></a>Wielu architektury obrazów
 
@@ -125,15 +125,15 @@ Uruchamianie kontenera na Windows z użyciem lub bez izolacji funkcji Hyper-V je
 
 -   **Dokumentacja usługi kontenerów Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
 -   **Podstawowe informacje dotyczące kontenerów Windows**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
 -   **Grafika informacyjna: Firma Microsoft i kontenery**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>Ekosystem kontenera na platformie Azure
 

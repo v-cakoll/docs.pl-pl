@@ -1,17 +1,17 @@
 ---
-title: Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
+title: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 description: Aplikacje rzeczywistej produkcji mają być wdrażane i zarządzane przy użyciu koordynatorów, które obsługują kondycji, obciążenia i cyklami życia dla wszystkich kontenerów.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 834e0b91a596f489c10e4eb11b0de2b5eaeb9f1c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 148eab941644667c803c5613b8815f50263fc0fb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466403"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613706"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i wielokontenerowych aplikacji o wysokiej skalowalności i dostępności
+# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
 
 Przy użyciu koordynatorów aplikacji gotowych do produkcji jest istotne, jeśli aplikacja jest oparta na mikrousługach lub podzielone między wiele kontenerów. Jak wprowadzona wcześniej w podejściu opartych na mikrousługach, każda mikrousługa jest właścicielem jej modelu i danych tak, aby go autonomicznego od środowisk programowania i wdrażania punktu widzenia. Ale nawet w przypadku bardziej tradycyjny aplikację która składa się z wielu usług (np. SOA), będziesz również mieć wiele kontenerów i usług wchodzących w skład aplikacji biznesowej, które muszą zostać wdrożone jako rozproszony system. Tego rodzaju systemy są złożone i skalowanie w poziomie i zarządzać; w związku z tym bezwzględnie konieczne koordynatora, jeśli chcesz mieć aplikację obsługującą wiele kontenerów gotowe do produkcji i skalowalny.
 
@@ -115,15 +115,15 @@ Aby uzyskać więcej informacji, zobacz artykuł [programowanie zespołowe za po
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wprowadzenie do korzystania z usługi Azure Kubernetes Service (AKS)** \
-  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
-  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  <https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces>
 
 - **Rozwiązanie Kubernetes.** Oficjalna witryna. \
-  [https://kubernetes.io/](https://kubernetes.io/)
+  <https://kubernetes.io/>
 
-## <a name="using-azure-service-fabric"></a>Za pomocą usługi Azure Service Fabric
+## <a name="using-azure-service-fabric"></a>Korzystanie z usługi Azure Service Fabric
 
 Usługa Azure Service Fabric, powstały od firmy Microsoft przejście od dostarczania produktów "pola", które były zazwyczaj monolitycznych w stylu, dostarczaniu usług. Środowisko tworzenia i obsługi dużych usług na dużą skalę, takich jak Azure SQL Database, Azure Cosmos DB, Azure Service Bus lub Cortany wewnętrznej bazy danych, kształt usługi Service Fabric. Platforma ewoluował wraz z upływem czasu coraz więcej usług przyjęty go. Co ważniejsze usługi Service Fabric musiał uruchomić nie tylko na platformie Azure, ale także w autonomicznych wdrożeniach systemu Windows Server.
 

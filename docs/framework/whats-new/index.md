@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: d67626a72e04cd1163e749339d8d5fac22959a3a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328637"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613762"
 ---
 # <a name="whats-new-in-the-net-framework"></a>What's new in .NET Framework
 
@@ -23,7 +23,7 @@ Ten artykuł zawiera podsumowanie kluczowych nowych funkcji i ulepszeń w nastę
 
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET framework 4.7](#v47)
+- [.NET Framework 4.7](#v47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 i .NET Framework 4.6](#v46)
@@ -58,9 +58,9 @@ Możesz wybrać docelową programu .NET Framework 4.7.2 w programie Visual Studi
 
 .NET Framework 4.7.2 zawiera nowe funkcje w następujących obszarach:
 
-- [Core](#core-472)
+- [Funkcje podstawowe](#core-472)
 - [ASP.NET](#asp-net472)
-- [Obsługa sieci](#net472)
+- [Sieć](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -93,7 +93,9 @@ Using rsa = RSA.Create()
    ' Other code to execute using the rsa instance.
 End Using
 ```
+
 z kodem następująco:
+
 ```csharp
 // Starting with .NET Framework 4.7.2
 using (RSA rsa = RSA.Create(rsaParameters))
@@ -101,6 +103,7 @@ using (RSA rsa = RSA.Create(rsaParameters))
    // Other code to execute using the rsa instance.
 }
 ```
+
 ```vb
 ' Starting with .NET Framework 4.7.2
 Using rsa = RSA.Create(rsaParameters)
@@ -266,6 +269,7 @@ c.SameSite = SameSiteMode.Lax;
 Dim c As New HttpCookie("secureCookie", "same origin")
 c.SameSite = SameSiteMode.Lax
 ```
+
 SameSite plików cookie można również skonfigurować na poziomie aplikacji, modyfikując plik web.config:
 
 ```xml
@@ -273,6 +277,7 @@ SameSite plików cookie można również skonfigurować na poziomie aplikacji, m
    <httpCookies sameSite="Strict" />
 </system.web>
 ```
+
 Możesz dodać SameSite dla <xref:System.Web.Security.FormsAuthentication> i <xref:System.Web.SessionState> plików cookie przez zmodyfikowanie pliku konfiguracji sieci web:
 
 ```xml
@@ -432,9 +437,9 @@ Dla aplikacji Windows Forms obejście poprzednie ustawienia świadomości DPI w 
 
 .NET Framework 4.7.1 zawiera nowe funkcje w następujących obszarach:
 
-- [Core](#core471)
+- [Funkcje podstawowe](#core471)
 - [Środowisko uruchomieniowe języka wspólnego (CLR)](#clr)
-- [Obsługa sieci](#net471)
+- [Sieć](#net471)
 - [ASP.NET](#asp-net471)
 
 Ponadto główne skoncentrować się na platformie .NET Framework 4.7.1 jest ulepszone ułatwień dostępu, który umożliwia aplikacji zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej. Aby uzyskać informacji na temat ulepszenia ułatwień dostępu w programie .NET Framework 4.7.1, zobacz [What's new in ułatwień dostępu w programie .NET Framework](whats-new-in-accessibility.md).
@@ -515,8 +520,8 @@ W .NET Framework 4.7 i wersjach starszych program ASP.NET dozwolone deweloperom 
 
 .NET Framework 4.7 zawiera nowe funkcje w następujących obszarach:
 
-- [Core](#Core47)
-- [Obsługa sieci](#net47)
+- [Funkcje podstawowe](#Core47)
+- [Sieć](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -637,7 +642,7 @@ WPF użytkownika drukowanie interfejsów API w <xref:System.Printing.PrintQueue?
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
-- [Program Windows Workflow Foundation (WF)](#WF462)
+- [Windows Workflow Foundation (WF)](#WF462)
 
 - [ClickOnce](#clickonce-1)
 
@@ -1012,7 +1017,7 @@ Elastyczne Obsługa klawiatury umożliwia fokus śledzenie w aplikacjach WPF prz
 
 W poprzednich wersjach programu .NET Framework aplikacje WPF nie mogą skorzystać fokus śledzenia bez konieczności wyłączania WPF pióra/obsługi wprowadzania dotykowego gestu.  W wyniku aplikacji WPF, należy wybrać pełnej obsługi wprowadzania dotykowego WPF lub zależą od podwyższenia poziomu myszy Windows.
 
-**Per-monitor DPI**
+**Rozpoznawanie wartości DPI monitora**
 
 Do obsługi najnowszych rozprzestrzenianie wysokiej rozdzielczości DPI i rozdzielczości DPI hybrydowego środowiska w przypadku aplikacji WPF, platformy WPF w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] umożliwia rozpoznawanie monitora. Zobacz [przewodnik dla deweloperów i przykłady](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) w serwisie GitHub, aby uzyskać więcej informacji na temat włączania aplikacji WPF stać się świadome DPI monitora.
 
@@ -1036,8 +1041,7 @@ W [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], Windows Workflow Found
 
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF obsługuje wyrażeń języka C# w obu projektanta programu Visual Studio i przepływy pracy kodu. Re-hosted projektanta przepływu pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład w WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń języka C# i technologii IntelliSense w Projektancie przepływu pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
-W wersjach programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i sprawia, że funkcja IntelliSense niedostępne.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework w wersjach wcześniejszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], funkcja IntelliSense programu WF projektanta został przerwany, gdy klient ponownie kompiluje projekt przepływu pracy w programie Visual Studio. Gdy kompilacja projektu zakończy się pomyślnie, typy przepływów pracy nie znajdują się w Projektancie i ostrzeżenia z technologii IntelliSense dla brakujących typy przepływów pracy są wyświetlane w **lista błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i sprawia, że funkcja IntelliSense niedostępne.
 
 **Aplikacje V1 przepływu pracy śledzenia przepływu pracy na teraz być uruchamiane w trybie FIPS**
 
@@ -1147,7 +1151,7 @@ Klient SQL teraz automatycznie zapewnia szybsze połączenia do grupy dostępno�
 
 Windows Presentation Foundation zawiera szereg udoskonaleń i zmian.
 
-**Większa wydajność**
+**Lepsza wydajność**
 
 Opóźnienie w wyzwalanie zdarzeń touch został rozwiązany w [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]. Ponadto, wpisując <xref:System.Windows.Controls.RichTextBox> kontroli nie blokuje wątku renderowania podczas wprowadzania szybkie.
 
@@ -1244,7 +1248,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
      Aby uzyskać informacje, zobacz [platformy ASP.NET Core](/aspnet/core/).
 
-- **Aktualizacje programu ASP.NET**
+- **ASP.NET Updates**
 
     - **Odpowiedź asynchroniczna opróżnienie opartego na zadaniach interfejsu API**
 
@@ -1528,7 +1532,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
      Wartość domyślna to `false`.
 
-- **Obsługa sieci**
+- **Sieć**
 
     - **Ponowne używanie gniazd**
 
@@ -1564,7 +1568,7 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
      [!INCLUDE[net_core](../../../includes/net-core-md.md)] przede wszystkim obsługuje kodowania Unicode i domyślnie udostępnia ograniczoną obsługę stron kodowych. Można dodać obsługę stron kodowych dostępnych w programie .NET Framework, ale niedostępną w [!INCLUDE[net_core](../../../includes/net-core-md.md)] , rejestrując stron kodowych za pomocą <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji, zobacz <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
-- **Architektura .NET Native**
+- **.NET Native**
 
      Aplikacje Windows dla systemu Windows 10, których platformą docelową [!INCLUDE[net_core](../../../includes/net-core-md.md)] i są zapisywane w języku C# lub Visual Basic można korzystać z nowej technologii, która kompiluje aplikacje do kodu natywnego, a nie IL. Wygenerowanie aplikacji jest określony przez szybsze uruchamianie i czasu wykonania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji z architekturą .NET Native](../net-native/index.md). Omówienie programu .NET Native badający jak różni się od NGEN i kompilacja JIT i przebieg oznacza, że w kodzie, zobacz [.NET Native i kompilacja](../net-native/net-native-and-compilation.md).
 
@@ -1609,11 +1613,11 @@ Wprowadza .NET 2015 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i .NET 
 
     - Zastąp <xref:System.Transactions.IPromotableSinglePhaseNotification> z <xref:System.Transactions.ISinglePhaseNotification>, czyli trwałej rejestracji, który obsługuje zatwierdzania jedna faza.
 
-     Możesz to zrobić w tej samej domenie aplikacji i nie wymaga żadnych dodatkowych niezarządzanego kodu do interakcji z MSDTC przeprowadzić podwyższenia poziomu. Nową metodę można wywołać tylko wtedy, gdy wywołanie oczekujące z <xref:System.Transactions?displayProperty=nameWithType> do <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote` metodę, która jest implementowany przez awansowanie rejestracji.
+     Możesz to zrobić w tej samej domenie aplikacji i nie wymaga żadnych dodatkowych niezarządzanego kodu do interakcji z MSDTC przeprowadzić podwyższenia poziomu. Nową metodę można wywołać tylko wtedy, gdy wywołanie oczekujące z <xref:System.Transactions?displayProperty=nameWithType> do <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote` metodę, która jest implementowany przez awansowanie rejestracji.
 
 - **Ulepszenia profilowania.** Nowe niezarządzanych profilowania API zapewniają bardziej niezawodne profilowania:
 
-    - [Struktura COR_PRF_ASSEMBLY_REFERENCE_INFO](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+    - [COR_PRF_ASSEMBLY_REFERENCE_INFO, struktura](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
     - [Wyliczenie COR_PRF_HIGH_MONITOR](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
     - [GetAssemblyReferences, metoda](../unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
     - [GetEventMask2, metoda](../unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
@@ -1785,7 +1789,7 @@ Program ASP.NET 4.5 i 4.5.1 dodaje powiązanie modelu dla formularzy sieci Web, 
 
 - [ASP.NET 4.5 and Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
-- [Rozszerzenie ASP.NET and Web Tools dla programu Visual Studio 2013 — informacje o wersji](/aspnet/visual-studio/overview/2013/release-notes)
+- [Platforma ASP.NET i narzędzia Web Tools dla programu Visual Studio 2013 — informacje o wersji](/aspnet/visual-studio/overview/2013/release-notes)
 
 ### <a name="networking-a-namenetworking-"></a>Sieć <a name="networking" />
 

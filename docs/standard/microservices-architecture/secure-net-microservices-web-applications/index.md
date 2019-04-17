@@ -4,12 +4,12 @@ description: Zabezpieczenia w Mikrousługach .NET i aplikacji sieci Web - Get w 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 3e2598f58bf2fb34a7ad7c107066d34e0e7c3408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464817"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611565"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Bezpieczne Mikrousług .NET i aplikacji sieci Web
 
@@ -289,13 +289,13 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
 - **Michell Anicas. Wprowadzenie do protokołu OAuth 2** \
-  [https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
+  <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (repozytorium GitHub dla dostawców uwierzytelniania OAuth ASP.NET) \
-  [https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+  <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
 - **Danny Strockis. Integrowanie usługi Azure AD dla aplikacji sieci web ASP.NET Core** \
-  [https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)
+  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
 
 - **IdentityServer4. Oficjalna dokumentacja** \
   <https://identityserver4.readthedocs.io/en/latest/>

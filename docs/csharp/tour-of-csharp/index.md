@@ -45,11 +45,11 @@ Hello, World
 
 Program "Hello, World" rozpoczyna się od dyrektywy `using`, która odwołuje się do przestrzeni nazw `System`. Przestrzenie nazw zawierają hierarchiczny sposób organizowania programów C# i biblioteki. Przestrzenie nazw zawierają typy i inne przestrzenie nazw — na przykład przestrzeń nazw `System` zawiera wiele typów, takie jak klasa `Console`, do której odwołuje się program i wiele innych przestrzeni nazw, takich jak `IO` i `Collections`. A dyrektywa `using`, która odwołuje się do danej przestrzeni nazw umożliwia niekwalifikowane korzystanie z typów, które są elementami członkowskimi tej przestrzeni nazw. Z powodu dyrektywy `using`, można użyć polecenia `Console.WriteLine` jako skrót dla `System.Console.WriteLine`.
 
-`Hello` Klasy zadeklarowanej przez program "Hello, World" zawiera jeden element członkowski metodę o nazwie `Main`. `Main` Metody jest zadeklarowana za pomocą modyfikator statyczny. Podczas gdy metody wystąpienia można odwołania konkretnego wystąpienia obiektu otaczającej przy użyciu słowa kluczowego `this`, metody statyczne działać bez odwołania do określonego obiektu. Zgodnie z Konwencją statyczną metodę o nazwie `Main` służy jako punkt wejścia programu.
+Klasa `Hello` zadeklarowa przez program "Hello, World" zawiera jedną składową którą jest metoda o nazwie `Main`. Metoda `Main` jest zadeklarowana za pomocą słowa kluczowego `static`. Podczas gdy zwykłe metody wymagają stworzenia obiektu z klasy której są składową aby z nich skorzystać, to metody statyczne już takiej instancji nie wymagają, a co za tym idzie nie można w takich metodach korzystać ze słowa kluczowego `this` służącego do odwołania się do obecnego obiektu, ponieważ taki obiekt może nie istnieć. Zgodnie z konwencją, statyczna metoda o nazwie `Main` służy jako punkt startowy programu.
 
-Dane wyjściowe programu jest generowany przez `WriteLine` metody `Console` klasy w `System` przestrzeni nazw. Ta klasa jest zapewniana przez bibliotek standardowych klas, które domyślnie są automatycznie dołączane do kompilatora.
+Dane wyjściowe programu są generowane przez metodę `WriteLine` klasy `Console` w przestrzeni nazw `System`. Ta klasa jest zapewniana przez bibliotekę klas standardowych, które domyślnie są automatycznie dołączane do kompilatora.
 
-Istnieje o wiele więcej, aby dowiedzieć się więcej na temat C#.  Poniższe tematy zawierają omówienie elementów C# języka. Te przeglądy będzie podawanie ogólnych informacji o wszystkich elementach języka i zapewnić informacje niezbędne do Dowiedz się więcej na elementy C# języka:
+Aby dowiedzieć się więcej na temat C# zajrzyj do poniższych tematów zawierających ogólne omówienie elementów języka C#. Te tematy zapewnią ci informacje niezbędne do pracy z tym językiem. Dowiedz się więcej o języku C#:
 
 * [Struktura programu](program-structure.md)
   - Dowiedz się, podstawowych pojęć organizacji w C# języka: ***programy***, ***przestrzenie nazw***, ***typy***, ***członków***i ***zestawy***.

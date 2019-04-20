@@ -12,38 +12,38 @@ ms.locfileid: "59481096"
 ---
 # <a name="a-tour-of-the-c-language"></a>Przewodnik po przykładzie C# języka
 
-C# (Wymowa: "Zobacz Sharp") to proste, nowoczesnych, zorientowane obiektowo i bezpieczny typowo język programowania. C#korzenie jego rodziny C języków, będzie znane w programowaniu w języku C, C++, Java i JavaScript. Ten przewodnik zawiera omówienie głównych składników języka. Jeśli chcesz poznać język za pomocą interaktywnych przykłady, Wypróbuj nasz [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) samouczków.
+C# (Wymowa: "Si Sharp") to prosty, nowoczesny, zorientowany obiektowo i bezpieczny typowo język programowania. Korzenie C# sięgają rodziny języków C i powinien być przyjazny dla programistów C, C++, Java i JavaScript. Ten przewodnik zawiera omówienie głównych składników języka. Jeśli chcesz poznać język za pomocą interaktywnych przykładów, wypróbuj nasze [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) samouczki.
 
-C# to język obiektowy, ale C# dalsze obejmuje obsługę ***zorientowanego na*** programowania. Projektowania oprogramowania współczesnych coraz bardziej opiera się na składniki oprogramowania w postaci pakietów niezależna i samoopisujące funkcji. Kluczem do takich składników jest, czy stanowią one model programowania za pomocą właściwości, metod i zdarzeń; mają atrybuty, które zapewniają deklaracyjne informacje o składniku; i obejmują one we własnej dokumentacji. C#udostępnia konstrukcji języka, aby bezpośrednio obsługują te pojęcia, dzięki czemu C# bardzo języka naturalnego, w której do tworzenia i używania składników oprogramowania.
+C# to język zorientowany obiektowo, ale również obsługuje ***podejście modułowe*** programowania. Współcześnie projektowanie oprogramowania coraz bardziej opiera się na dzielenie całego programu na pakiety w postaci zbiorów niezależnych i samoopisujących się funkcji. Kluczem do takiego podejścia jest wykorzystanie właściwości, metod i zdarzeń tworzonych obiektów; mają one atrybuty, które zapewniają deklaracje informacji o pakiecie; i mogą one być opisane za pomocą oddzielnych dokumentacji. C# udostępnia dokumentację opisującą konstrukcję języka, aby bezpośrednio wyjaśnić pojęcia z nią związane, dzięki czemu język C# jest bardzo naturalny przy tworzeniu i wykorzystywaniu części składowych oprogramowania.
 
-Kilka C# funkcje pomocy do tworzenia niezawodnych i trwałych aplikacji: ***Wyrzucanie elementów bezużytecznych*** automatycznie odzyskuje pamięć zajmowanych przez nieosiągalne obiekty nieużywane; ***wyjątków*** ze strukturą i rozszerzalny podejście do wykrywania błędów i odzyskiwania; i ***bezpieczny*** projekt języka umożliwia odczytywanie niezainicjowane zmienne Indeksowanie tablic poza ich zakresem, lub wykonać unchecked typu rzutowania.
+C# ma również bardzo pomocne funkcje służące do tworzenia niezawodnych i trwałych aplikacji: ***Garbage collection*** służący do automatycznego odzyskiwania pamięci zajmowanej przez nieosiągalne i nieużywane obiekty; ***Wychwytywanie wyjątków*** służące do prezechwytywania i obsługiwania błędów; oraz ***Bezpieczne typowanie*** uniemożliwiające odczytywanie niezainicjowane zmiennych, indeksowanie tablic poza ich zakresem, lub wykonywanie rzutowania na siebie nie znanych typów.
 
-C# ma ***unified system typów***. Wszystkie C# typów, w tym typów podstawowych takich jak `int` i `double`, dziedziczą z jednym elementem głównym `object` typu. W efekcie wszystkie typy udostępnić zestaw typowych operacji, a wartości dowolnego typu mogą być przechowywane, transportowane i wykonywane są operacje w sposób ciągły. Ponadto, C# obsługuje typy odwołań zdefiniowanych przez użytkownika i typów wartości, umożliwiając dynamiczna alokacja obiektów, a także magazynu w tekście uproszczone struktur.
+C# ma ***własny system typów***. Wszystkie typy danych, w tym typy podstawowe takie jak `int`, czy `double`, dziedziczą z jednego typu głównego `object`. W efekcie wszystkie typy udostępniają zestaw pewnych metod, a wartości dowolnego typu mogą być przechowywane, transportowane i wykorzystywane do różnych operacji w sposób ciągły. Ponadto, C# obsługuje typy odwołań i wartości zdefiniowane przez użytkownika, umożliwiając dynamiczna alokacja obiektów, a także magazynowanie uproszczonych struktur.
 
 Aby upewnić się, że C# programów i bibliotek mogą z czasem ewoluować w sposób zgodny, znacznie większym naciskiem został umieszczony na ***versioning*** w C#projekt. Wiele języków programowania interesuje tego problemu, a w rezultacie, programy napisane w tych języków podziału częściej niż to konieczne, w przypadku nowszych wersjach zależne biblioteki zostały wprowadzone. Aspekty C#przez projekt, który zostały bezpośrednio wpływa uwagi dotyczące wersji zawierają oddzielny `virtual` i `override` modyfikatorów, reguły dla rozwiązania przeciążenia metody i pomoc techniczna dla deklaracji elementu członkowskiego interfejsu jawnego.
 
-## <a name="hello-world"></a>Cześć ludzie
+## <a name="hello-world"></a>Hello World
 
-Program "Hello, World" tradycyjnie umożliwia wprowadzenie języka programowania. Poniżej przedstawiono w języku C#:
+Program "Hello, World" tradycyjnie umożliwia wprowadzenie do języka programowania. Poniżej przedstawiono taki program napisany w języku C#:
 
 [!code-csharp[Hello World](../../../samples/snippets/csharp/tour/hello/Program.cs#L1-L8)]
 
-Pliki źródłowe C# zazwyczaj mają rozszerzenie pliku `.cs`. Przy założeniu, że program "Hello, World" jest przechowywany w pliku `hello.cs`, program może być skompilowana przy użyciu wiersza polecenia:
+Pliki źródłowe C# zazwyczaj mają rozszerzenie `.cs`. Przy założeniu, że program "Hello, World" jest przechowywany w pliku `hello.cs`, program może być skompilowany przy użyciu wiersza poleceń:
 
 ```console
 csc hello.cs
 ```
 
-który tworzy zestaw pliku wykonywalnego o nazwie hello.exe. Dane wyjściowe generowane przez tę aplikację po jej uruchomieniu są:
+który tworzy pliku wykonywalny o nazwie hello.exe. Dane wyjściowe generowane przez tę aplikację po jej uruchomieniu to:
 
 ```console
 Hello, World
 ```
 
 > [!IMPORTANT]
-> `csc` Polecenie kompiluje dla pełnej struktury i mogą nie być dostępne na wszystkich platformach.
+> `csc` Polecenie kompiluje dla pełnej struktury i może nie być dostępne na wszystkich platformach.
 
-Program "Hello, World" rozpoczyna się od `using` dyrektywę, który odwołuje się do `System` przestrzeni nazw. Przestrzenie nazw zawierają hierarchiczny sposób organizowania programów C# i biblioteki. Przestrzenie nazw zawierają typy i inne przestrzenie nazw — na przykład `System` przestrzeń nazw zawiera wiele typów, takie jak `Console` klasy, do którego odwołuje się program i wiele innych przestrzeniach nazw, takich jak `IO` i `Collections`. A `using` dyrektywę, który odwołuje się do danej przestrzeni nazw umożliwia niekwalifikowanej korzystanie z typów, które są elementami członkowskimi tej przestrzeni nazw. Z powodu `using` dyrektywy, można użyć programu `Console.WriteLine` jako skrót dla `System.Console.WriteLine`.
+Program "Hello, World" rozpoczyna się od dyrektywy `using`, która odwołuje się do przestrzeni nazw `System`. Przestrzenie nazw zawierają hierarchiczny sposób organizowania programów C# i biblioteki. Przestrzenie nazw zawierają typy i inne przestrzenie nazw — na przykład przestrzeń nazw `System` zawiera wiele typów, takie jak klasa `Console`, do której odwołuje się program i wiele innych przestrzeni nazw, takich jak `IO` i `Collections`. A dyrektywa `using`, która odwołuje się do danej przestrzeni nazw umożliwia niekwalifikowane korzystanie z typów, które są elementami członkowskimi tej przestrzeni nazw. Z powodu dyrektywy `using`, można użyć polecenia `Console.WriteLine` jako skrót dla `System.Console.WriteLine`.
 
 `Hello` Klasy zadeklarowanej przez program "Hello, World" zawiera jeden element członkowski metodę o nazwie `Main`. `Main` Metody jest zadeklarowana za pomocą modyfikator statyczny. Podczas gdy metody wystąpienia można odwołania konkretnego wystąpienia obiektu otaczającej przy użyciu słowa kluczowego `this`, metody statyczne działać bez odwołania do określonego obiektu. Zgodnie z Konwencją statyczną metodę o nazwie `Main` służy jako punkt wejścia programu.
 

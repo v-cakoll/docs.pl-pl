@@ -11,10 +11,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
 ms.openlocfilehash: 848ae7c88e2531806bf97b05cc0fe6d2388977fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162374"
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Instrukcje: manipulowanie paskami w kontrolce DataGridView formularzy systemu Windows
@@ -38,4 +38,4 @@ Poniższy przykład kodu pokazuje różne sposoby manipulowania <xref:System.Win
 - <xref:System.Windows.Forms.DataGridViewBand>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows](programming-with-cells-rows-and-columns-in-the-datagrid.md)
+- [Programowanie przy użyciu komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](programming-with-cells-rows-and-columns-in-the-datagrid.md)

@@ -13,10 +13,10 @@ ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083845"
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
@@ -79,9 +79,9 @@ Podobne dane często mogą być obsługiwane efektywniej przy zachowywaniu i mod
 |[Wybieranie klasy kolekcji](../../../docs/standard/collections/selecting-a-collection-class.md)|W tym artykule opisano różne kolekcje, a następnie pomoże Ci wybrać jeden dla danego scenariusza.|  
 |[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|W tym artykule opisano typy powszechnie używane kolekcji rodzajowych i nierodzajowych, takie jak <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
 |[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|Omawia stosowanie rodzajowych typów kolekcji.|  
-|[Porównywanie i sortowanie w kolekcjach](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono używanie porównania równości i sortowania porównania w kolekcjach.|  
-|[Sortowane typów kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|Opisuje kolekcje posortowane wydajności i właściwości|  
-|[Typy kolekcji tablic wartości funkcji mieszającej i słowników](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Opisuje funkcje typów ogólnych i nieogólnych słownika bazujących na skrótach.|  
+|[Porównywanie i sortowanie w ramach kolekcji](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono używanie porównania równości i sortowania porównania w kolekcjach.|  
+|[Sortowane typy kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|Opisuje kolekcje posortowane wydajności i właściwości|  
+|[Typy kolekcji: słownikowy i tabela skrótów](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Opisuje funkcje typów ogólnych i nieogólnych słownika bazujących na skrótach.|  
 |[Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)|Opisuje typy kolekcji, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> obsługujące bezpieczny i skuteczny równoczesny dostęp z wielu wątków.|  
 |System.Collections.Immutable|Wprowadza kolekcje niezmienialne i dostarcza łącza do typów kolekcji.|  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089585"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<Dodaj >, Element dla \<odbiorników > dla \<śledzenia >
@@ -39,9 +39,9 @@ Dodaje odbiornik do **odbiorników** kolekcji.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**— typ**|Atrybut wymagany.<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|**type**|Atrybut wymagany.<br /><br /> Określa typ odbiornika. Należy użyć ciągu, który spełnia wymagania określone w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |**initializeData**|Atrybut opcjonalny.<br /><br /> Ciąg przekazany do konstruktora dla określonej klasy.|  
-|**nazwa**|Atrybut opcjonalny.<br /><br /> Określa nazwę odbiornika.|  
+|**Nazwa**|Atrybut opcjonalny.<br /><br /> Określa nazwę odbiornika.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -109,4 +109,4 @@ Dodaje odbiornik do **odbiorników** kolekcji.
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Obiekty nasłuchujące śledzenia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Obiekty nasłuchujące śledzenie](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

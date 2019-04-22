@@ -5,10 +5,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
 ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124725"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Tryb wirtualny w formancie DataGridView formularzy systemu Windows
@@ -66,7 +66,7 @@ Tryb wirtualny, można zarządzać interakcji między <xref:System.Windows.Forms
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows](implementing-virtual-mode-wf-datagridview-control.md)
-- [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

@@ -5,10 +5,10 @@ ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 20657e0a583890b851ab8e15c50bce791a3641b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094492"
 ---
 # <a name="property-element-net-native"></a>\<Właściwość > (architektura .NET Native)
@@ -54,7 +54,7 @@ Zastosowanie zasad odbicia środowiska uruchomieniowego do właściwości.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  

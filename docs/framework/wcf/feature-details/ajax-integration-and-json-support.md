@@ -5,10 +5,10 @@ helpviewer_keywords:
 - AJAX integration and JSON support [WCF]
 ms.assetid: 3851a8fc-d861-4ac1-873c-96af0343d3a7
 ms.openlocfilehash: a3d9c29f3223624653f2d568bb351d90334a4318
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137114"
 ---
 # <a name="ajax-integration-and-json-support"></a>Obsługa integracji AJAX i notacji JSON
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) obsługuje ASP.NET asynchronicznego języ
  [Obsługa formatu JSON i innych formatów transferowania danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)  
  W tym artykule opisano obsługi formatu JSON, zwykle używane (zamiast XML) do obsługi komunikatów z usługami ASP.NET AJAX.  
   
- [Instrukcje: migrowanie usług internetowych obsługujących technologię AJAX i opartych na platformie ASP.NET do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
+ [Instrukcje: Migrowanie usług internetowych platformy ASP.NET z włączoną obsługą technologii AJAX do programu WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)  
  W tym artykule opisano, jak przeprowadzić migrację usługi sieci Web platformy ASP.NET z obsługą technologii AJAX do usługi sieci WCF Web.  
   
 ## <a name="see-also"></a>Zobacz także

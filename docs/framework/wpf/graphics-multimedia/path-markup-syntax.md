@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082493"
 ---
 # <a name="path-markup-syntax"></a>Składni znacznikowania ścieżki
@@ -57,7 +57,7 @@ ms.locfileid: "59082493"
   
 |Termin|Opis|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Określa, czy <xref:System.Windows.Media.StreamGeometry> używa <xref:System.Windows.Media.FillRule.EvenOdd> lub <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Określa <xref:System.Windows.Media.FillRule.EvenOdd> reguły wypełniania.<br />-   `F1` Określa <xref:System.Windows.Media.FillRule.Nonzero> reguły wypełniania.<br /><br /> Jeżeli pominięto tego polecenia, ścieżka podrzędna używa zachowanie domyślne, czyli <xref:System.Windows.Media.FillRule.EvenOdd>. Jeśli określisz tego polecenia, należy go najpierw umieścić.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Określa, czy <xref:System.Windows.Media.StreamGeometry> używa <xref:System.Windows.Media.FillRule.EvenOdd> lub <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Określa <xref:System.Windows.Media.FillRule.EvenOdd> reguły wypełniania.<br />-   `F1` Określa <xref:System.Windows.Media.FillRule.Nonzero> reguły wypełniania.<br /><br /> Jeżeli pominięto tego polecenia, ścieżka podrzędna używa zachowanie domyślne, czyli <xref:System.Windows.Media.FillRule.EvenOdd>. Jeśli określisz tego polecenia, należy go najpierw umieścić.|  
 |*figureDescription*|Rysunek, składające się z poleceniem przenoszenia narysuj poleceń i opcjonalnie polecenie Zamknij.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Polecenie przenoszenia, która określa punkt początkowy liczby. Zobacz [polecenie Przenieś](#themovecommand) sekcji.|  
 |*drawCommands*|Co najmniej jeden polecenia rysowania, które opisują rysunek zawartość. Zobacz [polecenia rysowania](#drawcommands) sekcji.|  
@@ -114,11 +114,11 @@ Wielkie litery `H` wskazuje, że `x` jest wartością bezwzględną; małymi lit
 
 |Składnia|  
 |------------|  
-|`V`  *t*<br /><br /> - lub -<br /><br /> `v`  *t*|  
+|`V`  *y*<br /><br /> - lub -<br /><br /> `v`  *y*|  
   
 |Termin|Opis|  
 |----------|-----------------|  
-|*t*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna y punktu końcowego linii.|  
+|*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Współrzędna y punktu końcowego linii.|  
 
 Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi literami `v` wskazuje, że `y` to przesunięcie do wcześniejszego punktu lub (0,0), jeśli żaden nie istnieje.  
     
@@ -200,7 +200,7 @@ Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi lit
   
 |Składnia|  
 |------------|  
-|`x` `,` `y`<br /><br /> - lub -<br /><br /> `x` `y`|  
+|`x` `,` `y`<br /><br /> - lub -<br /><br /> `x``y`|  
   
 |Termin|Opis|  
 |----------|-----------------|  
@@ -228,6 +228,6 @@ Wielkie litery `V` wskazuje, że `y` jest wartością bezwzględną; małymi lit
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
-- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Przegląd Geometria](geometry-overview.md)
-- [— Tematy porad](geometries-how-to-topics.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Geometria — przegląd](geometry-overview.md)
+- [Tematy z instrukcjami](geometries-how-to-topics.md)

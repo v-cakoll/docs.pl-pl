@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097554"
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
@@ -198,5 +198,5 @@ Zakończenie naszej dyskusji w tym przykładzie. Aby uzyskać pełny przykład, 
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](how-to-find-datatemplate-generated-elements.md)
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [Przegląd Style nagłówka kolumn i szablonów GridView](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [GridView — style i szablony nagłówków kolumn — omówienie](../controls/gridview-column-header-styles-and-templates-overview.md)

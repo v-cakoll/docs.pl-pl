@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 745917af176de47999737c87833c23df9c75ea7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080868"
 ---
 # <a name="icordebugeval-interface"></a>ICorDebugEval, interfejs
@@ -31,7 +31,7 @@ Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debug
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Abort — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Przerywa obliczeń, to `ICorDebugEval` wykonuje obecnie obiektu.|  
+|[Abort, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Przerywa obliczeń, to `ICorDebugEval` wykonuje obecnie obiektu.|  
 |[CallFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Konfiguruje wywołanie do określonej funkcji. (Przestarzałe w wersji 2.0 .NET Framework; użyj [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast.)|  
 |[CreateValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Pobiera wskaźnik interfejsu do określonego typu obiektu "ICorDebugValue" o wartości początkowej zero lub wartość null. (Przestarzałe w programie .NET Framework 2.0; użyj [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) zamiast.)|  
 |[GetResult, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Pobiera wskaźnik interfejsu do `ICorDebugValue` zawierający wyniki obliczeń.|  
@@ -65,4 +65,4 @@ Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debug
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

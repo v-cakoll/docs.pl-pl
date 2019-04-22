@@ -14,10 +14,10 @@ helpviewer_keywords:
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
 ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166208"
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
@@ -63,5 +63,5 @@ ms.locfileid: "59166208"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)

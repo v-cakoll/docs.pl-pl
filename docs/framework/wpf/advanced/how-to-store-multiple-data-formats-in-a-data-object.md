@@ -10,10 +10,10 @@ helpviewer_keywords:
 - drag-and-drop [WPF], storing multiple formats
 ms.assetid: 941ace29-29c4-4c26-b75b-ea7d06aa0d69
 ms.openlocfilehash: 3f8e7233e1d28fec1f7dac114b04287aa3aff49f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085054"
 ---
 # <a name="how-to-store-multiple-data-formats-in-a-data-object"></a>Instrukcje: Przechowanie wielu formatów danych w obiekcie danych
@@ -30,4 +30,4 @@ Poniższy przykład pokazuje, jak używać <xref:System.Windows.DataObject.SetDa
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.IDataObject>
-- [Przegląd Przeciąganie i upuszczanie](drag-and-drop-overview.md)
+- [Przegląd przeciągania i upuszczania](drag-and-drop-overview.md)

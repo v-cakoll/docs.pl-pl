@@ -3,10 +3,10 @@ title: Definicje typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096026"
 ---
 # <a name="type-definitions-entity-sql"></a>Definicje typów (jednostka SQL)
@@ -37,7 +37,7 @@ Definicja typu jest używana w instrukcji deklaracji elementu [!INCLUDE[esql](..
   
 -   `IdentifierName` WIERSZ (`property_definition`), lub  
   
--   `IdentifierName` REF (`supported_entity_type`)  
+-   `IdentifierName` REF(`supported_entity_type`)  
   
  Opcja definicji właściwości jest `IdentifierName type_definition`.  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

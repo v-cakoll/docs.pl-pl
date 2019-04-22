@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124153"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows
@@ -32,6 +32,6 @@ W formularzach Windows Forms dane wejściowe użytkownika są wysyłane do aplik
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dane użytkownika w formularzach systemu Windows](user-input-in-windows-forms.md)
-- [Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows](keyboard-input-in-a-windows-forms-application.md)
+- [Dane użytkownika w formularzach Windows Forms](user-input-in-windows-forms.md)
+- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](keyboard-input-in-a-windows-forms-application.md)
 - [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](mouse-input-in-a-windows-forms-application.md)

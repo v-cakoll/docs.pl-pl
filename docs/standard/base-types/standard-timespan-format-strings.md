@@ -20,10 +20,10 @@ ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1bf7424c8aa2ae816340f6fa641e5c79a56ae0dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834130"
 ---
 # <a name="standard-timespan-format-strings"></a>Standardowe ciągi formatujące TimeSpan

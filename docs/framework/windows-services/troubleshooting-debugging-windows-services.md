@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
 ms.openlocfilehash: 0552fc005a25e83065bb44e425770f9cef84f71b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082584"
 ---
 # <a name="troubleshooting-debugging-windows-services"></a>Rozwiązywanie problemów: Debugowanie usług Windows
@@ -26,5 +26,5 @@ Podczas debugowania aplikacji usługi Windows, usługi i **Windows Service Manag
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
+- [Instrukcje: Debugowanie aplikacji usług Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
 - [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187294"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress — Metoda
@@ -60,6 +60,6 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugInternalFrame2 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugInternalFrame2, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

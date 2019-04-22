@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
 ms.openlocfilehash: e35df9a5dacc5f281af48cec292a09b291312119
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124517"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania
@@ -29,4 +29,4 @@ Windows Communication Foundation (WCF) udostępnia kilka tryby, według których
 ## <a name="see-also"></a>Zobacz także
 
 - [Tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)
-- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

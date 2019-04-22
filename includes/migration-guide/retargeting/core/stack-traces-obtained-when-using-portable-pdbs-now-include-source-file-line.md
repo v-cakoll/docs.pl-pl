@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 384f8c7fa08b69c13d05edb3404787d428dad837
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234047"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774077"
 ---
 ### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>Ślady stosu uzyskane podczas przy użyciu przenośnych plików PDB teraz obejmować informacje o pliku i wiersza źródłowego, jeśli jest to wymagane
 

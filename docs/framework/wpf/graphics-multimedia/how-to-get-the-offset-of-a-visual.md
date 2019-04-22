@@ -11,10 +11,10 @@ helpviewer_keywords:
 - retrieving offset values from visual objects [WPF]
 ms.assetid: 889a1dd6-1b11-445a-b351-fbb04c53ee34
 ms.openlocfilehash: 4787b771c7e59a8b033b9267079c068a5845a1e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093413"
 ---
 # <a name="how-to-get-the-offset-of-a-visual"></a>Instrukcje: Pobieranie przesunięcia wizualizacji
@@ -69,4 +69,4 @@ Zagnieżdżone w obrębie dwóch StackPanels TextBlock
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

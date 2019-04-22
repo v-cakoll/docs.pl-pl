@@ -12,11 +12,11 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], displaying for Windows Forms
 ms.assetid: aaac1b38-c651-495a-8d3d-5a9bfb32fee3
 ms.openlocfilehash: b99f2273dae88faf86448da6e1d2986a83803abf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311087"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773821"
 ---
 # <a name="how-to-display-dialog-boxes-for-windows-forms"></a>Instrukcje: Wyświetlanie okien dialogowych formularzy Windows Forms
 Okno dialogowe jest wyświetlane w taki sam sposób, jak wyświetlać jakąkolwiek inną formę w aplikacji. Formularz początkowy ładuje się automatycznie, gdy aplikacja jest uruchomiona. Aby wprowadzić drugi formularz lub okno dialogowe, które są wyświetlane w aplikacji, należy napisać kod, ładowania i wyświetlania ich. Podobnie aby formularza lub okna dialogowego pole znikną, napisz kod, aby zwolnić lub je ukryć.  

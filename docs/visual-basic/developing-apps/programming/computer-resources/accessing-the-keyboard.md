@@ -8,29 +8,29 @@ helpviewer_keywords:
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
 ms.openlocfilehash: 00cdf18d057ca8a5c59cde02759b5c8c572a8bba
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823574"
 ---
-# <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="509d1-102">Uzyskiwanie dostępu do klawiatury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="509d1-102">Accessing the Keyboard (Visual Basic)</span></span>
-<span data-ttu-id="509d1-103">`My.Computer.Keyboard` Obiekt zawiera właściwości do uzyskiwania dostępu do bieżącego stanu klawiatury, takie jak klucze, które są aktualnie naciśnięciu i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.</span><span class="sxs-lookup"><span data-stu-id="509d1-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  
+# <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="ca6ba-102">Uzyskiwanie dostępu do klawiatury (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca6ba-102">Accessing the Keyboard (Visual Basic)</span></span>
+<span data-ttu-id="ca6ba-103">`My.Computer.Keyboard` Obiekt zawiera właściwości do uzyskiwania dostępu do bieżącego stanu klawiatury, takie jak klucze, które są aktualnie naciśnięciu i udostępnia metodę Wyślij naciśnięcia klawiszy do aktywnego okna.</span><span class="sxs-lookup"><span data-stu-id="ca6ba-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="509d1-104">Zadania</span><span class="sxs-lookup"><span data-stu-id="509d1-104">Tasks</span></span>  
- <span data-ttu-id="509d1-105">Poniższa tabela zawiera listę zadań skojarzonych z `My.Computer.Keyboard` obiektów i punktów do tematów ukazujące sposób wykonania poszczególnych zadań.</span><span class="sxs-lookup"><span data-stu-id="509d1-105">This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.</span></span>  
+## <a name="tasks"></a><span data-ttu-id="ca6ba-104">Zadania</span><span class="sxs-lookup"><span data-stu-id="ca6ba-104">Tasks</span></span>  
+ <span data-ttu-id="ca6ba-105">Poniższa tabela zawiera listę zadań skojarzonych z `My.Computer.Keyboard` obiektów i punktów do tematów ukazujące sposób wykonania poszczególnych zadań.</span><span class="sxs-lookup"><span data-stu-id="ca6ba-105">This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.</span></span>  
   
-|<span data-ttu-id="509d1-106">Zadanie</span><span class="sxs-lookup"><span data-stu-id="509d1-106">To</span></span>|<span data-ttu-id="509d1-107">Zobacz</span><span class="sxs-lookup"><span data-stu-id="509d1-107">See</span></span>|  
+|<span data-ttu-id="ca6ba-106">Zadanie</span><span class="sxs-lookup"><span data-stu-id="ca6ba-106">To</span></span>|<span data-ttu-id="ca6ba-107">Zobacz</span><span class="sxs-lookup"><span data-stu-id="ca6ba-107">See</span></span>|  
 |--------|---------|  
-|<span data-ttu-id="509d1-108">Określić, czy klawisz CAPS LOCK jest włączony</span><span class="sxs-lookup"><span data-stu-id="509d1-108">Determine whether CAPS LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
-|<span data-ttu-id="509d1-109">Ustal, czy klawisz SHIFT jest wciśnięty</span><span class="sxs-lookup"><span data-stu-id="509d1-109">Determine whether the SHIFT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
-|<span data-ttu-id="509d1-110">Ustal, czy klawisz ALT jest wciśnięty</span><span class="sxs-lookup"><span data-stu-id="509d1-110">Determine whether the ALT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
-|<span data-ttu-id="509d1-111">Ustal, czy klawisz CTRL jest wciśnięty</span><span class="sxs-lookup"><span data-stu-id="509d1-111">Determine whether the CTRL key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
-|<span data-ttu-id="509d1-112">Określić, czy NUM LOCK jest włączony</span><span class="sxs-lookup"><span data-stu-id="509d1-112">Determine whether NUM LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
-|<span data-ttu-id="509d1-113">Określić, czy SCROLL LOCK jest włączony</span><span class="sxs-lookup"><span data-stu-id="509d1-113">Determine whether SCROLL LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|<span data-ttu-id="509d1-114">Uruchom aplikację i wysyłać je naciśnięć klawiszy</span><span class="sxs-lookup"><span data-stu-id="509d1-114">Start an application and send it keystrokes</span></span>|[<span data-ttu-id="509d1-115">Instrukcje: Uruchamianie aplikacji i wysyłanie do niej uderzeń w klawisze (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="509d1-115">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|<span data-ttu-id="ca6ba-108">Określić, czy klawisz CAPS LOCK jest włączony</span><span class="sxs-lookup"><span data-stu-id="ca6ba-108">Determine whether CAPS LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
+|<span data-ttu-id="ca6ba-109">Ustal, czy klawisz SHIFT jest wciśnięty</span><span class="sxs-lookup"><span data-stu-id="ca6ba-109">Determine whether the SHIFT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
+|<span data-ttu-id="ca6ba-110">Ustal, czy klawisz ALT jest wciśnięty</span><span class="sxs-lookup"><span data-stu-id="ca6ba-110">Determine whether the ALT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
+|<span data-ttu-id="ca6ba-111">Ustal, czy klawisz CTRL jest wciśnięty</span><span class="sxs-lookup"><span data-stu-id="ca6ba-111">Determine whether the CTRL key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
+|<span data-ttu-id="ca6ba-112">Określić, czy NUM LOCK jest włączony</span><span class="sxs-lookup"><span data-stu-id="ca6ba-112">Determine whether NUM LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
+|<span data-ttu-id="ca6ba-113">Określić, czy SCROLL LOCK jest włączony</span><span class="sxs-lookup"><span data-stu-id="ca6ba-113">Determine whether SCROLL LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
+|<span data-ttu-id="ca6ba-114">Uruchom aplikację i wysyłać je naciśnięć klawiszy</span><span class="sxs-lookup"><span data-stu-id="ca6ba-114">Start an application and send it keystrokes</span></span>|[<span data-ttu-id="ca6ba-115">Instrukcje: Uruchamianie aplikacji i wysyłanie do niej uderzeń w klawisze (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ca6ba-115">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a><span data-ttu-id="509d1-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="509d1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ca6ba-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ca6ba-116">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>

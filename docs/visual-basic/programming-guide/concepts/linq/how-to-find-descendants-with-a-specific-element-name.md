@@ -3,10 +3,10 @@ title: 'Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie eleme
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
 ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816841"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie elementu (Visual Basic)

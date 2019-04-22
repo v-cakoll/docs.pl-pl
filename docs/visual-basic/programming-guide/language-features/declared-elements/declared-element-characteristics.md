@@ -14,10 +14,10 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821300"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Zadeklarowana charakterystyka elementów (Visual Basic)
@@ -38,18 +38,18 @@ A *cechy* zadeklarowany element jest elementem tego elementu, który ma wpływ n
 |-------------|---------------|--------------|------------------------|------------------|  
 |Zmienna|Tak|Yes|Yes|Tak|  
 |Stała|Tak|Nie|Yes|Tak|  
-|Wyliczenie|Tak|Nie|Yes|Tak|  
-|Struktura|Nie|Nie|Yes|Tak|  
-|Właściwość|Tak|Yes|Yes|Tak|  
+|Wyliczenie|Tak|Nie|Yes|Yes|  
+|Struktura|Nie|Nie|Yes|Yes|  
+|Właściwość|Yes|Yes|Yes|Tak|  
 |Metoda|Nie|Yes|Yes|Tak|  
 |Procedura (`Sub` lub `Function`)|Nie|Yes|Yes|Tak|  
-|Parametr procedury|Tak|Yes|Yes|Nie|  
-|Return — funkcja|Tak|Yes|Yes|Nie|  
-|Operator|Tak|Nie|Yes|Tak|  
+|Parametr procedury|Yes|Yes|Yes|Nie|  
+|Return — funkcja|Yes|Yes|Yes|Nie|  
+|Operator|Yes|Nie|Yes|Tak|  
 |Interface|Nie|Nie|Yes|Tak|  
-|Class|Nie|Nie|Yes|Tak|  
+|Class|Nie|Nie|Yes|Yes|  
 |Zdarzenie|Nie|Nie|Yes|Tak|  
-|Delegate|Nie|Nie|Yes|Tak|  
+|Delegate|Nie|Nie|Yes|Yes|  
   
  <sup>1</sup> zakres jest czasami określane jako *widoczność*.  
   

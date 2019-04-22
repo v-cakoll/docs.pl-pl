@@ -24,10 +24,10 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826330"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next — Instrukcja (Visual Basic)
@@ -130,9 +130,9 @@ Next [ counter ]
   
 |Jest `datatype` obecne?|Jest `counter` już zdefiniowane?|Wynik (czy `counter` definiuje Nowa zmienna lokalna, które są ograniczone do całej `For...Next` pętli)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|Nie|Tak|Nie, ponieważ `counter` jest już zdefiniowany. Jeśli zakres `counter` nie jest lokalnym do procedury występuje ostrzeżenie kompilacji.|  
+|Nie|Yes|Nie, ponieważ `counter` jest już zdefiniowany. Jeśli zakres `counter` nie jest lokalnym do procedury występuje ostrzeżenie kompilacji.|  
 |Nie|Nie|Tak. Typ danych jest wnioskowany z `start`, `end`, i `step` wyrażenia. Aby uzyskać informacji na temat wnioskowanie o typie, zobacz [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md) i [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Tak|Tak|Tak, ale tylko wtedy, gdy istniejące `counter` zmienna jest zdefiniowana poza procedury. Tej zmiennej pozostaje oddzielnym. Jeśli zakres istniejącego `counter` zmienna jest lokalny dla procedury, wystąpi błąd kompilacji.|  
+|Yes|Tak|Tak, ale tylko wtedy, gdy istniejące `counter` zmienna jest zdefiniowana poza procedury. Tej zmiennej pozostaje oddzielnym. Jeśli zakres istniejącego `counter` zmienna jest lokalny dla procedury, wystąpi błąd kompilacji.|  
 |Tak|Nie|Tak.|  
   
  Typ danych `counter` Określa typ iteracji, która musi być jednym z następujących typów:  

@@ -3,10 +3,10 @@ title: 'Instrukcje: Zapytania LINQ to XML przy użyciu składni XPath (Visual Ba
 ms.date: 07/20/2015
 ms.assetid: e1f69a20-1efa-452d-9089-c472fa84b3d5
 ms.openlocfilehash: cff0b5f6e4bb3c64522dc13a44dd79d7c172c1b5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843080"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-visual-basic"></a>Instrukcje: Zapytania LINQ to XML przy użyciu składni XPath (Visual Basic)

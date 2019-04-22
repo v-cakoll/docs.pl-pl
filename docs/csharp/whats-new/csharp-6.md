@@ -3,10 +3,10 @@ title: Co nowego w języku C# 6 — Przewodnik po języku C#
 description: Dowiedz się, nowych funkcji w języku C# w wersji 6
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920678"
 ---
 # <a name="whats-new-in-c-6"></a>Co nowego w języku C# 6

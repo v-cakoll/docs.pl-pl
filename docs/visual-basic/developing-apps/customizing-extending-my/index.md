@@ -7,17 +7,17 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890400"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Dostosowywanie projektów i rozszerzanie My za pomocą Visual Basic
 Można dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów. Dzięki temu można łatwo innym deweloperom do znalezienia i użycia obiektów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Rozszerzanie przestrzeni nazw My w Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
+ [Rozszerzanie mojej Namespace w języku Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)  
  W tym artykule opisano sposób dodawania niestandardowych elementów członkowskich i wartości do `My` przestrzeni nazw w języku Visual Basic.  
   
  [Pakowanie i wdrażanie niestandardowych rozszerzeń My](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)  
@@ -47,4 +47,4 @@ Można dostosować szablony projektów, aby zapewnić dodatkowe `My` obiektów. 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie aplikacji za pomocą Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Tworzenie aplikacji za pomocą języka Visual Basic](../../../visual-basic/developing-apps/index.md)

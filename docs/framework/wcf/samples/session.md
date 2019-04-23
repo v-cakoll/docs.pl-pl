@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
 ms.openlocfilehash: 539d897230fc69b2c30bd2a3930b305220d8345e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309293"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768101"
 ---
 # <a name="session"></a>Sesja
 Przykładowe sesji demonstruje sposób implementacji kontraktu wymagającego sesji. Sesja tworzy kontekst do wykonywania wielu operacji. Umożliwia usłudze kojarzenie stanu z danej sesji, takie, że kolejne operacje można użyć stanu poprzednią operację. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. `ICalculator` Kontraktu została zmodyfikowana, aby zezwolić na zestaw operacji arytmetycznych do wykonania przy jednoczesnym zachowaniu wynik uruchomionych. Ta funkcja jest zdefiniowana przez `ICalculatorSession` kontraktu. Jak wiele operacji usługi są wywoływane w celu wykonywania obliczeń Usługa przechowuje informacje o stanie dla klienta. Klient może pobrać bieżący wynik, wywołując `Result()` i wyczyść wynik, który ma wartość zero, wywołując `Clear()`.  

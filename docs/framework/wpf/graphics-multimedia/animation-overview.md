@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337737"
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
@@ -331,21 +331,21 @@ ms.locfileid: "59337737"
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Przegląd Animacja i system chronometrażu](animation-and-timing-system-overview.md)|W tym artykule opisano, jak system chronometrażu używa <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> klasy, które pozwalają na tworzenie animacji.|  
-|[Porady i triki animacyjne](animation-tips-and-tricks.md)|Wyświetla listę przydatnych porad dotyczących rozwiązywania problemów z animacjami, takich jak wydajność.|  
-|[Przegląd Niestandardowe animacje](custom-animations-overview.md)|Opisuje sposób rozszerzyć systemu animacji z klatkami kluczowymi, klasy animacji lub wywołań zwrotnych w poszczególnych klatkach.|  
+|[Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)|W tym artykule opisano, jak system chronometrażu używa <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> klasy, które pozwalają na tworzenie animacji.|  
+|[Animacja — porady i wskazówki](animation-tips-and-tricks.md)|Wyświetla listę przydatnych porad dotyczących rozwiązywania problemów z animacjami, takich jak wydajność.|  
+|[Niestandardowe animacje — przegląd](custom-animations-overview.md)|Opisuje sposób rozszerzyć systemu animacji z klatkami kluczowymi, klasy animacji lub wywołań zwrotnych w poszczególnych klatkach.|  
 |Przegląd Cechy animacji od/do/przez|W tym artykule opisano sposób tworzenia animacji, które przechodzi między dwiema wartościami.|  
-|[Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)|W tym artykule opisano sposób tworzenia wielu wartości docelowej, w tym możliwość kontrolowania metodę interpolacji animacji.|  
-|[Zwalnianie funkcji](easing-functions.md)|Wyjaśnia, jak mają dotyczyć wzory matematyczne animacji można pobrać realistyczne zachowania, na przykład odbijania.|  
-|[Przegląd Animacja ścieżki](path-animations-overview.md)|Opisuje sposób przenoszenia lub obrócić obiekt na ścieżce złożone.|  
-|[Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)|W tym artykule opisano animacje tej właściwości przy użyciu scenorysów, lokalne animacji, zegary i animacje w poszczególnych klatkach.|  
-|[Przegląd Scenorysy](storyboards-overview.md)|Opisuje sposób używania scenorysy z wieloma osiami czasu tworzenia złożonych animacji.|  
-|[Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)|W tym artykule opisano <xref:System.Windows.Media.Animation.Timeline> typów i właściwości używane w animacji.|  
-|[Przegląd Zdarzenia chronometrażu](timing-events-overview.md)|Opis zdarzenia, które są dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów umożliwiającego wykonywanie kodu w punktach na osi czasu, takich jak rozpocząć, wstrzymać, wznowić, Pomiń lub zatrzymać.|  
-|[— Tematy porad](animation-and-timing-how-to-topics.md)|Zawiera przykłady kodu za pomocą animacji i osi czasu w aplikacji.|  
-|[Zegary Tematy porad](clocks-how-to-topics.md)|Zawiera przykłady kodu za pomocą <xref:System.Windows.Media.Animation.Clock> obiektu w aplikacji.|  
+|[Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)|W tym artykule opisano sposób tworzenia wielu wartości docelowej, w tym możliwość kontrolowania metodę interpolacji animacji.|  
+|[Funkcje easingu](easing-functions.md)|Wyjaśnia, jak mają dotyczyć wzory matematyczne animacji można pobrać realistyczne zachowania, na przykład odbijania.|  
+|[Animacje ścieżki — przegląd](path-animations-overview.md)|Opisuje sposób przenoszenia lub obrócić obiekt na ścieżce złożone.|  
+|[Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)|W tym artykule opisano animacje tej właściwości przy użyciu scenorysów, lokalne animacji, zegary i animacje w poszczególnych klatkach.|  
+|[Scenorysy — przegląd](storyboards-overview.md)|Opisuje sposób używania scenorysy z wieloma osiami czasu tworzenia złożonych animacji.|  
+|[Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)|W tym artykule opisano <xref:System.Windows.Media.Animation.Timeline> typów i właściwości używane w animacji.|  
+|[Zdarzenia chronometrażu — przegląd](timing-events-overview.md)|Opis zdarzenia, które są dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów umożliwiającego wykonywanie kodu w punktach na osi czasu, takich jak rozpocząć, wstrzymać, wznowić, Pomiń lub zatrzymać.|  
+|[Tematy z instrukcjami](animation-and-timing-how-to-topics.md)|Zawiera przykłady kodu za pomocą animacji i osi czasu w aplikacji.|  
+|[Zegary — tematy z instrukcjami](clocks-how-to-topics.md)|Zawiera przykłady kodu za pomocą <xref:System.Windows.Media.Animation.Clock> obiektu w aplikacji.|  
 |[Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)|Zawiera przykłady kodu w aplikacji przy użyciu Animacja kluczowych klatek.|  
-|[Animacja ścieżki Tematy Pomocy](path-animation-how-to-topics.md)|Zawiera przykłady kodu w aplikacji przy użyciu animacje ścieżki.|  
+|[Animacja ścieżki — tematy z instrukcjami](path-animation-how-to-topics.md)|Zawiera przykłady kodu w aplikacji przy użyciu animacje ścieżki.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Tematy pomocy  

@@ -3,11 +3,11 @@ title: Adresowanie
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
 ms.openlocfilehash: a59c3b354404169c2baadd4ab8c2702728d9a891
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306027"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767984"
 ---
 # <a name="addressing"></a>Adresowanie
 W przykładzie adresowanie pokazano różne aspekty i funkcje adresy punktów końcowych. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest samodzielnie hostowana. Usługi i klienta są aplikacji konsoli. Usługa definiuje wiele punktów końcowych przy użyciu kombinacji adresy punktów końcowych względnych i bezwzględnych.  

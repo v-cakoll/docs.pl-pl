@@ -10,10 +10,10 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337711"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Instrukcje: dostarczanie mapy bitowej przybornika dla kontrolki
@@ -66,7 +66,7 @@ Jeśli chcesz mieć specjalną ikonę kontrolki są wyświetlane w **przybornika
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Drawing.ToolboxBitmapAttribute>
-- [Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Opracowywanie formantów formularzy systemu Windows w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
+- [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
 - [Omówienie atrybuty (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)
 - [Atrybuty (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)

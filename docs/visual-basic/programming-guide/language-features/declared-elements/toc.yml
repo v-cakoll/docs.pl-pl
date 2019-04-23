@@ -1,42 +1,35 @@
-items:
 - name: Zadeklarowane elementy
   href: index.md
   items:
-  - name: Nazwy zadeklarowanych elementów
-    href: declared-element-names.md
-  - name: Charakterystyka zadeklarowanych elementów
-    href: declared-element-characteristics.md
-    items:
-    - name: Okres istnienia
-      href: lifetime.md
-    - name: Zakres
-      href: scope.md
+    - name: Nazwy zadeklarowanych elementów
+      href: declared-element-names.md
+    - name: Charakterystyka zadeklarowanych elementów
+      href: declared-element-characteristics.md
       items:
-      - name: 'Instrukcje: Kontrolowanie zakresu zmiennej'
-        href: how-to-control-the-scope-of-a-variable.md
-      - name: Promocja typu
-        href: type-promotion.md
-    - name: Poziomy dostępu
-      href: access-levels.md
-      items:
-      - name: 'Instrukcje: Kontrolowanie dostępności zmiennej'
-        href: how-to-control-the-availability-of-a-variable.md
-    - name: Odwołania do elementów zadeklarowanych
-      href: references-to-declared-elements.md
-    - name: Zasłanianie
-      href: shadowing.md
-      items:
-      - name: Różnice między zasłanianiem i przesłanianiem
-        href: differences-between-shadowing-and-overriding.md
-      - name: 'Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika'
-        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
-      - name: 'Instrukcje: Ukrywanie dziedziczonej zmiennej'
-        href: how-to-hide-an-inherited-variable.md
-      - name: 'Instrukcje: Dostęp do zmiennej ukrytej przez klasę pochodną'
-        href: how-to-access-a-variable-hidden-by-a-derived-class.md
-ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471391"
+        - name: Okres istnienia
+          href: lifetime.md
+        - name: Zakres
+          href: scope.md
+          items:
+            - name: 'Instrukcje: Kontrolowanie zakresu zmiennej'
+              href: how-to-control-the-scope-of-a-variable.md
+            - name: Promocja typu
+              href: type-promotion.md
+        - name: Poziomy dostępu
+          href: access-levels.md
+          items:
+            - name: 'Instrukcje: Kontrolowanie dostępności zmiennej'
+              href: how-to-control-the-availability-of-a-variable.md
+        - name: Odwołania do elementów zadeklarowanych
+          href: references-to-declared-elements.md
+        - name: Zasłanianie
+          href: shadowing.md
+          items:
+            - name: Różnice między zasłanianiem i przesłanianiem
+              href: differences-between-shadowing-and-overriding.md
+            - name: 'Instrukcje: Ukrywanie zmiennej o tej samej nazwie jako zmiennej użytkownika'
+              href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+            - name: 'Instrukcje: Ukrywanie dziedziczonej zmiennej'
+              href: how-to-hide-an-inherited-variable.md
+            - name: 'Instrukcje: Dostęp do zmiennej ukrytej przez klasę pochodną'
+              href: how-to-access-a-variable-hidden-by-a-derived-class.md

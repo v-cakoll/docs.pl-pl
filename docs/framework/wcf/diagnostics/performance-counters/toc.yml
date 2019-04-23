@@ -1,153 +1,146 @@
-items:
 - name: Liczniki wydajności
   href: index.md
   items:
-  - name: Liczniki wydajności operacji
-    href: operation-performance-counters.md
-    items:
-    - name: Wywołania
-      href: calls.md
-    - name: Wywołania na sekundę
-      href: calls-per-second.md
-    - name: Wywołania oczekujące
-      href: calls-outstanding.md
-    - name: Wywołania zakończone niepowodzeniem
-      href: calls-failed.md
-    - name: Wywołania zakończone niepowodzeniami na sekundę
-      href: calls-failed-per-second.md
-    - name: Wywołania zwracające błędy
-      href: calls-faulted.md
-    - name: Wywołania zwracające błędy na sekundę
-      href: calls-faulted-per-second.md
-    - name: Czas trwania wywołań
-      href: calls-duration.md
-    - name: Błędy walidacji zabezpieczeń i uwierzytelniania
-      href: security-validation-and-authentication-failures.md
-    - name: Niepowodzenia uwierzytelniania i weryfikacji zabezpieczeń na sekundę
-      href: security-validation-and-authentication-failures-per-second.md
-    - name: Wywołania zabezpieczeń bez autoryzacji
-      href: security-calls-not-authorized.md
-    - name: Nieautoryzowane wywołania zabezpieczeń na sekundę
-      href: security-calls-not-authorized-per-second.md
-    - name: Przepływ transakcji
-      href: transactions-flowed.md
-    - name: Przepływ transakcji na sekundę
-      href: transactions-flowed-per-second.md
-  - name: Liczniki wydajności usługi
-    href: service-performance-counters.md
-    items:
-    - name: Wywołania
-      href: service-calls.md
-    - name: Wywołania na sekundę
-      href: service-calls-per-second.md
-    - name: Wywołania oczekujące
-      href: service-calls-outstanding.md
-    - name: Wywołania zakończone niepowodzeniem
-      href: service-calls-failed.md
-    - name: Wywołania zakończone niepowodzeniami na sekundę
-      href: service-calls-failed-per-second.md
-    - name: Wywołania zwracające błędy
-      href: service-calls-faulted.md
-    - name: Wywołania zwracające błędy na sekundę
-      href: service-calls-faulted-per-second.md
-    - name: Czas trwania wywołań
-      href: service-calls-duration.md
-    - name: Wystąpienia
-      href: instances.md
-    - name: Wystąpienia na sekundę
-      href: instances-per-second.md
-    - name: Procent maksymalnej liczby współbieżnych wywołań
-      href: percent-of-max-concurrent-calls.md
-    - name: Wartość procentowa maksymalnej liczby równoczesnych wystąpień
-      href: percent-of-max-concurrent-instances.md
-    - name: Wartość procentowa maksymalnej liczby równoczesnych sesji
-      href: percent-of-max-concurrent-sessions.md
-    - name: Porzucone komunikaty w kolejce
-      href: queue-dropped-messages.md
-    - name: Zakolejkowane komunikaty porzucone na sekundę
-      href: queue-dropped-messages-per-second.md
-    - name: Skażone wiadomości w kolejce
-      href: queued-poison-messages.md
-    - name: Zakolejkowane komunikaty zanieczyszczone na sekundę
-      href: queued-poison-messages-per-second.md
-    - name: Zakolejkowane komunikaty odrzucone
-      href: queued-rejected-messages.md
-    - name: Zakolejkowane komunikaty odrzucone na sekundę
-      href: queued-rejected-messages-per-second.md
-    - name: Porzucone komunikaty komunikacji niezawodnej
-      href: reliable-messaging-messages-dropped.md
-    - name: Porzucone komunikaty komunikacji niezawodnej na sekundę
-      href: reliable-messaging-messages-dropped-per-second.md
-    - name: Błędne sesje komunikacji niezawodnej
-      href: reliable-messaging-sessions-faulted.md
-    - name: Błędne sesje komunikacji niezawodnej na sekundę
-      href: reliable-messaging-sessions-faulted-per-second.md
-    - name: Wywołania zabezpieczeń bez autoryzacji
-      href: service-security-calls-not-authorized.md
-    - name: Nieautoryzowane wywołania zabezpieczeń na sekundę
-      href: service-security-calls-not-authorized-per-second.md
-    - name: Błędy walidacji zabezpieczeń i uwierzytelniania
-      href: service-security-validation-and-authentication-failures.md
-    - name: Niepowodzenia uwierzytelniania i weryfikacji zabezpieczeń na sekundę
-      href: service-security-validation-and-authentication-failures-per-second.md
-    - name: Przepływ transakcji
-      href: service-transactions-flowed.md
-    - name: Przepływ transakcji na sekundę
-      href: service-transactions-flowed-per-second.md
-    - name: Przerwane operacje transakcyjne
-      href: transacted-operations-aborted.md
-    - name: Przerwane operacje transakcyjne na sekundę
-      href: transacted-operations-aborted-per-second.md
-    - name: Potwierdzone operacje transakcyjne
-      href: transacted-operations-committed.md
-    - name: Zatwierdzone operacje transakcyjne na sekundę
-      href: transacted-operations-committed-per-second.md
-    - name: Wątpliwe operacje transakcyjne
-      href: transacted-operations-in-doubt.md
-    - name: Wątpliwe operacje transakcyjne na sekundę
-      href: transacted-operations-in-doubt-per-second.md
-  - name: Liczniki wydajności w punkcie końcowym
-    href: endpoint-performance-counters.md
-    items:
-    - name: Wywołania
-      href: endpoint-calls.md
-    - name: Wywołania na sekundę
-      href: endpoint-calls-per-second.md
-    - name: Wywołania oczekujące
-      href: endpoint-calls-outstanding.md
-    - name: Wywołania zakończone niepowodzeniem
-      href: endpoint-calls-failed.md
-    - name: Wywołania zakończone niepowodzeniami na sekundę
-      href: endpoint-calls-failed-per-second.md
-    - name: Wywołania zwracające błędy
-      href: endpoint-calls-faulted.md
-    - name: Wywołania zwracające błędy na sekundę
-      href: endpoint-calls-faulted-per-second.md
-    - name: Czas trwania wywołań
-      href: endpoint-calls-duration.md
-    - name: Porzucone komunikaty komunikacji niezawodnej
-      href: endpoint-reliable-messaging-messages-dropped.md
-    - name: Porzucone komunikaty komunikacji niezawodnej na sekundę
-      href: endpoint-reliable-messaging-messages-dropped-per-second.md
-    - name: Błędne sesje komunikacji niezawodnej
-      href: endpoint-reliable-messaging-sessions-faulted.md
-    - name: Błędne sesje komunikacji niezawodnej na sekundę
-      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
-    - name: Wywołania zabezpieczeń bez autoryzacji
-      href: endpoint-security-calls-not-authorized.md
-    - name: Nieautoryzowane wywołania zabezpieczeń na sekundę
-      href: endpoint-security-calls-not-authorized-per-second.md
-    - name: Błędy walidacji zabezpieczeń i uwierzytelniania
-      href: endpoint-security-validation-and-authentication-failures.md
-    - name: Niepowodzenia uwierzytelniania i weryfikacji zabezpieczeń na sekundę
-      href: endpoint-security-validation-and-authentication-failures-per-second.md
-    - name: Przepływ transakcji
-      href: endpoint-transactions-flowed.md
-    - name: Przepływ transakcji na sekundę
-      href: endpoint-transactions-flowed-per-second.md
-ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471382"
+    - name: Liczniki wydajności operacji
+      href: operation-performance-counters.md
+      items:
+        - name: Wywołania
+          href: calls.md
+        - name: Wywołania na sekundę
+          href: calls-per-second.md
+        - name: Wywołania oczekujące
+          href: calls-outstanding.md
+        - name: Wywołania zakończone niepowodzeniem
+          href: calls-failed.md
+        - name: Wywołania zakończone niepowodzeniami na sekundę
+          href: calls-failed-per-second.md
+        - name: Wywołania zwracające błędy
+          href: calls-faulted.md
+        - name: Wywołania zwracające błędy na sekundę
+          href: calls-faulted-per-second.md
+        - name: Czas trwania wywołań
+          href: calls-duration.md
+        - name: Błędy walidacji zabezpieczeń i uwierzytelniania
+          href: security-validation-and-authentication-failures.md
+        - name: Niepowodzenia uwierzytelniania i weryfikacji zabezpieczeń na sekundę
+          href: security-validation-and-authentication-failures-per-second.md
+        - name: Wywołania zabezpieczeń bez autoryzacji
+          href: security-calls-not-authorized.md
+        - name: Nieautoryzowane wywołania zabezpieczeń na sekundę
+          href: security-calls-not-authorized-per-second.md
+        - name: Przepływ transakcji
+          href: transactions-flowed.md
+        - name: Przepływ transakcji na sekundę
+          href: transactions-flowed-per-second.md
+    - name: Liczniki wydajności usługi
+      href: service-performance-counters.md
+      items:
+        - name: Wywołania
+          href: service-calls.md
+        - name: Wywołania na sekundę
+          href: service-calls-per-second.md
+        - name: Wywołania oczekujące
+          href: service-calls-outstanding.md
+        - name: Wywołania zakończone niepowodzeniem
+          href: service-calls-failed.md
+        - name: Wywołania zakończone niepowodzeniami na sekundę
+          href: service-calls-failed-per-second.md
+        - name: Wywołania zwracające błędy
+          href: service-calls-faulted.md
+        - name: Wywołania zwracające błędy na sekundę
+          href: service-calls-faulted-per-second.md
+        - name: Czas trwania wywołań
+          href: service-calls-duration.md
+        - name: Wystąpienia
+          href: instances.md
+        - name: Wystąpienia na sekundę
+          href: instances-per-second.md
+        - name: Procent maksymalnej liczby współbieżnych wywołań
+          href: percent-of-max-concurrent-calls.md
+        - name: Wartość procentowa maksymalnej liczby równoczesnych wystąpień
+          href: percent-of-max-concurrent-instances.md
+        - name: Wartość procentowa maksymalnej liczby równoczesnych sesji
+          href: percent-of-max-concurrent-sessions.md
+        - name: Porzucone komunikaty w kolejce
+          href: queue-dropped-messages.md
+        - name: Zakolejkowane komunikaty porzucone na sekundę
+          href: queue-dropped-messages-per-second.md
+        - name: Skażone wiadomości w kolejce
+          href: queued-poison-messages.md
+        - name: Zakolejkowane komunikaty zanieczyszczone na sekundę
+          href: queued-poison-messages-per-second.md
+        - name: Zakolejkowane komunikaty odrzucone
+          href: queued-rejected-messages.md
+        - name: Zakolejkowane komunikaty odrzucone na sekundę
+          href: queued-rejected-messages-per-second.md
+        - name: Porzucone komunikaty komunikacji niezawodnej
+          href: reliable-messaging-messages-dropped.md
+        - name: Porzucone komunikaty komunikacji niezawodnej na sekundę
+          href: reliable-messaging-messages-dropped-per-second.md
+        - name: Błędne sesje komunikacji niezawodnej
+          href: reliable-messaging-sessions-faulted.md
+        - name: Błędne sesje komunikacji niezawodnej na sekundę
+          href: reliable-messaging-sessions-faulted-per-second.md
+        - name: Wywołania zabezpieczeń bez autoryzacji
+          href: service-security-calls-not-authorized.md
+        - name: Nieautoryzowane wywołania zabezpieczeń na sekundę
+          href: service-security-calls-not-authorized-per-second.md
+        - name: Błędy walidacji zabezpieczeń i uwierzytelniania
+          href: service-security-validation-and-authentication-failures.md
+        - name: Niepowodzenia uwierzytelniania i weryfikacji zabezpieczeń na sekundę
+          href: service-security-validation-and-authentication-failures-per-second.md
+        - name: Przepływ transakcji
+          href: service-transactions-flowed.md
+        - name: Przepływ transakcji na sekundę
+          href: service-transactions-flowed-per-second.md
+        - name: Przerwane operacje transakcyjne
+          href: transacted-operations-aborted.md
+        - name: Przerwane operacje transakcyjne na sekundę
+          href: transacted-operations-aborted-per-second.md
+        - name: Potwierdzone operacje transakcyjne
+          href: transacted-operations-committed.md
+        - name: Zatwierdzone operacje transakcyjne na sekundę
+          href: transacted-operations-committed-per-second.md
+        - name: Wątpliwe operacje transakcyjne
+          href: transacted-operations-in-doubt.md
+        - name: Wątpliwe operacje transakcyjne na sekundę
+          href: transacted-operations-in-doubt-per-second.md
+    - name: Liczniki wydajności w punkcie końcowym
+      href: endpoint-performance-counters.md
+      items:
+        - name: Wywołania
+          href: endpoint-calls.md
+        - name: Wywołania na sekundę
+          href: endpoint-calls-per-second.md
+        - name: Wywołania oczekujące
+          href: endpoint-calls-outstanding.md
+        - name: Wywołania zakończone niepowodzeniem
+          href: endpoint-calls-failed.md
+        - name: Wywołania zakończone niepowodzeniami na sekundę
+          href: endpoint-calls-failed-per-second.md
+        - name: Wywołania zwracające błędy
+          href: endpoint-calls-faulted.md
+        - name: Wywołania zwracające błędy na sekundę
+          href: endpoint-calls-faulted-per-second.md
+        - name: Czas trwania wywołań
+          href: endpoint-calls-duration.md
+        - name: Porzucone komunikaty komunikacji niezawodnej
+          href: endpoint-reliable-messaging-messages-dropped.md
+        - name: Porzucone komunikaty komunikacji niezawodnej na sekundę
+          href: endpoint-reliable-messaging-messages-dropped-per-second.md
+        - name: Błędne sesje komunikacji niezawodnej
+          href: endpoint-reliable-messaging-sessions-faulted.md
+        - name: Błędne sesje komunikacji niezawodnej na sekundę
+          href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+        - name: Wywołania zabezpieczeń bez autoryzacji
+          href: endpoint-security-calls-not-authorized.md
+        - name: Nieautoryzowane wywołania zabezpieczeń na sekundę
+          href: endpoint-security-calls-not-authorized-per-second.md
+        - name: Błędy walidacji zabezpieczeń i uwierzytelniania
+          href: endpoint-security-validation-and-authentication-failures.md
+        - name: Niepowodzenia uwierzytelniania i weryfikacji zabezpieczeń na sekundę
+          href: endpoint-security-validation-and-authentication-failures-per-second.md
+        - name: Przepływ transakcji
+          href: endpoint-transactions-flowed.md
+        - name: Przepływ transakcji na sekundę
+          href: endpoint-transactions-flowed-per-second.md

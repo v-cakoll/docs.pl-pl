@@ -1,24 +1,17 @@
-items:
 - name: Kowariancja i kontrawariancja
   href: index.md
   items:
-  - name: Wariancje w interfejsach ogólnych
-    href: variance-in-generic-interfaces.md
-    items:
-    - name: Tworzenie interfejsów ogólnych typu Variant
-      href: creating-variant-generic-interfaces.md
-    - name: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych
-      href: using-variance-in-interfaces-for-generic-collections.md
-  - name: Wariancje w delegatach
-    href: variance-in-delegates.md
-    items:
-    - name: Korzystanie z wariancji w delegatach
-      href: using-variance-in-delegates.md
-    - name: Korzystanie z wariancji dla delegatów ogólnych Func i Action
-      href: using-variance-for-func-and-action-generic-delegates.md
-ms.openlocfilehash: 9cc69c37946ca16f911dcf0b58bd947c37a7bf07
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471407"
+    - name: Wariancje w interfejsach ogólnych
+      href: variance-in-generic-interfaces.md
+      items:
+        - name: Tworzenie interfejsów ogólnych typu Variant
+          href: creating-variant-generic-interfaces.md
+        - name: Korzystanie z wariancji w interfejsach dla kolekcji ogólnych
+          href: using-variance-in-interfaces-for-generic-collections.md
+    - name: Wariancje w delegatach
+      href: variance-in-delegates.md
+      items:
+        - name: Korzystanie z wariancji w delegatach
+          href: using-variance-in-delegates.md
+        - name: Korzystanie z wariancji dla delegatów ogólnych Func i Action
+          href: using-variance-for-func-and-action-generic-delegates.md

@@ -1,43 +1,36 @@
-items:
 - name: wdrażania
   href: index.md
   items:
-  - name: Wdrażanie programu .NET Framework
-    href: deploying-the-net-framework.md
-    items:
-    - name: Przewodnik wdrażania dla deweloperów
-      href: deployment-guide-for-developers.md
-    - name: Przewodnik wdrażania dla administratorów
-      href: guide-for-administrators.md
-    - name: Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
-      href: reducing-system-restarts.md
-    - name: 'Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
-      href: how-to-get-progress-from-the-dotnet-installer.md
-    - name: 'Błędy inicjowania programu .NET Framework: Zarządzanie środowiskiem użytkownika'
-      href: initialization-errors-managing-the-user-experience.md
-    - name: 'Instrukcje: debugowanie problemów aktywacji środowiska CLR'
-      href: how-to-debug-clr-activation-issues.md
-  - name: Wdrażanie aplikacji .NET Framework
-    href: net-framework-applications.md
-    items:
-    - name: Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
-      href: how-the-runtime-locates-assemblies.md
-    - name: Najlepsze praktyki dotyczące ładowania zestawu
-      href: best-practices-for-assembly-loading.md
-  - name: .NET Framework Client Profile
-    href: client-profile.md
-  - name: Wykonywanie równoczesne
-    href: side-by-side-execution.md
-    items:
-    - name: Konfigurowanie przekierowywania powiązań zestawów
-      href: configuring-assembly-binding-redirection.md
-    - name: Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
-      href: guidelines-for-creating-components-for-side-by-side-execution.md
-    - name: Wykonywanie równoczesne i wewnątrzprocesowe
-      href: in-process-side-by-side-execution.md
-ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471506"
+    - name: Wdrażanie programu .NET Framework
+      href: deploying-the-net-framework.md
+      items:
+        - name: Przewodnik wdrażania dla deweloperów
+          href: deployment-guide-for-developers.md
+        - name: Przewodnik wdrażania dla administratorów
+          href: guide-for-administrators.md
+        - name: Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
+          href: reducing-system-restarts.md
+        - name: 'Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
+          href: how-to-get-progress-from-the-dotnet-installer.md
+        - name: 'Błędy inicjowania programu .NET Framework: Zarządzanie środowiskiem użytkownika'
+          href: initialization-errors-managing-the-user-experience.md
+        - name: 'Instrukcje: debugowanie problemów aktywacji środowiska CLR'
+          href: how-to-debug-clr-activation-issues.md
+    - name: Wdrażanie aplikacji .NET Framework
+      href: net-framework-applications.md
+      items:
+        - name: Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
+          href: how-the-runtime-locates-assemblies.md
+        - name: Najlepsze praktyki dotyczące ładowania zestawu
+          href: best-practices-for-assembly-loading.md
+    - name: .NET Framework Client Profile
+      href: client-profile.md
+    - name: Wykonywanie równoczesne
+      href: side-by-side-execution.md
+      items:
+        - name: Konfigurowanie przekierowywania powiązań zestawów
+          href: configuring-assembly-binding-redirection.md
+        - name: Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
+          href: guidelines-for-creating-components-for-side-by-side-execution.md
+        - name: Wykonywanie równoczesne i wewnątrzprocesowe
+          href: in-process-side-by-side-execution.md

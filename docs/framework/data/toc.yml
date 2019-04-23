@@ -1,16 +1,9 @@
-items:
 - name: Dane i modelowanie
   href: index.md
   items:
-  - name: Usługi danych WCF 4.5
-    href: wcf/
-  - name: ADO.NET
-    href: adonet/
-  - name: Przetwarzanie transakcji
-    href: transactions/
-ms.openlocfilehash: c6e43c7118d1fa415fa676f803b247e37c7c725a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471420"
+    - name: Usługi danych WCF 4.5
+      href: wcf/
+    - name: ADO.NET
+      href: adonet/
+    - name: Przetwarzanie transakcji
+      href: transactions/

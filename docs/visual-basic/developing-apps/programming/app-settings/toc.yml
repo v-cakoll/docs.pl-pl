@@ -1,18 +1,11 @@
-items:
 - name: Uzyskiwanie dostępu do ustawień aplikacji
   href: index.md
   items:
-  - name: 'Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika'
-    href: how-to-create-property-grids-for-user-settings.md
-  - name: 'Instrukcje: Utrwalanie ustawień użytkownika'
-    href: how-to-persist-user-settings.md
-  - name: 'Instrukcje: Zmiana ustawień użytkownika'
-    href: how-to-change-user-settings.md
-  - name: 'Instrukcje: Odczytywanie ustawień aplikacji'
-    href: how-to-read-application-settings.md
-ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472029"
+    - name: 'Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika'
+      href: how-to-create-property-grids-for-user-settings.md
+    - name: 'Instrukcje: Utrwalanie ustawień użytkownika'
+      href: how-to-persist-user-settings.md
+    - name: 'Instrukcje: Zmiana ustawień użytkownika'
+      href: how-to-change-user-settings.md
+    - name: 'Instrukcje: Odczytywanie ustawień aplikacji'
+      href: how-to-read-application-settings.md

@@ -1,73 +1,66 @@
-items:
 - name: We/Wy plików i strumieni
   href: index.md
   items:
-  - name: Formaty ścieżek plików w systemie Windows
-    href: file-path-formats.md
-  - name: Typowe zadania We/Wy
-    href: common-i-o-tasks.md
-    items:
-    - name: 'Instrukcje: Kopiowanie katalogów'
-      href: how-to-copy-directories.md
-    - name: 'Instrukcje: Wyliczanie katalogów i plików'
-      href: how-to-enumerate-directories-and-files.md
-    - name: 'Instrukcje: Odczyt i zapis we właśnie utworzonym pliku danych'
-      href: how-to-read-and-write-to-a-newly-created-data-file.md
-    - name: 'Instrukcje: Otwieranie pliku dziennika i dołączanie do niego'
-      href: how-to-open-and-append-to-a-log-file.md
-    - name: 'Instrukcje: Zapisywanie tekstu w pliku'
-      href: how-to-write-text-to-a-file.md
-    - name: 'Instrukcje: Odczytywanie tekstu z pliku'
-      href: how-to-read-text-from-a-file.md
-    - name: 'Instrukcje: Odczytywanie znaków z ciągu'
-      href: how-to-read-characters-from-a-string.md
-    - name: 'Instrukcje: Zapisywanie znaków w ciągu'
-      href: how-to-write-characters-to-a-string.md
-    - name: 'Instrukcje: Dodawanie lub usuwanie pozycji listy kontroli dostępu'
-      href: how-to-add-or-remove-access-control-list-entries.md
-    - name: 'Instrukcje: Kompresowanie i wyodrębnianie plików'
-      href: how-to-compress-and-extract-files.md
-    - name: Tworzenie strumieni
-      href: composing-streams.md
-    - name: 'Instrukcje: Konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows'
-      href: how-to-convert-between-dotnet-streams-and-winrt-streams.md
-  - name: Asynchroniczne We/Wy pliku
-    href: asynchronous-file-i-o.md
-  - name: Obsługa błędów operacji we/wy
-    href: handling-io-errors.md
-  - name: Izolowany magazyn
-    href: isolated-storage.md
-    items:
-    - name: Typy izolacji
-      href: types-of-isolation.md
-    - name: 'Instrukcje: Uzyskiwanie magazynów dla izolowanego magazynu'
-      href: how-to-obtain-stores-for-isolated-storage.md
-    - name: 'Instrukcje: Wykazywanie magazynów dla izolowanego magazynu'
-      href: how-to-enumerate-stores-for-isolated-storage.md
-    - name: 'Instrukcje: Usuwanie danych z izolowanego magazynu'
-      href: how-to-delete-stores-in-isolated-storage.md
-    - name: 'Instrukcje: Przewidywanie warunków braku miejsca w izolowanym magazynie'
-      href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
-    - name: 'Instrukcje: Tworzenie plików i katalogów w izolowanym magazynie'
-      href: how-to-create-files-and-directories-in-isolated-storage.md
-    - name: 'Instrukcje: Wyszukiwanie istniejących plików i katalogów w izolowanym magazynie'
-      href: how-to-find-existing-files-and-directories-in-isolated-storage.md
-    - name: 'Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie'
-      href: how-to-read-and-write-to-files-in-isolated-storage.md
-    - name: 'Instrukcje: Usuwanie plików i katalogów w izolowanym magazynie'
-      href: how-to-delete-files-and-directories-in-isolated-storage.md
-  - name: Potoki
-    href: pipe-operations.md
-    items:
-    - name: 'Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
-      href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
-    - name: 'Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej'
-      href: how-to-use-named-pipes-for-network-interprocess-communication.md
-  - name: Pliki mapowane w pamięci
-    href: memory-mapped-files.md
-ms.openlocfilehash: 2da7230409fe2ccb8e6b21c21cbee57d3cd134ac
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472048"
+    - name: Formaty ścieżek plików w systemie Windows
+      href: file-path-formats.md
+    - name: Typowe zadania We/Wy
+      href: common-i-o-tasks.md
+      items:
+        - name: 'Instrukcje: Kopiowanie katalogów'
+          href: how-to-copy-directories.md
+        - name: 'Instrukcje: Wyliczanie katalogów i plików'
+          href: how-to-enumerate-directories-and-files.md
+        - name: 'Instrukcje: Odczyt i zapis we właśnie utworzonym pliku danych'
+          href: how-to-read-and-write-to-a-newly-created-data-file.md
+        - name: 'Instrukcje: Otwieranie pliku dziennika i dołączanie do niego'
+          href: how-to-open-and-append-to-a-log-file.md
+        - name: 'Instrukcje: Zapisywanie tekstu w pliku'
+          href: how-to-write-text-to-a-file.md
+        - name: 'Instrukcje: Odczytywanie tekstu z pliku'
+          href: how-to-read-text-from-a-file.md
+        - name: 'Instrukcje: Odczytywanie znaków z ciągu'
+          href: how-to-read-characters-from-a-string.md
+        - name: 'Instrukcje: Zapisywanie znaków w ciągu'
+          href: how-to-write-characters-to-a-string.md
+        - name: 'Instrukcje: Dodawanie lub usuwanie pozycji listy kontroli dostępu'
+          href: how-to-add-or-remove-access-control-list-entries.md
+        - name: 'Instrukcje: Kompresowanie i wyodrębnianie plików'
+          href: how-to-compress-and-extract-files.md
+        - name: Tworzenie strumieni
+          href: composing-streams.md
+        - name: 'Instrukcje: Konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows'
+          href: how-to-convert-between-dotnet-streams-and-winrt-streams.md
+    - name: Asynchroniczne We/Wy pliku
+      href: asynchronous-file-i-o.md
+    - name: Obsługa błędów operacji we/wy
+      href: handling-io-errors.md
+    - name: Izolowany magazyn
+      href: isolated-storage.md
+      items:
+        - name: Typy izolacji
+          href: types-of-isolation.md
+        - name: 'Instrukcje: Uzyskiwanie magazynów dla izolowanego magazynu'
+          href: how-to-obtain-stores-for-isolated-storage.md
+        - name: 'Instrukcje: Wykazywanie magazynów dla izolowanego magazynu'
+          href: how-to-enumerate-stores-for-isolated-storage.md
+        - name: 'Instrukcje: Usuwanie danych z izolowanego magazynu'
+          href: how-to-delete-stores-in-isolated-storage.md
+        - name: 'Instrukcje: Przewidywanie warunków braku miejsca w izolowanym magazynie'
+          href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+        - name: 'Instrukcje: Tworzenie plików i katalogów w izolowanym magazynie'
+          href: how-to-create-files-and-directories-in-isolated-storage.md
+        - name: 'Instrukcje: Wyszukiwanie istniejących plików i katalogów w izolowanym magazynie'
+          href: how-to-find-existing-files-and-directories-in-isolated-storage.md
+        - name: 'Instrukcje: Odczyt i zapis w plikach w izolowanym magazynie'
+          href: how-to-read-and-write-to-files-in-isolated-storage.md
+        - name: 'Instrukcje: Usuwanie plików i katalogów w izolowanym magazynie'
+          href: how-to-delete-files-and-directories-in-isolated-storage.md
+    - name: Potoki
+      href: pipe-operations.md
+      items:
+        - name: 'Instrukcje: Stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej'
+          href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+        - name: 'Instrukcje: Stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej'
+          href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: Pliki mapowane w pamięci
+      href: memory-mapped-files.md

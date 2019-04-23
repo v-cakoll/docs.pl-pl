@@ -1,168 +1,161 @@
-items:
 - name: 'Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET'
   href: index.md
   items:
-  - name: Wprowadzenie do kontenerów i platformy Docker
-    href: container-docker-introduction/index.md
-    items:
-    - name: Co to jest Docker?
-      href: container-docker-introduction/docker-defined.md
-    - name: Terminologia platformy Docker
-      href: container-docker-introduction/docker-terminology.md
-    - name: Kontenery, obrazy i rejestry platformy Docker
-      href: container-docker-introduction/docker-containers-images-registries.md
-  - name: Wybieranie między programami .NET Core i .NET Framework na potrzeby tworzenia kontenerów Docker
-    href: net-core-net-framework-containers/index.md
-    items:
-    - name: Wskazówki ogólne
-      href: net-core-net-framework-containers/general-guidance.md
-    - name: Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
-      href: net-core-net-framework-containers/net-core-container-scenarios.md
-    - name: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
-      href: net-core-net-framework-containers/net-framework-container-scenarios.md
-    - name: 'Tabela decyzji: korzystanie z programu .NET Framework z platformą Docker'
-      href: net-core-net-framework-containers/container-framework-choice-factors.md
-    - name: Jakiego systemu operacyjnego należy używać docelowo z kontenerami .NET
-      href: net-core-net-framework-containers/net-container-os-targets.md
-    - name: Oficjalne obrazy Docker w programie .NET
-      href: net-core-net-framework-containers/official-net-docker-images.md
-  - name: Tworzenie aplikacji opartych na kontenerach i mikrousługach
-    href: architect-microservice-container-applications/index.md
-    items:
-    - name: Umieszczanie aplikacji monolitycznych w kontenerze
-      href: architect-microservice-container-applications/containerize-monolithic-applications.md
-    - name: Stan i dane w aplikacjach platformy Docker
-      href: architect-microservice-container-applications/docker-application-state-data.md
-    - name: Architektura zorientowana na usługi
-      href: architect-microservice-container-applications/service-oriented-architecture.md
-    - name: Architektura mikrousług
-      href: architect-microservice-container-applications/microservices-architecture.md
-    - name: Suwerenność danych przypadająca na mikrousługę
-      href: architect-microservice-container-applications/data-sovereignty-per-microservice.md
-    - name: Architektura logiczna a architektura fizyczna
-      href: architect-microservice-container-applications/logical-versus-physical-architecture.md
-    - name: Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
-      href: architect-microservice-container-applications/distributed-data-management.md
-    - name: Identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług
-      href: architect-microservice-container-applications/identify-microservice-domain-model-boundaries.md
-    - name: Bezpośrednia komunikacja klienta z mikrousługą a wzorzec bramy interfejsu API
-      href: architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md
-    - name: Komunikacja w ramach architektury mikrousługi
-      href: architect-microservice-container-applications/communication-in-microservice-architecture.md
-    - name: Asynchroniczna komunikacja oparta na komunikatach
-      href: architect-microservice-container-applications/asynchronous-message-based-communication.md
-    - name: Tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontaktów w mikrousługach
-      href: architect-microservice-container-applications/maintain-microservice-apis.md
-    - name: Adresowanie mikrousług i rejestr usług
-      href: architect-microservice-container-applications/microservices-addressability-service-registry.md
-    - name: Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach, w tym kształt graficzny interfejsu użytkownika i układ generowany przez wiele mikrousług
-      href: architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md
-    - name: Odporność i wysoka dostępność w ramach mikrousług
-      href: architect-microservice-container-applications/resilient-high-availability-microservices.md
-    - name: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
-      href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Korzystanie z usługi Azure Service Fabric
-      href: architect-microservice-container-applications/using-azure-service-fabric.md
-  - name: Proces programistyczny dotyczący aplikacji opartych na platformie Docker
-    href: docker-application-development-process/index.md
-    items:
-    - name: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
-      href: docker-application-development-process/docker-app-development-workflow.md
-  - name: Projektowanie i tworzenie aplikacji .NET opartych na wielu kontenerach i mikrousługach
-    href: multi-container-microservice-net-applications/index.md
-    items:
-    - name: Projektowanie aplikacji opartej na mikrousługach
-      href: multi-container-microservice-net-applications/microservice-application-design.md
-    - name: Tworzenie prostej mikrousługi CRUD na podstawie danych
-      href: multi-container-microservice-net-applications/data-driven-crud-microservice.md
-    - name: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
-      href: multi-container-microservice-net-applications/multi-container-applications-docker-compose.md
-    - name: Korzystanie z serwera bazy danych uruchomionego jako kontener
-      href: multi-container-microservice-net-applications/database-server-container.md
-    - name: Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
-      href: multi-container-microservice-net-applications/integration-event-based-microservice-communications.md
-    - name: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
-      href: multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md
-    - name: Subskrybowanie zdarzeń
-      href: multi-container-microservice-net-applications/subscribe-events.md
-    - name: Testowanie aplikacji internetowych i usług ASP.NET Core
-      href: multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md
-    - name: Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHostedService
-      href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
-    - name: Wdrażanie bram interfejsu API za pomocą rozwiązania Ocelot
-      href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
-  - name: Rozwiązywanie problemów ze złożonościami biznesowymi w mikrousłudze z wzorcami DDD i CQRS
-    href: microservice-ddd-cqrs-patterns/index.md
-    items:
-    - name: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
-      href: microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md
-    - name: Stosowanie zasad CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
-      href: microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
-    - name: Implementowanie odczytów i zapytań w mikrousłudze CQRS
-      href: microservice-ddd-cqrs-patterns/cqrs-microservice-reads.md
-    - name: Projektowanie mikrousługi zorientowanej na wzorzec DDD
-      href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
-    - name: Projektowanie modelu domeny mikrousługi
-      href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
-    - name: Implementowanie modelu domeny mikrousługi za pomocą platformy .NET Core
-      href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
-    - name: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
-      href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
-    - name: Implementowanie obiektów wartości
-      href: microservice-ddd-cqrs-patterns/implement-value-objects.md
-    - name: Używanie klas wyliczeń zamiast typów wyliczeń
-      href: microservice-ddd-cqrs-patterns/enumeration-classes-over-enum-types.md
-    - name: Projektowanie reguł weryfikacji w warstwie modelu domeny
-      href: microservice-ddd-cqrs-patterns/domain-model-layer-validations.md
-    - name: Weryfikacja po stronie klienta (weryfikacja w warstwach prezentacji)
-      href: microservice-ddd-cqrs-patterns/client-side-validation.md
-    - name: 'Zdarzenia w domenie: projektowanie i implementacja'
-      href: microservice-ddd-cqrs-patterns/domain-events-design-implementation.md
-    - name: Projektowanie warstwy trwałości infrastruktury
-      href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
-    - name: Implementowanie warstwy trwałości infrastruktury za pomocą programu Entity Framework Core
-      href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
-    - name: Korzystanie z baz danych NoSQL jako infrastruktury trwałości
-      href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
-    - name: Projektowanie warstwy aplikacji mikrousług i internetowego interfejsu API
-      href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
-    - name: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
-      href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-  - name: Implementowanie aplikacji odpornych na błędy
-    href: implement-resilient-applications/index.md
-    items:
-    - name: Obsługa częściowych niepowodzeń
-      href: implement-resilient-applications/handle-partial-failure.md
-    - name: Strategie dotyczące obsługi częściowych niepowodzeń
-      href: implement-resilient-applications/partial-failure-strategies.md
-    - name: Implementowanie ponownych prób wykonywanych przy użyciu wycofywania wykładniczego
-      href: implement-resilient-applications/implement-retries-exponential-backoff.md
-    - name: Implementowanie odpornych na błędy połączeń SQL w programie Entity Framework Core
-      href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-    - name: Eksplorowanie ponownych prób niestandardowego wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego
-      href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-    - name: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
-      href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
-    - name: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
-      href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
-    - name: Implementowanie wzorca wyłącznika
-      href: implement-resilient-applications/implement-circuit-breaker-pattern.md
-    - name: Monitorowanie kondycji
-      href: implement-resilient-applications/monitor-app-health.md
-  - name: Zabezpieczanie mikrousług .NET i aplikacji internetowych
-    href: secure-net-microservices-web-applications/index.md
-    items:
-    - name: Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych
-      href: secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md
-    - name: Bezpieczne przechowywanie kluczy tajnych aplikacji podczas jej tworzenia
-      href: secure-net-microservices-web-applications/developer-app-secrets-storage.md
-    - name: Korzystanie z usługi Azure Key Vault w celu ochrony kluczy tajnych w czasie tworzenia
-      href: secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md
-  - name: Kluczowe kwestie do zapamiętania
-    href: key-takeaways.md
-ms.openlocfilehash: ad22824bb83e1a468873331197340b21c28502e3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471984"
+    - name: Wprowadzenie do kontenerów i platformy Docker
+      href: container-docker-introduction/index.md
+      items:
+        - name: Co to jest Docker?
+          href: container-docker-introduction/docker-defined.md
+        - name: Terminologia platformy Docker
+          href: container-docker-introduction/docker-terminology.md
+        - name: 'Kontenery, obrazy i rejestry platformy Docker'
+          href: container-docker-introduction/docker-containers-images-registries.md
+    - name: Wybieranie między programami .NET Core i .NET Framework na potrzeby tworzenia kontenerów Docker
+      href: net-core-net-framework-containers/index.md
+      items:
+        - name: Wskazówki ogólne
+          href: net-core-net-framework-containers/general-guidance.md
+        - name: Kiedy należy wybrać oprogramowanie .NET Core dla kontenerów Docker
+          href: net-core-net-framework-containers/net-core-container-scenarios.md
+        - name: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
+          href: net-core-net-framework-containers/net-framework-container-scenarios.md
+        - name: 'Tabela decyzji: korzystanie z programu .NET Framework z platformą Docker'
+          href: net-core-net-framework-containers/container-framework-choice-factors.md
+        - name: Jakiego systemu operacyjnego należy używać docelowo z kontenerami .NET
+          href: net-core-net-framework-containers/net-container-os-targets.md
+        - name: Oficjalne obrazy Docker w programie .NET
+          href: net-core-net-framework-containers/official-net-docker-images.md
+    - name: Tworzenie aplikacji opartych na kontenerach i mikrousługach
+      href: architect-microservice-container-applications/index.md
+      items:
+        - name: Umieszczanie aplikacji monolitycznych w kontenerze
+          href: architect-microservice-container-applications/containerize-monolithic-applications.md
+        - name: Stan i dane w aplikacjach platformy Docker
+          href: architect-microservice-container-applications/docker-application-state-data.md
+        - name: Architektura zorientowana na usługi
+          href: architect-microservice-container-applications/service-oriented-architecture.md
+        - name: Architektura mikrousług
+          href: architect-microservice-container-applications/microservices-architecture.md
+        - name: Suwerenność danych przypadająca na mikrousługę
+          href: architect-microservice-container-applications/data-sovereignty-per-microservice.md
+        - name: Architektura logiczna a architektura fizyczna
+          href: architect-microservice-container-applications/logical-versus-physical-architecture.md
+        - name: Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
+          href: architect-microservice-container-applications/distributed-data-management.md
+        - name: Identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług
+          href: architect-microservice-container-applications/identify-microservice-domain-model-boundaries.md
+        - name: Bezpośrednia komunikacja klienta z mikrousługą a wzorzec bramy interfejsu API
+          href: architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md
+        - name: Komunikacja w ramach architektury mikrousługi
+          href: architect-microservice-container-applications/communication-in-microservice-architecture.md
+        - name: Asynchroniczna komunikacja oparta na komunikatach
+          href: architect-microservice-container-applications/asynchronous-message-based-communication.md
+        - name: 'Tworzenie, rozwijanie i przechowywanie wersji interfejsów API i kontaktów w mikrousługach'
+          href: architect-microservice-container-applications/maintain-microservice-apis.md
+        - name: Adresowanie mikrousług i rejestr usług
+          href: architect-microservice-container-applications/microservices-addressability-service-registry.md
+        - name: 'Tworzenie złożonego interfejsu użytkownika opartego na mikrousługach, w tym kształt graficzny interfejsu użytkownika i układ generowany przez wiele mikrousług'
+          href: architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md
+        - name: Odporność i wysoka dostępność w ramach mikrousług
+          href: architect-microservice-container-applications/resilient-high-availability-microservices.md
+        - name: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
+          href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
+        - name: Korzystanie z usługi Azure Service Fabric
+          href: architect-microservice-container-applications/using-azure-service-fabric.md
+    - name: Proces programistyczny dotyczący aplikacji opartych na platformie Docker
+      href: docker-application-development-process/index.md
+      items:
+        - name: Przepływ pracy tworzenia oprogramowania dla aplikacji platformy Docker
+          href: docker-application-development-process/docker-app-development-workflow.md
+    - name: Projektowanie i tworzenie aplikacji .NET opartych na wielu kontenerach i mikrousługach
+      href: multi-container-microservice-net-applications/index.md
+      items:
+        - name: Projektowanie aplikacji opartej na mikrousługach
+          href: multi-container-microservice-net-applications/microservice-application-design.md
+        - name: Tworzenie prostej mikrousługi CRUD na podstawie danych
+          href: multi-container-microservice-net-applications/data-driven-crud-microservice.md
+        - name: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
+          href: multi-container-microservice-net-applications/multi-container-applications-docker-compose.md
+        - name: Korzystanie z serwera bazy danych uruchomionego jako kontener
+          href: multi-container-microservice-net-applications/database-server-container.md
+        - name: Implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)
+          href: multi-container-microservice-net-applications/integration-event-based-microservice-communications.md
+        - name: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
+          href: multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md
+        - name: Subskrybowanie zdarzeń
+          href: multi-container-microservice-net-applications/subscribe-events.md
+        - name: Testowanie aplikacji internetowych i usług ASP.NET Core
+          href: multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md
+        - name: Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHostedService
+          href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
+        - name: Wdrażanie bram interfejsu API za pomocą rozwiązania Ocelot
+          href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
+    - name: Rozwiązywanie problemów ze złożonościami biznesowymi w mikrousłudze z wzorcami DDD i CQRS
+      href: microservice-ddd-cqrs-patterns/index.md
+      items:
+        - name: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
+          href: microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md
+        - name: Stosowanie zasad CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers
+          href: microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
+        - name: Implementowanie odczytów i zapytań w mikrousłudze CQRS
+          href: microservice-ddd-cqrs-patterns/cqrs-microservice-reads.md
+        - name: Projektowanie mikrousługi zorientowanej na wzorzec DDD
+          href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
+        - name: Projektowanie modelu domeny mikrousługi
+          href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
+        - name: Implementowanie modelu domeny mikrousługi za pomocą platformy .NET Core
+          href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
+        - name: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
+          href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
+        - name: Implementowanie obiektów wartości
+          href: microservice-ddd-cqrs-patterns/implement-value-objects.md
+        - name: Używanie klas wyliczeń zamiast typów wyliczeń
+          href: microservice-ddd-cqrs-patterns/enumeration-classes-over-enum-types.md
+        - name: Projektowanie reguł weryfikacji w warstwie modelu domeny
+          href: microservice-ddd-cqrs-patterns/domain-model-layer-validations.md
+        - name: Weryfikacja po stronie klienta (weryfikacja w warstwach prezentacji)
+          href: microservice-ddd-cqrs-patterns/client-side-validation.md
+        - name: 'Zdarzenia w domenie: projektowanie i implementacja'
+          href: microservice-ddd-cqrs-patterns/domain-events-design-implementation.md
+        - name: Projektowanie warstwy trwałości infrastruktury
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
+        - name: Implementowanie warstwy trwałości infrastruktury za pomocą programu Entity Framework Core
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+        - name: Korzystanie z baz danych NoSQL jako infrastruktury trwałości
+          href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
+        - name: Projektowanie warstwy aplikacji mikrousług i internetowego interfejsu API
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
+        - name: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
+    - name: Implementowanie aplikacji odpornych na błędy
+      href: implement-resilient-applications/index.md
+      items:
+        - name: Obsługa częściowych niepowodzeń
+          href: implement-resilient-applications/handle-partial-failure.md
+        - name: Strategie dotyczące obsługi częściowych niepowodzeń
+          href: implement-resilient-applications/partial-failure-strategies.md
+        - name: Implementowanie ponownych prób wykonywanych przy użyciu wycofywania wykładniczego
+          href: implement-resilient-applications/implement-retries-exponential-backoff.md
+        - name: Implementowanie odpornych na błędy połączeń SQL w programie Entity Framework Core
+          href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
+        - name: Eksplorowanie ponownych prób niestandardowego wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego
+          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
+        - name: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
+          href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
+        - name: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
+          href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
+        - name: Implementowanie wzorca wyłącznika
+          href: implement-resilient-applications/implement-circuit-breaker-pattern.md
+        - name: Monitorowanie kondycji
+          href: implement-resilient-applications/monitor-app-health.md
+    - name: Zabezpieczanie mikrousług .NET i aplikacji internetowych
+      href: secure-net-microservices-web-applications/index.md
+      items:
+        - name: Informacje o autoryzacji w mikrousługach .NET i aplikacjach internetowych
+          href: secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md
+        - name: Bezpieczne przechowywanie kluczy tajnych aplikacji podczas jej tworzenia
+          href: secure-net-microservices-web-applications/developer-app-secrets-storage.md
+        - name: Korzystanie z usługi Azure Key Vault w celu ochrony kluczy tajnych w czasie tworzenia
+          href: secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md
+    - name: Kluczowe kwestie do zapamiętania
+      href: key-takeaways.md

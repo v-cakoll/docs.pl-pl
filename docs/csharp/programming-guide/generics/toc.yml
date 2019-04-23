@@ -1,36 +1,29 @@
-items:
 - name: Typy ogólne
   href: index.md
   items:
-  - name: Wprowadzenie do typów ogólnych
-    href: introduction-to-generics.md
-  - name: Zalety typów ogólnych
-    href: benefits-of-generics.md
-  - name: Parametry typu ogólnego
-    href: generic-type-parameters.md
-  - name: Ograniczenia dotyczące parametrów typu
-    href: constraints-on-type-parameters.md
-  - name: Klasy ogólne
-    href: generic-classes.md
-  - name: Interfejsy ogólne
-    href: generic-interfaces.md
-  - name: Metody ogólne
-    href: generic-methods.md
-  - name: Typy ogólne i tablice
-    href: generics-and-arrays.md
-  - name: Delegaci ogólni
-    href: generic-delegates.md
-  - name: Różnice między szablonami C++ i typami ogólnymi C#
-    href: differences-between-cpp-templates-and-csharp-generics.md
-  - name: Typy ogólne w środowisku uruchomieniowym
-    href: generics-in-the-run-time.md
-  - name: Typy ogólne i odbicie
-    href: generics-and-reflection.md
-  - name: Typy ogólne i atrybuty
-    href: generics-and-attributes.md
-ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471424"
+    - name: Wprowadzenie do typów ogólnych
+      href: introduction-to-generics.md
+    - name: Zalety typów ogólnych
+      href: benefits-of-generics.md
+    - name: Parametry typu ogólnego
+      href: generic-type-parameters.md
+    - name: Ograniczenia dotyczące parametrów typu
+      href: constraints-on-type-parameters.md
+    - name: Klasy ogólne
+      href: generic-classes.md
+    - name: Interfejsy ogólne
+      href: generic-interfaces.md
+    - name: Metody ogólne
+      href: generic-methods.md
+    - name: Typy ogólne i tablice
+      href: generics-and-arrays.md
+    - name: Delegaci ogólni
+      href: generic-delegates.md
+    - name: 'Różnice między szablonami C++ i typami ogólnymi C#'
+      href: differences-between-cpp-templates-and-csharp-generics.md
+    - name: Typy ogólne w środowisku uruchomieniowym
+      href: generics-in-the-run-time.md
+    - name: Typy ogólne i odbicie
+      href: generics-and-reflection.md
+    - name: Typy ogólne i atrybuty
+      href: generics-and-attributes.md

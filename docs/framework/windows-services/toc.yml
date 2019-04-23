@@ -1,41 +1,34 @@
-items:
 - name: Aplikacje usług systemu Windows
   href: index.md
   items:
-  - name: Wprowadzenie do aplikacji usług systemu Windows
-    href: introduction-to-windows-service-applications.md
-  - name: 'Przewodnik: Tworzenie aplikacji usług systemu Windows'
-    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
-  - name: Architektura programowania aplikacji usług
-    href: service-application-programming-architecture.md
-  - name: 'Instrukcje: Tworzenie usług systemu Windows'
-    href: how-to-create-windows-services.md
-    items:
-    - name: 'Instrukcje: Programowane pisanie usług'
-      href: how-to-write-services-programmatically.md
-    - name: 'Instrukcje: Dodawanie instalatorów od aplikacji usług'
-      href: how-to-add-installers-to-your-service-application.md
-    - name: 'Instrukcje: Określanie kontekstu zabezpieczeń dla usług'
-      href: how-to-specify-the-security-context-for-services.md
-    - name: 'Instrukcje: Instalowanie i odinstalowywanie usług'
-      href: how-to-install-and-uninstall-services.md
-    - name: 'Instrukcje: Uruchamianie usług'
-      href: how-to-start-services.md
-    - name: 'Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)'
-      href: how-to-pause-a-windows-service-visual-basic.md
-    - name: 'Instrukcje: Kontynuowanie usługi systemu Windows (Visual Basic)'
-      href: how-to-continue-a-windows-service-visual-basic.md
-    - name: 'Instrukcje: Debugowanie aplikacji usług systemu Windows'
-      href: how-to-debug-windows-service-applications.md
-    - name: 'Instrukcje: Rejestrowanie informacji o usługach'
-      href: how-to-log-information-about-services.md
-    - name: 'Rozwiązywanie problemów: Debugowanie usług systemu Windows'
-      href: troubleshooting-debugging-windows-services.md
-    - name: 'Rozwiązywanie problemów: Aplikacja usług nie instaluje się'
-      href: troubleshooting-service-application-wont-install.md
-ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471414"
+    - name: Wprowadzenie do aplikacji usług systemu Windows
+      href: introduction-to-windows-service-applications.md
+    - name: 'Przewodnik: Tworzenie aplikacji usług systemu Windows'
+      href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+    - name: Architektura programowania aplikacji usług
+      href: service-application-programming-architecture.md
+    - name: 'Instrukcje: Tworzenie usług systemu Windows'
+      href: how-to-create-windows-services.md
+      items:
+        - name: 'Instrukcje: Programowane pisanie usług'
+          href: how-to-write-services-programmatically.md
+        - name: 'Instrukcje: Dodawanie instalatorów od aplikacji usług'
+          href: how-to-add-installers-to-your-service-application.md
+        - name: 'Instrukcje: Określanie kontekstu zabezpieczeń dla usług'
+          href: how-to-specify-the-security-context-for-services.md
+        - name: 'Instrukcje: Instalowanie i odinstalowywanie usług'
+          href: how-to-install-and-uninstall-services.md
+        - name: 'Instrukcje: Uruchamianie usług'
+          href: how-to-start-services.md
+        - name: 'Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)'
+          href: how-to-pause-a-windows-service-visual-basic.md
+        - name: 'Instrukcje: Kontynuowanie usługi systemu Windows (Visual Basic)'
+          href: how-to-continue-a-windows-service-visual-basic.md
+        - name: 'Instrukcje: Debugowanie aplikacji usług systemu Windows'
+          href: how-to-debug-windows-service-applications.md
+        - name: 'Instrukcje: Rejestrowanie informacji o usługach'
+          href: how-to-log-information-about-services.md
+        - name: 'Rozwiązywanie problemów: Debugowanie usług systemu Windows'
+          href: troubleshooting-debugging-windows-services.md
+        - name: 'Rozwiązywanie problemów: Aplikacja usług nie instaluje się'
+          href: troubleshooting-service-application-wont-install.md

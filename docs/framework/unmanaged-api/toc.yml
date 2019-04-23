@@ -1,38 +1,31 @@
-items:
 - name: Niezarządzany wykaz interfejsów API
   href: index.md
   items:
-  - name: Standardowe typy danych
-    href: common-data-types-unmanaged-api-reference.md
-  - name: ALink, interfejs API
-    href: alink/
-  - name: Authenticode
-    href: authenticode/
-  - name: Stałe
-    href: constants-unmanaged-api-reference.md
-  - name: Debugowanie
-    href: debugging/
-  - name: Magazyn symboli diagnostycznych
-    href: diagnostics/
-  - name: Łączenie
-    href: fusion/
-  - name: Hosting
-    href: hosting/
-  - name: Metadane
-    href: metadata/
-  - name: Profilowanie
-    href: profiling/
-  - name: Silne nazewnictwo
-    href: strong-naming/
-  - name: Usługi WMI i liczniki wydajności
-    href: wmi/
-  - name: Tlbexp, funkcje pomocy
-    href: tlbexp/
-  - name: GUID_ManagedName — Atrybut
-    href: guid-managedname-attribute.md
-ms.openlocfilehash: 48454d1cf9285a229de8d3b852d33c985c3b53bc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472045"
+    - name: Standardowe typy danych
+      href: common-data-types-unmanaged-api-reference.md
+    - name: 'ALink, interfejs API'
+      href: alink/
+    - name: Authenticode
+      href: authenticode/
+    - name: Stałe
+      href: constants-unmanaged-api-reference.md
+    - name: Debugowanie
+      href: debugging/
+    - name: Magazyn symboli diagnostycznych
+      href: diagnostics/
+    - name: Łączenie
+      href: fusion/
+    - name: Hosting
+      href: hosting/
+    - name: Metadane
+      href: metadata/
+    - name: Profilowanie
+      href: profiling/
+    - name: Silne nazewnictwo
+      href: strong-naming/
+    - name: Usługi WMI i liczniki wydajności
+      href: wmi/
+    - name: 'Tlbexp, funkcje pomocy'
+      href: tlbexp/
+    - name: GUID_ManagedName — Atrybut
+      href: guid-managedname-attribute.md

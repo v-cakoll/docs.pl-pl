@@ -1,1233 +1,1226 @@
-items:
 - name: Formanty formularzy systemu Windows
   href: index.md
   items:
-  - name: Rozmieszczanie formantów na formularzach systemu Windows
-    href: arranging-controls-on-windows-forms.md
-    items:
-    - name: 'Instrukcje: wyrównywanie kontrolek na formularzach systemu Windows'
-      href: how-to-align-multiple-controls-on-windows-forms.md
-    - name: 'Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows'
-      href: how-to-anchor-controls-on-windows-forms.md
-    - name: 'Instrukcje: kopiowanie kontrolek pomiędzy formularzami systemu Windows'
-      href: how-to-copy-controls-between-windows-forms.md
-    - name: 'Instrukcje: dokowanie kontrolek w Formularzach systemu Windows'
-      href: how-to-dock-controls-on-windows-forms.md
-    - name: 'Instrukcje: tworzenie warstw obiektów na formularzach systemu Windows'
-      href: how-to-layer-objects-on-windows-forms.md
-    - name: 'Instrukcje: blokowanie kontrolek do formularzy systemu Windows'
-      href: how-to-lock-controls-to-windows-forms.md
-    - name: 'Instrukcje: kontrolki pozycji na formularzach systemu Windows'
-      href: how-to-position-controls-on-windows-forms.md
-    - name: 'Instrukcje: zmienianie rozmiaru kontrolek na formularzach systemu Windows'
-      href: how-to-resize-controls-on-windows-forms.md
-    - name: 'Instrukcje: ustawianie opcji siatki dla wszystkich formularzy systemu Windows'
-      href: how-to-set-grid-options-for-all-windows-forms.md
-    - name: 'Instrukcje: ustawianie kolejności tabulacji na formularzach systemu Windows'
-      href: how-to-set-the-tab-order-on-windows-forms.md
-    - name: 'Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania'
-      href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-    - name: 'Instrukcje: aranżowanie kontrolek z liniami przyciągania oraz siatki w formularzach systemu Windows'
-      href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
-    - name: 'Instrukcje: ponowne przypisywanie istniejących kontrolek do innego elementu nadrzędnego'
-      href: how-to-reassign-existing-controls-to-a-different-parent.md
-    - name: 'Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize'
-      href: windows-forms-controls-padding-autosize.md
-  - name: Umieszczanie formantów na formularzach systemu Windows
-    href: putting-controls-on-windows-forms.md
-    items:
-    - name: 'Instrukcje: dodawanie kontrolek do formularzy systemu Windows'
-      href: how-to-add-controls-to-windows-forms.md
-    - name: 'Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows'
-      href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
-    - name: 'Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania'
-      href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
-    - name: 'Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi'
-      href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-    - name: 'Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows'
-      href: how-to-add-activex-controls-to-windows-forms.md
-    - name: Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
-      href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
-  - name: Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
-    href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
-    items:
-    - name: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows'
-      href: how-to-create-access-keys-for-windows-forms-controls.md
-    - name: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows przy użyciu narzędzia Projektant'
-      href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
-    - name: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows'
-      href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
-    - name: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant'
-      href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
-    - name: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows'
-      href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
-    - name: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant'
-      href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
-    - name: Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
-      href: providing-accessibility-information-for-controls-on-a-windows-form.md
-  - name: Formanty do użycia w formularzach systemu Windows
-    href: controls-to-use-on-windows-forms.md
-    items:
-    - name: Formanty formularzy systemu Windows według funkcji
+    - name: Rozmieszczanie formantów na formularzach systemu Windows
+      href: arranging-controls-on-windows-forms.md
+      items:
+        - name: 'Instrukcje: wyrównywanie kontrolek na formularzach systemu Windows'
+          href: how-to-align-multiple-controls-on-windows-forms.md
+        - name: 'Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows'
+          href: how-to-anchor-controls-on-windows-forms.md
+        - name: 'Instrukcje: kopiowanie kontrolek pomiędzy formularzami systemu Windows'
+          href: how-to-copy-controls-between-windows-forms.md
+        - name: 'Instrukcje: dokowanie kontrolek w Formularzach systemu Windows'
+          href: how-to-dock-controls-on-windows-forms.md
+        - name: 'Instrukcje: tworzenie warstw obiektów na formularzach systemu Windows'
+          href: how-to-layer-objects-on-windows-forms.md
+        - name: 'Instrukcje: blokowanie kontrolek do formularzy systemu Windows'
+          href: how-to-lock-controls-to-windows-forms.md
+        - name: 'Instrukcje: kontrolki pozycji na formularzach systemu Windows'
+          href: how-to-position-controls-on-windows-forms.md
+        - name: 'Instrukcje: zmienianie rozmiaru kontrolek na formularzach systemu Windows'
+          href: how-to-resize-controls-on-windows-forms.md
+        - name: 'Instrukcje: ustawianie opcji siatki dla wszystkich formularzy systemu Windows'
+          href: how-to-set-grid-options-for-all-windows-forms.md
+        - name: 'Instrukcje: ustawianie kolejności tabulacji na formularzach systemu Windows'
+          href: how-to-set-the-tab-order-on-windows-forms.md
+        - name: 'Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania'
+          href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
+        - name: 'Instrukcje: aranżowanie kontrolek z liniami przyciągania oraz siatki w formularzach systemu Windows'
+          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
+        - name: 'Instrukcje: ponowne przypisywanie istniejących kontrolek do innego elementu nadrzędnego'
+          href: how-to-reassign-existing-controls-to-a-different-parent.md
+        - name: 'Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize'
+          href: windows-forms-controls-padding-autosize.md
+    - name: Umieszczanie formantów na formularzach systemu Windows
+      href: putting-controls-on-windows-forms.md
+      items:
+        - name: 'Instrukcje: dodawanie kontrolek do formularzy systemu Windows'
+          href: how-to-add-controls-to-windows-forms.md
+        - name: 'Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows'
+          href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
+        - name: 'Instrukcje: dodawanie do lub usuwanie z kolekcji kontrolek w czasie wykonywania'
+          href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
+        - name: 'Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi'
+          href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
+        - name: 'Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows'
+          href: how-to-add-activex-controls-to-windows-forms.md
+        - name: Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
+          href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
+    - name: Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich
+      href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+      items:
+        - name: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows'
+          href: how-to-create-access-keys-for-windows-forms-controls.md
+        - name: 'Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows przy użyciu narzędzia Projektant'
+          href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
+        - name: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows'
+          href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
+        - name: 'Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant'
+          href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
+        - name: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows'
+          href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
+        - name: 'Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows przy użyciu narzędzia Projektant'
+          href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
+        - name: Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
+          href: providing-accessibility-information-for-controls-on-a-windows-form.md
+    - name: Formanty do użycia w formularzach systemu Windows
+      href: controls-to-use-on-windows-forms.md
+      items:
+        - name: Formanty formularzy systemu Windows według funkcji
+          href: windows-forms-controls-by-function.md
+        - name: Formanty z wbudowaną obsługą rysowania przez właściciela
+          href: controls-with-built-in-owner-drawing-support.md
+        - name: BackgroundWorker — Składnik
+          href: backgroundworker-component.md
+          items:
+            - name: BackgroundWorker — Informacje o składniku
+              href: backgroundworker-component-overview.md
+            - name: 'Instrukcje: uruchamianie operacji w tle'
+              href: how-to-run-an-operation-in-the-background.md
+            - name: 'Instrukcje: pobieranie pliku w tle'
+              href: how-to-download-a-file-in-the-background.md
+            - name: 'Instrukcje: implementowanie formularza korzystającego z operacji w tle'
+              href: how-to-implement-a-form-that-uses-a-background-operation.md
+            - name: 'Przewodnik: uruchamianie operacji w tle'
+              href: walkthrough-running-an-operation-in-the-background.md
+            - name: 'Przewodnik: wdrażanie formularza korzystającego z operacji w tle'
+              href: walkthrough-implementing-a-form-that-uses-a-background-operation.md
+        - name: BindingNavigator — kontrolka
+          href: bindingnavigator-control-windows-forms.md
+          items:
+            - name: 'BindingNavigator, kontrolka — omówienie'
+              href: bindingnavigator-control-overview-windows-forms.md
+            - name: 'Instrukcje: nawigowanie w danych za pomocą kontrolki BindingNavigator formularzy systemu Windows'
+              href: how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md
+            - name: 'Instrukcje: przechodzenie między elementami DataSet za pomocą BindingNavigator formularzy systemu Windows'
+              href: move-through-a-dataset-with-wf-bindingnavigator-control.md
+            - name: 'Instrukcje: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows'
+              href: load-save-and-cancel-bindingnavigator.md
+        - name: BindingSource — Składnik
+          href: bindingsource-component.md
+          items:
+            - name: BindingSource — Informacje o składniku
+              href: bindingsource-component-overview.md
+            - name: Architektura składnika BindingSource
+              href: bindingsource-component-architecture.md
+            - name: 'Instrukcje: powiązanie kontrolki formularzy systemu Windows z obiektem fabryki'
+              href: how-to-bind-a-windows-forms-control-to-a-factory-object.md
+            - name: 'Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem'
+              href: how-to-bind-a-windows-forms-control-to-a-type.md
+            - name: 'Instrukcje: wiązanie kontrolki formularzy systemu Windows z typem przy użyciu narzędzia Projektant'
+              href: how-to-bind-a-windows-forms-control-to-a-type-using-the-designer.md
+            - name: 'Instrukcje: wiązanie z usługą sieci Web za pomocą kontrolki BindingSource formularzy systemu Windows'
+              href: how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md
+            - name: 'Instrukcje: wiązanie kontrolek formularzy systemu Windows z wartościami bazy danych DBNull'
+              href: how-to-bind-windows-forms-controls-to-dbnull-database-values.md
+            - name: 'Instrukcje: wiązanie kontrolek formularzy systemu Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant'
+              href: bind-wf-controls-with-the-bindingsource.md
+            - name: 'Instrukcje: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows'
+              href: how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md
+            - name: 'Instrukcje: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy systemu Windows'
+              href: how-to-customize-item-addition-with-the-windows-forms-bindingsource.md
+            - name: 'Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych'
+              href: how-to-handle-errors-and-exceptions-that-occur-with-databinding.md
+            - name: 'Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged'
+              href: raise-change-notifications--bindingsource.md
+            - name: 'Instrukcje: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem'
+              href: how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md
+            - name: 'Instrukcje: odzwierciedlanie aktualizacji źródła danych w kontrolce formularzy systemu Windows za pomocą elementu BindingSource'
+              href: reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md
+            - name: 'Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource'
+              href: how-to-share-bound-data-across-forms-using-the-bindingsource-component.md
+            - name: 'Instrukcje: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy systemu Windows'
+              href: sort-and-filter-ado-net-data-with-wf-bindingsource-component.md
+        - name: 'Button, kontrolka'
+          href: button-control-windows-forms.md
+          items:
+            - name: 'Button, kontrolka — omówienie'
+              href: button-control-overview-windows-forms.md
+            - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj'
+              href: how-to-designate-a-windows-forms-button-as-the-accept-button.md
+            - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj przy użyciu narzędzia Projektant'
+              href: designate-a-wf-button-as-the-accept-button-using-the-designer.md
+            - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj'
+              href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
+            - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj przy użyciu narzędzia Projektant'
+              href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
+            - name: 'Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows'
+              href: how-to-respond-to-windows-forms-button-clicks.md
+            - name: Sposoby wyboru kontrolki przycisku formularzy systemu Windows
+              href: ways-to-select-a-windows-forms-button-control.md
+        - name: 'CheckBox, kontrolka'
+          href: checkbox-control-windows-forms.md
+          items:
+            - name: 'CheckBox, kontrolka — omówienie'
+              href: checkbox-control-overview-windows-forms.md
+            - name: 'Instrukcje: odpowiadanie na kliknięcia elementu CheckBox formularzy systemu Windows'
+              href: how-to-respond-to-windows-forms-checkbox-clicks.md
+            - name: 'Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy systemu Windows'
+              href: how-to-set-options-with-windows-forms-checkbox-controls.md
+        - name: 'CheckedListBox, kontrolka'
+          href: checkedlistbox-control-windows-forms.md
+          items:
+            - name: 'CheckedListBox, kontrolka — omówienie'
+              href: checkedlistbox-control-overview-windows-forms.md
+            - name: 'Instrukcje: określanie elementów jako zaznaczone w kontrolce CheckedListBox formularzy systemu Windows'
+              href: how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md
+        - name: 'ColorDialog, składnik'
+          href: colordialog-component-windows-forms.md
+          items:
+            - name: 'ColorDialog, składnik — omówienie'
+              href: colordialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows'
+              href: how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md
+            - name: 'Instrukcje: pokazywanie palety kolorów przy użyciu składnika ColorDialog'
+              href: how-to-show-a-color-palette-with-the-colordialog-component.md
+        - name: 'ComboBox, kontrolka'
+          href: combobox-control-windows-forms.md
+          items:
+            - name: 'ComboBox, kontrolka — omówienie'
+              href: combobox-control-overview-windows-forms.md
+            - name: 'Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox'
+              href: how-to-create-variable-sized-text-in-a-combobox-control.md
+        - name: 'ContextMenu, składnik'
+          href: contextmenu-component-windows-forms.md
+          items:
+            - name: 'ContextMenu, składnik — omówienie'
+              href: contextmenu-component-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows'
+              href: add-and-remove-menu-items-with-wf-contextmenu-component.md
+        - name: ContextMenuStrip — Formant
+          href: contextmenustrip-control.md
+          items:
+            - name: ContextMenuStrip — Informacje o formancie
+              href: contextmenustrip-control-overview.md
+            - name: 'Instrukcje: skojarzenie właściwości ContextMenuStrip z kontrolką'
+              href: how-to-associate-a-contextmenustrip-with-a-control.md
+            - name: 'Instrukcje: dodawanie elementów menu do paska ContextMenuStrip'
+              href: how-to-add-menu-items-to-a-contextmenustrip.md
+            - name: 'Instrukcje: konfiguracja marginesów zaznaczania ContextMenuStrip i marginesów obrazu'
+              href: how-to-configure-contextmenustrip-check-margins-and-image-margins.md
+            - name: 'Instrukcje: włączanie marginesów zaznaczania i marginesów obrazów w kontrolkach ContextMenuStrip'
+              href: how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md
+            - name: 'Instrukcje: obsługa zdarzenia otwierania kontrolki ContextMenuStrip'
+              href: how-to-handle-the-contextmenustrip-opening-event.md
+        - name: 'DataGrid, kontrolka'
+          href: datagrid-control-windows-forms.md
+          items:
+            - name: 'DataGrid, kontrolka — omówienie'
+              href: datagrid-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows'
+              href: how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md
+            - name: 'Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md
+            - name: 'Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych'
+              href: how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md
+            - name: 'Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych przy użyciu narzędzia Projektant'
+              href: bind-wf-datagrid-control-to-a-data-source-using-the-designer.md
+            - name: 'Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy systemu Windows'
+              href: change-displayed-data-at-run-time-wf-datagrid-control.md
+            - name: 'Instrukcje: tworzenie list wzorzec/szczegół za pomocą kontrolki DataGrid formularzy systemu Windows'
+              href: how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md
+            - name: 'Instrukcje: tworzenie list wzorzec-szczegół za pomocą kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: create-master-details-lists-with-wf-datagrid-control-using-the-designer.md
+            - name: 'Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy systemu Windows'
+              href: how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md
+            - name: 'Instrukcje: format kontrolki DataGrid formularzy systemu Windows'
+              href: how-to-format-the-windows-forms-datagrid-control.md
+            - name: 'Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: how-to-format-the-windows-forms-datagrid-control-using-the-designer.md
+            - name: 'Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows'
+              href: how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md
+            - name: 'Instrukcje: sprawdzanie poprawności danych wejściowych w kontrolce DataGrid formularzy systemu Windows'
+              href: how-to-validate-input-with-the-windows-forms-datagrid-control.md
+            - name: Skróty klawiaturowe dla formantu DataGrid formularzy systemu Windows
+              href: keyboard-shortcuts-for-the-windows-forms-datagrid-control.md
+        - name: DataGridView — Formant
+          href: datagridview-control-windows-forms.md
+          items:
+            - name: Używanie narzędzia Projektant z formantem DataGridView formularzy systemu Windows
+              href: using-the-designer-with-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Instrukcje: dodawanie i usuwanie kolumn do kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: add-and-remove-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: wiązanie danych z kontrolką DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: bind-data-to-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: change-the-order-of-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: zmienianie typu kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: change-the-type-of-a-wf-datagridview-column-using-the-designer.md
+                - name: 'Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: enable-column-reordering-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: freeze-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: ukrywanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: hide-columns-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: nadawanie kolumnom statusu tylko do odczytu w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: make-columns-read-only-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: zapobieganie dodawaniu i usuwaniu rzędów do kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: set-alternating-row-styles-for-the-datagrid-using-the-designer.md
+                - name: 'Instrukcje: ustawianie domyślnych stylów komórek i formatów danych dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
+                  href: default-cell-styles-datagridview.md
+            - name: 'DataGridView, kontrolka — omówienie'
+              href: datagridview-control-overview-windows-forms.md
+              items:
+                - name: 'DataGridView, kontrolka — podsumowanie technologii'
+                  href: datagridview-control-technology-summary-windows-forms.md
+                - name: 'DataGridView, kontrolka — architektura'
+                  href: datagridview-control-architecture-windows-forms.md
+                - name: 'DataGridView, kontrolka — scenariusze'
+                  href: datagridview-control-scenarios-windows-forms.md
+                - name: 'DataGridView, kontrolka — katalog kodu'
+                  href: datagridview-control-code-directory-windows-forms.md
+            - name: Funkcje domyślne w formancie DataGridView formularzy systemu Windows
+              href: default-functionality-in-the-windows-forms-datagridview-control.md
+            - name: Typy kolumn w formancie DataGridView formularzy systemu Windows
+              href: column-types-in-the-windows-forms-datagridview-control.md
+            - name: 'Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows'
+              href: basic-column-row-and-cell-features-wf-datagridview-control.md
+              items:
+                - name: 'Instrukcje: ukrywanie kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-hide-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ukrywanie nagłówków kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-freeze-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: określanie kolumn jako tylko do odczytu w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: zapobieganie dodawaniu i usuwaniu rzędów do kontrolki DataGridView formularzy systemu Windows'
+                  href: prevent-row-addition-and-deletion-datagridview.md
+                - name: 'Instrukcje: pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy systemu Windows'
+                  href: get-and-set-the-current-cell-wf-datagridview-control.md
+                - name: 'Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md
+            - name: Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows
+              href: basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Instrukcje: zmienianie stylów obramowania i linii siatki w kontrolce DataGridView formularzy systemu Windows'
+                  href: change-the-border-and-gridline-styles-in-the-datagrid.md
+                - name: Style komórki w formancie DataGridView formularzy systemu Windows
+                  href: cell-styles-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ustawianie domyślnych stylów komórki dla kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-format-data-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ustawianie alternatywnych stylów wierszy dla kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy systemu Windows'
+                  href: use-the-row-template-to-customize-rows-in-the-datagrid.md
+            - name: Wyświetlanie danych w formancie DataGridView formularzy systemu Windows
+              href: displaying-data-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
+                  href: data-display-modes-in-the-windows-forms-datagridview-control.md
+                - name: Formatowanie danych w formancie DataGridView formularzy systemu Windows
+                  href: data-formatting-in-the-windows-forms-datagridview-control.md
+                - name: 'Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows'
+                  href: walkthrough-creating-an-unbound-windows-forms-datagridview-control.md
+                  items:
+                    - name: 'Instrukcje: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows'
+                      href: how-to-create-an-unbound-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: powiązanie danych z kontrolką DataGridView formularzy systemu Windows'
+                  href: how-to-bind-data-to-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: automatyczne generowanie kolumn w powiązaną z danymi kontrolką DataGridView formularzy systemu Windows'
+                  href: autogenerate-columns-in-a-data-bound-wf-datagridview-control.md
+                - name: 'Instrukcje: usuwanie utworzonych automatycznie kolumn z kontrolki DataGridView formularzy systemu Windows'
+                  href: remove-autogenerated-columns-from-a-wf-datagridview-control.md
+                - name: 'Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: dodawanie niepowiązanych kolumn do powiązanej z danymi kontrolki DataGridView formularzy systemu Windows'
+                  href: unbound-column-to-a-data-bound-datagridview.md
+                - name: 'Instrukcje: powiązanie obiektów z kontrolkami DataGridView formularzy systemu Windows'
+                  href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
+                - name: 'Instrukcje: uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
+                - name: 'Instrukcje: uzyskiwanie dostępu do obiektów na liście rozwijanej DataGridViewComboBoxCell formularzy systemu Windows'
+                  href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
+                - name: 'Przewodnik: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows'
+                  href: creating-a-master-detail-form-using-two-datagridviews.md
+                  items:
+                    - name: 'Instrukcje: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows'
+                      href: create-a-master-detail-form-using-two-datagridviews.md
+                - name: 'Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md
+            - name: Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows
+              href: resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
+                  href: sizing-options-in-the-windows-forms-datagridview-control.md
+                - name: Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows
+                  href: column-fill-mode-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: zmienianie w sposób programowy rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy systemu Windows'
+                  href: programmatically-resize-cells-to-fit-content-in-the-datagrid.md
+                - name: 'Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows'
+                  href: automatically-resize-cells-when-content-changes-in-the-datagrid.md
+            - name: Sortowanie danych w kontrolce DataGridView formularzy Windows Forms
+              href: sorting-data-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Tryb sortowania kolumn w formancie DataGridView formularzy systemu Windows
+                  href: column-sort-modes-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ustawianie trybów sortowania kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: set-the-sort-modes-for-columns-wf-datagridview-control.md
+                - name: 'Instrukcje: dostosowywanie sortowania w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-customize-sorting-in-the-windows-forms-datagridview-control.md
+            - name: Wprowadzanie danych w formancie DataGridView formularzy systemu Windows
+              href: data-entry-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Instrukcje: określanie trybu edycji dla kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy systemu Windows'
+                  href: specify-default-values-for-new-rows-in-the-datagrid.md
+                - name: Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
+                  href: using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md
+                - name: 'Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows'
+                  href: walkthrough-validating-data-in-the-windows-forms-datagridview-control.md
+                  items:
+                    - name: 'Instrukcje: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows'
+                      href: how-to-validate-data-in-the-windows-forms-datagridview-control.md
+                - name: 'Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows'
+                  href: handling-errors-that-occur-during-data-entry-in-the-datagrid.md
+                  items:
+                    - name: 'Instrukcje: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows'
+                      href: handle-errors-that-occur-during-data-entry-in-the-datagrid.md
+            - name: Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows
+              href: selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md
+              items:
+                - name: Tryby wyboru w formancie DataGridView formularzy systemu Windows
+                  href: selection-modes-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows'
+                  href: how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: pobieranie wybranych komórek, wierszy i kolumn w kontrolce DataGridView formularzy systemu Windows'
+                  href: selected-cells-rows-and-columns-datagridview.md
+                - name: 'Instrukcje: umożliwianie użytkownikom kopiowania wielu komórek do schowka z kontrolki DataGridView formularzy systemu Windows'
+                  href: enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md
+            - name: 'Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows'
+              href: programming-with-cells-rows-and-columns-in-the-datagrid.md
+              items:
+                - name: 'Instrukcje: dodawanie elementu ToolTips do pojedynczych komórek w kontrolce DataGridView formularzy systemu Windows'
+                  href: add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md
+                - name: 'Instrukcje: wykonywanie niestandardowej akcji na podstawie zmian w komórce kontrolki DataGridView formularzy systemu Windows'
+                  href: perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md
+                - name: 'Instrukcje: manipulowanie paskami w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: manipulowanie wierszami w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: manipulowanie kolumnami w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md
+                - name: 'Instrukcje: praca z kolumnami obrazów w kontrolce DataGridView formularzy systemu Windows'
+                  href: how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md
+            - name: Dostosowywanie formantu DataGridView formularzy systemu Windows
+              href: customizing-the-windows-forms-datagridview-control.md
+              items:
+                - name: 'Instrukcje: dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy systemu Windows'
+                  href: customize-the-appearance-of-cells-in-the-datagrid.md
+                - name: 'Instrukcje: dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy systemu Windows'
+                  href: customize-the-appearance-of-rows-in-the-datagrid.md
+                - name: 'Instrukcje: dostosowywanie komórek i kolumn w kontrolce DataGridView (Formularze systemu Windows) przez rozszerzanie ich zachowania i wyglądu'
+                  href: customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md
+                - name: 'Instrukcje: wyłączanie przycisków w kolumnie przycisków w kontrolce DataGridView formularzy systemu Windows'
+                  href: disable-buttons-in-a-button-column-in-the-datagrid.md
+                - name: 'Instrukcje: kontrolki hosta w komórkach DataGridView formularzy systemu Windows'
+                  href: how-to-host-controls-in-windows-forms-datagridview-cells.md
+            - name: Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows
+              href: performance-tuning-in-the-windows-forms-datagridview-control.md
+              items:
+                - name: Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows
+                  href: best-practices-for-scaling-the-windows-forms-datagridview-control.md
+                - name: Tryb wirtualny w formancie DataGridView formularzy systemu Windows
+                  href: virtual-mode-in-the-windows-forms-datagridview-control.md
+                - name: 'Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows'
+                  href: implementing-virtual-mode-wf-datagridview-control.md
+                  items:
+                    - name: 'Instrukcje: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows'
+                      href: how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md
+                - name: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows
+                  href: implementing-virtual-mode-jit-data-loading-in-the-datagrid.md
+                  items:
+                    - name: 'Instrukcje: implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy systemu Windows'
+                      href: virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md
+            - name: Domyślna obsługa myszy i klawiatury w kontrolce DataGridView formularzy Windows Forms
+              href: default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md
+            - name: Różnice między formantami DataGridView i DataGrid formularzy systemu Windows
+              href: differences-between-the-windows-forms-datagridview-and-datagrid-controls.md
+        - name: 'DateTimePicker, kontrolka'
+          href: datetimepicker-control-windows-forms.md
+          items:
+            - name: 'DateTimePicker, kontrolka — omówienie'
+              href: datetimepicker-control-overview-windows-forms.md
+            - name: 'Instrukcje: wyświetlanie daty w niestandardowym formacie za pomocą kontrolki DateTimePicker formularzy systemu Windows'
+              href: display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md
+            - name: 'Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy systemu Windows'
+              href: how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md
+            - name: 'Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker'
+              href: how-to-display-time-with-the-datetimepicker-control.md
+        - name: Kontrolki i składniki okien dialogowych
+          href: dialog-box-controls-and-components-windows-forms.md
+        - name: 'DomainUpDown, kontrolka'
+          href: domainupdown-control-windows-forms.md
+          items:
+            - name: 'DomainUpDown, kontrolka — omówienie'
+              href: domainupdown-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie w sposób programowy elementów do kontrolki DomainUpDown formularzy systemu Windows'
+              href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
+            - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown'
+              href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
+        - name: 'ErrorProvider, składnik'
+          href: errorprovider-component-windows-forms.md
+          items:
+            - name: 'ErrorProvider, składnik — omówienie'
+              href: errorprovider-component-overview-windows-forms.md
+            - name: 'Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows'
+              href: display-error-icons-for-form-validation-with-wf-errorprovider.md
+            - name: 'Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows'
+              href: view-errors-within-a-dataset-with-wf-errorprovider-component.md
+        - name: FileDialog — Klasa
+          href: filedialog-class.md
+          items:
+            - name: 'Instrukcje: jak nie zgadzać się na uczestnictwo dotyczące automatycznego uaktualniania okna dialogowego obsługi pliku'
+              href: how-to-opt-out-of-file-dialog-box-automatic-upgrade.md
+            - name: 'Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików'
+              href: how-to-add-a-custom-place-to-a-file-dialog-box.md
+            - name: Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików
+              href: known-folder-guids-for-file-dialog-custom-places.md
+        - name: 'FlowLayoutPanel, kontrolka'
+          href: flowlayoutpanel-control-windows-forms.md
+          items:
+            - name: FlowLayoutPanel — Informacje o formancie
+              href: flowlayoutpanel-control-overview.md
+            - name: 'Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel'
+              href: how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md
+            - name: 'Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel'
+              href: walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md
+        - name: 'FolderBrowserDialog, składnik'
+          href: folderbrowserdialog-component-windows-forms.md
+          items:
+            - name: FolderBrowserDialog — Informacje o składniku (Formularze systemu Windows)
+              href: folderbrowserdialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows'
+              href: how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md
+        - name: 'FontDialog, składnik'
+          href: fontdialog-component-windows-forms.md
+          items:
+            - name: 'FontDialog, składnik — omówienie'
+              href: fontdialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: pokazywanie listy czcionek przy użyciu składnika FontDialog'
+              href: how-to-show-a-font-list-with-the-fontdialog-component.md
+        - name: 'GroupBox, kontrolka'
+          href: groupbox-control-windows-forms.md
+          items:
+            - name: 'GroupBox, kontrolka — omówienie'
+              href: groupbox-control-overview-windows-forms.md
+            - name: 'Instrukcje: grupowanie kontrolek za pomocą kontrolki GroupBox formularzy systemu Windows'
+              href: how-to-group-controls-with-the-windows-forms-groupbox-control.md
+        - name: 'HelpProvider, składnik'
+          href: helpprovider-component-windows-forms.md
+          items:
+            - name: 'HelpProvider, składnik — omówienie'
+              href: helpprovider-component-overview-windows-forms.md
+        - name: 'HScrollBar i VScrollBar, kontrolki'
+          href: hscrollbar-and-vscrollbar-controls-windows-forms.md
+          items:
+            - name: 'HScrollBar i VScrollBar, kontrolki — omówienie'
+              href: hscrollbar-and-vscrollbar-controls-overview-windows-forms.md
+        - name: 'ImageList, składnik'
+          href: imagelist-component-windows-forms.md
+          items:
+            - name: 'ImageList, składnik — omówienie'
+              href: imagelist-component-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows'
+              href: how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md
+            - name: 'Instrukcje: dodawanie lub usuwanie obrazów ImageList przy użyciu narzędzia Projektant'
+              href: how-to-add-or-remove-imagelist-images-with-the-designer.md
+        - name: 'Label, kontrolka'
+          href: label-control-windows-forms.md
+          items:
+            - name: 'Label, kontrolka — omówienie'
+              href: label-control-overview-windows-forms.md
+            - name: 'Instrukcje: tworzenie klawiszy dostępu za pomocą kontrolek etykiet formularzy systemu Windows'
+              href: how-to-create-access-keys-with-windows-forms-label-controls.md
+            - name: 'Instrukcje: rozmiar kontrolki etykiety (Formularze systemu Windows) pasujący do jego zawartości'
+              href: how-to-size-a-windows-forms-label-control-to-fit-its-contents.md
+        - name: 'LinkLabel, kontrolka'
+          href: linklabel-control-windows-forms.md
+          items:
+            - name: 'LinkLabel, kontrolka — omówienie'
+              href: linklabel-control-overview-windows-forms.md
+            - name: 'Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy systemu Windows'
+              href: how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md
+            - name: 'Instrukcje: łączenie z obiektem lub stroną sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows'
+              href: link-to-an-object-or-web-page-with-wf-linklabel-control.md
+            - name: 'Instrukcje: wyświetlanie strony sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows (Visual Basic)'
+              href: display-a-web-page-from-a-wf-linklabel-control-visual-basic.md
+        - name: 'ListBox, kontrolka'
+          href: listbox-control-windows-forms.md
+          items:
+            - name: 'ListBox, kontrolka — omówienie'
+              href: listbox-control-overview-windows-forms.md
+        - name: ListView — Formant
+          href: listview-control-windows-forms.md
+          items:
+            - name: 'ListView, kontrolka — omówienie'
+              href: listview-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows'
+              href: how-to-add-and-remove-items-with-the-windows-forms-listview-control.md
+            - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: add-and-remove-items-with-wf-listview-control-using-the-designer.md
+            - name: 'Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows'
+              href: how-to-add-columns-to-the-windows-forms-listview-control.md
+            - name: 'Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md
+            - name: 'Instrukcje: dodawanie funkcji wyszukiwania do kontrolki ListView'
+              href: how-to-add-search-capabilities-to-a-listview-control.md
+            - name: 'Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy systemu Windows'
+              href: how-to-display-icons-for-the-windows-forms-listview-control.md
+            - name: 'Instrukcje: wyświetlanie podelementów w kolumnach za pomocą kontrolki ListView formularzy systemu Windows'
+              href: how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md
+            - name: 'Instrukcje: włączanie widoku Tile w kontrolce ListView formularzy systemu Windows'
+              href: how-to-enable-tile-view-in-a-windows-forms-listview-control.md
+            - name: 'Instrukcje: włączanie widoku Tile w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: enable-tile-view-in-a-wf-listview-control-using-the-designer.md
+            - name: 'Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows'
+              href: how-to-group-items-in-a-windows-forms-listview-control.md
+            - name: 'Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md
+            - name: 'Instrukcje: wyświetlanie znacznika wstawiania w kontrolce ListView formularzy systemu Windows'
+              href: how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md
+            - name: 'Instrukcje: zaznaczanie elementu w kontrolce ListView formularzy systemu Windows'
+              href: how-to-select-an-item-in-the-windows-forms-listview-control.md
+            - name: 'Przewodnik: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant'
+              href: creating-an-explorer-style-interface-with-the-listview-and-treeview.md
+        - name: 'MainMenu, składnik'
+          href: mainmenu-component-windows-forms.md
+          items:
+            - name: 'MainMenu, składnik — omówienie'
+              href: mainmenu-component-overview-windows-forms.md
+        - name: 'MaskedTextBox, kontrolka'
+          href: maskedtextbox-control-windows-forms.md
+          items:
+            - name: 'Przewodnik: praca z kontrolką MaskedTextBox'
+              href: walkthrough-working-with-the-maskedtextbox-control.md
+            - name: 'Instrukcje: powiązanie danych z kontrolką MaskedTextBox'
+              href: how-to-bind-data-to-the-maskedtextbox-control.md
+            - name: 'Instrukcje: ustawienie maski wprowadzania'
+              href: how-to-set-the-input-mask.md
+        - name: 'MenuStrip, kontrolka'
+          href: menustrip-control-windows-forms.md
+          items:
+            - name: 'MenuStrip, kontrolka — omówienie'
+              href: menustrip-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie rozszerzeń do kontrolki ToolStripMenuItems'
+              href: how-to-add-enhancements-to-toolstripmenuitems.md
+            - name: 'Instrukcje: dołączanie kontrolki MenuStrip do nadrzędnego okna MDI'
+              href: how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md
+            - name: 'Instrukcje: kopiowanie ToolStripMenuItems'
+              href: how-to-copy-toolstripmenuitems.md
+            - name: 'Instrukcje: tworzenie list okien MDI za pomocą elementu MenuStrip'
+              href: how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md
+            - name: 'Instrukcje: wyłączanie ToolStripMenuItems'
+              href: how-to-disable-toolstripmenuitems.md
+            - name: 'Instrukcje: wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant'
+              href: how-to-disable-toolstripmenuitems-using-the-designer.md
+            - name: 'Instrukcje: wyświetlanie przycisków opcji w kontrolce MenuStrip'
+              href: how-to-display-option-buttons-in-a-menustrip-windows-forms.md
+            - name: 'Instrukcje: ukrywanie kontrolki ToolStripMenuItems'
+              href: how-to-hide-toolstripmenuitems.md
+            - name: 'Instrukcje: ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant'
+              href: how-to-hide-toolstripmenuitems-using-the-designer.md
+            - name: 'Instrukcje: wstawianie kontrolki MenuStrip do menu rozwijanego MDI'
+              href: how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md
+            - name: 'Instrukcje: usuwanie kontrolki ToolStripMenuItem z menu rozwijanego MDI'
+              href: how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md
+            - name: 'Instrukcje: przenoszenie ToolStripMenuItems'
+              href: how-to-move-toolstripmenuitems.md
+            - name: 'Instrukcje: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu'
+              href: how-to-configure-menustrip-check-margins-and-image-margins.md
+            - name: 'Instrukcje: zapewnianie elementów menu standardowego dla formularza'
+              href: how-to-provide-standard-menu-items-to-a-form.md
+            - name: 'Instrukcje: konfigurowanie automatycznego scalania menu dla aplikacji MDI'
+              href: how-to-set-up-automatic-menu-merging-for-mdi-applications.md
+            - name: Scalanie elementów menu w formancie MenuStrip formularzy systemu Windows
+              href: merging-menu-items-in-the-windows-forms-menustrip-control.md
+            - name: 'Przewodnik: zapewnianie elementów menu standardowego dla formularza'
+              href: walkthrough-providing-standard-menu-items-to-a-form.md
+        - name: 'MonthCalendar, kontrolka'
+          href: monthcalendar-control-windows-forms.md
+          items:
+            - name: 'MonthCalendar, kontrolka — omówienie'
+              href: monthcalendar-control-overview-windows-forms.md
+            - name: 'Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy systemu Windows'
+              href: how-to-change-monthcalendar-control-appearance.md
+            - name: 'Instrukcje: wyświetlanie większej niż jeden liczby miesięcy w kontrolce MonthCalendar formularzy systemu Windows'
+              href: display-more-than-one-month-wf-monthcalendar-control.md
+            - name: 'Instrukcje: wyświetlanie określonych dni pogrubioną czcionką za pomocą kontrolki MonthCalendar formularzy systemu Windows'
+              href: display-specific-days-in-bold-with-wf-monthcalendar-control.md
+            - name: 'Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy systemu Windows'
+              href: how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md
+        - name: 'NotifyIcon, składnik'
+          href: notifyicon-component-windows-forms.md
+          items:
+            - name: 'NotifyIcon, składnik — omówienie'
+              href: notifyicon-component-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows'
+              href: app-icons-to-the-taskbar-with-wf-notifyicon.md
+            - name: 'Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows'
+              href: how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md
+        - name: 'NumericUpDown, kontrolka'
+          href: numericupdown-control-windows-forms.md
+          items:
+            - name: 'NumericUpDown, kontrolka — omówienie'
+              href: numericupdown-control-overview-windows-forms.md
+            - name: 'Instrukcje: ustawianie i zwracanie wartości liczbowych za pomocą kontrolki NumericUpDown formularzy systemu Windows'
+              href: set-and-return-numeric-values-with-wf-numericupdown-control.md
+            - name: 'Instrukcje: ustawienie formatu dla kontrolki NumericUpDown formularzy systemu Windows'
+              href: how-to-set-the-format-for-the-windows-forms-numericupdown-control.md
+        - name: 'OpenFileDialog, składnik'
+          href: openfiledialog-component-windows-forms.md
+          items:
+            - name: 'OpenFileDialog, składnik — omówienie'
+              href: openfiledialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: otwieranie plików za pomocą składnika OpenFileDialog'
+              href: how-to-open-files-using-the-openfiledialog-component.md
+        - name: 'PageSetupDialog, składnik'
+          href: pagesetupdialog-component-windows-forms.md
+          items:
+            - name: 'PageSetupDialog, składnik — omówienie'
+              href: pagesetupdialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog'
+              href: how-to-determine-page-properties-using-the-pagesetupdialog-component.md
+        - name: 'Panel, kontrolka'
+          href: panel-control-windows-forms.md
+          items:
+            - name: 'Panel, kontrolka — omówienie'
+              href: panel-control-overview-windows-forms.md
+            - name: 'Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: group-controls-with-wf-panel-control-using-the-designer.md
+            - name: 'Instrukcje: ustawianie tła panelu'
+              href: how-to-set-the-background-of-a-windows-forms-panel.md
+            - name: 'Instrukcje: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md
+        - name: 'PictureBox, kontrolka'
+          href: picturebox-control-windows-forms.md
+          items:
+            - name: 'PictureBox, kontrolka — omówienie'
+              href: picturebox-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant'
+              href: how-to-load-a-picture-using-the-designer-windows-forms.md
+            - name: 'Instrukcje: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania'
+              href: how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md
+            - name: 'Instrukcje: ustawienie obrazów w czasie wykonywania'
+              href: how-to-set-pictures-at-run-time-windows-forms.md
+        - name: 'PrintDialog, składnik'
+          href: printdialog-component-windows-forms.md
+          items:
+            - name: 'PrintDialog, składnik — omówienie'
+              href: printdialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: wyświetlanie składnika PrintDialog'
+              href: how-to-display-the-printdialog-component.md
+        - name: 'PrintDocument, składnik'
+          href: printdocument-component-windows-forms.md
+          items:
+            - name: 'PrintDocument, składnik — omówienie'
+              href: printdocument-component-overview-windows-forms.md
+        - name: 'PrintPreviewControl, kontrolka'
+          href: printpreviewcontrol-control-windows-forms.md
+          items:
+            - name: 'PrintPreviewControl, kontrolka — omówienie'
+              href: printpreviewcontrol-control-overview-windows-forms.md
+        - name: 'PrintPreviewDialog, kontrolka'
+          href: printpreviewdialog-control-windows-forms.md
+          items:
+            - name: 'PrintPreviewDialog, kontrolka — omówienie'
+              href: printpreviewdialog-control-overview-windows-forms.md
+            - name: 'Instrukcje: wyświetlanie podglądu wydruku w aplikacjach formularzy Windows'
+              href: how-to-display-print-preview-in-windows-forms-applications.md
+        - name: 'ProgressBar, kontrolka'
+          href: progressbar-control-windows-forms.md
+          items:
+            - name: 'ProgressBar, kontrolka — omówienie'
+              href: progressbar-control-overview-windows-forms.md
+            - name: 'Instrukcje: ustawianie wartości wyświetlanej przez kontrolkę ProgressBar formularzy systemu Windows'
+              href: how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md
+        - name: 'RadioButton, kontrolka'
+          href: radiobutton-control-windows-forms.md
+          items:
+            - name: 'RadioButton, kontrolka — omówienie'
+              href: radiobutton-control-overview-windows-forms.md
+            - name: 'Instrukcje: grupowanie kontrolek RadioButton formularzy systemu Windows, aby działały jak zestaw'
+              href: how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md
+        - name: 'RichTextBox, kontrolka'
+          href: richtextbox-control-windows-forms.md
+          items:
+            - name: RichTextBoxm kontrolka — omówienie
+              href: richtextbox-control-overview-windows-forms.md
+            - name: 'Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows'
+              href: determine-when-formatting-attributes-change-wf-richtextbox-control.md
+            - name: 'Instrukcje: wyświetlanie pasków przewijania w komórkach kontrolki RichTextBox formularzy systemu Windows'
+              href: how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md
+            - name: 'Instrukcje: wyświetlanie łączy stylu sieci Web za pomocą kontrolki RichTextBox formularzy systemu Windows'
+              href: how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md
+            - name: 'Instrukcje: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy systemu Windows'
+              href: enable-drag-and-drop-operations-with-wf-richtextbox-control.md
+            - name: 'Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy systemu Windows'
+              href: how-to-load-files-into-the-windows-forms-richtextbox-control.md
+            - name: 'Instrukcje: zapisywanie plików za pomocą kontrolki RichTextBox formularzy systemu Windows'
+              href: how-to-save-files-with-the-windows-forms-richtextbox-control.md
+            - name: 'Instrukcje: ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy systemu Windows'
+              href: how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md
+            - name: 'Instrukcje: ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą kontrolki RichTextBox formularzy systemu Windows'
+              href: set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md
+        - name: 'SaveFileDialog, składnik'
+          href: savefiledialog-component-windows-forms.md
+          items:
+            - name: 'SaveFileDialog, składnik — omówienie'
+              href: savefiledialog-component-overview-windows-forms.md
+            - name: 'Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog'
+              href: how-to-save-files-using-the-savefiledialog-component.md
+        - name: SoundPlayer — Klasa
+          href: soundplayer-class.md
+          items:
+            - name: Przegląd klasy SoundPlayer
+              href: soundplayer-class-overview.md
+            - name: 'Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows'
+              href: how-to-play-a-sound-from-a-windows-form.md
+            - name: 'Instrukcje: odtwarzanie sygnału dźwiękowego z formularza systemu Windows'
+              href: how-to-play-a-beep-from-a-windows-form.md
+            - name: 'Instrukcje: odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza systemu Windows'
+              href: how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md
+            - name: 'Instrukcje: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows'
+              href: how-to-play-a-system-sound-from-a-windows-form.md
+            - name: 'Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows'
+              href: how-to-load-a-sound-asynchronously-within-a-windows-form.md
+            - name: 'Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows'
+              href: how-to-loop-a-sound-playing-on-a-windows-form.md
+        - name: 'SplitContainer, kontrolka'
+          href: splitcontainer-control-windows-forms.md
+          items:
+            - name: 'SplitContainer, kontrolka — omówienie'
+              href: splitcontainer-control-overview-windows-forms.md
+            - name: 'Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows'
+              href: how-to-create-a-multipane-user-interface-with-windows-forms.md
+            - name: 'Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant'
+              href: create-a-multipane-user-interface-with-wf-using-the-designer.md
+            - name: 'Instrukcje: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows'
+              href: how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md
+            - name: 'Instrukcje: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie'
+              href: how-to-define-resize-and-positioning-behavior-in-a-split-window.md
+            - name: 'Instrukcje: dzielenie okna w poziomie'
+              href: how-to-split-a-window-horizontally.md
+            - name: 'Instrukcje: poziome dzielenie okna przy użyciu narzędzia Projektant'
+              href: how-to-split-a-window-horizontally-using-the-designer.md
+        - name: 'Splitter, kontrolka'
+          href: splitter-control-windows-forms.md
+          items:
+            - name: 'Splitter, kontrolka — omówienie'
+              href: splitter-control-overview-windows-forms.md
+        - name: 'StatusBar, kontrolka'
+          href: statusbar-control-windows-forms.md
+          items:
+            - name: 'StatusBar, kontrolka — omówienie'
+              href: statusbar-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie paneli do kontrolki StatusBar'
+              href: how-to-add-panels-to-a-statusbar-control.md
+            - name: 'Instrukcje: ustalanie, który panel został kliknięty w kontrolce StatusBar formularzy systemu Windows'
+              href: determine-which-panel-wf-statusbar-control-was-clicked.md
+            - name: 'Instrukcje: ustawianie rozmiaru paneli paska stanu'
+              href: how-to-set-the-size-of-status-bar-panels.md
+            - name: 'Przewodnik: aktualizowanie informacji na pasku stanu w czasie wykonywania'
+              href: walkthrough-updating-status-bar-information-at-run-time.md
+        - name: StatusStrip — Formant
+          href: statusstrip-control.md
+          items:
+            - name: StatusStrip — Informacje o formancie
+              href: statusstrip-control-overview.md
+            - name: 'Instrukcje: użycie właściwości Spring interaktywnie w StatusStrip'
+              href: how-to-use-the-spring-property-interactively-in-a-statusstrip.md
+        - name: TabControl — Formant
+          href: tabcontrol-control-windows-forms.md
+          items:
+            - name: 'TabControl, kontrolka — omówienie'
+              href: tabcontrol-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie kontrolki do karty'
+              href: how-to-add-a-control-to-a-tab-page.md
+            - name: 'Instrukcje: dodawanie kontrolki do strony karty przy użyciu narzędzia Projektant'
+              href: how-to-add-a-control-to-a-tab-page-using-the-designer.md
+            - name: 'Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy systemu Windows'
+              href: how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md
+            - name: 'Instrukcje: dodawanie i usuwanie kart za pomocą formularzy systemu Windows TabControl przy użyciu narzędzia Projektant'
+              href: add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md
+            - name: 'Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows'
+              href: how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md
+            - name: 'Instrukcje: wyłączanie kart'
+              href: how-to-disable-tab-pages.md
+            - name: 'Instrukcje: wyświetlanie wyrównanych poziomo kart przy użyciu kontrolki TabControl'
+              href: how-to-display-side-aligned-tabs-with-tabcontrol.md
+        - name: TableLayoutPanel — kontrolka
+          href: tablelayoutpanel-control-windows-forms.md
+          items:
+            - name: TableLayoutPanel — Informacje o formancie
+              href: tablelayoutpanel-control-overview.md
+            - name: Zachowanie AutoSize w formancie TableLayoutPanel
+              href: autosize-behavior-in-the-tablelayoutpanel-control.md
+            - name: Najlepsze praktyki dotyczące formantu TableLayoutPanel
+              href: best-practices-for-the-tablelayoutpanel-control.md
+            - name: 'Instrukcje: wyrównywanie i rozciąganie kontrolki w kontrolce TableLayoutPanel'
+              href: how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md
+            - name: 'Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel'
+              href: how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md
+            - name: 'Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych'
+              href: how-to-create-a-resizable-windows-form-for-data-entry.md
+            - name: 'Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację'
+              href: how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md
+            - name: 'Instrukcje: edytowanie rzędów i kolumn w kontrolce TableLayoutPanel'
+              href: how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md
+            - name: 'Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel'
+              href: how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md
+            - name: 'Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel'
+              href: walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md
+        - name: 'TextBox, kontrolka'
+          href: textbox-control-windows-forms.md
+          items:
+            - name: 'TextBox, kontrolka — omówienie'
+              href: textbox-control-overview-windows-forms.md
+            - name: 'Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy systemu Windows'
+              href: how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md
+            - name: 'Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy systemu Windows'
+              href: how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md
+            - name: 'Instrukcje: tworzenie pola tekstowego tylko do odczytu'
+              href: how-to-create-a-read-only-text-box-windows-forms.md
+            - name: 'Instrukcje: umieszczanie cudzysłowu w ciągu'
+              href: how-to-put-quotation-marks-in-a-string-windows-forms.md
+            - name: 'Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy systemu Windows'
+              href: how-to-select-text-in-the-windows-forms-textbox-control.md
+            - name: 'Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows'
+              href: how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md
+        - name: 'Timer, składnik'
+          href: timer-component-windows-forms.md
+          items:
+            - name: 'Timer, składnik — omówienie'
+              href: timer-component-overview-windows-forms.md
+            - name: Ograniczenia właściwości Interval składnika Timer formularzy systemu Windows
+              href: limitations-of-the-timer-component-interval-property.md
+            - name: 'Instrukcje: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows'
+              href: run-procedures-at-set-intervals-with-wf-timer-component.md
+        - name: ToolBar — Formant
+          href: toolbar-control-windows-forms.md
+          items:
+            - name: 'ToolBar, kontrolka — omówienie'
+              href: toolbar-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar'
+              href: how-to-add-buttons-to-a-toolbar-control.md
+            - name: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant'
+              href: how-to-add-buttons-to-a-toolbar-control-using-the-designer.md
+            - name: 'Instrukcje: określanie ikony dla przycisku ToolBar'
+              href: how-to-define-an-icon-for-a-toolbar-button.md
+            - name: 'Instrukcje: określanie ikony dla przycisku ToolBar przy użyciu narzędzia Projektant'
+              href: how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md
+            - name: 'Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
+              href: how-to-trigger-menu-events-for-toolbar-buttons.md
+        - name: ToolStrip — Formant
+          href: toolstrip-control-windows-forms.md
+          items:
+            - name: 'ToolStrip, kontrolka — omówienie'
+              href: toolstrip-control-overview-windows-forms.md
+            - name: Podsumowanie informacji o technologii formantów ToolStrip
+              href: toolstrip-technology-summary.md
+            - name: ToolStrip — Architektura formantu
+              href: toolstrip-control-architecture.md
+            - name: 'Instrukcje: dynamiczne dodawanie elementów ToolStrip'
+              href: how-to-add-toolstrip-items-dynamically.md
+            - name: 'Instrukcje: tworzenie podstawowych kontrolek ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant'
+              href: create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md
+            - name: 'Instrukcje: tworzenie profesjonalnej kontrolki ToolStrip'
+              href: how-to-create-a-professionally-styled-toolstrip-control.md
+            - name: 'Instrukcje: tworzenie formularza MDI za pomocą scalania menu i kontrolek ToolStrip'
+              href: how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
+            - name: 'Instrukcje: tworzenie formularza MDI za pomocą kontrolek ToolStripPanel'
+              href: how-to-create-an-mdi-form-with-toolstrippanel-controls.md
+            - name: 'Instrukcje: zmienianie wyglądu tekstu i obrazów elementów ToolStrip w formularzach systemu Windows'
+              href: how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md
+            - name: 'Instrukcje: zmienianie odstępów i wyrównania elementów ToolStrip w formularzach systemu Windows'
+              href: how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md
+            - name: 'Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows'
+              href: create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md
+            - name: 'Instrukcje: tworzenie przycisków przełączania w kontrolkach ToolStrip'
+              href: how-to-create-toggle-buttons-in-toolstrip-controls.md
+            - name: 'Instrukcje: niestandardowy rysunek kontrolki ToolStrip'
+              href: how-to-custom-draw-a-toolstrip-control.md
+            - name: 'Instrukcje: dostosowywanie kolorów w aplikacjach ToolStrip'
+              href: how-to-customize-colors-in-toolstrip-applications.md
+            - name: 'Instrukcje: definiowanie porządku osi Z zadokowanych kontrolek ToolStrip'
+              href: how-to-define-z-ordering-of-docked-toolstrip-controls.md
+            - name: 'Instrukcje: wykrywanie, kiedy wskaźnik myszy znajduje się nad elementem ToolStripItem'
+              href: how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md
+            - name: 'Instrukcje: włączanie funkcji AutoComplete w kontrolkach ToolStrip'
+              href: how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md
+            - name: 'Instrukcje: włączanie zmiany kolejności elementów ToolStrip w czasie wykonywania'
+              href: how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md
+            - name: 'Instrukcje: włączenie używania klawisza TAB do wychodzenia z kontrolki ToolStrip'
+              href: how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md
+            - name: 'Instrukcje: implementowanie niestandardowego elementu ToolStripRenderer'
+              href: how-to-implement-a-custom-toolstriprenderer.md
+            - name: 'Instrukcje: zarządzanie przepełnieniem elementu ToolStrip'
+              href: how-to-manage-toolstrip-overflow-in-windows-forms.md
+            - name: 'Instrukcje: przenoszenie elementu ToolStrip z ToolStripContainer na formularz'
+              href: how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md
+            - name: 'Instrukcje: położenie elementu ToolStripItem w kontrolce ToolStrip'
+              href: how-to-position-a-toolstripitem-on-a-toolstrip.md
+            - name: 'Instrukcje: ustawienie modułu renderowania ToolStrip w czasie wykonywania'
+              href: how-to-set-the-toolstrip-renderer-at-run-time.md
+            - name: 'Instrukcje: ustawienie modułu renderowania ToolStrip dla aplikacji'
+              href: how-to-set-the-toolstrip-renderer-for-an-application.md
+            - name: 'Instrukcje: rozciąganie elementu ToolStripTextBox w celu uzupełnienia szerokości elementu ToolStrip'
+              href: stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-wf.md
+            - name: 'Instrukcje: użycie elementu ToolTips w kontrolkach ToolStrip'
+              href: how-to-use-tooltips-in-toolstrip-controls.md
+            - name: 'Instrukcje: zawijanie kontrolki formularzy systemu Windows za pomocą elementu ToolStripControlHost'
+              href: how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md
+            - name: 'Przewodnik: tworzenie profesjonalnej kontrolki ToolStrip'
+              href: walkthrough-creating-a-professionally-styled-toolstrip-control.md
+            - name: 'Przewodnik: tworzenie formularza MDI ze scalaniem menu i kontrolkami ToolStrip'
+              href: walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
+        - name: ToolStripContainer — Formant
+          href: toolstripcontainer-control.md
+          items:
+            - name: ToolStripContainer — Informacje o formancie
+              href: toolstripcontainer-control-overview.md
+            - name: 'Instrukcje: dodawanie elementu ToolStripContainer do formularza'
+              href: how-to-add-a-toolstripcontainer-to-a-form.md
+            - name: 'Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel'
+              href: how-to-add-a-control-to-a-toolstripcontentpanel.md
+        - name: ToolStripPanel — Formant
+          href: toolstrippanel-control.md
+          items:
+            - name: ToolStripPanel — Informacje o formancie
+              href: toolstrippanel-control-overview.md
+            - name: 'Instrukcje: łączenie ToolStripPanels'
+              href: how-to-join-toolstrippanels.md
+            - name: 'Instrukcje: używanie elementu ToolStripPanels dla MDI'
+              href: how-to-use-toolstrippanels-for-mdi.md
+        - name: ToolStripProgressBar — Formant
+          href: toolstripprogressbar-control.md
+          items:
+            - name: ToolStripProgressBar — Informacje o formancie
+              href: toolstripprogressbar-control-overview.md
+        - name: ToolStripStatusLabel — Formant
+          href: toolstripstatuslabel-control.md
+          items:
+            - name: ToolStripStatusLabel — Informacje o formancie
+              href: toolstripstatuslabel-control-overview.md
+        - name: ToolTip — Składnik
+          href: tooltip-component-windows-forms.md
+          items:
+            - name: 'ToolTip, składnik — omówienie'
+              href: tooltip-component-overview-windows-forms.md
+            - name: 'Instrukcje: ustawienie elementu ToolTips dla kontrolek w formularzu systemu Windows w czasie projektowania'
+              href: how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md
+            - name: 'Instrukcje: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows'
+              href: how-to-change-the-delay-of-the-windows-forms-tooltip-component.md
+        - name: 'TrackBar, kontrolka'
+          href: trackbar-control-windows-forms.md
+          items:
+            - name: 'TrackBar, kontrolka — omówienie'
+              href: trackbar-control-overview-windows-forms.md
+        - name: TreeView — Formant
+          href: treeview-control-windows-forms.md
+          items:
+            - name: 'TreeView, kontrolka — omówienie'
+              href: treeview-control-overview-windows-forms.md
+            - name: 'Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows'
+              href: how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md
+            - name: 'Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows przy użyciu narzędzia Projektant'
+              href: add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md
+            - name: 'Instrukcje: dołączanie menu ShortCut do węzła TreeView'
+              href: how-to-attach-a-shortcut-menu-to-a-treeview-node.md
+            - name: 'Instrukcje: dołączanie menu skrótów do TreeNode przy użyciu narzędzia Projektant'
+              href: how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md
+            - name: 'Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)'
+              href: add-custom-information-to-a-treeview-or-listview-control-wf.md
+            - name: 'Instrukcje: określanie, który węzeł TreeView został kliknięty'
+              href: how-to-determine-which-treeview-node-was-clicked-windows-forms.md
+            - name: 'Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows'
+              href: how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md
+            - name: 'Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy systemu Windows'
+              href: how-to-set-icons-for-the-windows-forms-treeview-control.md
+        - name: WebBrowser — Formant
+          href: webbrowser-control-windows-forms.md
+          items:
+            - name: WebBrowser — Informacje o formancie
+              href: webbrowser-control-overview.md
+            - name: Zabezpieczenia WebBrowser
+              href: webbrowser-security.md
+            - name: 'Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser'
+              href: how-to-navigate-to-a-url-with-the-webbrowser-control.md
+            - name: 'Instrukcje: drukowanie za pomocą kontrolki WebBrowser'
+              href: how-to-print-with-a-webbrowser-control.md
+            - name: 'Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms'
+              href: how-to-add-web-browser-capabilities-to-a-windows-forms-application.md
+            - name: 'Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji formularzy systemu Windows'
+              href: how-to-create-an-html-document-viewer-in-a-windows-forms-application.md
+            - name: 'Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta'
+              href: implement-two-way-com-between-dhtml-and-client.md
+            - name: Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML
+              href: using-the-managed-html-document-object-model.md
+              items:
+                - name: 'Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
+                  href: how-to-access-the-managed-html-document-object-model.md
+                - name: 'Instrukcje: uzyskiwanie dostępu do źródła HTML w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
+                  href: how-to-access-the-html-source-in-the-managed-html-document-object-model.md
+                - name: 'Instrukcje: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
+                  href: how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md
+                - name: Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
+                  href: accessing-frames-in-the-managed-html-document-object-model.md
+                - name: Uzyskiwanie dostępu do nieujawnionych elementów w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
+                  href: accessing-unexposed-members-on-the-managed-html-document-object-model.md
+        - name: Formanty formularzy systemu Windows używane do obsługi opcji list
+          href: windows-forms-controls-used-to-list-options.md
+          items:
+            - name: Kiedy należy używać formantu ComboBox formularzy systemu Windows zamiast ListBox
+              href: when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md
+            - name: 'Instrukcje: uzyskiwanie dostępu do określonych elementów w kontrolkach ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+              href: access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md
+            - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+              href: add-and-remove-items-from-a-wf-combobox.md
+            - name: 'Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy systemu Windows'
+              href: create-a-lookup-table-for-a-wf-combobox-listbox.md
+            - name: 'Instrukcje: powiązanie kontrolki ComboBox lub ListBox (Formularze systemu Windows) z danymi'
+              href: how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md
+            - name: 'Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
+              href: sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md
+    - name: Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
+      href: developing-custom-windows-forms-controls.md
+      items:
+        - name: Omówienie używania formantów w formularzach systemu Windows
+          href: overview-of-using-controls-in-windows-forms.md
+        - name: Różne typy formantów niestandardowych
+          href: varieties-of-custom-controls.md
+          items:
+            - name: Zalecenia dotyczące typu formantu
+              href: control-type-recommendations.md
+        - name: Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows
+          href: windows-forms-control-development-basics.md
+          items:
+            - name: 'Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows'
+              href: how-to-develop-a-simple-windows-forms-control.md
+            - name: 'Instrukcje: tworzenie kontrolki formularzy systemu Windows pokazującego postęp'
+              href: how-to-create-a-windows-forms-control-that-shows-progress.md
+            - name: Opracowywanie złożonego formantu formularzy systemu Windows
+              href: developing-a-composite-windows-forms-control.md
+        - name: Właściwości formantów formularzy systemu Windows
+          href: properties-in-windows-forms-controls.md
+          items:
+            - name: Definiowanie właściwości
+              href: defining-a-property-in-windows-forms-controls.md
+            - name: Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset
+              href: defining-default-values-with-the-shouldserialize-and-reset-methods.md
+            - name: Zdarzenia zmiany właściwości
+              href: property-changed-events.md
+            - name: 'Instrukcje: udostępnianie właściwości kontrolek składowych'
+              href: how-to-expose-properties-of-constituent-controls.md
+            - name: Implementacja metody w formantach niestandardowych
+              href: method-implementation-in-custom-controls.md
+        - name: Zdarzenia w formantach formularzy systemu Windows
+          href: events-in-windows-forms-controls.md
+          items:
+            - name: Zastępowanie metody OnPaint
+              href: overriding-the-onpaint-method.md
+            - name: Obsługa danych wejściowych użytkownika
+              href: handling-user-input.md
+            - name: Definiowanie zdarzenia
+              href: defining-an-event-in-windows-forms-controls.md
+        - name: Atrybuty w formantach formularzy systemu Windows
+          href: attributes-in-windows-forms-controls.md
+          items:
+            - name: 'Instrukcje: stosowanie atrybutów w kontrolkach formularzy systemu Windows'
+              href: how-to-apply-attributes-in-windows-forms-controls.md
+        - name: Malowanie i renderowanie formantu niestandardowego
+          href: custom-control-painting-and-rendering.md
+          items:
+            - name: Renderowanie formantu formularzy systemu Windows
+              href: rendering-a-windows-forms-control.md
+            - name: Formanty rysowane przez użytkownika
+              href: user-drawn-controls.md
+            - name: Formanty składników
+              href: constituent-controls.md
+            - name: 'Instrukcje: ukrywanie kontrolki w czasie wykonywania'
+              href: how-to-make-your-control-invisible-at-run-time.md
+            - name: 'Instrukcje: ustawienie przezroczystego tła kontrolki'
+              href: how-to-give-your-control-a-transparent-background.md
+            - name: Renderowanie formantów przy użyciu stylów wizualnych
+              href: rendering-controls-with-visual-styles.md
+              items:
+                - name: 'Instrukcje: używanie klasy renderowania kontrolki'
+                  href: how-to-use-a-control-rendering-class.md
+                - name: 'Instrukcje: renderowanie elementu stylu wizualnego'
+                  href: how-to-render-a-visual-style-element.md
+        - name: Układ w formantach formularzy systemu Windows
+          href: layout-in-windows-forms-controls.md
+          items:
+            - name: AutoSize — Przegląd właściwości
+              href: autosize-property-overview.md
+            - name: 'Instrukcje: wyrównywanie kontrolki z krawędziami formularzy'
+              href: how-to-align-a-control-to-the-edges-of-forms.md
+            - name: Margines i wypełnienie w formantach formularzy systemu Windows
+              href: margin-and-padding-in-windows-forms-controls.md
+            - name: 'Instrukcje: tworzenie obramowania wokoło kontrolki formularzy systemu Windows za pomocą wypełnienia'
+              href: how-to-create-a-border-around-a-windows-forms-control-using-padding.md
+            - name: 'Instrukcje: implementowanie aparatu niestandardowego układu'
+              href: how-to-implement-a-custom-layout-engine.md
+        - name: Wielowątkowość w formantach formularzy systemu Windows
+          href: multithreading-in-windows-forms-controls.md
+          items:
+            - name: 'Instrukcje: bezpieczne wątkowo wywołania kontrolek formularzy systemu Windows'
+              href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
+            - name: 'Instrukcje: użycie wątku w tle do wyszukiwania plików'
+              href: how-to-use-a-background-thread-to-search-for-files.md
+    - name: Kontrolki formularzy Windows Forms w programie .NET Framework według funkcji
       href: windows-forms-controls-by-function.md
-    - name: Formanty z wbudowaną obsługą rysowania przez właściciela
-      href: controls-with-built-in-owner-drawing-support.md
-    - name: BackgroundWorker — Składnik
-      href: backgroundworker-component.md
-      items:
-      - name: BackgroundWorker — Informacje o składniku
-        href: backgroundworker-component-overview.md
-      - name: 'Instrukcje: uruchamianie operacji w tle'
-        href: how-to-run-an-operation-in-the-background.md
-      - name: 'Instrukcje: pobieranie pliku w tle'
-        href: how-to-download-a-file-in-the-background.md
-      - name: 'Instrukcje: implementowanie formularza korzystającego z operacji w tle'
-        href: how-to-implement-a-form-that-uses-a-background-operation.md
-      - name: 'Przewodnik: uruchamianie operacji w tle'
-        href: walkthrough-running-an-operation-in-the-background.md
-      - name: 'Przewodnik: wdrażanie formularza korzystającego z operacji w tle'
-        href: walkthrough-implementing-a-form-that-uses-a-background-operation.md
-    - name: BindingNavigator — kontrolka
-      href: bindingnavigator-control-windows-forms.md
-      items:
-      - name: BindingNavigator, kontrolka — omówienie
-        href: bindingnavigator-control-overview-windows-forms.md
-      - name: 'Instrukcje: nawigowanie w danych za pomocą kontrolki BindingNavigator formularzy systemu Windows'
-        href: how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md
-      - name: 'Instrukcje: przechodzenie między elementami DataSet za pomocą BindingNavigator formularzy systemu Windows'
-        href: move-through-a-dataset-with-wf-bindingnavigator-control.md
-      - name: 'Instrukcje: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows'
-        href: load-save-and-cancel-bindingnavigator.md
-    - name: BindingSource — Składnik
-      href: bindingsource-component.md
-      items:
-      - name: BindingSource — Informacje o składniku
-        href: bindingsource-component-overview.md
-      - name: Architektura składnika BindingSource
-        href: bindingsource-component-architecture.md
-      - name: 'Instrukcje: powiązanie kontrolki formularzy systemu Windows z obiektem fabryki'
-        href: how-to-bind-a-windows-forms-control-to-a-factory-object.md
-      - name: 'Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem'
-        href: how-to-bind-a-windows-forms-control-to-a-type.md
-      - name: 'Instrukcje: wiązanie kontrolki formularzy systemu Windows z typem przy użyciu narzędzia Projektant'
-        href: how-to-bind-a-windows-forms-control-to-a-type-using-the-designer.md
-      - name: 'Instrukcje: wiązanie z usługą sieci Web za pomocą kontrolki BindingSource formularzy systemu Windows'
-        href: how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md
-      - name: 'Instrukcje: wiązanie kontrolek formularzy systemu Windows z wartościami bazy danych DBNull'
-        href: how-to-bind-windows-forms-controls-to-dbnull-database-values.md
-      - name: 'Instrukcje: wiązanie kontrolek formularzy systemu Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant'
-        href: bind-wf-controls-with-the-bindingsource.md
-      - name: 'Instrukcje: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows'
-        href: how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md
-      - name: 'Instrukcje: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy systemu Windows'
-        href: how-to-customize-item-addition-with-the-windows-forms-bindingsource.md
-      - name: 'Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych'
-        href: how-to-handle-errors-and-exceptions-that-occur-with-databinding.md
-      - name: 'Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged'
-        href: raise-change-notifications--bindingsource.md
-      - name: 'Instrukcje: wywoływanie powiadomień o zmianie za pomocą metody BindingSource ResetItem'
-        href: how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md
-      - name: 'Instrukcje: odzwierciedlanie aktualizacji źródła danych w kontrolce formularzy systemu Windows za pomocą elementu BindingSource'
-        href: reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md
-      - name: 'Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource'
-        href: how-to-share-bound-data-across-forms-using-the-bindingsource-component.md
-      - name: 'Instrukcje: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy systemu Windows'
-        href: sort-and-filter-ado-net-data-with-wf-bindingsource-component.md
-    - name: Button, kontrolka
-      href: button-control-windows-forms.md
-      items:
-      - name: Button, kontrolka — omówienie
-        href: button-control-overview-windows-forms.md
-      - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj'
-        href: how-to-designate-a-windows-forms-button-as-the-accept-button.md
-      - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj przy użyciu narzędzia Projektant'
-        href: designate-a-wf-button-as-the-accept-button-using-the-designer.md
-      - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj'
-        href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
-      - name: 'Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj przy użyciu narzędzia Projektant'
-        href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-      - name: 'Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows'
-        href: how-to-respond-to-windows-forms-button-clicks.md
-      - name: Sposoby wyboru kontrolki przycisku formularzy systemu Windows
-        href: ways-to-select-a-windows-forms-button-control.md
-    - name: CheckBox, kontrolka
-      href: checkbox-control-windows-forms.md
-      items:
-      - name: CheckBox, kontrolka — omówienie
-        href: checkbox-control-overview-windows-forms.md
-      - name: 'Instrukcje: odpowiadanie na kliknięcia elementu CheckBox formularzy systemu Windows'
-        href: how-to-respond-to-windows-forms-checkbox-clicks.md
-      - name: 'Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy systemu Windows'
-        href: how-to-set-options-with-windows-forms-checkbox-controls.md
-    - name: CheckedListBox, kontrolka
-      href: checkedlistbox-control-windows-forms.md
-      items:
-      - name: CheckedListBox, kontrolka — omówienie
-        href: checkedlistbox-control-overview-windows-forms.md
-      - name: 'Instrukcje: określanie elementów jako zaznaczone w kontrolce CheckedListBox formularzy systemu Windows'
-        href: how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md
-    - name: ColorDialog, składnik
-      href: colordialog-component-windows-forms.md
-      items:
-      - name: ColorDialog, składnik — omówienie
-        href: colordialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows'
-        href: how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md
-      - name: 'Instrukcje: pokazywanie palety kolorów przy użyciu składnika ColorDialog'
-        href: how-to-show-a-color-palette-with-the-colordialog-component.md
-    - name: ComboBox, kontrolka
-      href: combobox-control-windows-forms.md
-      items:
-      - name: ComboBox, kontrolka — omówienie
-        href: combobox-control-overview-windows-forms.md
-      - name: 'Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox'
-        href: how-to-create-variable-sized-text-in-a-combobox-control.md
-    - name: ContextMenu, składnik
-      href: contextmenu-component-windows-forms.md
-      items:
-      - name: ContextMenu, składnik — omówienie
-        href: contextmenu-component-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy systemu Windows'
-        href: add-and-remove-menu-items-with-wf-contextmenu-component.md
-    - name: ContextMenuStrip — Formant
-      href: contextmenustrip-control.md
-      items:
-      - name: ContextMenuStrip — Informacje o formancie
-        href: contextmenustrip-control-overview.md
-      - name: 'Instrukcje: skojarzenie właściwości ContextMenuStrip z kontrolką'
-        href: how-to-associate-a-contextmenustrip-with-a-control.md
-      - name: 'Instrukcje: dodawanie elementów menu do paska ContextMenuStrip'
-        href: how-to-add-menu-items-to-a-contextmenustrip.md
-      - name: 'Instrukcje: konfiguracja marginesów zaznaczania ContextMenuStrip i marginesów obrazu'
-        href: how-to-configure-contextmenustrip-check-margins-and-image-margins.md
-      - name: 'Instrukcje: włączanie marginesów zaznaczania i marginesów obrazów w kontrolkach ContextMenuStrip'
-        href: how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md
-      - name: 'Instrukcje: obsługa zdarzenia otwierania kontrolki ContextMenuStrip'
-        href: how-to-handle-the-contextmenustrip-opening-event.md
-    - name: DataGrid, kontrolka
-      href: datagrid-control-windows-forms.md
-      items:
-      - name: DataGrid, kontrolka — omówienie
-        href: datagrid-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows'
-        href: how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md
-      - name: 'Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md
-      - name: 'Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych'
-        href: how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md
-      - name: 'Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych przy użyciu narzędzia Projektant'
-        href: bind-wf-datagrid-control-to-a-data-source-using-the-designer.md
-      - name: 'Instrukcje: zmienianie wyświetlanych danych w czasie wykonywania w kontrolce DataGrid formularzy systemu Windows'
-        href: change-displayed-data-at-run-time-wf-datagrid-control.md
-      - name: 'Instrukcje: tworzenie list wzorzec/szczegół za pomocą kontrolki DataGrid formularzy systemu Windows'
-        href: how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md
-      - name: 'Instrukcje: tworzenie list wzorzec-szczegół za pomocą kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: create-master-details-lists-with-wf-datagrid-control-using-the-designer.md
-      - name: 'Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy systemu Windows'
-        href: how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md
-      - name: 'Instrukcje: format kontrolki DataGrid formularzy systemu Windows'
-        href: how-to-format-the-windows-forms-datagrid-control.md
-      - name: 'Instrukcje: formatowanie kontrolki DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: how-to-format-the-windows-forms-datagrid-control-using-the-designer.md
-      - name: 'Instrukcje: odpowiadanie na kliknięcia w kontrolce DataGrid formularzy systemu Windows'
-        href: how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md
-      - name: 'Instrukcje: sprawdzanie poprawności danych wejściowych w kontrolce DataGrid formularzy systemu Windows'
-        href: how-to-validate-input-with-the-windows-forms-datagrid-control.md
-      - name: Skróty klawiaturowe dla formantu DataGrid formularzy systemu Windows
-        href: keyboard-shortcuts-for-the-windows-forms-datagrid-control.md
-    - name: DataGridView — Formant
-      href: datagridview-control-windows-forms.md
-      items:
-      - name: Używanie narzędzia Projektant z formantem DataGridView formularzy systemu Windows
-        href: using-the-designer-with-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Instrukcje: dodawanie i usuwanie kolumn do kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: add-and-remove-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: wiązanie danych z kontrolką DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: bind-data-to-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: change-the-order-of-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: zmienianie typu kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: change-the-type-of-a-wf-datagridview-column-using-the-designer.md
-        - name: 'Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: enable-column-reordering-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: freeze-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: ukrywanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: hide-columns-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: nadawanie kolumnom statusu tylko do odczytu w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: make-columns-read-only-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: zapobieganie dodawaniu i usuwaniu rzędów do kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: ustawianie przemiennych wierszy dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: set-alternating-row-styles-for-the-datagrid-using-the-designer.md
-        - name: 'Instrukcje: ustawianie domyślnych stylów komórek i formatów danych dla kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant'
-          href: default-cell-styles-datagridview.md
-      - name: DataGridView, kontrolka — omówienie
-        href: datagridview-control-overview-windows-forms.md
-        items:
-        - name: DataGridView, kontrolka — podsumowanie technologii
-          href: datagridview-control-technology-summary-windows-forms.md
-        - name: DataGridView, kontrolka — architektura
-          href: datagridview-control-architecture-windows-forms.md
-        - name: DataGridView, kontrolka — scenariusze
-          href: datagridview-control-scenarios-windows-forms.md
-        - name: DataGridView, kontrolka — katalog kodu
-          href: datagridview-control-code-directory-windows-forms.md
-      - name: Funkcje domyślne w formancie DataGridView formularzy systemu Windows
-        href: default-functionality-in-the-windows-forms-datagridview-control.md
-      - name: Typy kolumn w formancie DataGridView formularzy systemu Windows
-        href: column-types-in-the-windows-forms-datagridview-control.md
-      - name: Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
-        href: basic-column-row-and-cell-features-wf-datagridview-control.md
-        items:
-        - name: 'Instrukcje: ukrywanie kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-hide-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ukrywanie nagłówków kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-freeze-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: określanie kolumn jako tylko do odczytu w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: zapobieganie dodawaniu i usuwaniu rzędów do kontrolki DataGridView formularzy systemu Windows'
-          href: prevent-row-addition-and-deletion-datagridview.md
-        - name: 'Instrukcje: pobieranie i ustawianie bieżącej komórki w kontrolce DataGridView formularzy systemu Windows'
-          href: get-and-set-the-current-cell-wf-datagridview-control.md
-        - name: 'Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md
-      - name: Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows
-        href: basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Instrukcje: zmienianie stylów obramowania i linii siatki w kontrolce DataGridView formularzy systemu Windows'
-          href: change-the-border-and-gridline-styles-in-the-datagrid.md
-        - name: Style komórki w formancie DataGridView formularzy systemu Windows
-          href: cell-styles-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ustawianie domyślnych stylów komórki dla kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-format-data-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ustawianie stylów czcionek i koloru w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ustawianie alternatywnych stylów wierszy dla kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: użycie szablonu wiersza do dostosowania wierszy w kontrolce DataGridView formularzy systemu Windows'
-          href: use-the-row-template-to-customize-rows-in-the-datagrid.md
-      - name: Wyświetlanie danych w formancie DataGridView formularzy systemu Windows
-        href: displaying-data-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows
-          href: data-display-modes-in-the-windows-forms-datagridview-control.md
-        - name: Formatowanie danych w formancie DataGridView formularzy systemu Windows
-          href: data-formatting-in-the-windows-forms-datagridview-control.md
-        - name: 'Przewodnik: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows'
-          href: walkthrough-creating-an-unbound-windows-forms-datagridview-control.md
-          items:
-          - name: 'Instrukcje: utworzenie niezwiązanej kontrolki DataGridView formularzy systemu Windows'
-            href: how-to-create-an-unbound-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: powiązanie danych z kontrolką DataGridView formularzy systemu Windows'
-          href: how-to-bind-data-to-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: automatyczne generowanie kolumn w powiązaną z danymi kontrolką DataGridView formularzy systemu Windows'
-          href: autogenerate-columns-in-a-data-bound-wf-datagridview-control.md
-        - name: 'Instrukcje: usuwanie utworzonych automatycznie kolumn z kontrolki DataGridView formularzy systemu Windows'
-          href: remove-autogenerated-columns-from-a-wf-datagridview-control.md
-        - name: 'Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: dodawanie niepowiązanych kolumn do powiązanej z danymi kontrolki DataGridView formularzy systemu Windows'
-          href: unbound-column-to-a-data-bound-datagridview.md
-        - name: 'Instrukcje: powiązanie obiektów z kontrolkami DataGridView formularzy systemu Windows'
-          href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-        - name: 'Instrukcje: uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
-        - name: 'Instrukcje: uzyskiwanie dostępu do obiektów na liście rozwijanej DataGridViewComboBoxCell formularzy systemu Windows'
-          href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
-        - name: 'Przewodnik: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows'
-          href: creating-a-master-detail-form-using-two-datagridviews.md
-          items:
-          - name: 'Instrukcje: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy systemu Windows'
-            href: create-a-master-detail-form-using-two-datagridviews.md
-        - name: 'Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md
-      - name: Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows
-        href: resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
-          href: sizing-options-in-the-windows-forms-datagridview-control.md
-        - name: Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows
-          href: column-fill-mode-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: zmienianie w sposób programowy rozmiaru komórek w celu dopasowania do zawartości w kontrolce DataGridView formularzy systemu Windows'
-          href: programmatically-resize-cells-to-fit-content-in-the-datagrid.md
-        - name: 'Instrukcje: automatyczne zmienianie rozmiaru komórek przy zmianie zawartości w kontrolce DataGridView formularzy systemu Windows'
-          href: automatically-resize-cells-when-content-changes-in-the-datagrid.md
-      - name: Sortowanie danych w kontrolce DataGridView formularzy Windows Forms
-        href: sorting-data-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Tryb sortowania kolumn w formancie DataGridView formularzy systemu Windows
-          href: column-sort-modes-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ustawianie trybów sortowania kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: set-the-sort-modes-for-columns-wf-datagridview-control.md
-        - name: 'Instrukcje: dostosowywanie sortowania w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-customize-sorting-in-the-windows-forms-datagridview-control.md
-      - name: Wprowadzanie danych w formancie DataGridView formularzy systemu Windows
-        href: data-entry-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Instrukcje: określanie trybu edycji dla kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy systemu Windows'
-          href: specify-default-values-for-new-rows-in-the-datagrid.md
-        - name: Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
-          href: using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md
-        - name: 'Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows'
-          href: walkthrough-validating-data-in-the-windows-forms-datagridview-control.md
-          items:
-          - name: 'Instrukcje: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows'
-            href: how-to-validate-data-in-the-windows-forms-datagridview-control.md
-        - name: 'Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows'
-          href: handling-errors-that-occur-during-data-entry-in-the-datagrid.md
-          items:
-          - name: 'Instrukcje: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows'
-            href: handle-errors-that-occur-during-data-entry-in-the-datagrid.md
-      - name: Wybór i używanie schowka za pomocą składnika DataGridView formularzy systemu Windows
-        href: selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md
-        items:
-        - name: Tryby wyboru w formancie DataGridView formularzy systemu Windows
-          href: selection-modes-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy systemu Windows'
-          href: how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: pobieranie wybranych komórek, wierszy i kolumn w kontrolce DataGridView formularzy systemu Windows'
-          href: selected-cells-rows-and-columns-datagridview.md
-        - name: 'Instrukcje: umożliwianie użytkownikom kopiowania wielu komórek do schowka z kontrolki DataGridView formularzy systemu Windows'
-          href: enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md
-      - name: Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
-        href: programming-with-cells-rows-and-columns-in-the-datagrid.md
-        items:
-        - name: 'Instrukcje: dodawanie elementu ToolTips do pojedynczych komórek w kontrolce DataGridView formularzy systemu Windows'
-          href: add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md
-        - name: 'Instrukcje: wykonywanie niestandardowej akcji na podstawie zmian w komórce kontrolki DataGridView formularzy systemu Windows'
-          href: perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md
-        - name: 'Instrukcje: manipulowanie paskami w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: manipulowanie wierszami w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: manipulowanie kolumnami w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md
-        - name: 'Instrukcje: praca z kolumnami obrazów w kontrolce DataGridView formularzy systemu Windows'
-          href: how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md
-      - name: Dostosowywanie formantu DataGridView formularzy systemu Windows
-        href: customizing-the-windows-forms-datagridview-control.md
-        items:
-        - name: 'Instrukcje: dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy systemu Windows'
-          href: customize-the-appearance-of-cells-in-the-datagrid.md
-        - name: 'Instrukcje: dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy systemu Windows'
-          href: customize-the-appearance-of-rows-in-the-datagrid.md
-        - name: 'Instrukcje: dostosowywanie komórek i kolumn w kontrolce DataGridView (Formularze systemu Windows) przez rozszerzanie ich zachowania i wyglądu'
-          href: customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md
-        - name: 'Instrukcje: wyłączanie przycisków w kolumnie przycisków w kontrolce DataGridView formularzy systemu Windows'
-          href: disable-buttons-in-a-button-column-in-the-datagrid.md
-        - name: 'Instrukcje: kontrolki hosta w komórkach DataGridView formularzy systemu Windows'
-          href: how-to-host-controls-in-windows-forms-datagridview-cells.md
-      - name: Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows
-        href: performance-tuning-in-the-windows-forms-datagridview-control.md
-        items:
-        - name: Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows
-          href: best-practices-for-scaling-the-windows-forms-datagridview-control.md
-        - name: Tryb wirtualny w formancie DataGridView formularzy systemu Windows
-          href: virtual-mode-in-the-windows-forms-datagridview-control.md
-        - name: 'Przewodnik: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows'
-          href: implementing-virtual-mode-wf-datagridview-control.md
-          items:
-          - name: 'Instrukcje: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy systemu Windows'
-            href: how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md
-        - name: Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w formancie DataGridView formularzy systemu Windows
-          href: implementing-virtual-mode-jit-data-loading-in-the-datagrid.md
-          items:
-          - name: 'Instrukcje: implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy systemu Windows'
-            href: virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md
-      - name: Domyślna obsługa myszy i klawiatury w kontrolce DataGridView formularzy Windows Forms
-        href: default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md
-      - name: Różnice między formantami DataGridView i DataGrid formularzy systemu Windows
-        href: differences-between-the-windows-forms-datagridview-and-datagrid-controls.md
-    - name: DateTimePicker, kontrolka
-      href: datetimepicker-control-windows-forms.md
-      items:
-      - name: DateTimePicker, kontrolka — omówienie
-        href: datetimepicker-control-overview-windows-forms.md
-      - name: 'Instrukcje: wyświetlanie daty w niestandardowym formacie za pomocą kontrolki DateTimePicker formularzy systemu Windows'
-        href: display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md
-      - name: 'Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy systemu Windows'
-        href: how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md
-      - name: 'Instrukcje: wyświetlanie godziny za pomocą kontrolki DateTimePicker'
-        href: how-to-display-time-with-the-datetimepicker-control.md
-    - name: Kontrolki i składniki okien dialogowych
-      href: dialog-box-controls-and-components-windows-forms.md
-    - name: DomainUpDown, kontrolka
-      href: domainupdown-control-windows-forms.md
-      items:
-      - name: DomainUpDown, kontrolka — omówienie
-        href: domainupdown-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie w sposób programowy elementów do kontrolki DomainUpDown formularzy systemu Windows'
-        href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
-      - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki DomainUpDown'
-        href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
-    - name: ErrorProvider, składnik
-      href: errorprovider-component-windows-forms.md
-      items:
-      - name: ErrorProvider, składnik — omówienie
-        href: errorprovider-component-overview-windows-forms.md
-      - name: 'Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows'
-        href: display-error-icons-for-form-validation-with-wf-errorprovider.md
-      - name: 'Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows'
-        href: view-errors-within-a-dataset-with-wf-errorprovider-component.md
-    - name: FileDialog — Klasa
-      href: filedialog-class.md
-      items:
-      - name: 'Instrukcje: jak nie zgadzać się na uczestnictwo dotyczące automatycznego uaktualniania okna dialogowego obsługi pliku'
-        href: how-to-opt-out-of-file-dialog-box-automatic-upgrade.md
-      - name: 'Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików'
-        href: how-to-add-a-custom-place-to-a-file-dialog-box.md
-      - name: Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików
-        href: known-folder-guids-for-file-dialog-custom-places.md
-    - name: FlowLayoutPanel, kontrolka
-      href: flowlayoutpanel-control-windows-forms.md
-      items:
-      - name: FlowLayoutPanel — Informacje o formancie
-        href: flowlayoutpanel-control-overview.md
-      - name: 'Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel'
-        href: how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md
-      - name: 'Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel'
-        href: walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md
-    - name: FolderBrowserDialog, składnik
-      href: folderbrowserdialog-component-windows-forms.md
-      items:
-      - name: FolderBrowserDialog — Informacje o składniku (Formularze systemu Windows)
-        href: folderbrowserdialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy systemu Windows'
-        href: how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md
-    - name: FontDialog, składnik
-      href: fontdialog-component-windows-forms.md
-      items:
-      - name: FontDialog, składnik — omówienie
-        href: fontdialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: pokazywanie listy czcionek przy użyciu składnika FontDialog'
-        href: how-to-show-a-font-list-with-the-fontdialog-component.md
-    - name: GroupBox, kontrolka
-      href: groupbox-control-windows-forms.md
-      items:
-      - name: GroupBox, kontrolka — omówienie
-        href: groupbox-control-overview-windows-forms.md
-      - name: 'Instrukcje: grupowanie kontrolek za pomocą kontrolki GroupBox formularzy systemu Windows'
-        href: how-to-group-controls-with-the-windows-forms-groupbox-control.md
-    - name: HelpProvider, składnik
-      href: helpprovider-component-windows-forms.md
-      items:
-      - name: HelpProvider, składnik — omówienie
-        href: helpprovider-component-overview-windows-forms.md
-    - name: HScrollBar i VScrollBar, kontrolki
-      href: hscrollbar-and-vscrollbar-controls-windows-forms.md
-      items:
-      - name: HScrollBar i VScrollBar, kontrolki — omówienie
-        href: hscrollbar-and-vscrollbar-controls-overview-windows-forms.md
-    - name: ImageList, składnik
-      href: imagelist-component-windows-forms.md
-      items:
-      - name: ImageList, składnik — omówienie
-        href: imagelist-component-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows'
-        href: how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md
-      - name: 'Instrukcje: dodawanie lub usuwanie obrazów ImageList przy użyciu narzędzia Projektant'
-        href: how-to-add-or-remove-imagelist-images-with-the-designer.md
-    - name: Label, kontrolka
-      href: label-control-windows-forms.md
-      items:
-      - name: Label, kontrolka — omówienie
-        href: label-control-overview-windows-forms.md
-      - name: 'Instrukcje: tworzenie klawiszy dostępu za pomocą kontrolek etykiet formularzy systemu Windows'
-        href: how-to-create-access-keys-with-windows-forms-label-controls.md
-      - name: 'Instrukcje: rozmiar kontrolki etykiety (Formularze systemu Windows) pasujący do jego zawartości'
-        href: how-to-size-a-windows-forms-label-control-to-fit-its-contents.md
-    - name: LinkLabel, kontrolka
-      href: linklabel-control-windows-forms.md
-      items:
-      - name: LinkLabel, kontrolka — omówienie
-        href: linklabel-control-overview-windows-forms.md
-      - name: 'Instrukcje: zmienianie wyglądu kontrolki LinkLabel formularzy systemu Windows'
-        href: how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md
-      - name: 'Instrukcje: łączenie z obiektem lub stroną sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows'
-        href: link-to-an-object-or-web-page-with-wf-linklabel-control.md
-      - name: 'Instrukcje: wyświetlanie strony sieci Web za pomocą kontrolki LinkLabel formularzy systemu Windows (Visual Basic)'
-        href: display-a-web-page-from-a-wf-linklabel-control-visual-basic.md
-    - name: ListBox, kontrolka
-      href: listbox-control-windows-forms.md
-      items:
-      - name: ListBox, kontrolka — omówienie
-        href: listbox-control-overview-windows-forms.md
-    - name: ListView — Formant
-      href: listview-control-windows-forms.md
-      items:
-      - name: ListView, kontrolka — omówienie
-        href: listview-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows'
-        href: how-to-add-and-remove-items-with-the-windows-forms-listview-control.md
-      - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: add-and-remove-items-with-wf-listview-control-using-the-designer.md
-      - name: 'Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows'
-        href: how-to-add-columns-to-the-windows-forms-listview-control.md
-      - name: 'Instrukcje: dodawanie kolumn do kontrolki ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md
-      - name: 'Instrukcje: dodawanie funkcji wyszukiwania do kontrolki ListView'
-        href: how-to-add-search-capabilities-to-a-listview-control.md
-      - name: 'Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy systemu Windows'
-        href: how-to-display-icons-for-the-windows-forms-listview-control.md
-      - name: 'Instrukcje: wyświetlanie podelementów w kolumnach za pomocą kontrolki ListView formularzy systemu Windows'
-        href: how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md
-      - name: 'Instrukcje: włączanie widoku Tile w kontrolce ListView formularzy systemu Windows'
-        href: how-to-enable-tile-view-in-a-windows-forms-listview-control.md
-      - name: 'Instrukcje: włączanie widoku Tile w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: enable-tile-view-in-a-wf-listview-control-using-the-designer.md
-      - name: 'Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows'
-        href: how-to-group-items-in-a-windows-forms-listview-control.md
-      - name: 'Instrukcje: grupowanie elementów w kontrolce ListView formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md
-      - name: 'Instrukcje: wyświetlanie znacznika wstawiania w kontrolce ListView formularzy systemu Windows'
-        href: how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md
-      - name: 'Instrukcje: zaznaczanie elementu w kontrolce ListView formularzy systemu Windows'
-        href: how-to-select-an-item-in-the-windows-forms-listview-control.md
-      - name: 'Przewodnik: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant'
-        href: creating-an-explorer-style-interface-with-the-listview-and-treeview.md
-    - name: MainMenu, składnik
-      href: mainmenu-component-windows-forms.md
-      items:
-      - name: MainMenu, składnik — omówienie
-        href: mainmenu-component-overview-windows-forms.md
-    - name: MaskedTextBox, kontrolka
-      href: maskedtextbox-control-windows-forms.md
-      items:
-      - name: 'Przewodnik: praca z kontrolką MaskedTextBox'
-        href: walkthrough-working-with-the-maskedtextbox-control.md
-      - name: 'Instrukcje: powiązanie danych z kontrolką MaskedTextBox'
-        href: how-to-bind-data-to-the-maskedtextbox-control.md
-      - name: 'Instrukcje: ustawienie maski wprowadzania'
-        href: how-to-set-the-input-mask.md
-    - name: MenuStrip, kontrolka
-      href: menustrip-control-windows-forms.md
-      items:
-      - name: MenuStrip, kontrolka — omówienie
-        href: menustrip-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie rozszerzeń do kontrolki ToolStripMenuItems'
-        href: how-to-add-enhancements-to-toolstripmenuitems.md
-      - name: 'Instrukcje: dołączanie kontrolki MenuStrip do nadrzędnego okna MDI'
-        href: how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md
-      - name: 'Instrukcje: kopiowanie ToolStripMenuItems'
-        href: how-to-copy-toolstripmenuitems.md
-      - name: 'Instrukcje: tworzenie list okien MDI za pomocą elementu MenuStrip'
-        href: how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md
-      - name: 'Instrukcje: wyłączanie ToolStripMenuItems'
-        href: how-to-disable-toolstripmenuitems.md
-      - name: 'Instrukcje: wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant'
-        href: how-to-disable-toolstripmenuitems-using-the-designer.md
-      - name: 'Instrukcje: wyświetlanie przycisków opcji w kontrolce MenuStrip'
-        href: how-to-display-option-buttons-in-a-menustrip-windows-forms.md
-      - name: 'Instrukcje: ukrywanie kontrolki ToolStripMenuItems'
-        href: how-to-hide-toolstripmenuitems.md
-      - name: 'Instrukcje: ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant'
-        href: how-to-hide-toolstripmenuitems-using-the-designer.md
-      - name: 'Instrukcje: wstawianie kontrolki MenuStrip do menu rozwijanego MDI'
-        href: how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md
-      - name: 'Instrukcje: usuwanie kontrolki ToolStripMenuItem z menu rozwijanego MDI'
-        href: how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md
-      - name: 'Instrukcje: przenoszenie ToolStripMenuItems'
-        href: how-to-move-toolstripmenuitems.md
-      - name: 'Instrukcje: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu'
-        href: how-to-configure-menustrip-check-margins-and-image-margins.md
-      - name: 'Instrukcje: zapewnianie elementów menu standardowego dla formularza'
-        href: how-to-provide-standard-menu-items-to-a-form.md
-      - name: 'Instrukcje: konfigurowanie automatycznego scalania menu dla aplikacji MDI'
-        href: how-to-set-up-automatic-menu-merging-for-mdi-applications.md
-      - name: Scalanie elementów menu w formancie MenuStrip formularzy systemu Windows
-        href: merging-menu-items-in-the-windows-forms-menustrip-control.md
-      - name: 'Przewodnik: zapewnianie elementów menu standardowego dla formularza'
-        href: walkthrough-providing-standard-menu-items-to-a-form.md
-    - name: MonthCalendar, kontrolka
-      href: monthcalendar-control-windows-forms.md
-      items:
-      - name: MonthCalendar, kontrolka — omówienie
-        href: monthcalendar-control-overview-windows-forms.md
-      - name: 'Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy systemu Windows'
-        href: how-to-change-monthcalendar-control-appearance.md
-      - name: 'Instrukcje: wyświetlanie większej niż jeden liczby miesięcy w kontrolce MonthCalendar formularzy systemu Windows'
-        href: display-more-than-one-month-wf-monthcalendar-control.md
-      - name: 'Instrukcje: wyświetlanie określonych dni pogrubioną czcionką za pomocą kontrolki MonthCalendar formularzy systemu Windows'
-        href: display-specific-days-in-bold-with-wf-monthcalendar-control.md
-      - name: 'Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy systemu Windows'
-        href: how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md
-    - name: NotifyIcon, składnik
-      href: notifyicon-component-windows-forms.md
-      items:
-      - name: NotifyIcon, składnik — omówienie
-        href: notifyicon-component-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows'
-        href: app-icons-to-the-taskbar-with-wf-notifyicon.md
-      - name: 'Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows'
-        href: how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md
-    - name: NumericUpDown, kontrolka
-      href: numericupdown-control-windows-forms.md
-      items:
-      - name: NumericUpDown, kontrolka — omówienie
-        href: numericupdown-control-overview-windows-forms.md
-      - name: 'Instrukcje: ustawianie i zwracanie wartości liczbowych za pomocą kontrolki NumericUpDown formularzy systemu Windows'
-        href: set-and-return-numeric-values-with-wf-numericupdown-control.md
-      - name: 'Instrukcje: ustawienie formatu dla kontrolki NumericUpDown formularzy systemu Windows'
-        href: how-to-set-the-format-for-the-windows-forms-numericupdown-control.md
-    - name: OpenFileDialog, składnik
-      href: openfiledialog-component-windows-forms.md
-      items:
-      - name: OpenFileDialog, składnik — omówienie
-        href: openfiledialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: otwieranie plików za pomocą składnika OpenFileDialog'
-        href: how-to-open-files-using-the-openfiledialog-component.md
-    - name: PageSetupDialog, składnik
-      href: pagesetupdialog-component-windows-forms.md
-      items:
-      - name: PageSetupDialog, składnik — omówienie
-        href: pagesetupdialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: określanie właściwości strony za pomocą składnika PageSetupDialog'
-        href: how-to-determine-page-properties-using-the-pagesetupdialog-component.md
-    - name: Panel, kontrolka
-      href: panel-control-windows-forms.md
-      items:
-      - name: Panel, kontrolka — omówienie
-        href: panel-control-overview-windows-forms.md
-      - name: 'Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: group-controls-with-wf-panel-control-using-the-designer.md
-      - name: 'Instrukcje: ustawianie tła panelu'
-        href: how-to-set-the-background-of-a-windows-forms-panel.md
-      - name: 'Instrukcje: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md
-    - name: PictureBox, kontrolka
-      href: picturebox-control-windows-forms.md
-      items:
-      - name: PictureBox, kontrolka — omówienie
-        href: picturebox-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie zdjęcia przy użyciu narzędzia Projektant'
-        href: how-to-load-a-picture-using-the-designer-windows-forms.md
-      - name: 'Instrukcje: modyfikowanie rozmiaru lub położenia obrazu w czasie wykonywania'
-        href: how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md
-      - name: 'Instrukcje: ustawienie obrazów w czasie wykonywania'
-        href: how-to-set-pictures-at-run-time-windows-forms.md
-    - name: PrintDialog, składnik
-      href: printdialog-component-windows-forms.md
-      items:
-      - name: PrintDialog, składnik — omówienie
-        href: printdialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: wyświetlanie składnika PrintDialog'
-        href: how-to-display-the-printdialog-component.md
-    - name: PrintDocument, składnik
-      href: printdocument-component-windows-forms.md
-      items:
-      - name: PrintDocument, składnik — omówienie
-        href: printdocument-component-overview-windows-forms.md
-    - name: PrintPreviewControl, kontrolka
-      href: printpreviewcontrol-control-windows-forms.md
-      items:
-      - name: PrintPreviewControl, kontrolka — omówienie
-        href: printpreviewcontrol-control-overview-windows-forms.md
-    - name: PrintPreviewDialog, kontrolka
-      href: printpreviewdialog-control-windows-forms.md
-      items:
-      - name: PrintPreviewDialog, kontrolka — omówienie
-        href: printpreviewdialog-control-overview-windows-forms.md
-      - name: 'Instrukcje: wyświetlanie podglądu wydruku w aplikacjach formularzy Windows'
-        href: how-to-display-print-preview-in-windows-forms-applications.md
-    - name: ProgressBar, kontrolka
-      href: progressbar-control-windows-forms.md
-      items:
-      - name: ProgressBar, kontrolka — omówienie
-        href: progressbar-control-overview-windows-forms.md
-      - name: 'Instrukcje: ustawianie wartości wyświetlanej przez kontrolkę ProgressBar formularzy systemu Windows'
-        href: how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md
-    - name: RadioButton, kontrolka
-      href: radiobutton-control-windows-forms.md
-      items:
-      - name: RadioButton, kontrolka — omówienie
-        href: radiobutton-control-overview-windows-forms.md
-      - name: 'Instrukcje: grupowanie kontrolek RadioButton formularzy systemu Windows, aby działały jak zestaw'
-        href: how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md
-    - name: RichTextBox, kontrolka
-      href: richtextbox-control-windows-forms.md
-      items:
-      - name: RichTextBoxm kontrolka — omówienie
-        href: richtextbox-control-overview-windows-forms.md
-      - name: 'Instrukcje: ustalenie, kiedy zmieniono atrybuty formatowania w kontrolce RichTextBox formularzy systemu Windows'
-        href: determine-when-formatting-attributes-change-wf-richtextbox-control.md
-      - name: 'Instrukcje: wyświetlanie pasków przewijania w komórkach kontrolki RichTextBox formularzy systemu Windows'
-        href: how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md
-      - name: 'Instrukcje: wyświetlanie łączy stylu sieci Web za pomocą kontrolki RichTextBox formularzy systemu Windows'
-        href: how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md
-      - name: 'Instrukcje: włączenie operacji przeciągania i upuszczania za pomocą kontrolki RichTextBox formularzy systemu Windows'
-        href: enable-drag-and-drop-operations-with-wf-richtextbox-control.md
-      - name: 'Instrukcje: ładowanie plików do kontrolki RichTextBox formularzy systemu Windows'
-        href: how-to-load-files-into-the-windows-forms-richtextbox-control.md
-      - name: 'Instrukcje: zapisywanie plików za pomocą kontrolki RichTextBox formularzy systemu Windows'
-        href: how-to-save-files-with-the-windows-forms-richtextbox-control.md
-      - name: 'Instrukcje: ustawianie atrybutów czcionki dla kontrolki RichTextBox formularzy systemu Windows'
-        href: how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md
-      - name: 'Instrukcje: ustawianie wcięć, wysunięć i akapitów punktowanych za pomocą kontrolki RichTextBox formularzy systemu Windows'
-        href: set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md
-    - name: SaveFileDialog, składnik
-      href: savefiledialog-component-windows-forms.md
-      items:
-      - name: SaveFileDialog, składnik — omówienie
-        href: savefiledialog-component-overview-windows-forms.md
-      - name: 'Instrukcje: zapisywanie plików za pomocą składnika SaveFileDialog'
-        href: how-to-save-files-using-the-savefiledialog-component.md
-    - name: SoundPlayer — Klasa
-      href: soundplayer-class.md
-      items:
-      - name: Przegląd klasy SoundPlayer
-        href: soundplayer-class-overview.md
-      - name: 'Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows'
-        href: how-to-play-a-sound-from-a-windows-form.md
-      - name: 'Instrukcje: odtwarzanie sygnału dźwiękowego z formularza systemu Windows'
-        href: how-to-play-a-beep-from-a-windows-form.md
-      - name: 'Instrukcje: odtwarzanie dźwięku osadzonego w zasobie za pomocą formularza systemu Windows'
-        href: how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md
-      - name: 'Instrukcje: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows'
-        href: how-to-play-a-system-sound-from-a-windows-form.md
-      - name: 'Instrukcje: ładowanie dźwięku asynchronicznie w formularzu systemu Windows'
-        href: how-to-load-a-sound-asynchronously-within-a-windows-form.md
-      - name: 'Instrukcje: odtwarzanie zapętlonego dźwięku w formularzu systemu Windows'
-        href: how-to-loop-a-sound-playing-on-a-windows-form.md
-    - name: SplitContainer, kontrolka
-      href: splitcontainer-control-windows-forms.md
-      items:
-      - name: SplitContainer, kontrolka — omówienie
-        href: splitcontainer-control-overview-windows-forms.md
-      - name: 'Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows'
-        href: how-to-create-a-multipane-user-interface-with-windows-forms.md
-      - name: 'Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant'
-        href: create-a-multipane-user-interface-with-wf-using-the-designer.md
-      - name: 'Instrukcje: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows'
-        href: how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md
-      - name: 'Instrukcje: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie'
-        href: how-to-define-resize-and-positioning-behavior-in-a-split-window.md
-      - name: 'Instrukcje: dzielenie okna w poziomie'
-        href: how-to-split-a-window-horizontally.md
-      - name: 'Instrukcje: poziome dzielenie okna przy użyciu narzędzia Projektant'
-        href: how-to-split-a-window-horizontally-using-the-designer.md
-    - name: Splitter, kontrolka
-      href: splitter-control-windows-forms.md
-      items:
-      - name: Splitter, kontrolka — omówienie
-        href: splitter-control-overview-windows-forms.md
-    - name: StatusBar, kontrolka
-      href: statusbar-control-windows-forms.md
-      items:
-      - name: StatusBar, kontrolka — omówienie
-        href: statusbar-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie paneli do kontrolki StatusBar'
-        href: how-to-add-panels-to-a-statusbar-control.md
-      - name: 'Instrukcje: ustalanie, który panel został kliknięty w kontrolce StatusBar formularzy systemu Windows'
-        href: determine-which-panel-wf-statusbar-control-was-clicked.md
-      - name: 'Instrukcje: ustawianie rozmiaru paneli paska stanu'
-        href: how-to-set-the-size-of-status-bar-panels.md
-      - name: 'Przewodnik: aktualizowanie informacji na pasku stanu w czasie wykonywania'
-        href: walkthrough-updating-status-bar-information-at-run-time.md
-    - name: StatusStrip — Formant
-      href: statusstrip-control.md
-      items:
-      - name: StatusStrip — Informacje o formancie
-        href: statusstrip-control-overview.md
-      - name: 'Instrukcje: użycie właściwości Spring interaktywnie w StatusStrip'
-        href: how-to-use-the-spring-property-interactively-in-a-statusstrip.md
-    - name: TabControl — Formant
-      href: tabcontrol-control-windows-forms.md
-      items:
-      - name: TabControl, kontrolka — omówienie
-        href: tabcontrol-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie kontrolki do karty'
-        href: how-to-add-a-control-to-a-tab-page.md
-      - name: 'Instrukcje: dodawanie kontrolki do strony karty przy użyciu narzędzia Projektant'
-        href: how-to-add-a-control-to-a-tab-page-using-the-designer.md
-      - name: 'Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy systemu Windows'
-        href: how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md
-      - name: 'Instrukcje: dodawanie i usuwanie kart za pomocą formularzy systemu Windows TabControl przy użyciu narzędzia Projektant'
-        href: add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md
-      - name: 'Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows'
-        href: how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md
-      - name: 'Instrukcje: wyłączanie kart'
-        href: how-to-disable-tab-pages.md
-      - name: 'Instrukcje: wyświetlanie wyrównanych poziomo kart przy użyciu kontrolki TabControl'
-        href: how-to-display-side-aligned-tabs-with-tabcontrol.md
-    - name: TableLayoutPanel — kontrolka
-      href: tablelayoutpanel-control-windows-forms.md
-      items:
-      - name: TableLayoutPanel — Informacje o formancie
-        href: tablelayoutpanel-control-overview.md
-      - name: Zachowanie AutoSize w formancie TableLayoutPanel
-        href: autosize-behavior-in-the-tablelayoutpanel-control.md
-      - name: Najlepsze praktyki dotyczące formantu TableLayoutPanel
-        href: best-practices-for-the-tablelayoutpanel-control.md
-      - name: 'Instrukcje: wyrównywanie i rozciąganie kontrolki w kontrolce TableLayoutPanel'
-        href: how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md
-      - name: 'Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel'
-        href: how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md
-      - name: 'Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych'
-        href: how-to-create-a-resizable-windows-form-for-data-entry.md
-      - name: 'Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację'
-        href: how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md
-      - name: 'Instrukcje: edytowanie rzędów i kolumn w kontrolce TableLayoutPanel'
-        href: how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md
-      - name: 'Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel'
-        href: how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md
-      - name: 'Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel'
-        href: walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md
-    - name: TextBox, kontrolka
-      href: textbox-control-windows-forms.md
-      items:
-      - name: TextBox, kontrolka — omówienie
-        href: textbox-control-overview-windows-forms.md
-      - name: 'Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy systemu Windows'
-        href: how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md
-      - name: 'Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy systemu Windows'
-        href: how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md
-      - name: 'Instrukcje: tworzenie pola tekstowego tylko do odczytu'
-        href: how-to-create-a-read-only-text-box-windows-forms.md
-      - name: 'Instrukcje: umieszczanie cudzysłowu w ciągu'
-        href: how-to-put-quotation-marks-in-a-string-windows-forms.md
-      - name: 'Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy systemu Windows'
-        href: how-to-select-text-in-the-windows-forms-textbox-control.md
-      - name: 'Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows'
-        href: how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md
-    - name: Timer, składnik
-      href: timer-component-windows-forms.md
-      items:
-      - name: Timer, składnik — omówienie
-        href: timer-component-overview-windows-forms.md
-      - name: Ograniczenia właściwości Interval składnika Timer formularzy systemu Windows
-        href: limitations-of-the-timer-component-interval-property.md
-      - name: 'Instrukcje: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows'
-        href: run-procedures-at-set-intervals-with-wf-timer-component.md
-    - name: ToolBar — Formant
-      href: toolbar-control-windows-forms.md
-      items:
-      - name: ToolBar, kontrolka — omówienie
-        href: toolbar-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar'
-        href: how-to-add-buttons-to-a-toolbar-control.md
-      - name: 'Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant'
-        href: how-to-add-buttons-to-a-toolbar-control-using-the-designer.md
-      - name: 'Instrukcje: określanie ikony dla przycisku ToolBar'
-        href: how-to-define-an-icon-for-a-toolbar-button.md
-      - name: 'Instrukcje: określanie ikony dla przycisku ToolBar przy użyciu narzędzia Projektant'
-        href: how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md
-      - name: 'Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi'
-        href: how-to-trigger-menu-events-for-toolbar-buttons.md
-    - name: ToolStrip — Formant
-      href: toolstrip-control-windows-forms.md
-      items:
-      - name: ToolStrip, kontrolka — omówienie
-        href: toolstrip-control-overview-windows-forms.md
-      - name: Podsumowanie informacji o technologii formantów ToolStrip
-        href: toolstrip-technology-summary.md
-      - name: ToolStrip — Architektura formantu
-        href: toolstrip-control-architecture.md
-      - name: 'Instrukcje: dynamiczne dodawanie elementów ToolStrip'
-        href: how-to-add-toolstrip-items-dynamically.md
-      - name: 'Instrukcje: tworzenie podstawowych kontrolek ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant'
-        href: create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md
-      - name: 'Instrukcje: tworzenie profesjonalnej kontrolki ToolStrip'
-        href: how-to-create-a-professionally-styled-toolstrip-control.md
-      - name: 'Instrukcje: tworzenie formularza MDI za pomocą scalania menu i kontrolek ToolStrip'
-        href: how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
-      - name: 'Instrukcje: tworzenie formularza MDI za pomocą kontrolek ToolStripPanel'
-        href: how-to-create-an-mdi-form-with-toolstrippanel-controls.md
-      - name: 'Instrukcje: zmienianie wyglądu tekstu i obrazów elementów ToolStrip w formularzach systemu Windows'
-        href: how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md
-      - name: 'Instrukcje: zmienianie odstępów i wyrównania elementów ToolStrip w formularzach systemu Windows'
-        href: how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md
-      - name: 'Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows'
-        href: create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md
-      - name: 'Instrukcje: tworzenie przycisków przełączania w kontrolkach ToolStrip'
-        href: how-to-create-toggle-buttons-in-toolstrip-controls.md
-      - name: 'Instrukcje: niestandardowy rysunek kontrolki ToolStrip'
-        href: how-to-custom-draw-a-toolstrip-control.md
-      - name: 'Instrukcje: dostosowywanie kolorów w aplikacjach ToolStrip'
-        href: how-to-customize-colors-in-toolstrip-applications.md
-      - name: 'Instrukcje: definiowanie porządku osi Z zadokowanych kontrolek ToolStrip'
-        href: how-to-define-z-ordering-of-docked-toolstrip-controls.md
-      - name: 'Instrukcje: wykrywanie, kiedy wskaźnik myszy znajduje się nad elementem ToolStripItem'
-        href: how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md
-      - name: 'Instrukcje: włączanie funkcji AutoComplete w kontrolkach ToolStrip'
-        href: how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md
-      - name: 'Instrukcje: włączanie zmiany kolejności elementów ToolStrip w czasie wykonywania'
-        href: how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md
-      - name: 'Instrukcje: włączenie używania klawisza TAB do wychodzenia z kontrolki ToolStrip'
-        href: how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md
-      - name: 'Instrukcje: implementowanie niestandardowego elementu ToolStripRenderer'
-        href: how-to-implement-a-custom-toolstriprenderer.md
-      - name: 'Instrukcje: zarządzanie przepełnieniem elementu ToolStrip'
-        href: how-to-manage-toolstrip-overflow-in-windows-forms.md
-      - name: 'Instrukcje: przenoszenie elementu ToolStrip z ToolStripContainer na formularz'
-        href: how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md
-      - name: 'Instrukcje: położenie elementu ToolStripItem w kontrolce ToolStrip'
-        href: how-to-position-a-toolstripitem-on-a-toolstrip.md
-      - name: 'Instrukcje: ustawienie modułu renderowania ToolStrip w czasie wykonywania'
-        href: how-to-set-the-toolstrip-renderer-at-run-time.md
-      - name: 'Instrukcje: ustawienie modułu renderowania ToolStrip dla aplikacji'
-        href: how-to-set-the-toolstrip-renderer-for-an-application.md
-      - name: 'Instrukcje: rozciąganie elementu ToolStripTextBox w celu uzupełnienia szerokości elementu ToolStrip'
-        href: stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-wf.md
-      - name: 'Instrukcje: użycie elementu ToolTips w kontrolkach ToolStrip'
-        href: how-to-use-tooltips-in-toolstrip-controls.md
-      - name: 'Instrukcje: zawijanie kontrolki formularzy systemu Windows za pomocą elementu ToolStripControlHost'
-        href: how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md
-      - name: 'Przewodnik: tworzenie profesjonalnej kontrolki ToolStrip'
-        href: walkthrough-creating-a-professionally-styled-toolstrip-control.md
-      - name: 'Przewodnik: tworzenie formularza MDI ze scalaniem menu i kontrolkami ToolStrip'
-        href: walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
-    - name: ToolStripContainer — Formant
-      href: toolstripcontainer-control.md
-      items:
-      - name: ToolStripContainer — Informacje o formancie
-        href: toolstripcontainer-control-overview.md
-      - name: 'Instrukcje: dodawanie elementu ToolStripContainer do formularza'
-        href: how-to-add-a-toolstripcontainer-to-a-form.md
-      - name: 'Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel'
-        href: how-to-add-a-control-to-a-toolstripcontentpanel.md
-    - name: ToolStripPanel — Formant
-      href: toolstrippanel-control.md
-      items:
-      - name: ToolStripPanel — Informacje o formancie
-        href: toolstrippanel-control-overview.md
-      - name: 'Instrukcje: łączenie ToolStripPanels'
-        href: how-to-join-toolstrippanels.md
-      - name: 'Instrukcje: używanie elementu ToolStripPanels dla MDI'
-        href: how-to-use-toolstrippanels-for-mdi.md
-    - name: ToolStripProgressBar — Formant
-      href: toolstripprogressbar-control.md
-      items:
-      - name: ToolStripProgressBar — Informacje o formancie
-        href: toolstripprogressbar-control-overview.md
-    - name: ToolStripStatusLabel — Formant
-      href: toolstripstatuslabel-control.md
-      items:
-      - name: ToolStripStatusLabel — Informacje o formancie
-        href: toolstripstatuslabel-control-overview.md
-    - name: ToolTip — Składnik
-      href: tooltip-component-windows-forms.md
-      items:
-      - name: ToolTip, składnik — omówienie
-        href: tooltip-component-overview-windows-forms.md
-      - name: 'Instrukcje: ustawienie elementu ToolTips dla kontrolek w formularzu systemu Windows w czasie projektowania'
-        href: how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md
-      - name: 'Instrukcje: zmienianie opóźnienia składnika ToolTip formularzy systemu Windows'
-        href: how-to-change-the-delay-of-the-windows-forms-tooltip-component.md
-    - name: TrackBar, kontrolka
-      href: trackbar-control-windows-forms.md
-      items:
-      - name: TrackBar, kontrolka — omówienie
-        href: trackbar-control-overview-windows-forms.md
-    - name: TreeView — Formant
-      href: treeview-control-windows-forms.md
-      items:
-      - name: TreeView, kontrolka — omówienie
-        href: treeview-control-overview-windows-forms.md
-      - name: 'Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows'
-        href: how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md
-      - name: 'Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows przy użyciu narzędzia Projektant'
-        href: add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md
-      - name: 'Instrukcje: dołączanie menu ShortCut do węzła TreeView'
-        href: how-to-attach-a-shortcut-menu-to-a-treeview-node.md
-      - name: 'Instrukcje: dołączanie menu skrótów do TreeNode przy użyciu narzędzia Projektant'
-        href: how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md
-      - name: 'Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)'
-        href: add-custom-information-to-a-treeview-or-listview-control-wf.md
-      - name: 'Instrukcje: określanie, który węzeł TreeView został kliknięty'
-        href: how-to-determine-which-treeview-node-was-clicked-windows-forms.md
-      - name: 'Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows'
-        href: how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md
-      - name: 'Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy systemu Windows'
-        href: how-to-set-icons-for-the-windows-forms-treeview-control.md
-    - name: WebBrowser — Formant
-      href: webbrowser-control-windows-forms.md
-      items:
-      - name: WebBrowser — Informacje o formancie
-        href: webbrowser-control-overview.md
-      - name: Zabezpieczenia WebBrowser
-        href: webbrowser-security.md
-      - name: 'Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser'
-        href: how-to-navigate-to-a-url-with-the-webbrowser-control.md
-      - name: 'Instrukcje: drukowanie za pomocą kontrolki WebBrowser'
-        href: how-to-print-with-a-webbrowser-control.md
-      - name: 'Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms'
-        href: how-to-add-web-browser-capabilities-to-a-windows-forms-application.md
-      - name: 'Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji formularzy systemu Windows'
-        href: how-to-create-an-html-document-viewer-in-a-windows-forms-application.md
-      - name: 'Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta'
-        href: implement-two-way-com-between-dhtml-and-client.md
-      - name: Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-        href: using-the-managed-html-document-object-model.md
-        items:
-        - name: 'Instrukcje: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
-          href: how-to-access-the-managed-html-document-object-model.md
-        - name: 'Instrukcje: uzyskiwanie dostępu do źródła HTML w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
-          href: how-to-access-the-html-source-in-the-managed-html-document-object-model.md
-        - name: 'Instrukcje: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
-          href: how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md
-        - name: Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-          href: accessing-frames-in-the-managed-html-document-object-model.md
-        - name: Uzyskiwanie dostępu do nieujawnionych elementów w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-          href: accessing-unexposed-members-on-the-managed-html-document-object-model.md
-    - name: Formanty formularzy systemu Windows używane do obsługi opcji list
-      href: windows-forms-controls-used-to-list-options.md
-      items:
-      - name: Kiedy należy używać formantu ComboBox formularzy systemu Windows zamiast ListBox
-        href: when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md
-      - name: 'Instrukcje: uzyskiwanie dostępu do określonych elementów w kontrolkach ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
-        href: access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md
-      - name: 'Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
-        href: add-and-remove-items-from-a-wf-combobox.md
-      - name: 'Instrukcje: tworzenie tabeli wyszukiwania dla kontrolek ComboBox, ListBox i CheckedListBox formularzy systemu Windows'
-        href: create-a-lookup-table-for-a-wf-combobox-listbox.md
-      - name: 'Instrukcje: powiązanie kontrolki ComboBox lub ListBox (Formularze systemu Windows) z danymi'
-        href: how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md
-      - name: 'Instrukcje: sortowanie zawartości kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows'
-        href: sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md
-  - name: Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
-    href: developing-custom-windows-forms-controls.md
-    items:
-    - name: Omówienie używania formantów w formularzach systemu Windows
-      href: overview-of-using-controls-in-windows-forms.md
-    - name: Różne typy formantów niestandardowych
-      href: varieties-of-custom-controls.md
-      items:
-      - name: Zalecenia dotyczące typu formantu
-        href: control-type-recommendations.md
-    - name: Podstawowe informacje o opracowywaniu formantów formularzy systemu Windows
-      href: windows-forms-control-development-basics.md
-      items:
-      - name: 'Instrukcje: opracowywanie prostej kontrolki formularzy systemu Windows'
-        href: how-to-develop-a-simple-windows-forms-control.md
-      - name: 'Instrukcje: tworzenie kontrolki formularzy systemu Windows pokazującego postęp'
-        href: how-to-create-a-windows-forms-control-that-shows-progress.md
-      - name: Opracowywanie złożonego formantu formularzy systemu Windows
-        href: developing-a-composite-windows-forms-control.md
-    - name: Właściwości formantów formularzy systemu Windows
-      href: properties-in-windows-forms-controls.md
-      items:
-      - name: Definiowanie właściwości
-        href: defining-a-property-in-windows-forms-controls.md
-      - name: Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset
-        href: defining-default-values-with-the-shouldserialize-and-reset-methods.md
-      - name: Zdarzenia zmiany właściwości
-        href: property-changed-events.md
-      - name: 'Instrukcje: udostępnianie właściwości kontrolek składowych'
-        href: how-to-expose-properties-of-constituent-controls.md
-      - name: Implementacja metody w formantach niestandardowych
-        href: method-implementation-in-custom-controls.md
-    - name: Zdarzenia w formantach formularzy systemu Windows
-      href: events-in-windows-forms-controls.md
-      items:
-      - name: Zastępowanie metody OnPaint
-        href: overriding-the-onpaint-method.md
-      - name: Obsługa danych wejściowych użytkownika
-        href: handling-user-input.md
-      - name: Definiowanie zdarzenia
-        href: defining-an-event-in-windows-forms-controls.md
-    - name: Atrybuty w formantach formularzy systemu Windows
-      href: attributes-in-windows-forms-controls.md
-      items:
-      - name: 'Instrukcje: stosowanie atrybutów w kontrolkach formularzy systemu Windows'
-        href: how-to-apply-attributes-in-windows-forms-controls.md
-    - name: Malowanie i renderowanie formantu niestandardowego
-      href: custom-control-painting-and-rendering.md
-      items:
-      - name: Renderowanie formantu formularzy systemu Windows
-        href: rendering-a-windows-forms-control.md
-      - name: Formanty rysowane przez użytkownika
-        href: user-drawn-controls.md
-      - name: Formanty składników
-        href: constituent-controls.md
-      - name: 'Instrukcje: ukrywanie kontrolki w czasie wykonywania'
-        href: how-to-make-your-control-invisible-at-run-time.md
-      - name: 'Instrukcje: ustawienie przezroczystego tła kontrolki'
-        href: how-to-give-your-control-a-transparent-background.md
-      - name: Renderowanie formantów przy użyciu stylów wizualnych
-        href: rendering-controls-with-visual-styles.md
-        items:
-        - name: 'Instrukcje: używanie klasy renderowania kontrolki'
-          href: how-to-use-a-control-rendering-class.md
-        - name: 'Instrukcje: renderowanie elementu stylu wizualnego'
-          href: how-to-render-a-visual-style-element.md
-    - name: Układ w formantach formularzy systemu Windows
-      href: layout-in-windows-forms-controls.md
-      items:
-      - name: AutoSize — Przegląd właściwości
-        href: autosize-property-overview.md
-      - name: 'Instrukcje: wyrównywanie kontrolki z krawędziami formularzy'
-        href: how-to-align-a-control-to-the-edges-of-forms.md
-      - name: Margines i wypełnienie w formantach formularzy systemu Windows
-        href: margin-and-padding-in-windows-forms-controls.md
-      - name: 'Instrukcje: tworzenie obramowania wokoło kontrolki formularzy systemu Windows za pomocą wypełnienia'
-        href: how-to-create-a-border-around-a-windows-forms-control-using-padding.md
-      - name: 'Instrukcje: implementowanie aparatu niestandardowego układu'
-        href: how-to-implement-a-custom-layout-engine.md
-    - name: Wielowątkowość w formantach formularzy systemu Windows
-      href: multithreading-in-windows-forms-controls.md
-      items:
-      - name: 'Instrukcje: bezpieczne wątkowo wywołania kontrolek formularzy systemu Windows'
-        href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
-      - name: 'Instrukcje: użycie wątku w tle do wyszukiwania plików'
-        href: how-to-use-a-background-thread-to-search-for-files.md
-  - name: Kontrolki formularzy Windows Forms w programie .NET Framework według funkcji
-    href: windows-forms-controls-by-function.md
-  - name: Opracowywanie formantów formularzy systemu Windows w czasie projektowania
-    href: developing-windows-forms-controls-at-design-time.md
-    items:
-    - name: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic'
-      href: walkthrough-authoring-a-composite-control-with-visual-basic.md
-    - name: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#'
-      href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
-    - name: 'Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic'
-      href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
-    - name: 'Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows formantu z Visual C#'
-      href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-    - name: 'Przewodnik: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows'
-      href: performing-common-tasks-using-smart-tags-on-wf-controls.md
-    - name: 'Przewodnik: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute'
-      href: serializing-collections-designerserializationvisibilityattribute.md
-    - name: 'Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania'
-      href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
-    - name: 'Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio'
-      href: creating-a-wf-control-design-time-features.md
-    - name: 'Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows'
-      href: how-to-author-controls-for-windows-forms.md
-    - name: 'Instrukcje: autoryzowanie kontrolek złożonych'
-      href: how-to-author-composite-controls.md
-    - name: 'Instrukcje: dziedziczenie z klasy UserControl'
-      href: how-to-inherit-from-the-usercontrol-class.md
-    - name: 'Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows'
-      href: how-to-inherit-from-existing-windows-forms-controls.md
-    - name: 'Instrukcje: dziedziczenie z klasy kontrolek'
-      href: how-to-inherit-from-the-control-class.md
-    - name: 'Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania'
-      href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
-    - name: 'Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika'
-      href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
-    - name: 'Instrukcje: dostarczanie mapy bitowej przybornika dla kontrolki'
-      href: how-to-provide-a-toolbox-bitmap-for-a-control.md
-    - name: 'Instrukcje: testowanie zachowania UserControl w czasie wykonywania'
-      href: how-to-test-the-run-time-behavior-of-a-usercontrol.md
-    - name: Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows
-      href: design-time-errors-in-the-windows-forms-designer.md
-    - name: Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
-      href: troubleshooting-control-and-component-authoring.md
-ms.openlocfilehash: b61b1fa3f7e772db4bd29f1ce34e1df76b325831
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471456"
+    - name: Opracowywanie formantów formularzy systemu Windows w czasie projektowania
+      href: developing-windows-forms-controls-at-design-time.md
+      items:
+        - name: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic'
+          href: walkthrough-authoring-a-composite-control-with-visual-basic.md
+        - name: 'Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#'
+          href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
+        - name: 'Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic'
+          href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
+        - name: 'Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows formantu z Visual C#'
+          href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
+        - name: 'Przewodnik: przeprowadzanie typowych zadań z tagami inteligentnymi na kontrolkach formularzy systemu Windows'
+          href: performing-common-tasks-using-smart-tags-on-wf-controls.md
+        - name: 'Przewodnik: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute'
+          href: serializing-collections-designerserializationvisibilityattribute.md
+        - name: 'Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania'
+          href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
+        - name: 'Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio'
+          href: creating-a-wf-control-design-time-features.md
+        - name: 'Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows'
+          href: how-to-author-controls-for-windows-forms.md
+        - name: 'Instrukcje: autoryzowanie kontrolek złożonych'
+          href: how-to-author-composite-controls.md
+        - name: 'Instrukcje: dziedziczenie z klasy UserControl'
+          href: how-to-inherit-from-the-usercontrol-class.md
+        - name: 'Instrukcje: dziedziczenie z istniejących kontrolek formularzy systemu Windows'
+          href: how-to-inherit-from-existing-windows-forms-controls.md
+        - name: 'Instrukcje: dziedziczenie z klasy kontrolek'
+          href: how-to-inherit-from-the-control-class.md
+        - name: 'Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania'
+          href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
+        - name: 'Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika'
+          href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
+        - name: 'Instrukcje: dostarczanie mapy bitowej przybornika dla kontrolki'
+          href: how-to-provide-a-toolbox-bitmap-for-a-control.md
+        - name: 'Instrukcje: testowanie zachowania UserControl w czasie wykonywania'
+          href: how-to-test-the-run-time-behavior-of-a-usercontrol.md
+        - name: Błędy czasu projektowania w narzędziu Projektant dla formularzy systemu Windows
+          href: design-time-errors-in-the-windows-forms-designer.md
+        - name: Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
+          href: troubleshooting-control-and-component-authoring.md

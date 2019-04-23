@@ -1,94 +1,87 @@
-items:
 - name: Dane
   href: index.md
   items:
-  - name: Powiązanie danych
-    href: data-binding-wpf.md
-    items:
-    - name: Przegląd Wiązanie danych
-      href: data-binding-overview.md
-    - name: Przegląd Wiązanie źródeł
-      href: binding-sources-overview.md
-    - name: Przegląd Szablonowanie danych
-      href: data-templating-overview.md
-    - name: Przegląd Wiązanie deklaracji
-      href: binding-declarations-overview.md
-    - name: — Tematy porad
-      href: data-binding-how-to-topics.md
+    - name: Powiązanie danych
+      href: data-binding-wpf.md
       items:
-      - name: Tworzenie prostego powiązania
-        href: how-to-create-a-simple-binding.md
-      - name: Określanie obiektu źródłowego powiązania
-        href: how-to-specify-the-binding-source.md
-      - name: Udostępnianie danych do powiązania w XAML
-        href: how-to-make-data-available-for-binding-in-xaml.md
-      - name: Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox
-        href: how-to-control-when-the-textbox-text-updates-the-source.md
-      - name: Określanie kierunku powiązania
-        href: how-to-specify-the-direction-of-the-binding.md
-      - name: Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru
-        href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
-      - name: Powiązywanie z wyliczeniem
-        href: how-to-bind-to-an-enumeration.md
-      - name: Powiązywanie właściwości dwóch kontrolek
-        href: how-to-bind-the-properties-of-two-controls.md
-      - name: Implementowanie weryfikacji wiązania
-        href: how-to-implement-binding-validation.md
-      - name: Implementowanie logiki weryfikacji w obiektach niestandardowych
-        href: how-to-implement-validation-logic-on-custom-objects.md
-      - name: Pobieranie obiektu wiążącego z powiązanej własności docelowej
-        href: how-to-get-the-binding-object-from-a-bound-target-property.md
-      - name: Implementowanie CompositeCollection
-        href: how-to-implement-a-compositecollection.md
-      - name: Konwertowanie powiązanych danych
-        href: how-to-convert-bound-data.md
-      - name: Tworzenie powiązania w kodzie
-        href: how-to-create-a-binding-in-code.md
-      - name: Pobieranie widoku domyślnego kolekcji danych
-        href: how-to-get-the-default-view-of-a-data-collection.md
-      - name: Przechodzenie do obiektów w danych CollectionView
-        href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
-      - name: Filtrowanie danych w widoku
-        href: how-to-filter-data-in-a-view.md
-      - name: Sortowanie danych w widoku
-        href: how-to-sort-data-in-a-view.md
-      - name: Sortowanie i grupowanie danych przy użyciu widoku w XAML
-        href: how-to-sort-and-group-data-using-a-view-in-xaml.md
-      - name: Używanie wzorca szczegółowego z danymi hierarchicznymi
-        href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
-      - name: Używanie wzorca szczegółowego z danymi hierarchicznymi XML
-        href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
-      - name: Uzyskiwanie wartości na podstawie listy powiązanych elementów
-        href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
-      - name: Implementowanie powiadomienia o zmianie właściwości
-        href: how-to-implement-property-change-notification.md
-      - name: Tworzenie i wiązanie z elementem ObservableCollection
-        href: how-to-create-and-bind-to-an-observablecollection.md
-      - name: Implementowanie elementu PriorityBinding
-        href: how-to-implement-prioritybinding.md
-      - name: Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath
-        href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
-      - name: Wiązanie z elementem XDocument, XElement lub LINQ dla wyników zapytań XML
-        href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
-      - name: Używanie przestrzeni nazw XML w powiązaniu danych
-        href: how-to-use-xml-namespaces-in-data-binding.md
-      - name: Wiązanie ze źródłem danych ADO.NET
-        href: how-to-bind-to-an-ado-net-data-source.md
-      - name: Wiązanie z metodą
-        href: how-to-bind-to-a-method.md
-      - name: Konfigurowanie powiadomienia o aktualizacji powiązań
-        href: how-to-set-up-notification-of-binding-updates.md
-      - name: Czyszczenie powiązań
-        href: how-to-clear-bindings.md
-      - name: Znajdowanie elementów wygenerowanych przez szablon DataTemplate
-        href: how-to-find-datatemplate-generated-elements.md
-      - name: Wiązanie z usługą internetową
-        href: how-to-bind-to-a-web-service.md
-      - name: Wiązanie z wynikami zapytania LINQ
-        href: how-to-bind-to-the-results-of-a-linq-query.md
-ms.openlocfilehash: 7dd345771eb00e8d40f89ce4a925e2263763e8da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471463"
+        - name: Przegląd Wiązanie danych
+          href: data-binding-overview.md
+        - name: Przegląd Wiązanie źródeł
+          href: binding-sources-overview.md
+        - name: Przegląd Szablonowanie danych
+          href: data-templating-overview.md
+        - name: Przegląd Wiązanie deklaracji
+          href: binding-declarations-overview.md
+        - name: — Tematy porad
+          href: data-binding-how-to-topics.md
+          items:
+            - name: Tworzenie prostego powiązania
+              href: how-to-create-a-simple-binding.md
+            - name: Określanie obiektu źródłowego powiązania
+              href: how-to-specify-the-binding-source.md
+            - name: Udostępnianie danych do powiązania w XAML
+              href: how-to-make-data-available-for-binding-in-xaml.md
+            - name: Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox
+              href: how-to-control-when-the-textbox-text-updates-the-source.md
+            - name: Określanie kierunku powiązania
+              href: how-to-specify-the-direction-of-the-binding.md
+            - name: Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru
+              href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
+            - name: Powiązywanie z wyliczeniem
+              href: how-to-bind-to-an-enumeration.md
+            - name: Powiązywanie właściwości dwóch kontrolek
+              href: how-to-bind-the-properties-of-two-controls.md
+            - name: Implementowanie weryfikacji wiązania
+              href: how-to-implement-binding-validation.md
+            - name: Implementowanie logiki weryfikacji w obiektach niestandardowych
+              href: how-to-implement-validation-logic-on-custom-objects.md
+            - name: Pobieranie obiektu wiążącego z powiązanej własności docelowej
+              href: how-to-get-the-binding-object-from-a-bound-target-property.md
+            - name: Implementowanie CompositeCollection
+              href: how-to-implement-a-compositecollection.md
+            - name: Konwertowanie powiązanych danych
+              href: how-to-convert-bound-data.md
+            - name: Tworzenie powiązania w kodzie
+              href: how-to-create-a-binding-in-code.md
+            - name: Pobieranie widoku domyślnego kolekcji danych
+              href: how-to-get-the-default-view-of-a-data-collection.md
+            - name: Przechodzenie do obiektów w danych CollectionView
+              href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
+            - name: Filtrowanie danych w widoku
+              href: how-to-filter-data-in-a-view.md
+            - name: Sortowanie danych w widoku
+              href: how-to-sort-data-in-a-view.md
+            - name: Sortowanie i grupowanie danych przy użyciu widoku w XAML
+              href: how-to-sort-and-group-data-using-a-view-in-xaml.md
+            - name: Używanie wzorca szczegółowego z danymi hierarchicznymi
+              href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
+            - name: Używanie wzorca szczegółowego z danymi hierarchicznymi XML
+              href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
+            - name: Uzyskiwanie wartości na podstawie listy powiązanych elementów
+              href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
+            - name: Implementowanie powiadomienia o zmianie właściwości
+              href: how-to-implement-property-change-notification.md
+            - name: Tworzenie i wiązanie z elementem ObservableCollection
+              href: how-to-create-and-bind-to-an-observablecollection.md
+            - name: Implementowanie elementu PriorityBinding
+              href: how-to-implement-prioritybinding.md
+            - name: Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath
+              href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
+            - name: 'Wiązanie z elementem XDocument, XElement lub LINQ dla wyników zapytań XML'
+              href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
+            - name: Używanie przestrzeni nazw XML w powiązaniu danych
+              href: how-to-use-xml-namespaces-in-data-binding.md
+            - name: Wiązanie ze źródłem danych ADO.NET
+              href: how-to-bind-to-an-ado-net-data-source.md
+            - name: Wiązanie z metodą
+              href: how-to-bind-to-a-method.md
+            - name: Konfigurowanie powiadomienia o aktualizacji powiązań
+              href: how-to-set-up-notification-of-binding-updates.md
+            - name: Czyszczenie powiązań
+              href: how-to-clear-bindings.md
+            - name: Znajdowanie elementów wygenerowanych przez szablon DataTemplate
+              href: how-to-find-datatemplate-generated-elements.md
+            - name: Wiązanie z usługą internetową
+              href: how-to-bind-to-a-web-service.md
+            - name: Wiązanie z wynikami zapytania LINQ
+              href: how-to-bind-to-the-results-of-a-linq-query.md

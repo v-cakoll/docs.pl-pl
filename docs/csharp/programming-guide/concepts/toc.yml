@@ -1,34 +1,27 @@
-items:
 - name: Pojęcia związane z programowaniem
   href: index.md
   items:
-  - name: Zestawy i globalna pamięć podręczna zestawów
-    href: assemblies-gac/
-  - name: Programowanie asynchroniczne z Async i Await
-    href: async/
-  - name: Atrybuty
-    href: attributes/
-  - name: Informacje o wywołującym
-    href: caller-information.md
-  - name: Kolekcje
-    href: collections.md
-  - name: Kowariancja i kontrawariancja
-    href: covariance-contravariance/
-  - name: Drzewa wyrażeń
-    href: expression-trees/
-  - name: Iteratory
-    href: iterators.md
-  - name: Zapytanie o języku zintegrowanym (LINQ)
-    href: linq/
-  - name: Programowanie zorientowane obiektowo
-    href: object-oriented-programming.md
-  - name: Odbicie
-    href: reflection.md
-  - name: Serializacja (C#)
-    href: serialization/
-ms.openlocfilehash: 43357f3e4d438d96ba5778100585453792ed29c6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471989"
+    - name: Zestawy i globalna pamięć podręczna zestawów
+      href: assemblies-gac/
+    - name: Programowanie asynchroniczne z Async i Await
+      href: async/
+    - name: Atrybuty
+      href: attributes/
+    - name: Informacje o wywołującym
+      href: caller-information.md
+    - name: Kolekcje
+      href: collections.md
+    - name: Kowariancja i kontrawariancja
+      href: covariance-contravariance/
+    - name: Drzewa wyrażeń
+      href: expression-trees/
+    - name: Iteratory
+      href: iterators.md
+    - name: Zapytanie o języku zintegrowanym (LINQ)
+      href: linq/
+    - name: Programowanie zorientowane obiektowo
+      href: object-oriented-programming.md
+    - name: Odbicie
+      href: reflection.md
+    - name: 'Serializacja (C#)'
+      href: serialization/

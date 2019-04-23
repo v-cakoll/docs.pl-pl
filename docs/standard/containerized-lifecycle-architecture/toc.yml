@@ -1,70 +1,63 @@
-items:
 - name: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
   href: index.md
   items:
-  - name: Co to jest Docker?
-    href: what-is-docker.md
-  - name: Terminologia platformy Docker
-    href: docker-terminology.md
-  - name: Kontenery, obrazy i rejestry platformy Docker
-    href: docker-containers-images-and-registries.md
-  - name: Droga do nowoczesnych aplikacji opartych na kontenerach
-    href: road-to-modern-applications-based-on-containers.md
-  - name: Wprowadzenie do cyklu życia aplikacji platformy Docker
-    href: Docker-application-lifecycle/index.md
-    items:
-    - name: Kontenery jako podstawa współpracy w metodyce DevOps
-      href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
-  - name: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konteneryzowanych
-    href: Microsoft-platform-tools-containerized-apps/index.md
-  - name: Projektowanie i opracowywanie konteneryzowanych aplikacji przy użyciu platformy Docker i platformy Microsoft Azure
-    href: design-develop-containerized-apps/index.md
-    items:
-    - name: Projektowanie aplikacji platformy Docker
-      href: design-develop-containerized-apps/design-docker-applications.md
-    - name: Wspólne zasady projektowania kontenera
-      href: design-develop-containerized-apps/common-container-design-principles.md
-    - name: Aplikacje monolityczne
-      href: design-develop-containerized-apps/monolithic-applications.md
-    - name: Stan i dane w aplikacjach platformy Docker
-      href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
-    - name: Aplikacje zorientowane na usługi
-      href: design-develop-containerized-apps/soa-applications.md
-    - name: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
-      href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
-    - name: Wdrażanie w usłudze Azure Kubernetes Service (AKS)
-      href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
-    - name: Środowisko deweloperskie dla aplikacji platformy Docker
-      href: design-develop-containerized-apps/docker-apps-development-environment.md
-    - name: Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
-      href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
-    - name: Visual Studio Tools for Docker
-      href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
-    - name: Używanie poleceń programu Windows PowerShell w pliku DockerFile do konfigurowania kontenerów systemu Windows (opartych na standardzie platformy Docker)
-      href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
-    - name: Tworzenie aplikacji ASP.NET Core 2.0 wdrażanych jako kontenery systemu Linux do koordynatora usługi AKS/Kubernetes
-      href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
-  - name: Przepływ pracy DevOps dla aplikacji platformy Docker z wykorzystaniem narzędzi firmy Microsoft
-    href: docker-devops-workflow/index.md
-    items:
-    - name: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
-      href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
-    - name: Tworzenie potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services dla aplikacji .NET Core 2.0 na kontenerach i wdrażanie w klastrze Kubernetes
-      href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
-  - name: Uruchamianie i monitorowanie środowisk produkcyjnych platformy Docker oraz zarządzanie nimi
-    href: run-manage-monitor-docker-environments/index.md
-    items:
-    - name: Uruchamianie aplikacji złożonych i opartych na mikrousługach w środowiskach produkcyjnych
-      href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
-    - name: Zarządzanie środowiskami produkcyjnymi platformy Docker
-      href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
-    - name: Monitorowanie usług konteneryzowanych aplikacji
-      href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
-  - name: Kluczowe kwestie do zapamiętania
-    href: key-takeaways/index.md
-ms.openlocfilehash: 8aa4e07d422ddf01e9dee971ee6071486dd0e1ff
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471459"
+    - name: Co to jest Docker?
+      href: what-is-docker.md
+    - name: Terminologia platformy Docker
+      href: docker-terminology.md
+    - name: 'Kontenery, obrazy i rejestry platformy Docker'
+      href: docker-containers-images-and-registries.md
+    - name: Droga do nowoczesnych aplikacji opartych na kontenerach
+      href: road-to-modern-applications-based-on-containers.md
+    - name: Wprowadzenie do cyklu życia aplikacji platformy Docker
+      href: Docker-application-lifecycle/index.md
+      items:
+        - name: Kontenery jako podstawa współpracy w metodyce DevOps
+          href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
+    - name: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konteneryzowanych
+      href: Microsoft-platform-tools-containerized-apps/index.md
+    - name: Projektowanie i opracowywanie konteneryzowanych aplikacji przy użyciu platformy Docker i platformy Microsoft Azure
+      href: design-develop-containerized-apps/index.md
+      items:
+        - name: Projektowanie aplikacji platformy Docker
+          href: design-develop-containerized-apps/design-docker-applications.md
+        - name: Wspólne zasady projektowania kontenera
+          href: design-develop-containerized-apps/common-container-design-principles.md
+        - name: Aplikacje monolityczne
+          href: design-develop-containerized-apps/monolithic-applications.md
+        - name: Stan i dane w aplikacjach platformy Docker
+          href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
+        - name: Aplikacje zorientowane na usługi
+          href: design-develop-containerized-apps/soa-applications.md
+        - name: Organizowanie aplikacji mikrousług i aplikacji z wieloma kontenerami w celu zapewnienia wysokiej skalowalności i dostępności
+          href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
+        - name: Wdrażanie w usłudze Azure Kubernetes Service (AKS)
+          href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
+        - name: Środowisko deweloperskie dla aplikacji platformy Docker
+          href: design-develop-containerized-apps/docker-apps-development-environment.md
+        - name: Przepływ pracy wewnętrznej pętli tworzenia kodu dla aplikacji platformy Docker
+          href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
+        - name: Visual Studio Tools for Docker
+          href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
+        - name: Używanie poleceń programu Windows PowerShell w pliku DockerFile do konfigurowania kontenerów systemu Windows (opartych na standardzie platformy Docker)
+          href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
+        - name: Tworzenie aplikacji ASP.NET Core 2.0 wdrażanych jako kontenery systemu Linux do koordynatora usługi AKS/Kubernetes
+          href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
+    - name: Przepływ pracy DevOps dla aplikacji platformy Docker z wykorzystaniem narzędzi firmy Microsoft
+      href: docker-devops-workflow/index.md
+      items:
+        - name: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
+          href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
+        - name: Tworzenie potoków ciągłej integracji/ciągłego wdrażania w usługach Azure DevOps Services dla aplikacji .NET Core 2.0 na kontenerach i wdrażanie w klastrze Kubernetes
+          href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
+    - name: Uruchamianie i monitorowanie środowisk produkcyjnych platformy Docker oraz zarządzanie nimi
+      href: run-manage-monitor-docker-environments/index.md
+      items:
+        - name: Uruchamianie aplikacji złożonych i opartych na mikrousługach w środowiskach produkcyjnych
+          href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
+        - name: Zarządzanie środowiskami produkcyjnymi platformy Docker
+          href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
+        - name: Monitorowanie usług konteneryzowanych aplikacji
+          href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
+    - name: Kluczowe kwestie do zapamiętania
+      href: key-takeaways/index.md

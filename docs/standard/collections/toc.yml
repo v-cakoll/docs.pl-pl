@@ -1,24 +1,17 @@
-items:
 - name: Kolekcje i struktury danych
   href: index.md
   items:
-  - name: Wybieranie klasy kolekcji
-    href: selecting-a-collection-class.md
-  - name: Często używane typy kolekcji
-    href: commonly-used-collection-types.md
-  - name: Kiedy należy używać kolekcji ogólnych
-    href: when-to-use-generic-collections.md
-  - name: Porównywanie i sortowanie w kolekcjach
-    href: comparisons-and-sorts-within-collections.md
-  - name: Sortowane typów kolekcji
-    href: sorted-collection-types.md
-  - name: Typy kolekcji tablic wartości funkcji mieszającej i słowników
-    href: hashtable-and-dictionary-collection-types.md
-  - name: Kolekcje bezpieczne wątkowo
-    href: thread-safe/
-ms.openlocfilehash: c9d534277d71f3cb3f18ac90809698a3e63e5145
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471952"
+    - name: Wybieranie klasy kolekcji
+      href: selecting-a-collection-class.md
+    - name: Często używane typy kolekcji
+      href: commonly-used-collection-types.md
+    - name: Kiedy należy używać kolekcji ogólnych
+      href: when-to-use-generic-collections.md
+    - name: Porównywanie i sortowanie w kolekcjach
+      href: comparisons-and-sorts-within-collections.md
+    - name: Sortowane typów kolekcji
+      href: sorted-collection-types.md
+    - name: Typy kolekcji tablic wartości funkcji mieszającej i słowników
+      href: hashtable-and-dictionary-collection-types.md
+    - name: Kolekcje bezpieczne wątkowo
+      href: thread-safe/

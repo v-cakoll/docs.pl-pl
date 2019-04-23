@@ -1,147 +1,140 @@
-items:
 - name: Projektowanie aplikacji
   href: index.md
   items:
-  - name: Przegląd Zarządzanie aplikacjami
-    href: application-management-overview.md
-    items:
-    - name: Zasoby aplikacji WPF, zawartość, pliki danych
-      href: wpf-application-resource-content-and-data-files.md
-    - name: Pakuj URI w WPF
-      href: pack-uris-in-wpf.md
-    - name: Dodawanie ekranu powitalnego do aplikacji WPF
-      href: how-to-add-a-splash-screen-to-a-wpf-application.md
-    - name: Używanie słownika zasobów zakresu aplikacji
-      href: how-to-use-an-application-scope-resource-dictionary.md
-    - name: Utrwalanie i przywracanie właściwości zakresu aplikacji między sesjami aplikacji
-      href: persist-and-restore-application-scope-properties.md
-  - name: Okna w programie WPF
-    href: windows-in-wpf-applications.md
-    items:
-    - name: Przegląd Okna WPF
-      href: wpf-windows-overview.md
-    - name: Przegląd okien dialogowych
-      href: dialog-boxes-overview.md
-    - name: — Tematy porad
-      href: window-management-how-to-topics.md
+    - name: Przegląd Zarządzanie aplikacjami
+      href: application-management-overview.md
       items:
-      - name: Automatyczne dopasowywanie rozmiaru okna do jego zawartości
-        href: how-to-automatically-size-a-window-to-fit-its-content.md
-      - name: Pobieranie wszystkich okien w aplikacji
-        href: how-to-get-all-windows-in-an-application.md
-      - name: Pobieranie i ustawianie okna głównego aplikacji
-        href: how-to-get-and-set-the-main-application-window.md
-      - name: Otwieranie okna dialogowego
-        href: how-to-open-a-dialog-box.md
-      - name: Otwieranie okna komunikatu
-        href: how-to-open-a-message-box.md
-      - name: Otwieranie okna
-        href: how-to-open-a-window.md
-      - name: Zwracanie wyniku okna dialogowego
-        href: how-to-return-a-dialog-box-result.md
-  - name: Przegląd Nawigacja
-    href: navigation-overview.md
-    items:
-    - name: Przegląd Strukturyzowana nawigacja
-      href: structured-navigation-overview.md
-    - name: Przegląd Topologia nawigacji
-      href: navigation-topologies-overview.md
-    - name: — Tematy porad
-      href: navigation-how-to-topics.md
+        - name: 'Zasoby aplikacji WPF, zawartość, pliki danych'
+          href: wpf-application-resource-content-and-data-files.md
+        - name: Pakuj URI w WPF
+          href: pack-uris-in-wpf.md
+        - name: Dodawanie ekranu powitalnego do aplikacji WPF
+          href: how-to-add-a-splash-screen-to-a-wpf-application.md
+        - name: Używanie słownika zasobów zakresu aplikacji
+          href: how-to-use-an-application-scope-resource-dictionary.md
+        - name: Utrwalanie i przywracanie właściwości zakresu aplikacji między sesjami aplikacji
+          href: persist-and-restore-application-scope-properties.md
+    - name: Okna w programie WPF
+      href: windows-in-wpf-applications.md
       items:
-      - name: Wywoływanie funkcji strony
-        href: how-to-call-a-page-function.md
-      - name: Przechodzenie do strony
-        href: how-to-navigate-to-a-page.md
-      - name: Odświeżanie strony
-        href: how-to-refresh-a-page.md
-      - name: Zatrzymywanie ładowania strony
-        href: how-to-stop-a-page-from-loading.md
-      - name: Poruszanie się wstecz w historii nawigacji
-        href: how-to-navigate-back-through-navigation-history.md
-      - name: Powrót z funkcji strony
-        href: how-to-return-from-a-page-function.md
-      - name: Pobieranie wartości zwracanej funkcji strony
-        href: how-to-get-the-return-value-of-a-page-function.md
-      - name: Poruszanie się w przód i wstecz w historii nawigacji
-        href: how-to-navigate-forward-or-back-through-navigation-history.md
-      - name: Ustalanie, czy strona jest hostowana w przeglądarce
-        href: how-to-determine-if-a-page-is-browser-hosted.md
-      - name: 'Używanie protokołu mailto: do wysyłania wiadomości ze strony'
-        href: how-to-use-mailto-to-send-mail-from-a-page.md
-      - name: Ustawianie tytułu okna z poziomu strony
-        href: how-to-set-the-title-of-a-window-from-a-page.md
-      - name: Ustawianie szerokości okna z poziomu strony
-        href: how-to-set-the-width-of-a-window-from-a-page.md
-      - name: Ustawianie wysokości okna z poziomu strony
-        href: how-to-set-the-height-of-a-window-from-a-page.md
-  - name: Przegląd Dodatki WPF
-    href: wpf-add-ins-overview.md
-    items:
-    - name: — Tematy porad
-      href: how-to-topics.md
+        - name: Przegląd Okna WPF
+          href: wpf-windows-overview.md
+        - name: Przegląd okien dialogowych
+          href: dialog-boxes-overview.md
+        - name: — Tematy porad
+          href: window-management-how-to-topics.md
+          items:
+            - name: Automatyczne dopasowywanie rozmiaru okna do jego zawartości
+              href: how-to-automatically-size-a-window-to-fit-its-content.md
+            - name: Pobieranie wszystkich okien w aplikacji
+              href: how-to-get-all-windows-in-an-application.md
+            - name: Pobieranie i ustawianie okna głównego aplikacji
+              href: how-to-get-and-set-the-main-application-window.md
+            - name: Otwieranie okna dialogowego
+              href: how-to-open-a-dialog-box.md
+            - name: Otwieranie okna komunikatu
+              href: how-to-open-a-message-box.md
+            - name: Otwieranie okna
+              href: how-to-open-a-window.md
+            - name: Zwracanie wyniku okna dialogowego
+              href: how-to-return-a-dialog-box-result.md
+    - name: Przegląd Nawigacja
+      href: navigation-overview.md
       items:
-      - name: Tworzenie dodatku, który zwraca interfejs użytkownika
-        href: how-to-create-an-add-in-that-returns-a-ui.md
-      - name: Tworzenie dodatku, który jest interfejsem użytkownika
-        href: how-to-create-an-add-in-that-is-a-ui.md
-  - name: Hosting
-    href: hosting-wpf-applications.md
-    items:
-    - name: Przegląd Aplikacje przeglądarek WPF XAML
-      href: wpf-xaml-browser-applications-overview.md
-    - name: Host WPF (PresentationHost.exe)
-      href: wpf-host-presentationhost-exe.md
-    - name: Dodatki Firefox wspierające wdrożenie aplikacji .NET
-      href: firefox-add-ons-to-support-net-application-deployment.md
-    - name: Macierzysta przeglądarka WPF wsparcia API hostingu
-      href: native-wpf-browser-hosting-support-apis.md
+        - name: Przegląd Strukturyzowana nawigacja
+          href: structured-navigation-overview.md
+        - name: Przegląd Topologia nawigacji
+          href: navigation-topologies-overview.md
+        - name: — Tematy porad
+          href: navigation-how-to-topics.md
+          items:
+            - name: Wywoływanie funkcji strony
+              href: how-to-call-a-page-function.md
+            - name: Przechodzenie do strony
+              href: how-to-navigate-to-a-page.md
+            - name: Odświeżanie strony
+              href: how-to-refresh-a-page.md
+            - name: Zatrzymywanie ładowania strony
+              href: how-to-stop-a-page-from-loading.md
+            - name: Poruszanie się wstecz w historii nawigacji
+              href: how-to-navigate-back-through-navigation-history.md
+            - name: Powrót z funkcji strony
+              href: how-to-return-from-a-page-function.md
+            - name: Pobieranie wartości zwracanej funkcji strony
+              href: how-to-get-the-return-value-of-a-page-function.md
+            - name: Poruszanie się w przód i wstecz w historii nawigacji
+              href: how-to-navigate-forward-or-back-through-navigation-history.md
+            - name: 'Ustalanie, czy strona jest hostowana w przeglądarce'
+              href: how-to-determine-if-a-page-is-browser-hosted.md
+            - name: 'Używanie protokołu mailto: do wysyłania wiadomości ze strony'
+              href: how-to-use-mailto-to-send-mail-from-a-page.md
+            - name: Ustawianie tytułu okna z poziomu strony
+              href: how-to-set-the-title-of-a-window-from-a-page.md
+            - name: Ustawianie szerokości okna z poziomu strony
+              href: how-to-set-the-width-of-a-window-from-a-page.md
+            - name: Ustawianie wysokości okna z poziomu strony
+              href: how-to-set-the-height-of-a-window-from-a-page.md
+    - name: Przegląd Dodatki WPF
+      href: wpf-add-ins-overview.md
       items:
-      - name: IEnumRAWINPUTDEVICE
-        href: ienumrawinputdevice.md
-        items:
-        - name: IEnumRAWINPUTDEVIC:Next
-          href: ienumrawinputdevic-next.md
-        - name: IEnumRAWINPUTDEVIC:Skip
-          href: ienumrawinputdevic-skip.md
-        - name: IEnumRAWINPUTDEVIC:Reset
-          href: ienumrawinputdevic-reset.md
-        - name: IEnumRAWINPUTDEVIC:Clone
-          href: ienumrawinputdevic-clone.md
-      - name: IWpfHostSupport
-        href: iwpfhostsupport.md
-        items:
-        - name: GetRawInputDevices
-          href: getrawinputdevices.md
-        - name: FilterInputMessage
-          href: filterinputmessage.md
-        - name: GetCustomUI
-          href: getcustomui.md
-  - name: Wdróż i konfiguruj
-    href: building-and-deploying-wpf-applications.md
-    items:
-    - name: Kompilowanie aplikacji WPF
-      href: building-a-wpf-application-wpf.md
-    - name: Wdrażanie aplikacji WPF
-      href: deploying-a-wpf-application-wpf.md
-    - name: — Tematy porad
-      href: build-and-deploy-how-to-topics.md
+        - name: — Tematy porad
+          href: how-to-topics.md
+          items:
+            - name: 'Tworzenie dodatku, który zwraca interfejs użytkownika'
+              href: how-to-create-an-add-in-that-returns-a-ui.md
+            - name: 'Tworzenie dodatku, który jest interfejsem użytkownika'
+              href: how-to-create-an-add-in-that-is-a-ui.md
+    - name: Hosting
+      href: hosting-wpf-applications.md
       items:
-      - name: Konfigurowanie w usługach IIS 5.0 oraz IIS 6.0 wdrażania aplikacji WPF
-        href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-      - name: Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej
-        href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-      - name: Ustalanie zainstalowanej wersji WPF
-        href: how-to-determine-the-installed-version-of-wpf.md
-      - name: Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana
-        href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
-      - name: Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana
-        href: how-to-detect-whether-the-net-framework-3-5-is-installed.md
-      - name: Wykrywanie, czy wtyczka WPF dla Firefox jest zainstalowana
-        href: how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md
-ms.openlocfilehash: 40a6b0dce93aae1300614800fe482e3ce8133e2f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471793"
+        - name: Przegląd Aplikacje przeglądarek WPF XAML
+          href: wpf-xaml-browser-applications-overview.md
+        - name: Host WPF (PresentationHost.exe)
+          href: wpf-host-presentationhost-exe.md
+        - name: Dodatki Firefox wspierające wdrożenie aplikacji .NET
+          href: firefox-add-ons-to-support-net-application-deployment.md
+        - name: Macierzysta przeglądarka WPF wsparcia API hostingu
+          href: native-wpf-browser-hosting-support-apis.md
+          items:
+            - name: IEnumRAWINPUTDEVICE
+              href: ienumrawinputdevice.md
+              items:
+                - name: 'IEnumRAWINPUTDEVIC:Next'
+                  href: ienumrawinputdevic-next.md
+                - name: 'IEnumRAWINPUTDEVIC:Skip'
+                  href: ienumrawinputdevic-skip.md
+                - name: 'IEnumRAWINPUTDEVIC:Reset'
+                  href: ienumrawinputdevic-reset.md
+                - name: 'IEnumRAWINPUTDEVIC:Clone'
+                  href: ienumrawinputdevic-clone.md
+            - name: IWpfHostSupport
+              href: iwpfhostsupport.md
+              items:
+                - name: GetRawInputDevices
+                  href: getrawinputdevices.md
+                - name: FilterInputMessage
+                  href: filterinputmessage.md
+                - name: GetCustomUI
+                  href: getcustomui.md
+    - name: Wdróż i konfiguruj
+      href: building-and-deploying-wpf-applications.md
+      items:
+        - name: Kompilowanie aplikacji WPF
+          href: building-a-wpf-application-wpf.md
+        - name: Wdrażanie aplikacji WPF
+          href: deploying-a-wpf-application-wpf.md
+        - name: — Tematy porad
+          href: build-and-deploy-how-to-topics.md
+          items:
+            - name: Konfigurowanie w usługach IIS 5.0 oraz IIS 6.0 wdrażania aplikacji WPF
+              href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
+            - name: Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej
+              href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
+            - name: Ustalanie zainstalowanej wersji WPF
+              href: how-to-determine-the-installed-version-of-wpf.md
+            - name: 'Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana'
+              href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
+            - name: 'Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana'
+              href: how-to-detect-whether-the-net-framework-3-5-is-installed.md
+            - name: 'Wykrywanie, czy wtyczka WPF dla Firefox jest zainstalowana'
+              href: how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md

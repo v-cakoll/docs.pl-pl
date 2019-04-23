@@ -1,140 +1,133 @@
-items:
 - name: Typy podstawowe
   href: index.md
   items:
-  - name: System typu wspólnego
-    href: common-type-system.md
-  - name: Konwersja typów w programie .NET
-    href: type-conversion.md
-    items:
-    - name: Tabele konwersji typów
-      href: conversion-tables.md
-  - name: Formatowanie typów
-    href: formatting-types.md
-    items:
-    - name: Standardowe ciągi formatujące liczby
-      href: standard-numeric-format-strings.md
-    - name: Niestandardowe ciągi formatujące liczby
-      href: custom-numeric-format-strings.md
-    - name: Standardowe ciągi formatujące datę i godzinę
-      href: standard-date-and-time-format-strings.md
-    - name: Niestandardowe ciągi formatujące datę i godzinę
-      href: custom-date-and-time-format-strings.md
-    - name: Standardowe ciągi formatujące TimeSpan
-      href: standard-timespan-format-strings.md
-    - name: Niestandardowe ciągi formatujące TimeSpan
-      href: custom-timespan-format-strings.md
-    - name: Wyliczanie ciągów formatujących
-      href: enumeration-format-strings.md
-    - name: Złożone formatowanie
-      href: composite-formatting.md
-    - name: Wykonywanie operacji formatowania
-      href: performing-formatting-operations.md
+    - name: System typu wspólnego
+      href: common-type-system.md
+    - name: Konwersja typów w programie .NET
+      href: type-conversion.md
       items:
-      - name: 'Instrukcje: Uzupełnianie liczby zerami wiodącymi'
-        href: how-to-pad-a-number-with-leading-zeros.md
-      - name: 'Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty'
-        href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-      - name: 'Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego'
-        href: how-to-define-and-use-custom-numeric-format-providers.md
-      - name: 'Instrukcje: Obustronne wartości daty i godziny'
-        href: how-to-round-trip-date-and-time-values.md
-      - name: 'Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych'
-        href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-      - name: 'Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu'
-        href: how-to-display-localized-date-and-time-information-to-web-users.md
-      - name: 'Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny'
-        href: how-to-display-milliseconds-in-date-and-time-values.md
-      - name: 'Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański'
-        href: how-to-display-dates-in-non-gregorian-calendars.md
-  - name: Manipulowanie ciągami
-    href: manipulating-strings.md
-    items:
-    - name: Najlepsze rozwiązania dotyczące używania ciągów
-      href: best-practices-strings.md
-    - name: Podstawowe operacje na ciągach
-      href: basic-string-operations.md
+        - name: Tabele konwersji typów
+          href: conversion-tables.md
+    - name: Formatowanie typów
+      href: formatting-types.md
       items:
-      - name: Tworzenie nowych ciągów
-        href: creating-new.md
-      - name: Przycinanie i usuwanie znaków
-        href: trimming.md
-      - name: Uzupełnianie ciągów
-        href: padding.md
-      - name: Porównywanie ciągów
-        href: comparing.md
-      - name: Zmienianie wielkości liter
-        href: changing-case.md
-      - name: Używanie klasy StringBuilder
-        href: stringbuilder.md
-      - name: 'Instrukcje: Wykonywanie podstawowych działań na ciągach'
-        href: basic-manipulations.md
-    - name: Wyrażenia regularne w programie .NET
-      href: regular-expressions.md
+        - name: Standardowe ciągi formatujące liczby
+          href: standard-numeric-format-strings.md
+        - name: Niestandardowe ciągi formatujące liczby
+          href: custom-numeric-format-strings.md
+        - name: Standardowe ciągi formatujące datę i godzinę
+          href: standard-date-and-time-format-strings.md
+        - name: Niestandardowe ciągi formatujące datę i godzinę
+          href: custom-date-and-time-format-strings.md
+        - name: Standardowe ciągi formatujące TimeSpan
+          href: standard-timespan-format-strings.md
+        - name: Niestandardowe ciągi formatujące TimeSpan
+          href: custom-timespan-format-strings.md
+        - name: Wyliczanie ciągów formatujących
+          href: enumeration-format-strings.md
+        - name: Złożone formatowanie
+          href: composite-formatting.md
+        - name: Wykonywanie operacji formatowania
+          href: performing-formatting-operations.md
+          items:
+            - name: 'Instrukcje: Uzupełnianie liczby zerami wiodącymi'
+              href: how-to-pad-a-number-with-leading-zeros.md
+            - name: 'Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty'
+              href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
+            - name: 'Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego'
+              href: how-to-define-and-use-custom-numeric-format-providers.md
+            - name: 'Instrukcje: Obustronne wartości daty i godziny'
+              href: how-to-round-trip-date-and-time-values.md
+            - name: 'Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych'
+              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
+            - name: 'Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu'
+              href: how-to-display-localized-date-and-time-information-to-web-users.md
+            - name: 'Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny'
+              href: how-to-display-milliseconds-in-date-and-time-values.md
+            - name: 'Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański'
+              href: how-to-display-dates-in-non-gregorian-calendars.md
+    - name: Manipulowanie ciągami
+      href: manipulating-strings.md
       items:
-      - name: Język wyrażeń regularnych — podręczny wykaz
-        href: regular-expression-language-quick-reference.md
-        items:
-        - name: Znaki unikowe
-          href: character-escapes-in-regular-expressions.md
-        - name: Klasy znaku
-          href: character-classes-in-regular-expressions.md
-        - name: Kotwice
-          href: anchors-in-regular-expressions.md
-        - name: Konstrukty grupujące
-          href: grouping-constructs-in-regular-expressions.md
-        - name: Kwantyfikatory
-          href: quantifiers-in-regular-expressions.md
-        - name: Konstrukty grupowania wstecznego
-          href: backreference-constructs-in-regular-expressions.md
-        - name: Konstrukty naprzemienne
-          href: alternation-constructs-in-regular-expressions.md
-        - name: Zastępstwa
-          href: substitutions-in-regular-expressions.md
-        - name: Opcje wyrażeń regularnych
-          href: regular-expression-options.md
-        - name: Różne konstruktory
-          href: miscellaneous-constructs-in-regular-expressions.md
-      - name: Najlepsze rozwiązania dotyczące wyrażeń regularnych
-        href: best-practices.md
-      - name: Model obiektów wyrażeń regularnych
-        href: the-regular-expression-object-model.md
-      - name: Szczegóły zachowania dotyczącego wyrażeń regularnych
-        href: details-of-regular-expression-behavior.md
-        items:
-        - name: Nawracanie
-          href: backtracking-in-regular-expressions.md
-        - name: Kompilacja i ponowne użycie
-          href: compilation-and-reuse-in-regular-expressions.md
-        - name: Bezpieczeństwo wątków
-          href: thread-safety-in-regular-expressions.md
-      - name: Przykłady wyrażeń regularnych
-        href: regular-expression-examples.md
-        items:
-        - name: 'Przykład: Wyszukiwanie wartości HREF'
-          href: regular-expression-example-scanning-for-hrefs.md
-        - name: 'Przykład: Zmienianie formatów daty'
-          href: regular-expression-example-changing-date-formats.md
-        - name: 'Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL'
-          href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-        - name: 'Instrukcje: Usuwanie nieprawidłowych znaków z ciągu'
-          href: how-to-strip-invalid-characters-from-a-string.md
-        - name: 'Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
-          href: how-to-verify-that-strings-are-in-valid-email-format.md
-    - name: Kodowanie znaków w programie .NET
-      href: character-encoding.md
-  - name: Analizowanie ciągów
-    href: parsing-strings.md
-    items:
-    - name: Analizowanie ciągów liczbowych
-      href: parsing-numeric.md
-    - name: Analizowanie ciągów daty i godziny
-      href: parsing-datetime.md
-    - name: Analiza składniowa innych ciągów
-      href: parsing-other.md
-ms.openlocfilehash: 893959894168d56c05f525a167773ee9e69e9f1b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471360"
+        - name: Najlepsze rozwiązania dotyczące używania ciągów
+          href: best-practices-strings.md
+        - name: Podstawowe operacje na ciągach
+          href: basic-string-operations.md
+          items:
+            - name: Tworzenie nowych ciągów
+              href: creating-new.md
+            - name: Przycinanie i usuwanie znaków
+              href: trimming.md
+            - name: Uzupełnianie ciągów
+              href: padding.md
+            - name: Porównywanie ciągów
+              href: comparing.md
+            - name: Zmienianie wielkości liter
+              href: changing-case.md
+            - name: Używanie klasy StringBuilder
+              href: stringbuilder.md
+            - name: 'Instrukcje: Wykonywanie podstawowych działań na ciągach'
+              href: basic-manipulations.md
+        - name: Wyrażenia regularne w programie .NET
+          href: regular-expressions.md
+          items:
+            - name: Język wyrażeń regularnych — podręczny wykaz
+              href: regular-expression-language-quick-reference.md
+              items:
+                - name: Znaki unikowe
+                  href: character-escapes-in-regular-expressions.md
+                - name: Klasy znaku
+                  href: character-classes-in-regular-expressions.md
+                - name: Kotwice
+                  href: anchors-in-regular-expressions.md
+                - name: Konstrukty grupujące
+                  href: grouping-constructs-in-regular-expressions.md
+                - name: Kwantyfikatory
+                  href: quantifiers-in-regular-expressions.md
+                - name: Konstrukty grupowania wstecznego
+                  href: backreference-constructs-in-regular-expressions.md
+                - name: Konstrukty naprzemienne
+                  href: alternation-constructs-in-regular-expressions.md
+                - name: Zastępstwa
+                  href: substitutions-in-regular-expressions.md
+                - name: Opcje wyrażeń regularnych
+                  href: regular-expression-options.md
+                - name: Różne konstruktory
+                  href: miscellaneous-constructs-in-regular-expressions.md
+            - name: Najlepsze rozwiązania dotyczące wyrażeń regularnych
+              href: best-practices.md
+            - name: Model obiektów wyrażeń regularnych
+              href: the-regular-expression-object-model.md
+            - name: Szczegóły zachowania dotyczącego wyrażeń regularnych
+              href: details-of-regular-expression-behavior.md
+              items:
+                - name: Nawracanie
+                  href: backtracking-in-regular-expressions.md
+                - name: Kompilacja i ponowne użycie
+                  href: compilation-and-reuse-in-regular-expressions.md
+                - name: Bezpieczeństwo wątków
+                  href: thread-safety-in-regular-expressions.md
+            - name: Przykłady wyrażeń regularnych
+              href: regular-expression-examples.md
+              items:
+                - name: 'Przykład: Wyszukiwanie wartości HREF'
+                  href: regular-expression-example-scanning-for-hrefs.md
+                - name: 'Przykład: Zmienianie formatów daty'
+                  href: regular-expression-example-changing-date-formats.md
+                - name: 'Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL'
+                  href: how-to-extract-a-protocol-and-port-number-from-a-url.md
+                - name: 'Instrukcje: Usuwanie nieprawidłowych znaków z ciągu'
+                  href: how-to-strip-invalid-characters-from-a-string.md
+                - name: 'Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
+                  href: how-to-verify-that-strings-are-in-valid-email-format.md
+        - name: Kodowanie znaków w programie .NET
+          href: character-encoding.md
+    - name: Analizowanie ciągów
+      href: parsing-strings.md
+      items:
+        - name: Analizowanie ciągów liczbowych
+          href: parsing-numeric.md
+        - name: Analizowanie ciągów daty i godziny
+          href: parsing-datetime.md
+        - name: Analiza składniowa innych ciągów
+          href: parsing-other.md

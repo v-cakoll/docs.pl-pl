@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120981"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementowanie transakcji niejawnej przy użyciu zakresu transakcji
@@ -90,9 +90,9 @@ void SomeMethod()
 |Wymagane|Nie|Nowa transakcja (będzie główny)|  
 |Wymagane nowe|Nie|Nowa transakcja (będzie główny)|  
 |Pomiń|Nie|Nie transakcji|  
-|Wymagane|Tak|Otoczenia transakcji|  
+|Wymagane|Yes|Otoczenia transakcji|  
 |Wymagane nowe|Tak|Nowa transakcja (będzie główny)|  
-|Pomiń|Yes|Nie transakcji|  
+|Pomiń|Tak|Nie transakcji|  
   
  Gdy <xref:System.Transactions.TransactionScope> obiektu sprzężenia istniejącej transakcji otoczenia, usuwania obiektu zakres nie może kończyć się transakcji, chyba że zakres przerywa transakcję. Jeśli otoczenia transakcji został utworzony przez zakres głównego, tylko wtedy, gdy zakres główny jest usunięty, nie <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana w transakcji. Jeśli transakcja została utworzona ręcznie, zakończenia transakcji, gdy jest to zostało przerwane lub przydzielonej przez jej twórcę.  
   
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- W przykładzie pokazano blok kodu, bez żadnych transakcji otoczenia nowego zakresu (`scope1`) przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>. Zakres `scope1` jest zakresem głównego, ponieważ tworzy nową transakcję (transakcji A) i sprawia, że transakcja A otoczenia transakcji. `Scope1` następnie tworzy trzy więcej obiektów, z których każdy z inną <xref:System.Transactions.TransactionScopeOption> wartość. Na przykład `scope2` jest tworzona przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>, i ponieważ istnieje transakcja otoczenia, dołączeniu pierwszej transakcji utworzone przez `scope1`. Należy pamiętać, że `scope3` zakres główny nowej transakcji, a `scope4` ma ma otoczenia transakcji.  
+ W przykładzie pokazano blok kodu, bez żadnych transakcji otoczenia nowego zakresu (`scope1`) przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>. Zakres `scope1` jest zakresem głównego, ponieważ tworzy nową transakcję (transakcji A) i sprawia, że transakcja A otoczenia transakcji. `Scope1`następnie tworzy trzy więcej obiektów, każdy z inną <xref:System.Transactions.TransactionScopeOption> wartość. Na przykład `scope2` jest tworzona przy użyciu <xref:System.Transactions.TransactionScopeOption.Required>, i ponieważ istnieje transakcja otoczenia, dołączeniu pierwszej transakcji utworzone przez `scope1`. Należy pamiętać, że `scope3` zakres główny nowej transakcji, a `scope4` ma ma otoczenia transakcji.  
   
  Chociaż często używane wartości domyślne i większość <xref:System.Transactions.TransactionScopeOption> jest <xref:System.Transactions.TransactionScopeOption.Required>, inne wartości ma unikatowy z przeznaczeniem.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress> jest przydatne, gdy chcesz zachować operacji wykonywanych przez sekcję kodu, a nie chcesz przerwać otoczenia transakcji, jeśli operacje kończą się niepowodzeniem. Na przykład jeśli chcesz wykonać rejestrowania lub inspekcji operacji lub mają być publikowane zdarzeń subskrybentom niezależnie od tego czy otoczenia transakcji zatwierdzeń lub przerywa. Ta wartość umożliwia mają sekcję kodu nietransakcyjnej wewnątrz zakresu transakcji, jak pokazano w poniższym przykładzie.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress>jest przydatne, gdy chcesz zachować operacji wykonywanych przez sekcję kodu, a nie chcesz przerwać otoczenia transakcji, jeśli operacje kończą się niepowodzeniem. Na przykład jeśli chcesz wykonać rejestrowania lub inspekcji operacji lub mają być publikowane zdarzeń subskrybentom niezależnie od tego czy otoczenia transakcji zatwierdzeń lub przerywa. Ta wartość umożliwia mają sekcję kodu nietransakcyjnej wewnątrz zakresu transakcji, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  

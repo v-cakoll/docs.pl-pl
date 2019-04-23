@@ -3,10 +3,10 @@ title: Funkcji daty i godziny Canonical
 ms.date: 03/30/2017
 ms.assetid: 9628b74f-1585-436a-b385-8b02ed0cdd63
 ms.openlocfilehash: 1e54fa3d763fa08d7bafd9b002f0458ec3a6293d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119239"
 ---
 # <a name="date-and-time-canonical-functions"></a>Funkcji daty i godziny Canonical

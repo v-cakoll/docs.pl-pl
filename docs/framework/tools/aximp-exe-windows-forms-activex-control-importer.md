@@ -11,10 +11,10 @@ ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119200"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
@@ -38,18 +38,18 @@ aximp [options]{file.dll | file.ocx}
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*plik*|Nazwa pliku źródłowego, który zawiera formant ActiveX do przekonwertowania. Argument file musi mieć rozszerzenie dll lub ocx.|  
+|*Plik*|Nazwa pliku źródłowego, który zawiera formant ActiveX do przekonwertowania. Argument file musi mieć rozszerzenie dll lub ocx.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/delaysign`|Określa, że program Aximp.exe ma podpisać wynikowy formant, używając funkcji podpisywania opóźnionego. Tę opcję należy określić z oboma `/keycontainer:`, `/keyfile:`, lub `/publickey:` opcji. Aby uzyskać więcej informacji na temat procesu podpisywania opóźnionego, zobacz [opóźnienie podpisywania zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/keycontainer:` *containerName*|Podpisuje wynikowy formant silną nazwą, używając pary kluczy publiczny/prywatny znalezionej w kontenerze kluczy określonym przez *containerName*.|  
-|`/keyfile:` *nazwa_pliku*|Podpisuje wynikowy formant silną nazwą przy użyciu wydawcy oficjalnej publiczny/prywatny pary kluczy w *filename*.|  
+|`/keyfile:` *Nazwa pliku*|Podpisuje wynikowy formant silną nazwą przy użyciu wydawcy oficjalnej publiczny/prywatny pary kluczy w *filename*.|  
 |`/nologo`|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|`/out:` *nazwa_pliku*|Określa nazwę zestawu, który ma zostać utworzony.|  
-|`/publickey:` *nazwa_pliku*|Podpisuje wynikowy formant silną nazwą przy użyciu klucza publicznego w pliku określonym przez *filename*.|  
-|`/rcw:` *nazwa_pliku*|Używa określonej wywoływalnej otoki czasu wykonywania, zamiast generować nową. Można określić wiele wystąpień. Dla ścieżek względnych jest używany bieżący katalog. Aby uzyskać więcej informacji, zobacz [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
+|`/out:` *Nazwa pliku*|Określa nazwę zestawu, który ma zostać utworzony.|  
+|`/publickey:` *Nazwa pliku*|Podpisuje wynikowy formant silną nazwą przy użyciu klucza publicznego w pliku określonym przez *filename*.|  
+|`/rcw:` *Nazwa pliku*|Używa określonej wywoływalnej otoki czasu wykonywania, zamiast generować nową. Można określić wiele wystąpień. Dla ścieżek względnych jest używany bieżący katalog. Aby uzyskać więcej informacji, zobacz [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
 |`/silent`|Pomija wyświetlanie komunikatów o sukcesie.|  
 |`/source`|Generuje kod źródłowy w języku C# dla otoki programu Windows Forms.|  
 |`/verbose`|Określa tryb pełny; wyświetla dodatkowe informacje o postępie.|  
@@ -82,4 +82,4 @@ aximp c:\systemroot\system32\msdxm.ocx
 ## <a name="see-also"></a>Zobacz także
 
 - [Narzędzia](../../../docs/framework/tools/index.md)
-- [Ildasm.exe (Dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

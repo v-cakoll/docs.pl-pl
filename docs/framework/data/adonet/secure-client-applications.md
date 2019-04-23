@@ -3,10 +3,10 @@ title: Zabezpieczanie aplikacji klienckich
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119617"
 ---
 # <a name="secure-client-applications"></a>Zabezpieczanie aplikacji klienckich
@@ -24,22 +24,22 @@ Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystk
  [Walidacja danych wejściowych użytkownika na stronach sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  Omówienie sprawdzania poprawności danych wejściowych za pomocą programu ASP.NET sprawdzania poprawności formantów użytkownika.  
   
- [Dane użytkownika w formularzach systemu Windows](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Dane użytkownika w formularzach Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Zawiera linki i informacje dotyczące weryfikacji myszy i klawiatury w aplikacji Windows Forms.  
   
- [.NET Framework — Wyrażenia regularne](../../../../docs/standard/base-types/regular-expressions.md)  
+ [Wyrażeń regularnych programu .NET framework](../../../../docs/standard/base-types/regular-expressions.md)  
  Opisuje sposób używania <xref:System.Text.RegularExpressions.Regex> klasy, aby sprawdzić poprawność danych wejściowych użytkownika.  
   
 ## <a name="windows-applications"></a>Aplikacje Windows  
  W przeszłości aplikacje Windows są zazwyczaj uruchomione z pełnymi uprawnieniami. .NET Framework oferuje infrastrukturę, aby ograniczyć kodu wykonywanego w aplikacji Windows przy użyciu zabezpieczeń dostępu kodu (CAS). Jednak tylko urzędy certyfikacji nie wystarcza do ochrony aplikacji.  
   
- [Zabezpieczenia formularzy systemu Windows](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Zabezpieczenia formularzy Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  W tym artykule omówiono sposób zabezpieczania aplikacji Windows Forms i zawiera linki do powiązanych tematów.  
   
- [Formularze systemu Windows i niezarządzane aplikacje](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Formularze Windows Forms i niezarządzane aplikacje](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  W tym artykule opisano sposób interakcji z niezarządzanych aplikacji w aplikacji Windows Forms.  
   
- [Wdrożenie ClickOnce w przypadku formularzy systemu Windows](../../winforms/clickonce-deployment-for-windows-forms.md)  
+ [Wdrożenie ClickOnce w przypadku formularzy Windows Forms](../../winforms/clickonce-deployment-for-windows-forms.md)  
  Opisuje sposób używania `ClickOnce` wdrożenia w aplikacji Windows Forms i omówiono skutki dla bezpieczeństwa.  
   
 ## <a name="aspnet-and-xml-web-services"></a>Program ASP.NET i usługi XML sieci Web  
@@ -63,7 +63,7 @@ Aplikacje składają się zazwyczaj z wielu części, które muszą być wszystk
 |--------------|-----------------|  
 |[Konfigurację zdalnego aplikacji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|W tym artykule omówiono sposób konfigurowania aplikacji usług zdalnych w celu uniknięcia typowych problemów.|  
 |[Zabezpieczenia w komunikacji zdalnej](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|W tym artykule opisano, uwierzytelniania i szyfrowania, a także tematy dodatkowe zabezpieczenia komunikacji zdalnej.|  
-|[Zagadnienia dotyczące zabezpieczeń internetowych i zdalnego dostępu](../../../../docs/framework/misc/security-and-remoting-considerations.md)|W tym artykule opisano problemy z zabezpieczeniami, za pomocą chronionych obiektów i występujące w wielu domenach aplikacji.|  
+|[Zabezpieczenia i zagadnienia dotyczące komunikacji zdalnej](../../../../docs/framework/misc/security-and-remoting-considerations.md)|W tym artykule opisano problemy z zabezpieczeniami, za pomocą chronionych obiektów i występujące w wielu domenach aplikacji.|  
   
 ## <a name="see-also"></a>Zobacz także
 

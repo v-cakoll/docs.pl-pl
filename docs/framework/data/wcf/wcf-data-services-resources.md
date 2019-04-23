@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172123"
 ---
 # <a name="wcf-data-services-resources"></a>Zasoby usługi danych WCF
@@ -38,7 +38,7 @@ ms.locfileid: "59172123"
  [Witryny sieci Web OData](https://go.microsoft.com/fwlink/?LinkID=184554)  
  Podstawowym źródłem informacji na temat [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)].  
   
- [Zestaw SDK OData](https://go.microsoft.com/fwlink/?LinkID=185248)  
+ [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)  
  Zawiera przykładowe usług, przykłady i biblioteki programistyczne, które pozwalają pracować z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych.  
   
  [OData Blog](https://go.microsoft.com/fwlink/?LinkId=185868)  
@@ -50,7 +50,7 @@ ms.locfileid: "59172123"
  [Platforma danych jak to zrobić? Filmy wideo: Seria usług danych WCF](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Zawiera zestaw rzutowania ekranu wideo, które pokazują, jak tworzyć i uzyskiwać dostęp do usług danych.  
   
- [Przegląd: Usługi danych WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [Omówienie: Usługi danych WCF](https://go.microsoft.com/fwlink/?LinkID=131074)  
  Oficjalny dokument, który zawiera bardziej ogólne informacje o zaletach [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
  [Za pomocą usług danych Microsoft WCF](https://go.microsoft.com/fwlink/?LinkID=131075)  

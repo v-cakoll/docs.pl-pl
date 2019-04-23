@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165272"
 ---
 # <a name="binding-declarations-overview"></a>Przegląd Wiązanie deklaracji
@@ -125,7 +125,7 @@ W tym temacie omówiono różne sposoby, można zadeklarować powiązania.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
-- [PropertyPath — Składnia XAML](../advanced/propertypath-xaml-syntax.md)
+- [PropertyPath, składnia XAML](../advanced/propertypath-xaml-syntax.md)

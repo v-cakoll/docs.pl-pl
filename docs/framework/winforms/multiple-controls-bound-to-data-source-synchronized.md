@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170342"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Instrukcje: Zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych
@@ -42,7 +42,7 @@ Często pracując przy użyciu powiązania danych w formularzach Windows Forms, 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
+- [Instrukcje: Udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
 - [Interfejsy dotyczące wiązania danych](interfaces-related-to-data-binding.md)
-- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

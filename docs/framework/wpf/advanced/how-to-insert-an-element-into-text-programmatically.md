@@ -12,10 +12,10 @@ helpviewer_keywords:
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
 ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169588"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>Instrukcje: Programowe wstawianie elementu do tekstu
@@ -31,4 +31,4 @@ Poniższy przykład pokazuje, jak za pomocą dwóch <xref:System.Windows.Documen
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Dokument przepływu](flow-document-overview.md)
+- [Przegląd dokumentu przepływu](flow-document-overview.md)

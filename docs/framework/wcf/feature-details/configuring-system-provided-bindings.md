@@ -7,10 +7,10 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172812"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurowanie powiązań dostarczanych przez system
@@ -38,7 +38,7 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|Powiązania, który nadaje się do komunikowania się z profilu WS-Basic zgodność usług sieci Web, na przykład usługi sieci Web platformy ASP.NET (ASMX)-na podstawie usług. To powiązanie korzysta z protokołu HTTP jako transportu i text/XML jako domyślne kodowanie komunikatu.|  
 |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów na usługę non-duplex.|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|[\<ws2007HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|Bezpieczne i interoperacyjne powiązanie, które zapewnia obsługę dla poprawnych wersji <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>, i <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> elementów wiązania.|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie obsługuje protokół WS-Federation, umożliwiając organizacjom, które znajdują się w Federacji, aby efektywnie uwierzytelnianie i autoryzowanie użytkowników.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Bezpieczne i interoperacyjne powiązanie pochodzi od klasy <xref:System.ServiceModel.WS2007HttpBinding> i obsługuje federacyjnego zabezpieczenia.|  
 |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Bezpieczne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami między aplikacjami usług WCF.|  
@@ -56,10 +56,10 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 |<xref:System.ServiceModel.BasicHttpBinding>|1.1 profilu podstawowego|(Brak), mieszane transportu, wiadomości,|Brak, (Brak)|(Brak)|n/d|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security, WS-Trust, WS-SecureConversation, WS-SecurityPolicy|Brak, Transport, (komunikat) mieszane|(Brak), Transport, niezawodnej sesji|Tak (Brak)|n/d|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Brak (komunikat)|(Niezawodnej sesji)|Tak (Brak)|Tak|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|Brak (komunikat)|(Niezawodnej sesji)|Tak (Brak)|Yes|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|Brak (komunikat) mieszane|(Brak), niezawodnej sesji|Tak (Brak)|Nie|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|Brak (komunikat) mieszane|(Brak), niezawodnej sesji|Tak (Brak)|Nie|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|Brak, (transportu), wiadomości,<br /><br /> Mieszane|Sesja niezawodna (transportu)|Tak (Brak)|Tak|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|Brak, (transportu), wiadomości,<br /><br /> Mieszane|Sesja niezawodna (transportu)|Tak (Brak)|Yes|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Brak,<br /><br /> (Transportu)|Brak (transportu)|Tak (Brak)|Tak|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Brak, komunikat (transportu), zarówno|(Brak)|Tak (Brak)|Nie|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Elementu równorzędnego|Mieszane None, komunikat (transportu)|(Brak)|(Brak)|Tak|  
@@ -80,5 +80,5 @@ Powiązania określić mechanizm komunikacji w przypadku do punktu końcowego i 
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

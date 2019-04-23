@@ -9,10 +9,10 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167170"
 ---
 # <a name="timing-events-overview"></a>Przegląd Zdarzenia chronometrażu
@@ -56,7 +56,7 @@ W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostęp
   
 |Zdarzenie|Wyzwalanie operacji interaktywne|Inne wyzwalacze|  
 |-----------|--------------------------------------|--------------------|  
-|**Zakończone**|Przejdź do wypełnienia|Zegar zostanie ukończone.|  
+|**Ukończone**|Przejdź do wypełnienia|Zegar zostanie ukończone.|  
 |**CurrentGlobalSpeedInvalidated**|Wstrzymywanie, wznawianie, wyszukiwania, ustawić szybkość współczynnik, od razu przejść do wypełnienia, Zatrzymaj|Zegar odwraca, przyspieszają działanie, uruchomienia lub zatrzymania.|  
 |**CurrentStateInvalidated**|Rozpocząć, przejdź do wypełnienia, Zatrzymaj|Zegar uruchamia, zatrzymuje, lub wypełnia.|  
 |**CurrentTimeInvalidated**|Rozpocznij, wyszukiwania, przejdź do wypełnienia, Zatrzymaj|Przeprowadzaj zegara.|  
@@ -78,6 +78,6 @@ W tym temacie opisano sposób używania pięciu zdarzenia chronometrażu dostęp
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Animacja i system chronometrażu](animation-and-timing-system-overview.md)
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)
+- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)

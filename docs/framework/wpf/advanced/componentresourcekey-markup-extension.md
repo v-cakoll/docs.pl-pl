@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169757"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
@@ -78,6 +78,6 @@ Definiuje i odwołuje się do kluczy dla zasobów, które zostały załadowane z
 
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Przegląd Autorstwo formantów](../controls/control-authoring-overview.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)

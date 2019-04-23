@@ -18,10 +18,10 @@ helpviewer_keywords:
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
 ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172110"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy
@@ -101,4 +101,4 @@ Programy obsługi dla zdarzenia trasowanego oznaczyć zdarzeń przetwarzanych w 
 - <xref:System.Windows.EventManager>
 - [Podgląd zdarzeń](preview-events.md)
 - [Tworzenie niestandardowego zdarzenia trasowanego](how-to-create-a-custom-routed-event.md)
-- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)

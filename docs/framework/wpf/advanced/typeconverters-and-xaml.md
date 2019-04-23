@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164993"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters i XAML
@@ -110,6 +110,6 @@ W tym temacie przedstawiono celem typ Konwersja ciągu jako ogólna funkcja jęz
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.TypeConverter>
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)

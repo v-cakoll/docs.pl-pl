@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ColorConvertedBitmap markup extension [WPF]
 ms.assetid: 18321c18-c898-4470-93fa-a702b47770c1
 ms.openlocfilehash: e8a36a1b8592146eb2474805638cdc3697adb0c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172942"
 ---
 # <a name="colorconvertedbitmap-markup-extension"></a>ColorConvertedBitmap — Rozszerzenie znaczników
@@ -39,5 +39,5 @@ Zapewnia sposób określania źródła mapy bitowej, który nie ma profilu osadz
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.Imaging.BitmapImage.UriSource%2A>
-- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [Przegląd Obrazowanie](../graphics-multimedia/imaging-overview.md)
+- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Obrazowanie — przegląd](../graphics-multimedia/imaging-overview.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166897"
 ---
 # <a name="bitmap-effects-overview"></a>Przegląd Efekty mapy bitowej
@@ -64,7 +64,7 @@ Efekty mapy bitowej umożliwia projektantom i deweloperom stosowanie efektów wi
 - <xref:System.Windows.Media.Effects.BitmapEffectInput>
 - <xref:System.Windows.Media.Effects.BitmapEffectCollection>
 - [Efekt mapy bitowej niezarządzanych WPF](https://docs.microsoft.com/previous-versions/windows/desktop/wibe/-wibe-lh)
-- [Przegląd Obrazowanie](imaging-overview.md)
+- [Obrazowanie — przegląd](imaging-overview.md)
 - [Zabezpieczenia](../security-wpf.md)
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

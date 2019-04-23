@@ -9,10 +9,10 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173033"
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
@@ -129,5 +129,5 @@ Ilość czasu, która jest wymagana dla aplikacji WPF rozpocząć może się zna
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
 - [Dodawanie ekranu powitalnego do aplikacji WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
-- [Ngen.exe (Generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
+- [Ngen.exe (generator obrazu natywnego)](../../tools/ngen-exe-native-image-generator.md)
 - [\<generatePublisherEvidence> Element](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

@@ -6,20 +6,20 @@ helpviewer_keywords:
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
 ms.openlocfilehash: ebff66e185bdca75a0150b22a16392bfd08892d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165493"
 ---
 # <a name="authentication-in-wcf"></a>Uwierzytelnianie w programie WCF
 Poniższe tematy przedstawiają szeregu różnych mechanizmów w Windows Communication Foundation (WCF) zapewniające uwierzytelniania, na przykład Windows uwierzytelniania certyfikatów X.509 i nazwa użytkownika i hasła.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: używanie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
+ [Instrukcje: Użycie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  Funkcje platformy ASP.NET obejmują członkostwa i dostawcy ról, bazę danych do przechowywania par nazwa/hasło użytkownika do uwierzytelniania i ról użytkownika o zezwolenie. W tym temacie wyjaśniono, jak użyć tej samej bazy danych do uwierzytelniania i autoryzowania użytkowników usług WCF.  
   
- [Instrukcje: używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
+ [Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła](../../../../docs/framework/wcf/feature-details/how-to-use-a-custom-user-name-and-password-validator.md)  
  Pokazuje, jak zintegrować moduł weryfikacji nazwy i hasła użytkownika niestandardowego.  
   
  [Uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  

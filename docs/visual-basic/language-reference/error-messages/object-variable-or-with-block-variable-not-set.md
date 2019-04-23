@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
 ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297931"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Zmienna obiektu lub zmienna bloku With nie jest ustawiona
@@ -55,5 +55,5 @@ Option Strict On
 ## <a name="see-also"></a>Zobacz także
 
 - [Deklaracja zmiennej obiektu](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [ReDim — Instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [With...End With — Instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [ReDim, instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)
+- [With...End With, instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300464"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Przewodnik: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend
@@ -249,8 +249,8 @@ Ten przewodnik przeprowadzi Cię przez proces tworzenia [!INCLUDE[TLA2#tla_wpf](
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie przycisku przy użyciu języka XAML](walkthrough-create-a-button-by-using-xaml.md)
+- [Tworzenie przycisku przy użyciu XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Przegląd Animacja](../graphics-multimedia/animation-overview.md)
-- [Przegląd Malowanie jednolitymi kolorami i gradientami](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Przegląd Efekty mapy bitowej](../graphics-multimedia/bitmap-effects-overview.md)
+- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Efekty mapy bitowej — przegląd](../graphics-multimedia/bitmap-effects-overview.md)

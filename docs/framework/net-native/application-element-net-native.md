@@ -5,10 +5,10 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228305"
 ---
 # <a name="application-element-net-native"></a>\<Aplikacja > (architektura .NET Native)
@@ -61,8 +61,8 @@ Służy jako kontener dla całej aplikacji, typy i składowe typu, którego meta
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Zestaw >](../../../docs/framework/net-native/assembly-element-net-native.md)|Stosuje zasady do wszystkich typów w określonym zestawie.|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w określonej przestrzeni nazw.|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje zasady do określonego typu, takie jak klasy lub struktury.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w określonej przestrzeni nazw.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje zasady do określonego typu, takie jak klasy lub struktury.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego typu ogólnego. Na przykład [ \<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) element może służyć do definiowania zasad dla `List<String>` typu.|  
 |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Stosuje zasady do metody dla określonego typu.|  
 |[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego metody rodzajowej.|  

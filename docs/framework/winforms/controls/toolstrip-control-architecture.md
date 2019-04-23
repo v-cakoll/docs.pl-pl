@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296215"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip — Architektura formantu
@@ -263,7 +263,7 @@ ms.locfileid: "59296215"
   
 |Zamkniętego elementu|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|Yes|Nie|Nie|Nie|Yes|  
+|<xref:System.Windows.Forms.ToolStripButton>|Tak|Nie|Nie|Nie|Yes|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|Yes|Yes|Yes|Nie|Yes|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|Yes|Nie|Nie|Yes|Yes|  
 |<xref:System.Windows.Forms.ToolStripLabel>|Yes|Nie|Nie|Yes|Yes|  
@@ -316,7 +316,7 @@ ms.locfileid: "59296215"
  <xref:System.Windows.Forms.ToolStripMenuItem> jest <xref:System.Windows.Forms.ToolStripDropDownItem> działające z <xref:System.Windows.Forms.ToolStripDropDownMenu> i <xref:System.Windows.Forms.ContextMenuStrip> do obsługi specjalnych rozmieszczenie wyróżniania, układ i kolumny menu.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> wygląda jak <xref:System.Windows.Forms.ToolStripButton>, ale pokazuje obszaru listy rozwijanej, po kliknięciu przez użytkownika. Ukrywanie lub pokazywanie strzałkę listy rozwijanej, ustawiając <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> właściwości. <xref:System.Windows.Forms.ToolStripDropDownButton> Hosty <xref:System.Windows.Forms.ToolStripOverflowButton> wyświetlającą elementy, które overflow <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> wygląda jak <xref:System.Windows.Forms.ToolStripButton>, ale pokazuje obszaru listy rozwijanej, po kliknięciu przez użytkownika. Ukrywanie lub pokazywanie strzałkę listy rozwijanej, ustawiając <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> właściwości. <xref:System.Windows.Forms.ToolStripDropDownButton> hosty <xref:System.Windows.Forms.ToolStripOverflowButton> wyświetlającą elementy, które overflow <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> przycisk łączy i funkcjonalność przycisk listy rozwijanej.  
@@ -379,9 +379,9 @@ ms.locfileid: "59296215"
 ## <a name="see-also"></a>Zobacz także
 
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
-- [Podsumowanie informacji o technologii formantów ToolStrip](toolstrip-technology-summary.md)
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
 - [MenuStrip, kontrolka](menustrip-control-windows-forms.md)
-- [StatusStrip — Formant](statusstrip-control.md)
-- [ContextMenuStrip — Formant](contextmenustrip-control.md)
-- [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md)
+- [StatusStrip, kontrolka](statusstrip-control.md)
+- [ContextMenuStrip, kontrolka](contextmenustrip-control.md)
+- [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)

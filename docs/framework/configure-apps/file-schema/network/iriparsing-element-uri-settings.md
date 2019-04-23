@@ -1,12 +1,12 @@
 ---
-title: <iriParsing> Element (ustawienia identyfikatora Uri)
+title: <iriParsing>, element (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 ms.openlocfilehash: 7033f4dcda7d2fe73310ae0d36d9b05c090d13d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299673"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<iriParsing >, Element (ustawienia identyfikatora Uri)

@@ -3,10 +3,10 @@ title: Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu 
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229748"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
@@ -17,7 +17,7 @@ ms.locfileid: "59229748"
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
 |**msdata:ConstraintOnly**|Jeśli **ConstraintOnly = "true"** jest określona w **keyref** elementu w schemacie, ograniczenie zostanie utworzony, ale żadna relacja jest tworzony. Jeśli ten atrybut nie jest określony (lub jest ustawiona na **False**), ograniczenia i relacji, które są tworzone w **zestawu danych**.|  
-|**MSDATA:ConstraintName**|Jeśli **ConstraintName** atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu **keyref** elementu w schemacie zawiera nazwę ograniczenia w **zestawu danych**.|  
+|**msdata:ConstraintName**|Jeśli **ConstraintName** atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu **keyref** elementu w schemacie zawiera nazwę ograniczenia w **zestawu danych**.|  
 |**msdata:UpdateRule**|Jeśli **elementu UpdateRule** atrybut jest określony w **keyref** elementu w schemacie, jego wartość jest przypisywana do **elementu UpdateRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **elementu UpdateRule** właściwość jest ustawiona na **Cascade**.|  
 |**msdata:DeleteRule**|Jeśli **DeleteRule** atrybut jest określony w **keyref** elementu w schemacie, jego wartość jest przypisywana do **DeleteRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **DeleteRule** właściwość jest ustawiona na **Cascade**.|  
 |**msdata:AcceptRejectRule**|Jeśli **AcceptRejectRule** atrybut jest określony w **keyref** elementu w schemacie, jego wartość jest przypisywana do **AcceptRejectRule** ograniczenia właściwości  **Zestaw danych**. W przeciwnym razie **AcceptRejectRule** właściwość jest ustawiona na **Brak**.|  

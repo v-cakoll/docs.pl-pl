@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296124"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
@@ -108,9 +108,9 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna dla programu MSBuild  
  Określa sposób implementacji okna, jak została ona skonfigurowana do [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Okna, która jest zdefiniowana przy użyciu zarówno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i związane z kodem:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` elementów.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementów.  
   
--   Pliki związane z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` elementów.  
+-   Pliki związane z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementów.  
   
  Jest to pokazane w następującym [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] pliku projektu.  
   
@@ -257,7 +257,7 @@ Użytkownicy wchodzić w interakcje z aplikacjami autonomicznego Windows Present
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- <xref:System.Windows.Window.Closing> Programu obsługi zdarzeń jest przekazywany <xref:System.ComponentModel.CancelEventArgs>, który implementuje `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość, która jest ustawiona na `true` zapobiegające zamknięcia okna.  
+ <xref:System.Windows.Window.Closing> Programu obsługi zdarzeń jest przekazywany <xref:System.ComponentModel.CancelEventArgs>, który implementuje `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwość, która jest ustawiona na `true` zapobiegające zamknięcia okna.  
   
  Jeśli <xref:System.Windows.Window.Closing> nie jest obsługiwany lub jest obsługiwane, ale nie zostało anulowane, okno zostanie zamknięte. Tuż przed, w rzeczywistości powoduje zamknięcie okna <xref:System.Windows.Window.Closed> jest wywoływane. W tym momencie okna nie można zablokować zamknięcia.  
   
@@ -485,5 +485,5 @@ Domyślny wygląd okna zawiera przycisk na pasku zadań, tak jak pokazano na pon
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>
 - <xref:System.Windows.Application>
-- [Przegląd okien dialogowych](dialog-boxes-overview.md)
+- [Okna dialogowe — omówienie](dialog-boxes-overview.md)
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228201"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Jednostki znaków XML i XAML
@@ -64,7 +64,7 @@ XAML używa encje znaków zdefiniowanych w pliku XML dla znaków specjalnych. W 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XamlName — Gramatyka](xamlname-grammar.md)
-- [Przetwarzanie spacji w XAML](whitespace-processing-in-xaml.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName, gramatyka](xamlname-grammar.md)
+- [Znak odstępu przetwarzanie w XAML](whitespace-processing-in-xaml.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299985"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic
@@ -60,7 +60,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Zmień na|  
     |--------------|---------------|  
     |**Nazwa**|`lblDisplay`|  
-    |**Tekst**|`(blank space)`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -245,7 +245,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
     |**Nazwa**|`lblAlarm`|  
-    |**Tekst**|**Alarm!**|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Widoczne**|`False`|  
   
@@ -358,7 +358,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
     |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
-    |`label1`|**Tekst**|`(blank space)`|  
+    |`label1`|**Text**|`(blank space)`|  
     ||**Nazwa**|`lblTest`|  
     |`dateTimePicker1`|**Nazwa**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -397,6 +397,6 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: autoryzowanie kontrolek złożonych](how-to-author-composite-controls.md)
-- [Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
+- [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)
+- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

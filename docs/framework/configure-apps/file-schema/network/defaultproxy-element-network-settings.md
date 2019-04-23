@@ -1,5 +1,5 @@
 ---
-title: <defaultProxy> Element (ustawienia sieci)
+title: <defaultProxy>, element (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228350"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy — >, Element (ustawienia sieci)
@@ -49,8 +49,8 @@ Umożliwia skonfigurowanie serwera proxy protokołu HTTP (Hypertext Transfer).
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Zawiera zestaw wyrażeń regularnych, które opisują adresy, które nie korzystają z serwera proxy.|  
-|[moduł](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Dodaje nowy moduł serwera proxy aplikacji.|  
-|[serwer proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Określa serwer proxy.|  
+|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Dodaje nowy moduł serwera proxy aplikacji.|  
+|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Określa serwer proxy.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

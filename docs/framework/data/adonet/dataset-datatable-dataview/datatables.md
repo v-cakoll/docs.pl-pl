@@ -3,10 +3,10 @@ title: Elementy DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
 ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207321"
 ---
 # <a name="datatables"></a>Elementy DataTable
@@ -21,13 +21,13 @@ A <xref:System.Data.DataSet> składa się z kolekcją tabel, relacje i ogranicze
  Można utworzyć hierarchiczne relacje między tabelami przy użyciu jednej lub więcej powiązanych kolumn w tabelach. Utwórz relację między **DataTable** obiektów przy użyciu <xref:System.Data.DataRelation>. **DataRelation —** obiektów, następnie może służyć do zwrócenia powiązane podrzędnej lub nadrzędnej wiersze określonego wiersza. Aby uzyskać więcej informacji, zobacz [Dodawanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Tworzenie elementów DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
  Wyjaśnia sposób tworzenia **DataTable** i dodać go do **zestawu danych**.  
   
  [Definicja schematu elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  Informacje na temat tworzenia i używania **DataColumn** obiektów i ograniczenia.  
   
- [Operowanie na danych w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  Opis sposobu dodawania, modyfikowania i usuwania danych w tabeli. Opis sposobu użycia **DataTable** zdarzeń w celu zbadania zmian danych w tabeli.  
   
  [Obsługa zdarzeń elementu DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
@@ -52,7 +52,7 @@ A <xref:System.Data.DataSet> składa się z kolekcją tabel, relacje i ogranicze
  <xref:System.Data.DataTable>  
  Zawiera informacje na temat **DataTable** obiektu.  
   
- [Przegląd biblioteki klas](../../../../../docs/standard/class-library-overview.md)  
+ [Omówienie biblioteki klas](../../../../../docs/standard/class-library-overview.md)  
  Zawiera omówienie biblioteki klas programu .NET Framework, w tym **systemu** przestrzeni nazw oraz jego przestrzeń nazw drugiego poziomu, **System.Data**.  
   
 ## <a name="see-also"></a>Zobacz także

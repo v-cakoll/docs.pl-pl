@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296527"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Przewodnik: mapowanie właściwości przy użyciu kontrolki WindowsFormsHost
@@ -83,7 +83,7 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
      `AddClipMapping` Metoda dodaje nowe mapowanie dla <xref:System.Windows.UIElement.Clip%2A> właściwości.
 
-     `OnClipChange` Tłumaczy metoda <xref:System.Windows.UIElement.Clip%2A> właściwość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> właściwości.
+     `OnClipChange` Tłumaczy metoda <xref:System.Windows.UIElement.Clip%2A> właściwości [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> właściwości.
 
      `Window1_SizeChanged` Obsługiwała okna <xref:System.Windows.FrameworkElement.SizeChanged> zdarzeń i rozmiar obszaru przycinania do rozmiaru okna aplikacji.
 
@@ -113,7 +113,7 @@ Zastąp domyślne mapowanie właściwości przez usunięcie domyślnego mapowani
 
      `ReplaceFlowDirectionMapping` Metoda zastępuje domyślne mapowanie dla <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości.
 
-     `OnFlowDirectionChange` Tłumaczy metoda <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości.
+     `OnFlowDirectionChange` Tłumaczy metoda <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości.
 
      `cb_CheckedChanged` Metodę uchwytów <xref:System.Windows.Forms.CheckBox.CheckedChanged> zdarzenie na <xref:System.Windows.Forms.CheckBox> kontroli. Przypisuje <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości na podstawie wartości z <xref:System.Windows.Forms.CheckBox.CheckState%2A> właściwości
 
@@ -145,7 +145,7 @@ Konfigurowanie mapowań właściwości przez wywołanie metody opisany wcześnie
 
      `WindowLoaded` Metodę uchwytów <xref:System.Windows.FrameworkElement.Loaded> zdarzeń i wykonuje następujące inicjowanie.
 
-    -   Tworzy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> kontroli.
+    -   Tworzy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> kontroli.
 
     -   Wywołuje metody, które są zdefiniowane we wcześniejszej części przewodnika do skonfigurowania mapowania właściwości.
 
@@ -160,4 +160,4 @@ Konfigurowanie mapowań właściwości przez wywołanie metody opisany wcześnie
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: hostowanie kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

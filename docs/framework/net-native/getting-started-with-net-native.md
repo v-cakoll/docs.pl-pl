@@ -5,10 +5,10 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298477"
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
@@ -106,16 +106,16 @@ Czy podczas pisania nowych aplikacji Windows dla systemu Windows 10 jest przepro
   
  Aby uzyskać kilka przykładów Obsługa wyjątków i inne problemy występujące podczas testowania aplikacji Zobacz:  
   
--   [Przykład: Obsługa wyjątków podczas wiązania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Przykład: Obsługa wyjątków podczas powiązywania danych](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
 -   [Przykład: Rozwiązywanie problemów z programowaniem dynamicznym](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [Wyjątki środowiska uruchomieniowego w aplikacjach .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [Wyjątki czasu wykonywania w aplikacjach .NET Native](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [Instalacja i konfiguracja architektury .NET Native](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET native instalację i konfigurację.](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
 - [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [Interfejsy API, które działają na podstawie odbicia](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)

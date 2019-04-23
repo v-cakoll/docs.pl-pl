@@ -15,10 +15,10 @@ helpviewer_keywords:
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
 ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295955"
 ---
 # <a name="animation-tips-and-tricks"></a>Porady i triki animacyjne
@@ -75,10 +75,10 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
 2. Drugi scenorysu staje się skuteczny i animuje od bieżącej pozycji, która jest teraz 0 do 500.  
   
- **Ale to nie co się dzieje.** Zamiast tego prostokąta nie jest przenoszony wrócili, kontynuuje po prawej stronie. Wynika to z drugiej animacji używa bieżącej wartości animacji pierwszy jako jej wartość początkową i animuje z tej wartości do 500. Po drugiej animacji zastępuje pierwsze, ponieważ <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior> jest używany, <xref:System.Windows.Media.Animation.FillBehavior> pierwszego animacji nie ma znaczenia.  
+ **Ale to nie co się dzieje.** Zamiast tego prostokąta nie jest przenoszony wrócili, kontynuuje po prawej stronie. Wynika to z drugiej animacji używa bieżącej wartości animacji pierwszy jako jej wartość początkową i animuje z tej wartości do 500. Po drugiej animacji zastępuje pierwsze, ponieważ <xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace> <xref:System.Windows.Media.Animation.HandoffBehavior> jest używany, <xref:System.Windows.Media.Animation.FillBehavior> pierwszego animacji nie ma znaczenia.  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior i ukończone zdarzenie  
- W następnych przykładach pokazują inny scenariusz, w którym <xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> wydaje się mieć żadnego efektu. Ponownie w przykładzie użyto scenorysu, aby animować <xref:System.Windows.Media.TranslateTransform.X%2A> właściwość <xref:System.Windows.Media.TranslateTransform> od 0 do 350. Jednak tym razem przykład rejestruje <xref:System.Windows.Media.Animation.Timeline.Completed> zdarzeń.  
+ W następnych przykładach pokazują inny scenariusz, w którym <xref:System.Windows.Media.Animation.FillBehavior.Stop> <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> wydaje się mieć żadnego efektu. Ponownie w przykładzie użyto scenorysu, aby animować <xref:System.Windows.Media.TranslateTransform.X%2A> właściwość <xref:System.Windows.Media.TranslateTransform> od 0 do 350. Jednak tym razem przykład rejestruje <xref:System.Windows.Media.Animation.Timeline.Completed> zdarzeń.  
   
  [!code-xaml[AnimationTipsAndTricksSample_snip#FillBehaviorTipStoryboardCButton](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimationTipsAndTricksSample_snip/CSharp/FillBehaviorTip.xaml#fillbehaviortipstoryboardcbutton)]  
   
@@ -116,7 +116,7 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
  Aby uzyskać więcej informacji na temat różnych sposobów, aby animować właściwości, zobacz [Przegląd techniki animacji właściwości](property-animation-techniques-overview.md).  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>Za pomocą narzędzia Compose HandoffBehavior wykorzystuje zasoby systemowe  
- Po zastosowaniu <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, lub <xref:System.Windows.Media.Animation.AnimationClock> za pomocą właściwości <xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>, any <xref:System.Windows.Media.Animation.Clock> obiektów była poprzednio skojarzona z tą właściwością, kontynuując zużywanie zasobów systemowych; system chronometrażu nie spowoduje usunięcia zegary automatycznie.  
+ Po zastosowaniu <xref:System.Windows.Media.Animation.Storyboard>, <xref:System.Windows.Media.Animation.AnimationTimeline>, lub <xref:System.Windows.Media.Animation.AnimationClock> za pomocą właściwości <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>, any <xref:System.Windows.Media.Animation.Clock> obiektów była poprzednio skojarzona z tą właściwością, kontynuując zużywanie zasobów systemowych; nie będzie system chronometrażu automatyczne usuwanie zegary.  
   
  Aby uniknąć problemów z wydajnością, po zastosowaniu dużej liczby zegary przy użyciu <xref:System.Windows.Media.Animation.HandoffBehavior.Compose>, tworzenie zegary należy usunąć z animowanych właściwości po ich zakończeniu. Istnieje kilka sposobów, aby usunąć zegara.  
   
@@ -130,4 +130,4 @@ Podczas pracy z animacjami w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sh
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Animacja](animation-overview.md)
+- [Animacja — przegląd](animation-overview.md)

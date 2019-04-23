@@ -12,10 +12,10 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299875"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Instrukcje: Tworzenie aplikacji Windows Forms z wiersza polecenia
@@ -117,6 +117,6 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać, aby
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Zmienianie wyglądu formularzy systemu Windows](changing-the-appearance-of-windows-forms.md)
+- [Zmienianie wyglądu formularzy Windows Forms](changing-the-appearance-of-windows-forms.md)
 - [Rozszerzanie aplikacji Windows Forms](./advanced/index.md)
-- [Wprowadzenie do formularzy systemu Windows](getting-started-with-windows-forms.md)
+- [Wprowadzenie do formularzy Windows Forms](getting-started-with-windows-forms.md)

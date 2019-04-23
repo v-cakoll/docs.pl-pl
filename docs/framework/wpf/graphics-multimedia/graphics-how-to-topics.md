@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230658"
 ---
 # <a name="graphics-how-to-topics"></a>Grafika Tematy porad
@@ -22,9 +22,9 @@ W poniższych tematach pokazano sposób użycia funkcji graficznych [!INCLUDE[TL
  [Animowanie prostokąta](how-to-animate-a-rectangle.md)  
  [Animowanie położenia obiektu przy użyciu elementu PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Przekształcanie punktów i wektorów](how-to-transform-points-and-vectors.md)  
- [Rozszerz szklaną klatkę na aplikację WPF](extend-glass-frame-into-a-wpf-application.md)  
+ [Rozszerzanie szklanej klatki na aplikację WPF](extend-glass-frame-into-a-wpf-application.md)  
  [Instrukcje: Poprawianie wydajności renderowania przez zapisanie elementu w pamięci podręcznej](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [Instrukcje: Używanie zachowanego w pamięci podręcznej elementu jako pędzla](how-to-use-a-cached-element-as-a-brush.md)  
+ [Instrukcje: Użyj pamięci podręcznej elementu jako pędzla](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -36,4 +36,4 @@ W poniższych tematach pokazano sposób użycia funkcji graficznych [!INCLUDE[TL
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
 - [Grafika i multimedia](index.md)
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

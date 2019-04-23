@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
 ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207633"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
@@ -20,6 +20,6 @@ ms.locfileid: "59207633"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Documents.FlowDocument>
-- [Przegląd Dokument przepływu](../advanced/flow-document-overview.md)
-- [— Tematy porad](../advanced/flow-content-elements-how-to-topics.md)
+- [Przegląd dokumentu przepływu](../advanced/flow-document-overview.md)
+- [Tematy z instrukcjami](../advanced/flow-content-elements-how-to-topics.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)

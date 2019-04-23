@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 1654d58651bf14b0e7c21de2afa827634b7db858
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59235661"
 ---
 ### <a name="systemuri-escaping-now-supports-rfc-3986"></a>Anulowanie System.Uri obsługuje teraz ze standardem RFC 3986

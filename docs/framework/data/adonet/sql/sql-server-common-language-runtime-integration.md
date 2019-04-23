@@ -3,10 +3,10 @@ title: Integracja aparatu plików wykonywalnych języka wspólnego z programem S
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297503"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Integracja aparatu plików wykonywalnych języka wspólnego z programem SQL Server
@@ -21,7 +21,7 @@ SQL Server 2005 wprowadzono integrację składnika wspólnego języka wspólnego
 1. [Koncepcje programowania integracji wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR)](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do integracji środowiska CLR programu SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+ [Wprowadzenie do integracja środowiska CLR programu SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
  Wprowadzenie do integracji środowiska CLR programu SQL Server. Zawiera łącza do dodatkowych tematów.  
   
  [Zdefiniowane przez użytkownika funkcje CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  

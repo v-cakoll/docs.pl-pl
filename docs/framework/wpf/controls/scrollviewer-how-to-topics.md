@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
 ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229417"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer — Tematy porad
@@ -29,5 +29,5 @@ Tematy w tej sekcji przedstawiają sposoby użycia <xref:System.Windows.Controls
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Panele](panels-overview.md)
+- [Panele — omówienie](panels-overview.md)
 - [Układ](../advanced/layout.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298321"
 ---
 # <a name="how-to-localize-an-application"></a>Instrukcje: Lokalizowanie aplikacji
@@ -68,7 +68,7 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
   
 1. Skompilować HelloApp, aby utworzyć [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
   
-     **MSBUILD helloapp.csproj**  
+     **msbuild helloapp.csproj**  
   
 2. Nowo utworzony głównym zestawem aplikacji, HelloApp.exe, jest tworzony w następującym folderze:  
   
@@ -212,4 +212,4 @@ W tym samouczku opisano sposób tworzenia zlokalizowanych aplikacji przy użyciu
 ## <a name="see-also"></a>Zobacz także
 
 - [Globalizacja dla WPF](globalization-for-wpf.md)
-- [Przegląd Użyj automatycznego układu](use-automatic-layout-overview.md)
+- [Przegląd używania automatycznego układu](use-automatic-layout-overview.md)

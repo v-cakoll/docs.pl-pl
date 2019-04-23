@@ -19,10 +19,10 @@ helpviewer_keywords:
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
 ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300635"
 ---
 # <a name="option-compare-statement"></a>Option Compare — Instrukcja
@@ -96,8 +96,8 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Operatory porównania w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [Like — Operator](../../../visual-basic/language-reference/operators/like-operator.md)
+- [Operatory porównania w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Funkcje ciągów](../../../visual-basic/language-reference/functions/string-functions.md)
-- [Option Explicit — Instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)

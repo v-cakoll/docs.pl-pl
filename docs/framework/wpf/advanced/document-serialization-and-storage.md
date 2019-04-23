@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295903"
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
@@ -77,5 +77,5 @@ Microsoft .NET Framework oferuje zaawansowane środowisko do tworzenia i wyświe
 - <xref:System.Windows.Xps.XpsDocumentWriter>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd Drukowanie](printing-overview.md)
-- [Formatu XML Paper Specification: Omówienie](https://go.microsoft.com/fwlink?LinkID=106246)
+- [Przegląd drukowania](printing-overview.md)
+- [Formatu XML Paper Specification: omówienie](https://go.microsoft.com/fwlink?LinkID=106246)

@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298581"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
@@ -80,9 +80,9 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
     ||**#CONST debugowania = true**|Włącza debugowanie|  
     ||**#CONST debugowania = false**|Wyłącza debugowanie|  
     |**C#**|**#define śledzenia**|Umożliwia włączenie śledzenia|  
-    ||**#undef śledzenia**|Wyłącza śledzenie|  
+    ||**#undef TRACE**|Wyłącza śledzenie|  
     ||**#define debugowania**|Włącza debugowanie|  
-    ||**#undef debugowania**|Wyłącza debugowanie|  
+    ||**#undef DEBUG**|Wyłącza debugowanie|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>Aby wyłączyć śledzenia i debugowania  
   
@@ -100,7 +100,7 @@ Dyrektywy kompilatora w komentarz.
 - [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [Instrukcje: ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Instrukcje: Wywoływanie kompilatora wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Instrukcje: Ustawianie zmiennych środowiskowych dla wiersza polecenia programu Visual Studio](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Instrukcje: wywoływanie kompilatora z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

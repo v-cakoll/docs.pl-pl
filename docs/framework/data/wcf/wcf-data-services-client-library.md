@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230203"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteka klienta usług danych WCF
@@ -39,7 +39,7 @@ Każda aplikacja może współdziałać z [!INCLUDE[ssODataFull](../../../../inc
  [Operacje przetwarzania wsadowego](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  W tym artykule opisano sposób wysyłania wielu żądań do usługi danych w jednej partii przy użyciu biblioteki klienta.  
   
- [Wiązanie danych z kontrolką](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Opis sposobu tworzenia powiązania kontrolki [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródło danych zwróconych przez usługę danych.  
   
  [Wywołania operacji usługi](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  

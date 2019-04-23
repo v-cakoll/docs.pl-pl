@@ -5,16 +5,16 @@ ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d82ed3299f967457fe967d096a238da6143751a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219164"
 ---
-# <a name="axlauthenticodetimestamperinfo-structure"></a><span data-ttu-id="2c184-102">Struktura AXL_AUTHENTICODE_TIMESTAMPER_INFO</span><span class="sxs-lookup"><span data-stu-id="2c184-102">AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure</span></span>
-<span data-ttu-id="2c184-103">Definiuje informacje stamper czasu Authenticode.</span><span class="sxs-lookup"><span data-stu-id="2c184-103">Defines the Authenticode time stamper information.</span></span>  
+# <a name="axlauthenticodetimestamperinfo-structure"></a><span data-ttu-id="ebc25-102">Struktura AXL_AUTHENTICODE_TIMESTAMPER_INFO</span><span class="sxs-lookup"><span data-stu-id="ebc25-102">AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure</span></span>
+<span data-ttu-id="ebc25-103">Definiuje informacje stamper czasu Authenticode.</span><span class="sxs-lookup"><span data-stu-id="ebc25-103">Defines the Authenticode time stamper information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2c184-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2c184-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ebc25-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ebc25-104">Syntax</span></span>  
   
 ```  
 typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {  
@@ -26,16 +26,16 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 } AXL_AUTHENTICODE_TIMESTAMPER_INFO, * PAXL_AUTHENTICODE_TIMESTAMPER_INFO;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="2c184-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="2c184-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="ebc25-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="ebc25-105">Members</span></span>  
   
-|<span data-ttu-id="2c184-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="2c184-106">Member</span></span>|<span data-ttu-id="2c184-107">Opis</span><span class="sxs-lookup"><span data-stu-id="2c184-107">Description</span></span>|  
+|<span data-ttu-id="ebc25-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="ebc25-106">Member</span></span>|<span data-ttu-id="ebc25-107">Opis</span><span class="sxs-lookup"><span data-stu-id="ebc25-107">Description</span></span>|  
 |------------|-----------------|  
-|`cbSize`|<span data-ttu-id="2c184-108">Rozmiar tej struktury.</span><span class="sxs-lookup"><span data-stu-id="2c184-108">The size of this structure.</span></span>|  
-|`dwError`|<span data-ttu-id="2c184-109">Kod błędu.</span><span class="sxs-lookup"><span data-stu-id="2c184-109">The error code.</span></span>|  
-|`algHash`|<span data-ttu-id="2c184-110">Algorytm wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="2c184-110">The hash algorithm.</span></span>|  
-|`ftTimestamp`|<span data-ttu-id="2c184-111">Czas sygnaturę czasową.</span><span class="sxs-lookup"><span data-stu-id="2c184-111">The time of the time stamp.</span></span>|  
-|`pChainContext`|<span data-ttu-id="2c184-112">Kontekst łańcucha stamper czasu.</span><span class="sxs-lookup"><span data-stu-id="2c184-112">The time stamper’s chain context.</span></span>  <span data-ttu-id="2c184-113">Zobacz [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) struktury.</span><span class="sxs-lookup"><span data-stu-id="2c184-113">See the [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) structure.</span></span>|  
+|`cbSize`|<span data-ttu-id="ebc25-108">Rozmiar tej struktury.</span><span class="sxs-lookup"><span data-stu-id="ebc25-108">The size of this structure.</span></span>|  
+|`dwError`|<span data-ttu-id="ebc25-109">Kod błędu.</span><span class="sxs-lookup"><span data-stu-id="ebc25-109">The error code.</span></span>|  
+|`algHash`|<span data-ttu-id="ebc25-110">Algorytm wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="ebc25-110">The hash algorithm.</span></span>|  
+|`ftTimestamp`|<span data-ttu-id="ebc25-111">Czas sygnaturę czasową.</span><span class="sxs-lookup"><span data-stu-id="ebc25-111">The time of the time stamp.</span></span>|  
+|`pChainContext`|<span data-ttu-id="ebc25-112">Kontekst łańcucha stamper czasu.</span><span class="sxs-lookup"><span data-stu-id="ebc25-112">The time stamper’s chain context.</span></span>  <span data-ttu-id="ebc25-113">Zobacz [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) struktury.</span><span class="sxs-lookup"><span data-stu-id="ebc25-113">See the [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) structure.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="2c184-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2c184-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebc25-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ebc25-114">See also</span></span>
 
-- [<span data-ttu-id="2c184-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="2c184-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [<span data-ttu-id="ebc25-115">Authenticode</span><span class="sxs-lookup"><span data-stu-id="ebc25-115">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)

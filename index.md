@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 01472d5586becf0bca2333557a05ddb10ee8b607
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978084"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427490"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -54,7 +54,7 @@ ms.locfileid: "59978084"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.8">
+                <a href="/dotnet/api/?view=netframework-4.7.2">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">

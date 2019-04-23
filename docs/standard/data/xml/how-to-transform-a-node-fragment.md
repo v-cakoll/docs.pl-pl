@@ -9,44 +9,44 @@ ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345173"
 ---
-# <a name="how-to-transform-a-node-fragment"></a><span data-ttu-id="81a17-102">Instrukcje: Przekształcanie fragmentu węzła</span><span class="sxs-lookup"><span data-stu-id="81a17-102">How to: Transform a Node Fragment</span></span>
-<span data-ttu-id="81a17-103">Kiedy przekształcasz dane zawarte w <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> obiektu przekształcenia XSLT dotyczą dokumentu jako całości.</span><span class="sxs-lookup"><span data-stu-id="81a17-103">When you transform data contained in an <xref:System.Xml.XmlDocument> or <xref:System.Xml.XPath.XPathDocument> object the XSLT transformations apply to a document as a whole.</span></span> <span data-ttu-id="81a17-104">Innymi słowy Jeśli przekażesz w węźle innym niż węzeł główny dokument, to nie uniemożliwia proces przekształcania uzyskiwania dostępu do wszystkich węzłów w dokumencie załadowane.</span><span class="sxs-lookup"><span data-stu-id="81a17-104">In other words, if you pass in a node other than the document root node, this does not prevent the transformation process from accessing all nodes in the loaded document.</span></span> <span data-ttu-id="81a17-105">Aby Przekształcanie fragmentu węzła, należy utworzyć oddzielny obiekt zawierający tylko fragmentu węzła i przekazać ten obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="81a17-105">To transform a node fragment, you must create a separate object containing just the node fragment, and pass that object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
+# <a name="how-to-transform-a-node-fragment"></a><span data-ttu-id="4acba-102">Instrukcje: Przekształcanie fragmentu węzła</span><span class="sxs-lookup"><span data-stu-id="4acba-102">How to: Transform a Node Fragment</span></span>
+<span data-ttu-id="4acba-103">Kiedy przekształcasz dane zawarte w <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> obiektu przekształcenia XSLT dotyczą dokumentu jako całości.</span><span class="sxs-lookup"><span data-stu-id="4acba-103">When you transform data contained in an <xref:System.Xml.XmlDocument> or <xref:System.Xml.XPath.XPathDocument> object the XSLT transformations apply to a document as a whole.</span></span> <span data-ttu-id="4acba-104">Innymi słowy Jeśli przekażesz w węźle innym niż węzeł główny dokument, to nie uniemożliwia proces przekształcania uzyskiwania dostępu do wszystkich węzłów w dokumencie załadowane.</span><span class="sxs-lookup"><span data-stu-id="4acba-104">In other words, if you pass in a node other than the document root node, this does not prevent the transformation process from accessing all nodes in the loaded document.</span></span> <span data-ttu-id="4acba-105">Aby Przekształcanie fragmentu węzła, należy utworzyć oddzielny obiekt zawierający tylko fragmentu węzła i przekazać ten obiekt do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="4acba-105">To transform a node fragment, you must create a separate object containing just the node fragment, and pass that object to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## <a name="procedures"></a><span data-ttu-id="81a17-106">Procedury</span><span class="sxs-lookup"><span data-stu-id="81a17-106">Procedures</span></span>  
+## <a name="procedures"></a><span data-ttu-id="4acba-106">Procedury</span><span class="sxs-lookup"><span data-stu-id="4acba-106">Procedures</span></span>  
   
-#### <a name="to-transform-a-node-fragment"></a><span data-ttu-id="81a17-107">Aby Przekształcanie fragmentu węzła</span><span class="sxs-lookup"><span data-stu-id="81a17-107">To transform a node fragment</span></span>  
+#### <a name="to-transform-a-node-fragment"></a><span data-ttu-id="4acba-107">Aby Przekształcanie fragmentu węzła</span><span class="sxs-lookup"><span data-stu-id="4acba-107">To transform a node fragment</span></span>  
   
-1. <span data-ttu-id="81a17-108">Utwórz obiekt zawierający dokumentu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="81a17-108">Create an object containing the source document.</span></span>  
+1. <span data-ttu-id="4acba-108">Utwórz obiekt zawierający dokumentu źródłowego.</span><span class="sxs-lookup"><span data-stu-id="4acba-108">Create an object containing the source document.</span></span>  
   
-2. <span data-ttu-id="81a17-109">Znajdź fragment węzeł, który chcesz przekształcić.</span><span class="sxs-lookup"><span data-stu-id="81a17-109">Locate the node fragment you wish to transform.</span></span>  
+2. <span data-ttu-id="4acba-109">Znajdź fragment węzeł, który chcesz przekształcić.</span><span class="sxs-lookup"><span data-stu-id="4acba-109">Locate the node fragment you wish to transform.</span></span>  
   
-3. <span data-ttu-id="81a17-110">Utwórz oddzielne obiekty z tylko fragmentu węzła.</span><span class="sxs-lookup"><span data-stu-id="81a17-110">Create separate object with just the node fragment.</span></span>  
+3. <span data-ttu-id="4acba-110">Utwórz oddzielne obiekty z tylko fragmentu węzła.</span><span class="sxs-lookup"><span data-stu-id="4acba-110">Create separate object with just the node fragment.</span></span>  
   
-4. <span data-ttu-id="81a17-111">Przekazywanie fragmentu węzła do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="81a17-111">Pass the node fragment to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
+4. <span data-ttu-id="4acba-111">Przekazywanie fragmentu węzła do <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="4acba-111">Pass the node fragment to the <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="81a17-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="81a17-112">Example</span></span>  
- <span data-ttu-id="81a17-113">W poniższym przykładzie przekształca fragmentu węzła i generuje wyjściowe wyniki do konsoli.</span><span class="sxs-lookup"><span data-stu-id="81a17-113">The following example transforms a node fragment and outputs the results to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="4acba-112">Przykład</span><span class="sxs-lookup"><span data-stu-id="4acba-112">Example</span></span>  
+ <span data-ttu-id="4acba-113">W poniższym przykładzie przekształca fragmentu węzła i generuje wyjściowe wyniki do konsoli.</span><span class="sxs-lookup"><span data-stu-id="4acba-113">The following example transforms a node fragment and outputs the results to the console.</span></span>  
   
  [!code-csharp[XSLT_NodeFrag#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_NodeFrag/CS/xslt_frag.cs#1)]
  [!code-vb[XSLT_NodeFrag#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_NodeFrag/VB/xslt_frag.vb#1)]  
   
-### <a name="input"></a><span data-ttu-id="81a17-114">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="81a17-114">Input</span></span>  
+### <a name="input"></a><span data-ttu-id="4acba-114">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="4acba-114">Input</span></span>  
   
-##### <a name="booksxml"></a><span data-ttu-id="81a17-115">Books.XML</span><span class="sxs-lookup"><span data-stu-id="81a17-115">books.xml</span></span>  
+##### <a name="booksxml"></a><span data-ttu-id="4acba-115">Books.XML</span><span class="sxs-lookup"><span data-stu-id="4acba-115">books.xml</span></span>  
  [!code-xml[XML_Core_Files#1](../../../../samples/snippets/xml/VS_Snippets_Data/XML_Core_Files/XML/books.xml#1)]  
   
-##### <a name="singlexsl"></a><span data-ttu-id="81a17-116">Single.xsl</span><span class="sxs-lookup"><span data-stu-id="81a17-116">single.xsl</span></span>  
+##### <a name="singlexsl"></a><span data-ttu-id="4acba-116">Single.xsl</span><span class="sxs-lookup"><span data-stu-id="4acba-116">single.xsl</span></span>  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a><span data-ttu-id="81a17-117">Dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="81a17-117">Output</span></span>  
- <span data-ttu-id="81a17-118">Tytuł książki jest Man. ufności</span><span class="sxs-lookup"><span data-stu-id="81a17-118">Book title is The Confidence Man.</span></span>  
+### <a name="output"></a><span data-ttu-id="4acba-117">Dane wyjściowe</span><span class="sxs-lookup"><span data-stu-id="4acba-117">Output</span></span>  
+ <span data-ttu-id="4acba-118">Tytuł książki jest Man. ufności</span><span class="sxs-lookup"><span data-stu-id="4acba-118">Book title is The Confidence Man.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="81a17-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="81a17-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4acba-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4acba-119">See also</span></span>
 
-- [<span data-ttu-id="81a17-120">Używanie klasy XslCompiledTransform</span><span class="sxs-lookup"><span data-stu-id="81a17-120">Using the XslCompiledTransform Class</span></span>](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [<span data-ttu-id="4acba-120">Używanie klasy XslCompiledTransform</span><span class="sxs-lookup"><span data-stu-id="4acba-120">Using the XslCompiledTransform Class</span></span>](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

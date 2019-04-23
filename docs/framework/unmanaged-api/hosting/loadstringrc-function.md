@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f17ecfe683de0739e4e1e063d38836eecf949336
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147005"
 ---
-# <a name="loadstringrc-function"></a><span data-ttu-id="0e3e9-102">LoadStringRC — Funkcja</span><span class="sxs-lookup"><span data-stu-id="0e3e9-102">LoadStringRC Function</span></span>
-<span data-ttu-id="0e3e9-103">Tłumaczy wartość HRESULT na komunikat o błędzie przy użyciu domyślnej kultury bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-103">Translates an HRESULT value into an error message by using the default culture of the current thread.</span></span>  
+# <a name="loadstringrc-function"></a><span data-ttu-id="989d0-102">LoadStringRC — Funkcja</span><span class="sxs-lookup"><span data-stu-id="989d0-102">LoadStringRC Function</span></span>
+<span data-ttu-id="989d0-103">Tłumaczy wartość HRESULT na komunikat o błędzie przy użyciu domyślnej kultury bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="989d0-103">Translates an HRESULT value into an error message by using the default culture of the current thread.</span></span>  
   
- <span data-ttu-id="0e3e9-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="0e3e9-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="989d0-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="989d0-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0e3e9-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="0e3e9-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="989d0-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="989d0-105">Syntax</span></span>  
   
 ```  
 HRESULT LoadStringRC (  
@@ -39,40 +39,40 @@ HRESULT LoadStringRC (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0e3e9-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="0e3e9-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="989d0-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="989d0-106">Parameters</span></span>  
  `iResourceID`  
- <span data-ttu-id="0e3e9-107">[in] Wartość HRESULT.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-107">[in] An HRESULT.</span></span>  
+ <span data-ttu-id="989d0-107">[in] Wartość HRESULT.</span><span class="sxs-lookup"><span data-stu-id="989d0-107">[in] An HRESULT.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="0e3e9-108">[out] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-108">[out] A buffer that contains the error message upon successful completion.</span></span>  
+ <span data-ttu-id="989d0-108">[out] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.</span><span class="sxs-lookup"><span data-stu-id="989d0-108">[out] A buffer that contains the error message upon successful completion.</span></span>  
   
  `iMax`  
- <span data-ttu-id="0e3e9-109">[in] Rozmiar buforu komunikatu błędu.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-109">[in] The size of the error message buffer.</span></span>  
+ <span data-ttu-id="989d0-109">[in] Rozmiar buforu komunikatu błędu.</span><span class="sxs-lookup"><span data-stu-id="989d0-109">[in] The size of the error message buffer.</span></span>  
   
  `bQuiet`  
- <span data-ttu-id="0e3e9-110">[in] Ignorowane.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-110">[in] Ignored.</span></span>  
+ <span data-ttu-id="989d0-110">[in] Ignorowane.</span><span class="sxs-lookup"><span data-stu-id="989d0-110">[in] Ignored.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0e3e9-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0e3e9-111">Return Value</span></span>  
- <span data-ttu-id="0e3e9-112">Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="989d0-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="989d0-111">Return Value</span></span>  
+ <span data-ttu-id="989d0-112">Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="989d0-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="0e3e9-113">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="0e3e9-113">Return code</span></span>|<span data-ttu-id="0e3e9-114">Opis</span><span class="sxs-lookup"><span data-stu-id="0e3e9-114">Description</span></span>|  
+|<span data-ttu-id="989d0-113">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="989d0-113">Return code</span></span>|<span data-ttu-id="989d0-114">Opis</span><span class="sxs-lookup"><span data-stu-id="989d0-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="0e3e9-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="0e3e9-115">S_OK</span></span>|<span data-ttu-id="0e3e9-116">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="0e3e9-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="0e3e9-117">E_INVALIDARG</span></span>|`szBuffer` <span data-ttu-id="0e3e9-118">ma wartość null lub `iMax` wynosi zero (0).</span><span class="sxs-lookup"><span data-stu-id="0e3e9-118">is null or `iMax` is zero (0).</span></span>|  
+|<span data-ttu-id="989d0-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="989d0-115">S_OK</span></span>|<span data-ttu-id="989d0-116">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="989d0-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="989d0-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="989d0-117">E_INVALIDARG</span></span>|<span data-ttu-id="989d0-118">`szBuffer` ma wartość null lub `iMax` wynosi zero (0).</span><span class="sxs-lookup"><span data-stu-id="989d0-118">`szBuffer` is null or `iMax` is zero (0).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0e3e9-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0e3e9-119">Remarks</span></span>  
- <span data-ttu-id="0e3e9-120">Jeśli metoda nie została zakończona pomyślnie, `szBuffer` zawiera pusty ciąg.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-120">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="989d0-119">Uwagi</span><span class="sxs-lookup"><span data-stu-id="989d0-119">Remarks</span></span>  
+ <span data-ttu-id="989d0-120">Jeśli metoda nie została zakończona pomyślnie, `szBuffer` zawiera pusty ciąg.</span><span class="sxs-lookup"><span data-stu-id="989d0-120">If the method does not complete successfully, `szBuffer` contains an empty string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0e3e9-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0e3e9-121">Requirements</span></span>  
- <span data-ttu-id="0e3e9-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0e3e9-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="989d0-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="989d0-121">Requirements</span></span>  
+ <span data-ttu-id="989d0-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="989d0-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0e3e9-123">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0e3e9-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="989d0-123">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="989d0-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0e3e9-124">**Biblioteka:** MSCorEE.dll i Mscorwks.dll.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-124">**Library:** MSCorEE.dll and Mscorwks.dll.</span></span> <span data-ttu-id="0e3e9-125">Użyj MSCorEE.dll zamiast Mscorwks.dll zapewnienie docelowych poprawną wersję programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="0e3e9-125">Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="989d0-124">**Biblioteka:** MSCorEE.dll i Mscorwks.dll.</span><span class="sxs-lookup"><span data-stu-id="989d0-124">**Library:** MSCorEE.dll and Mscorwks.dll.</span></span> <span data-ttu-id="989d0-125">Użyj MSCorEE.dll zamiast Mscorwks.dll zapewnienie docelowych poprawną wersję programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="989d0-125">Use MSCorEE.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- **<span data-ttu-id="0e3e9-126">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="0e3e9-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="989d0-126">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="989d0-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e3e9-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0e3e9-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="989d0-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="989d0-127">See also</span></span>
 
-- [<span data-ttu-id="0e3e9-128">LoadStringRCEx — Funkcja</span><span class="sxs-lookup"><span data-stu-id="0e3e9-128">LoadStringRCEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
-- [<span data-ttu-id="0e3e9-129">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="0e3e9-129">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="989d0-128">LoadStringRCEx, funkcja</span><span class="sxs-lookup"><span data-stu-id="989d0-128">LoadStringRCEx Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md)
+- [<span data-ttu-id="989d0-129">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="989d0-129">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

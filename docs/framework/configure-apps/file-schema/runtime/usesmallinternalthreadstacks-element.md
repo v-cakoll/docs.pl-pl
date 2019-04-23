@@ -1,5 +1,5 @@
 ---
-title: <UseSmallInternalThreadStacks> Element
+title: <UseSmallInternalThreadStacks>, element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UseSmallInternalThreadStacks element
@@ -8,61 +8,61 @@ ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144830"
 ---
-# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="91e09-102">\<UseSmallInternalThreadStacks> Element</span><span class="sxs-lookup"><span data-stu-id="91e09-102">\<UseSmallInternalThreadStacks> Element</span></span>
-<span data-ttu-id="91e09-103">Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR), zmniejszyć pamięci, określając stosu jawnych rozmiarów, podczas tworzenia niektórych wątków, które używa wewnętrznie, zamiast korzystać z domyślnego rozmiaru stosu dla tych wątków.</span><span class="sxs-lookup"><span data-stu-id="91e09-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
+# <a name="usesmallinternalthreadstacks-element"></a><span data-ttu-id="91ddd-102">\<UseSmallInternalThreadStacks> Element</span><span class="sxs-lookup"><span data-stu-id="91ddd-102">\<UseSmallInternalThreadStacks> Element</span></span>
+<span data-ttu-id="91ddd-103">Użyj żądania, że środowisko uruchomieniowe języka wspólnego (CLR), zmniejszyć pamięci, określając stosu jawnych rozmiarów, podczas tworzenia niektórych wątków, które używa wewnętrznie, zamiast korzystać z domyślnego rozmiaru stosu dla tych wątków.</span><span class="sxs-lookup"><span data-stu-id="91ddd-103">Requests that the common language runtime (CLR) reduce memory use by specifying explicit stack sizes when it creates certain threads that it uses internally, instead of using the default stack size for those threads.</span></span>  
   
- <span data-ttu-id="91e09-104">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="91e09-104">\<configuration> Element</span></span>  
-<span data-ttu-id="91e09-105">\<środowisko uruchomieniowe > Element</span><span class="sxs-lookup"><span data-stu-id="91e09-105">\<runtime> Element</span></span>  
-<span data-ttu-id="91e09-106">\<UseSmallInternalThreadStacks> Element</span><span class="sxs-lookup"><span data-stu-id="91e09-106">\<UseSmallInternalThreadStacks> Element</span></span>  
+ <span data-ttu-id="91ddd-104">\<Konfiguracja > Element</span><span class="sxs-lookup"><span data-stu-id="91ddd-104">\<configuration> Element</span></span>  
+<span data-ttu-id="91ddd-105">\<środowisko uruchomieniowe > Element</span><span class="sxs-lookup"><span data-stu-id="91ddd-105">\<runtime> Element</span></span>  
+<span data-ttu-id="91ddd-106">\<UseSmallInternalThreadStacks> Element</span><span class="sxs-lookup"><span data-stu-id="91ddd-106">\<UseSmallInternalThreadStacks> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91e09-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="91e09-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91ddd-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="91ddd-107">Syntax</span></span>  
   
 ```xml  
 <UseSmallInternalThreadStacks enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="91e09-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="91e09-108">Attributes and Elements</span></span>  
- <span data-ttu-id="91e09-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="91e09-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="91ddd-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="91ddd-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="91ddd-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="91ddd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="91e09-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="91e09-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="91ddd-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="91ddd-110">Attributes</span></span>  
   
-|<span data-ttu-id="91e09-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="91e09-111">Attribute</span></span>|<span data-ttu-id="91e09-112">Opis</span><span class="sxs-lookup"><span data-stu-id="91e09-112">Description</span></span>|  
+|<span data-ttu-id="91ddd-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="91ddd-111">Attribute</span></span>|<span data-ttu-id="91ddd-112">Opis</span><span class="sxs-lookup"><span data-stu-id="91ddd-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="91e09-113">Włączone</span><span class="sxs-lookup"><span data-stu-id="91e09-113">enabled</span></span>|<span data-ttu-id="91e09-114">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="91e09-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="91e09-115">Określa, czy żądanie rozmiary CLR Użyj jawnego stosu zamiast domyślnego rozmiaru stosu podczas tworzenia niektórych wątków, które używa wewnętrznie.</span><span class="sxs-lookup"><span data-stu-id="91e09-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="91e09-116">Rozmiary jawne stosu są mniejsze niż domyślny rozmiar stosu 1 MB.</span><span class="sxs-lookup"><span data-stu-id="91e09-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
+|<span data-ttu-id="91ddd-113">Włączone</span><span class="sxs-lookup"><span data-stu-id="91ddd-113">enabled</span></span>|<span data-ttu-id="91ddd-114">Atrybut wymagany.</span><span class="sxs-lookup"><span data-stu-id="91ddd-114">Required attribute.</span></span><br /><br /> <span data-ttu-id="91ddd-115">Określa, czy żądanie rozmiary CLR Użyj jawnego stosu zamiast domyślnego rozmiaru stosu podczas tworzenia niektórych wątków, które używa wewnętrznie.</span><span class="sxs-lookup"><span data-stu-id="91ddd-115">Specifies whether to request that the CLR use explicit stack sizes instead of the default stack size when it creates certain threads that it uses internally.</span></span> <span data-ttu-id="91ddd-116">Rozmiary jawne stosu są mniejsze niż domyślny rozmiar stosu 1 MB.</span><span class="sxs-lookup"><span data-stu-id="91ddd-116">The explicit stack sizes are smaller than the default stack size of 1 MB.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="91e09-117">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="91e09-117">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="91ddd-117">Atrybut włączony</span><span class="sxs-lookup"><span data-stu-id="91ddd-117">enabled Attribute</span></span>  
   
-|<span data-ttu-id="91e09-118">Wartość</span><span class="sxs-lookup"><span data-stu-id="91e09-118">Value</span></span>|<span data-ttu-id="91e09-119">Opis</span><span class="sxs-lookup"><span data-stu-id="91e09-119">Description</span></span>|  
+|<span data-ttu-id="91ddd-118">Wartość</span><span class="sxs-lookup"><span data-stu-id="91ddd-118">Value</span></span>|<span data-ttu-id="91ddd-119">Opis</span><span class="sxs-lookup"><span data-stu-id="91ddd-119">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="91e09-120">true</span><span class="sxs-lookup"><span data-stu-id="91e09-120">true</span></span>|<span data-ttu-id="91e09-121">Żądanie stosu jawnych rozmiarów.</span><span class="sxs-lookup"><span data-stu-id="91e09-121">Request explicit stack sizes.</span></span>|  
-|<span data-ttu-id="91e09-122">false</span><span class="sxs-lookup"><span data-stu-id="91e09-122">false</span></span>|<span data-ttu-id="91e09-123">Użyj domyślnego rozmiaru stosu.</span><span class="sxs-lookup"><span data-stu-id="91e09-123">Use the default stack size.</span></span> <span data-ttu-id="91e09-124">Jest to flaga domyślna dla [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91e09-124">This is the default for the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>|  
+|<span data-ttu-id="91ddd-120">true</span><span class="sxs-lookup"><span data-stu-id="91ddd-120">true</span></span>|<span data-ttu-id="91ddd-121">Żądanie stosu jawnych rozmiarów.</span><span class="sxs-lookup"><span data-stu-id="91ddd-121">Request explicit stack sizes.</span></span>|  
+|<span data-ttu-id="91ddd-122">false</span><span class="sxs-lookup"><span data-stu-id="91ddd-122">false</span></span>|<span data-ttu-id="91ddd-123">Użyj domyślnego rozmiaru stosu.</span><span class="sxs-lookup"><span data-stu-id="91ddd-123">Use the default stack size.</span></span> <span data-ttu-id="91ddd-124">Jest to flaga domyślna dla [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="91ddd-124">This is the default for the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="91e09-125">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="91e09-125">Child Elements</span></span>  
- <span data-ttu-id="91e09-126">Brak.</span><span class="sxs-lookup"><span data-stu-id="91e09-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="91ddd-125">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="91ddd-125">Child Elements</span></span>  
+ <span data-ttu-id="91ddd-126">Brak.</span><span class="sxs-lookup"><span data-stu-id="91ddd-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="91e09-127">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="91e09-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="91ddd-127">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="91ddd-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="91e09-128">Element</span><span class="sxs-lookup"><span data-stu-id="91e09-128">Element</span></span>|<span data-ttu-id="91e09-129">Opis</span><span class="sxs-lookup"><span data-stu-id="91e09-129">Description</span></span>|  
+|<span data-ttu-id="91ddd-128">Element</span><span class="sxs-lookup"><span data-stu-id="91ddd-128">Element</span></span>|<span data-ttu-id="91ddd-129">Opis</span><span class="sxs-lookup"><span data-stu-id="91ddd-129">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="91e09-130">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="91e09-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="91e09-131">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="91e09-131">Contains information about assembly binding and garbage collection.</span></span>|  
+|`configuration`|<span data-ttu-id="91ddd-130">Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="91ddd-130">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="91ddd-131">Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="91ddd-131">Contains information about assembly binding and garbage collection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="91e09-132">Uwagi</span><span class="sxs-lookup"><span data-stu-id="91e09-132">Remarks</span></span>  
- <span data-ttu-id="91e09-133">Ten element konfiguracji służy do żądania użyj ograniczoną ilość pamięci wirtualnej w procesie, ponieważ rozmiary jawne wątków, które środowisko CLR używa wewnętrznego wątków, jeśli żądanie zostanie uznane, są mniejsze niż domyślny rozmiar.</span><span class="sxs-lookup"><span data-stu-id="91e09-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="91ddd-132">Uwagi</span><span class="sxs-lookup"><span data-stu-id="91ddd-132">Remarks</span></span>  
+ <span data-ttu-id="91ddd-133">Ten element konfiguracji służy do żądania użyj ograniczoną ilość pamięci wirtualnej w procesie, ponieważ rozmiary jawne wątków, które środowisko CLR używa wewnętrznego wątków, jeśli żądanie zostanie uznane, są mniejsze niż domyślny rozmiar.</span><span class="sxs-lookup"><span data-stu-id="91ddd-133">This configuration element is used to request reduced virtual memory use in a process, because the explicit thread sizes that the CLR uses for its internal threads, if the request is honored, are smaller than the default size.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="91e09-134">Ten element konfiguracji to żądanie do środowiska CLR zamiast bezwzględnie.</span><span class="sxs-lookup"><span data-stu-id="91e09-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="91e09-135">W [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], żądanie zostanie uznane tylko w przypadku x86 architektury.</span><span class="sxs-lookup"><span data-stu-id="91e09-135">In the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="91e09-136">Ten element może być całkowicie ignorowane w przyszłych wersjach środowiska CLR lub zastępuje rozmiary jawne stosu, które są zawsze używane dla wybranych wątków wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="91e09-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
+>  <span data-ttu-id="91ddd-134">Ten element konfiguracji to żądanie do środowiska CLR zamiast bezwzględnie.</span><span class="sxs-lookup"><span data-stu-id="91ddd-134">This configuration element is a request to the CLR rather than an absolute requirement.</span></span> <span data-ttu-id="91ddd-135">W [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], żądanie zostanie uznane tylko w przypadku x86 architektury.</span><span class="sxs-lookup"><span data-stu-id="91ddd-135">In the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], the request is honored only for the x86 architecture.</span></span> <span data-ttu-id="91ddd-136">Ten element może być całkowicie ignorowane w przyszłych wersjach środowiska CLR lub zastępuje rozmiary jawne stosu, które są zawsze używane dla wybranych wątków wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="91ddd-136">This element might be ignored completely in future versions of the CLR, or replaced by explicit stack sizes that are always used for selected internal threads.</span></span>  
   
- <span data-ttu-id="91e09-137">Określanie, czy ten element konfiguracji zamienia niezawodność mniejsze użycie pamięci wirtualnej, jeśli środowisko CLR honoruje żądania, ponieważ mniejsze rozmiary stos może sprawić stosu najprawdopodobniej przepełnienia.</span><span class="sxs-lookup"><span data-stu-id="91e09-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
+ <span data-ttu-id="91ddd-137">Określanie, czy ten element konfiguracji zamienia niezawodność mniejsze użycie pamięci wirtualnej, jeśli środowisko CLR honoruje żądania, ponieważ mniejsze rozmiary stos może sprawić stosu najprawdopodobniej przepełnienia.</span><span class="sxs-lookup"><span data-stu-id="91ddd-137">Specifying this configuration element trades reliability for smaller virtual memory use if the CLR honors the request, because smaller stack sizes could potentially make stack overflows more likely.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91e09-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="91e09-138">Example</span></span>  
- <span data-ttu-id="91e09-139">Poniższy przykład pokazuje, jak żądanie stosu jawnego użycia CLR rozmiarów dla niektórych wątków, które używa wewnętrznie.</span><span class="sxs-lookup"><span data-stu-id="91e09-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
+## <a name="example"></a><span data-ttu-id="91ddd-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="91ddd-138">Example</span></span>  
+ <span data-ttu-id="91ddd-139">Poniższy przykład pokazuje, jak żądanie stosu jawnego użycia CLR rozmiarów dla niektórych wątków, które używa wewnętrznie.</span><span class="sxs-lookup"><span data-stu-id="91ddd-139">The following example shows how to request that the CLR use explicit stack sizes for certain threads that it uses internally.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,7 @@ ms.locfileid: "59144830"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="91e09-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="91e09-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91ddd-140">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="91ddd-140">See also</span></span>
 
-- [<span data-ttu-id="91e09-141">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="91e09-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="91e09-142">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="91e09-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="91ddd-141">Schemat ustawień środowiska uruchomieniowego</span><span class="sxs-lookup"><span data-stu-id="91ddd-141">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="91ddd-142">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="91ddd-142">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

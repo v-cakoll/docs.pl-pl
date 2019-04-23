@@ -9,10 +9,10 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193722"
 ---
 # <a name="security-in-windows-forms-overview"></a>Przegląd zabezpieczeń w formularzach systemu Windows
@@ -84,9 +84,9 @@ Przed wydaniem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], ca�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
+- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
 - [Podstawy zabezpieczeń dostępu kodu](../misc/code-access-security-basics.md)
-- [Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Przegląd wdrażania zaufanych aplikacji](/visualstudio/deployment/trusted-application-deployment-overview)
-- [Mage.exe (Narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Mage.exe (narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (narzędzie generowania i edytowania manifestu, klient z interfejsem graficznym)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

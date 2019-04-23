@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 26dcd4a64fc7aa2c3cb9cc599ceaef292efb1b6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192767"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Instrukcje: Stosowanie wielu przekształceń do obiektu
@@ -32,5 +32,5 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.TransformGr
 
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
-- [Przegląd Przekształcenia](transforms-overview.md)
+- [Przekształcenia — przegląd](transforms-overview.md)
 - [Przykładowe transformacje 2-D](https://go.microsoft.com/fwlink/?LinkID=158252)

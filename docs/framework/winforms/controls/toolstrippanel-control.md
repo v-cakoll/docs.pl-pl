@@ -9,10 +9,10 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192280"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel — Formant
@@ -21,13 +21,13 @@ ms.locfileid: "59192280"
  W tematach w tej sekcji opisano pojęć i technik, które służą do tworzenia `ToolStripPanel` funkcji w aplikacjach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolStripPanel — Informacje o formancie](toolstrippanel-control-overview.md)  
+ [ToolStripPanel, kontrolka — omówienie](toolstrippanel-control-overview.md)  
  Zawiera tematy, które opisano przeznaczenie i główne pojęcia formularzy Windows Forms <xref:System.Windows.Forms.ToolStripContainer> kontroli.  
   
- [Instrukcje: łączenie ToolStripPanels](how-to-join-toolstrippanels.md)  
+ [Instrukcje: Join ToolStripPanels](how-to-join-toolstrippanels.md)  
  Pokazuje, dodając <xref:System.Windows.Forms.ToolStrip> mające na celu `ToolStripPanel`.  
   
- [Instrukcje: używanie elementu ToolStripPanels dla MDI](how-to-use-toolstrippanels-for-mdi.md)  
+ [Instrukcje: Używanie elementu ToolStripPanels dla MDI](how-to-use-toolstrippanels-for-mdi.md)  
  Pokazuje elastyczności zapewnianej przez `ToolStripPanel` kontrolek w aplikacji interfejsu wielu dokumentów.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -36,4 +36,4 @@ ms.locfileid: "59192280"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

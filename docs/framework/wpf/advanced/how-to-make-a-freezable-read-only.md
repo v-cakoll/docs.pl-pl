@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191453"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Instrukcje: Ustawianie obiektu Freezable w obiekt tylko do odczytu
@@ -40,5 +40,5 @@ W tym przykładzie pokazano, jak wprowadzić <xref:System.Windows.Freezable> tyl
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
-- [Przegląd Obiekty Freezable](freezable-objects-overview.md)
-- [— Tematy porad](base-elements-how-to-topics.md)
+- [Przegląd obiektów Freezable](freezable-objects-overview.md)
+- [Tematy z instrukcjami](base-elements-how-to-topics.md)

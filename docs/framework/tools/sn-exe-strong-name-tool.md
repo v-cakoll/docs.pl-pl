@@ -13,10 +13,10 @@ ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191890"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
@@ -69,7 +69,7 @@ sn [-quiet][option [parameter(s)]]
 |**-v** *zestawu*|Weryfikuje silną nazwę w *zestawu*, gdzie *zestawu* jest nazwą pliku zawierającego manifest zestawu.|  
 |**-vf**  *zestawu*|Weryfikuje silną nazwę w *zestawu.* W odróżnieniu od **- v** opcji **-vf** wymusza weryfikację, nawet jeśli jest wyłączone, za pomocą **- Vr** opcji.|  
 |**-Vk**  *regfile.reg* *zestawu* [*userlist*] [*infile*]|Tworzy plik wpisów rejestracji (reg), którego można użyć do zarejestrowania określonego zestawu, aby pomijał weryfikację. Zasady nazewnictwa zestawów, które są stosowane do **- Vr** opcja dotyczy **— Vk** także. Aby uzyskać informacje o *userlist* i *infile* opcji, zobacz **— Vr** opcji.|  
-|**-Vl**|Wyświetla listę bieżących ustawień dla weryfikacji silnych nazw na tym komputerze.|  
+|**-Licencjonowania zbiorowego**|Wyświetla listę bieżących ustawień dla weryfikacji silnych nazw na tym komputerze.|  
 |**-Vr**  *zestawu* [*userlist*] [*infile*]|Rejestruje *zestawu* do pomijania weryfikacji. Opcjonalnie można określić listę rozdzielonych przecinkami nazw użytkownika, do których powinno zostać zastosowane pominięcie weryfikacji. Jeśli określisz *infile*, weryfikacja pozostanie włączona, ale klucz publiczny w *infile* jest używany podczas operacji weryfikacji. Można określić *zestawu* w formie  *\*, strongname* Aby zarejestrować wszystkie zestawy z określoną silną nazwą. Aby uzyskać *strongname*, określ ciąg cyfr szesnastkowych reprezentujący tokenami formularza klucza publicznego. Zobacz **-t** i **-T** opcje, aby wyświetlić token klucza publicznego. **Uwaga:**  Używaj tej opcji tylko podczas tworzenia oprogramowania. Dodanie zestawu, który będzie pomijał listę weryfikacji, tworzy lukę w zabezpieczeniach. Złośliwy zestaw mógłby użyć w pełni określonej nazwy (nazwy zestawu, wersji, kultury i tokenu klucza publicznego) zestawu dodanego do listy pomijania weryfikacji, aby ukryć swoją tożsamość. Pozwoliłoby to złośliwemu zestawowi na ominięcie weryfikacji.|  
 |||  
 |**-Vu**  *zestawu*|Wyrejestrowuje *zestawu* do pomijania weryfikacji. Te same zasady nazewnictwa zestawów, które dotyczą **- Vr** dotyczą **- Vu**.|  
@@ -127,6 +127,6 @@ sn -d MyContainer
 ## <a name="see-also"></a>Zobacz także
 
 - [Narzędzia](../../../docs/framework/tools/index.md)
-- [Al.exe (Konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

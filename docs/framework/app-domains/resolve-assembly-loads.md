@@ -15,10 +15,10 @@ ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: accb06421b8a697b0ee89adab0a9dffa23cffb05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193112"
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
@@ -83,4 +83,4 @@ Program .NET Framework oferuje <xref:System.AppDomain.AssemblyResolve?displayPro
 ## <a name="see-also"></a>Zobacz także
 
 - [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
-- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)
+- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

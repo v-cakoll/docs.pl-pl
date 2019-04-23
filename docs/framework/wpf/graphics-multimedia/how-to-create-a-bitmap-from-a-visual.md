@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
 ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189893"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Instrukcje: Tworzenie mapy bitowej za pomocą wizualizacji
@@ -25,6 +25,6 @@ W tym przykładzie pokazano, jak utworzyć mapę bitową z <xref:System.Windows.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.DrawingContext>
-- [Przegląd Obrazowanie](imaging-overview.md)
-- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
+- [Obrazowanie — przegląd](imaging-overview.md)
+- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
 - [Użycie obiektów DrawingVisual](using-drawingvisual-objects.md)

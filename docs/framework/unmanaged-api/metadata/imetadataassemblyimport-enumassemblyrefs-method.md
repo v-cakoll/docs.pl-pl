@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 91e253669b9f51e7c1d600ba11f13a9ce67fb58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072483"
 ---
-# <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="c47ec-102">IMetaDataAssemblyImport::EnumAssemblyRefs — Metoda</span><span class="sxs-lookup"><span data-stu-id="c47ec-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
-<span data-ttu-id="c47ec-103">Wylicza `mdAssemblyRef` wystąpień, które są zdefiniowane w manifeście zestawu.</span><span class="sxs-lookup"><span data-stu-id="c47ec-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  
+# <a name="imetadataassemblyimportenumassemblyrefs-method"></a><span data-ttu-id="9108d-102">IMetaDataAssemblyImport::EnumAssemblyRefs — Metoda</span><span class="sxs-lookup"><span data-stu-id="9108d-102">IMetaDataAssemblyImport::EnumAssemblyRefs Method</span></span>
+<span data-ttu-id="9108d-103">Wylicza `mdAssemblyRef` wystąpień, które są zdefiniowane w manifeście zestawu.</span><span class="sxs-lookup"><span data-stu-id="9108d-103">Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c47ec-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c47ec-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9108d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9108d-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumAssemblyRefs (  
@@ -38,35 +38,35 @@ HRESULT EnumAssemblyRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c47ec-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c47ec-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9108d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9108d-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="c47ec-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="c47ec-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="c47ec-107">Musi to być wartość null wartość przy `EnumAssemblyRefs` metoda jest wywoływana po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="c47ec-107">This must be a null value when the `EnumAssemblyRefs` method is called for the first time.</span></span>  
+ <span data-ttu-id="9108d-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="9108d-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="9108d-107">Musi to być wartość null wartość przy `EnumAssemblyRefs` metoda jest wywoływana po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="9108d-107">This must be a null value when the `EnumAssemblyRefs` method is called for the first time.</span></span>  
   
  `rAssemblyRefs`  
- <span data-ttu-id="c47ec-108">[out] Wyliczanie `mdAssemblyRef` tokeny metadanych.</span><span class="sxs-lookup"><span data-stu-id="c47ec-108">[out] The enumeration of `mdAssemblyRef` metadata tokens.</span></span>  
+ <span data-ttu-id="9108d-108">[out] Wyliczanie `mdAssemblyRef` tokeny metadanych.</span><span class="sxs-lookup"><span data-stu-id="9108d-108">[out] The enumeration of `mdAssemblyRef` metadata tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="c47ec-109">[in] Maksymalna liczba tokenów, które można umieścić w `rAssemblyRefs` tablicy.</span><span class="sxs-lookup"><span data-stu-id="c47ec-109">[in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.</span></span>  
+ <span data-ttu-id="9108d-109">[in] Maksymalna liczba tokenów, które można umieścić w `rAssemblyRefs` tablicy.</span><span class="sxs-lookup"><span data-stu-id="9108d-109">[in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="c47ec-110">[out] Liczba tokenów faktycznie umieszczone w `rAssemblyRefs`.</span><span class="sxs-lookup"><span data-stu-id="c47ec-110">[out] The number of tokens actually placed in `rAssemblyRefs`.</span></span>  
+ <span data-ttu-id="9108d-110">[out] Liczba tokenów faktycznie umieszczone w `rAssemblyRefs`.</span><span class="sxs-lookup"><span data-stu-id="9108d-110">[out] The number of tokens actually placed in `rAssemblyRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c47ec-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c47ec-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9108d-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9108d-111">Return Value</span></span>  
   
-|<span data-ttu-id="c47ec-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c47ec-112">HRESULT</span></span>|<span data-ttu-id="c47ec-113">Opis</span><span class="sxs-lookup"><span data-stu-id="c47ec-113">Description</span></span>|  
+|<span data-ttu-id="9108d-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9108d-112">HRESULT</span></span>|<span data-ttu-id="9108d-113">Opis</span><span class="sxs-lookup"><span data-stu-id="9108d-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` <span data-ttu-id="c47ec-114">pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="c47ec-114">returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="c47ec-115">Nie ma żadnych tokeny do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="c47ec-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="c47ec-116">W tym przypadku `pcTokens` jest równa zero.</span><span class="sxs-lookup"><span data-stu-id="c47ec-116">In this case, `pcTokens` is set to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="9108d-114">`EnumAssemblyRefs` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="9108d-114">`EnumAssemblyRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="9108d-115">Nie ma żadnych tokeny do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="9108d-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="9108d-116">W tym przypadku `pcTokens` jest równa zero.</span><span class="sxs-lookup"><span data-stu-id="9108d-116">In this case, `pcTokens` is set to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c47ec-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c47ec-117">Requirements</span></span>  
- <span data-ttu-id="c47ec-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c47ec-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9108d-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9108d-117">Requirements</span></span>  
+ <span data-ttu-id="9108d-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9108d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c47ec-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="c47ec-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9108d-119">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="9108d-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c47ec-120">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c47ec-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9108d-120">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9108d-120">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="c47ec-121">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="c47ec-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="9108d-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9108d-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c47ec-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c47ec-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9108d-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9108d-122">See also</span></span>
 
-- [<span data-ttu-id="c47ec-123">IMetaDataAssemblyImport — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c47ec-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="9108d-123">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="9108d-123">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

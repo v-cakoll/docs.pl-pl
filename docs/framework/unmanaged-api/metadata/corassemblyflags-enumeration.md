@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072717"
 ---
-# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="0a3d0-102">CorAssemblyFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="0a3d0-102">CorAssemblyFlags Enumeration</span></span>
-<span data-ttu-id="0a3d0-103">Zawiera wartości, które opisują metadane stosowane do kompilacji zestawu.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
+# <a name="corassemblyflags-enumeration"></a><span data-ttu-id="a5f22-102">CorAssemblyFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="a5f22-102">CorAssemblyFlags Enumeration</span></span>
+<span data-ttu-id="a5f22-103">Zawiera wartości, które opisują metadane stosowane do kompilacji zestawu.</span><span class="sxs-lookup"><span data-stu-id="a5f22-103">Contains values that describe the metadata applied to an assembly compilation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a3d0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0a3d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5f22-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a5f22-104">Syntax</span></span>  
   
 ```  
 typedef enum CorAssemblyFlags {  
@@ -55,36 +55,36 @@ typedef enum CorAssemblyFlags {
 } CorAssemblyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0a3d0-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="0a3d0-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a5f22-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="a5f22-105">Members</span></span>  
   
-|<span data-ttu-id="0a3d0-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="0a3d0-106">Member</span></span>|<span data-ttu-id="0a3d0-107">Opis</span><span class="sxs-lookup"><span data-stu-id="0a3d0-107">Description</span></span>|  
+|<span data-ttu-id="a5f22-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="a5f22-106">Member</span></span>|<span data-ttu-id="a5f22-107">Opis</span><span class="sxs-lookup"><span data-stu-id="a5f22-107">Description</span></span>|  
 |------------|-----------------|  
-|`afPublicKey`|<span data-ttu-id="0a3d0-108">Wskazuje, że odwołanie do zestawu zawiera pełną, bez haszowania klucz publiczny.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
-|`afPA_None`|<span data-ttu-id="0a3d0-109">Wskazuje, że architektura procesora jest nieokreślony.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-109">Indicates that the processor architecture is unspecified.</span></span>|  
-|`afPA_MSIL`|<span data-ttu-id="0a3d0-110">Wskazuje, że architektura procesora jest neutralny (PE32).</span><span class="sxs-lookup"><span data-stu-id="0a3d0-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
-|`afPA_x86`|<span data-ttu-id="0a3d0-111">Wskazuje, że architektura procesora jest x86 (PE32).</span><span class="sxs-lookup"><span data-stu-id="0a3d0-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
-|`afPA_IA64`|<span data-ttu-id="0a3d0-112">Wskazuje, że architektura procesora jest Itanium (PE32 +).</span><span class="sxs-lookup"><span data-stu-id="0a3d0-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
-|`afPA_AMD64`|<span data-ttu-id="0a3d0-113">Wskazuje, że architektura procesora jest AMD X64 (PE32 +).</span><span class="sxs-lookup"><span data-stu-id="0a3d0-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
-|`afPA_ARM`|<span data-ttu-id="0a3d0-114">Wskazuje, że architektura procesora jest ARM (PE32).</span><span class="sxs-lookup"><span data-stu-id="0a3d0-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
-|`afPA_NoPlatform`|<span data-ttu-id="0a3d0-115">Wskazuje, że zestaw jest zestaw odwołania; oznacza, że ma zastosowanie do dowolnej architekturze ale nie można uruchomić na dowolnej architektury.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="0a3d0-116">W związku z tym, Flaga jest taka sama jak `afPA_Mask`.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
-|`afPA_Specified`|<span data-ttu-id="0a3d0-117">Wskazuje, że flagi architektury procesora należy propagowane do `AssemblyRef` rekordu.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
-|`afPA_Mask`|<span data-ttu-id="0a3d0-118">Maska, która zawiera opis architektury procesora.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-118">A mask that describes the processor architecture.</span></span>|  
-|`afPA_FullMask`|<span data-ttu-id="0a3d0-119">Określa, czy znajduje się opis architektury procesora.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-119">Specifies that the processor architecture description is included.</span></span>|  
-|`afPA_Shift`|<span data-ttu-id="0a3d0-120">Wskazuje liczbę shift in flagi architektury procesora, do i z indeksu.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
-|`afEnableJITcompileTracking`|<span data-ttu-id="0a3d0-121">Wskazuje odpowiedniej wartości z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> z <xref:System.Diagnostics.DebuggableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afDisableJITcompileOptimizer`|<span data-ttu-id="0a3d0-122">Wskazuje odpowiedniej wartości z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> z <xref:System.Diagnostics.DebuggableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
-|`afRetargetable`|<span data-ttu-id="0a3d0-123">Wskazuje, czy zestaw można przekierować go w czasie wykonywania do zestawu od innego wydawcy.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
-|`afContentType_Mask`|<span data-ttu-id="0a3d0-124">Maska, który opisuje typ zawartości.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-124">A mask that describes the content type.</span></span>|  
-|`afContentType_Default`|<span data-ttu-id="0a3d0-125">Określa domyślny typ zawartości.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-125">Indicates the default content type.</span></span>|  
-|`afContentType_WindowsRuntime`|<span data-ttu-id="0a3d0-126">Wskazuje [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typ zawartości.</span><span class="sxs-lookup"><span data-stu-id="0a3d0-126">Indicates the [!INCLUDE[wrt](../../../../includes/wrt-md.md)] content type.</span></span>|  
+|`afPublicKey`|<span data-ttu-id="a5f22-108">Wskazuje, że odwołanie do zestawu zawiera pełną, bez haszowania klucz publiczny.</span><span class="sxs-lookup"><span data-stu-id="a5f22-108">Indicates that the assembly reference holds the full, unhashed public key.</span></span>|  
+|`afPA_None`|<span data-ttu-id="a5f22-109">Wskazuje, że architektura procesora jest nieokreślony.</span><span class="sxs-lookup"><span data-stu-id="a5f22-109">Indicates that the processor architecture is unspecified.</span></span>|  
+|`afPA_MSIL`|<span data-ttu-id="a5f22-110">Wskazuje, że architektura procesora jest neutralny (PE32).</span><span class="sxs-lookup"><span data-stu-id="a5f22-110">Indicates that the processor architecture is neutral (PE32).</span></span>|  
+|`afPA_x86`|<span data-ttu-id="a5f22-111">Wskazuje, że architektura procesora jest x86 (PE32).</span><span class="sxs-lookup"><span data-stu-id="a5f22-111">Indicates that the processor architecture is x86 (PE32).</span></span>|  
+|`afPA_IA64`|<span data-ttu-id="a5f22-112">Wskazuje, że architektura procesora jest Itanium (PE32 +).</span><span class="sxs-lookup"><span data-stu-id="a5f22-112">Indicates that the processor architecture is Itanium (PE32+).</span></span>|  
+|`afPA_AMD64`|<span data-ttu-id="a5f22-113">Wskazuje, że architektura procesora jest AMD X64 (PE32 +).</span><span class="sxs-lookup"><span data-stu-id="a5f22-113">Indicates that the processor architecture is AMD X64 (PE32+).</span></span>|  
+|`afPA_ARM`|<span data-ttu-id="a5f22-114">Wskazuje, że architektura procesora jest ARM (PE32).</span><span class="sxs-lookup"><span data-stu-id="a5f22-114">Indicates that the processor architecture is ARM (PE32).</span></span>|  
+|`afPA_NoPlatform`|<span data-ttu-id="a5f22-115">Wskazuje, że zestaw jest zestaw odwołania; oznacza, że ma zastosowanie do dowolnej architekturze ale nie można uruchomić na dowolnej architektury.</span><span class="sxs-lookup"><span data-stu-id="a5f22-115">Indicates that the assembly is a reference assembly; that is, it applies to any architecture but cannot run on any architecture.</span></span> <span data-ttu-id="a5f22-116">W związku z tym, Flaga jest taka sama jak `afPA_Mask`.</span><span class="sxs-lookup"><span data-stu-id="a5f22-116">Thus, the flag is the same as `afPA_Mask`.</span></span>|  
+|`afPA_Specified`|<span data-ttu-id="a5f22-117">Wskazuje, że flagi architektury procesora należy propagowane do `AssemblyRef` rekordu.</span><span class="sxs-lookup"><span data-stu-id="a5f22-117">Indicates that the processor architecture flags should be propagated to the `AssemblyRef` record.</span></span>|  
+|`afPA_Mask`|<span data-ttu-id="a5f22-118">Maska, która zawiera opis architektury procesora.</span><span class="sxs-lookup"><span data-stu-id="a5f22-118">A mask that describes the processor architecture.</span></span>|  
+|`afPA_FullMask`|<span data-ttu-id="a5f22-119">Określa, czy znajduje się opis architektury procesora.</span><span class="sxs-lookup"><span data-stu-id="a5f22-119">Specifies that the processor architecture description is included.</span></span>|  
+|`afPA_Shift`|<span data-ttu-id="a5f22-120">Wskazuje liczbę shift in flagi architektury procesora, do i z indeksu.</span><span class="sxs-lookup"><span data-stu-id="a5f22-120">Indicates a shift count in the processor architecture flags to and from the index.</span></span>|  
+|`afEnableJITcompileTracking`|<span data-ttu-id="a5f22-121">Wskazuje odpowiedniej wartości z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> z <xref:System.Diagnostics.DebuggableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a5f22-121">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afDisableJITcompileOptimizer`|<span data-ttu-id="a5f22-122">Wskazuje odpowiedniej wartości z <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> z <xref:System.Diagnostics.DebuggableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a5f22-122">Indicates the corresponding value from the <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> of the <xref:System.Diagnostics.DebuggableAttribute>.</span></span>|  
+|`afRetargetable`|<span data-ttu-id="a5f22-123">Wskazuje, czy zestaw można przekierować go w czasie wykonywania do zestawu od innego wydawcy.</span><span class="sxs-lookup"><span data-stu-id="a5f22-123">Indicates that the assembly can be retargeted at run time to an assembly from a different publisher.</span></span>|  
+|`afContentType_Mask`|<span data-ttu-id="a5f22-124">Maska, który opisuje typ zawartości.</span><span class="sxs-lookup"><span data-stu-id="a5f22-124">A mask that describes the content type.</span></span>|  
+|`afContentType_Default`|<span data-ttu-id="a5f22-125">Określa domyślny typ zawartości.</span><span class="sxs-lookup"><span data-stu-id="a5f22-125">Indicates the default content type.</span></span>|  
+|`afContentType_WindowsRuntime`|<span data-ttu-id="a5f22-126">Wskazuje [!INCLUDE[wrt](../../../../includes/wrt-md.md)] typ zawartości.</span><span class="sxs-lookup"><span data-stu-id="a5f22-126">Indicates the [!INCLUDE[wrt](../../../../includes/wrt-md.md)] content type.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0a3d0-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0a3d0-127">Requirements</span></span>  
- <span data-ttu-id="0a3d0-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a3d0-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5f22-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a5f22-127">Requirements</span></span>  
+ <span data-ttu-id="a5f22-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5f22-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a3d0-129">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="0a3d0-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="a5f22-129">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="a5f22-129">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="0a3d0-130">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="0a3d0-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="a5f22-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5f22-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a3d0-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0a3d0-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5f22-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a5f22-131">See also</span></span>
 
-- [<span data-ttu-id="0a3d0-132">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="0a3d0-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="a5f22-132">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="a5f22-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

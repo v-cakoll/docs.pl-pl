@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
 ms.openlocfilehash: 15cf94d5ea191435723f754f35e43d65632142e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311204"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Instrukcje: Tworzenie przepływu pracy schematu blokowego
@@ -157,5 +157,5 @@ Przepływy pracy można skonstruować z wbudowanych działań, a także z dział
 - [Programowanie w programie Windows Workflow Foundation](programming.md)
 - [Projektowanie przepływów pracy](designing-workflows.md)
 - [Wprowadzenie — samouczek](getting-started-tutorial.md)
-- [Instrukcje: Tworzenie działania](how-to-create-an-activity.md)
+- [Instrukcje: Utwórz działanie](how-to-create-an-activity.md)
 - [Instrukcje: Uruchamianie przepływu pracy](how-to-run-a-workflow.md)

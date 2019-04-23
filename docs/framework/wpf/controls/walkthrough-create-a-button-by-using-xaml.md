@@ -5,10 +5,10 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309501"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Przewodnik: Tworzenie przycisku przy użyciu języka XAML
@@ -435,6 +435,6 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć przycisk animowany do u�
 
 - [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Przegląd Animacja](../graphics-multimedia/animation-overview.md)
-- [Przegląd Malowanie jednolitymi kolorami i gradientami](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [Przegląd Efekty mapy bitowej](../graphics-multimedia/bitmap-effects-overview.md)
+- [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+- [Efekty mapy bitowej — przegląd](../graphics-multimedia/bitmap-effects-overview.md)

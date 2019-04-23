@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309228"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Przewodnik: Pisanie zapytań w języku C# (LINQ)
@@ -174,9 +174,9 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
 ## <a name="next-steps"></a>Następne kroki  
  Po przejściu na podstawowych aspektów pracy z zapytaniami w języku C#, jesteś gotowy do odczytu, dokumentację i przykłady dla określonego typu dostawcy LINQ, który Cię interesuje:  
   
- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
- [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
  [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   

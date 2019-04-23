@@ -9,10 +9,10 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310567"
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
@@ -304,7 +304,7 @@ ms.locfileid: "59310567"
   
 3. Następujące polecenie służy do porzucenia wyjątków zagnieżdżonych.  
   
-     **! pe -zagnieżdżonych**  
+     **! pe-zagnieżdżonych**  
   
      Jeśli nie możesz znaleźć wszystkie wyjątki, wyjątek braku pamięci pochodzi z niezarządzanego kodu.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "59310567"
   
 -   Użyj **vmstat** polecenia:  
   
-     **!vmstat**  
+     **! vmstat**  
   
      Największego wolnego region jest największą wartość w kolumnie maksymalna, jak pokazano w następujących danych wyjściowych.  
   
@@ -496,7 +496,7 @@ ms.locfileid: "59310567"
   
 1. W debugerze WinDbg lub Visual Studio za pomocą rozszerzenie debugowania SOS załadowane wpisz następujące polecenie:  
   
-     **!finalizequeue**  
+     **! finalizequeue**  
   
      Spójrz na liczbę obiektów, które są gotowe do finalizacji. Jeśli liczba jest wysokie, należy zbadać, dlaczego te finalizatory nie postępu na wszystkich lub nie postęp szybkiego wystarczająco.  
   

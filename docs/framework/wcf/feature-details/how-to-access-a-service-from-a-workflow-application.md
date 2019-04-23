@@ -3,10 +3,10 @@ title: 'Instrukcje: uzyskiwanie dostępu do usługi z poziomu aplikacji przepły
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309319"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Instrukcje: uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy

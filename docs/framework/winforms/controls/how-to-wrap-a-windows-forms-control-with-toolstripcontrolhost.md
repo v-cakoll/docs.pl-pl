@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
 ms.openlocfilehash: ccf82b2ea767d69797af1ffa38381a7cc0fd3b67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308006"
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Instrukcje: zawijanie kontrolki formularzy systemu Windows za pomocą elementu ToolStripControlHost
@@ -69,5 +69,5 @@ ms.locfileid: "59308006"
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
 - [ToolStrip, kontrolka — omówienie](toolstrip-control-overview-windows-forms.md)
-- [ToolStrip — Architektura formantu](toolstrip-control-architecture.md)
-- [Podsumowanie informacji o technologii formantów ToolStrip](toolstrip-technology-summary.md)
+- [ToolStrip, kontrolka — architektura](toolstrip-control-architecture.md)
+- [ToolStrip — podsumowanie informacji o technologii](toolstrip-technology-summary.md)

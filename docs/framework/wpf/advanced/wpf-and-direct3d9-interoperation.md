@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307733"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF i Direct3D9 — Współdziałanie
@@ -151,5 +151,5 @@ Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundatio
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Zagadnienia dotyczące współdziałania Direct3D9 i WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [Przewodnik: tworzenie zawartości Direct3D9 na potrzeby hostingu w WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Przewodnik: hostowanie zawartości Direct3D9 w WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [Przewodnik: Tworzenie zawartości Direct3D9 dla hostingu w WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Przewodnik: Hosting zawartości Direct3D9 w WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

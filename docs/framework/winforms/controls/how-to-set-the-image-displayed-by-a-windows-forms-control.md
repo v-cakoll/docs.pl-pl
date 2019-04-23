@@ -13,20 +13,20 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
 ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333928"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771533"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="f502e-102">Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="f502e-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
-<span data-ttu-id="f502e-103">Kilka kontrolek Windows Forms można wyświetlać obrazy.</span><span class="sxs-lookup"><span data-stu-id="f502e-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="f502e-104">Obrazy te można ikony, które wyjaśnienie przeznaczenia kontrolki, takie jak ikonę dyskietki na przycisku określające elementy **Zapisz** polecenia.</span><span class="sxs-lookup"><span data-stu-id="f502e-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="f502e-105">Alternatywnie ikony może być obrazów tła do zapewnienia kontroli, wygląd i zachowanie, które chcesz.</span><span class="sxs-lookup"><span data-stu-id="f502e-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a><span data-ttu-id="fcfa8-102">Instrukcje: ustawianie obrazu wyświetlanego przez kontrolkę formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="fcfa8-102">How to: Set the Image Displayed by a Windows Forms Control</span></span>
+<span data-ttu-id="fcfa8-103">Kilka kontrolek Windows Forms można wyświetlać obrazy.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-103">Several Windows Forms controls can display images.</span></span> <span data-ttu-id="fcfa8-104">Obrazy te można ikony, które wyjaśnienie przeznaczenia kontrolki, takie jak ikonę dyskietki na przycisku określające elementy **Zapisz** polecenia.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-104">These images can be icons that clarify the purpose of the control, such as a diskette icon on a button denoting the **Save** command.</span></span> <span data-ttu-id="fcfa8-105">Alternatywnie ikony może być obrazów tła do zapewnienia kontroli, wygląd i zachowanie, które chcesz.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-105">Alternatively, the icons can be background images to give the control the appearance and behavior you want.</span></span>  
   
-### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="f502e-106">Aby ustawić obrazu wyświetlanego przez kontrolkę</span><span class="sxs-lookup"><span data-stu-id="f502e-106">To set the image displayed by a control</span></span>  
+### <a name="to-set-the-image-displayed-by-a-control"></a><span data-ttu-id="fcfa8-106">Aby ustawić obrazu wyświetlanego przez kontrolkę</span><span class="sxs-lookup"><span data-stu-id="fcfa8-106">To set the image displayed by a control</span></span>  
   
-1. <span data-ttu-id="f502e-107">Ustaw dla formantu `Image` lub `BackgroundImage` właściwość do obiektu typu <xref:System.Drawing.Image>.</span><span class="sxs-lookup"><span data-stu-id="f502e-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="f502e-108">Ogólnie rzecz biorąc, można będzie się ładuje obraz z pliku przy użyciu <xref:System.Drawing.Image.FromFile%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="f502e-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
+1. <span data-ttu-id="fcfa8-107">Ustaw dla formantu `Image` lub `BackgroundImage` właściwość do obiektu typu <xref:System.Drawing.Image>.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-107">Set the control's `Image` or `BackgroundImage` property to an object of type <xref:System.Drawing.Image>.</span></span> <span data-ttu-id="fcfa8-108">Ogólnie rzecz biorąc, można będzie się ładuje obraz z pliku przy użyciu <xref:System.Drawing.Image.FromFile%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-108">Generally, you will be loading the image from a file by using the <xref:System.Drawing.Image.FromFile%2A> method.</span></span>  
   
-     <span data-ttu-id="f502e-109">W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje obrazy** folderu.</span><span class="sxs-lookup"><span data-stu-id="f502e-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="f502e-110">Większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu.</span><span class="sxs-lookup"><span data-stu-id="f502e-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="f502e-111">Umożliwia także użytkownikom minimalny system poziomy dostępu do bezpiecznego uruchamiania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="f502e-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="f502e-112">Poniższy przykład kodu wymaga jeszcze formularza z <xref:System.Windows.Forms.PictureBox> dodane kontrolki.</span><span class="sxs-lookup"><span data-stu-id="f502e-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
+     <span data-ttu-id="fcfa8-109">W poniższym przykładzie kodu ścieżkę zestawu dla lokalizacji obrazu jest **Moje obrazy** folderu.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-109">In the following code example, the path set for the location of the image is the **My Pictures** folder.</span></span> <span data-ttu-id="fcfa8-110">Większość komputerów z systemem operacyjnym Windows będzie zawierać tego katalogu.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-110">Most computers running the Windows operating system will include this directory.</span></span> <span data-ttu-id="fcfa8-111">Umożliwia także użytkownikom minimalny system poziomy dostępu do bezpiecznego uruchamiania aplikacji.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-111">This also enables users with minimal system access levels to run the application safely.</span></span> <span data-ttu-id="fcfa8-112">Poniższy przykład kodu wymaga jeszcze formularza z <xref:System.Windows.Forms.PictureBox> dodane kontrolki.</span><span class="sxs-lookup"><span data-stu-id="fcfa8-112">The following code example requires that you already have a form with a <xref:System.Windows.Forms.PictureBox> control added.</span></span>  
   
     ```vb  
     ' Replace the image named below  
@@ -56,7 +56,7 @@ ms.locfileid: "59333928"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f502e-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f502e-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fcfa8-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fcfa8-113">See also</span></span>
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

@@ -5,33 +5,33 @@ f1_keywords:
 - vbrApplicationLog_FileExceedsMaximumSize
 ms.assetid: 61747a9c-e460-424b-a365-73cdba9dd428
 ms.openlocfilehash: 587b35282c7e78da1fdf4ccf9d08214e5665119c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298607"
 ---
-# <a name="unable-to-write-to-log-file-because-writing-to-it-would-cause-it-to-exceed-maximumsize-value"></a><span data-ttu-id="34f76-102">Nie można zapisać do pliku dziennika, ponieważ spowodowałoby przekroczenie wartości MaximumSize zapis do niego</span><span class="sxs-lookup"><span data-stu-id="34f76-102">Unable to write to log file because writing to it would cause it to exceed MaximumSize value</span></span>
-<span data-ttu-id="34f76-103"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasy nie można zapisać do pliku dziennika, ponieważ:</span><span class="sxs-lookup"><span data-stu-id="34f76-103">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class could not write to the log file because:</span></span>  
+# <a name="unable-to-write-to-log-file-because-writing-to-it-would-cause-it-to-exceed-maximumsize-value"></a><span data-ttu-id="90eab-102">Nie można zapisać do pliku dziennika, ponieważ spowodowałoby przekroczenie wartości MaximumSize zapis do niego</span><span class="sxs-lookup"><span data-stu-id="90eab-102">Unable to write to log file because writing to it would cause it to exceed MaximumSize value</span></span>
+<span data-ttu-id="90eab-103"><xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> Klasy nie można zapisać do pliku dziennika, ponieważ:</span><span class="sxs-lookup"><span data-stu-id="90eab-103">The <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class could not write to the log file because:</span></span>  
   
--   <span data-ttu-id="34f76-104">Rozmiar pliku dziennika (w bajtach) jest większa niż wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> właściwości</span><span class="sxs-lookup"><span data-stu-id="34f76-104">The log file size (in bytes) is greater than the value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property</span></span>  
+-   <span data-ttu-id="90eab-104">Rozmiar pliku dziennika (w bajtach) jest większa niż wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> właściwości</span><span class="sxs-lookup"><span data-stu-id="90eab-104">The log file size (in bytes) is greater than the value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property</span></span>  
   
-     <span data-ttu-id="34f76-105">— i —</span><span class="sxs-lookup"><span data-stu-id="34f76-105">—and—</span></span>  
+     <span data-ttu-id="90eab-105">— i —</span><span class="sxs-lookup"><span data-stu-id="90eab-105">—and—</span></span>  
   
--   <span data-ttu-id="34f76-106">Wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> właściwość <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.ThrowException>.</span><span class="sxs-lookup"><span data-stu-id="34f76-106">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> property was <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.ThrowException>.</span></span>  
+-   <span data-ttu-id="90eab-106">Wartość <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> właściwość <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.ThrowException>.</span><span class="sxs-lookup"><span data-stu-id="90eab-106">The value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> property was <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.ThrowException>.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="34f76-107">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="34f76-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="90eab-107">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="90eab-107">To correct this error</span></span>  
   
-1. <span data-ttu-id="34f76-108">Archiwizowanie istniejące dzienniki i usuń je z komputera, aby umożliwić <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> obiekt, aby utworzyć nowe dzienniki.</span><span class="sxs-lookup"><span data-stu-id="34f76-108">Archive the existing logs and remove them from the computer to allow the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> object to create new logs.</span></span>  
+1. <span data-ttu-id="90eab-108">Archiwizowanie istniejące dzienniki i usuń je z komputera, aby umożliwić <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> obiekt, aby utworzyć nowe dzienniki.</span><span class="sxs-lookup"><span data-stu-id="90eab-108">Archive the existing logs and remove them from the computer to allow the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> object to create new logs.</span></span>  
   
-2. <span data-ttu-id="34f76-109">Zmień wartość właściwości <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> właściwości, aby umożliwić większe dzienniki.</span><span class="sxs-lookup"><span data-stu-id="34f76-109">Change the value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property to allow for larger logs.</span></span>  
+2. <span data-ttu-id="90eab-109">Zmień wartość właściwości <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> właściwości, aby umożliwić większe dzienniki.</span><span class="sxs-lookup"><span data-stu-id="90eab-109">Change the value of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A> property to allow for larger logs.</span></span>  
   
-3. <span data-ttu-id="34f76-110">Ustaw <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> właściwości <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> do odrzucenia komunikaty bez ostrzeżenia, jeśli dziennik jest zbyt duży.</span><span class="sxs-lookup"><span data-stu-id="34f76-110">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> property to <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> to discard messages without warning if the log is too large.</span></span>  
+3. <span data-ttu-id="90eab-110">Ustaw <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> właściwości <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> do odrzucenia komunikaty bez ostrzeżenia, jeśli dziennik jest zbyt duży.</span><span class="sxs-lookup"><span data-stu-id="90eab-110">Set the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A> property to <xref:Microsoft.VisualBasic.Logging.DiskSpaceExhaustedOption.DiscardMessages> to discard messages without warning if the log is too large.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34f76-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="34f76-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90eab-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="90eab-111">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.MaxFileSize%2A>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.DiskSpaceExhaustedBehavior%2A>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener>
-- [<span data-ttu-id="34f76-112">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="34f76-112">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
-- [<span data-ttu-id="34f76-113">My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="34f76-113">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [<span data-ttu-id="90eab-112">My.Application.Log</span><span class="sxs-lookup"><span data-stu-id="90eab-112">My.Application.Log</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)
+- [<span data-ttu-id="90eab-113">My.Application.Info.DirectoryPath</span><span class="sxs-lookup"><span data-stu-id="90eab-113">My.Application.Info.DirectoryPath</span></span>](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)

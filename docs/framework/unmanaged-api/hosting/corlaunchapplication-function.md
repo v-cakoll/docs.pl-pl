@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c997ab107ba3ceb7773bc9235b9c9dcd4d97df8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231451"
 ---
-# <a name="corlaunchapplication-function"></a><span data-ttu-id="a5a02-102">CorLaunchApplication — Funkcja</span><span class="sxs-lookup"><span data-stu-id="a5a02-102">CorLaunchApplication Function</span></span>
-<span data-ttu-id="a5a02-103">Uruchamia aplikację w określonej ścieżce sieciowej, przy użyciu określonych manifestów i innych danych aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a5a02-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
+# <a name="corlaunchapplication-function"></a><span data-ttu-id="b427e-102">CorLaunchApplication — Funkcja</span><span class="sxs-lookup"><span data-stu-id="b427e-102">CorLaunchApplication Function</span></span>
+<span data-ttu-id="b427e-103">Uruchamia aplikację w określonej ścieżce sieciowej, przy użyciu określonych manifestów i innych danych aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b427e-103">Starts the application at the specified network path, using the specified manifests and other application data.</span></span>  
   
- <span data-ttu-id="a5a02-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a5a02-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="b427e-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b427e-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5a02-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="a5a02-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b427e-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="b427e-105">Syntax</span></span>  
   
 ```  
 HRESULT CorLaunchApplication (  
@@ -43,37 +43,37 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a5a02-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="a5a02-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b427e-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="b427e-106">Parameters</span></span>  
  `dwClickOnceHost`  
- <span data-ttu-id="a5a02-107">[in] Wartość [host_type —](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) wyliczenie, który określa typ hosta, który uruchamia aplikację.</span><span class="sxs-lookup"><span data-stu-id="a5a02-107">[in] A value of the [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
+ <span data-ttu-id="b427e-107">[in] Wartość [host_type —](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) wyliczenie, który określa typ hosta, który uruchamia aplikację.</span><span class="sxs-lookup"><span data-stu-id="b427e-107">[in] A value of the [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) enumeration that specifies the type of host that is launching the application.</span></span>  
   
  `pwzAppFullName`  
- <span data-ttu-id="a5a02-108">[in] Pełna nazwa aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="a5a02-108">[in] The full name of the application that is being launched.</span></span>  
+ <span data-ttu-id="b427e-108">[in] Pełna nazwa aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="b427e-108">[in] The full name of the application that is being launched.</span></span>  
   
  `dwManifestPaths`  
- <span data-ttu-id="a5a02-109">[in] Liczba ścieżek manifestu dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a5a02-109">[in] The number of manifest paths for the application.</span></span>  
+ <span data-ttu-id="b427e-109">[in] Liczba ścieżek manifestu dla aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b427e-109">[in] The number of manifest paths for the application.</span></span>  
   
  `ppwzManifestPaths`  
- <span data-ttu-id="a5a02-110">[in] Tablica ciągów, z których każdy określa ścieżkę do manifestu aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="a5a02-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
+ <span data-ttu-id="b427e-110">[in] Tablica ciągów, z których każdy określa ścieżkę do manifestu aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="b427e-110">[in] An array of strings, each of which specifies a path to a manifest for the application that is being launched.</span></span>  
   
  `dwActivationData`  
- <span data-ttu-id="a5a02-111">[in] Liczba elementów danych aktywacji dla aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="a5a02-111">[in] The number of activation data items for the application that is being launched.</span></span>  
+ <span data-ttu-id="b427e-111">[in] Liczba elementów danych aktywacji dla aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="b427e-111">[in] The number of activation data items for the application that is being launched.</span></span>  
   
  `ppwzActivationData`  
- <span data-ttu-id="a5a02-112">[in] Tablica ciągów, z których każdy jest element danych aktywacji dla aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="a5a02-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
+ <span data-ttu-id="b427e-112">[in] Tablica ciągów, z których każdy jest element danych aktywacji dla aplikacji, który jest on uruchamiany.</span><span class="sxs-lookup"><span data-stu-id="b427e-112">[in] An array of strings, each of which is an activation data item for the application that is being launched.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="a5a02-113">[out] Wskaźnik do informacji na temat procesu, w którym został załadowany w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="a5a02-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
+ <span data-ttu-id="b427e-113">[out] Wskaźnik do informacji na temat procesu, w którym został załadowany w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="b427e-113">[out] A pointer to information about the process in which the application has been loaded.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5a02-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a5a02-114">Requirements</span></span>  
- <span data-ttu-id="a5a02-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a5a02-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b427e-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b427e-114">Requirements</span></span>  
+ <span data-ttu-id="b427e-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b427e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5a02-116">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a5a02-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b427e-116">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b427e-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a5a02-117">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a5a02-117">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="b427e-117">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b427e-117">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="a5a02-118">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="a5a02-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="b427e-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b427e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a5a02-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a5a02-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b427e-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b427e-119">See also</span></span>
 
-- [<span data-ttu-id="a5a02-120">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="a5a02-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="b427e-120">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="b427e-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

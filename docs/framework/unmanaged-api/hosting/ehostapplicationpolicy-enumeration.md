@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3fb71686c3d708de7a2cc71f65a32c22e52f26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229430"
 ---
-# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="e0e4a-102">EHostApplicationPolicy — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="e0e4a-102">EHostApplicationPolicy Enumeration</span></span>
-<span data-ttu-id="e0e4a-103">Wskazuje, jak zmodyfikować [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) obiektu interfejsu.</span><span class="sxs-lookup"><span data-stu-id="e0e4a-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="e0e4a-104">To wyliczenie jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="e0e4a-104">This enumeration has been deprecated.</span></span>  
+# <a name="ehostapplicationpolicy-enumeration"></a><span data-ttu-id="d4dfb-102">EHostApplicationPolicy — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="d4dfb-102">EHostApplicationPolicy Enumeration</span></span>
+<span data-ttu-id="d4dfb-103">Wskazuje, jak zmodyfikować [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) obiektu interfejsu.</span><span class="sxs-lookup"><span data-stu-id="d4dfb-103">Indicates how to modify an [IHostAssemblyManager](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md) interface object.</span></span> <span data-ttu-id="d4dfb-104">To wyliczenie jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="d4dfb-104">This enumeration has been deprecated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e0e4a-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="e0e4a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4dfb-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d4dfb-105">Syntax</span></span>  
   
 ```  
 typedef enum _HostApplicationPolicy {  
@@ -34,15 +34,15 @@ typedef enum _HostApplicationPolicy {
 } EHostApplicationPolicy;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="e0e4a-106">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e0e4a-106">Requirements</span></span>  
- <span data-ttu-id="e0e4a-107">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e0e4a-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4dfb-106">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d4dfb-106">Requirements</span></span>  
+ <span data-ttu-id="d4dfb-107">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4dfb-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e0e4a-108">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e0e4a-108">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d4dfb-108">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d4dfb-108">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="e0e4a-109">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e0e4a-109">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="d4dfb-109">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d4dfb-109">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="e0e4a-110">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="e0e4a-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="d4dfb-110">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d4dfb-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e0e4a-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e0e4a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d4dfb-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d4dfb-111">See also</span></span>
 
-- [<span data-ttu-id="e0e4a-112">Hosting — Wyliczenia</span><span class="sxs-lookup"><span data-stu-id="e0e4a-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="d4dfb-112">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="d4dfb-112">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

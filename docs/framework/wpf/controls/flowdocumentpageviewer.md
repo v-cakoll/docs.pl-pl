@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
 ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207633"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="79a6e-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="79a6e-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="79a6e-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Formantu służy do wyświetlania <xref:System.Windows.Documents.FlowDocument> zawartości na podstawie na stronę.</span><span class="sxs-lookup"><span data-stu-id="79a6e-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="79a6e-104">Porównaj z <xref:System.Windows.Controls.FlowDocumentScrollViewer>, który przedstawia <xref:System.Windows.Documents.FlowDocument> zawartości w podglądzie z przewijaniem.</span><span class="sxs-lookup"><span data-stu-id="79a6e-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="68990-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="68990-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="68990-103"><xref:System.Windows.Controls.FlowDocumentPageViewer> Formantu służy do wyświetlania <xref:System.Windows.Documents.FlowDocument> zawartości na podstawie na stronę.</span><span class="sxs-lookup"><span data-stu-id="68990-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="68990-104">Porównaj z <xref:System.Windows.Controls.FlowDocumentScrollViewer>, który przedstawia <xref:System.Windows.Documents.FlowDocument> zawartości w podglądzie z przewijaniem.</span><span class="sxs-lookup"><span data-stu-id="68990-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79a6e-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="79a6e-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="68990-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="68990-105">See also</span></span>
 
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="79a6e-106">Przegląd Dokument przepływu</span><span class="sxs-lookup"><span data-stu-id="79a6e-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
-- [<span data-ttu-id="79a6e-107">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="79a6e-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
-- [<span data-ttu-id="79a6e-108">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="79a6e-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="68990-106">Przegląd dokumentu przepływu</span><span class="sxs-lookup"><span data-stu-id="68990-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="68990-107">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="68990-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="68990-108">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="68990-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 61a36ff23bf9deac25983f06387b2bbbfd49546b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133189"
 ---
-# <a name="icorprofilercallbackremotingclientsendingmessage-method"></a><span data-ttu-id="b37e9-102">ICorProfilerCallback::RemotingClientSendingMessage — Metoda</span><span class="sxs-lookup"><span data-stu-id="b37e9-102">ICorProfilerCallback::RemotingClientSendingMessage Method</span></span>
-<span data-ttu-id="b37e9-103">Powiadamia program profilujący, że klient wysyła żądanie do serwera.</span><span class="sxs-lookup"><span data-stu-id="b37e9-103">Notifies the profiler that the client is sending a request to the server.</span></span>  
+# <a name="icorprofilercallbackremotingclientsendingmessage-method"></a><span data-ttu-id="c3759-102">ICorProfilerCallback::RemotingClientSendingMessage — Metoda</span><span class="sxs-lookup"><span data-stu-id="c3759-102">ICorProfilerCallback::RemotingClientSendingMessage Method</span></span>
+<span data-ttu-id="c3759-103">Powiadamia program profilujący, że klient wysyła żądanie do serwera.</span><span class="sxs-lookup"><span data-stu-id="c3759-103">Notifies the profiler that the client is sending a request to the server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b37e9-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b37e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3759-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c3759-104">Syntax</span></span>  
   
 ```  
 HRESULT RemotingClientSendingMessage(  
@@ -35,30 +35,30 @@ HRESULT RemotingClientSendingMessage(
     [in] BOOL fIsAsync);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b37e9-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b37e9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3759-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c3759-105">Parameters</span></span>  
  `pCookie`  
- <span data-ttu-id="b37e9-106">[in] Wartość, która odpowiada za pomocą wartość podana w [icorprofilercallback::remotingserverreceivingmessage —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) w tych warunkach:</span><span class="sxs-lookup"><span data-stu-id="b37e9-106">[in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:</span></span>  
+ <span data-ttu-id="c3759-106">[in] Wartość, która odpowiada za pomocą wartość podana w [icorprofilercallback::remotingserverreceivingmessage —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) w tych warunkach:</span><span class="sxs-lookup"><span data-stu-id="c3759-106">[in] A value that corresponds with the value provided in [ICorProfilerCallback::RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) under these conditions:</span></span>  
   
--   <span data-ttu-id="b37e9-107">Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.</span><span class="sxs-lookup"><span data-stu-id="b37e9-107">Remoting GUID cookies are active.</span></span>  
+-   <span data-ttu-id="c3759-107">Pliki cookie identyfikatora GUID komunikacji zdalnej są aktywne.</span><span class="sxs-lookup"><span data-stu-id="c3759-107">Remoting GUID cookies are active.</span></span>  
   
--   <span data-ttu-id="b37e9-108">Kanał powiedzie się podczas przesyłania wiadomości.</span><span class="sxs-lookup"><span data-stu-id="b37e9-108">The channel succeeds in transmitting the message.</span></span>  
+-   <span data-ttu-id="c3759-108">Kanał powiedzie się podczas przesyłania wiadomości.</span><span class="sxs-lookup"><span data-stu-id="c3759-108">The channel succeeds in transmitting the message.</span></span>  
   
--   <span data-ttu-id="b37e9-109">Identyfikator GUID pliki cookie są aktywne na proces po stronie serwera.</span><span class="sxs-lookup"><span data-stu-id="b37e9-109">GUID cookies are active on the server-side process.</span></span>  
+-   <span data-ttu-id="c3759-109">Identyfikator GUID pliki cookie są aktywne na proces po stronie serwera.</span><span class="sxs-lookup"><span data-stu-id="c3759-109">GUID cookies are active on the server-side process.</span></span>  
   
- <span data-ttu-id="b37e9-110">Dzięki temu można łatwo parowanie wywołaniem funkcji zdalnych wywołań i Tworzenie stosu wywołań logicznych.</span><span class="sxs-lookup"><span data-stu-id="b37e9-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
+ <span data-ttu-id="c3759-110">Dzięki temu można łatwo parowanie wywołaniem funkcji zdalnych wywołań i Tworzenie stosu wywołań logicznych.</span><span class="sxs-lookup"><span data-stu-id="c3759-110">This allows easy pairing of remoting calls and the creation of a logical call stack.</span></span>  
   
  `fIsAsync`  
- <span data-ttu-id="b37e9-111">[in] Wartość, która jest `true` Jeśli wywołanie jest asynchroniczne; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="b37e9-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
+ <span data-ttu-id="c3759-111">[in] Wartość, która jest `true` Jeśli wywołanie jest asynchroniczne; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="c3759-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b37e9-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b37e9-112">Requirements</span></span>  
- <span data-ttu-id="b37e9-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b37e9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3759-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c3759-112">Requirements</span></span>  
+ <span data-ttu-id="c3759-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3759-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b37e9-114">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b37e9-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c3759-114">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c3759-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b37e9-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b37e9-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c3759-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3759-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b37e9-116">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="b37e9-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="c3759-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3759-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b37e9-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b37e9-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3759-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c3759-117">See also</span></span>
 
-- [<span data-ttu-id="b37e9-118">ICorProfilerCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="b37e9-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="c3759-118">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="c3759-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

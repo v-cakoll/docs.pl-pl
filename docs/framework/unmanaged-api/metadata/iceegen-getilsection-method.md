@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139155"
 ---
-# <a name="iceegengetilsection-method"></a><span data-ttu-id="377b5-102">ICeeGen::GetIlSection — Metoda</span><span class="sxs-lookup"><span data-stu-id="377b5-102">ICeeGen::GetIlSection Method</span></span>
-<span data-ttu-id="377b5-103">Pobiera części bazy kodu języka pośredniego przywoływane przez określone dojście.</span><span class="sxs-lookup"><span data-stu-id="377b5-103">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  
+# <a name="iceegengetilsection-method"></a><span data-ttu-id="b4708-102">ICeeGen::GetIlSection — Metoda</span><span class="sxs-lookup"><span data-stu-id="b4708-102">ICeeGen::GetIlSection Method</span></span>
+<span data-ttu-id="b4708-103">Pobiera części bazy kodu języka pośredniego przywoływane przez określone dojście.</span><span class="sxs-lookup"><span data-stu-id="b4708-103">Gets the section of the intermediate language code base referenced by the specified handle.</span></span>  
   
- <span data-ttu-id="377b5-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="377b5-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="b4708-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="b4708-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="377b5-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="377b5-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b4708-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="b4708-105">Syntax</span></span>  
   
 ```  
 HRESULT GetIlSection (  
@@ -37,19 +37,19 @@ HRESULT GetIlSection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="377b5-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="377b5-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b4708-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="b4708-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="377b5-107">[in] Dojście do sekcji, aby uzyskać.</span><span class="sxs-lookup"><span data-stu-id="377b5-107">[in] The handle to the section to get.</span></span>  
+ <span data-ttu-id="b4708-107">[in] Dojście do sekcji, aby uzyskać.</span><span class="sxs-lookup"><span data-stu-id="b4708-107">[in] The handle to the section to get.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="377b5-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="377b5-108">Requirements</span></span>  
- <span data-ttu-id="377b5-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="377b5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b4708-108">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b4708-108">Requirements</span></span>  
+ <span data-ttu-id="b4708-109">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b4708-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="377b5-110">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="377b5-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="b4708-110">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="b4708-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="377b5-111">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="377b5-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="b4708-111">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b4708-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="377b5-112">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="377b5-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="b4708-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b4708-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="377b5-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="377b5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b4708-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b4708-113">See also</span></span>
 
-- [<span data-ttu-id="377b5-114">ICeeGen — Interfejs</span><span class="sxs-lookup"><span data-stu-id="377b5-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="b4708-114">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="b4708-114">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

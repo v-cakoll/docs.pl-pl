@@ -8,30 +8,30 @@ helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
 ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315780"
 ---
-# <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a><span data-ttu-id="3efb4-102">Szacowanie funkcji zostało wyłączone, ponieważ poprzednie szacowanie przekroczyło limit czasu</span><span class="sxs-lookup"><span data-stu-id="3efb4-102">Function evaluation is disabled because a previous function evaluation timed out</span></span>
-<span data-ttu-id="3efb4-103">Szacowanie funkcji zostało wyłączone, ponieważ poprzednie szacowanie funkcji przekroczyło limit czasu. Aby ponownie włączyć funkcję oceny, krok ponownie, lub uruchom ponownie debugowanie.</span><span class="sxs-lookup"><span data-stu-id="3efb4-103">Function evaluation is disabled because a previous function evaluation timed out. To re-enable function evaluation, step again or restart debugging.</span></span>  
+# <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a><span data-ttu-id="eca06-102">Szacowanie funkcji zostało wyłączone, ponieważ poprzednie szacowanie przekroczyło limit czasu</span><span class="sxs-lookup"><span data-stu-id="eca06-102">Function evaluation is disabled because a previous function evaluation timed out</span></span>
+<span data-ttu-id="eca06-103">Szacowanie funkcji zostało wyłączone, ponieważ poprzednie szacowanie funkcji przekroczyło limit czasu. Aby ponownie włączyć funkcję oceny, krok ponownie, lub uruchom ponownie debugowanie.</span><span class="sxs-lookup"><span data-stu-id="eca06-103">Function evaluation is disabled because a previous function evaluation timed out. To re-enable function evaluation, step again or restart debugging.</span></span>  
   
- <span data-ttu-id="3efb4-104">W debugerze programu Visual Studio wyrażenie określa wywołania procedury, ale upłynął limit czasu oceny innego.</span><span class="sxs-lookup"><span data-stu-id="3efb4-104">In the Visual Studio debugger, an expression specifies a procedure call, but another evaluation has timed out.</span></span>  
+ <span data-ttu-id="eca06-104">W debugerze programu Visual Studio wyrażenie określa wywołania procedury, ale upłynął limit czasu oceny innego.</span><span class="sxs-lookup"><span data-stu-id="eca06-104">In the Visual Studio debugger, an expression specifies a procedure call, but another evaluation has timed out.</span></span>  
   
- <span data-ttu-id="3efb4-105">Możliwe przyczyny na przekroczenie limitu czasu wywołanie procedury to wejścia w nieskończoną pętlę lub *nieskończoną pętlę*.</span><span class="sxs-lookup"><span data-stu-id="3efb4-105">Possible causes for a procedure call to time out include an infinite loop or *endless loop*.</span></span> <span data-ttu-id="3efb4-106">Aby uzyskać więcej informacji, zobacz [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md).</span><span class="sxs-lookup"><span data-stu-id="3efb4-106">For more information, see [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md).</span></span>  
+ <span data-ttu-id="eca06-105">Możliwe przyczyny na przekroczenie limitu czasu wywołanie procedury to wejścia w nieskończoną pętlę lub *nieskończoną pętlę*.</span><span class="sxs-lookup"><span data-stu-id="eca06-105">Possible causes for a procedure call to time out include an infinite loop or *endless loop*.</span></span> <span data-ttu-id="eca06-106">Aby uzyskać więcej informacji, zobacz [dla... Następna instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md).</span><span class="sxs-lookup"><span data-stu-id="eca06-106">For more information, see [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md).</span></span>  
   
- <span data-ttu-id="3efb4-107">Jest przypadkiem szczególnym wejścia w nieskończoną pętlę *rekursji*.</span><span class="sxs-lookup"><span data-stu-id="3efb4-107">A special case of an infinite loop is *recursion*.</span></span> <span data-ttu-id="3efb4-108">Aby uzyskać więcej informacji, zobacz [procedury rekurencyjne](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="3efb4-108">For more information, see [Recursive Procedures](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).</span></span>  
+ <span data-ttu-id="eca06-107">Jest przypadkiem szczególnym wejścia w nieskończoną pętlę *rekursji*.</span><span class="sxs-lookup"><span data-stu-id="eca06-107">A special case of an infinite loop is *recursion*.</span></span> <span data-ttu-id="eca06-108">Aby uzyskać więcej informacji, zobacz [procedury rekurencyjne](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).</span><span class="sxs-lookup"><span data-stu-id="eca06-108">For more information, see [Recursive Procedures](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md).</span></span>  
   
- <span data-ttu-id="3efb4-109">**Identyfikator błędu:** BC30957</span><span class="sxs-lookup"><span data-stu-id="3efb4-109">**Error ID:** BC30957</span></span>  
+ <span data-ttu-id="eca06-109">**Identyfikator błędu:** BC30957</span><span class="sxs-lookup"><span data-stu-id="eca06-109">**Error ID:** BC30957</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="3efb4-110">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="3efb4-110">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="eca06-110">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="eca06-110">To correct this error</span></span>  
   
-1. <span data-ttu-id="3efb4-111">Jeśli to możliwe Określ poprzednie szacowanie funkcji zostało i co spowodowało przekroczenie limitu czasu. W przeciwnym razie ten błąd może wystąpić ponownie.</span><span class="sxs-lookup"><span data-stu-id="3efb4-111">If possible, determine what the previous function evaluation was and what caused it to time out. Otherwise, you might encounter this error again.</span></span>  
+1. <span data-ttu-id="eca06-111">Jeśli to możliwe Określ poprzednie szacowanie funkcji zostało i co spowodowało przekroczenie limitu czasu. W przeciwnym razie ten błąd może wystąpić ponownie.</span><span class="sxs-lookup"><span data-stu-id="eca06-111">If possible, determine what the previous function evaluation was and what caused it to time out. Otherwise, you might encounter this error again.</span></span>  
   
-2. <span data-ttu-id="3efb4-112">Krok debuger ponownie, lub przerwać i uruchom ponownie debugowanie.</span><span class="sxs-lookup"><span data-stu-id="3efb4-112">Either step the debugger again, or terminate and restart debugging.</span></span>  
+2. <span data-ttu-id="eca06-112">Krok debuger ponownie, lub przerwać i uruchom ponownie debugowanie.</span><span class="sxs-lookup"><span data-stu-id="eca06-112">Either step the debugger again, or terminate and restart debugging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3efb4-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3efb4-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eca06-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="eca06-113">See also</span></span>
 
-- [<span data-ttu-id="3efb4-114">Debugowanie w Visual Studio</span><span class="sxs-lookup"><span data-stu-id="3efb4-114">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)
-- [<span data-ttu-id="3efb4-115">Nawigowanie po kodzie za pomocą debugera</span><span class="sxs-lookup"><span data-stu-id="3efb4-115">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)
+- [<span data-ttu-id="eca06-114">Debugowanie w programie Visual Studio</span><span class="sxs-lookup"><span data-stu-id="eca06-114">Debugging in Visual Studio</span></span>](/visualstudio/debugger/debugging-in-visual-studio)
+- [<span data-ttu-id="eca06-115">Nawigowanie po kodzie za pomocą debugera</span><span class="sxs-lookup"><span data-stu-id="eca06-115">Navigating through Code with the Debugger</span></span>](/visualstudio/debugger/navigating-through-code-with-the-debugger)

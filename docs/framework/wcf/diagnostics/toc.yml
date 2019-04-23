@@ -1,38 +1,31 @@
-items:
 - name: Administracja i diagnostyka
   href: index.md
 - name: Rejestrowanie komunikatów
   href: message-logging.md
   items:
-  - name: Przegląd przepływu komunikatu
-    href: message-flow-overview.md
-  - name: Konfigurowanie rejestrowania komunikatów
-    href: configuring-message-logging.md
-  - name: Wyświetlanie dzienników komunikatów
-    href: viewing-message-logs.md
-  - name: Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
-    href: security-concerns-for-message-logging.md
-  - name: Śledzenie
-    href: tracing/
-  - name: Śledzenie analityczne za pomocą funkcji ETW
-    href: etw/
-  - name: Liczniki wydajności
-    href: performance-counters/
-  - name: Rejestrowanie zdarzeń
-    href: event-logging/
-  - name: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
-    href: wmi/
-  - name: Informacje o wyjątkach
-    href: exceptions-reference/
+    - name: Przegląd przepływu komunikatu
+      href: message-flow-overview.md
+    - name: Konfigurowanie rejestrowania komunikatów
+      href: configuring-message-logging.md
+    - name: Wyświetlanie dzienników komunikatów
+      href: viewing-message-logs.md
+    - name: Uwagi dotyczące zabezpieczeń rejestrowania komunikatów
+      href: security-concerns-for-message-logging.md
+    - name: Śledzenie
+      href: tracing/
+    - name: Śledzenie analityczne za pomocą funkcji ETW
+      href: etw/
+    - name: Liczniki wydajności
+      href: performance-counters/
+    - name: Rejestrowanie zdarzeń
+      href: event-logging/
+    - name: Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
+      href: wmi/
+    - name: Informacje o wyjątkach
+      href: exceptions-reference/
 - name: Konfigurowanie własnej aplikacji
   href: configuring-your-application.md
 - name: Narzędzie rejestracji modelu ServiceModel
   href: servicemodel-registration-tool.md
 - name: Wdrażanie usług
   href: deploying-services.md
-ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472065"

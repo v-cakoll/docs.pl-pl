@@ -1,39 +1,32 @@
-items:
 - name: Niebezpieczny kod i wskaźniki
   href: index.md
   items:
-  - name: Bufory o ustalonym rozmiarze
-    href: fixed-size-buffers.md
-  - name: Typy wskaźnika
-    href: pointer-types.md
-    items:
-    - name: Konwersje wskaźników
-      href: pointer-conversions.md
-    - name: Wyrażenia wskaźników
-      href: pointer-expressions.md
+    - name: Bufory o ustalonym rozmiarze
+      href: fixed-size-buffers.md
+    - name: Typy wskaźnika
+      href: pointer-types.md
       items:
-      - name: 'Instrukcje: uzyskiwanie wartości zmiennej wskaźnikowej'
-        href: how-to-obtain-the-value-of-a-pointer-variable.md
-      - name: 'Instrukcje: uzyskiwanie adresu zmiennej'
-        href: how-to-obtain-the-address-of-a-variable.md
-      - name: 'Instrukcje: uzyskiwanie dostępu do elementu członkowskiego za pomocą wskaźnika'
-        href: how-to-access-a-member-with-a-pointer.md
-      - name: 'Instrukcje: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika'
-        href: how-to-access-an-array-element-with-a-pointer.md
-      - name: Manipulowanie wskaźnikami
-        href: manipulating-pointers.md
-        items:
-        - name: 'Instrukcje: inkrementacja i dekrementacja wskaźników'
-          href: how-to-increment-and-decrement-pointers.md
-        - name: Operacje arytmetyczne na wskaźnikach
-          href: arithmetic-operations-on-pointers.md
-        - name: Porównanie wskaźników
-          href: pointer-comparison.md
-    - name: 'Instrukcje: używanie wskaźników do kopiowania tablicy bajtów'
-      href: how-to-use-pointers-to-copy-an-array-of-bytes.md
-ms.openlocfilehash: 094fa68222bcb4d92ab19a57373789a8234d2606
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471769"
+        - name: Konwersje wskaźników
+          href: pointer-conversions.md
+        - name: Wyrażenia wskaźników
+          href: pointer-expressions.md
+          items:
+            - name: 'Instrukcje: uzyskiwanie wartości zmiennej wskaźnikowej'
+              href: how-to-obtain-the-value-of-a-pointer-variable.md
+            - name: 'Instrukcje: uzyskiwanie adresu zmiennej'
+              href: how-to-obtain-the-address-of-a-variable.md
+            - name: 'Instrukcje: uzyskiwanie dostępu do elementu członkowskiego za pomocą wskaźnika'
+              href: how-to-access-a-member-with-a-pointer.md
+            - name: 'Instrukcje: uzyskiwanie dostępu do elementu tablicy za pomocą wskaźnika'
+              href: how-to-access-an-array-element-with-a-pointer.md
+            - name: Manipulowanie wskaźnikami
+              href: manipulating-pointers.md
+              items:
+                - name: 'Instrukcje: inkrementacja i dekrementacja wskaźników'
+                  href: how-to-increment-and-decrement-pointers.md
+                - name: Operacje arytmetyczne na wskaźnikach
+                  href: arithmetic-operations-on-pointers.md
+                - name: Porównanie wskaźników
+                  href: pointer-comparison.md
+        - name: 'Instrukcje: używanie wskaźników do kopiowania tablicy bajtów'
+          href: how-to-use-pointers-to-copy-an-array-of-bytes.md

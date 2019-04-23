@@ -1,30 +1,23 @@
-items:
 - name: LINQ w Visual Basic
   href: index.md
   items:
-  - name: Wprowadzenie do LINQ
-    href: introduction-to-linq.md
-  - name: 'Instrukcje: Wysyłanie zapytania do bazy danych za pomocą LINQ'
-    href: how-to-query-a-database-by-using-linq.md
-  - name: 'Instrukcje: Wywoływanie procedury składowanej za pomocą LINQ'
-    href: how-to-call-a-stored-procedure-by-using-linq.md
-  - name: 'Instrukcje: Modyfikowanie danych w bazie danych za pomocą LINQ'
-    href: how-to-modify-data-in-a-database-by-using-linq.md
-  - name: 'Instrukcje: Łączenie danych w LINQ za pomocą sprzężeń'
-    href: how-to-combine-data-with-linq-by-using-joins.md
-  - name: 'Instrukcje: Sortowanie wyników zapytania za pomocą LINQ'
-    href: how-to-sort-query-results-by-using-linq.md
-  - name: 'Instrukcje: Filtrowanie wyników zapytania za pomocą LINQ'
-    href: how-to-filter-query-results-by-using-linq.md
-  - name: 'Instrukcje: Zliczanie, sumowanie, lub uśrednianie danych za pomocą LINQ'
-    href: how-to-count-sum-or-average-data-by-using-linq.md
-  - name: 'Instrukcje: Znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania za pomocą LINQ'
-    href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
-  - name: 'Instrukcje: Zwracanie wyniku zapytania LINQ jako określonego typu'
-    href: how-to-return-a-linq-query-result-as-a-specific-type.md
-ms.openlocfilehash: 0d56e6e5c147b71bbd4aa35bab93751b15e63a8d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58472061"
+    - name: Wprowadzenie do LINQ
+      href: introduction-to-linq.md
+    - name: 'Instrukcje: Wysyłanie zapytania do bazy danych za pomocą LINQ'
+      href: how-to-query-a-database-by-using-linq.md
+    - name: 'Instrukcje: Wywoływanie procedury składowanej za pomocą LINQ'
+      href: how-to-call-a-stored-procedure-by-using-linq.md
+    - name: 'Instrukcje: Modyfikowanie danych w bazie danych za pomocą LINQ'
+      href: how-to-modify-data-in-a-database-by-using-linq.md
+    - name: 'Instrukcje: Łączenie danych w LINQ za pomocą sprzężeń'
+      href: how-to-combine-data-with-linq-by-using-joins.md
+    - name: 'Instrukcje: Sortowanie wyników zapytania za pomocą LINQ'
+      href: how-to-sort-query-results-by-using-linq.md
+    - name: 'Instrukcje: Filtrowanie wyników zapytania za pomocą LINQ'
+      href: how-to-filter-query-results-by-using-linq.md
+    - name: 'Instrukcje: Zliczanie, sumowanie, lub uśrednianie danych za pomocą LINQ'
+      href: how-to-count-sum-or-average-data-by-using-linq.md
+    - name: 'Instrukcje: Znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania za pomocą LINQ'
+      href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
+    - name: 'Instrukcje: Zwracanie wyniku zapytania LINQ jako określonego typu'
+      href: how-to-return-a-linq-query-result-as-a-specific-type.md

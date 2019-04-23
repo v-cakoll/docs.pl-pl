@@ -1,79 +1,72 @@
-items:
 - name: Zabezpieczenia
   href: index.md
   items:
-  - name: Główne pojęcia dotyczące zabezpieczeń
-    href: key-security-concepts.md
-  - name: Zabezpieczenia oparte na rolach
-    href: role-based-security.md
-    items:
-    - name: Obiekty główne i obiekty tożsamości
-      href: principal-and-identity-objects.md
-    - name: 'Instrukcje: Tworzenie obiektu WindowsPrincipal'
-      href: how-to-create-a-windowsprincipal-object.md
-    - name: 'Instrukcje: Tworzenie obiektów GenericPrincipal i GenericIdentity'
-      href: how-to-create-genericprincipal-and-genericidentity-objects.md
-    - name: Zastępowanie obiektu głównego
-      href: replacing-a-principal-object.md
-    - name: Personifikacja i przywracanie
-      href: impersonating-and-reverting.md
-  - name: Model kryptografii
-    href: cryptography-model.md
-    items:
-    - name: Usługi kryptograficzne
-      href: cryptographic-services.md
-    - name: Generowanie kluczy szyfrowania i odszyfrowywania
-      href: generating-keys-for-encryption-and-decryption.md
-    - name: 'Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy'
-      href: how-to-store-asymmetric-keys-in-a-key-container.md
-    - name: Szyfrowanie danych
-      href: encrypting-data.md
-    - name: Odszyfrowywanie danych
-      href: decrypting-data.md
-    - name: Podpisy kryptograficzne
-      href: cryptographic-signatures.md
-    - name: Zapewnianie integralności danych za pomocą wartości skrótu
-      href: ensuring-data-integrity-with-hash-codes.md
-    - name: Tworzenie schematu kryptograficznego
-      href: creating-a-cryptographic-scheme.md
-    - name: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych'
-      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-    - name: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych'
-      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-    - name: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy asymetrycznych'
-      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-    - name: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych'
-      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-    - name: 'Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509'
-      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-    - name: 'Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509'
-      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-    - name: 'Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
-      href: how-to-sign-xml-documents-with-digital-signatures.md
-    - name: 'Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML'
-      href: how-to-verify-the-digital-signatures-of-xml-documents.md
-    - name: 'Instrukcje: Stosowanie ochrony danych'
-      href: how-to-use-data-protection.md
-    - name: 'Instrukcje: Dostęp do sprzętowych urządzeń szyfrujących'
-      href: how-to-access-hardware-encryption-devices.md
-    - name: 'Przewodnik: Tworzenie aplikacji kryptograficznej'
-      href: walkthrough-creating-a-cryptographic-application.md
-  - name: Wytyczne dotyczące bezpiecznego programowania
-    href: secure-coding-guidelines.md
-    items:
-    - name: Zabezpieczanie danych o stanie
-      href: securing-state-data.md
-    - name: Zabezpieczenia i dane użytkownika
-      href: security-and-user-input.md
-    - name: Zabezpieczenia i sytuacja wyścigu
-      href: security-and-race-conditions.md
-    - name: Zabezpieczenia i generowanie kodu na bieżąco
-      href: security-and-on-the-fly-code-generation.md
-    - name: Luki w zabezpieczeniach chronometrażu z odszyfrowywaniem symetrycznym w trybie CBC przy użyciu uzupełnienia
-      href: vulnerabilities-cbc-mode.md
-ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471892"
+    - name: Główne pojęcia dotyczące zabezpieczeń
+      href: key-security-concepts.md
+    - name: Zabezpieczenia oparte na rolach
+      href: role-based-security.md
+      items:
+        - name: Obiekty główne i obiekty tożsamości
+          href: principal-and-identity-objects.md
+        - name: 'Instrukcje: Tworzenie obiektu WindowsPrincipal'
+          href: how-to-create-a-windowsprincipal-object.md
+        - name: 'Instrukcje: Tworzenie obiektów GenericPrincipal i GenericIdentity'
+          href: how-to-create-genericprincipal-and-genericidentity-objects.md
+        - name: Zastępowanie obiektu głównego
+          href: replacing-a-principal-object.md
+        - name: Personifikacja i przywracanie
+          href: impersonating-and-reverting.md
+    - name: Model kryptografii
+      href: cryptography-model.md
+      items:
+        - name: Usługi kryptograficzne
+          href: cryptographic-services.md
+        - name: Generowanie kluczy szyfrowania i odszyfrowywania
+          href: generating-keys-for-encryption-and-decryption.md
+        - name: 'Instrukcje: Przechowywanie kluczy asymetrycznych w kontenerze kluczy'
+          href: how-to-store-asymmetric-keys-in-a-key-container.md
+        - name: Szyfrowanie danych
+          href: encrypting-data.md
+        - name: Odszyfrowywanie danych
+          href: decrypting-data.md
+        - name: Podpisy kryptograficzne
+          href: cryptographic-signatures.md
+        - name: Zapewnianie integralności danych za pomocą wartości skrótu
+          href: ensuring-data-integrity-with-hash-codes.md
+        - name: Tworzenie schematu kryptograficznego
+          href: creating-a-cryptographic-scheme.md
+        - name: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy symetrycznych'
+          href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+        - name: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy symetrycznych'
+          href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+        - name: 'Instrukcje: Szyfrowanie elementów XML przy użyciu kluczy asymetrycznych'
+          href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+        - name: 'Instrukcje: Odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych'
+          href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+        - name: 'Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509'
+          href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+        - name: 'Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X.509'
+          href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+        - name: 'Instrukcje: Podpisywanie dokumentów XML za pomocą podpisów cyfrowych'
+          href: how-to-sign-xml-documents-with-digital-signatures.md
+        - name: 'Instrukcje: Sprawdzanie podpisów cyfrowych w dokumentach XML'
+          href: how-to-verify-the-digital-signatures-of-xml-documents.md
+        - name: 'Instrukcje: Stosowanie ochrony danych'
+          href: how-to-use-data-protection.md
+        - name: 'Instrukcje: Dostęp do sprzętowych urządzeń szyfrujących'
+          href: how-to-access-hardware-encryption-devices.md
+        - name: 'Przewodnik: Tworzenie aplikacji kryptograficznej'
+          href: walkthrough-creating-a-cryptographic-application.md
+    - name: Wytyczne dotyczące bezpiecznego programowania
+      href: secure-coding-guidelines.md
+      items:
+        - name: Zabezpieczanie danych o stanie
+          href: securing-state-data.md
+        - name: Zabezpieczenia i dane użytkownika
+          href: security-and-user-input.md
+        - name: Zabezpieczenia i sytuacja wyścigu
+          href: security-and-race-conditions.md
+        - name: Zabezpieczenia i generowanie kodu na bieżąco
+          href: security-and-on-the-fly-code-generation.md
+        - name: Luki w zabezpieczeniach chronometrażu z odszyfrowywaniem symetrycznym w trybie CBC przy użyciu uzupełnienia
+          href: vulnerabilities-cbc-mode.md

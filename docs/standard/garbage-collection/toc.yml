@@ -1,38 +1,31 @@
-items:
 - name: Zarządzanie pamięcią i odzyskiwanie pamięci
   href: memory-management-and-gc.md
   items:
-  - name: Oczyszczanie zasobów niezarządzanych
-    href: unmanaged.md
-    items:
-    - name: Implementacja metody Dispose
-      href: implementing-dispose.md
-    - name: Używanie obiektów implementujących interfejs IDisposable
-      href: using-objects.md
-  - name: Odzyskiwanie pamięci
-    href: index.md
-    items:
-    - name: Podstawy dotyczące wyrzucania elementów bezużytecznych
-      href: fundamentals.md
-    - name: Sterta obiektów wielkich
-      href: large-object-heap.md
-    - name: Odzyskiwanie pamięci i wydajność
-      href: performance.md
-    - name: Wywołane kolekcje
-      href: induced.md
-    - name: Tryby opóźnienia
-      href: latency.md
-    - name: Optymalizacja udostępnionej usługi hostingu sieci Web
-      href: optimization-for-shared-web-hosting.md
-    - name: Powiadomienia dotyczące odzyskiwania pamięci
-      href: notifications.md
-    - name: Monitorowanie zasobów domen aplikacji
-      href: app-domain-resource-monitoring.md
-    - name: Słabe odwołania
-      href: weak-references.md
-ms.openlocfilehash: ad426c53df40be9a5222bd0e5a6292d8f1ec8e30
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471997"
+    - name: Oczyszczanie zasobów niezarządzanych
+      href: unmanaged.md
+      items:
+        - name: Implementacja metody Dispose
+          href: implementing-dispose.md
+        - name: Używanie obiektów implementujących interfejs IDisposable
+          href: using-objects.md
+    - name: Odzyskiwanie pamięci
+      href: index.md
+      items:
+        - name: Podstawy dotyczące wyrzucania elementów bezużytecznych
+          href: fundamentals.md
+        - name: Sterta obiektów wielkich
+          href: large-object-heap.md
+        - name: Odzyskiwanie pamięci i wydajność
+          href: performance.md
+        - name: Wywołane kolekcje
+          href: induced.md
+        - name: Tryby opóźnienia
+          href: latency.md
+        - name: Optymalizacja udostępnionej usługi hostingu sieci Web
+          href: optimization-for-shared-web-hosting.md
+        - name: Powiadomienia dotyczące odzyskiwania pamięci
+          href: notifications.md
+        - name: Monitorowanie zasobów domen aplikacji
+          href: app-domain-resource-monitoring.md
+        - name: Słabe odwołania
+          href: weak-references.md

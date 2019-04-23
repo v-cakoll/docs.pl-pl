@@ -1,22 +1,15 @@
-items:
 - name: Tworzenie aplikacji dla wielu platform
   href: index.md
   items:
-  - name: Biblioteka klas przenośnych
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: Korzystanie z biblioteki klas przenośnych z modelem MVVM
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: Przekazywanie adresu URI do środowiska wykonawczego systemu Windows
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) — Metoda
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471813"
+    - name: Biblioteka klas przenośnych
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: Korzystanie z biblioteki klas przenośnych z modelem MVVM
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: Przekazywanie adresu URI do środowiska wykonawczego systemu Windows
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) — Metoda
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

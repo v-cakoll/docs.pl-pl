@@ -1,510 +1,503 @@
-items:
 - name: Formanty
   href: index.md
   items:
-  - name: Kontrolki według kategorii
-    href: controls-by-category.md
-  - name: Model zawartości WPF
-    href: wpf-content-model.md
-  - name: Biblioteka formantów
-    href: control-library.md
-    items:
-    - name: Obramowanie
-      href: border.md
+    - name: Kontrolki według kategorii
+      href: controls-by-category.md
+    - name: Model zawartości WPF
+      href: wpf-content-model.md
+    - name: Biblioteka formantów
+      href: control-library.md
       items:
-      - name: Animowanie wartości BorderThickness
-        href: how-to-animate-a-borderthickness-value.md
-    - name: BulletDecorator
-      href: bulletdecorator.md
-    - name: Przycisk
-      href: button.md
+        - name: Obramowanie
+          href: border.md
+          items:
+            - name: Animowanie wartości BorderThickness
+              href: how-to-animate-a-borderthickness-value.md
+        - name: BulletDecorator
+          href: bulletdecorator.md
+        - name: Przycisk
+          href: button.md
+          items:
+            - name: Tworzenie przycisku mającego obraz
+              href: how-to-create-a-button-that-has-an-image.md
+        - name: Kalendarz
+          href: calendar.md
+        - name: Kanwa
+          href: canvas.md
+          items:
+            - name: — Tematy porad
+              href: canvas-how-to-topics.md
+              items:
+                - name: Zawijanie obramowania wokół zawartości kanwy
+                  href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
+                - name: Pobieranie lub ustawianie właściwości ustawienia kanwy
+                  href: how-to-get-or-set-canvas-positioning-properties.md
+                - name: Tworzenie i używanie kanwy
+                  href: how-to-create-and-use-a-canvas.md
+                - name: Używanie załączonych właściwości kanwy do ustawiania położenia elementów podrzędnych
+                  href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
+                - name: Zmienianie rozmiaru kanwy przy użyciu kciuka
+                  href: how-to-resize-a-canvas-by-using-a-thumb.md
+        - name: CheckBox
+          href: checkbox.md
+        - name: ComboBox
+          href: combobox.md
+        - name: ContextMenu
+          href: contextmenu.md
+          items:
+            - name: ContextMenu — Przegląd
+              href: contextmenu-overview.md
+        - name: DataGrid
+          href: datagrid.md
+          items:
+            - name: Domyślne zachowanie myszy i klawiatury w formancie DataGrid
+              href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
+            - name: 'Instrukcje: dodawanie szczegółów wiersza do kontrolki DataGrid'
+              href: how-to-add-row-details-to-a-datagrid-control.md
+            - name: 'Instrukcje: grupowanie, sortowanie i filtrowanie danych w kontrolce DataGrid'
+              href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
+            - name: 'Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid'
+              href: how-to-implement-validation-with-the-datagrid-control.md
+            - name: 'Przewodnik: wyświetlanie danych z serwera bazy danych SQL w kontrolce DataGrid'
+              href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
+            - name: Opcje ustalania rozmiaru w formancie DataGrid
+              href: sizing-options-in-the-datagrid-control.md
+        - name: DatePicker
+          href: datepicker.md
+        - name: DockPanel
+          href: dockpanel.md
+          items:
+            - name: — Tematy porad
+              href: dockpanel-how-to-topics.md
+              items:
+                - name: Pobieranie lub ustawianie wartości dokowania
+                  href: how-to-get-or-set-a-dock-value.md
+                - name: Tworzenie elementu DockPanel
+                  href: how-to-create-a-dockpanel.md
+                - name: Rozdzielanie miejsca przy użyciu elementu DockPanel
+                  href: how-to-partition-space-by-using-the-dockpanel-element.md
+        - name: DocumentViewer
+          href: documentviewer.md
+        - name: Ekspander
+          href: expander.md
+          items:
+            - name: Przegląd Ekspander
+              href: expander-overview.md
+            - name: — Tematy porad
+              href: expander-how-to-topics.md
+              items:
+                - name: Tworzenie ekspandera za pomocą kontrolki ScrollViewer
+                  href: how-to-create-an-expander-with-a-scrollviewer.md
+        - name: FlowDocumentPageViewer
+          href: flowdocumentpageviewer.md
+        - name: FlowDocumentReader
+          href: flowdocumentreader.md
+        - name: FlowDocumentScrollViewer
+          href: flowdocumentscrollviewer.md
+        - name: Klatka
+          href: frame.md
+        - name: Siatka
+          href: grid.md
+          items:
+            - name: — Tematy porad
+              href: grid-how-to-topics.md
+              items:
+                - name: Tworzenie standardowego okna dialogowego interfejsu użytkownika przy użyciu siatki
+                  href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
+                - name: Tworzenie siatki złożonej
+                  href: how-to-create-a-complex-grid.md
+                - name: Tworzenie elementu siatki
+                  href: how-to-create-a-grid-element.md
+                - name: Tworzenie i używanie obiektu GridLengthConverter
+                  href: how-to-create-and-use-a-gridlengthconverter-object.md
+                - name: Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections
+                  href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
+                - name: Ustawianie położenia elementów podrzędnych siatki
+                  href: how-to-position-the-child-elements-of-a-grid.md
+                - name: Udostępnianie właściwości ustalania rozmiaru między siatkami
+                  href: how-to-share-sizing-properties-between-grids.md
+        - name: GridSplitter
+          href: gridsplitter.md
+          items:
+            - name: — Tematy porad
+              href: gridsplitter-how-to-topics.md
+              items:
+                - name: Zmienianie rozmiaru wierszy przy użyciu GridSplitter
+                  href: how-to-resize-rows-with-a-gridsplitter.md
+                - name: Zmienianie rozmiaru kolumn przy użyciu GridSplitter
+                  href: how-to-resize-columns-with-a-gridsplitter.md
+                - name: 'Upewnianie się, że kontrolka GridSplitter jest widoczna'
+                  href: how-to-make-sure-that-a-gridsplitter-is-visible.md
+        - name: GroupBox
+          href: groupbox.md
+          items:
+            - name: Definiowanie szablonu GroupBox
+              href: how-to-define-a-groupbox-template.md
+        - name: Obraz
+          href: image.md
+          items:
+            - name: — Tematy porad
+              href: image-how-to-topics.md
+              items:
+                - name: Używanie elementu obrazu
+                  href: how-to-use-the-image-element.md
+                - name: Konwertowanie obrazu na odcienie szarości
+                  href: how-to-convert-an-image-to-greyscale.md
+                - name: Przycinanie obrazu
+                  href: how-to-crop-an-image.md
+                - name: Obracanie obrazu
+                  href: how-to-rotate-an-image.md
+        - name: Etykieta
+          href: label.md
+          items:
+            - name: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu
+              href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
+        - name: ListBox
+          href: listbox.md
+          items:
+            - name: — Tematy porad
+              href: listbox-how-to-topics.md
+              items:
+                - name: Powiązywanie ListBox z danymi
+                  href: how-to-bind-a-listbox-to-data.md
+                - name: Pobieranie elementu ListBoxItem
+                  href: how-to-get-a-listboxitem.md
+                - name: Poprawianie wydajności przesuwania w kontrolce ListBox
+                  href: how-to-improve-the-scrolling-performance-of-a-listbox.md
+        - name: ListView
+          href: listview.md
+          items:
+            - name: Omówienia
+              href: listview-overviews.md
+              items:
+                - name: ListView — Przegląd
+                  href: listview-overview.md
+                - name: GridView — Przegląd
+                  href: gridview-overview.md
+                - name: Przegląd Style nagłówka kolumn i szablonów GridView
+                  href: gridview-column-header-styles-and-templates-overview.md
+            - name: — Tematy porad
+              href: listview-how-to-topics.md
+              items:
+                - name: Sortowanie kolumny GridView po kliknięciu nagłówka
+                  href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
+                - name: Tworzenie niestandardowego trybu widoku dla kontrolki ListView
+                  href: how-to-create-a-custom-view-mode-for-a-listview.md
+                - name: Używanie szablonów do nadawania stylu kontrolce ListView korzystającej z GridView
+                  href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
+                - name: Tworzenie stylu dla przeciąganego nagłówka kolumny kontrolki GridView
+                  href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
+                - name: Wyświetlanie zawartości kontrolki ListView przy użyciu kontrolki GridView
+                  href: how-to-display-listview-contents-by-using-a-gridview.md
+                - name: Używanie wyzwalaczy do nadawania stylu wybranym elementom w kontrolce ListView
+                  href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
+                - name: Tworzenie kontrolki ListViewItems za pomocą kontrolki CheckBox
+                  href: how-to-create-listviewitems-with-a-checkbox.md
+                - name: Wyświetlanie danych za pomocą GridViewRowPresenter
+                  href: how-to-display-data-by-using-gridviewrowpresenter.md
+                - name: Grupowanie elementów w kontrolce ListView z implementacją GridView
+                  href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
+                - name: Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView
+                  href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
+                - name: Zmienianie wyrównania w poziomie kolumny w kontrolce ListView
+                  href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
+                - name: Obsługiwanie zdarzenia MouseDoubleClick dla każdego elementu w kontrolce ListView
+                  href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
+        - name: Menu
+          href: menu.md
+          items:
+            - name: Przegląd Menu
+              href: menu-overview.md
+        - name: Panel
+          href: panel.md
+          items:
+            - name: Przegląd Panele
+              href: panels-overview.md
+            - name: — Tematy porad
+              href: panel-how-to-topics.md
+              items:
+                - name: Tworzenie niestandardowego elementu panelu
+                  href: how-to-create-a-custom-panel-element.md
+                - name: Zastępowanie metody OnRender panelu
+                  href: how-to-override-the-panel-onrender-method.md
+                - name: Ustawianie właściwości wysokości elementu
+                  href: how-to-set-the-height-properties-of-an-element.md
+                - name: Ustawianie właściwości szerokości elementu
+                  href: how-to-set-the-width-properties-of-an-element.md
+        - name: PasswordBox
+          href: passwordbox.md
+        - name: Okno podręczne
+          href: popup.md
+          items:
+            - name: Przegląd Okna podręczne
+              href: popup-overview.md
+            - name: Zachowanie położenia okna podręcznego
+              href: popup-placement-behavior.md
+            - name: — Tematy porad
+              href: popup-how-to-topics.md
+              items:
+                - name: Animowanie okna podręcznego
+                  href: how-to-animate-a-popup.md
+                - name: Określanie niestandardowego położenia okna podręcznego
+                  href: how-to-specify-a-custom-popup-position.md
+        - name: ProgressBar
+          href: progressbar.md
+        - name: PrintDialog
+          href: printdialog.md
+        - name: RadioButton
+          href: radiobutton.md
+        - name: RepeatButton
+          href: repeatbutton.md
+        - name: RichTextBox
+          href: richtextbox.md
+          items:
+            - name: RichTextBox — Przegląd
+              href: richtextbox-overview.md
+            - name: — Tematy porad
+              href: richtextbox-how-to-topics.md
+              items:
+                - name: Wyodrębnianie zawartości tekstu z kontrolki RichTextBox
+                  href: how-to-extract-the-text-content-from-a-richtextbox.md
+                - name: Zmień wybór RichTextBox za pomocą programowania
+                  href: change-selection-in-a-richtextbox-programmatically.md
+                - name: 'Zapisz, ładuj i drukuj zawartość RichTextBox'
+                  href: how-to-save-load-and-print-richtextbox-content.md
+                - name: Ustawianie położenia menu kontekstowego w kontrolce RichTextBox
+                  href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
+        - name: ScrollBar
+          href: scrollbar.md
+          items:
+            - name: Dostosowywanie rozmiaru miniatury na pasku ScrollBar
+              href: how-to-customize-the-thumb-size-on-a-scrollbar.md
+        - name: ScrollViewer
+          href: scrollviewer.md
+          items:
+            - name: ScrollViewer — Przegląd
+              href: scrollviewer-overview.md
+            - name: — Tematy porad
+              href: scrollviewer-how-to-topics.md
+              items:
+                - name: Obsługa zdarzenia ScrollChanged
+                  href: how-to-handle-the-scrollchanged-event.md
+                - name: Przewijanie zawartości przy użyciu interfejsu IScrollInfo
+                  href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
+                - name: Używanie metod przewijania zawartości ScrollViewer
+                  href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
+        - name: Separator
+          href: separator.md
+        - name: Suwak
+          href: slider.md
+          items:
+            - name: Dostosowywanie znaczników na suwaku
+              href: how-to-customize-the-ticks-on-a-slider.md
+        - name: StackPanel
+          href: stackpanel.md
+          items:
+            - name: — Tematy porad
+              href: stackpanel-how-to-topics.md
+              items:
+                - name: Wybieranie między elementami StackPanel i DockPanel
+                  href: how-to-choose-between-stackpanel-and-dockpanel.md
+                - name: Tworzenie elementu StackPanel
+                  href: how-to-create-a-stackpanel.md
+                - name: Wyrównywanie w poziomie lub w pionie zawartości w kontrolce StackPanel
+                  href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
+        - name: StatusBar
+          href: statusbar.md
+        - name: TabControl
+          href: tabcontrol.md
+        - name: TextBlock
+          href: textblock.md
+          items:
+            - name: TextBlock — Przegląd
+              href: textblock-overview.md
+        - name: TextBox
+          href: textbox.md
+          items:
+            - name: TextBox — Przegląd
+              href: textbox-overview.md
+            - name: — Tematy porad
+              href: textbox-how-to-topics.md
+              items:
+                - name: Tworzenie wielowierszowej kontrolki TextBox
+                  href: how-to-create-a-multiline-textbox-control.md
+                - name: Wykrywanie momentu zmiany tekstu w kontrolce TextBox
+                  href: how-to-detect-when-text-in-a-textbox-has-changed.md
+                - name: Włączanie znaków tabulatora w kontrolce TextBox
+                  href: how-to-enable-tab-characters-in-a-textbox-control.md
+                - name: Pobieranie kolekcji wierszy z kontrolki TextBox
+                  href: how-to-get-a-collection-of-lines-from-a-textbox.md
+                - name: Tworzenie kontrolki TextBox tylko do odczytu
+                  href: how-to-make-a-textbox-control-read-only.md
+                - name: Umieszczanie kursora na początku lub na końcu tekstu w kontrolce TextBox
+                  href: position-the-cursor-at-the-beginning-or-end-of-text.md
+                - name: Pobieranie zaznaczenia tekstu
+                  href: how-to-retrieve-a-text-selection.md
+                - name: Ustawianie fokusu w kontrolce TextBox
+                  href: how-to-set-focus-in-a-textbox-control.md
+                - name: Ustawianie zawartości tekstu dla kontrolki TextBox
+                  href: how-to-set-the-text-content-of-a-textbox-control.md
+                - name: Włączanie sprawdzania pisowni w kontrolce edycji tekstu
+                  href: how-to-enable-spell-checking-in-a-text-editing-control.md
+                - name: Używanie niestandardowego menu kontekstowego z kontrolką TextBox
+                  href: how-to-use-a-custom-context-menu-with-a-textbox.md
+                - name: Używanie sprawdzania pisowni z menu kontekstowym
+                  href: how-to-use-spell-checking-with-a-context-menu.md
+                - name: Dodawanie znaku wodnego do kontrolki TextBox
+                  href: how-to-add-a-watermark-to-a-textbox.md
+        - name: ToolBar
+          href: toolbar.md
+          items:
+            - name: ToolBar — Przegląd
+              href: toolbar-overview.md
+            - name: Kontrolki stylu na pasku ToolBar
+              href: how-to-style-controls-on-a-toolbar.md
+        - name: ToolTip
+          href: tooltip.md
+          items:
+            - name: ToolTip — Przegląd
+              href: tooltip-overview.md
+            - name: — Tematy porad
+              href: tooltip-how-to-topics.md
+              items:
+                - name: Ustawianie położenia elementu ToolTip
+                  href: how-to-position-a-tooltip.md
+                - name: Używanie właściwości BetweenShowDelay
+                  href: how-to-use-the-betweenshowdelay-property.md
+        - name: TreeView
+          href: treeview.md
+          items:
+            - name: TreeView — Przegląd
+              href: treeview-overview.md
+            - name: — Tematy porad
+              href: treeview-how-to-topics.md
+              items:
+                - name: Tworzenie prostej lub złożonej kontrolki TreeView
+                  href: how-to-create-simple-or-complex-treeviews.md
+                - name: 'Używanie elementów SelectedValue, SelectedValuePath i SelectedItem'
+                  href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
+                - name: 'Wiązanie elementu TreeView z danymi, które mają nieokreśloną głębokość'
+                  href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
+                - name: Poprawianie wydajności kontrolki TreeView
+                  href: how-to-improve-the-performance-of-a-treeview.md
+                - name: Znajdowanie elementu TreeViewItem w kontrolce TreeView
+                  href: how-to-find-a-treeviewitem-in-a-treeview.md
+        - name: WrapPanel
+          href: wrappanel.md
+        - name: Okno widoku
+          href: viewbox.md
+          items:
+            - name: Stosowanie właściwości rozciągania do zawartości okna widoku
+              href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
+    - name: ' — Style i szablony'
+      href: styles-and-templates.md
       items:
-      - name: Tworzenie przycisku mającego obraz
-        href: how-to-create-a-button-that-has-an-image.md
-    - name: Kalendarz
-      href: calendar.md
-    - name: Kanwa
-      href: canvas.md
+        - name: Tworzenie szablonów i stylów
+          href: styling-and-templating.md
+        - name: Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
+          href: customizing-the-appearance-of-an-existing-control.md
+        - name: 'Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate'
+          href: how-to-find-controltemplate-generated-elements.md
+    - name: Niestandardowe dostosowywanie formantu
+      href: control-customization.md
       items:
-      - name: " — Tematy porad"
-        href: canvas-how-to-topics.md
-        items:
-        - name: Zawijanie obramowania wokół zawartości kanwy
-          href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
-        - name: Pobieranie lub ustawianie właściwości ustawienia kanwy
-          href: how-to-get-or-set-canvas-positioning-properties.md
-        - name: Tworzenie i używanie kanwy
-          href: how-to-create-and-use-a-canvas.md
-        - name: Używanie załączonych właściwości kanwy do ustawiania położenia elementów podrzędnych
-          href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
-        - name: Zmienianie rozmiaru kanwy przy użyciu kciuka
-          href: how-to-resize-a-canvas-by-using-a-thumb.md
-    - name: CheckBox
-      href: checkbox.md
-    - name: ComboBox
-      href: combobox.md
-    - name: ContextMenu
-      href: contextmenu.md
-      items:
-      - name: ContextMenu — Przegląd
-        href: contextmenu-overview.md
-    - name: DataGrid
-      href: datagrid.md
-      items:
-      - name: Domyślne zachowanie myszy i klawiatury w formancie DataGrid
-        href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-      - name: 'Instrukcje: dodawanie szczegółów wiersza do kontrolki DataGrid'
-        href: how-to-add-row-details-to-a-datagrid-control.md
-      - name: 'Instrukcje: grupowanie, sortowanie i filtrowanie danych w kontrolce DataGrid'
-        href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-      - name: 'Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid'
-        href: how-to-implement-validation-with-the-datagrid-control.md
-      - name: 'Przewodnik: wyświetlanie danych z serwera bazy danych SQL w kontrolce DataGrid'
-        href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
-      - name: Opcje ustalania rozmiaru w formancie DataGrid
-        href: sizing-options-in-the-datagrid-control.md
-    - name: DatePicker
-      href: datepicker.md
-    - name: DockPanel
-      href: dockpanel.md
-      items:
-      - name: " — Tematy porad"
-        href: dockpanel-how-to-topics.md
-        items:
-        - name: Pobieranie lub ustawianie wartości dokowania
-          href: how-to-get-or-set-a-dock-value.md
-        - name: Tworzenie elementu DockPanel
-          href: how-to-create-a-dockpanel.md
-        - name: Rozdzielanie miejsca przy użyciu elementu DockPanel
-          href: how-to-partition-space-by-using-the-dockpanel-element.md
-    - name: DocumentViewer
-      href: documentviewer.md
-    - name: Ekspander
-      href: expander.md
-      items:
-      - name: Przegląd Ekspander
-        href: expander-overview.md
-      - name: " — Tematy porad"
-        href: expander-how-to-topics.md
-        items:
-        - name: Tworzenie ekspandera za pomocą kontrolki ScrollViewer
-          href: how-to-create-an-expander-with-a-scrollviewer.md
-    - name: FlowDocumentPageViewer
-      href: flowdocumentpageviewer.md
-    - name: FlowDocumentReader
-      href: flowdocumentreader.md
-    - name: FlowDocumentScrollViewer
-      href: flowdocumentscrollviewer.md
-    - name: Klatka
-      href: frame.md
-    - name: Siatka
-      href: grid.md
-      items:
-      - name: " — Tematy porad"
-        href: grid-how-to-topics.md
-        items:
-        - name: Tworzenie standardowego okna dialogowego interfejsu użytkownika przy użyciu siatki
-          href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
-        - name: Tworzenie siatki złożonej
-          href: how-to-create-a-complex-grid.md
-        - name: Tworzenie elementu siatki
-          href: how-to-create-a-grid-element.md
-        - name: Tworzenie i używanie obiektu GridLengthConverter
-          href: how-to-create-and-use-a-gridlengthconverter-object.md
-        - name: Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections
-          href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
-        - name: Ustawianie położenia elementów podrzędnych siatki
-          href: how-to-position-the-child-elements-of-a-grid.md
-        - name: Udostępnianie właściwości ustalania rozmiaru między siatkami
-          href: how-to-share-sizing-properties-between-grids.md
-    - name: GridSplitter
-      href: gridsplitter.md
-      items:
-      - name: " — Tematy porad"
-        href: gridsplitter-how-to-topics.md
-        items:
-        - name: Zmienianie rozmiaru wierszy przy użyciu GridSplitter
-          href: how-to-resize-rows-with-a-gridsplitter.md
-        - name: Zmienianie rozmiaru kolumn przy użyciu GridSplitter
-          href: how-to-resize-columns-with-a-gridsplitter.md
-        - name: Upewnianie się, że kontrolka GridSplitter jest widoczna
-          href: how-to-make-sure-that-a-gridsplitter-is-visible.md
-    - name: GroupBox
-      href: groupbox.md
-      items:
-      - name: Definiowanie szablonu GroupBox
-        href: how-to-define-a-groupbox-template.md
-    - name: Obraz
-      href: image.md
-      items:
-      - name: " — Tematy porad"
-        href: image-how-to-topics.md
-        items:
-        - name: Używanie elementu obrazu
-          href: how-to-use-the-image-element.md
-        - name: Konwertowanie obrazu na odcienie szarości
-          href: how-to-convert-an-image-to-greyscale.md
-        - name: Przycinanie obrazu
-          href: how-to-crop-an-image.md
-        - name: Obracanie obrazu
-          href: how-to-rotate-an-image.md
-    - name: Etykieta
-      href: label.md
-      items:
-      - name: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu
-        href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
-    - name: ListBox
-      href: listbox.md
-      items:
-      - name: " — Tematy porad"
-        href: listbox-how-to-topics.md
-        items:
-        - name: Powiązywanie ListBox z danymi
-          href: how-to-bind-a-listbox-to-data.md
-        - name: Pobieranie elementu ListBoxItem
-          href: how-to-get-a-listboxitem.md
-        - name: Poprawianie wydajności przesuwania w kontrolce ListBox
-          href: how-to-improve-the-scrolling-performance-of-a-listbox.md
-    - name: ListView
-      href: listview.md
-      items:
-      - name: Omówienia
-        href: listview-overviews.md
-        items:
-        - name: ListView — Przegląd
-          href: listview-overview.md
-        - name: GridView — Przegląd
-          href: gridview-overview.md
-        - name: Przegląd Style nagłówka kolumn i szablonów GridView
-          href: gridview-column-header-styles-and-templates-overview.md
-      - name: " — Tematy porad"
-        href: listview-how-to-topics.md
-        items:
-        - name: Sortowanie kolumny GridView po kliknięciu nagłówka
-          href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
-        - name: Tworzenie niestandardowego trybu widoku dla kontrolki ListView
-          href: how-to-create-a-custom-view-mode-for-a-listview.md
-        - name: Używanie szablonów do nadawania stylu kontrolce ListView korzystającej z GridView
-          href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
-        - name: Tworzenie stylu dla przeciąganego nagłówka kolumny kontrolki GridView
-          href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
-        - name: Wyświetlanie zawartości kontrolki ListView przy użyciu kontrolki GridView
-          href: how-to-display-listview-contents-by-using-a-gridview.md
-        - name: Używanie wyzwalaczy do nadawania stylu wybranym elementom w kontrolce ListView
-          href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
-        - name: Tworzenie kontrolki ListViewItems za pomocą kontrolki CheckBox
-          href: how-to-create-listviewitems-with-a-checkbox.md
-        - name: Wyświetlanie danych za pomocą GridViewRowPresenter
-          href: how-to-display-data-by-using-gridviewrowpresenter.md
-        - name: Grupowanie elementów w kontrolce ListView z implementacją GridView
-          href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
-        - name: Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView
-          href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
-        - name: Zmienianie wyrównania w poziomie kolumny w kontrolce ListView
-          href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
-        - name: Obsługiwanie zdarzenia MouseDoubleClick dla każdego elementu w kontrolce ListView
-          href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
-    - name: Menu
-      href: menu.md
-      items:
-      - name: Przegląd Menu
-        href: menu-overview.md
-    - name: Panel
-      href: panel.md
-      items:
-      - name: Przegląd Panele
-        href: panels-overview.md
-      - name: " — Tematy porad"
-        href: panel-how-to-topics.md
-        items:
-        - name: Tworzenie niestandardowego elementu panelu
-          href: how-to-create-a-custom-panel-element.md
-        - name: Zastępowanie metody OnRender panelu
-          href: how-to-override-the-panel-onrender-method.md
-        - name: Ustawianie właściwości wysokości elementu
-          href: how-to-set-the-height-properties-of-an-element.md
-        - name: Ustawianie właściwości szerokości elementu
-          href: how-to-set-the-width-properties-of-an-element.md
-    - name: PasswordBox
-      href: passwordbox.md
-    - name: Okno podręczne
-      href: popup.md
-      items:
-      - name: Przegląd Okna podręczne
-        href: popup-overview.md
-      - name: Zachowanie położenia okna podręcznego
-        href: popup-placement-behavior.md
-      - name: " — Tematy porad"
-        href: popup-how-to-topics.md
-        items:
-        - name: Animowanie okna podręcznego
-          href: how-to-animate-a-popup.md
-        - name: Określanie niestandardowego położenia okna podręcznego
-          href: how-to-specify-a-custom-popup-position.md
-    - name: ProgressBar
-      href: progressbar.md
-    - name: PrintDialog
-      href: printdialog.md
-    - name: RadioButton
-      href: radiobutton.md
-    - name: RepeatButton
-      href: repeatbutton.md
-    - name: RichTextBox
-      href: richtextbox.md
-      items:
-      - name: RichTextBox — Przegląd
-        href: richtextbox-overview.md
-      - name: " — Tematy porad"
-        href: richtextbox-how-to-topics.md
-        items:
-        - name: Wyodrębnianie zawartości tekstu z kontrolki RichTextBox
-          href: how-to-extract-the-text-content-from-a-richtextbox.md
-        - name: Zmień wybór RichTextBox za pomocą programowania
-          href: change-selection-in-a-richtextbox-programmatically.md
-        - name: Zapisz, ładuj i drukuj zawartość RichTextBox
-          href: how-to-save-load-and-print-richtextbox-content.md
-        - name: Ustawianie położenia menu kontekstowego w kontrolce RichTextBox
-          href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
-    - name: ScrollBar
-      href: scrollbar.md
-      items:
-      - name: Dostosowywanie rozmiaru miniatury na pasku ScrollBar
-        href: how-to-customize-the-thumb-size-on-a-scrollbar.md
-    - name: ScrollViewer
-      href: scrollviewer.md
-      items:
-      - name: ScrollViewer — Przegląd
-        href: scrollviewer-overview.md
-      - name: " — Tematy porad"
-        href: scrollviewer-how-to-topics.md
-        items:
-        - name: Obsługa zdarzenia ScrollChanged
-          href: how-to-handle-the-scrollchanged-event.md
-        - name: Przewijanie zawartości przy użyciu interfejsu IScrollInfo
-          href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
-        - name: Używanie metod przewijania zawartości ScrollViewer
-          href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
-    - name: Separator
-      href: separator.md
-    - name: Suwak
-      href: slider.md
-      items:
-      - name: Dostosowywanie znaczników na suwaku
-        href: how-to-customize-the-ticks-on-a-slider.md
-    - name: StackPanel
-      href: stackpanel.md
-      items:
-      - name: " — Tematy porad"
-        href: stackpanel-how-to-topics.md
-        items:
-        - name: Wybieranie między elementami StackPanel i DockPanel
-          href: how-to-choose-between-stackpanel-and-dockpanel.md
-        - name: Tworzenie elementu StackPanel
-          href: how-to-create-a-stackpanel.md
-        - name: Wyrównywanie w poziomie lub w pionie zawartości w kontrolce StackPanel
-          href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
-    - name: StatusBar
-      href: statusbar.md
-    - name: TabControl
-      href: tabcontrol.md
-    - name: TextBlock
-      href: textblock.md
-      items:
-      - name: TextBlock — Przegląd
-        href: textblock-overview.md
-    - name: TextBox
-      href: textbox.md
-      items:
-      - name: TextBox — Przegląd
-        href: textbox-overview.md
-      - name: " — Tematy porad"
-        href: textbox-how-to-topics.md
-        items:
-        - name: Tworzenie wielowierszowej kontrolki TextBox
-          href: how-to-create-a-multiline-textbox-control.md
-        - name: Wykrywanie momentu zmiany tekstu w kontrolce TextBox
-          href: how-to-detect-when-text-in-a-textbox-has-changed.md
-        - name: Włączanie znaków tabulatora w kontrolce TextBox
-          href: how-to-enable-tab-characters-in-a-textbox-control.md
-        - name: Pobieranie kolekcji wierszy z kontrolki TextBox
-          href: how-to-get-a-collection-of-lines-from-a-textbox.md
-        - name: Tworzenie kontrolki TextBox tylko do odczytu
-          href: how-to-make-a-textbox-control-read-only.md
-        - name: Umieszczanie kursora na początku lub na końcu tekstu w kontrolce TextBox
-          href: position-the-cursor-at-the-beginning-or-end-of-text.md
-        - name: Pobieranie zaznaczenia tekstu
-          href: how-to-retrieve-a-text-selection.md
-        - name: Ustawianie fokusu w kontrolce TextBox
-          href: how-to-set-focus-in-a-textbox-control.md
-        - name: Ustawianie zawartości tekstu dla kontrolki TextBox
-          href: how-to-set-the-text-content-of-a-textbox-control.md
-        - name: Włączanie sprawdzania pisowni w kontrolce edycji tekstu
-          href: how-to-enable-spell-checking-in-a-text-editing-control.md
-        - name: Używanie niestandardowego menu kontekstowego z kontrolką TextBox
-          href: how-to-use-a-custom-context-menu-with-a-textbox.md
-        - name: Używanie sprawdzania pisowni z menu kontekstowym
-          href: how-to-use-spell-checking-with-a-context-menu.md
-        - name: Dodawanie znaku wodnego do kontrolki TextBox
-          href: how-to-add-a-watermark-to-a-textbox.md
-    - name: ToolBar
-      href: toolbar.md
-      items:
-      - name: ToolBar — Przegląd
-        href: toolbar-overview.md
-      - name: Kontrolki stylu na pasku ToolBar
-        href: how-to-style-controls-on-a-toolbar.md
-    - name: ToolTip
-      href: tooltip.md
-      items:
-      - name: ToolTip — Przegląd
-        href: tooltip-overview.md
-      - name: " — Tematy porad"
-        href: tooltip-how-to-topics.md
-        items:
-        - name: Ustawianie położenia elementu ToolTip
-          href: how-to-position-a-tooltip.md
-        - name: Używanie właściwości BetweenShowDelay
-          href: how-to-use-the-betweenshowdelay-property.md
-    - name: TreeView
-      href: treeview.md
-      items:
-      - name: TreeView — Przegląd
-        href: treeview-overview.md
-      - name: " — Tematy porad"
-        href: treeview-how-to-topics.md
-        items:
-        - name: Tworzenie prostej lub złożonej kontrolki TreeView
-          href: how-to-create-simple-or-complex-treeviews.md
-        - name: Używanie elementów SelectedValue, SelectedValuePath i SelectedItem
-          href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
-        - name: Wiązanie elementu TreeView z danymi, które mają nieokreśloną głębokość
-          href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
-        - name: Poprawianie wydajności kontrolki TreeView
-          href: how-to-improve-the-performance-of-a-treeview.md
-        - name: Znajdowanie elementu TreeViewItem w kontrolce TreeView
-          href: how-to-find-a-treeviewitem-in-a-treeview.md
-    - name: WrapPanel
-      href: wrappanel.md
-    - name: Okno widoku
-      href: viewbox.md
-      items:
-      - name: Stosowanie właściwości rozciągania do zawartości okna widoku
-        href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
-  - name: " — Style i szablony"
-    href: styles-and-templates.md
-    items:
-    - name: Tworzenie szablonów i stylów
-      href: styling-and-templating.md
-    - name: Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
-      href: customizing-the-appearance-of-an-existing-control.md
-    - name: 'Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate'
-      href: how-to-find-controltemplate-generated-elements.md
-  - name: Niestandardowe dostosowywanie formantu
-    href: control-customization.md
-    items:
-    - name: Przegląd Autorstwo formantów
-      href: control-authoring-overview.md
-    - name: Tworzenie formantu, którego wygląd można dostosować
-      href: creating-a-control-that-has-a-customizable-appearance.md
-    - name: Wytyczne do projektowania kontrolek w określonych stylach
-      href: guidelines-for-designing-stylable-controls.md
-    - name: Moduły definiowania układu
-      href: adorners.md
-      items:
-      - name: Przegląd Moduły indeksowania układu
-        href: adorners-overview.md
-      - name: " — Tematy porad"
-        href: adorners-how-to-topics.md
-        items:
-        - name: Implementowanie modułu definiowania układu
-          href: how-to-implement-an-adorner.md
-        - name: Powiązywanie modułu definiowania układu z elementem
-          href: how-to-bind-an-adorner-to-an-element.md
-        - name: Powiązywanie elementów podrzędnych panelu
-          href: how-to-adorn-the-children-of-a-panel.md
-        - name: Usuwanie modułu definiowania układów z elementu
-          href: how-to-remove-an-adorner-from-an-element.md
-        - name: Usuwanie wszystkich modułów definiowania układów z elementu
-          href: how-to-remove-all-adorners-from-an-element.md
-    - name: Style i szablony formantu
-      href: control-styles-and-templates.md
-      items:
-      - name: Style i szablony przycisków
-        href: button-styles-and-templates.md
-      - name: Style i szablony kalendarza
-        href: calendar-styles-and-templates.md
-      - name: CheckBox — Style i szablony
-        href: checkbox-styles-and-templates.md
-      - name: ComboBox — Style i szablony
-        href: combobox-styles-and-templates.md
-      - name: ContextMenu — Style i szablony
-        href: contextmenu-styles-and-templates.md
-      - name: DataGrid — Style i szablony
-        href: datagrid-styles-and-templates.md
-      - name: DatePicker — Style i szablony
-        href: datepicker-styles-and-templates.md
-      - name: DocumentViewer — Style i szablony
-        href: documentviewer-styles-and-templates.md
-      - name: Style i szablony ekspandera
-        href: expander-styles-and-templates.md
-      - name: Style i szablony klatek
-        href: frame-styles-and-templates.md
-      - name: GroupBox — Style i szablony
-        href: groupbox-styles-and-templates.md
-      - name: Style i szablony etykiet
-        href: label-styles-and-templates.md
-      - name: ListBox — Style i szablony
-        href: listbox-styles-and-templates.md
-      - name: ListView — Style i szablony
-        href: listview-styles-and-templates.md
-      - name: Style i szablony menu
-        href: menu-styles-and-templates.md
-      - name: NavigationWindow — Style i szablony
-        href: navigationwindow-styles-and-templates.md
-      - name: PasswordBox — Style i szablony
-        href: passwordbox-styles-and-templates.md
-      - name: ProgressBar — Style i szablony
-        href: progressbar-styles-and-templates.md
-      - name: RadioButton — Style i szablony
-        href: radiobutton-styles-and-templates.md
-      - name: RepeatButton — Style i szablony
-        href: repeatbutton-styles-and-templates.md
-      - name: ScrollBar — Style i szablony
-        href: scrollbar-styles-and-templates.md
-      - name: ScrollViewer — Style i szablony
-        href: scrollviewer-styles-and-templates.md
-      - name: Style i szablony suwaka
-        href: slider-styles-and-templates.md
-      - name: StatusBar — Style i szablony
-        href: statusbar-styles-and-templates.md
-      - name: TabControl — Style i szablony
-        href: tabcontrol-styles-and-templates.md
-      - name: TextBox — Style i szablony
-        href: textbox-styles-and-templates.md
-      - name: Style i szablony miniatury
-        href: thumb-styles-and-templates.md
-      - name: ToggleButton — Style i szablony
-        href: togglebutton-styles-and-templates.md
-      - name: ToolBar — Style i szablony
-        href: toolbar-styles-and-templates.md
-      - name: ToolTip — Style i szablony
-        href: tooltip-styles-and-templates.md
-      - name: TreeView — Style i szablony
-        href: treeview-styles-and-templates.md
-      - name: Style i szablony okien
-        href: window-styles-and-templates.md
-    - name: Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
-      href: ui-automation-of-a-wpf-custom-control.md
-    - name: 'Przewodniki: Tworzenie niestandardowego przycisku animowanego'
-      href: walkthroughs-create-a-custom-animated-button.md
-      items:
-      - name: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend
-        href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
-      - name: Tworzenie przycisku przy użyciu języka XAML
-        href: walkthrough-create-a-button-by-using-xaml.md
-ms.openlocfilehash: e1f4c9978b5a1d640c721cb7b6584b556c622264
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471808"
+        - name: Przegląd Autorstwo formantów
+          href: control-authoring-overview.md
+        - name: 'Tworzenie formantu, którego wygląd można dostosować'
+          href: creating-a-control-that-has-a-customizable-appearance.md
+        - name: Wytyczne do projektowania kontrolek w określonych stylach
+          href: guidelines-for-designing-stylable-controls.md
+        - name: Moduły definiowania układu
+          href: adorners.md
+          items:
+            - name: Przegląd Moduły indeksowania układu
+              href: adorners-overview.md
+            - name: — Tematy porad
+              href: adorners-how-to-topics.md
+              items:
+                - name: Implementowanie modułu definiowania układu
+                  href: how-to-implement-an-adorner.md
+                - name: Powiązywanie modułu definiowania układu z elementem
+                  href: how-to-bind-an-adorner-to-an-element.md
+                - name: Powiązywanie elementów podrzędnych panelu
+                  href: how-to-adorn-the-children-of-a-panel.md
+                - name: Usuwanie modułu definiowania układów z elementu
+                  href: how-to-remove-an-adorner-from-an-element.md
+                - name: Usuwanie wszystkich modułów definiowania układów z elementu
+                  href: how-to-remove-all-adorners-from-an-element.md
+        - name: Style i szablony formantu
+          href: control-styles-and-templates.md
+          items:
+            - name: Style i szablony przycisków
+              href: button-styles-and-templates.md
+            - name: Style i szablony kalendarza
+              href: calendar-styles-and-templates.md
+            - name: CheckBox — Style i szablony
+              href: checkbox-styles-and-templates.md
+            - name: ComboBox — Style i szablony
+              href: combobox-styles-and-templates.md
+            - name: ContextMenu — Style i szablony
+              href: contextmenu-styles-and-templates.md
+            - name: DataGrid — Style i szablony
+              href: datagrid-styles-and-templates.md
+            - name: DatePicker — Style i szablony
+              href: datepicker-styles-and-templates.md
+            - name: DocumentViewer — Style i szablony
+              href: documentviewer-styles-and-templates.md
+            - name: Style i szablony ekspandera
+              href: expander-styles-and-templates.md
+            - name: Style i szablony klatek
+              href: frame-styles-and-templates.md
+            - name: GroupBox — Style i szablony
+              href: groupbox-styles-and-templates.md
+            - name: Style i szablony etykiet
+              href: label-styles-and-templates.md
+            - name: ListBox — Style i szablony
+              href: listbox-styles-and-templates.md
+            - name: ListView — Style i szablony
+              href: listview-styles-and-templates.md
+            - name: Style i szablony menu
+              href: menu-styles-and-templates.md
+            - name: NavigationWindow — Style i szablony
+              href: navigationwindow-styles-and-templates.md
+            - name: PasswordBox — Style i szablony
+              href: passwordbox-styles-and-templates.md
+            - name: ProgressBar — Style i szablony
+              href: progressbar-styles-and-templates.md
+            - name: RadioButton — Style i szablony
+              href: radiobutton-styles-and-templates.md
+            - name: RepeatButton — Style i szablony
+              href: repeatbutton-styles-and-templates.md
+            - name: ScrollBar — Style i szablony
+              href: scrollbar-styles-and-templates.md
+            - name: ScrollViewer — Style i szablony
+              href: scrollviewer-styles-and-templates.md
+            - name: Style i szablony suwaka
+              href: slider-styles-and-templates.md
+            - name: StatusBar — Style i szablony
+              href: statusbar-styles-and-templates.md
+            - name: TabControl — Style i szablony
+              href: tabcontrol-styles-and-templates.md
+            - name: TextBox — Style i szablony
+              href: textbox-styles-and-templates.md
+            - name: Style i szablony miniatury
+              href: thumb-styles-and-templates.md
+            - name: ToggleButton — Style i szablony
+              href: togglebutton-styles-and-templates.md
+            - name: ToolBar — Style i szablony
+              href: toolbar-styles-and-templates.md
+            - name: ToolTip — Style i szablony
+              href: tooltip-styles-and-templates.md
+            - name: TreeView — Style i szablony
+              href: treeview-styles-and-templates.md
+            - name: Style i szablony okien
+              href: window-styles-and-templates.md
+        - name: Automatyzacja interfejsu użytkownika formantu niestandardowego WPF
+          href: ui-automation-of-a-wpf-custom-control.md
+        - name: 'Przewodniki: Tworzenie niestandardowego przycisku animowanego'
+          href: walkthroughs-create-a-custom-animated-button.md
+          items:
+            - name: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend
+              href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
+            - name: Tworzenie przycisku przy użyciu języka XAML
+              href: walkthrough-create-a-button-by-using-xaml.md

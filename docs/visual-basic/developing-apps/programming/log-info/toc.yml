@@ -1,32 +1,25 @@
-items:
 - name: Rejestrowanie informacji z aplikacji
   href: index.md
   items:
-  - name: 'Instrukcje: zapisywanie komunikatów dziennika'
-    href: how-to-write-log-messages.md
-  - name: 'Instrukcje: rejestrowanie wyjątków'
-    href: how-to-log-exceptions.md
-  - name: 'Instrukcje: rejestrowanie komunikatów podczas uruchamiania lub zamykania aplikacji'
-    href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
-  - name: 'Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji'
-    href: how-to-write-to-an-application-event-log.md
-  - name: 'Instrukcje: zapisywanie informacji o zdarzeniach w pliku tekstowym'
-    href: how-to-write-event-information-to-a-text-file.md
-  - name: Praca z dziennikami aplikacji
-    href: working-with-application-logs.md
-  - name: 'Przewodnik: ustalanie lokalizacji, w której element My.Application.Log zapisuje informacje'
-    href: walkthrough-determining-where-my-application-log-writes-information.md
-  - name: 'Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje'
-    href: walkthrough-changing-where-my-application-log-writes-information.md
-  - name: 'Przewodnik: filtrowanie danych wyjściowych elementu My.Application.Log'
-    href: walkthrough-filtering-my-application-log-output.md
-  - name: 'Przewodnik: tworzenie odbiorców dzienników niestandardowych'
-    href: walkthrough-creating-custom-log-listeners.md
-  - name: 'Rozwiązywanie problemów: odbiorcy dzienników'
-    href: troubleshooting-log-listeners.md
-ms.openlocfilehash: 9b1d9ae3a2fdda80723180e7eef1b31aa06a28ea
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471836"
+    - name: 'Instrukcje: zapisywanie komunikatów dziennika'
+      href: how-to-write-log-messages.md
+    - name: 'Instrukcje: rejestrowanie wyjątków'
+      href: how-to-log-exceptions.md
+    - name: 'Instrukcje: rejestrowanie komunikatów podczas uruchamiania lub zamykania aplikacji'
+      href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
+    - name: 'Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji'
+      href: how-to-write-to-an-application-event-log.md
+    - name: 'Instrukcje: zapisywanie informacji o zdarzeniach w pliku tekstowym'
+      href: how-to-write-event-information-to-a-text-file.md
+    - name: Praca z dziennikami aplikacji
+      href: working-with-application-logs.md
+    - name: 'Przewodnik: ustalanie lokalizacji, w której element My.Application.Log zapisuje informacje'
+      href: walkthrough-determining-where-my-application-log-writes-information.md
+    - name: 'Przewodnik: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje'
+      href: walkthrough-changing-where-my-application-log-writes-information.md
+    - name: 'Przewodnik: filtrowanie danych wyjściowych elementu My.Application.Log'
+      href: walkthrough-filtering-my-application-log-output.md
+    - name: 'Przewodnik: tworzenie odbiorców dzienników niestandardowych'
+      href: walkthrough-creating-custom-log-listeners.md
+    - name: 'Rozwiązywanie problemów: odbiorcy dzienników'
+      href: troubleshooting-log-listeners.md

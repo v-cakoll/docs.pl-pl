@@ -1,18 +1,11 @@
-items:
 - name: Delegaty
   href: index.md
   items:
-  - name: Używanie delegatów
-    href: using-delegates.md
-  - name: Delegaty z metodami nazwanymi lub Metody anonimowe
-    href: delegates-with-named-vs-anonymous-methods.md
-  - name: 'Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji) (Przewodnik programowania w języku C#)'
-    href: how-to-combine-delegates-multicast-delegates.md
-  - name: 'Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegata'
-    href: how-to-declare-instantiate-and-use-a-delegate.md
-ms.openlocfilehash: f9857a805966b3b3c9d1c6776027c77c6183235b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471981"
+    - name: Używanie delegatów
+      href: using-delegates.md
+    - name: Delegaty z metodami nazwanymi lub Metody anonimowe
+      href: delegates-with-named-vs-anonymous-methods.md
+    - name: 'Instrukcje: Łączenie obiektów delegowanych (obiekty delegowane multiemisji) (Przewodnik programowania w języku C#)'
+      href: how-to-combine-delegates-multicast-delegates.md
+    - name: 'Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegata'
+      href: how-to-declare-instantiate-and-use-a-delegate.md

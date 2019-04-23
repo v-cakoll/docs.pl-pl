@@ -1,105 +1,98 @@
-items:
 - name: Domeny aplikacji i zestawy
   href: index.md
   items:
-  - name: Zestawy w środowisku uruchomieniowym języka wspólnego
-    href: assemblies-in-the-common-language-runtime.md
-    items:
-    - name: Zawartość zestawu
-      href: assembly-contents.md
-    - name: Manifest zestawu
-      href: assembly-manifest.md
-    - name: Global Assembly Cache
-      href: gac.md
-    - name: Zestawy o silnych nazwach
-      href: strong-named-assemblies.md
-    - name: Zagadnienia dotyczące zabezpieczeń zestawów
-      href: assembly-security-considerations.md
-    - name: Przechowywanie wersji zestawu
-      href: assembly-versioning.md
-    - name: Umieszczanie zestawu
-      href: assembly-placement.md
-    - name: Zestawy i wykonywanie równoczesne
-      href: assemblies-and-side-by-side-execution.md
-  - name: Domeny aplikacji
-    href: application-domains.md
-  - name: Porady dotyczące zestawów i domen aplikacji
-    href: application-domains-and-assemblies-how-to-topics.md
-  - name: Używanie domeny aplikacji
-    href: use.md
-    items:
-    - name: 'Instrukcje: Tworzenie domeny aplikacji'
-      href: how-to-create-an-application-domain.md
-    - name: 'Instrukcje: Zwolnienie domeny aplikacji'
-      href: how-to-unload-an-application-domain.md
-    - name: 'Instrukcje: Konfigurowanie domeny aplikacji'
-      href: how-to-configure-an-application-domain.md
-    - name: Pobieranie informacji o instalacji z domeny aplikacji
-      href: retrieve-setup-information.md
-    - name: 'Instrukcje: Ładowanie zestawów do domeny aplikacji'
-      href: how-to-load-assemblies-into-an-application-domain.md
-    - name: 'Instrukcje: Uzyskiwanie informacji dotyczących typów i składowych z zestawu'
-      href: how-to-obtain-type-and-member-information-from-an-assembly.md
-    - name: Kopiowanie zestawów w tle
-      href: shadow-copy-assemblies.md
-    - name: 'Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy'
-      href: how-to-receive-first-chance-exception-notifications.md
-    - name: Rozwiązywanie załadowań zestawów
-      href: resolve-assembly-loads.md
-  - name: Programowanie za pomocą zestawów
-    href: programming-with-assemblies.md
-    items:
-    - name: Tworzenie zestawów
-      href: create-assemblies.md
-    - name: Nazwy zestawów
-      href: assembly-names.md
-    - name: 'Instrukcje: Określanie w pełni kwalifikowanej nazwy zestawu'
-      href: how-to-determine-assembly-fully-qualified-name.md
-    - name: Uruchamianie aplikacji intranetowych w trybie pełnego zaufania
-      href: running-intranet-applications-in-full-trust.md
-    - name: Lokalizacja zestawu
-      href: assembly-location.md
-    - name: 'Instrukcje: Kompilacja zestawu jednoplikowego'
-      href: how-to-build-a-single-file-assembly.md
-    - name: Zestawy wieloplikowe
-      href: multifile-assemblies.md
-    - name: 'Instrukcje: Kompilacja zestawów wieloplikowych'
-      href: how-to-build-a-multifile-assembly.md
-    - name: Ustawienie atrybutów zestawu
-      href: set-assembly-attributes.md
-    - name: Tworzenie i używanie zestawów o silnej nazwie
-      href: create-and-use-strong-named-assemblies.md
+    - name: Zestawy w środowisku uruchomieniowym języka wspólnego
+      href: assemblies-in-the-common-language-runtime.md
       items:
-      - name: 'Instrukcje: Tworzenie pary kluczy publiczny-prywatny'
-        href: how-to-create-a-public-private-key-pair.md
-      - name: 'Instrukcje: Podpisywanie zestawu silną nazwą'
-        href: how-to-sign-an-assembly-with-a-strong-name.md
-      - name: Poprawa silnego nazywania
-        href: enhanced-strong-naming.md
-      - name: 'Instrukcje: Odwołanie do zestawu o silnej nazwie'
-        href: how-to-reference-a-strong-named-assembly.md
-      - name: 'Instrukcje: Wyłączanie funkcji pomijania silnej nazwy'
-        href: how-to-disable-the-strong-name-bypass-feature.md
-    - name: Opóźnione podpisywanie zestawu
-      href: delay-sign-assembly.md
-    - name: Praca z zestawami i globalną pamięcią podręczną zestawów
-      href: working-with-assemblies-and-the-gac.md
+        - name: Zawartość zestawu
+          href: assembly-contents.md
+        - name: Manifest zestawu
+          href: assembly-manifest.md
+        - name: Global Assembly Cache
+          href: gac.md
+        - name: Zestawy o silnych nazwach
+          href: strong-named-assemblies.md
+        - name: Zagadnienia dotyczące zabezpieczeń zestawów
+          href: assembly-security-considerations.md
+        - name: Przechowywanie wersji zestawu
+          href: assembly-versioning.md
+        - name: Umieszczanie zestawu
+          href: assembly-placement.md
+        - name: Zestawy i wykonywanie równoczesne
+          href: assemblies-and-side-by-side-execution.md
+    - name: Domeny aplikacji
+      href: application-domains.md
+    - name: Porady dotyczące zestawów i domen aplikacji
+      href: application-domains-and-assemblies-how-to-topics.md
+    - name: Używanie domeny aplikacji
+      href: use.md
       items:
-      - name: 'Instrukcje: instalowanie zestawu w globalnej pamięci podręcznej zestawów'
-        href: how-to-install-an-assembly-into-the-gac.md
-      - name: 'Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów'
-        href: how-to-view-the-contents-of-the-gac.md
-      - name: 'Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów'
-        href: how-to-remove-an-assembly-from-the-gac.md
-      - name: Używanie obsługiwanych składników z globalną pamięcią podręczną zestawów
-        href: use-serviced-components-with-the-gac.md
-    - name: 'Instrukcje: Wyświetlanie zawartości zestawu'
-      href: how-to-view-assembly-contents.md
-    - name: Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego
-      href: type-forwarding-in-the-common-language-runtime.md
-ms.openlocfilehash: 8a928eda090b144daf61c768fb5d8b8de079af16
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471446"
+        - name: 'Instrukcje: Tworzenie domeny aplikacji'
+          href: how-to-create-an-application-domain.md
+        - name: 'Instrukcje: Zwolnienie domeny aplikacji'
+          href: how-to-unload-an-application-domain.md
+        - name: 'Instrukcje: Konfigurowanie domeny aplikacji'
+          href: how-to-configure-an-application-domain.md
+        - name: Pobieranie informacji o instalacji z domeny aplikacji
+          href: retrieve-setup-information.md
+        - name: 'Instrukcje: Ładowanie zestawów do domeny aplikacji'
+          href: how-to-load-assemblies-into-an-application-domain.md
+        - name: 'Instrukcje: Uzyskiwanie informacji dotyczących typów i składowych z zestawu'
+          href: how-to-obtain-type-and-member-information-from-an-assembly.md
+        - name: Kopiowanie zestawów w tle
+          href: shadow-copy-assemblies.md
+        - name: 'Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy'
+          href: how-to-receive-first-chance-exception-notifications.md
+        - name: Rozwiązywanie załadowań zestawów
+          href: resolve-assembly-loads.md
+    - name: Programowanie za pomocą zestawów
+      href: programming-with-assemblies.md
+      items:
+        - name: Tworzenie zestawów
+          href: create-assemblies.md
+        - name: Nazwy zestawów
+          href: assembly-names.md
+        - name: 'Instrukcje: Określanie w pełni kwalifikowanej nazwy zestawu'
+          href: how-to-determine-assembly-fully-qualified-name.md
+        - name: Uruchamianie aplikacji intranetowych w trybie pełnego zaufania
+          href: running-intranet-applications-in-full-trust.md
+        - name: Lokalizacja zestawu
+          href: assembly-location.md
+        - name: 'Instrukcje: Kompilacja zestawu jednoplikowego'
+          href: how-to-build-a-single-file-assembly.md
+        - name: Zestawy wieloplikowe
+          href: multifile-assemblies.md
+        - name: 'Instrukcje: Kompilacja zestawów wieloplikowych'
+          href: how-to-build-a-multifile-assembly.md
+        - name: Ustawienie atrybutów zestawu
+          href: set-assembly-attributes.md
+        - name: Tworzenie i używanie zestawów o silnej nazwie
+          href: create-and-use-strong-named-assemblies.md
+          items:
+            - name: 'Instrukcje: Tworzenie pary kluczy publiczny-prywatny'
+              href: how-to-create-a-public-private-key-pair.md
+            - name: 'Instrukcje: Podpisywanie zestawu silną nazwą'
+              href: how-to-sign-an-assembly-with-a-strong-name.md
+            - name: Poprawa silnego nazywania
+              href: enhanced-strong-naming.md
+            - name: 'Instrukcje: Odwołanie do zestawu o silnej nazwie'
+              href: how-to-reference-a-strong-named-assembly.md
+            - name: 'Instrukcje: Wyłączanie funkcji pomijania silnej nazwy'
+              href: how-to-disable-the-strong-name-bypass-feature.md
+        - name: Opóźnione podpisywanie zestawu
+          href: delay-sign-assembly.md
+        - name: Praca z zestawami i globalną pamięcią podręczną zestawów
+          href: working-with-assemblies-and-the-gac.md
+          items:
+            - name: 'Instrukcje: instalowanie zestawu w globalnej pamięci podręcznej zestawów'
+              href: how-to-install-an-assembly-into-the-gac.md
+            - name: 'Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów'
+              href: how-to-view-the-contents-of-the-gac.md
+            - name: 'Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów'
+              href: how-to-remove-an-assembly-from-the-gac.md
+            - name: Używanie obsługiwanych składników z globalną pamięcią podręczną zestawów
+              href: use-serviced-components-with-the-gac.md
+        - name: 'Instrukcje: Wyświetlanie zawartości zestawu'
+          href: how-to-view-assembly-contents.md
+        - name: Przekazywanie dalej typu w środowisku uruchomieniowym języka wspólnego
+          href: type-forwarding-in-the-common-language-runtime.md

@@ -1,49 +1,42 @@
-items:
-- name: Instrukcje, wyrażenia i operatory
+- name: 'Instrukcje, wyrażenia i operatory'
   href: index.md
   items:
-  - name: Instrukcje
-    href: statements.md
-  - name: Wyrażenia
-    href: expressions.md
-    items:
-    - name: Składowe z wyrażeniem w treści
-      href: expression-bodied-members.md
-  - name: Operatory
-    href: operators.md
-  - name: Funkcje anonimowe
-    href: anonymous-functions.md
-    items:
-    - name: Wyrażenia lambda
-      href: lambda-expressions.md
+    - name: Instrukcje
+      href: statements.md
+    - name: Wyrażenia
+      href: expressions.md
       items:
-      - name: 'Instrukcje: użycie wyrażeń lambda w zapytaniu'
-        href: how-to-use-lambda-expressions-in-a-query.md
-      - name: 'Instrukcje: Użycie wyrażeń lambda poza LINQ'
-        href: how-to-use-lambda-expressions-outside-linq.md
-    - name: Metody anonimowe
-      href: anonymous-methods.md
-  - name: Operatory z możliwością przeciążenia
-    href: overloadable-operators.md
-  - name: Operatory konwersji
-    href: conversion-operators.md
-    items:
-    - name: Używanie operatorów konwersji
-      href: using-conversion-operators.md
-    - name: 'Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur'
-      href: how-to-implement-user-defined-conversions-between-structs.md
-  - name: Wyrażenia wartości domyślnych
-    href: default-value-expressions.md
-  - name: Porównywanie równości
-    href: equality-comparisons.md
-    items:
-    - name: 'Instrukcje: Definiowanie równości wartości dla typu'
-      href: how-to-define-value-equality-for-a-type.md
-    - name: 'Instrukcje: Testowanie równości odwołań (tożsamości)'
-      href: how-to-test-for-reference-equality-identity.md
-ms.openlocfilehash: d5f37fd97cf72c7c8d9b7854753eb25fdea8bbb2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471429"
+        - name: Składowe z wyrażeniem w treści
+          href: expression-bodied-members.md
+    - name: Operatory
+      href: operators.md
+    - name: Funkcje anonimowe
+      href: anonymous-functions.md
+      items:
+        - name: Wyrażenia lambda
+          href: lambda-expressions.md
+          items:
+            - name: 'Instrukcje: użycie wyrażeń lambda w zapytaniu'
+              href: how-to-use-lambda-expressions-in-a-query.md
+            - name: 'Instrukcje: Użycie wyrażeń lambda poza LINQ'
+              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: Metody anonimowe
+          href: anonymous-methods.md
+    - name: Operatory z możliwością przeciążenia
+      href: overloadable-operators.md
+    - name: Operatory konwersji
+      href: conversion-operators.md
+      items:
+        - name: Używanie operatorów konwersji
+          href: using-conversion-operators.md
+        - name: 'Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur'
+          href: how-to-implement-user-defined-conversions-between-structs.md
+    - name: Wyrażenia wartości domyślnych
+      href: default-value-expressions.md
+    - name: Porównywanie równości
+      href: equality-comparisons.md
+      items:
+        - name: 'Instrukcje: Definiowanie równości wartości dla typu'
+          href: how-to-define-value-equality-for-a-type.md
+        - name: 'Instrukcje: Testowanie równości odwołań (tożsamości)'
+          href: how-to-test-for-reference-equality-identity.md

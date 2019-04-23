@@ -1,37 +1,30 @@
-items:
 - name: Programowanie asynchroniczne przy użyciu elementów async i await
   href: index.md
   items:
-  - name: Model programowania asynchronicznego zadań (APM)
-    href: task-asynchronous-programming-model.md
-  - name: 'Przewodnik: uzyskiwanie dostępu do sieci za pomocą elementów async i await'
-    href: walkthrough-accessing-the-web-by-using-async-and-await.md
-  - name: 'Instrukcje: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll'
-    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-  - name: 'Instrukcje: równoległe żądania internetowe za pomocą elementów async i await'
-    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-  - name: Asynchroniczne typy zwracane
-    href: async-return-types.md
-  - name: Przepływ sterowania w aplikacjach asynchronicznych
-    href: control-flow-in-async-programs.md
-  - name: Dostrajanie aplikacji asynchronicznych
-    href: fine-tuning-your-async-application.md
-    items:
-    - name: Anulowanie zadania asynchronicznego lub listy zadań
-      href: cancel-an-async-task-or-a-list-of-tasks.md
-    - name: Anulowanie zadań asynchronicznych po upływie określonego czasu
-      href: cancel-async-tasks-after-a-period-of-time.md
-    - name: Anulowanie pozostałych zadań asynchronicznych po zakończeniu jednego
-      href: cancel-remaining-async-tasks-after-one-is-complete.md
-    - name: Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich w chwili zakończenia
-      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-  - name: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych
-    href: handling-reentrancy-in-async-apps.md
-  - name: Uzyskiwanie dostępu do plików przy użyciu elementu async
-    href: using-async-for-file-access.md
-ms.openlocfilehash: 72bac78b384a76eb7f9b6e4ed83c299129014223
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471837"
+    - name: Model programowania asynchronicznego zadań (APM)
+      href: task-asynchronous-programming-model.md
+    - name: 'Przewodnik: uzyskiwanie dostępu do sieci za pomocą elementów async i await'
+      href: walkthrough-accessing-the-web-by-using-async-and-await.md
+    - name: 'Instrukcje: rozszerzanie wskazówek asynchronicznych za pomocą Task.WhenAll'
+      href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+    - name: 'Instrukcje: równoległe żądania internetowe za pomocą elementów async i await'
+      href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+    - name: Asynchroniczne typy zwracane
+      href: async-return-types.md
+    - name: Przepływ sterowania w aplikacjach asynchronicznych
+      href: control-flow-in-async-programs.md
+    - name: Dostrajanie aplikacji asynchronicznych
+      href: fine-tuning-your-async-application.md
+      items:
+        - name: Anulowanie zadania asynchronicznego lub listy zadań
+          href: cancel-an-async-task-or-a-list-of-tasks.md
+        - name: Anulowanie zadań asynchronicznych po upływie określonego czasu
+          href: cancel-async-tasks-after-a-period-of-time.md
+        - name: Anulowanie pozostałych zadań asynchronicznych po zakończeniu jednego
+          href: cancel-remaining-async-tasks-after-one-is-complete.md
+        - name: Rozpoczynanie wielu zadań asynchronicznych i przetwarzanie ich w chwili zakończenia
+          href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+    - name: Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych
+      href: handling-reentrancy-in-async-apps.md
+    - name: Użycie Async do uzyskiwania dostępu do plików
+      href: using-async-for-file-access.md

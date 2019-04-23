@@ -1,16 +1,9 @@
-items:
 - name: Interfejsy
   href: index.md
   items:
-  - name: Implementacja interfejsu jawnego
-    href: explicit-interface-implementation.md
-  - name: 'Instrukcje: Jawne implementowanie elementów interfejsu'
-    href: how-to-explicitly-implement-interface-members.md
-  - name: 'Instrukcje: Jawne implementowanie elementów dwóch interfejsów'
-    href: how-to-explicitly-implement-members-of-two-interfaces.md
-ms.openlocfilehash: e57ba8a9916b35c4bfdedba8f720615ea1eaf727
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471968"
+    - name: Implementacja interfejsu jawnego
+      href: explicit-interface-implementation.md
+    - name: 'Instrukcje: Jawne implementowanie elementów interfejsu'
+      href: how-to-explicitly-implement-interface-members.md
+    - name: 'Instrukcje: Jawne implementowanie elementów dwóch interfejsów'
+      href: how-to-explicitly-implement-members-of-two-interfaces.md

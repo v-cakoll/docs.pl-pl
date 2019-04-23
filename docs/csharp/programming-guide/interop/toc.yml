@@ -1,22 +1,15 @@
-items:
 - name: Współdziałanie
   href: index.md
   items:
-  - name: Przegląd współdziałania
-    href: interoperability-overview.md
-  - name: 'Instrukcje: Uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#'
-    href: how-to-access-office-onterop-objects.md
-  - name: 'Instrukcje: Użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM'
-    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
-  - name: 'Instrukcje: Użycie wywołania platformy do odtwarzania pliku Wave'
-    href: how-to-use-platform-invoke-to-play-a-wave-file.md
-  - name: 'Przewodnik: Programowanie Office (C# i Visual Basic)'
-    href: walkthrough-office-programming.md
-  - name: Przykładowa klasa modelu COM
-    href: example-com-class.md
-ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471499"
+    - name: Przegląd współdziałania
+      href: interoperability-overview.md
+    - name: 'Instrukcje: Uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#'
+      href: how-to-access-office-onterop-objects.md
+    - name: 'Instrukcje: Użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM'
+      href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+    - name: 'Instrukcje: Użycie wywołania platformy do odtwarzania pliku Wave'
+      href: how-to-use-platform-invoke-to-play-a-wave-file.md
+    - name: 'Przewodnik: Programowanie Office (C# i Visual Basic)'
+      href: walkthrough-office-programming.md
+    - name: Przykładowa klasa modelu COM
+      href: example-com-class.md

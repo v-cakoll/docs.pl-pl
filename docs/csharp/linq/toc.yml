@@ -1,48 +1,41 @@
-items:
 - name: Language Integrated Query (LINQ)
   href: index.md
   items:
-  - name: Podstawowe informacje o wyrażeniach zapytań
-    href: query-expression-basics.md
-  - name: LINQ w C#
-    href: linq-in-csharp.md
-  - name: Zapisywanie zapytań LINQ w C#
-    href: write-linq-queries.md
-  - name: Zapytanie dotyczące kolekcji obiektów
-    href: query-a-collection-of-objects.md
-  - name: Zwracanie zapytania z metody
-    href: return-a-query-from-a-method.md
-  - name: Przechowywanie wyników zapytania w pamięci
-    href: store-the-results-of-a-query-in-memory.md
-  - name: Grupowanie wyników zapytania
-    href: group-query-results.md
-  - name: Tworzenie grupy zagnieżdżonej
-    href: create-a-nested-group.md
-  - name: Wykonywanie podzapytania w operacji grupowania
-    href: perform-a-subquery-on-a-grouping-operation.md
-  - name: Grupowanie wyników według ciągłych kluczy
-    href: group-results-by-contiguous-keys.md
-  - name: Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym
-    href: dynamically-specify-predicate-filters-at-runtime.md
-  - name: Wykonywanie sprzężeń wewnętrznych
-    href: perform-inner-joins.md
-  - name: Wykonywanie sprzężeń grupowanych
-    href: perform-grouped-joins.md
-  - name: Wykonywanie lewych sprzężeń zewnętrznych
-    href: perform-left-outer-joins.md
-  - name: Kolejność wyników klauzuli join
-    href: order-the-results-of-a-join-clause.md
-  - name: Sprzęganie za pomocą kluczy złożonych
-    href: join-by-using-composite-keys.md
-  - name: Wykonywanie niestandardowych operacji sprzęgania
-    href: perform-custom-join-operations.md
-  - name: Obsługa wartości null w wyrażeniach zapytań
-    href: handle-null-values-in-query-expressions.md
-  - name: Obsługa wyjątków w wyrażeniach zapytań
-    href: handle-exceptions-in-query-expressions.md
-ms.openlocfilehash: 1bc1fb625c7627abe63db2b69071df1ef1b7d11c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471358"
+    - name: Podstawowe informacje o wyrażeniach zapytań
+      href: query-expression-basics.md
+    - name: 'LINQ w C#'
+      href: linq-in-csharp.md
+    - name: 'Zapisywanie zapytań LINQ w C#'
+      href: write-linq-queries.md
+    - name: Zapytanie dotyczące kolekcji obiektów
+      href: query-a-collection-of-objects.md
+    - name: Zwracanie zapytania z metody
+      href: return-a-query-from-a-method.md
+    - name: Przechowywanie wyników zapytania w pamięci
+      href: store-the-results-of-a-query-in-memory.md
+    - name: Grupowanie wyników zapytania
+      href: group-query-results.md
+    - name: Tworzenie grupy zagnieżdżonej
+      href: create-a-nested-group.md
+    - name: Wykonywanie podzapytania w operacji grupowania
+      href: perform-a-subquery-on-a-grouping-operation.md
+    - name: Grupowanie wyników według ciągłych kluczy
+      href: group-results-by-contiguous-keys.md
+    - name: Dynamiczne określanie filtrów predykatów w środowisku uruchomieniowym
+      href: dynamically-specify-predicate-filters-at-runtime.md
+    - name: Wykonywanie sprzężeń wewnętrznych
+      href: perform-inner-joins.md
+    - name: Wykonywanie sprzężeń grupowanych
+      href: perform-grouped-joins.md
+    - name: Wykonywanie lewych sprzężeń zewnętrznych
+      href: perform-left-outer-joins.md
+    - name: Kolejność wyników klauzuli join
+      href: order-the-results-of-a-join-clause.md
+    - name: Sprzęganie za pomocą kluczy złożonych
+      href: join-by-using-composite-keys.md
+    - name: Wykonywanie niestandardowych operacji sprzęgania
+      href: perform-custom-join-operations.md
+    - name: Obsługa wartości null w wyrażeniach zapytań
+      href: handle-null-values-in-query-expressions.md
+    - name: Obsługa wyjątków w wyrażeniach zapytań
+      href: handle-exceptions-in-query-expressions.md

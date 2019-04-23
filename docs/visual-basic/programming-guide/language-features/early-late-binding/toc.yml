@@ -1,16 +1,9 @@
-items:
 - name: Wczesne i późne powiązania
   href: index.md
   items:
-  - name: Określanie typu obiektu
-    href: determining-object-type.md
-  - name: Wywoływanie właściwości lub metody za pomocą nazwy ciągu
-    href: calling-a-property-or-method-using-a-string-name.md
-  - name: Praca z obiektami dynamicznymi
-    href: working-with-dynamic-objects.md
-ms.openlocfilehash: edd2a6e97163ceb4dce728639a6651482e58ab6d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471366"
+    - name: Określanie typu obiektu
+      href: determining-object-type.md
+    - name: Wywoływanie właściwości lub metody za pomocą nazwy ciągu
+      href: calling-a-property-or-method-using-a-string-name.md
+    - name: Praca z obiektami dynamicznymi
+      href: working-with-dynamic-objects.md

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
 ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162636"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Zagadnienia dotyczące współdziałania Direct3D9 i WPF
@@ -62,6 +62,6 @@ Może obsługiwać zawartości Direct3D9 przy użyciu <xref:System.Windows.Inter
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Interop.D3DImage>
-- [WPF i Direct3D9 — Współdziałanie](wpf-and-direct3d9-interoperation.md)
-- [Przewodnik: tworzenie zawartości Direct3D9 na potrzeby hostingu w WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [Przewodnik: hostowanie zawartości Direct3D9 w WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [WPF i Direct3D9 — współdziałanie](wpf-and-direct3d9-interoperation.md)
+- [Przewodnik: Tworzenie zawartości Direct3D9 dla hostingu w WPF](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [Przewodnik: Hosting zawartości Direct3D9 w WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)

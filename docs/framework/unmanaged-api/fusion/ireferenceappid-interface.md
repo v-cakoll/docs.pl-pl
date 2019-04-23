@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25733e459423500352595d6be0eee26ef75ca7e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157199"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId — Interfejs
@@ -46,5 +46,5 @@ Reprezentuje odwołanie do Unikatowy identyfikator aplikacji w bieżącym zakres
 ## <a name="see-also"></a>Zobacz także
 
 - [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [IEnumReferenceIdentity — Interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
-- [IReferenceIdentity — Interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+- [IEnumReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)
+- [IReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

@@ -3,10 +3,10 @@ title: Wprowadzenie do routingu
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158681"
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
@@ -369,7 +369,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), backupList);
 |Dwukierunkowa||✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dwukierunkowa|✓|✓||Nie|Jest zgłaszany wyjątek, a transakcja zostanie wycofana.|  
 |Dupleks||||Nie|Komunikację dupleksową non sesji nie jest obecnie obsługiwane.|  
-|Dupleks|✓|||Yes|Wyślij do miejsca docelowego kopii zapasowej.|  
+|Dupleks|✓|||Tak|Wyślij do miejsca docelowego kopii zapasowej.|  
   
 ## <a name="hosting"></a>Hosting  
  Ponieważ usługa routingu jest zaimplementowana jako usługa WCF, musi być albo może być samodzielnie hostowane w aplikacji lub hostowanych przez usługi IIS i WAS. Zaleca się, że usługa routingu znajdować IIS, WAS, lub aplikacji usługi Windows można skorzystać z automatycznego uruchamiania i cyklu życia funkcje zarządzania dostępne w tych środowiskach hostingu.  
@@ -405,4 +405,4 @@ using (ServiceHost serviceHost =
 
 - [Filtry komunikatów](message-filters.md)
 - [Kontrakty routingu](routing-contracts.md)
-- [Wybieranie filtra](choosing-a-filter.md)
+- [Wybieranie filtru](choosing-a-filter.md)

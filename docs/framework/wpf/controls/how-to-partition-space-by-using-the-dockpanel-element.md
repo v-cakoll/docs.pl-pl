@@ -11,10 +11,10 @@ helpviewer_keywords:
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
 ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158889"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Instrukcje: Rozdzielanie miejsca przy użyciu elementu DockPanel
@@ -38,4 +38,4 @@ Poniższy przykład tworzy prostą [!INCLUDE[TLA#tla_ui](../../../../includes/tl
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.DockPanel>
-- [Przegląd Panele](panels-overview.md)
+- [Panele — omówienie](panels-overview.md)

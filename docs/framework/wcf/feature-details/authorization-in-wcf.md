@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
 ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161374"
 ---
 # <a name="authorization-in-wcf"></a>Autoryzacja w programie WCF
@@ -22,10 +22,10 @@ Autoryzacja to proces nadzoru nad dostępu i uprawnień do zasobów, takich jak 
  [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Przedstawia proces ograniczanie dostępu do usługi za pomocą <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Instrukcje: używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  Omawia konfigurację usługi, aby włączyć go do użycia funkcję dostawcy roli [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
- [Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Instrukcje: Używanie dostawcy roli Menedżera autoryzacji platformy ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] można użyć Menedżera autoryzacji do zarządzania autoryzacji dla witryny sieci Web. Podobnie można korzystać z usługi WCF [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]kombinacja /Authorization Menedżera autoryzacji klientów.  
   
  [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
 ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157056"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox — Style i szablony
@@ -68,7 +68,7 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ListBox> k
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony formantu](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Style i szablony kontrolek](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

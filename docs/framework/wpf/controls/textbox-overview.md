@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162649"
 ---
 # <a name="textbox-overview"></a>TextBox — Przegląd
@@ -22,7 +22,7 @@ ms.locfileid: "59162649"
 |formant|Sprawdzanie pisowni w czasie rzeczywistym|Menu kontekstowe|Formatowanie poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (kont. + B)|<xref:System.Windows.Documents.FlowDocument> zawartość, taką jak obrazy, akapitów, tabelach itp.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Tak|Yes|Nie|Nie.|  
-|<xref:System.Windows.Controls.RichTextBox>|Tak|Tak|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|  
+|<xref:System.Windows.Controls.RichTextBox>|Tak|Yes|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|Tak (zobacz [RichTextBox — Przegląd](richtextbox-overview.md))|  
   
 > [!NOTE]
 >  Mimo że <xref:System.Windows.Controls.TextBox> ma obsługują formatowanie pokrewne edytowania poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> kont. + B, wiele podstawowych poleceń są obsługiwane przez oba formanty, takie jak <xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Documents.EditingCommands>.  
@@ -67,5 +67,5 @@ ms.locfileid: "59162649"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [— Tematy porad](textbox-how-to-topics.md)
-- [RichTextBox — Przegląd](richtextbox-overview.md)
+- [Tematy z instrukcjami](textbox-how-to-topics.md)
+- [RichTextBox — omówienie](richtextbox-overview.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: caf9a66e8c42fb80955539aa9d3eb32179309004
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157459"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) został opracowany pod kątem współdzia
 |Obsługa wiadomości|SOAP 1.1|[SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=90520)<br /><br /> Zgodnie z Basic Profile 1.1 `basicHttpBinding` element implementuje protokół wiadomości SOAP 1.1.|  
 |Zabezpieczenia|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Zgodnie z profilu podstawowego zabezpieczeń `basicHttpBinding` element implementuje Specyfikacja zabezpieczeń wiadomości SOAP zabezpieczeń usług sieci Web (WSS) 1.0, nazwa użytkownika/hasło i zabezpieczenia oparte na X.509.<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential &#124;                     "Message" .../> </binding> </basicHttpBinding>`|  
 |Zabezpieczenia|Profil UsernameToken zabezpieczeń komunikatu protokołu SOAP programu WSS 1.0|[Profil UsernameToken zabezpieczeń komunikatu protokołu SOAP programu WSS 1.0](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> `<basicHttpBinding> <binding name="Binding1"> <security mode="TransportWithMessageCredential"> <transport clientCredentialType="Basic"/> </security> </basicHttpBinding>`|  
-|Zabezpieczenia|WSS SOAP Message Security X.509 Certificate Token Profile 1.0|[WSS SOAP Message Security X.509 Certificate Token Profile 1.0](https://go.microsoft.com/fwlink/?LinkId=95335)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
+|Zabezpieczenia|WSS SOAP Message Security X.509 Certificate Token Profile 1.0|[Grupie WSS protokołu SOAP wiadomości zabezpieczeń X.509 tokenu profilu certyfikatu 1.0](https://go.microsoft.com/fwlink/?LinkId=95335)<br /><br /> `<basicHttpBinding>   <security mode="Message"> <message clientCredentialType="Certificate"/> </security> </basicHttpBinding>`|  
   
 ### <a name="wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding"></a>wsHttpBinding, ws2007HttpBinding i wsDualHttpBinding  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) został opracowany pod kątem współdzia
 |Zabezpieczenia|WSS SOAP Message Security 1.0|[WSS SOAP Message Security 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)<br /><br /> Zastosowania `securityMode` atrybut jest ustawiony na "wsSecurityOverHttp" (wartość domyślna), a parametry są skonfigurowane przy użyciu `wsSecurity` elementu podrzędnego.<br /><br /> `<wsHttpBinding>   <binding name="myBinding">      <security mode="Message" .../>   </binding> </wsHttpBinding>`|  
 |Zabezpieczenia|Grupie WSS SOAP 1.1 profilu UsernameToken zabezpieczeń komunikatów|[Profil UsernameToken zabezpieczeń komunikatu protokołu SOAP programu WSS 1.0](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> Zastosowania `wsSecurity` elementu `authenticationMode` atrybut jest ustawiony na "Nazwa_użytkownika".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="UserName        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security> </binding> </wsHttpBinding>`|  
 |Zabezpieczenia|Grupie WSS protokołu SOAP wiadomości zabezpieczeń X.509 tokenu profilu certyfikatu 1.1|[Grupie WSS protokołu SOAP wiadomości zabezpieczeń X.509 tokenu profilu certyfikatu 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)<br /><br /> Używany do ochrony wiadomości gdy `wsSecurity` elementu `authenticationMode` atrybutu jest równa "Nazwa_użytkownika", "Certificate" lub "None". Ponadto, użyj tego do uwierzytelniania klienta podczas `wsSecurity` elementu `authenticationMode` "Certificate" ma ustawioną wartość atrybutu.<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Certificate"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
-|Zabezpieczenia|Profil tokenu protokołu Kerberos zabezpieczeń wiadomości WSS SOAP 1.1|[Profil tokenu protokołu Kerberos zabezpieczeń wiadomości WSS SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Na użytek uwierzytelniania i komunikat ochrony podczas `wsSecurity` elementu `authenticationMode` atrybut jest ustawiony na "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
+|Zabezpieczenia|Profil tokenu protokołu Kerberos zabezpieczeń wiadomości WSS SOAP 1.1|[WSS SOAP Message Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Na użytek uwierzytelniania i komunikat ochrony podczas `wsSecurity` elementu `authenticationMode` atrybut jest ustawiony na "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
 |Zabezpieczenia|WS-SecureConversation|[WS-SecureConversation](https://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Służy do zapewnienia bezpiecznej sesji przy `security/@mode` "Message" ma ustawioną wartość atrybutu i `message/@establishSecurityContext` atrybut jest ustawiony na wartość "prawda" (wartość domyślna).|  
 |Zabezpieczenia|WS-Trust|[WS-Trust](https://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Używane przez usługi WS-SecureConversation (zobacz powyżej).|  
 |Niezawodna obsługa komunikatów|WS-ReliableMessaging|[WS-ReliableMessaging](https://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Podczas wiązania jest skonfigurowany do używania `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
@@ -110,9 +110,9 @@ Windows Communication Foundation (WCF) został opracowany pod kątem współdzia
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
-- [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
+- [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)
 - [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)
 - [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

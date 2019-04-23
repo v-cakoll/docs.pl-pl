@@ -3,10 +3,10 @@ title: typ złożony
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160813"
 ---
 # <a name="complex-type"></a>typ złożony
@@ -40,4 +40,4 @@ A *typu złożonego* jest szablon służący do definiowania właściwości zaaw
 ## <a name="see-also"></a>Zobacz także
 
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

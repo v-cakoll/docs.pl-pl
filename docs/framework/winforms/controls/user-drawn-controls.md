@@ -10,10 +10,10 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158447"
 ---
 # <a name="user-drawn-controls"></a>Formanty rysowane przez użytkownika
@@ -83,5 +83,5 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
 - [Instrukcje: Tworzenie obiektów graficznych do rysowania](../advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Formanty składników](constituent-controls.md)
-- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
+- [Kontrolki składników](constituent-controls.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

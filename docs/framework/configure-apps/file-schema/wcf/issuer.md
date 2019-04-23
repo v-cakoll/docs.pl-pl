@@ -3,10 +3,10 @@ title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
 ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160826"
 ---
 # <a name="issuer"></a>\<issuer>
@@ -57,7 +57,7 @@ Określa Usługa tokenu zabezpieczającego (STS), która wystawia tokeny zabezpi
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Kolekcja nagłówków adresowych dla punktów końcowych, które można utworzyć konstruktora.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Podczas używania tokenu wystawionego, określa ustawienia, które umożliwiają klienta do uwierzytelniania serwera.|  
+|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Podczas używania tokenu wystawionego, określa ustawienia, które umożliwiają klienta do uwierzytelniania serwera.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -74,5 +74,5 @@ Określa Usługa tokenu zabezpieczającego (STS), która wystawia tokeny zabezpi
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Możliwości zabezpieczeń wiązań niestandardowych](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

@@ -1,12 +1,12 @@
 ---
-title: <serviceAuthorization> — element
+title: <serviceAuthorization>, element
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
 ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157349"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > element
@@ -101,6 +101,6 @@ Określa ustawienia, które zezwalają na dostęp do operacji usługi
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Autoryzowanie dostępu do operacji usługi](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Instrukcje: Ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [Zasady autoryzacji](../../../../../docs/framework/wcf/samples/authorization-policy.md)

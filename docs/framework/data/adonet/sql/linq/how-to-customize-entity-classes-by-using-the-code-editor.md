@@ -3,10 +3,10 @@ title: 'Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu'
 ms.date: 03/30/2017
 ms.assetid: ec28332f-9f3c-4e0a-baca-60f9141a68c0
 ms.openlocfilehash: 05a523f8b98c7b64350b67c217baba07dca14de3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155171"
 ---
 # <a name="how-to-customize-entity-classes-by-using-the-code-editor"></a>Instrukcje: Dostosowywanie klas jednostek za pomocą edytora kodu
@@ -34,7 +34,7 @@ Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesi
  [Instrukcje: Reprezentacja kolumn jako wygenerowanych w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-database-generated.md)  
  Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>.  
   
- [Instrukcje: Reprezentacja kolumn jako kolumn znacznika czasu lub wersji](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
+ [Instrukcje: Reprezentuje kolumn jako sygnatura czasowa lub kolumny wersji](../../../../../../docs/framework/data/adonet/sql/linq/how-to-represent-columns-as-timestamp-or-version-columns.md)  
  Opisuje sposób używania <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>.  
   
  [Instrukcje: Określanie typów danych bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-database-data-types.md)  
@@ -57,4 +57,4 @@ Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesi
   
 ## <a name="see-also"></a>Zobacz także
 
-- [SqlMetal.exe (Narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
+- [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)

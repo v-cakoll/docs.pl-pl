@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156003"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding — Rozszerzenie znaczników
@@ -65,7 +65,7 @@ ms.locfileid: "59156003"
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
-- [RelativeSource MarkupExtension](relativesource-markupextension.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [RelativeSource, rozszerzenie znaczników](relativesource-markupextension.md)
 - [Rozszerzenie znaczników powiązania](binding-markup-extension.md)

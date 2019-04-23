@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157875"
 ---
 # <a name="panels-overview"></a>Przegląd Panele
@@ -73,7 +73,7 @@ ms.locfileid: "59157875"
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|Nie|<xref:System.Windows.Controls.Primitives.UniformGrid> Służy do Rozmieść elementy podrzędne w siatce, ze wszystkimi rozmiarami równy komórki.|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|Nie|Udostępnia klasę bazową dla paneli, które mogą "Wirtualizacja" ich elementy podrzędne kolekcji.|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|Tak|Rozmieszcza i Wirtualizuje zawartość w jednym wierszu zorientowanej na poziomo czy pionowo.|  
-|<xref:System.Windows.Controls.WrapPanel>|Yes|<xref:System.Windows.Controls.WrapPanel> Ustawia elementy podrzędne na kolejnych pozycjach od od lewej do prawej, istotne zawartości do następnego wiersza na krawędzi zawierającego pole. Kolejne porządkowanie się dzieje sekwencyjnie od góry do dołu lub od prawej do lewej w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
+|<xref:System.Windows.Controls.WrapPanel>|Tak|<xref:System.Windows.Controls.WrapPanel> Ustawia elementy podrzędne na kolejnych pozycjach od od lewej do prawej, istotne zawartości do następnego wiersza na krawędzi zawierającego pole. Kolejne porządkowanie się dzieje sekwencyjnie od góry do dołu lub od prawej do lewej w zależności od wartości <xref:System.Windows.Controls.WrapPanel.Orientation%2A> właściwości.|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>Panele interfejsu użytkownika  
@@ -254,12 +254,12 @@ ms.locfileid: "59157875"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [Przykład WPF układu galerii](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [Układ](../advanced/layout.md)
 - [Przykładu z galerii kontrolki WPF](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [Przegląd Wyrównanie, marginesy i wypełnienia](../advanced/alignment-margins-and-padding-overview.md)
+- [Przegląd wyrównania, marginesów i wypełnień](../advanced/alignment-margins-and-padding-overview.md)
 - [Tworzenie niestandardowych przykładowej panelu zawijania zawartości](https://go.microsoft.com/fwlink/?LinkID=159979)
-- [Przegląd Właściwości dołączone](../advanced/attached-properties-overview.md)
-- [Przegląd Użyj automatycznego układu](../advanced/use-automatic-layout-overview.md)
+- [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md)
+- [Przegląd używania automatycznego układu](../advanced/use-automatic-layout-overview.md)
 - [Układ i projekt](../advanced/optimizing-performance-layout-and-design.md)

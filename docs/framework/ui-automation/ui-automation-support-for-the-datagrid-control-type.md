@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
 ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161034"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataGrid
@@ -54,10 +54,10 @@ ms.locfileid: "59161034"
   
 |— Wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Sam formant siatki danych zawsze obsługuje wzorca kontrolki siatki, ponieważ elementy zawierała metadanych, który został rozmieszczony w siatce.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Tak|Sam formant siatki danych zawsze obsługuje wzorca kontrolki siatki, ponieważ elementy zawierała metadanych, który został rozmieszczony w siatce.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Zależy od|Możliwość przewiń w siatce danych, zależy od zawartości i tego, czy paski przewijania są obecne.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Zależy od|Możliwość wybrania siatki danych zależy od zawartości.|  
-|<xref:System.Windows.Automation.Provider.ITableProvider>|Tak|Formant siatki danych zawsze ma nagłówek w ramach jego poddrzewa, więc wzorca kontrolki tabeli muszą być obsługiwane.|  
+|<xref:System.Windows.Automation.Provider.ITableProvider>|Yes|Formant siatki danych zawsze ma nagłówek w ramach jego poddrzewa, więc wzorca kontrolki tabeli muszą być obsługiwane.|  
   
  Elementy danych w ramach kontenerów siatki danych będzie obsługiwać minimum:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59161034"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty siatki danych. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -107,5 +107,5 @@ ms.locfileid: "59161034"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Automation.ControlType.DataGrid>
-- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

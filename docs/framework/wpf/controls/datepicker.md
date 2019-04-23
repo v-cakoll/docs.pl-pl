@@ -6,10 +6,10 @@ helpviewer_keywords:
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
 ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161344"
 ---
 # <a name="datepicker"></a>DatePicker
@@ -26,5 +26,5 @@ DatePicker Control
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty](index.md)
+- [Kontrolki](index.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)

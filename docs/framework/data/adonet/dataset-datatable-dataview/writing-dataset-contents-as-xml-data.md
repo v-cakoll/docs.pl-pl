@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158955"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Zapisywanie zawartości elementu DataSet jako danych XML
@@ -37,7 +37,7 @@ string xmlDS = custDS.GetXml();
 |-------------------------|-----------------|  
 |**IgnoreSchema**|Zapisuje zawartość bieżącego <xref:System.Data.DataSet> jako danych XML bez schematu XML. Domyślnie włączone.|  
 |**WriteSchema**|Zapisuje zawartość bieżącego <xref:System.Data.DataSet> jako danych XML przy użyciu relacyjnej struktury jako wbudowanego schematu XML.|  
-|**Format DiffGram**|Zapisuje całą <xref:System.Data.DataSet> jako element w formacie DiffGram, łącznie z pierwotnym i bieżącym wartości. Aby uzyskać więcej informacji, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**DiffGram**|Zapisuje całą <xref:System.Data.DataSet> jako element w formacie DiffGram, łącznie z pierwotnym i bieżącym wartości. Aby uzyskać więcej informacji, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
   
  Podczas zapisywania zawartości reprezentację XML <xref:System.Data.DataSet> zawierający **DataRelation** obiektów, najprawdopodobniej będą wynikowy kod XML ma wiersze podrzędne każdej relacji zagnieżdżone w obrębie ich elementy nadrzędne powiązane. Aby to zrobić, należy ustawić **zagnieżdżone** właściwość **DataRelation** do **true** po dodaniu **DataRelation** do <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [zagnieżdżanie elementów DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
@@ -71,7 +71,7 @@ xmlSW.Close();
 |**Element**|Domyślnie włączone. Kolumny są zapisywane jako XML element, gdzie ColumnName jest nazwa elementu, a zawartość kolumny są zapisywane w postaci tekstu elementu. Na przykład:<br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**Atrybut**|Kolumny są zapisywane jako atrybut XML elementu XML dla bieżącego wiersza, gdzie ColumnName jest nazwa atrybutu, a zawartość kolumny są zapisywane jako wartość atrybutu. Na przykład:<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
 |**SimpleContent**|Zawartość kolumny są zapisywane jako tekst w elemencie XML dla bieżącego wiersza. Na przykład:<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> Należy pamiętać, że **SimpleContent** nie można ustawić wartości w kolumnie tabeli, która ma **elementu** kolumn ani relacjach zagnieżdżonych.|  
-|**Hidden**|Kolumna nie jest zapisywana w danych wyjściowych XML.|  
+|**Ukryte**|Kolumna nie jest zapisywana w danych wyjściowych XML.|  
   
 ## <a name="see-also"></a>Zobacz także
 

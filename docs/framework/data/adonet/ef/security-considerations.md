@@ -3,10 +3,10 @@ title: Security Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161369"
 ---
 # <a name="security-considerations-entity-framework"></a>Security Considerations (Entity Framework)
@@ -69,7 +69,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 -   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> do obsługi zapytań LINQ do zapytań jednostki.  
   
--   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> można zarejestrować w <xref:System.Transactions><xref:System.Transactions.Transaction>.  
+-   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> można zarejestrować w <xref:System.Transactions> <xref:System.Transactions.Transaction>.  
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> serializować wyjątków za pomocą <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
@@ -164,5 +164,5 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 ## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Uwagi dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
+- [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Zagadnienia dotyczące migracji](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

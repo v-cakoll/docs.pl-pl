@@ -10,10 +10,10 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
 ms.openlocfilehash: f47090f5d0765833f7ac17a947691a4693d9923b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162493"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem
@@ -39,4 +39,4 @@ Podczas tworzenia formantów, które współdziałają z danymi będą czasami j
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [BindingSource — Składnik](bindingsource-component.md)
+- [BindingSource, składnik](bindingsource-component.md)

@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bf78ded62f11b336d9f5fe0f3a205275ae37189b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157407"
 ---
 # <a name="createassemblycache-function"></a>CreateAssemblyCache — Funkcja
@@ -55,6 +55,6 @@ HRESULT CreateAssemblyCache (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyCache — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
 - [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

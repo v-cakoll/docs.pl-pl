@@ -3,10 +3,10 @@ title: Możliwości zabezpieczeń wiązań niestandardowych
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
 ms.openlocfilehash: 25d203fa706eeb0d0ccf1eaf4367ffa5bd7b83aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157277"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Możliwości zabezpieczeń wiązań niestandardowych
@@ -16,34 +16,34 @@ Najbardziej typowe zadania zabezpieczeń można wykonać przy użyciu jednej z p
  [Tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
  W tym artykule opisano tryby uwierzytelniania, które można wykonać za pomocą niestandardowego powiązania.  
   
- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  W tym artykule opisano podstawowe kroki tworzenia niestandardowego powiązania za pomocą elementu zabezpieczeń.  
   
- [Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [Instrukcje: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
  W tym artykule opisano, jak utworzyć element zabezpieczeń dla określonego trybu uwierzytelniania.  
   
- [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Instrukcje: Wyłączanie bezpiecznej sesji WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Opisuje sposób wyłączanie bezpiecznej sesji podczas tworzenia usługi federacyjnej.  
   
- [Instrukcje: włączanie wykrywania powtarzania komunikatu](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
+ [Instrukcje: Włączanie wykrywania powtarzania komunikatu](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  W tym artykule opisano, jak określić, gdy wystąpi atak metodą powtórzeń.  
   
- [Instrukcje: tworzenie poświadczeń pomocniczych](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
+ [Instrukcje: Tworzenie poświadczeń pomocniczych](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
  Zawiera opis sposobu dostarczania pomocnicze poświadczeń z usługą, jeśli usługa wymaga.  
   
- [Instrukcje: konfigurowanie potwierdzenia sygnatury](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
+ [Instrukcje: Konfigurowanie potwierdzenia sygnatury](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
  W tym artykule opisano kroki, aby potwierdzić podpisów w przypadku, gdy cyfrowe podpisywanie komunikatów.  
   
- [Instrukcje: ustawianie maksymalnego przesunięcia czasowego zegara](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
+ [Instrukcje: Zestaw maksymalnego przesunięcia czasowego zegara](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
  W tym artykule opisano, jak ustawić maksymalny dozwolony czas różnią się usługi i klienta.  
   
- [Instrukcje: wyłączanie szyfrowania podpisów cyfrowych](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
+ [Instrukcje: Wyłączanie szyfrowania podpisów cyfrowych](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
  W tym artykule opisano, jak wyłączanie szyfrowania podpisów cyfrowych może mieć korzyści wydajności.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
- [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
+ [\<Zabezpieczenia >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Omówienie poziomów ochrony](../../../../docs/framework/wcf/understanding-protection-level.md)  
@@ -52,6 +52,6 @@ Najbardziej typowe zadania zabezpieczeń można wykonać przy użyciu jednej z p
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)

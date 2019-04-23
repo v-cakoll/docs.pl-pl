@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155093"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
@@ -174,9 +174,9 @@ Autoryzacja to proces określania jednostek, które ma uprawnienia do zmiany, wy
 - [Oświadczenia i tokeny](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Oświadczenia i odmawianie dostępu do zasobów](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Tworzenie oświadczenia i wartości zasobów](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [Instrukcje: tworzenie oświadczenia niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Instrukcje: porównywanie oświadczeń](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Instrukcje: tworzenie niestandardowych zasad autoryzacji](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [Instrukcje: tworzenie menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [Instrukcje: Tworzenie oświadczenia niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Instrukcje: Porównywanie oświadczeń](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Instrukcje: Tworzenie niestandardowych zasad autoryzacji](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Instrukcje: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

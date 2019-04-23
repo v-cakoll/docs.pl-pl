@@ -3,10 +3,10 @@ title: Wyrażenia obiektów
 description: Dowiedz się, jak używać F# wyrażenia obiektów, jeśli chcesz uniknąć dodatkowego kodu i obciążenie wymagane do utworzenia nowego typu nazwanego.
 ms.date: 02/08/2019
 ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157855"
 ---
 # <a name="object-expressions"></a>Wyrażenia obiektów
@@ -79,4 +79,4 @@ Należy użyć wyrażeń obiektu, jeśli chcesz uniknąć dodatkowego kodu i obc
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Materiały referencyjne dotyczące języka F#](index.md)
+- [Dokumentacja języka F#](index.md)

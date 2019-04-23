@@ -3,10 +3,10 @@ title: <message> element <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
 ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161021"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<komunikat > element \<netTcpBinding >
@@ -74,7 +74,7 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Uwagi  
  Komunikat używa zabezpieczenia na poziomie komunikatu, integralności i poufności komunikatu protokołu SOAP, a także do wzajemnego uwierzytelniania komunikacji elementów równorzędnych. Zaznaczenie tego trybu zabezpieczeń w powiązaniu stosu kanał jest skonfigurowany przy użyciu elementów powiązanie zabezpieczeń komunikatów i komunikaty protokołu SOAP są zabezpieczone zgodnie z protokołu WS-Security * standardy.  
@@ -88,5 +88,5 @@ Określa typ zabezpieczenia na poziomie wiadomości dotyczące punkty końcowe s
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: e88cc9b36f64a559105620359f4c163978cf9d8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: becc3fc8a75cd4d2d5e0c1db2858b15b8b61ae20
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692262"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978578"
 ---
 # <a name="constructors-c-programming-guide"></a>Konstruktorzy (Przewodnik programowania w języku C#)
 Zawsze, gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzone, jego konstruktor jest wywoływany. Klasa lub struktura może mieć wiele konstruktorów, które przyjmują różne argumentów. Konstruktory Włącz programisty należy ustawić wartości domyślne, ograniczyć podczas tworzenia wystąpienia i napisać kod, który jest elastyczny i łatwy do odczytania. Aby uzyskać więcej informacji i przykładów, zobacz [korzystanie z konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) i [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
 
-## <a name="default-constructors"></a>Konstruktory domyślne
+## <a name="parameterless-constructors"></a>Konstruktorów bez parametrów
   
-Jeśli nie podasz konstruktora dla klasy, C# tworzony jest jeden domyślny, który tworzy wystąpienie obiektu i ustawia zmienne składowe do wartości domyślnych, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Jeśli nie podasz konstruktora dla Twojej struktury, C# opiera się na *niejawnego domyślnego konstruktora* automatycznie zainicjować każdego pola typu wartości do wartości domyślnej, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+Jeśli nie podasz konstruktora dla klasy, C# tworzony jest jeden domyślny, który tworzy wystąpienie obiektu i ustawia zmienne składowe do wartości domyślnych, zgodnie z zaleceniami z [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Jeśli nie podasz konstruktora dla Twojej struktury C# opiera się na *niejawnego konstruktora bez parametrów* automatycznie zainicjować każdego pola typu wartości do wartości domyślnej, zgodnie z zaleceniami z [wartości domyślne Tabela](../../../csharp/language-reference/keywords/default-values-table.md). Aby uzyskać więcej informacji i przykładów, zobacz [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Składnia konstruktora
 

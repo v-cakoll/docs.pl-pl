@@ -3,10 +3,10 @@ title: Planu zapytania z pamięci podręcznej (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178181"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Planu zapytania z pamięci podręcznej (jednostka SQL)
@@ -50,4 +50,4 @@ Zawsze, gdy podejmowana jest próba, aby wykonać zapytanie, potok zapytanie wys
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

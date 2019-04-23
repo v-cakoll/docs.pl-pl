@@ -27,19 +27,19 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.openlocfilehash: dc817fdb9684f794efc6599444e80be1ef7f9654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978045"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 
 Następujące operatory wykonywać operacji arytmetycznych na wartościach typy liczbowe:
 
-- Jednoargumentowy [ `++` (inkrementacja)](#increment-operator-), [ `--` (dekrementacja)](#decrement-operator---), [ `+` (plus)](#unary-plus-and-minus-operators), i [ `-` (minus)](#unary-plus-and-minus-operators) operatorów.
-- Binarny [ `*` (mnożenie)](#multiplication-operator-), [ `/` (dział)](#division-operator-), [ `%` (resztę)](#remainder-operator-), [ `+` () Dodawanie)](#addition-operator-), i [ `-` (odejmowanie)](#subtraction-operator--) operatorów.
+- Jednoargumentowy [ `++` (inkrementacja)](#increment-operator-), [ `--` (dekrementacja)](#decrement-operator---), [ `+` (plus)](#unary-plus-and-minus-operators), i [ `-` (minus)](#unary-plus-and-minus-operators) operatorów
+- Binarny [ `*` (mnożenie)](#multiplication-operator-), [ `/` (dział)](#division-operator-), [ `%` (resztę)](#remainder-operator-), [ `+` () Dodawanie)](#addition-operator-), i [ `-` (odejmowanie)](#subtraction-operator--) operatorów
 
 Te operatory obsługują wszystkie [całkowitego](../keywords/integral-types-table.md) i [zmiennoprzecinkowych](../keywords/floating-point-types-table.md) typów liczbowych.
 
@@ -167,10 +167,10 @@ Możesz również użyć `-` operator usuwanie delegata. Aby uzyskać więcej in
 
 Poniższa lista zamówień operatorów arytmetycznych, zaczynając od najwyższy priorytet do najniższego:
 
-- Inkrementacja przyrostkowa `x++` i dekrementacyjne `x--` operatorów.
-- Inkrementacja przedrostkowa `++x` i dekrementacyjne `--x` i jednoargumentowe `+` i `-` operatorów.
-- Mnożenia `*`, `/`, i `%` operatorów.
-- Dodatek `+` i `-` operatorów.
+- Inkrementacja przyrostkowa `x++` i dekrementacyjne `x--` operatorów
+- Inkrementacja przedrostkowa `++x` i dekrementacyjne `--x` i jednoargumentowe `+` i `-` operatorów
+- Mnożenia `*`, `/`, i `%` operatorów
+- Dodatek `+` i `-` operatorów
 
 Operatory arytmetyczne binarne są lewostronne. Oznacza to operatory o tym samym poziomie priorytetu są obliczane od lewej do prawej.
 
@@ -199,6 +199,10 @@ z tą różnicą, że `x` jest obliczany tylko raz.
 W poniższym przykładzie pokazano użycie przydział złożony z operatorów arytmetycznych:
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
+
+Z powodu [promocji na liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions), wynikiem `op` operacji może nie być niejawnie konwertowane na typ `T` z `x`. W takim przypadku jeśli `op` jest wstępnie zdefiniowanego operatora, a wynik operacji jest jawnie konwertowany na typ `T` z `x`, wyrażenia przypisania złożonego w postaci `x op= y` jest odpowiednikiem `x = (T)(x op y)`, z wyjątkiem które `x` jest oceniane tylko raz. Poniższy przykład przedstawia tego zachowania:
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
 Możesz także użyć `+=` i `-=` operatory subskrybowanie i anulowanie subskrypcji [zdarzenia](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
@@ -256,10 +260,11 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Operator odejmowania](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Przydział złożony](~/_csharplang/spec/expressions.md#compound-assignment)
 - [Operatory checked i unchecked](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Promocji na liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
 - <xref:System.Math?displayProperty=nameWithType>

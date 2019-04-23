@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4e549e13c0d51e4aa708a674a2224168ab66f8ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178168"
 ---
 # <a name="nukedownloadedcache-function"></a>NukeDownloadedCache — Funkcja
@@ -51,6 +51,6 @@ HRESULT NukeDownloadedCache();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [CreateHistoryReader — Funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
-- [GetHistoryFileDirectory — Funkcja](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)
+- [CreateHistoryReader, funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)
+- [GetHistoryFileDirectory, funkcja](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)
 - [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

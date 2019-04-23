@@ -10,10 +10,10 @@ helpviewer_keywords:
 - includehex
 ms.assetid: ad22b4b8-00af-4778-9cca-cb609ce1f8ff
 ms.openlocfilehash: 00df193671255e7b40f5c4b86ee952a3e20e3a40
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177570"
 ---
 # <a name="interpreting-network-tracing"></a>Interpretowanie śledzenia sieci
@@ -47,5 +47,5 @@ Po włączeniu funkcji śledzenia sieci umożliwia śledzenie przechwytywania wy
 ## <a name="see-also"></a>Zobacz także
 
 - [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [Instrukcje: konfigurowanie funkcji śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
-- [Śledzenie sieci w .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Instrukcje: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)

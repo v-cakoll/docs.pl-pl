@@ -10,10 +10,10 @@ helpviewer_keywords:
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
 ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163010"
 ---
 # <a name="how-to-transform-a-brush"></a>Instrukcje: Przekształcanie pędzla
@@ -46,6 +46,6 @@ W tym przykładzie pokazano, jak przekształcić <xref:System.Windows.Media.Brus
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Przekształcanie pędzla](brush-transformation-overview.md)
-- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
-- [Przegląd Przekształcenia](transforms-overview.md)
+- [Przekształcanie pędzla — przegląd](brush-transformation-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Przekształcenia — przegląd](transforms-overview.md)

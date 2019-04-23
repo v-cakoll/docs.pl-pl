@@ -1,12 +1,12 @@
 ---
-title: <certificate> dla <identity>
+title: <certificate> Aby uzyskać <identity>
 ms.date: 03/30/2017
 ms.assetid: 4aeccaf7-8f23-495c-aa5f-5bd8b5d4a10c
 ms.openlocfilehash: 76bdcb40d5016d7fcbff6c0d9769819f710065fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205839"
 ---
 # <a name="certificate-for-identity"></a>\<certyfikat > dla \<identity >
@@ -39,7 +39,7 @@ Określa certyfikat X.509 używany do walidacji serwera do klienta.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
+|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod określa reprezentację zakodowany certyfikat używany do walidacji serwera do klienta.  
@@ -57,4 +57,4 @@ Określa certyfikat X.509 używany do walidacji serwera do klienta.
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.EndpointIdentity>
 - [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

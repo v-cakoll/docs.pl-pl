@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352828"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978929"
 ---
 # <a name="data-binding"></a>Powiązanie danych
 
@@ -42,9 +42,9 @@ Kolekcja pokoleń są implementowane przez ogólny <xref:System.Data.Linq.Table%
 
 - Źródło danych jest <xref:System.Linq.IQueryable%601>. Istnieją dwa scenariusze:
 
-    - Jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] znajduje podstawowe <xref:System.Data.Linq.Table%601> z <xref:System.Linq.IQueryable%601>źródła umożliwia edition i ta sytuacja jest taki sam jak w pierwszym punkcie.
+  - Jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] znajduje podstawowe <xref:System.Data.Linq.Table%601> z <xref:System.Linq.IQueryable%601>źródła umożliwia edition i ta sytuacja jest taki sam jak w pierwszym punkcie.
 
-    - Jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie można odnaleźć bazowej <xref:System.Data.Linq.Table%601>, źródło nie zezwala na wersji (na przykład `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przegląda zapytanie, aby wypełnić ogólnego `SortableBindingList`, czyli prostego <xref:System.ComponentModel.BindingList%601> implementującej funkcję sortowania dla jednostek T dla danej właściwości.
+  - Jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie można odnaleźć bazowej <xref:System.Data.Linq.Table%601>, źródło nie zezwala na wersji (na przykład `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przegląda zapytanie, aby wypełnić ogólnego `SortableBindingList`, czyli prostego <xref:System.ComponentModel.BindingList%601> implementującej funkcję sortowania dla jednostek T dla danej właściwości.
 
 ## <a name="specialized-collections"></a>Specjalne kolekcje
 

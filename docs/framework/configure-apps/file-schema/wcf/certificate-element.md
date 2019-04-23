@@ -1,12 +1,12 @@
 ---
-title: <certificate> Element
+title: <certificate>, element
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
 ms.openlocfilehash: eea8130911ca3780a6e4e753c17877e58c50b139
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164271"
 ---
 # <a name="certificate-element"></a>\<certyfikat > Element
@@ -48,7 +48,7 @@ Określa certyfikat X.509 do podpisywania i szyfrowania wiadomości dla klientó
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer.|  
+|[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Określa poświadczenia używane podczas uwierzytelniania klientów peer-to-peer.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element konfiguracji zawiera wystąpienie X509Certificate2 używany podczas uwierzytelniania sąsiadów w siatki elementów równorzędnych.  

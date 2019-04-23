@@ -5,10 +5,10 @@ ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163140"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
@@ -22,7 +22,7 @@ ms.locfileid: "59163140"
   
 -   [Nieobsługiwane scenariusze oraz interfejsów API](#Unsupported)  
   
--   [Różnice w programie Visual Studio](#VS)  
+-   [Visual Studio differences](#VS)  
   
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>Różnice ogólne w czasie wykonywania  
@@ -97,9 +97,9 @@ ms.locfileid: "59163140"
   
 -   [Ogólne ustawienia projektowania](#General)  
   
--   [Klasy HttpClient](#HttpClient)  
+-   [HttpClient](#HttpClient)  
   
--   [Usługa międzyoperacyjna](#Interop)  
+-   [Interop](#Interop)  
   
 -   [Nieobsługiwana interfejsów API](#APIs)  
   
@@ -153,7 +153,7 @@ ms.locfileid: "59163140"
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Metoda poprawnie analizuje ciągów, które zawierają daty krótkie w .NET Native. Jednak go nie zachować zgodność z zmiany daty i czasu podczas analizowania opisane w artykułach bazy wiedzy Microsoft Knowledge Base [KB2803771](https://support.microsoft.com/kb/2803771) i [KB2803755](https://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` is correpoprawnie jest zaokrąglana w .NET Native. W niektórych wersjach środowiska CLR zostały obcięte wynikowego ciągu zamiast zaokrąglane.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` poprawnie jest zaokrąglana w .NET Native. W niektórych wersjach środowiska CLR zostały obcięte wynikowego ciągu zamiast zaokrąglane.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Różnice HttpClient  
@@ -177,7 +177,7 @@ ms.locfileid: "59163140"
   
  .NET for Windows Store apps pozwala na ustawienie <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> właściwości <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, zarówno <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip>, lub <xref:System.Net.DecompressionMethods.None>.  .NET native obsługuje tylko <xref:System.Net.DecompressionMethods.Deflate> wraz z <xref:System.Net.DecompressionMethods.GZip>, lub <xref:System.Net.DecompressionMethods.None>.  Ustawiany <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> właściwości albo <xref:System.Net.DecompressionMethods.Deflate> lub <xref:System.Net.DecompressionMethods.GZip> samodzielnie dyskretnie ustawia ją na wartość oba <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip>.  
   
- **Pliki cookie**  
+ **Plik cookie**  
   
  Obsługa pliku cookie jest wykonywane jednocześnie przez <xref:System.Net.Http.HttpClient> i WinINet.  Pliki cookie z <xref:System.Net.CookieContainer> są łączone za pomocą plików cookie w pamięci podręcznej plików cookie WinINet.  Usuwanie pliku cookie z <xref:System.Net.CookieContainer> zapobiega <xref:System.Net.Http.HttpClient> wysyłanie plików cookie, ale jeśli plik cookie został już widzianych przez WinINet i pliki cookie nie zostały usunięte przez użytkownika, WinINet wysyła je.  Nie będzie już możliwe programowo usunąć plik cookie z WinINet przy użyciu <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, lub <xref:System.Net.CookieContainer> interfejsu API.  Ustawienie <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> właściwości `false` powoduje, że tylko <xref:System.Net.Http.HttpClient> Aby zatrzymać wysyłanie plików cookie. WinINet nadal mogą obejmować jego plików cookie w żądaniu.  
   
@@ -634,7 +634,7 @@ Inne nieobsługiwane funkcje międzyoperacyjności:
   
  Użyj x86 kompilacji narzędzia, które są stosowane domyślnie przez program Visual Studio. Nie zaleca się za pomocą narzędzia AMD64 MSBuild, które znajdują się w folderze C:\Program Files (x86)\MSBuild\12.0\bin\amd64; mogą one tworzyć problemów związanych z kompilacją.  
   
- **Profilery**  
+ **Profilers**  
   
 -   Profiler procesora CPU w usłudze Visual Studio i Profiler pamięci XAML nie Just My-kodu są poprawnie wyświetlane.  
   
@@ -651,4 +651,4 @@ Inne nieobsługiwane funkcje międzyoperacyjności:
 - [Wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Omówienie aplikacji .NET dla Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

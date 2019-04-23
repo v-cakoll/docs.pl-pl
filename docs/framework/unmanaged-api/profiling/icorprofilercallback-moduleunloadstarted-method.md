@@ -19,7 +19,7 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bb00a56b0d80b78867f70e64c1c9bdf0fc49e1be
 ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178402"

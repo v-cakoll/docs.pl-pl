@@ -5,10 +5,10 @@ ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176543"
 ---
 # <a name="mitigation-path-normalization"></a>Środki zaradcze: Ścieżka normalizacji
@@ -62,4 +62,4 @@ Począwszy od aplikacji docelowej [!INCLUDE[net_v462](../../../includes/net-v462
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany przekierowania](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Zmiany retargetingu](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

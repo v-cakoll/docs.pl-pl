@@ -3,10 +3,10 @@ title: Zkratka
 description: Dowiedz się więcej o byref i typami byref podobne w F#, które są używane do programowania niskiego poziomu.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055368"
 ---
 # <a name="byrefs"></a>Zkratka
@@ -112,17 +112,17 @@ C# obsługuje `in ref` i `out ref` słów kluczowych, oprócz `ref` zwraca. W po
 
 |Konstrukcja w języku C#|F#wnioskuje|
 |------------|---------|
-|`ref` wartość zwrócona|`outref<'T>`|
-|`ref readonly` wartość zwrócona|`inref<'T>`|
-|`in ref` parametr|`inref<'T>`|
-|`out ref` parametr|`outref<'T>`|
+|`ref` Wartość zwracana|`outref<'T>`|
+|`ref readonly` Wartość zwracana|`inref<'T>`|
+|`in ref` Parametr|`inref<'T>`|
+|`out ref` Parametr|`outref<'T>`|
 
 W poniższej tabeli przedstawiono co F# emituje:
 
 |F#konstrukcja|Konstrukcja emitowany|
 |------------|-----------------|
 |`inref<'T>` Argument|`[In]` argument atrybutu|
-|`inref<'T>` return|`modreq` atrybut na wartość|
+|`inref<'T>` Wróć|`modreq` atrybut na wartość|
 |`inref<'T>` w abstrakcyjny gniazdo lub wdrożenia|`modreq` argument lub zwracany|
 |`outref<'T>` Argument|`[Out]` argument atrybutu|
 

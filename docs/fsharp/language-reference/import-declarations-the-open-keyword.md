@@ -3,10 +3,10 @@ title: 'Deklaracje importowania: Open — słowo kluczowe'
 description: Dowiedz się więcej o F# zaimportować deklaracje i jak określić modułu lub przestrzeni nazw elementów, których możesz odwoływać się bez korzystania z w pełni kwalifikowanej nazwy.
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055004"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Deklaracje importowania: `open` — Słowo kluczowe
@@ -68,6 +68,6 @@ Niektóre moduły, rekordów lub typy Unii mogą określać `RequireQualifiedAcc
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Materiały referencyjne dotyczące języka F#](index.md)
-- [Namespaces](namespaces.md)
+- [Dokumentacja języka F#](index.md)
+- [Przestrzenie nazw](namespaces.md)
 - [Moduły](modules.md)

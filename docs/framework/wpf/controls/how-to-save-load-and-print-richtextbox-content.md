@@ -13,10 +13,10 @@ helpviewer_keywords:
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
 ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072467"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Instrukcje: Zapisz, ładuj i drukuj zawartość RichTextBox
@@ -35,5 +35,5 @@ Poniższy przykład pokazuje, jak można zapisać zawartości <xref:System.Windo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [RichTextBox — Przegląd](richtextbox-overview.md)
-- [TextBox — Przegląd](textbox-overview.md)
+- [RichTextBox — omówienie](richtextbox-overview.md)
+- [TextBox — omówienie](textbox-overview.md)

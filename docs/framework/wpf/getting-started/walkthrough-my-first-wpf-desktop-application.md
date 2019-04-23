@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055251"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Przewodnik: Moja pierwsza aplikacja klasyczna WPF
@@ -500,7 +500,7 @@ W tym instruktażu przedstawiono kilka technik tworzenia interfejsu użytkownika
 Aby uzyskać więcej informacji na temat tworzenia aplikacji zobacz następujące tematy:
 
 - [Tworzenie aplikacji](../app-development/index.md)
-- [Formanty](../controls/index.md)
+- [Kontrolki](../controls/index.md)
 - [Przegląd wiązanie danych](../data/data-binding-overview.md)
 - [Grafika i multimedia](../graphics-multimedia/index.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)

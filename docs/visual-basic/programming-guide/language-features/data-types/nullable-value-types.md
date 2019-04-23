@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
 ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921315"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Typy o wartości zerowalnej (Visual Basic)
@@ -109,12 +109,12 @@ Baza danych jest jednym z najważniejszych miejsc do użycia typy dopuszczające
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
-- [Używanie typów dopuszczających wartości zerowe](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Używanie typów dopuszczających wartości null](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Typy danych](index.md)
 - [Typy wartości i odwołań](value-types-and-reference-types.md)
-- [Rozwiązywanie problemów związanych z typami](troubleshooting-data-types.md)
-- [Wypełnij zestawów danych za pomocą adapterów TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
-- [If — operator](../../../language-reference/operators/if-operator.md)
+- [Rozwiązywanie problemów związanych z typami danych](troubleshooting-data-types.md)
+- [Wypełnianie zestawów danych za pomocą adapterów TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
+- [If, operator](../../../language-reference/operators/if-operator.md)
 - [Wnioskowanie o typie lokalnym](../variables/local-type-inference.md)
-- [Is — Operator](../../../language-reference/operators/is-operator.md)
-- [Operator IsNot](../../../language-reference/operators/isnot-operator.md)
+- [Is, operator](../../../language-reference/operators/is-operator.md)
+- [IsNot, operator](../../../language-reference/operators/isnot-operator.md)

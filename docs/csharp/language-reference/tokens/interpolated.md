@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920899"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — Interpolacja ciągów (odwołanie w C#)
@@ -99,4 +99,4 @@ Jeśli jesteś nowym użytkownikiem Interpolacja ciągów, zobacz [Interpolacja 
 - [Ciągi](../../programming-guide/strings/index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Znaki specjalne języka C#](index.md)
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)

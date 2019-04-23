@@ -9,10 +9,10 @@ helpviewer_keywords:
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054991"
 ---
 # <a name="tooltip"></a>ToolTip
@@ -25,8 +25,8 @@ Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zat
  ![Zrzut ekranu etykietki narzędzia](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolTip — Przegląd](tooltip-overview.md)  
-  [— Tematy porad](tooltip-how-to-topics.md)  
+ [ToolTip — omówienie](tooltip-overview.md)  
+  [Tematy z instrukcjami](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ Etykietka narzędzia jest niewielkie okno podręczne, który pojawia się po zat
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Przegląd Okna podręczne](popup-overview.md)  
-  [— Tematy porad](popup-how-to-topics.md)
+ [Okno podręczne — omówienie](popup-overview.md)  
+  [Tematy z instrukcjami](popup-how-to-topics.md)

@@ -3,10 +3,10 @@ title: Wprowadzenie do C# -zapoznanie się z poziomu narzędzi deweloperskich
 description: Ten artykuł zawiera podstawowe wprowadzenie do narzędzi, będziesz używać do tworzenia C# i aplikacje platformy .NET na maszynie.
 ms.date: 10/23/2018
 ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920665"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Zapoznanie się z poziomu narzędzi deweloperskich platformy .NET
@@ -26,25 +26,25 @@ Inne polecenia użyjesz [ `dotnet build` ](../../../core/tools/dotnet-build.md) 
 
 Można uruchomić z dowolnej z następujących samouczków:
 
-## [<a name="numbers-in-c"></a>Liczby w języku C#](numbers-in-csharp-local.md)
+## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Liczby w języku C#](numbers-in-csharp-local.md)
 
 W [liczby w elemencie C# ](numbers-in-csharp-local.md) samouczka, dowiesz się, jak komputery przechowujące liczby oraz sposób wykonywania obliczeń na różne typy liczbowe. Poznasz podstawy zaokrąglania oraz przeprowadzania obliczeń matematycznych za pomocą C#.
 
 W tym samouczku założono, że zakończono [Witaj, świecie](hello-world.yml) lekcji.
 
-## [<a name="branches-and-loops"></a>Gałęzie i pętle](branches-and-loops-local.md)
+## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Gałęzie i pętle](branches-and-loops-local.md)
 
 [Gałęzie i pętle](branches-and-loops-local.md) samouczek omawia podstawowe informacje dotyczące wybierania różnych ścieżek wykonywania kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, która jest podstawą jak programy podejmowanie decyzji i wybierz różne akcje.
 
 W tym samouczku założono, że zakończono [Witaj, świecie](hello-world.yml) i [liczby w elemencie C# ](numbers-in-csharp-local.md) lekcje.
 
-## [<a name="list-collection"></a>Lista kolekcji](arrays-and-collections.md)
+## <a name="list-collectionarrays-and-collectionsmd"></a>[Lista kolekcji](arrays-and-collections.md)
 
 [Listy kolekcji](arrays-and-collections.md) lekcji przedstawi Przewodnik po typ kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy, wyszukiwać elementy i sortowanie listy. Dowiesz się o różnych rodzajów list. 
 
 Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
 
-## [<a name="introduction-to-classes"></a>Wprowadzenie do klas](introduction-to-classes.md)
+## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Wprowadzenie do klas](introduction-to-classes.md)
 
 To wprowadzenie końcowego do C# samouczka jest dostępna tylko dla uruchomienia na komputerze, przy użyciu własnego lokalnego środowiska deweloperskiego i .NET Core.
 Można będzie tworzenie aplikacji konsolowej, a podstawowe funkcje zorientowane obiektowo, które są częścią C# języka.

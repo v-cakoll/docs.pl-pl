@@ -3,10 +3,10 @@ title: Programowanie asynchroniczne z Async i Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
 ms.openlocfilehash: 8593275371fcd97db2357211c3e221839b878527
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324724"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programowanie asynchroniczne z Async i Await (Visual Basic)
@@ -164,7 +164,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
 -   [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
   
--   [Await — Operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
+-   [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)  
   
 ## <a name="BKMK_ReturnTypesandParameters"></a> Typy zwracane i parametry  
  W programowaniu .NET Framework, metoda async zwykle zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Wewnątrz metody asynchronicznej `Await` operator jest stosowany do zadania, który jest zwracany z wywołania do innej metody async.  
@@ -315,5 +315,5 @@ End Class
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Await — Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [Await, operator](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)

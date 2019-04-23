@@ -10,10 +10,10 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: db9269978f3a77920778ab120a6ace11d6dd111c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325764"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Instrukcje: Drukowanie w formularzach systemu Windows przy użyciu podglądu wydruku
@@ -66,6 +66,6 @@ Często zdarza się w formularzach Windows programowania do zaoferowania podglą
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Wyświetlanie podglądu wydruku w aplikacjach formularzy systemu Windows](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)
-- [Bezpieczniejsze drukowanie w formularzach systemu Windows](../more-secure-printing-in-windows-forms.md)
+- [Instrukcje: Podglądu wydruku w formularzach Windows Forms](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)
+- [Bezpieczniejsze drukowanie w formularzach Windows Forms](../more-secure-printing-in-windows-forms.md)

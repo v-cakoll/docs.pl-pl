@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323853"
 ---
 # <a name="creating-an-ink-input-control"></a>Tworzenie formantu danych wejściowych atramentu
@@ -34,7 +34,7 @@ Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie p
   
 -   [Za pomocą dodatkowych dodatków plug-in i DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Wniosek](#AdvancedInkHandling_Conclusion)  
+-   [Podsumowanie](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Instrukcje: Zbieranie danych punktu pióra i utworzyć pociągnięć odręcznych  
@@ -100,5 +100,5 @@ Można utworzyć formant niestandardowy, dynamicznie i statycznie renderowanie p
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zaawansowana obsługa atramentu](advanced-ink-handling.md)
+- [Zaawansowana obsługa pisma odręcznego](advanced-ink-handling.md)
 - [Uzyskiwania dostępu i manipulowania piórem](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

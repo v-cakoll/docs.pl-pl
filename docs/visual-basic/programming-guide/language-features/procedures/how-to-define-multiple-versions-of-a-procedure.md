@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
 ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324035"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Instrukcje: Definiowanie wielu wersji procedury (Visual Basic)
@@ -47,7 +47,7 @@ Procedurę można zdefiniować w wielu wersjach, *przeciążenie* go przy użyci
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
-- [Instrukcje: Przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Instrukcje: Przeciążanie procedury korzystającej z nieskończonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)
 - [Rozpoznanie przeciążenia](./overload-resolution.md)

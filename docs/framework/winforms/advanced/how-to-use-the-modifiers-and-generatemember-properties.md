@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322644"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Instrukcje: Stosowanie modyfikatorów i właściwości „GenerateMember"
@@ -62,6 +62,6 @@ Po umieszczeniu składnika w formularzu Windows dwie właściwości są dostarcz
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Button>
-- [Formularze systemu Windows — dziedziczenie Visual](windows-forms-visual-inheritance.md)
-- [Przewodnik: Demonstrowanie dziedziczenia Visual](walkthrough-demonstrating-visual-inheritance.md)
-- [Instrukcje: Dziedziczenie formularzy systemu Windows](how-to-inherit-windows-forms.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
+- [Przewodnik: Demonstrowanie dziedziczenia wizualizacji](walkthrough-demonstrating-visual-inheritance.md)
+- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)

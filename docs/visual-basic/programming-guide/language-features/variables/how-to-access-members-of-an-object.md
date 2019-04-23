@@ -6,10 +6,10 @@ helpviewer_keywords:
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
 ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322761"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Instrukcje: Dostęp do elementów członkowskich obiektu (Visual Basic)
@@ -77,5 +77,5 @@ Jeśli masz zmienną obiektu, który odwołuje się do obiektu, często chcą pr
 - <xref:System.MemberAccessException>
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict — Instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

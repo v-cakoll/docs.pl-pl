@@ -7,10 +7,10 @@ helpviewer_keywords:
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
 ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322085"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
@@ -93,15 +93,15 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
   
 -   [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Instrukcje: Przesłonięcie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [Instrukcje: Przesłanianie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Dziedziczenie](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Klasy abstrakcyjne i zapieczętowane oraz składowe klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)
 - [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)
 - [Indeksatory](../../../csharp/programming-guide/indexers/index.md)
-- [Types](../../../csharp/programming-guide/types/index.md)
+- [Typy](../../../csharp/programming-guide/types/index.md)

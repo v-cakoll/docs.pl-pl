@@ -13,10 +13,10 @@ ms.assetid: 790b5d8b-d546-40a6-beeb-151b574e5ee5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 12c229b3a1436f9794258fec13905cce0fb767aa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324776"
 ---
 # <a name="how-to-implement-a-provider"></a>Instrukcje: Implementowanie dostawcy
@@ -65,4 +65,4 @@ Wzorzec projektowy obserwatora wymaga dzielenia od dostawcy, który monitoruje d
 - <xref:System.IObservable%601>
 - [Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)
 - [Instrukcje: Implementowanie obserwatora](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [Wzorzec projektowy obserwatora — Najlepsze praktyki](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [Wzorzec projektowy obserwatora — najlepsze rozwiązania](../../../docs/standard/events/observer-design-pattern-best-practices.md)

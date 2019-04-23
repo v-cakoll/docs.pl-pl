@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327376"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Instrukcje: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows
@@ -52,7 +52,7 @@ Eksplorator Windows jest wspólne wybór interfejsu użytkownika dla aplikacji z
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Instrukcje: definiowanie zachowania dotyczącego zmieniania rozmiaru i pozycjonowania w podzielonym oknie](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
-- [Instrukcje: dzielenie okna w poziomie](how-to-split-a-window-horizontally.md)
+- [Instrukcje: Tworzenie złożonego interfejsu użytkownika z formularzami Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Instrukcje: Definiowanie zmieniania rozmiaru i pozycjonowania zachowania w podzielonym oknie](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Instrukcje: Dzielenie okna w poziomie](how-to-split-a-window-horizontally.md)
 - [SplitContainer, kontrolka](splitcontainer-control-windows-forms.md)

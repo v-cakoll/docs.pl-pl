@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325517"
 ---
 # <a name="drawing-objects-overview"></a>Przegląd Rysowanie obiektów
@@ -236,9 +236,9 @@ GeometryDrawing używane z DrawingBrush
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
-- [Przegląd Geometria](geometry-overview.md)
-- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
-- [Przegląd Obiekty Freezable](../advanced/freezable-objects-overview.md)
-- [— Tematy porad](drawings-how-to-topics.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Geometria — przegląd](geometry-overview.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
+- [Tematy z instrukcjami](drawings-how-to-topics.md)

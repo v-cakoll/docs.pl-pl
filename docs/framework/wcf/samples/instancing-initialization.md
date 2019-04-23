@@ -3,10 +3,10 @@ title: Tworzenie wystąpienia inicjowania
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 1414908025416f4cdd6e5b51c052799631ab52cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322189"
 ---
 # <a name="instancing-initialization"></a>Tworzenie wystąpienia inicjowania
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  Ta próbka używa atrybutu niestandardowego. Gdy <xref:System.ServiceModel.ServiceHost> jest skonstruowany, jej poszczególne atrybuty, są używane w definicji typu usługi, jak i zachowania dostępne są dodawane do kolekcji zachowań opisu usługi.  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez architekturę WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> nazywa się najpierw; Umożliwia usłudze poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> nazywa się obok; Ta metoda jest wymagana tylko w bardzo zaawansowanych scenariuszach. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> nazywa się ostatnio i jest odpowiedzialny za konfigurowanie środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
+ <xref:System.ServiceModel.Description.IServiceBehavior> Interfejs ma trzy metody: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` i <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Te metody są wywoływane przez architekturę WCF podczas <xref:System.ServiceModel.ServiceHost> jest inicjowany. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> nazywa się najpierw; Umożliwia usłudze poddanych niespójności. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> nazywa się obok; Ta metoda jest wymagana tylko w bardzo zaawansowanych scenariuszach. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> nazywa się ostatnio i jest odpowiedzialny za konfigurowanie środowiska uruchomieniowego. Następujące parametry są przekazywane do <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>:  
   
 -   `Description`: Ten parametr zawiera opis usługi dla całej usługi. To może służyć do wglądu opis danych dotyczących punktów końcowych usługi, kontrakty, powiązania i inne dane związane z usługą.  
   

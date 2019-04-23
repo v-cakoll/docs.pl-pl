@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327311"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na formularzach systemu Windows w czasie projektowania
@@ -151,9 +151,9 @@ W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularz
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: Wyrównywanie formantu z krawędziami formularzy w czasie projektowania](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)
-- [Korzystanie z formantów WPF](using-wpf-controls.md)
+- [Korzystanie z kontrolek WPF](using-wpf-controls.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

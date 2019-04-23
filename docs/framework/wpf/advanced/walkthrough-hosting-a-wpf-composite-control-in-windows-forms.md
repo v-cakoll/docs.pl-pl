@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322839"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms
@@ -327,5 +327,5 @@ Na poniższej ilustracji przedstawiono złożonego formantu WPF hostowany w apli
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: hostowanie kontrolki złożonej 3-D WPF w Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: Hosting złożonego formantu 3D WPF w formularzach Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

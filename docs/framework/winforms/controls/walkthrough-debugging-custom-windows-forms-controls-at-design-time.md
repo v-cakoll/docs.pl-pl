@@ -16,10 +16,10 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325361"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Przewodnik: debugowanie niestandardowych kontrolek formularzy systemu Windows w czasie projektowania
@@ -174,6 +174,6 @@ Kiedy tworzysz formant niestandardowy, będzie często jest konieczne do debugow
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio](creating-a-wf-control-design-time-features.md)
+- [Przewodnik: Tworzenie kontrolki formularzy Windows wykorzystującego funkcje czasu projektowania w programie Visual Studio](creating-a-wf-control-design-time-features.md)
 - [Instrukcje: Dostęp do usługi w czasie projektowania](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Instrukcje: Dostęp do obsługi w czasie projektowania w formularzach Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

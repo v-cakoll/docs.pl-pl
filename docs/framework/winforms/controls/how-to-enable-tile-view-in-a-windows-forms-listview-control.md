@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
 ms.openlocfilehash: 14eb21fa0285275e510b865c5cee7d1fc82fd0fd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326999"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Instrukcje: włączanie widoku Tile w kontrolce ListView formularzy systemu Windows
@@ -62,5 +62,5 @@ Korzystając z funkcji widoku kafelków <xref:System.Windows.Forms.ListView> kon
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView — Formant](listview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)
 - [ListView, kontrolka — omówienie](listview-control-overview-windows-forms.md)

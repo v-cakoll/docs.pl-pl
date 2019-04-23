@@ -16,10 +16,10 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325595"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji
@@ -93,4 +93,4 @@ Najczęściej używane do śledzenia przedstawiono metody do zapisywania danych 
 - [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Przełączniki śledzenia](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)

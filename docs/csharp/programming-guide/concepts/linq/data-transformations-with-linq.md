@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326063"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
@@ -100,8 +100,8 @@ ms.locfileid: "59326063"
 ## <a name="see-also"></a>Zobacz także
 
 - [Zapytanie o języku zintegrowanym (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
+- [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
 - [Wyrażenia zapytań LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [select — Klauzula](../../../../csharp/language-reference/keywords/select-clause.md)
+- [select, klauzula](../../../../csharp/language-reference/keywords/select-clause.md)

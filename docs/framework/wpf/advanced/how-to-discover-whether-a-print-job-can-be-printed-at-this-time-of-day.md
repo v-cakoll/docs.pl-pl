@@ -11,10 +11,10 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326869"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Instrukcje: Wykrywanie, czy zadanie drukowania może zostać zrealizowane o tej porze dnia
@@ -80,4 +80,4 @@ Kolejki wydruku nie zawsze są dostępne 24 godziny na dobę. Mają one właści
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd Drukowanie](printing-overview.md)
+- [Przegląd drukowania](printing-overview.md)

@@ -3,10 +3,10 @@ title: 'Transport: Współdziałanie protokołu TCP z usługami WSE 3.0'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
 ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324217"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: Współdziałanie protokołu TCP z usługami WSE 3.0
@@ -23,7 +23,7 @@ Przykładowe programu WSE 3.0 protokołu TCP współdziałanie transportu demons
 5. Dodaj element powiązania, który dodaje niestandardowy transportu do stosu kanału. Aby uzyskać więcej informacji zobacz [Dodawanie elementu powiązania].  
   
 ## <a name="creating-iduplexsessionchannel"></a>Tworzenie IDuplexSessionChannel  
- Pierwszym krokiem podczas pisania transportu współdziałania programu WSE 3.0 protokołu TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IDuplexSessionChannel> w górnej części <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` Pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelBase>. Logika wysyłania wiadomości zawiera dwie główne części: (1) kodowanie wiadomości w bajtach i (2) ramek tych bajtów i wysyłając przesyłania.  
+ Pierwszym krokiem podczas pisania transportu współdziałania programu WSE 3.0 protokołu TCP jest utworzenie implementacji klasy <xref:System.ServiceModel.Channels.IDuplexSessionChannel> w górnej części <xref:System.Net.Sockets.Socket>. `WseTcpDuplexSessionChannel` pochodzi od klasy <xref:System.ServiceModel.Channels.ChannelBase>. Logika wysyłania wiadomości zawiera dwie główne części: (1) kodowanie wiadomości w bajtach i (2) ramek tych bajtów i wysyłając przesyłania.  
   
  `ArraySegment<byte> encodedBytes = EncodeMessage(message);`  
   

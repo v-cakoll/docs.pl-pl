@@ -3,10 +3,10 @@ title: Unii (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: df98a4db-b00d-4c8b-bd74-0d285f27e1df
 ms.openlocfilehash: 736b92f7aac89c309b37a8ac61a295c8d1495d6b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323294"
 ---
 # <a name="union-entity-sql"></a>Unii (jednostka SQL)
@@ -47,4 +47,4 @@ expression
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

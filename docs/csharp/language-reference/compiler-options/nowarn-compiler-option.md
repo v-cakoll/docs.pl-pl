@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324152"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (opcje kompilatora C#)
@@ -54,5 +54,5 @@ ms.locfileid: "59324152"
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)
 - [Błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md)

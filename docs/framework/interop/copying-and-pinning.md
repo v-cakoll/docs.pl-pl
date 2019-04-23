@@ -10,10 +10,10 @@ ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326284"
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
@@ -79,4 +79,4 @@ Podczas przekazywania danych, organizator międzyoperacyjny można skopiować lu
 
 - [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)
 - [Atrybuty kierunkowe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Organizowanie międzyoperacyjne](interop-marshaling.md)
+- [Marshaling międzyoperacyjny](interop-marshaling.md)

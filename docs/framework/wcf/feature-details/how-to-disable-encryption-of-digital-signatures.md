@@ -3,10 +3,10 @@ title: 'Instrukcje: wyłączanie szyfrowania podpisów cyfrowych'
 ms.date: 03/30/2017
 ms.assetid: fd174313-ad81-4dca-898a-016ccaff8187
 ms.openlocfilehash: e2fd2a058e636ebf398f9d0c71a93788ccd7dfa0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325270"
 ---
 # <a name="how-to-disable-encryption-of-digital-signatures"></a>Instrukcje: wyłączanie szyfrowania podpisów cyfrowych
@@ -27,4 +27,4 @@ Domyślnie wiadomość jest podpisany i podpisu cyfrowego są szyfrowane. Jest t
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Możliwości zabezpieczeń wiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Możliwości zabezpieczeń powiązań niestandardowych](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)

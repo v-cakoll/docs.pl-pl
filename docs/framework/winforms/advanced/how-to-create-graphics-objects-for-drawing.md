@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324204"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Instrukcje: Tworzenie obiektów graficznych do rysowania
@@ -165,14 +165,14 @@ Zanim można narysować linie i kształty, renderowanie tekstu, lub wyświetlani
   
     |Do renderowania|Zobacz|  
     |---------------|---------|  
-    |wiersze|[Instrukcje: Rysowanie linii w formularzu systemu Windows](how-to-draw-a-line-on-a-windows-form.md)|  
+    |wiersze|[Instrukcje: Rysuj linię w formularzu Windows](how-to-draw-a-line-on-a-windows-form.md)|  
     |Kształty|[Instrukcje: Rysowanie konturu kształtu](how-to-draw-an-outlined-shape.md)|  
-    |Tekst|[Instrukcje: Rysowanie tekstu w formularzu systemu Windows](how-to-draw-text-on-a-windows-form.md)|  
-    |Obrazy|[Instrukcje: Renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)|  
+    |Tekst|[Instrukcje: Rysowanie tekstu w formularzu Windows](how-to-draw-text-on-a-windows-form.md)|  
+    |Obrazy|[Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do programowania grafiki](getting-started-with-graphics-programming.md)
-- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Linie, krzywe i kształty](lines-curves-and-shapes.md)
-- [Instrukcje: Renderowanie obrazów za pomocą GDI+](how-to-render-images-with-gdi.md)
+- [Instrukcje: Renderowanie obrazów za pomocą GDI +](how-to-render-images-with-gdi.md)

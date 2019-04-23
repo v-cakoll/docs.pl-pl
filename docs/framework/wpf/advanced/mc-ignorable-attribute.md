@@ -10,10 +10,10 @@ helpviewer_keywords:
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
 ms.openlocfilehash: 03439a2c4a1a4de375e90d0e5121e690541e2f0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219333"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable — Atrybut
@@ -68,6 +68,6 @@ Określa, która [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-m
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Markup.XamlReader>
-- [PresentationOptions:Freeze — Atrybut](presentationoptions-freeze-attribute.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [PresentationOptions:Freeze, atrybut](presentationoptions-freeze-attribute.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
 - [Dokumenty w WPF](documents-in-wpf.md)

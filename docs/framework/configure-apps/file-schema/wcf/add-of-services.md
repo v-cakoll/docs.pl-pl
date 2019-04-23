@@ -1,12 +1,12 @@
 ---
-title: <add> z <services>
+title: <add> dla <services>
 ms.date: 03/30/2017
 ms.assetid: 6bdc4590-aa9c-4ec8-9345-879d780cd141
 ms.openlocfilehash: c07b3377db4f5b434fd021b09de510c1d43ec832
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219190"
 ---
 # <a name="add-of-services"></a>\<Dodaj > z \<usług >

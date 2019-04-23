@@ -15,18 +15,18 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217773"
 ---
 # <a name="shapes"></a>Kształty
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę Rysowanie kształtów podstawowych przy użyciu <xref:System.Windows.Shapes.Shape> klasy. Obiekty kształtów pochodzić od <xref:System.Windows.FrameworkElement> i jako takie, uczestniczą w systemie układ i mogą być wystawiane, po prostu przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)  
- [— Tematy porad](shapes-how-to-topics.md)  
+ [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Tematy z instrukcjami](shapes-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

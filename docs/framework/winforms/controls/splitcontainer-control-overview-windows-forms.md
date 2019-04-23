@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219424"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer — Informacje o formancie [Formularze systemu Windows]
@@ -40,14 +40,14 @@ Formularze Windows <xref:System.Windows.Forms.SplitContainer> kontrolki mogą by
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> property|Określa, który panel pozostanie taki sam rozmiar po <xref:System.Windows.Forms.SplitContainer> zmieni się rozmiar kontrolki.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property|Określa, czy można przenieść rozdzielacza za pomocą klawiatury lub myszy.|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> property|Określa, jeśli rozdzielacz są rozmieszczone w pionie lub poziomie.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property|Określa odległość w pikselach pasek podziału ruchome z lewej lub górnej krawędzi.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property|Określa minimalną odległość w pikselach, że rozdzielacza mogą być przenoszone przez użytkownika.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> property|Określa grubość, w pikselach rozdzielacza.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> zdarzenie|Występuje, gdy porusza się rozdzielacza.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> zdarzenie|Występuje, gdy został przeniesiony rozdzielacza.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> Właściwość|Określa, który panel pozostanie taki sam rozmiar po <xref:System.Windows.Forms.SplitContainer> zmieni się rozmiar kontrolki.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> Właściwość|Określa, czy można przenieść rozdzielacza za pomocą klawiatury lub myszy.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> Właściwość|Określa, jeśli rozdzielacz są rozmieszczone w pionie lub poziomie.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> Właściwość|Określa odległość w pikselach pasek podziału ruchome z lewej lub górnej krawędzi.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Właściwość|Określa minimalną odległość w pikselach, że rozdzielacza mogą być przenoszone przez użytkownika.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> Właściwość|Określa grubość, w pikselach rozdzielacza.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Zdarzenia|Występuje, gdy porusza się rozdzielacza.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Zdarzenia|Występuje, gdy został przeniesiony rozdzielacza.|  
   
 ## <a name="see-also"></a>Zobacz także
 

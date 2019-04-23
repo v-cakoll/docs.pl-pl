@@ -16,10 +16,10 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218384"
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
@@ -131,20 +131,20 @@ ms.locfileid: "59218384"
 |Uprawnienie|Atrybut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Dostęp do serwerów DNS|Tak|Nie|  
-|Zmienne środowiskowe|Odczyt|Yes|Nie|  
-|Okna dialogowe pliku|Otwarcie|Tak|Tak|  
-|Okna dialogowe pliku|Bez ograniczeń|Yes|Nie|  
+|Zmienne środowiskowe|Odczyt|Tak|Nie|  
+|Okna dialogowe pliku|Otwarcie|Yes|Tak|  
+|Okna dialogowe pliku|Bez ograniczeń|Tak|Nie|  
 |Izolowany magazyn|Zestaw Izolacja według użytkownika|Tak|Nie|  
-|Izolowany magazyn|Nieznany izolacji|Tak|Tak|  
-|Izolowany magazyn|Limit przydziału użytkownika bez ograniczeń|Tak|Nie|  
+|Izolowany magazyn|Nieznany izolacji|Tak|Yes|  
+|Izolowany magazyn|Limit przydziału użytkownika bez ograniczeń|Yes|Nie|  
 |Nośnik|Bezpieczne audio, wideo i obrazy|Tak|Tak|  
-|Drukowanie|Drukowanie domyślne|Tak|Nie|  
-|Drukowanie|Bezpieczne drukowanie|Tak|Yes|  
-|Odbicie|Emituj|Tak|Nie|  
-|Zabezpieczenia|Wykonywanie kodu zarządzanego|Yes|Yes|  
-|Zabezpieczenia|Asercja udzielone uprawnienia|Tak|Nie|  
+|Drukowanie|Drukowanie domyślne|Yes|Nie|  
+|Drukowanie|Bezpieczne drukowanie|Tak|Tak|  
+|Odbicie|Emituj|Yes|Nie|  
+|Zabezpieczenia|Wykonywanie kodu zarządzanego|Tak|Tak|  
+|Zabezpieczenia|Asercja udzielone uprawnienia|Yes|Nie|  
 |Interfejs użytkownika|Bez ograniczeń|Tak|Nie|  
-|Interfejs użytkownika|Bezpieczne najwyższego poziomu systemu windows|Tak|Tak|  
+|Interfejs użytkownika|Bezpieczne najwyższego poziomu systemu windows|Tak|Yes|  
 |Interfejs użytkownika|Właścicielem Schowka|Tak|Tak|  
 |Przeglądarki sieci Web|Nawigacji w ramce awaryjny w formacie HTML|Tak|Tak|  
   
@@ -166,5 +166,5 @@ ms.locfileid: "59218384"
 ## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczenia](security-wpf.md)
-- [Strategia zabezpieczeń WPF - zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
-- [Strategia zabezpieczeń WPF - projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
+- [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
+- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)

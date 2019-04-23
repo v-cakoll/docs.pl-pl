@@ -1,12 +1,12 @@
 ---
-title: <peer> z <serviceCredentials>
+title: <peer> dla <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: b134e21d-e5b5-458e-9309-626dbf8db4ed
 ms.openlocfilehash: d726ab460141b1e373a1cabf770b8958f50319eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219151"
 ---
 # <a name="peer-of-servicecredentials"></a>\<elementu równorzędnego > z \<serviceCredentials >
@@ -39,9 +39,9 @@ Określa bieżące poświadczenia dla węzła równorzędnego.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Określa certyfikat X.509 do podpisywania i szyfrowanie wiadomości usługi peer-to-peer. .|  
+|[\<certyfikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-peer.md)|Określa certyfikat X.509 do podpisywania i szyfrowanie wiadomości usługi peer-to-peer. .|  
 |[\<messageSenderAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication.md)|Określa opcje uwierzytelnienia dla nadawców wiadomości.|  
-|[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Określa opcje uwierzytelniania dla elementów równorzędnych usługi.|  
+|[\<peerAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication.md)|Określa opcje uwierzytelniania dla elementów równorzędnych usługi.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

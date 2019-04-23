@@ -1,5 +1,5 @@
 ---
-title: <cryptoClasses> Element
+title: <cryptoClasses>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
 ms.openlocfilehash: 7a03729f075645a230c660ff4c6469e0f5f3a51e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220321"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
@@ -83,4 +83,4 @@ Zawiera listę klas kryptografii, które mają mapowanie do przyjazną nazwę w 
 - [Schemat ustawień kryptografii](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
 - [Usługi kryptograficzne](../../../../../docs/standard/security/cryptographic-services.md)
 - [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
-- [Konfigurowanie klasy kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+- [Konfigurowanie klas kryptografii](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

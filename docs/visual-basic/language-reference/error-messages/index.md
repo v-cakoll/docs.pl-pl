@@ -8,11 +8,11 @@ helpviewer_keywords:
 - errors [Visual Basic], trappable
 ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 ms.openlocfilehash: 822c0f266e7dd68f063043d98a9f4af308ae93fd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338140"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770103"
 ---
 # <a name="error-messages-visual-basic"></a>Komunikaty o błędach (Visual Basic)
 Podczas pisania, kompilacji lub uruchamiania aplikacji w języku Visual Basic mogą wystąpić następujące błędy:  

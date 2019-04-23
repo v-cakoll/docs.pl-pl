@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
 ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312192"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>Instrukcje: rozmiar kontrolki etykiety (Formularze systemu Windows) pasujący do jego zawartości
@@ -26,6 +26,6 @@ Formularze Windows <xref:System.Windows.Forms.Label> formant może być w jednym
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: tworzenie klawiszy dostępu za pomocą kontrolek etykiet formularzy systemu Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [Instrukcje: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy Windows](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Label, kontrolka — omówienie](label-control-overview-windows-forms.md)
 - [Label, kontrolka](label-control-windows-forms.md)

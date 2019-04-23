@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
 ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312224"
 ---
 # <a name="cannot-save-file-to-temp"></a>Nie można zapisać pliku Temp
@@ -22,4 +22,4 @@ Składnik nie można znaleźć katalogu o nazwie TEMP albo dysku lub partycji za
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Error — Typy](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

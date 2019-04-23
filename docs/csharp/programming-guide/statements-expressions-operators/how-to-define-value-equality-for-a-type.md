@@ -10,10 +10,10 @@ helpviewer_keywords:
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
 ms.openlocfilehash: 73cb9249343b02c937c3e4e652021c7a6dbb4386
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311477"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Instrukcje: Definiowanie równości wartości dla typu (C# Programming Guide)
@@ -21,7 +21,7 @@ Po zdefiniowaniu klasy lub struktury, możesz zdecydować, czy warto tworzyć ni
   
 1. `x.Equals(x)` Zwraca `true`. Jest to właściwość zwrotnej.  
   
-2. `x.Equals(y)` Zwraca taką samą wartość jak `y.Equals(x)`. Jest to właściwość symetryczne.  
+2. `x.Equals(y)` zwraca taką samą wartość jak `y.Equals(x)`. Jest to właściwość symetryczne.  
   
 3. Jeśli `(x.Equals(y) && y.Equals(z))` zwraca `true`, następnie `x.Equals(z)` zwraca `true`. Jest to właściwość przechodnie.  
   

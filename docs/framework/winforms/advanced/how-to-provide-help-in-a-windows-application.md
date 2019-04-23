@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312722"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Instrukcje: Zapewnianie pomocy w aplikacji Windows
@@ -58,6 +58,6 @@ Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika, aby
 ## <a name="see-also"></a>Zobacz także
 
 - [Instrukcje: Wyświetlanie pomocy podręcznej](how-to-display-pop-up-help.md)
-- [Pomoc w kontroli przy użyciu ToolTips](control-help-using-tooltips.md)
-- [Integrowanie pomocy użytkownika z formularzami systemu Windows](integrating-user-help-in-windows-forms.md)
+- [Pomoc do kontrolek przy użyciu etykietek narzędzi](control-help-using-tooltips.md)
+- [Integrowanie pomocy użytkownika z formularzami Windows Forms](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

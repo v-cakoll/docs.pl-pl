@@ -5,10 +5,10 @@ author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
 ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481148"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Napisać niestandardowego hosta platformy .NET Core do kontrolowania środowiska uruchomieniowego .NET z kodu natywnego
@@ -68,10 +68,8 @@ Przed rozpoczęciem środowisko uruchomieniowe, jest wymagane do przygotowania n
 
 Wspólne właściwości obejmują:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Jest to lista zestawu ścieżek (rozdzielonych przez ';' na Windows i ":" w systemie Linux), której środowisko uruchomieniowe będzie mieć możliwość rozpoznania domyślnie. Niektóre hosty ma ustaloną manifesty listę zestawów, które mogą oni ładować. Inne umieści wszystkie biblioteki w określonych lokalizacjach (obok *coreclr.dll*, na przykład) na tej liście.
-* `APP_PATHS`
-  To jest lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Ponieważ host nie ma większą kontrolę nad tym, którzy zestawy są ładowane przy użyciu listy elementu TPA, jest najlepszym rozwiązaniem dla hostów, aby określić zestawy, które spełniają oczekiwane obciążenia i wyświetlać je w sposób jawny. Jeśli potrzebne jest badania w czasie wykonywania, jednak tej właściwości można włączyć tego scenariusza.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Jest to lista zestawu ścieżek (rozdzielonych przez ';' na Windows i ":" w systemie Linux), której środowisko uruchomieniowe będzie mieć możliwość rozpoznania domyślnie. Niektóre hosty ma ustaloną manifesty listę zestawów, które mogą oni ładować. Inne umieści wszystkie biblioteki w określonych lokalizacjach (obok *coreclr.dll*, na przykład) na tej liście.
+* `APP_PATHS` To jest lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Ponieważ host nie ma większą kontrolę nad tym, którzy zestawy są ładowane przy użyciu listy elementu TPA, jest najlepszym rozwiązaniem dla hostów, aby określić zestawy, które spełniają oczekiwane obciążenia i wyświetlać je w sposób jawny. Jeśli potrzebne jest badania w czasie wykonywania, jednak tej właściwości można włączyć tego scenariusza.
 *  `APP_NI_PATHS` Ta lista jest podobne do APP_PATHS, z tą różnicą, że oznaczało ma być ścieżek, które będzie sondowany dla obrazów natywnych.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Ta właściwość jest lista ścieżek, które moduł ładujący powinien sondowania podczas wyszukiwania dla bibliotek natywnych wywoływanym za pośrednictwem p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Ta lista zawiera ścieżki do sondowania w dla zestawów satelickich zasobów (w podfolderach specyficzne dla kultury).
@@ -166,10 +164,8 @@ Po podjęciu decyzji, które AppDomain flagi do użycia, należy zdefiniować w�
 
 Wspólne właściwości elementu AppDomain obejmują:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`
-  Jest to lista zestawu ścieżek (rozdzielone `;` na Windows i `:` na system Linux lub Mac) który element AppDomain nadać priorytet ładowanie i przyznać pełne zaufanie (nawet w częściowo zaufanych domen). Ta lista jest przeznaczona do zawierają zestawy "Framework" i innych zaufanych modułów, podobne do globalnej pamięci podręcznej zestawów w scenariuszach .NET Framework. Niektóre hosty będą obok Umieść każdą bibliotekę *coreclr.dll* na tej liście inne ma ustaloną manifesty listę zaufanych zestawów dla swoich potrzeb.
-* `APP_PATHS`
-  To jest lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Ponieważ host nie ma większą kontrolę nad tym, którzy zestawy są ładowane przy użyciu listy elementu TPA, jest najlepszym rozwiązaniem dla hostów, aby określić zestawy, które spełniają oczekiwane obciążenia i wyświetlać je w sposób jawny. Jeśli potrzebne jest badania w czasie wykonywania, jednak tej właściwości można włączyć tego scenariusza.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Jest to lista zestawu ścieżek (rozdzielone `;` na Windows i `:` na system Linux lub Mac) który element AppDomain nadać priorytet ładowanie i przyznać pełne zaufanie (nawet w częściowo zaufanych domen). Ta lista jest przeznaczona do zawierają zestawy "Framework" i innych zaufanych modułów, podobne do globalnej pamięci podręcznej zestawów w scenariuszach .NET Framework. Niektóre hosty będą obok Umieść każdą bibliotekę *coreclr.dll* na tej liście inne ma ustaloną manifesty listę zaufanych zestawów dla swoich potrzeb.
+* `APP_PATHS` To jest lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Ponieważ host nie ma większą kontrolę nad tym, którzy zestawy są ładowane przy użyciu listy elementu TPA, jest najlepszym rozwiązaniem dla hostów, aby określić zestawy, które spełniają oczekiwane obciążenia i wyświetlać je w sposób jawny. Jeśli potrzebne jest badania w czasie wykonywania, jednak tej właściwości można włączyć tego scenariusza.
 *  `APP_NI_PATHS` Ta lista jest bardzo podobne do APP_PATHS, chyba że ma ją traktować jako ścieżek, które będzie sondowany dla obrazów natywnych.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Ta właściwość jest lista ścieżek, które moduł ładujący powinien sondowania, gdy szukasz natywnych bibliotek DLL wywoływanym za pośrednictwem p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Ta lista zawiera ścieżki do sondowania w dla zestawów satelickich zasobów (w podfolderach specyficzne dla kultury).

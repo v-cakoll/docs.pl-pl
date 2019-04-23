@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339817"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu (Visual Basic)
@@ -39,8 +39,8 @@ Jeśli chcesz `Get` i `Set` procedury dotyczące właściwości, aby mieć róż
 - [Procedury](./index.md)
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Property — Instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
+- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
 - [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
 - [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
 - [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341910"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Instrukcje: Usuwanie zasobu systemu (Visual Basic)
@@ -52,4 +52,4 @@ Możesz użyć `Using` bloku, aby zagwarantować, że system Usuwa zasób po kod
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [Using — Instrukcja](../../../../visual-basic/language-reference/statements/using-statement.md)
+- [Using, instrukcja](../../../../visual-basic/language-reference/statements/using-statement.md)

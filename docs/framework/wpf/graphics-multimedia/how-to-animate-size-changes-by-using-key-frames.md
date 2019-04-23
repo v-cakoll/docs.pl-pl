@@ -7,10 +7,10 @@ helpviewer_keywords:
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
 ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342371"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Instrukcje: Animowanie zmian rozmiaru przy użyciu klatek kluczowych
@@ -37,5 +37,5 @@ Ten przykład pokazuje, jak animować zmiany rozmiaru z wykorzystaniem klatek kl
 - <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

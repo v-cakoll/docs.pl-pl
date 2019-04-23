@@ -3,10 +3,10 @@ title: Co nowego C# 7.1
 description: Omówienie nowych funkcji w C# 7.1.
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480966"
 ---
 # <a name="whats-new-in-c-71"></a>Co nowego C# 7.1
@@ -17,7 +17,7 @@ C#7.1 dodaje [wybór wersji języka](../language-reference/configure-language-ve
 
 Dostępne są następujące nowe funkcje języka w tej wersji:
 
-* [`async` `Main` — metoda](#async-main)
+* [`async` `Main` — Metoda](#async-main)
   - Punkt wejścia dla aplikacji może mieć `async` modyfikator.
 * [`default` wyrażenia literału](#default-literal-expressions)
   - Można używać wyrażeń literał domyślny w wyrażeniach wartości domyślne, gdy można wywnioskować typu docelowego.

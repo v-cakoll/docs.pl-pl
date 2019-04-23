@@ -3,10 +3,10 @@ title: Używanie elementu ExpressionTextBox w projektancie działań niestandard
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344978"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Używanie elementu ExpressionTextBox w projektancie działań niestandardowych
@@ -49,4 +49,4 @@ Ten przykład ilustruje sposób używania <xref:System.Activities.Presentation.V
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Activities.Presentation.View.ExpressionTextBox>
-- [Tworzenie aplikacji za pomocą projektanta przepływów pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+- [Tworzenie aplikacji przy użyciu Projektanta przepływu pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

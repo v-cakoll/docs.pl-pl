@@ -9,10 +9,10 @@ ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345771"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
@@ -53,4 +53,4 @@ Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego ko
 ## <a name="see-also"></a>Zobacz także
 
 - [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)
-- [Przykład usługi międzyoperacyjnej modelu COM: Klient modelu COM i serwer .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)
+- [Przykład międzyoperacyjnego modelu COM: Klient modelu COM i serwer .NET](../../../docs/framework/interop/com-interop-sample-com-client-and-net-server.md)

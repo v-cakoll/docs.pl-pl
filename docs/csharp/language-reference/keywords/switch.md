@@ -13,10 +13,10 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481460"
 ---
 # <a name="switch-c-reference"></a>Switch (odwołanie w C#)
@@ -199,8 +199,8 @@ Aby uzyskać więcej informacji, zobacz [instrukcji switch](~/_csharplang/spec/s
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [if-else](if-else.md)
-- [Dopasowanie wzorca](../../pattern-matching.md)
+- [Dopasowanie do wzorca](../../pattern-matching.md)

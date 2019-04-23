@@ -3,10 +3,10 @@ title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
 ms.openlocfilehash: a7a3ce1b33d040b337087dfede90b58906c95cbd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481174"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
@@ -81,7 +81,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [class](../../../csharp/language-reference/keywords/class.md)
 
-- [struktura ](../../../csharp/language-reference/keywords/struct.md)
+- [struct](../../../csharp/language-reference/keywords/struct.md)
 
 ### <a name="Members"></a> Elementy członkowskie klasy
 

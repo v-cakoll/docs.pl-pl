@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481382"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
@@ -26,11 +26,11 @@ Kiedy używasz usług danych WCF utworzyć usługę danych, która obsługuje [!
 
      Usługi danych WCF obsługuje wiele różnych dostawców usług danych, które umożliwiają zdefiniowanie modelu danych na podstawie danych z różnych źródeł danych z relacyjnej bazy danych do typów danych z późnym wiązaniem. Aby uzyskać więcej informacji, zobacz [dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
-2. **Utworzenie usługi danych**
+2. **Tworzenie usługi danych**
 
      Najbardziej podstawowa usługa danych uwidacznia klasę, która dziedziczy po elemencie <xref:System.Data.Services.DataService%601> klasy o typie `T` czyli przestrzeni nazw kwalifikowana nazwa kontenera jednostek. Aby uzyskać więcej informacji, zobacz [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md).
 
-3. **Skonfigurowanie usługi danych**
+3. **Konfigurowanie usługi danych**
 
      Domyślnie usługi danych WCF powoduje wyłączenie dostępu do zasobów, które są uwidaczniane przez kontener jednostek. <xref:System.Data.Services.DataServiceConfiguration> Interfejs umożliwia skonfigurowanie dostępu do zasobów i operacji usług, określenie obsługiwanej wersji OData oraz zdefiniowanie innych zachowań całej usługi, takie jak przetwarzanie wsadowe zachowania lub maksymalna liczba jednostek, które mogą być zwracane w kanale informacyjnym pojedynczą odpowiedź. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).
 
@@ -40,14 +40,14 @@ W tym temacie omówiono przede wszystkim tworzenia i wdrażania usługi danych p
 
 Podczas tworzenia usługi danych programu WCF jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji lub [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web za pomocą programu Visual Studio 2015, masz do wyboru, serwery sieci Web, na którym ma być uruchamiana usługa danych podczas programowania. Poniższe serwery sieci Web integrują się z programem Visual Studio, aby ułatwić testowanie i debugowanie usług danych na komputerze lokalnym.
 
-1. **Lokalny serwer IIS**
+1. **Local IIS Server**
 
      Podczas tworzenia usługi danych jest [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji lub [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, która jest uruchamiana w Internet Information Services (IIS), zaleca się projektowanie i testowanie usługi danych przy użyciu usług IIS na komputerze lokalnym. Uruchamianie usługi danych na serwerze IIS ułatwia śledzenie żądań HTTP podczas debugowania. Pozwala również wstępnie określić niezbędne uprawnienia wymagane przez program IIS przy uzyskiwaniu dostępu do plików, baz danych i innych zasobów wymaganych przez usługę danych. Aby uruchamiać usługę danych na serwerze IIS, należy upewnić się, zarówno w przypadku usług IIS, jak i Windows Communication Foundation (WCF) są zainstalowane i poprawnie skonfigurowane i udzielić dostępu do kont usług IIS w systemie plików i baz danych. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych WCF działającej na serwerze IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Możesz uruchomić program Visual Studio z uprawnieniami administratora, aby włączyć środowisko deweloperskie w celu skonfigurowania lokalnego serwera IIS.
 
-2. **Serwer deweloperski programu Visual Studio**
+2. **Visual Studio Development Server**
 
      Program Visual Studio obejmuje wbudowanego serwera sieci Web serwera wdrożeniowego programu Visual Studio czyli domyślnego serwera sieci Web dla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektów. Ten serwer sieci Web jest przeznaczony do działania [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekty na komputerze lokalnym podczas projektowania. [Szybki Start usług danych WCF](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) pokazuje, jak utworzyć usługę danych, która działa w serwera wdrożeniowego programu Visual Studio.
 
@@ -68,7 +68,7 @@ Podczas tworzenia usługi danych programu WCF jako [!INCLUDE[vstecasp](../../../
     > [!TIP]
     > Mimo że serwera wdrożeniowego programu Visual Studio można użyć do testowania usług danych podczas projektowania, należy przetestować je ponownie po wdrożeniu na serwerze sieci Web, na którym są uruchomione usługi IIS.
 
-3. **Środowisko deweloperskie systemu Microsoft Azure**
+3. **Środowisko deweloperskie platformy Azure Windows**
 
      Windows Azure Tools dla programu Visual Studio obejmują zintegrowany zestaw narzędzi do tworzenia usług Windows Azure w programie Visual Studio. Za pomocą tych narzędzi można zaprojektować usługę danych, którą będzie można wdrożyć w systemie Microsoft Azure i przed wdrożeniem można przetestować usługę danych na komputerze lokalnym. W przypadku używania programu Visual Studio do projektowania usługi danych, które jest uruchamiane na platformie Windows Azure, należy użyć tych narzędzi. Możesz pobrać program Windows Azure Tools dla programu Visual Studio z [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat tworzenia usługi danych, która działa na platformie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -90,17 +90,17 @@ Podczas projektowania usługi danych należy wziąć pod uwagę następujące kw
 
 Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór procesu hostującego usługę danych. Visual Studio można użyć do wdrożenia usługi danych na następujących platformach:
 
-- **Serwer sieci Web hostowany w programie IIS**
+- **Serwer sieci Web obsługiwane przez usługi IIS**
 
     Jeśli usługa danych jest opracowana jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, można je było wdrożyć do serwera sieci Web usług IIS przy użyciu standardu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] procesów wdrażania.  Program Visual Studio zapewnia Poniższe technologie wdrażania programu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], w zależności od używanego z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projektu, który hostuje usługę danych, w której przeprowadzasz wdrożenie.
 
-  - **Technologie wdrażania aplikacji internetowych programu ASP.NET**
+  - **Technologie wdrażania dla aplikacji sieci Web ASP.NET**
 
     - [Instrukcje: Utwórz pakiet wdrażania sieci Web w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
     - [Instrukcje: Wdrażanie sieci Web projektu za pomocą jednego kliknięcia publikowania w programie Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
-  - **Technologie wdrażania witryn sieci Web programu ASP.NET**
+  - **Technologie wdrażania witryn sieci Web platformy ASP.NET**
 
     - [Instrukcje: Skopiuj pliki witryny sieci Web za pomocą narzędzia kopiowania witryny internetowej](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
@@ -113,7 +113,7 @@ Usługa danych programu WCF zapewnia elastyczność, jeśli chodzi o wybór proc
     > [!TIP]
     > Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi danych WCF działającej na serwerze IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **System Microsoft Azure**
+- **Windows Azure**
 
      Usługi danych można wdrożyć na platformie Windows Azure przy użyciu narzędzia Windows Azure Tools dla programu Visual Studio. Możesz pobrać program Windows Azure Tools dla programu Visual Studio z [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Aby uzyskać więcej informacji na temat wdrażania usługi danych na platformie Windows Azure, zobacz wpis [wdrażanie usługi OData w systemie Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 

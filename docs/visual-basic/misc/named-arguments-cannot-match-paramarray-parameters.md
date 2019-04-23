@@ -5,10 +5,10 @@ f1_keywords:
 - vbrNamedArgumentOnParamArray
 ms.assetid: ba35fb86-329a-4ceb-864b-045c07661482
 ms.openlocfilehash: 155b42a104b30553e067aa4e0681ec565640bd5e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340051"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>Argumenty nazwane nie odpowiadają parametrom ParamArray
@@ -20,6 +20,6 @@ Parameter — tablice muszą być przekazywane przez wartość.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Parameter — Tablice](../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
+- [Tablice parametrów](../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)
 - [Przekazywanie argumentów według wartości i według odwołania](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
-- [Przekazywanie argumentów przez pozycję i przez nazwę](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
+- [Przekazywanie argumentów według pozycji i według nazwy](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
 ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341403"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant
@@ -33,4 +33,4 @@ Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do grupowani
 
 - [Panel, kontrolka](panel-control-windows-forms.md)
 - [Panel, kontrolka — omówienie](panel-control-overview-windows-forms.md)
-- [Instrukcje: ustawianie tła panelu](how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Instrukcje: Ustawianie tła panelu](how-to-set-the-background-of-a-windows-forms-panel.md)

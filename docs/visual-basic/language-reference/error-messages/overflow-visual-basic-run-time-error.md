@@ -5,10 +5,10 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345550"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>Przepełnienie (błąd czasu wykonywania w Visual Basic)
@@ -27,4 +27,4 @@ Przepełnienie powoduje podczas próby przypisania przekracza limit przydziału 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
 - [Typy danych](../../../visual-basic/language-reference/data-types/index.md)
-- [Error — Typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

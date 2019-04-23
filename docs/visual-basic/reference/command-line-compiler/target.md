@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344744"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
@@ -25,7 +25,7 @@ Określa format danych wyjściowych kompilatora.
 ## <a name="remarks"></a>Uwagi  
  W poniższej tabeli przedstawiono efekt `-target` opcji.  
   
-|**Opcja**|**Zachowanie**|  
+|**Option**|**Behavior**|  
 |----------------|------------------|  
 |`-target:exe`|Powoduje, że kompilator, aby utworzyć aplikację konsoli pliku wykonywalnego.<br /><br /> Jest to opcja domyślna, gdy nie `-target` określono opcję. Plik wykonywalny jest tworzony z rozszerzeniem .exe.<br /><br /> Chyba że określono inaczej, za pomocą `/out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pliku wejściowego, który zawiera `Sub Main` procedury.<br /><br /> Tylko jeden `Sub Main` procedura jest wymagana w plikach kodu źródłowego, które są kompilowane do pliku .exe. Użyj `-main` opcję kompilatora, aby określić, która klasa zawiera `Sub Main` procedury.|  
 |`-target:library`|Powoduje, że kompilator do tworzenia biblioteki dołączanej (dynamicznie DLL).<br /><br /> Plik biblioteki dołączanej jest tworzony z rozszerzeniem dll.<br /><br /> Chyba że określono inaczej, za pomocą `-out` opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.<br /><br /> Podczas tworzenia biblioteki DLL, `Sub Main` procedura nie jest wymagana.|  
@@ -57,11 +57,11 @@ vbc -target:library in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
 - [— Odwołanie (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
 - [Zestawy w środowisku .NET](../../../standard/assembly/index.md)
-- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

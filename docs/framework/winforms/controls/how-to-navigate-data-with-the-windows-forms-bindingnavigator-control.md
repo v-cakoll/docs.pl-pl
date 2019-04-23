@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
 ms.openlocfilehash: 0c2fdf820b9b42a592c422cf77362598c5e5eed7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338894"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Instrukcje: nawigowanie w danych za pomocą kontrolki BindingNavigator formularzy systemu Windows
@@ -56,5 +56,5 @@ Pojawienie się <xref:System.Windows.Forms.BindingNavigator> kontroli w formular
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.BindingNavigator>
-- [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md)
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)

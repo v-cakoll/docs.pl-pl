@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342176"
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
@@ -63,9 +63,9 @@ Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarze�
 |Zadanie|Metoda|  
 |----------|------------|  
 |Przechwytywać klucz nawigacji i podnieść <xref:System.Windows.Forms.Control.KeyDown> zdarzeń. Na przykład chcesz kartę i wróć do obsłużenia w polu tekstowym.|Zastąp <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Uwaga:**  Alternatywnie, można obsługiwać <xref:System.Windows.Forms.Control.PreviewKeyDown> zdarzeń i ustaw <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> z <xref:System.Windows.Forms.PreviewKeyDownEventArgs> do `true` klucza lub kluczy ma.|  
-|W kontrolce, należy wykonać specjalne obsługi danych wejściowych lub nawigacji. Na przykład chcesz użycie klawiszy strzałek w kontrolce listy można zmienić wybranego elementu.|Zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|W kontrolce, należy wykonać specjalne obsługi danych wejściowych lub nawigacji. Na przykład chcesz użycie klawiszy strzałek w kontrolce listy można zmienić wybranego elementu.|zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
 |Przechwytywać klucz nawigacji i podnieść <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład w kontrolce pola pokrętła potrzebujesz wielu Strzałka musi nacisnąć, aby przyspieszyć przez kolejne elementy.|Zastąp <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Wykonywać specjalne obsługi danych wejściowych lub nawigacji podczas <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład na liście kontroli, przytrzymując naciśnięty klawisz "r" pomija między elementami, które zaczynają się od litery r.|Zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Wykonywać specjalne obsługi danych wejściowych lub nawigacji podczas <xref:System.Windows.Forms.Control.KeyPress> zdarzeń. Na przykład na liście kontroli, przytrzymując naciśnięty klawisz "r" pomija między elementami, które zaczynają się od litery r.|zastąpienie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
 |Wykonaj niestandardowy skrót klawiszowy obsługi; na przykład chcesz obsługiwać symboli na przyciskach rysowanych przez właściciela, znajdujących się na pasku narzędzi.|Zastąp <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Zobacz także
@@ -73,6 +73,6 @@ Formularze Windows przetwarza dane wejściowe z klawiatury, wywoływanie zdarze�
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
-- [My.Computer.Keyboard — Obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
+- [My.Computer.Keyboard, obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [Uzyskiwanie dostępu do klawiatury](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
 - [Używanie zdarzeń klawiatury](using-keyboard-events.md)

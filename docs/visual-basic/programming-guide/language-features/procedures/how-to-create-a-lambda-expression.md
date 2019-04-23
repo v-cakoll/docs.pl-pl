@@ -6,10 +6,10 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: fc2b7ed2004b842116d051b393f00506428def61
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344549"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Instrukcje: Tworzenie wyrażenia Lambda (Visual Basic)
@@ -108,9 +108,9 @@ A *wyrażenia lambda* jest funkcji lub podprocedury, który nie ma nazwy. Wyraż
 
 - <xref:System.Linq.Enumerable>
 - [Wyrażenia lambda](./lambda-expressions.md)
-- [Function — Instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub — Instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Delegaty](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Instrukcje: Przekazywanie procedur do innej procedury w Visual Basic](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Delegate — Instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate, instrukcja](../../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

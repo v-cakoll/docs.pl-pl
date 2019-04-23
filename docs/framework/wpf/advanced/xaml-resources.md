@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344926"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
@@ -128,7 +128,7 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
 -   Ustawienia właściwości musi być właściwością na <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>. Czy właściwości muszą być chronione przez <xref:System.Windows.DependencyProperty>.  
   
--   Odwołanie jest podanie wartości w ramach <xref:System.Windows.Style><xref:System.Windows.Setter>.  
+-   Odwołanie jest podanie wartości w ramach <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
 -   Ustawienia właściwości musi być właściwością na <xref:System.Windows.Freezable> dostarczanym w wartości <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> właściwości lub <xref:System.Windows.Setter> wartość.  
   
@@ -144,7 +144,7 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Czy styl tak naprawdę mieć klucz: niejawny klucz `typeof(`<xref:System.Windows.Controls.Button>`)`. W znaczniku, można określić <xref:System.Windows.Style.TargetType%2A> bezpośrednio jako typ nazwy (możesz też opcjonalnie [{x: Type...}](../../xaml-services/x-type-markup-extension.md) Aby zwrócić <xref:System.Type>.  
+ Czy styl tak naprawdę mieć klucz: niejawny klucz `typeof(` <xref:System.Windows.Controls.Button> `)`. W znaczniku, można określić <xref:System.Windows.Style.TargetType%2A> bezpośrednio jako typ nazwy (możesz też opcjonalnie [{x: Type...}](../../xaml-services/x-type-markup-extension.md) Aby zwrócić <xref:System.Type>.  
   
  Za pomocą mechanizmów style motyw domyślny używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], że stylów jest stosowana jako styl środowiska uruchomieniowego <xref:System.Windows.Controls.Button> na stronie mimo że <xref:System.Windows.Controls.Button> sam nie jest podejmowana próba określenia jego <xref:System.Windows.FrameworkElement.Style%2A> właściwości lub określonego zasobu Odwołanie do stylu. Własnego stylu zdefiniowana na stronie znajduje się wcześniej w kolejności wyszukiwania niż motyw stylu słownika przy użyciu tego samego klucza, zawierającej styl słownika motywu. Można określić `<Button>Hello</Button>` w dowolnym miejscu strony i style zdefiniowane za pomocą <xref:System.Windows.Style.TargetType%2A> z `Button` zastosowanie do tego przycisku. Jeśli chcesz, możesz nadal jawnie klucza styl z taką samą wartość typu, jak <xref:System.Windows.Style.TargetType%2A>dla jasności znaczników, ale jest opcjonalny.  
   
@@ -158,7 +158,7 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
 - [Zasoby aplikacji](optimizing-performance-application-resources.md)
 - [Zasoby i kod](resources-and-code.md)
 - [Definiowanie zasobu i odwoływanie się do niego](how-to-define-and-reference-a-resource.md)
-- [Przegląd Zarządzanie aplikacjami](../app-development/application-management-overview.md)
-- [x:Type — Rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)
-- [StaticResource — Rozszerzenie znaczników](staticresource-markup-extension.md)
-- [DynamicResource — Rozszerzenie znaczników](dynamicresource-markup-extension.md)
+- [Zarządzanie aplikacjami — omówienie](../app-development/application-management-overview.md)
+- [x:Type, rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)
+- [StaticResource, rozszerzenie znaczników](staticresource-markup-extension.md)
+- [DynamicResource, rozszerzenie znaczników](dynamicresource-markup-extension.md)

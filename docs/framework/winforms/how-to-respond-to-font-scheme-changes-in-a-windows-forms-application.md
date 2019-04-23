@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
 ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339050"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Instrukcje: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
@@ -67,4 +67,4 @@ W systemach operacyjnych Windows użytkownik może zmienić ustawień czcionki s
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Automatyczne skalowanie w formularzach systemu Windows](automatic-scaling-in-windows-forms.md)
+- [Automatyczne skalowanie w formularzach Windows Forms](automatic-scaling-in-windows-forms.md)

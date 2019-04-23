@@ -12,10 +12,10 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345004"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Instrukcje: Nawigowanie po danych w formularzach Windows Forms
@@ -52,7 +52,7 @@ W aplikacji Windows, aby poruszać się po rekordów w źródle danych najłatwi
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Źródła danych obsługiwane przez formularze systemu Windows](data-sources-supported-by-windows-forms.md)
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
-- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)
-- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
+- [Źródła danych obsługiwane przez formularze Windows Forms](data-sources-supported-by-windows-forms.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

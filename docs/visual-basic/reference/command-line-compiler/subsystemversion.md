@@ -7,10 +7,10 @@ helpviewer_keywords:
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480862"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion — (Visual Basic)
@@ -70,6 +70,6 @@ Aby ustawić **- subsystemversion** — opcja kompilatora w programie Visual Stu
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 
 - [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)

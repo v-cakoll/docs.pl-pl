@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - stackalloc keyword [C#]
 ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480810"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (odwołanie w C#)
@@ -74,7 +74,7 @@ Należy używać <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601> Jeśl
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Słowa kluczowe operatora](operator-keywords.md)

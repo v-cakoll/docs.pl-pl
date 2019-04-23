@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
 ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340753"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji formularzy systemu Windows
@@ -43,7 +43,7 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> sterowania do wyświetlani
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [WebBrowser — Informacje o formancie](webbrowser-control-overview.md)
+- [WebBrowser, kontrolka — omówienie](webbrowser-control-overview.md)
 - [Zabezpieczenia WebBrowser](webbrowser-security.md)
-- [Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Instrukcje: drukowanie za pomocą kontrolki WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Instrukcje: Drukowanie za pomocą formantu WebBrowser](how-to-print-with-a-webbrowser-control.md)

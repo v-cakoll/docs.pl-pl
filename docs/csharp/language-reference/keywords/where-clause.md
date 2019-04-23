@@ -9,10 +9,10 @@ helpviewer_keywords:
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
 ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341390"
 ---
 # <a name="where-clause-c-reference"></a>Klauzula where (odwołanie w C#)
@@ -48,8 +48,8 @@ W czasie kompilacji `where` — słowo kluczowe jest konwertowana na wywołanie 
 ## <a name="see-also"></a>Zobacz także
 
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)
-- [Klauzula from](from-clause.md)
-- [select — Klauzula](select-clause.md)
+- [from, klauzula](from-clause.md)
+- [select, klauzula](select-clause.md)
 - [Filtrowanie danych](../../programming-guide/concepts/linq/filtering-data.md)
 - [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [Wprowadzenie do korzystania z LINQ w C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

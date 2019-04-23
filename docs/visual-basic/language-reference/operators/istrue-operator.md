@@ -8,10 +8,10 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
 ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344952"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue — Operator (Visual Basic)
@@ -46,6 +46,6 @@ Określa, czy wyrażenie jest `True`.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Operator IsFalse](../../../visual-basic/language-reference/operators/isfalse-operator.md)
+- [IsFalse, operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [Instrukcje: Definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [Operator OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)
+- [OrElse, operator](../../../visual-basic/language-reference/operators/orelse-operator.md)

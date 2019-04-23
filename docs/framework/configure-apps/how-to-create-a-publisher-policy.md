@@ -8,10 +8,10 @@ helpviewer_keywords:
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344666"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Instrukcje: Tworzenie zasad wydawcy
@@ -61,7 +61,7 @@ Dostawcy zestawów mogą stanu, aplikacje powinny używać nowszej wersji zestaw
   
     -   *PublisherPolicyAssemblyFile* argument jest nazwą zestaw zasad wydawcy, która wynika z tego polecenia. Nazwy pliku zestawu musi być zgodny z formatem:  
   
-         **zasady.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile* argument jest nazwą pliku zawierającego parę kluczy. Musisz zarejestrować zestaw i zestaw zasad wydawcy z tej samej pary kluczy.  
   

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340493"
 ---
 # <a name="multimedia-overview"></a>Przegląd Multimedia
@@ -99,7 +99,7 @@ Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ### <a name="controlling-mediaplayer"></a>Kontrolowanie MediaPlayer  
  Ponieważ <xref:System.Windows.Media.MediaPlayer> jest bezstanowych, istnieją tylko dwa sposoby, aby kontrolować odtwarzanie multimediów.  
   
-1. Metody kontroli interaktywne. W miejscu, w trybie niezależne (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> właściwości).  
+1. Metody kontroli interaktywne. W miejscu, w trybie niezależne (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> właściwości).  
   
 2. <xref:System.Windows.Media.MediaClock>. W miejscu, w przypadku nośnika <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
@@ -114,4 +114,4 @@ Multimediów funkcje w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 
 - <xref:System.Windows.Media.DrawingGroup>
 - [Układ](../advanced/layout.md)
-- [— Tematy porad](audio-and-video-how-to-topics.md)
+- [Tematy z instrukcjami](audio-and-video-how-to-topics.md)

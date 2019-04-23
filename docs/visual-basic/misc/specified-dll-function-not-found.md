@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID453
 ms.assetid: c0a308ee-5876-40af-be4b-1979397835df
 ms.openlocfilehash: 4c058d9ee5b673de431aadd7f4304fe0271838b0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339466"
 ---
 # <a name="specified-dll-function-not-found"></a>Nie można odnaleźć określonej funkcji DLL
@@ -22,4 +22,4 @@ Znaleziono biblioteki dołączanej (dynamicznie DLL) w dokumentacji biblioteki u
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Error — Typy](../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)

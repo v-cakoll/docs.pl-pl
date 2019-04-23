@@ -11,10 +11,10 @@ helpviewer_keywords:
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
 ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339024"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel
@@ -37,4 +37,4 @@ Kontrolki w <xref:System.Windows.Forms.TableLayoutPanel> kontrolki mogą znajdow
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TableLayoutPanel — kontrolka](tablelayoutpanel-control-windows-forms.md)
+- [TableLayoutPanel, kontrolka](tablelayoutpanel-control-windows-forms.md)

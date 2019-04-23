@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
 ms.openlocfilehash: bb35a4d47f583aad710e178bdb12cb9adf6321e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340025"
 ---
 # <a name="control-authoring-overview"></a>Przegląd Autorstwo formantów
@@ -182,7 +182,7 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
   
 -   Implementowanie parę `public` `static` CLR metody o nazwie `Set` *PropertyName* i `Get` *PropertyName*. Obie metody powinna obsługiwać klasę pochodną <xref:System.Windows.DependencyProperty> jako swojego pierwszego argumentu. `Set` *PropertyName* metoda akceptuje także argumentem, którego typ jest zgodny z typem danych zarejestrowanych dla właściwości. `Get` *PropertyName* metoda powinna zwrócić wartość tego samego typu. Jeśli `Set` *PropertyName* Brak metoda, właściwość jest oznaczona jako tylko do odczytu.  
   
--   `Set` **PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio.DProjektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
+-   `Set` *PropertyName* i `Get` *PropertyName* musi kierować bezpośrednio do <xref:System.Windows.DependencyObject.GetValue%2A> i <xref:System.Windows.DependencyObject.SetValue%2A> metod w zależności docelowego obiektu odpowiednio. Projektanci mogą uzyskiwać dostęp do dołączona właściwość wywoływania przez otoki metody lub wybierając bezpośrednie wywołanie do obiektu docelowego zależności.  
   
  Aby uzyskać więcej informacji na temat dołączone właściwości, zobacz [Przegląd właściwości dołączonych](../advanced/attached-properties-overview.md).  
   
@@ -269,5 +269,5 @@ Możliwość rozszerzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlas
 ## <a name="see-also"></a>Zobacz także
 
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Pakuj URI w WPF](../app-development/pack-uris-in-wpf.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Pakowanie URI w WPF](../app-development/pack-uris-in-wpf.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)

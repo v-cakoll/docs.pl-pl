@@ -12,10 +12,10 @@ metadata:
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Kolekcja listy
   ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
-  ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-  ms.translationtype: MT
+  ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+  ms.translationtype: HT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 04/09/2019
+  ms.lasthandoff: 04/18/2019
   ms.locfileid: "59427529"
 items:
 - durationInMinutes: 1
@@ -217,4 +217,4 @@ items:
 
     > To środowisko kodowania online jest w trybie podglądu. Jeśli napotkasz problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - title: Gratulacje!
-  content: "\"Gałęzie i pętle\" interaktywnego samouczka został ukończony. Możesz kliknąć pozycję **ciągi interpolowane** poniższe łącze do uruchomienia interaktywnego samouczka dalej lub mogą odwiedzić [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku \"Zachowaj Learning\" łączy do tych samouczków.\n\nMożesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:\n\n- [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)\n- [While — Instrukcja](../../language-reference/keywords/while.md)\n- [Do — Instrukcja](../../language-reference/keywords/do.md)\n- [For — Instrukcja](../../language-reference/keywords/for.md)"
+  content: "\"Gałęzie i pętle\" interaktywnego samouczka został ukończony. Możesz kliknąć pozycję **ciągi interpolowane** poniższe łącze do uruchomienia interaktywnego samouczka dalej lub mogą odwiedzić [lokacji .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) można pobrać zestawu .NET Core SDK, Utwórz projekt na komputerze i Zachowaj kodowania. W kroku \"Zachowaj Learning\" łączy do tych samouczków.\n\nMożesz dowiedzieć się więcej na temat tych pojęć w następujących tematach:\n\n- [Jeśli i else, instrukcja](../../language-reference/keywords/if-else.md)\n- [while — instrukcja](../../language-reference/keywords/while.md)\n- [— Instrukcja](../../language-reference/keywords/do.md)\n- [For — instrukcja](../../language-reference/keywords/for.md)"

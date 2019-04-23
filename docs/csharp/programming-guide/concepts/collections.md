@@ -3,10 +3,10 @@ title: Kolekcje (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481109"
 ---
 # <a name="collections-c"></a>Kolekcje (C#)
@@ -24,7 +24,7 @@ Jeśli kolekcja zawiera elementy tylko jednego typu danych, możesz użyć jedne
 > [!NOTE]
 > W przykładach w tym temacie zawierają [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy dla `System.Collections.Generic` i `System.Linq` przestrzeni nazw.
 
- **W tym temacie:**
+ **W tym temacie**
 
 - [Za pomocą prostej kolekcji](#BKMK_SimpleCollection)
 
@@ -186,11 +186,11 @@ Wiele typowych kolekcji jest dostarczanych przez program .NET Framework. Każdy 
 
 W tej sekcji opisano niektóre typowe klasy kolekcji:
 
-- <xref:System.Collections.Generic> klasy
+- <xref:System.Collections.Generic> Klasy
 
-- <xref:System.Collections.Concurrent> klasy
+- <xref:System.Collections.Concurrent> Klasy
 
-- <xref:System.Collections> klasy
+- <xref:System.Collections> Klasy
 
 <a name="BKMK_Generic"></a>
 
@@ -600,10 +600,10 @@ private static IEnumerable<int> EvenSequence(
 
 - [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 - [Koncepcje programowania (C#)](../../../csharp/programming-guide/concepts/index.md)
-- [Option Strict — Instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
 - [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
 - [Kolekcje i struktury danych](../../../standard/collections/index.md)
 - [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)
-- [Porównywanie i sortowanie w kolekcjach](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345095"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (opcje kompilatora C#)
@@ -28,13 +28,13 @@ Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora 
 ```  
   
 ## <a name="arguments"></a>Argumenty  
- **brak**  
+ **Brak**  
  Raporty o błędach wewnętrznych kompilatora nie będą zbierane ani wysyłane do firmy Microsoft.  
   
  **wiersz**  
  Monituje o wysłanie raportu po pojawieniu się błędu wewnętrznego kompilatora. **wiersz** jest domyślną kolekcją podczas kompilowania aplikacji w środowisku programistycznym.  
   
- **queue**  
+ **kolejki**  
  Kolejkuje raport o błędach. Po zalogowaniu się przy użyciu poświadczeń administracyjnych może zgłaszać błędów od czasu ostatniego zalogowania się. Użytkownik nie jest monitowany o wysłanie raportu błędów więcej niż raz na trzy dni. **kolejka** jest domyślną kolekcją podczas kompilowania aplikacji w wierszu polecenia.  
   
  **Wyślij**  

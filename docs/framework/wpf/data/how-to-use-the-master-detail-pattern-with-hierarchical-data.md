@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
 ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346187"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Instrukcje: Używanie wzorca szczegółowego z danymi hierarchicznymi
@@ -37,6 +37,6 @@ W tym przykładzie pokazano, jak można implementować scenariusza wzorzec / szc
 
 - <xref:System.Windows.HierarchicalDataTemplate>
 - [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [Przegląd Szablonowanie danych](data-templating-overview.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Szablonowanie danych — omówienie](data-templating-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

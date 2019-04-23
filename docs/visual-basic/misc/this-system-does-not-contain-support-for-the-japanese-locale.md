@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_JPNNotSupported
 ms.assetid: 986d0379-c9d1-4004-b9ac-8d3bd95dfe85
 ms.openlocfilehash: f1a4e02d66d2073fd5172616214533bf4358422a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341286"
 ---
 # <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>Ten system nie obsługuje japońskich ustawieniach regionalnych
@@ -22,4 +22,4 @@ Podjęto próbę użycia `VbStrConv.Japanese` element członkowski wyliczenia, a
 
 - <xref:System.Globalization>
 
-- [Wprowadzenie do aplikacji międzynarodowych na podstawie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Wprowadzenie do aplikacji międzynarodowych opartych na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

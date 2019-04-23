@@ -4,10 +4,10 @@ description: Ten artykuł zawiera omówienie i wprowadzenie do platformy Docker 
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
 ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480732"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
@@ -55,7 +55,7 @@ Różne usługi platformy Azure obsługują kontenery. Tworzenie obrazu platform
 * [Usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
 Skalowanie i organizowanie kontenerów systemu Linux przy użyciu platformy Kubernetes.
 
-* [Usługa Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Wdrażanie aplikacji sieci web lub interfejsów API przy użyciu kontenerów systemu Linux w środowisku PaaS.
 
 * [Usługa Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\

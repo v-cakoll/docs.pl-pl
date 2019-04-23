@@ -13,10 +13,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
 ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346057"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows
@@ -92,7 +92,7 @@ Po wyświetleniu funkcji zapisu danych do użytkowników, często trzeba sprawdz
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Wprowadzanie danych w formancie DataGridView formularzy systemu Windows](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md)

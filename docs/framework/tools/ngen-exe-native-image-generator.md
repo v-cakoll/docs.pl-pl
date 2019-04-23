@@ -21,10 +21,10 @@ ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481265"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
@@ -118,8 +118,8 @@ W poniższej tabeli pokazano składnię każdego `action`. Opisy poszczególnych
 
 |Konfiguracja|Opis|
 |-------------------|-----------------|
-|`/ExeConfig:` `exePath`|Używa konfiguracji określonego zestawu wykonywalnego.<br /><br /> Program Ngen.exe musi podjąć te same decyzje, co moduł ładowania podczas tworzenia powiązania z zależnościami. Gdy współużytkowany składnik jest ładowany w czasie wykonywania, za pomocą <xref:System.Reflection.Assembly.Load%2A> metoda, pliku konfiguracji aplikacji określa zależności, które są ładowane dla współużytkowanego składnika — na przykład wersję zależności, który jest ładowany. `/ExeConfig` Przełącznik zapewnia Ngen.exe wskazówek, na którym zależności będą ładowane w czasie wykonywania.|
-|`/AppBase:` `directoryPath`|Podczas lokalizowania zależności należy użyć określonego katalogu jako podstawy aplikacji.|
+|`/ExeConfig:``exePath`|Używa konfiguracji określonego zestawu wykonywalnego.<br /><br /> Program Ngen.exe musi podjąć te same decyzje, co moduł ładowania podczas tworzenia powiązania z zależnościami. Gdy współużytkowany składnik jest ładowany w czasie wykonywania, za pomocą <xref:System.Reflection.Assembly.Load%2A> metoda, pliku konfiguracji aplikacji określa zależności, które są ładowane dla współużytkowanego składnika — na przykład wersję zależności, który jest ładowany. `/ExeConfig` Przełącznik zapewnia Ngen.exe wskazówek, na którym zależności będą ładowane w czasie wykonywania.|
+|`/AppBase:``directoryPath`|Podczas lokalizowania zależności należy użyć określonego katalogu jako podstawy aplikacji.|
 
 <a name="OptionTable"></a>
 
@@ -189,7 +189,7 @@ W tej sekcji uwag:
 
 - [Rozwiązywanie problemów](#Troubleshooting)
 
-  - [podgląd dziennika powiązań zestawów](#Fusion)
+  - [Assembly Binding Log Viewer](#Fusion)
 
   - [Asystent debugowania zarządzanego JITCompilationStart](#MDA)
 
@@ -565,7 +565,7 @@ Obraz macierzysty — zadanie jest zarejestrowany, gdy dla każdego Procesora ar
 
 |Nazwa zadania|komputer 32-bitowy|komputer 64-bitowy|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN 4.0.30319|Yes|Yes|
+|NET Framework NGEN 4.0.30319|Tak|Tak|
 |NET Framework NGEN 4.0.30319 64|Nie|Tak|
 
 Obraz macierzysty — zadanie jest dostępna w .NET Framework 4.5 i nowsze wersje, gdy uruchomiony w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows, .NET Framework używa [Native Image Service](#native-image-service).

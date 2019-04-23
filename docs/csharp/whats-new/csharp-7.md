@@ -4,22 +4,22 @@ description: Zapoznaj się z omówieniem nowych funkcji w wersji 7.0 C# języka.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481304"
 ---
 # <a name="whats-new-in-c-70"></a>Co nowego w języku C# 7.0
 
 C# 7.0 dodaje wiele nowych funkcji do języka C#:
-* [`out` zmienne](#out-variables)
+* [`out` Zmienne](#out-variables)
   - Można zadeklarować `out` wartości wbudowanych jako argumenty do metody, gdzie są używane.
 * [Krotki](#tuples)
   - Można tworzyć lekkie, bez nazwy typów, które zawierają wiele pola publiczne. Kompilatory i narzędzia IDE zrozumieć semantykę tych typów.
-* [Odrzuca](#discards)
+* [Odrzucenia](#discards)
   - Odrzuca są tymczasowego, tylko do zapisu zmienne używane w przypisania, jeśli nie dba o wartość przypisana. Są one najbardziej użyteczne, gdy dekonstrukcja krotek i typy zdefiniowane przez użytkownika, a także podczas wywoływania metody z `out` parametrów.
-* [Dopasowanie wzorca](#pattern-matching)
+* [Dopasowanie do wzorca](#pattern-matching)
   - Można utworzyć logikę rozgałęziania, na podstawie dowolnego typu i wartości elementów członkowskich tych typów.
 * [`ref` Zmienne lokalne i](#ref-locals-and-returns)
   - Metoda zmienne lokalne i wartości zwracane mogą być odwołania do innych magazynów.
@@ -27,7 +27,7 @@ C# 7.0 dodaje wiele nowych funkcji do języka C#:
   - Można zagnieżdżać funkcji w innych funkcjach, aby ograniczyć ich zakres i widoczność.
 * [Więcej elementy członkowskie z wyrażeniem](#more-expression-bodied-members)
   - Zwiększył się listę elementów członkowskich, które można tworzyć za pomocą wyrażeń.
-* [`throw` Wyrażenia](#throw-expressions)
+* [`throw` Expressions](#throw-expressions)
   - W konstrukcji kodu, które wcześniej nie były dozwolone, ponieważ może generować wyjątki `throw` został instrukcję.
 * [Uogólnionego asynchroniczne typy zwracane](#generalized-async-return-types)
   - Metody zadeklarowane za pomocą `async` modyfikator może zwrócić inne typy oprócz `Task` i `Task<T>`.

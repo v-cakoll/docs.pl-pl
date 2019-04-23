@@ -12,10 +12,10 @@ ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344237"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Instrukcje: Definiowanie metody ogólnej przy użyciu emisji odbicia
@@ -78,7 +78,7 @@ Pierwsza procedura pokazuje, jak utworzyć proste metody ogólnej z dwoma parame
 10. Emituj metody treści, za pomocą <xref:System.Reflection.Emit.ILGenerator>. Aby uzyskać szczegółowe informacje Zobacz towarzyszący procedurę do emitowania treści metody.  
   
     > [!IMPORTANT]
-    >  Emituj wywołania metod typów ogólnych i argumenty typu z tych typów są parametry typu metody ogólnej, należy użyć `static`<xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>, i <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> przeciążenia metody <xref:System.Reflection.Emit.TypeBuilder> skonstruowany klasy w celu uzyskania rodzaje metod. Towarzyszący procedury do emitowania treści metody pokazuje to.  
+    >  Emituj wywołania metod typów ogólnych i argumenty typu z tych typów są parametry typu metody ogólnej, należy użyć `static` <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>, i <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> przeciążenia metody <xref:System.Reflection.Emit.TypeBuilder> klasy Uzyskaj skonstruowany rodzaje metod. Towarzyszący procedury do emitowania treści metody pokazuje to.  
   
 11. Typ, który zawiera metodę ukończenia, a następnie Zapisz zestaw. Towarzyszący procedury do wywoływania metody rodzajowej przedstawia dwa sposoby wywołania metody ukończone.  
   
@@ -105,7 +105,7 @@ Pierwsza procedura pokazuje, jak utworzyć proste metody ogólnej z dwoma parame
      [!code-csharp[GenericMethodHowTo#31](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#31)]
      [!code-vb[GenericMethodHowTo#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#31)]  
   
-4. Pobierz <xref:System.Reflection.MethodInfo> reprezentujący <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody. Metoda działa na `ICollection(Of TInput)` (`ICollection<TInput>` w C#), co jest niezbędne do doprowadzenia `Add` metody określonej w tym skonstruowany typ. Nie można użyć <xref:System.Type.GetMethod%2A> metodę, aby uzyskać dostęp do tej <xref:System.Reflection.MethodInfo> bezpośrednio z `icollOfTInput`, ponieważ <xref:System.Type.GetMethod%2A> nie jest obsługiwana dla typu, który został skonstruowany przy użyciu <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Zamiast tego należy wywołać <xref:System.Type.GetMethod%2A> na `icoll`, który zawiera definicję typu ogólnego <xref:System.Collections.Generic.ICollection%601> interfejs generyczny. Następnie użyj <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29>`static` metody do tworzenia <xref:System.Reflection.MethodInfo> skonstruowanego typu. Poniższy kod przedstawia to.  
+4. Pobierz <xref:System.Reflection.MethodInfo> reprezentujący <xref:System.Collections.Generic.ICollection%601.Add%2A?displayProperty=nameWithType> metody. Metoda działa na `ICollection(Of TInput)` (`ICollection<TInput>` w C#), co jest niezbędne do doprowadzenia `Add` metody określonej w tym skonstruowany typ. Nie można użyć <xref:System.Type.GetMethod%2A> metodę, aby uzyskać dostęp do tej <xref:System.Reflection.MethodInfo> bezpośrednio z `icollOfTInput`, ponieważ <xref:System.Type.GetMethod%2A> nie jest obsługiwana dla typu, który został skonstruowany przy użyciu <xref:System.Reflection.Emit.GenericTypeParameterBuilder>. Zamiast tego należy wywołać <xref:System.Type.GetMethod%2A> na `icoll`, który zawiera definicję typu ogólnego <xref:System.Collections.Generic.ICollection%601> interfejs generyczny. Następnie użyj <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> `static` metody do tworzenia <xref:System.Reflection.MethodInfo> skonstruowanego typu. Poniższy kod przedstawia to.  
   
      [!code-csharp[GenericMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#12)]
      [!code-vb[GenericMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#12)]  
@@ -173,4 +173,4 @@ Pierwsza procedura pokazuje, jak utworzyć proste metody ogólnej z dwoma parame
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.Emit.MethodBuilder>
-- [Instrukcje: Definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+- [Instrukcje: Definiowanie typu ogólnego przy użyciu odbicia emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

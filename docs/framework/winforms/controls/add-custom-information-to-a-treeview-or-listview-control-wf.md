@@ -14,10 +14,10 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344159"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)
@@ -132,5 +132,5 @@ Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.F
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TreeView — Formant](treeview-control-windows-forms.md)
-- [ListView — Formant](listview-control-windows-forms.md)
+- [TreeView, kontrolka](treeview-control-windows-forms.md)
+- [Kontrolka ListView](listview-control-windows-forms.md)

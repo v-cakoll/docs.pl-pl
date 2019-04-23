@@ -3,10 +3,10 @@ title: Co nowego C# 8.0 - C# przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8.0. W tym artykule jest aktualny i 2 w wersji zapoznawczej.
 ms.date: 02/12/2019
 ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427282"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego C# 8.0
@@ -24,7 +24,7 @@ Istnieje wiele ulepszeń C# języka, które możesz wypróbować już w wersji z
 
 Następujące funkcje języka najpierw pojawiła się C# 8.0 w wersji zapoznawczej 1:
 
-- [Typy dopuszczające wartości null odwołań](#nullable-reference-types)
+- [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
 - [Asynchroniczne strumienie](#asynchronous-streams)
 - [Indeksy i zakresy](#indices-and-ranges)
 

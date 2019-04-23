@@ -16,10 +16,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343405"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Przewodnik: wdrażanie formularza korzystającego z operacji w tle
@@ -168,7 +168,7 @@ Jeśli operacja, która będzie zająć dużo czasu, i nie ma interfejsu użytko
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
 - [Zarządzana wątkowość](../../../standard/threading/index.md)
 - [Zarządzana wątkowość — najlepsze rozwiązania](../../../standard/threading/managed-threading-best-practices.md)
-- [Asynchroniczny wzorzec oparty na zdarzeniach — przegląd](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [Przewodnik: uruchamianie operacji w tle](walkthrough-running-an-operation-in-the-background.md)
-- [BackgroundWorker — Składnik](backgroundworker-component.md)
+- [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Przewodnik: Przeprowadzanie operacji w tle](walkthrough-running-an-operation-in-the-background.md)
+- [BackgroundWorker, składnik](backgroundworker-component.md)

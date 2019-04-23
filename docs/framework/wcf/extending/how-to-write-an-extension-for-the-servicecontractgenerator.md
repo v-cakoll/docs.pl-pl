@@ -3,10 +3,10 @@ title: 'Instrukcje: pisanie rozszerzenia dla typu ServiceContractGenerator'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
 ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340623"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Instrukcje: pisanie rozszerzenia dla typu ServiceContractGenerator
@@ -101,4 +101,4 @@ W tym temacie opisano sposób pisania rozszerzenie <xref:System.ServiceModel.Des
 ## <a name="see-also"></a>Zobacz także
 
 - [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [Instrukcje: Importowanie niestandardowych plików WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Instrukcje: Import Custom WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

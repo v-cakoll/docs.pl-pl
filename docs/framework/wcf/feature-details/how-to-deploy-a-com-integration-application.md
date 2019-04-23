@@ -3,10 +3,10 @@ title: 'Instrukcje: wdrażanie aplikacji integracji modelu COM+'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
 ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343385"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Instrukcje: wdrażanie aplikacji integracji modelu COM+
@@ -41,5 +41,5 @@ Po napisaniu aplikacji COM +, integracja, warto wdrożyć ją na innym komputerz
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd integrowania z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)
-- [Instrukcje: konfigurowanie ustawień usługi COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
-- [Instrukcje: używanie narzędzia konfiguracji modelu usług COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)
+- [Instrukcje: Konfigurowanie ustawień usługi COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [Instrukcje: Używanie narzędzia konfiguracji modelu usług COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)

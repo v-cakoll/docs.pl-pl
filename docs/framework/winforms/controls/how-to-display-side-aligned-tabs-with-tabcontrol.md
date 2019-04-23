@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
 ms.openlocfilehash: d98c5906d99dff9371f8290e7dbc9c9011cd0c29
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338790"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Instrukcje: wyświetlanie wyrównanych poziomo kart przy użyciu kontrolki TabControl
@@ -42,4 +42,4 @@ ms.locfileid: "59338790"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TabControl — Formant](tabcontrol-control-windows-forms.md)
+- [TabControl, kontrolka](tabcontrol-control-windows-forms.md)

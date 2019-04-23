@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
 ms.openlocfilehash: 4f18c9216aa24840bc205534a97124d12698cb98
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342157"
 ---
 # <a name="pathfile-access-error"></a>Błąd dostępu do ścieżki/pliku
@@ -26,4 +26,4 @@ Podczas operacji uzyskiwania dostępu do plików lub dostępu do dysku systemu o
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Error — Typy](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)

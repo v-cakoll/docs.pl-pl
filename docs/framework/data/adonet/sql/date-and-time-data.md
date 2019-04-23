@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344181"
 ---
 # <a name="date-and-time-data"></a>Dane daty i godziny
@@ -99,7 +99,7 @@ Można określić typu danych <xref:System.Data.SqlClient.SqlParameter> przy uż
 >  Wartości czasu, w których wartość jest mniejsza od zera i mniejszy niż 24 godziny będzie zgłaszać wyjątek <xref:System.ArgumentException>.  
   
 ### <a name="creating-parameters"></a>Tworzenie parametrów  
- Możesz utworzyć <xref:System.Data.SqlClient.SqlParameter> obiektu za pomocą jej konstruktora lub przez dodanie jej do <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji przez wywołanie metody `Add` metody <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Metoda zajmie się jako dane wejściowe w argumentach konstruktora lub istniejący obiekt parametru.  
+ Możesz utworzyć <xref:System.Data.SqlClient.SqlParameter> obiektu za pomocą jej konstruktora lub przez dodanie jej do <xref:System.Data.SqlClient.SqlCommand> <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji przez wywołanie metody `Add` metody <xref:System.Data.SqlClient.SqlParameterCollection>. `Add` Metoda zajmie się jako dane wejściowe w argumentach konstruktora lub istniejący obiekt parametru.  
   
  Następnych sekcjach tego tematu zawierają przykłady sposobu określania parametrów daty i godziny. Aby uzyskać dodatkowe przykłady pracy z parametrami, zobacz [konfigurowania parametrów i typów danych parametrów](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) i [parametry elementu DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   

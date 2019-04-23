@@ -5,10 +5,10 @@ ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216356"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (niezarządzana dokumentacja interfejsu API)
@@ -44,4 +44,4 @@ Obsługuje moduł tworzenia i weryfikacji licencji Authenticode XrML.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Niezarządzany wykaz interfejsów API](../../../../docs/framework/unmanaged-api/index.md)
+- [Niezarządzane interfejsy API — informacje](../../../../docs/framework/unmanaged-api/index.md)

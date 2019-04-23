@@ -8,10 +8,10 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216349"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)
@@ -34,13 +34,13 @@ winmdexp [options] winmdmodule
 |Argument lub opcja|Opis|  
 |------------------------|-----------------|  
 |`winmdmodule`|Określa moduł (winmdobj) do wyeksportowania. Dozwolony jest tylko jeden moduł. Aby utworzyć ten moduł, użyj `/target` — opcja kompilatora przy użyciu `winmdobj` docelowej. Zobacz [/target: winmdobj (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) lub [/TARGET (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
-|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Określa wyjściowy plik dokumentacji XML, który zostanie wygenerowany przez Winmdexp.exe. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], plik wyjściowy jest zasadniczo taki sam jak wejściowy plik XML w dokumentacji.|  
-|`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|Określa nazwę pliku dokumentacji XML, wytworzonego przez kompilator za pomocą `winmdmodule`.|  
-|`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|Określa nazwę pliku bazy danych (PDB) programu, który zawiera symbole dla `winmdmodule`.|  
-|`/nowarn:` `warning`|Wyłącza ostrzeżenie o podanym numerze. Aby uzyskać *ostrzeżenie*, podaj tylko liczbowej części kodu błędu, bez zer wiodących.|  
-|`/out:` `file`<br /><br /> `/o:` `file`|Określa nazwę wyjściowego pliku metadanych systemu Windows (winmd).|  
-|`/pdb:` `symbolfile`<br /><br /> `/p:` `symbolfile`|Określa nazwę wyjściowego pliku bazy danych programu (PDB), który będzie zawierał symbole dla eksportowanego pliku metadanych systemu Windows (winmd).|  
-|`/reference:` `winmd`<br /><br /> `/r:` `winmd`|Określa plik metadanych (winmd lub zestaw) jako plik referencyjny podczas eksportowania. Jeśli używasz zestawów odwołań w "\Program pliki (x86) \Reference Assemblies\Microsoft\Framework\\. NETCore\v4.5 "(" \Program Files\\... "na komputerach z 32-bitowy), zawierają odwołania do System.Runtime.dll, jak i mscorlib.dll.|  
+|`/docfile:``docfile`<br /><br /> `/d:``docfile`|Określa wyjściowy plik dokumentacji XML, który zostanie wygenerowany przez Winmdexp.exe. W [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], plik wyjściowy jest zasadniczo taki sam jak wejściowy plik XML w dokumentacji.|  
+|`/moduledoc:``docfile`<br /><br /> `/md:``docfile`|Określa nazwę pliku dokumentacji XML, wytworzonego przez kompilator za pomocą `winmdmodule`.|  
+|`/modulepdb:``symbolfile`<br /><br /> `/mp:``symbolfile`|Określa nazwę pliku bazy danych (PDB) programu, który zawiera symbole dla `winmdmodule`.|  
+|`/nowarn:``warning`|Wyłącza ostrzeżenie o podanym numerze. Aby uzyskać *ostrzeżenie*, podaj tylko liczbowej części kodu błędu, bez zer wiodących.|  
+|`/out:``file`<br /><br /> `/o:``file`|Określa nazwę wyjściowego pliku metadanych systemu Windows (winmd).|  
+|`/pdb:``symbolfile`<br /><br /> `/p:``symbolfile`|Określa nazwę wyjściowego pliku bazy danych programu (PDB), który będzie zawierał symbole dla eksportowanego pliku metadanych systemu Windows (winmd).|  
+|`/reference:``winmd`<br /><br /> `/r:``winmd`|Określa plik metadanych (winmd lub zestaw) jako plik referencyjny podczas eksportowania. Jeśli używasz zestawów odwołań w "\Program pliki (x86) \Reference Assemblies\Microsoft\Framework\\. NETCore\v4.5 "(" \Program Files\\... "na komputerach z 32-bitowy), zawierają odwołania do System.Runtime.dll, jak i mscorlib.dll.|  
 |`/utf8output`|Określa, że komunikaty wyjściowe powinny mieć kodowanie UTF-8.|  
 |`/warnaserror+`|Określa, że wszystkie ostrzeżenia powinny być traktowane jako błędy.|  
 |**@** `responsefile`|Określa plik odpowiedzi (rsp), który zawiera opcje (i opcjonalnie `winmdmodule`). Każdy wiersz w `responsefile` powinien zawierać pojedynczy argument lub opcję.|  
@@ -52,7 +52,7 @@ winmdexp [options] winmdmodule
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [Tworzenie składników środowiska wykonawczego Windows w języku C# i Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe — komunikaty o błędach](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
-- [Narzędzia tworzenia, wdrażania i konfiguracji (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))
+- [Tworzenia, wdrażania i narzędzia do konfiguracji (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216473"
 ---
 # <a name="net-performance-tips"></a>Wskazówki dotyczące wydajności .NET
@@ -32,7 +32,7 @@ Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. C
   
 -   [Szybsze pisanie kodu zarządzanego: Znaj koszt](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Pisanie wysokiej wydajności aplikacji zarządzanych: Podstawowe informacje](https://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [Pisanie wysokiej wydajności aplikacji zarządzanych: A Primer](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
 -   [Podstawy modułu odśmiecania pamięci i wskazówki dotyczące wydajności](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
@@ -45,5 +45,5 @@ Termin *wydajności* zazwyczaj odnosi się do szybkości wykonywania programu. C
 ## <a name="see-also"></a>Zobacz także
 
 - [Wydajność](../../../docs/framework/performance/index.md)
-- [Przewodnik programowania w Visual Basic](../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)
 - [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)

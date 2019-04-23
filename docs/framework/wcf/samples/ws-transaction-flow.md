@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296098"
 ---
 # <a name="ws-transaction-flow"></a>Przepływ transakcji WS
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   Drugi `Subtract` żądania jest wykonywane w ramach zadeklarowany za pomocą nowego zakresu transakcji `TransactionScopeOption.Suppress` opcji. To pomija początkowej transakcji zewnętrznym klienta i żądania nie przepływu transakcji do usługi. Takie podejście umożliwia klientowi jawnie zrezygnować z i chronić przepływu transakcji do usługi, gdy nie jest wymagane. Usługi są wykonywane działania w zakresie nowych i niepołączonych transakcji.  
   
--   `Multiply` Żądania nie przepływu transakcji do usługi, ponieważ klient firmy wygenerowana definicja `ICalculator` interfejs zawiera <xref:System.ServiceModel.TransactionFlowAttribute> równa <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
+-   `Multiply` Żądania nie przepływu transakcji do usługi, ponieważ klient firmy wygenerowana definicja `ICalculator` interfejs zawiera <xref:System.ServiceModel.TransactionFlowAttribute> równa <xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`.  
   
 -   `Divide` Żądania nie przepływu transakcji do usługi, ponieważ ponownie klienta użytkownika wygenerowana definicja `ICalculator` nie ma interfejsu `TransactionFlowAttribute`. Usługi ponownie są wykonywane działania w zakresie nowych i niepołączonych transakcja.  
   

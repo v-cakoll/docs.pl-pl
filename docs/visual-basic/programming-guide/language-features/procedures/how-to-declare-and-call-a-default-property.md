@@ -11,10 +11,10 @@ helpviewer_keywords:
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
 ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295643"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic
@@ -85,9 +85,9 @@ A *właściwość domyślna* jest właściwością klasy lub struktury, których
 
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Property — Instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Domyślny](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
+- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
 - [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
 - [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)

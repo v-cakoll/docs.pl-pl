@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295773"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktura programu Visual Basic
@@ -22,9 +22,9 @@ Program Visual Basic jest tworzone na podstawie standardowych bloków konstrukcy
 ## <a name="file-level-programming-elements"></a>Elementy programowania poziomie plików  
  Po uruchomieniu projektu lub pliku i otworzyć Edytor kodu, zobaczysz kodu już, jak i w odpowiedniej kolejności. Wszelki kod, który napiszesz należy wykonać następującą sekwencję:  
   
-1. `Option` instrukcje  
+1. `Option` Instrukcje  
   
-2. `Imports` instrukcje  
+2. `Imports` Instrukcje  
   
 3. `Namespace` instrukcje i poziomie przestrzeni nazw elementów  
   
@@ -47,30 +47,30 @@ Program Visual Basic jest tworzone na podstawie standardowych bloków konstrukcy
 ## <a name="namespace-level-programming-elements"></a>Poziom Namespace elementy programowania  
  Klasy, struktury i moduły zawiera cały kod w pliku źródłowym. Są one *poziomie przestrzeni nazw* elementy, które może się pojawić w przestrzeni nazw lub na poziomie pliku źródłowego. Przechowują deklaracje wszystkie inne elementy programowania. Interfejsy, które zdefiniować element podpisów, ale nie implementacji, są również wyświetlane na poziomie modułu. Aby uzyskać więcej informacji na poziomie modułu elementów zobacz następujące tematy:  
   
--   [Class — Instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure — Instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module — Instrukcja](../../../visual-basic/language-reference/statements/module-statement.md)  
+-   [Instrukcja Module](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface — Instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  Elementy danych na poziomie przestrzeni nazw są, wyliczenia i delegaty.  
   
 ## <a name="module-level-programming-elements"></a>Poziom modułu elementy programowania  
  Procedury operatorów, właściwości i zdarzenia są tylko elementy programowania, które mogą zawierać kod wykonywalny (instrukcji, które wykonują akcje w czasie wykonywania). Są one *poziom modułu* elementach programu. Aby uzyskać więcej informacji na temat elementów poziom procedury zobacz następujące tematy:  
   
--   [Function — Instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
+-   [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub — Instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
+-   [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare — Instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator — Instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property — Instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event — Instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
+-   [Event, instrukcja](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  Elementy danych na poziomie modułu są zmienne, stałe, wyliczenia i delegaty.  
   
@@ -95,5 +95,5 @@ Program Visual Basic jest tworzone na podstawie standardowych bloków konstrukcy
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedura główna w Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
-- [Visual Basic — Konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic — konwencje nazewnictwa](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Ograniczenia Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)

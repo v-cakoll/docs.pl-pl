@@ -6,10 +6,10 @@ helpviewer_keywords:
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
 ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196362"
 ---
 # <a name="ui-automation-events-for-clients"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika dla klientów

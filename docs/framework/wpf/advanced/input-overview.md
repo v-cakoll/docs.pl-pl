@@ -25,10 +25,10 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320018"
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
@@ -287,9 +287,9 @@ ms.locfileid: "59320018"
 
 |Zdarzenie, które anulowanie jest wywoływana w|Zdarzenia myszy, które wystąpiły dla danych wejściowych, które już wystąpiły|
 |----------------------------------------|-----------------------------------------------------------------|
-|<xref:System.Windows.UIElement.ManipulationStarting> and <xref:System.Windows.UIElement.ManipulationStarted>|Wskaźnik myszy w dół do zdarzenia.|
+|<xref:System.Windows.UIElement.ManipulationStarting> i <xref:System.Windows.UIElement.ManipulationStarted>|Wskaźnik myszy w dół do zdarzenia.|
 |<xref:System.Windows.UIElement.ManipulationDelta>|Naciśnięcia przycisku myszy i myszy przesuń zdarzenia.|
-|<xref:System.Windows.UIElement.ManipulationInertiaStarting> and <xref:System.Windows.UIElement.ManipulationCompleted>|Naciśnięcia myszą i myszy zdarzenia przycisku myszy.|
+|<xref:System.Windows.UIElement.ManipulationInertiaStarting> i <xref:System.Windows.UIElement.ManipulationCompleted>|Naciśnięcia myszą i myszy zdarzenia przycisku myszy.|
 
  Należy pamiętać, że jeśli wywołasz <xref:System.Windows.Input.ManipulationStartingEventArgs.Cancel%2A> podczas modyfikowania znajduje się w bezwładności, metoda zwraca `false` i dane wejściowe nie zgłaszać zdarzenia myszy.
 
@@ -391,8 +391,8 @@ ms.locfileid: "59320018"
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Fokus](focus-overview.md)
-- [Przegląd Polecenia](commanding-overview.md)
-- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
-- [Przegląd Elementy bazy](base-elements-overview.md)
+- [Przegląd fokusu](focus-overview.md)
+- [Przegląd poleceń](commanding-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
+- [Przegląd elementów podstawowych](base-elements-overview.md)
 - [Właściwości](properties-wpf.md)

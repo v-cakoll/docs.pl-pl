@@ -7,10 +7,10 @@ helpviewer_keywords:
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
 ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198793"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Instrukcje: Ustawianie czas trwania animacji
@@ -26,4 +26,4 @@ A <xref:System.Windows.Media.Animation.Timeline> reprezentuje segment czasu i d�
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Duration>
-- [Przegląd Animacja](animation-overview.md)
+- [Animacja — przegląd](animation-overview.md)

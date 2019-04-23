@@ -13,10 +13,10 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
 ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320889"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych przy użyciu narzędzia Projektant
@@ -72,7 +72,7 @@ ms.locfileid: "59320889"
 ## <a name="see-also"></a>Zobacz także
 
 - [DataGrid, kontrolka — omówienie](datagrid-control-overview-windows-forms.md)
-- [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [Powiązywanie danych formularzy systemu Windows](../windows-forms-data-binding.md)
+- [Wiązanie danych formularzy Windows Forms](../windows-forms-data-binding.md)
 - [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)

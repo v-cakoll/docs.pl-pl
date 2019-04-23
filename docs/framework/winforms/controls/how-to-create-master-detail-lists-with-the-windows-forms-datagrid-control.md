@@ -11,10 +11,10 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
 ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302416"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Instrukcje: tworzenie list wzorzec/szczegół za pomocą kontrolki DataGrid formularzy systemu Windows
@@ -74,4 +74,4 @@ ms.locfileid: "59302416"
 
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
 - [DataGrid, kontrolka — omówienie](datagrid-control-overview-windows-forms.md)
-- [Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

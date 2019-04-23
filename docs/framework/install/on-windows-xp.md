@@ -4,15 +4,15 @@ description: Dowiedz się, jak zainstalować program .NET Framework na Windows X
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
-ms.openlocfilehash: 7c21ffbbb4feaf3b64ac454f1f00443bdb5f7227
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.date: 04/18/2019
+ms.openlocfilehash: 401073d29ca0a0bb0b1511e65cd1bad31e1bbceb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536493"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974938"
 ---
-# <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Instalowanie programu .NET Framework w Windows XP i Windows Server 2003
+# <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Instalowanie programu .NET Framework w systemach Windows XP i Windows Server 2003
 
 > [!NOTE]
 > Windows XP nie jest już obsługiwana przez firmę Microsoft. Zaleca się uaktualnienie do systemu Windows 10, która jest obsługiwana i zawiera najnowszą wersję programu .NET Framework. Niniejszy dokument jest przeznaczony wyłącznie jako pomocne wskazówki dotyczące rozwiązywania problemów.
@@ -21,7 +21,7 @@ ms.locfileid: "54536493"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Nie jest obsługiwana w systemach Windows i Windows Server 2003. Nie jest dołączony [Windows Update 10 października 2018 r.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) i [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10)
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.8]https://github.com/Microsoft/dotnet/tree/master/releases/net48) jest najnowsza wersja. Nie jest obsługiwana w systemach Windows i Windows Server 2003. Nie jest dołączony [systemu Windows 10 może aktualizować 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

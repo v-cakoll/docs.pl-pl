@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d2e89c842ae83a5be65c7500e47beb7f302e23be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e90280bf6673b21cfe4c8257f71dd0010cdd73a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427191"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974873"
 ---
 # <a name="using-structs-c-programming-guide"></a>Używanie struktur (Przewodnik programowania w języku C#)
 `struct` Typu nadaje się do reprezentowania lekkie obiekty, takie jak `Point`, `Rectangle`, i `Color`. Mimo że jest to po prostu jako wygodne reprezentuje punkt jako [klasy](../../../csharp/language-reference/keywords/class.md) z [implemented Properties](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), [struktury](../../../csharp/language-reference/keywords/struct.md) może być bardziej efektywne w niektórych scenariuszach. Na przykład, jeśli zadeklarować tablicę 1000 `Point` obiektów do odwoływania się do każdego obiektu; w tym przypadku przydzieli dodatkową pamięć, struktura będzie mniej kosztowne. Ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zawiera obiekt o nazwie <xref:System.Drawing.Point>, struktury, w tym przykładzie ma nazwę "Coords" zamiast niego.  
   
  [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]  
   
- Jest to błąd, aby zdefiniować domyślnego (bezparametrowego) konstruktora struktury. Jest również błędu, aby zainicjować pola wystąpienia w treści struktury. Składowe struktury dostępną z zewnątrz można zainicjować tylko przy użyciu sparametryzowanego konstruktora, pośrednie, Konstruktor domyślny [inicjatora obiektu](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), lub uzyskując dostęp do elementów członkowskich pojedynczo po zadeklarowana jest struktura. Wszystkie elementy członkowskie prywatne lub w inny sposób niedostępny korzystają z konstruktorów wyłącznie.
+ Jest to błąd, aby zdefiniować domyślnego (bezparametrowego) konstruktora struktury. Jest również błędu, aby zainicjować pola wystąpienia w treści struktury. Składowe struktury dostępną z zewnątrz można zainicjować tylko przy użyciu sparametryzowanego konstruktora, niejawne konstruktor bez parametrów, [inicjatora obiektu](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md), lub uzyskując dostęp do elementów członkowskich pojedynczo po struktury zadeklarowane. Wszystkie elementy członkowskie prywatne lub w inny sposób niedostępny korzystają z konstruktorów wyłącznie.
   
  Po utworzeniu obiektu struktury przy użyciu [nowe](../../../csharp/language-reference/keywords/new.md) operatora, powstaje i odpowiedniego konstruktora jest wywoływana, zgodnie z opisem w [sygnatury konstruktora firmy](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax). W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora. W takim przypadku nie ma żadnych wywołanie konstruktora, co sprawia, że przydział jest bardziej wydajne. Jednak pola pozostaną nieprzypisane i nie można użyć obiektu, dopóki wszystkie pola są inicjowane. W tym z brakiem, aby pobrać lub ustawić wartości za pomocą właściwości.
  

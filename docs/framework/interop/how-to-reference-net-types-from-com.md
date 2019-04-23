@@ -15,10 +15,10 @@ ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198403"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Instrukcje: Odwołania do typów .NET z modelu COM
@@ -48,4 +48,4 @@ Z punktu widzenia kodu klienta i serwera różnice w modelu COM i .NET Framework
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
 - [Wywołanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Wdrażanie aplikacji do dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Wdrażanie aplikacji dla dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

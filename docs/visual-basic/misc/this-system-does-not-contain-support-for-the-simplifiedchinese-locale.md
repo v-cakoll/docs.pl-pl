@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
 ms.openlocfilehash: c9b2483ca51982d93f746d23d996d552a621c64d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320252"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>Ten system nie obsługuje dla ustawień regionalnych SimplifiedChinese
@@ -22,4 +22,4 @@ Podjęto próbę użycia `VbStrConv.SimplifiedChinese` element członkowski wyli
 
 - <xref:System.Globalization>
 
-- [Wprowadzenie do aplikacji międzynarodowych na podstawie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Wprowadzenie do aplikacji międzynarodowych opartych na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

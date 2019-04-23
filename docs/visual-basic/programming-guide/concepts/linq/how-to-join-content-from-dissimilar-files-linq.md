@@ -3,10 +3,10 @@ title: 'Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (Visual B
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
 ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301116"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)

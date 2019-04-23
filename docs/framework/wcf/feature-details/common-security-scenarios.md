@@ -5,10 +5,10 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199274"
 ---
 # <a name="common-security-scenarios"></a>Typowe scenariusze zabezpieczeń
@@ -67,7 +67,7 @@ Tematy w tej sekcji wykazu pewną liczbę możliwych klienta i konfiguracje zabe
   
  [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
   
- [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
+ [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   

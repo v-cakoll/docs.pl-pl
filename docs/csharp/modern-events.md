@@ -3,12 +3,12 @@ title: Wzorzec zdarzeń zaktualizowane środowiska .NET Core
 description: Dowiedz się, jak wzorzec zdarzeń platformy .NET Core umożliwia elastyczność dzięki wstecznej zgodności oraz sposób implementacji przetwarzanie zdarzeń bezpieczne subskrybentami async.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.openlocfilehash: 5c7b9b4cb9bc22a73b865c45e225ce5c382380b1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188485"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975497"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Wzorzec zdarzeń zaktualizowane środowiska .NET Core
 
@@ -25,7 +25,7 @@ Możesz również zmienić `SearchDirectoryArgs` na strukturę co więcej zmiany
 
 [!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
-Kolejna zmiana jest wywołanie konstruktora domyślnego przed wchodzenie do konstruktora, która inicjuje wszystkie pola. Bez tego dodatku, regułami C# może zgłosić, że właściwości są dostępne przed zostały przypisane.
+Kolejna zmiana jest wywołanie konstruktora bez parametrów przed wchodzenie do konstruktora, która inicjuje wszystkie pola. Bez tego dodatku, regułami C# może zgłosić, że właściwości są dostępne przed zostały przypisane.
 
 Nie należy zmieniać `FileFoundArgs` z klasy (typ odwołania) na strukturę (typ wartości). To, ponieważ protokół obsługę anulowania, wymaga, że argumenty zdarzenia są przekazywane przez odwołanie. Jeśli wprowadzono tę samą zmianę klasa wyszukiwania pliku nigdy nie może obserwować zmiany wprowadzone przez wszystkich subskrybentów zdarzeń. Nową kopię struktury będzie używana dla każdego subskrybenta, a tej kopii będzie kopię innej niż ta, widoczne dla obiektu wyszukiwania pliku.
 
@@ -37,7 +37,7 @@ Po każdym podobnej logiki argumentu zdarzenia utworzony typ teraz nie będzie z
 
 ## <a name="events-with-async-subscribers"></a>Zdarzenia przy użyciu Async subskrybentów
 
-Masz jeden wzorzec końcowego Aby dowiedzieć się więcej: jak poprawnie zapisać subskrybentów zdarzeń, które wywołują kod asynchroniczny. Żądania został opisany w artykule na [async i await](async.md). Metody asynchroniczne mogą mieć zwracać typ void, ale jest zdecydowanie odradzane. Gdy kod dla subskrybentów zdarzeń wywołuje metody asynchronicznej, masz nie wyboru, a do utworzenia `async void` metody. Podpis programu obsługi zdarzeń go wymaga.
+Masz jeden wzorzec końcowego Aby dowiedzieć się więcej: Jak poprawnie zapisać subskrybentów zdarzeń, które wywołują kod asynchroniczny. Żądania został opisany w artykule na [async i await](async.md). Metody asynchroniczne mogą mieć zwracać typ void, ale jest zdecydowanie odradzane. Gdy kod dla subskrybentów zdarzeń wywołuje metody asynchronicznej, masz nie wyboru, a do utworzenia `async void` metody. Podpis programu obsługi zdarzeń go wymaga.
 
 Należy uzgodnić tych wskazówkach przeciwstawnym. Jakiś sposób, należy utworzyć bezpiecznego `async void` metody. Podstawowe informacje potrzebne do zaimplementowania wzorca znajdują się poniżej:
 

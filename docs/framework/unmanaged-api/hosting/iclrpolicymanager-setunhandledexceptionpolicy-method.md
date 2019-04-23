@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f988084310b920907bb7f212e7d40ca0d1c91db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197519"
 ---
 # <a name="iclrpolicymanagersetunhandledexceptionpolicy-method"></a>ICLRPolicyManager::SetUnhandledExceptionPolicy — Metoda
@@ -64,7 +64,7 @@ HRESULT SetUnhandledExceptionPolicy (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [EClrUnhandledException — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
-- [ICLRControl — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLRPolicyManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [IHostPolicyManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [EClrUnhandledException, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrunhandledexception-enumeration.md)
+- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLRPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [IHostPolicyManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

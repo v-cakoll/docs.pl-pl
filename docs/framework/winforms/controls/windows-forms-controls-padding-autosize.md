@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302468"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize
@@ -190,7 +190,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
-- [AutoSize — Przegląd właściwości](autosize-property-overview.md)
-- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [AutoSize, właściwość — omówienie](autosize-property-overview.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

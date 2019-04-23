@@ -3,10 +3,10 @@ title: Rozpoznanie przeciążenia funkcji (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
 ms.openlocfilehash: 0248fdd3f3ba6afb5c7edca740d9aad3ca74bd03
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302520"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>Rozpoznanie przeciążenia funkcji (jednostka SQL)
@@ -32,6 +32,6 @@ W tym temacie opisano sposób [!INCLUDE[esql](../../../../../../includes/esql-md
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

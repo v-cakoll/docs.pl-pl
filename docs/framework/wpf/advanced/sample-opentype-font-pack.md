@@ -7,10 +7,10 @@ helpviewer_keywords:
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199040"
 ---
 # <a name="sample-opentype-font-pack"></a>Przykład pakietu czcionek OpenType
@@ -54,5 +54,5 @@ Wyświetlanie Czcionka Lindsey
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Documents.Typography>
-- [OpenType funkcje czcionki](opentype-font-features.md)
+- [Funkcje czcionki OpenType](opentype-font-features.md)
 - [Pakowanie czcionek z aplikacjami](packaging-fonts-with-applications.md)

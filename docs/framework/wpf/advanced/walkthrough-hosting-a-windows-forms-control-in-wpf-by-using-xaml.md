@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 1aef42cb-4cfb-44b4-9a7a-c02632d3d9c7
 ms.openlocfilehash: 10554145de9725bb4cfc655ed88195dce28d739c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321617"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml"></a>Przewodnik: hostowanie kontrolki Windows Forms w WPF z wykorzystaniem języka XAML
@@ -55,8 +55,8 @@ Potrzebujesz programu Visual Studio w celu przeprowadzenia tego instruktażu.
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: hostowanie kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
-- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Kontrolki Windows Forms i ekwiwalentne kontrolki WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
+- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Kontrolki formularzy Windows Forms i równoważne kontrolki WPF](windows-forms-controls-and-equivalent-wpf-controls.md)
 - [Hosting kontrolki Windows Forms w WPF za pomocą przykładowych XAML](https://go.microsoft.com/fwlink/?LinkID=160000)

@@ -3,10 +3,10 @@ title: Podobnie jak (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302260"
 ---
 # <a name="like-entity-sql"></a>Podobnie jak (jednostka SQL)
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

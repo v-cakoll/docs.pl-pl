@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: b8284f45d769f018655ee35a5f0b067703963634
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199105"
 ---
 # <a name="dataadapter-parameters"></a>Parametry elementu DataAdapter
@@ -166,9 +166,9 @@ adapter.Fill(customers, "Customers");
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Aktualizowanie źródeł danych za pomocą elementów DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Modyfikowanie danych za pomocą procedur składowanych](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
 - [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

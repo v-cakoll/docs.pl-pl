@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300921"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Przewodnik: mapowanie właściwości przy użyciu kontrolki ElementHost
@@ -147,4 +147,4 @@ Możesz użyć domyślnego mapowania właściwości i rozszerzać go za pomocą 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
 ms.openlocfilehash: faed4d3c9498938e022daf821dd0aefbcbcf2e8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322033"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>Przewodnik: Tworzenie i wdrażanie interfejsów (Visual Basic)
@@ -109,7 +109,7 @@ Interfejsy opisują cechy właściwości, metody i zdarzenia, ale pozostawić sz
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Implements — Instrukcja](../../../../visual-basic/language-reference/statements/implements-statement.md)
+- [Implements, instrukcja](../../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interfejsy](../../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [Interface — Instrukcja](../../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Event — Instrukcja](../../../../visual-basic/language-reference/statements/event-statement.md)
+- [Instrukcja Interface](../../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Event, instrukcja](../../../../visual-basic/language-reference/statements/event-statement.md)

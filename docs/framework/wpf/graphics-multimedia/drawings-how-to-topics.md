@@ -12,10 +12,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197740"
 ---
 # <a name="drawings-how-to-topics"></a>Rysowanie Tematy porad
@@ -32,6 +32,6 @@ Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Media.Drawi
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.Drawing>
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
-- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafika i multimedia](index.md)

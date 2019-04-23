@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
 ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320234"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne (Visual Basic)
@@ -66,10 +66,10 @@ Jeśli procedura ma co najmniej jeden [opcjonalnie](../../../../visual-basic/lan
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Parametry opcjonalne](./optional-parameters.md)
-- [Parameter — Tablice](./parameter-arrays.md)
+- [Tablice parametrów](./parameter-arrays.md)
 - [Przeciążanie procedury](./procedure-overloading.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
 - [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury przeciążonej](./how-to-call-an-overloaded-procedure.md)
-- [Instrukcje: Przeciążanie procedury korzystającej z nieskończonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Rozpoznanie przeciążenia](./overload-resolution.md)

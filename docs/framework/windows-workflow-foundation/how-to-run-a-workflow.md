@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319927"
 ---
 # <a name="how-to-run-a-workflow"></a>Instrukcje: Uruchamianie przepływu pracy
@@ -166,6 +166,6 @@ W tym temacie jest kontynuacją samouczka Windows Workflow Foundation wprowadzen
 - [Programowanie w programie Windows Workflow Foundation](programming.md)
 - [Wprowadzenie — samouczek](getting-started-tutorial.md)
 - [Instrukcje: Tworzenie przepływu pracy](how-to-create-a-workflow.md)
-- [Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy](how-to-create-and-run-a-long-running-workflow.md)
+- [Instrukcje: Tworzenie i uruchamianie długotrwałego uruchamiania przepływu pracy](how-to-create-and-run-a-long-running-workflow.md)
 - [Oczekiwanie na dane wejściowe w przepływie pracy](waiting-for-input-in-a-workflow.md)
 - [Hostowanie przepływów pracy](hosting-workflows.md)

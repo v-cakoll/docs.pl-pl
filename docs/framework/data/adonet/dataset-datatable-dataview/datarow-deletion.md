@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196141"
 ---
 # <a name="datarow-deletion"></a>Usuwanie elementu DataRow
@@ -49,5 +49,5 @@ workRow.Delete();
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Operowanie na danych w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Operowanie danymi w elemencie DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: Współdziałanie z usługami przedsiębiorstwa i transakcjami COM+
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301909"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Współdziałanie z usługami przedsiębiorstwa i transakcjami COM+
@@ -25,7 +25,7 @@ ms.locfileid: "59301909"
   
  Jeśli chcesz połączyć <xref:System.EnterpriseServices> transakcji z transakcją otoczenia, musisz użyć dowolnego <xref:System.Transactions.EnterpriseServicesInteropOption.Full> lub <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>. Obie te wartości wykorzystano funkcję usług bez składniki, a zatem powinno być uruchomione w dodatku Service Pack 2 dla systemu Windows XP lub Windows Server 2003 podczas korzystania z nich.  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> Określa, że transakcje otoczenia <xref:System.Transactions> i <xref:System.EnterpriseServices> są zawsze takie same. Powoduje to utworzenie nowego <xref:System.EnterpriseServices> kontekstu transakcji i stosowania obowiązująca dla transakcji <xref:System.Transactions.TransactionScope> jako bieżący dla tego kontekstu. Działa w taki sposób, transakcji w <xref:System.Transactions.Transaction.Current%2A> jest całkowicie w synchronizacji z transakcją w <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Ta wartość wprowadzono zmniejszenie wydajności, ponieważ może być konieczne do utworzenia nowego modelu COM + kontekstów.  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full>Określa, że transakcje otoczenia <xref:System.Transactions> i <xref:System.EnterpriseServices> zawsze są takie same. Powoduje to utworzenie nowego <xref:System.EnterpriseServices> kontekstu transakcji i stosowania obowiązująca dla transakcji <xref:System.Transactions.TransactionScope> jako bieżący dla tego kontekstu. Działa w taki sposób, transakcji w <xref:System.Transactions.Transaction.Current%2A> jest całkowicie w synchronizacji z transakcją w <xref:System.EnterpriseServices.ContextUtil.Transaction%2A>. Ta wartość wprowadzono zmniejszenie wydajności, ponieważ może być konieczne do utworzenia nowego modelu COM + kontekstów.  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> Określa następujące wymagania:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59301909"
   
  Podsumowanie następujące reguły podczas tworzenia nowego zakresu transakcji:  
   
-1. <xref:System.Transactions.Transaction.Current%2A> jest sprawdzany, aby sprawdzić, czy jest transakcję. Tego wyboru powoduje:  
+1. <xref:System.Transactions.Transaction.Current%2A>jest sprawdzenie, czy jest transakcję. Tego wyboru powoduje:  
   
     -   Sprawdź, czy jest zakresem.  
   

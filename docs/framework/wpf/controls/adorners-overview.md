@@ -8,10 +8,10 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320473"
 ---
 # <a name="adorners-overview"></a>Przegląd Moduły indeksowania układu
@@ -102,7 +102,7 @@ Moduły definiowania układu są specjalnym typem <xref:System.Windows.Framework
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.AdornerHitTestResult>
-- [Przegląd Kształty i podstawowe rysowanie w WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie obrazami, rysowaniem i Visual](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
-- [Przegląd Rysowanie obiektów](../graphics-multimedia/drawing-objects-overview.md)
-- [— Tematy porad](adorners-how-to-topics.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+- [Rysowanie obiektów — przegląd](../graphics-multimedia/drawing-objects-overview.md)
+- [Tematy z instrukcjami](adorners-how-to-topics.md)

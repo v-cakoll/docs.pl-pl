@@ -11,10 +11,10 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
 ms.openlocfilehash: 79937f0801a790d4ff1ab327aaaf45ef1b881827
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199547"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Instrukcje: Stosowanie macierzy kolorów ustawiania wartości alfa na obrazach
@@ -33,9 +33,9 @@ ms.locfileid: "59199547"
  [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs>`e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Grafika i rysowanie w formularzach systemu Windows](graphics-and-drawing-in-windows-forms.md)
+- [Grafika i rysowanie w formularzach Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Przenikanie alfa linii i wypełnień](alpha-blending-lines-and-fills.md)

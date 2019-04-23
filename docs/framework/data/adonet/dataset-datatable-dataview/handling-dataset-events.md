@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
 ms.openlocfilehash: 5e1de3effcae5700aa25f5dbb84f2dec3a0b20f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195289"
 ---
 # <a name="handling-dataset-events"></a>Obsługa zdarzeń elementu DataSet
@@ -48,7 +48,7 @@ private static void DataSetMergeFailed(
  <xref:System.Data.DataSet.IsInitialized%2A> Właściwość zwraca `true` Jeśli `DataSet` zakończeniu inicjalizacji; w przeciwnym razie zwraca `false`. <xref:System.Data.DataSet.BeginInit%2A> Metody, która rozpoczyna się inicjowanie `DataSet`, ustawia <xref:System.Data.DataSet.IsInitialized%2A> do `false`. <xref:System.Data.DataSet.EndInit%2A> Metody, która kończy się inicjowanie `DataSet`, ustawia ją na `true`. Te metody są używane w środowisku projektowym programu Visual Studio można zainicjować `DataSet` który jest używany przez inny składnik. Możesz nie będzie najczęściej używać ich w kodzie.  
   
 ## <a name="the-disposed-event"></a>Zdarzenie usunięte  
- `DataSet` jest tworzony na podstawie <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metody i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje procedurę obsługi zdarzeń do nasłuchiwania na zdarzenie usunięte w składniku. Możesz użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenia `DataSet` Jeśli chcesz wykonać kod, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> Zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
+ `DataSet` jest tworzony na podstawie <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metody i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje procedurę obsługi zdarzeń do nasłuchiwania na zdarzenie usunięte w składniku. Możesz użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenia `DataSet` Jeśli chcesz wykonać kod, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
 >  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługa techniczna <xref:System.Runtime.Serialization.ISerializable> interfejs do komunikacji zdalnej. Są to jedyne obiekty ADO.NET, które mogą być w węzłach. Aby uzyskać więcej informacji, zobacz [wywołaniem funkcji zdalnych .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)).  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 4f779247-0b50-47e8-9e5c-ab5cf39ac0d2
 ms.openlocfilehash: 56099d334a03e85b816cf48983cbbead0784ef5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320395"
 ---
 # <a name="how-to-create-a-procedure-visual-basic"></a>Instrukcje: Tworzenie procedury (Visual Basic)

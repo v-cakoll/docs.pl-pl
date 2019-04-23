@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
-ms.translationtype: MT
+ms.openlocfilehash: 54657fb8ed4c0935c7c21fad333c7a62b42aec2e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186081"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975406"
 ---
 # <a name="methods"></a>Metody
 
@@ -157,7 +157,7 @@ Definicję metody można określić, że jej parametry są wymagane lub czy są 
 Wartość domyślna parametru musi zostać przypisany przez jedną z następujących rodzajów wyrażeń:
 
 - Stała, takich jak ciąg literału lub numer.
-- Wyrażenie w formie `new ValType`, gdzie `ValType` jest typem wartości. Należy pamiętać, że wywołuje to typ wartości niejawnego domyślnego konstruktora, który nie jest faktycznej składowej typu.
+- Wyrażenie w formie `new ValType`, gdzie `ValType` jest typem wartości. Należy pamiętać, że wywołuje to typ wartości niejawnego konstruktora bez parametrów, który nie jest faktycznej składowej typu.
 - Wyrażenie w formie `default(ValType)`, gdzie `ValType` jest typem wartości.
 
 Jeśli metoda zawiera zarówno wymaganych i opcjonalnych parametrów, opcjonalne parametry są definiowane na końcu listy parametrów po wszystkich wymaganych parametrów.
@@ -274,7 +274,7 @@ Metoda async nie może deklarować [w](language-reference/keywords/in-parameter-
 
 <a name="expr"></a>
 
-## <a name="expression-bodied-members"></a>Elementy członkowskie z wyrażeniem
+## <a name="expression-bodied-members"></a>Składowe z wyrażeniem w treści
 
 Jest to często mają definicje metody, która po prostu zwrócenia natychmiast z wynikiem wyrażenia lub pojedynczą instrukcję jako treść metody, które mają.  Ma składnię skrót do definiowania takich metod za pomocą `=>`:
 

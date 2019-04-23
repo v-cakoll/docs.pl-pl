@@ -13,10 +13,10 @@ helpviewer_keywords:
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
 ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300986"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy systemu Windows
@@ -75,9 +75,9 @@ Pole hasła jest polem tekstowym formularzy Windows, który wyświetla symboli z
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)
-- [Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy systemu Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Instrukcje: tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Instrukcje: umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy systemu Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Instrukcje: Umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Instrukcje: Zaznaczanie tekstu w formancie TextBox formularzy Windows](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox, kontrolka](textbox-control-windows-forms.md)

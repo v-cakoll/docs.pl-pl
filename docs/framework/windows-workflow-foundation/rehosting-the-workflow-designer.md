@@ -3,10 +3,10 @@ title: Rehostowanie projektanta przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
 ms.openlocfilehash: 98048ca58bf635f4e87241befa083dc240deaecf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206112"
 ---
 # <a name="rehosting-the-workflow-designer"></a>Rehostowanie projektanta przepływu pracy
@@ -15,7 +15,7 @@ ms.locfileid: "59206112"
  <xref:System.Activities.Presentation.WorkflowDesigner> Typu jest otoką elementu obszaru roboczego, siatki właściwości i inne elementy i udostępnia podstawowe model programowania do obsługi większości scenariuszy rehostowanie projektanta. Hosting <xref:System.Activities.Presentation.WorkflowDesigner> wewnątrz Windows Presentation Foundation (WPF) aplikacji jest to typowy scenariusz rehosting dla [!INCLUDE[wfd2](../../../includes/wfd2-md.md)].
 
 ## <a name="in-this-section"></a>W tej sekcji
- [Zadanie 1. Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+ [Zadanie 1: Tworzenie nowej aplikacji Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
 
  [Zadanie 2. Hostowanie projektanta przepływu pracy](task-2-host-the-workflow-designer.md)
 

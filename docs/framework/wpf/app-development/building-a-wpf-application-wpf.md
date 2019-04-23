@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300960"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
@@ -169,5 +169,5 @@ End Sub
 
 - [Wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md)
 - [Odwołanie do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
-- [Pakuj URI w WPF](pack-uris-in-wpf.md)
-- [Zasoby aplikacji WPF, zawartość, pliki danych](wpf-application-resource-content-and-data-files.md)
+- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
+- [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)

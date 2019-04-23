@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302780"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (opcje kompilatora C#)
@@ -49,4 +49,4 @@ Określa nazwę kontenera kluczy kryptograficznych.
 
 - [-Keyfile — opcja kompilatora C#](keyfile-compiler-option.md)
 - [Opcje kompilatora C#](index.md)
-- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

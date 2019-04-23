@@ -6,10 +6,10 @@ helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303339"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Instrukcje: Implementowanie i wywołanie niestandardowej metody rozszerzenia (C# Programming Guide)
@@ -46,10 +46,10 @@ W tym temacie pokazano, jak można implementować własne metody rozszerzenia dl
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (zapytania o języku zintegrowanym)](../../../csharp/linq/linq-in-csharp.md)
-- [Klasy statyczne i statyczne składowe klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [LINQ (Language-Integrated Query)](../../../csharp/linq/linq-in-csharp.md)
+- [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [protected](../../../csharp/language-reference/keywords/protected.md)
 - [internal](../../../csharp/language-reference/keywords/internal.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [this](../../../csharp/language-reference/keywords/this.md)
-- [— przestrzeń nazw](../../../csharp/language-reference/keywords/namespace.md)
+- [namespace](../../../csharp/language-reference/keywords/namespace.md)

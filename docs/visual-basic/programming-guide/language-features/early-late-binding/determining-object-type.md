@@ -10,10 +10,10 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302715"
 ---
 # <a name="determining-object-type-visual-basic"></a>Określanie typu obiektu (Visual Basic)
@@ -48,7 +48,7 @@ Obiekt generyczny zmienne (czyli zmienne został zadeklarowany jako `Object`) mo
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Wywoływanie właściwości lub metody za pomocą nazwy ciągu](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [If...Then...Else — Instrukcja](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Typ danych ciągu](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer — Typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Dyrektywa #If...Then...#Else](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Integer, typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)

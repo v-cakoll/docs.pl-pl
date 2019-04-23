@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303144"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Instrukcje: Zapewnienie pozostawania wybranego wiersza w tabeli podrzędnej w prawidłowym położeniu
@@ -85,6 +85,6 @@ Często w przypadku, gdy pracujesz z powiązanie danych w formularzach Windows F
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych](multiple-controls-bound-to-data-source-synchronized.md)
-- [BindingSource — Składnik](./controls/bindingsource-component.md)
-- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)
+- [Instrukcje: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane](multiple-controls-bound-to-data-source-synchronized.md)
+- [BindingSource, składnik](./controls/bindingsource-component.md)
+- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
 ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195647"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Przegląd formularzy systemu Windows i niezarządzanych aplikacji
@@ -57,13 +57,13 @@ Aplikacje Windows Forms i formanty może współpracować z niezarządzanych apl
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formularze systemu Windows i niezarządzane aplikacje](windows-forms-and-unmanaged-applications.md)
-- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
+- [Formularze Windows Forms i niezarządzane aplikacje](windows-forms-and-unmanaged-applications.md)
+- [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Współdziałanie COM w aplikacjach .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Przykłady współdziałania COM](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Aximp.exe (importer kontrolki ActiveX formularzy Windows Forms)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Udostępnianie składników .NET Framework modelowi COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Pakowanie zestawu dla modelu COM](../../interop/packaging-an-assembly-for-com.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](../../interop/registering-assemblies-with-com.md)
-- [Instrukcje: Obsługa międzyoperacyjności w modelu COM za pomocą wyświetlania formularzy systemu Windows przy użyciu metody ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza systemu Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania formularza Windows, za pomocą ShowDialog — metoda](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza Windows w jego własnym wątku](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

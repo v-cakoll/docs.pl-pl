@@ -3,10 +3,10 @@ title: Przykład strumieniowych kanałów informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
 ms.openlocfilehash: 8b48bc5ec65d6ca30d6ffeed7ca68dc246f74d94
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320434"
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
@@ -120,4 +120,4 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Autonomiczny kanał diagnostyczny](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)
+- [Autonomiczne źródło danych diagnostycznych](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
 ms.openlocfilehash: faaa48051c80b6dfd330f15f72a38297ff2d1b9f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301883"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Instrukcje: wyświetlanie łączy stylu sieci Web za pomocą kontrolki RichTextBox formularzy systemu Windows
@@ -122,4 +122,4 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświe
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

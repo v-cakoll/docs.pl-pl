@@ -9,10 +9,10 @@ ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320915"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>Udostępnianie składników COM programowi.NET Framework
@@ -41,7 +41,7 @@ Ta sekcja zawiera podsumowanie procesu potrzebne, aby udostępnić istniejący s
 ## <a name="see-also"></a>Zobacz także
 
 - [Współdziałanie z kodem niezarządzanym](index.md)
-- [Zagadnienia projektowania związane z międzyoperacyjnością](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
-- [Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM](com-interop-sample-net-client-and-com-server.md)
-- [Niezależność od języka i elementy niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil.exe (Narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)
+- [Zagadnienia dotyczące projektowania do celów międzyoperacyjności](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
+- [Przykład międzyoperacyjnego modelu COM: Klient modelu .NET i serwer COM](com-interop-sample-net-client-and-com-server.md)
+- [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
+- [Gacutil.exe (narzędzie Global Assembly Cache)](../tools/gacutil-exe-gac-tool.md)

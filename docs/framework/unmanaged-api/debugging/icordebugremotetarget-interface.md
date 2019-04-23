@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae31506d4ba34bf262f49bc2321c6cfcd30f1b60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197324"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget — Interfejs
@@ -45,7 +45,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName — Metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Zwraca nazwę hosta lub adres IP komputera zdalnego.|  
+|[ICorDebugRemoteTarget::GetHostName, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|Zwraca nazwę hosta lub adres IP komputera zdalnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Debugowanie trybu mieszanego (czyli kodu zarządzanego i natywnego) nie jest obsługiwana na Windows 95, Windows 98 lub Windows ME lub na platformach innych niż x86 (takich jak IA-64 i AMD64).  
@@ -61,6 +61,6 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugRemote — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemote, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

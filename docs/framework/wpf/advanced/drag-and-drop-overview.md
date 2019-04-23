@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301402"
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
@@ -218,6 +218,6 @@ Ten temat zawiera omówienie obsługi przeciągania i upuszczania w [!INCLUDE[TL
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Clipboard>
-- [Przewodnik: włączanie przeciągania i upuszczania w kontrolce użytkownika](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [— Tematy porad](drag-and-drop-how-to-topics.md)
-- [Przeciągnij i opuść](drag-and-drop.md)
+- [Przewodnik: Włączanie przeciągania i upuszczania w kontrolce użytkownika](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
+- [Tematy z instrukcjami](drag-and-drop-how-to-topics.md)
+- [Przeciąganie i upuszczanie](drag-and-drop.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197389"
 ---
 # <a name="graphics-rendering-tiers"></a>Poziomy zmiany grafiki
@@ -56,7 +56,7 @@ Warstwy renderowania definiuje poziom możliwości sprzętu grafiki i wydajnośc
   
 |Funkcja|Warstwa 1|Warstwa 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] Wersja|Musi być większa lub równa 9.0.|Musi być większa lub równa 9.0.|  
 |Pamięć RAM wideo|Musi być większa niż lub równy 60MB.|Musi być większa niż lub równy 120MB.|  
 |Program do cieniowania pikseli|Poziom wersji muszą być większa lub równa wersji 2.0.|Poziom wersji muszą być większa lub równa wersji 2.0.|  
 |Program do cieniowania wierzchołków|Nie jest wymagany.|Poziom wersji muszą być większa lub równa wersji 2.0.|  
@@ -132,6 +132,6 @@ Narzędzie diagnostyczne DirectX głównego okna.
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)
-- [Pakiet wydajności WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
-- [Ustawienie rejestru renderowania grafiki](../graphics-multimedia/graphics-rendering-registry-settings.md)
-- [Porady i triki animacyjne](../graphics-multimedia/animation-tips-and-tricks.md)
+- [WPF Performance Suite](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
+- [Ustawienia rejestru renderowania grafiki](../graphics-multimedia/graphics-rendering-registry-settings.md)
+- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)

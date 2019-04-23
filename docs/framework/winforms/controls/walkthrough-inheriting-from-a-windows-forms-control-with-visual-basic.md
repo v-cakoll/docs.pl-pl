@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
 ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320642"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic
@@ -148,7 +148,7 @@ Za pomocą Visual Basic można tworzyć zaawansowane Kontrolki niestandardowe za
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
 - [Podstawowe informacje o dziedziczeniu (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

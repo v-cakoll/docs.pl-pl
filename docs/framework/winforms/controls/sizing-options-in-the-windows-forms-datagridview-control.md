@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
 ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197844"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows
@@ -155,6 +155,6 @@ ms.locfileid: "59197844"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [Zmiana rozmiaru wierszy i kolumn w formancie DataGridView formularzy systemu Windows](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Tryb wypełniania kolumn w formancie DataGridView formularzy systemu Windows](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy systemu Windows](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Zmiana rozmiaru wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Tryb wypełniania kolumn w kontrolce DataGridView formularzy Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Ustawianie trybów zmieniania rozmiaru kontrolki DataGridView formularzy Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

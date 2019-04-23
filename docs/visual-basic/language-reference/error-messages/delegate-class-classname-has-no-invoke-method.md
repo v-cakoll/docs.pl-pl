@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30220
 ms.assetid: 6be0d61c-f2f9-4f9b-ab90-8871a0d7206d
 ms.openlocfilehash: 3fe164d868ee7bde0e687e1d592f4d5a17565aea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321305"
 ---
 # <a name="delegate-class-classname-has-no-invoke-method-so-an-expression-of-this-type-cannot-be-the-target-of-a-method-call"></a>Klasa obiektu delegowanego\<nazwa_klasy >' nie ma metody Invoke, dlatego wyrażenie tego typu nie może być elementem docelowym wywołania metody
@@ -28,6 +28,6 @@ Wywołanie `Invoke` za pośrednictwem delegata nie powiodła się ponieważ `Inv
 ## <a name="see-also"></a>Zobacz także
 
 - [Delegaty](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Delegate — Instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Operator AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Delegate, instrukcja](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [AddressOf, operator](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Dim, instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md)

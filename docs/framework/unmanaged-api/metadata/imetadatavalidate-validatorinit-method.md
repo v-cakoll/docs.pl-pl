@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 31ff2c62810061cd8b774e934167a5ee3acf040c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195895"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>IMetaDataValidate::ValidatorInit — Metoda
@@ -54,4 +54,4 @@ HRESULT ValidatorInit (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IMetaDataValidate — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+- [IMetaDataValidate, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

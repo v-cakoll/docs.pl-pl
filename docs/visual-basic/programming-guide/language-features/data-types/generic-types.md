@@ -37,10 +37,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301233"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Typy ogólne w Visual Basic (Visual Basic)
@@ -151,11 +151,11 @@ A *typu ogólnego* jest pojedynczego elementu programistycznego, która dostosow
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Konwersje plików w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [Rozwiązywanie problemów związanych z typami](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
-- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
+- [z](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Kowariancja i kontrawariancja](../../concepts/covariance-contravariance/index.md)
 - [Iteratory](../../../../visual-basic/programming-guide/concepts/iterators.md)

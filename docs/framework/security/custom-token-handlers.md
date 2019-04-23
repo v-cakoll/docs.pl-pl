@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
 ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312114"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975679"
 ---
 # <a name="custom-token-handlers"></a>Niestandardowe programy obsługi tokenów
 W tym temacie omówiono programy obsługi tokenów programu WIF i jak są one używane do przetwarzania tokenów. Temat obejmuje także, co jest potrzebne utworzyć niestandardowe programy obsługi tokenów dla tokenu typów, które nie są obsługiwane w WIF domyślnie.  

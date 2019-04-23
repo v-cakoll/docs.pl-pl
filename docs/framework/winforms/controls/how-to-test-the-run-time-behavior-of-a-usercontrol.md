@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
 ms.openlocfilehash: 15b37c71e6643b588c0378510965a9a3e7cb56e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321773"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Instrukcje: testowanie zachowania UserControl w czasie wykonywania
@@ -69,7 +69,7 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.UserControl>
-- [Instrukcje: autoryzowanie kontrolek złożonych](how-to-author-composite-controls.md)
-- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Instrukcje: Formanty złożone autora](how-to-author-composite-controls.md)
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Projektant kontrolki użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

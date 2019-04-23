@@ -9,10 +9,10 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195517"
 ---
 # <a name="typography"></a>Typografia
@@ -20,17 +20,17 @@ ms.locfileid: "59195517"
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Typografia w WPF](typography-in-wpf.md)  
- [ClearType — Przegląd](cleartype-overview.md)  
+ [ClearType — przegląd](cleartype-overview.md)  
  [Ustawienia rejestru ClearType](cleartype-registry-settings.md)  
  [Rysowanie formatowanego tekstu](drawing-formatted-text.md)  
  [Zaawansowane formatowanie tekstu](advanced-text-formatting.md)  
  [Czcionki](fonts-wpf.md)  
  [Glify](glyphs.md)  
- [— Tematy porad](typography-how-to-topics.md)  
+ [Tematy z instrukcjami](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Documents.Typography>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [OpenType funkcje czcionki](opentype-font-features.md)
+- [Funkcje czcionki OpenType](opentype-font-features.md)
 - [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md)

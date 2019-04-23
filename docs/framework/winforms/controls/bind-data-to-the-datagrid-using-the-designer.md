@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321851"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>Instrukcje: wiązanie danych z kontrolką DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant
@@ -51,13 +51,13 @@ Projektant umożliwia łączenie <xref:System.Windows.Forms.DataGridView> kontro
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [Instrukcje: Łączenie z danymi w bazie danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [Instrukcje: dodawanie i usuwanie kolumn do kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: zmienianie kolejności kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: zmienianie typu kontrolki DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: ukrywanie kolumn w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](hide-columns-in-the-datagrid-using-the-designer.md)
-- [Instrukcje: nadawanie kolumnom statusu tylko do odczytu w kontrolce DataGridView formularzy systemu Windows przy użyciu narzędzia Projektant](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Dodawanie i usuwanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Zmienianie kolejności kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Zmień typ kolumny formantu DataGridView formularzy Windows przy użyciu narzędzia Projektant](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [Instrukcje: Blokowanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Ukrywanie kolumn w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](hide-columns-in-the-datagrid-using-the-designer.md)
+- [Instrukcje: Nadawanie kolumnom w trybie tylko do odczytu w formancie DataGridView formularzy Windows przy użyciu narzędzia Projektant](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [Instrukcje: Utwórz projekt aplikacji Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)
-- [Okno Źródła danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
+- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Okno źródeł danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [Instrukcje: Wyświetlanie powiązanych danych w aplikacji Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

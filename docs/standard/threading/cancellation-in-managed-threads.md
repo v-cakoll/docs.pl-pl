@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eea11fe5-d8b0-4314-bb5d-8a58166fb1c3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 088faaf454d3b188cff681fb7c41f3966b2e93fd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: MT
+ms.openlocfilehash: ca42512daa35d7efd7296c277a575bf131749ad2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989863"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975666"
 ---
 # <a name="cancellation-in-managed-threads"></a>Anulowanie w zarządzanych wątkach
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .NET Framework przy użyciu ujednoliconego modelu kooperatywne anulowanie asynchronicznego lub długotrwałe operacje synchroniczne. Ten model opiera się na lekki obiekt o nazwie token anulowania. Obiekt, który wywołuje co najmniej jednej operacji można anulować, na przykład, tworząc nowe wątki lub zadania, przekazuje ten token do każdej operacji. Poszczególne operacje z kolei można przekazać kopie tokenu do innych operacji. W późniejszym czasie obiekt, który utworzył token służy do żądania, że operacje przerwana, co robią. Tylko obiekt żądania można wydawać żądanie anulowania i każdego odbiornika jest odpowiedzialny za obserwowanie żądania i odpowiedzi do niej w sposób odpowiedni i terminowe.  
@@ -66,7 +66,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
  W poniższym przykładzie tworzy się obiektu żądającego <xref:System.Threading.CancellationTokenSource> obiektu, a następnie przekazuje jej <xref:System.Threading.CancellationTokenSource.Token%2A> właściwości można anulować operacji. Operacja, która odbiera żądanie monitoruje wartość <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość token za pomocą sondowania. Gdy wartość staje się `true`, odbiornik może zakończyć w jakikolwiek sposób jest odpowiednia. W tym przykładzie metoda po prostu kończy działanie, czyli wszystko, co jest wymagane w wielu przypadkach.  
   
 > [!NOTE]
->  W przykładzie użyto <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> metodę, aby wykazać, że nowa struktura anulowania jest zgodna z interfejsami API w starszej wersji. Na przykład, który korzysta z nowych, preferowany <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> typu, zobacz [porady: anulowanie zadania i jego elementy podrzędne](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
+>  W przykładzie użyto <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> metodę, aby wykazać, że nowa struktura anulowania jest zgodna z interfejsami API w starszej wersji. Na przykład, który korzysta z nowych, preferowany <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> typu, zobacz [jak: Anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md).  
   
  [!code-csharp[Cancellation#1](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex1.cs#1)]
  [!code-vb[Cancellation#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex1.vb#1)]  
@@ -94,7 +94,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
  [!code-csharp[Cancellation#3](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#3)]
  [!code-vb[Cancellation#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#3)]  
   
- Aby uzyskać pełniejszy przykład, zobacz [porady: nasłuchiwanie żądań anulowania za pomocą sondowania](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md).  
+ Aby uzyskać pełniejszy przykład, zobacz [jak: Nasłuchiwanie żądań anulowania za pomocą sondowania](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-by-polling.md).  
   
 ### <a name="listening-by-registering-a-callback"></a>Nasłuchiwanie przez zarejestrowanie wywołania zwrotnego  
  Niektóre operacje mogą stać się zablokowane w taki sposób, że ich nie może sprawdzić wartość tokenu anulowania w sposób terminowy. W takich przypadkach należy zarejestrować metodę wywołania zwrotnego, która odblokowuje metody, gdy odbierze żądanie anulowania.  
@@ -114,7 +114,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
   
 -   Wywołania zwrotne nie należy wykonywać ręcznie wątek lub <xref:System.Threading.SynchronizationContext> użycia w wywołaniu zwrotnym. Jeśli wywołanie zwrotne muszą być wykonywane w określonym wątku, należy użyć <xref:System.Threading.CancellationTokenRegistration?displayProperty=nameWithType> Konstruktor, który pozwala określić, że syncContext docelowy jest aktywny <xref:System.Threading.SynchronizationContext.Current%2A?displayProperty=nameWithType>. Wykonywanie ręczne wielowątkowości w wywołaniu zwrotnym może spowodować zakleszczenia.  
   
- Aby uzyskać pełniejszy przykład, zobacz [porady: rejestrowanie wywołań zwrotnych żądań anulowania](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
+ Aby uzyskać pełniejszy przykład, zobacz [jak: Rejestrowanie wywołań zwrotnych żądań anulowania](../../../docs/standard/threading/how-to-register-callbacks-for-cancellation-requests.md).  
   
 ### <a name="listening-by-using-a-wait-handle"></a>Nasłuchiwanie przy użyciu dojścia oczekiwania  
  Gdy zablokować możliwości anulowania operacji podczas oczekiwania na pierwotnych, takie jak synchronizacja <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> lub <xref:System.Threading.Semaphore?displayProperty=nameWithType>, możesz użyć <xref:System.Threading.CancellationToken.WaitHandle%2A?displayProperty=nameWithType> właściwością pozwalającą włączyć na oczekiwanie na zdarzenia i żądania anulowania operacji. Dojście oczekiwania token anulowania, zostanie zasygnalizowane w odpowiedzi na żądanie anulowania, a następnie użyć wartość zwracaną przez metodę <xref:System.Threading.WaitHandle.WaitAny%2A> metodę pozwala ustalić, czy została ona anulowania tokenu, który zasygnalizowane. Operacja, a następnie po prostu, lub zakończenia throw <xref:System.OperationCanceledException>, odpowiednio.  
@@ -127,7 +127,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  
   
- Aby uzyskać pełniejszy przykład, zobacz [jak: nasłuchiwania anulowania żądania ma czekać obsługi przez](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
+ Aby uzyskać pełniejszy przykład, zobacz [jak: Nasłuchiwanie żądań anulowania z dojściami oczekiwania](../../../docs/standard/threading/how-to-listen-for-cancellation-requests-that-have-wait-handles.md).  
   
 ### <a name="listening-to-multiple-tokens-simultaneously"></a>Nasłuchiwanie wielu tokenów jednocześnie  
  W niektórych przypadkach odbiornik może być jednocześnie nasłuchiwać wielu tokenów anulowania. Na przykład pewnej operacji trzeba monitorować tokenu anulowania wewnętrzny oprócz tokenu przekazanego zewnętrznie jako argumentu do parametru metody. W tym celu utwórz połączone źródło tokenu, który można dołączyć co najmniej dwa tokeny do jednego tokenu, jak pokazano w poniższym przykładzie.  
@@ -135,7 +135,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
  [!code-csharp[Cancellation#7](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex13.cs#7)]
  [!code-vb[Cancellation#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex13.vb#7)]  
   
- Należy zauważyć, że należy wywołać `Dispose` na połączone źródło tokenu po wykonaniu tych czynności z nim. Aby uzyskać pełniejszy przykład, zobacz [porady: nasłuchiwanie wielu żądań anulowania](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md).  
+ Należy zauważyć, że należy wywołać `Dispose` na połączone źródło tokenu po wykonaniu tych czynności z nim. Aby uzyskać pełniejszy przykład, zobacz [jak: Nasłuchiwanie wielu żądań anulowania](../../../docs/standard/threading/how-to-listen-for-multiple-cancellation-requests.md).  
   
 ## <a name="cooperation-between-library-code-and-user-code"></a>Współpraca między kodem biblioteki i kod użytkownika  
  W ramach ujednoliconego anulowania umożliwia kod biblioteki anulować kod użytkownika i kod użytkownika anulować kod biblioteki w sposób współpracujący. Bezproblemowe współpracy zależy od każdej stronie poniższych wskazówek:  
@@ -146,7 +146,7 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], .N
   
 -   Delegatów użytkownika powinien próbować odpowiadać na żądania anulowania z biblioteki kodu w odpowiednim czasie.  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> to przykłady klas, które następują te wytyczne. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md)i [porady: Anulowanie zapytania PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
+ <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> to przykłady klas, które przestrzegać następujących wytycznych. Aby uzyskać więcej informacji, zobacz [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md) i [jak: Anulowanie zapytania PLINQ](../../../docs/standard/parallel-programming/how-to-cancel-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

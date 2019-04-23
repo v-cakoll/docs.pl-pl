@@ -3,10 +3,10 @@ title: Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195348"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
 ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321718"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy systemu Windows
@@ -71,9 +71,9 @@ Zaznacz tekst programowo w formularzach Windows Forms <xref:System.Windows.Forms
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox, kontrolka — omówienie](textbox-control-overview-windows-forms.md)
-- [Instrukcje: kontrolowanie punktu wstawiania w kontrolce TextBox formularzy systemu Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy systemu Windows](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Instrukcje: tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Instrukcje: umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy systemu Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Instrukcje: Kontrolowanie punktu wstawiania w formancie TextBox formularzy Windows](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Instrukcje: Tworzenie pola tekstowego tylko do odczytu](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Instrukcje: Umieszczanie cudzysłowu w ciągu](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [Instrukcje: Wyświetlanie wielu wierszy w formancie TextBox formularzy Windows](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox, kontrolka](textbox-control-windows-forms.md)

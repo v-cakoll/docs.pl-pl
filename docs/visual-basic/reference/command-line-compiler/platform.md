@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301168"
 ---
 # <a name="-platform-visual-basic"></a>-platformy (Visual Basic)
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [/target (Visual Basic)](target.md)
-- [Kompilator wierszy poleceń w Visual Basic](index.md)
-- [Kompilacja przykładów — wiersze poleceń](sample-compilation-command-lines.md)
+- [/ TARGET (Visual Basic)](target.md)
+- [Kompilator wiersza polecenia programu Visual Basic](index.md)
+- [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

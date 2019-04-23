@@ -7,10 +7,10 @@ helpviewer_keywords:
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
 ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301792"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>Instrukcje: Animowanie grubości obramowania przy użyciu klatek kluczowych
@@ -34,6 +34,6 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Controls.Control
 - <xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)
 - [Animowanie wartości BorderThickness](../controls/how-to-animate-a-borderthickness-value.md)

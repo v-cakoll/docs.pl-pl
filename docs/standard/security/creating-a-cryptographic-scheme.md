@@ -9,10 +9,10 @@ ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321656"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Tworzenie schematu kryptograficznego

@@ -13,10 +13,10 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300999"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
@@ -56,4 +56,4 @@ Współdziałanie COM interop aktywuje składnika bez za pomocą rejestru Window
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)
+- [Instrukcje: Konfigurowanie składników COM opartych na Framework .NET aktywacji bez rejestracji](../../../docs/framework/interop/configure-net-framework-based-com-components-for-reg.md)

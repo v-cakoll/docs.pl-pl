@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321040"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Przewodnik: Tworzenie formantu złożonego za pomocą Visual C\#
@@ -55,7 +55,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Zmień na|  
     |--------------|---------------|  
     |**Nazwa**|`lblDisplay`|  
-    |**Tekst**|`(blank space)`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -248,7 +248,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Ustawienie|  
     |--------------|-------------|  
     |**Nazwa**|`lblAlarm`|  
-    |**Tekst**|**Alarm!**|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Widoczne**|`false`|  
   
@@ -320,7 +320,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
     |Właściwość|Wartość|  
     |--------------|-----------|  
     |**Nazwa**|`btnAlarmOff`|  
-    |**Tekst**|**Wyłącz alarmów**|  
+    |**Text**|**Wyłącz alarmów**|  
   
 3. W projektancie, kliknij dwukrotnie **btnAlarmOff**.  
   
@@ -367,7 +367,7 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
     |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
-    |`label1`|**Tekst**|`(blank space)`|  
+    |`label1`|**Text**|`(blank space)`|  
     ||**Nazwa**|`lblTest`|  
     |`dateTimePicker1`|**Nazwa**|`dtpTest`|  
     ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -406,6 +406,6 @@ Formanty złożone umożliwiają za pomocą którego niestandardowe interfejsy g
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: wyświetlanie kontroli w oknie dialogowym Wybierz elementy przybornika](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows formantu z Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
+- [Instrukcje: Wyświetlanie kontroli w wybierz elementy przybornika — okno dialogowe](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
 ms.openlocfilehash: 17ce930a91d2eb3626e92898e00e67be4741cf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321604"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>Instrukcje: zmienianie rozmiaru kontrolek na formularzach systemu Windows
@@ -34,9 +34,9 @@ Możesz zmienić rozmiar poszczególnych formantów, a rozmiar można zmieniać 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty formularzy systemu Windows](index.md)
-- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
-- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
-- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)
+- [Kontrolki formularzy Windows Forms](index.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
 - [Instrukcje: Zmiana rozmiaru formularzy Windows przy użyciu narzędzia Projektant](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

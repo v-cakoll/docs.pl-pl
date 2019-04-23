@@ -4,10 +4,10 @@ description: Język jak wygląda w jego wersje i jak go powstała od?
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303365"
 ---
 # <a name="the-history-of-c"></a>Historia języka c\#
@@ -58,7 +58,7 @@ Teraz rozpocząć pobieranie interesujących rzeczy. Spójrzmy na niektóre gł�
 - [Typy ogólne](../programming-guide/generics/index.md)
 - [Typy częściowe](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metody anonimowe](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Typy dopuszczające wartości null](../programming-guide/nullable-types/index.md)
+- [Typy dopuszczające wartości zerowe](../programming-guide/nullable-types/index.md)
 - [Iteratory](../programming-guide/concepts/iterators.md)
 - [Kowariancja i kontrawariancja](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -166,7 +166,7 @@ Najbardziej aktualną wersję główną jest C# w wersji 7.0. Ta wersja ma kilka
 
 Inne funkcje uwzględnione:
 
-- [Odrzuca](./csharp-7.md#discards)
+- [Odrzucenia](./csharp-7.md#discards)
 - [Literały binarne oraz separatory cyfr](./csharp-7.md#numeric-literal-syntax-improvements)
 - [Wyrażenia throw](./csharp-7.md#throw-expressions)
 

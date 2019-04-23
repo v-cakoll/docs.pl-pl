@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 133aa22f16285f94f58722cb18c83b96f1ff885c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302793"
 ---
 # <a name="-main-c-compiler-options"></a>-main (opcje kompilatora C#)
@@ -54,4 +54,4 @@ csc t2.cs t3.cs -main:Test2
 ## <a name="see-also"></a>Zobacz także
 
 - [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)
-- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

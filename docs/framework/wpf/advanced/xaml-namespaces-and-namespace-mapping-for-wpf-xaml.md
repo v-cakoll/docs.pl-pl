@@ -15,10 +15,10 @@ helpviewer_keywords:
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
 ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301038"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
@@ -138,4 +138,4 @@ End Namespace
 ## <a name="see-also"></a>Zobacz także
 
 - [Informacje o przestrzeni nazw XML](https://go.microsoft.com/fwlink/?LinkId=98069)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)

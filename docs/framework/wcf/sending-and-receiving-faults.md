@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195062"
 ---
 # <a name="sending-and-receiving-faults"></a>Wysyłanie i odbieranie błędów
@@ -110,4 +110,4 @@ Błędach SOAP obejmują warunku informacje o błędzie z usługi do klienta, a 
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Oczekiwane wyjątki](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Zwalnianie zasobów klienta programu WCF za pomocą poleceń Zamknij i Przerwij](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Użyj Zamknij i Przerwij, aby zwolnić zasoby klienta WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

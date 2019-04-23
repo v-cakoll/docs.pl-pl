@@ -3,10 +3,10 @@ title: Przepływ sterowania w programach Async (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300934"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>Przepływ sterowania w programach Async (Visual Basic)
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Asynchroniczne typy zwracane (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Próbka asynchroniczna: Przepływ sterowania w aplikacjach asynchronicznych (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Próbka asynchroniczna: Kontrolowanie Flow in Async Programs (C# i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320055"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy

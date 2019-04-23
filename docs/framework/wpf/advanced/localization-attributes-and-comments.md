@@ -6,10 +6,10 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301857"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
@@ -23,7 +23,7 @@ ms.locfileid: "59301857"
   
 2. Podczas procesu kompilacji można określić w pliku .proj czy zamieszczać komentarze dowolnej lokalizacji w zestawie, pasek się częścią komentarze lub pasek się wszystkie komentarze. Komentarze usunięta, a limit są umieszczane w oddzielnym pliku. Określ, przy użyciu opcji `LocalizationDirectivesToLocFile` tagu, na przykład:  
   
-     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *Wartość* `</LocalizationDirectivesToLocFile>`  
   
 3. Wartości, które mogą być przypisane są następujące:  
   

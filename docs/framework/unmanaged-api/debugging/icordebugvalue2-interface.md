@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6718bbfdb1825b9f01698d76deec3fab16cb2ac6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091606"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 — Interfejs
@@ -48,6 +48,6 @@ Umożliwia rozbudowanie interfejsu "ICorDebugValue", aby zapewnić obsługę dla
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 
-- [ICorDebugValue3 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [ICorDebugValue3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
 ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091151"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Instrukcje: Wykrywanie momentu zmiany tekstu w kontrolce TextBox
@@ -45,5 +45,5 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Primitiv
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.TextChangedEventArgs>
-- [TextBox — Przegląd](textbox-overview.md)
-- [RichTextBox — Przegląd](richtextbox-overview.md)
+- [TextBox — omówienie](textbox-overview.md)
+- [RichTextBox — omówienie](richtextbox-overview.md)

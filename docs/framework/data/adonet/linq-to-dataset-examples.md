@@ -3,10 +3,10 @@ title: Przykłady LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091697"
 ---
 # <a name="linq-to-dataset-examples"></a>Przykłady LINQ to DataSet
@@ -16,7 +16,7 @@ Ta sekcja zawiera LINQ do DataSet przykłady programowania, które używają sta
  [Przykłady wyrażeń zapytania](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
  Zawiera następujące przykłady:  
   
--   [Rzut](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+-   [Projekcja](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
 -   [Ograniczenie](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
@@ -30,10 +30,10 @@ Ta sekcja zawiera LINQ do DataSet przykłady programowania, które używają sta
   
 -   [Operatory łączenia](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [Przykłady zapytań opartych na metodach](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [Przykłady zapytań oparte na metodzie](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
  Zawiera następujące przykłady:  
   
--   [Rzut](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+-   [Projekcja](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
 -   [Partycjonowanie](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   

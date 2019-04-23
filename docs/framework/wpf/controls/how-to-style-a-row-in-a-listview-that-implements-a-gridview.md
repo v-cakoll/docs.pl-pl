@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
 ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091463"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Instrukcje: Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView
-W tym przykładzie pokazano, jak styl wierszowi w <xref:System.Windows.Controls.ListView> formant, który implementuje <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A> trybu.  
+W tym przykładzie pokazano, jak styl wierszowi w <xref:System.Windows.Controls.ListView> formant, który implementuje <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> trybu.  
   
 ## <a name="example"></a>Przykład  
  Można styl wierszowi w <xref:System.Windows.Controls.ListView> kontroli przez ustawienie <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> na <xref:System.Windows.Controls.ListView> kontroli. Ustaw styl dla jego elementów, które są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Odwołania <xref:System.Windows.Controls.ControlTemplate> obiekty, które są używane do wyświetlania zawartości wiersza.  
@@ -37,6 +37,6 @@ W tym przykładzie pokazano, jak styl wierszowi w <xref:System.Windows.Controls.
 
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [— Tematy porad](listview-how-to-topics.md)
-- [ListView — Przegląd](listview-overview.md)
+- [Tematy z instrukcjami](listview-how-to-topics.md)
+- [ListView — omówienie](listview-overview.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)

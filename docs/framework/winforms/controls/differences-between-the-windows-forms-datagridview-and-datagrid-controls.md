@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
 ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095675"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Różnice między formantami DataGridView i DataGrid formularzy systemu Windows
@@ -37,14 +37,14 @@ ms.locfileid: "59095675"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
-- [DataGridView — Formant](datagridview-control-windows-forms.md)
+- [DataGridView, kontrolka](datagridview-control-windows-forms.md)
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [BindingSource — Składnik](bindingsource-component.md)
-- [Typy kolumn w formancie DataGridView formularzy systemu Windows](column-types-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Tryby wyświetlania danych w formancie DataGridView formularzy systemu Windows](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Formatowanie danych w formancie DataGridView formularzy systemu Windows](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Opcje ustalania rozmiaru w formancie DataGridView formularzy systemu Windows](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Tryb sortowania kolumn w formancie DataGridView formularzy systemu Windows](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Tryby wyboru w formancie DataGridView formularzy systemu Windows](selection-modes-in-the-windows-forms-datagridview-control.md)
-- [Dostosowywanie formantu DataGridView formularzy systemu Windows](customizing-the-windows-forms-datagridview-control.md)
+- [BindingSource, składnik](bindingsource-component.md)
+- [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Tryby wyświetlania danych w kontrolce DataGridView formularzy Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Opcje ustalania rozmiaru w kontrolce DataGridView formularzy Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Tryb sortowania kolumn w kontrolce DataGridView formularzy Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Tryby wyboru w kontrolce DataGridView formularzy Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)
+- [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088824"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Mapowanie właściwości Windows Forms i WPF
@@ -138,7 +138,7 @@ ms.locfileid: "59088824"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [WPF i Win32 — Współdziałanie](wpf-and-win32-interoperation.md)
+- [WPF i Win32 — współdziałanie](wpf-and-win32-interoperation.md)
 - [Współdziałanie WPF i Windows Forms](wpf-and-windows-forms-interoperation.md)
-- [Przewodnik: mapowanie właściwości przy użyciu kontrolki WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [Przewodnik: mapowanie właściwości przy użyciu kontrolki ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [Przewodnik: Mapowanie właściwości z użyciem elementu WindowsFormsHost](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [Przewodnik: Mapowanie właściwości z użyciem formantu ElementHost](walkthrough-mapping-properties-using-the-elementhost-control.md)

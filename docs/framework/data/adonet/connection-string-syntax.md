@@ -3,10 +3,10 @@ title: Składnia parametrów połączenia
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084971"
 ---
 # <a name="connection-string-syntax"></a>Składnia parametrów połączenia
@@ -113,11 +113,11 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Nie|Brak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie nie występuje.|  
 |Nie|Brak|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Nie|Brak|Tak|Yes|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Nie|Brak|Tak|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
 |Tak|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Tak|Yes|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Yes|Yes|Yes|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Tak|Yes|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Yes|Tak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Tak|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
+|Tak|Yes|Yes|Yes|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
   
  Aby uzyskać więcej informacji, zobacz [przy użyciu szyfrowania bez sprawdzania poprawności](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   

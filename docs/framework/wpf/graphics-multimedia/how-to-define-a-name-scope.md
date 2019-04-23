@@ -10,10 +10,10 @@ helpviewer_keywords:
 - animation [WPF], Storyboards [WPF], in procedural code
 ms.assetid: 4f361925-6a08-40dc-8231-a61111c6b28b
 ms.openlocfilehash: a03f477dd31909e8cb9dde9cd29da6f38d665758
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086822"
 ---
 # <a name="how-to-define-a-name-scope"></a>Instrukcje: Definiowanie zakresu nazw
@@ -28,4 +28,4 @@ Aby animować z <xref:System.Windows.Media.Animation.Storyboard> w kodzie, nale�
 ## <a name="see-also"></a>Zobacz także
 
 - [Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)
-- [Przegląd Animacja](animation-overview.md)
+- [Animacja — przegląd](animation-overview.md)

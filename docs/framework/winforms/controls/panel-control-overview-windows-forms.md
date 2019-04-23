@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086367"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel — Informacje o formancie (Formularze systemu Windows)
@@ -27,5 +27,5 @@ Windows Forms <xref:System.Windows.Forms.Panel> formantów służą do zapewnian
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox, kontrolka](groupbox-control-windows-forms.md)
-- [Instrukcje: grupowanie kontrolek z kontrolką panelu formularzy systemu Windows przy użyciu narzędzia Projektant](group-controls-with-wf-panel-control-using-the-designer.md)
-- [Instrukcje: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [Instrukcje: Grupowanie formantów z formantem panelu formularzy Windows przy użyciu narzędzia Projektant](group-controls-with-wf-panel-control-using-the-designer.md)
+- [Instrukcje: Ustawianie tła panelu formularzy Windows przy użyciu narzędzia Projektant](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

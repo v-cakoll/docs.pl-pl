@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091944"
 ---
 # <a name="exporting-and-importing-metadata"></a>Eksportowanie i importowanie metadanych
@@ -48,16 +48,16 @@ W Windows Communication Foundation (WCF), eksportowanie metadanych jest proces o
  <xref:System.ServiceModel.Description.WsdlExporter> Typu ponownie zgłasza wyjątki przechwytywane podczas procesu eksportowania. Wyjątki te nie są przechwytywane jako błędy w `Errors` właściwości. Raz <xref:System.ServiceModel.Description.WsdlExporter> zgłasza wyjątek, który, jest w nieprawidłowym stanie i nie można użyć ponownie. <xref:System.ServiceModel.Description.WsdlExporter> Dodaj ostrzeżeń do jego `Errors` właściwość podczas operacji nie można wyeksportować, ponieważ korzysta ona z symboli wieloznacznych, akcje i kiedy występują zduplikowane powiązanie nazwy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: importowanie metadanych do punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Instrukcje: Importowanie metadanych do punktów końcowych usługi](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  W tym artykule opisano, jak zaimportować pobrany metadanych do opisu obiektów.  
   
- [Instrukcje: eksportowanie metadanych z punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Instrukcje: Eksportowanie metadanych z punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Opisuje sposób eksportowania obiektów opis do metadanych.  
   
  [Odwołania do elementu ServiceDescription i kodu WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Opisuje mapowanie między obiektami opis i WSDL.  
   
- [Instrukcje: eksportowanie metadanych ze skompilowanego kodu usługi za pomocą programu Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Instrukcje: Eksportowanie metadanych ze skompilowanego kodu usługi za pomocą Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  W tym artykule opisano użycie programu Svcutil.exe do wyeksportowania metadanych dla usługi, kontrakty i typów danych w skompilowanych zestawach.  
   
  [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

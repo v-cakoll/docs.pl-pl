@@ -10,10 +10,10 @@ helpviewer_keywords:
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
 ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083839"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Właściwości zależności i ładowania XAML
@@ -43,8 +43,8 @@ Bieżący [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-wincli
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
 - [Metadane zależności właściwości](dependency-property-metadata.md)
 - [Właściwości zależności typu kolekcji](collection-type-dependency-properties.md)
-- [Zabezpieczenie właściwości zależności](dependency-property-security.md)
-- [Bezpieczne wzorce konstruktora DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)
+- [Zabezpieczenia właściwości zależności](dependency-property-security.md)
+- [Bezpieczne wzorce konstruktora dla obiektów DependencyObjects](safe-constructor-patterns-for-dependencyobjects.md)

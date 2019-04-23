@@ -11,10 +11,10 @@ helpviewer_keywords:
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
 ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091710"
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Instrukcje: Animowanie właściwości bez użycia scenorysu
@@ -42,5 +42,5 @@ Ten przykład przedstawia sposób zastosowania animacji właściwości bez użyc
 - <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)
-- [Przegląd Animacja](animation-overview.md)
+- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)
+- [Animacja — przegląd](animation-overview.md)

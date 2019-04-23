@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097411"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Uzyskiwanie DbProviderFactory
@@ -43,7 +43,7 @@ Proces uzyskiwania <xref:System.Data.Common.DbProviderFactory> polega na przekaz
 |--------------------|-----------------|--------------------|-----------------|  
 |0|**Nazwa**|Dostawca danych SqlClient|Czytelna nazwa dostawcy danych|  
 |1|**Opis**|.NET framework Data Provider Pro SqlServer|Czytelny opis dostawcy danych|  
-|2|**InvariantName**|System.Data.SqlClient|Nazwy, które umożliwiają programowe do odwoływania się do dostawcy danych|  
+|2|**Invatiantname**|System.Data.SqlClient|Nazwy, które umożliwiają programowe do odwoływania się do dostawcy danych|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|W pełni kwalifikowana nazwa klasy fabryki, która zawiera wystarczająco dużo informacji, aby utworzyć wystąpienie obiektu|  
   
  To `DataTable` może służyć do włączyć użytkownikowi na wybranie <xref:System.Data.DataRow> w czasie wykonywania. Wybrane `DataRow` mogą być następnie przekazywany do <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> metodę, aby utworzyć silnie typizowaną <xref:System.Data.Common.DbProviderFactory>. Wybrane <xref:System.Data.DataRow> mogą być przekazywane do `GetFactory` metodę, aby utworzyć żądany `DbProviderFactory` obiektu.  

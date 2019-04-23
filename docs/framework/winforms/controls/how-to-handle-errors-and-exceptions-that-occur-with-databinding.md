@@ -14,10 +14,10 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
 ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084625"
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych
@@ -43,4 +43,4 @@ Często wyjątków i błędów występujących na obiekty źródłowe firm gdy p
 
 - <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
-- [BindingSource — Składnik](bindingsource-component.md)
+- [BindingSource, składnik](bindingsource-component.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb9aa09447acf28f1ed10ba409ce936cdb4f84a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085041"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 — Interfejs
@@ -48,5 +48,5 @@ Dostarcza metodę, która rozszerza "ICorDebugCode" i "ICorDebugCode2", aby poda
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugILFrame3 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

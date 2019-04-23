@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085132"
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do typizowanych elementów DataSet
@@ -64,12 +64,12 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
   
 |Obiekt lub metoda/zdarzenia|Domyślny|Adnotacja|  
 |---------------------------|-------------|----------------|  
-|**DataTable**|TableNameDataTable|typedPlural|  
+|**Elementu DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** metody|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|Właściwość TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Właściwość**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**Podrzędne** metody dostępu|GetChildTableNameRows|typedChildren|  
 |**Nadrzędny** metody dostępu|TableNameRow|typedParent|  
 |**Zestaw danych** zdarzenia|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  

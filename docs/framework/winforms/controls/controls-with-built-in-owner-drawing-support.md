@@ -9,10 +9,10 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087186"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Formanty z wbudowaną obsługą rysowania przez właściciela
@@ -86,7 +86,7 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>Składnik element MenuItem  
  <xref:System.Windows.Forms.MenuItem> Składnika reprezentuje pojedynczy element menu w <xref:System.Windows.Forms.MainMenu> lub <xref:System.Windows.Forms.ContextMenu> składnika.  
@@ -172,9 +172,9 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Instrukcje: dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy systemu Windows](customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Instrukcje: Dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Instrukcje: dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy systemu Windows](customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Instrukcje: Dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip — Formant  
  <xref:System.Windows.Forms.ToolStrip> i formanty pochodne umożliwiają dostosowanie każdego aspektu wyglądu ich.  
@@ -185,10 +185,10 @@ Rysowanie w formularzach Windows, który jest znany także jako rysowanie niesta
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach systemu Windows](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Instrukcje: Tworzenie i ustawienie niestandardowego modułu renderowania dla formantu ToolStrip w formularzach Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Instrukcje: niestandardowy rysunek kontrolki ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
+-   [Instrukcje: Rysowanie niestandardowego formantu ToolStrip](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

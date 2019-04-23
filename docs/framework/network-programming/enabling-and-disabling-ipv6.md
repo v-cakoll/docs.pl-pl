@@ -3,10 +3,10 @@ title: Włączanie i wyłączanie protokołu IPv6
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
 ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083689"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Włączanie i wyłączanie protokołu IPv6
@@ -19,8 +19,8 @@ Aby skorzystać z protokołu IPv6, upewnij się, że używasz wersji systemu ope
 |-------------------------------------|---------------------------------------|-----------------|  
 |Nie|Nie|Można analizować adresów IPv6.|  
 |Nie|Tak|Można analizować adresów IPv6.|  
-|Tak|Nie|Można przeanalizować adresy IPv6 i rozpoznać adresów IPv6 za pomocą metody rozpoznawania nazw, nie oznaczony jako przestarzały.|  
-|Yes|Tak|Można przeanalizować i rozpoznać adresów IPv6 za pomocą wszystkich metod, łącznie z tymi oznaczony jako przestarzały.|  
+|Yes|Nie|Można przeanalizować adresy IPv6 i rozpoznać adresów IPv6 za pomocą metody rozpoznawania nazw, nie oznaczony jako przestarzały.|  
+|Tak|Tak|Można przeanalizować i rozpoznać adresów IPv6 za pomocą wszystkich metod, łącznie z tymi oznaczony jako przestarzały.|  
   
  Należy pamiętać, że aby włączyć obsługę protokołu IPv6 dla wszystkich klas w przestrzeni nazw System.Net, należy zmodyfikować plik konfiguracji komputera lub w pliku konfiguracyjnym aplikacji. Plik konfiguracyjny aplikacji ma priorytet nad plikiem konfiguracyjnym komputera.  
   

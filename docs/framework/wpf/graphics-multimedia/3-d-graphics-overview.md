@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087992"
 ---
 # <a name="3-d-graphics-overview"></a>Przegląd Grafika 3-D
@@ -117,7 +117,7 @@ Perspektywy i prostopadły prognozy
   
 -   <xref:System.Windows.Media.Media3D.PointLight>: Świeci, takich jak pobliskich źródła światła. PointLights stanowiska i rzutowania światła z tej pozycji. W zależności od ich pozycji i odległość względem światła podświetlonych obiektów w scenie. <xref:System.Windows.Media.Media3D.PointLightBase> udostępnia <xref:System.Windows.Media.Media3D.PointLightBase.Range%2A> właściwość, która określa odległość, po przekroczeniu których modeli będzie nie być podświetlenie światła. PointLight udostępnia również tłumienie właściwości, które określają, jak zmniejsza się intensywność światła odległości. Można określić stałe liniowej i drugiego stopnia interpolations dla tłumienie światła.  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>: Dziedziczy <xref:System.Windows.Media.Media3D.PointLight>. W dniach oświetlenia, takich jak PointLight i położenie i kierunku. One projektu światła w kształcie stożek ustawionego <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> i <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> określonych w stopniach właściwości.  
+-   <xref:System.Windows.Media.Media3D.SpotLight>: dziedziczy <xref:System.Windows.Media.Media3D.PointLight>. W dniach oświetlenia, takich jak PointLight i położenie i kierunku. One projektu światła w kształcie stożek ustawionego <xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A> i <xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A> określonych w stopniach właściwości.  
   
  Światła są <xref:System.Windows.Media.Media3D.Model3D> obiektów, dzięki czemu może przekształcić i animować właściwości światła, w tym pozycji, kolorów, kierunku i zakresu.  
   
@@ -174,8 +174,8 @@ Perspektywy i prostopadły prognozy
 - <xref:System.Windows.Media.Media3D.PerspectiveCamera>
 - <xref:System.Windows.Media.Media3D.DirectionalLight>
 - <xref:System.Windows.Media.Media3D.Material>
-- [Przegląd Przekształcenia 3-D](3-d-transformations-overview.md)
-- [Maksymalizuj wydajność 3D WPF](maximize-wpf-3d-performance.md)
-- [— Tematy porad](3-d-graphics-how-to-topics.md)
-- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [Przekształcenia 3D — przegląd](3-d-transformations-overview.md)
+- [Maksymalizowanie wydajności 3D WPF](maximize-wpf-3d-performance.md)
+- [Tematy z instrukcjami](3-d-graphics-how-to-topics.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)

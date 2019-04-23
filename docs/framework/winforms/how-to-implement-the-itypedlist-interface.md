@@ -11,10 +11,10 @@ helpviewer_keywords:
 - IBindingList interface
 ms.assetid: 834cc15c-50bc-4a8b-a610-313d6a217357
 ms.openlocfilehash: 2463a9c77a9836ff251e799056cc5131bf6c99e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084932"
 ---
 # <a name="how-to-implement-the-itypedlist-interface"></a>Instrukcje: Implementowanie interfejsu ITypedList
@@ -42,4 +42,4 @@ Implementowanie <xref:System.ComponentModel.ITypedList> interfejsu, aby włączy
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)
+- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)

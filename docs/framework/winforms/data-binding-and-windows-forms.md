@@ -13,10 +13,10 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095493"
 ---
 # <a name="data-binding-and-windows-forms"></a>Wiązanie danych i formularze systemu Windows
@@ -56,6 +56,6 @@ W formularzach Windows Forms można powiązać źródła danych nie jest po pros
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Binding>
-- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
-- [Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [BindingSource — Składnik](./controls/bindingsource-component.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
+- [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [BindingSource, składnik](./controls/bindingsource-component.md)

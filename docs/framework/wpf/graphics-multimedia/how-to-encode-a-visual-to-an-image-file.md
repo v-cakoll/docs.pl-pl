@@ -10,10 +10,10 @@ helpviewer_keywords:
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
 ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096787"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>Instrukcje: Kodowanie wizualizacji do pliku obrazu
@@ -30,6 +30,6 @@ W tym przykładzie pokazano, jak kodować <xref:System.Windows.Media.Visual> obi
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.DrawingContext>
-- [Przegląd Obrazowanie](imaging-overview.md)
-- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
+- [Obrazowanie — przegląd](imaging-overview.md)
+- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
 - [Użycie obiektów DrawingVisual](using-drawingvisual-objects.md)

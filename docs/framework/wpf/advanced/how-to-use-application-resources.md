@@ -6,10 +6,10 @@ helpviewer_keywords:
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
 ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088207"
 ---
 # <a name="how-to-use-application-resources"></a>Instrukcje: Używanie zasobów aplikacji
@@ -28,5 +28,5 @@ W tym przykładzie pokazano, jak korzystać z zasobów aplikacji.
 ## <a name="see-also"></a>Zobacz także
 
 - [Zasoby XAML](xaml-resources.md)
-- [Przegląd Zarządzanie aplikacjami](../app-development/application-management-overview.md)
-- [— Tematy porad](resources-how-to-topics.md)
+- [Zarządzanie aplikacjami — omówienie](../app-development/application-management-overview.md)
+- [Tematy z instrukcjami](resources-how-to-topics.md)

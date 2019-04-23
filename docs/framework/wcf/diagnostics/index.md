@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092283"
 ---
 # <a name="administration-and-diagnostics"></a>Administracja i diagnostyka
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) zapewnia bogaty zestaw funkcji, które mo
 
 - [Konfigurowanie własnej aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [Wdrażanie usług](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
-- [Informacje o wyjątkach](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
+- [Dokumentacja wyjątków](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [Rejestrowanie zdarzeń](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [Rejestrowanie komunikatów](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)

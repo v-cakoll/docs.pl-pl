@@ -1,12 +1,12 @@
 ---
-title: <transport> z <netMsmqBinding>
+title: <transport> dla <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
 ms.openlocfilehash: ec726c4b39fedbf63a7ecc9e685a86367609fa43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085015"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<transport > z \<netMsmqBinding >
@@ -41,7 +41,7 @@ Określa ustawienia zabezpieczenia transportu.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|msmqAuthenticationMode|Określa, jak wiadomość musi zostać uwierzytelniony przez usługę transportową MSMQ. Prawidłowe wartości są następujące:<br /><br /> -Brak: Bez uwierzytelniania.<br />-WindowsDomain: Mechanizm uwierzytelniania używa usługi Active Directory można pobrać certyfikatu X.509 dla identyfikatora zabezpieczeń skojarzonych z wiadomością. Następnie służy do Sprawdź, czy lista ACL kolejki, aby upewnić się, użytkownik ma uprawnienia do zapisu dla kolejki.<br />-Certyfikat: Kanał pobiera certyfikat z magazynu certyfikatów.<br /><br /> Wartość domyślna to `WindowsDomain`.<br /><br /> Jeśli ten atrybut jest ustawiony na `None`, `msmqProtectionLevel` atrybut również musi być ustawiona na `None`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqAuthenticationMode>|  
+|msmqAuthenticationMode|Określa, jak wiadomość musi zostać uwierzytelniony przez usługę transportową MSMQ. Prawidłowe wartości są następujące:<br /><br /> -Brak: Bez uwierzytelniania.<br />-WindowsDomain: Mechanizm uwierzytelniania używa usługi Active Directory można pobrać certyfikatu X.509 dla identyfikatora zabezpieczeń skojarzonych z wiadomością. Następnie służy do Sprawdź, czy lista ACL kolejki, aby upewnić się, użytkownik ma uprawnienia do zapisu dla kolejki.<br />-Certyfikat: Kanał pobiera certyfikat z magazynu certyfikatów.<br /><br /> Wartość domyślna to `WindowsDomain`.<br /><br /> Jeśli ten atrybut jest ustawiony na `None`, `msmqProtectionLevel` atrybut również musi być ustawiona na `None`. Ten atrybut nie ma typu<xref:System.ServiceModel.MsmqAuthenticationMode>|  
 |msmqEncryptionAlgorithm|Określa algorytm używany do szyfrowania wiadomości na łączu podczas transferu wiadomości między menedżerami kolejki wiadomości. Prawidłowe wartości są następujące:<br /><br /> -RC4Stream<br />-AES<br />— Wartość domyślna to `RC4Stream`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
 |msmqProtectionLevel|Określa, że sposób wiadomości są zabezpieczone na poziomie usługi transportu MSMQ. Szyfrowanie zapewnia, że komunikat integralności, podczas logowania i szyfrowania zapewnia integralność komunikatów i uznawania. Oznacza to komunikat w rzeczywistości pochodzi od nadawcy i informacje o nadawcy mają który mówi, że jest on. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak ochrony.<br />— Logowanie: Komunikaty są podpisane.<br />-EncryptAndSign: Komunikaty są szyfrowane i podpisany.<br />— Wartość domyślna to `Sign`.|  
 |msmqSecureHashAlgorithm|Określa algorytm wyznaczania wartości skrótu, który ma być używany do przetwarzania danych skrót wiadomości. Prawidłowe wartości są następujące:<br /><br /> -   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Wartość domyślna to `SHA1`. Ten atrybut jest typu <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Z powodu problemów kolizji z MD5 lub SHA1 firma Microsoft zaleca SHA256 lub lepszej.|  
@@ -53,7 +53,7 @@ Określa ustawienia zabezpieczenia transportu.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Określa ustawienia zabezpieczenia transportu dla transportów umieszczonych w kolejce.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Określa ustawienia zabezpieczenia transportu dla transportów umieszczonych w kolejce.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -65,5 +65,5 @@ Określa ustawienia zabezpieczenia transportu.
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

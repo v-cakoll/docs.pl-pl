@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
 ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087836"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optymalizacja wydajności: Powiązanie danych
@@ -80,7 +80,7 @@ ms.locfileid: "59087836"
 - [Grafika 2D i obrazowanie](optimizing-performance-2d-graphics-and-imaging.md)
 - [Zachowanie obiektu](optimizing-performance-object-behavior.md)
 - [Zasoby aplikacji](optimizing-performance-application-resources.md)
-- [Tekst](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)
-- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
-- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

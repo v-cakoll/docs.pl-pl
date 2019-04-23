@@ -8,10 +8,10 @@ helpviewer_keywords:
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
 ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089136"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Instrukcje: Zaokrąglanie rogów elementu RectangleGeometry
@@ -27,6 +27,6 @@ Prostokąty z zaokrąglonymi narożnikami
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Geometria](geometry-overview.md)
+- [Geometria — przegląd](geometry-overview.md)
 - [Tworzenie kształtu złożonego](how-to-create-a-composite-shape.md)
 - [Tworzenie kształtu przy użyciu elementu PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)

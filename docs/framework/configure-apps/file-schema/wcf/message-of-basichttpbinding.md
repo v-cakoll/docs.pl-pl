@@ -1,12 +1,12 @@
 ---
-title: <message> z <basicHttpBinding>
+title: <message> dla <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
 ms.openlocfilehash: 746acd91074863029211a1ca2584743c464c9ce1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083299"
 ---
 # <a name="message-of-basichttpbinding"></a>\<komunikat > z \<basicHttpBinding >
@@ -50,7 +50,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<basicHttpBinding
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Definiuje funkcje bezpieczeństwa umożliwiające [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
 ## <a name="example"></a>Przykład  
  Ten przykład demonstruje sposób implementacji aplikacji, która używa zabezpieczenia basicHttpBinding i komunikatu. W poniższym przykładzie konfiguracji dla usługi określa basicHttpBinding definicji punktu końcowego, a odwołuje się do konfiguracji powiązania o nazwie `Binding1`. Certyfikat używany przez usługę do samodzielnego uwierzytelnienia klienta znajduje się w `behaviors` części pliku konfiguracyjnego obszarze `serviceCredentials` elementu. Tryb weryfikacji, który ma zastosowanie do certyfikatu używanego przez klienta do samodzielnego uwierzytelnienia usługi jest również ustawiona `behaviors` sekcji `clientCertificate` elementu.  
@@ -128,5 +128,5 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<basicHttpBinding
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

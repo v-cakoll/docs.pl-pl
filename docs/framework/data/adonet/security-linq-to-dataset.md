@@ -3,10 +3,10 @@ title: Zabezpieczenia (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
 ms.openlocfilehash: aa281cb4d6019ca2df85137eb505724e55b8060a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087341"
 ---
 # <a name="security-linq-to-dataset"></a>Zabezpieczenia (LINQ to DataSet)

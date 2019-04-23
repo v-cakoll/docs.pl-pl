@@ -4,10 +4,10 @@ description: Więcej informacji na temat drzew wyrażeń w .NET Core i jak z nic
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
 ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096618"
 ---
 # <a name="expression-trees"></a>Drzewa wyrażeń
@@ -36,7 +36,7 @@ Pozostałe sekcje w tym samouczku będzie zapoznaj się z drzewa wyrażeń są, 
 
     Dowiedz się, jak można przekonwertować na drzewo wyrażenia, w postaci wyrażenia Lambda do delegata, a następnie wykonaj wynikowego delegata.
 
-4. [Interpreting Expressions](expression-trees-interpreting.md)
+4. [Interpretowanie wyrażeń](expression-trees-interpreting.md)
 
     Dowiedz się, jak przejść i zbadaj *drzew wyrażeń* Aby zrozumieć, co kod drzewa wyrażenie reprezentuje.
 

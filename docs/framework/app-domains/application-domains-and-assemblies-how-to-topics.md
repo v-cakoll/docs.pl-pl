@@ -8,10 +8,10 @@ ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1610322e33be81a109dec1cd1d189544a33b17d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095520"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>Porady dotyczące zestawów i domen aplikacji
@@ -27,17 +27,17 @@ Poniższe sekcje zawierają łącza do wszystkich tematów instrukcje w dokument
   
 -   [Instrukcje: Ładowanie zestawów do domeny aplikacji](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
   
--   [Instrukcje: Uzyskiwanie informacji dotyczących typów i składowych z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+-   [Instrukcje: Uzyskiwanie informacji dotyczących elementu członkowskiego typów i z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
   
  **Zestawy**  
   
--   [Instrukcje: Określanie w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+-   [Instrukcje: Określić w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
   
--   [Instrukcje: Kompilacja zestawu jednoplikowego](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
+-   [Instrukcje: Kompilacja zestawów pojedynczego pliku](../../../docs/framework/app-domains/how-to-build-a-single-file-assembly.md)  
   
 -   [Instrukcje: Kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
   
--   [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+-   [Instrukcje: Tworzenie pary kluczy publiczny prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
   
 -   [Instrukcje: Podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
   
@@ -45,11 +45,11 @@ Poniższe sekcje zawierają łącza do wszystkich tematów instrukcje w dokument
   
 -   [Instrukcje: Wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)  
   
--   [Instrukcje: instalowanie zestawu w globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+-   [Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
   
--   [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+-   [Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
   
--   [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+-   [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
   
 -   [Instrukcje: Wyświetlanie zawartości zestawu](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   

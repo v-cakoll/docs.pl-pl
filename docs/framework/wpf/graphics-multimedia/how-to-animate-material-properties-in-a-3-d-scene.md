@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 3-D scenes [WPF], animating Material properties
 ms.assetid: 229fd6eb-7401-4992-b0c9-8b28de230c0f
 ms.openlocfilehash: 58e880a2828d21ee76f7fac6bdcf313e8454e65b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090904"
 ---
 # <a name="how-to-animate-material-properties-in-a-3-d-scene"></a>Instrukcje: Animowanie właściwości materiału w scenie 3D
@@ -32,4 +32,4 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.Brush.Opac
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie sceny 3D](how-to-create-a-3-d-scene.md)
-- [Przegląd Grafika 3-D](3-d-graphics-overview.md)
+- [Grafika 3D — przegląd](3-d-graphics-overview.md)

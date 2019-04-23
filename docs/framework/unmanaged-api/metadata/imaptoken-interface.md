@@ -17,33 +17,33 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111673"
 ---
-# <a name="imaptoken-interface"></a><span data-ttu-id="37d4e-102">IMapToken — Interfejs</span><span class="sxs-lookup"><span data-stu-id="37d4e-102">IMapToken Interface</span></span>
-<span data-ttu-id="37d4e-103">Zapewnia możliwości mapowania między zestawami.</span><span class="sxs-lookup"><span data-stu-id="37d4e-103">Provides mapping capabilities between assemblies.</span></span>  
+# <a name="imaptoken-interface"></a><span data-ttu-id="213d8-102">IMapToken — Interfejs</span><span class="sxs-lookup"><span data-stu-id="213d8-102">IMapToken Interface</span></span>
+<span data-ttu-id="213d8-103">Zapewnia możliwości mapowania między zestawami.</span><span class="sxs-lookup"><span data-stu-id="213d8-103">Provides mapping capabilities between assemblies.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="37d4e-104">`IMapToken` Interfejsu muszą być zaimplementowane przez klienta.</span><span class="sxs-lookup"><span data-stu-id="37d4e-104">The `IMapToken` interface must be implemented by the client.</span></span>  
+>  <span data-ttu-id="213d8-104">`IMapToken` Interfejsu muszą być zaimplementowane przez klienta.</span><span class="sxs-lookup"><span data-stu-id="213d8-104">The `IMapToken` interface must be implemented by the client.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="37d4e-105">Metody</span><span class="sxs-lookup"><span data-stu-id="37d4e-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="213d8-105">Metody</span><span class="sxs-lookup"><span data-stu-id="213d8-105">Methods</span></span>  
   
-|<span data-ttu-id="37d4e-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="37d4e-106">Method</span></span>|<span data-ttu-id="37d4e-107">Opis</span><span class="sxs-lookup"><span data-stu-id="37d4e-107">Description</span></span>|  
+|<span data-ttu-id="213d8-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="213d8-106">Method</span></span>|<span data-ttu-id="213d8-107">Opis</span><span class="sxs-lookup"><span data-stu-id="213d8-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="37d4e-108">Map, metoda</span><span class="sxs-lookup"><span data-stu-id="37d4e-108">Map Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|<span data-ttu-id="37d4e-109">Mapuje relacje między dwa zestawy za pomocą sygnatur metadanych.</span><span class="sxs-lookup"><span data-stu-id="37d4e-109">Maps a relationship between two assemblies using metadata signatures.</span></span>|  
+|[<span data-ttu-id="213d8-108">Map, metoda</span><span class="sxs-lookup"><span data-stu-id="213d8-108">Map Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|<span data-ttu-id="213d8-109">Mapuje relacje między dwa zestawy za pomocą sygnatur metadanych.</span><span class="sxs-lookup"><span data-stu-id="213d8-109">Maps a relationship between two assemblies using metadata signatures.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="37d4e-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="37d4e-110">Requirements</span></span>  
- <span data-ttu-id="37d4e-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37d4e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="213d8-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="213d8-110">Requirements</span></span>  
+ <span data-ttu-id="213d8-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="213d8-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37d4e-112">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="37d4e-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="213d8-112">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="213d8-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="37d4e-113">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="37d4e-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="213d8-113">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="213d8-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="37d4e-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="37d4e-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="213d8-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="213d8-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37d4e-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="37d4e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="213d8-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="213d8-115">See also</span></span>
 
-- [<span data-ttu-id="37d4e-116">Interfejsy metadanych</span><span class="sxs-lookup"><span data-stu-id="37d4e-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="213d8-116">Interfejsy metadanych</span><span class="sxs-lookup"><span data-stu-id="213d8-116">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

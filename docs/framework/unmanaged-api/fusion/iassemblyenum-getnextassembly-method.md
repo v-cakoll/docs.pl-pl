@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9a77e468363b59e76e55aa24d97d064189ad297e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117752"
 ---
-# <a name="iassemblyenumgetnextassembly-method"></a><span data-ttu-id="19265-102">IAssemblyEnum::GetNextAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="19265-102">IAssemblyEnum::GetNextAssembly Method</span></span>
-<span data-ttu-id="19265-103">Pobiera wskaźnik do następnego [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) zawarte w tym [iassemblyenum —](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="19265-103">Gets a pointer to the next [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) contained in this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object.</span></span>  
+# <a name="iassemblyenumgetnextassembly-method"></a><span data-ttu-id="97b97-102">IAssemblyEnum::GetNextAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="97b97-102">IAssemblyEnum::GetNextAssembly Method</span></span>
+<span data-ttu-id="97b97-103">Pobiera wskaźnik do następnego [iassemblyname —](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) zawarte w tym [iassemblyenum —](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) obiektu.</span><span class="sxs-lookup"><span data-stu-id="97b97-103">Gets a pointer to the next [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) contained in this [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19265-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="19265-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="97b97-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="97b97-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextAssembly (  
@@ -37,24 +37,24 @@ HRESULT GetNextAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="19265-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="19265-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="97b97-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="97b97-105">Parameters</span></span>  
  `pvReserved`  
- <span data-ttu-id="19265-106">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="19265-106">[in] Reserved for future extensibility.</span></span> `pvReserved` <span data-ttu-id="19265-107">musi być odwołanie o wartości null.</span><span class="sxs-lookup"><span data-stu-id="19265-107">must be a null reference.</span></span>  
+ <span data-ttu-id="97b97-106">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="97b97-106">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="97b97-107">`pvReserved` musi być odwołanie o wartości null.</span><span class="sxs-lookup"><span data-stu-id="97b97-107">`pvReserved` must be a null reference.</span></span>  
   
  `ppName`  
- <span data-ttu-id="19265-108">[out] Zwrócony `IAssemblyName` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="19265-108">[out] The returned `IAssemblyName` pointer.</span></span>  
+ <span data-ttu-id="97b97-108">[out] Zwrócony `IAssemblyName` wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="97b97-108">[out] The returned `IAssemblyName` pointer.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="19265-109">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="19265-109">[in] Reserved for future extensibility.</span></span> `dwFlags` <span data-ttu-id="19265-110">musi być równa 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="19265-110">must be 0 (zero).</span></span>  
+ <span data-ttu-id="97b97-109">[in] Zarezerwowane dla przyszłej rozszerzalności.</span><span class="sxs-lookup"><span data-stu-id="97b97-109">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="97b97-110">`dwFlags` musi być równa 0 (zero).</span><span class="sxs-lookup"><span data-stu-id="97b97-110">`dwFlags` must be 0 (zero).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19265-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="19265-111">Requirements</span></span>  
- <span data-ttu-id="19265-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19265-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="97b97-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="97b97-111">Requirements</span></span>  
+ <span data-ttu-id="97b97-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97b97-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19265-113">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="19265-113">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="97b97-113">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="97b97-113">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="19265-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="19265-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="97b97-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="97b97-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19265-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="19265-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="97b97-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="97b97-115">See also</span></span>
 
-- [<span data-ttu-id="19265-116">IAssemblyName — Interfejs</span><span class="sxs-lookup"><span data-stu-id="19265-116">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [<span data-ttu-id="19265-117">IAssemblyEnum — Interfejs</span><span class="sxs-lookup"><span data-stu-id="19265-117">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)
+- [<span data-ttu-id="97b97-116">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="97b97-116">IAssemblyName Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [<span data-ttu-id="97b97-117">IAssemblyEnum, interfejs</span><span class="sxs-lookup"><span data-stu-id="97b97-117">IAssemblyEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
 ms.openlocfilehash: 62e137df53d06f5aedb2701b5727c25e52f35614
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319069"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Przewodnik: tworzenie formularza MDI ze scalaniem menu i kontrolkami ToolStrip
@@ -211,5 +211,5 @@ ms.locfileid: "59319069"
 - <xref:System.Windows.Forms.StatusStrip>
 - [Instrukcje: Tworzenie formularzy nadrzędnych MDI](../advanced/how-to-create-mdi-parent-forms.md)
 - [Instrukcje: Tworzenie formularzy podrzędnych MDI](../advanced/how-to-create-mdi-child-forms.md)
-- [Instrukcje: wstawianie kontrolki MenuStrip do menu rozwijanego MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [Instrukcje: Wstawianie elementu MenuStrip do Menu rozwijanego MDI](how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)

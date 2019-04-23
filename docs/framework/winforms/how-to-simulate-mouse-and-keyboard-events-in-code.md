@@ -13,10 +13,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
 ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313089"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Instrukcje: Symulowanie zdarzeń myszy i klawiatury w kodzie
@@ -91,4 +91,4 @@ Windows Forms zapewnia kilka opcji symulowania programowo, myszy i klawiatury. T
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dane użytkownika w formularzach systemu Windows](user-input-in-windows-forms.md)
+- [Dane użytkownika w formularzach Windows Forms](user-input-in-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317015"
 ---
 # <a name="how-to-author-composite-controls"></a>Instrukcje: autoryzowanie kontrolek złożonych
@@ -80,10 +80,10 @@ Formanty złożone można zastosować na wiele sposobów. Można tworzyć w rama
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Przewodnik: tworzenie kontrolki złożonej za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows z Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [Przewodnik: dziedziczenie z kontrolki formularzy systemu Windows formantu z Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
-- [Zalecenia dotyczące typu formantu](control-type-recommendations.md)
-- [Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows](how-to-author-controls-for-windows-forms.md)
-- [Różne typy formantów niestandardowych](varieties-of-custom-controls.md)
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Przewodnik: Tworzenie formantu złożonego za pomocą Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Przewodnik: Dziedziczenie z kontrolki formularzy Windows Forms za pomocą Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [Zalecenia dotyczące typu kontrolki](control-type-recommendations.md)
+- [Instrukcje: Tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

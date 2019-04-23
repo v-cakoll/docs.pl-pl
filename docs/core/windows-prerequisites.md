@@ -4,10 +4,10 @@ description: Dowiedz się, jakie zależności dotyczące usługi Windows kompute
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
 ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313713"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dla platformy .NET Core w Windows
@@ -73,7 +73,7 @@ Tworzenie aplikacji .NET Core przy użyciu zestawu .NET Core SDK, można użyć 
 
 Możesz dowiedzieć się więcej o zmianach wprowadzonych w programie Visual Studio 2017 w [informacje o wersji](/visualstudio/releasenotes/vs2017-relnotes).
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Aby opracować aplikacje platformy .NET Core w programie Visual Studio 2017 przy użyciu zestawu .NET Core 2.2 SDK:
 
@@ -101,7 +101,7 @@ Gdy program Visual Studio skonfigurowane przy użyciu zestawu .NET Core 2.2 SDK,
 * Przekierowanie wersji 1.x i 2.x projektów .NET Core do platformy .NET Core 2.2, kompilacja i uruchom.
 * Utwórz nowe projekty platformy .NET Core 2.2.
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Tworzenie aplikacji .NET Core 1.x, w programie Visual Studio, [Pobierz i zainstaluj program Visual Studio 2017](/visualstudio/install/install-visual-studio) z **"Programowanie dla wielu platform .NET Core"** obciążenia (w **inne zestawy narzędzi**sekcji) wybranego.
 

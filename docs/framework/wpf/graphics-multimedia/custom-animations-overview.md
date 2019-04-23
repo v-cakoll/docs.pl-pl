@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313947"
 ---
 # <a name="custom-animations-overview"></a>Przegląd Niestandardowe animacje
@@ -127,10 +127,10 @@ W tym temacie opisano, jak i kiedy rozszerzenie [!INCLUDE[TLA2#tla_winclient](..
 
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.IKeyFrame>
-- [Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)
-- [Przegląd Obiekty Freezable](../advanced/freezable-objects-overview.md)
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
-- [Przegląd Animacja ścieżki](path-animations-overview.md)
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Animacja i system chronometrażu](animation-and-timing-system-overview.md)
+- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)
+- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Animacje ścieżki — przegląd](path-animations-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Animacja i system chronometrażu — przegląd](animation-and-timing-system-overview.md)
 - [Przykład animacji niestandardowej](https://go.microsoft.com/fwlink/?LinkID=159981)

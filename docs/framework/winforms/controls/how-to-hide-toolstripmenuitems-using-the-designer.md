@@ -7,10 +7,10 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317678"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Instrukcje: ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant
@@ -42,4 +42,4 @@ Ukrywanie elementów menu jest sposób sterowania interfejsem użytkownika (UI),
 - <xref:System.Windows.Forms.ToolStripItem.Available%2A>
 - <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>
 - [MenuStrip, kontrolka — omówienie](menustrip-control-overview-windows-forms.md)
-- [Instrukcje: wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-disable-toolstripmenuitems-using-the-designer.md)
+- [Instrukcje: Wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-disable-toolstripmenuitems-using-the-designer.md)

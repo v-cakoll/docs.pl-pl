@@ -16,10 +16,10 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314012"
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
@@ -90,7 +90,7 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
 |Typ lub kategoria typów|Zobacz|  
 |---------------------------|---------|  
 |Typy daty i godziny (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Typy wyliczeniowe (wszystkie typy pochodne <xref:System.Enum?displayProperty=nameWithType>)|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Typy wyliczeniowe (wszystkie typy pochodne <xref:System.Enum?displayProperty=nameWithType>)|[Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |Typy liczbowe (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
@@ -172,4 +172,4 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
 - [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)
+- [Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)

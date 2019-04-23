@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
 ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318757"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Instrukcje: Wywoływanie procedury właściwości (Visual Basic)
@@ -56,12 +56,12 @@ Przechowywanie wartości we właściwości lub pobieranie jej wartość jest wyw
 
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Property — Instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
+- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
 - [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
 - [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Instrukcje: Umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
 - [Instrukcje: Pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
-- [Get — Instrukcja](../../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set — Instrukcja](../../../../visual-basic/language-reference/statements/set-statement.md)
+- [Get, instrukcja](../../../../visual-basic/language-reference/statements/get-statement.md)
+- [Set, instrukcja](../../../../visual-basic/language-reference/statements/set-statement.md)

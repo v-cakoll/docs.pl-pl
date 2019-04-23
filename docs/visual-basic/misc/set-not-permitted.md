@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID387
 ms.assetid: 809f6768-7dd7-4632-b4dd-83856edfdb48
 ms.openlocfilehash: 231dd322fd0eadb6fa13d58b527c0b047cc0e3f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315286"
 ---
 # <a name="set-not-permitted"></a>Zestaw nie jest dozwolone
@@ -20,4 +20,4 @@ Próbowano zmienić właściwość, której ustawienia albo nie można ustawić 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+- [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

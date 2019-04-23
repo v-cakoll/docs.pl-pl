@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318978"
 ---
 # <a name="if-c-reference"></a>#if (odwołanie w C#)
@@ -89,7 +89,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../../../csharp/language-reference/index.md)
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Dyrektywy preprocesora języka C#](index.md)
+- [Dyrektywy preprocesora C#](index.md)
 - [Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

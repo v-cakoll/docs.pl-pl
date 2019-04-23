@@ -12,10 +12,10 @@ ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315767"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
@@ -378,9 +378,9 @@ interface _Graphics {
   
 |Typ wartości systemu|Typ pliku IDL|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATA**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Identyfikator GUID**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Poniższy kod przedstawia definicję typy niezarządzanwe **data**, **GUID**, **dziesiętna**, i **OLE_COLOR** w typie Stdole2 Biblioteka.  
@@ -443,6 +443,6 @@ interface IValueTypes : IDispatch {
 
 - [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)
 - [Kopiowanie i przypinanie](copying-and-pinning.md)
-- [Organizowanie domyślne dotyczące tablic](default-marshaling-for-arrays.md)
+- [Domyślny marshaling dla tablic](default-marshaling-for-arrays.md)
 - [Domyślny marshaling dla obiektów](default-marshaling-for-objects.md)
-- [Organizowanie domyślne dotyczące ciągów](default-marshaling-for-strings.md)
+- [Domyślny marshaling dla ciągów](default-marshaling-for-strings.md)

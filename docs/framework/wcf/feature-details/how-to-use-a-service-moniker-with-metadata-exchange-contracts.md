@@ -3,10 +3,10 @@ title: 'Instrukcje: używanie krótkiej nazwy usługi z kontraktami wymiany meta
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319836"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: używanie krótkiej nazwy usługi z kontraktami wymiany metadanych
@@ -41,5 +41,5 @@ Po rozwinięciu niektórych nowych usług WCF, może zdecydować, chcesz można 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: używanie krótkiej nazwy programu Windows Communication Foundation bez rejestracji](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
-- [Instrukcje: używanie krótkiej nazwy usługi z kontraktami WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+- [Instrukcje: Użyj monikera usługi Windows Communication Foundation, bez rejestracji](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [Instrukcje: Używanie krótkiej nazwy z kontraktami WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

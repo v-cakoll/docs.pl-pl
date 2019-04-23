@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314397"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Instrukcje: Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru
@@ -49,6 +49,6 @@ W prostym scenariuszu wzorzec / szczegół mają powiązane z danymi <xref:Syste
 
 - [Używanie wzorca szczegółowego z danymi hierarchicznymi](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Używanie wzorca szczegółowego z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [Przegląd Szablonowanie danych](data-templating-overview.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Szablonowanie danych — omówienie](data-templating-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
 ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318939"
 ---
 # <a name="decision-structures-visual-basic"></a>Struktury decyzji (Visual Basic)
@@ -51,4 +51,4 @@ Visual Basic umożliwia warunki badania i wykonywać różne operacje, w zależn
 - [Struktury pętli](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Inne struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Zagnieżdżone struktury sterujące](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [If — operator](../../../../visual-basic/language-reference/operators/if-operator.md)
+- [If, operator](../../../../visual-basic/language-reference/operators/if-operator.md)

@@ -16,10 +16,10 @@ ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313375"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
@@ -54,7 +54,7 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że jako dewelop
   
     -   [Typy ogólne i członkowie](#Generics)  
   
-    -   [Konstruktorów](#ctors)  
+    -   [Konstruktory](#ctors)  
   
     -   [Właściwości](#properties)  
   
@@ -110,8 +110,8 @@ Program .NET Framework jest niezależny od języka. Oznacza to, że jako dewelop
 |Atrybuty|[Atrybuty](#attributes)|Atrybuty powinny być typu <xref:System.Attribute?displayProperty=nameWithType>, lub typu z niego dziedziczącego.|41|  
 |Atrybuty|[Atrybuty](#attributes)|Specyfikacja CLS zezwala tylko na podzestaw kodowań atrybutów niestandardowych. Jedyne typy, które mają się pojawiać w tych kodowaniach to (zobacz część IV): <xref:System.Type?displayProperty=nameWithType>, <xref:System.String?displayProperty=nameWithType>, <xref:System.Char?displayProperty=nameWithType>, <xref:System.Boolean?displayProperty=nameWithType>, <xref:System.Byte?displayProperty=nameWithType>, <xref:System.Int16?displayProperty=nameWithType>, <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Int64?displayProperty=nameWithType>, <xref:System.Single?displayProperty=nameWithType>, <xref:System.Double?displayProperty=nameWithType> , a każdy typ wyliczeniowy oparty na zgodny ze specyfikacją CLS podstawowym typie integer.|34|  
 |Atrybuty|[Atrybuty](#attributes)|Specyfikacja CLS nie zezwala na Modyfikatory widoczne publicznie (`modreq`, zob. partycja II), ale zezwala na Modyfikatory opcjonalne (`modopt`, zob. partycja II) nie rozumie.|35|  
-|Konstruktorów|[Konstruktorów](#ctors)|Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)|21|  
-|Konstruktorów|[Konstruktorów](#ctors)|Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie.|22|  
+|Konstruktorów|[Konstruktory](#ctors)|Konstruktor obiektu musi wywołać konstruktora pewnego wystąpienia klasy podstawowej zanim nastąpi dostęp do danych wystąpienia dziedziczonego. (To nie dotyczy typów wartości, które nie wymagają konstruktorów.)|21|  
+|Konstruktorów|[Konstruktory](#ctors)|Konstruktor obiektu nie będzie wywoływany z wyjątkiem jako część tworzenia obiektu i obiekt nie może być inicjowany dwukrotnie.|22|  
 |Wyliczenia|[Wyliczenia](#enums)|Podstawowym typem wyliczenia będzie wbudowany typ liczby całkowitej ze specyfikacją CLS, nazwy pola będzie "value__" i pole to będzie oznakowane `RTSpecialName`.|7|  
 |Wyliczenia|[Wyliczenia](#enums)|Istnieją dwa odrębne rodzaje wyliczeń, wskazywane przez obecność lub Brak <xref:System.FlagsAttribute?displayProperty=nameWithType> atrybut niestandardowy (zobacz Biblioteka partycja IV). Reprezentuje nazwane wartości liczb całkowitych; inne reprezentuje nazwane flagi bitowe, które mogą być połączone do generowania wartości nienazwanej. Wartość `enum` nie jest ograniczona do określonej wartości.|8|  
 |Wyliczenia|[Wyliczenia](#enums)|Literał statycznego pola elementu enum ma typ wyliczenia Enum.|9|  

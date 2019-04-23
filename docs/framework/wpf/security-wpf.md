@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313570"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
@@ -62,7 +62,7 @@ ms.locfileid: "59313570"
 |Zasób|Pliki, które są dodawane do projektu o typie kompilacji **zasobów**.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Zawartość|Pliki, które są dodawane do projektu o typie kompilacji **zawartości**.|`pack://application:,,,/MyContentFile.xaml`|  
 |Witryna pochodzenia|Pliki, które są dodawane do projektu o typie kompilacji **Brak**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Kod aplikacji|Zasoby XAML, które zostały skompilowane kodem.<br /><br /> —lub—<br /><br /> Pliki XAML, które są dodawane do projektu o typie kompilacji **strony**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Kod aplikacji|Zasoby XAML, które zostały skompilowane kodem.<br /><br /> —lub—<br /><br /> Pliki XAML, które są dodawane do projektu o typie kompilacji **strony**.|`pack://application:,,,/MyResourceFile``.xaml`|  
   
 > [!NOTE]
 >  Aby uzyskać więcej informacji na temat plików danych aplikacji i dodatkiem Service pack [!INCLUDE[TLA2#tla_uri#plural](../../../includes/tla2sharptla-urisharpplural-md.md)], zobacz [zasoby aplikacji WPF, zawartość i pliki danych](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -268,15 +268,15 @@ ms.locfileid: "59313570"
 |----------|--------------|  
 |Kod zarządzany|[Wzorce i rozwiązania dotyczące zabezpieczeń dla aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]|[Zabezpieczenia dostępu kodu](../misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
-- [Strategia zabezpieczeń WPF - zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
-- [Strategia zabezpieczeń WPF - projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
+- [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
+- [Strategia zabezpieczeń WPF — projekt zabezpieczeń](wpf-security-strategy-security-engineering.md)
 - [Wzorce i rozwiązania dotyczące zabezpieczeń dla aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
-- [Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Omówienie XAML (WPF)](./advanced/xaml-overview-wpf.md)
+- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Przegląd XAML (WPF)](./advanced/xaml-overview-wpf.md)

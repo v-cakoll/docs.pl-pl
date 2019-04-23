@@ -11,10 +11,10 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315325"
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
@@ -431,8 +431,8 @@ ms.locfileid: "59315325"
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Nowości w WPF w wersji 4.5](../getting-started/whats-new.md)
-- [Wiązanie z wynikami zapytania LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
+- [Powiązywanie z wynikami zapytania LINQ](how-to-bind-to-the-results-of-a-linq-query.md)
 - [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)
 - [Pokaz powiązania danych](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [— Tematy porad](data-binding-how-to-topics.md)
-- [Wiązanie ze źródłem danych ADO.NET](how-to-bind-to-an-ado-net-data-source.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)
+- [Powiązywanie ze źródłem danych ADO.NET](how-to-bind-to-an-ado-net-data-source.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313960"
 ---
 # <a name="documents-in-wpf"></a>Dokumenty w WPF
@@ -142,7 +142,7 @@ ms.locfileid: "59313960"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Tekst](optimizing-performance-text.md)
-- [Przegląd Dokument przepływu](flow-document-overview.md)
-- [Przegląd Drukowanie](printing-overview.md)
+- [Text](optimizing-performance-text.md)
+- [Przegląd dokumentu przepływu](flow-document-overview.md)
+- [Przegląd drukowania](printing-overview.md)
 - [Serializacja dokumentu i przechowywanie](document-serialization-and-storage.md)

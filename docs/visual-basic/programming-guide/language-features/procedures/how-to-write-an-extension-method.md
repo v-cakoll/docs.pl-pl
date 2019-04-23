@@ -7,10 +7,10 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
 ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313765"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Instrukcje: Zapisywanie metody rozszerzenia (Visual Basic)
@@ -85,6 +85,6 @@ End Module
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Metody rozszerzeń](./extension-methods.md)
-- [Module — Instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Instrukcja Module](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

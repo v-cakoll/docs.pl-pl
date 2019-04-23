@@ -16,10 +16,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314688"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Przewodnik: Manipulowanie plikami i katalogami w Visual Basic
@@ -46,9 +46,9 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
     |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nazwa**|`filesListBox`|  
-    |**Przycisk**|**Nazwa**<br /><br /> **Tekst**|`browseButton`<br /><br /> **Przeglądaj**|  
-    |**Przycisk**|**Nazwa**<br /><br /> **Tekst**|`examineButton`<br /><br /> **Sprawdź**|  
-    |**CheckBox**|**Nazwa**<br /><br /> **Tekst**|`saveCheckBox`<br /><br /> **Zapisz wyniki**|  
+    |**Przycisk**|**Nazwa**<br /><br /> **Text**|`browseButton`<br /><br /> **Przeglądaj**|  
+    |**Przycisk**|**Nazwa**<br /><br /> **Text**|`examineButton`<br /><br /> **Sprawdź**|  
+    |**CheckBox**|**Nazwa**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Zapisz wyniki**|  
     |**FolderBrowserDialog**|**Nazwa**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Wybierz folder i wyświetlać listę plików w folderze  

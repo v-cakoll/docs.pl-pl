@@ -16,10 +16,10 @@ helpviewer_keywords:
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
 ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318419"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Instrukcje: zapisywanie plików za pomocą kontrolki RichTextBox formularzy systemu Windows
@@ -92,4 +92,4 @@ Formularze Windows <xref:System.Windows.Forms.RichTextBox> kontroli można zapis
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox, kontrolka](richtextbox-control-windows-forms.md)
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

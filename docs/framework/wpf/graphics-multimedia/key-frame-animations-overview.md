@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316742"
 ---
 # <a name="key-frame-animations-overview"></a>Przegląd Animacja kluczowych klatek
@@ -290,7 +290,7 @@ Kluczowych krzywej składanej kontrolką punkty (0,25, 0,5) i (0,75, 1.0)
 - <xref:System.Windows.Media.Animation.Timeline>
 - [Przykład animacji klucza z krzywymi składanymi](https://go.microsoft.com/fwlink/?LinkID=160011)
 - [Przykład animacji klatki kluczowej](https://go.microsoft.com/fwlink/?LinkID=160012)
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Scenorysy](storyboards-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Scenorysy — przegląd](storyboards-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)
-- [Przegląd Zachowania chronometrażu](timing-behaviors-overview.md)
+- [Zachowania chronometrażu — przegląd](timing-behaviors-overview.md)

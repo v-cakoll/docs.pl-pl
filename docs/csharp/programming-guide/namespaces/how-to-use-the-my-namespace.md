@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316027"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>Instrukcje: Użyj mojej Namespace (C# Programming Guide)
@@ -42,5 +42,5 @@ ms.locfileid: "59316027"
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
-- [Namespaces](../../../csharp/programming-guide/namespaces/index.md)
+- [Przestrzenie nazw](../../../csharp/programming-guide/namespaces/index.md)
 - [Używanie przestrzeni nazw](../../../csharp/programming-guide/namespaces/using-namespaces.md)

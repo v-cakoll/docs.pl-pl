@@ -3,10 +3,10 @@ title: Przykład technologii serializacji podstawowej
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315013"
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii serializacji podstawowej
@@ -72,7 +72,7 @@ ms.locfileid: "59315013"
   
 -   We/Wy strumienia  
   
-    -   <xref:System.IO.Stream> Używany do serializacji i deserializacji. Typ określonego strumienia używane w tym przykładzie jest <xref:System.IO.FileStream> typu. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.  
+    -   <xref:System.IO.Stream>Służy do serializacji i deserializacji. Typ określonego strumienia używane w tym przykładzie jest <xref:System.IO.FileStream> typu. Jednak można użyć serializacji z dowolnego typu opracowane na podstawie <xref:System.IO.Stream>.  
   
     -   <xref:System.IO.File> Użyty do utworzenia <xref:System.IO.FileStream> obiektów do odczytywania i tworzenia plików na dysku.  
   

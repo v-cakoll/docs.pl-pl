@@ -7,10 +7,10 @@ helpviewer_keywords:
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
 ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313271"
 ---
 # <a name="how-to-create-windows-services"></a>Instrukcje: Tworzenie usług systemu Windows
@@ -72,7 +72,7 @@ Podczas tworzenia usługi można użyć szablonu projektu programu Visual Studio
 - [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Instrukcje: Programowane pisanie usług](../../../docs/framework/windows-services/how-to-write-services-programmatically.md)
 - [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Instrukcje: Rejestrowanie informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Instrukcje: Dziennik informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
 - [Instrukcje: Uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Instrukcje: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
 - [Instrukcje: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)

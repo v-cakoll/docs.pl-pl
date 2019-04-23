@@ -13,10 +13,10 @@ helpviewer_keywords:
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
 ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317795"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Instrukcje: określanie alternatywnej nazwy elementu dla strumienia XML
@@ -98,5 +98,5 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Instrukcje: serializowanie obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Instrukcje: deserializowanie obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317262"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Instrukcje: dokowanie kontrolek w Formularzach systemu Windows
@@ -38,12 +38,12 @@ Można dokowanie formantów do krawędzi formularza lub je wypełnić kontener f
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty formularzy systemu Windows](index.md)
-- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
-- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
-- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)
-- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [AutoSize — Przegląd właściwości](autosize-property-overview.md)
-- [Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows](how-to-anchor-controls-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms](index.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)
+- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie FlowLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [AutoSize, właściwość — omówienie](autosize-property-overview.md)
+- [Instrukcje: Zakotwiczenia formantów na formularzach Windows Forms](how-to-anchor-controls-on-windows-forms.md)

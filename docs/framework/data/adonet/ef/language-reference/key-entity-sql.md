@@ -3,10 +3,10 @@ title: KLUCZ (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
 ms.openlocfilehash: 9cd3276583741f2b0261cb8a0e55f4185d20100e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319342"
 ---
 # <a name="key-entity-sql"></a>KLUCZ (jednostka SQL)
@@ -39,7 +39,7 @@ from LOB.Orders as o
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
 - [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
 - [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)

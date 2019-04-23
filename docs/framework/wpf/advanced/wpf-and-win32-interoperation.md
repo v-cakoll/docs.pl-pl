@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314415"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF i Win32 — Współdziałanie
@@ -29,7 +29,7 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>Projekty współdziałanie WPF  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sczy kodu zarządzanego, ale większość istniejące [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programy są zapisywane niezarządzanych [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].enNie można wywołać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] z prawdziwej niezarządzanych program.nJednak przy użyciu `/clr` z opcją [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] kompilatora, można utworzyć mieszane zarządzanych niezarządzanych program której można bezproblemowo łączyć zarządzanych i niezarządzanych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wywołania.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] czy kodu zarządzanego, ale większość istniejące [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] programy są zapisywane niezarządzanych [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].  Nie można wywołać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] z prawdziwej niezarządzanych program. Jednak przy użyciu `/clr` z opcją [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] kompilatora, można utworzyć mieszane zarządzanych niezarządzanych program której można bezproblemowo łączyć zarządzanych i niezarządzanych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] wywołania.  
   
  Jeden poziom projektu kompilacji jest, że nie można skompilować [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pliki do [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] projektu.  Istnieje kilka technik dzielenia projektu w celu kompensacji to.  
   
@@ -159,5 +159,5 @@ Ten temat zawiera omówienie sposobu współdziałania [!INCLUDE[TLA2#tla_wincli
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [Przewodnik: hostowanie kontrolki Win32 w WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [Przewodnik: hostowanie zawartości WPF w Win32](walkthrough-hosting-wpf-content-in-win32.md)
+- [Przewodnik: Hosting kontrolki Win32 w WPF](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [Przewodnik: Hosting zawartości WPF w Win32](walkthrough-hosting-wpf-content-in-win32.md)

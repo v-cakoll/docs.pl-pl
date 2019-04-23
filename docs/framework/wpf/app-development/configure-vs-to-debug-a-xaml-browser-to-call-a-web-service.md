@@ -9,10 +9,10 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
 ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314376"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>Instrukcje: Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej
@@ -31,7 +31,7 @@ ms.locfileid: "59314376"
 
 4. W **opcje uruchamiania** sekcji, wprowadź następujące informacje w **argumenty wiersza polecenia** pola tekstowego:
 
-     `-debug`  *nazwa_pliku*
+     `-debug`  *Nazwa pliku*
 
      *Filename* wartość **-debug** parametru jest nazwą pliku XBAP; na przykład:
 
@@ -46,7 +46,7 @@ ms.locfileid: "59314376"
 
 3. W **opcje uruchamiania** sekcji, Dodaj następujący parametr wiersza polecenia, aby **argumenty wiersza polecenia** pola tekstowego:
 
-     `-debugSecurityZoneURL`  *Adres URL*
+     `-debugSecurityZoneURL`  *ADRES URL*
 
      *Adresu URL* wartość **- debugSecurityZoneURL** parametr [!INCLUDE[TLA#tla_url](../../../../includes/tlasharptla-url-md.md)] lokalizacji, z którym chcesz przeprowadzić symulację jako witryna pochodzenia aplikacji.
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
 ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318809"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Instrukcje: Wybieranie w formularzach systemu Windows drukarek podłączonych do komputera użytkownika
@@ -108,4 +108,4 @@ Często chcą wybierz drukarek innych niż drukarki domyślnej wydrukowany do u�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Obsługa drukowania w formularzach systemu Windows](windows-forms-print-support.md)
+- [Obsługa drukowania w formularzach Windows Forms](windows-forms-print-support.md)

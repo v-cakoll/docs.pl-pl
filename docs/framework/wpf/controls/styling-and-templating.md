@@ -16,10 +16,10 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132301"
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
@@ -198,6 +198,6 @@ ms.locfileid: "59132301"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pakuj URI w WPF](../app-development/pack-uris-in-wpf.md)
-- [Instrukcje: znajdowanie elementów generowanych przez element ControlTemplate](how-to-find-controltemplate-generated-elements.md)
+- [Pakowanie URI w WPF](../app-development/pack-uris-in-wpf.md)
+- [Instrukcje: Find ControlTemplate-Generated Elements](how-to-find-controltemplate-generated-elements.md)
 - [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../data/how-to-find-datatemplate-generated-elements.md)

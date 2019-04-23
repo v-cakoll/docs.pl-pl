@@ -3,10 +3,10 @@ title: funkcja zadeklarowana modelu
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
 ms.openlocfilehash: c9abf9a3340cd22ab5d654588b1d22e10b5c05fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130549"
 ---
 # <a name="model-declared-function"></a>funkcja zadeklarowana modelu
@@ -31,4 +31,4 @@ A *funkcja zadeklarowana modelu* jest funkcją, która jest zadeklarowana w mode
 ## <a name="see-also"></a>Zobacz także
 
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

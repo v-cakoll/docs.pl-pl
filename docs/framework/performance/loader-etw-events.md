@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141534"
 ---
 # <a name="loader-etw-events"></a>Zdarzenia ETW modułu ładującego
@@ -37,7 +37,7 @@ ms.locfileid: "59141534"
   
 |Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` and `AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` i `AppDomainUnLoad_V1`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Komunikat informacyjny (4)|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59141534"
   
 |Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` and `AssemblyUnload`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` i `AssemblyUnload`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Komunikat informacyjny (4)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59141534"
   
 |Słowo kluczowe dla podnoszonego zdarzenia|Zdarzenie|Poziom|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` and `ModuleUnload_V2`|Komunikat informacyjny (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` i `ModuleUnload_V2`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Komunikat informacyjny (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Komunikat informacyjny (4)|  
 ||||  
@@ -214,4 +214,4 @@ ms.locfileid: "59141534"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

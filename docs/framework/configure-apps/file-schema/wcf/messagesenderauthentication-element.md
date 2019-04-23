@@ -1,12 +1,12 @@
 ---
-title: <messageSenderAuthentication> — element
+title: <messageSenderAuthentication>, element
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
 ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135061"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > element
@@ -74,7 +74,7 @@ Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Określa poświadczenie używane do uwierzytelniania klienta do usługi elementu równorzędnego.|  
+|[\<elementu równorzędnego >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|Określa poświadczenie używane do uwierzytelniania klienta do usługi elementu równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element musi być skonfigurowany, jeśli wybrano opcję uwierzytelniania wiadomości. Dla kanałów danych wyjściowych, każdy komunikat jest podpisany przy użyciu certyfikatu dostarczonego przez [ \<certyfikatu >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md). Wszystkie komunikaty zanim dostarczane do aplikacji, są porównywane z poświadczeniami komunikatu przy użyciu modułu sprawdzania poprawności określonego przez `customCertificateValidatorType` atrybutu tego elementu. Moduł weryfikacji można zaakceptować lub odrzucić poświadczeń.  

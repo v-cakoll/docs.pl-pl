@@ -8,10 +8,10 @@ ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141261"
 ---
 # <a name="in-process-side-by-side-execution"></a>Wykonywanie równoczesne i wewnątrzprocesowe
@@ -40,9 +40,9 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], mo
   
     |Wersja programu .NET Framework|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|Nie dotyczy|Nie|Tak|  
-    |2.0 - 3.5|Nie|Nie dotyczy|Yes|  
-    |4|Yes|Yes|Nie dotyczy|  
+    |1.1|Nie dotyczy|Nie|Yes|  
+    |2.0 - 3.5|Nie|Nie dotyczy|Tak|  
+    |4|Yes|Tak|Nie dotyczy|  
   
 > [!NOTE]
 >  Wersje programu .NET framework 3.0 i 3.5 są tworzone przyrostowo w wersji 2.0 i nie trzeba uruchamiać równolegle. Te założenia mają taką samą wersję.  

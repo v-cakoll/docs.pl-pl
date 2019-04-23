@@ -3,10 +3,10 @@ title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137257"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
@@ -56,7 +56,7 @@ Aby pisać bezpieczny kod, ADO.NET, musisz znać mechanizmy zabezpieczeń dostę
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Podstawowe założenia obsługi wyjątków](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|W tym artykule opisano podstawowe rodzaje try/catch/finally strukturalna Obsługa wyjątków.|  
-|[Najlepsze praktyki dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
+|[Najlepsze rozwiązania dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Ochrona programu Microsoft Access i źródła danych programu Excel  
  Program Microsoft Access i Microsoft Excel może działać jako magazyn danych na potrzeby aplikacji ADO.NET, gdy wymagania dotyczące zabezpieczeń są minimalne lub nie istnieje. Ich funkcje bezpieczeństwa, zostaną zastosowane na przed intruzami, ale nie należy polegać na więcej niż zniechęcić meddling przez użytkowników w organizacji uninformed. Pliki danych fizycznych dostępu i programu Excel istnieje w systemie plików, a musi być dostępna dla wszystkich użytkowników. To sprawia, że ich narażone na ataki, mogącymi skutkować kradzieżą lub utraty danych, ponieważ pliki można łatwo skopiować lub zmodyfikować. Gdy wymagana jest niezawodne zabezpieczenia, użyj programu SQL Server lub innej bazy danych, które są oparte na serwerze plików danych fizycznych których nie można odczytać z systemu plików.  

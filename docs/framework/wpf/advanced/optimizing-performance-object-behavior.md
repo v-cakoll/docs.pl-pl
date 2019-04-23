@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
 ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137439"
 ---
 # <a name="optimizing-performance-object-behavior"></a>Optymalizacja wydajności: Zachowanie obiektu
@@ -65,7 +65,7 @@ Opis zachowania wewnętrzne [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Zamrażanie <xref:System.Windows.Freezable> może zwiększyć jej wydajność, ponieważ nie jest już musi używać zasobów przy zachowaniu powiadomienia o zmianach. W poniższej tabeli przedstawiono rozmiar prostego <xref:System.Windows.Media.SolidColorBrush> podczas jego <xref:System.Windows.Freezable.IsFrozen%2A> właściwość jest ustawiona na `true`, w porównaniu do kiedy nie jest. Założono, że stosowanie jednej pędzla do <xref:System.Windows.Shapes.Shape.Fill%2A> właściwość dziesięciu <xref:System.Windows.Shapes.Rectangle> obiektów.  
   
-|**Stan**|**Rozmiar**|  
+|**State**|**Rozmiar**|  
 |---------------|--------------|  
 |Zamrożone <xref:System.Windows.Media.SolidColorBrush>|212 bajtów|  
 |Zamrożone inne niż <xref:System.Windows.Media.SolidColorBrush>|972 bajtów|  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
 ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137764"
 ---
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>Instrukcje: wiązanie kontrolek formularzy systemu Windows z wartościami bazy danych DBNull
@@ -36,6 +36,6 @@ Po powiązaniu kontrolek formularzy Windows Forms do źródła danych i źródł
   
 ## <a name="see-also"></a>Zobacz także
 
-- [BindingSource — Składnik](bindingsource-component.md)
-- [Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [BindingSource, składnik](bindingsource-component.md)
+- [Instrukcje: Obsługa błędów i wyjątków występujących za powodu powiązania danych](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)

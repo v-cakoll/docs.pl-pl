@@ -5,10 +5,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130263"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView — Architektura formantu (Formularze systemu Windows)
@@ -139,5 +139,5 @@ ms.locfileid: "59130263"
 ## <a name="see-also"></a>Zobacz także
 
 - [DataGridView, kontrolka — omówienie](datagridview-control-overview-windows-forms.md)
-- [Dostosowywanie formantu DataGridView formularzy systemu Windows](customizing-the-windows-forms-datagridview-control.md)
-- [Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)
+- [Używanie wiersza dla nowych rekordów w kontrolce DataGridView formularzy Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

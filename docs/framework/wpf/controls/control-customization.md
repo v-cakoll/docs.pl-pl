@@ -8,21 +8,21 @@ helpviewer_keywords:
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
 ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135385"
 ---
 # <a name="control-customization"></a>Niestandardowe dostosowywanie formantu
 Ta kategoria obejmuje różnych klas bazowych, interfejsów i inne elementy oraz koncepcji używanych podczas tworzenia w pełni funkcjonalne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kontroli.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd Autorstwo formantów](control-authoring-overview.md)  
+ [Tworzenie kontrolek — omówienie](control-authoring-overview.md)  
  [Wytyczne do projektowania kontrolek w określonych stylach](guidelines-for-designing-stylable-controls.md)  
  [Moduły definiowania układu](adorners.md)  
- [Style i szablony formantu](control-styles-and-templates.md)  
- [Automatyzacja interfejsu użytkownika formantu niestandardowego WPF](ui-automation-of-a-wpf-custom-control.md)  
+ [Style i szablony kontrolek](control-styles-and-templates.md)  
+ [Automatyzacja interfejsu użytkownika kontrolki niestandardowej WPF](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

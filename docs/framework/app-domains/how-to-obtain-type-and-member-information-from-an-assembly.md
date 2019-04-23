@@ -12,10 +12,10 @@ ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f9d01715a9635b276ca87d94082bb4d3820084e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138882"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Instrukcje: Uzyskiwanie informacji dotyczących typów i składowych z zestawu
@@ -30,6 +30,6 @@ ms.locfileid: "59138882"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie za pomocą domen aplikacji](./application-domains.md#programming-with-application-domains)
+- [Programowanie z domenami aplikacji](./application-domains.md#programming-with-application-domains)
 - [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)
+- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

@@ -3,10 +3,10 @@ title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 3f4550344ee09620ae17de5bfcba36b3075a0f47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135671"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
@@ -17,7 +17,7 @@ ms.locfileid: "59135671"
 |Typ danych|Opis|  
 |---------------|-----------------|  
 |**Obiekt blob**|Oracle **BLOB** typu danych, który zawiera dane binarne o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **tablicy** typu **bajt**.|  
-|**CLOB**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych, która zawiera znak danych na podstawie domyślny znak. To jest mapowany **ciąg**.|  
+|**Clob**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych, która zawiera znak danych na podstawie domyślny znak. To jest mapowany **ciąg**.|  
 |**NClob**|Oracle **NCLOB** typu danych, który zawiera znak danych oparte na national zestawu znaków na serwerze o maksymalnym rozmiarze 4 gigabajty. To jest mapowany **ciąg**.|  
   
  **OracleLob** różni się od <xref:System.Data.OracleClient.OracleBFile> , dane są przechowywane na serwerze, a nie w pliku fizycznego w systemie operacyjnym. Może to być także obiekt odczytu i zapisu, w odróżnieniu od **OracleBFile**, który jest zawsze tylko do odczytu.  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
 ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133552"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Instrukcje: Stosowanie stylu FocusVisualStyle do kontrolki
@@ -30,4 +30,4 @@ W tym przykładzie pokazano, jak utworzyć styl wizualny fokusu w zasobach i zas
 
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Style dla Fokusu w formantach i FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)
+- [Style dla fokusu w kontrolkach i styl FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

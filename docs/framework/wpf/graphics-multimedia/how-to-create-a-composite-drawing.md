@@ -7,10 +7,10 @@ helpviewer_keywords:
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
 ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132473"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>Instrukcje: Tworzenie złożonego rysunku
@@ -49,4 +49,4 @@ Złożonego rysowania, który ma wiele DrawingGroup — obiekty
 - <xref:System.Windows.Media.DrawingGroup.Opacity%2A>
 - <xref:System.Windows.Media.DrawingGroup.ClipGeometry%2A>
 - <xref:System.Windows.Media.DrawingGroup.GuidelineSet%2A>
-- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
+- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)

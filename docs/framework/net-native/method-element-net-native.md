@@ -5,10 +5,10 @@ ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131719"
 ---
 # <a name="method-element-net-native"></a>\<Metoda > (architektura .NET Native)
@@ -57,7 +57,7 @@ Ma zastosowanie zasad odbicia środowiska uruchomieniowego do konstruktora lub m
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Parametr >](../../../docs/framework/net-native/parameter-element-net-native.md)|Stosuje zasady do typu argumentu przekazanego do metody.|  
+|[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|Stosuje zasady do typu argumentu przekazanego do metody.|  
 |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Stosuje zasady do typu parametru typu ogólnego lub metody.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Stosuje zasady do typu, jeśli te zasady zostały doliczone do metody reprezentowanej przez zawierający `<Method>` elementu.|  
 |[\<TypeParameter>](../../../docs/framework/net-native/typeparameter-element-net-native.md)|Stosuje zasady na typ reprezentowany przez <xref:System.Type> argument przekazywany do metody.|  
@@ -66,7 +66,7 @@ Ma zastosowanie zasad odbicia środowiska uruchomieniowego do konstruktora lub m
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
   
 ## <a name="remarks"></a>Uwagi  

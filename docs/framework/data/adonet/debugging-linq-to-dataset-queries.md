@@ -3,10 +3,10 @@ title: Debugowanie zapytań LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133337"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debugowanie zapytań LINQ to DataSet
@@ -29,5 +29,5 @@ Program Visual Studio obsługuje debugowanie [!INCLUDE[linq_dataset](../../../..
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie zarządzanego kodu](/visualstudio/debugger/debugging-managed-code)
+- [Debugowanie kodu zarządzanego](/visualstudio/debugger/debugging-managed-code)
 - [Przewodnik programowania](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

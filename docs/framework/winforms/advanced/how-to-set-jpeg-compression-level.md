@@ -9,10 +9,10 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130679"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>Instrukcje: Ustawianie poziomu dekompresji JPEG

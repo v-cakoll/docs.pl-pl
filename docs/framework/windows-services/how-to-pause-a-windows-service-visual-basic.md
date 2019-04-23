@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: eddb9409-942b-46b6-a2ce-fbd4c65f2790
 author: ghogen
 ms.openlocfilehash: f0b0ad1b18a57ca9a2c069ab172966730b62e84e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136190"
 ---
 # <a name="how-to-pause-a-windows-service-visual-basic"></a>Instrukcje: Wstrzymywanie usługi systemu Windows (Visual Basic)
@@ -52,4 +52,4 @@ W tym przykładzie użyto <xref:System.ServiceProcess.ServiceController> składn
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - <xref:System.ServiceProcess.ServiceController.WaitForStatus%2A>
-- [Instrukcje: Kontynuowanie usługi systemu Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)
+- [Instrukcje: Kontynuowanie usług Windows (Visual Basic)](../../../docs/framework/windows-services/how-to-continue-a-windows-service-visual-basic.md)

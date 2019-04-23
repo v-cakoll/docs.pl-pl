@@ -11,10 +11,10 @@ ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131290"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
@@ -49,4 +49,4 @@ ms.locfileid: "59131290"
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Organizowanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md)
+- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134675"
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
@@ -50,7 +50,7 @@ ms.locfileid: "59134675"
 |[Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Omówienie i porad ułatwiających korzystanie z klienta interfejsu API.|Deweloperzy aplikacji klienckich.|  
 |[Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Informacje o implementacji wzorców kontrolek przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
 |[Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Informacje o implementacji wzorca kontrolki tekstu przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
-|[Typy formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Informacje o wzorcach właściwości oraz kontrolki, obsługiwane przez różne typy formantów.|Wszystkie.|  
+|[Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Informacje o wzorcach właściwości oraz kontrolki, obsługiwane przez różne typy formantów.|Wszystkie.|  
   
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przestrzeni nazw, zawierające je i odbiorców, którzy są one używane przez biblioteki dll.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59134675"
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [Wzorce formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)
 - [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
 - [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

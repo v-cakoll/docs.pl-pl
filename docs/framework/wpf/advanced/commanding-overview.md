@@ -14,10 +14,10 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 4071f7f08c2b25a2ec551832f57a2b9a7facc91d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139038"
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
@@ -189,8 +189,8 @@ ms.locfileid: "59139038"
 - <xref:System.Windows.Input.CommandBinding>
 - <xref:System.Windows.Input.InputBinding>
 - <xref:System.Windows.Input.CommandManager>
-- [Przegląd Dane wejściowe](input-overview.md)
-- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Przegląd danych wejściowych](input-overview.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)
 - [Implementowanie elementu ICommandSource](how-to-implement-icommandsource.md)
 - [Instrukcje: Dodawanie polecenia do element MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))
 - [Tworzenie przykładowej routedcommand — niestandardowe](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)

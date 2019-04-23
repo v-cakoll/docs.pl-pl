@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139532"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
@@ -52,7 +52,7 @@ ms.locfileid: "59139532"
 |<xref:System.Windows.Forms.Control>|— Wprowadzenie <xref:System.Windows.Forms.Control.Parent%2A> właściwości.<br />-Ustawianie `Region` właściwości.<br />-Wywołanie <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> i <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, lub <xref:System.Windows.Forms.Control.SetTopLevel%2A> metody.<br />-Wywołanie <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> metodę, jeśli zwrócony kontrolki nie jest elementem podrzędnym, wywołujący formantu.<br />-Modyfikowanie fokus kontrolki wewnątrz kontrolki kontenera.|  
 |<xref:System.Windows.Forms.Cursor>|-Ustawianie <xref:System.Windows.Forms.Cursor.Clip%2A> właściwości.<br />-Wywołanie <xref:System.Windows.Forms.Control.Hide%2A> metody.|  
 |<xref:System.Windows.Forms.DataGrid>|-Wywołanie <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> metody.|  
-|<xref:System.Windows.Forms.Form>|— Wprowadzenie <xref:System.Windows.Forms.Form.ActiveForm%2A> lub <xref:System.Windows.Forms.Form.MdiParent%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, lub <xref:System.Windows.Forms.Form.TopMost%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.Opacity%2A> właściwość spadnie poniżej 50%.<br />-Ustawianie <xref:System.Windows.Forms.Form.WindowState%2A> właściwość <xref:System.Windows.Forms.FormWindowState.Minimized> programowo.<br />-Wywołanie <xref:System.Windows.Forms.Form.Activate%2A> metody.<br />— Za pomocą <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, i <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> wartości wyliczenia.|  
+|<xref:System.Windows.Forms.Form>|— Wprowadzenie <xref:System.Windows.Forms.Form.ActiveForm%2A> lub <xref:System.Windows.Forms.Form.MdiParent%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, lub <xref:System.Windows.Forms.Form.TopMost%2A> właściwości.<br />-Ustawianie <xref:System.Windows.Forms.Form.Opacity%2A> właściwość spadnie poniżej 50%.<br />-Ustawianie <xref:System.Windows.Forms.Form.WindowState%2A> właściwość <xref:System.Windows.Forms.FormWindowState.Minimized> programowo.<br />-Wywołanie <xref:System.Windows.Forms.Form.Activate%2A> metody.<br />— Za pomocą <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, i <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> wartości wyliczenia.|  
 |<xref:System.Windows.Forms.NotifyIcon>|— Za pomocą <xref:System.Windows.Forms.NotifyIcon> składnik jest całkowicie ograniczony.|  
   
  <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Wartość ogranicza akcji wymienionych w poniższej tabeli, dodatkowo do ograniczeń nałożonych przez <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> wartość.  
@@ -90,8 +90,8 @@ ms.locfileid: "59139532"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows](more-secure-file-and-data-access-in-windows-forms.md)
-- [Bezpieczniejsze drukowanie w formularzach systemu Windows](more-secure-printing-in-windows-forms.md)
-- [Przegląd zabezpieczeń w formularzach systemu Windows](security-in-windows-forms-overview.md)
-- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
+- [Bezpieczniejszy dostęp do plików i danych w formularzach Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
+- [Bezpieczniejsze drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)
+- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
 - [Zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

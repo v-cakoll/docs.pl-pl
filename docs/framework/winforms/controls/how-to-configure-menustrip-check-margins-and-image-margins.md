@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
 ms.openlocfilehash: 09de1a9ca4be1c4ebfb0e13e800c09753bd04f11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134995"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Instrukcje: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu
@@ -37,5 +37,5 @@ Można dostosować <xref:System.Windows.Forms.MenuStrip> , ustawiając <xref:Sys
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
-- [Instrukcje: włączanie marginesów zaznaczania i marginesów obrazów w kontrolkach ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)
+- [Instrukcje: Włączanie marginesów zaznaczania i marginesów obrazów w formantach ContextMenuStrip](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

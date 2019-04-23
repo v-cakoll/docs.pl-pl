@@ -10,24 +10,24 @@ helpviewer_keywords:
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140221"
 ---
 # <a name="geometries"></a>Geometria
 <xref:System.Windows.Media.Geometry> jest klasą wszechstronna używany do renderowania [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] grafiki, obiekty testowania trafienia i zdefiniuj regionów wycinka  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Składni znacznikowania ścieżki](path-markup-syntax.md)  
- [Przegląd Geometria](geometry-overview.md)  
- [— Tematy porad](geometries-how-to-topics.md)  
+ [Składnia znacznikowania ścieżki](path-markup-syntax.md)  
+ [Geometria — przegląd](geometry-overview.md)  
+ [Tematy z instrukcjami](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Przegląd Kształty i podstawowe rysowanie w WPF](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Grafika i multimedia](index.md)

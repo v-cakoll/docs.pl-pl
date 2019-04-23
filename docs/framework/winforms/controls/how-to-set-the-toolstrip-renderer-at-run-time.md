@@ -12,10 +12,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 ms.assetid: 525e2347-0804-49aa-b9a3-9b2cabbf1c35
 ms.openlocfilehash: f0e8668ef46de8cc073663786bcd43b740a1b2f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138589"
 ---
 # <a name="how-to-set-the-toolstrip-renderer-at-run-time"></a>Instrukcje: ustawienie modułu renderowania ToolStrip w czasie wykonywania
@@ -57,4 +57,4 @@ Można dostosować wygląd Twojego <xref:System.Windows.Forms.ToolStrip> kontrol
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)

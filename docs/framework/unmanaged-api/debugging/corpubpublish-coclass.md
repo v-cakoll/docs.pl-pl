@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05d9eef36885aee05d88f7da994c8b168c3221b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130536"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish — Klasa coclass
@@ -42,11 +42,11 @@ coclass CorpubPublish {
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|[ICorPublish — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Udostępnia metody do publikowania informacji o procesach i domen aplikacji w tych procesów.|  
-|[ICorPublishAppDomain — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Reprezentuje i zawiera informacje dotyczące domeny aplikacji w ramach procesu.|  
-|[ICorPublishAppDomainEnum — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Udostępnia metody, które przemierzają kolekcję domen aplikacji, które obecnie istnieją w ramach procesu.|  
-|[ICorPublishProcess — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Reprezentuje proces, który jest uruchomiony na komputerze.|  
-|[ICorPublishProcessEnum — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Udostępnia metody, które przemierzają kolekcję procesów, które są uruchomione na komputerze.|  
+|[ICorPublish, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)|Udostępnia metody do publikowania informacji o procesach i domen aplikacji w tych procesów.|  
+|[ICorPublishAppDomain, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)|Reprezentuje i zawiera informacje dotyczące domeny aplikacji w ramach procesu.|  
+|[ICorPublishAppDomainEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)|Udostępnia metody, które przemierzają kolekcję domen aplikacji, które obecnie istnieją w ramach procesu.|  
+|[ICorPublishProcess, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)|Reprezentuje proces, który jest uruchomiony na komputerze.|  
+|[ICorPublishProcessEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)|Udostępnia metody, które przemierzają kolekcję procesów, które są uruchomione na komputerze.|  
   
 ## <a name="remarks"></a>Uwagi  
  Typowy scenariusz publikowania obejmuje deweloperem i potrzebujesz do debugowania kodu zarządzanego, który jest uruchomiony na komputerze w domenie aplikacji. Środowisko hostingu może działać więcej niż jedną domenę aplikacji w ramach procesu. Deweloper chce użyć graficznego interfejsu użytkownika lub inne metody, aby wyświetlić listę wszystkich procesów, które są uruchomione na komputerze, a następnie wybierz określony proces. Listę powinien zawierać wszystkie domeny aplikacji wewnątrz procesów uruchomionych w kodzie zarządzanym. Deweloper można zidentyfikować określonej domenie aplikacji i dołączyć debuger do tej domeny.  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132063"
 ---
 # <a name="distributed-application-security"></a>Rozproszone zabezpieczenia aplikacji
@@ -97,6 +97,6 @@ Zabezpieczenia usług Windows Communication Foundation (WCF) jest dzielony na tr
 ## <a name="see-also"></a>Zobacz także
 
 - [Przegląd tworzenia punktów końcowych](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Model zabezpieczeń dla systemu Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141560"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optymalizacja wydajności aplikacji WPF
@@ -37,7 +37,7 @@ Ta sekcja jest przeznaczona jako odniesienie do [!INCLUDE[TLA#tla_winclient](../
   
  [Powiązanie danych](optimizing-performance-data-binding.md)  
   
- [Formanty](optimizing-performance-controls.md)  
+ [Kontrolki](optimizing-performance-controls.md)  
   
  [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)  
   
@@ -47,19 +47,19 @@ Ta sekcja jest przeznaczona jako odniesienie do [!INCLUDE[TLA#tla_winclient](../
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>
-- [Poziomy zmiany grafiki](graphics-rendering-tiers.md)
-- [Przegląd Renderowanie grafiki WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Warstwy renderowania grafiki](graphics-rendering-tiers.md)
+- [Renderowanie grafiki WPF — przegląd](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Układ](layout.md)
 - [Drzewa w WPF](trees-in-wpf.md)
-- [Przegląd Rysowanie obiektów](../graphics-multimedia/drawing-objects-overview.md)
+- [Rysowanie obiektów — przegląd](../graphics-multimedia/drawing-objects-overview.md)
 - [Użycie obiektów DrawingVisual](../graphics-multimedia/using-drawingvisual-objects.md)
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
-- [Przegląd Obiekty Freezable](freezable-objects-overview.md)
+- [Przegląd obiektów Freezable](freezable-objects-overview.md)
 - [Zasoby XAML](xaml-resources.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
 - [Rysowanie formatowanego tekstu](drawing-formatted-text.md)
 - [Typografia w WPF](typography-in-wpf.md)
-- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
-- [Przegląd Nawigacja](../app-development/navigation-overview.md)
-- [Porady i triki animacyjne](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Nawigacja — omówienie](../app-development/navigation-overview.md)
+- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)
+- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

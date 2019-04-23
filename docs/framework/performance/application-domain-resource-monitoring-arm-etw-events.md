@@ -8,10 +8,10 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133825"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>Zdarzenia ETW monitorowania zasobów domen aplikacji (ARM)
@@ -158,4 +158,4 @@ ms.locfileid: "59133825"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia ETW CLR](../../../docs/framework/performance/clr-etw-events.md)
+- [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

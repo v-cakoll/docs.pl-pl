@@ -8,10 +8,10 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132213"
 ---
 # <a name="wpf-brushes-overview"></a>Przegląd Pędzle WPF
@@ -164,11 +164,11 @@ Prostokąt malowane przy użyciu VisualBrush
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
-- [Przegląd Malowanie jednolitymi kolorami i gradientami](painting-with-solid-colors-and-gradients-overview.md)
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
-- [Przegląd Obiekty Freezable](../advanced/freezable-objects-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
 - [Przykład pędzle](https://go.microsoft.com/fwlink/?LinkID=159973)
-- [ImageBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [— Tematy porad](brushes-how-to-topics.md)
+- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Tematy z instrukcjami](brushes-how-to-topics.md)
 - [Inne zalecenia dotyczące wydajności](../advanced/optimizing-performance-other-recommendations.md)

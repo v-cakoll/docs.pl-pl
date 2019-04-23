@@ -14,10 +14,10 @@ helpviewer_keywords:
 - requesting data from Internet, application protocols
 ms.assetid: 3aab4bcc-8397-4e1a-a1b6-bbd837a21430
 ms.openlocfilehash: ffb47c6384a5c26599a65c9837f3b9d1d9332e9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131485"
 ---
 # <a name="using-application-protocols"></a>Korzystanie z protokołów aplikacji
@@ -25,6 +25,6 @@ ms.locfileid: "59131485"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie dla sieci w .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

@@ -5,10 +5,10 @@ ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131173"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Standardowe typy danych (niezarządzana dokumentacja interfejsu API)
@@ -41,4 +41,4 @@ W tym temacie przedstawiono typy proste dane używane przez niezarządzanych int
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Niezarządzany wykaz interfejsów API](../../../docs/framework/unmanaged-api/index.md)
+- [Niezarządzane interfejsy API — informacje](../../../docs/framework/unmanaged-api/index.md)

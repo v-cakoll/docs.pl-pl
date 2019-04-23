@@ -1,12 +1,12 @@
 ---
-title: <certificateReference> dla <identity>
+title: <certificateReference> Aby uzyskać <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138817"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > dla \<identity >
@@ -46,7 +46,7 @@ Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa ustawienia, które umożliwiają uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
+|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa ustawienia, które umożliwiają uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiana wiadomości z nim.|  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
 ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137751"
 ---
 # <a name="hosting-workflows"></a>Hostowanie przepływów pracy

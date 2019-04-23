@@ -5,10 +5,10 @@ ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0788c05edace2142d348c679c73aa1b4404ce75
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137855"
 ---
 # <a name="assembly-element-net-native"></a>\<Zestaw > (architektura .NET Native)
@@ -65,8 +65,8 @@ Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruch
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Ma zastosowanie zasad odbicia do wszystkich typów w podrzędnej przestrzeni nazw.|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Zastosowanie zasad odbicia do typu.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Ma zastosowanie zasad odbicia do wszystkich typów w podrzędnej przestrzeni nazw.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Zastosowanie zasad odbicia do typu.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -74,7 +74,7 @@ Dotyczy wszystkich typów w określonym zestawie zasad odbicia środowiska uruch
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji, typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) element może mieć zero, co najmniej jeden `<Assembly>` elementów.|  
-|[\<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć zero lub jeden `<Assembly>` elementu.|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw, który zawiera typy i składowe typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć zero lub jeden `<Assembly>` elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<Assembly>` Element definiuje zasad środowiska uruchomieniowego dla wszystkich typów w zestawie. Różni się od [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element, który określa bibliotekę, ale zależy od jego elementów podrzędnych do definiowania zasad odbicia środowiska uruchomieniowego. `<Assembly>` Element ma zastosowanie do wszystkich typów w zestawie, chyba że zostaną zastąpione przez element podrzędny.  

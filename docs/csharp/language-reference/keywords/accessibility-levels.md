@@ -7,10 +7,10 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130471"
 ---
 # <a name="accessibility-levels-c-reference"></a>Poziomy ułatwień dostępu (odwołanie w C#)
@@ -50,11 +50,11 @@ Użyj modyfikatory dostępu `public`, `protected`, `internal`, lub `private`, ab
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../../../csharp/language-reference/index.md)
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)
 - [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)
 - [Modyfikatory dostępu](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Domena ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-domain.md)
+- [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md)
 - [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../../csharp/language-reference/keywords/public.md)

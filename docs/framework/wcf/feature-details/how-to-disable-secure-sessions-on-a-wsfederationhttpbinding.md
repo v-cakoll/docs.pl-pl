@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 ms.openlocfilehash: 38863cbfe457afd923c3c8238d8c12b4d451c67f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59293961"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding
@@ -44,4 +44,4 @@ Niektóre usługi może wymagać poświadczeń federacyjnych, ale nie obsługuj�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

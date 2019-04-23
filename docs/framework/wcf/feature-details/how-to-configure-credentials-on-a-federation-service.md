@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295435"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: konfigurowanie poświadczeń usługi federacyjnej
@@ -76,8 +76,8 @@ W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa
 - [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Federacja i zaufanie](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)
 - [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md)
-- [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
-- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: Wyłączanie bezpiecznej sesji WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Tryby uwierzytelniania elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)

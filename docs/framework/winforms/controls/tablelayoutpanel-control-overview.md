@@ -12,10 +12,10 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], about TableLayoutPanel control
 ms.assetid: 337661c8-61cb-44ee-93e0-3662bddec327
 ms.openlocfilehash: 65daba0ce1a6f1c37fb257c1029396577821aad9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295370"
 ---
 # <a name="tablelayoutpanel-control-overview"></a>TableLayoutPanel — Informacje o formancie
@@ -33,18 +33,18 @@ ms.locfileid: "59295370"
   
  Można scalać komórek w <xref:System.Windows.Forms.TableLayoutPanel> kontroli przez ustawienie `ColumnSpan` lub `RowSpan` właściwości kontrolki podrzędnej.  
   
-1. [Instrukcje: wyrównywanie i rozciąganie kontrolki w kontrolce TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [Instrukcje: Wyrównaj i rozciągnij kontrolki w kontrolce TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [Instrukcje: obejmowanie rzędów i kolumn w kontrolce TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [Instrukcje: Obejmowanie rzędów i kolumn w formancie TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [Instrukcje: edytowanie rzędów i kolumn w kontrolce TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [Instrukcje: Edytowanie rzędów i kolumn w formancie TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutSettings>
-- [Instrukcje: projektowanie układu formularzy systemu Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych](how-to-create-a-resizable-windows-form-for-data-entry.md)
-- [Najlepsze praktyki dotyczące formantu TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
+- [Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
+- [Instrukcje: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](how-to-create-a-resizable-windows-form-for-data-entry.md)
+- [Najlepsze praktyki dotyczące kontrolki TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)

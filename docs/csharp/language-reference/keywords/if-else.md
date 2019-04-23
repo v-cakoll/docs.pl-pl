@@ -12,10 +12,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294422"
 ---
 # <a name="if-else-c-reference"></a>if-else (odwołanie w C#)
@@ -137,9 +137,9 @@ if (!(m >= n || m >= p))
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [?: Operator](../operators/conditional-operator.md)
-- [if-else — instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)
-- [— przełącznik](switch.md)
+- [?: operator](../operators/conditional-operator.md)
+- [if-else, instrukcja (C++)](/cpp/cpp/if-else-statement-cpp)
+- [switch](switch.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
 ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295617"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta
@@ -112,4 +112,4 @@ Możesz użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istni
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>
-- [WebBrowser — Formant](webbrowser-control-windows-forms.md)
+- [WebBrowser, kontrolka](webbrowser-control-windows-forms.md)

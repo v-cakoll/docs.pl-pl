@@ -3,10 +3,10 @@ title: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295604"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
@@ -90,4 +90,4 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)
+- [Omówienie struktur i koncepcji strumienia węzłów XAML](understanding-xaml-node-stream-structures-and-concepts.md)

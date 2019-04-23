@@ -16,10 +16,10 @@ helpviewer_keywords:
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
 ms.openlocfilehash: 62701edfdb3cf2729cb401ad12a12ee4f524287b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221303"
 ---
 # <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Instrukcje: formatowanie danych w kontrolce DataGridView formularzy systemu Windows
@@ -72,8 +72,8 @@ Poniższe procedury przedstawiają podstawowe formatowanie wartości komórki za
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
-- [Podstawowe formatowanie i style w formancie DataGridView formularzy systemu Windows](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Style komórki w formancie DataGridView formularzy systemu Windows](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Formatowanie danych w formancie DataGridView formularzy systemu Windows](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: dostosowywanie formatowania danych w kontrolce DataGridView formularzy systemu Windows](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Style komórki w kontrolce DataGridView formularzy Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Dostosowywanie formatowania danych w kontrolce DataGridView formularzy Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Formatowanie typów](../../../standard/base-types/formatting-types.md)

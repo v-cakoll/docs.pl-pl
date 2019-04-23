@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
 ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222071"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>Instrukcje: Powiązywanie właściwości dwóch kontrolek
@@ -30,4 +30,4 @@ W tym przykładzie pokazano, jak powiązać z innego przy użyciu właściwości
 ## <a name="see-also"></a>Zobacz także
 
 - [Określanie obiektu źródłowego powiązania](how-to-specify-the-binding-source.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

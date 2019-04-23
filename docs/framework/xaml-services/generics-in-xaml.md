@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
 ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221603"
 ---
 # <a name="generics-in-xaml"></a>Typy ogólne w XAML
@@ -44,6 +44,6 @@ ms.locfileid: "59221603"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [x:TypeArguments — dyrektywa](x-typearguments-directive.md)
-- [x:Class — dyrektywa](x-class-directive.md)
+- [x:TypeArguments, dyrektywa](x-typearguments-directive.md)
+- [x:Class, dyrektywa](x-class-directive.md)
 - [Typy wbudowane dla wspólnych elementów podstawowych języka XAML](built-in-types-for-common-xaml-language-primitives.md)

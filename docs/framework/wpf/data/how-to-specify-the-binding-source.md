@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
 ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222305"
 ---
 # <a name="how-to-specify-the-binding-source"></a>Instrukcje: Określanie obiektu źródłowego powiązania
@@ -47,7 +47,7 @@ W powiązaniu danych obiektu źródłowego powiązania odnosi się do obiektu, k
 
 - <xref:System.Windows.FrameworkElement.DataContext%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.DataContext%2A?displayProperty=nameWithType>
-- [Przejęcie wartości właściwości](../advanced/property-value-inheritance.md)
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [Przegląd Wiązanie deklaracji](binding-declarations-overview.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Dziedziczenie wartości właściwości](../advanced/property-value-inheritance.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie deklaracji — omówienie](binding-declarations-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

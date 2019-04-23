@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b41e3234c00059ecb5088bbf2597611d7f139b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236074"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59981928"
 ---
 ### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>RSACng i DSACng są ponownie użyteczne w sytuacjach częściowego zaufania
 

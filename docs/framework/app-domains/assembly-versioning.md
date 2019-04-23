@@ -11,10 +11,10 @@ ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305198"
 ---
 # <a name="assembly-versioning"></a>Przechowywanie wersji zestawu
@@ -74,4 +74,4 @@ Zarządzanie wszystkimi wersjami zestawów używających środowiska uruchomieni
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)
 - [Ustawienie atrybutów zestawu](../../../docs/framework/app-domains/set-assembly-attributes.md)
-- [Zestawy w środowisku uruchomieniowym języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

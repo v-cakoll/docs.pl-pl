@@ -9,10 +9,10 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304782"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Instrukcje: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
@@ -114,5 +114,5 @@ ms.locfileid: "59304782"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator — kontrolka](bindingnavigator-control-windows-forms.md)
-- [BindingSource — Informacje o składniku](bindingsource-component-overview.md)
+- [BindingNavigator, kontrolka](bindingnavigator-control-windows-forms.md)
+- [BindingSource, składnik — omówienie](bindingsource-component-overview.md)

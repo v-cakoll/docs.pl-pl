@@ -3,10 +3,10 @@ title: 'Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Vis
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
 ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306322"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Visual Basic)

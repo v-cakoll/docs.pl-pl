@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
 ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304990"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Instrukcje: Wiązanie z usługą internetową
@@ -47,6 +47,6 @@ W tym przykładzie pokazano, jak powiązać obiekty zwrócone przez wywołania m
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [Przegląd Wiązanie źródeł](binding-sources-overview.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Wiązanie źródeł — omówienie](binding-sources-overview.md)
 - [Udostępnianie danych do powiązania w XAML](how-to-make-data-available-for-binding-in-xaml.md)

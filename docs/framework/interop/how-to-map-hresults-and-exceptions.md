@@ -14,10 +14,10 @@ ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306550"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Instrukcje: Mapowanie wyników HRESULT i wyjątków
@@ -60,9 +60,9 @@ CMyClass::MethodThatThrows
 |HRESULT|Wyjątek dla platformy .NET|  
 |-------------|--------------------|  
 |**MSEE_E_APPDOMAINUNLOADED**|**AppDomainUnloadedException**|  
-|**COR_E_APPLICATION**|**ApplicationException**|  
+|**COR_E_APPLICATION**|**Applicationexception —**|  
 |**COR_E_ARGUMENT lub E_INVALIDARG**|**ArgumentException**|  
-|**COR_E_ARGUMENTOUTOFRANGE**|**ArgumentOutOfRangeException**|  
+|**COR_E_ARGUMENTOUTOFRANGE**|**Trwa wyjątku ArgumentOutOfRangeException**|  
 |**COR_E_ARITHMETIC lub ERROR_ARITHMETIC_OVERFLOW**|**Arithmeticexception —**|  
 |**COR_E_ARRAYTYPEMISMATCH**|**ArrayTypeMismatchException**|  
 |**COR_E_BADIMAGEFORMAT lub ERROR_BAD_FORMAT**|**BadImageFormatException**|  
@@ -71,11 +71,11 @@ CMyClass::MethodThatThrows
 |**COR_E_CORE**|**CoreException**|  
 |**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND lub ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
-|**COR_E_DIVIDEBYZERO**|**Dividebyzeroexception —**|  
+|**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Wyjątek**|  
+|**COR_E_EXCEPTION**|**wyjątek**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND lub ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -97,20 +97,20 @@ CMyClass::MethodThatThrows
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**Obiektu NullReferenceException**|  
+|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY lub**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
-|**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**Pathtoolongexception —**|  
+|**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
 |**COR_E_RANK**|**RankException**|  
 |**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
 |**COR_E_REMOTING**|**Remotingexception —**|  
 |**COR_E_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
-|**COR_E_SECURITY**|**Securityexception —**|  
+|**COR_E_SECURITY**|**SecurityException**|  
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**Synchronizationlockexception —**|  
 |**COR_E_SYSTEM**|**SystemException**|  
-|**COR_E_TARGET**|**Targetexception —**|  
+|**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
 |**COR_E_THREADABORTED**|**ThreadAbortException**|  
@@ -136,7 +136,7 @@ CMyClass::MethodThatThrows
 |**HelpLink**|Jeśli **IErrorInfo -> helpcontext —** jest różna od zera, ciąg jest tworzona przez złączenie **IErrorInfo -> GetHelpFile** i "#" i **IErrorInfo -> GetHelpContext**. W przeciwnym razie zostanie zwrócony ciąg z **IErrorInfo -> GetHelpFile**.|  
 |**Wyjątek wewnętrzny**|Zawsze odwołanie o wartości null (**nic** w języku Visual Basic).|  
 |**Komunikat**|Ciąg zwracany z **IErrorInfo -> GetDescription**.|  
-|**Źródło**|Ciąg zwracany z **IErrorInfo -> GetSource**.|  
+|**Element źródłowy**|Ciąg zwracany z **IErrorInfo -> GetSource**.|  
 |**StackTrace**|Ślad stosu.|  
 |**TargetSite**|Nazwa metody, która jest zwracana niepowodzenia HRESULT.|  
   

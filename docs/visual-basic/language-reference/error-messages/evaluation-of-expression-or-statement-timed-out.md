@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
 ms.openlocfilehash: 7a3b460e7abb0e673457ca6abee2a195912715ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305666"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>Szacowanie wyrażenia lub instrukcji przekroczyło limit czasu
@@ -27,4 +27,4 @@ Obliczania wyrażenia nie została ukończona w odpowiednim czasie.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie w Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

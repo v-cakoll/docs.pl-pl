@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
 ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306654"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Przy użyciu typów dopuszczających wartości zerowe (C# Programming Guide)
@@ -94,6 +94,6 @@ Rozpakowywanie z opakowanym typem wartościowym do odpowiedniego typu dopuszczaj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Typy dopuszczające wartości null](index.md)
+- [Typy dopuszczające wartości zerowe](index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Co dokładnie "podniesiony" oznacza?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

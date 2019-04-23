@@ -3,10 +3,10 @@ title: '! (NIE) (Jednostka SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
 ms.openlocfilehash: 51d3bdbc4adb0b5fd6275629219698dd9b42fa86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306771"
 ---
 # <a name="-not-entity-sql"></a>! (NIE) (Jednostka SQL)
@@ -38,4 +38,4 @@ or
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

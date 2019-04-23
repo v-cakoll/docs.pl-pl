@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
 ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306199"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Instrukcje: dodawanie przycisków do kontrolki ToolBar przy użyciu narzędzia Projektant
@@ -50,7 +50,7 @@ ms.locfileid: "59306199"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Instrukcje: określanie ikony dla przycisku ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Instrukcje: Określanie ikony dla przycisku kontrolki ToolBar](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Instrukcje: Wyzwalacz zdarzenia Menu dla przycisków paska narzędzi](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar, kontrolka — omówienie](toolbar-control-overview-windows-forms.md)
-- [ToolBar — Formant](toolbar-control-windows-forms.md)
+- [ToolBar, kontrolka](toolbar-control-windows-forms.md)

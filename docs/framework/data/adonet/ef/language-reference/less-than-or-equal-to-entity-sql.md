@@ -3,10 +3,10 @@ title: < = (mniejsze niż lub równe) (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
 ms.openlocfilehash: 7a65984da22d125bdbdd5cfadb5a2051fa3dafdc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304769"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<= (Mniejsze niż lub równe) (jednostka SQL)
@@ -36,4 +36,4 @@ expression <= expression
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

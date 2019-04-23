@@ -13,10 +13,10 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
 ms.openlocfilehash: 8770a8761af4b55394d9280b21d2a6a5b71b6ed5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304899"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Instrukcje: Modyfikowanie danych w bazie danych za pomocą LINQ (Visual Basic)
@@ -163,7 +163,7 @@ Language-Integrated Query (LINQ) zapytania ułatwiają dostęp do bazy danych in
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Instrukcje: Przypisywanie procedur składowanych do wykonywania aktualizacji, wstawiania i usuwania (O/R Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [Instrukcje: Przypisywanie procedur składowanych na potrzeby wykonywania aktualizacji, wstawiania i usuwania (Object Relational Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

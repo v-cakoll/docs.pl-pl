@@ -8,10 +8,10 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306719"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>Instrukcje: Tworzenie właściwości (Visual Basic)
@@ -65,7 +65,7 @@ Ujmij definicji właściwości między `Property` instrukcji i `End Property` in
 - [Procedury](./index.md)
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
+- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
 - [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
 - [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305960"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Instrukcje: implementowanie weryfikowania za pomocą kontrolki DataGrid
@@ -95,5 +95,5 @@ ms.locfileid: "59305960"
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Powiązanie danych](../data/data-binding-wpf.md)
-- [Implementowanie weryfikacji wiązania](../data/how-to-implement-binding-validation.md)
-- [Implementowanie logiki weryfikacji w obiektach niestandardowych](../data/how-to-implement-validation-logic-on-custom-objects.md)
+- [Implementowanie powiązanej walidacji](../data/how-to-implement-binding-validation.md)
+- [Implementowanie logiki walidacji w obiektach niestandardowych](../data/how-to-implement-validation-logic-on-custom-objects.md)

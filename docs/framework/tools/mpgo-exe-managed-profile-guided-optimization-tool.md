@@ -11,10 +11,10 @@ ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306342"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (narzędzie optymalizacji sterowania zarządzanym profilem)
@@ -53,12 +53,12 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 |`-OutDir` \<*directory*>|Katalog, w którym będą umieszczone zoptymalizowane zestawy. Jeśli zestaw już istnieje w folderze katalogu wyjściowego, tworzona jest nowa kopia i numer indeksu jest dołączany do nazwy; na przykład: *assemblyname*-1.exe. Użyj podwójnego cudzysłowu *katalogu* Jeśli Określa on ścieżkę zawierającą spacje.|
 |`-AssemblyList` \<*assembly1 assembly2...*><br /><br /> —lub—<br /><br /> `-AssemblyListFile` \<*file*>|Lista zestawów (w tym pliki exe i dll) rozdzielonych spacjami, dla których chcesz zbierać informacje profilowe. Można określić `C:\Dir\*.dll` lub `*.dll` aby wybrać wszystkie zestawy w wyznaczonym lub bieżącym katalogu roboczym. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.<br /><br /> —lub—<br /><br /> Plik tekstowy, który zawiera listę zestawów, dla których chcesz zebrać informacje o profilu. W każdym wierszu wymieniony jest jeden zestaw. Jeśli nazwa zestawu rozpoczyna się łącznikiem (-), użyj listy plików zestawów lub zmień nazwę zestawu.|
 |`-AppID` \<*appId*>|Identyfikator aplikacji w określonym pakiecie. Jeśli używasz symbolu wieloznacznego (\*), Mpgo.exe spróbuje wyliczyć identyfikatory AppID w pakiecie i powróci do \< *package_family_name*>! Aplikacja, jeśli zakończy się niepowodzeniem. Jeżeli określono ciąg, który jest poprzedzony znakiem wykrzyknika (!), Mpgo.exe będzie łączyć nazwę rodziny pakietu z dostarczonym argumentem.|
-|`-Timeout` \<*seconds*>|Ilość czasu, aby umożliwić [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji do uruchomienia przed zakończeniem aplikacji.|
+|`-Timeout` \<*sekundy*>|Ilość czasu, aby umożliwić [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji do uruchomienia przed zakończeniem aplikacji.|
 
 |Parametr opcjonalny|Opis|
 |------------------------|-----------------|
 |`-64bit`|Instrumentuje zestawy do systemów 64-bitowych.  Nawet jeśli zestaw jest zadeklarowany jako 64-bitowy, należy określić ten parametr dla zestawów 64-bitowych.|
-|`-ExeConfig` \<*filename*>|Określa plik konfiguracji używany przez scenariusz do określenia informacje o wersji i module ładującym.|
+|`-ExeConfig` \<*Nazwa pliku*>|Określa plik konfiguracji używany przez scenariusz do określenia informacje o wersji i module ładującym.|
 |`-f`|Wymusza umieszczenie danych profilu w zestawie binarnym, nawet jeśli jest podpisany.  Jeśli zestaw jest podpisany, musi zostać ponownie podpisany; w przeciwnym razie zestawu nie będzie można załadować i uruchomić.|
 |`-Reset`|Resetuje środowisko, aby była pewność, że przerwane sesje profilowania nie mają wpływu na swoje zestawy, a następnie kończy działanie. Środowisko jest resetowane domyślnie przed i po sesji profilowania.|
 |`-Timeout` \<*czas w sekundach*>|Określa czas profilowania w sekundach. Użyj wartości, która jest nieco większa niż obserwowane czasy uruchamiania aplikacji GUI. Na koniec limitu czasu dane profilu są rejestrowana, mimo że aplikacja kontynuuje działanie. Jeśli ta opcja nie zostanie ustawiona, profilowanie będzie kontynuowane do czasu zamknięcia aplikacji, w czasie którym dane będą rejestrowane.|
@@ -128,7 +128,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
+- [Ngen.exe (generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [Zwiększanie wydajności uruchamiania aplikacji klasycznych](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [Przegląd ulepszeń wydajności w .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)

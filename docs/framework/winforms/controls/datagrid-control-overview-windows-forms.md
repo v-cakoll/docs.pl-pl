@@ -21,10 +21,10 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304741"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
@@ -57,13 +57,13 @@ ms.locfileid: "59304741"
   
  Źródła danych prawidłowe <xref:System.Windows.Forms.DataGrid> obejmują:  
   
--   <xref:System.Data.DataTable> class  
+-   <xref:System.Data.DataTable> Klasa  
   
--   <xref:System.Data.DataView> class  
+-   <xref:System.Data.DataView> Klasa  
   
--   <xref:System.Data.DataSet> class  
+-   <xref:System.Data.DataSet> Klasa  
   
--   <xref:System.Data.DataViewManager> class  
+-   <xref:System.Data.DataViewManager> Klasa  
   
  Jeśli źródłem jest zestaw danych, zestaw danych może być w formie lub obiektu przekazanego do formularza przez usługi sieci Web XML. Możesz powiązać typizowany lub nietypizowany zestawów danych.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59304741"
 ## <a name="see-also"></a>Zobacz także
 
 - [DataGrid, kontrolka](datagrid-control-windows-forms.md)
-- [Instrukcje: wiązanie kontrolki DataGrid formularzy systemu Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy systemu Windows](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy systemu Windows](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [Instrukcje: format kontrolki DataGrid formularzy systemu Windows](how-to-format-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Powiązywanie formantu DataGrid formularzy Windows ze źródłem danych](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Instrukcje: Dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Usuń lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Instrukcje: Formatowanie kontrolki DataGrid formularzy Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)

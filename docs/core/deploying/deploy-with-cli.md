@@ -9,10 +9,10 @@ dev_langs:
 - vb
 ms.custom: seodec18
 ms.openlocfilehash: a72e5e557cd3aa098b674bffd277e3cc6da99d33
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306069"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Publikowanie .NET Core z aplikacji przy użyciu interfejsu wiersza polecenia
@@ -128,8 +128,7 @@ Publikowanie FDE tworzy aplikację, automatycznie ustala przekazywania dalej na 
 
 Należy najpierw (z wyjątkiem platformy .NET Core 3.x, gdy miejscem docelowym bieżącej platformie) Użyj następujących przełączników z `dotnet publish` polecenie w celu opublikowania FDE:
 
-- `-r <RID>`
-  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+- `-r <RID>` Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
 - `--self-contained false` Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako FDE.
 
@@ -148,8 +147,7 @@ Publikowanie — SCD tworzy aplikację, która nie przodu do najnowszych dostęp
 
 Należy użyć następujących przełączników z `dotnet publish` polecenie w celu opublikowania — SCD:
 
-- `-r <RID>`
-  Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
+- `-r <RID>` Ten przełącznik używa identyfikatora (RID) w celu określenia platformy docelowej. Aby uzyskać listę identyfikatorów środowisk uruchomieniowych, zobacz [katalog identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md).
 
 - `--self-contained true` Ten przełącznik informuje zestawu .NET Core SDK, aby utworzyć plik wykonywalny jako — SCD.
 

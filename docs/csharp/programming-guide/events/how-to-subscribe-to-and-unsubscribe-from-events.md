@@ -8,10 +8,10 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306602"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń (C# Programming Guide)
@@ -102,7 +102,7 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
 ## <a name="see-also"></a>Zobacz także
 
 - [Zdarzenia](../../../csharp/programming-guide/events/index.md)
-- [zdarzenie](../../../csharp/language-reference/keywords/event.md)
-- [Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi platformy .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [Operator -= (odwołanie w C#)](../../language-reference/operators/subtraction-assignment-operator.md)
+- [event](../../../csharp/language-reference/keywords/event.md)
+- [Instrukcje: Publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [-= — Operator (odwołanie w C#)](../../language-reference/operators/subtraction-assignment-operator.md)
 - [+=, operator](../../../csharp/language-reference/operators/addition-assignment-operator.md)

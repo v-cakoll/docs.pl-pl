@@ -3,10 +3,10 @@ title: Wybierz (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306433"
 ---
 # <a name="select-entity-sql"></a>Wybierz (jednostka SQL)
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  Wyrażenie formularza:  
   
- `expr` as `identifier` &#124; `expr`  
+ `expr` jako `identifier`&#124; `expr`  
   
  `expr`  
  Literał lub wyrażenie.  
@@ -102,6 +102,6 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyrażenia kwerend](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Wyrażenia zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

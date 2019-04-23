@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124088"
 ---
-# <a name="getversionfromprocess-function"></a><span data-ttu-id="4762b-102">GetVersionFromProcess — Funkcja</span><span class="sxs-lookup"><span data-stu-id="4762b-102">GetVersionFromProcess Function</span></span>
-<span data-ttu-id="4762b-103">Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z określonym dojściem do procesu.</span><span class="sxs-lookup"><span data-stu-id="4762b-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
+# <a name="getversionfromprocess-function"></a><span data-ttu-id="ed1d7-102">GetVersionFromProcess — Funkcja</span><span class="sxs-lookup"><span data-stu-id="ed1d7-102">GetVersionFromProcess Function</span></span>
+<span data-ttu-id="ed1d7-103">Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z określonym dojściem do procesu.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
   
- <span data-ttu-id="4762b-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4762b-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="ed1d7-104">Ta funkcja jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ed1d7-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4762b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="4762b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed1d7-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="ed1d7-105">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionFromProcess (  
@@ -40,40 +40,40 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4762b-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="4762b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed1d7-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="ed1d7-106">Parameters</span></span>  
  `hProcess`  
- <span data-ttu-id="4762b-107">[in] Dojście do procesu.</span><span class="sxs-lookup"><span data-stu-id="4762b-107">[in] A handle to a process.</span></span>  
+ <span data-ttu-id="ed1d7-107">[in] Dojście do procesu.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-107">[in] A handle to a process.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="4762b-108">[out] Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu metody.</span><span class="sxs-lookup"><span data-stu-id="4762b-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
+ <span data-ttu-id="ed1d7-108">[out] Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu metody.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="4762b-109">[in] Długość buforu wersji.</span><span class="sxs-lookup"><span data-stu-id="4762b-109">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="ed1d7-109">[in] Długość buforu wersji.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-109">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="4762b-110">[out] Wskaźnik do długości ciągu numeru wersji.</span><span class="sxs-lookup"><span data-stu-id="4762b-110">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="ed1d7-110">[out] Wskaźnik do długości ciągu numeru wersji.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-110">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4762b-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="4762b-111">Return Value</span></span>  
- <span data-ttu-id="4762b-112">Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="4762b-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed1d7-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ed1d7-111">Return Value</span></span>  
+ <span data-ttu-id="ed1d7-112">Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="4762b-113">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="4762b-113">Return code</span></span>|<span data-ttu-id="4762b-114">Opis</span><span class="sxs-lookup"><span data-stu-id="4762b-114">Description</span></span>|  
+|<span data-ttu-id="ed1d7-113">Kod powrotu</span><span class="sxs-lookup"><span data-stu-id="ed1d7-113">Return code</span></span>|<span data-ttu-id="ed1d7-114">Opis</span><span class="sxs-lookup"><span data-stu-id="ed1d7-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="4762b-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="4762b-115">S_OK</span></span>|<span data-ttu-id="4762b-116">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="4762b-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="4762b-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="4762b-117">E_INVALIDARG</span></span>|`pVersion` <span data-ttu-id="4762b-118">ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.</span><span class="sxs-lookup"><span data-stu-id="4762b-118">is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="4762b-119">—lub—</span><span class="sxs-lookup"><span data-stu-id="4762b-119">-or-</span></span><br /><br /> `hProcess` <span data-ttu-id="4762b-120">nie jest prawidłowym dojściem do procesu.</span><span class="sxs-lookup"><span data-stu-id="4762b-120">is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="4762b-121">—lub—</span><span class="sxs-lookup"><span data-stu-id="4762b-121">-or-</span></span><br /><br /> <span data-ttu-id="4762b-122">Środowisko CLR nie został załadowany.</span><span class="sxs-lookup"><span data-stu-id="4762b-122">The CLR is not loaded.</span></span>|  
-|<span data-ttu-id="4762b-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="4762b-123">ERROR_INSUFFICIENT_BUFFER</span></span>|`cchBuffer` <span data-ttu-id="4762b-124">jest wartość null lub jest mniejsza niż długość ciągu wersji.</span><span class="sxs-lookup"><span data-stu-id="4762b-124">is null or less than the length of the version string.</span></span>|  
-|<span data-ttu-id="4762b-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="4762b-125">E_NOTIMPL</span></span>|<span data-ttu-id="4762b-126">Ta metoda nie jest dostępna w systemie operacyjnym Microsoft Windows 95, Microsoft Windows 98 lub Microsoft Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="4762b-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
+|<span data-ttu-id="ed1d7-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="ed1d7-115">S_OK</span></span>|<span data-ttu-id="ed1d7-116">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="ed1d7-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="ed1d7-117">E_INVALIDARG</span></span>|<span data-ttu-id="ed1d7-118">`pVersion` ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="ed1d7-119">—lub—</span><span class="sxs-lookup"><span data-stu-id="ed1d7-119">-or-</span></span><br /><br /> <span data-ttu-id="ed1d7-120">`hProcess` nie jest prawidłowym dojściem do procesu.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="ed1d7-121">—lub—</span><span class="sxs-lookup"><span data-stu-id="ed1d7-121">-or-</span></span><br /><br /> <span data-ttu-id="ed1d7-122">Środowisko CLR nie został załadowany.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-122">The CLR is not loaded.</span></span>|  
+|<span data-ttu-id="ed1d7-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="ed1d7-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="ed1d7-124">`cchBuffer` jest wartość null lub jest mniejsza niż długość ciągu wersji.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
+|<span data-ttu-id="ed1d7-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="ed1d7-125">E_NOTIMPL</span></span>|<span data-ttu-id="ed1d7-126">Ta metoda nie jest dostępna w systemie operacyjnym Microsoft Windows 95, Microsoft Windows 98 lub Microsoft Windows Millennium Edition.</span><span class="sxs-lookup"><span data-stu-id="ed1d7-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4762b-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4762b-127">Requirements</span></span>  
- <span data-ttu-id="4762b-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4762b-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed1d7-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ed1d7-127">Requirements</span></span>  
+ <span data-ttu-id="ed1d7-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ed1d7-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4762b-129">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4762b-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ed1d7-129">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ed1d7-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4762b-130">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4762b-130">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="ed1d7-130">**Biblioteka:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ed1d7-130">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="4762b-131">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="4762b-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="ed1d7-131">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed1d7-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4762b-132">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4762b-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed1d7-132">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ed1d7-132">See also</span></span>
 
-- [<span data-ttu-id="4762b-133">GetRequestedRuntimeInfo — Funkcja</span><span class="sxs-lookup"><span data-stu-id="4762b-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [<span data-ttu-id="4762b-134">GetRequestedRuntimeVersion — Funkcja</span><span class="sxs-lookup"><span data-stu-id="4762b-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [<span data-ttu-id="4762b-135">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="4762b-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="ed1d7-133">GetRequestedRuntimeInfo, funkcja</span><span class="sxs-lookup"><span data-stu-id="ed1d7-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="ed1d7-134">GetRequestedRuntimeVersion, funkcja</span><span class="sxs-lookup"><span data-stu-id="ed1d7-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="ed1d7-135">Przestarzałe funkcje hostingu środowiska CLR</span><span class="sxs-lookup"><span data-stu-id="ed1d7-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

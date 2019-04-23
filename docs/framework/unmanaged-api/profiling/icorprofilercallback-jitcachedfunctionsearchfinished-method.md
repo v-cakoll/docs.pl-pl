@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4b0e78e10f092bce1c8f7762362f02b7a403c86a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122944"
 ---
-# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="c8af6-102">ICorProfilerCallback::JITCachedFunctionSearchFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="c8af6-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
-<span data-ttu-id="c8af6-103">Powiadamia program profilujący, że wyszukiwanie zakończył się dla funkcji, która została skompilowana wcześniej przy użyciu Native Image Generator (NGen.exe).</span><span class="sxs-lookup"><span data-stu-id="c8af6-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
+# <a name="icorprofilercallbackjitcachedfunctionsearchfinished-method"></a><span data-ttu-id="83482-102">ICorProfilerCallback::JITCachedFunctionSearchFinished — Metoda</span><span class="sxs-lookup"><span data-stu-id="83482-102">ICorProfilerCallback::JITCachedFunctionSearchFinished Method</span></span>
+<span data-ttu-id="83482-103">Powiadamia program profilujący, że wyszukiwanie zakończył się dla funkcji, która została skompilowana wcześniej przy użyciu Native Image Generator (NGen.exe).</span><span class="sxs-lookup"><span data-stu-id="83482-103">Notifies the profiler that a search has finished for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8af6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c8af6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83482-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="83482-104">Syntax</span></span>  
   
 ```  
 HRESULT JITCachedFunctionSearchFinished(  
@@ -35,25 +35,25 @@ HRESULT JITCachedFunctionSearchFinished(
     [in] COR_PRF_JIT_CACHE result);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c8af6-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c8af6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83482-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="83482-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="c8af6-106">[in] Identyfikator funkcji, dla której zostało wykonane wyszukiwanie.</span><span class="sxs-lookup"><span data-stu-id="c8af6-106">[in] The ID of the function for which the search was performed.</span></span>  
+ <span data-ttu-id="83482-106">[in] Identyfikator funkcji, dla której zostało wykonane wyszukiwanie.</span><span class="sxs-lookup"><span data-stu-id="83482-106">[in] The ID of the function for which the search was performed.</span></span>  
   
  `result`  
- <span data-ttu-id="c8af6-107">[in] Wartość [cor_prf_jit_cache —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) wyliczenia, która wskazuje wynik wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="c8af6-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
+ <span data-ttu-id="83482-107">[in] Wartość [cor_prf_jit_cache —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) wyliczenia, która wskazuje wynik wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="83482-107">[in] A value of the [COR_PRF_JIT_CACHE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md) enumeration that indicates the result of the search.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c8af6-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c8af6-108">Remarks</span></span>  
- <span data-ttu-id="c8af6-109">W .NET Framework w wersji 2.0 [icorprofilercallback::jitcachedfunctionsearchstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) i `JITCachedFunctionSearchFinished` wywołania zwrotne nie zostaną wprowadzone dla wszystkich funkcji w zwykłych obrazów NGen.</span><span class="sxs-lookup"><span data-stu-id="c8af6-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="c8af6-110">Tylko obrazów NGen zoptymalizowane pod kątem program profilujący wygeneruje wywołania zwrotne dla wszystkich funkcji w obrazie.</span><span class="sxs-lookup"><span data-stu-id="c8af6-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="c8af6-111">Jednak ze względu na dodatkowe obciążenie, program profilujący powinien zażądać profiler zoptymalizowane pod kątem obrazów NGen tylko wtedy, gdy zamierza korzystać z tych wywołań zwrotnych do wymuszenia funkcję, która ma być skompilowany just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="c8af6-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="c8af6-112">W przeciwnym razie do zbierania informacji o funkcji strategii z opóźnieniem należy używać programu profilującego.</span><span class="sxs-lookup"><span data-stu-id="c8af6-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="83482-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="83482-108">Remarks</span></span>  
+ <span data-ttu-id="83482-109">W .NET Framework w wersji 2.0 [icorprofilercallback::jitcachedfunctionsearchstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) i `JITCachedFunctionSearchFinished` wywołania zwrotne nie zostaną wprowadzone dla wszystkich funkcji w zwykłych obrazów NGen.</span><span class="sxs-lookup"><span data-stu-id="83482-109">In the .NET Framework version 2.0, the [ICorProfilerCallback::JITCachedFunctionSearchStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchstarted-method.md) and `JITCachedFunctionSearchFinished` callbacks will not be made for all functions in regular NGen images.</span></span> <span data-ttu-id="83482-110">Tylko obrazów NGen zoptymalizowane pod kątem program profilujący wygeneruje wywołania zwrotne dla wszystkich funkcji w obrazie.</span><span class="sxs-lookup"><span data-stu-id="83482-110">Only NGen images optimized for a profiler will generate callbacks for all functions in the image.</span></span> <span data-ttu-id="83482-111">Jednak ze względu na dodatkowe obciążenie, program profilujący powinien zażądać profiler zoptymalizowane pod kątem obrazów NGen tylko wtedy, gdy zamierza korzystać z tych wywołań zwrotnych do wymuszenia funkcję, która ma być skompilowany just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="83482-111">However, due to the additional overhead, a profiler should request profiler-optimized NGen images only if it intends to use these callbacks to force a function to be compiled just-in-time (JIT).</span></span> <span data-ttu-id="83482-112">W przeciwnym razie do zbierania informacji o funkcji strategii z opóźnieniem należy używać programu profilującego.</span><span class="sxs-lookup"><span data-stu-id="83482-112">Otherwise, the profiler should use a lazy strategy for gathering function information.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8af6-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c8af6-113">Requirements</span></span>  
- <span data-ttu-id="c8af6-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8af6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83482-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="83482-113">Requirements</span></span>  
+ <span data-ttu-id="83482-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83482-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8af6-115">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c8af6-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="83482-115">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="83482-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c8af6-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c8af6-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="83482-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="83482-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="c8af6-117">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="c8af6-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="83482-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83482-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8af6-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c8af6-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83482-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="83482-118">See also</span></span>
 
-- [<span data-ttu-id="c8af6-119">ICorProfilerCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c8af6-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="83482-119">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="83482-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

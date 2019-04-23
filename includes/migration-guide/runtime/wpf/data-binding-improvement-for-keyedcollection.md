@@ -1,0 +1,17 @@
+---
+ms.openlocfilehash: 50d251d8e8ec28fa8a895f1ef66f7efc1657eff4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59982248"
+---
+### <a name="data-binding-improvement-for-keyedcollection"></a>Poprawa powiązania danych dla KeyedCollection
+
+|   |   |
+|---|---|
+|Szczegóły|Naprawiono <xref:System.Windows.Data.Binding> niepoprawne użycie indeksatora IList, gdy obiekt źródłowy deklaruje niestandardowe indeksator o tej samej sygnaturze (np. KeyedCollection&lt;int, TItem&gt;).|
+|Sugestia|Aby aplikacji do korzystania z tej zmiany, należy uruchomić w środowisku .NET Framework 4.7.2 lub nowszym, oraz jego musi zgadzaj się na zmianę, dodając następujące [AppContext przełącznika](https://docs.microsoft.com/dotnet/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element) do <code>&lt;runtime&gt;</code> części pliku konfiguracyjnego aplikacji i ustawienie <code>false</code>:<pre><code class="lang-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&#13;&#10;&lt;configuration&gt;&#13;&#10;&lt;startup&gt;&#13;&#10;&lt;supportedRuntime version=&quot;v4.0&quot; sku=&quot;.NETFramework,Version=v4.7&quot;/&gt;&#13;&#10;&lt;/startup&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;!-- AppContextSwitchOverrides value attribute is in the form of &#39;key1=true/false;key2=true/false  --&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Windows.Data.Binding.IListIndexerHidesCustomIndexer=false&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Zakres|Duży|
+|Wersja|4.8|
+|Typ|Środowisko uruchomieniowe|

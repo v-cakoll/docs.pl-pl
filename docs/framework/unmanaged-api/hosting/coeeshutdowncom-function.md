@@ -21,38 +21,38 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ddef35b1b707cc5c962402e880923dca7d4d9d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208153"
 ---
-# <a name="coeeshutdowncom-function"></a><span data-ttu-id="79f15-102">CoEEShutDownCOM — Funkcja</span><span class="sxs-lookup"><span data-stu-id="79f15-102">CoEEShutDownCOM Function</span></span>
-<span data-ttu-id="79f15-103">Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływanych otok środowiska uruchomieniowego (RCW).</span><span class="sxs-lookup"><span data-stu-id="79f15-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="79f15-104">To powoduje zwolnienie wszystkich RCW pamięci podręcznych.</span><span class="sxs-lookup"><span data-stu-id="79f15-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="79f15-105">Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="79f15-105">This global function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="79f15-106">Zamiast tego należy użyć punktu wejścia dla określonego środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="79f15-106">Instead, use the entry point for a specific runtime.</span></span>  
+# <a name="coeeshutdowncom-function"></a><span data-ttu-id="495f3-102">CoEEShutDownCOM — Funkcja</span><span class="sxs-lookup"><span data-stu-id="495f3-102">CoEEShutDownCOM Function</span></span>
+<span data-ttu-id="495f3-103">Wymusza środowisko uruchomieniowe języka wspólnego (CLR), aby zwolnić wszystkie wskaźniki interfejsu, którą przechowuje wewnątrz wywoływanych otok środowiska uruchomieniowego (RCW).</span><span class="sxs-lookup"><span data-stu-id="495f3-103">Forces the common language runtime (CLR) to release all interface pointers it holds inside runtime callable wrappers (RCW).</span></span> <span data-ttu-id="495f3-104">To powoduje zwolnienie wszystkich RCW pamięci podręcznych.</span><span class="sxs-lookup"><span data-stu-id="495f3-104">This has the effect of releasing all RCW caches.</span></span> <span data-ttu-id="495f3-105">Ta funkcja globalna jest przestarzała w [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="495f3-105">This global function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="495f3-106">Zamiast tego należy użyć punktu wejścia dla określonego środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="495f3-106">Instead, use the entry point for a specific runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="79f15-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="79f15-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="495f3-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="495f3-107">Syntax</span></span>  
   
 ```  
 void CoEEShutDownCOM ();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="79f15-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="79f15-108">Remarks</span></span>  
- <span data-ttu-id="79f15-109">`CoEEShutDownCOM` Funkcji najpierw zwalnia RCW we wszystkich kontekstach i wszystkich pamięci podręcznych, a następnie usuwa wszelkie powiadomienia zakończenia istniejące w Instalatorze.</span><span class="sxs-lookup"><span data-stu-id="79f15-109">The `CoEEShutDownCOM` function first releases all the RCWs in all contexts and in all caches, and then removes any tear-down notification existing in setup.</span></span> <span data-ttu-id="79f15-110">Nie zwalnianie biblioteki DLL występuje.</span><span class="sxs-lookup"><span data-stu-id="79f15-110">No DLL unloading occurs.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="495f3-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="495f3-108">Remarks</span></span>  
+ <span data-ttu-id="495f3-109">`CoEEShutDownCOM` Funkcji najpierw zwalnia RCW we wszystkich kontekstach i wszystkich pamięci podręcznych, a następnie usuwa wszelkie powiadomienia zakończenia istniejące w Instalatorze.</span><span class="sxs-lookup"><span data-stu-id="495f3-109">The `CoEEShutDownCOM` function first releases all the RCWs in all contexts and in all caches, and then removes any tear-down notification existing in setup.</span></span> <span data-ttu-id="495f3-110">Nie zwalnianie biblioteki DLL występuje.</span><span class="sxs-lookup"><span data-stu-id="495f3-110">No DLL unloading occurs.</span></span>  
   
 > [!CAUTION]
->  <span data-ttu-id="79f15-111">Ta funkcja ma wpływ na wszystkie środowiska uruchomieniowe, które są ładowane do procesu.</span><span class="sxs-lookup"><span data-stu-id="79f15-111">This function affects all runtimes that are loaded into the process.</span></span>  
+>  <span data-ttu-id="495f3-111">Ta funkcja ma wpływ na wszystkie środowiska uruchomieniowe, które są ładowane do procesu.</span><span class="sxs-lookup"><span data-stu-id="495f3-111">This function affects all runtimes that are loaded into the process.</span></span>  
   
- <span data-ttu-id="79f15-112">Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], wywołać punkt wejścia dla tej funkcji, od określonego środowiska uruchomieniowego, chcesz mieć wpływ.</span><span class="sxs-lookup"><span data-stu-id="79f15-112">Beginning with the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], call the entry point for this function on the specific runtime you want to affect.</span></span> <span data-ttu-id="79f15-113">Aby uzyskać punkt wejścia, należy wywołać [iclrruntimeinfo::GetProcAddress —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) metodę i określić "coeeshutdowncom —".</span><span class="sxs-lookup"><span data-stu-id="79f15-113">To get the entry point, call the [ICLRRuntimeInfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) method and specify "CoEEShutDownCOM".</span></span>  
+ <span data-ttu-id="495f3-112">Począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], wywołać punkt wejścia dla tej funkcji, od określonego środowiska uruchomieniowego, chcesz mieć wpływ.</span><span class="sxs-lookup"><span data-stu-id="495f3-112">Beginning with the [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], call the entry point for this function on the specific runtime you want to affect.</span></span> <span data-ttu-id="495f3-113">Aby uzyskać punkt wejścia, należy wywołać [iclrruntimeinfo::GetProcAddress —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) metodę i określić "coeeshutdowncom —".</span><span class="sxs-lookup"><span data-stu-id="495f3-113">To get the entry point, call the [ICLRRuntimeInfo::GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) method and specify "CoEEShutDownCOM".</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="79f15-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="79f15-114">Requirements</span></span>  
- <span data-ttu-id="79f15-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79f15-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="495f3-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="495f3-114">Requirements</span></span>  
+ <span data-ttu-id="495f3-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="495f3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="79f15-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="79f15-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="495f3-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="495f3-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="79f15-117">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="79f15-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="495f3-117">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="495f3-117">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="79f15-118">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="79f15-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="495f3-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="495f3-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79f15-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="79f15-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="495f3-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="495f3-119">See also</span></span>
 
-- [<span data-ttu-id="79f15-120">Statyczne funkcje globalne metadanych</span><span class="sxs-lookup"><span data-stu-id="79f15-120">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="495f3-120">Statyczne funkcje globalne metadanych</span><span class="sxs-lookup"><span data-stu-id="495f3-120">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

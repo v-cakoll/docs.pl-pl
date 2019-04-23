@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144550"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier — dyrektywa
@@ -53,7 +53,7 @@ Modyfikuje zachowanie kompilacji XAML, tak aby pola dla odwołania do obiektu o 
 ## <a name="see-also"></a>Zobacz także
 
 - [Klasy XAML i niestandardowe dla WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Związane z kodem i XAML w WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [x:Name — dyrektywa](x-name-directive.md)
+- [Plik codebehind i XAML w WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:Name, dyrektywa](x-name-directive.md)
 - [Kompilowanie aplikacji WPF (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
-- [x:ClassModifier — dyrektywa](x-classmodifier-directive.md)
+- [x:ClassModifier, dyrektywa](x-classmodifier-directive.md)

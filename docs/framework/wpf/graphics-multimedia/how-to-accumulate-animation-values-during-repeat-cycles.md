@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146019"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>Instrukcje: Gromadzenie wartości animacji podczas cykli powtórzeń
@@ -36,6 +36,6 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.D
 
 - [Dodawanie wartości danych wyjściowych animacji do wartości początkowej animacji](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [Powtarzanie animacji](how-to-repeat-an-animation.md)
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
-- [— Tematy porad](animation-and-timing-how-to-topics.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Tematy z instrukcjami](animation-and-timing-how-to-topics.md)

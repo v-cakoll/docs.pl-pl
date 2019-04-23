@@ -3,10 +3,10 @@ title: 'Model danych jednostki: Typy danych pierwotnych'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142652"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Model danych jednostki: Typy danych pierwotnych
@@ -29,7 +29,7 @@ Entity Data Model (EDM) obsługuje zestaw abstrakcyjne pierwotne typy danych (na
 |DateTimeOffset|Zawiera datę i godzinę w ciągu kilku minut od GMT przesunięcia.|Precyzja dopuszczającego wartość null, domyślny|  
 |Wartość dziesiętna|Zawiera wartość liczbową ze stałym dokładności i skali.|Precyzja dopuszczającego wartość null, domyślny|  
 |Double|Zawiera zmiennoprzecinkowa numer z dokładnością do 15 cyfr.|Precyzja dopuszczającego wartość null, domyślny|  
-|float|Zawiera zmiennoprzecinkowa numer z siedmiu cyfr precyzji.|Precyzja dopuszczającego wartość null, domyślny|  
+|Float|Zawiera zmiennoprzecinkowa numer z siedmiu cyfr precyzji.|Precyzja dopuszczającego wartość null, domyślny|  
 |Guid|Zawiera unikatowy identyfikator 16-bajtowy.|Precyzja dopuszczającego wartość null, domyślny|  
 |Int16|Zawiera wartość liczby całkowitej ze znakiem 16-bitowych.|Precyzja dopuszczającego wartość null, domyślny|  
 |Int32|Zawiera wartość całkowita 32-bitowa.|Precyzja dopuszczającego wartość null, domyślny|  
@@ -41,4 +41,4 @@ Entity Data Model (EDM) obsługuje zestaw abstrakcyjne pierwotne typy danych (na
 ## <a name="see-also"></a>Zobacz także
 
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

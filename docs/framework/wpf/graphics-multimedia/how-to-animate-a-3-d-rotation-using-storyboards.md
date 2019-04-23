@@ -7,10 +7,10 @@ helpviewer_keywords:
 - animation [WPF], 3-D translations [WPF], with Storyboards
 ms.assetid: 1020e44e-e21e-49a8-be53-53cbc1910e83
 ms.openlocfilehash: 03b01205f1a31426a01b09533b350682c384df4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146201"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-storyboards"></a>Instrukcje: Animowanie obrotu 3D przy użyciu scenorysów
@@ -23,5 +23,5 @@ Poniższy przykład pokazuje, jak należy obrócić podczas jego "wobbles", anim
 
 - [Animowanie obrotu 3D przy użyciu elementu Rotation3DAnimation](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
 - [Animowanie obrotu 3D przy użyciu klatek kluczowych (Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)
-- [Przegląd Grafika 3-D](3-d-graphics-overview.md)
-- [Przegląd Scenorysy](storyboards-overview.md)
+- [Grafika 3D — przegląd](3-d-graphics-overview.md)
+- [Scenorysy — przegląd](storyboards-overview.md)

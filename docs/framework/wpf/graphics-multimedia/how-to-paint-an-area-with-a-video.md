@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151180"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Instrukcje: Malowanie obszaru za pomocą wideo
@@ -40,6 +40,6 @@ Ten przykład pokazuje, jak malować obszar za pomocą nośnika. Jednym ze sposo
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.VisualBrush>
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
-- [TileBrush — Przegląd](tilebrush-overview.md)
-- [Przegląd Multimedia](multimedia-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [TileBrush — przegląd](tilebrush-overview.md)
+- [Multimedia — przegląd](multimedia-overview.md)

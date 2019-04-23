@@ -9,10 +9,10 @@ helpviewer_keywords:
 - aid usability of a TextBox using a background image [WPF]
 ms.assetid: df89bdd8-a0fb-45e0-b312-dd53332d01a8
 ms.openlocfilehash: ef2536f03ba6ed08e27d2fcf30cd1f72df2cf460
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142418"
 ---
 # <a name="how-to-add-a-watermark-to-a-textbox"></a>Instrukcje: Dodawanie znaku wodnego do kontrolki TextBox
@@ -31,5 +31,5 @@ Poniższy przykład pokazuje, jak użyteczność pomocy dotyczącej <xref:System
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TextBox — Przegląd](textbox-overview.md)
-- [RichTextBox — Przegląd](richtextbox-overview.md)
+- [TextBox — omówienie](textbox-overview.md)
+- [RichTextBox — omówienie](richtextbox-overview.md)

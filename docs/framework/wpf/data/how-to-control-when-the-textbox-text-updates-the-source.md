@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143276"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Instrukcje: Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox
@@ -47,4 +47,4 @@ W tym temacie opisano sposób użycia <xref:System.Windows.Data.Binding.UpdateSo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

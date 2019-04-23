@@ -7,10 +7,10 @@ helpviewer_keywords:
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
 ms.openlocfilehash: b437e19b10b534ce1c1dfae8ef0cca083cac2d61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149571"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton
@@ -56,7 +56,7 @@ ms.locfileid: "59149571"
   
 |Właściwość wzorzec wzorzec/formantu|Obsługa/wartość|Uwagi|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Wszystkie kontrolki przycisku radiowego musi obsługiwać wzorzec SelectionItem, aby włączyć się do wybrania.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Wszystkie kontrolki przycisku radiowego musi obsługiwać wzorzec SelectionItem, aby włączyć się do wybrania.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|Zobacz uwagi.|`SelectionContainerProperty` Zawsze muszą być wypełnione, tak aby klientów automatyzacji interfejsu użytkownika można określić, jakie inne przyciski radiowe w określonym kontekście odnoszą się do siebie nawzajem.  Aby uzyskać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] wersję przycisk radiowy, ta właściwość nie będą obsługiwane, ponieważ nie jest możliwe uzyskać te informacje z tej struktury starszej wersji.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|nigdy nie|Przycisk radiowy nie może przechodzić przez jego stan, po został ustawiony.  Przycisk radiowy nigdy nie muszą obsługiwać tego wzorca.|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59149571"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty przycisków radiowych. Aby uzyskać więcej informacji na temat zdarzeń, zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Wymagane|Brak|  
@@ -78,5 +78,5 @@ ms.locfileid: "59149571"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Automation.ControlType.RadioButton>
-- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

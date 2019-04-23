@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8e81cea13fb8d25701ccbe163f112904baf47a9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143172"
 ---
 # <a name="isymunmanageddispose-interface"></a>ISymUnmanagedDispose — Interfejs
@@ -30,7 +30,7 @@ Usuwa zasoby niezarządzane.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Destroy, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Powoduje, że obiekt jest zwolnienie wszystkich odwołań wewnętrznego i zwraca błąd na dowolne wywołania metody kolejne.|  
+|[destroy, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|Powoduje, że obiekt jest zwolnienie wszystkich odwołań wewnętrznego i zwraca błąd na dowolne wywołania metody kolejne.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Nagłówek:** CorSym.idl, CorSym.h  

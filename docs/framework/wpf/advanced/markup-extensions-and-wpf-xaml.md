@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148100"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
@@ -118,10 +118,10 @@ W tym temacie przedstawiono koncepcję — rozszerzenia znaczników dla XAML, w 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
-- [Przestrzeń nazw XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Namespace XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
-- [StaticResource — Rozszerzenie znaczników](staticresource-markup-extension.md)
+- [StaticResource, rozszerzenie znaczników](staticresource-markup-extension.md)
 - [Rozszerzenie znaczników powiązania](binding-markup-extension.md)
-- [DynamicResource — Rozszerzenie znaczników](dynamicresource-markup-extension.md)
-- [x:Type — Rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)
+- [DynamicResource, rozszerzenie znaczników](dynamicresource-markup-extension.md)
+- [x:Type, rozszerzenie znaczników](../../xaml-services/x-type-markup-extension.md)

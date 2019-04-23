@@ -3,10 +3,10 @@ title: Zabezpieczanie aplikacji ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149386"
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
@@ -23,7 +23,7 @@ Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowy
  [Bezpieczny dostęp do danych](../../../../docs/framework/data/adonet/secure-data-access.md)  
  W tym artykule opisano sposób pracy z danymi ze źródła zabezpieczonych danych.  
   
- [Zabezpieczanie aplikacji klienckich](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Zabezpieczanie aplikacje klienckich](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  W tym artykule opisano zagadnienia dotyczące zabezpieczeń dla aplikacji klienckich.  
   
  [Zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
@@ -36,7 +36,7 @@ Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowy
  [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  W tym artykule opisano funkcje zabezpieczeń programu SQL Server z perspektywy dewelopera.  
   
- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  W tym artykule opisano zabezpieczenia dla aplikacji platformy Entity Framework.  
   
  [Zabezpieczenia](../../../../docs/standard/security/index.md)  
@@ -48,7 +48,7 @@ Zapisywanie bezpiecznych aplikacji ADO.NET obejmuje więcej niż unikanie typowy
  [Zasoby służące do tworzenia bezpiecznych aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Zawiera łącza do tematów dotyczące tworzenia bezpiecznych aplikacji.  
   
- [Bibliografia dotyczące zabezpieczeń](/visualstudio/ide/security-bibliography)  
+ [Bibliografia dotycząca zabezpieczeń](/visualstudio/ide/security-bibliography)  
  Zawiera łącza do zasobów zewnętrznych, które są dostępne w tryb online i drukowania.  
   
 ## <a name="see-also"></a>Zobacz także

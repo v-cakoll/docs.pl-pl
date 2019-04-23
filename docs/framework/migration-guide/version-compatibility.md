@@ -10,10 +10,10 @@ ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1f27385fadd872d2ff6f84cabe079811142008df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143653"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w programie .NET Framework
@@ -67,8 +67,8 @@ Zgodność ze starszymi wersjami oznacza, że aplikacja opracowana dla konkretne
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Nowości](../../../docs/framework/whats-new/index.md)
-- [Przestarzałe elementy w bibliotece klas](../../../docs/framework/whats-new/whats-obsolete.md)
+- [Co nowego](../../../docs/framework/whats-new/index.md)
+- [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)
 - [Zgodność aplikacji](../../../docs/framework/migration-guide/application-compatibility.md)
-- [Cykl wsparcia technicznego dla programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [Microsoft .NET Framework Support Lifecycle Policy](https://go.microsoft.com/fwlink/p/?LinkId=248212)
 - [Zagadnienia dotyczące migracji programu .NET framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

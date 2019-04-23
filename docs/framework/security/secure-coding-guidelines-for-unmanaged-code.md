@@ -10,10 +10,10 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143770"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu
@@ -48,7 +48,7 @@ Kod biblioteki musi wywoływać kod niezarządzany (na przykład kodu natywnego 
 |Słowo kluczowe|Zagadnienia dotyczące bezpieczeństwa|  
 |-------------|-----------------------------|  
 |**Bezpieczne**|Nieszkodliwy całkowicie dowolnego kodu, nawet złośliwego kodu, aby wywołać. Może służyć podobnie jak inne kodu zarządzanego. Na przykład funkcja, która pobiera godzinę jest zazwyczaj bezpieczne.|  
-|**natywne**|Neutralnym poziomie bezpieczeństwa; oznacza to, że kod niezarządzany, który wymaga niezarządzany kod uprawnienia do wywołania. Zabezpieczenia są sprawdzane, co uniemożliwia nieautoryzowanym obiektu wywołującego.|  
+|**native**|Neutralnym poziomie bezpieczeństwa; oznacza to, że kod niezarządzany, który wymaga niezarządzany kod uprawnienia do wywołania. Zabezpieczenia są sprawdzane, co uniemożliwia nieautoryzowanym obiektu wywołującego.|  
 |**unsafe**|Niebezpieczny kod niezarządzany punkt wejścia z zabezpieczeniami pominięte. Deweloperzy należy zachować ostrożność największy podczas korzystania z takiego kodu niezarządzanego, upewniając się, że innych mechanizmów ochrony znajdują się w miejscu, aby uniemożliwić luki w zabezpieczeniach. Deweloperzy muszą być odpowiedzialne, to słowo kluczowe zastępuje system zabezpieczeń.|  
   
 ## <a name="see-also"></a>Zobacz także

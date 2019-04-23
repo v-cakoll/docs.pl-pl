@@ -18,10 +18,10 @@ ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151271"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importowanie biblioteki typów jako zestawu
@@ -50,7 +50,7 @@ Definicje typów modelu COM zazwyczaj znajdują się w bibliotece typów. Z kole
   
      Importer biblioteki typów udostępnia opcje wiersza polecenia do Dostosuj metadane w powstałym pliku międzyoperacyjnych, importuje typy z istniejącej biblioteki typów, a następnie generuje zestaw międzyoperacyjny i przestrzeni nazw. Aby uzyskać instrukcje, zobacz [jak: Generowanie zestawów międzyoperacyjnych z bibliotek typów](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> class  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> Klasa  
   
      Ta klasa dostarcza metody do przekonwertowania klasy coclass i interfejsy w bibliotece typów na metadane w zestawie. Generuje ten sam wynik metadanych jako Tlbimp.exe. Jednak w przeciwieństwie do Tlbimp.exe <xref:System.Runtime.InteropServices.TypeLibConverter> klasy można przekonwertować biblioteki typów w pamięci na metadanych.  
   
@@ -73,12 +73,12 @@ Definicje typów modelu COM zazwyczaj znajdują się w bibliotece typów. Z kole
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
-- [Udostępnianie składników COM programowi.NET Framework](../../../docs/framework/interop/exposing-com-components.md)
-- [Podsumowanie informacji o konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
+- [Udostępnianie składników COM programowi .NET Framework](../../../docs/framework/interop/exposing-com-components.md)
+- [Biblioteki typów na zestaw konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tlbimp.exe (importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)
 - [Dostosowywanie otok standardowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Używanie typów modelu COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilowanie projektu międzyoperacyjnego](../../../docs/framework/interop/compiling-an-interop-project.md)
 - [Wdrażanie aplikacji międzyoperacyjnych](../../../docs/framework/interop/deploying-an-interop-application.md)
-- [Instrukcje: Dodawanie odwołań do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
+- [Instrukcje: Dodaj odwołania do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)
 - [Instrukcje: Generowanie zestawów międzyoperacyjnych z bibliotek typów](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)

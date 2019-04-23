@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 ms.openlocfilehash: 747e1112046b6882b1a3bef0c1bfdb25f0e83f53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149763"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla formantów typu kalendarz
@@ -56,7 +56,7 @@ ms.locfileid: "59149763"
   
 |Właściwości wzorzec/wzorzec kontrolki|Pomoc techniczna|Uwagi|  
 |---------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|Tak|Ponieważ dni w miesiącu to elementy, które można go znaleźć przestrzennie kontrolki kalendarza zawsze obsługuje wzorca siatki.|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|Yes|Ponieważ dni w miesiącu to elementy, które można go znaleźć przestrzennie kontrolki kalendarza zawsze obsługuje wzorca siatki.|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|Zależy od|Formanty kalendarza większość obsługuje Przerzucanie widoku przez stronę. Wzorzec przewijania jest zalecane w celu obsługi nawigacji stronicowania.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Zależy od|Formanty kalendarza większość zachować określonego dnia, miesiąca lub roku jako zaznaczenia elementu podrzędnego. Niektóre kalendarze i są wielokrotnego wyboru, a inne tylko pojedynczego wyboru.|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|Tak|Formant kalendarza ma zawsze nagłówka w ramach jego poddrzewa dni tygodnia, więc wzorzec tabeli muszą być obsługiwane.|  
@@ -66,7 +66,7 @@ ms.locfileid: "59149763"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie formanty kalendarza. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -86,5 +86,5 @@ ms.locfileid: "59149763"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Automation.ControlType.Calendar>
-- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

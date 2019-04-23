@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148164"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Wytyczne do projektowania kontrolek w określonych stylach
@@ -121,4 +121,4 @@ W tym dokumencie przedstawiono podsumowanie zestaw najlepszych rozwiązań, aby 
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Przegląd Autorstwo formantów](control-authoring-overview.md)
+- [Tworzenie kontrolek — omówienie](control-authoring-overview.md)

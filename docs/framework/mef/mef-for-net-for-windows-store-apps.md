@@ -5,10 +5,10 @@ ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b47af2955d0ad8e618d0143d7eedff7c74278fbd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150998"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF dla platformy .NET dla aplikacji do Sklepu Windows
@@ -28,6 +28,6 @@ ms.locfileid: "59150998"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie aplikacji .NET dla Sklepu Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312)
+- [Omówienie aplikacji .NET dla Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=238312)
 - [Aplikacje .NET for Windows Store — obsługiwane interfejsy API](https://go.microsoft.com/fwlink/p/?LinkID=247912)
 - [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

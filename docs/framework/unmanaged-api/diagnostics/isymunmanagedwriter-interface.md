@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4ac95cd5b79a2e1762fa9adf29d4d7926ab4ab7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150585"
 ---
 # <a name="isymunmanagedwriter-interface"></a>ISymUnmanagedWriter — Interfejs
@@ -30,8 +30,8 @@ Reprezentuje edytor symboli i zapewnia metody do definiowania dokumentów, punkt
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Abort — Metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|Zamyka moduł zapisujący symboli nie poświęcając symbole do magazynu symboli.|  
-|[Close — Metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|Zamyka moduł zapisujący symbol po zatwierdzeniu symbole do magazynu symboli.|  
+|[Abort, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)|Zamyka moduł zapisujący symboli nie poświęcając symbole do magazynu symboli.|  
+|[Close, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md)|Zamyka moduł zapisujący symbol po zatwierdzeniu symbole do magazynu symboli.|  
 |[CloseMethod, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)|Zamyka bieżącą metodę. Po zamknięciu metody żadnych więcej symboli można zdefiniować w nim.|  
 |[CloseNamespace, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)|Zamyka otwarty ostatnio przestrzeni nazw.|  
 |[CloseScope, metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)|Zamyka bieżący zakresie leksykalnym.|  
@@ -61,5 +61,5 @@ Reprezentuje edytor symboli i zapewnia metody do definiowania dokumentów, punkt
 ## <a name="see-also"></a>Zobacz także
 
 - [Interfejsy magazynu symboli diagnostycznych](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [ISymUnmanagedWriter2 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
-- [ISymUnmanagedWriter3 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [ISymUnmanagedWriter2, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-interface.md)
+- [ISymUnmanagedWriter3, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

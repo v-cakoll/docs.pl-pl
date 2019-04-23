@@ -12,10 +12,10 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151557"
 ---
 # <a name="how-to-configure-network-tracing"></a>Instrukcje: konfigurowanie funkcji śledzenia sieci
@@ -100,6 +100,6 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
 ## <a name="see-also"></a>Zobacz także
 
 - [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [Śledzenie sieci w .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
+- [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)
 - [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)
 - [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

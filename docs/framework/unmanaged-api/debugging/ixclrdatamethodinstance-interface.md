@@ -16,10 +16,10 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152961"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance, interfejs
@@ -49,4 +49,4 @@ Ten interfejs znajduje się wewnątrz środowiska uruchomieniowego i nie jest do
 ## <a name="see-also"></a>Zobacz także
 
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

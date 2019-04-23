@@ -23,10 +23,10 @@ helpviewer_keywords:
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146149"
 ---
 # <a name="introducing-pluggable-protocols"></a>Wprowadzenie protokołów podłączanych
@@ -69,6 +69,6 @@ Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożeni
 ## <a name="see-also"></a>Zobacz także
 
 - [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Programowanie dla sieci w .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Przykłady kodu usług sieciowych dla platformy .NET w galerii kodu MSDN](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

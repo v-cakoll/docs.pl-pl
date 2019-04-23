@@ -7,10 +7,10 @@ helpviewer_keywords:
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
 ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149997"
 ---
 # <a name="how-to-use-xml-namespaces-in-data-binding"></a>Instrukcje: Używanie przestrzeni nazw XML w powiązaniu danych
@@ -31,6 +31,6 @@ ms.locfileid: "59149997"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
 ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154365"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>Instrukcje: wyświetlanie podglądu wydruku w aplikacjach formularzy Windows
@@ -85,5 +85,5 @@ Możesz użyć <xref:System.Windows.Forms.PrintPreviewDialog> sterowania, aby u�
 
 - [PrintDocument, składnik](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog, kontrolka](printpreviewdialog-control-windows-forms.md)
-- [Obsługa drukowania w formularzach systemu Windows](../advanced/windows-forms-print-support.md)
+- [Obsługa drukowania w formularzach Windows Forms](../advanced/windows-forms-print-support.md)
 - [Windows Forms](../index.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154417"
 ---
 # <a name="controls"></a>Formanty
@@ -101,10 +101,10 @@ ms.locfileid: "59154417"
 
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
 - [Kontrolki według kategorii](controls-by-category.md)
-- [Biblioteka formantów](control-library.md)
-- [Przegląd Szablonowanie danych](../data/data-templating-overview.md)
-- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Biblioteka kontrolek](control-library.md)
+- [Szablonowanie danych — omówienie](../data/data-templating-overview.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
 - [Dane wejściowe](../advanced/input-wpf.md)
 - [Włączanie polecenia](../advanced/how-to-enable-a-command.md)
-- [Przewodniki: Tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Przewodnik: Tworzenie niestandardowego przycisku animowanego](walkthroughs-create-a-custom-animated-button.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)

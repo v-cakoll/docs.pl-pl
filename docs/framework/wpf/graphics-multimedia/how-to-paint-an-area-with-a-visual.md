@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 35f92996-1d03-4542-acc4-3469dcf09492
 ms.openlocfilehash: b5376085dc36549cd2d3d72835ec291454124267
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153455"
 ---
 # <a name="how-to-paint-an-area-with-a-visual"></a>Instrukcje: Maluj obszar za pomocą Visual
@@ -33,4 +33,4 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.VisualBrush
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)

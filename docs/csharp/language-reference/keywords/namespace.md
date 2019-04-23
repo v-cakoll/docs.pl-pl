@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148762"
 ---
 # <a name="namespace-c-reference"></a>namespace (odwołanie w C#)
@@ -32,7 +32,7 @@ W przestrzeni nazw można zadeklarować zero lub więcej z następujących typó
 
 - [interface](interface.md)
 
-- [struktura ](struct.md)
+- [struct](struct.md)
 
 - [enum](enum.md)
 
@@ -56,11 +56,11 @@ Poniższy przykład pokazuje sposób wywołania metody statycznej w zagnieżdżo
 
 Aby uzyskać więcej informacji o korzystaniu z przestrzeni nazw zobacz następujące tematy:
 
-- [Namespaces](../../programming-guide/namespaces/index.md)
+- [Przestrzenie nazw](../../programming-guide/namespaces/index.md)
 
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
 
-- [Instrukcje: Użycie globalnych aliasów przestrzeni nazw](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [Instrukcje: Użycie globalnych aliasów Namespace](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -68,9 +68,9 @@ Aby uzyskać więcej informacji o korzystaniu z przestrzeni nazw zobacz następu
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../../language-reference/index.md)
+- [Dokumentacja języka C#](../../language-reference/index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Słowa kluczowe przestrzeni nazw](namespace-keywords.md)
-- [korzystanie](using-directive.md)
+- [using](using-directive.md)
 - [Przy użyciu statycznej](using-static.md)

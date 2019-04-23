@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf23a8f1893aa0f992d554d3c7533c3dc42f4e95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150985"
 ---
 # <a name="getcachepath-function"></a>GetCachePath — Funkcja
@@ -57,5 +57,5 @@ HRESULT GetCachePath (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ASM_CACHE_FLAGS — Wyliczenie](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
+- [ASM_CACHE_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md)
 - [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

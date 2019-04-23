@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
 ms.openlocfilehash: 443e5c620ef5bf240d3e317f0234aac0b29b456f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59145083"
 ---
 # <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>Instrukcje: Obsługiwanie zdarzenia MouseDoubleClick dla każdego elementu w kontrolce ListView
@@ -35,7 +35,7 @@ Aby obsłużyć zdarzenie dla elementu w <xref:System.Windows.Controls.ListView>
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.XmlElement>
-- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Wiązanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [ListView — Przegląd](listview-overview.md)
+- [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [ListView — omówienie](listview-overview.md)

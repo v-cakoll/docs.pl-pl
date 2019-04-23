@@ -3,10 +3,10 @@ title: <mexHttpsBinding>
 ms.date: 03/30/2017
 ms.assetid: f2ed3774-78b9-4a15-b79b-655f1ad68b86
 ms.openlocfilehash: 4e96c28ac9b372092d06538d24d165dde6c5fe48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203135"
 ---
 # <a name="mexhttpsbinding"></a>\<mexHttpsBinding>
@@ -58,13 +58,13 @@ Określa ustawienia dla powiązania używanego w wymianie wiadomości WS-Metadat
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpsBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpsBindingElement>
-- [Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Publikowanie i pobieranie metadanych za pośrednictwem powiązania niestandardowego](../../../../../docs/framework/wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
-- [Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Instrukcje: pobieranie metadanych przez wiązanie inne niż wymiany metadanych](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Instrukcje: Konfigurowanie niestandardowego protokołu WS-Metadata Exchange powiązania](../../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Instrukcje: Pobieranie metadanych przez MEX powiązanie inne niż](../../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
 - [Niestandardowy bezpieczny punkt końcowy metadanych](../../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)
 - [Metadane](../../../../../docs/framework/wcf/feature-details/metadata.md)
 - [Powiązania](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Konfigurowanie usług i klientów za pomocą wiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204201"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Malowanie obrazami, rysowaniem i Visual
@@ -139,11 +139,11 @@ Składniki TileBrush o wiele kafelków
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [TileBrush — Przegląd](tilebrush-overview.md)
-- [Przegląd Pędzle WPF](wpf-brushes-overview.md)
-- [Przegląd Obrazowanie](imaging-overview.md)
-- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
-- [Przegląd Masek krycia](opacity-masks-overview.md)
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
-- [ImageBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [TileBrush — przegląd](tilebrush-overview.md)
+- [Pędzle WPF — przegląd](wpf-brushes-overview.md)
+- [Obrazowanie — przegląd](imaging-overview.md)
+- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Maska nieprzezroczystości — przegląd](opacity-masks-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)
+- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)

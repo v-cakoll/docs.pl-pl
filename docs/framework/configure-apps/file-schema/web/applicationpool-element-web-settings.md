@@ -1,15 +1,15 @@
 ---
-title: <applicationPool> Element (ustawienia internetowe)
+title: <applicationPool>, element (ustawienia internetowe)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184733"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool >, Element (ustawienia sieci Web)

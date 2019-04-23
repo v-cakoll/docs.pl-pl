@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199924"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy systemu Windows
@@ -106,6 +106,6 @@ Formularze Windows <xref:System.Windows.Forms.MonthCalendar> kontroli umożliwia
 ## <a name="see-also"></a>Zobacz także
 
 - [MonthCalendar, kontrolka](monthcalendar-control-windows-forms.md)
-- [Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy systemu Windows](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Instrukcje: wyświetlanie określonych dni pogrubioną czcionką za pomocą kontrolki MonthCalendar formularzy systemu Windows](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Instrukcje: wyświetlanie większej niż jeden liczby miesięcy w kontrolce MonthCalendar formularzy systemu Windows](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Instrukcje: Wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Instrukcje: Wyświetlanie określonych dni pogrubioną czcionką za pomocą Windows formantu MonthCalendar formularzy](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Instrukcje: Wyświetl więcej niż jednego miesiąca w kontrolce MonthCalendar formularzy Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

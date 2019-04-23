@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cad7b319a20bce09779821af6f50aea086880c26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187349"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager — Metoda
@@ -59,7 +59,7 @@ HRESULT GetHostManager (
 ## <a name="remarks"></a>Uwagi  
  Środowisko CLR wykonuje kwerendę hostowi na określenie, czy obsługuje co najmniej jeden z poniższych interfejsów:  
   
--   [Ihostmemorymanager —](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
+-   [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)  
   
 -   [IHostTaskManager](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)  
   
@@ -92,4 +92,4 @@ HRESULT GetHostManager (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IHostControl — Interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [IHostControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

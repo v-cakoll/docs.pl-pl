@@ -11,10 +11,10 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188269"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>Instrukcje: Rysowanie nieprzezroczystych i półprzezroczystych linii
@@ -33,10 +33,10 @@ Po narysowaniu linii, należy przekazać <xref:System.Drawing.Pen> obiekt <xref:
  ![Ilustracja przedstawiająca nieprzezroczystych i półprzezroczystych danych wyjściowych](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs>`e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
+ Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Przenikanie alfa linii i wypełnień](alpha-blending-lines-and-fills.md)
-- [Instrukcje: ustawienie przezroczystego tła kontrolki](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Instrukcje: Zachować kontrolę z przezroczystym tłem](../controls/how-to-give-your-control-a-transparent-background.md)
 - [Instrukcje: Rysowanie za pomocą nieprzezroczystych i półprzezroczystych pędzli](how-to-draw-with-opaque-and-semitransparent-brushes.md)

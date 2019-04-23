@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
 ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200587"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Instrukcje: Określanie niestandardowego położenia okna podręcznego
@@ -35,5 +35,5 @@ W tym przykładzie pokazano, jak określić niestandardowe położenie <xref:Sys
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.Primitives.Popup>
-- [Przegląd Okna podręczne](popup-overview.md)
-- [— Tematy porad](popup-how-to-topics.md)
+- [Okno podręczne — omówienie](popup-overview.md)
+- [Tematy z instrukcjami](popup-how-to-topics.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184824"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows
@@ -61,5 +61,5 @@ Kiedy używasz <xref:System.Windows.Forms.DataGridView> do edycji danych w aplik
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Wprowadzanie danych w formancie DataGridView formularzy systemu Windows](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy systemu Windows](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Określanie wartości domyślnych dla nowych wierszy w kontrolce DataGridView formularzy Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

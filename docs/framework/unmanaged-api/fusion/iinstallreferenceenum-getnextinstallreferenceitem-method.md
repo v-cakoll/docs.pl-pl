@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc04bb12e4271a3237ebef140c481620fc01ad7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202381"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem — Metoda
@@ -56,5 +56,5 @@ HRESULT GetNextInstallReferenceItem (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IInstallReferenceItem — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [IInstallReferenceEnum — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+- [IInstallReferenceItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
+- [IInstallReferenceEnum, interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)

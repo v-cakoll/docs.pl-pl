@@ -19,10 +19,10 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200353"
 ---
 # <a name="threading-model"></a>Model wątkowości
@@ -97,7 +97,7 @@ ms.locfileid: "59200353"
  [!code-csharp[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingPrimeNumbers/CSharp/Window1.xaml.cs#threadingprimenumberchecknextnumber)]
  [!code-vb[ThreadingPrimeNumbers#ThreadingPrimeNumberCheckNextNumber](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingPrimeNumbers/visualbasic/mainwindow.xaml.vb#threadingprimenumberchecknextnumber)]  
   
- Ta metoda sprawdza, czy najbliższej nieparzystej liczby pierwsze. Jeśli jest zainicjowanie, metoda bezpośrednio aktualizuje `bigPrime`<xref:System.Windows.Controls.TextBlock> aby odzwierciedlić ich odnajdywania. Możemy to zrobić, ponieważ obliczenie jest wykonywane w tym samym wątku, który został użyty do utworzenia składnika. Firma Microsoft wybierze użyć oddzielnego wątku do obliczenia, firma Microsoft musiałaby używany był mechanizm synchronizacji bardziej skomplikowane i wykonać aktualizację w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Następnie zademonstrujemy tę sytuację.  
+ Ta metoda sprawdza, czy najbliższej nieparzystej liczby pierwsze. Jeśli jest zainicjowanie, metoda bezpośrednio aktualizuje `bigPrime` <xref:System.Windows.Controls.TextBlock> aby odzwierciedlić ich odnajdywania. Możemy to zrobić, ponieważ obliczenie jest wykonywane w tym samym wątku, który został użyty do utworzenia składnika. Firma Microsoft wybierze użyć oddzielnego wątku do obliczenia, firma Microsoft musiałaby używany był mechanizm synchronizacji bardziej skomplikowane i wykonać aktualizację w [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wątku. Następnie zademonstrujemy tę sytuację.  
   
  Aby uzyskać pełnego kodu źródłowego dla tego przykładu, zobacz [Single-Threaded aplikacji z przykładem obliczania długotrwałych](https://go.microsoft.com/fwlink/?LinkID=160038)  
   
@@ -143,7 +143,7 @@ ms.locfileid: "59200353"
   
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Eksplorator działa w ten sposób. Każde nowe okno Eksploratora należy do oryginalnego proces, ale jest tworzona pod kontrolą, niezależnie od wątku.  
   
- Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.Frame> kontrolki, można też wyświetlać stron sieci Web. Firma Microsoft można łatwo utworzyć prostą [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] zastąpienia. Rozpoczniemy pracę ważną funkcją: możliwości, aby otworzyć nowe okno Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno" przycisk, możemy uruchomić kopię naszych okna w oddzielnym wątku. W ten sposób operacji długotrwałych lub blokowania w jednym z systemu windows nie będzie blokować inne okna.  
+ Za pomocą [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Frame> kontrolki, można też wyświetlać stron sieci Web. Firma Microsoft można łatwo utworzyć prostą [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] zastąpienia. Rozpoczniemy pracę ważną funkcją: możliwości, aby otworzyć nowe okno Eksploratora. Gdy użytkownik kliknie przycisk "nowe okno" przycisk, możemy uruchomić kopię naszych okna w oddzielnym wątku. W ten sposób operacji długotrwałych lub blokowania w jednym z systemu windows nie będzie blokować inne okna.  
   
  W rzeczywistości modelu przeglądarki sieci Web ma swój własny skomplikowany model wątkowości. Wybraliśmy on, ponieważ powinna być znane większość odbiorców.  
   

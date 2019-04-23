@@ -6,10 +6,10 @@ helpviewer_keywords:
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
 ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185903"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Instrukcje: Wiązanie z wynikami zapytania LINQ
@@ -26,12 +26,12 @@ W tym przykładzie pokazano, jak uruchomić zapytanie LINQ, a następnie wiąż�
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- Drugie pole listy wiąże do tej kolekcji, ponieważ jego <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> wartość jest równa `{Binding}`. W wyniku zostanie zwrócona kolekcja (na podstawie `myTaskTemplate`<xref:System.Windows.DataTemplate>).  
+ Drugie pole listy wiąże do tej kolekcji, ponieważ jego <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> wartość jest równa `{Binding}`. W wyniku zostanie zwrócona kolekcja (na podstawie `myTaskTemplate` <xref:System.Windows.DataTemplate>).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Udostępnianie danych do powiązania w XAML](how-to-make-data-available-for-binding-in-xaml.md)
 - [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Nowości w WPF w wersji 4.5](../getting-started/whats-new.md)
-- [Przegląd Wiązanie danych](data-binding-overview.md)
-- [— Tematy porad](data-binding-how-to-topics.md)
+- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Tematy z instrukcjami](data-binding-how-to-topics.md)

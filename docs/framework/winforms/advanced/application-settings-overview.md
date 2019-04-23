@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203629"
 ---
 # <a name="application-settings-overview"></a>Przegląd ustawień aplikacji
@@ -53,9 +53,9 @@ W tym temacie omówiono sposób tworzenia i przechowywania danych ustawień w im
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Instrukcje: Walidacja ustawień aplikacji](how-to-validate-application-settings.md)
+- [Instrukcje: Sprawdzanie poprawności ustawień aplikacji](how-to-validate-application-settings.md)
 - [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Instrukcje: Czytanie ustawień w czasie wykonywania w języku C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Instrukcje: Odczytaj ustawienia w czasie wykonywania za pomocąC#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Używanie ustawień aplikacji i ustawień użytkownika](using-application-settings-and-user-settings.md)
 - [Architektura ustawień aplikacji](application-settings-architecture.md)
 - [Ustawienia aplikacji dotyczące kontrolek niestandardowych](application-settings-for-custom-controls.md)

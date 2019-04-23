@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
 ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187430"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Instrukcje: blokowanie kolumn w kontrolce DataGridView formularzy systemu Windows
@@ -46,5 +46,5 @@ Gdy użytkownicy wyświetlają dane wyświetlane w formularzach Windows <xref:Sy
 
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
-- [Podstawowe funkcje komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Instrukcje: włączanie zmiany układu kolumn w kontrolce DataGridView formularzy systemu Windows](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Instrukcje: Włączanie zmiany układu kolumn w kontrolce DataGridView formularzy Windows Forms](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

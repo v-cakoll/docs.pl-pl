@@ -3,10 +3,10 @@ title: <userPrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
 ms.openlocfilehash: 9e7b845d39495dba1d1a19af95faf308b8b8c0fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188251"
 ---
 # <a name="userprincipalname"></a>\<userPrincipalName>
@@ -39,7 +39,7 @@ Określa główną nazwę użytkownika (UPN) usługi uwierzytelniania przez klie
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
+|[\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Określa tożsamość usługi, aby zostać uwierzytelnionym przez klienta.|  
   
 ## <a name="remarks"></a>Uwagi  
  Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości używa nazwy UPN, podczas przeprowadzania uwierzytelniania SSPI z punktem końcowym.  
@@ -60,4 +60,4 @@ Określa główną nazwę użytkownika (UPN) usługi uwierzytelniania przez klie
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>
 - <xref:System.ServiceModel.UpnEndpointIdentity>
 - [Uwierzytelnianie i tożsamość usług](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [\<tożsamość >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)

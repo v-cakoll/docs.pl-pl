@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188646"
 ---
 # <a name="dependency-properties-overview"></a>Przegląd właściwości zależności
@@ -200,5 +200,5 @@ Zazwyczaj nie trzeba będzie style Zawsze stosuj i zasłaniać nawet lokalnie us
 
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Właściwości zależności tylko do odczytu](read-only-dependency-properties.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
 - [Architektura WPF](wpf-architecture.md)

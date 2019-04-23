@@ -3,10 +3,10 @@ title: Ataki oparte na metodzie powtórzeń
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186761"
 ---
 # <a name="replay-attacks"></a>Ataki oparte na metodzie powtórzeń
@@ -38,7 +38,7 @@ A *powtarzania atak* występuje, gdy osoba atakująca kopiuje strumienia komunik
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

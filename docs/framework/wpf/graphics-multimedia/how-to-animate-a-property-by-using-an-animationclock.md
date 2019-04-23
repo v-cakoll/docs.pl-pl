@@ -9,10 +9,10 @@ helpviewer_keywords:
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
 ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201367"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>Instrukcje: Animowanie właściwości przy użyciu elementu AnimationClock
@@ -40,4 +40,4 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.C
 
 - [Animowanie właściwości przy użyciu scenorysu](how-to-animate-a-property-by-using-a-storyboard.md)
 - [Animowanie właściwości bez użycia scenorysu](how-to-animate-a-property-without-using-a-storyboard.md)
-- [Przegląd Techniki animacji właściwości](property-animation-techniques-overview.md)
+- [Techniki animacji właściwości — przegląd](property-animation-techniques-overview.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
 ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184850"
 ---
 # <a name="xarguments-directive"></a>x:Arguments — dyrektywa
@@ -109,4 +109,4 @@ public Food TryLookupFood(string name)
 ## <a name="see-also"></a>Zobacz także
 
 - [Definiowanie typów niestandardowych do użytku z usługami .NET Framework XAML](defining-custom-types-for-use-with-net-framework-xaml-services.md)
-- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

@@ -10,10 +10,10 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185445"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w .NET Framework
@@ -42,7 +42,7 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
   
     -   [System.Design.dll](#design)  
   
-    -   [PLik System.dll](#system)  
+    -   [System.dll](#system)  
   
     -   [System.Drawing.dll](#drawing)  
   
@@ -801,5 +801,5 @@ W tabelach, w tym artykule przedstawiono elementy członkowskie typu, które są
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przestarzałe elementy w bibliotece klas](whats-obsolete.md)
+- [Przestarzałe elementy w ułatwieniach dostępu](whats-obsolete.md)
 - [Przestarzałe typy](obsolete-types.md)

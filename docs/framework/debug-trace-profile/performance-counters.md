@@ -9,10 +9,10 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184811"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w oprogramowaniu .NET Framework
@@ -22,7 +22,7 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
   
 -   [Liczniki wydajności międzyoperacyjności](#interop)  
   
--   [liczniki wydajności JIT](#jit)  
+-   [Liczniki wydajności JIT](#jit)  
   
 -   [Ładowanie liczników wydajności](#loading)  
   
@@ -154,10 +154,10 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
 |**Wysłane datagramy**|Łączna liczba Skumulowana liczba wysłanych przez wszystkich pakietów datagram <xref:System.Net.Sockets.Socket> obiektów w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
 |**HttpWebRequest średni okres istnienia**|Średni czas ukończenia dla wszystkich <xref:System.Net.HttpWebRequest> obiektów, które zostało zakończone w ostatniego interwału w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
 |**HttpWebRequest Średni czas oczekiwania**|Średni czas na kolejki dla wszystkich <xref:System.Net.HttpWebRequest> obiektów, które pozostanie kolejki w ostatniego interwału w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
-|**HttpWebRequests Created/sec**|Liczba <xref:System.Net.HttpWebRequest> obiektów utworzonych w ciągu sekundy <xref:System.AppDomain>.|  
+|**HttpWebRequests utworzone na sekundę**|Liczba <xref:System.Net.HttpWebRequest> obiektów utworzonych w ciągu sekundy <xref:System.AppDomain>.|  
 |**HttpWebRequests Queued/sec**|Liczba <xref:System.Net.HttpWebRequest> obiekty, które zostały dodane do kolejki na sekundę w ramach <xref:System.AppDomain>.|  
 |**Przerwano HttpWebRequests na sekundę**|Liczba <xref:System.Net.HttpWebRequest> obiekty, których aplikacja o nazwie <xref:System.Net.HttpWebRequest.Abort%2A> metody na sekundę w ramach <xref:System.AppDomain>.|  
-|**HttpWebRequests Failed/sec**|Liczba <xref:System.Net.HttpWebRequest> obiektów, które otrzymały kod stanu nie powiodło się z serwera na sekundę w ramach <xref:System.AppDomain>.|  
+|**HttpWebRequests nie powiodło się na sekundę**|Liczba <xref:System.Net.HttpWebRequest> obiektów, które otrzymały kod stanu nie powiodło się z serwera na sekundę w ramach <xref:System.AppDomain>.|  
   
  Istnieje kilka rodzajów liczniki wydajności obsługiwanych funkcji sieciowych:  
   
@@ -203,13 +203,13 @@ Ten temat zawiera listę liczników wydajności można znaleźć w [Windows Perf
   
  Istnieją cztery liczniki, które śledzą pewnych <xref:System.Net.HttpWebRequest> obiektu problemy dla interwału. Te liczniki wydajności mogą pomóc deweloperom aplikacji i administratorów i działu pomocy technicznej lepiej zrozumieć, jakie <xref:System.Net.HttpWebRequest> robią obiektów. Następujące liczniki:  
   
--   **HttpWebRequests Created/sec**  
+-   **HttpWebRequests utworzone na sekundę**  
   
 -   **HttpWebRequests Queued/sec**  
   
 -   **Przerwano HttpWebRequests na sekundę**  
   
--   **HttpWebRequests Failed/sec**  
+-   **HttpWebRequests nie powiodło się na sekundę**  
   
  Dla **Aborted HttpWebRequests na sekundę** licznik, wewnętrzny wywołania <xref:System.Net.HttpWebRequest.Abort%2A> są również uwzględniane. Te wewnętrzne wywołania są zazwyczaj spowodowane przekroczenia limitu czasu, aplikacja może być konieczne mierzenie.  
   

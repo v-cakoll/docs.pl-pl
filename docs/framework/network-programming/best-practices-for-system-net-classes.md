@@ -11,10 +11,10 @@ helpviewer_keywords:
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
 ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200951"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>Najlepsze rozwiązania dotyczące klas System.Net
@@ -34,4 +34,4 @@ Poniższe zalecenia pomogą należy używać klas znajdujących się w <xref:Sys
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie dla sieci w .NET Framework](../../../docs/framework/network-programming/index.md)
+- [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)

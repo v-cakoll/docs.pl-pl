@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188529"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Instrukcje: Ładowanie zestawów do domeny aplikacji
@@ -49,8 +49,8 @@ Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Programowanie za pomocą domen aplikacji](application-domains.md#programming-with-application-domains)
+- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)
 - [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)
-- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)
+- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)
 - [Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [Domeny aplikacji i zestawy](application-domains.md#application-domains-and-assemblies)

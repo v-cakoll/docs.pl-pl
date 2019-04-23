@@ -3,15 +3,15 @@ title: Platformy docelowe
 description: Więcej informacji na temat platform docelowych dla aplikacji platformy .NET Core i bibliotek.
 author: richlander
 ms.author: mairaw
-ms.date: 12/03/2018
+ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1b7be132691218bf4b8283c60f9527decfd5023c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727407"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973879"
 ---
 # <a name="target-frameworks"></a>Platformy docelowe
 
@@ -33,7 +33,7 @@ W poniższej tabeli opisano najbardziej typowe platform docelowych, jak w przypa
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | Brak                                     |
 | .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
-| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Obsługiwane target framework w wersji
 
@@ -43,7 +43,7 @@ Platforma docelowa jest zwykle przywoływany przez TFM. W poniższej tabeli prze
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Sklep Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |

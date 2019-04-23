@@ -2,7 +2,7 @@
 title: Wymagania systemowe programu .NET framework
 description: Dowiedz się, jakie są wymagania sprzętowe, systemu operacyjnego i oprogramowania do zainstalowania programu .NET Framework 4.5 lub nowszy.
 ms.custom: updateeachrelease
-ms.date: 10/01/2018
+ms.date: 04/18/2019
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cbc639c9fed90b25c034964b5a504e880876b54
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: 5d4b335c9b196aec2873f8f663e82ee461748de3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091841"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973866"
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET framework
 
@@ -26,6 +26,7 @@ Tabele w tym temacie dostarczają wymagań sprzętowych, systemu operacyjnego i 
 * .NET framework 4.5 i jego wydania punktowe (4.5.1 i 4.5.2).
 * .NET framework 4.6 i jego wydania punktowe (4.6.1 i 4.6.2).
 * .NET framework 4.7 i jego wydania punktowe (4.7.1 i 4.7.2).
+* .NET Framework 4.8
 
 Aby uzyskać informacji na temat wersji programu .NET Framework wcześniejszych niż .NET Framework 4.5, zobacz [wersje programu .NET Framework i zależności](../migration-guide/versions-and-dependencies.md).
 
@@ -55,26 +56,27 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej wersji programu .NET F
 
 | System operacyjny | Obsługiwane wersje | Wstępnie zainstalowane w systemie operacyjnym | Do zainstalowania osobno |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Usługa Windows Update 10 października 2018 r. | 32-bitowych i 64-bitowych | .NET Framework 4.7.2 |--|
-| Usługa Windows Update 10 kwietnia 2018 r. | 32-bitowych i 64-bitowych | .NET Framework 4.7.2 |--|
-| Windows 10 Fall Creators Update | 32-bitowych i 64-bitowych | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
-| Windows 10 Creators Update | 32-bitowych i 64-bitowych | .NET framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
-| Rocznicowa aktualizacja systemu Windows 10 | 32-bitowych i 64-bitowych | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
+| Usługa Windows Update 10 maja 2019 r. | 32-bitowych i 64-bitowych | .NET Framework 4.8 | -- |
+| Usługa Windows Update 10 października 2018 r. | 32-bitowych i 64-bitowych | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| Usługa Windows Update 10 kwietnia 2018 r. | 32-bitowych i 64-bitowych | .NET Framework 4.7.2 |.NET Framework 4.8|
+| Windows 10 Fall Creators Update | 32-bitowych i 64-bitowych | .NET Framework 4.7.1 | .NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows 10 Creators Update | 32-bitowych i 64-bitowych | .NET framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Rocznicowa aktualizacja systemu Windows 10 | 32-bitowych i 64-bitowych | .NET Framework 4.6.2 |.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8  |
 | Usługa Windows Update 10 listopada | 32-bitowych i 64-bitowych | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
 | Windows 10 | 32-bitowych i 64-bitowych | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
-| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32-bitowy, 64-bitowych i ARM | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32-bitowy, 64-bitowych i ARM | [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
-| Windows 7 SP1|32-bitowych i 64-bitowych | -- | Program .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Vista z dodatkiem SP2|32-bitowych i 64-bitowych | -- | Program .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| [!INCLUDE[win81](../../../includes/win81-md.md)] | 32-bitowy, 64-bitowych i ARM | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| [!INCLUDE[win8](../../../includes/win8-md.md)] | 32-bitowy, 64-bitowych i ARM | .NET Framework 4.5 | .NET Framework 4.5.1<br /><br />.NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1 |
+| Windows 7 SP1|32-bitowych i 64-bitowych | -- | Program .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Vista z dodatkiem SP2|32-bitowych i 64-bitowych | -- | Program .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 | Windows XP |32-bitowych i 64-bitowych | -- | Program .NET Framework 4 |
 
  **Uwagi:**
 
 - .NET Framework wymaga w systemach Windows 7, Windows 7 z dodatkiem SP1. Jeśli jesteś w systemie Windows 7 i nie został jeszcze zainstalowany dodatek Service Pack 1, należy to zrobić przed zainstalowaniem programu .NET Framework.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest obsługiwana w środowisku preinstalacji Windows (Windows PE). Nie wszystkie funkcje są obsługiwane w środowisku Windows PE.
+- .NET framework 4.5 jest obsługiwana w środowisku preinstalacji Windows (Windows PE). Nie wszystkie funkcje są obsługiwane w środowisku Windows PE.
 
-- .NET Framework 4 obsługuje również platformie IA64.
+- .NET framework 4 obsługuje również platformie IA64.
 
 - Dla wszystkich platform zaleca się uaktualnienie do najnowszego dodatku Service Pack dla Windows i zainstaluj dostępne aktualizacje krytyczne [witryny Windows Update](https://go.microsoft.com/fwlink/?LinkId=168461) do zapewnienia najlepszej zgodności i zabezpieczeń.
 
@@ -84,19 +86,19 @@ Aby uzyskać informacje na temat cyklu pomocy technicznej wersji programu .NET F
 
 | System operacyjny | Obsługiwane wersje | Wstępnie zainstalowane w systemie operacyjnym | Do zainstalowania osobno |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
-| Windows Server 2019 | 64-bitowy | .NET Framework 4.7.2 | -- |
-| W systemie Windows Server w wersji 1809 | 64-bitowy | .NET Framework 4.7.2 | -- |
-| W systemie Windows Server w wersji 1803 | 64-bitowy | .NET Framework 4.7.2 | -- |
-| W systemie Windows Server w wersji 1709 | 64-bitowy | .NET Framework 4.7.1 | .NET Framework 4.7.2 | 
-| Windows Server 2016 | 64-bitowy | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] | .NET framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2012 z dodatkiem R2 | 64-bitowy | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2012 (wydanie 64-bitowe) | 64-bitowy| [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2008 R2 SP1|64-bitowy | -- | Program .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 |
-| Windows Server 2008 SP2|32-bitowych i 64-bitowych | -- | Program .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] |
+| Windows Server 2019 | 64-bitowy | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| W systemie Windows Server w wersji 1809 | 64-bitowy | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| W systemie Windows Server w wersji 1803 | 64-bitowy | .NET Framework 4.7.2 | .NET Framework 4.8 |
+| W systemie Windows Server w wersji 1709 | 64-bitowy | .NET Framework 4.7.1 | .NET Framework 4.7.2|
+| Windows Server 2016 | 64-bitowy | .NET Framework 4.6.2 | .NET framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2012 z dodatkiem R2 | 64-bitowy | .NET Framework 4.5.1 | .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/> .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2012 (wydanie 64-bitowe) | 64-bitowy| .NET Framework 4.5 | .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2008 R2 SP1|64-bitowy | -- | Program .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
+| Windows Server 2008 SP2|32-bitowych i 64-bitowych | -- | Program .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
  **Uwagi:**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] obejmuje [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], więc nie trzeba go zainstalować osobno. Podobnie [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] obejmuje [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] obejmuje .NET Framework 4.5, więc nie trzeba go zainstalować osobno. Podobnie [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] zawiera programu .NET Framework 4.5.1.
 
 - .NET Framework ma ograniczoną obsługę roli Server Core z systemu Windows Server 2008 R2 z dodatkiem SP1 lub nowszym. Zobacz [funkcje platformy .NET Core serwera](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) listę nieobsługiwanych interfejsów API.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
 ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185695"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973723"
 ---
 # <a name="data-member-default-values"></a>Domyślne wartości elementów członkowskich danych
 W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], typy mają koncepcji *wartości domyślne*. Na przykład dla dowolnego typu odwołania, wartość domyślna to `null`, a typ liczby całkowitej wynosi zero. Należy co pewien czas pominięto element członkowski danych z serializowanych danych, gdy jest ustawiona na wartość domyślną. Ponieważ element członkowski ma wartość domyślną, wartość rzeczywistą nie muszą podlegać serializacji; ma to zalety wydajności.  

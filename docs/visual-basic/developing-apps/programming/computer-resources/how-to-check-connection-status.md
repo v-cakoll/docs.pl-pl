@@ -8,11 +8,11 @@ helpviewer_keywords:
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
 ms.openlocfilehash: fd618852c2d0650f168edf8dac53931216fc3a9b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826265"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974451"
 ---
 # <a name="how-to-check-connection-status-in-visual-basic"></a>Instrukcje: Sprawdzanie stanu połączenia w języku Visual Basic
 <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> Właściwość może służyć do określenia, czy komputer ma pracy sieci lub połączenie z Internetem.  

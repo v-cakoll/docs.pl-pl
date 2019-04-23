@@ -1,7 +1,6 @@
 ---
-title: Środowisko uruchomieniowe języka wspólnego (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: Omówienie usługi Common Language Runtime (CLR) — .NET Framework
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
-ms.translationtype: MT
+ms.custom: updateeachrelease
+ms.openlocfilehash: 798b3d29a13434511f64dfc358fb7690948cacfa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904119"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59972956"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Omówienie usługi Common Language Runtime (CLR)
 
@@ -64,7 +64,7 @@ Narzędzia i Kompilatory języka ujawniać funkcjonalność środowiska wykonawc
 
 ## <a name="clr-versions"></a>Wersje środowiska CLR
 
-Numer wersji systemu .NET Framework nie musi koniecznie odpowiadać numerowi wersji CLR, którą zawiera. W poniższej tabeli przedstawiono, jak skorelowane są numery dwóch wersji.
+Numer wersji systemu .NET Framework nie musi koniecznie odpowiadać numerowi wersji CLR, którą zawiera. W poniższej tabeli przedstawiono, jak skorelowane są numery dwóch wersji:
 
 |Wersja programu .NET Framework|Zawiera wersję środowiska CLR|
 |----------------------------|--------------------------|
@@ -77,6 +77,7 @@ Numer wersji systemu .NET Framework nie musi koniecznie odpowiadać numerowi wer
 |4.5 (w tym 4.5.1 i 4.5.2)|4|
 |4.6 (w tym 4.6.1 i 4.6.2)|4|
 |4.7 (w tym 4.7.1 i 4.7.2)|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>Tematy pokrewne
 

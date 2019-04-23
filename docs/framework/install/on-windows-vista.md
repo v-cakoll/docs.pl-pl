@@ -4,13 +4,13 @@ description: Dowiedz się, jak zainstalować program .NET Framework w Windows Vi
 ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
-ms.date: 08/03/2017
-ms.openlocfilehash: 92745ed32ab671e7401d61c8edcbbe325fc1ddea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.date: 04/18/2019
+ms.openlocfilehash: 1c83aca2b2c05b33bb0f05b6f4884d4a1e55dc28
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740704"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974297"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalowanie programu .NET Framework w systemach Windows Vista i Windows Server 2008
 
@@ -18,7 +18,7 @@ ms.locfileid: "54740704"
 
 ![Nie można uruchomić tej aplikacji](./media/this-application-could-not-be-started.png)
 
-Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) jest najnowsza wersja. Nie jest obsługiwana w systemach Windows Vista i Windows Server 2008. Nie jest dołączony [Windows Update 10 października 2018 r.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) i [Windows Update 10 kwietnia 2018 r.](https://www.microsoft.com/software-download/windows10).
+Te instrukcje będą pomocne w zainstalować wersje programu .NET Framework, które są potrzebne. [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) jest najnowsza wersja. Nie jest obsługiwana w systemach Windows Vista i Windows Server 2008. Nie jest dołączony [systemu Windows 10 może aktualizować 2019](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 

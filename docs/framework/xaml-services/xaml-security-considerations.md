@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
 ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162675"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973458"
 ---
 # <a name="xaml-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XAML
 W tym temacie opisano najlepsze rozwiązania dotyczące zabezpieczeń w aplikacji, korzystając z XAML i interfejsu API programu .NET Framework XAML Services.  

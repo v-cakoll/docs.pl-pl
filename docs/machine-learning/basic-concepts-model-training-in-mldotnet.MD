@@ -4,12 +4,12 @@ description: W tym artykule opisano podstawowe pojęcia dotyczące *modelu szkol
 ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: d29f6b901b0296f4d9a75b470a84dc087fb50e5d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675566"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973840"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>Podstawowe pojęcia do trenowania modelu w strukturze ML.NET
 
@@ -37,7 +37,7 @@ W tym dokumencie opisano następujące pojęcia związane z szkolenia modelu w s
 - [*Funkcja prognozowania* ](#prediction-function) reprezentowane jako `PredictionEngine<TSrc, TDst>` klasy.
   - Funkcja prognozowania może być traktowany jako maszynie, która dotyczy transformatora jeden wiersz, takie jak w momencie prognozy.
 
-## <a name="data"></a>Dane
+## <a name="data"></a>Dane 
 
 W strukturze ML.NET dane są podobne do widoku SQL: Jest opóźnieniem ocenianą, informatycznych cursorable heterogenicznych, zestawu danych.
 

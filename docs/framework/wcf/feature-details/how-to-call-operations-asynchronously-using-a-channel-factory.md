@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
 ms.openlocfilehash: 17b6dd979f7554cd433cc1abcf2a4da8dd9b83cb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338920"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772686"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Instrukcje: asynchroniczne wywoływanie operacji za pomocą fabryki kanałów
 W tym temacie opisano, jak klient może uzyskać dostęp do operacji usługi asynchronicznie podczas korzystania <xref:System.ServiceModel.ChannelFactory%601>— na podstawie aplikacji klienckiej. (Korzystając z <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> obiektu, aby wywołać usługę, można użyć oparte na zdarzeniach asynchronicznych wywoływania modelu. Aby uzyskać więcej informacji, zobacz [jak: Asynchroniczne wywoływanie operacji usługi](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat oparte na zdarzeniach asynchronicznych wywoływania modelu, zobacz [oparte na zdarzeniach asynchroniczny wzorzec (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).)  

@@ -3,11 +3,11 @@ title: Opcja kodowania wystąpienia
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
 ms.openlocfilehash: c4de7c45d899f45a7b5b71d563257d9accb8fdbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315624"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773847"
 ---
 # <a name="instance-encoding-option"></a>Opcja kodowania wystąpienia
 **Opcja kodowania wystąpienia** właściwość Store wystąpienia przepływu pracy SQL pozwala określić, czy dostawcy stanów trwałych programu SQL należy skompresować informacji stanu wystąpienia przepływu pracy za pomocą algorytmu GZip przed zapisaniem informacje w bazie danych trwałości. Dozwolone wartości dla tej właściwości to: GZip i None. Wartość domyślna to Brak. Na poniższej liście opisano te opcje.  

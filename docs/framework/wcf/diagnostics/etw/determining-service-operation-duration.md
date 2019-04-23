@@ -3,11 +3,11 @@ title: Określanie czasu trwania operacji usługi
 ms.date: 03/30/2017
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
 ms.openlocfilehash: fd7dec5784f50a0613b574822a31202a859b34c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299036"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772783"
 ---
 # <a name="determining-service-operation-duration"></a>Określanie czasu trwania operacji usługi
 Włączenie śledzenia danych analitycznych w aplikacji Windows Communication Foundation (WCF), czas trwania wykonywania operacji usługi łatwo można ustalić, sprawdzając dziennik zdarzeń.  W tym temacie pokazano, jak określić ilość czasu potrzebnego do ukończenia w operacji usługi.  

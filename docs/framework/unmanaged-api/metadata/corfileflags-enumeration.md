@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 076d5de3e9d1925e3a030fee4a06a89862105897
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159617"
 ---
-# <a name="corfileflags-enumeration"></a><span data-ttu-id="1a894-102">CorFileFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="1a894-102">CorFileFlags Enumeration</span></span>
-<span data-ttu-id="1a894-103">Zawiera wartości, które opisują typ zdefiniowany w wywołaniu pliku [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="1a894-103">Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+# <a name="corfileflags-enumeration"></a><span data-ttu-id="3bf6a-102">CorFileFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="3bf6a-102">CorFileFlags Enumeration</span></span>
+<span data-ttu-id="3bf6a-103">Zawiera wartości, które opisują typ zdefiniowany w wywołaniu pliku [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="3bf6a-103">Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1a894-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1a894-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3bf6a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3bf6a-104">Syntax</span></span>  
   
 ```  
 typedef enum CorFileFlags {  
@@ -37,20 +37,20 @@ typedef enum CorFileFlags {
 } CorFileFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="1a894-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="1a894-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="3bf6a-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="3bf6a-105">Members</span></span>  
   
-|<span data-ttu-id="1a894-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="1a894-106">Member</span></span>|<span data-ttu-id="1a894-107">Opis</span><span class="sxs-lookup"><span data-stu-id="1a894-107">Description</span></span>|  
+|<span data-ttu-id="3bf6a-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="3bf6a-106">Member</span></span>|<span data-ttu-id="3bf6a-107">Opis</span><span class="sxs-lookup"><span data-stu-id="3bf6a-107">Description</span></span>|  
 |------------|-----------------|  
-|`ffContainsMetaData`|<span data-ttu-id="1a894-108">Wskazuje, że plik nie jest plikiem zasobów.</span><span class="sxs-lookup"><span data-stu-id="1a894-108">Indicates that the file is not a resource file.</span></span>|  
-|`ffContainsNoMetaData`|<span data-ttu-id="1a894-109">Wskazuje, czy plik, ewentualnie pliku zasobów, nie zawiera metadanych.</span><span class="sxs-lookup"><span data-stu-id="1a894-109">Indicates that the file, possibly a resource file, does not contain metadata.</span></span>|  
+|`ffContainsMetaData`|<span data-ttu-id="3bf6a-108">Wskazuje, że plik nie jest plikiem zasobów.</span><span class="sxs-lookup"><span data-stu-id="3bf6a-108">Indicates that the file is not a resource file.</span></span>|  
+|`ffContainsNoMetaData`|<span data-ttu-id="3bf6a-109">Wskazuje, czy plik, ewentualnie pliku zasobów, nie zawiera metadanych.</span><span class="sxs-lookup"><span data-stu-id="3bf6a-109">Indicates that the file, possibly a resource file, does not contain metadata.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1a894-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1a894-110">Requirements</span></span>  
- <span data-ttu-id="1a894-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1a894-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3bf6a-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3bf6a-110">Requirements</span></span>  
+ <span data-ttu-id="3bf6a-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3bf6a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1a894-112">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1a894-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="3bf6a-112">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="3bf6a-112">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="1a894-113">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="1a894-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="3bf6a-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bf6a-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1a894-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1a894-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3bf6a-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3bf6a-114">See also</span></span>
 
-- [<span data-ttu-id="1a894-115">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="1a894-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="3bf6a-115">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="3bf6a-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

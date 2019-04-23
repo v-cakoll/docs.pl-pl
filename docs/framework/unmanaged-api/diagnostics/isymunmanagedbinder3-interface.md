@@ -17,29 +17,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fdfd8e8fc419809a3a490639ada1c533f286fe8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157511"
 ---
-# <a name="isymunmanagedbinder3-interface"></a><span data-ttu-id="84b7b-102">ISymUnmanagedBinder3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="84b7b-102">ISymUnmanagedBinder3 Interface</span></span>
-<span data-ttu-id="84b7b-103">Rozszerza interfejs integratora symboli.</span><span class="sxs-lookup"><span data-stu-id="84b7b-103">Extends the symbol binder interface.</span></span> <span data-ttu-id="84b7b-104">Uzyskanie tego interfejsu, wywołując `QueryInterface` na obiekt, który implementuje `ISymUnmanagedBinder` interfejsu.</span><span class="sxs-lookup"><span data-stu-id="84b7b-104">Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.</span></span>  
+# <a name="isymunmanagedbinder3-interface"></a><span data-ttu-id="5c450-102">ISymUnmanagedBinder3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5c450-102">ISymUnmanagedBinder3 Interface</span></span>
+<span data-ttu-id="5c450-103">Rozszerza interfejs integratora symboli.</span><span class="sxs-lookup"><span data-stu-id="5c450-103">Extends the symbol binder interface.</span></span> <span data-ttu-id="5c450-104">Uzyskanie tego interfejsu, wywołując `QueryInterface` na obiekt, który implementuje `ISymUnmanagedBinder` interfejsu.</span><span class="sxs-lookup"><span data-stu-id="5c450-104">Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="84b7b-105">Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych (PDB) programu z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="84b7b-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="5c450-105">Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych (PDB) programu z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="5c450-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="84b7b-106">Metody</span><span class="sxs-lookup"><span data-stu-id="84b7b-106">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5c450-106">Metody</span><span class="sxs-lookup"><span data-stu-id="5c450-106">Methods</span></span>  
   
-|<span data-ttu-id="84b7b-107">Metoda</span><span class="sxs-lookup"><span data-stu-id="84b7b-107">Method</span></span>|<span data-ttu-id="84b7b-108">Opis</span><span class="sxs-lookup"><span data-stu-id="84b7b-108">Description</span></span>|  
+|<span data-ttu-id="5c450-107">Metoda</span><span class="sxs-lookup"><span data-stu-id="5c450-107">Method</span></span>|<span data-ttu-id="5c450-108">Opis</span><span class="sxs-lookup"><span data-stu-id="5c450-108">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="84b7b-109">GetReaderFromCallback, metoda</span><span class="sxs-lookup"><span data-stu-id="84b7b-109">GetReaderFromCallback Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|<span data-ttu-id="84b7b-110">Zezwala użytkownikowi na implementowanie lub podać za pośrednictwem wywołania zwrotnego albo `IID_IDiaReadExeAtRVACallback` lub `IID_IDiaReadExeAtOffsetCallback` Aby uzyskać informacje o debugowaniu katalogu z pamięci</span><span class="sxs-lookup"><span data-stu-id="84b7b-110">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory</span></span>|  
+|[<span data-ttu-id="5c450-109">GetReaderFromCallback, metoda</span><span class="sxs-lookup"><span data-stu-id="5c450-109">GetReaderFromCallback Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|<span data-ttu-id="5c450-110">Zezwala użytkownikowi na implementowanie lub podać za pośrednictwem wywołania zwrotnego albo `IID_IDiaReadExeAtRVACallback` lub `IID_IDiaReadExeAtOffsetCallback` Aby uzyskać informacje o debugowaniu katalogu z pamięci</span><span class="sxs-lookup"><span data-stu-id="5c450-110">Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="84b7b-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="84b7b-111">Requirements</span></span>  
- <span data-ttu-id="84b7b-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="84b7b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5c450-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5c450-111">Requirements</span></span>  
+ <span data-ttu-id="5c450-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5c450-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="84b7b-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="84b7b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c450-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5c450-113">See also</span></span>
 
-- [<span data-ttu-id="84b7b-114">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="84b7b-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="84b7b-115">ISymUnmanagedBinder — Interfejs</span><span class="sxs-lookup"><span data-stu-id="84b7b-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [<span data-ttu-id="84b7b-116">ISymUnmanagedBinder2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="84b7b-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [<span data-ttu-id="5c450-114">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="5c450-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="5c450-115">ISymUnmanagedBinder, interfejs</span><span class="sxs-lookup"><span data-stu-id="5c450-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="5c450-116">ISymUnmanagedBinder2, interfejs</span><span class="sxs-lookup"><span data-stu-id="5c450-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)

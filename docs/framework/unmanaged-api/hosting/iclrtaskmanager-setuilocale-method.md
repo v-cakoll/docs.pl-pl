@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03c5c9d04567832951062fe1512a292f9b32a94b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155680"
 ---
-# <a name="iclrtaskmanagersetuilocale-method"></a><span data-ttu-id="c3592-102">ICLRTaskManager::SetUILocale — Metoda</span><span class="sxs-lookup"><span data-stu-id="c3592-102">ICLRTaskManager::SetUILocale Method</span></span>
-<span data-ttu-id="c3592-103">Powiadamia środowisko uruchomieniowe języka wspólnego (CLR), czy host ma zmodyfikowane ustawienia regionalne interfejsu użytkownika lub kultury, na aktualnie przeprowadzane zadanie.</span><span class="sxs-lookup"><span data-stu-id="c3592-103">Notifies the common language runtime (CLR) that the host has modified the user interface (UI) locale, or culture, on the currently executing task.</span></span>  
+# <a name="iclrtaskmanagersetuilocale-method"></a><span data-ttu-id="2da15-102">ICLRTaskManager::SetUILocale — Metoda</span><span class="sxs-lookup"><span data-stu-id="2da15-102">ICLRTaskManager::SetUILocale Method</span></span>
+<span data-ttu-id="2da15-103">Powiadamia środowisko uruchomieniowe języka wspólnego (CLR), czy host ma zmodyfikowane ustawienia regionalne interfejsu użytkownika lub kultury, na aktualnie przeprowadzane zadanie.</span><span class="sxs-lookup"><span data-stu-id="2da15-103">Notifies the common language runtime (CLR) that the host has modified the user interface (UI) locale, or culture, on the currently executing task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c3592-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c3592-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2da15-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2da15-104">Syntax</span></span>  
   
 ```  
 HRESULT SetUILocale (  
@@ -35,36 +35,36 @@ HRESULT SetUILocale (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c3592-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c3592-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2da15-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2da15-105">Parameters</span></span>  
  `lcid`  
- <span data-ttu-id="c3592-106">[in] Wartość identyfikatora ustawień regionalnych, który jest mapowany do nowo przypisanej kultury geograficzne i język interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="c3592-106">[in] The locale identifier value that maps to the newly assigned geographical culture and language for the user interface.</span></span>  
+ <span data-ttu-id="2da15-106">[in] Wartość identyfikatora ustawień regionalnych, który jest mapowany do nowo przypisanej kultury geograficzne i język interfejsu użytkownika.</span><span class="sxs-lookup"><span data-stu-id="2da15-106">[in] The locale identifier value that maps to the newly assigned geographical culture and language for the user interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c3592-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="c3592-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2da15-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="2da15-107">Return Value</span></span>  
   
-|<span data-ttu-id="c3592-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c3592-108">HRESULT</span></span>|<span data-ttu-id="c3592-109">Opis</span><span class="sxs-lookup"><span data-stu-id="c3592-109">Description</span></span>|  
+|<span data-ttu-id="2da15-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2da15-108">HRESULT</span></span>|<span data-ttu-id="2da15-109">Opis</span><span class="sxs-lookup"><span data-stu-id="2da15-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c3592-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="c3592-110">S_OK</span></span>|`SetUILocale` <span data-ttu-id="c3592-111">pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="c3592-111">returned successfully.</span></span>|  
-|<span data-ttu-id="c3592-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="c3592-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="c3592-113">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="c3592-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="c3592-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="c3592-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="c3592-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="c3592-115">The call timed out.</span></span>|  
-|<span data-ttu-id="c3592-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="c3592-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="c3592-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="c3592-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="c3592-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="c3592-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="c3592-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="c3592-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="c3592-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c3592-120">E_FAIL</span></span>|<span data-ttu-id="c3592-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="c3592-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="c3592-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="c3592-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="c3592-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="c3592-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2da15-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="2da15-110">S_OK</span></span>|<span data-ttu-id="2da15-111">`SetUILocale` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="2da15-111">`SetUILocale` returned successfully.</span></span>|  
+|<span data-ttu-id="2da15-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2da15-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2da15-113">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="2da15-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="2da15-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2da15-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2da15-115">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="2da15-115">The call timed out.</span></span>|  
+|<span data-ttu-id="2da15-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2da15-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2da15-117">Obiekt wywołujący nie posiada blokady.</span><span class="sxs-lookup"><span data-stu-id="2da15-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2da15-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2da15-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2da15-119">Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="2da15-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2da15-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2da15-120">E_FAIL</span></span>|<span data-ttu-id="2da15-121">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="2da15-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2da15-122">Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="2da15-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2da15-123">Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="2da15-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c3592-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="c3592-124">Remarks</span></span>  
- `SetUILocale` <span data-ttu-id="c3592-125">zapewnia możliwość hosta do wykonywania jakichkolwiek mechanizmów środowiska użytkownika, który może mieć synchronizacji ustawień regionalnych.</span><span class="sxs-lookup"><span data-stu-id="c3592-125">provides an opportunity for the host to execute any mechanisms it might have for the synchronization of locales.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2da15-124">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2da15-124">Remarks</span></span>  
+ <span data-ttu-id="2da15-125">`SetUILocale` zapewnia możliwość hosta do wykonywania jakichkolwiek mechanizmów środowiska użytkownika, który może mieć synchronizacji ustawień regionalnych.</span><span class="sxs-lookup"><span data-stu-id="2da15-125">`SetUILocale` provides an opportunity for the host to execute any mechanisms it might have for the synchronization of locales.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c3592-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c3592-126">Requirements</span></span>  
- <span data-ttu-id="c3592-127">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c3592-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2da15-126">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2da15-126">Requirements</span></span>  
+ <span data-ttu-id="2da15-127">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2da15-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c3592-128">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c3592-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2da15-128">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2da15-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c3592-129">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c3592-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2da15-129">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2da15-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="c3592-130">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="c3592-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="2da15-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2da15-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c3592-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c3592-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2da15-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2da15-131">See also</span></span>
 
-- [<span data-ttu-id="c3592-132">ICLRTask — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c3592-132">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="c3592-133">ICLRTaskManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c3592-133">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="c3592-134">IHostTask — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c3592-134">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="c3592-135">IHostTaskManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c3592-135">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="2da15-132">ICLRTask, interfejs</span><span class="sxs-lookup"><span data-stu-id="2da15-132">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="2da15-133">ICLRTaskManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="2da15-133">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="2da15-134">IHostTask, interfejs</span><span class="sxs-lookup"><span data-stu-id="2da15-134">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="2da15-135">IHostTaskManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="2da15-135">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)

@@ -3,23 +3,23 @@ title: Microsoft.Transactions.TransactionBridge.CreateTransactionFailure
 ms.date: 03/30/2017
 ms.assetid: c3468e23-49a9-4a84-972d-a79a658851b3
 ms.openlocfilehash: 968444947714315bae902d3d038129c5b8a04cf2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082519"
 ---
-# <a name="microsofttransactionstransactionbridgecreatetransactionfailure"></a><span data-ttu-id="5c34e-102">Microsoft.Transactions.TransactionBridge.CreateTransactionFailure</span><span class="sxs-lookup"><span data-stu-id="5c34e-102">Microsoft.Transactions.TransactionBridge.CreateTransactionFailure</span></span>
-<span data-ttu-id="5c34e-103">Nie można utworzyć transakcji.</span><span class="sxs-lookup"><span data-stu-id="5c34e-103">A transaction could not be created.</span></span>  
+# <a name="microsofttransactionstransactionbridgecreatetransactionfailure"></a><span data-ttu-id="f5d2d-102">Microsoft.Transactions.TransactionBridge.CreateTransactionFailure</span><span class="sxs-lookup"><span data-stu-id="f5d2d-102">Microsoft.Transactions.TransactionBridge.CreateTransactionFailure</span></span>
+<span data-ttu-id="f5d2d-103">Nie można utworzyć transakcji.</span><span class="sxs-lookup"><span data-stu-id="f5d2d-103">A transaction could not be created.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="5c34e-104">Opis</span><span class="sxs-lookup"><span data-stu-id="5c34e-104">Description</span></span>  
- <span data-ttu-id="5c34e-105">Ślad jest generowany, gdy nie może utworzyć transakcji MSDTC.</span><span class="sxs-lookup"><span data-stu-id="5c34e-105">This trace is generated when MSDTC is unable to create a transaction.</span></span> <span data-ttu-id="5c34e-106">Może to być spowodowane małą ilością zasobów, miejsca w dzienniku niewystarczające lub inne błędy.</span><span class="sxs-lookup"><span data-stu-id="5c34e-106">This can be due to low resources, insufficient log space, or other errors.</span></span>  
+## <a name="description"></a><span data-ttu-id="f5d2d-104">Opis</span><span class="sxs-lookup"><span data-stu-id="f5d2d-104">Description</span></span>  
+ <span data-ttu-id="f5d2d-105">Ślad jest generowany, gdy nie może utworzyć transakcji MSDTC.</span><span class="sxs-lookup"><span data-stu-id="f5d2d-105">This trace is generated when MSDTC is unable to create a transaction.</span></span> <span data-ttu-id="f5d2d-106">Może to być spowodowane małą ilością zasobów, miejsca w dzienniku niewystarczające lub inne błędy.</span><span class="sxs-lookup"><span data-stu-id="f5d2d-106">This can be due to low resources, insufficient log space, or other errors.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="5c34e-107">Rozwiązywanie problemów</span><span class="sxs-lookup"><span data-stu-id="5c34e-107">Troubleshooting</span></span>  
- <span data-ttu-id="5c34e-108">Sprawdź, czy ciąg stanu w ramach komunikat śledzenia do ustalenia, czy istnieje dowolny element informacje z możliwością działania.</span><span class="sxs-lookup"><span data-stu-id="5c34e-108">Inspect the status string within the trace message to determine if any actionable item exists.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="f5d2d-107">Rozwiązywanie problemów</span><span class="sxs-lookup"><span data-stu-id="f5d2d-107">Troubleshooting</span></span>  
+ <span data-ttu-id="f5d2d-108">Sprawdź, czy ciąg stanu w ramach komunikat śledzenia do ustalenia, czy istnieje dowolny element informacje z możliwością działania.</span><span class="sxs-lookup"><span data-stu-id="f5d2d-108">Inspect the status string within the trace message to determine if any actionable item exists.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5c34e-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5c34e-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f5d2d-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f5d2d-109">See also</span></span>
 
-- [<span data-ttu-id="5c34e-110">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="5c34e-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="5c34e-111">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="5c34e-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="5c34e-112">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="5c34e-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="f5d2d-110">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="f5d2d-110">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="f5d2d-111">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="f5d2d-111">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="f5d2d-112">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="f5d2d-112">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

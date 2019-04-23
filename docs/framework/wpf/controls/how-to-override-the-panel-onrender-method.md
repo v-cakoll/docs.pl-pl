@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
 ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102534"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Instrukcje: Zastępowanie metody OnRender panelu
@@ -33,6 +33,6 @@ Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.Panel>
-- [Przegląd Panele](panels-overview.md)
+- [Panele — omówienie](panels-overview.md)
 - [Przykładowe niestandardowe panelu promieniowego](https://go.microsoft.com/fwlink/?LinkID=159982)
-- [— Tematy porad](panel-how-to-topics.md)
+- [Tematy z instrukcjami](panel-how-to-topics.md)

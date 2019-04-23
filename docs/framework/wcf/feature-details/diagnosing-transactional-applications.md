@@ -3,10 +3,10 @@ title: Diagnozowanie aplikacji transakcyjnych
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101715"
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
@@ -95,7 +95,7 @@ W tym temacie opisano rozwiązywanie problemów aplikacji transakcyjnej przy uż
   
      Śledzenie WS-AtomicTransaction można włączyć za pomocą [WS-AtomicTransaction Configuration Utility (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md). Takie śledzenie zapewnia wgląd w stan transakcji i uczestników w systemie. Umożliwia również wewnętrznego śledzenia Model usług, można ustawić `HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` klucz rejestru prawidłową wartością <xref:System.Diagnostics.SourceLevels> wyliczenia. Można włączyć rejestrowanie w taki sam sposób jak inne aplikacje WCF komunikatów.  
   
--   `System.Transactions` śledzenie  
+-   `System.Transactions` Śledzenie  
   
      Podczas korzystania z protokołu OleTransactions, komunikatach protokołów nie może być śledzony. Obsługa śledzenia <xref:System.Transactions> zapewnia infrastrukturę (które wykorzystuje OleTransactions) pozwala użytkownikom na wyświetlanie zdarzeń, które nastąpiły w transakcji. Aby włączyć śledzenie dla <xref:System.Transactions> aplikacji, zawrzyj następujący kod w `App.config` pliku konfiguracji.  
   

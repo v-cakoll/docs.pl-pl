@@ -1,5 +1,5 @@
 ---
-title: <settings> Element (ustawienia sieci)
+title: <settings>, element (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#settings
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: a1733803d1f5a5bf64aeb69d0360cef3de3b3a69
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096930"
 ---
 # <a name="settings-element-network-settings"></a>\<Ustawienia >, Element (ustawienia sieci)
@@ -51,7 +51,7 @@ Konfiguruje opcje sieciowe podstawowe dla <xref:System.Net?displayProperty=nameW
 |[Protokół IPv6](../../../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)|Włącza protokołu internetowego w wersji 6 (IPv6) pomocy technicznej.|  
 |[\<performanceCounter >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/performancecounter-element-network-settings.md)|Liczniki wydajności funkcji sieciowych umożliwia.|  
 |[servicePointManager](../../../../../docs/framework/configure-apps/file-schema/network/servicepointmanager-element-network-settings.md)|Służy do konfigurowania połączeń z zasobami sieciowymi.|  
-|[gniazdo](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Określa, czy operacje gniazda używają portów.|  
+|[Gniazda](../../../../../docs/framework/configure-apps/file-schema/network/socket-element-network-settings.md)|Określa, czy operacje gniazda używają portów.|  
 |[\<webproxyscript — >, Element (ustawienia sieci)](../../../../../docs/framework/configure-apps/file-schema/network/webproxyscript-element-network-settings.md)|Konfiguruje właściwości skryptu używanej do odnajdywania serwerów proxy sieci Web.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  

@@ -3,10 +3,10 @@ title: Pobieranie i modyfikowanie danych ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097628"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Pobieranie i modyfikowanie danych ADO.NET
@@ -25,7 +25,7 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest łączenie ze źródłe
  [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  Zawiera tematy, opisujący sposób tworzenia poleceń i polecenia konstruktorów, konfigurowania parametrów i sposób wykonywania polecenia, aby pobrać i zmodyfikować dane.  
   
- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  Zawiera tematy opisujące DataReaders, elementów DataAdapters, parametry, obsługa zdarzeń elementu DataAdapter i wykonywanie operacji wsadowych.  
   
  [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  

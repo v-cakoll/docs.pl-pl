@@ -1,5 +1,5 @@
 ---
-title: <add> Element dla bypasslist (ustawienia sieci)
+title: <add>, element dla bypasslist (ustawienia sieci)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098289"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<Dodaj >, Element dla bypasslist (ustawienia sieci)
@@ -41,7 +41,7 @@ Dodaje adres IP lub nazwę DNS do listy pomijania proxy.
   
 |**Atrybut**|**Opis**|  
 |-------------------|---------------------|  
-|**adres**|Wyrażenie regularne, zawierająca opis, adres IP lub nazwę DNS.|  
+|**address**|Wyrażenie regularne, zawierająca opis, adres IP lub nazwę DNS.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  

@@ -3,10 +3,10 @@ title: Elementy DataSet, DataTable i DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
 ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105732"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
@@ -72,7 +72,7 @@ ADO.NET <xref:System.Data.DataSet> jest reprezentacją rezydentnego zapewnia sp�
  [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Zawiera opis sposobu ładowania **DataSet** z danymi ze źródła danych.  
   
- [Aktualizowanie źródeł danych za pomocą elementów DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Opisuje sposób rozwiązywania zmiany z danymi w **DataSet** wstecz do źródła danych.  
   
  [Dodawanie istniejących ograniczeń do zestawu danych](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  

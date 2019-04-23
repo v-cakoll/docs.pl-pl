@@ -13,10 +13,10 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
 ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100811"
 ---
 # <a name="xnull-markup-extension"></a>x:Null — Rozszerzenie znaczników
@@ -47,5 +47,5 @@ Określa `null` jako wartość dla elementu członkowskiego XAML.
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.DependencyProperty.UnsetValue>
-- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

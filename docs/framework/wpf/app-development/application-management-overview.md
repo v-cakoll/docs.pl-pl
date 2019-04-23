@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100083"
 ---
 # <a name="application-management-overview"></a>Przegląd Zarządzanie aplikacjami
@@ -105,7 +105,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Pobieranie bieżącej aplikacji  
- Ponieważ funkcje <xref:System.Windows.Application> klasy są współdzielone przez aplikację, może istnieć tylko jedno wystąpienie <xref:System.Windows.Application> klasy na <xref:System.AppDomain>. Do wyegzekwowania tego, <xref:System.Windows.Application> klasy jest implementowany jako klasa pojedyncza (zobacz [Implementowanie wzorzec Singleton w C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), który tworzy pojedyncze wystąpienie sam i zapewnia udostępniony dostęp do niego za pomocą `static`<xref:System.Windows.Application.Current%2A> właściwości.  
+ Ponieważ funkcje <xref:System.Windows.Application> klasy są współdzielone przez aplikację, może istnieć tylko jedno wystąpienie <xref:System.Windows.Application> klasy na <xref:System.AppDomain>. Do wyegzekwowania tego, <xref:System.Windows.Application> klasy jest implementowany jako klasa pojedyncza (zobacz [wdrażanie pojedynczego wystąpienia w języku C#](https://go.microsoft.com/fwlink/?LinkId=100567)), który tworzy pojedyncze wystąpienie sam i zapewnia udostępniony dostęp do niego za pomocą `static` <xref:System.Windows.Application.Current%2A> Właściwość.  
   
  Poniższy kod pokazuje, jak można uzyskać odwołanie do <xref:System.Windows.Application> obiektu dla bieżącego <xref:System.AppDomain>.  
   
@@ -357,9 +357,9 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Application>
-- [Przegląd Okna WPF](wpf-windows-overview.md)
-- [Przegląd Nawigacja](navigation-overview.md)
-- [Zasoby aplikacji WPF, zawartość, pliki danych](wpf-application-resource-content-and-data-files.md)
-- [Pakuj URI w WPF](pack-uris-in-wpf.md)
-- [Application Model: — Tematy porad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Okna WPF — omówienie](wpf-windows-overview.md)
+- [Nawigacja — omówienie](navigation-overview.md)
+- [Zasoby aplikacji WPF, zawartość i pliki danych](wpf-application-resource-content-and-data-files.md)
+- [Pakowanie URI w WPF](pack-uris-in-wpf.md)
+- [Model aplikacji: Tematy porad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Projektowanie aplikacji](index.md)

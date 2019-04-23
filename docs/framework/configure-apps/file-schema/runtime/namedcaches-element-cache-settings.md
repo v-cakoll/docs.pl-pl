@@ -1,5 +1,5 @@
 ---
-title: <namedCaches> Element (ustawienia pamięci podręcznej)
+title: <namedCaches>, element (ustawienia pamięci podręcznej)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104939"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches >, Element (ustawienia pamięci podręcznej)

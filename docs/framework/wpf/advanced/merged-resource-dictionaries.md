@@ -6,10 +6,10 @@ helpviewer_keywords:
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
 ms.openlocfilehash: 17dd8e0c02d71fc7e72800fc578866188d03060e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097242"
 ---
 # <a name="merged-resource-dictionaries"></a>Połączone słowniki zasobów
@@ -56,4 +56,4 @@ ms.locfileid: "59097242"
 - <xref:System.Windows.ResourceDictionary>
 - [Zasoby XAML](xaml-resources.md)
 - [Zasoby i kod](resources-and-code.md)
-- [Zasoby aplikacji WPF, zawartość, pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Zasoby aplikacji WPF, zawartość i pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)

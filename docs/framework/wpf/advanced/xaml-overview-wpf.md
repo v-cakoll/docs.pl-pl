@@ -20,10 +20,10 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102833"
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
@@ -329,7 +329,7 @@ W tym temacie opisano funkcje języka XAML oraz pokazano, jak można użyć XAML
 
 - [Szczegóły składni XAML](xaml-syntax-in-detail.md)
 - [Klasy XAML i niestandardowe dla WPF](xaml-and-custom-classes-for-wpf.md)
-- [Przestrzeń nazw XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Namespace XAML (x:) Funkcje językowe](../../xaml-services/xaml-namespace-x-language-features.md)
 - [Rozszerzenia WPF XAML](wpf-xaml-extensions.md)
-- [Przegląd Elementy bazy](base-elements-overview.md)
+- [Przegląd elementów podstawowych](base-elements-overview.md)
 - [Drzewa w WPF](trees-in-wpf.md)

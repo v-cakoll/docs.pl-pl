@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102352"
 ---
 # <a name="graphics"></a>Grafika
@@ -25,8 +25,8 @@ ms.locfileid: "59102352"
  [Obrazy](images.md)  
  [Kształty](shapes.md)  
  [Przekształcenia](transformations.md)  
- [Ustawienie rejestru renderowania grafiki](graphics-rendering-registry-settings.md)  
- [— Tematy porad](graphics-how-to-topics.md)  
+ [Ustawienia rejestru renderowania grafiki](graphics-rendering-registry-settings.md)  
+ [Tematy z instrukcjami](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -39,4 +39,4 @@ ms.locfileid: "59102352"
 - <xref:System.Windows.Media.Effects.BitmapEffect>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafika i multimedia](index.md)
-- [Przegląd Renderowanie grafiki WPF](wpf-graphics-rendering-overview.md)
+- [Renderowanie grafiki WPF — przegląd](wpf-graphics-rendering-overview.md)

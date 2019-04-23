@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300801"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
@@ -68,5 +68,5 @@ Identyfikuje użytkownika aplikacji plik manifestu Win32 osadzanego do projektu 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wierszy poleceń w Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

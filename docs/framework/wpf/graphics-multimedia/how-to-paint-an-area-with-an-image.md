@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
 ms.openlocfilehash: 2b88982e7a8d196c31869dc74aac636d78f68386
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207815"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>Instrukcje: Maluj obszar za pomocą obrazu
@@ -37,4 +37,4 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.ImageBrush>
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300869"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Przewodnik: wiązanie z danymi w aplikacjach hybrydowych
@@ -179,5 +179,5 @@ Powiązanie źródła danych z kontrolką ma zasadnicze znaczenie dla zapewniaj�
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Powiązywanie danych w przykładowej aplikacji hybrydowych](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [Przewodnik: hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: hostowanie kontrolki złożonej WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: Hostowanie kontrolki złożonej Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

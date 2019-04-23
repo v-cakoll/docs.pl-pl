@@ -10,10 +10,10 @@ helpviewer_keywords:
 - templates [WPF], GroupBox
 ms.assetid: 33df7037-0a1b-476f-b9d0-41566a777699
 ms.openlocfilehash: 5ef8e4b44bc2b6072fa730f33c10191b64954f7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078996"
 ---
 # <a name="groupbox-styles-and-templates"></a>GroupBox — Style i szablony
@@ -49,7 +49,7 @@ ms.locfileid: "59078996"
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony formantu](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Style i szablony kontrolek](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

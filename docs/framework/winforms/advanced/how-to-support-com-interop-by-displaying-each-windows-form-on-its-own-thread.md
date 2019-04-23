@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
 ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072678"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania każdego formularza systemu Windows w jego własnym wątku
@@ -50,5 +50,5 @@ Można rozwiązać problemy ze współdziałaniem COM za pomocą wyświetlania f
 - [Udostępnianie składników .NET Framework modelowi COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Pakowanie zestawu dla modelu COM](../../interop/packaging-an-assembly-for-com.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](../../interop/registering-assemblies-with-com.md)
-- [Instrukcje: Obsługa międzyoperacyjności w modelu COM za pomocą wyświetlania formularzy systemu Windows przy użyciu metody ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Przegląd formularzy systemu Windows i niezarządzanych aplikacji](windows-forms-and-unmanaged-applications-overview.md)
+- [Instrukcje: Obsługa międzyoperacyjności modelu COM za pomocą wyświetlania formularza Windows, za pomocą ShowDialog — metoda](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Przegląd formularzy Windows Forms i niezarządzanych aplikacji](windows-forms-and-unmanaged-applications-overview.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075863"
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
@@ -43,7 +43,7 @@ Za pomocą programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu
   
  Korzyści wynikające z [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżka wydruku jest znaczna i obejmują:  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] obsługa drukowania  
+-   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] Obsługa drukowania  
   
 -   Macierzysta obsługa Profile zaawansowane kolorów, które obejmują 32 bitów na kanał, CMYK, o nazwie kolory, n farby i natywną obsługę przejrzystości i gradientów.  
   
@@ -143,8 +143,8 @@ W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../.
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [— Tematy porad](printing-how-to-topics.md)
+- [Tematy z instrukcjami](printing-how-to-topics.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Dokumenty XPS](/windows/desktop/printdocs/documents)
+- [XPS Documents](/windows/desktop/printdocs/documents)
 - [Serializacja dokumentu i przechowywanie](document-serialization-and-storage.md)
 - [Konwerter (MXDC) dokumentów XPS firmy Microsoft](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)

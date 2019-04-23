@@ -3,10 +3,10 @@ title: Funkcje (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
 ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080608"
 ---
 # <a name="functions-entity-sql"></a>Funkcje (jednostka SQL)
@@ -25,4 +25,4 @@ Jednostka SQL obsługuje funkcje zdefiniowane przez użytkownika, funkcje canoni
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

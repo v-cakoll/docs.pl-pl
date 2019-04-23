@@ -6,10 +6,10 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073696"
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
@@ -52,5 +52,5 @@ Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na 
 
 - [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
 - [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)
-- [Instrukcje: konfigurowanie usługi WCF na potrzeby współużytkowania portów](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
-- [Instrukcje: włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Instrukcje: Konfigurowanie usługi WCF na potrzeby współużytkowania portów](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)
+- [Instrukcje: Włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

@@ -3,10 +3,10 @@ title: Powiązanie danych i LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073562"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Powiązanie danych i LINQ to DataSet
@@ -20,10 +20,10 @@ ms.locfileid: "59073562"
  [Tworzenie obiektu widoku danych](../../../../docs/framework/data/adonet/creating-a-dataview-object-linq-to-dataset.md)  
  Zawiera informacje o tworzeniu <xref:System.Data.DataView>.  
   
- [Filtrowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
+ [Filtrowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
  W tym artykule opisano jak filtrować za pomocą <xref:System.Data.DataView>.  
   
- [Sortowanie za pomocą widoku danych](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
+ [Sortowanie za pomocą widoku danych.](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)  
  W tym artykule opisano sposób sortowania z <xref:System.Data.DataView>.  
   
  [Wykonywanie zapytania do kolekcji DataRowView w widoku danych](../../../../docs/framework/data/adonet/querying-the-datarowview-collection-in-a-dataview.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "59073562"
  [Wydajność widoku danych](../../../../docs/framework/data/adonet/dataview-performance.md)  
  Zawiera informacje na temat <xref:System.Data.DataView> i wydajności.  
   
- [Instrukcje: Wiązanie obiektu widoku danych z kontrolką DataGridView formularzy systemu Windows](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [Instrukcje: Powiązanie obiektu widoku danych do formantu DataGridView formularzy Windows](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  Opis sposobu tworzenia powiązania <xref:System.Data.DataView> obiekt <xref:System.Windows.Forms.DataGridView>.  
   
 ## <a name="see-also"></a>Zobacz także

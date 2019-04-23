@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081850"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
@@ -123,5 +123,5 @@ Ta druga wersja jest bardziej wydajne, za pomocą sekwencji dłużej w scenarius
 
 ## <a name="see-also"></a>Zobacz także
 
-- [REF — słowo kluczowe](../../language-reference/keywords/ref.md)
+- [ref keyword](../../language-reference/keywords/ref.md)
 - [Pisanie kodu efektywne bezpieczne](../../write-safe-efficient-code.md)

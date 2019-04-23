@@ -6,14 +6,14 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079997"
 ---
 # <a name="cleartype-registry-settings"></a>Ustawienia rejestru ClearType
-Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] ustawień rejestru, które są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] ustawień rejestru, które są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Omówienie technologii  
@@ -36,12 +36,12 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
 |Struktura pikseli|W tym artykule opisano rozmieszczenie pikseli do wyświetlania na urządzeniach.|  
 |Poziom kontrast tekstu|W tym artykule opisano poziom kontrastu wyświetlanego tekstu.|  
   
- Te ustawienia można uzyskać przez narzędzie do konfiguracji zewnętrznego, który wie, jak odwoływać się do wskazywanego przez nią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawień rejestru. Te ustawienia można również utworzone lub zmodyfikowane, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Edytora rejestru.  
+ Te ustawienia można uzyskać przez narzędzie do konfiguracji zewnętrznego, który wie, jak odwoływać się do wskazywanego przez nią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawień rejestru. Te ustawienia można również utworzone lub zmodyfikowane, uzyskując dostęp do wartości bezpośrednio przy użyciu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] Edytora rejestru.  
   
- Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia rejestru nie są ustawione (co jest domyślnym stanem), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapytania aplikacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informacje o systemie parametrów do wygładzania ustawienia czcionek.  
+ Jeśli [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ustawienia rejestru nie są ustawione (co jest domyślnym stanem), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zapytania aplikacji [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] informacje o systemie parametrów do wygładzania ustawienia czcionek.  
   
 > [!NOTE]
->  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `SystemParametersInfo`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
+>  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `SystemParametersInfo` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Poziom ClearType  
@@ -89,7 +89,7 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
  Struktura pikseli odpowiada na wartość całkowitą z zakresu od 0 do 2. Domyślny poziom to 0, co oznacza struktury płaskiej pikseli.  
   
 > [!NOTE]
->  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `EnumDisplayDevices`[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
+>  Aby uzyskać informacji na temat wyliczania wyświetlanie nazwy urządzenia, zobacz `EnumDisplayDevices` [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] funkcji.  
   
 ### <a name="registry-setting"></a>Ustawienia rejestru  
  Ustawienia lokalizacji dla struktury pikseli rejestru jest ustawienie komputera lokalnego, który odpowiada nazwę wyświetlaną określonego urządzenia:  
@@ -115,5 +115,5 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ClearType — Przegląd](cleartype-overview.md)
+- [ClearType — przegląd](cleartype-overview.md)
 - [Antyaliasing ClearType](/windows/desktop/gdi/cleartype-antialiasing)

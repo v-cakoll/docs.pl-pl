@@ -13,10 +13,10 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074992"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optymalizacja wydajności: Grafika 2D i obrazowanie
@@ -109,4 +109,4 @@ ms.locfileid: "59074992"
 - [Tekst](optimizing-performance-text.md)
 - [Powiązanie danych](optimizing-performance-data-binding.md)
 - [Inne zalecenia dotyczące wydajności](optimizing-performance-other-recommendations.md)
-- [Porady i triki animacyjne](../graphics-multimedia/animation-tips-and-tricks.md)
+- [Animacja — porady i wskazówki](../graphics-multimedia/animation-tips-and-tricks.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
 ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078424"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>Instrukcje: Zarządzanie kolumnami tabeli za pomocą właściwości Columns
@@ -67,7 +67,7 @@ W tym przykładzie przedstawiono niektóre typowe operacje, które mogą być wy
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Tabela](table-overview.md)
+- [Przegląd tabeli](table-overview.md)
 - [Definiowanie tabeli przy użyciu XAML](how-to-define-a-table-with-xaml.md)
 - [Programowe tworzenie tabeli](how-to-build-a-table-programmatically.md)
 - [Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

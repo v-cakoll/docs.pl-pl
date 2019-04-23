@@ -3,10 +3,10 @@ title: Przegląd języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073473"
 ---
 # <a name="entity-sql-overview"></a>Przegląd języka Entity SQL
@@ -19,9 +19,9 @@ ms.locfileid: "59073473"
  Ta sekcja zawiera informacje o pojęciach dotyczących [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Czym język Entity SQL różni się od języka Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+ [Jak jednostka SQL różni się od języka Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
   
- [Szybkie odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
+ [Szybkie odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-quick-reference.md)  
   
  [System typów](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "59073473"
   
  [Buforowanie planu zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-plan-caching-entity-sql.md)  
   
- [Namespaces](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
+ [Przestrzenie nazw](../../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md)  
   
  [Identyfikatory](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
   
@@ -47,22 +47,22 @@ ms.locfileid: "59073473"
   
  [Wejściowy zestaw znaków](../../../../../../docs/framework/data/adonet/ef/language-reference/input-character-set-entity-sql.md)  
   
- [Wyrażenia kwerend](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
+ [Wyrażenia zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)  
   
  [Funkcje](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)  
   
- [Kolejność wykonywania działań](../../../../../../docs/framework/data/adonet/ef/language-reference/operator-precedence-entity-sql.md)  
+ [Pierwszeństwo operatorów](../../../../../../docs/framework/data/adonet/ef/language-reference/operator-precedence-entity-sql.md)  
   
  [Stronicowanie](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)  
   
  [Semantyka porównania](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-semantics-entity-sql.md)  
   
- [Tworzenie zagnieżdżonych zapytań w języku Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
+ [Tworzenie zagnieżdżonych zapytań jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/composing-nested-entity-sql-queries.md)  
   
  [Typy strukturalne dopuszczające wartości Null](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Język Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [CSDL, SSDL i MSL specyfikacji](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Jednostki języka SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+- [Specyfikacje CSDL, SSDL i MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

@@ -5,10 +5,10 @@ ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080881"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > (architektura .NET Native)
@@ -68,7 +68,7 @@ W przypadku zasad do typu, że zasady zostały zastosowane do zawierający typ l
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Ma zastosowanie zasad odbicia do typu i jej elementów członkowskich.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Ma zastosowanie zasad odbicia do skonstruowany typ rodzajowy i jej elementów członkowskich.|  
 |[\<Metoda >](../../../docs/framework/net-native/method-element-net-native.md)|Zastosowanie zasad odbicia do metody.|  
   

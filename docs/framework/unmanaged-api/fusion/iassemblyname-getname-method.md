@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88a46ecadaf2b191e8321c5629bc77b0c67dfd3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079529"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName — Metoda
@@ -52,4 +52,4 @@ HRESULT GetName (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyName — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

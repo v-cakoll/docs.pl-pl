@@ -1,12 +1,12 @@
 ---
-title: <transport> z <peerTransport>
+title: <transport> dla <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
 ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076006"
 ---
 # <a name="transport-of-peertransport"></a>\<transport > z \<peerTransport >
@@ -51,7 +51,7 @@ Określa typ transportu dla zabezpieczonych wiadomości wysłanych przez element
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń transport elementu równorzędnego.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń transport elementu równorzędnego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element jest ustawiona tylko wtedy, gdy atrybut tryb [ \<zabezpieczeń >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) ustawiono `Transport` lub `TransportWithMessageCredential`.  

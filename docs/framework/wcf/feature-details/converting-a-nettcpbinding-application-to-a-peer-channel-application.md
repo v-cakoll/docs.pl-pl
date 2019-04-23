@@ -3,10 +3,10 @@ title: Konwertowanie aplikacji NetTcpBinding na aplikację kanału równorzędne
 ms.date: 03/30/2017
 ms.assetid: d4137292-a923-4b8f-8594-42276f2d3ce2
 ms.openlocfilehash: 2daeb28ee984e6df576fc3da0aacc9d5f7497c96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077501"
 ---
 # <a name="converting-a-nettcpbinding-application-to-a-peer-channel-application"></a>Konwertowanie aplikacji NetTcpBinding na aplikację kanału równorzędnego
@@ -17,4 +17,4 @@ Można utworzyć połączenia między klientami przy użyciu [!INCLUDE[vstecwinf
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie aplikacji kanału równorzędnego](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
-- [Wiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)
+- [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)

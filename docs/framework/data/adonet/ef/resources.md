@@ -3,10 +3,10 @@ title: Zasoby programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
 ms.openlocfilehash: c1e93896bbbaf7be68f53e4cfb45ba7465a423bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078853"
 ---
 # <a name="entity-framework-resources"></a>Zasoby programu Entity Framework
@@ -32,4 +32,4 @@ Następujące zasoby zewnętrzne Podaj informacje i pomoc techniczna do tworzeni
 - [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)
-- [Narzędzia ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
+- [Narzędzia do modelu danych jednostki ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
 ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074957"
 ---
 # <a name="handling-user-input"></a>Obsługa danych wejściowych użytkownika
@@ -65,7 +65,7 @@ W tym temacie opisano główne zdarzeń klawiatury oraz myszy dostarczone przez 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zdarzenia w formantach formularzy systemu Windows](events-in-windows-forms-controls.md)
+- [Zdarzenia w kontrolkach formularzy Windows Forms](events-in-windows-forms-controls.md)
 - [Definiowanie zdarzenia](defining-an-event-in-windows-forms-controls.md)
 - [Zdarzenia](../../../standard/events/index.md)
-- [Dane użytkownika w formularzach systemu Windows](../user-input-in-windows-forms.md)
+- [Dane użytkownika w formularzach Windows Forms](../user-input-in-windows-forms.md)

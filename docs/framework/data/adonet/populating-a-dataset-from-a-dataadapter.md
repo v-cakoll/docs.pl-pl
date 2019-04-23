@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 ms.openlocfilehash: ecfd2c3a31b42b380c593aef0bbc23775874cc7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076825"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Wypełnianie zestawu danych z elementu DataAdapter
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataSet> Jest rezydentnego reprezentację danych, który zapewnia spójne relacyjnych programowania modelu niezależnie od źródła danych. `DataSet` Przedstawia kompletny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` jest niezależna od źródła danych `DataSet` mogą obejmować dane lokalne do aplikacji i danych z wielu źródeł danych. Interakcja z istniejących źródeł danych jest kontrolowany za pośrednictwem `DataAdapter`.  
+[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Jest rezydentnego reprezentację danych, który zapewnia spójne relacyjnych programowania modelu niezależnie od źródła danych. `DataSet` Przedstawia kompletny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` jest niezależna od źródła danych `DataSet` mogą obejmować dane lokalne do aplikacji i danych z wielu źródeł danych. Interakcja z istniejących źródeł danych jest kontrolowany za pośrednictwem `DataAdapter`.  
   
  `SelectCommand` Właściwość `DataAdapter` jest `Command` obiekt, który pobiera dane ze źródła danych. `InsertCommand`, `UpdateCommand`, I `DeleteCommand` właściwości `DataAdapter` są `Command` obiektów zarządzanych aktualizacji względem danych w źródle danych, zgodnie z modyfikacje wprowadzone do danych w `DataSet`. Te właściwości są omówione bardziej szczegółowo w [aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
   
@@ -183,7 +183,7 @@ adapter.Fill(customers, "Customers");
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Elementy DataAdapter i DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
 - [Modyfikowanie danych za pomocą obiektu DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
 - [Wiele aktywnych zestawów wyników (MARS)](../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)

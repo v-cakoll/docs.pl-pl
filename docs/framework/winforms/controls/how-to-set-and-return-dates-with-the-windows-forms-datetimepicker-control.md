@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
 ms.openlocfilehash: cc4f0bdf7355cda61e6cb95f5e0b18c4f83aa62b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081544"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy systemu Windows
@@ -75,4 +75,4 @@ Aktualnie wybranej daty lub godziny w formularzach Windows Forms <xref:System.Wi
 ## <a name="see-also"></a>Zobacz także
 
 - [DateTimePicker, kontrolka](datetimepicker-control-windows-forms.md)
-- [Instrukcje: wyświetlanie daty w niestandardowym formacie za pomocą kontrolki DateTimePicker formularzy systemu Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Instrukcje: Wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy Windows](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
 ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079594"
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Instrukcje: stosowanie atrybutów w kontrolkach formularzy systemu Windows
@@ -81,6 +81,6 @@ Do tworzenia składników i formantów, które nawiązują prawidłową interakc
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
-- [Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
-- [Atrybuty w formantach formularzy systemu Windows](attributes-in-windows-forms-controls.md)
+- [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](developing-custom-windows-forms-controls.md)
+- [Atrybuty w kontrolkach formularzy Windows Forms](attributes-in-windows-forms-controls.md)
 - [Instrukcje: Serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

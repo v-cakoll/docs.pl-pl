@@ -3,10 +3,10 @@ title: Zapytania LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
 ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076188"
 ---
 # <a name="linq-to-sql-queries"></a>Zapytania LINQ to SQL
@@ -19,7 +19,7 @@ Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
   
  W poniższej tabeli przedstawiono podobieństwa i różnice między [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania elementów.  
   
-|Element|Zapytania LINQ|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Zapytanie|  
+|Element|Zapytania LINQ|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Query|  
 |----------|----------------|----------------------------------------------------------------------|  
 |Zwracany typ zmiennej lokalnej, która przechowuje zapytanie (dla zapytań, które zwracają sekwencje)|Ogólny `IEnumerable`|Ogólny `IQueryable`|  
 |Określanie źródła danych|Używa `From` (Visual Basic) lub `from` (C#) — klauzula|Ten sam|  
@@ -33,7 +33,7 @@ Należy zdefiniować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do kwerend LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
+- [Wprowadzenie do zapytań LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
 - [Podstawowe operacje zapytań LINQ](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [Relacje typów w operacjach zapytań LINQ](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)
 - [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

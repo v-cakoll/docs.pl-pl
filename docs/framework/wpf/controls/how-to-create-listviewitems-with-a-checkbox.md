@@ -8,10 +8,10 @@ helpviewer_keywords:
 - CheckBox control [WPF], ListView control
 ms.assetid: f6d66c7f-906c-4f65-a55a-0ede9d00e26a
 ms.openlocfilehash: b09d5ad11b0961febf524cec1e19cb1e59832e44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083110"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>Instrukcje: Tworzenie kontrolki ListViewItems za pomocą kontrolki CheckBox
@@ -33,6 +33,6 @@ W tym przykładzie przedstawiono sposób wyświetlania kolumny <xref:System.Wind
 - <xref:System.Windows.Controls.Control>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [ListView — Przegląd](listview-overview.md)
-- [— Tematy porad](listview-how-to-topics.md)
-- [GridView — Przegląd](gridview-overview.md)
+- [ListView — omówienie](listview-overview.md)
+- [Tematy z instrukcjami](listview-how-to-topics.md)
+- [GridView — omówienie](gridview-overview.md)

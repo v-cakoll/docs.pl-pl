@@ -1,13 +1,13 @@
 ---
-title: <add> z <participants>
+title: <add> dla <participants>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c730850-6f8e-4102-acb8-8effb4e09463
 ms.openlocfilehash: 291d1a006bc16769e36774dd9507017cb555e547
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079126"
 ---
 # <a name="add-of-participants"></a>\<Dodaj > z \<uczestników >

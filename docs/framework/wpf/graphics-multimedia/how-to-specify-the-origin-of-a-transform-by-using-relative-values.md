@@ -7,10 +7,10 @@ helpviewer_keywords:
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
 ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082961"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>Instrukcje: Określanie źródła przekształcenia przy użyciu wartości względnych
@@ -42,5 +42,5 @@ Ten przykład pokazuje, jak określić źródło przy użyciu wartości względn
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Media.Transform>
-- [Przegląd Przekształcenia](transforms-overview.md)
-- [— Tematy porad](transformations-how-to-topics.md)
+- [Przekształcenia — przegląd](transforms-overview.md)
+- [Tematy z instrukcjami](transformations-how-to-topics.md)

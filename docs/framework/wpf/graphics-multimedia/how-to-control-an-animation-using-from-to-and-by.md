@@ -8,10 +8,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 59afba57-6fc1-44c8-987e-8a5f4142adad
 ms.openlocfilehash: 56522ee5bd4391e43c261558b2fa622234c9ea3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073275"
 ---
 # <a name="how-to-control-an-animation-using-from-to-and-by"></a>Instrukcje: Kontrolowanie animacji z użyciem elementów od, do i przez
@@ -20,8 +20,8 @@ ms.locfileid: "59073275"
 |Określono właściwości|Wynikowe zachowania|  
 |--------------------------|------------------------|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości do podstawowej wartości właściwości, jest animowany lub poprzedniej animacji danych wyjściowych wartość, w zależności od sposobu skonfigurowania poprzedniej animacji.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości.|  
-|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> and <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość określoną przez sumę <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości.|  
+|<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|W miarę animacji z wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości na wartość określoną przez sumę <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> i <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>|Animacja w miarę od wartości bazowej animowany właściwości lub poprzedniej animacji danych wyjściowych wartość na wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości.|  
 |<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>|W miarę animacji z podstawową wartość właściwości jest animowany lub poprzedniej animacji danych wyjściowych wartość sumę wartości i wartość określoną przez <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości.|  
   
@@ -39,6 +39,6 @@ ms.locfileid: "59073275"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
 - [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)

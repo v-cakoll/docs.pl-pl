@@ -1,12 +1,12 @@
 ---
-title: <add> z <knownCertificates>
+title: <add> dla <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
 ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077722"
 ---
 # <a name="add-of-knowncertificates"></a>\<Dodaj > z \<knownCertificates >
@@ -129,5 +129,5 @@ Dodaje certyfikat X.509 do kolekcji znanych certyfikatów.
 - [\<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)
 - [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

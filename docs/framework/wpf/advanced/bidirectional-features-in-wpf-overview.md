@@ -6,10 +6,10 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079828"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
@@ -41,7 +41,7 @@ W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](..
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- Najwyższego poziomu <xref:System.Windows.Window> ma <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, więc wszystkie elementy zawarte w nim również dziedziczyć takie same <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Element do zastąpienia określonej <xref:System.Windows.FrameworkElement.FlowDirection%2A> należy dodać, zmiany kierunku jawne, takich jak drugi <xref:System.Windows.Controls.TextBlock> w poprzednim przykładzie, który zmienia się na <xref:System.Windows.FlowDirection.LeftToRight>. Gdy nie <xref:System.Windows.FrameworkElement.FlowDirection%2A> jest zdefiniowana wartość domyślna <xref:System.Windows.FlowDirection.LeftToRight> ma zastosowanie.  
+ Najwyższego poziomu <xref:System.Windows.Window> ma <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, więc wszystkie elementy zawarte w nim również dziedziczyć takie same <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Element do zastąpienia określonej <xref:System.Windows.FrameworkElement.FlowDirection%2A> należy dodać, zmiany kierunku jawne, takich jak drugi <xref:System.Windows.Controls.TextBlock> w poprzednim przykładzie, który zmienia się na <xref:System.Windows.FlowDirection.LeftToRight>. Gdy nie <xref:System.Windows.FrameworkElement.FlowDirection%2A> jest zdefiniowana wartość domyślna <xref:System.Windows.FlowDirection.LeftToRight> ma zastosowanie.  
   
  Na poniższym rysunku przedstawiono dane wyjściowe poprzedniego przykładu:
 
@@ -114,7 +114,7 @@ W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](..
     
  ![Grafika przedstawiająca narzędzi z prawej do lewej gradientu.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- Poniższy przykład pobiera <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Można ją rysować od lewej do prawej, Usuń <xref:System.Windows.FlowDirection> atrybutu na <xref:System.Windows.Controls.ToolBar>.  
+ Poniższy przykład pobiera <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Można ją rysować od lewej do prawej, Usuń <xref:System.Windows.FlowDirection> atrybutu na <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -140,9 +140,9 @@ W przeciwieństwie do innych platform tworzenia [!INCLUDE[TLA2#tla_winclient](..
   
  **Ścieżki**  
   
- Oprócz <xref:System.Windows.Controls.Image>, jest inny interesujący element <xref:System.Windows.Shapes.Path>. Ścieżka jest obiektem, który można narysować szereg podłączonych linii i krzywych. Działa w sposób podobny do <xref:System.Windows.Controls.Image> dotyczące jego <xref:System.Windows.FlowDirection>; na przykład jego <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> jest poziomy odzwierciedleniem jej <xref:System.Windows.FlowDirection.LeftToRight> jeden. Jednak w przeciwieństwie do <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> dziedziczy jej <xref:System.Windows.FlowDirection> z kontenera i jeden trzeba określić ręcznie.  
+ Oprócz <xref:System.Windows.Controls.Image>, jest inny interesujący element <xref:System.Windows.Shapes.Path>. Ścieżka jest obiektem, który można narysować szereg podłączonych linii i krzywych. Działa w sposób podobny do <xref:System.Windows.Controls.Image> dotyczące jego <xref:System.Windows.FlowDirection>; na przykład jego <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> jest poziomy odzwierciedleniem jej <xref:System.Windows.FlowDirection.LeftToRight> jeden. Jednak w przeciwieństwie do <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> dziedziczy jej <xref:System.Windows.FlowDirection> z kontenera i jeden trzeba określić ręcznie.  
   
- Poniższy przykład pobiera Prosta strzałka przy użyciu 3 wiersze. Pierwsza Strzałka dziedziczy <xref:System.Windows.FlowDirection.RightToLeft> kierunek z przepływu <xref:System.Windows.Controls.StackPanel> tak, aby jego początkowego i punktu końcowego są mierzone w katalogu głównym, po prawej stronie. Druga strzałka, mającej jawny <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> również rozpoczyna się po prawej stronie. Jednak począwszy od główny trzeci strzałkę jest się po lewej stronie. Aby uzyskać więcej informacji na rysunku zobacz <xref:System.Windows.Media.LineGeometry> i <xref:System.Windows.Media.GeometryGroup>.  
+ Poniższy przykład pobiera Prosta strzałka przy użyciu 3 wiersze. Pierwsza Strzałka dziedziczy <xref:System.Windows.FlowDirection.RightToLeft> kierunek z przepływu <xref:System.Windows.Controls.StackPanel> tak, aby jego początkowego i punktu końcowego są mierzone w katalogu głównym, po prawej stronie. Druga strzałka, mającej jawny <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> również rozpoczyna się po prawej stronie. Jednak począwszy od główny trzeci strzałkę jest się po lewej stronie. Aby uzyskać więcej informacji na rysunku zobacz <xref:System.Windows.Media.LineGeometry> i <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   

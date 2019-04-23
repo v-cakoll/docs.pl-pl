@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Typography attribute [WPF], setting
 ms.assetid: 19a3b49b-60a2-4c11-a786-e26b4c965588
 ms.openlocfilehash: 4c027424632f8671ba8d7cae1c899ef3a53edc26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078866"
 ---
 # <a name="how-to-alter-the-typography-of-text"></a>Instrukcje: Zmienianie typografii tekstu
@@ -37,4 +37,4 @@ Poniższy przykład pokazuje, jak ustawić <xref:System.Windows.Documents.TextEl
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Dokument przepływu](flow-document-overview.md)
+- [Przegląd dokumentu przepływu](flow-document-overview.md)

@@ -3,10 +3,10 @@ title: Omówienie LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073679"
 ---
 # <a name="linq-to-dataset-overview"></a>Omówienie LINQ to DataSet
@@ -33,4 +33,4 @@ ms.locfileid: "59073679"
 - [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Zapytanie o języku zintegrowanym (LINQ) —C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Zapytanie o języku zintegrowanym (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [LINQ do SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+- [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

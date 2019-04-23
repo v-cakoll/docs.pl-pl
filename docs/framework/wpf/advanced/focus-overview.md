@@ -9,10 +9,10 @@ helpviewer_keywords:
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
 ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073887"
 ---
 # <a name="focus-overview"></a>Przegląd Fokus
@@ -120,5 +120,5 @@ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>
-- [Przegląd Dane wejściowe](input-overview.md)
-- [Przegląd Elementy bazy](base-elements-overview.md)
+- [Przegląd danych wejściowych](input-overview.md)
+- [Przegląd elementów podstawowych](base-elements-overview.md)

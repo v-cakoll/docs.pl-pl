@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
 ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082571"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer — Formant
@@ -19,13 +19,13 @@ ms.locfileid: "59082571"
  W tematach w tej sekcji opisano pojęć i technik, które służą do tworzenia <xref:System.Windows.Forms.ToolStripContainer> funkcji w aplikacjach.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ToolStripContainer — Informacje o formancie](toolstripcontainer-control-overview.md)  
+ [ToolStripContainer, kontrolka — omówienie](toolstripcontainer-control-overview.md)  
  Zawiera tematy, które opisano przeznaczenie i główne pojęcia formularzy Windows Forms <xref:System.Windows.Forms.ToolStripContainer> kontroli.  
   
- [Instrukcje: dodawanie elementu ToolStripContainer do formularza](how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [Instrukcje: Dodawanie elementu ToolStripContainer do formularza](how-to-add-a-toolstripcontainer-to-a-form.md)  
  Pokazuje, dodając <xref:System.Windows.Forms.ToolStripContainer> do aplikacji i dodawanie formantu do określonych panelu <xref:System.Windows.Forms.ToolStripContainer>.  
   
- [Instrukcje: dodawanie kontrolki do elementu ToolStripContentPanel](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [Instrukcje: Dodawanie formantu do elementu ToolStripContentPanel](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  Pokazuje Dodawanie kontrolki do <xref:System.Windows.Forms.ToolStripContentPanel>.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -43,4 +43,4 @@ ms.locfileid: "59082571"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

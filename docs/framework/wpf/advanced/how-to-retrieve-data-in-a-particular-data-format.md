@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataObject class [WPF], retrieving data
 ms.assetid: a625acf3-1144-44cd-add7-456aefc3859f
 ms.openlocfilehash: b3ec1b8fa873fd449956912e9e77e98b0362cb0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080023"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>Instrukcje: Uzyskiwanie danych w konkretnym formacie danych
@@ -40,4 +40,4 @@ Poniższe przykłady pokazują, jak można pobrać danych z obiektu danych w okr
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.IDataObject>
-- [Przegląd Przeciąganie i upuszczanie](drag-and-drop-overview.md)
+- [Przegląd przeciągania i upuszczania](drag-and-drop-overview.md)

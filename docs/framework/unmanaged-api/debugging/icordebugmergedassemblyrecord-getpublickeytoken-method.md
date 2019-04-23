@@ -5,10 +5,10 @@ ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a4a8e5f99a845d2befe55f5939b41224f2aa47b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077306"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken Method
@@ -52,4 +52,4 @@ HRESULT GetPublicKeyToken(
 ## <a name="see-also"></a>Zobacz także
 
 - [ICorDebugMergedAssemblyRecord, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

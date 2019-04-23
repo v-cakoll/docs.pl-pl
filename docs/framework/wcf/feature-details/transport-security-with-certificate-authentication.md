@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074537"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów
@@ -25,8 +25,8 @@ W tym temacie omówiono, za pomocą certyfikatów X.509 do uwierzytelniania klie
 |Tryb zabezpieczeń|Transport|  
 |Współdziałanie|Za pomocą istniejących klientów usługi sieci Web i usług.|  
 |Uwierzytelnianie (serwer)<br /><br /> Uwierzytelnianie (klient)|Tak (za pomocą certyfikatu SSL)<br /><br /> Tak (za pomocą certyfikatu X.509)|  
-|Integralność danych|Yes|  
-|Poufność danych|Tak|  
+|Integralność danych|Tak|  
+|Poufność danych|Yes|  
 |Transport|HTTPS|  
 |Wiązanie|<xref:System.ServiceModel.WSHttpBinding>|  
   

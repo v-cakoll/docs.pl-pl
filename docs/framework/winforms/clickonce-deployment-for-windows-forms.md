@@ -7,10 +7,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
 ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072847"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Wdrożenie ClickOnce w przypadku formularzy systemu Windows
@@ -44,10 +44,10 @@ W poniższych tematach opisano [!INCLUDE[ndptecclick](../../../includes/ndpteccl
  [Instrukcje: Dodawanie zaufanego wydawcy do komputera klienckiego dla aplikacji ClickOnce](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Pokazuje jednorazowej konfiguracji komputerów klienckich, wymagane do wdrażania zaufanych aplikacji.  
   
- [Instrukcje: Określanie alternatywnej lokalizacji aktualizacji wdrażania](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
+ [Instrukcje: Określanie alternatywnej lokalizacji aktualizacji wdrożenia](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
  Pokazuje Konfigurowanie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacji przy użyciu narzędzi zestawu SDK, aby sprawdzić inną lokalizację dla nowych wersji aplikacji.  
   
- [Przewodnik: Pobieranie zestawów na żądanie przy użyciu wdrażania interfejsu API ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
+ [Przewodnik: Pobieranie zestawów na żądanie przy użyciu interfejsu API wdrażania ClickOnce](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api)  
  Demonstruje użycie wywołań interfejsu API do pobierania czasu zestawu pierwsza aplikacja próbuje załadować go.  
   
  [Instrukcje: Pobieranie informacji o ciągu zapytania w aplikacji ClickOnce w trybie online](/visualstudio/deployment/how-to-retrieve-query-string-information-in-an-online-clickonce-application)  

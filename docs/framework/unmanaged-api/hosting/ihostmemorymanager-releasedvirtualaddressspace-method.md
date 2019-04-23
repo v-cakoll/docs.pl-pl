@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0acbf4163e98b1171510260c4fac72c3d6f6fb1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189290"
 ---
-# <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a><span data-ttu-id="f821b-102">IHostMemoryManager::ReleasedVirtualAddressSpace — Metoda</span><span class="sxs-lookup"><span data-stu-id="f821b-102">IHostMemoryManager::ReleasedVirtualAddressSpace Method</span></span>
-<span data-ttu-id="f821b-103">Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) została zakończona, użycie pamięci określonej.</span><span class="sxs-lookup"><span data-stu-id="f821b-103">Notifies the host that the common language runtime (CLR) has finished using the specified memory.</span></span>  
+# <a name="ihostmemorymanagerreleasedvirtualaddressspace-method"></a><span data-ttu-id="dfc48-102">IHostMemoryManager::ReleasedVirtualAddressSpace — Metoda</span><span class="sxs-lookup"><span data-stu-id="dfc48-102">IHostMemoryManager::ReleasedVirtualAddressSpace Method</span></span>
+<span data-ttu-id="dfc48-103">Powiadamia hosta, że środowisko uruchomieniowe języka wspólnego (CLR) została zakończona, użycie pamięci określonej.</span><span class="sxs-lookup"><span data-stu-id="dfc48-103">Notifies the host that the common language runtime (CLR) has finished using the specified memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f821b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f821b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfc48-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dfc48-104">Syntax</span></span>  
   
 ```  
 HRESULT ReleasedVirtualAddressSpace(  
@@ -35,22 +35,22 @@ HRESULT ReleasedVirtualAddressSpace(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f821b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f821b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dfc48-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="dfc48-105">Parameters</span></span>  
  `startAddress`  
- <span data-ttu-id="f821b-106">[in] Wskaźnik do pamięci, które mogą być wprowadzane na adres początkowy.</span><span class="sxs-lookup"><span data-stu-id="f821b-106">[in] Pointer to the starting address of the memory to be released.</span></span>  
+ <span data-ttu-id="dfc48-106">[in] Wskaźnik do pamięci, które mogą być wprowadzane na adres początkowy.</span><span class="sxs-lookup"><span data-stu-id="dfc48-106">[in] Pointer to the starting address of the memory to be released.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f821b-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f821b-107">Remarks</span></span>  
- <span data-ttu-id="f821b-108">`ReleasedVirtualAddressSpace` Metoda jest metodą wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej.</span><span class="sxs-lookup"><span data-stu-id="f821b-108">The `ReleasedVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="f821b-109">Jest ona wywoływana przez środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="f821b-109">It is called by the CLR.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dfc48-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="dfc48-107">Remarks</span></span>  
+ <span data-ttu-id="dfc48-108">`ReleasedVirtualAddressSpace` Metoda jest metodą wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej.</span><span class="sxs-lookup"><span data-stu-id="dfc48-108">The `ReleasedVirtualAddressSpace` method is a callback method and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="dfc48-109">Jest ona wywoływana przez środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="dfc48-109">It is called by the CLR.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f821b-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f821b-110">Requirements</span></span>  
- <span data-ttu-id="f821b-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f821b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfc48-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dfc48-110">Requirements</span></span>  
+ <span data-ttu-id="dfc48-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfc48-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f821b-112">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f821b-112">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dfc48-112">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dfc48-112">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f821b-113">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f821b-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dfc48-113">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="dfc48-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="f821b-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="f821b-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="dfc48-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfc48-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f821b-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f821b-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfc48-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dfc48-115">See also</span></span>
 
-- [<span data-ttu-id="f821b-116">IHostMemoryManager — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f821b-116">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="dfc48-116">IHostMemoryManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="dfc48-116">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

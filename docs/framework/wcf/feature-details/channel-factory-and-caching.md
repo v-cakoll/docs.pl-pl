@@ -3,10 +3,10 @@ title: Fabryka kanałów i buforowanie
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106460"
 ---
 # <a name="channel-factory-and-caching"></a>Fabryka kanałów i buforowanie
@@ -117,4 +117,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - [Kompilowanie klientów](../../../../docs/framework/wcf/building-clients.md)
 - [Klienci](../../../../docs/framework/wcf/feature-details/clients.md)
 - [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Instrukcje: używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Instrukcje: Używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

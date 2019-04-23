@@ -6,10 +6,10 @@ helpviewer_keywords:
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
 ms.openlocfilehash: aca9bd577f2882e31e8d49abe5eeb5ade86f95f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110667"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>Instrukcje: Obracanie elementu w miejscu
@@ -24,5 +24,5 @@ Ten przykład pokazuje, jak do uczynienia elementu Uruchom za pomocą <xref:Syst
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Przekształcenia](transforms-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Przekształcenia — przegląd](transforms-overview.md)

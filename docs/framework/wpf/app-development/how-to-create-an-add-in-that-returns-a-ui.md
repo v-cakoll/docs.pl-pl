@@ -10,10 +10,10 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115755"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Instrukcje: Tworzenie dodatku, który zwraca interfejs użytkownika
@@ -91,4 +91,4 @@ Ten przykład przedstawia sposób tworzenia dodatku, zwracające Windows Present
 ## <a name="see-also"></a>Zobacz także
 
 - [Dodatki i rozszerzalność](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Przegląd Dodatki WPF](wpf-add-ins-overview.md)
+- [Dodatki WPF — omówienie](wpf-add-ins-overview.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
 ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108969"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicjalizacja elementów obiektu poza drzewem obiektu
@@ -43,5 +43,5 @@ Niektóre aspekty [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-
 ## <a name="see-also"></a>Zobacz także
 
 - [Drzewa w WPF](trees-in-wpf.md)
-- [Przegląd Renderowanie grafiki WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Renderowanie grafiki WPF — przegląd](../graphics-multimedia/wpf-graphics-rendering-overview.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)

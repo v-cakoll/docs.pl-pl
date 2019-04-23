@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b494b8b776f4cb0eb534233c5a03ab2d34a698ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115625"
 ---
 # <a name="createalink-function"></a>CreateALink — Funkcja
@@ -48,4 +48,4 @@ HRESULT CreateALink (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Al.exe (Konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (konsolidator zestawów)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

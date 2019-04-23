@@ -20,10 +20,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112882"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView — Informacje o formancie [Formularze systemu Windows]
@@ -66,22 +66,22 @@ ms.locfileid: "59112882"
  Zawiera łącza do przykładów kodu w dokumentacji dotyczącej różnych <xref:System.Windows.Forms.DataGridView> zadania. Te przykłady są pogrupowane według typu zadania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Typy kolumn w formancie DataGridView formularzy systemu Windows](column-types-in-the-windows-forms-datagridview-control.md)  
+ [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)  
  W tym artykule omówiono typy kolumn w formularzach Windows Forms <xref:System.Windows.Forms.DataGridView> kontrolkę służącą do wyświetlania informacji i zezwala użytkownikom na modyfikowanie lub dodawanie informacji.  
   
- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)  
  Zawiera tematy, które opisują sposób wypełnienia kontrolki z danymi ręczny lub z zewnętrznego źródła danych.  
   
- [Dostosowywanie formantu DataGridView formularzy systemu Windows](customizing-the-windows-forms-datagridview-control.md)  
+ [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](customizing-the-windows-forms-datagridview-control.md)  
  Zawiera tematy, które opisują niestandardowego rysowania <xref:System.Windows.Forms.DataGridView> komórek i wierszy oraz tworzenie pochodnych komórki, kolumny i typy wierszy.  
   
- [Dostrajanie wydajności w formancie DataGridView formularzy systemu Windows](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Zawiera tematy, które opisują sposób efektywnie wykorzystać formantu, aby uniknąć problemów z wydajnością podczas pracy z dużymi ilościami danych.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [DataGridView — Formant](datagridview-control-windows-forms.md)
-- [Funkcje domyślne w formancie DataGridView formularzy systemu Windows](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [DataGridView, kontrolka](datagridview-control-windows-forms.md)
+- [Funkcje domyślne w kontrolce DataGridView formularzy Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
 - [Domyślna obsługa myszy i klawiatury w kontrolce DataGridView formularzy Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

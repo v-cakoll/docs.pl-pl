@@ -3,10 +3,10 @@ title: Wejściowy zestaw znaków (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 13d291d3-e6bc-4719-b953-758b61a590b6
 ms.openlocfilehash: 3795660cf6086aa67596f31e49c4d950aa653d86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109730"
 ---
 # <a name="input-character-set-entity-sql"></a>Wejściowy zestaw znaków (jednostka SQL)
@@ -30,4 +30,4 @@ ms.locfileid: "59109730"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -3,10 +3,10 @@ title: Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu 
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 ms.openlocfilehash: 650cd6b8b8149529f115f22a11d19178fbd6d302
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108228"
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
@@ -16,7 +16,7 @@ W schemacie języka (XSD) definicji schematu XML **unikatowy** element określa 
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|**MSDATA:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybut zawiera wartość Nazwa ograniczenia.|  
+|**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybut zawiera wartość Nazwa ograniczenia.|  
 |**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` znajduje się w **unikatowy** unikatowego ograniczenia elementu jest tworzony z **IsPrimaryKey** właściwością **true**.|  
   
  W poniższym przykładzie przedstawiono schematu XML, który używa **unikatowy** elementu, aby określić ograniczenie unikatowości.  

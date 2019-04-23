@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110074"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows
@@ -58,5 +58,5 @@ Najbardziej podstawowa funkcja formularzy Windows <xref:System.Windows.Forms.But
 ## <a name="see-also"></a>Zobacz także
 
 - [Button, kontrolka — omówienie](button-control-overview-windows-forms.md)
-- [Sposoby wyboru kontrolki przycisku formularzy systemu Windows](ways-to-select-a-windows-forms-button-control.md)
+- [Sposoby wyboru kontrolki przycisku Windows Forms](ways-to-select-a-windows-forms-button-control.md)
 - [Button, kontrolka](button-control-windows-forms.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116259"
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
@@ -159,6 +159,6 @@ Można połączyć modyfikatorów, aby zadeklarować struktury jako `readonly re
 - [operator przypisania REF](../operators/assignment-operator.md#ref-assignment-operator)
 - [Przekazywanie parametrów](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [Parametry metody](method-parameters.md)
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)

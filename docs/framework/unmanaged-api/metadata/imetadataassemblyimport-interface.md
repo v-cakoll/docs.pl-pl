@@ -17,10 +17,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 373ff0470e2403f91534df0c0ffe4039dbb0f832
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112635"
 ---
 # <a name="imetadataassemblyimport-interface"></a>IMetaDataAssemblyImport — Interfejs
@@ -30,7 +30,7 @@ Udostępnia metody dostępu i sprawdź zawartość w manifeście zestawu.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CloseEnum — Metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|Zwalnia dojścia do określonego modułu wyliczającego.|  
+|[CloseEnum, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-closeenum-method.md)|Zwalnia dojścia do określonego modułu wyliczającego.|  
 |[EnumAssemblyRefs, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumassemblyrefs-method.md)|Pobiera moduł wyliczający, który zawiera wskaźnik interfejsu `mdAssemblyRef` tokenów zestawów odwołuje się zestaw w bieżącym zakresie metadanych.|  
 |[EnumExportedTypes, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumexportedtypes-method.md)|Pobiera moduł wyliczający, który zawiera wskaźnik interfejsu `mdExportedType` tokenów typów modelu COM, który odwołuje się zestaw w bieżącym zakresie metadanych.|  
 |[EnumFiles, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-enumfiles-method.md)|Pobiera moduł wyliczający, który zawiera wskaźnik interfejsu `mdFile` tokeny plików odwołuje się zestaw w bieżącym zakresie metadanych.|  
@@ -57,4 +57,4 @@ Udostępnia metody dostępu i sprawdź zawartość w manifeście zestawu.
 ## <a name="see-also"></a>Zobacz także
 
 - [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [IMetaDataAssemblyEmit — Interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

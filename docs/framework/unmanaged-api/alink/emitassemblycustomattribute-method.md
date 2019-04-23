@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 67073f04cfe981dd383369029d9a4b436929a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117848"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute — Metoda
@@ -71,6 +71,6 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IALink — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 — Interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink — interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

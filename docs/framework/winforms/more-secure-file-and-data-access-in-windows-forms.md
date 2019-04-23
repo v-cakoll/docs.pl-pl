@@ -14,10 +14,10 @@ helpviewer_keywords:
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
 ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115768"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
@@ -360,9 +360,9 @@ public void Write()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Bezpieczniejsze drukowanie w formularzach systemu Windows](more-secure-printing-in-windows-forms.md)
-- [Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows](additional-security-considerations-in-windows-forms.md)
-- [Przegląd zabezpieczeń w formularzach systemu Windows](security-in-windows-forms-overview.md)
-- [Zabezpieczenia formularzy systemu Windows](windows-forms-security.md)
-- [Mage.exe (Narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [Bezpieczniejsze drukowanie w formularzach Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Dodatkowe zagadnienia z zakresu zabezpieczeń dotyczące formularzy Windows Forms](additional-security-considerations-in-windows-forms.md)
+- [Przegląd zabezpieczeń w formularzach Windows Forms](security-in-windows-forms-overview.md)
+- [Zabezpieczenia formularzy Windows Forms](windows-forms-security.md)
+- [Mage.exe (narzędzie generowania manifestu i edytowania)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [MageUI.exe (narzędzie generowania i edytowania manifestu, klient z interfejsem graficznym)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

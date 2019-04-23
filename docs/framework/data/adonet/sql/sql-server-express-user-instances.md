@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111153"
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia użytkownika programu SQL Server Express
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  Protokół sieciowy do wystąpień użytkownika musi być lokalny nazwanych potoków. Nie można uruchomić wystąpienia użytkownika na zdalnym wystąpieniu programu SQL Server i logowania do programu SQL Server nie są dozwolone.  
   
 ## <a name="connecting-to-a-user-instance"></a>Nawiązywanie połączenia z wystąpieniem użytkownika  
- `User Instance` i `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Zezwalaj słowa kluczowe <xref:System.Data.SqlClient.SqlConnection> do połączenia z wystąpieniem użytkownika. Wystąpienia użytkownika są również obsługiwane przez <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` i `AttachDBFilename` właściwości.  
+ `User Instance` i `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Zezwalaj słowa kluczowe <xref:System.Data.SqlClient.SqlConnection> do połączenia z wystąpieniem użytkownika. Wystąpienia użytkownika są również obsługiwane przez <xref:System.Data.SqlClient.SqlConnectionStringBuilder> `UserInstance` i `AttachDBFilename` właściwości.  
   
  Należy pamiętać o następujących dotyczących przykładowe parametry połączenia, pokazano poniżej:  
   
@@ -58,7 +58,7 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> i <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> właściwości do tworzenia parametrów połączenia w czasie wykonywania.  
+>  Można również użyć <xref:System.Data.SqlClient.SqlConnectionStringBuilder> <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> i <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> właściwości do tworzenia parametrów połączenia w czasie wykonywania.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Za pomocą &#124;DataDirectory&#124; ciąg podstawienia  
  `AttachDbFileName` został rozszerzony ADO.NET w wersji 2.0 wraz z wprowadzeniem `|DataDirectory|` (ujęty w symbole potoku) ciąg podstawienia. `DataDirectory` jest używana w połączeniu z `AttachDbFileName` wskaż ścieżkę względną do pliku danych, co pozwoli deweloperom na tworzenie parametrów połączenia, które są oparte na ścieżkę względną do źródła danych, zamiast trzeba określić pełną ścieżkę.  

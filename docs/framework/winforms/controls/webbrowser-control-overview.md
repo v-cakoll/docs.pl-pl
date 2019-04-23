@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109438"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser — Informacje o formancie
@@ -26,19 +26,19 @@ ms.locfileid: "59109438"
   
 |Nazwa|Opis|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A> property|Pobiera obiekt, który zapewnia zarządzany dostęp do kodu HTML document object model (DOM) bieżącej strony sieci Web.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzenie|Występuje, gdy zakończenie ładowania strony sieci Web.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property|Pobiera lub ustawia zawartość bieżącej strony sieci Web HTML.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> property|Pobiera tytuł bieżącej strony sieci Web.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> — metoda|Powoduje przejście do poprzedniej strony w historii.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> — metoda|Powoduje przejście do następnej strony w historii.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> — metoda|Powoduje przejście do określonego adresu URL.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> zdarzenie|Występuje przed rozpoczęciem nawigacji, umożliwiając akcji, które zostaną anulowane.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property|Pobiera lub ustawia obiekt, który strony sieci Web, kod skryptowy można użyć do komunikacji z aplikacją.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A> — metoda|Drukuje bieżącej strony sieci Web.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> — metoda|Ponownie ładuje bieżącej strony sieci Web.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A> — metoda|Zatrzymuje bieżący nawigacji i zatrzymuje strony dynamicznej elementów, takich jak dźwięki i animacji.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A> property|Pobiera lub ustawia adres URL bieżącej strony sieci Web. Ustawienie tej właściwości powoduje przejście kontrolki na nowy adres URL.|  
+|<xref:System.Windows.Forms.WebBrowser.Document%2A> Właściwość|Pobiera obiekt, który zapewnia zarządzany dostęp do kodu HTML document object model (DOM) bieżącej strony sieci Web.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Zdarzenia|Występuje, gdy zakończenie ładowania strony sieci Web.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> Właściwość|Pobiera lub ustawia zawartość bieżącej strony sieci Web HTML.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> Właściwość|Pobiera tytuł bieżącej strony sieci Web.|  
+|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> — Metoda|Powoduje przejście do poprzedniej strony w historii.|  
+|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> — Metoda|Powoduje przejście do następnej strony w historii.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> — Metoda|Powoduje przejście do określonego adresu URL.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> Zdarzenia|Występuje przed rozpoczęciem nawigacji, umożliwiając akcji, które zostaną anulowane.|  
+|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> Właściwość|Pobiera lub ustawia obiekt, który strony sieci Web, kod skryptowy można użyć do komunikacji z aplikacją.|  
+|<xref:System.Windows.Forms.WebBrowser.Print%2A> — Metoda|Drukuje bieżącej strony sieci Web.|  
+|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> — Metoda|Ponownie ładuje bieżącej strony sieci Web.|  
+|<xref:System.Windows.Forms.WebBrowser.Stop%2A> — Metoda|Zatrzymuje bieżący nawigacji i zatrzymuje strony dynamicznej elementów, takich jak dźwięki i animacji.|  
+|<xref:System.Windows.Forms.WebBrowser.Url%2A> Właściwość|Pobiera lub ustawia adres URL bieżącej strony sieci Web. Ustawienie tej właściwości powoduje przejście kontrolki na nowy adres URL.|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -53,9 +53,9 @@ ms.locfileid: "59109438"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Instrukcje: drukowanie za pomocą kontrolki WebBrowser](how-to-print-with-a-webbrowser-control.md)
-- [Instrukcje: dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji formularzy systemu Windows](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML a kodem aplikacji klienta](implement-two-way-com-between-dhtml-and-client.md)
+- [Instrukcje: Przejdź do adresu URL za pomocą formantu WebBrowser](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Instrukcje: Drukowanie za pomocą formantu WebBrowser](how-to-print-with-a-webbrowser-control.md)
+- [Instrukcje: Dodawanie funkcji przeglądarki sieci Web do aplikacji programu Windows Forms](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Instrukcje: Tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Instrukcje: Implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta](implement-two-way-com-between-dhtml-and-client.md)
 - [Zabezpieczenia WebBrowser](webbrowser-security.md)

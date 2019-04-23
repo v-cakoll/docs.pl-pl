@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Spring property [Windows Forms]
 ms.assetid: 18bde842-a93c-48dd-9db3-15738a1775ce
 ms.openlocfilehash: 7d79a885f49168c3883259826e7b8ae62eec1dab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108189"
 ---
 # <a name="how-to-use-the-spring-property-interactively-in-a-statusstrip"></a>Instrukcje: użycie właściwości Spring interaktywnie w StatusStrip
@@ -44,4 +44,4 @@ Możesz użyć <xref:System.Windows.Forms.ToolStripStatusLabel.Spring%2A> właś
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)

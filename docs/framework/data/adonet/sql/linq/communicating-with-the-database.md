@@ -3,10 +3,10 @@ title: Komunikacja z bazą danych
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
 ms.openlocfilehash: d767bbe706b4fc9efb00031fddf8f6bd3369b485
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117147"
 ---
 # <a name="communicating-with-the-database"></a>Komunikacja z bazą danych

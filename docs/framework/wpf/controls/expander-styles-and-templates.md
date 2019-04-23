@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], Expander
 ms.assetid: da2e5a1c-5230-4c21-98a5-59c7895facd7
 ms.openlocfilehash: c5f805c251d3f6b256035e568798cd6d252ea9a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115443"
 ---
 # <a name="expander-styles-and-templates"></a>Style i szablony ekspandera
@@ -57,7 +57,7 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Expander> 
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony formantu](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Style i szablony kontrolek](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -3,10 +3,10 @@ title: Funkcje ciągów
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
 ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110394"
 ---
 # <a name="string-functions"></a>Funkcje ciągów
@@ -44,7 +44,7 @@ ms.locfileid: "59110394"
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[Funkcje ciągów (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115915)|[Funkcje ciągów (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115916)|[Funkcje ciągów (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115914)|  
+|[String Functions (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115915)|[String Functions (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115916)|[String Functions (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115914)|  
   
 ## <a name="see-also"></a>Zobacz także
 

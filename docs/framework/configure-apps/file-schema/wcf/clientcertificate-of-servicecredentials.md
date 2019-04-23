@@ -1,12 +1,12 @@
 ---
-title: <clientCertificate> z <serviceCredentials>
+title: <clientCertificate> dla <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
 ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107993"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
@@ -39,8 +39,8 @@ Definiuje certyfikat X.509 używany do podpisywania i szyfrowania wiadomości dl
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|Określa opcje uwierzytelniania certyfikatu klienta.|  
-|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|Określa certyfikat do użycia.|  
+|[\<Uwierzytelnianie >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|Określa opcje uwierzytelniania certyfikatu klienta.|  
+|[\<certyfikat >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|Określa certyfikat do użycia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -60,6 +60,6 @@ Definiuje certyfikat X.509 używany do podpisywania i szyfrowania wiadomości dl
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [Instrukcje: tworzenie kontraktu dwukierunkowego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Instrukcje: Tworzenie kontraktu dwukierunkowego](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

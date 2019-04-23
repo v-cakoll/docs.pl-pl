@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb970d31fb5158adc7dbcbb7cc0175cc91c83c8c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107344"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE — Struktura
@@ -58,6 +58,6 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IDefinitionIdentity — Interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
-- [IDENTITY_ATTRIBUTE_BLOB — Struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
-- [Łączenie — Struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+- [IDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
+- [IDENTITY_ATTRIBUTE_BLOB, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
+- [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

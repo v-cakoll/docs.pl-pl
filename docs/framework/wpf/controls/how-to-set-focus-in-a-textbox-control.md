@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TextBox control [WPF], setting focus
 ms.assetid: 24b61b45-dc2d-425e-9839-b017af7ab86f
 ms.openlocfilehash: f4ba367ea9bdfcd6dbab7a5015472ec33adfe46f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115508"
 ---
 # <a name="how-to-set-focus-in-a-textbox-control"></a>Instrukcje: Ustawianie fokusu w kontrolce TextBox
@@ -33,5 +33,5 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.UIElement.Focus%2
 
 - <xref:System.Windows.UIElement.Focusable%2A>
 - <xref:System.Windows.UIElement.IsFocused%2A>
-- [TextBox — Przegląd](textbox-overview.md)
-- [RichTextBox — Przegląd](richtextbox-overview.md)
+- [TextBox — omówienie](textbox-overview.md)
+- [RichTextBox — omówienie](richtextbox-overview.md)

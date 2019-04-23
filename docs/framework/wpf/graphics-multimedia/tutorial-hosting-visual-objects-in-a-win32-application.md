@@ -10,10 +10,10 @@ helpviewer_keywords:
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
 ms.openlocfilehash: b260f96246f0d9e5447b74a05e1396bfef176197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111465"
 ---
 # <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Samouczek: hosting obiektów Visual w aplikacji Win32
@@ -79,4 +79,4 @@ ms.locfileid: "59111465"
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Hit Test przykład współdziałanie Win32](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Test trafienia w warstwie Visual](hit-testing-in-the-visual-layer.md)
+- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)

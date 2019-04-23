@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108761"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Uwagi odnośnie do hostowania kontrolki ActiveX na formularzu systemu Windows
@@ -30,8 +30,8 @@ Mimo że formularze Windows zostały zoptymalizowane do kontrolek Windows Forms 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows](how-to-add-activex-controls-to-windows-forms.md)
+- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Zabezpieczenia dostępu kodu](../../misc/code-access-security.md)
-- [Porównanie formantów i programowanych obiektów w różnych językach i bibliotekach](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [Umieszczanie formantów na formularzach systemu Windows](putting-controls-on-windows-forms.md)
-- [Formanty formularzy systemu Windows](index.md)
+- [Formantów i programowanych obiektów w różnych językach i bibliotekach](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
+- [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms](index.md)

@@ -18,43 +18,43 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: efe3070b41b1d71e0cf533a7f9f211f4c6626726
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197869"
 ---
-# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="1f349-102">ICorProfilerCallback3::ProfilerDetachSucceeded — Metoda</span><span class="sxs-lookup"><span data-stu-id="1f349-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
-<span data-ttu-id="1f349-103">Powiadamia program profilujący, że środowisko uruchomieniowe języka wspólnego (CLR) zostanie zwolnienia biblioteki DLL profilera.</span><span class="sxs-lookup"><span data-stu-id="1f349-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
+# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="72683-102">ICorProfilerCallback3::ProfilerDetachSucceeded — Metoda</span><span class="sxs-lookup"><span data-stu-id="72683-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
+<span data-ttu-id="72683-103">Powiadamia program profilujący, że środowisko uruchomieniowe języka wspólnego (CLR) zostanie zwolnienia biblioteki DLL profilera.</span><span class="sxs-lookup"><span data-stu-id="72683-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1f349-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1f349-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72683-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="72683-104">Syntax</span></span>  
   
 ```  
 HRESULT ProfilerDetachSucceeded();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="1f349-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="1f349-105">Return Value</span></span>  
- <span data-ttu-id="1f349-106">Wartość zwrócona przez to wywołanie zwrotne jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="1f349-106">The return value from this callback is ignored.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="72683-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="72683-105">Return Value</span></span>  
+ <span data-ttu-id="72683-106">Wartość zwrócona przez to wywołanie zwrotne jest ignorowany.</span><span class="sxs-lookup"><span data-stu-id="72683-106">The return value from this callback is ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1f349-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1f349-107">Remarks</span></span>  
- <span data-ttu-id="1f349-108">`ProfilerDetachSucceeded` Wywołanie zwrotne zostało wydane po zamknięciu wszystkich wątków programu profilującego kodu.</span><span class="sxs-lookup"><span data-stu-id="1f349-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="1f349-109">Gdy ta metoda jest wywoływana, program profilujący, należy wykonać wszelkie zadania ostatniej chwili, które nie są odpowiednie dla jego destruktor, takie jak jego interfejsu użytkownika lub składnik rejestrowania zgłaszające.</span><span class="sxs-lookup"><span data-stu-id="1f349-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="1f349-110">Jednakże program profilujący nie mogą wywoływać funkcje dla interfejsów, które są dostarczane przez środowisko CLR Podczas tego wywołania zwrotnego (takie jak [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub `IMetaData*` interfejsów).</span><span class="sxs-lookup"><span data-stu-id="1f349-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="72683-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="72683-107">Remarks</span></span>  
+ <span data-ttu-id="72683-108">`ProfilerDetachSucceeded` Wywołanie zwrotne zostało wydane po zamknięciu wszystkich wątków programu profilującego kodu.</span><span class="sxs-lookup"><span data-stu-id="72683-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="72683-109">Gdy ta metoda jest wywoływana, program profilujący, należy wykonać wszelkie zadania ostatniej chwili, które nie są odpowiednie dla jego destruktor, takie jak jego interfejsu użytkownika lub składnik rejestrowania zgłaszające.</span><span class="sxs-lookup"><span data-stu-id="72683-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="72683-110">Jednakże program profilujący nie mogą wywoływać funkcje dla interfejsów, które są dostarczane przez środowisko CLR Podczas tego wywołania zwrotnego (takie jak [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub `IMetaData*` interfejsów).</span><span class="sxs-lookup"><span data-stu-id="72683-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
   
- <span data-ttu-id="1f349-111">Środowisko CLR tworzy wpis w dzienniku zdarzeń aplikacji Windows, aby wskazać, czy operacja odłączenia powiodła się.</span><span class="sxs-lookup"><span data-stu-id="1f349-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
+ <span data-ttu-id="72683-111">Środowisko CLR tworzy wpis w dzienniku zdarzeń aplikacji Windows, aby wskazać, czy operacja odłączenia powiodła się.</span><span class="sxs-lookup"><span data-stu-id="72683-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
   
- <span data-ttu-id="1f349-112">Po profiler zwraca z to wywołanie zwrotne, środowisko CLR zwalnia obiekt profilera i wyładowuje profiler DLL.</span><span class="sxs-lookup"><span data-stu-id="1f349-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="1f349-113">W związku z tym program profilujący nie musi wykonywać wszystkie akcje, które mogłoby spowodować wykonanie zapytania wewnątrz biblioteki DLL profilera po zwraca od to wywołanie zwrotne.</span><span class="sxs-lookup"><span data-stu-id="1f349-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="1f349-114">Na przykład nie musi tworzyć wątków lub rejestrowanie wywołań zwrotnych czasomierza.</span><span class="sxs-lookup"><span data-stu-id="1f349-114">For example, it must not create threads or register timer callbacks.</span></span>  
+ <span data-ttu-id="72683-112">Po profiler zwraca z to wywołanie zwrotne, środowisko CLR zwalnia obiekt profilera i wyładowuje profiler DLL.</span><span class="sxs-lookup"><span data-stu-id="72683-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="72683-113">W związku z tym program profilujący nie musi wykonywać wszystkie akcje, które mogłoby spowodować wykonanie zapytania wewnątrz biblioteki DLL profilera po zwraca od to wywołanie zwrotne.</span><span class="sxs-lookup"><span data-stu-id="72683-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="72683-114">Na przykład nie musi tworzyć wątków lub rejestrowanie wywołań zwrotnych czasomierza.</span><span class="sxs-lookup"><span data-stu-id="72683-114">For example, it must not create threads or register timer callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1f349-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1f349-115">Requirements</span></span>  
- <span data-ttu-id="1f349-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1f349-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72683-115">Wymagania</span><span class="sxs-lookup"><span data-stu-id="72683-115">Requirements</span></span>  
+ <span data-ttu-id="72683-116">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="72683-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1f349-117">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1f349-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="72683-117">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="72683-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1f349-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1f349-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="72683-118">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="72683-118">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="1f349-119">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="1f349-119">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="72683-119">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72683-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1f349-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1f349-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72683-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="72683-120">See also</span></span>
 
-- [<span data-ttu-id="1f349-121">Interfejsy metadanych</span><span class="sxs-lookup"><span data-stu-id="1f349-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="1f349-122">ICorProfilerInfo3 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="1f349-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="1f349-123">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="1f349-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="1f349-124">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="1f349-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="72683-121">Interfejsy metadanych</span><span class="sxs-lookup"><span data-stu-id="72683-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="72683-122">ICorProfilerInfo3, interfejs</span><span class="sxs-lookup"><span data-stu-id="72683-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="72683-123">Interfejsy profilowania</span><span class="sxs-lookup"><span data-stu-id="72683-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="72683-124">Profilowanie</span><span class="sxs-lookup"><span data-stu-id="72683-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

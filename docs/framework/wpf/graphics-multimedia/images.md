@@ -10,27 +10,27 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194984"
 ---
-# <a name="images"></a><span data-ttu-id="d7c9c-102">Obrazy</span><span class="sxs-lookup"><span data-stu-id="d7c9c-102">Images</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="d7c9c-103">udostępnia wbudowaną obsługę wielu formatów obrazów, renderowania obrazów o dużej wierności i rozszerzalność kodera-dekodera.</span><span class="sxs-lookup"><span data-stu-id="d7c9c-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
+# <a name="images"></a><span data-ttu-id="47c21-102">Obrazy</span><span class="sxs-lookup"><span data-stu-id="47c21-102">Images</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="47c21-103">udostępnia wbudowaną obsługę wielu formatów obrazów, renderowania obrazów o dużej wierności i rozszerzalność kodera-dekodera.</span><span class="sxs-lookup"><span data-stu-id="47c21-103">provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d7c9c-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d7c9c-104">In This Section</span></span>  
- [<span data-ttu-id="d7c9c-105">Przegląd Obrazowanie</span><span class="sxs-lookup"><span data-stu-id="d7c9c-105">Imaging Overview</span></span>](imaging-overview.md)  
- [<span data-ttu-id="d7c9c-106">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="d7c9c-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="47c21-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="47c21-104">In This Section</span></span>  
+ [<span data-ttu-id="47c21-105">Obrazowanie — przegląd</span><span class="sxs-lookup"><span data-stu-id="47c21-105">Imaging Overview</span></span>](imaging-overview.md)  
+ [<span data-ttu-id="47c21-106">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="47c21-106">How-to Topics</span></span>](imaging-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="d7c9c-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d7c9c-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="47c21-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="47c21-107">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="d7c9c-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d7c9c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="47c21-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="47c21-108">See also</span></span>
 
-- [<span data-ttu-id="d7c9c-109">Grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="d7c9c-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="d7c9c-110">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="d7c9c-110">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="47c21-109">Grafika 2D i obrazowanie</span><span class="sxs-lookup"><span data-stu-id="47c21-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="47c21-110">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="47c21-110">Graphics and Multimedia</span></span>](index.md)

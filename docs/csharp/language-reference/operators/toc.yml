@@ -1,81 +1,59 @@
-items:
-- name: Operatory języka C#
+- name: 'Operatory języka C#'
   href: index.md
   items:
-  - name: Operatory arytmetyczne
-    displayName: ++, --, +, -, *, /, %, +=, -=, *=, /=, %=
-    href: arithmetic-operators.md
-  - name: Operatory logiczne (Boolean)
-    displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
-    href: boolean-logical-operators.md
-  - name: Operatory równości
-    displayName: ==, !=
-    href: equality-operators.md
-  - name: '[], operator'
-    href: index-operator.md
-  - name: (), operator
-    href: invocation-operator.md
-  - name: . Operator
-    href: member-access-operator.md
-  - name: ?. i ?[], operatory
-    href: null-conditional-operators.md
-  - name: ':: Operator'
-    href: namespace-alias-qualifer.md
-  - name: + Operator
-    href: addition-operator.md
-  - name: '- Operator'
-    href: subtraction-operator.md
-  - name: '* Operator'
-    href: multiplication-operator.md
-  - name: '&, operator'
-    href: and-operator.md
-  - name: '|, operator'
-    href: or-operator.md
-  - name: ^, operator
-    href: xor-operator.md
-  - name: ~, operator
-    href: bitwise-complement-operator.md
-  - name: =, operator
-    href: assignment-operator.md
-  - name: <, operator
-    href: less-than-operator.md
-  - name: '> Operator'
-    href: greater-than-operator.md
-  - name: '?: Operator'
-    href: conditional-operator.md
-  - name: <<, operator
-    href: left-shift-operator.md
-  - name: '>> Operator'
-    href: right-shift-operator.md
-  - name: <=, operator
-    href: less-than-equal-operator.md
-  - name: '>=, operator'
-    href: greater-than-equal-operator.md
-  - name: +=, operator
-    href: addition-assignment-operator.md
-  - name: -=, operator
-    href: subtraction-assignment-operator.md
-  - name: '*=, operator'
-    href: multiplication-assignment-operator.md
-  - name: '&=, operator'
-    href: and-assignment-operator.md
-  - name: '|=, operator'
-    href: or-assignment-operator.md
-  - name: ^=, operator
-    href: xor-assignment-operator.md
-  - name: <<=, operator
-    href: left-shift-assignment-operator.md
-  - name: '>>=, operator'
-    href: right-shift-assignment-operator.md
-  - name: ->, operator
-    href: dereference-operator.md
-  - name: ?? Operator
-    href: null-coalescing-operator.md
-  - name: =>, operator
-    href: lambda-operator.md
-ms.openlocfilehash: f2554167da2c1e51227d8f745496839c5c60fac2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307538"
+    - name: Operatory arytmetyczne
+      href: arithmetic-operators.md
+      displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+    - name: Operatory logiczne (Boolean)
+      href: boolean-logical-operators.md
+      displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+    - name: Operatory przesunięcia i operatory bitowe
+      href: bitwise-and-shift-operators.md
+      displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+    - name: Operatory równości
+      href: equality-operators.md
+      displayName: '==, !='
+    - name: '[], operator'
+      href: index-operator.md
+    - name: '(), operator'
+      href: invocation-operator.md
+    - name: . Operator
+      href: member-access-operator.md
+    - name: '?. i ?[], operatory'
+      href: null-conditional-operators.md
+    - name: ':: Operator'
+      href: namespace-alias-qualifer.md
+    - name: + Operator
+      href: addition-operator.md
+    - name: '- Operator'
+      href: subtraction-operator.md
+    - name: '* Operator'
+      href: multiplication-operator.md
+    - name: '&, operator'
+      href: and-operator.md
+    - name: '=, operator'
+      href: assignment-operator.md
+    - name: '<, operator'
+      href: less-than-operator.md
+    - name: '> Operator'
+      href: greater-than-operator.md
+    - name: '?: Operator'
+      href: conditional-operator.md
+    - name: '<=, operator'
+      href: less-than-equal-operator.md
+    - name: '>=, operator'
+      href: greater-than-equal-operator.md
+    - name: '+=, operator'
+      href: addition-assignment-operator.md
+    - name: '-=, operator'
+      href: subtraction-assignment-operator.md
+    - name: '*=, operator'
+      href: multiplication-assignment-operator.md
+    - name: '&=, operator'
+      href: and-assignment-operator.md
+    - name: '->, operator'
+      href: dereference-operator.md
+    - name: '?? Operator'
+      href: null-coalescing-operator.md
+    - name: '=>, operator'
+      href: lambda-operator.md

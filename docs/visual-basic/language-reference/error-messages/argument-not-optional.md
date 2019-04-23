@@ -5,21 +5,21 @@ f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
 ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321750"
 ---
-# <a name="argument-not-optional-visual-basic"></a><span data-ttu-id="29b5e-102">Argument nie jest opcjonalny (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="29b5e-102">Argument not optional (Visual Basic)</span></span>
-<span data-ttu-id="29b5e-103">Liczba i typy argumentów musi odpowiadać wartości oczekiwanych.</span><span class="sxs-lookup"><span data-stu-id="29b5e-103">The number and types of arguments must match those expected.</span></span> <span data-ttu-id="29b5e-104">Nieprawidłowa liczba argumentów jest albo pominięty argument nie jest opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="29b5e-104">Either there is an incorrect number of arguments, or an omitted argument is not optional.</span></span> <span data-ttu-id="29b5e-105">Argument tylko wtedy można pominąć po wywołaniu procedury zdefiniowanych przez użytkownika, jeśli została zadeklarowana `Optional` w definicji procedury.</span><span class="sxs-lookup"><span data-stu-id="29b5e-105">An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.</span></span>  
+# <a name="argument-not-optional-visual-basic"></a><span data-ttu-id="5d9a9-102">Argument nie jest opcjonalny (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d9a9-102">Argument not optional (Visual Basic)</span></span>
+<span data-ttu-id="5d9a9-103">Liczba i typy argumentów musi odpowiadać wartości oczekiwanych.</span><span class="sxs-lookup"><span data-stu-id="5d9a9-103">The number and types of arguments must match those expected.</span></span> <span data-ttu-id="5d9a9-104">Nieprawidłowa liczba argumentów jest albo pominięty argument nie jest opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="5d9a9-104">Either there is an incorrect number of arguments, or an omitted argument is not optional.</span></span> <span data-ttu-id="5d9a9-105">Argument tylko wtedy można pominąć po wywołaniu procedury zdefiniowanych przez użytkownika, jeśli została zadeklarowana `Optional` w definicji procedury.</span><span class="sxs-lookup"><span data-stu-id="5d9a9-105">An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="29b5e-106">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="29b5e-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5d9a9-106">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="5d9a9-106">To correct this error</span></span>  
   
-1. <span data-ttu-id="29b5e-107">Należy podać wszystkie wymagane argumenty.</span><span class="sxs-lookup"><span data-stu-id="29b5e-107">Supply all necessary arguments.</span></span>  
+1. <span data-ttu-id="5d9a9-107">Należy podać wszystkie wymagane argumenty.</span><span class="sxs-lookup"><span data-stu-id="5d9a9-107">Supply all necessary arguments.</span></span>  
   
-2. <span data-ttu-id="29b5e-108">Upewnij się, został pominięty argumenty są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="29b5e-108">Make sure omitted arguments are optional.</span></span> <span data-ttu-id="29b5e-109">Jeśli nie, albo podać argument w wywołaniu lub Zadeklaruj parametr `Optional` w definicji.</span><span class="sxs-lookup"><span data-stu-id="29b5e-109">If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.</span></span>  
+2. <span data-ttu-id="5d9a9-108">Upewnij się, został pominięty argumenty są opcjonalne.</span><span class="sxs-lookup"><span data-stu-id="5d9a9-108">Make sure omitted arguments are optional.</span></span> <span data-ttu-id="5d9a9-109">Jeśli nie, albo podać argument w wywołaniu lub Zadeklaruj parametr `Optional` w definicji.</span><span class="sxs-lookup"><span data-stu-id="5d9a9-109">If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29b5e-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="29b5e-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d9a9-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5d9a9-110">See also</span></span>
 
-- [<span data-ttu-id="29b5e-111">Error — Typy</span><span class="sxs-lookup"><span data-stu-id="29b5e-111">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="5d9a9-111">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="5d9a9-111">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

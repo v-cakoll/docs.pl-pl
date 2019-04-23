@@ -5,67 +5,67 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+ms.openlocfilehash: 1c14d50e31b89f4c77c94e5899e8207766a3540f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239855"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977174"
 ---
-# <a name="new-operator-c-reference"></a><span data-ttu-id="e43be-102">New — operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="e43be-102">new operator (C# Reference)</span></span>
+# <a name="new-operator-c-reference"></a><span data-ttu-id="a9d0f-102">New — operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="a9d0f-102">new operator (C# Reference)</span></span>
 
-<span data-ttu-id="e43be-103">Używane do tworzenia obiektów i wywoływać konstruktorów.</span><span class="sxs-lookup"><span data-stu-id="e43be-103">Used to create objects and invoke constructors.</span></span> <span data-ttu-id="e43be-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="e43be-104">For example:</span></span>
+<span data-ttu-id="a9d0f-103">Używane do tworzenia obiektów i wywoływać konstruktorów.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-103">Used to create objects and invoke constructors.</span></span> <span data-ttu-id="a9d0f-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="a9d0f-104">For example:</span></span>
 
 ```csharp
 Class1 obj  = new Class1();
 ```
 
-<span data-ttu-id="e43be-105">Służy również do tworzenia wystąpień typów anonimowych:</span><span class="sxs-lookup"><span data-stu-id="e43be-105">It is also used to create instances of anonymous types:</span></span>
+<span data-ttu-id="a9d0f-105">Służy również do tworzenia wystąpień typów anonimowych:</span><span class="sxs-lookup"><span data-stu-id="a9d0f-105">It is also used to create instances of anonymous types:</span></span>
 
 ```csharp
 var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-<span data-ttu-id="e43be-106">`new` Operator jest również używany do wywoływania domyślnego konstruktora dla typów wartości.</span><span class="sxs-lookup"><span data-stu-id="e43be-106">The `new` operator is also used to invoke the default constructor for value types.</span></span> <span data-ttu-id="e43be-107">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="e43be-107">For example:</span></span>
+<span data-ttu-id="a9d0f-106">`new` Operator jest również używany do wywoływania konstruktora bez parametrów dla typów wartości.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-106">The `new` operator is also used to invoke the parameterless constructor for value types.</span></span> <span data-ttu-id="a9d0f-107">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="a9d0f-107">For example:</span></span>
 
 ```csharp
 int i = new int();
 ```
 
-<span data-ttu-id="e43be-108">W poprzednich instrukcji `i` jest inicjowany do `0`, która jest wartością domyślną dla typu `int`.</span><span class="sxs-lookup"><span data-stu-id="e43be-108">In the preceding statement, `i` is initialized to `0`, which is the default value for the type `int`.</span></span> <span data-ttu-id="e43be-109">Wykonywanie instrukcji ma taki sam skutek jak poniżej:</span><span class="sxs-lookup"><span data-stu-id="e43be-109">The statement has the same effect as the following:</span></span>
+<span data-ttu-id="a9d0f-108">W poprzednich instrukcji `i` jest inicjowany do `0`, która jest wartością domyślną dla typu `int`.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-108">In the preceding statement, `i` is initialized to `0`, which is the default value for the type `int`.</span></span> <span data-ttu-id="a9d0f-109">Wykonywanie instrukcji ma taki sam skutek jak poniżej:</span><span class="sxs-lookup"><span data-stu-id="a9d0f-109">The statement has the same effect as the following:</span></span>
 
 ```csharp
 int i = 0;
 ```
 
-<span data-ttu-id="e43be-110">Aby uzyskać pełną listę wartości domyślnych, zobacz [tabela wartości domyślnych](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="e43be-110">For a complete list of default values, see [Default Values Table](default-values-table.md).</span></span>
+<span data-ttu-id="a9d0f-110">Aby uzyskać pełną listę wartości domyślnych, zobacz [tabela wartości domyślnych](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="a9d0f-110">For a complete list of default values, see [Default Values Table](default-values-table.md).</span></span>
 
-<span data-ttu-id="e43be-111">Należy pamiętać, że jest błąd, aby zadeklarować Konstruktor domyślny dla [struktury](struct.md) ponieważ każdego typu wartości niejawnie ma publicznego konstruktora domyślnego.</span><span class="sxs-lookup"><span data-stu-id="e43be-111">Remember that it is an error to declare a default constructor for a [struct](struct.md) because every value type implicitly has a public default constructor.</span></span> <span data-ttu-id="e43be-112">Istnieje możliwość zadeklarować konstruktory sparametryzowane w typie struct, można ustawić wartości początkowej, ale tylko jest to konieczne, jeśli wymagane są wartości innej niż domyślna.</span><span class="sxs-lookup"><span data-stu-id="e43be-112">It is possible to declare parameterized constructors on a struct type to set its initial values, but this is only necessary if values other than the default are required.</span></span>
+<span data-ttu-id="a9d0f-111">Pamiętaj, że ma ona błędem jest deklaracja konstruktora bez parametrów dla [struktury](struct.md) ponieważ każdego typu wartości niejawnie ma publicznego konstruktora bez parametrów.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-111">Remember that it is an error to declare a parameterless constructor for a [struct](struct.md) because every value type implicitly has a public parameterless constructor.</span></span> <span data-ttu-id="a9d0f-112">Istnieje możliwość zadeklarować konstruktory sparametryzowane w typie struct, można ustawić wartości początkowej, ale tylko jest to konieczne, jeśli wymagane są wartości innej niż domyślna.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-112">It is possible to declare parameterized constructors on a struct type to set its initial values, but this is only necessary if values other than the default are required.</span></span>
 
-<span data-ttu-id="e43be-113">Typ odwołania obiektów, takich jak klasy i obiekty typu wartości, takie jak struktury są niszczone, automatycznie, ale obiekty typu wartości jest niszczony, kiedy ich zawierającego kontekstu jest niszczony, natomiast obiekty typu odwołania są niszczone, wyrzucanie elementów Moduł zbierający na nieokreślony czas, po usunięciu ostatniego odwołania do nich.</span><span class="sxs-lookup"><span data-stu-id="e43be-113">Both value-type objects such as structs and reference-type objects such as classes are destroyed automatically, but value-type objects are destroyed when their containing context is destroyed, whereas reference-type objects are destroyed by the garbage collector at an unspecified time after the last reference to them is removed.</span></span> <span data-ttu-id="e43be-114">W przypadku typów, które zawierają zasoby, takie jak dojścia do plików lub połączeń sieciowych pożądane jest mogą wykorzystać deterministyczne cleanup, aby upewnić się, jak najszybciej zwolnienie zasobów, które zawierają.</span><span class="sxs-lookup"><span data-stu-id="e43be-114">For types that contain resources such as file handles, or network connections, it is desirable to employ deterministic cleanup to ensure that the resources they contain are released as soon as possible.</span></span> <span data-ttu-id="e43be-115">Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="e43be-115">For more information, see [using Statement](using-statement.md).</span></span>
+<span data-ttu-id="a9d0f-113">Typ odwołania obiektów, takich jak klasy i obiekty typu wartości, takie jak struktury są niszczone, automatycznie, ale obiekty typu wartości jest niszczony, kiedy ich zawierającego kontekstu jest niszczony, natomiast obiekty typu odwołania są niszczone, wyrzucanie elementów Moduł zbierający na nieokreślony czas, po usunięciu ostatniego odwołania do nich.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-113">Both value-type objects such as structs and reference-type objects such as classes are destroyed automatically, but value-type objects are destroyed when their containing context is destroyed, whereas reference-type objects are destroyed by the garbage collector at an unspecified time after the last reference to them is removed.</span></span> <span data-ttu-id="a9d0f-114">W przypadku typów, które zawierają zasoby, takie jak dojścia do plików lub połączeń sieciowych pożądane jest mogą wykorzystać deterministyczne cleanup, aby upewnić się, jak najszybciej zwolnienie zasobów, które zawierają.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-114">For types that contain resources such as file handles, or network connections, it is desirable to employ deterministic cleanup to ensure that the resources they contain are released as soon as possible.</span></span> <span data-ttu-id="a9d0f-115">Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](using-statement.md).</span><span class="sxs-lookup"><span data-stu-id="a9d0f-115">For more information, see [using Statement](using-statement.md).</span></span>
 
-<span data-ttu-id="e43be-116">Operator `new` nie może być przeciążony.</span><span class="sxs-lookup"><span data-stu-id="e43be-116">The `new` operator cannot be overloaded.</span></span>
+<span data-ttu-id="a9d0f-116">Operator `new` nie może być przeciążony.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-116">The `new` operator cannot be overloaded.</span></span>
 
-<span data-ttu-id="e43be-117">Jeśli `new` operator nie może przydzielić pamięci, zgłosi wyjątek, <xref:System.OutOfMemoryException>.</span><span class="sxs-lookup"><span data-stu-id="e43be-117">If the `new` operator fails to allocate memory, it throws the exception, <xref:System.OutOfMemoryException>.</span></span>
+<span data-ttu-id="a9d0f-117">Jeśli `new` operator nie może przydzielić pamięci, zgłosi wyjątek, <xref:System.OutOfMemoryException>.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-117">If the `new` operator fails to allocate memory, it throws the exception, <xref:System.OutOfMemoryException>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e43be-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="e43be-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a9d0f-118">Przykład</span><span class="sxs-lookup"><span data-stu-id="a9d0f-118">Example</span></span>
 
-<span data-ttu-id="e43be-119">W poniższym przykładzie `struct` obiektu i obiekt klasy są tworzone i inicjowane za pomocą `new` operatora, a następnie przypisać wartości.</span><span class="sxs-lookup"><span data-stu-id="e43be-119">In the following example, a `struct` object and a class object are created and initialized by using the `new` operator and then assigned values.</span></span> <span data-ttu-id="e43be-120">Wartość domyślna i przypisane wartości są wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="e43be-120">The default and the assigned values are displayed.</span></span>
+<span data-ttu-id="a9d0f-119">W poniższym przykładzie `struct` obiektu i obiekt klasy są tworzone i inicjowane za pomocą `new` operatora, a następnie przypisać wartości.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-119">In the following example, a `struct` object and a class object are created and initialized by using the `new` operator and then assigned values.</span></span> <span data-ttu-id="a9d0f-120">Wartość domyślna i przypisane wartości są wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-120">The default and the assigned values are displayed.</span></span>
 
 [!code-csharp[csrefKeywordsOperator#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#7)]
 
-<span data-ttu-id="e43be-121">Zwróć uwagę, w tym przykładzie jest wartością domyślną ciągu `null`.</span><span class="sxs-lookup"><span data-stu-id="e43be-121">Notice in the example that the default value of a string is `null`.</span></span> <span data-ttu-id="e43be-122">W związku z tym nie jest wyświetlany.</span><span class="sxs-lookup"><span data-stu-id="e43be-122">Therefore, it is not displayed.</span></span>
+<span data-ttu-id="a9d0f-121">Zwróć uwagę, w tym przykładzie jest wartością domyślną ciągu `null`.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-121">Notice in the example that the default value of a string is `null`.</span></span> <span data-ttu-id="a9d0f-122">W związku z tym nie jest wyświetlany.</span><span class="sxs-lookup"><span data-stu-id="a9d0f-122">Therefore, it is not displayed.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="e43be-123">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e43be-123">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="a9d0f-123">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="a9d0f-123">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e43be-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e43be-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9d0f-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a9d0f-124">See also</span></span>
 
-- [<span data-ttu-id="e43be-125">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="e43be-125">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="e43be-126">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="e43be-126">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="e43be-127">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="e43be-127">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="e43be-128">Słowa kluczowe operatora</span><span class="sxs-lookup"><span data-stu-id="e43be-128">Operator Keywords</span></span>](operator-keywords.md)
-- [<span data-ttu-id="e43be-129">new</span><span class="sxs-lookup"><span data-stu-id="e43be-129">new</span></span>](new.md)
-- [<span data-ttu-id="e43be-130">Typy anonimowe</span><span class="sxs-lookup"><span data-stu-id="e43be-130">Anonymous Types</span></span>](../../programming-guide/classes-and-structs/anonymous-types.md)
+- [<span data-ttu-id="a9d0f-125">Dokumentacja języka C#</span><span class="sxs-lookup"><span data-stu-id="a9d0f-125">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="a9d0f-126">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="a9d0f-126">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="a9d0f-127">Słowa kluczowe języka C#</span><span class="sxs-lookup"><span data-stu-id="a9d0f-127">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="a9d0f-128">Słowa kluczowe operatora</span><span class="sxs-lookup"><span data-stu-id="a9d0f-128">Operator Keywords</span></span>](operator-keywords.md)
+- [<span data-ttu-id="a9d0f-129">new</span><span class="sxs-lookup"><span data-stu-id="a9d0f-129">new</span></span>](new.md)
+- [<span data-ttu-id="a9d0f-130">Typy anonimowe</span><span class="sxs-lookup"><span data-stu-id="a9d0f-130">Anonymous Types</span></span>](../../programming-guide/classes-and-structs/anonymous-types.md)

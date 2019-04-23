@@ -3,10 +3,10 @@ title: 'Instrukcje: Reprezentacja kolumn jako dopuszczających wartości Null'
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
 ms.openlocfilehash: ef8fa87963b91ef7140fbaefb657fc7904604b5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331159"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>Instrukcje: Reprezentacja kolumn jako dopuszczających wartości Null

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - not equals operator [C#]
 - '!= operator [C#]'
 ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334162"
 ---
 # <a name="equality-operators-c-reference"></a>Operatory porównania (C# odwołania)
@@ -76,7 +76,7 @@ Aby uzyskać więcej informacji, zobacz [relacyjne i badania typu operatory](~/_
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>

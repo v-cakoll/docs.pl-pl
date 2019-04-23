@@ -3,10 +3,10 @@ title: Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia progra
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334513"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
@@ -43,6 +43,6 @@ W Windows Communication Foundation (WCF), eksportowanie metadanych jest proces o
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Instrukcje: eksportowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
+- [Instrukcje: Eksportowanie niestandardowych plików WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Instrukcje: Eksportowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [Importowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

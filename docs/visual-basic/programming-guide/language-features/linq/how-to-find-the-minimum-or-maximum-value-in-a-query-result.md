@@ -15,10 +15,10 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 238b763b-7dcd-4b14-8050-b65500a4f71c
 ms.openlocfilehash: af5f4bf829664057c40004a842df95d927cc5d71
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337477"
 ---
 # <a name="how-to-find-the-minimum-or-maximum-value-in-a-query-result-by-using-linq-visual-basic"></a>Instrukcje: Znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania za pomocą LINQ (Visual Basic)
@@ -79,6 +79,6 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

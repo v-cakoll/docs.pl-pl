@@ -12,10 +12,10 @@ helpviewer_keywords:
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
 ms.openlocfilehash: fc4d43ef9181f1a290d37c137b4fc6f7f16588b7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332056"
 ---
 # <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Instrukcje: Filtrowanie wyników zapytania za pomocą LINQ (Visual Basic)
@@ -80,6 +80,6 @@ Language-Integrated Query (LINQ) ułatwia dostęp do informacji o bazie danych i
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Kwerendy](../../../../visual-basic/language-reference/queries/index.md)
-- [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md)
+- [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [Metody DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

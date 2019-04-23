@@ -13,10 +13,10 @@ ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336151"
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
@@ -110,11 +110,11 @@ ms.locfileid: "59336151"
 ## <a name="see-also"></a>Zobacz także
 
 - [Omówienie](../../docs/framework/get-started/overview.md)
-- [Niezależność od języka i elementy niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Składniki samoopisujące się i metadane](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (Asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
+- [Ilasm.exe (asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Zabezpieczenia](../../docs/standard/security/index.md)
 - [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)
-- [wdrażania](../../docs/framework/deployment/net-framework-applications.md)
-- [Zestawy w środowisku uruchomieniowym języka wspólnego](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Domeny aplikacji](../../docs/framework/app-domains/application-domains.md)

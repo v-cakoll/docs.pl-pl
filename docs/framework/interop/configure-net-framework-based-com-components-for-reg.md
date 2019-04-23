@@ -11,10 +11,10 @@ ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336580"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
@@ -107,7 +107,7 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
     |Atrybut|Opis|Wymagane|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Yes|  
+    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Tak|  
     |`description`|Ciąg, który informuje użytkownika o informacje o składniku. Pusty ciąg jest ustawieniem domyślnym.|Nie|  
     |`name`|Ciąg, który reprezentuje klasy zarządzanej.|Tak|  
     |`progid`|Identyfikator, który ma być używany do aktywacji z późnym wiązaniem.|Nie|  
@@ -174,7 +174,7 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Współdziałanie z modelem COM bez rejestrowania](registration-free-com-interop.md)
-- [Wymagania dotyczące niewymagającego rejestracji modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
+- [Współdziałanie z COM bez rejestrowania](registration-free-com-interop.md)
+- [Wymagania dotyczące współdziałania z modelem COM bez rejestrowania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [Konfigurowanie składników COM na potrzeby aktywacji bez rejestracji](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))
 - [Współdziałanie aktywacji. NET składników: Przewodnik](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973915(v=msdn.10))

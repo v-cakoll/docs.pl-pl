@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
 ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335501"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Instrukcje: Utwórz procedurę, która zwraca wartość (Visual Basic)
@@ -43,6 +43,6 @@ Możesz użyć `Function` procedury w celu zwrócenia wartości do wywołująceg
 - [Procedury właściwości](./property-procedures.md)
 - [Procedury operatorów](./operator-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Function — Instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Instrukcje: Zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)
 - [Instrukcje: Wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)

@@ -3,10 +3,10 @@ title: Hostowanie w aplikacji usługi systemu Windows
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335371"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
@@ -40,7 +40,7 @@ Usługi Windows (znana wcześniej jako usługi Windows NT) zapewniają proces mo
 
 - <xref:System.ServiceProcess>
 - [Przewodnik: Tworzenie aplikacji usługi Windows w Projektancie składników](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [Instrukcje: hostowanie usługi WCF w usłudze zarządzanej systemu Windows](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Instrukcje: Hostowanie usługi WCF w usłudze Windows zarządzanych](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Host usług systemu Windows](../../../../docs/framework/wcf/samples/windows-service-host.md)
 - [Architektura programowania aplikacji usług](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server AppFabric funkcje hostingu](https://go.microsoft.com/fwlink/?LinkId=201276)

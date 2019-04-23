@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307628"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia Visual
@@ -165,6 +165,6 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Dziedziczenie formularzy systemu Windows](how-to-inherit-windows-forms.md)
-- [Formularze systemu Windows — dziedziczenie Visual](windows-forms-visual-inheritance.md)
+- [Instrukcje: Dziedziczenie formularzy Windows](how-to-inherit-windows-forms.md)
+- [Formularze Windows Forms — dziedziczenie wizualizacji](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

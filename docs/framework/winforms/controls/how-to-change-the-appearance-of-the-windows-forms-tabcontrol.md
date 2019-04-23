@@ -12,10 +12,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331341"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Instrukcje: zmienianie wyglądu składnika TabControl formularzy systemu Windows
@@ -67,8 +67,8 @@ Można zmienić wygląd karty w formularzach Windows Forms za pomocą właściwo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TabControl — Formant](tabcontrol-control-windows-forms.md)
+- [TabControl, kontrolka](tabcontrol-control-windows-forms.md)
 - [TabControl, kontrolka — omówienie](tabcontrol-control-overview-windows-forms.md)
-- [Instrukcje: dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
-- [Instrukcje: wyłączanie kart](how-to-disable-tab-pages.md)
-- [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy systemu Windows](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Instrukcje: Dodawanie kontrolki do karty](how-to-add-a-control-to-a-tab-page.md)
+- [Instrukcje: Wyłączanie kart](how-to-disable-tab-pages.md)
+- [Instrukcje: Dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

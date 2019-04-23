@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
 ms.openlocfilehash: 9be633d14429bc2ceda1f0db2ff09252d55d5dd5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337451"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Instrukcje: dołączanie menu skrótów do TreeNode przy użyciu narzędzia Projektant
@@ -32,6 +32,6 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> kontrolka Wyświetla hie
   
 ## <a name="see-also"></a>Zobacz także
 
-- [TreeView — Formant](treeview-control-windows-forms.md)
+- [TreeView, kontrolka](treeview-control-windows-forms.md)
 - [TreeView, kontrolka — omówienie](treeview-control-overview-windows-forms.md)
-- [ContextMenuStrip — Formant](contextmenustrip-control.md)
+- [ContextMenuStrip, kontrolka](contextmenustrip-control.md)

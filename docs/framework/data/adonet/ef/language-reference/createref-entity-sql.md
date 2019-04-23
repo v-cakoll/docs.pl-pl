@@ -3,10 +3,10 @@ title: CREATEREF (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
 ms.openlocfilehash: 6ae4712fb280418ad8cf17cd68a7bbcd9cf3b8a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335657"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (jednostka SQL)
@@ -46,7 +46,7 @@ from LOB.Orders as o
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
 - [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)
 - [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)

@@ -3,10 +3,10 @@ title: Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307618"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient dla wysokiej dostępności, odzyskiwania po awarii
@@ -79,7 +79,7 @@ W tym temacie omówiono Obsługa SqlClient (dodano w [!INCLUDE[net_v45](../../..
   
  `ApplicationIntent` — Słowo kluczowe nie działa dla starszej wersji, tylko do odczytu bazy danych.  
   
- Bazę danych można zezwolić lub nie zezwalaj na obciążeniami odczytu w docelowej bazie danych zawsze włączonych. (Jest to zrobić za pomocą `ALLOW_CONNECTIONS` klauzuli `PRIMARY_ROLE` i `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji.)  
+ Bazę danych można zezwolić lub nie zezwalaj na obciążeniami odczytu w docelowej bazie danych zawsze włączonych. (Jest to zrobić za pomocą `ALLOW_CONNECTIONS` klauzuli `PRIMARY_ROLE` i `SECONDARY_ROLE` [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji.)  
   
  `ApplicationIntent` Słowo kluczowe jest używane, aby umożliwić routing tylko do odczytu.  
   

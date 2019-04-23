@@ -3,10 +3,10 @@ title: ZainstalujF#
 description: Dowiedz się, jak zainstalować F# zależności od używanego środowiska.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331978"
 ---
 # <a name="install-f"></a>Zainstaluj F\#
@@ -31,7 +31,7 @@ Po zakończeniu instalacji wybierz pozycję "Uruchom Visual Studio". Można rów
 
 Konieczne jest posiadanie [zainstalowane narzędzie git](https://git-scm.com/download) i dostępne w zmiennej PATH, aby użyć szablonów projektu. Możesz sprawdzić, czy jest poprawnie zainstalowany, wpisując `git --version` w wierszu polecenia i naciskając klawisz **Enter**.
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Narzędzie mono](https://www.mono-project.com) służy do [ F# Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. Najprostszym sposobem zainstalowania platformy Mono w systemie macOS jest za pośrednictwem Homebrew. Po prostu wpisz następujące polecenie w terminalu:
 
@@ -41,7 +41,7 @@ brew install mono
 
 Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Narzędzie mono](https://www.mono-project.com) służy do [ F# Interactive](../tutorials/fsharp-interactive/index.md) pomocy technicznej. W przypadku systemie Debian lub Ubuntu, można użyć następujących czynności:
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Zainstaluj również [zestawu .NET Core SDK](https://www.microsoft.com/net/download).
 
-### [<a name="windows"></a>Windows](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Zainstaluj [programu Visual Studio z F# obsługuje](#install-f-with-visual-studio). Spowoduje to zainstalowanie wszystkich składników niezbędnych do zapisu, skompilowania i wykonania F# kodu.
 

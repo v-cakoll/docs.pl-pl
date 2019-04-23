@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332147"
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Porównanie wartości Null za pomocą SqlTypes i typów CLR  
- Podczas porównywania wartości null, ważne jest, aby zrozumieć różnicę między sposób `Equals` metoda oblicza wartości null w <xref:System.Data.SqlTypes> porównaniu sposób działa z typami CLR. Wszystkie <xref:System.Data.SqlTypes>`Equals` metody korzystają bezpośrednio z semantyki bazy danych do oceny wartości null: Jeśli jeden lub oba wartości ma wartość null, porównanie daje wartość null. Z drugiej strony, przy użyciu środowiska CLR `Equals` metody na dwóch <xref:System.Data.SqlTypes> da wartość true, jeśli oba mają wartość null. Ten sposób odzwierciedlono różnica między metodą wystąpienia, takie jak środowisko CLR `String.Equals` metody i przy użyciu metody statyczne/udostępnione `SqlString.Equals`.  
+ Podczas porównywania wartości null, ważne jest, aby zrozumieć różnicę między sposób `Equals` metoda oblicza wartości null w <xref:System.Data.SqlTypes> porównaniu sposób działa z typami CLR. Wszystkie <xref:System.Data.SqlTypes> `Equals` metody korzystają bezpośrednio z semantyki bazy danych do oceny wartości null: Jeśli jeden lub oba wartości ma wartość null, porównanie daje wartość null. Z drugiej strony, przy użyciu środowiska CLR `Equals` metody na dwóch <xref:System.Data.SqlTypes> da wartość true, jeśli oba mają wartość null. Ten sposób odzwierciedlono różnica między metodą wystąpienia, takie jak środowisko CLR `String.Equals` metody i przy użyciu metody statyczne/udostępnione `SqlString.Equals`.  
   
  Poniższy przykład ilustruje różnicę w wynikach między `SqlString.Equals` metody i `String.Equals` metody, gdy każda jest przekazywany pary wartości null, a następnie para pustych ciągów.  
   

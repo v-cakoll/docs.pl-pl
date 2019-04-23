@@ -16,10 +16,10 @@ helpviewer_keywords:
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
 ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333681"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Zdarzenia myszy w formularzach systemu Windows
@@ -93,7 +93,7 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
     -   Kliknij dwukrotnie bezpośrednio: Nie zdarzeń kliknij zgłaszanych  
   
--   <xref:System.Windows.Forms.ListView>  — formant  
+-   <xref:System.Windows.Forms.ListView> Kontrolki  
   
     > [!NOTE]
     >  Zachowanie zdarzeń, w dalszej części występuje tylko wtedy, gdy użytkownik kliknie elementów w <xref:System.Windows.Forms.ListView> kontroli. Żadne zdarzenia nie są zgłaszane dla kliknięcia miejscach w formancie. Oprócz zdarzeń opisanym w dalszej części, istnieją <xref:System.Windows.Forms.ListView.BeforeLabelEdit> i <xref:System.Windows.Forms.ListView.AfterLabelEdit> zdarzenia, które mogą być przydatne, jeśli chcesz używać Weryfikacja przy użyciu <xref:System.Windows.Forms.ListView> kontroli.  
@@ -106,7 +106,7 @@ Podczas obsługi myszy w danych wejściowych, zwykle chcą wiedzieć lokalizacji
   
     -   Kliknij dwukrotnie przycisk z prawej: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>  
   
--   <xref:System.Windows.Forms.TreeView>  — formant  
+-   <xref:System.Windows.Forms.TreeView> Kontrolki  
   
     > [!NOTE]
     >  Zachowanie zdarzeń, w dalszej części występuje tylko po kliknięciu przez użytkownika na elementach, samodzielnie lub z prawej strony elementów w <xref:System.Windows.Forms.TreeView> kontroli. Żadne zdarzenia nie są zgłaszane dla kliknięcia miejscach w formancie. Oprócz tych opisanym w dalszej części istnieją <xref:System.Windows.Forms.TreeView.BeforeCheck>, <xref:System.Windows.Forms.TreeView.BeforeSelect>, <xref:System.Windows.Forms.TreeView.BeforeLabelEdit>, <xref:System.Windows.Forms.TreeView.AfterSelect>, <xref:System.Windows.Forms.TreeView.AfterCheck>, i <xref:System.Windows.Forms.TreeView.AfterLabelEdit> zdarzenia, które mogą być przydatne, jeśli chcesz używać Weryfikacja przy użyciu <xref:System.Windows.Forms.TreeView> kontroli .  

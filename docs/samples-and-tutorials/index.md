@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330821"
 ---
 # <a name="net-samples-and-tutorials"></a>Samouczki i przykłady kodu platformy .NET
@@ -53,11 +53,11 @@ Ten przykład przedstawia składnię i funkcje dla C# indeksatorów. [Ukończone
 
 Ten przykład przedstawia składnię i funkcje dla C# delegaci i zdarzenia. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) jest dostępny w repozytorium dotnet/samples w witrynie GitHub. A [druga próba](https://github.com/dotnet/samples/tree/master/csharp/events) koncentruje się na zdarzenia jest również w tym samym repozytorium.
 
-**[Drzewa wyrażeń](../csharp/expression-trees.md)**
+**[Expression Trees](../csharp/expression-trees.md)**
 
 Niniejszy przykład pokazuje wiele problemów, które można rozwiązać za pomocą drzewa wyrażeń. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
-**Przykłady interfejsów LINQ**
+**Przykłady LINQ**
 
 Ta seria przykłady pokazują wiele funkcji, z Language Integrated Query (LINQ). [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/core/linq/csharp) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
@@ -67,11 +67,11 @@ Ta seria przykłady pokazują wiele funkcji, z Language Integrated Query (LINQ).
 
 ### <a name="tutorials"></a>Samouczki
 
-**[Aplikacja konsoli](../csharp/tutorials/console-teleprompter.md)**
+**[Aplikacja konsolowa](../csharp/tutorials/console-teleprompter.md)**
 
 Ten samouczek pokazuje, konsola operacje We/Wy, struktury aplikacji konsoli i podstawy opartego na zadaniach asynchronicznego modelu programowania. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 
-**[Klient REST](../csharp/tutorials/console-webapiclient.md)**
+**[REST Client](../csharp/tutorials/console-webapiclient.md)**
 
 Ten samouczek pokazuje, komunikacji w sieci web, serializację JSON i funkcje zorientowane obiektowo C# języka. [Ukończone przykładowe](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) jest dostępny w repozytorium dotnet/samples w witrynie GitHub.
 

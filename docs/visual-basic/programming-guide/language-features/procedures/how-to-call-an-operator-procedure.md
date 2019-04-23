@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335488"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Instrukcje: Wywoływanie procedury operatora (Visual Basic)
@@ -58,10 +58,10 @@ Za pomocą symbol operatora w wyrażeniu jest wywoływanie procedury operatora. 
 - [Procedury operatorów](./operator-procedures.md)
 - [Instrukcje: Definiowanie operatora](./how-to-define-an-operator.md)
 - [Instrukcje: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
-- [Operator — Instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [Structure — Instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Instrukcje: Deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

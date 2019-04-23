@@ -16,10 +16,10 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330457"
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
@@ -249,9 +249,9 @@ Dane wejściowe zdarzenia Propagacja i tunelowanie
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>
-- [Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
-- [Przegląd Dane wejściowe](input-overview.md)
-- [Przegląd Polecenia](commanding-overview.md)
+- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
+- [Przegląd danych wejściowych](input-overview.md)
+- [Przegląd poleceń](commanding-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
 - [Drzewa w WPF](trees-in-wpf.md)
 - [Słabe wzorce zdarzeń](weak-event-patterns.md)

@@ -3,10 +3,10 @@ title: W przypadku (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334890"
 ---
 # <a name="case-entity-sql"></a>W przypadku (jednostka SQL)
@@ -28,7 +28,7 @@ END
  `n`  
  Jest symbolem zastępczym, która wskazuje, że wiele podczas `Boolean_expression` następnie `result_expression` klauzule można użyć.  
   
- THEN `result_expression`  
+ NASTĘPNIE `result_expression`  
  Wyrażenie zwracane, gdy `Boolean_expression` daje w wyniku `true`. `result expression` Jest dowolnym prawidłowym wyrażeniem.  
   
  ELSE `else_result_expression`  
@@ -60,4 +60,4 @@ END
 
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
 - [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [Odwołanie do języka Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

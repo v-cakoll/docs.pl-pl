@@ -6,12 +6,12 @@ title: Dokumentacja platformy .NET
 description: Dowiedz się, jak używać platformy .NET do tworzenia różnych aplikacji na dowolnej platformie w języku C#, Visual Basic i F#. Przeglądaj dokumentację dotyczącą interfejsu API, przykładowy kod, samouczki i inne zasoby.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 01472d5586becf0bca2333557a05ddb10ee8b607
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427490"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978084"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -54,7 +54,7 @@ ms.locfileid: "59427490"
                 </a>
             </li>
             <li>
-                <a href="/dotnet/api/?view=netframework-4.7.2">
+                <a href="/dotnet/api/?view=netframework-4.8">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -77,10 +77,10 @@ ms.locfileid: "59427490"
         <h1>Dokumentacja platformy .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">Dokumenty</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Rozpocznij</a>
+                        <a href="#getstarted">Wprowadzenie</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -93,7 +93,7 @@ ms.locfileid: "59427490"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/standard/">.NET — przewodnik</a></h3>
-                                                <p><a href="/dotnet/standard/get-started">Rozpocznij</a></p>
+                                                <p><a href="/dotnet/standard/get-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/standard/tour">Przewodnik po środowisku .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">Pojęcia dotyczące architektury platformy .NET</a></p>
                                             </div>
@@ -112,7 +112,7 @@ ms.locfileid: "59427490"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/core">Przewodnik platformy .NET Core</a></h3>
-                                                <p><a href="/dotnet/core/get-started">Rozpocznij</a></p>
+                                                <p><a href="/dotnet/core/get-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/core/tutorials">Samouczki</a></p>
                                                 <p><a href="/dotnet/core/porting">Przenoszenie z platformy .NET Framework</a></p>
                                                 <p><a href="/aspnet/core/getting-started">ASP.NET Core</a></p>
@@ -133,9 +133,9 @@ ms.locfileid: "59427490"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/framework/">.NET framework — przewodnik</a></h3>
-                                                <p><a href="/dotnet/framework/get-started/">Rozpocznij</a></p>
+                                                <p><a href="/dotnet/framework/get-started/">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">Podręcznik programowania</a></p>
-                                                <p><a href="/dotnet/framework/develop-client-apps">Tworzenie aplikacji klienckich</a></p>
+                                                <p><a href="/dotnet/framework/develop-client-apps">Programowanie klientów</a></p>
                                                 <p><a href="/aspnet/#pivot=aspnet">ASP.NET</a></p>
                                             </div>
                                         </div>
@@ -173,10 +173,10 @@ ms.locfileid: "59427490"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Przewodnik dla języka C#</a></h3>
-                                                <p><a href="/dotnet/csharp/getting-started">Rozpocznij</a></p>
+                                                <p><a href="/dotnet/csharp/getting-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Przewodnik po środowisku C#</a></p>
                                                 <p><a href="/dotnet/csharp/whats-new">Co nowego w języku C#</a></p>
-                                                <p><a href="/dotnet/csharp/language-reference">Materiały referencyjne dotyczące języka C#</a></p>
+                                                <p><a href="/dotnet/csharp/language-reference">Dokumentacja języka C#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -193,9 +193,9 @@ ms.locfileid: "59427490"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/fsharp">Podręcznik języka F#</a></h3>
-                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Rozpocznij</a></p>
-                                                <p><a href="/dotnet/fsharp/tour">Przewodnik po środowisku F#</a></p>
-                                                <p><a href="/dotnet/fsharp/language-reference">Materiały referencyjne dotyczące języka F#</a></p>
+                                                <p><a href="/dotnet/fsharp/tutorials/getting-started">Wprowadzenie</a></p>
+                                                <p><a href="/dotnet/fsharp/tour">Przewodnik po F#</a></p>
+                                                <p><a href="/dotnet/fsharp/language-reference">Dokumentacja języka F#</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -212,9 +212,9 @@ ms.locfileid: "59427490"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/visual-basic">Przewodnik po Visual Basic</a></h3>
-                                                <p><a href="/dotnet/visual-basic/getting-started">Rozpocznij</a></p>
+                                                <p><a href="/dotnet/visual-basic/getting-started">Wprowadzenie</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Przewodnik po języku Visual Basic</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Odwołanie językowe Visual Basic</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Dokumentacja języka Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@ ms.locfileid: "59427490"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">Przewodnik po strukturze ML.NET</a></h3>
                                                 <p><a href="/dotnet/machine-learning/tutorials">Samouczki</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">Resources</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Zasoby</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Słownik</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">Dokumentacja interfejsów API ML.NET</a></p>
                                             </div>
@@ -243,13 +243,13 @@ ms.locfileid: "59427490"
                             <li class="fullSpan">
                                 <div class="container footer">
                                     <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Współtworzenie dokumentacji i przykładów dotyczących platformy .NET</a></p>
-                                    <p><a href="/dotnet/project-json">Znajdź wersję dokumentacji dotyczącą narzędzi Visual Studio 2015/project.json</a></p>
+                                    <p><a href="/dotnet/project-json">Znajdź wersję dokumentacji Visual Studio 2015/project.json</a></p>
                                 </div>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#web">sieć Web</a>
+                        <a href="#web">Internet</a>
                         <ul id="web" class="cardsC">
                             <li>
                                 <a href="https://www.asp.net/get-started">
@@ -496,7 +496,7 @@ ms.locfileid: "59427490"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">Aplikacje klasyczne</a>
+                        <a href="#desktop">Komputer stacjonarny</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">

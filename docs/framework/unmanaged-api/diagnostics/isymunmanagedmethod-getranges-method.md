@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 94ca1db2bf85f42117f686a8cb483907003927c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59205852"
 ---
-# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="5180e-102">ISymUnmanagedMethod::GetRanges — Metoda</span><span class="sxs-lookup"><span data-stu-id="5180e-102">ISymUnmanagedMethod::GetRanges Method</span></span>
-<span data-ttu-id="5180e-103">Danou pozici w dokumencie zwraca tablicę rozpoczęcia i zakończenia pary przesunięcia, które odnoszą się do zakresów języka Microsoft intermediate language (MSIL) uwzględniającą pozycja w ramach tej metody.</span><span class="sxs-lookup"><span data-stu-id="5180e-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="5180e-104">Tablica jest tablicy liczb całkowitych i ma format [rozpoczęcia, zakończenia, uruchamianie i kończenie].</span><span class="sxs-lookup"><span data-stu-id="5180e-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="5180e-105">Liczba par zakres jest długość tablicy podzielonej przez 2.</span><span class="sxs-lookup"><span data-stu-id="5180e-105">The number of range pairs is the length of the array divided by 2.</span></span>  
+# <a name="isymunmanagedmethodgetranges-method"></a><span data-ttu-id="2fa3a-102">ISymUnmanagedMethod::GetRanges — Metoda</span><span class="sxs-lookup"><span data-stu-id="2fa3a-102">ISymUnmanagedMethod::GetRanges Method</span></span>
+<span data-ttu-id="2fa3a-103">Danou pozici w dokumencie zwraca tablicę rozpoczęcia i zakończenia pary przesunięcia, które odnoszą się do zakresów języka Microsoft intermediate language (MSIL) uwzględniającą pozycja w ramach tej metody.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-103">Given a position in a document, returns an array of start and end offset pairs that correspond to the ranges of Microsoft intermediate language (MSIL) that the position covers within this method.</span></span> <span data-ttu-id="2fa3a-104">Tablica jest tablicy liczb całkowitych i ma format [rozpoczęcia, zakończenia, uruchamianie i kończenie].</span><span class="sxs-lookup"><span data-stu-id="2fa3a-104">The array is an array of integers and has the format [start, end, start, end].</span></span> <span data-ttu-id="2fa3a-105">Liczba par zakres jest długość tablicy podzielonej przez 2.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-105">The number of range pairs is the length of the array divided by 2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5180e-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="5180e-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2fa3a-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="2fa3a-106">Syntax</span></span>  
   
 ```  
 HRESULT GetRanges(  
@@ -40,31 +40,31 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5180e-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="5180e-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2fa3a-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="2fa3a-107">Parameters</span></span>  
  `document`  
- <span data-ttu-id="5180e-108">[in] Dokument, dla którego żądana jest przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="5180e-108">[in] The document for which the offset is requested.</span></span>  
+ <span data-ttu-id="2fa3a-108">[in] Dokument, dla którego żądana jest przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-108">[in] The document for which the offset is requested.</span></span>  
   
  `line`  
- <span data-ttu-id="5180e-109">[in] Wiersz dokumentu odpowiadający zakresów.</span><span class="sxs-lookup"><span data-stu-id="5180e-109">[in] The document line corresponding to the ranges.</span></span>  
+ <span data-ttu-id="2fa3a-109">[in] Wiersz dokumentu odpowiadający zakresów.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-109">[in] The document line corresponding to the ranges.</span></span>  
   
  `column`  
- <span data-ttu-id="5180e-110">[in] Kolumna dokumentu, odpowiadający zakresów.</span><span class="sxs-lookup"><span data-stu-id="5180e-110">[in] The document column corresponding to the ranges.</span></span>  
+ <span data-ttu-id="2fa3a-110">[in] Kolumna dokumentu, odpowiadający zakresów.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-110">[in] The document column corresponding to the ranges.</span></span>  
   
  `cRanges`  
- <span data-ttu-id="5180e-111">[in] Rozmiar `ranges` tablicy.</span><span class="sxs-lookup"><span data-stu-id="5180e-111">[in] The size of the `ranges` array.</span></span>  
+ <span data-ttu-id="2fa3a-111">[in] Rozmiar `ranges` tablicy.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-111">[in] The size of the `ranges` array.</span></span>  
   
  `pcRanges`  
- <span data-ttu-id="5180e-112">[out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać zakresy.</span><span class="sxs-lookup"><span data-stu-id="5180e-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
+ <span data-ttu-id="2fa3a-112">[out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać zakresy.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-112">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the ranges.</span></span>  
   
  `ranges`  
- <span data-ttu-id="5180e-113">[out] Wskaźnik do buforu, który otrzymuje zakresów.</span><span class="sxs-lookup"><span data-stu-id="5180e-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
+ <span data-ttu-id="2fa3a-113">[out] Wskaźnik do buforu, który otrzymuje zakresów.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-113">[out] A pointer to the buffer that receives the ranges.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5180e-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="5180e-114">Return Value</span></span>  
- <span data-ttu-id="5180e-115">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="5180e-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2fa3a-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="2fa3a-114">Return Value</span></span>  
+ <span data-ttu-id="2fa3a-115">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="2fa3a-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5180e-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5180e-116">Requirements</span></span>  
- <span data-ttu-id="5180e-117">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5180e-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2fa3a-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2fa3a-116">Requirements</span></span>  
+ <span data-ttu-id="2fa3a-117">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2fa3a-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5180e-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5180e-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2fa3a-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2fa3a-118">See also</span></span>
 
-- [<span data-ttu-id="5180e-119">ISymUnmanagedMethod — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5180e-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="2fa3a-119">ISymUnmanagedMethod, interfejs</span><span class="sxs-lookup"><span data-stu-id="2fa3a-119">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

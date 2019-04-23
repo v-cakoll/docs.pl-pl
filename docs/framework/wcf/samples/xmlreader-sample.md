@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
 ms.openlocfilehash: 03c6949d25497419a55f7baafa33d568817b8f27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299328"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768348"
 ---
 # <a name="xmlreader-sample"></a>Przykład klasy XmlReader
 Przykład klasy XmlReader pokazuje przetwarzania treści komunikatu przy użyciu <xref:System.Xml.XmlReader>. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje usługę kalkulatora. Operacja dodatkowe usługi, `Sum`, dodano, który akceptuje komunikat, który zawiera tablicę wartości, aby dodawać razem. Usługa odczytuje komunikat przy użyciu <xref:System.Xml.XmlReader>.  

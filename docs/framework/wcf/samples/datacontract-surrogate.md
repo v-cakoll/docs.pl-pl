@@ -3,11 +3,11 @@ title: DataContract — surogat
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312634"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769102"
 ---
 # <a name="datacontract-surrogate"></a>DataContract — surogat
 Niniejszy przykład pokazuje, jak procesy takie jak serializacji, deserializacji, schemat eksportu i importu schematu można dostosować za pomocą kontraktu danych zastępczych klas. W tym przykładzie pokazano, jak używać zastępczy w ramach scenariusza klienta i serwera, gdzie dane są serializacji i przesyłane między klientem usługi Windows Communication Foundation (WCF) i usługi.  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337555"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)

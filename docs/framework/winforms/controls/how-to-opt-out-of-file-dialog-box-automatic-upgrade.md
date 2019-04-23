@@ -9,11 +9,11 @@ helpviewer_keywords:
 - AutoUpgradeEnabled property
 ms.assetid: 522e482e-cc01-48b1-8d59-9617dc2c4ac1
 ms.openlocfilehash: a4be35617e8be1c6c83ac6f2d06e03b6cbb2977f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59301103"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769414"
 ---
 # <a name="how-to-opt-out-of-file-dialog-box-automatic-upgrade"></a>Instrukcje: jak nie zgadzać się na uczestnictwo dotyczące automatycznego uaktualniania okna dialogowego obsługi pliku
 Gdy <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy są używane w aplikacji, ich wyglądu i działania zależą od wersji systemu Windows, w której działa aplikacja na. Gdy aplikacja, która została utworzona na [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] lub wcześniej, jest wyświetlany na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)], <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> są automatycznie wyświetlane przy użyciu [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] wygląd i zachowanie. Począwszy od [!INCLUDE[net_v30_short](../../../../includes/net-v30-short-md.md)], użytkownik może zrezygnować z automatycznego uaktualniania, aby wyświetlić <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> z [!INCLUDE[winxp](../../../../includes/winxp-md.md)]— styl wyglądu i zachowania.  

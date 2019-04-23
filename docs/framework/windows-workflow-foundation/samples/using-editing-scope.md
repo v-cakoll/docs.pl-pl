@@ -3,11 +3,11 @@ title: Używanie zakresu edycji
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59308630"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769427"
 ---
 # <a name="using-editing-scope"></a>Używanie zakresu edycji
 Niniejszy przykład pokazuje jak dzielić na partie zestaw zmian, dzięki czemu mogą zostać cofnięte w pojedynczą jednostkę atomic. Domyślnie akcje wykonywane przez autora projektanta działań są automatycznie zintegrowane system Cofnij/Ponów.  

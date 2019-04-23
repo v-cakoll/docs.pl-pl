@@ -3,11 +3,11 @@ title: Używanie monikera programu WCF z klientami COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
 ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59294850"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768387"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
 W tym przykładzie pokazano, jak użyć monikera programu Windows Communication Foundation (WCF) do integracji usług internetowych w środowiskach programistycznych opartych na modelu COM, takich jak Microsoft Office Visual Basic for Applications (VBA pakietu Office) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Windows Script Host (VBS), obsługi klienta biblioteki (.dll) i usługi biblioteki (.dll), hostowanej przez Internetowe usługi informacyjne (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — dodawania, odejmowania, mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows okno komunikatu.  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 7139d585-4034-4dfa-916f-2120a8b72792
 ms.openlocfilehash: 78d6c9287c5c69c41bd2f50abd8d57dcd1cb4e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337581"
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Instrukcje: Wykonywanie zapytania, które zwraca wyniki PrimitiveType
@@ -38,5 +38,5 @@ W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie do języka Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Odwołanie do jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

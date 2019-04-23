@@ -3,11 +3,11 @@ title: Punkty końcowe protokołów SOAP i HTTP
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307447"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768920"
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
 W tym przykładzie pokazano, jak zaimplementować usługę opartego na protokole RPC i udostępnić ją w formacie protokołu SOAP i format "Zwykłego starego kodu XML" (POX) za pomocą modelu programowania w sieci Web WCF. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) próbki, aby uzyskać więcej informacji o wiązaniu HTTP dla usługi. Ten przykład koncentruje się na szczegółowe informacje, które odnoszą się do udostępniania tej samej usługi za pośrednictwem protokołu SOAP i HTTP z użyciem różnych powiązania.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e8da98e7-d22f-4f60-ac82-3fb0928a353f
 ms.openlocfilehash: 0e173f71201d5f98a04d2ad922469e4ff6666681
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327077"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768595"
 ---
 # <a name="how-to-declare-faults-in-service-contracts"></a>Instrukcje: Deklarowanie błędów w kontraktach usługi
 W zarządzanym kodzie są zgłaszane wyjątki, gdy wystąpią błędy. W aplikacjach Windows Communication Foundation (WCF) natomiast kontraktów usług określić informacje o błędach, które są zwracane do klientów przez zadeklarowanie błędach SOAP w kontrakcie usługi. Aby uzyskać przegląd relacji między wyjątków i błędów, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  

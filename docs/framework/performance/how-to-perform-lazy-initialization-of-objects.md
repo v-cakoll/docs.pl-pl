@@ -10,17 +10,17 @@ ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188966"
 ---
-# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="072f0-102">Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem</span><span class="sxs-lookup"><span data-stu-id="072f0-102">How to: Perform Lazy Initialization of Objects</span></span>
-<span data-ttu-id="072f0-103"><xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracę wykonywanie incjalizacji i wystąpienia obiektów.</span><span class="sxs-lookup"><span data-stu-id="072f0-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="072f0-104">Inicjowanie obiektów w sposób z opóźnieniem, można uniknąć konieczności tworzenia ich w ogóle, jeśli nigdy nie są one potrzebne lub można odroczyć ich inicjowania, aż najpierw są one używane.</span><span class="sxs-lookup"><span data-stu-id="072f0-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="072f0-105">Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="072f0-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
+# <a name="how-to-perform-lazy-initialization-of-objects"></a><span data-ttu-id="7eab0-102">Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem</span><span class="sxs-lookup"><span data-stu-id="7eab0-102">How to: Perform Lazy Initialization of Objects</span></span>
+<span data-ttu-id="7eab0-103"><xref:System.Lazy%601?displayProperty=nameWithType> Klasa upraszcza pracę wykonywanie incjalizacji i wystąpienia obiektów.</span><span class="sxs-lookup"><span data-stu-id="7eab0-103">The <xref:System.Lazy%601?displayProperty=nameWithType> class simplifies the work of performing lazy initialization and instantiation of objects.</span></span> <span data-ttu-id="7eab0-104">Inicjowanie obiektów w sposób z opóźnieniem, można uniknąć konieczności tworzenia ich w ogóle, jeśli nigdy nie są one potrzebne lub można odroczyć ich inicjowania, aż najpierw są one używane.</span><span class="sxs-lookup"><span data-stu-id="7eab0-104">By initializing objects in a lazy manner, you can avoid having to create them at all if they are never needed, or you can postpone their initialization until they are first accessed.</span></span> <span data-ttu-id="7eab0-105">Aby uzyskać więcej informacji, zobacz [inicjowania z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md).</span><span class="sxs-lookup"><span data-stu-id="7eab0-105">For more information, see [Lazy Initialization](../../../docs/framework/performance/lazy-initialization.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="072f0-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="072f0-106">Example</span></span>  
- <span data-ttu-id="072f0-107">Poniższy przykład pokazuje, jak zainicjować wartość składającą się z <xref:System.Lazy%601>.</span><span class="sxs-lookup"><span data-stu-id="072f0-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="072f0-108">Przyjęto założenie, że zmienna z opóźnieniem nie konieczne może być w zależności od innego kodu, który ustawia `someCondition` zmiennej na wartość true lub false.</span><span class="sxs-lookup"><span data-stu-id="072f0-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
+## <a name="example"></a><span data-ttu-id="7eab0-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="7eab0-106">Example</span></span>  
+ <span data-ttu-id="7eab0-107">Poniższy przykład pokazuje, jak zainicjować wartość składającą się z <xref:System.Lazy%601>.</span><span class="sxs-lookup"><span data-stu-id="7eab0-107">The following example shows how to initialize a value with <xref:System.Lazy%601>.</span></span> <span data-ttu-id="7eab0-108">Przyjęto założenie, że zmienna z opóźnieniem nie konieczne może być w zależności od innego kodu, który ustawia `someCondition` zmiennej na wartość true lub false.</span><span class="sxs-lookup"><span data-stu-id="7eab0-108">Assume that the lazy variable might not be needed, depending on some other code that sets the `someCondition` variable to true or false.</span></span>  
   
 ```vb  
 Dim someCondition As Boolean = False  
@@ -70,13 +70,13 @@ End Sub
   }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="072f0-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="072f0-109">Example</span></span>  
- <span data-ttu-id="072f0-110">Poniższy przykład pokazuje, jak używać <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy, aby zainicjować typu, która jest widoczna tylko dla bieżącego wystąpienia obiektu dla bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="072f0-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
+## <a name="example"></a><span data-ttu-id="7eab0-109">Przykład</span><span class="sxs-lookup"><span data-stu-id="7eab0-109">Example</span></span>  
+ <span data-ttu-id="7eab0-110">Poniższy przykład pokazuje, jak używać <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> klasy, aby zainicjować typu, która jest widoczna tylko dla bieżącego wystąpienia obiektu dla bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="7eab0-110">The following example shows how to use the <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> class to initialize a type that is visible only to the current object instance on the current thread.</span></span>  
   
  [!code-csharp[CDS#13](../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds2.cs#13)]
  [!code-vb[CDS#13](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/lazyhowto.vb#13)]  
   
-## <a name="see-also"></a><span data-ttu-id="072f0-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="072f0-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7eab0-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7eab0-111">See also</span></span>
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [<span data-ttu-id="072f0-112">Inicjalizacja z opóźnieniem</span><span class="sxs-lookup"><span data-stu-id="072f0-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)
+- [<span data-ttu-id="7eab0-112">Inicjowanie z opóźnieniem</span><span class="sxs-lookup"><span data-stu-id="7eab0-112">Lazy Initialization</span></span>](../../../docs/framework/performance/lazy-initialization.md)

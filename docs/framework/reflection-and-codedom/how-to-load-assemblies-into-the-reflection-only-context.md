@@ -15,11 +15,11 @@ ms.assetid: 9818b660-52f5-423d-a9af-e75163aa7068
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8dc05d27b0316c82c5314a766fcad929dc5f3698
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331055"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976745"
 ---
 # <a name="how-to-load-assemblies-into-the-reflection-only-context"></a>Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only
 Kontekst ładowania tylko odbicie umożliwia analizowanie zestawy skompilowane dla innych platform lub w przypadku innych wersji systemu .NET Framework. Tylko można zbadać kodu załadowanego w tym kontekście; Nie można wykonać. Oznacza to, że nie można utworzyć obiektów, ponieważ nie można wykonać konstruktorów. Ponieważ nie można wykonać kod, zależności nie są ładowane automatycznie. Jeśli musisz zbadać je, należy załadować je samodzielnie.  

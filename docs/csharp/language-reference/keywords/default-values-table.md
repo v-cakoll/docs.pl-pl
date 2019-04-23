@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 1eb2fbc707b7c1ff9575e694457fa975f3d2e363
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237041"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976511"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela wartości domyślnych (odwołanie w C#)
 
@@ -57,7 +57,7 @@ Począwszy od języka C# 7.1 można używać [ `default` literału](../../progra
 int a = default;
 ```
 
-Również służy konstruktora domyślnego ani niejawnego domyślnego konstruktora do produkcji wartość domyślna typu wartości, co ilustruje poniższy przykład. Aby uzyskać więcej informacji na temat konstruktorów, zobacz [konstruktory](../../programming-guide/classes-and-structs/constructors.md) artykułu.
+Możesz również umożliwia konstruktora bez parametrów lub niejawnego konstruktora bez parametrów generuje wartość domyślna typu wartości, co ilustruje poniższy przykład. Aby uzyskać więcej informacji na temat konstruktorów, zobacz [konstruktory](../../programming-guide/classes-and-structs/constructors.md) artykułu.
 
 ```csharp
 int a = new int();

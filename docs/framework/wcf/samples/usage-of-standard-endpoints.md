@@ -3,11 +3,11 @@ title: Użycie standardowych punktów końcowych
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
 ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304613"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977083"
 ---
 # <a name="usage-of-standard-endpoints"></a>Użycie standardowych punktów końcowych
 

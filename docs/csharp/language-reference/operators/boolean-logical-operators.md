@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1a53f2862727318112eae8e9723cabb794fb4f37
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427321"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977941"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Wartość logiczna operatorów logicznych (C# odwołania)
 
@@ -47,7 +47,7 @@ Następujące operatory logiczne wykonania operacji związanych z [bool](../keyw
 - Binarny [ `&` (operator logiczny oraz)](#logical-and-operator-), [ `|` (operator logiczny lub)](#logical-or-operator-), i [ `^` (logiczne OR wyłączne)](#logical-exclusive-or-operator-) operatorów. Te operatory zawsze należy przeprowadzić ocenę oba operandy.
 - Binarny [ `&&` (warunkowego operator logiczny oraz)](#conditional-logical-and-operator-) i [ `||` (logiczne OR warunkowe)](#conditional-logical-or-operator-) operatorów. Te operatory ocenić drugi argument operacji tylko wtedy, gdy jest to konieczne.
 
-Dla argumentów operacji [całkowitego](../keywords/integral-types-table.md) typów `&`, `|`, i `^` Operatorzy wykonywać operacje logiczne bitowe.
+Dla argumentów operacji [całkowitego](../keywords/integral-types-table.md) typów `&`, `|`, i `^` Operatorzy wykonywać operacje logiczne bitowe. Aby uzyskać więcej informacji, zobacz [operatory bitowe- and -shift](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Operator logiczny negacji!
 
@@ -67,7 +67,7 @@ W poniższym przykładzie, drugi operand `&` operator jest wywołanie metody, kt
 
 [Warunkowego logicznego operatora AND](#conditional-logical-and-operator-) `&&` również oblicza logicznego i jego operandu, ale nie ocenia drugiego operandu, jeśli pierwszy operand ma wartość `false`.
 
-Dla argumentów operacji typu całkowitoliczbowego `&` oblicza operator [iloczynu bitowego AND logiczne](and-operator.md#integer-logical-bitwise-and-operator) z argumentów. Jednoargumentowy `&` operator jest [operatora address-of](and-operator.md#unary-address-of-operator).
+Dla argumentów operacji typu całkowitoliczbowego `&` oblicza operator [iloczynu bitowego AND logiczne](bitwise-and-shift-operators.md#logical-and-operator-) z argumentów. Jednoargumentowy `&` operator jest [operatora address-of](and-operator.md#unary-address-of-operator).
 
 ## <a name="logical-exclusive-or-operator-"></a>Operator logiczny OR wyłączne ^
 
@@ -75,7 +75,7 @@ Dla argumentów operacji typu całkowitoliczbowego `&` oblicza operator [iloczyn
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-Dla argumentów operacji typu całkowitoliczbowego `^` oblicza operator [bitowe wykluczające OR logiczne](xor-operator.md) z argumentów.
+Dla argumentów operacji typu całkowitoliczbowego `^` oblicza operator [bitowe wykluczające OR logiczne](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) z argumentów.
 
 ## <a name="logical-or-operator-"></a>Operator logiczny OR |
 
@@ -89,7 +89,7 @@ W poniższym przykładzie, drugi operand `|` operator jest wywołanie metody, kt
 
 [Warunkowego logicznego operatora OR](#conditional-logical-or-operator-) `||` również oblicza logiczne OR z argumentów, ale nie ocenia drugiego operandu, jeśli pierwszy operand ma wartość `true`.
 
-Dla argumentów operacji typu całkowitoliczbowego `|` oblicza operator [bitowe OR logiczne](or-operator.md) z argumentów.
+Dla argumentów operacji typu całkowitoliczbowego `|` oblicza operator [bitowe OR logiczne](bitwise-and-shift-operators.md#logical-or-operator-) z argumentów.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>Operator logiczny AND warunkowe &amp;&amp;
 
@@ -187,9 +187,11 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Operator logiczny negacji](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Operatory logiczne](~/_csharplang/spec/expressions.md#logical-operators)
 - [Operatory logiczne warunkowe](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [Przydział złożony](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
+- [Bitowe i operatory przesunięcia](bitwise-and-shift-operators.md)

@@ -3,11 +3,11 @@ title: Niestandardowe uaktualnienia strumienia
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
 ms.openlocfilehash: 8c769321702deb774c04613d5fe5eb2fde069063
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345251"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977772"
 ---
 # <a name="custom-stream-upgrades"></a>Niestandardowe uaktualnienia strumienia
 Zorientowane na Stream transportu, takich jak TCP i nazwane potoki działają na ciągłego strumienia bajtów między klientem i serwerem. Ten strumień jest wykonywane przez <xref:System.IO.Stream> obiektu. W przypadku uaktualniania strumienia klient chce Dodawanie warstwy protokołu opcjonalne stosu kanału i prosi drugiej stronie kanał komunikacyjny, aby to zrobić. Uaktualnienie strumienia polega na zastąpienie oryginalnego <xref:System.IO.Stream> obiektu z uaktualnionym.  

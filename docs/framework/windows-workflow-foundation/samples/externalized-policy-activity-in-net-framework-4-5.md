@@ -3,11 +3,11 @@ title: Działanie zasad zewnętrznych w programie .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
 ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59338283"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976810"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Działanie zasad zewnętrznych w programie .NET Framework 4.5
 

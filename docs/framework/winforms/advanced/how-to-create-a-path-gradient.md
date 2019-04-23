@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186098"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975757"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Instrukcje: Tworzenie gradientu ścieżki
 <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasy pozwala dostosować sposób wypełnienia kształtu z stopniowo zmiana kolorów. Na przykład można określić jeden kolor środek ścieżka i innego koloru dla granicy ścieżki. Można również określić różne kolory dla każdego z kilku punktów wzdłuż granic ścieżki.  
   
 > [!NOTE]
->  W [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ścieżki jest sekwencją linii i krzywych utrzymywane przez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Aby uzyskać więcej informacji na temat [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ścieżki, zobacz [ścieżki grafiki w GDI +](graphics-paths-in-gdi.md) i [Constructing i rysowanie ścieżek](constructing-and-drawing-paths.md).  
-  
+>  W GDI + ścieżki jest sekwencją linii i krzywych utrzymywane przez <xref:System.Drawing.Drawing2D.GraphicsPath> obiektu. Aby uzyskać więcej informacji na temat ścieżek GDI + zobacz [ścieżki grafiki w GDI +](graphics-paths-in-gdi.md) i [Constructing i rysowanie ścieżek](constructing-and-drawing-paths.md).  
+
+Przykłady w niniejszym artykule są metody, które są wywoływane z poziomu kontroli <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Aby wypełnić elipsę gradientu ścieżki  
   
 -   Poniższy przykład wypełnia elipsę z pędzla gradientu ścieżki. Kolor jest ustawiona na niebieski i Akwamaryna jest ustawiony kolor granic. Poniższa ilustracja przedstawia wypełnioną elipsę.  
@@ -30,7 +32,7 @@ ms.locfileid: "59186098"
   
      Domyślnie pędzla gradientu ścieżki nie jest rozszerzana poza granicami ścieżki. Jeśli używasz pędzla gradientu ścieżki do wypełnienia rysunku, który wykracza poza granicę ścieżkę obszaru ekranu poza ścieżka nie zostanie wypełnione.  
   
-     Na poniższej ilustracji pokazano, co się stanie, jeśli zmienisz <xref:System.Drawing.Graphics.FillEllipse%2A> wywołania następujący kod do `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     Na poniższej ilustracji pokazano, co się stanie, jeśli zmienisz <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> wywołania następujący kod do `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Ścieżka gradientu wykracza poza granicę ścieżki.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   

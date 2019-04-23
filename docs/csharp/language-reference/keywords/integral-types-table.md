@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
-ms.translationtype: MT
+ms.openlocfilehash: dc093def716a624162cb695d1151d8a722807094
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396789"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976628"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela typów całkowitych (odwołanie w C#)
 

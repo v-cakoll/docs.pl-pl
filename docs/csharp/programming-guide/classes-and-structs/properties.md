@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 260c9e362281ba7996dc834ab47d7beb2755b636
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676825"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977096"
 ---
 # <a name="properties-c-programming-guide"></a>Właściwości (Przewodnik programowania w języku C#)
 
@@ -54,7 +54,7 @@ Poniższy przykład ilustruje ten wzorzec. W tym przykładzie `TimePeriod` klasa
 
 W niektórych przypadkach właściwość `get` i `set` tylko przypisanie wartości do metod dostępu lub pobrania wartości z polem zapasowym, bez uwzględniania dodatkowej logiki. Przy użyciu automatycznie implementowanych właściwości, można uprościć kod, mając kompilator języka C# przezroczyste Podaj pola pomocniczego. 
 
-Jeśli właściwość ma jednocześnie `get` i `set` dostępu, obie wartości muszą być zaimplementowane automatycznie. Właściwości zaimplementowane automatycznie definiowane za pomocą `get` i `set` słów kluczowych bez podawania implementacji. Poniższy przykład jest powtarzany w poprzedniej wersji, chyba że `Name` i `Price` są automatycznie implementowane właściwości. Należy pamiętać, że w przykładzie usunięto także Konstruktor sparametryzowany, tak aby `SaleItem` obiekty są teraz inicjowane w wyniku wywołania konstruktora domyślnego i [inicjatora obiektu](object-and-collection-initializers.md).
+Jeśli właściwość ma jednocześnie `get` i `set` dostępu, obie wartości muszą być zaimplementowane automatycznie. Właściwości zaimplementowane automatycznie definiowane za pomocą `get` i `set` słów kluczowych bez podawania implementacji. Poniższy przykład jest powtarzany w poprzedniej wersji, chyba że `Name` i `Price` są automatycznie implementowane właściwości. Należy pamiętać, że w przykładzie usunięto także Konstruktor sparametryzowany, tak aby `SaleItem` obiekty są teraz inicjowane w wyniku wywołania konstruktora bez parametrów i [inicjatora obiektu](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 

@@ -3,12 +3,12 @@ title: Klasy i obiekty w C# — Przewodnik po przykładzie C# języka
 description: Jesteś nowym użytkownikiem C#? Przeczytaj omówienie klas, obiektów i dziedziczenie
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 6f06a43b60a1101e5583ffa85bd948c69679943b
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
-ms.translationtype: MT
+ms.openlocfilehash: 36def74888f67dfa216cea7c093d80724e452c7b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921250"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976407"
 ---
 # <a name="classes-and-objects"></a>Klasy i obiekty
 
@@ -33,42 +33,42 @@ Elementy członkowskie klasy są statyczne elementy Członkowskie lub elementy c
 Poniżej omówiono rodzajów elementów członkowskich, który może zawierać klasę.
 
 * Stałe
-    - Skojarzony z klasą wartości stałych
+  - Skojarzony z klasą wartości stałych
 * Pola
-    - Zmienne klasy
+  - Zmienne klasy
 * Metody
-    - Obliczeń i akcji, które mogą być wykonywane przez klasę
+  - Obliczeń i akcji, które mogą być wykonywane przez klasę
 * Właściwości
-    - Akcje skojarzone z odczytywaniem i zapisywaniem nazwane właściwości klasy
+  - Akcje skojarzone z odczytywaniem i zapisywaniem nazwane właściwości klasy
 * Indeksatory
-    - Akcje skojarzone z indeksowania wystąpienia klasy, jak tablica
+  - Akcje skojarzone z indeksowania wystąpienia klasy, jak tablica
 * Zdarzenia
-    - Powiadomienia, które mogą być generowane przez klasę
+  - Powiadomienia, które mogą być generowane przez klasę
 * Operatory
-    - Konwersje i operatory wyrażeń obsługiwany przez klasę
+  - Konwersje i operatory wyrażeń obsługiwany przez klasę
 * Konstruktorów
-    - Działania wymagane w celu zainicjowania wystąpienia klasy lub samej klasy
+  - Działania wymagane w celu zainicjowania wystąpienia klasy lub samej klasy
 * Finalizatory
-    - Akcje do wykonania przed wystąpienia klasy stałe są odrzucane.
+  - Akcje do wykonania przed wystąpienia klasy stałe są odrzucane.
 * Types
-    - Zagnieżdżone typy zadeklarowane w klasie
+  - Zagnieżdżone typy zadeklarowane w klasie
 
 ## <a name="accessibility"></a>Ułatwienia dostępu
 
 Każdy członek klasy ma skojarzone ułatwień dostępu, który kontroluje regionach tekst programu, które mogą uzyskiwać dostęp do elementu członkowskiego do. Istnieje sześć możliwe formy ułatwień dostępu. Ich podsumowanie można znaleźć poniżej.
 
 * `public`
-    - Nie ograniczając dostęp
+  - Nie ograniczając dostęp
 * `protected`
-    - Dostęp ograniczony do tej klasy lub klas pochodzących z tej klasy
+  - Dostęp ograniczony do tej klasy lub klas pochodzących z tej klasy
 * `internal`
-    - Dostęp ograniczony do bieżącego zestawu (.exe, .dll, itp.)
+  - Dostęp ograniczony do bieżącego zestawu (.exe, .dll, itp.)
 * `protected internal`
-    - Dostęp ograniczony do klasy, klasy pochodne klasy zawierającej lub klas w obrębie tego samego zestawu zawierającego
+  - Dostęp ograniczony do klasy, klasy pochodne klasy zawierającej lub klas w obrębie tego samego zestawu zawierającego
 * `private`
-    - Dostęp ograniczony do klasy
+  - Dostęp ograniczony do klasy
 * `private protected`
-    - Dostęp ograniczony do klasy lub klas zawierającego pochodzi od typu zawierającego w obrębie tego samego zestawu
+  - Dostęp ograniczony do klasy lub klas zawierającego pochodzi od typu zawierającego w obrębie tego samego zestawu
 
 ## <a name="type-parameters"></a>Parametry typu
 

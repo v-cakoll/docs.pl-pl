@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 6c260408b7cdbb7bd55477a57ca879d89c3c0144
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.openlocfilehash: 0c0faf9fe6d9752cafa03ee054f669334f56090d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977035"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977304"
 ---
 # <a name="structs-c-programming-guide"></a>Struktury (Przewodnik programowania w języku C#)
 
@@ -22,7 +22,7 @@ Struktury są zdefiniowane przy użyciu [struktury](../../language-reference/key
 Struktury współużytkując większość tej samej składni jako klasy. Nazwa struktury musi być prawidłową C# [nazwa identyfikatora](../inside-a-program/identifier-names.md). Struktury są bardziej ograniczone niż klas w następujący sposób:  
   
 - W deklaracji struktury pola nie można zainicjować, chyba że są deklarowane jako const lub statyczną.  
-- Domyślny konstruktor (Konstruktor bez parametrów), lub finalizator, nie można zadeklarować struktury.  
+- Struktura nie można zadeklarować konstruktora bez parametrów (Konstruktor bez parametrów) lub finalizatora.  
 - Struktury są kopiowane w przydziale. Gdy struktura jest przypisywana nowej zmiennej, wszystkie dane są kopiowane, a wszelkie zmiany nowa kopia nie zmienia danych do oryginalnej kopii. Ważne jest, aby pamiętać podczas pracy z kolekcjami wartość typy takie jak `Dictionary<string, myStruct>`.  
 - Struktury są typami wartości, w przeciwieństwie do klasy, które są typami odwołań.  
 - W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora.  

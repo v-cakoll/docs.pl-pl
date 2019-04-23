@@ -8,11 +8,11 @@ helpviewer_keywords:
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
 ms.openlocfilehash: 9519fd85177d5d2adf97b54652c19330954edadf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815969"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976394"
 ---
 # <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>Instrukcje: Uruchamianie aplikacji i wysyłanie do niej uderzeń w klawisze (Visual Basic)
 W tym przykładzie użyto `Shell` działać do uruchomienia aplikacji Kalkulator, a następnie mnoży dwie liczby, wysyłając naciśnięcia klawiszy `My.Computer.Keyboard.SendKeys` metody.  

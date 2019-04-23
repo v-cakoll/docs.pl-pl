@@ -10,21 +10,24 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b836659821b54698b675d48acd4e46466001d654
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125024"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977278"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Instrukcje: Tworzenie gradientu liniowego
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia poziomej, pionowej i ukośne gradienty liniowe. Domyślnie w przypadku gradientu liniowego zmienia kolor równomiernie. Można jednak dostosować gradientu liniowego, tak, aby zmienia kolor w sposób obsługuje technologię niejednolitego.  
+GDI + zapewnia poziomej, pionowej i ukośne gradienty liniowe. Domyślnie w przypadku gradientu liniowego zmienia kolor równomiernie. Można jednak dostosować gradientu liniowego, tak, aby zmienia kolor w sposób obsługuje technologię niejednolitego.  
+
+> [!NOTE]
+> Przykłady w niniejszym artykule są metody, które są wywoływane z poziomu kontroli <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
+
+Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gradientów liniowych.  
   
- Poniższy przykład wypełnia linię, elipsę i prostokąt o poziomie pędzel gradientów liniowych.  
+<xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor odbiera cztery argumenty: dwa punkty i dwóch kolorów. Pierwszy punkt (0, 10) jest skojarzona z pierwszy kolor (czerwony), a drugi punkt (200, 10) jest skojarzony z drugi kolor (niebieski). Jak można oczekiwać, wiersz z (0, 10) do (200, 10) stopniowo zmienia się z kolor czerwony, niebieski.  
   
- <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> Konstruktor odbiera cztery argumenty: dwa punkty i dwóch kolorów. Pierwszy punkt (0, 10) jest skojarzona z pierwszy kolor (czerwony), a drugi punkt (200, 10) jest skojarzony z drugi kolor (niebieski). Jak można oczekiwać, wiersz z (0, 10) do (200, 10) stopniowo zmienia się z kolor czerwony, niebieski.  
-  
- 10s w punktach (50, 10) i (200, 10) nie są ważne. Co to jest ważne jest, czy dwa punkty mają tę samą współrzędną. drugi — wiersz, łącząc je jest poziomy. Elipsy i prostokąt również zmienić stopniowo kolor czerwony, niebieski, ponieważ pozioma współrzędne przechodzi z zakresu od 0 do 200.  
+ 10s w punktach (0, 10) i (200, 10) nie są ważne. Co to jest ważne jest, czy dwa punkty mają tę samą współrzędną. drugi — wiersz, łącząc je jest poziomy. Elipsy i prostokąt również zmienić stopniowo kolor czerwony, niebieski, ponieważ pozioma współrzędne przechodzi z zakresu od 0 do 200.  
   
  Na poniższej ilustracji przedstawiono wiersza, elipsy i prostokąt. Należy pamiętać, że kolor gradientu powtarza się, jak pozioma współrzędne przekroczy 200.  
   
@@ -39,7 +42,7 @@ ms.locfileid: "59125024"
   
  W powyższym przykładzie kolor zmiany składników liniowo po przeniesieniu pozioma współrzędne 0 Aby pozioma współrzędne 200. Na przykład punkt, w której Współrzędna pierwszy jest w połowie zakresu od 0 do 200 mają niebieski składnik, który jest w połowie między 0 a 255.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] można dostosować sposób, w których kolor, który różni się od jednej krawędzi gradientu do drugiego. Załóżmy, że chcesz utworzyć pędzla gradientu, który zmienia się pomiędzy czarny na czerwony, zgodnie z poniższą tabelą.  
+ GDI + pozwala dostosować sposób, w których kolor, który różni się od jednej krawędzi gradientu do drugiego. Załóżmy, że chcesz utworzyć pędzla gradientu, który zmienia się pomiędzy czarny na czerwony, zgodnie z poniższą tabelą.  
   
 |Pozioma współrzędne|Składniki RGB|  
 |---------------------------|--------------------|  
@@ -49,12 +52,12 @@ ms.locfileid: "59125024"
   
  Należy pamiętać, że składnik czerwony w wysokości równej połowie intensywność podczas pozioma współrzędne jest tylko 20% sposób z zakresu od 0 do 200.  
   
- Poniższy przykład ustawia <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A> właściwość <xref:System.Drawing.Drawing2D.LinearGradientBrush> powiązania obiektu trzy względne natężenia z trzech położenie względne. Tak jak w powyższej tabeli względną intensywność 0,5 jest skojarzony z względne położenie 0.2. Kod wprowadza elipsę i prostokąt z pędzla gradientu.  
+ Poniższy przykład ustawia <xref:System.Drawing.Drawing2D.LinearGradientBrush.Blend%2A?displayProperty=nameWithType> właściwość do skojarzenia z trzech względne natężenia z trzech położenie względne. Tak jak w powyższej tabeli względną intensywność 0,5 jest skojarzony z względne położenie 0.2. Kod wprowadza elipsę i prostokąt z pędzla gradientu.  
   
  Na poniższej ilustracji przedstawiono wynikowe elipsy i prostokąt.  
   
  ![Gradient liniowy](./media/cslineargradient2.png "cslineargradient2")  
-  
+
 ### <a name="to-customize-linear-gradients"></a>Aby dostosować gradienty liniowe  
   
 -   Przekaż nieprzezroczyste red czarne i nieprzezroczystości jako argument trzecia i czwarta odpowiednio.  

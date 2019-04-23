@@ -3,11 +3,11 @@ title: Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
 ms.openlocfilehash: a62b659472f6d05e61672fa603e8663d9946977e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127910"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976316"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje
 <xref:System.Net.PeerToPeer.Collaboration> Przestrzeń nazw zawiera klasy i interfejsy API, które są używane do wykonywania działań współpracy elementów równorzędnych przy użyciu infrastruktury współpracy Peer-to-Peer.  

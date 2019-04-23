@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672293"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977382"
 ---
 # <a name="c-operators"></a>Operatory języka C#
 
@@ -77,7 +77,7 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-) — negacji logicznej.
 
-[~ x](bitwise-complement-operator.md) — uzupełnienie bitowe.
+[~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-) — uzupełnienie bitowe.
 
 [++ x](arithmetic-operators.md#increment-operator-) — przedrostkowe. Zwraca wartość x po zaktualizowaniu lokalizacji magazynu z wartością x, który jest jednym większą (zazwyczaj dodaje liczbę całkowitą 1).
 
@@ -90,6 +90,10 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 [& x](and-operator.md) — adres.
 
 [* x](multiplication-operator.md) — dereferencji.
+
+[TRUE — operator](../keywords/true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie true.
+
+[FALSE — operator](../keywords/true-false-operators.md) — zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie false.
 
 ## <a name="multiplicative-operators"></a>Operatory multiplikatywne
 
@@ -113,9 +117,9 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x <\< y](left-shift-operator.md) — przesunięcia bitów w lewo i wypełnić zero po prawej stronie.
+[x <\< y](bitwise-and-shift-operators.md#left-shift-operator-) — przesunięcia bitów w lewo i wypełnić zero po prawej stronie.
 
-[x >> y](right-shift-operator.md) — shift bits po prawej stronie. Jeśli Lewy argument operacji jest `int` lub `long`, a następnie po lewej stronie bity są wypełnione bitu znaku. Jeśli Lewy argument operacji jest `uint` lub `ulong`, a następnie po lewej stronie bity są wypełnione zero.
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) — shift bits po prawej stronie. Jeśli Lewy argument operacji jest `int` lub `long`, a następnie po lewej stronie bity są wypełnione bitu znaku. Jeśli Lewy argument operacji jest `uint` lub `ulong`, a następnie po lewej stronie bity są wypełnione zero.
 
 ## <a name="relational-and-type-testing-operators"></a>Operatory relacyjne i badania typu
 
@@ -145,27 +149,19 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x i y](and-operator.md) — operatora logicznego lub bitowego AND. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.
+`x & y` — [operator logiczny oraz](boolean-logical-operators.md#logical-and-operator-) dla `bool` operandy lub [iloczynu bitowego AND logiczne](bitwise-and-shift-operators.md#logical-and-operator-) przypadku argumentów operacji typu całkowitoliczbowego.
 
 ## <a name="logical-xor-operator"></a>Operatora logicznego XOR
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x ^ y](xor-operator.md) — logicznych lub bitowe XOR. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.
+`x ^ y` — [XOR logiczne](boolean-logical-operators.md#logical-exclusive-or-operator-) dla `bool` operandy lub [iloczynu bitowego XOR logiczne](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) przypadku argumentów operacji typu całkowitoliczbowego.
 
 ## <a name="logical-or-operator"></a>Operator logiczny OR
 
 Ten operator ma wyższy priorytet niż następnej sekcji i niższy priorytet niż w poprzedniej sekcji.
 
-[x &#124; y](or-operator.md) — logicznych lub bitowe OR. Zazwyczaj można użyć tego z typami całkowitymi i `enum` typów.
-
-## <a name="true-operator"></a>TRUE — operator
-
-[True](../keywords/true-false-operators.md) operator zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie true. 
-
-## <a name="false-operator"></a>False operator
-
-[False](../keywords/true-false-operators.md) operator zwraca [bool](../keywords/bool.md) wartość `true` do wskazania, że argument jest zdecydowanie false. 
+`x | y` — [logiczne OR](boolean-logical-operators.md#logical-or-operator-) dla `bool` operandy lub [bitowe OR logiczne](bitwise-and-shift-operators.md#logical-or-operator-) przypadku argumentów operacji typu całkowitoliczbowego.
 
 ## <a name="conditional-and-operator"></a>Operator warunkowy AND
 
@@ -199,23 +195,23 @@ Te operatory mają wyższy priorytet niż następnej sekcji i niższy priorytet 
 
 [x += y](addition-assignment-operator.md) — przyrostu. Dodaj wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, dodającego C# jako program obsługi zdarzeń.
 
-[x-= y](subtraction-assignment-operator.md) — zmniejszanie. Odejmuje wartość `y` od wartości `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, który C# usuwa jako program obsługi zdarzeń
+[x-= y](subtraction-assignment-operator.md) — zmniejszanie. Odejmuje wartość `y` od wartości `x`, zapisują wynik w `x`i zwraca nową wartość. Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję C# usuwa jako program obsługi zdarzeń.
 
-[x * = y](multiplication-assignment-operator.md) — mnożenie i przypisanie. Mnoży wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość.
+[x * = y](arithmetic-operators.md#compound-assignment) — mnożenie i przypisanie. Mnoży wartość `y` wartość `x`, zapisują wynik w `x`i zwraca nową wartość.
 
 [x / = y](arithmetic-operators.md#compound-assignment) — dzielenie i przypisanie. Dzieli wartość `x` przez wartość `y`, zapisują wynik w `x`i zwraca nową wartość.
 
 [x % = y](arithmetic-operators.md#compound-assignment) — remainder przypisania. Dzieli wartość `x` przez wartość `y`, przechowywać resztę w `x`i zwraca nową wartość.
 
-[x & = y](and-assignment-operator.md) — i przypisanie. I wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
+[x & = y](boolean-logical-operators.md#compound-assignment) — i przypisanie. I wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
 
-[x &#124;= y](or-assignment-operator.md) — i przypisanie. LUB wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
+[x &#124;= y](boolean-logical-operators.md#compound-assignment) — i przypisanie. LUB wartość `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
 
-[x ^ = y](xor-assignment-operator.md) — przypisanie XOR. XOR wartość z `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
+[x ^ = y](boolean-logical-operators.md#compound-assignment) — przypisanie XOR. XOR wartość z `y` z wartością `x`, zapisują wynik w `x`i zwraca nową wartość.
 
-[x << = y](left-shift-assignment-operator.md) — przypisania przesunięcia w lewo. Przesuwa wartość `x` po lewej stronie, `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.
+[x << = y](bitwise-and-shift-operators.md#compound-assignment) — przypisania przesunięcia w lewo. Przesuwa wartość `x` po lewej stronie, `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.
 
-[x >> = y](right-shift-assignment-operator.md) — przypisania przesunięcia w prawo. Przesuwa wartość `x` bezpośrednio przez `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.
+[x >> = y](bitwise-and-shift-operators.md#compound-assignment) — przypisania przesunięcia w prawo. Przesuwa wartość `x` bezpośrednio przez `y` miejscach, zapisują wynik w `x`i zwraca nową wartość.
 
 [=>](lambda-operator.md) — deklaracji lambda.
 

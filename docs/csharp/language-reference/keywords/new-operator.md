@@ -5,12 +5,12 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+ms.openlocfilehash: 1c14d50e31b89f4c77c94e5899e8207766a3540f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239855"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977174"
 ---
 # <a name="new-operator-c-reference"></a>New — operator (odwołanie w C#)
 
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-`new` Operator jest również używany do wywoływania domyślnego konstruktora dla typów wartości. Na przykład:
+`new` Operator jest również używany do wywoływania konstruktora bez parametrów dla typów wartości. Na przykład:
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 Aby uzyskać pełną listę wartości domyślnych, zobacz [tabela wartości domyślnych](default-values-table.md).
 
-Należy pamiętać, że jest błąd, aby zadeklarować Konstruktor domyślny dla [struktury](struct.md) ponieważ każdego typu wartości niejawnie ma publicznego konstruktora domyślnego. Istnieje możliwość zadeklarować konstruktory sparametryzowane w typie struct, można ustawić wartości początkowej, ale tylko jest to konieczne, jeśli wymagane są wartości innej niż domyślna.
+Pamiętaj, że ma ona błędem jest deklaracja konstruktora bez parametrów dla [struktury](struct.md) ponieważ każdego typu wartości niejawnie ma publicznego konstruktora bez parametrów. Istnieje możliwość zadeklarować konstruktory sparametryzowane w typie struct, można ustawić wartości początkowej, ale tylko jest to konieczne, jeśli wymagane są wartości innej niż domyślna.
 
 Typ odwołania obiektów, takich jak klasy i obiekty typu wartości, takie jak struktury są niszczone, automatycznie, ale obiekty typu wartości jest niszczony, kiedy ich zawierającego kontekstu jest niszczony, natomiast obiekty typu odwołania są niszczone, wyrzucanie elementów Moduł zbierający na nieokreślony czas, po usunięciu ostatniego odwołania do nich. W przypadku typów, które zawierają zasoby, takie jak dojścia do plików lub połączeń sieciowych pożądane jest mogą wykorzystać deterministyczne cleanup, aby upewnić się, jak najszybciej zwolnienie zasobów, które zawierają. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](using-statement.md).
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329781"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Instrukcje: kotwiczenie kontrolek na formularzach systemu Windows
@@ -55,10 +55,10 @@ W przypadku projektowania formularza, który użytkownik może zmienić rozmiar 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty formularzy systemu Windows](index.md)
-- [Rozmieszczanie formantów na formularzach systemu Windows](arranging-controls-on-windows-forms.md)
-- [AutoSize — Przegląd właściwości](autosize-property-overview.md)
-- [Instrukcje: dokowanie kontrolek w Formularzach systemu Windows](how-to-dock-controls-on-windows-forms.md)
-- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Przewodnik: rozmieszczanie kontrolek w aplikacji formularzy systemu Windows za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [Przewodnik: tworzenie kontrolek formularzy systemu Windows z uzupełnieniem, marginesami oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)
+- [Kontrolki formularzy Windows Forms](index.md)
+- [Rozmieszczanie kontrolek na formularzach Windows Forms](arranging-controls-on-windows-forms.md)
+- [AutoSize, właściwość — omówienie](autosize-property-overview.md)
+- [Instrukcje: Dokowanie formantów na formularzach Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [Przewodnik: Rozmieszczanie kontrolek na formularzach Windows Forms za pomocą TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Przewodnik: Układania Windows formantów formularzy przy użyciu dopełnienie, marginesy oraz właściwościami AutoSize](windows-forms-controls-padding-autosize.md)

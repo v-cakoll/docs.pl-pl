@@ -13,10 +13,10 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
 ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328416"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Instrukcje: ustawienie ikon dla kontrolki TreeView formularzy systemu Windows
@@ -71,7 +71,7 @@ Formularze Windows <xref:System.Windows.Forms.TreeView> formant może wyświetla
 ## <a name="see-also"></a>Zobacz także
 
 - [TreeView, kontrolka — omówienie](treeview-control-overview-windows-forms.md)
-- [Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy systemu Windows](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Instrukcje: iterowanie wszystkich węzłów kontrolki TreeView formularzy systemu Windows](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [Instrukcje: określanie, który węzeł TreeView został kliknięty](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Instrukcje: Dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy Windows](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Instrukcje: Iterowanie wszystkich węzłów kontrolki TreeView formularzy Windows](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Instrukcje: Określanie, który węzeł TreeView został kliknięty](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

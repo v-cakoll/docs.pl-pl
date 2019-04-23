@@ -3,10 +3,10 @@ title: Nauka przez przewodniki
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329313"
 ---
 # <a name="learning-by-walkthroughs"></a>Nauka przez przewodniki
@@ -22,10 +22,10 @@ ms.locfileid: "59329313"
   
 |Cel|Visual Basic|C#|  
 |---------------|------------------|---------|  
-|Utwórz klasę jednostki i wykonania prostego zapytania.|[Przewodnik: Prosty model obiektu i zapytanie (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Przewodnik: Prosty model obiektu i zapytanie (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
+|Utwórz klasę jednostki i wykonania prostego zapytania.|[Przewodnik: Prosty Model obiektu i zapytanie (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Przewodnik: Prosty Model obiektu i zapytanie (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
 |Dodaj klasę sekundy, a następnie wykonaj bardziej złożonego zapytania.<br /><br /> (Wymaga zakończenia poprzednim przewodniku).|[Przewodnik: Wykonywanie zapytań w relacjach (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Przewodnik: Wykonywanie zapytań w relacjach (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
 |Dodawanie, zmienianie i usuwać elementy w bazie danych.|[Przewodnik: Manipulowanie danymi (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Przewodnik: Manipulowanie danymi (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Używanie procedur składowanych.|[Przewodnik: Używanie tylko procedur składowanych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Przewodnik: Używanie tylko procedur składowanych (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Używanie procedur składowanych.|[Przewodnik: Przy użyciu wyłącznie procedur składowanych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Przewodnik: Przy użyciu wyłącznie procedur składowanych (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Ogólne  
  Poniższe informacje ogólnie rzecz biorąc odnoszą się do tych przewodników:  

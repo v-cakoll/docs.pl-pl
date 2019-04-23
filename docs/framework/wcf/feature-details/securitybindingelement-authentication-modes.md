@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330340"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Tryby uwierzytelniania elementu SecurityBindingElement
@@ -123,4 +123,4 @@ Windows Communication Foundation (WCF) udostępnia kilka tryby, według których
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
-- [Instrukcje: tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [Instrukcje: Tworzenie elementu SecurityBindingElement dla określonego trybu uwierzytelniania](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

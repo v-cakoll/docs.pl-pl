@@ -17,10 +17,10 @@ ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330080"
 ---
 # <a name="how-to-view-assembly-contents"></a>Instrukcje: Wyświetlanie zawartości zestawu
@@ -91,5 +91,5 @@ Możesz użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildas
 ## <a name="see-also"></a>Zobacz także
 
 - [Domeny aplikacji i zestawy](application-domains.md#application-domains-and-assemblies)
-- [Porady dotyczące zestawów i domen aplikacji](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
-- [Ildasm.exe (Dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
+- [Instrukcje dotyczące zestawów i domen aplikacji](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
+- [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

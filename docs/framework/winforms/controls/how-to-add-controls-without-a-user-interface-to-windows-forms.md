@@ -15,10 +15,10 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330106"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Instrukcje: dodawanie kontrolek bez interfejsu użytkownika do formularzy systemu Windows
@@ -81,11 +81,11 @@ Niewizualne kontrolki (lub składnika) zapewnia funkcje aplikacji. W przeciwień
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty formularzy systemu Windows](index.md)
-- [Instrukcje: dodawanie kontrolek do formularzy systemu Windows](how-to-add-controls-to-windows-forms.md)
-- [Instrukcje: dodawanie kontrolek ActiveX do formularzy systemu Windows](how-to-add-activex-controls-to-windows-forms.md)
-- [Instrukcje: kopiowanie kontrolek pomiędzy formularzami systemu Windows](how-to-copy-controls-between-windows-forms.md)
-- [Umieszczanie formantów na formularzach systemu Windows](putting-controls-on-windows-forms.md)
-- [Etykietowanie pojedynczych formantów formularzy systemu Windows i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
-- [Formanty formularzy systemu Windows według funkcji](windows-forms-controls-by-function.md)
+- [Kontrolki formularzy Windows Forms](index.md)
+- [Instrukcje: Dodawanie formantów do formularzy Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Instrukcje: Dodawanie kontrolek ActiveX do formularzy Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Instrukcje: Kopiowanie formantów pomiędzy formularzami Windows](how-to-copy-controls-between-windows-forms.md)
+- [Umieszczanie kontrolek na formularzach Windows Forms](putting-controls-on-windows-forms.md)
+- [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)
+- [Kontrolki formularzy Windows Forms według funkcji](windows-forms-controls-by-function.md)

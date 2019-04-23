@@ -5,10 +5,10 @@ author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
 ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327753"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Tworzenie kompletnego rozwiązania .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
@@ -192,4 +192,4 @@ Testy jednostek zapewniają oprogramowania automatyczne, testowane podczas tworz
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Informacje o wersji programu Visual Studio 2017 for Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+- [Visual Studio 2017 for Mac — informacje o wersji](/visualstudio/releasenotes/vs2017-mac-relnotes)

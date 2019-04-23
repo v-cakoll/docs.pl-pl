@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
 ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328429"
 ---
 # <a name="how-to-write-services-programmatically"></a>Instrukcje: Programowane pisanie usług
@@ -73,7 +73,7 @@ Jeśli nie chcesz użyć szablonu projektu usługi Windows, można napisać wła
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [Instrukcje: Tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [Instrukcje: Tworzenie usług Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Instrukcje: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
-- [Instrukcje: Rejestrowanie informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
+- [Instrukcje: Dziennik informacji o usługach](../../../docs/framework/windows-services/how-to-log-information-about-services.md)
 - [Przewodnik: Tworzenie aplikacji usługi Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)

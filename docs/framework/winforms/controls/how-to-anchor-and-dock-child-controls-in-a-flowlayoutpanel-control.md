@@ -8,10 +8,10 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
 ms.openlocfilehash: 255ac50ae79d6931c9b82b50677c450c0834fdea
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329040"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce FlowLayoutPanel
@@ -63,4 +63,4 @@ ms.locfileid: "59329040"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [FlowLayoutPanel — Informacje o formancie](flowlayoutpanel-control-overview.md)
+- [FlowLayoutPanel, kontrolka — omówienie](flowlayoutpanel-control-overview.md)

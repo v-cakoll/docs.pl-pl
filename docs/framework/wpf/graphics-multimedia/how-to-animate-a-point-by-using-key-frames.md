@@ -10,10 +10,10 @@ helpviewer_keywords:
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
 ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328780"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>Instrukcje: Animowanie punktu przy użyciu klatek kluczowych
@@ -41,5 +41,5 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.P
 - <xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.EllipseGeometry.Center%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Media.EllipseGeometry>
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
 - [Klatki kluczowe — tematy z instrukcjami](key-frame-animation-how-to-topics.md)

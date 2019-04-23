@@ -18,39 +18,39 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bb00a56b0d80b78867f70e64c1c9bdf0fc49e1be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178402"
 ---
-# <a name="icorprofilercallbackmoduleunloadstarted-method"></a><span data-ttu-id="e7034-102">ICorProfilerCallback::ModuleUnloadStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="e7034-102">ICorProfilerCallback::ModuleUnloadStarted Method</span></span>
-<span data-ttu-id="e7034-103">Powiadamia program profilujący, że Trwa zwalnianie modułu.</span><span class="sxs-lookup"><span data-stu-id="e7034-103">Notifies the profiler that a module is being unloaded.</span></span>  
+# <a name="icorprofilercallbackmoduleunloadstarted-method"></a><span data-ttu-id="717dd-102">ICorProfilerCallback::ModuleUnloadStarted — Metoda</span><span class="sxs-lookup"><span data-stu-id="717dd-102">ICorProfilerCallback::ModuleUnloadStarted Method</span></span>
+<span data-ttu-id="717dd-103">Powiadamia program profilujący, że Trwa zwalnianie modułu.</span><span class="sxs-lookup"><span data-stu-id="717dd-103">Notifies the profiler that a module is being unloaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e7034-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e7034-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="717dd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="717dd-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleUnloadStarted(  
     [in] ModuleID moduleId);   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e7034-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e7034-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="717dd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="717dd-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="e7034-106">[in] Identyfikator modułu, który jest zwalniany.</span><span class="sxs-lookup"><span data-stu-id="e7034-106">[in] The ID of the module that is being unloaded.</span></span>  
+ <span data-ttu-id="717dd-106">[in] Identyfikator modułu, który jest zwalniany.</span><span class="sxs-lookup"><span data-stu-id="717dd-106">[in] The ID of the module that is being unloaded.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e7034-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e7034-107">Remarks</span></span>  
- <span data-ttu-id="e7034-108">Wartość `moduleId` jest nieprawidłowa dla żądania informacji po `ModuleUnloadStarted` metoda zwraca — jest to programu profilującego ostatniego masz szansę, aby uzyskać informacje na temat tego modułu.</span><span class="sxs-lookup"><span data-stu-id="e7034-108">The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="717dd-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="717dd-107">Remarks</span></span>  
+ <span data-ttu-id="717dd-108">Wartość `moduleId` jest nieprawidłowa dla żądania informacji po `ModuleUnloadStarted` metoda zwraca — jest to programu profilującego ostatniego masz szansę, aby uzyskać informacje na temat tego modułu.</span><span class="sxs-lookup"><span data-stu-id="717dd-108">The value of `moduleId` is not valid for an information request after the `ModuleUnloadStarted` method returns — this is the profiler's last chance to get information about this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e7034-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e7034-109">Requirements</span></span>  
- <span data-ttu-id="e7034-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e7034-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="717dd-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="717dd-109">Requirements</span></span>  
+ <span data-ttu-id="717dd-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="717dd-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e7034-111">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e7034-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="717dd-111">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="717dd-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e7034-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e7034-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="717dd-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="717dd-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e7034-113">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="e7034-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="717dd-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="717dd-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e7034-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e7034-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="717dd-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="717dd-114">See also</span></span>
 
-- [<span data-ttu-id="e7034-115">ICorProfilerCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="e7034-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="e7034-116">ModuleUnloadFinished, metoda</span><span class="sxs-lookup"><span data-stu-id="e7034-116">ModuleUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)
+- [<span data-ttu-id="717dd-115">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="717dd-115">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="717dd-116">ModuleUnloadFinished, metoda</span><span class="sxs-lookup"><span data-stu-id="717dd-116">ModuleUnloadFinished Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadfinished-method.md)

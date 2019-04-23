@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
 ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227343"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Instrukcje: Przeprowadzanie testu trafienia geometrii w wizualizacji
@@ -37,5 +37,5 @@ W tym przykładzie pokazano, jak przeprowadzić test trafień na obiekt wizualny
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Test trafienia w warstwie Visual](hit-testing-in-the-visual-layer.md)
+- [Test trafienia w warstwie wizualizacji](hit-testing-in-the-visual-layer.md)
 - [Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru](how-to-hit-test-using-geometry-as-a-parameter.md)

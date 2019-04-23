@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227125"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox — Formant (Formularze systemu Windows)
@@ -24,17 +24,17 @@ Formularze Windows `ComboBox` formant jest używany do wyświetlania danych w po
  [ComboBox, kontrolka — omówienie](combobox-control-overview-windows-forms.md)  
  Wyjaśnia, ta kontrolka jest oraz jego kluczowych funkcji i właściwości.  
   
- [Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Instrukcje: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Pokazuje Rysowanie niestandardowego tekstu w `ComboBox` kontroli.  
   
 ## <a name="reference"></a>Tematy pomocy  
- <xref:System.Windows.Forms.ComboBox> class  
+ <xref:System.Windows.Forms.ComboBox> Klasa  
  Zawiera opis tej klasy i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty formularzy systemu Windows używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)  
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](windows-forms-controls-used-to-list-options.md)  
  Lista rzeczy, które można zrobić za pomocą pola listy, pola kombi i pól listy zaznaczone.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Formanty do użycia w formularzach systemu Windows](controls-to-use-on-windows-forms.md)
+- [Kontrolki do użycia w formularzach Windows Forms](controls-to-use-on-windows-forms.md)

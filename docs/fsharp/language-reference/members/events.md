@@ -3,10 +3,10 @@ title: Zdarzenia
 description: Dowiedz się, jak F# zdarzenia umożliwiają kojarzenie wywołań funkcji z akcjami użytkownika, które są ważne w programowaniu graficznych interfejsów użytkownika.
 ms.date: 05/16/2016
 ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227005"
 ---
 # <a name="events"></a>Zdarzenia
@@ -176,7 +176,7 @@ Application.Run(appForm)
 
 - [Elementy członkowskie](index.md)
 - [Obsługa i wywoływanie zdarzeń](../../../../docs/standard/events/index.md)
-- [Lambda Expressions: `fun` — Słowo kluczowe](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda Expressions: słowo kluczowe `fun`](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event — moduł](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;t&#62; klasy](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;'Delegate,'Args&#62; Class](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

@@ -7,25 +7,25 @@ helpviewer_keywords:
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
 ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094388"
 ---
-# <a name="how-to-create-a-simple-binding"></a><span data-ttu-id="ac75f-102">Instrukcje: Tworzenie prostego powiązania</span><span class="sxs-lookup"><span data-stu-id="ac75f-102">How to: Create a Simple Binding</span></span>
-<span data-ttu-id="ac75f-103">W tym przykładzie przedstawiono sposób tworzenia prostej <xref:System.Windows.Data.Binding>.</span><span class="sxs-lookup"><span data-stu-id="ac75f-103">This example shows you how to create a simple <xref:System.Windows.Data.Binding>.</span></span>  
+# <a name="how-to-create-a-simple-binding"></a><span data-ttu-id="33865-102">Instrukcje: Tworzenie prostego powiązania</span><span class="sxs-lookup"><span data-stu-id="33865-102">How to: Create a Simple Binding</span></span>
+<span data-ttu-id="33865-103">W tym przykładzie przedstawiono sposób tworzenia prostej <xref:System.Windows.Data.Binding>.</span><span class="sxs-lookup"><span data-stu-id="33865-103">This example shows you how to create a simple <xref:System.Windows.Data.Binding>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ac75f-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="ac75f-104">Example</span></span>  
- <span data-ttu-id="ac75f-105">W tym przykładzie należy `Person` obiektu z właściwością ciągu o nazwie `PersonName`.</span><span class="sxs-lookup"><span data-stu-id="ac75f-105">In this example, you have a `Person` object with a string property named `PersonName`.</span></span> <span data-ttu-id="ac75f-106">`Person` Obiekt jest zdefiniowany w przestrzeni nazw o nazwie `SDKSample`.</span><span class="sxs-lookup"><span data-stu-id="ac75f-106">The `Person` object is defined in the namespace called `SDKSample`.</span></span>  
+## <a name="example"></a><span data-ttu-id="33865-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="33865-104">Example</span></span>  
+ <span data-ttu-id="33865-105">W tym przykładzie należy `Person` obiektu z właściwością ciągu o nazwie `PersonName`.</span><span class="sxs-lookup"><span data-stu-id="33865-105">In this example, you have a `Person` object with a string property named `PersonName`.</span></span> <span data-ttu-id="33865-106">`Person` Obiekt jest zdefiniowany w przestrzeni nazw o nazwie `SDKSample`.</span><span class="sxs-lookup"><span data-stu-id="33865-106">The `Person` object is defined in the namespace called `SDKSample`.</span></span>  
   
- <span data-ttu-id="ac75f-107">Wyróżniony wiersz, który zawiera `<src>` tworzy wystąpienie elementu w poniższym przykładzie `Person` obiekt z `PersonName` wartość właściwości `Joe`.</span><span class="sxs-lookup"><span data-stu-id="ac75f-107">The highlighted line that contains the `<src>` element in the following example instantiates the `Person` object with a `PersonName` property value of `Joe`.</span></span> <span data-ttu-id="ac75f-108">Jest to realizowane w `Resources` sekcji i przypisane `x:Key`.</span><span class="sxs-lookup"><span data-stu-id="ac75f-108">This is done in the `Resources` section and assigned an `x:Key`.</span></span>  
+ <span data-ttu-id="33865-107">Wyróżniony wiersz, który zawiera `<src>` tworzy wystąpienie elementu w poniższym przykładzie `Person` obiekt z `PersonName` wartość właściwości `Joe`.</span><span class="sxs-lookup"><span data-stu-id="33865-107">The highlighted line that contains the `<src>` element in the following example instantiates the `Person` object with a `PersonName` property value of `Joe`.</span></span> <span data-ttu-id="33865-108">Jest to realizowane w `Resources` sekcji i przypisane `x:Key`.</span><span class="sxs-lookup"><span data-stu-id="33865-108">This is done in the `Resources` section and assigned an `x:Key`.</span></span>  
   
  [!code-xaml[SimpleBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- <span data-ttu-id="ac75f-109">Wyróżniony wiersz, który zawiera `<TextBlock>` element czym wiąże <xref:System.Windows.Controls.TextBlock> kontrolę `PersonName` właściwości.</span><span class="sxs-lookup"><span data-stu-id="ac75f-109">The highlighted line that contains the `<TextBlock>` element then binds the <xref:System.Windows.Controls.TextBlock> control to the `PersonName` property.</span></span> <span data-ttu-id="ac75f-110">W rezultacie <xref:System.Windows.Controls.TextBlock> pojawi się wartość "Jan".</span><span class="sxs-lookup"><span data-stu-id="ac75f-110">As a result, the <xref:System.Windows.Controls.TextBlock> appears with the value "Joe".</span></span>  
+ <span data-ttu-id="33865-109">Wyróżniony wiersz, który zawiera `<TextBlock>` element czym wiąże <xref:System.Windows.Controls.TextBlock> kontrolę `PersonName` właściwości.</span><span class="sxs-lookup"><span data-stu-id="33865-109">The highlighted line that contains the `<TextBlock>` element then binds the <xref:System.Windows.Controls.TextBlock> control to the `PersonName` property.</span></span> <span data-ttu-id="33865-110">W rezultacie <xref:System.Windows.Controls.TextBlock> pojawi się wartość "Jan".</span><span class="sxs-lookup"><span data-stu-id="33865-110">As a result, the <xref:System.Windows.Controls.TextBlock> appears with the value "Joe".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac75f-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ac75f-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="33865-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="33865-111">See also</span></span>
 
-- [<span data-ttu-id="ac75f-112">Przegląd Wiązanie danych</span><span class="sxs-lookup"><span data-stu-id="ac75f-112">Data Binding Overview</span></span>](data-binding-overview.md)
-- [<span data-ttu-id="ac75f-113">— Tematy porad</span><span class="sxs-lookup"><span data-stu-id="ac75f-113">How-to Topics</span></span>](data-binding-how-to-topics.md)
+- [<span data-ttu-id="33865-112">Powiązanie danych — omówienie</span><span class="sxs-lookup"><span data-stu-id="33865-112">Data Binding Overview</span></span>](data-binding-overview.md)
+- [<span data-ttu-id="33865-113">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="33865-113">How-to Topics</span></span>](data-binding-how-to-topics.md)

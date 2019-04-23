@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4733d59eb14f736f1369de82a7e9c677a65c3f86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093647"
 ---
-# <a name="icordebugcode2getcompilerflags-method"></a><span data-ttu-id="9ed5d-102">ICorDebugCode2::GetCompilerFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="9ed5d-102">ICorDebugCode2::GetCompilerFlags Method</span></span>
-<span data-ttu-id="9ed5d-103">Pobiera flagi, które określają warunki, na których ten obiekt kod był albo just-in-time (JIT) skompilowanego lub wygenerowany za pomocą generator obrazu natywnego (Ngen.exe).</span><span class="sxs-lookup"><span data-stu-id="9ed5d-103">Gets the flags that specify the conditions under which this code object was either just-in-time (JIT) compiled or generated using the native image generator (Ngen.exe).</span></span>  
+# <a name="icordebugcode2getcompilerflags-method"></a><span data-ttu-id="32d18-102">ICorDebugCode2::GetCompilerFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="32d18-102">ICorDebugCode2::GetCompilerFlags Method</span></span>
+<span data-ttu-id="32d18-103">Pobiera flagi, które określają warunki, na których ten obiekt kod był albo just-in-time (JIT) skompilowanego lub wygenerowany za pomocą generator obrazu natywnego (Ngen.exe).</span><span class="sxs-lookup"><span data-stu-id="32d18-103">Gets the flags that specify the conditions under which this code object was either just-in-time (JIT) compiled or generated using the native image generator (Ngen.exe).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ed5d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9ed5d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="32d18-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="32d18-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCompilerFlags (  
@@ -35,17 +35,17 @@ HRESULT GetCompilerFlags (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9ed5d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9ed5d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="32d18-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="32d18-105">Parameters</span></span>  
  `pdwFlags`  
- <span data-ttu-id="9ed5d-106">[out] Wskaźnik do wartości [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenia, która określa zachowanie kompilatora JIT lub generator obrazu natywnego.</span><span class="sxs-lookup"><span data-stu-id="9ed5d-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that specifies the behavior of the JIT compiler or the native image generator.</span></span>  
+ <span data-ttu-id="32d18-106">[out] Wskaźnik do wartości [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenia, która określa zachowanie kompilatora JIT lub generator obrazu natywnego.</span><span class="sxs-lookup"><span data-stu-id="32d18-106">[out] A pointer to a value of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration that specifies the behavior of the JIT compiler or the native image generator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ed5d-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9ed5d-107">Requirements</span></span>  
- <span data-ttu-id="9ed5d-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ed5d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="32d18-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="32d18-107">Requirements</span></span>  
+ <span data-ttu-id="32d18-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32d18-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ed5d-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ed5d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="32d18-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="32d18-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9ed5d-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ed5d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="32d18-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32d18-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="9ed5d-111">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="9ed5d-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="32d18-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32d18-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9ed5d-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9ed5d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32d18-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="32d18-112">See also</span></span>

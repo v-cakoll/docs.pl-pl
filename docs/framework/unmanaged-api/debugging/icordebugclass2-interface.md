@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 015085cff23028814937dfef9aea19af7438b4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173813"
 ---
 # <a name="icordebugclass2-interface"></a>ICorDebugClass2, interfejs
@@ -50,5 +50,5 @@ Reprezentuje klasą rodzajową lub klasy z parametrem metody typu <xref:System.T
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorDebugClass, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugClass Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

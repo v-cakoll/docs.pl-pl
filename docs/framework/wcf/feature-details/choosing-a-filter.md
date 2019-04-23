@@ -3,10 +3,10 @@ title: Wybieranie filtra
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
 ms.openlocfilehash: 76875cd56f74bd555133253beda97b30ee3fa90a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174034"
 ---
 # <a name="choosing-a-filter"></a>Wybieranie filtra
@@ -138,4 +138,4 @@ XPathMessageFilter xpath1=new XPathMessageFilter("//ns:element");
 ## <a name="see-also"></a>Zobacz także
 
 - [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)
-- [Instrukcje: Używanie filtrów](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)
+- [Instrukcje: Użyj filtrów](../../../../docs/framework/wcf/feature-details/how-to-use-filters.md)

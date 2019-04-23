@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209154"
 ---
 # <a name="fromtoby-animations-overview"></a>Przegląd Cechy animacji od/do/przez
@@ -144,9 +144,9 @@ W tym temacie opisano sposób użycia animacji od/do/przez animować właściwo�
 
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
-- [Przegląd Animacja](animation-overview.md)
-- [Przegląd Scenorysy](storyboards-overview.md)
-- [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md)
-- [Przegląd Animacja ścieżki](path-animations-overview.md)
-- [Przegląd Niestandardowe animacje](custom-animations-overview.md)
+- [Animacja — przegląd](animation-overview.md)
+- [Scenorysy — przegląd](storyboards-overview.md)
+- [Animacje kluczowych klatek — przegląd](key-frame-animations-overview.md)
+- [Animacje ścieżki — przegląd](path-animations-overview.md)
+- [Niestandardowe animacje — przegląd](custom-animations-overview.md)
 - [Od, do i przez przykład wartości docelowej animacji](https://go.microsoft.com/fwlink/?LinkID=159988)

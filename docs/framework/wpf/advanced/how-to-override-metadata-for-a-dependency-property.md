@@ -10,10 +10,10 @@ helpviewer_keywords:
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
 ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209440"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Instrukcje: Przesłanianie metadanych dla właściwości zależności
@@ -36,4 +36,4 @@ W tym przykładzie pokazano, jak zastąpić domyślny metadane zależności wła
 - <xref:System.Windows.DependencyProperty>
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
-- [— Tematy porad](properties-how-to-topics.md)
+- [Tematy z instrukcjami](properties-how-to-topics.md)

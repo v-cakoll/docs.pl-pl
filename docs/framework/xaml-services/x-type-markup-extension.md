@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211637"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
@@ -83,5 +83,5 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
 
 - <xref:System.Windows.Style>
 - [Tworzenie szablonów i stylów](../wpf/controls/styling-and-templating.md)
-- [Omówienie XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

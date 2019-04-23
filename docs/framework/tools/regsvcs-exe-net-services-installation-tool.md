@@ -12,10 +12,10 @@ ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215043"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
@@ -43,14 +43,14 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*plikZestawu.dll*|Plik zestawu źródłowego. Zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
+|*assemblyFile.dll*|Plik zestawu źródłowego. Zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji, zobacz [podpisywanie zestawu za pomocą silnej nazwy](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/appdir:** *ścieżki*|Określa katalog główny aplikacji.|  
 |**operacji:** *applicationName*|Określa nazwę aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/c**|Tworzy aplikację docelową.|  
-|**/componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
+|**componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
 |**/exapp**|Określa, że narzędzie ma oczekiwać istniejącej aplikacji.|  
 |**/extlb**|Używa istniejącej biblioteki typów.|  
 |**/fc**|Znajduje lub tworzy aplikację docelową.|  

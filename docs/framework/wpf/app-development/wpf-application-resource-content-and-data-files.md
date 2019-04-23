@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211929"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
@@ -123,7 +123,7 @@ ms.locfileid: "59211929"
  Należy używać plików zawartości, jeśli aplikacja wymaga określonego zestawu plików danych aplikacji, które można zaktualizować bez konieczności ponownego kompilowania zestawu, który je wykorzystuje.  
   
 ### <a name="configuring-content-files"></a>Konfigurowanie plików zawartości  
- Aby dodać zawartość pliku do projektu, może być dołączony jako pliku danych aplikacji `Content` elementu. Ponadto, ponieważ plik zawartości nie jest kompilowana bezpośrednio do zestawu, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` elementu metadanych, aby określić, że plik zawartości jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw. Jeśli chcesz, aby zasób był kopiowany do folderu wyjściowego kompilacji każdym razem, gdy projekt jest kompilowany, możesz ustawić `CopyToOutputDirectory` elementu metadanych z `Always` wartości. W przeciwnym razie należy zapewnić, że tylko najnowszą wersję zasobu jest kopiowany do folderu danych wyjściowych kompilacji za pomocą `PreserveNewest` wartości.  
+ Aby dodać zawartość pliku do projektu, może być dołączony jako pliku danych aplikacji `Content` elementu. Ponadto, ponieważ plik zawartości nie jest kompilowana bezpośrednio do zestawu, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` elementu metadanych, aby określić, że plik zawartości jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw. Jeśli chcesz, aby zasób był kopiowany do folderu wyjściowego kompilacji każdym razem, gdy projekt jest kompilowany, możesz ustawić `CopyToOutputDirectory` elementu metadanych z `Always` wartości. W przeciwnym razie należy zapewnić, że tylko najnowszą wersję zasobu jest kopiowany do folderu danych wyjściowych kompilacji za pomocą `PreserveNewest` wartości.  
   
  Poniżej przedstawiono plik, który jest skonfigurowany jako wyjścia w zawartości pliku, który jest kopiowany do kompilacji folderu tylko wtedy, gdy nowa wersja zasobu jest dodawany do projektu.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59211929"
 ### <a name="configuring-site-of-origin-files"></a>Konfigurowanie witryny pochodzenia plików  
  W przypadku witryny pochodzenia plików nie istnieje lub jest nieznany w czasie kompilacji, należy użyć wdrażania tradycyjnych mechanizmów zapewniających wymagane pliki są dostępne w czasie wykonywania, w tym za pomocą `XCopy` wiersza polecenia programu lub [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Jeśli wiesz, w czasie kompilacji plików, które będą znajdować się w witrynie źródła, takich jak, ale mimo to chcesz uniknąć jawne zależności, można dodać te pliki [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] projektu jako `None` elementu. Jak w przypadku plików zawartości, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` atrybutu, aby określić, czy witryna pochodzenia pliku jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw, określając opcję `Always` wartość lub `PreserveNewest` wartość.  
+ Jeśli wiesz, w czasie kompilacji plików, które będą znajdować się w witrynie źródła, takich jak, ale mimo to chcesz uniknąć jawne zależności, można dodać te pliki [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] projektu jako `None` elementu. Jak w przypadku plików zawartości, należy ustawić [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` atrybutu, aby określić, czy witryna pochodzenia pliku jest kopiowany do lokalizacji, która jest określana względem skompilowany zestaw, określając opcję `Always` wartość lub `PreserveNewest` wartość.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +239,4 @@ ms.locfileid: "59211929"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Pakuj URI w WPF](pack-uris-in-wpf.md)
+- [Pakowanie URI w WPF](pack-uris-in-wpf.md)

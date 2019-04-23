@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211065"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
@@ -121,10 +121,10 @@ ms.locfileid: "59211065"
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Przegląd Zarządzanie aplikacjami](application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy, w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
+|[Zarządzanie aplikacjami — omówienie](application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy, w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
 |[Okna w programie WPF](windows-in-wpf-applications.md)|Zawiera szczegółowe informacje o zarządzanie systemem windows w Twojej aplikacji, takich jak używać <xref:System.Windows.Window> klasy i w oknach dialogowych.|  
-|[Przegląd Nawigacja](navigation-overview.md)|Omówienie zarządzania Nawigacja między stronami aplikacji.|  
+|[Nawigacja — omówienie](navigation-overview.md)|Omówienie zarządzania Nawigacja między stronami aplikacji.|  
 |[Hosting](hosting-wpf-applications.md)|Zawiera omówienie [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
-|[Wdróż i konfiguruj](building-and-deploying-wpf-applications.md)|W tym artykule opisano sposób tworzenia i wdrażania aplikacji WPF.|  
+|[Tworzenie i wdrażanie](building-and-deploying-wpf-applications.md)|W tym artykule opisano sposób tworzenia i wdrażania aplikacji WPF.|  
 |[Wprowadzenie do platformy WPF w programie Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|W tym artykule opisano główne funkcje WPF.|  
-|[Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć WPF aplikacji za pomocą strony nawigacji, układ, formanty, obrazy, style i powiązania.|
+|[Przewodnik: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć WPF aplikacji za pomocą strony nawigacji, układ, formanty, obrazy, style i powiązania.|

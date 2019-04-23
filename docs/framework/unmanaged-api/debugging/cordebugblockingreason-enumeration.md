@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215082"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason — Wyliczenie
@@ -43,7 +43,7 @@ Typedef enum CorDebugBlockingReason
 |------------|-----------------|  
 |`BLOCKING_NONE`|Wyłącznie do użytku wewnętrznego.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Wątek próbuje pobrać sekcję krytyczną, skojarzonego z blokadą monitora na obiekcie. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> lub <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> metody.|  
-|`BLOCKING_MONITOR_EVENT`|Wątek jest oczekiwanie na zdarzenia skojarzonego z blokadą monitor dla obiektu. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` metody.|  
+|`BLOCKING_MONITOR_EVENT`|Wątek jest oczekiwanie na zdarzenia skojarzonego z blokadą monitor dla obiektu. Zazwyczaj ten błąd występuje podczas wywołania jednej z <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` metody.|  
   
 ## <a name="remarks"></a>Uwagi  
  Gdy `BLOCKING_MONITOR_CRITICAL_SECTION` lub `BLOCKING_MONITOR_EVENT` elementu członkowskiego jest używany w [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury, `pBlockingObject` składowej struktury punktami interfejs "ICorDebugValue", który reprezentuje obiekt, który jest wprowadzanych . Również musi implementować [icordebugheapvalue3 —](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) interfejsu.  
@@ -59,5 +59,5 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie — wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debugowanie, wyliczenia](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

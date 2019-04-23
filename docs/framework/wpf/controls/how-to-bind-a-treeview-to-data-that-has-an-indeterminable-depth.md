@@ -5,10 +5,10 @@ helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
 ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214861"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Instrukcje: Wiązanie elementu TreeView z danymi, które mają nieokreśloną głębokość
@@ -27,5 +27,5 @@ Może to być czasy, kiedy chcesz powiązać <xref:System.Windows.Controls.TreeV
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Wiązanie danych](../data/data-binding-overview.md)
-- [Przegląd Szablonowanie danych](../data/data-templating-overview.md)
+- [Powiązanie danych — omówienie](../data/data-binding-overview.md)
+- [Szablonowanie danych — omówienie](../data/data-templating-overview.md)

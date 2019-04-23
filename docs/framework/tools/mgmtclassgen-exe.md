@@ -14,10 +14,10 @@ ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213132"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Zarządzanie generatorem silnie typizowanej klasy)
@@ -61,11 +61,11 @@ WMIClass [options]
 |CIM_SINT32|**Int32**|  
 |SIM_UINT32|**UInt32**|  
 |CIM_SINT64|**Int64**|  
-|CIM_UINT64|**UInt64**|  
+|CIM_UINT64|**UInt64 —**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
 |CIM_BOOLEAN|**Boolean**|  
-|CIM_String|**String**|  
+|CIM_String|**Ciąg**|  
 |CIM_DATETIME|**Data i godzina** lub **przedział czasu**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  

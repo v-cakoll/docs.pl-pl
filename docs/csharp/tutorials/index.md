@@ -3,10 +3,10 @@ title: Samouczki języka C#
 description: Zapoznaj się z tych C# samouczki, aby dowiedzieć się, jak tworzyć C# programów i ucz się C# funkcje języka.
 ms.date: 10/25/2018
 ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214445"
 ---
 # <a name="c-tutorials"></a>Samouczki języka C#
@@ -17,29 +17,29 @@ Witamy w C# samouczków. One rozpoczynać się interakcyjne lekcji, które możn
 
 Pierwszy lekcji opisano C# pojęć przy użyciu małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takich jak ciągi, liczby i wartości logiczne. To wszystkie interaktywne, a użytkownik będzie pisanie i uruchamianie kodu w ciągu kilku minut. Te lekcje pierwszy założono nie uprzednia umiejętność programowania lub C# języka.
 
-## [<a name="hello-world"></a>Cześć ludzie](intro-to-csharp/hello-world.yml)
+## <a name="hello-worldintro-to-csharphello-worldyml"></a>[Hello World](intro-to-csharp/hello-world.yml)
 
 W [Witaj, świecie](intro-to-csharp/hello-world.yml) samouczka, utworzysz najbardziej podstawowym C# program. Dowiesz się o `string` typu i sposób pracy z tekstem.
 
-## [<a name="numbers-in-c"></a>Liczby w języku C#](intro-to-csharp/numbers-in-csharp.yml)
+## <a name="numbers-in-cintro-to-csharpnumbers-in-csharpyml"></a>[Liczby w języku C#](intro-to-csharp/numbers-in-csharp.yml)
 
 W [liczby w elemencie C# ](intro-to-csharp/numbers-in-csharp.yml) samouczka, dowiesz się, jak komputery przechowujące liczby oraz sposób wykonywania obliczeń na różne typy liczbowe. Poznasz podstawy zaokrąglania oraz sposób wykonywania obliczeń matematycznych za pomocą C#. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/numbers-in-csharp-local.md).
 
 W tym samouczku założono, że zakończono [Witaj, świecie](intro-to-csharp/hello-world.yml) lekcji.
 
-## [<a name="branches-and-loops"></a>Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml)
+## <a name="branches-and-loopsintro-to-csharpbranches-and-loopsyml"></a>[Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml)
 
 [Gałęzie i pętle](intro-to-csharp/branches-and-loops.yml) samouczek omawia podstawowe informacje dotyczące wybierania różnych ścieżek wykonywania kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, która jest podstawą jak programy podejmowanie decyzji i wybierz różne akcje. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/branches-and-loops-local.md).
 
 W tym samouczku założono, że zakończono [Witaj, świecie](intro-to-csharp/hello-world.yml) i [liczby w elemencie C# ](intro-to-csharp/numbers-in-csharp.yml) lekcje.
 
-## [<a name="list-collection"></a>Lista kolekcji](intro-to-csharp/list-collection.yml)
+## <a name="list-collectionintro-to-csharplist-collectionyml"></a>[Lista kolekcji](intro-to-csharp/list-collection.yml)
 
 [Listy kolekcji](intro-to-csharp/list-collection.yml) lekcji przedstawi Przewodnik po typ kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy, wyszukiwać elementy i sortowanie listy. Dowiesz się o różnych rodzajów list. W tym samouczku jest również dostępna [do uruchomienia lokalnie na swojej maszynie](intro-to-csharp/arrays-and-collections.md).
 
 Ten samouczek zakłada, Zakończono lekcje wymienionych powyżej.
 
-## [<a name="introduction-to-c----work-locally"></a>Wprowadzenie do C# — pracować lokalnie](intro-to-csharp/local-environment.md)
+## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Wprowadzenie do C# — pracować lokalnie](intro-to-csharp/local-environment.md)
 
 Wprowadzających samouczków po lekcji Witaj, świecie są dostępne w środowisku projektowym lokalnego. Na koniec każdego samouczka zdecyduj, czy chcesz kontynuować z następnej lekcji online lub na własnym komputerze. Brak łącza, które ułatwiają konfigurowanie środowiska i przejdź do następnego samouczka na komputerze.
 

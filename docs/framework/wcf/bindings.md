@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211481"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Wiązania WCF (Windows Communication Foundation)
@@ -18,10 +18,10 @@ Powiązania Określ, jak punkt końcowy usługi Windows Communication Foundation
  [Omówienie powiązań WCF](../../../docs/framework/wcf/bindings-overview.md)  
  Omówienie powiązań WCF, jakie są powiązania, jaki zapewnia system i jak można zdefiniować lub zmodyfikować je.  
   
- [Wiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)  
+ [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)  
  Lista powiązania dołączone do programu WCF. Te powiązania dotyczą większość komunikat wzorca z wymagań dotyczących bezpieczeństwa i.  
   
- [Konfigurowanie usług i klientów za pomocą wiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  Powiązania WCF zawiera ważne informacje, które klienci muszą używać połączyć się z punktami końcowymi usługi.  
   
  [Konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
@@ -31,7 +31,7 @@ Powiązania Określ, jak punkt końcowy usługi Windows Communication Foundation
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Punkty końcowe: adresy, wiązania i kontrakty](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Punkty końcowe: Adresy, powiązania i kontrakty](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Powiązania](../../../docs/framework/wcf/feature-details/bindings.md)  
   

@@ -5,10 +5,10 @@ ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af4c7feb7076eeac6089a3255c7832c17a43469b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208842"
 ---
 # <a name="icordebugexceptiondebugeventgetflags-method"></a>Metoda ICorDebugExceptionDebugEvent::GetFlags
@@ -42,5 +42,5 @@ HRESULT GetFlags(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Interfejs ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionDebugEvent, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
 ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209745"
 ---
 # <a name="typography-how-to-topics"></a>Typografia Tematy porad
@@ -31,4 +31,4 @@ Tematy w tej sekcji opisano sposób korzystania [!INCLUDE[TLA#tla_winclient](../
 
 - <xref:System.Windows.Documents.Typography>
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [OpenType funkcje czcionki](opentype-font-features.md)
+- [Funkcje czcionki OpenType](opentype-font-features.md)

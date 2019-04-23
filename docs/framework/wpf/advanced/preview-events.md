@@ -8,10 +8,10 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211400"
 ---
 # <a name="preview-events"></a>Podgląd zdarzeń
@@ -31,5 +31,5 @@ Podgląd zdarzeń, tzw. tunelowanie zdarzeń, są zdarzenia trasowane, gdzie kie
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Oznaczanie zdarzenia trasowanego jako obsłużonego oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
-- [Przegląd Zdarzenia trasowane](routed-events-overview.md)
+- [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
+- [Przegląd zdarzeń trasowanych](routed-events-overview.md)

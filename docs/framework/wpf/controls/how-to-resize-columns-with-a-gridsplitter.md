@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resizing grid columns [WPF]
 ms.assetid: 47b20fe6-7adc-4aa6-9693-b4e184eef74b
 ms.openlocfilehash: f743e9ccf8a984a646a4b8f05ee99162e5bc73ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210441"
 ---
 # <a name="how-to-resize-columns-with-a-gridsplitter"></a>Instrukcje: Zmienianie rozmiaru kolumn przy użyciu GridSplitter
@@ -37,4 +37,4 @@ W tym przykładzie przedstawiono sposób tworzenia pionowej <xref:System.Windows
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.GridSplitter>
-- [— Tematy porad](gridsplitter-how-to-topics.md)
+- [Tematy z instrukcjami](gridsplitter-how-to-topics.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
 ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127845"
 ---
 # <a name="controls-by-category"></a>Kontrolki według kategorii
@@ -179,4 +179,4 @@ Formanty Windows Presentation Foundation (WPF) może być logicznie pogrupowane 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Biblioteka formantów](control-library.md)
+- [Biblioteka kontrolek](control-library.md)

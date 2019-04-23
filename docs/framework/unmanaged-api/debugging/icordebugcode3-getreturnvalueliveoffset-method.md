@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 03ee275336d3ae71f63d82add694fe1308efbe8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125940"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset — Metoda
@@ -61,7 +61,7 @@ HRESULT GetReturnValueLiveOffset(
   
  Funkcja zwraca `HRESULT` wartości podanych w poniższej tabeli.  
   
-|`HRESULT` value|Opis|  
+|`HRESULT` Wartość|Opis|  
 |---------------------|-----------------|  
 |`S_OK`|Powodzenie.|  
 |`CORDBG_E_INVALID_OPCODE`|Podanego przesunięcia IL nie jest instrukcją call, lub funkcja zwraca `void`.|  
@@ -81,4 +81,4 @@ HRESULT GetReturnValueLiveOffset(
 ## <a name="see-also"></a>Zobacz także
 
 - [GetReturnValueForILOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [ICorDebugCode3 — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)

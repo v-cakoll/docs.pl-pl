@@ -10,10 +10,10 @@ helpviewer_keywords:
 - states [WPF], ContextMenu
 ms.assetid: 342d1f17-c406-4f94-8f55-867c5f3ea511
 ms.openlocfilehash: 6650d5a7be8ebe8fc2dcd7af7c854da669de87f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123048"
 ---
 # <a name="contextmenu-styles-and-templates"></a>ContextMenu — Style i szablony
@@ -48,7 +48,7 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ContextMen
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony formantu](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Style i szablony kontrolek](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130406"
 ---
 # <a name="expander-overview"></a>Przegląd Ekspander
@@ -28,7 +28,7 @@ ms.locfileid: "59130406"
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Ustawienie kierunku powiększających obszar zawartości  
- Możesz ustawić obszaru zawartości <xref:System.Windows.Controls.Expander> formantu, aby rozwinąć w jednej z czterech kierunków (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, lub <xref:System.Windows.Controls.ExpandDirection.Right>) przy użyciu <xref:System.Windows.Controls.ExpandDirection> właściwości. Kiedy obszar zawartości jest zwinięte, tylko <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> i pojawiają się jego przycisku przełączania. A <xref:System.Windows.Controls.Button> kontrolkę wyświetlającą strzałkę kierunkową służy jako przycisk przełącznika, aby rozwinąć lub zwinąć obszar zawartości. Po rozwinięciu <xref:System.Windows.Controls.Expander> próbuje wyświetlić całej zawartości w obszarze podobne okno.  
+ Możesz ustawić obszaru zawartości <xref:System.Windows.Controls.Expander> formantu, aby rozwinąć w jednej z czterech kierunków (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, lub <xref:System.Windows.Controls.ExpandDirection.Right>) przy użyciu <xref:System.Windows.Controls.ExpandDirection> właściwości. Kiedy obszar zawartości jest zwinięte, tylko <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> i pojawiają się jego przycisku przełączania. A <xref:System.Windows.Controls.Button> kontrolkę wyświetlającą strzałkę kierunkową służy jako przycisk przełącznika, aby rozwinąć lub zwinąć obszar zawartości. Po rozwinięciu <xref:System.Windows.Controls.Expander> próbuje wyświetlić całej zawartości w obszarze podobne okno.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Kontrolowanie rozmiaru ekspander w panelu  
@@ -62,4 +62,4 @@ ms.locfileid: "59130406"
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [— Tematy porad](expander-how-to-topics.md)
+- [Tematy z instrukcjami](expander-how-to-topics.md)

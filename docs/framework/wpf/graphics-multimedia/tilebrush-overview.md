@@ -9,10 +9,10 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125307"
 ---
 # <a name="tilebrush-overview"></a>TileBrush — Przegląd
@@ -126,8 +126,8 @@ Składniki TileBrush z TileMode kafelka
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
-- [Malowanie obrazami, rysowaniem i Visual](painting-with-images-drawings-and-visuals.md)
-- [— Tematy porad](brushes-how-to-topics.md)
-- [Przegląd Obiekty Freezable](../advanced/freezable-objects-overview.md)
-- [ImageBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160005)
-- [Przykładowe VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Tematy z instrukcjami](brushes-how-to-topics.md)
+- [Przegląd obiektów Freezable](../advanced/freezable-objects-overview.md)
+- [Przykładowe ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
+- [VisualBrush Sample](https://go.microsoft.com/fwlink/?LinkID=160049)

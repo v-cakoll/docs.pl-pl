@@ -12,10 +12,10 @@ ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124816"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling delegata jako metoda wywołania zwrotnego
@@ -26,13 +26,13 @@ Niniejszy przykład pokazuje sposób przekazywania delegatów do niezarządzanej
 
 Przykład wywołania zwrotnego używa następujących funkcji niezarządzanych, wyświetlane wraz z ich oryginalną deklaracją funkcji:
 
--   `TestCallBack` exported from PinvokeLib.dll.
+-   `TestCallBack` eksportowany z PinvokeLib.dll.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` exported from PinvokeLib.dll.
+-   `TestCallBack2` eksportowany z PinvokeLib.dll.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

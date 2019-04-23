@@ -10,18 +10,18 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
 ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128664"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
 <xref:System.Windows.Controls.ScrollViewer> Kontroli tworzy przewijany region, w którym zawartość może być przewijana poziomo czy pionowo.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ScrollViewer — Przegląd](scrollviewer-overview.md)  
- [— Tematy porad](scrollviewer-how-to-topics.md)  
+ [ScrollViewer — omówienie](scrollviewer-overview.md)  
+ [Tematy z instrukcjami](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -30,5 +30,5 @@ ms.locfileid: "59128664"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd Panele](panels-overview.md)
+- [Panele — omówienie](panels-overview.md)
 - [Układ](../advanced/layout.md)

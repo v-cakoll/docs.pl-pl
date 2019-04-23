@@ -6,10 +6,10 @@ helpviewer_keywords:
 - 3-D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
 ms.openlocfilehash: a20b89a7359fc85d9790ac02dd2b173452df8c22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125037"
 ---
 # <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>Instrukcje: Stosowanie rysowania do modelu 3D
@@ -30,5 +30,5 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.DrawingBrus
 
 - [Zasoby XAML](../advanced/xaml-resources.md)
 - [Tworzenie sceny 3D](how-to-create-a-3-d-scene.md)
-- [Przegląd Rysowanie obiektów](drawing-objects-overview.md)
-- [Przegląd Grafika 3-D](3-d-graphics-overview.md)
+- [Rysowanie obiektów — przegląd](drawing-objects-overview.md)
+- [Grafika 3D — przegląd](3-d-graphics-overview.md)

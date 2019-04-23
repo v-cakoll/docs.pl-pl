@@ -16,10 +16,10 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124621"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
@@ -59,6 +59,6 @@ Tradycyjnie powiązanie danych został użyty w ramach aplikacji może korzysta�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
-- [Wiązanie danych i formularze systemu Windows](data-binding-and-windows-forms.md)
-- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych i formularzy Windows Forms](data-binding-and-windows-forms.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125149"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource — Rozszerzenie znaczników
@@ -70,7 +70,7 @@ Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
-- [Rozszerzenia znacznikowania i WPF XAML](markup-extensions-and-wpf-xaml.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Zasoby XAML](xaml-resources.md)
 - [Zasoby i kod](resources-and-code.md)

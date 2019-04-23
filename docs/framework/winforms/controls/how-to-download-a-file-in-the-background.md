@@ -15,10 +15,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
 ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128781"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Instrukcje: pobieranie pliku w tle
@@ -68,5 +68,5 @@ Pobieranie pliku jest typowym zadaniem i jest często przydatne do wykonania tej
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [Instrukcje: uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
-- [Instrukcje: implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [Instrukcje: Uruchamianie operacji w tle](how-to-run-an-operation-in-the-background.md)
+- [Instrukcje: Implementowanie formularza korzystającego z operacji w tle](how-to-implement-a-form-that-uses-a-background-operation.md)

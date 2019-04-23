@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126116"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Instrukcje: Definiowanie operatora (Visual Basic)
@@ -42,7 +42,7 @@ Jeśli zdefiniowano klasy lub struktury, można zdefiniować zachowanie standard
 - [Instrukcje: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
 - [Instrukcje: Wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)
 - [Instrukcje: Używanie klasy definiującej operatory](./how-to-use-a-class-that-defines-operators.md)
-- [Operator — Instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Structure — Instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Instrukcje: Deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Mod — Operator](../../../../visual-basic/language-reference/operators/mod-operator.md)
+- [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Instrukcje: deklarowanie struktury](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Mod, operator](../../../../visual-basic/language-reference/operators/mod-operator.md)

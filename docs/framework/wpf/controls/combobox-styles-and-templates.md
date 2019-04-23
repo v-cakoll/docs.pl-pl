@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
 ms.openlocfilehash: 8f29039185e7171d799543fb1d43e2fa460a97e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123074"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox — Style i szablony
@@ -81,7 +81,7 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ComboBox> 
 
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
-- [Style i szablony formantu](control-styles-and-templates.md)
-- [Niestandardowe dostosowywanie formantu](control-customization.md)
+- [Style i szablony kontrolek](control-styles-and-templates.md)
+- [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](styling-and-templating.md)
-- [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

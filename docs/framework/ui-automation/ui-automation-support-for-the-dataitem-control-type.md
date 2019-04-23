@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125214"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem
@@ -61,7 +61,7 @@ ms.locfileid: "59125214"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element danych można można rozwijać i zwijać by pokazać lub ukryć informacje, wzorzec Rozwiń Zwiń muszą być obsługiwane.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Elementy danych będzie obsługiwać wzorzec elementu siatki, gdy kolekcja elementów danych jest dostępna w kontenerze, który może być przestrzennie nawigować pozycji na pozycję.|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Zależy od|Wszystkie elementy danych obsługuje możliwość być przewijane w widoku przy użyciu wzorca element przewijania, gdy ich kontenera danych ma więcej elementów niż można zmieścić na ekranie.|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Tak|Wszystkie elementy danych musi obsługiwać wzorzec SelectionItem sygnalizującego, kiedy element jest zaznaczony.|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Yes|Wszystkie elementy danych musi obsługiwać wzorzec SelectionItem sygnalizującego, kiedy element jest zaznaczony.|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider>|Zależy od|Jeśli element danych znajduje się w obrębie typu formantu siatki danych będzie ona obsługiwać tego wzorca.|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Zależy od|Jeśli element danych zawiera stan, który jest cyklom za pośrednictwem.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli tekst podstawowy element danych jest edytowalna wzorca wartości muszą być obsługiwane.|  
@@ -76,7 +76,7 @@ ms.locfileid: "59125214"
 ## <a name="required-ui-automation-events"></a>Właściwości zdarzeń automatyzacji interfejsu użytkownika wymagane  
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdarzenia wymagane są obsługiwane przez wszystkie kontrolki elementu danych. Aby uzyskać więcej informacji o zdarzeniach zobacz [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenie|Pomoc techniczna|Uwagi|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Zdarzenia|Pomoc techniczna|Uwagi|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Wymagane|Brak|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Zdarzenie zmiany właściwości.|Wymagane|Brak|  
@@ -109,5 +109,5 @@ ms.locfileid: "59125214"
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Automation.ControlType.DataItem>
-- [Typy formantów automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
+- [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)

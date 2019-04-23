@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: 0e8dea56-5f46-408b-914d-7e360341a234
 ms.openlocfilehash: d84b62005554479d227778f513e72594322791a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124933"
 ---
 # <a name="how-to-add-toolstrip-items-dynamically"></a>Instrukcje: dynamiczne dodawanie elementów ToolStrip
@@ -44,4 +44,4 @@ Możesz dynamicznie wypełnić kolekcję elementów menu <xref:System.Windows.Fo
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>
-- [ToolStrip — Formant](toolstrip-control-windows-forms.md)
+- [ToolStrip, kontrolka](toolstrip-control-windows-forms.md)

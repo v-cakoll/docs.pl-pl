@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Margin property [Windows Forms]
 ms.assetid: bac7ed4d-a163-4259-98bd-155a36345890
 ms.openlocfilehash: e3bbf43dbe45e675df172a6c3e1db16a3ba9caa8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124030"
 ---
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>Instrukcje: tworzenie obramowania wokoło kontrolki formularzy systemu Windows za pomocą wypełnienia
@@ -31,4 +31,4 @@ Poniższy przykład kodu pokazuje, jak utworzyć obramowanie lub konspektu wokó
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Padding>
-- [Margines i wypełnienie w formantach formularzy systemu Windows](margin-and-padding-in-windows-forms-controls.md)
+- [Margines i wypełnienie w kontrolkach formularzy Windows Forms](margin-and-padding-in-windows-forms-controls.md)

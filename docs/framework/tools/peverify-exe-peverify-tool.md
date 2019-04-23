@@ -13,10 +13,10 @@ ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128742"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
@@ -36,12 +36,12 @@ peverify filename [options]
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*nazwa_pliku*|Przenośny plik wykonywalny (PE), który ma zostać sprawdzony pod kątem języka MSIL i metadanych.|  
+|*Nazwa pliku*|Przenośny plik wykonywalny (PE), który ma zostać sprawdzony pod kątem języka MSIL i metadanych.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/break=** *maxErrorCount*|Przerywa weryfikację po *maxErrorCount* błędy.<br /><br /> Ten parametr nie jest obsługiwany w .NET Framework w wersji 2.0 lub wyższej.|  
-|**/clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **MD Val. Cykl**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. czysty**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **IL Ver. Cykl**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **{1&gt;IL Ver pure&lt;1}**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> **; MD Val. cycle** i **IL Ver. cycle** razy obejmują czas wymagany do wykonania niezbędnych procedur uruchamiania i zamykania. **MD Val. pure** i **IL Ver pure** razy odzwierciedlają czas wymagany do wykonania tylko sprawdzenia poprawności lub tylko weryfikacji.|  
+|**/Clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **MD Val. cycle**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. pure**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **IL Ver. cycle**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **IL Ver pure**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> **; MD Val. cycle** i **IL Ver. cycle** razy obejmują czas wymagany do wykonania niezbędnych procedur uruchamiania i zamykania. **MD Val. pure** i **IL Ver pure** razy odzwierciedlają czas wymagany do wykonania tylko sprawdzenia poprawności lub tylko weryfikacji.|  
 |**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/hresult**|Wyświetla kody błędów w formacie szesnastkowym.|  
 |**/ ignore =** *gt;Hex.Code* [, *gt;Hex.Code*]|Ignoruje wymienione kody błędów.|  

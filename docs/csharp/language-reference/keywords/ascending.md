@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
 ms.openlocfilehash: b04c2b3cf9069c12073ba36600125aaf24b96434
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123859"
 ---
 # <a name="ascending-c-reference"></a>ascending (odwołanie w C#)
@@ -25,6 +25,6 @@ ms.locfileid: "59123859"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../../../csharp/language-reference/index.md)
+- [Dokumentacja języka C#](../../../csharp/language-reference/index.md)
 - [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [descending](../../../csharp/language-reference/keywords/descending.md)

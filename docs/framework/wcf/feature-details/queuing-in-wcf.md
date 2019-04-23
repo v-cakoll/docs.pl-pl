@@ -3,10 +3,10 @@ title: Tworzenie kolejek w programie WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128768"
 ---
 # <a name="queuing-in-wcf"></a>Tworzenie kolejek w programie WCF
@@ -105,9 +105,9 @@ W tej sekcji opisano sposób użycia komunikacji z obsługą kolejek w Windows C
 ### <a name="sample-code"></a>Przykładowy kod  
  Aby uzyskać instrukcje krok po kroku dotyczące pisania WCF usług korzystających z usługi MSMQ, zobacz następujące tematy:  
   
--   [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [Instrukcje: wymiana zakolejkowanych komunikatów z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [Instrukcje: Wymiana zakolejkowanych komunikatów z punktami końcowymi programu WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  Aby uzyskać kompletny kod przykładowy pokazujący użycie usługi MSMQ w usłudze WCF, zobacz następujące tematy:  
   

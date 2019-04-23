@@ -8,10 +8,10 @@ ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa44090e589e7a2a70b8fb7dbd8d5e6967c1ed19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126645"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>Zestawy i wykonywanie równoczesne
@@ -24,4 +24,4 @@ Wykonanie Side-by-side jest możliwość przechowywania i wykonywania wielu wers
 ## <a name="see-also"></a>Zobacz także
 
 - [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [Zestawy w środowisku uruchomieniowym języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

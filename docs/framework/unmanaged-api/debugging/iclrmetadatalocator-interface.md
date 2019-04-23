@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123776"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator — Interfejs
@@ -30,7 +30,7 @@ Używane przez warstwę usług dostępu do danych do lokalizowania metadane zest
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetMetadata, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
+|[GetMetaData, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
  Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład to implementacja żywy proces będzie różnić się od tej ze zrzutu pamięci.  
@@ -46,4 +46,4 @@ Używane przez warstwę usług dostępu do danych do lokalizowania metadane zest
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Debugowanie — Interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

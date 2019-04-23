@@ -7,10 +7,10 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122359"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
@@ -112,8 +112,8 @@ XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptl
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Omówienie XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
-- [Przegląd Autorstwo formantów](../controls/control-authoring-overview.md)
-- [Przegląd Elementy bazy](base-elements-overview.md)
-- [Właściwości zależności i ładowania XAML](xaml-loading-and-dependency-properties.md)
+- [Tworzenie kontrolek — omówienie](../controls/control-authoring-overview.md)
+- [Przegląd elementów podstawowych](base-elements-overview.md)
+- [Ładowanie XAML i właściwości zależności](xaml-loading-and-dependency-properties.md)

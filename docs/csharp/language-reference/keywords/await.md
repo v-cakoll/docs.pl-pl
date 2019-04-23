@@ -9,10 +9,10 @@ helpviewer_keywords:
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122892"
 ---
 # <a name="await-c-reference"></a>await (odwołanie w C#)
@@ -69,6 +69,6 @@ W poprzednim przykładzie użyto C# 7.1, która obsługuje [ `async` `Main` meto
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie asynchroniczne przy użyciu elementów async i await](../../../csharp/programming-guide/concepts/async/index.md)
-- [Przewodnik: Uzyskiwanie dostępu do sieci za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Programowanie asynchroniczne z Async i Await](../../../csharp/programming-guide/concepts/async/index.md)
+- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

@@ -3,10 +3,10 @@ title: Wyłącz RealTimeStylus dla aplikacji WPF
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
 ms.openlocfilehash: e44b71ac5af64ab3a6cb008db71e5a8881592e91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124686"
 ---
 # <a name="disable-the-realtimestylus-for-wpf-applications"></a>Wyłącz RealTimeStylus dla aplikacji WPF
@@ -54,4 +54,4 @@ public static void DisableWPFTabletSupport()
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przechwycenie danych z pisaka](intercepting-input-from-the-stylus.md)
+- [Przechwytywanie danych wejściowych z pisaka](intercepting-input-from-the-stylus.md)

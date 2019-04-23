@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127949"
 ---
 # <a name="standard-query-operator-translation"></a>Translacja standardowego operatora zapytania
@@ -227,7 +227,7 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tematy pomocy](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Zwracanie lub pomijanie elementów w sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [Łączenie dwóch sekwencji](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
 - [Zwracanie zestawu różnic między dwoma sekwencjami](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)

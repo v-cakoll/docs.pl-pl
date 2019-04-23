@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128391"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie platformy ASP.NET Core MVC aplikacji
@@ -432,7 +432,7 @@ Ostrożnie szczególnie "Uaktualnianie własnych" implementację kryptografii, c
 >   https://docs.microsoft.com/aspnet/core/security/
 > - **Wymuszanie protokołu SSL w aplikacji ASP.NET Core**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
-> - **Wprowadzenie do systemu Identity**  
+> - **Wprowadzenie do tożsamości**  
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Wprowadzenie do autoryzacji**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
@@ -499,9 +499,9 @@ Należy rozważyć sposobów w których Twoje aplikacje komunikują się bezpoś
 
 > ### <a name="references--client-communication"></a>Odwołania — komunikacja z klientem
 >
-> - **SignalR platformy ASP.NET Core**  
+> - **ASP.NET Core SignalR**  
 >   <https://github.com/aspnet/SignalR>
-> - **Menedżer WebSocket**  
+> - **WebSocket Manager**  
 >   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Projektowanie oparte na domenie — powinien zastosowania?

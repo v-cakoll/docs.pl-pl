@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129119"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton — Informacje o formancie [Formularze systemu Windows]
@@ -30,7 +30,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> formanty wyświetlania zes
 - [Panel, kontrolka — omówienie](panel-control-overview-windows-forms.md)
 - [GroupBox, kontrolka — omówienie](groupbox-control-overview-windows-forms.md)
 - [CheckBox, kontrolka — omówienie](checkbox-control-overview-windows-forms.md)
-- [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy systemu Windows](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę formularzy systemu Windows](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Instrukcje: grupowanie kontrolek RadioButton formularzy systemu Windows, aby działały jak zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Instrukcje: Tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Instrukcje: Ustawianie tekstu wyświetlanego przez kontrolki formularzy Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Instrukcje: Grupa formantów RadioButton formularzy Windows aby działały jak zestaw](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton, kontrolka](radiobutton-control-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
 ms.openlocfilehash: e0eaa90c8450888ea325470db5d4adae555f8d82
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304171"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj przy użyciu narzędzia Projektant
@@ -30,7 +30,7 @@ W każdym formularzu Windows, można wyznaczyć <xref:System.Windows.Forms.Butto
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button, kontrolka — omówienie](button-control-overview-windows-forms.md)
-- [Sposoby wyboru kontrolki przycisku formularzy systemu Windows](ways-to-select-a-windows-forms-button-control.md)
-- [Instrukcje: odpowiadanie na kliknięcia przycisków formularzy systemu Windows](how-to-respond-to-windows-forms-button-clicks.md)
-- [Instrukcje: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Sposoby wyboru kontrolki przycisku Windows Forms](ways-to-select-a-windows-forms-button-control.md)
+- [Instrukcje: Odpowiadanie na kliknięcia przycisków formularzy Windows](how-to-respond-to-windows-forms-button-clicks.md)
+- [Instrukcje: Wyznaczanie przycisku Windows Forms na przycisk Anuluj, przy użyciu narzędzia Projektant](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button, kontrolka](button-control-windows-forms.md)

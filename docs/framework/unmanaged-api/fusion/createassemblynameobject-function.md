@@ -19,10 +19,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd8609bedcea28c1cb8559d378b5e171f3ad568e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225004"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject — Funkcja
@@ -63,5 +63,5 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [IAssemblyName — Interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+- [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
 - [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

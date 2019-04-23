@@ -11,10 +11,10 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
 ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225784"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Instrukcje: Modyfikowanie sygnału z klawiatury do kontrolki standardowej
@@ -69,6 +69,6 @@ Windows Forms zapewnia możliwość korzystania i modyfikowanie danych wprowadzo
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows](keyboard-input-in-a-windows-forms-application.md)
-- [Wprowadzanie z klawiatury w aplikacjach formularzy systemu Windows](user-input-in-a-windows-forms-application.md)
+- [Wprowadzanie z klawiatury w aplikacjach Windows Forms](keyboard-input-in-a-windows-forms-application.md)
+- [Wprowadzanie przez użytkownika w aplikacjach Windows Forms](user-input-in-a-windows-forms-application.md)
 - [Działanie wprowadzania z klawiatury](how-keyboard-input-works.md)

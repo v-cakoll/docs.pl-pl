@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
 ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223579"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>Instrukcje: Rozciąganie elementu ToolStripTextBox w celu wypełnienia pozostałego szerokości ToolStrip (formularze Windows)
@@ -35,5 +35,5 @@ Po ustawieniu <xref:System.Windows.Forms.ToolStrip.Stretch%2A> właściwość <x
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripTextBox>
 - <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>
-- [ToolStrip — Architektura formantu](toolstrip-control-architecture.md)
-- [Instrukcje: użycie właściwości Spring interaktywnie w StatusStrip](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+- [ToolStrip, kontrolka — architektura](toolstrip-control-architecture.md)
+- [Instrukcje: Użycie właściwości Spring interaktywnie w StatusStrip](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

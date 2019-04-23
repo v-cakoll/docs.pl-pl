@@ -3,10 +3,10 @@ title: funkcja zdefiniowana przez model
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226641"
 ---
 # <a name="model-defined-function"></a>funkcja zdefiniowana przez model
@@ -39,5 +39,5 @@ A *funkcja zdefiniowana przez model* jest funkcją, która jest zdefiniowana w m
 ## <a name="see-also"></a>Zobacz także
 
 - [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [Model danych jednostki: Typy danych pierwotnych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+- [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Model danych jednostki: Pierwotne typy danych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
 ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223007"
 ---
 # <a name="ui-automation-properties-overview"></a>Przegląd właściwości automatyzacji interfejsu użytkownika
@@ -30,7 +30,7 @@ ms.locfileid: "59223007"
   
  <xref:System.Windows.Automation.AutomationProperty> obiektów reprezentujących szczególne właściwości są dostępne jako pola w różnych klas. Ze względów bezpieczeństwa dostawcy automatyzacji interfejsu użytkownika, należy uzyskać te obiekty z oddzielny zestaw klas, które są zawarte w Uiautomationtypes.dll.  
   
- Poniższa tabela kategoryzuje właściwości według klasy, które zawierają <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ Poniższa tabela kategoryzuje właściwości według klasy, które zawierają <xref:System.Windows.Automation.AutomationProperty> [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
 |Typy właściwości|Identyfikatory z pobierania przez klientów|Dostawców pobrać identyfikatorów z|  
 |-------------------------|--------------------------|----------------------------|  

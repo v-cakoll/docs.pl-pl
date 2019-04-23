@@ -3,10 +3,10 @@ title: Publikowanie i pobieranie metadanych za pośrednictwem powiązania niesta
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
 ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222981"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Publikowanie i pobieranie metadanych za pośrednictwem powiązania niestandardowego
@@ -31,5 +31,5 @@ ms.locfileid: "59222981"
 
 - [Zabezpieczanie usług](../../../../docs/framework/wcf/securing-services.md)
 - [Powiązania elementu WS-MetadataExchange](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
-- [Instrukcje: konfigurowanie niestandardowego wiązania WS-Metadata Exchange](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Instrukcje: Pobieranie metadanych przez wiązanie inne niż wymiany metadanych](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Instrukcje: Konfigurowanie niestandardowego protokołu WS-Metadata Exchange powiązania](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [Instrukcje: Pobieranie metadanych przez MEX powiązanie inne niż](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

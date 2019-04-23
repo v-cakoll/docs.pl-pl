@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
 ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222344"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)
@@ -28,28 +28,28 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Polecenie|Menu|Skrót|Opis|  
 |-------------|----------|--------------|-----------------|  
-|**Manifest aplikacji**|**Plik, Nowy**||Tworzy nowy manifest aplikacji.|  
-|**Manifest wdrażania**|**Plik, Nowy**||Tworzy nowy manifest wdrożenia.|  
-|**Otwarcie**|**Plik**|CTRL+O|Otwiera do edycji istniejący manifest wdrażania, manifest aplikacji lub licencję zaufania.|  
-|**Zamknięcie**|**Plik**|CTRL+F4|Zamyka otwarty plik.<br /><br /> Jeśli modyfikujesz plik przed jego zamknięciem, MageUI.exe monituje o ponowne podpisywanie pliku kluczem publicznym, parą kluczy lub przechowywanym certyfikatem.|  
-|**Zapisanie**|**Plik**|CTRL+S|Zapisuje na dysku dokument, który aktualnie ma fokus wprowadzania użytkownika.|  
+|**Manifest aplikacji**|**Plik, nowy**||Tworzy nowy manifest aplikacji.|  
+|**Manifest wdrażania**|**Plik, nowy**||Tworzy nowy manifest wdrożenia.|  
+|**Otwórz**|**Plik**|CTRL+O|Otwiera do edycji istniejący manifest wdrażania, manifest aplikacji lub licencję zaufania.|  
+|**Zamknij**|**Plik**|CTRL+F4|Zamyka otwarty plik.<br /><br /> Jeśli modyfikujesz plik przed jego zamknięciem, MageUI.exe monituje o ponowne podpisywanie pliku kluczem publicznym, parą kluczy lub przechowywanym certyfikatem.|  
+|**Zapisz**|**Plik**|CTRL+S|Zapisuje na dysku dokument, który aktualnie ma fokus wprowadzania użytkownika.|  
 |**Zapisz jako**|**Plik**||Zapisuje plik na dysku, umożliwiając podanie nowej nazwy pliku i/lub lokalizacji.|  
 |**Zapisz wszystko**|**Plik**||Zapisuje zmiany wprowadzone do wszystkich plików aktualnie otwartych w MageUI.exe.|  
 |**Preferencje**|**Plik**||Otwiera **preferencje** okno dialogowe. Aby uzyskać więcej informacji, zobacz następującą sekcję.|  
-|**Zakończ**|**Plik**|ALT+F4|Zamyka program MageUI.exe.|  
-|**Wytnij**|**Edytowanie**|CTRL+X|Usuwa zaznaczony tekst z aplikacji i przenosi je do Schowka systemu Windows.|  
+|**Exit**|**Plik**|ALT+F4|Zamyka program MageUI.exe.|  
+|**Cut**|**Edytowanie**|CTRL+X|Usuwa zaznaczony tekst z aplikacji i przenosi je do Schowka systemu Windows.|  
 |**Kopiuj**|**Edytowanie**|CTRL+C|Kopiuje zaznaczony tekst do Schowka systemu Windows.|  
 |**Wklej**|**Edytowanie**|CTRL+V|Wkleja tekst ze Schowka systemu Windows do aktywnego elementu tekstu.|  
-|**Usuwanie**|**Edytowanie**||Usuwa element zaznaczony na liście, takie jak licencja zaufania na **manifestu wdrażania** kartę.|  
-|**Zamknij wszystkie**|**Okno**||Zamyka wszystkie pliki otwarte w MageUI.exe. Jeżeli jeden lub więcej plików wymagają zapisania, MageUI.exe wyświetli monit o zapisanie ich. MageUI.exe również wyświetla monit o wybranie klucza podpisywania dla każdego niepodpisanego lub zmienionego pliku.|  
-|**Informacje**|**Pomoc**||Wyświetla informacje o wersji i prawach autorskich dotyczące MageUI.exe.|  
+|**Delete**|**Edytowanie**||Usuwa element zaznaczony na liście, takie jak licencja zaufania na **manifestu wdrażania** kartę.|  
+|**Zamknij wszystkie**|**Window**||Zamyka wszystkie pliki otwarte w MageUI.exe. Jeżeli jeden lub więcej plików wymagają zapisania, MageUI.exe wyświetli monit o zapisanie ich. MageUI.exe również wyświetla monit o wybranie klucza podpisywania dla każdego niepodpisanego lub zmienionego pliku.|  
+|**— informacje**|**Pomoc**||Wyświetla informacje o wersji i prawach autorskich dotyczące MageUI.exe.|  
   
 ## <a name="preferences-dialog-box"></a>Okno dialogowe Preferencje  
  **Preferencje** okno dialogowe zawiera następujące elementy.  
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Podpisz przy zapisywaniu**|Monituje o podpisanie pliku przy każdym zapisie modyfikacji.|  
+|**Zaloguj się przy zapisywaniu**|Monituje o podpisanie pliku przy każdym zapisie modyfikacji.|  
 |**Użyj domyślnego certyfikatu podpisywania**|Używa klucza wprowadzonego w **plik certyfikatu** pole tekstowe do podpisania wszystkich plików. Eliminuje monit podpisywania, który zwykle pojawia się podczas zapisywania pliku i **Zaloguj się przy zapisywaniu** jest zaznaczone. Użyj wielokropka (**...** ) znajdujący się obok **plik certyfikatu** pole tekstowe, aby wybrać plik klucza.|  
 |Algorytm porządkowania|Określa algorytm, za pomocą którego zostaną wygenerowane skróty zależności. Wartością musi być „sha256RSA” lub „sha1RSA”. Domyślną wartością jest SHA1. Używana zarówno w manifestach aplikacji, jak i wdrażania. Jeśli użytkownik poda certyfikat podczas zapisywania manifestu, używane są algorytmy w certyfikacie do wygenerowania rozkładów zależności.|  
   
@@ -63,7 +63,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Podpisz plikiem certyfikatu**|Podpisuje manifest certyfikatem cyfrowym przechowywanym w systemie plików.|  
 |**Plik**|Zapewnia miejsce do wpisania ścieżki do pliku pfx reprezentującego certyfikat.|  
 |**...**|Otwiera **wybierz plik** okno dialogowe wybierania istniejącego pliku pfx.|  
-|**New**|Generuje nowy pfx niesprawdzalny przez urząd certyfikacji (CA). Aby uzyskać więcej informacji dotyczących typów certyfikatów używanych do podpisywania [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożeń, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).|  
+|**Nowy**|Generuje nowy pfx niesprawdzalny przez urząd certyfikacji (CA). Aby uzyskać więcej informacji dotyczących typów certyfikatów używanych do podpisywania [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożeń, zobacz [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Hasło**|Miejsce na wpisanie hasła używanego do podpisywania tym certyfikatem. Jeśli nie ma to zastosowania, może być puste.|  
 |**Podpisz przechowywanym certyfikatem**|Wyświetla listę wyboru certyfikatów cyfrowych przechowywanych w magazynie certyfikatów na komputerze.|  
 |**TimeStamping URI**|Wyświetla identyfikator URI usługi sygnatur cyfrowych. Przypisanie do manifestu znacznika czasu zapobiega konieczności ponownego podpisania manifestu, jeśli certyfikat cyfrowy wygaśnie przed wdrożeniem następnej wersji aplikacji. Aby uzyskać więcej informacji, zobacz [Windows członkowie programu głównych certyfikatów](https://go.microsoft.com/fwlink/?LinkId=159000) i [ClickOnce i podpis Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
@@ -93,7 +93,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Nazwa**|Wymagana. Nazwa manifestu aplikacji. Zazwyczaj taka sama jak nazwa pliku.|  
 |**Wersja**|Wymagana. Numer wersji wdrożenia w formie *N.N.N.N*. Wymagany jest tylko pierwszy numer kompilacji głównych. Na przykład dla wersji 1.0 aplikacji prawidłowe wartości obejmuje `1`, `1.0`, `1.0.0`, i `1.0.0.0`.|  
 |**Procesor**|Opcjonalna. Architektura komputera, na którym można uruchomić tego wdrożenia. Wartość domyślna to `msil`, lub języka Microsoft Intermediate Language, który jest domyślnym formatem wszystkich zestawów zarządzanych. Zmień to pole, jeśli zestawy mają wstępnie skompilowany w aplikacji dla określonej architektury. Aby uzyskać więcej informacji o wstępnej kompilacji, zobacz [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
-|**Kultura**|Opcjonalna. Legalną dwuczęściową krajów i regionów kod ISO w którym aplikacja jest uruchomiona. Wartość domyślna to `neutral`.|  
+|**Kultury**|Opcjonalna. Legalną dwuczęściową krajów i regionów kod ISO w którym aplikacja jest uruchomiona. Wartość domyślna to `neutral`.|  
 |**Token klucza publicznego**|Opcjonalna. Klucz publiczny, za pomocą którego została podpisana tego manifestu aplikacji. Jeśli jest to manifest nowych lub bez znaku, w tym polu będzie wyświetlany jako `Unsigned`.|  
   
 ### <a name="description-tab"></a>Opis karty  
@@ -101,7 +101,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Wydawca**|Nazwa osoby lub organizacji jest odpowiedzialny za aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
+|**Publisher**|Nazwa osoby lub organizacji jest odpowiedzialny za aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
 |**Produkt**|Pełna nazwa produktu. W przypadku wybrania **zainstalować lokalnie** dla **typ aplikacji** element na **opcje wdrażania** karta manifestu wdrożenia, ta nazwa jest wyświetlanych w **Start** łącze menu i **apletu Dodaj lub usuń programy** dla tej aplikacji.|  
 |**Lokalizacja pomocy technicznej**|Adres URL, z którego klienci mogą uzyskać pomoc i obsługa techniczna dla aplikacji.|  
   
@@ -150,14 +150,14 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Nazwa**|Wymagana. Nazwa pliku manifestu wdrożenia. Zazwyczaj taka sama jak nazwa pliku.|  
 |**Wersja**|Wymagana. Numer wersji wdrożenia w formie *N.N.N.N*. Wymagany jest tylko pierwszy numer kompilacji głównych. Na przykład dla wersji 1.0 aplikacji prawidłowe wartości obejmuje `1`, `1.0`, `1.0.0`, i `1.0.0.0`.|  
 |**Procesor**|Opcjonalna. Architektura komputera, na którym można uruchomić tego wdrożenia. Wartość domyślna to `msil`, lub języka Microsoft Intermediate Language, domyślny format wszystkich zestawów zarządzanych. Zmień to pole, jeśli skompilowałeś zestawy w aplikacji dla określonej architektury.|  
-|**Kultura**|Opcjonalna. Kod kraju/regionu ISO legalną dwuczęściową w którym aplikacja jest uruchomiona. Wartość domyślna to `neutral`.|  
+|**Kultury**|Opcjonalna. Kod kraju/regionu ISO legalną dwuczęściową w którym aplikacja jest uruchomiona. Wartość domyślna to `neutral`.|  
 |**Token klucza publicznego**|Opcjonalna. Klucz publiczny, za pomocą którego została podpisana tego manifestu wdrażania. Jeśli jest to manifest nowych lub bez znaku, w tym polu będzie wyświetlany jako `Unsigned`.|  
   
 ### <a name="description-tab"></a>Opis karty  
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Wydawca**|Wymagana. Nazwa osoby lub organizacji jest odpowiedzialny za aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
+|**Publisher**|Wymagana. Nazwa osoby lub organizacji jest odpowiedzialny za aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
 |**Produkt**|Wymagana. Pełna nazwa produktu. W przypadku wybrania **zainstalować lokalnie** dla **typ aplikacji** element na **opcje wdrażania** kartę, ta nazwa będzie wyświetlanych w **Start** łącze menu i **apletu Dodaj lub usuń programy** dla tej aplikacji.|  
 |**Lokalizacja pomocy technicznej**|Opcjonalna. Adres URL, z którego klienci mogą uzyskać pomoc i obsługa techniczna dla aplikacji.|  
   
@@ -192,6 +192,6 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wskazówki dotyczące wdrażania ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Przewodnik: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
-- [Mage.exe (Narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+- [Mage.exe (narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

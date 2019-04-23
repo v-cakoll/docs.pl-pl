@@ -11,10 +11,10 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225797"
 ---
 # <a name="wpf-xaml-namescopes"></a>Zakresy nazw WPF XAML
@@ -97,4 +97,4 @@ Zakresy nazw XAML to pojęcie, który identyfikuje obiekty, które są definiowa
 ## <a name="see-also"></a>Zobacz także
 
 - [Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
-- [x:Name — dyrektywa](../../xaml-services/x-name-directive.md)
+- [x:Name, dyrektywa](../../xaml-services/x-name-directive.md)

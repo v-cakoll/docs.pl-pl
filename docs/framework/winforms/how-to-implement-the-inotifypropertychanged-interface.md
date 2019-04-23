@@ -8,10 +8,10 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], implementing
 ms.assetid: eac428af-b43b-46ac-80d9-1a5f88658725
 ms.openlocfilehash: cfdfb22fd854a8f630243e0f612761c71cb778d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225602"
 ---
 # <a name="how-to-implement-the-inotifypropertychanged-interface"></a>Instrukcje: Implementowanie interfejsu INotifyPropertyChanged
@@ -24,6 +24,6 @@ Poniższy przykład kodu demonstruje sposób implementacji <xref:System.Componen
 ## <a name="see-also"></a>Zobacz także
 
 - [Instrukcje: Stosowanie wzorca PropertyNameChanged](how-to-apply-the-propertynamechanged-pattern.md)
-- [Powiązywanie danych formularzy systemu Windows](windows-forms-data-binding.md)
-- [Instrukcje: wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
-- [Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows](change-notification-in-windows-forms-data-binding.md)
+- [Wiązanie danych formularzy Windows Forms](windows-forms-data-binding.md)
+- [Instrukcje: Wywoływanie powiadomień o zmianie za pomocą składnika BindingSource i interfejsu INotifyPropertyChanged](./controls/raise-change-notifications--bindingsource.md)
+- [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](change-notification-in-windows-forms-data-binding.md)

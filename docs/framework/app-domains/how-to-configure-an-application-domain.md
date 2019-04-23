@@ -12,10 +12,10 @@ ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fe0c7ecf1b0daf0e9ea56ec590083fe1ccd2d693
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225082"
 ---
 # <a name="how-to-configure-an-application-domain"></a>Instrukcje: Konfigurowanie domeny aplikacji
@@ -35,5 +35,5 @@ ms.locfileid: "59225082"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Programowanie za pomocą domen aplikacji](application-domains.md#programming-with-application-domains)
-- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)
+- [Programowanie z domenami aplikacji](application-domains.md#programming-with-application-domains)
+- [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

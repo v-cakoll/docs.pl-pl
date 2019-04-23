@@ -3,10 +3,10 @@ title: Konfigurowanie usług WCF w kodzie
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
 ms.openlocfilehash: 8a1eeff76b02315143fb7b50ccc41aa18bb9eb0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225706"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
@@ -102,7 +102,7 @@ public class Service1 : IService1
 - [Aktywacja oparta na konfiguracji w usługach IIS i WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
 - [Konfiguracja i obsługa metadanych](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
 - [Konfiguracja](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Instrukcje: Określanie powiązania usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Instrukcje: tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Instrukcje: Określanie powiązań klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Instrukcje: Określanie wiązań usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [Instrukcje: Tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Instrukcje: Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Instrukcje: Określanie wiązania klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)

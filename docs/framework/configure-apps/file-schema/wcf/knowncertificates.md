@@ -3,10 +3,10 @@ title: <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 678e21b4-6493-47c3-8359-fcf0d37e2138
 ms.openlocfilehash: 5c20baecf3e9fe83385c986e3fb58f0c03eeeb47
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224198"
 ---
 # <a name="knowncertificates"></a>\<knownCertificates >
@@ -47,7 +47,7 @@ Reprezentuje kolekcję certyfikatów X.509, które są dostarczane do uwierzytel
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|Określa token wydany jako poświadczenie usługi.|  
+|[\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)|Określa token wydany jako poświadczenie usługi.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wystawiony token scenariusz ma trzy etapy. W pierwszym etapie klienta próby uzyskania dostępu do usługi jest określane *secure token service*. Usługa bezpiecznych tokenów następnie uwierzytelnia klienta, a następnie wystawia token, zazwyczaj token zabezpieczeń potwierdzenia Markup Language (SAML) klienta. Klient powraca do usługi przy użyciu tokenu. Usługa sprawdza, czy token dla danych, które umożliwia usłudze uwierzytelniania tokenu, a w związku z tym klientem. W celu uwierzytelnienia tokenu certyfikatu używa usługa bezpiecznych tokenów musi być znane, do usługi.  
@@ -81,9 +81,9 @@ Reprezentuje kolekcję certyfikatów X.509, które są dostarczane do uwierzytel
 - <xref:System.ServiceModel.Configuration.X509CertificateTrustedIssuerElement>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A>
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)
-- [\<issuedTokenAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)
+- [\<issuedTokenAuthentication >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)
 - [Zachowania zabezpieczeń](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Praca z certyfikatami](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Federacja i wystawione tokeny](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)

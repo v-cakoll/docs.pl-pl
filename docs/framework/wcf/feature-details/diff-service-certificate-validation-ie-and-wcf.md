@@ -6,10 +6,10 @@ helpviewer_keywords:
 - certificates [WCF], service certificate validation
 ms.assetid: 9dffcab2-70a9-40f0-99fd-d3a0b296028f
 ms.openlocfilehash: 0bced548cdc9423d1907de09e8b52ebe078d7c19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225924"
 ---
 # <a name="differences-between-service-certificate-validation-done-by-internet-explorer-and-wcf"></a>Różnice między weryfikacją certyfikatów usług w programach Internet Explorer i WCF
@@ -18,4 +18,4 @@ Z powodu różnic pomiędzy sposób programu Internet Explorer i Windows Communi
 ## <a name="see-also"></a>Zobacz także
 
 - [Różnice dotyczące weryfikacji certyfikatów w protokołach HTTPS, SSL przez TCP i zabezpieczeniach SOAP](../../../../docs/framework/wcf/feature-details/cert-val-diff-https-ssl-over-tcp-and-soap.md)
-- [Instrukcje: pobieranie metadanych i implementowanie zgodnej usługi](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)
+- [Instrukcje: Pobieranie metadanych i implementowanie zgodnej usługi](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)

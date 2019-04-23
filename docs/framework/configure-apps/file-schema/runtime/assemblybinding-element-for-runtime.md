@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding> element dla <runtime>
+title: <assemblyBinding>, element dla <runtime>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding
@@ -11,10 +11,10 @@ ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225251"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblybinding — >, Element dla \<runtime >
@@ -40,7 +40,7 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML wymagane w celu tworzenia powiązań zestawów. Użyj ciągu "urn: schemas-microsoft-com:asm.v1" jako wartości.|  
-|**AppliesTo**|Określa wersję środowiska uruchomieniowego, dotyczy przekierowania zestawu .NET Framework. Ten atrybut opcjonalny używa numeru wersji .NET Framework, aby wskazać dla której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework. **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblyBinding >** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.|  
+|**appliesTo**|Określa wersję środowiska uruchomieniowego, dotyczy przekierowania zestawu .NET Framework. Ten atrybut opcjonalny używa numeru wersji .NET Framework, aby wskazać dla której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony,  **\<assemblyBinding >** element ma zastosowanie do wszystkich wersji programu .NET Framework. **AppliesTo** atrybut wprowadzono w programie .NET Framework w wersji 1.1; jest ignorowana przez program .NET Framework w wersji 1.0. Oznacza to, że wszystkie  **\<assemblyBinding >** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   

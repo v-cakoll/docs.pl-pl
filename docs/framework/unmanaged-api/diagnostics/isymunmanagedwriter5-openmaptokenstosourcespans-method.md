@@ -5,10 +5,10 @@ ms.assetid: 93ad2517-b0dc-464c-8688-a58a30eda18d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82dc2ced988f7277c994eb9449e7c26efa5450b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222682"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::OpenMapTokensToSourceSpans — Metoda
@@ -28,4 +28,4 @@ HRESULT OpenMapTokensToSourceSpans();
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ISymUnmanagedWriter5 — Interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)
+- [ISymUnmanagedWriter5, interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter5-interface.md)

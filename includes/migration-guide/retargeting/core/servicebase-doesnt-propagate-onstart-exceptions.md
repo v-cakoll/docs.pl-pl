@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 1148d040aa3b292d5c37eb50224413b6ddd202e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236443"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804755"
 ---
 ### <a name="servicebase-doesnt-propagate-onstart-exceptions"></a>ServiceBase — nie Propagacja wyjątków dla metody OnStart
 

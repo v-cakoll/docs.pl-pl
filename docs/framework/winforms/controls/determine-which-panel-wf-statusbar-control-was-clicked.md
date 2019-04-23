@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
 ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304288"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Instrukcje: ustalanie, który panel został kliknięty w kontrolce StatusBar formularzy systemu Windows
@@ -97,6 +97,6 @@ ms.locfileid: "59304288"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Instrukcje: ustawianie rozmiaru paneli paska stanu](how-to-set-the-size-of-status-bar-panels.md)
-- [Przewodnik: aktualizowanie informacji na pasku stanu w czasie wykonywania](walkthrough-updating-status-bar-information-at-run-time.md)
+- [Instrukcje: Ustawianie rozmiaru paneli paska stanu](how-to-set-the-size-of-status-bar-panels.md)
+- [Przewodnik: Aktualizowanie informacji na pasku stanu w czasie wykonywania](walkthrough-updating-status-bar-information-at-run-time.md)
 - [StatusBar, kontrolka — omówienie](statusbar-control-overview-windows-forms.md)

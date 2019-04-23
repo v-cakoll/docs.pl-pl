@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 ms.assetid: d10aef35-701e-4a3c-a684-2a2ed1aeaca6
 ms.openlocfilehash: dae254c14790841b37162fca9f998be429006125
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225615"
 ---
 # <a name="how-to-validate-data-in-the-windows-forms-datagridview-control"></a>Instrukcje: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows
@@ -40,7 +40,7 @@ Poniższy przykład kodu demonstruje sposób sprawdzania poprawności danych wpr
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Przewodnik: sprawdzanie poprawności danych w kontrolce DataGridView formularzy systemu Windows](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
-- [Wprowadzanie danych w formancie DataGridView formularzy systemu Windows](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Przewodnik: obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy systemu Windows](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Przewodnik: Sprawdzanie poprawności danych w kontrolce DataGridView formularzy Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Wprowadzanie danych w kontrolce DataGridView formularzy Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Przewodnik: Obsługa błędów występujących podczas wprowadzania danych w kontrolce DataGridView formularzy Windows Forms](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
 - [Ochrona informacji o połączeniu](../../data/adonet/protecting-connection-information.md)

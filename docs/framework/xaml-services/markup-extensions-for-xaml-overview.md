@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224926"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Rozszerzenia znaczników dla przeglądu XAML
@@ -27,7 +27,7 @@ Rozszerzenia znaczników są to technika XAML do uzyskania wartość, która nie
 ### <a name="xtype"></a>x: Type  
  `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Ta funkcja jest używana najczęściej w mechanizmów opóźnienia, które należy użyć podstawowy typ środowiska CLR i wpisać pochodnym jako moniker grupowania lub identyfikator. WPF style i szablony i ich użycie funkcji `TargetType` właściwości, znajdują się konkretnemu przykładowi. Aby uzyskać więcej informacji, zobacz [x: Type Markup Extension](x-type-markup-extension.md).  
   
-### <a name="xstatic"></a>X:static  
+### <a name="xstatic"></a>x: Static  
  `x:Static` Tworzy statyczny wartości z jednostki kodu typ wartości, które nie są bezpośrednio typ wartości właściwości, ale mogą być obliczane do tego typu. Jest to przydatne do określenia wartości, które już istnieją jako stałe dobrze znane w definicji typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
@@ -158,4 +158,4 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 
 - <xref:System.Windows.Markup.MarkupExtension>
 - [Typy konwerterów i rozszerzenia znaczników dla XAML](type-converters-and-markup-extensions-for-xaml.md)
-- [Rozszerzenia znacznikowania i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

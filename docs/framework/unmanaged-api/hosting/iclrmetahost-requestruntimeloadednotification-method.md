@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 61fce3e06b5245872f7061716e8d995dd5f5043c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224887"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification — Metoda
@@ -100,5 +100,5 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICLRMetaHost — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [ICLRMetaHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

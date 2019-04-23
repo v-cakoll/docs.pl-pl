@@ -13,10 +13,10 @@ ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d19410bd83605e6c7325a61e64a32a828846b7df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222578"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
@@ -44,6 +44,6 @@ Każdy komputer, na którym zainstalowano środowisko uruchomieniowe języka wsp
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zestawy w środowisku uruchomieniowym języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)

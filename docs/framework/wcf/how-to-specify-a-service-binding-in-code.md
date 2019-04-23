@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
 ms.openlocfilehash: 9f3320b031141246a394191a1924509204707dc1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303456"
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Instrukcje: Określanie powiązań usługi w kodzie
@@ -50,5 +50,5 @@ W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkula
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie usług i klientów za pomocą wiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

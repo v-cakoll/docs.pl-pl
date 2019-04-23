@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ac929a8b3e9a7d56122f5699c51819ad483d1f5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235611"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804739"
 ---
 ### <a name="binaryformatter-can-fail-to-find-type-from-loadfrom-context"></a>Elementu można nie można odnaleźć typu z LoadFrom — kontekst
 

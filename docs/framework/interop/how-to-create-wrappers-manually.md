@@ -7,10 +7,10 @@ ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f834eb52476e9b04ed6aaf294deed88213961045
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304249"
 ---
 # <a name="how-to-create-wrappers-manually"></a>Instrukcje: Ręczne tworzenie otok
@@ -37,7 +37,7 @@ Jeśli zdecydujesz się zadeklarować typy modelu COM ręcznie, w zarządzanym k
 ## <a name="example"></a>Przykład  
  W poniższym kodzie pokazano przykład interfejsu `ISATest` i klasy `SATest` napisane w języku IDL oraz odpowiadające typy w kodzie źródłowym języka C#.  
   
- **Plik IDL lub plik biblioteki typów**  
+ **IDL lub typu pliku biblioteki**  
   
 ```  
  [  
@@ -104,6 +104,6 @@ namespace SAServer
 - [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [Typy danych COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [Instrukcje: Edytowanie zestawów międzyoperacyjnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
-- [Podsumowanie informacji o konwersji biblioteki typów na zestaw](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (Importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (Eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Biblioteki typów na zestaw konwersja — podsumowanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
+- [Tlbimp.exe (importer biblioteki typów)](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)

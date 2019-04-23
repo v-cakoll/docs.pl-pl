@@ -7,10 +7,10 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
 ms.openlocfilehash: b298efb0494994659673f9bf9893b667f7eb0f8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304217"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Instrukcje: wiązanie kontrolki formularzy systemu Windows z typem przy użyciu narzędzia Projektant
@@ -53,6 +53,6 @@ Podczas tworzenia formantów, które współdziałają z danymi, czasami koniecz
   
 ## <a name="see-also"></a>Zobacz także
 
-- [BindingSource — Składnik](bindingsource-component.md)
-- [Instrukcje: powiązanie kontrolki formularzy systemu Windows z typem](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [Powiązywanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)
+- [BindingSource, składnik](bindingsource-component.md)
+- [Instrukcje: Powiązanie z typem formantu Windows Forms](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Wiązanie kontrolek z danymi w programie Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

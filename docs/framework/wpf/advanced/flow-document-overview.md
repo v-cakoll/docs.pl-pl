@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303495"
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
@@ -141,7 +141,7 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
  **Uwaga:** <xref:System.Windows.Documents.List> jest jedynym elementem przepływ, który używa <xref:System.Windows.Documents.ListItemCollection> do zarządzania elementami podrzędnymi.  
   
- **tabela**  
+ **Tabela**  
   
  <xref:System.Windows.Documents.Table> Służy do tworzenia tabeli. <xref:System.Windows.Documents.Table> jest podobny do <xref:System.Windows.Controls.Grid> elementu, ale ma więcej możliwości i dlatego wymagają większe obciążenie zasobów. Ponieważ <xref:System.Windows.Controls.Grid> jest <xref:System.Windows.UIElement>, chyba że znajduje się w nie można używać w dowolnej zawartości <xref:System.Windows.Documents.BlockUIContainer> lub <xref:System.Windows.Documents.InlineUIContainer>. Aby uzyskać więcej informacji na temat <xref:System.Windows.Documents.Table>, zobacz [Omówienie tabel](table-overview.md).  
   
@@ -348,11 +348,11 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tekst](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Typografia w WPF](typography-in-wpf.md)
-- [— Tematy porad](flow-content-elements-how-to-topics.md)
-- [Przegląd Model zawartości TextElement](textelement-content-model-overview.md)
-- [RichTextBox — Przegląd](../controls/richtextbox-overview.md)
+- [Tematy z instrukcjami](flow-content-elements-how-to-topics.md)
+- [Przegląd modelu zawartości TextElement](textelement-content-model-overview.md)
+- [RichTextBox — omówienie](../controls/richtextbox-overview.md)
 - [Dokumenty w WPF](documents-in-wpf.md)
-- [Przegląd Tabela](table-overview.md)
-- [Przegląd Adnotacje](annotations-overview.md)
+- [Przegląd tabeli](table-overview.md)
+- [Przegląd adnotacji](annotations-overview.md)

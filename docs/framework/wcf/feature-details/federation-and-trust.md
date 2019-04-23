@@ -5,10 +5,10 @@ helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
 ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225342"
 ---
 # <a name="federation-and-trust"></a>Federacja i zaufanie
@@ -40,6 +40,6 @@ W tym temacie omówiono różne aspekty związane z aplikacji federacyjnych, gra
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
-- [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Instrukcje: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [Instrukcje: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Instrukcje: Tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

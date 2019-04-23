@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
 ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181769"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Instrukcje: Używanie procedur składowanych, które przyjmują parametry
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Procedury składowane](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
 - [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Używanie typów dopuszczających wartości zerowe](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Typy o wartości zerowalnej](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Używanie typów dopuszczających wartości null](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Typy wartości dopuszczających wartości null](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

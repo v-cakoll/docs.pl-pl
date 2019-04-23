@@ -3,11 +3,11 @@ title: Podstawowa usługa AJAX
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
 ms.openlocfilehash: 8bcfb9a751670d3d1c32de6d8e6f7dc1b84ea30d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147003"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979501"
 ---
 # <a name="basic-ajax-service"></a>Podstawowa usługa AJAX
 W tym przykładzie pokazano, jak używać usług Windows Communication Foundation (WCF) do tworzenia podstawowej usługi ASP.NET asynchronicznych w języku JavaScript i XML (technologia AJAX) (usługa, której będziesz mieć dostęp przy użyciu kodu JavaScript w kliencie przeglądarki sieci Web). Używa usługi <xref:System.ServiceModel.Web.WebGetAttribute> atrybutu, aby upewnić się, czy usługa odpowiada na żądania HTTP GET i jest skonfigurowany do używania formatu JavaScript Object Notation (JSON) w danych odpowiedzi.  

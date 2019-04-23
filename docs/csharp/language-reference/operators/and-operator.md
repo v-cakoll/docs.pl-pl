@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.openlocfilehash: 7aac0af93efb3d72496df13a64afb7840993b22c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310047"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980645"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; Operator (odwołanie w C#)
 
@@ -60,11 +60,9 @@ Aby uzyskać więcej informacji, zobacz [operatora address-of](~/_csharplang/spe
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odwołanie w C#](../index.md)
+- [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Operatory języka C#](index.md)
-- [Operatory logiczne (Boolean)](boolean-logical-operators.md)
-- [Typy wskaźnika](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [| — Operator](or-operator.md)
-- [Operator ^](xor-operator.md)
-- [~ - Operator](bitwise-complement-operator.md)
+- [Operatory logiczne logiczne](boolean-logical-operators.md)
+- [Bitowe i operatory przesunięcia](bitwise-and-shift-operators.md)
+- [Typy wskaźników](../../programming-guide/unsafe-code-pointers/pointer-types.md)

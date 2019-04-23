@@ -8,11 +8,11 @@ helpviewer_keywords:
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
 ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116143"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980658"
 ---
 # <a name="windows-forms-coordinates"></a>Współrzędne formularzy systemu Windows
 System współrzędnych dla formularza Windows opiera się na współrzędnych urządzenia i podstawowa jednostka miary Rysowanie w formularzach Windows Forms jest jednostką urządzenia (zazwyczaj w pikselach). Punkty na ekranie są opisane przez pary współrzędną x i y, za pomocą współrzędnych x zwiększa się po prawej stronie i współrzędne y zwiększenie od góry do dołu. Lokalizacja pochodzenia względem ekranu, różnią się w zależności od tego, czy określasz współrzędne ekranu lub klienta.  

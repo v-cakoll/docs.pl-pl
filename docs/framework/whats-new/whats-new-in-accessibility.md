@@ -1,7 +1,7 @@
 ---
 title: What's new in ułatwień dostępu w programie .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 dev_langs:
 - csharp
 - vb
@@ -9,29 +9,30 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59fe1a5492b34d2aef88e81b86307498e3a5dc2c
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: afd4b77529f64852e77926b7fecc0e15033e7735
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612293"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979982"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
-Celem jest udostępnienie aplikacji dla użytkowników programu .NET Framework. Funkcje ułatwień dostępu, Zezwalaj na aplikację zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej. Począwszy od programu .NET Framework 4.7.1 .NET Framework zawiera dużą liczbę ulepszenia ułatwień dostępu, które umożliwiają deweloperom tworzyć aplikacje dostępne.
+Celem jest udostępnienie aplikacji dla użytkowników programu .NET Framework. Funkcje ułatwień dostępu, Zezwalaj na aplikację zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej. Począwszy od .NET Framework 4.7.1 .NET Framework zawiera dużą liczbę ulepszenia ułatwień dostępu, które umożliwiają deweloperom tworzyć aplikacje dostępne.
 
 ## <a name="accessibility-switches"></a>Przełączniki ułatwień dostępu
 
-Można skonfigurować aplikację, aby skorzystać z funkcji ułatwień dostępu, jeśli jest przeznaczony dla .NET Framework 4.7 lub starszej wersji, ale działa w środowisku .NET Framework 4.7.1 lub nowszej. Możesz także skonfigurować aplikację do używania starszych funkcji (i nie korzystaj z funkcji ułatwień dostępu), jeśli jest ono przeznaczone dla platformy .NET Framework 4.7.1 lub nowszej. Każda wersja programu .NET Framework, która obejmuje funkcje ułatwień dostępu ma przełącznika ułatwień dostępu specyficzny dla wersji, możesz dodać do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji z pliku konfiguracji aplikacji. Obsługiwane przełączniki są następujące:
+Można skonfigurować aplikację, aby skorzystać z funkcji ułatwień dostępu, jeśli jest przeznaczony dla .NET Framework 4.7 lub starszej wersji, ale działa w programie .NET Framework 4.7.1 lub nowszej. Możesz także skonfigurować aplikację do używania starszych funkcji (i nie korzystaj z funkcji ułatwień dostępu), jeśli jest ono przeznaczone dla platformy .NET Framework 4.7.1 lub nowszej. Każda wersja programu .NET Framework, która obejmuje funkcje ułatwień dostępu ma przełącznika ułatwień dostępu specyficzny dla wersji, możesz dodać do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) sekcji z pliku konfiguracji aplikacji. Obsługiwane przełączniki są następujące:
 
 |Wersja|Przełącznik|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
+|.NET Framework 4.8|"Switch.UseLegacyAccessibilityFeatures.3"|
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>Korzystając z zalet udoskonalonym ułatwieniom dostępu
 
-Nowe funkcje ułatwień dostępu są włączone domyślnie dla aplikacji przeznaczonych dla platformy .NET Framework 4.7.1 lub nowszy. Ponadto aplikacje, które kątem starszej wersji programu .NET Framework, ale są uruchomione w środowisku .NET Framework 4.7.1 lub później zdecydować się poza zachowania dostępności starszej wersji (i tym samym zalet ulepszenia ułatwień dostępu), dodając przełączniki [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) części pliku konfiguracyjnego aplikacji i ich wartości `false`. Poniżej przedstawiono sposób korzystania z opcji w celu ulepszenia ułatwień dostępu, wprowadzone w programie .NET Framework 4.7.1:
+Nowe funkcje ułatwień dostępu są włączone domyślnie dla aplikacji przeznaczonych dla platformy .NET Framework 4.7.1 lub nowszy. Ponadto aplikacje, które kątem starszej wersji programu .NET Framework, ale są uruchomione w programie .NET Framework 4.7.1 lub później zdecydować się poza zachowania dostępności starszej wersji (i ten sposób korzystać z zalet ulepszenia ułatwień dostępu), dodając przełączników do [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ `<runtime>` ](~/docs/framework/configure-apps/file-schema/runtime/index.md) części pliku konfiguracyjnego aplikacji i ich wartości `false`. Poniżej przedstawiono sposób korzystania z opcji w celu ulepszenia ułatwień dostępu, wprowadzone w programie .NET Framework 4.7.1:
 
 ```xml
 <runtime>
@@ -40,12 +41,21 @@ Nowe funkcje ułatwień dostępu są włączone domyślnie dla aplikacji przezna
 </runtime>
 ```
 
-Jeśli zdecydujesz się zgadzaj się na funkcje ułatwień dostępu w nowszej wersji programu .NET Framework, musi również jawnie zgody na uczestnictwo w funkcje z wcześniejszych wersji programu .NET Framework. Konfigurowanie aplikacji w taki sposób, aby wykorzystać ulepszenia ułatwień dostępu w systemie zarówno programu .NET Framework 4.7.1 i 4.7.2 wymaga następujących [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elementu:
+Jeśli zdecydujesz się zgadzaj się na funkcje ułatwień dostępu w nowszej wersji programu .NET Framework, musi również jawnie zgody na uczestnictwo w funkcje z wcześniejszych wersji programu .NET Framework. Konfigurowanie aplikacji w taki sposób, aby wykorzystać ulepszenia ułatwień dostępu w systemie zarówno .NET Framework 4.7.1 i 4.7.2 wymaga następujących [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elementu:
 
 ```xml
 <runtime>
     <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
     <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+</runtime>
+```
+
+Konfigurowanie aplikacji w taki sposób, aby wykorzystać ulepszenia ułatwień dostępu w programie .NET Framework 4.7.1 4.7.2 i 4.8 wymaga następujących [ `<AppContextSwitchOverrides>` ](~/docs/framework/configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) elementu:
+
+```xml
+<runtime>
+    <!-- AppContextSwitchOverrides value attribute is in the form of 'key1=true|false;key2=true|false  -->
+    <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3" />
 </runtime>
 ```
 
@@ -60,9 +70,260 @@ Aplikacji przeznaczonych dla wersji programu .NET Framework, począwszy od 4.7.1
 </runtime>
 ```
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-472"></a>What's new in ułatwień dostępu w programie .NET Framework 4.7.2
+## <a name="whats-new-in-accessibility-in-net-framework-48"></a>What's new in ułatwień dostępu w programie .NET Framework 4.8
 
-.NET Framework 4.7.2 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
+.NET framework 4.8 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
+
+- [Windows Forms](#winforms48)
+
+- [Windows Presentation Foundation (WPF)](#wpf48)
+
+- [Projektant przepływu pracy Windows Workflow Foundation (WF)](#wf48)
+
+<a name="winforms48" />
+
+### <a name="windows-forms"></a>Windows Forms
+
+W .NET Framework 4,8 Windows Forms dodaje obsługę LiveRegions i zdarzenia powiadomień do wielu najczęściej używane kontrolki. Dodaje również obsługę dla etykietki narzędzi, gdy użytkownik przechodzi do formantu za pomocą klawiatury.
+
+**Obsługa LiveRegions automatyzacji interfejsu użytkownika w etykiety i StatusStrip**
+
+LiveRegions automatyzacji interfejsu użytkownika umożliwiają deweloperom aplikacji do powiadamiania czytniki zawartości ekranu zmiany tekstu w kontrolce, która znajduje się niezależnie od lokalizacji, w którym pracuje użytkownik. Jest to przydatne, na przykład w przypadku <xref:System.Windows.Forms.StatusStrip> kontrolka, która pokazuje stan połączenia. Jeśli połączenie zostanie porzucone, a zmiany stanu, deweloper może chcieć Powiadom czytnika zawartości ekranu.
+
+Począwszy od programu .NET Framework 4.8 formularze Windows implementuje LiveRegions automatyzacji interfejsu użytkownika dla obu <xref:System.Windows.Forms.Label> i <xref:System.Windows.Forms.StatusStrip> kontrolki. Na przykład w poniższym kodzie użyto LiveRegion w <xref:System.Windows.Forms.Label> formantu o nazwie `label1`:
+
+```csharp
+public Form1()
+{
+   InitializeComponent();
+   label1.AutomationLiveSetting = AutomationLiveSetting.Polite;
+}
+
+…
+Label1.Text = “Ready!”;
+```
+
+Narrator ogłasza "Gotowe", niezależnie od tego, gdzie użytkownik prowadzi interakcję z aplikacją.
+
+Możesz również wdrożyć swoje <xref:System.Windows.Forms.UserControl> jako LiveRegion:
+
+```csharp
+using System;
+using System.Windows.Forms;
+using System.Windows.Forms.Automation;
+
+namespace WindowsFormsApplication
+{
+   public partial class UserControl1 : UserControl, IAutomationLiveRegion
+   {
+      public UserControl1()
+      {
+         InitializeComponent();
+      }
+
+      public AutomationLiveSetting AutomationLiveSetting { get; set; }
+      private AutomationLiveSetting IAutomationLiveRegion.GetLiveSetting()
+      {
+         return this.AutomationLiveSetting;
+      }
+
+      protected override void OnTextChanged(EventArgs e)
+      {
+         base.OnTextChanged(e);
+         AutomationNotifications.UiaRaiseLiveRegionChangedEvent(this.AccessibilityObject);
+      }
+   }
+}
+```
+
+**Zdarzenia powiadomień automatyzacji interfejsu użytkownika**
+
+Zdarzenia powiadomień automatyzacji interfejsu użytkownika, wprowadzone w programie Windows 10 Fall Creators Update umożliwia wywoływanie zdarzeń automatyzacji interfejsu użytkownika, który prowadzi do Narrator, po prostu co anons, na podstawie tekstu podać ze zdarzeniem, bez konieczności posiadania odpowiednią kontrolować w interfejsie użytkownika aplikacji. W niektórych przypadkach jest to prosty sposób znacznie zwiększyć dostępność aplikacji. W również może być przydatne do powiadomienia o postępie niektóre procesy, które może zająć dużo czasu. Aby uzyskać więcej informacji na temat zdarzenia powiadomień automatyzacji interfejsu użytkownika, zobacz [aplikację klasyczną mogą korzystać z nowego zdarzenia powiadomień interfejsu użytkownika?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
+
+Poniższy przykład wywołuje [zdarzenie powiadomienia](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
+
+```csharp
+MethodInfo raiseMethod = typeof(AccessibleObject).GetMethod("RaiseAutomationNotification");
+if (raiseMethod != null) {
+   raiseMethod.Invoke(progressBar1.AccessibilityObject, new object[3] {/*Other*/ 4, /*All*/ 2, "The progress is 50%." });
+}
+```
+
+**Etykietki narzędzi na dostęp za pomocą klawiatury**
+
+W aplikacjach przeznaczonych dla środowiska .NET Framework 4.7.2 i wcześniejszymi wersjami, formant [etykietki narzędzia](xref:System.Windows.Forms.ToolTip) tylko można wyzwolić do pop się przesuwając wskaźnik myszy w formancie. Począwszy od programu .NET Framework 4.8 użytkownika klawiatury może wyzwalać formantu etykietki narzędzia, koncentrując się kontrolka, za pomocą klawisza Tab lub klawisze strzałek z lub bez klawisze modyfikujące. To ulepszenie ułatwień dostępu w szczególności wiąże się z dodatkowymi [przełącznika AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md):
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1"/>
+   </startup>
+   <runtime>
+      <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false  -->
+      <!-- Please note that disabling Switch.UseLegacyAccessibilityFeatures, Switch.UseLegacyAccessibilityFeatures.2 and Switch.UseLegacyAccessibilityFeatures.3 is required to disable Switch.System.Windows.Forms.UseLegacyToolTipDisplay -->
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.System.Windows.Forms.UseLegacyToolTipDisplay=false"/>
+   </runtime>
+</configuration>
+```
+
+Na poniższej ilustracji przedstawiono etykietkę narzędzia, gdy użytkownik wybrał przycisk za pomocą klawiatury.
+
+![Etykietka narzędzia, gdy użytkownik przechodzi do przycisku za pomocą klawiatury](media/tooltip.png)
+
+<a name="wpf48" />
+
+### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
+
+Począwszy od programu .NET Framework 4.8 WPF zawiera szereg ulepszeń w ułatwienia dostępu.
+
+**Narrators ekranu nie są już ogłaszamy elementów o widoczności zwinięte lub ukryte**
+
+Elementy o widoczności zwinięty czy ukryty już nie są anonsowane przez czytnik zawartości ekranu. Interfejsy użytkownika, które zawierać elementów o widoczność <xref:System.Windows.Visibility.Collapsed?displayProperty=nameWithType> lub <xref:System.Windows.Visibility.Hidden?displayProperty=nameWithType> może być podawanie fałszywych informacji przez czytniki zawartości ekranu w przypadku ich obsłudze zostaną opublikowane dla użytkownika. Począwszy od programu .NET Framework 4.8 WPF nie zawiera już zwinięty lub ukryte elementy w widoku kontrolnym drzewa biblioteki UIAutomation, więc czytniki zawartości ekranu nie są już może poinformować o tych elementów.
+
+**Właściwość SelectionTextBrush do użytku z programem — moduł definiowania układu na podstawie zaznaczenia tekstu**
+
+W .NET Framework 4.7.2 WPF dodaje pobierające <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.PasswordBox> zaznaczonego tekstu bez korzystania z warstwy moduł definiowania układu kodu. Kolor pierwszego planu zaznaczony tekst w tym scenariuszu zostało podyktowanej <xref:System.Windows.SystemColors.HighlightTextBrush?displayProperty=nameWithType>.
+
+.NET framework 4.8 dodaje nową właściwość `SelectionTextBrush`, która umożliwia deweloperom wybrać określone Pędzel zaznaczony tekst, gdy za pomocą innego niż moduł definiowania układu na podstawie zaznaczonego tekstu. Ta właściwość działa tylko w systemie <xref:System.Windows.Controls.Primitives.TextBoxBase>-pochodnych kontrolek i <xref:System.Windows.Controls.PasswordBox> kontrolki w aplikacji WPF przy użyciu wybór podstawie moduł definiowania układu tekstu, włączone. Nie działa na <xref:System.Windows.Controls.RichTextBox> kontroli. Jeśli zaznaczenie tekstu podstawie moduł definiowania układu kodu nie jest włączona, ta właściwość jest ignorowana.
+
+Aby używać tej właściwości, dodaj go do kodu XAML i za pomocą odpowiednich pędzla lub powiązania. Wynikowy zaznaczonego tekstu wygląda następująco:
+
+![Etykietka narzędzia, gdy użytkownik przechodzi do przycisku za pomocą klawiatury](media/selectiontextbrush-property.png)
+
+Można połączyć użytkowania `SelectionBrush` i `SelectionTextBrush` właściwości, aby wygenerować żadnych tła i pierwszego planu kolor połączeniem, które uznasz za stosowny.
+
+**Obsługa biblioteki UIAutomation ControllerFor właściwość**
+
+Biblioteki firmy UIAutomation `ControllerFor` właściwość zwraca tablicę elementów automatyzacji, które są zmieniane przez element automatyzacji, który obsługuje tej właściwości. Ta właściwość jest często używana do automatycznego sugerowania ułatwień dostępu. `ControllerFor` jest używana podczas automatyzacji element ma wpływ na jeden lub więcej segmentów w interfejsie użytkownika aplikacji lub pulpitu. W przeciwnym razie jest trudny do skojarzenia wpływ operacji kontroli elementów interfejsu użytkownika. Ta funkcja dodaje możliwość dla formantów podać wartość dla `ControllerFor` właściwości.
+
+.NET framework 4.8 dodaje nowej metody wirtualnej <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>. Aby podać wartość dla `ControllerFor` właściwość, po prostu zastąpić tę metodę i zwraca `List<AutomationPeer>` dla formantów podlegający manipulowaniu to <xref:System.Windows.Automation.Peers.AutomationPeer>:
+
+```csharp
+public class AutoSuggestTextBox: TextBox
+{
+   protected override AutomationPeer OnCreateAutomationPeer()
+   {
+      return new AutoSuggestTextBoxAutomationPeer(this);
+   }
+
+   public ListBox SuggestionListBox;
+}
+
+internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
+{
+   public AutoSuggestTextBoxAutomationPeer(AutoSuggestTextBox owner) : base(owner)
+   {
+   }
+
+   protected override List<AutomationPeer> GetControlledPeersCore()
+   {
+      List<AutomationPeer> controlledPeers = new List<AutomationPeer>();
+      AutoSuggestTextBox owner = Owner as AutoSuggestTextBox;
+      controlledPeers.Add(UIElementAutomationPeer.CreatePeerForElement(owner.SuggestionListBox));
+      return controlledPeers;
+   }
+}
+```
+
+**Etykietki narzędzi na dostęp za pomocą klawiatury**
+
+W programie .NET Framework 4.7.2 i wcześniejszych wersjach wyświetlania w etykietkach ekranowych tylko wtedy, gdy użytkownik ustawi wskaźnik myszy nad formantem. W .NET Framework 4,8 etykietki narzędzi także wyświetlać na klawiaturę, a także za pomocą skrótów klawiaturowych.
+
+Aby włączyć tę funkcję, aplikacja musi platformą docelową jest program .NET Framework 4.8 lub wymaga zgody na uczestnictwo przy użyciu `Switch.UseLegacyAccessibilityFeatures.3` i `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) przełączników. Oto przykładowy plik konfiguracji aplikacji:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false;Switch.UseLegacyToolTipDisplay=false" />
+   </runtime>
+</configuration>
+```
+
+Po włączeniu wszystkich kontrolek, które zawierają etykietka narzędzia wyświetlić po formant uzyskuje fokus klawiatury. Etykietka narzędzia może być ukryty w czasie lub podczas zmiany fokus klawiatury. Użytkownicy mogą również odrzucić etykietki narzędzia ręcznie przy użyciu nowego skrótu klawiaturowego Ctrl + Shift + F10. Gdy etykietka narzędzia został odrzucony. może być wyświetlany ponownie przy użyciu tego samego skrótu klawiaturowego.
+
+> [!NOTE]
+> [Etykietki narzędzi wstążki] (xref:System.Windows.Controls.Ribbon.RibbonToolTips > na <xref:System.Windows.Controls.Ribbon.Ribbon> kontrolek nie zostanie wyświetlona na klawiaturę; pokazują za pomocą skrótów klawiaturowych.
+
+**Dodano obsługę SizeOfSet i biblioteki PositionInSet UIAutomation właściwości**
+
+Windows 10 wprowadzono dwie nowe właściwości biblioteki UIAutomation `SizeOfSet` i `PositionInSet`, które są używane przez aplikacje do opisania liczba elementów w zestawie. Biblioteki UIAutomation aplikacji klienckich, takich jak czytniki zawartości ekranu można zbadać aplikacji dla tych właściwości i ogłaszamy dokładne odzwierciedlenia Interfejsem użytkownika aplikacji.
+
+Począwszy od programu .NET Framework 4.8 WPF udostępnia te dwie właściwości do biblioteki UIAutomation w aplikacjach WPF. Można to zrobić na dwa sposoby:
+
+- Za pomocą właściwości zależności.
+
+   WPF dodaje dwie nowe właściwości zależności <xref:System.Windows.Automation.AutomationProperties.SizeOfSet?displayProperty=nameWithType> i <xref:System.Windows.Automation.AutomationProperties.PositionInSet?displayProperty=nameWithType>. Projektant umożliwia XAML ustawienia ich wartości:
+
+   ```xaml
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="1">Button 1</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="2">Button 2</Button>
+
+   <Button AutomationProperties.SizeOfSet="3"
+     AutomationProperties.PositionInSet="3">Button 3</Button>
+   ```
+
+- Przez zastąpienie AutomationPeer metod wirtualnych.
+
+   <xref:System.Windows.Automation.Peers.AutomationPeer.GetSizeOfSetCore> i <xref:System.Windows.Automation.Peers.AutomationPeer.GetPositionInSetCore> metody wirtualne zostały dodane do klasy AutomationPeer. Deweloper opracowuje wartości `SizeOfSet` i `PositionInSet` przez zastąpienie tych metod, jak pokazano w poniższym przykładzie:
+
+   ```csharp
+   public class MyButtonAutomationPeer : ButtonAutomationPeer
+   {
+      protected override int GetSizeOfSetCore()
+      {
+         // Call into your own logic to provide a value for SizeOfSet
+         return CalculateSizeOfSet();
+      }
+
+      protected override int GetPositionInSetCore()
+      {
+         // Call into your own logic to provide a value for PositionInSet
+         return CalculatePositionInSet();
+      }
+   }
+   ```
+
+Ponadto elementy w <xref:System.Windows.Controls.ItemsControl> wystąpienia oferują wartości tych właściwości, które automatycznie bez dodatkowych działań od dewelopera. Jeśli <xref:System.Windows.Controls.ItemsControl> są grupowane, kolekcję grup jest reprezentowany jako zestaw, a każda grupa jest traktowana jako oddzielny zestaw z każdym elementem w tej grupie, podając jego pozycja w tej grupie, a także rozmiar grupy. Automatyczne wartości nie dotyczy wirtualizacji. Nawet wtedy, gdy element nie jest wykonywane, nadal jest wliczane do łączny rozmiar zestawu i ma wpływ na położenie w zestawie z jego elementów równorzędnych.
+
+Automatyczne wartości są podane tylko, jeśli aplikacja jest przeznaczony dla .NET Framework 4.8. W przypadku aplikacji przeznaczonych dla starszej wersji programu .NET Framework, można ustawić `Switch.UseLegacyAccessibilityFeatures.3` [przełącznika AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), jak pokazano w następującym pliku App.config:
+
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+   <startup>
+      <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+   </startup>
+   <runtime>
+      <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false;Switch.UseLegacyAccessibilityFeatures.3=false" />
+   </runtime>
+</configuration>
+```
+
+<a name="wf48" />
+
+### <a name="windows-workflow-foundation-wf-workflow-designer"></a>Projektant przepływu pracy Windows Workflow Foundation (WF)
+
+Projektant przepływu pracy zawiera następujące zmiany w .NET Framework 4.8:
+
+- Za pomocą programu Narrator będzie towarzyszyć poprawę FlowSwitch etykiet wielkości liter.
+
+- Za pomocą programu Narrator będzie towarzyszyć ulepszenia w opisach przycisku.
+
+- Użytkownicy, którzy wysokiego kontrastu, motywów zobaczą poprawę widoczność projektanta przepływów pracy i jego formantów, takie jak lepsza współczynniki kontrastu między elementami i lepiej widoczne pola wyboru używany do elementów zespołu.
+
+Jeśli aplikacja jest przeznaczony dla .NET Framework 4.7.2 lub starszej wersji, możesz zdecydować się na te zmiany, ustawiając `Switch.UseLegacyAccessibilityFeatures.3` [przełącznika AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do `false` w pliku konfiguracyjnym aplikacji. Aby uzyskać więcej informacji, zobacz [zalet udoskonalonym ułatwieniom dostępu](#taking-advantage-of-accessibility-enhancements) sekcję w tym artykule.
+
+## <a name="whats-new-in-accessibility-in-net-framework-472"></a>What's new in ułatwień dostępu w programie .NET Framework 4.7.2
+
+.NET framework 4.7.2 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
 
 - [Windows Forms](#winforms472)
 
@@ -88,7 +349,7 @@ Począwszy od .NET Framework 4.7.2 formularze Windows używa kolorów zdefiniowa
 
 **Ulepszenia Narrator**
 
-Począwszy od programu .NET Framework 4.7.2 obsługi programu Narrator został rozszerzony w następujący sposób:
+Począwszy od .NET Framework 4.7.2 obsługi programu Narrator został rozszerzony w następujący sposób:
 
 - Ogłasza, wartość <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> właściwości ogłoszenie tekst <xref:System.Windows.Forms.ToolStripMenuItem>.
 
@@ -100,7 +361,7 @@ Począwszy od programu .NET Framework 4.7.2 obsługi programu Narrator został r
 
 **Ulepszenia w formancie DataGridView**
 
-Począwszy od programu .NET Framework 4.7.2, <xref:System.Windows.Forms.DataGridView> kontroli ma wprowadzono następujące ulepszenia ułatwień dostępu:
+Począwszy od .NET Framework 4.7.2, <xref:System.Windows.Forms.DataGridView> kontroli ma wprowadzono następujące ulepszenia ułatwień dostępu:
 
 - Za pomocą klawiatury można sortować wiersze. Użytkownik może używać klawisz F3, aby posortować według bieżącej kolumny.
 
@@ -128,7 +389,7 @@ Począwszy od programu .NET Framework 4.7.2, <xref:System.Windows.Forms.DataGrid
 
 **Zmiany do kontrolki pola wyboru i RadioButton**
 
-W wcześniejszych wersjach, WPF i .NET Framework 4.7.1 <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> i <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> formanty mają niespójne i, w modelu klasycznym oraz wysokiego kontrastu motywy niepoprawne koncentracji uwagi wizualizacji.  Te problemy występują w przypadkach, gdy formanty nie mają żadnych zestawu zawartości.  Dzięki temu może być przejście pomiędzy motywów mylące i element wizualny fokusu trudne do zobaczenia.
+W programie .NET Framework 4.7.1 i wcześniejszymi wersjami, WPF <xref:System.Windows.Controls.CheckBox?displayProperty=nameWIthType> i <xref:System.Windows.Controls.RadioButton?displayProperty=nameWIthType> formanty mają niespójne i, w modelu klasycznym oraz wysokiego kontrastu motywy niepoprawne koncentracji uwagi wizualizacji.  Te problemy występują w przypadkach, gdy formanty nie mają żadnych zestawu zawartości.  Dzięki temu może być przejście pomiędzy motywów mylące i element wizualny fokusu trudne do zobaczenia.
 
 W programie .NET Framework 4.7.2 te wizualizacje są teraz bardziej spójny między motywy i widoczność w klasycznej sieci wirtualnej i wysokiego kontrastu motywów.
 
@@ -138,9 +399,9 @@ Kontrolki WinForms hostowaną w aplikacji WPF, .NET Framework 4.7.1 i wcześniej
 
 Jednak automatycznych aplikacji, które zależą od fokus nigdy nie anulowania zapewnianego element warstwy WinForms może przestać działać zgodnie z oczekiwaniami.
 
-## <a name="whats-new-in-accessibility-in-the-net-framework-471"></a>What's new in ułatwień dostępu w programie .NET Framework 4.7.1
+## <a name="whats-new-in-accessibility-in-net-framework-471"></a>What's new in ułatwień dostępu w programie .NET Framework 4.7.1
 
-.NET Framework 4.7.1 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
+.NET framework 4.7.1 zawiera nowe funkcje ułatwień dostępu w następujących obszarach:
 
 - [Windows Presentation Foundation (WPF)](#wpf471)
 
@@ -158,15 +419,15 @@ Jednak automatycznych aplikacji, które zależą od fokus nigdy nie anulowania z
 
 **Ulepszenia czytnika ekranu**
 
-Po włączeniu ulepszenia ułatwień dostępu programu .NET Framework 4.7.1 obejmuje następujące ulepszenia, które wpływają na czytniki zawartości ekranu:
+Jeśli ulepszenia ułatwień dostępu są włączone, .NET Framework 4.7.1 obejmuje następujące ulepszenia, które wpływają na czytniki zawartości ekranu:
 
-- W .NET Framework 4.7 i wcześniejszymi wersjami <xref:System.Windows.Controls.Expander> formanty zostały odczytywana przez czytniki zawartości ekranu jako przyciski. Począwszy od programu .NET Framework 4.7.1 ich obsłudze zostaną poprawnie opublikowane jako rozwijania/zwijane grupy.
+- W .NET Framework 4.7 i wcześniejszymi wersjami <xref:System.Windows.Controls.Expander> formanty zostały odczytywana przez czytniki zawartości ekranu jako przyciski. Począwszy od .NET Framework 4.7.1 ich obsłudze zostaną poprawnie opublikowane jako rozwijania/zwijane grupy.
 
-- W .NET Framework 4.7 i wcześniejszymi wersjami <xref:System.Windows.Controls.DataGridCell> formantów była odczytywana przez czytniki ekranu jako "niestandardowe". Począwszy od programu .NET Framework 4.7.1 one są teraz prawidłowo od niedawna komórce siatki danych (zlokalizowany).
+- W .NET Framework 4.7 i wcześniejszymi wersjami <xref:System.Windows.Controls.DataGridCell> formantów była odczytywana przez czytniki ekranu jako "niestandardowe". Począwszy od .NET Framework 4.7.1 one są teraz prawidłowo od niedawna komórce siatki danych (zlokalizowany).
 
-- Począwszy od programu .NET Framework 4.7.1 czytniki zawartości ekranu ogłaszamy nazwę można edytować <xref:System.Windows.Controls.ComboBox>.
+- Począwszy od .NET Framework 4.7.1 czytniki zawartości ekranu ogłaszamy nazwę można edytować <xref:System.Windows.Controls.ComboBox>.
 
-- W .NET Framework 4.7 i wcześniejszymi wersjami <xref:System.Windows.Controls.PasswordBox> formanty zostały ogłaszany jako "Brak elementów w widoku" lub ma inny sposób niepoprawne zachowanie. Ten problem jest rozwiązany, począwszy od programu .NET Framework 4.7.1.
+- W .NET Framework 4.7 i wcześniejszymi wersjami <xref:System.Windows.Controls.PasswordBox> formanty zostały ogłaszany jako "Brak elementów w widoku" lub ma inny sposób niepoprawne zachowanie. Ten problem jest rozwiązany, począwszy od .NET Framework 4.7.1.
 
 **Obsługa biblioteki UIAutomation LiveRegion**
 
@@ -213,7 +474,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **Duży kontrast**
 
-Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ulepszenia do różnych formantów WPF. Są one teraz widoczne podczas <xref:System.Windows.SystemParameters.HighContrast%2A> ustawiono motywu. Należą do nich następujące elementy:
+Począwszy od .NET Framework 4.7.1 o wysokim kontraście wprowadzono ulepszenia do różnych formantów WPF. Są one teraz widoczne podczas <xref:System.Windows.SystemParameters.HighContrast%2A> ustawiono motywu. Należą do nich następujące elementy:
 
 - <xref:System.Windows.Controls.Expander> Kontrolki
 
@@ -241,7 +502,7 @@ Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ul
 
 - <xref:System.Windows.Controls.ComboBox> Kontrolki
 
-    Począwszy od programu .NET Framework 4.7.1, obramowania wyłączone <xref:System.Windows.Controls.ComboBox> formant jest kolor wyłączonego tekstu. Na przykład:
+    Począwszy od .NET Framework 4.7.1, obramowania wyłączone <xref:System.Windows.Controls.ComboBox> formant jest kolor wyłączonego tekstu. Na przykład:
 
     Przed: 
 
@@ -261,7 +522,7 @@ Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ul
 
     ![Kolory motywu przycisku po ulepszenia ułatwień dostępu](media/button-themes-after.png) 
 
-    Na koniec w .NET Framework 4.7 i wcześniejszych wersjach, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki do `Toolbar.ComboBoxStyleKey` spowodowane strzałkę listy rozwijanej, aby była niewidoczna. Ten problem jest rozwiązany, począwszy od programu .NET Framework 4.7.1. Na przykład:
+    Na koniec w .NET Framework 4.7 i wcześniejszymi wersjami, ustawienie <xref:System.Windows.Controls.ComboBox> stylu kontrolki do `Toolbar.ComboBoxStyleKey` spowodowane strzałkę listy rozwijanej, aby była niewidoczna. Ten problem jest rozwiązany, począwszy od .NET Framework 4.7.1. Na przykład:
 
     Przed: 
 
@@ -273,7 +534,7 @@ Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ul
 
 - <xref:System.Windows.Controls.DataGrid> Kontrolki
 
-    Począwszy od programu .NET Framework 4.7.1, strzałkę wskaźnika sortowania w <xref:System.Windows.Controls.DataGrid> kontroluje teraz używa Popraw kolory motywu. Na przykład:
+    Począwszy od .NET Framework 4.7.1, strzałkę wskaźnika sortowania w <xref:System.Windows.Controls.DataGrid> kontroluje teraz używa Popraw kolory motywu. Na przykład:
 
     Przed: 
 
@@ -283,7 +544,7 @@ Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ul
 
     ![Strzałka wskaźnika sortowania po ulepszenia ułatwień dostępu](media/sort-indicator-after.png) 
 
-    Ponadto w .NET Framework 4.7 i wcześniejszych wersjach, domyślnego stylu łącze zmieniony na niepoprawny kolor na myszy w trybach o wysokim kontraście. Ten problem został rozwiązany, począwszy od programu .NET Framework 4.7.1. Podobnie <xref:System.Windows.Controls.DataGrid> wyboru kolumn używa oczekiwanego kolorów opinii fokus klawiatury, począwszy od programu .NET Framework 4.7.1.
+    Ponadto w i wcześniejszych wersji programu .NET Framework 4.7, domyślnego stylu łącze zmieniana na niepoprawny kolor na myszy w trybach o wysokim kontraście. Ten problem został rozwiązany, począwszy od .NET Framework 4.7.1. Podobnie <xref:System.Windows.Controls.DataGrid> wyboru kolumn używa oczekiwanego kolorów opinii fokus klawiatury, począwszy od .NET Framework 4.7.1.
 
     Przed: 
 
@@ -293,17 +554,17 @@ Począwszy od programu .NET Framework 4.7.1 o wysokim kontraście wprowadzono ul
 
     ![Styl łącza domyślne DataGrid po ulepszenia ułatwień dostępu](media/default-link-style-after.png) 
 
-Aby uzyskać więcej informacji na temat ulepszenia ułatwień dostępu WPF w programie .NET Framework 4.7.1, zobacz [ulepszenia ułatwień dostępu w programie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
+Aby uzyskać więcej informacji na temat ulepszenia ułatwień dostępu programu WPF w programie .NET Framework 4.7.1, zobacz [ulepszenia ułatwień dostępu w programie WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
 <a name="winforms471"></a>
 
 ### <a name="windows-forms-accessibility-improvements"></a>Ulepszenia ułatwień dostępu w Windows Forms
 
-W .NET Framework 4.7.1 Windows Forms (WinForms) zawiera zmiany ułatwień dostępu w następujących obszarach.
+W programie .NET Framework 4.7.1 Windows Forms (WinForms) zawiera zmiany ułatwień dostępu w następujących obszarach.
 
 **Ulepszone wyświetlaną w trybie dużego kontrastu**
 
-Począwszy od programu .NET Framework 4.7.1 różne formanty formularzy WinForm oferuje ulepszoną renderowania w trybach HighContrast dostępne w systemie operacyjnym. Windows 10 została zmieniona wartości dla niektórych dużego kontrastu kolorów systemu i formularze Windows opiera się na platformę Windows 10 Win32. Aby uzyskać najlepsze wyniki Uruchom w najnowszej wersji systemu Windows, a następnie Zezwól na korzystanie z najnowszych zmian systemu operacyjnego, dodając plik app.manifest w aplikacji testowej i un-comment systemu Windows 10 obsługiwanych wiersza systemu operacyjnego wyglądającą następujące czynności:
+Począwszy od .NET Framework 4.7.1 różne formanty formularzy WinForm oferuje ulepszoną renderowania w trybach HighContrast dostępne w systemie operacyjnym. Windows 10 została zmieniona wartości dla niektórych dużego kontrastu kolorów systemu i formularze Windows opiera się na platformę Windows 10 Win32. Aby uzyskać najlepsze wyniki Uruchom w najnowszej wersji systemu Windows, a następnie Zezwól na korzystanie z najnowszych zmian systemu operacyjnego, dodając plik app.manifest w aplikacji testowej i un-comment systemu Windows 10 obsługiwanych wiersza systemu operacyjnego wyglądającą następujące czynności:
 
 ```xml
 <!-- Windows 10 -->
@@ -332,7 +593,7 @@ Niektóre zmiany o wysokim kontraście należą:
 
 **Ulepszona obsługa Narrator**
 
-Formularzy Windows w programie .NET Framework 4.7.1 obejmuje następujące ulepszenia ułatwień dostępu w programie Narrator:
+Windows Forms w programie .NET Framework 4.7.1 obejmuje następujące ulepszenia ułatwień dostępu w programie Narrator:
 
 - <xref:System.Windows.Forms.MonthCalendar> Kontroli jest możliwy, Narrator, a także innymi narzędziami automatyzacji interfejsu użytkownika.
 
@@ -344,7 +605,7 @@ Formularzy Windows w programie .NET Framework 4.7.1 obejmuje następujące uleps
 
 **Rozszerzona obsługa biblioteki UIAutomation ułatwień dostępu wzorców**
 
-Począwszy od programu .NET Framework 4.7.1 deweloperów technologii ułatwień dostępu mogą korzystać z typowych wzorców ułatwień dostępu do interfejsu API i właściwości dla kilku formantów formularzy WinForm. Te ulepszenia ułatwień dostępu, obejmują:
+Począwszy od .NET Framework 4.7.1 deweloperów technologii ułatwień dostępu mogą korzystać z typowych wzorców ułatwień dostępu do interfejsu API i właściwości dla kilku formantów formularzy WinForm. Te ulepszenia ułatwień dostępu, obejmują:
 
 - <xref:System.Windows.Forms.ComboBox> i <xref:System.Windows.Forms.ToolStripSplitButton> obsługują teraz [wzorzec Rozwiń/Zwiń](../ui-automation/implementing-the-ui-automation-expandcollapse-control-pattern.md).
 
@@ -356,7 +617,7 @@ Począwszy od programu .NET Framework 4.7.1 deweloperów technologii ułatwień 
 
 **Ulepszone właściwość przeglądania**
 
-Formularze Windows począwszy od programu .NET Framework 4.7.1 obejmuje:
+Formularze Windows począwszy od .NET Framework 4.7.1 obejmuje:
 
 - Lepsze nawigacji za pomocą klawiatury przez różne okna wyboru z listy rozwijanej.
 - Ograniczenia niepotrzebne tabulatorów.

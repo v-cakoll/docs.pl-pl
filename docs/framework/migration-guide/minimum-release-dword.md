@@ -1,6 +1,6 @@
 ---
 title: Minimalne wartości DWORD wydania dla każdej wersji systemu .NET Framework
-ms.date: 04/02/2019
+ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework, minimum version value
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6476539d704da171dc6bc1849bcabc21058cdc7e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 4f47ec41af114e8a6ab8a66aee2d338c722f149b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055498"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980710"
 ---
 # <a name="the-minimum-values-of-the-release-dword-for-net-framework-45-and-later-versions"></a>Minimalne wartości DWORD wersji .NET Framework 4.5 i nowsze wersje
 
@@ -30,3 +30,4 @@ W poniższej tabeli przedstawiono minimalną wartość **wersji** wpis dla każd
 |.NET framework 4.7|460798|
 |.NET Framework 4.7.1|461308|
 |.NET Framework 4.7.2|461808|
+|.NET Framework 4.8|528040|

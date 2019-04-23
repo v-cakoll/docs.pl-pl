@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 ms.openlocfilehash: 3bbb2e046054e35cf01fe223318a3bf560ef7253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180729"
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu ADO.NET
@@ -27,13 +27,13 @@ Zamieszczone w tym temacie pokazują, jak pobierać dane z bazy danych przy uży
 
 - ADO.NET Entity Framework:
 
-  - [LINQ do Jednostek](#linq-to-entities)
+  - [LINQ to Entities](#linq-to-entities)
 
   - [Typizowany obiekt ObjectQuery](#typed-objectquery)
 
   - [Dostawca EntityClient](#entityclient) (`System.Data.EntityClient`)
 
-- [LINQ do SQL](#linq-to-sql)
+- [LINQ to SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>Przykłady dostawcy danych ADO.NET
 Następujące fragmentów kodu pokazują, jak pobierać dane z bazy danych przy użyciu dostawcy danych ADO.NET. Dane są zwracane w `DataReader`. Aby uzyskać więcej informacji, zobacz [podczas pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
@@ -347,7 +347,7 @@ End Class
 
 - [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Tworzenie aplikacji danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [Tworzenie aplikacji do danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
 - [Wykonywanie zapytań z modelem EDM (Entity Framework zadania)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
 - [Instrukcje: Wykonywanie zapytania, które zwraca obiekty typu anonimowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))
 - [ADO.NET zarządzanego dostawcy i Centrum deweloperów zestawu danych](https://go.microsoft.com/fwlink/?LinkId=217917)

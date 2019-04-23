@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: c698ffc8d1bc68b2ebcbdf4578ab5926d4743516
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.openlocfilehash: 389fc46e0293823fa859859b7a32ef3730ca8051
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203473"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979761"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Konstruktory wystąpień (Przewodnik programowania w języku C#)
 Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne elementu członkowskiego wystąpienia, gdy używasz [nowe](../../../csharp/language-reference/keywords/new.md) wyrażenie do utworzenia obiektu [klasy](../../../csharp/language-reference/keywords/class.md). Można zainicjować [statyczne](../../../csharp/language-reference/keywords/static.md) klasy lub statycznych zmiennych w niestatycznych klas, należy zdefiniować Konstruktor statyczny. Aby uzyskać więcej informacji, zobacz [konstruktorów statycznych](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  
@@ -23,7 +23,7 @@ Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne e
 > [!NOTE]
 >  W celu uściślenia ta klasa zawiera pola publiczne. Użycie pola publiczne nie jest zalecana praktyka programowania, ponieważ zezwala ona na dowolną metodę w dowolnym miejscu w programie bez ograniczeń i niezweryfikowane dostęp do obiektu wewnętrznego działania. Elementy członkowskie danych zwykle powinny być prywatne i powinni mieć dostęp tylko za pośrednictwem metod i właściwości klasy.  
   
- Ten konstruktor wystąpienia jest wywoływane, gdy na podstawie obiektu `Coords` klasa jest tworzona. Konstruktor, takie jak nazywa się ten zestaw, który nie przyjmuje żadnych argumentów, *domyślnego konstruktora*. Jednak często jest przydatne zapewnić dodatkowe konstruktorów. Na przykład można dodać do konstruktora `Coords` klasę, która pozwala określić wartości początkowe dla składowych danych:  
+ Ten konstruktor wystąpienia jest wywoływane, gdy na podstawie obiektu `Coords` klasa jest tworzona. Konstruktor, takie jak nazywa się ten zestaw, który nie przyjmuje żadnych argumentów, *konstruktora bez parametrów*. Jednak często jest przydatne zapewnić dodatkowe konstruktorów. Na przykład można dodać do konstruktora `Coords` klasę, która pozwala określić wartości początkowe dla składowych danych:  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
@@ -31,7 +31,7 @@ Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne e
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Jeśli klasa nie ma konstruktora, Konstruktor domyślny jest generowany automatycznie i wartości domyślne są stosowane do inicjalizacji pola obiektu. Na przykład [int](../../../csharp/language-reference/keywords/int.md) jest inicjowana wartością 0. Aby uzyskać więcej informacji na temat wartości domyślnych, zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). W związku z tym ponieważ `Coords` Konstruktor domyślny klasy inicjuje wszystkie elementy członkowskie danych do zera, można je usunąć w całkowicie bez konieczności zmieniania sposobu działania klasy. Pełny przykład za pomocą wiele konstruktorów podano w przykładzie 1 w dalszej części tego tematu, a przykład automatycznie generowany Konstruktor jest podawany jako przykład 2.  
+ Jeśli klasa nie ma konstruktora, jest generowany automatycznie konstruktora bez parametrów i wartości domyślne są stosowane do inicjalizacji pola obiektu. Na przykład [int](../../../csharp/language-reference/keywords/int.md) jest inicjowana wartością 0. Aby uzyskać więcej informacji na temat wartości domyślnych, zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). W związku z tym ponieważ `Coords` klasy Konstruktor bezparametrowy inicjuje wszystkie elementy członkowskie danych do zera, można je usunąć w całkowicie bez konieczności zmieniania sposobu działania tej klasy. Pełny przykład za pomocą wiele konstruktorów podano w przykładzie 1 w dalszej części tego tematu, a przykład automatycznie generowany Konstruktor jest podawany jako przykład 2.  
   
  Konstruktory wystąpień może również wywoływać konstruktorów wystąpienia klas bazowych. Konstruktor klasy można wywołać konstruktora klasy podstawowej za pomocą inicjatora, w następujący sposób:  
   
@@ -45,7 +45,7 @@ Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne e
  [!code-csharp[csProgGuideObjects#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#4)]  
   
 ## <a name="example-2"></a>Przykład 2  
- W tym przykładzie klasa `Person` nie ma żadnych konstruktorów, w których przypadku domyślnego konstruktora jest dostarczana automatycznie, a pola są inicjowane do wartości domyślnych.  
+ W tym przykładzie klasa `Person` nie ma żadnych konstruktorów, w których przypadku konstruktora bez parametrów jest dostarczana automatycznie, a pola są inicjowane do wartości domyślnych.  
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   

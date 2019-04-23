@@ -3,12 +3,12 @@ title: Struktury — przewodnik języka C#
 description: Dowiedz się więcej o typ struktury i jak je utworzyć
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fcd30907880be9159b3cc2e3ab10659ddec248b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506982"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979488"
 ---
 # <a name="structs"></a>Struktury
 A *struktury* jest typem wartości. Po utworzeniu struktury, zmienna, do którego jest przypisana struktura zawiera rzeczywiste dane struktury. Struktura jest przypisywana do nowej zmiennej, są kopiowane. Nowa zmienna i pierwotna zmienna zatem zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednym egzemplarzu nie wpływają na drugi egzemplarz.
@@ -37,7 +37,7 @@ Struktury udostępniać większość tej samej składni jak klasy, chociaż stru
   
 -   W deklaracji struktury, pola nie można zainicjować, chyba że są one zadeklarowane jako `const` lub `static`.  
   
--   Domyślny konstruktor (Konstruktor bez parametrów), lub finalizator, nie można zadeklarować struktury.  
+-   Struktura nie można zadeklarować konstruktora bez parametrów (Konstruktor bez parametrów) lub finalizatora.  
   
 -   Struktury są kopiowane w przydziale. Gdy struktura jest przypisywana nowej zmiennej, wszystkie dane są kopiowane, a wszelkie zmiany nowa kopia nie zmienia danych do oryginalnej kopii. Jest to ważne podczas pracy z kolekcjami typów wartości, takich jak Dictionary < string, myStruct >.  
   

@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 169716d1a6d0dd633821cc832de96c9a02958d76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183108"
 ---
 # <a name="icorpublishprocessenumnext-method"></a>ICorPublishProcessEnum::Next — Metoda
@@ -59,4 +59,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorPublishProcessEnum — Interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)
+- [ICorPublishProcessEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)

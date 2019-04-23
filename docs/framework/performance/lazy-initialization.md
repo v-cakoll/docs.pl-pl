@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182302"
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
@@ -75,7 +75,7 @@ ms.locfileid: "59182302"
   
  Niektóre <xref:System.Lazy%601> mają konstruktory <xref:System.Threading.LazyThreadSafetyMode> parametr o nazwie `mode`. Te konstruktory zapewniają tryb awaryjny wątku dodatkowe. W poniższej tabeli przedstawiono, jak bezpieczeństwo wątku <xref:System.Lazy%601> obiektu jest zależna od parametry konstruktora, które określają bezpieczeństwo wątkowe. Każdy Konstruktor ma co najwyżej jeden taki parametr.  
   
-|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode` `mode` parametr|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
+|Bezpieczeństwo wątków obiektu|`LazyThreadSafetyMode` `mode` Parametr|Wartość logiczna `isThreadSafe` parametru|Brak parametrów bezpieczeństwa wątków|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |W pełni wątkowo; tylko jeden wątek jednocześnie próbuje zainicjować wartości.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Tak.|  
 |Nie metodą o bezpiecznych wątkach.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nie dotyczy.|  
@@ -101,9 +101,9 @@ ms.locfileid: "59182302"
 |Konstruktor|Tryb awaryjny wątku|Używa metody inicjującej|Wyjątki są buforowane.|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Nie|Nie|  
-|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Yes|Tak|  
+|Lazy(T)(FUNC(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Tak|Tak|  
 |Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Nie|Nie|  
-|Lazy(T)(FUNC(T), atrybut typu wartość logiczna)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Tak|  
+|Lazy(T)(FUNC(T), atrybut typu wartość logiczna)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) lub `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Tak|Yes|  
 |Lazy(T)(LazyThreadSafetyMode)|Określone przez użytkownika|Nie|Nie|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|Określone przez użytkownika|Tak|Nie, gdy użytkownik poda <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; w przeciwnym razie tak.|  
   
@@ -157,4 +157,4 @@ ms.locfileid: "59182302"
 - [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)
 - [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)
 - [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Instrukcje: wykonywanie inicjalizacji obiektów z opóźnieniem](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Instrukcje: Wykonywanie Incjalizacji obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

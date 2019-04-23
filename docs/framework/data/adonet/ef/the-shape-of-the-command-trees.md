@@ -2,12 +2,12 @@
 title: Kształt drzew poleceń
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378551"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980086"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Kształt drzew poleceń
 
@@ -85,9 +85,9 @@ Obiekt DbNewInstanceExpression mogą występować tylko w dwóch przypadkach:
 
 - Jako właściwość projekcji DbProjectExpression.  Gdy jest używana w związku z tym obowiązują następujące ograniczenia:
 
-    - Typ wyniku musi być typu wiersza.
+  - Typ wyniku musi być typu wiersza.
 
-    - Każdy z jej argumentów jest wyrażeniem, który produkuje wynik z parametrem typu podstawowego. Zwykle każdy argument znajduje się wyrażenie skalarne, takie jak PropertyExpression nad DbVariableReferenceExpression, wywołania funkcji lub arytmetyczne obliczeń DbPropertyExpression DbVariableReferenceExpression lub wywołania funkcji . Jednak wyrażenie reprezentujące podzapytania skalarnej może również wystąpić na liście argumentów obiekt DbNewInstanceExpression. Wyrażenie, które reprezentuje skalarne podzapytania jest drzewo wyrażenia, reprezentujący podzapytania, która zwraca dokładnie jeden wiersz i jedną kolumnę typu prymitywnego za pomocą głównego obiektu DbElementExpression
+  - Każdy z jej argumentów jest wyrażeniem, który produkuje wynik z parametrem typu podstawowego. Zwykle każdy argument znajduje się wyrażenie skalarne, takie jak PropertyExpression nad DbVariableReferenceExpression, wywołania funkcji lub arytmetyczne obliczeń DbPropertyExpression DbVariableReferenceExpression lub wywołania funkcji . Jednak wyrażenie reprezentujące podzapytania skalarnej może również wystąpić na liście argumentów obiekt DbNewInstanceExpression. Wyrażenie, które reprezentuje skalarne podzapytania jest drzewo wyrażenia, reprezentujący podzapytania, która zwraca dokładnie jeden wiersz i jedną kolumnę typu prymitywnego za pomocą głównego obiektu DbElementExpression
 
 - Z typem zwracanym kolekcji w którym to przypadku definiuje nową kolekcję wyrażeń dostarczone jako argumenty.
 

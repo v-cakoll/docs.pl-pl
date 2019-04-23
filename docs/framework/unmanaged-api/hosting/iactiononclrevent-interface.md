@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 864a8a4dd9f96da2fd0e0025848a910b4f8b0a70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180523"
 ---
 # <a name="iactiononclrevent-interface"></a>IActionOnCLREvent — Interfejs
@@ -43,7 +43,7 @@ Udostępnia [iactiononclrevent::ONEVENT —](../../../../docs/framework/unmanage
   
 ## <a name="see-also"></a>Zobacz także
 
-- [EClrEvent — Wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
-- [ICLRControl — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [ICLROnEventManager — Interfejs](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
-- [Hosting — Interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [EClrEvent, wyliczenie](../../../../docs/framework/unmanaged-api/hosting/eclrevent-enumeration.md)
+- [ICLRControl, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [ICLROnEventManager, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md)
+- [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

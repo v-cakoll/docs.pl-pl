@@ -3,10 +3,10 @@ title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
 ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179832"
 ---
 # <a name="peertransport"></a>\<peerTransport>
@@ -46,7 +46,7 @@ Definiuje transport elementu równorzędnego dla niestandardowego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń dla tego transportu. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Definiuje ustawienia zabezpieczeń dla tego transportu. Ten element jest typu <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

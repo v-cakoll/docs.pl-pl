@@ -3,11 +3,11 @@ title: 'Instrukcje: Obsługa błędów'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334994"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979397"
 ---
 # <a name="how-to-error-handling"></a>Instrukcje: Obsługa błędów
 W tym temacie przedstawiono podstawowe kroki wymagane do utworzenia konfiguracji routingu, który używa obsługi błędów. W tym przykładzie komunikaty są kierowane do docelowego punktu końcowego. Jeśli nie można dostarczyć komunikatu z powodu błędu związanego z komunikacji lub sieci (<xref:System.ServiceModel.CommunicationException>), wiadomości jest wysyłane ponownie do alternatywnego punktu końcowego.  

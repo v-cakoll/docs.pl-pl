@@ -1,12 +1,12 @@
 ---
-title: <security> z <customBinding>
+title: <security> dla <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
 ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182042"
 ---
 # <a name="security-of-custombinding"></a>\<Zabezpieczenia > z \<customBinding >
@@ -90,7 +90,7 @@ Określa opcje zabezpieczeń dla niestandardowego powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Określa bieżący wystawiony token. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Określa bieżący wystawiony token. Ten element jest typu <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Określa ustawienia zabezpieczenia lokalnego klienta dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
 |[\<localServiceSettings>](../../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)|Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>.|  
 |[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|Określa wartości domyślne używane do inicjowania usługi bezpiecznej konwersacji.|  
@@ -175,5 +175,5 @@ Określa opcje zabezpieczeń dla niestandardowego powiązania.
 - [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Instrukcje: tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Zabezpieczenia wiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Instrukcje: Tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Zabezpieczenia powiązania niestandardowego](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

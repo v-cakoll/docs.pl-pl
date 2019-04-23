@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 109298a7945a6b76b35970b7b9c42e159bad8f90
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307477"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979384"
 ---
 # <a name="operators-c-programming-guide"></a>Operatory (Przewodnik programowania w języku C#)
 
@@ -64,12 +64,12 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Tożsamość|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negacja|  
 |[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Negacja logiczna|  
-|[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Negacja bitowa|  
+|[~](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#bitwise-complement-operator-)x|Negacja bitowa|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Preinkrementacja|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Predekrementacja|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|Jawna konwersja wartości x na typ T|  
   
- **Operatory mnożne**  
+ **Operatory mnożenia**  
   
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
@@ -86,12 +86,12 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
   
  **Operatory przesunięcia**  
   
-|Wyrażenie|Opis|  
-|----------------|-----------------|  
-|x [ < \< ](../../../csharp/language-reference/operators/left-shift-operator.md) y|Przesunięcie w lewo|  
-|x [ >> ](../../../csharp/language-reference/operators/right-shift-operator.md) y|Przesunięcie w prawo|  
+|Wyrażenie|Opis|
+|----------------|-----------------|
+|x [ < \< ](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#left-shift-operator-) y|Przesunięcie w lewo|
+|x [ >> ](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#right-shift-operator-) y|Przesunięcie w prawo|
   
- **Operatory relacyjne i operatory typów**  
+ **Relacyjne i operatory typów**  
   
 |Wyrażenie|Opis|  
 |----------------|-----------------|  
@@ -109,25 +109,25 @@ W języku C# *operator* jest elementem programu, który jest stosowany do co naj
 |x [ == ](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|Równa się|  
 |x [! =](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|Nie równa się|  
   
- **Operatory logiczne, warunkowe i równe Null**  
+ **Operatory logiczne, warunkowe i o wartości Null**  
   
-|Kategoria|Wyrażenie|Opis|  
-|--------------|----------------|-----------------|  
-|Logicznego AND|x [ & ](../../../csharp/language-reference/operators/and-operator.md) y|Bitowe AND dla wartości całkowitych, logiczne AND dla wartości binarnych|  
-|Logicznego XOR|x [ ^ ](../../../csharp/language-reference/operators/xor-operator.md) y|Liczba całkowita iloczynu bitowego XOR, logiczne XOR logiczne|  
-|Logicznego OR|x [ &#124; ](../../../csharp/language-reference/operators/or-operator.md) y|Liczba całkowita bitowego lub logiczną logiczne OR|  
-|Warunkowego AND|x [ && ](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|  
-|Warunkowego OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|  
-|Łączenia wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|  
-|Warunkowe|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|Wynikiem jest wartość y, gdy wartość x jest równa true, lub z, gdy wartość x jest równa false|  
+|Kategoria|Wyrażenie|Opis|
+|--------------|----------------|-----------------|
+|Logicznego AND|`x & y`|[Liczba całkowita iloczynu bitowego AND](../../language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-), [logiczna logiczne AND](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)|
+|Logicznego XOR|`x ^ y`|[Bitowe XOR całkowitą](../../language-reference/operators/bitwise-and-shift-operators.md#logical-exclusive-or-operator-), [logicznego XOR logiczne](../../language-reference/operators/boolean-logical-operators.md#logical-exclusive-or-operator-)|
+|Logicznego OR|`x | y`|[Bitowe OR całkowitą](../../language-reference/operators/bitwise-and-shift-operators.md#logical-or-operator-), [logiczna logiczne OR](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)|
+|Warunkowego AND|x [ && ](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa true|
+|Warunkowego OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Wartość y jest obliczana tylko wtedy, gdy wartość x jest równa false|
+|Łączenia wartości null|x [?](../../../csharp/language-reference/operators/null-coalescing-operator.md) t|Wynikiem jest wartość y, jeśli x ma wartość null; w przeciwnym razie wynikiem jest wartość x|
+|Warunkowe|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y: z|Wynikiem jest wartość y, gdy wartość x jest równa true, lub z, gdy wartość x jest równa false|
   
  **Operatory przypisania i anonimowe**  
   
-|Wyrażenie|Opis|  
-|----------------|-----------------|  
-|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Przypisanie|  
-|x op= y|Przypisanie złożone Obsługuje następujące operatory: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
-|(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Funkcja anonimowa (wyrażenie lambda)|  
+|Wyrażenie|Opis|
+|----------------|-----------------|
+|[=](../../../csharp/language-reference/operators/assignment-operator.md)|Przypisanie|
+|x op= y|Przypisanie złożone Obsługuje następujące operatory: [ += ](../../../csharp/language-reference/operators/addition-assignment-operator.md), [ -= ](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [ *= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ /= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment), [ %= ](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment) , [&=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [&#124;=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [^=](../../../csharp/language-reference/operators/boolean-logical-operators.md#compound-assignment), [<\<=](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#compound-assignment), [>>=](../../../csharp/language-reference/operators/bitwise-and-shift-operators.md#compound-assignment)|
+|(T x) [ => ](../../../csharp/language-reference/operators/lambda-operator.md) y|Funkcja anonimowa (wyrażenie lambda)|
   
 ## <a name="associativity"></a>Łączność
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
+ms.openlocfilehash: 5ff883e541c614832286b4027bc1574952f8fd3d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612728"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979914"
 ---
 # <a name="value-types-c-reference"></a>Typy wartości (C# odwołania)
 
@@ -34,7 +34,7 @@ Inaczej niż w przypadku typów referencyjnych nie może pochodzić nowy typ z t
 
 Zmienne typu wartości nie może być `null` domyślnie. Jednakże zmienne odpowiadającego [typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md) może być `null`.
 
-Różne wartości mają niejawnego domyślnego konstruktora, który jest inicjowana wartością domyślną tego typu. Aby uzyskać informacje o wartościach domyślnych typów wartości, zobacz [tabela wartości domyślnych](default-values-table.md).
+Każdy typ wartości ma niejawnego konstruktora bez parametrów, która inicjuje wartością domyślną tego typu. Aby uzyskać informacje o wartościach domyślnych typów wartości, zobacz [tabela wartości domyślnych](default-values-table.md).
 
 ## <a name="simple-types"></a>Typy proste
 
@@ -67,7 +67,7 @@ int myInt;
 Nie można użyć go, przed jej inicjalizację. Można zainicjować za pomocą następującej instrukcji:
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 Ta instrukcja jest równoważna następującej instrukcji:
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Za pomocą [nowe](new.md) operator wywołuje domyślnego konstruktora określonego typu i przypisuje wartość domyślną do zmiennej. W powyższym przykładzie konstruktora domyślnego przypisaną wartość `0` do `myInt`. Aby uzyskać więcej informacji na temat wartości przypisane przez wywołanie metody konstruktory domyślne zobacz [tabela wartości domyślnych](default-values-table.md).
+Za pomocą [nowe](new.md) operator wywołuje konstruktora bez parametrów od określonego typu i przypisuje wartość domyślną do zmiennej. W powyższym przykładzie konstruktora bez parametrów przypisaną wartość `0` do `myInt`. Aby uzyskać więcej informacji na temat wartości przypisane przez wywołanie metody konstruktory domyślne zobacz [tabela wartości domyślnych](default-values-table.md).
 
-W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](new.md) do wywołania konstruktora domyślnego. Na przykład następująca instrukcja wywołuje domyślny konstruktor obiektu `Point` struktury:
+W przypadku typów zdefiniowanych przez użytkownika, należy użyć [nowe](new.md) do wywołania konstruktora bez parametrów. Na przykład następująca instrukcja wywołuje konstruktora bez parametrów z `Point` struktury:
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Po tym wywołaniu struktury uznaje się być zdecydowanie przypisywany; oznacza to, że wszystkie jego elementy członkowskie są inicjowane do wartości domyślnych.

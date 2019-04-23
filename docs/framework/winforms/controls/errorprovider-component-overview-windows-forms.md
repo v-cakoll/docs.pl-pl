@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
 ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181184"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider — Informacje o składniku (Formularze systemu Windows)
@@ -29,5 +29,5 @@ Formularze Windows [ErrorProvider](errorprovider-component-windows-forms.md) sk�
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy systemu Windows](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Instrukcje: Wyświetl błędy w zestawie danych za pomocą składnika ErrorProvider formularzy Windows](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Instrukcje: Wyświetlanie ikon błędów weryfikacji formularza za pomocą składnika ErrorProvider formularzy Windows](display-error-icons-for-form-validation-with-wf-errorprovider.md)

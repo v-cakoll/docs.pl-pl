@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 7a99afa92c7b2cc19933eded8e06e6d8f2ce7562
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202694"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979371"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Tworzenie i zgłaszanie wyjątków (Przewodnik programowania w języku C#)
 Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania programu. Obiekty wyjątków, które opisują błąd są tworzone a następnie *zgłoszony* z [throw](../../../csharp/language-reference/keywords/throw.md) — słowo kluczowe. Środowisko uruchomieniowe wyszukuje następnie najbardziej zgodne obsługi wyjątków.  
@@ -56,7 +56,7 @@ Wyjątki są używane do wskazania, że wystąpił błąd podczas uruchamiania p
 -   Nie należy tworzyć wyjątki, które mogą być generowane w trybie debugowania, ale nie tryb wydania. Aby zidentyfikować błędy czasu wykonywania w fazie opracowywania, należy użyć debugowania potwierdzenia.  
   
 ## <a name="defining-exception-classes"></a>Definiowanie klasy wyjątków  
- Programy może zgłosić klasy wstępnie zdefiniowany wyjątek <xref:System> przestrzeni nazw (z wyjątkiem sytuacji, gdy wcześniej wspomniano), lub Utwórz własne klasy wyjątków, wynikające z <xref:System.Exception>. W klasach pochodnych należy zdefiniować co najmniej cztery konstruktory: jeden domyślny konstruktor, który ustawia właściwości wiadomości oraz jedną, która ustawia zarówno <xref:System.Exception.Message%2A> i <xref:System.Exception.InnerException%2A> właściwości. Czwarty Konstruktor jest używany do serializacji wyjątku. Nowe klasy wyjątku powinien być możliwy do serializacji. Na przykład:  
+ Programy może zgłosić klasy wstępnie zdefiniowany wyjątek <xref:System> przestrzeni nazw (z wyjątkiem sytuacji, gdy wcześniej wspomniano), lub Utwórz własne klasy wyjątków, wynikające z <xref:System.Exception>. W klasach pochodnych należy zdefiniować co najmniej cztery konstruktory: jeden konstruktor bez parametrów, który ustawia właściwości wiadomości i jedną, która ustawia zarówno <xref:System.Exception.Message%2A> i <xref:System.Exception.InnerException%2A> właściwości. Czwarty Konstruktor jest używany do serializacji wyjątku. Nowe klasy wyjątku powinien być możliwy do serializacji. Na przykład:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

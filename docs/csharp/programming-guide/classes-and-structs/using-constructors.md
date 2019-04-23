@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7422267d6ce067ed30d0fbd4be8de2fd122b4a90
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 1f47459fc5002118d94cc8d389f35c18fa2c611a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200640"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979826"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Używanie konstruktorów (Przewodnik programowania w języku C#)
 Gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md) jest utworzone, jego konstruktor jest wywoływany. Konstruktory mają taką samą nazwę jak klasy lub struktury, a zwykle inicjują członków danych nowego obiektu.  
@@ -19,9 +19,9 @@ Gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- Wywoływany jest konstruktor, który nie przyjmuje żadnych parametrów *domyślnego konstruktora*. Konstruktory domyślne są wywoływane zawsze wtedy, gdy jest tworzone wystąpienie obiektu za pomocą `new` operatora i żadne argumenty, które zostały udostępnione firmie `new`. Aby uzyskać więcej informacji, zobacz [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+ Wywoływany jest konstruktor, który nie przyjmuje żadnych parametrów *konstruktora bez parametrów*. Konstruktory domyślne są wywoływane zawsze wtedy, gdy jest tworzone wystąpienie obiektu za pomocą `new` operatora i żadne argumenty, które zostały udostępnione firmie `new`. Aby uzyskać więcej informacji, zobacz [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
- Chyba, że klasa jest [statyczne](../../../csharp/language-reference/keywords/static.md), klasy bez konstruktory są podane publicznego konstruktora domyślnego przez kompilator języka C# w celu umożliwienia tworzenia wystąpienia klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Chyba, że klasa jest [statyczne](../../../csharp/language-reference/keywords/static.md), klasy bez konstruktory są podane publicznego konstruktora bez parametrów, C# kompilatora w celu umożliwienia tworzenia wystąpienia klasy. Aby uzyskać więcej informacji, zobacz [klasy statyczne i statyczne elementy członkowskie klasy](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  Klasę można zapobiec uruchamianiu przez Konstruktor prywatny, w następujący sposób:  
   
@@ -29,7 +29,7 @@ Gdy [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury
   
  Aby uzyskać więcej informacji, zobacz [konstruktory prywatne](../../../csharp/programming-guide/classes-and-structs/private-constructors.md).  
   
- Konstruktory [struktury](../../../csharp/language-reference/keywords/struct.md) typy przypominają Konstruktory klasy, ale `structs` nie może zawierać jawne domyślnego konstruktora, ponieważ zostało ono określone automatycznie przez kompilator. Ten konstruktor inicjuje wszystkie pola w `struct` do wartości domyślnych. Aby uzyskać więcej informacji, zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Jednak to domyślny konstruktor jest wywoływana tylko jeśli `struct` jest utworzone za pomocą `new`. Na przykład, ten kod używa domyślnego konstruktora dla <xref:System.Int32>, dzięki czemu są pewność, że liczba całkowita jest zainicjowany:  
+ Konstruktory [struktury](../../../csharp/language-reference/keywords/struct.md) typy przypominają Konstruktory klasy, ale `structs` nie może zawierać jawny konstruktor bez parametrów, ponieważ zostało ono określone automatycznie przez kompilator. Ten konstruktor inicjuje wszystkie pola w `struct` do wartości domyślnych. Aby uzyskać więcej informacji, zobacz [tabela wartości domyślnych](../../../csharp/language-reference/keywords/default-values-table.md). Jednak ten konstruktor bez parametrów jest wywoływana tylko jeśli `struct` jest utworzone za pomocą `new`. Na przykład, ten kod używa konstruktora bez parametrów dla <xref:System.Int32>, dzięki czemu są pewność, że liczba całkowita jest zainicjowany:  
   
 ```csharp  
 int i = new int();  
@@ -52,9 +52,9 @@ b = 33;      // Or assign it before using it.
 Console.WriteLine("{0}, {1}", a, b);  
 ```  
   
- Dlatego wywołanie domyślnego konstruktora dla typu wartości nie jest wymagana.  
+ Dlatego wywołanie konstruktora bez parametrów dla typu wartości nie jest wymagana.  
   
- Obie klasy i `structs` mogą definiować konstruktorów, które przyjmują parametry. Konstruktory, które przyjmują parametry musi zostać wywołana przez `new` instrukcji lub [podstawowy](../../../csharp/language-reference/keywords/base.md) instrukcji. Klasy i `structs` można również zdefiniować wiele konstruktorów i nie jest wymagany do zdefiniowania domyślnego konstruktora. Na przykład:  
+ Obie klasy i `structs` mogą definiować konstruktorów, które przyjmują parametry. Konstruktory, które przyjmują parametry musi zostać wywołana przez `new` instrukcji lub [podstawowy](../../../csharp/language-reference/keywords/base.md) instrukcji. Klasy i `structs` można również zdefiniować wiele konstruktorów i nie jest wymagany do zdefiniowania konstruktora bez parametrów. Na przykład:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -68,13 +68,13 @@ Console.WriteLine("{0}, {1}", a, b);
   
  W tym przykładzie konstruktora dla klasy bazowej jest wywoływana przed wykonaniem bloku dla konstruktora. `base` — Słowo kluczowe może być używany z bez parametrów. Wszelkie parametry konstruktora może służyć jako parametry `base`, lub jako część wyrażenia. Aby uzyskać więcej informacji, zobacz [podstawowy](../../../csharp/language-reference/keywords/base.md).  
   
- W klasie pochodnej, jeśli Konstruktor klasy bazowej nie jest jawnie wywoływana przy użyciu `base` — słowo kluczowe, Konstruktor domyślny, jeśli istnieje, jest wywoływana niejawnie. Oznacza to, że następujące deklaracje Konstruktor jest praktycznie taki sam:  
+ W klasie pochodnej, jeśli Konstruktor klasy bazowej nie jest jawnie wywoływana przy użyciu `base` — słowo kluczowe, konstruktor bez parametrów, jeśli istnieje, jest wywoływana niejawnie. Oznacza to, że następujące deklaracje Konstruktor jest praktycznie taki sam:  
   
  [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
  [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
- Jeśli klasa bazowa nie oferuje domyślnego konstruktora, klasy pochodnej musi utworzyć jawnym wywołaniem konstruktora bazowego przy użyciu `base`.  
+ Jeśli klasa bazowa nie oferuje konstruktora bez parametrów, klasy pochodnej musi utworzyć jawnym wywołaniem konstruktora bazowego przy użyciu `base`.  
   
  Konstruktor może wywołać innego konstruktora w ten sam obiekt przy użyciu [to](../../../csharp/language-reference/keywords/this.md) — słowo kluczowe. Podobnie jak `base`, `this` może być używany z lub bez parametrów i parametrów w Konstruktorze są dostępne jako parametry `this`, lub jako część wyrażenia. Na przykład, drugi Konstruktor w poprzednim przykładzie może zostać przepisany z użyciem `this`:  
   

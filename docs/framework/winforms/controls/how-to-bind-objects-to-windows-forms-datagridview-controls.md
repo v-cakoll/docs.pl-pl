@@ -10,10 +10,10 @@ helpviewer_keywords:
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
 ms.openlocfilehash: 02c4f94eddfcf782d7d2323787d9b6a9b18db2d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180261"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Instrukcje: powiązanie obiektów z kontrolkami DataGridView formularzy systemu Windows
@@ -33,5 +33,5 @@ Poniższy przykład kodu pokazuje, jak powiązać kolekcji obiektów do <xref:Sy
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Instrukcje: uzyskiwanie dostępu do obiektów powiązanych z wierszami kontrolki DataGridView formularzy systemu Windows](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Instrukcje: Uzyskiwanie dostępu do obiektów powiązanych z Windows Forms wierszami formantu DataGridView](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

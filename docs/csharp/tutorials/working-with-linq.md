@@ -3,12 +3,12 @@ title: Praca z technologią LINQ
 description: Ten samouczek omawia sposób generowania sekwencji za pomocą LINQ, pisanie metody używane w kwerendach LINQ i rozróżnienie między eager i leniwa ocena.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6dbe158c5f9b474dbd2cc61982ab8e23e584ec7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815590"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979683"
 ---
 # <a name="working-with-linq"></a>Praca z technologią LINQ
 
@@ -340,9 +340,9 @@ Oprócz LINQ przedstawiono nieco dotyczących używania magicians techniki, aby 
 
 Aby uzyskać więcej informacji na temat LINQ zobacz:
 - [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [Wprowadzenie do LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [Wprowadzenie do LINQ wC#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Podstawowe operacje zapytań LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [Przekształcanie danych za pomocą LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Składnia zapytania i metody w technologii LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [Funkcje C# obsługujące LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Wprowadzenie do LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [Wprowadzenie do LINQ wC#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [Podstawowe operacje zapytań LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [Przekształcanie danych za pomocą LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [Składnia zapytania i metody w technologii LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [Funkcje C# obsługujące LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

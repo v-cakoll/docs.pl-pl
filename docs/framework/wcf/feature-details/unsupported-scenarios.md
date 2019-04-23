@@ -3,10 +3,10 @@ title: Nieobsługiwane scenariusze
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178779"
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
@@ -95,7 +95,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
   
 - `http://localhost/CalculatorService/service` (usługa)  
   
-- `http://localhost/CalculatorService/issue_ticket` (the STS)  
+- `http://localhost/CalculatorService/issue_ticket` (STS)  
   
 - `http://localhost/CalculatorService/mex` (punkt końcowy metadanych)  
   
@@ -110,7 +110,7 @@ Z różnych powodów Windows Communication Foundation (WCF) nie obsługuje niekt
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)

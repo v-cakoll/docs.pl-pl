@@ -17,29 +17,29 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc7cc4ecf710090b2cbe55657a85cb081b2fe33c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59214757"
 ---
-# <a name="iinstallreferenceitem-interface"></a><span data-ttu-id="d71f1-102">IInstallReferenceItem — Interfejs</span><span class="sxs-lookup"><span data-stu-id="d71f1-102">IInstallReferenceItem Interface</span></span>
-<span data-ttu-id="d71f1-103">Reprezentuje element, który został zainstalowany w globalnej pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="d71f1-103">Represents an item installed in the global assembly cache.</span></span>  
+# <a name="iinstallreferenceitem-interface"></a><span data-ttu-id="7fd93-102">IInstallReferenceItem — Interfejs</span><span class="sxs-lookup"><span data-stu-id="7fd93-102">IInstallReferenceItem Interface</span></span>
+<span data-ttu-id="7fd93-103">Reprezentuje element, który został zainstalowany w globalnej pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="7fd93-103">Represents an item installed in the global assembly cache.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="d71f1-104">Metody</span><span class="sxs-lookup"><span data-stu-id="d71f1-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="7fd93-104">Metody</span><span class="sxs-lookup"><span data-stu-id="7fd93-104">Methods</span></span>  
   
-|<span data-ttu-id="d71f1-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="d71f1-105">Method</span></span>|<span data-ttu-id="d71f1-106">Opis</span><span class="sxs-lookup"><span data-stu-id="d71f1-106">Description</span></span>|  
+|<span data-ttu-id="7fd93-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="7fd93-105">Method</span></span>|<span data-ttu-id="7fd93-106">Opis</span><span class="sxs-lookup"><span data-stu-id="7fd93-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="d71f1-107">GetReference, metoda</span><span class="sxs-lookup"><span data-stu-id="d71f1-107">GetReference Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|<span data-ttu-id="d71f1-108">Pobiera wskaźnik do `FUSION_INSTALL_REFERENCE` struktury reprezentowany przez ten `IInstallReferenceItem`.</span><span class="sxs-lookup"><span data-stu-id="d71f1-108">Gets a pointer to the `FUSION_INSTALL_REFERENCE` structure represented by this `IInstallReferenceItem`.</span></span>|  
+|[<span data-ttu-id="7fd93-107">GetReference, metoda</span><span class="sxs-lookup"><span data-stu-id="7fd93-107">GetReference Method</span></span>](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-getreference-method.md)|<span data-ttu-id="7fd93-108">Pobiera wskaźnik do `FUSION_INSTALL_REFERENCE` struktury reprezentowany przez ten `IInstallReferenceItem`.</span><span class="sxs-lookup"><span data-stu-id="7fd93-108">Gets a pointer to the `FUSION_INSTALL_REFERENCE` structure represented by this `IInstallReferenceItem`.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d71f1-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d71f1-109">Requirements</span></span>  
- <span data-ttu-id="d71f1-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d71f1-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7fd93-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7fd93-109">Requirements</span></span>  
+ <span data-ttu-id="7fd93-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7fd93-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d71f1-111">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="d71f1-111">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="7fd93-111">**Nagłówek:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="7fd93-111">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="d71f1-112">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="d71f1-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="7fd93-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7fd93-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d71f1-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d71f1-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7fd93-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7fd93-113">See also</span></span>
 
-- [<span data-ttu-id="d71f1-114">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="d71f1-114">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
-- [<span data-ttu-id="d71f1-115">FUSION_INSTALL_REFERENCE — Struktura</span><span class="sxs-lookup"><span data-stu-id="d71f1-115">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)
+- [<span data-ttu-id="7fd93-114">Interfejsy łączenia</span><span class="sxs-lookup"><span data-stu-id="7fd93-114">Fusion Interfaces</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+- [<span data-ttu-id="7fd93-115">FUSION_INSTALL_REFERENCE, struktura</span><span class="sxs-lookup"><span data-stu-id="7fd93-115">FUSION_INSTALL_REFERENCE Structure</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)

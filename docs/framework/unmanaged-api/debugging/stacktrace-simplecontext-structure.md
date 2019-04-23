@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210428"
 ---
-# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="983c6-102">StackTrace_SimpleContext — Struktura</span><span class="sxs-lookup"><span data-stu-id="983c6-102">StackTrace_SimpleContext Structure</span></span>
-<span data-ttu-id="983c6-103">Udostępnia prosty kontekst, który można użyć zamiast pełnego `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="983c6-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
+# <a name="stacktracesimplecontext-structure"></a><span data-ttu-id="dc184-102">StackTrace_SimpleContext — Struktura</span><span class="sxs-lookup"><span data-stu-id="dc184-102">StackTrace_SimpleContext Structure</span></span>
+<span data-ttu-id="dc184-103">Udostępnia prosty kontekst, który można użyć zamiast pełnego `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="dc184-103">Provides a simple context that can be used in place of a full `CONTEXT` structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="983c6-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="983c6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dc184-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dc184-104">Syntax</span></span>  
   
 ```  
 struct StackTrace_SimpleContext  
@@ -38,25 +38,25 @@ struct StackTrace_SimpleContext
 };  
 ```  
   
-## <a name="members"></a><span data-ttu-id="983c6-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="983c6-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dc184-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="dc184-105">Members</span></span>  
   
-|<span data-ttu-id="983c6-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="983c6-106">Member</span></span>|<span data-ttu-id="983c6-107">Opis</span><span class="sxs-lookup"><span data-stu-id="983c6-107">Description</span></span>|  
+|<span data-ttu-id="dc184-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="dc184-106">Member</span></span>|<span data-ttu-id="dc184-107">Opis</span><span class="sxs-lookup"><span data-stu-id="dc184-107">Description</span></span>|  
 |------------|-----------------|  
-|`StackOffset`|<span data-ttu-id="983c6-108">Wskaźnik stosu lub wskaźnik stosu enter (ESP) na x86 platform.</span><span class="sxs-lookup"><span data-stu-id="983c6-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
-|`FrameOffset`|<span data-ttu-id="983c6-109">Przesunięcie ramki lub zarejestruj EBP na x86 platform.</span><span class="sxs-lookup"><span data-stu-id="983c6-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
-|`InstructionOffset`|<span data-ttu-id="983c6-110">Wskaźnik instrukcji lub enter wskaźnik instrukcji (EIP) na x86 platform.</span><span class="sxs-lookup"><span data-stu-id="983c6-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
+|`StackOffset`|<span data-ttu-id="dc184-108">Wskaźnik stosu lub wskaźnik stosu enter (ESP) na x86 platform.</span><span class="sxs-lookup"><span data-stu-id="dc184-108">The stack pointer, or the enter stack pointer (ESP) on x86 platforms.</span></span>|  
+|`FrameOffset`|<span data-ttu-id="dc184-109">Przesunięcie ramki lub zarejestruj EBP na x86 platform.</span><span class="sxs-lookup"><span data-stu-id="dc184-109">The frame offset, or the EBP register on x86 platforms.</span></span>|  
+|`InstructionOffset`|<span data-ttu-id="dc184-110">Wskaźnik instrukcji lub enter wskaźnik instrukcji (EIP) na x86 platform.</span><span class="sxs-lookup"><span data-stu-id="dc184-110">The instruction pointer, or the enter instruction pointer (EIP) on x86 platforms.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="983c6-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="983c6-111">Remarks</span></span>  
- <span data-ttu-id="983c6-112">Ponieważ funkcje śledzenia stosu zazwyczaj trzeba zwrócić tylko adres, przesunięcie ramki i adresu stosu, można opcjonalnie używać `SimpleContext` struktury zamiast dużą `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="983c6-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dc184-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="dc184-111">Remarks</span></span>  
+ <span data-ttu-id="dc184-112">Ponieważ funkcje śledzenia stosu zazwyczaj trzeba zwrócić tylko adres, przesunięcie ramki i adresu stosu, można opcjonalnie używać `SimpleContext` struktury zamiast dużą `CONTEXT` struktury.</span><span class="sxs-lookup"><span data-stu-id="dc184-112">Because stack trace functions typically need to return only the address, frame offset, and stack address, you can optionally use the `SimpleContext` structure instead of a large `CONTEXT` structure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="983c6-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="983c6-113">Requirements</span></span>  
- <span data-ttu-id="983c6-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="983c6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dc184-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dc184-113">Requirements</span></span>  
+ <span data-ttu-id="dc184-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dc184-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="983c6-115">**Nagłówek:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="983c6-115">**Header:** SOS_Stacktrace.h</span></span>  
+ <span data-ttu-id="dc184-115">**Nagłówek:** SOS_Stacktrace.h</span><span class="sxs-lookup"><span data-stu-id="dc184-115">**Header:** SOS_Stacktrace.h</span></span>  
   
- **<span data-ttu-id="983c6-116">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="983c6-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="dc184-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dc184-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="983c6-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="983c6-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dc184-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dc184-117">See also</span></span>
 
-- [<span data-ttu-id="983c6-118">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="983c6-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="983c6-119">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="983c6-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="dc184-118">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="dc184-118">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="dc184-119">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="dc184-119">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

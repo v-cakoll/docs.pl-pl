@@ -18,37 +18,37 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ab30e1f80be71b42a131afe68e38f0b2731ae60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212950"
 ---
-# <a name="isymunmanagedwriterclosescope-method"></a><span data-ttu-id="57a2b-102">ISymUnmanagedWriter::CloseScope — Metoda</span><span class="sxs-lookup"><span data-stu-id="57a2b-102">ISymUnmanagedWriter::CloseScope Method</span></span>
-<span data-ttu-id="57a2b-103">Zamyka bieżący zakresie leksykalnym.</span><span class="sxs-lookup"><span data-stu-id="57a2b-103">Closes the current lexical scope.</span></span>  
+# <a name="isymunmanagedwriterclosescope-method"></a><span data-ttu-id="a1271-102">ISymUnmanagedWriter::CloseScope — Metoda</span><span class="sxs-lookup"><span data-stu-id="a1271-102">ISymUnmanagedWriter::CloseScope Method</span></span>
+<span data-ttu-id="a1271-103">Zamyka bieżący zakresie leksykalnym.</span><span class="sxs-lookup"><span data-stu-id="a1271-103">Closes the current lexical scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="57a2b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="57a2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1271-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a1271-104">Syntax</span></span>  
   
 ```  
 HRESULT CloseScope(  
     [in] ULONG32 endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="57a2b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="57a2b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a1271-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a1271-105">Parameters</span></span>  
  `endOffset`  
- <span data-ttu-id="57a2b-106">[in] Przesunięcie od początku metody punktu na końcu ostatniego instrukcji w zakresie leksykalnym, w bajtach.</span><span class="sxs-lookup"><span data-stu-id="57a2b-106">[in] The offset from the beginning of the method of the point at the end of the last instruction in the lexical scope, in bytes.</span></span>  
+ <span data-ttu-id="a1271-106">[in] Przesunięcie od początku metody punktu na końcu ostatniego instrukcji w zakresie leksykalnym, w bajtach.</span><span class="sxs-lookup"><span data-stu-id="a1271-106">[in] The offset from the beginning of the method of the point at the end of the last instruction in the lexical scope, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="57a2b-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="57a2b-107">Return Value</span></span>  
- <span data-ttu-id="57a2b-108">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="57a2b-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a1271-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="a1271-107">Return Value</span></span>  
+ <span data-ttu-id="a1271-108">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="a1271-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="57a2b-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="57a2b-109">Remarks</span></span>  
- <span data-ttu-id="57a2b-110">Po zamknięciu zakresu nie więcej zmiennych można zdefiniować w nim.</span><span class="sxs-lookup"><span data-stu-id="57a2b-110">Once a scope is closed, no more variables can be defined within it.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a1271-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a1271-109">Remarks</span></span>  
+ <span data-ttu-id="a1271-110">Po zamknięciu zakresu nie więcej zmiennych można zdefiniować w nim.</span><span class="sxs-lookup"><span data-stu-id="a1271-110">Once a scope is closed, no more variables can be defined within it.</span></span>  
   
- <span data-ttu-id="57a2b-111">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) zwraca identyfikator nieprzezroczysty zakres, który może być używany z [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) później określić zakres użytkownika początkowe i końcowe przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="57a2b-111">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to later define a scope's starting and ending offset.</span></span> <span data-ttu-id="57a2b-112">W tym przypadku przesunięcia przekazany do `ISymUnmanagedWriter::OpenScope` i `ISymUnmanagedWriter::CloseScope` są ignorowane.</span><span class="sxs-lookup"><span data-stu-id="57a2b-112">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and `ISymUnmanagedWriter::CloseScope` are ignored.</span></span> <span data-ttu-id="57a2b-113">Zakres identyfikatorów są prawidłowe tylko w bieżącej metodzie.</span><span class="sxs-lookup"><span data-stu-id="57a2b-113">Scope identifiers are valid only in the current method.</span></span>  
+ <span data-ttu-id="a1271-111">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) zwraca identyfikator nieprzezroczysty zakres, który może być używany z [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) później określić zakres użytkownika początkowe i końcowe przesunięcie.</span><span class="sxs-lookup"><span data-stu-id="a1271-111">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to later define a scope's starting and ending offset.</span></span> <span data-ttu-id="a1271-112">W tym przypadku przesunięcia przekazany do `ISymUnmanagedWriter::OpenScope` i `ISymUnmanagedWriter::CloseScope` są ignorowane.</span><span class="sxs-lookup"><span data-stu-id="a1271-112">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and `ISymUnmanagedWriter::CloseScope` are ignored.</span></span> <span data-ttu-id="a1271-113">Zakres identyfikatorów są prawidłowe tylko w bieżącej metodzie.</span><span class="sxs-lookup"><span data-stu-id="a1271-113">Scope identifiers are valid only in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="57a2b-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="57a2b-114">Requirements</span></span>  
- <span data-ttu-id="57a2b-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="57a2b-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1271-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a1271-114">Requirements</span></span>  
+ <span data-ttu-id="a1271-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a1271-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="57a2b-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="57a2b-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1271-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a1271-116">See also</span></span>
 
-- [<span data-ttu-id="57a2b-117">ISymUnmanagedWriter — Interfejs</span><span class="sxs-lookup"><span data-stu-id="57a2b-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="a1271-117">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="a1271-117">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

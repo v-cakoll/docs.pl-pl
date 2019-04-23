@@ -7,28 +7,28 @@ helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
 ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209745"
 ---
-# <a name="typography-how-to-topics"></a><span data-ttu-id="52e4b-102">Typografia Tematy porad</span><span class="sxs-lookup"><span data-stu-id="52e4b-102">Typography How-to Topics</span></span>
-<span data-ttu-id="52e4b-103">Tematy w tej sekcji opisano sposób korzystania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pomocy technicznej, aby obejrzeć prezentację sformatowanego tekstu w swoich aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="52e4b-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
+# <a name="typography-how-to-topics"></a><span data-ttu-id="ee500-102">Typografia Tematy porad</span><span class="sxs-lookup"><span data-stu-id="ee500-102">Typography How-to Topics</span></span>
+<span data-ttu-id="ee500-103">Tematy w tej sekcji opisano sposób korzystania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pomocy technicznej, aby obejrzeć prezentację sformatowanego tekstu w swoich aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="ee500-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="52e4b-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="52e4b-104">In This Section</span></span>  
- [<span data-ttu-id="52e4b-105">Tworzenie dekoracji tekstu</span><span class="sxs-lookup"><span data-stu-id="52e4b-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
- [<span data-ttu-id="52e4b-106">Określanie, czy hiperlink jest podkreślony</span><span class="sxs-lookup"><span data-stu-id="52e4b-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [<span data-ttu-id="52e4b-107">Stosowanie przekształceń do tekstu</span><span class="sxs-lookup"><span data-stu-id="52e4b-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
- [<span data-ttu-id="52e4b-108">Stosowanie animacji do tekstu</span><span class="sxs-lookup"><span data-stu-id="52e4b-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
- [<span data-ttu-id="52e4b-109">Tworzenie tekstu z cieniem</span><span class="sxs-lookup"><span data-stu-id="52e4b-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
- [<span data-ttu-id="52e4b-110">Tworzenie tekstu z konturem</span><span class="sxs-lookup"><span data-stu-id="52e4b-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
- [<span data-ttu-id="52e4b-111">Rysowanie tekstu w tle kontrolki</span><span class="sxs-lookup"><span data-stu-id="52e4b-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
- [<span data-ttu-id="52e4b-112">Rysowanie tekstu w wizualizacji</span><span class="sxs-lookup"><span data-stu-id="52e4b-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
- [<span data-ttu-id="52e4b-113">Używanie znaku specjalnego w XAML</span><span class="sxs-lookup"><span data-stu-id="52e4b-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
+## <a name="in-this-section"></a><span data-ttu-id="ee500-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="ee500-104">In This Section</span></span>  
+ [<span data-ttu-id="ee500-105">Tworzenie dekoracji tekstu</span><span class="sxs-lookup"><span data-stu-id="ee500-105">Create a Text Decoration</span></span>](how-to-create-a-text-decoration.md)  
+ [<span data-ttu-id="ee500-106">Określanie, czy hiperlink jest podkreślony</span><span class="sxs-lookup"><span data-stu-id="ee500-106">Specify Whether a Hyperlink is Underlined</span></span>](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [<span data-ttu-id="ee500-107">Stosowanie przekształceń do tekstu</span><span class="sxs-lookup"><span data-stu-id="ee500-107">Apply Transforms to Text</span></span>](how-to-apply-transforms-to-text.md)  
+ [<span data-ttu-id="ee500-108">Stosowanie animacji do tekstu</span><span class="sxs-lookup"><span data-stu-id="ee500-108">Apply Animations to Text</span></span>](how-to-apply-animations-to-text.md)  
+ [<span data-ttu-id="ee500-109">Tworzenie tekstu z cieniem</span><span class="sxs-lookup"><span data-stu-id="ee500-109">Create Text with a Shadow</span></span>](how-to-create-text-with-a-shadow.md)  
+ [<span data-ttu-id="ee500-110">Tworzenie tekstu z konturem</span><span class="sxs-lookup"><span data-stu-id="ee500-110">Create Outlined Text</span></span>](how-to-create-outlined-text.md)  
+ [<span data-ttu-id="ee500-111">Rysowanie tekstu w tle kontrolki</span><span class="sxs-lookup"><span data-stu-id="ee500-111">Draw Text to a Control's Background</span></span>](how-to-draw-text-to-a-control-background.md)  
+ [<span data-ttu-id="ee500-112">Rysowanie tekstu w wizualizacji</span><span class="sxs-lookup"><span data-stu-id="ee500-112">Draw Text to a Visual</span></span>](how-to-draw-text-to-a-visual.md)  
+ [<span data-ttu-id="ee500-113">Używanie znaku specjalnego w XAML</span><span class="sxs-lookup"><span data-stu-id="ee500-113">Use Special Characters in XAML</span></span>](how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a><span data-ttu-id="52e4b-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="52e4b-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ee500-114">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ee500-114">See also</span></span>
 
 - <xref:System.Windows.Documents.Typography>
-- [<span data-ttu-id="52e4b-115">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="52e4b-115">Documents in WPF</span></span>](documents-in-wpf.md)
-- [<span data-ttu-id="52e4b-116">OpenType funkcje czcionki</span><span class="sxs-lookup"><span data-stu-id="52e4b-116">OpenType Font Features</span></span>](opentype-font-features.md)
+- [<span data-ttu-id="ee500-115">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="ee500-115">Documents in WPF</span></span>](documents-in-wpf.md)
+- [<span data-ttu-id="ee500-116">Funkcje czcionki OpenType</span><span class="sxs-lookup"><span data-stu-id="ee500-116">OpenType Font Features</span></span>](opentype-font-features.md)

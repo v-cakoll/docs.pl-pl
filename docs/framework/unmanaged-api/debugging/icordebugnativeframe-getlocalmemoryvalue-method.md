@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c44f3e369ac64773811a6aea74756783dedd2fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209466"
 ---
-# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="ca068-102">ICorDebugNativeFrame::GetLocalMemoryValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="ca068-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
-<span data-ttu-id="ca068-103">Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w określonej lokalizacji pamięci dla tej ramki natywne.</span><span class="sxs-lookup"><span data-stu-id="ca068-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="9e362-102">ICorDebugNativeFrame::GetLocalMemoryValue — Metoda</span><span class="sxs-lookup"><span data-stu-id="9e362-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
+<span data-ttu-id="9e362-103">Pobiera wartość argumentu lub zmiennej lokalnej, która jest przechowywana w określonej lokalizacji pamięci dla tej ramki natywne.</span><span class="sxs-lookup"><span data-stu-id="9e362-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca068-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ca068-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9e362-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9e362-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryValue (  
@@ -38,26 +38,26 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ca068-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ca068-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9e362-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9e362-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="ca068-106">[in] A `CORDB_ADDRESS` wartość, która określa lokalizację zawierającą wartość w pamięci.</span><span class="sxs-lookup"><span data-stu-id="ca068-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
+ <span data-ttu-id="9e362-106">[in] A `CORDB_ADDRESS` wartość, która określa lokalizację zawierającą wartość w pamięci.</span><span class="sxs-lookup"><span data-stu-id="9e362-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="ca068-107">[in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niej `pvSigBlob` parametru.</span><span class="sxs-lookup"><span data-stu-id="ca068-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="9e362-107">[in] Liczba całkowita określająca rozmiar podpisu metadanych binarny, który odwołuje się do niej `pvSigBlob` parametru.</span><span class="sxs-lookup"><span data-stu-id="9e362-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="ca068-108">[in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarny o typie wartości.</span><span class="sxs-lookup"><span data-stu-id="ca068-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="9e362-108">[in] A `PCCOR_SIGNATURE` wartość, która wskazuje podpisu metadanych binarny o typie wartości.</span><span class="sxs-lookup"><span data-stu-id="9e362-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="ca068-109">[out] Wskaźnik na adres "ICorDebugValue" obiekt reprezentujący pobrana wartość, która jest przechowywana w określonej lokalizacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="ca068-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
+ <span data-ttu-id="9e362-109">[out] Wskaźnik na adres "ICorDebugValue" obiekt reprezentujący pobrana wartość, która jest przechowywana w określonej lokalizacji pamięci.</span><span class="sxs-lookup"><span data-stu-id="9e362-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca068-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ca068-110">Requirements</span></span>  
- <span data-ttu-id="ca068-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca068-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9e362-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9e362-110">Requirements</span></span>  
+ <span data-ttu-id="9e362-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9e362-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca068-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ca068-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9e362-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9e362-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ca068-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ca068-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9e362-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9e362-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="ca068-114">Wersje programu .NET framework:</span><span class="sxs-lookup"><span data-stu-id="ca068-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="9e362-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9e362-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca068-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ca068-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9e362-115">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9e362-115">See also</span></span>

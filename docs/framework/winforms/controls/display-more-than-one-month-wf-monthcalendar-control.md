@@ -12,18 +12,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
 ms.openlocfilehash: 79100b52d8e0a5b651edb9d6555a4497287ed858
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209557"
 ---
-# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="c17d1-102">Instrukcje: wyświetlanie większej niż jeden liczby miesięcy w kontrolce MonthCalendar formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c17d1-102">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>
-<span data-ttu-id="c17d1-103">Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlić maksymalnie 12 miesięcy w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="c17d1-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control can display up to 12 months at a time.</span></span> <span data-ttu-id="c17d1-104">Domyślnie kontrolka ma wyświetlać tylko jeden miesiąc, ale można określić liczbę miesięcy są wyświetlane i jak są rozmieszczone w kontrolce.</span><span class="sxs-lookup"><span data-stu-id="c17d1-104">By default, the control displays only one month, but you can specify how many months are displayed and how they are arranged within the control.</span></span> <span data-ttu-id="c17d1-105">Po zmianie wymiary kalendarza zmieni się rozmiar kontrolki, dlatego upewnij się, że jest wystarczająco dużo miejsca w formularzu dla nowych wymiarów.</span><span class="sxs-lookup"><span data-stu-id="c17d1-105">When you change the calendar dimensions, the control is resized, so be sure there is enough room on the form for the new dimensions.</span></span>  
+# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a><span data-ttu-id="519a4-102">Instrukcje: wyświetlanie większej niż jeden liczby miesięcy w kontrolce MonthCalendar formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="519a4-102">How to: Display More than One Month in the Windows Forms MonthCalendar Control</span></span>
+<span data-ttu-id="519a4-103">Formularze Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlić maksymalnie 12 miesięcy w danym momencie.</span><span class="sxs-lookup"><span data-stu-id="519a4-103">The Windows Forms <xref:System.Windows.Forms.MonthCalendar> control can display up to 12 months at a time.</span></span> <span data-ttu-id="519a4-104">Domyślnie kontrolka ma wyświetlać tylko jeden miesiąc, ale można określić liczbę miesięcy są wyświetlane i jak są rozmieszczone w kontrolce.</span><span class="sxs-lookup"><span data-stu-id="519a4-104">By default, the control displays only one month, but you can specify how many months are displayed and how they are arranged within the control.</span></span> <span data-ttu-id="519a4-105">Po zmianie wymiary kalendarza zmieni się rozmiar kontrolki, dlatego upewnij się, że jest wystarczająco dużo miejsca w formularzu dla nowych wymiarów.</span><span class="sxs-lookup"><span data-stu-id="519a4-105">When you change the calendar dimensions, the control is resized, so be sure there is enough room on the form for the new dimensions.</span></span>  
   
-### <a name="to-display-multiple-months"></a><span data-ttu-id="c17d1-106">Aby wyświetlić wiele miesięcy</span><span class="sxs-lookup"><span data-stu-id="c17d1-106">To display multiple months</span></span>  
+### <a name="to-display-multiple-months"></a><span data-ttu-id="519a4-106">Aby wyświetlić wiele miesięcy</span><span class="sxs-lookup"><span data-stu-id="519a4-106">To display multiple months</span></span>  
   
--   <span data-ttu-id="c17d1-107">Ustaw <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> liczbę miesięcy do wyświetlenia w poziomie i w pionie.</span><span class="sxs-lookup"><span data-stu-id="c17d1-107">Set the <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> property to the number of months to display horizontally and vertically.</span></span>  
+-   <span data-ttu-id="519a4-107">Ustaw <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> liczbę miesięcy do wyświetlenia w poziomie i w pionie.</span><span class="sxs-lookup"><span data-stu-id="519a4-107">Set the <xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A> property to the number of months to display horizontally and vertically.</span></span>  
   
     ```vb  
     MonthCalendar1.CalendarDimensions = New System.Drawing.Size (3,2)  
@@ -37,8 +37,8 @@ ms.locfileid: "59209557"
     monthCalendar1->CalendarDimensions = System::Drawing::Size (3,2);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c17d1-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c17d1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="519a4-108">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="519a4-108">See also</span></span>
 
-- [<span data-ttu-id="c17d1-109">MonthCalendar, kontrolka</span><span class="sxs-lookup"><span data-stu-id="c17d1-109">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
-- [<span data-ttu-id="c17d1-110">Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c17d1-110">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [<span data-ttu-id="c17d1-111">Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c17d1-111">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)
+- [<span data-ttu-id="519a4-109">MonthCalendar, kontrolka</span><span class="sxs-lookup"><span data-stu-id="519a4-109">MonthCalendar Control</span></span>](monthcalendar-control-windows-forms.md)
+- [<span data-ttu-id="519a4-110">Instrukcje: Wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="519a4-110">How to: Select a Range of Dates in the Windows Forms MonthCalendar Control</span></span>](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [<span data-ttu-id="519a4-111">Instrukcje: Zmienianie wyglądu formantu MonthCalendar formularzy Windows</span><span class="sxs-lookup"><span data-stu-id="519a4-111">How to: Change the Windows Forms MonthCalendar Control's Appearance</span></span>](how-to-change-monthcalendar-control-appearance.md)

@@ -1,58 +1,51 @@
-items:
 - name: Wzorce programowania asynchronicznego
   href: index.md
   items:
-  - name: Wzorzec asynchroniczny oparty na zadaniach (TAP)
-    href: task-based-asynchronous-pattern-tap.md
-    items:
-    - name: Implementacja wzorca asynchronicznego opartego na zadaniach
-      href: implementing-the-task-based-asynchronous-pattern.md
-    - name: Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
-      href: consuming-the-task-based-asynchronous-pattern.md
-    - name: Współdziałanie z innymi wzorcami asynchronicznymi i typami
-      href: interop-with-other-asynchronous-patterns-and-types.md
-  - name: Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
-    href: event-based-asynchronous-pattern-eap.md
-    items:
-    - name: Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
-      href: event-based-asynchronous-pattern-overview.md
-    - name: Implementacja wzorca asynchronicznego opartego na zdarzeniach
-      href: implementing-the-event-based-asynchronous-pattern.md
-    - name: Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
-      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
-    - name: Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
-      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-    - name: 'Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
-      href: component-that-supports-the-event-based-asynchronous-pattern.md
-    - name: 'Instrukcje: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach'
-      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-    - name: 'Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach'
-      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
-  - name: Model programowania asynchronicznego (APM)
-    href: asynchronous-programming-model-apm.md
-    items:
-    - name: Wywołanie metod asynchronicznych za pomocą interfejsu IAsyncResult
-      href: calling-asynchronous-methods-using-iasyncresult.md
+    - name: Wzorzec asynchroniczny oparty na zadaniach (TAP)
+      href: task-based-asynchronous-pattern-tap.md
       items:
-      - name: Blokowanie wykonania aplikacji za pomocą właściwości AsyncWaitHandle
-        href: blocking-application-execution-using-an-asyncwaithandle.md
-      - name: Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej
-        href: blocking-application-execution-by-ending-an-async-operation.md
-      - name: Sondowanie stanu operacji asynchronicznych
-        href: polling-for-the-status-of-an-asynchronous-operation.md
-      - name: Używanie delegata AsyncCallback do kończenia operacji asynchronicznej
-        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
-        items:
-        - name: Używanie delegata AsyncCallback i obiektu stanu
-          href: using-an-asynccallback-delegate-and-state-object.md
-    - name: Programowanie asynchroniczne przy użyciu delegatów
-      href: asynchronous-programming-using-delegates.md
+        - name: Implementacja wzorca asynchronicznego opartego na zadaniach
+          href: implementing-the-task-based-asynchronous-pattern.md
+        - name: Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
+          href: consuming-the-task-based-asynchronous-pattern.md
+        - name: Współdziałanie z innymi wzorcami asynchronicznymi i typami
+          href: interop-with-other-asynchronous-patterns-and-types.md
+    - name: Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
+      href: event-based-asynchronous-pattern-eap.md
       items:
-      - name: Wywołanie metod synchronicznych w sposób asynchroniczny
-        href: calling-synchronous-methods-asynchronously.md
-ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471473"
+        - name: Asynchroniczny wzorzec oparty na zdarzeniach — przegląd
+          href: event-based-asynchronous-pattern-overview.md
+        - name: Implementacja wzorca asynchronicznego opartego na zdarzeniach
+          href: implementing-the-event-based-asynchronous-pattern.md
+        - name: Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
+          href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+        - name: Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
+          href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+        - name: 'Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach'
+          href: component-that-supports-the-event-based-asynchronous-pattern.md
+        - name: 'Instrukcje: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach'
+          href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+        - name: 'Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach'
+          href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+    - name: Model programowania asynchronicznego (APM)
+      href: asynchronous-programming-model-apm.md
+      items:
+        - name: Wywołanie metod asynchronicznych za pomocą interfejsu IAsyncResult
+          href: calling-asynchronous-methods-using-iasyncresult.md
+          items:
+            - name: Blokowanie wykonania aplikacji za pomocą właściwości AsyncWaitHandle
+              href: blocking-application-execution-using-an-asyncwaithandle.md
+            - name: Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej
+              href: blocking-application-execution-by-ending-an-async-operation.md
+            - name: Sondowanie stanu operacji asynchronicznych
+              href: polling-for-the-status-of-an-asynchronous-operation.md
+            - name: Używanie delegata AsyncCallback do kończenia operacji asynchronicznej
+              href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+              items:
+                - name: Używanie delegata AsyncCallback i obiektu stanu
+                  href: using-an-asynccallback-delegate-and-state-object.md
+        - name: Programowanie asynchroniczne przy użyciu delegatów
+          href: asynchronous-programming-using-delegates.md
+          items:
+            - name: Wywołanie metod synchronicznych w sposób asynchroniczny
+              href: calling-synchronous-methods-asynchronously.md

@@ -17,11 +17,11 @@ ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811511"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
  Wyrażenie regularne to wzorzec, który aparat wyrażeń regularnych próbuje dopasować w tekście wejściowym. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie – zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -191,7 +191,7 @@ ms.locfileid: "58410527"
   
 |Konstrukcja|Definicja|Przykład|  
 |---------------|----------------|-------------|  
-|`(?imnsx-imnsx)`|Ustawia lub wyłącza opcje, takie jak ignorowanie wielkości liter w środku wzorca. Aby uzyskać więcej informacji, zobacz [Regular Expression Options](regular-expression-options.md).|`\bA(?i)b\w+\b` Dopasowuje `"ABA"`, `"Able"` w `"ABA Able Act"`|  
+|`(?imnsx-imnsx)`|Ustawia lub wyłącza opcje, takie jak ignorowanie wielkości liter w środku wzorca. Aby uzyskać więcej informacji, zobacz [Opcje wyrażeń regularnych](regular-expression-options.md).|`\bA(?i)b\w+\b` Dopasowuje `"ABA"`, `"Able"` w `"ABA Able Act"`|  
 |`(?#` *Komentarz* `)`|Komentarz w tekście. Komentarz kończy się przy pierwszym nawiasie zamykającym.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [do końca wiersza]|Komentarz trybu X. Komentarz rozpoczyna się od niekodowanego `#` i kontynuuje do końca wiersza.|`(?x)\bA\w+\b#Matches words starting with A`|  
   

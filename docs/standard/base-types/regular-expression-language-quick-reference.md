@@ -199,7 +199,7 @@ ms.locfileid: "61811511"
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [Regular Expressions](regular-expressions.md)
+- [Wyrażenia regularne](regular-expressions.md)
 - [Klasy wyrażeń regularnych](the-regular-expression-object-model.md)
 - [Przykłady wyrażeń regularnych](regular-expression-examples.md)
 - [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)

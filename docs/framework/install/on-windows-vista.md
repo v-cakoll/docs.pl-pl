@@ -7,10 +7,10 @@ ms.author: mairaw
 ms.date: 04/18/2019
 ms.openlocfilehash: 1c83aca2b2c05b33bb0f05b6f4884d4a1e55dc28
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643731"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Instalowanie programu .NET Framework w systemach Windows Vista i Windows Server 2008
 

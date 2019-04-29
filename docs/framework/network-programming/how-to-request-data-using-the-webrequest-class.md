@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: 368b8d0f-dc5e-4469-a8b8-b2adbf5dd800
 ms.openlocfilehash: 1d8f501e90f3942bbfd95fc06e9fdd79d8f6430e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642532"
 ---
 # <a name="how-to-request-data-by-using-the-webrequest-class"></a>Instrukcje: Żądanie danych przy użyciu klasy WebRequest
 Poniższa procedura opisuje kroki, aby zażądać zasobu, np. strony sieci Web lub plik z serwera. Zasób musi być identyfikowany przez identyfikator URI.  

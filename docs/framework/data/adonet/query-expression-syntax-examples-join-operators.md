@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f4d86667-3392-470d-a076-5ca6cbb660f6
 ms.openlocfilehash: c0bc66bfe78a52fe092890c070c339df1a89199d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637679"
 ---
 # <a name="query-expression-syntax-examples-join-operators-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Dołącz do operatorów (LINQ to DataSet)
 Łączenie jest operacją ważne w zapytaniach, przeznaczonych dla źródeł danych, które mają żadnych relacji można nawigować do siebie nawzajem, takich jak tabel relacyjnej bazy danych. Przyłączenia dwóch źródeł danych jest skojarzenie obiektów w jednym źródle danych przy użyciu obiektów mających wspólny atrybut w źródle danych. Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) lub [standardowe operatory zapytań — Przegląd (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

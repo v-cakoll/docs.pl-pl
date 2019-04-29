@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d17b5831-9a2c-45c4-b0d1-68f48e72e861
 author: BrucePerlerMS
 ms.openlocfilehash: 6bc185572528d4229ee53f1421eaa5bf27b053e6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667226"
 ---
 # <a name="claimtype"></a>\<claimType>
 Określa pojedynczy opcjonalne lub wymagane oświadczenia przychodzące tokeny zabezpieczające.  

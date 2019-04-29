@@ -11,20 +11,20 @@ helpviewer_keywords:
 - horizontal alignment of Tilebrushes [WPF]
 ms.assetid: 65ae89bd-9246-4c9e-bde4-2fb991d4060d
 ms.openlocfilehash: ddef63bba7fce1bfb8d50b4f2dbaaddfa76709ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651326"
 ---
 # <a name="how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush"></a>Instrukcje: Ustawianie wyrównania elementu TileBrush w poziomie i pionie
 W tym przykładzie pokazano, jak kontrolować wyrównanie poziome i pionowe zawartości we fragmencie. Aby kontrolować wyrównanie poziome i pionowe <xref:System.Windows.Media.TileBrush>, użyj jej <xref:System.Windows.Media.TileBrush.AlignmentX%2A> i <xref:System.Windows.Media.TileBrush.AlignmentY%2A> właściwości.  
   
  <xref:System.Windows.Media.TileBrush.AlignmentX%2A> i <xref:System.Windows.Media.TileBrush.AlignmentY%2A> właściwości <xref:System.Windows.Media.TileBrush> są używane podczas jest spełniony jeden z następujących warunków:  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwość <xref:System.Windows.Media.Stretch.Uniform> lub <xref:System.Windows.Media.Stretch.UniformToFill> i <xref:System.Windows.Media.TileBrush.Viewbox%2A> i <xref:System.Windows.Media.TileBrush.Viewport%2A> mają różnych współczynnikach proporcji.  
+- <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwość <xref:System.Windows.Media.Stretch.Uniform> lub <xref:System.Windows.Media.Stretch.UniformToFill> i <xref:System.Windows.Media.TileBrush.Viewbox%2A> i <xref:System.Windows.Media.TileBrush.Viewport%2A> mają różnych współczynnikach proporcji.  
   
--   <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwość <xref:System.Windows.Media.Stretch.None> i <xref:System.Windows.Media.TileBrush.Viewbox%2A> i <xref:System.Windows.Media.TileBrush.Viewport%2A> mają różne rozmiary.  
+- <xref:System.Windows.Media.TileBrush.Stretch%2A> Właściwość <xref:System.Windows.Media.Stretch.None> i <xref:System.Windows.Media.TileBrush.Viewbox%2A> i <xref:System.Windows.Media.TileBrush.Viewport%2A> mają różne rozmiary.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład Wyrównuje zawartość <xref:System.Windows.Media.DrawingBrush>, który jest typem <xref:System.Windows.Media.TileBrush>, do lewego górnego rogu jej Kafelek. Aby wyrównać zawartości, na przykład ustawia <xref:System.Windows.Media.TileBrush.AlignmentX%2A> właściwość <xref:System.Windows.Media.DrawingBrush> do <xref:System.Windows.Media.AlignmentX.Left> i <xref:System.Windows.Media.TileBrush.AlignmentY%2A> właściwość <xref:System.Windows.Media.AlignmentY.Top>. Ten przykład generuje następujące dane wyjściowe.  

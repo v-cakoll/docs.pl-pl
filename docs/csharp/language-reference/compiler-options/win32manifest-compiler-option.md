@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 ms.openlocfilehash: 9718febfe5aefba75decc133ad2113b64e4547de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662222"
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opcje kompilatora C#)
 Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownika aplikacji plik manifestu Win32 osadzanego do projektu przenośnych plików wykonywalnych (PE) pliku.  
@@ -38,9 +38,9 @@ Użyj **-win32manifest** opcję, aby określić zdefiniowanych przez użytkownik
   
  Twoja aplikacja będzie wirtualizacji, jeśli jest spełniony jeden z następujących warunków:  
   
--   Możesz użyć **-nowin32manifest** opcji nie są oferowane manifest na późniejszym etapie kompilacji lub jako część pliku Windows zasobów (.res) przy użyciu **-win32res** opcji.  
+- Możesz użyć **-nowin32manifest** opcji nie są oferowane manifest na późniejszym etapie kompilacji lub jako część pliku Windows zasobów (.res) przy użyciu **-win32res** opcji.  
   
--   Możesz podać niestandardowy manifest, który nie określa wymagany poziom wykonywania.  
+- Możesz podać niestandardowy manifest, który nie określa wymagany poziom wykonywania.  
   
  Visual Studio tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release, wraz z pliku wykonywalnego. Aby dodać niestandardowy manifest, tworząc go w dowolnym edytorze tekstów, a następnie dodanie go do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy **projektu** ikonę **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij przycisk **Plikmanifestuaplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu, pojawi się na **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   

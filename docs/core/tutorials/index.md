@@ -6,11 +6,11 @@ ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
 ms.openlocfilehash: 794aa91e11f8d7386d3fe98f692e245e8af95eaa
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647245"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Dowiedz się, .NET Core oraz narzędzia .NET Core SDK, eksplorując te samouczki
 
@@ -30,7 +30,7 @@ Następujące samouczki są dostępne dla zapoznać się z platformą .NET Core.
 ## <a name="building-applications-with-visual-studio-code"></a>Tworzenie aplikacji za pomocą programu Visual Studio Code
 
 - [Wprowadzenie do języka C# i programu Visual Studio Code](with-visual-studio-code.md)
-- [Rozpoczynanie pracy z platformą .NET Core w systemie macOS](using-on-macos.md)
+- [Wprowadzenie do platformy .NET Core w systemie macOS](using-on-macos.md)
 
 ## <a name="building-applications-with-visual-studio-for-mac"></a>Tworzenie aplikacji za pomocą programu Visual Studio dla komputerów Mac
 

@@ -3,11 +3,11 @@ title: 'Instrukcje: Sortowanie elementów na wielu kluczach (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
 ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614213"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Instrukcje: Sortowanie elementów na wielu kluczach (Visual Basic)
 W tym temacie pokazano, jak ma być wykonywane sortowanie wielu kluczy.  

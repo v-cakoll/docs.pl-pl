@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651522"
 ---
 # <a name="three-categories-of-graphics-services"></a>Trzy kategorie usług grafiki
 Oferty grafiki w formularzach Windows Forms dzielą się na trzech ogólnych kategorii:  
   
--   Grafiki dwuwymiarowej wektorowej (2-D)  
+- Grafiki dwuwymiarowej wektorowej (2-D)  
   
--   Tworzenie obrazu  
+- Tworzenie obrazu  
   
--   Typografia  
+- Typografia  
   
 ## <a name="2-d-vector-graphics"></a>Grafika wektorowa 2-D  
  Grafika wektorowa dwuwymiarową są w nim elementów podstawowych; przykład linii, krzywych i liczby; które są określone przez zestawy punktów na układ współrzędnych. Na przykład prostej jest określony przez jego dwa punkty końcowe i określonej przez punkt, dzięki czemu położenie jego lewego górnego rogu oraz pary numerów, dzięki czemu jego szerokość i wysokość prostokąta. Ścieżek prostych jest określany przez tablicę punkty, które są połączone liniami proste. Krzywej Beziera jest zaawansowane krzywej określony przez punkty kontrolne cztery.  

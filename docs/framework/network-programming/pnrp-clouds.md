@@ -3,11 +3,11 @@ title: Chmury PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
 ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641986"
 ---
 # <a name="pnrp-clouds"></a>Chmury PNRP
 PNRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze sobą za pośrednictwem sieci. Termin "chmura" jest synonimem "siatki elementów równorzędnych" i "peer-to-peer grafu".  
@@ -18,9 +18,9 @@ PNRP "chmura" reprezentuje zestaw węzłów, które mogą komunikować się ze s
   
  Protokół PNRP używa trzech chmury "zakresów", w których zakresie to grupa komputerów, które są w stanie odnajdować:  
   
--   Chmury globalnej odnosi się do globalnego zakresu adresów IPv6 i adresy globalne i przedstawia wszystkie komputery w cały Internet IPv6. Istnieje tylko jednej chmury globalnej.  
+- Chmury globalnej odnosi się do globalnego zakresu adresów IPv6 i adresy globalne i przedstawia wszystkie komputery w cały Internet IPv6. Istnieje tylko jednej chmury globalnej.  
   
--   Chmura link-local odpowiada zakres adresów IPv6 połączenia lokalnego i adresów połączenia lokalnego. Chmura połączenia lokalnego jest jedno łącze jest zwykle taka sama, jak podsieć, podłączonych lokalnie. Może istnieć wiele chmur połączenia lokalnego.  
+- Chmura link-local odpowiada zakres adresów IPv6 połączenia lokalnego i adresów połączenia lokalnego. Chmura połączenia lokalnego jest jedno łącze jest zwykle taka sama, jak podsieć, podłączonych lokalnie. Może istnieć wiele chmur połączenia lokalnego.  
   
  Trzeci chmury, chmury specyficzne dla lokacji, odnosi się do witryny IPv6 zakres adresów i adresy lokacji lokalnej. Ta chmura została wycofana, mimo że nadal jest obsługiwana w PNRP.  
   

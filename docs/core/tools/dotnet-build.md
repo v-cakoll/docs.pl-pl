@@ -3,11 +3,11 @@ title: polecenie kompilacji DotNet
 description: Dotnet kompilacji polecenia kompilacji w projekt i wszystkie jego zależności.
 ms.date: 12/04/2018
 ms.openlocfilehash: 6a701ee371221c780a878e64b996df95f709371f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665276"
 ---
 # <a name="dotnet-build"></a>Kompilacja DotNet
 

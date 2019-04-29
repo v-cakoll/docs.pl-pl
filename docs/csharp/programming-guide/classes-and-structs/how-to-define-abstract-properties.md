@@ -7,22 +7,22 @@ helpviewer_keywords:
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 ms.openlocfilehash: 98a535f68efc50c2ff7409d8eadf52f9e7549566
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646439"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Instrukcje: Definiowanie właściwości abstrakcyjnych (C# Programming Guide)
 Poniższy przykład pokazuje jak zdefiniować [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) właściwości. Deklaracja właściwości abstrakcyjne nie zawiera implementacji metody dostępu właściwości, ponieważ relacja ta stwierdza, że obsługuje właściwości klasy, ale pozostawia implementacji metody dostępu dla klasy pochodnej. Poniższy przykład demonstruje sposób implementacji właściwości abstrakcyjnych dziedziczone z klasy podstawowej.  
   
  Ten przykład obejmuje trzy pliki, z których każdy jest kompilowany oddzielnie, a jego Wynikowy zestaw odwołuje się do następnej kompilacji:  
   
--   abstractshape.CS: `Shape` klasę, która zawiera abstrakcyjną `Area` właściwości.  
+- abstractshape.CS: `Shape` klasę, która zawiera abstrakcyjną `Area` właściwości.  
   
--   Shapes.CS: Podklasy `Shape` klasy.  
+- Shapes.CS: Podklasy `Shape` klasy.  
   
--   shapetest.CS: Program test, aby wyświetlić obszary niektórych `Shape`-obiektami wywodzącymi.  
+- shapetest.CS: Program test, aby wyświetlić obszary niektórych `Shape`-obiektami wywodzącymi.  
   
  Aby skompilować przykład, użyj następującego polecenia:  
   
@@ -35,13 +35,13 @@ Poniższy przykład pokazuje jak zdefiniować [abstrakcyjne](../../../csharp/lan
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
--   Modyfikatory we właściwości są umieszczane w sama deklaracja właściwości. Na przykład:  
+- Modyfikatory we właściwości są umieszczane w sama deklaracja właściwości. Na przykład:  
   
     ```csharp  
     public abstract double Area  
     ```  
   
--   Podczas deklarowania właściwość abstrakcyjną (takie jak `Area` w tym przykładzie), możesz po prostu wskazują, jakie metody dostępu właściwości są dostępne, ale nie ich wdrażania. W tym przykładzie, tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu jest dostępna, więc właściwość jest tylko do odczytu.  
+- Podczas deklarowania właściwość abstrakcyjną (takie jak `Area` w tym przykładzie), możesz po prostu wskazują, jakie metody dostępu właściwości są dostępne, ale nie ich wdrażania. W tym przykładzie, tylko [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu jest dostępna, więc właściwość jest tylko do odczytu.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod pokazuje trzy podklasy `Shape` i jak zastąpić `Area` właściwość zapewniali własną implementację.  

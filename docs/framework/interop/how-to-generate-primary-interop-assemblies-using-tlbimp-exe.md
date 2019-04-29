@@ -9,28 +9,28 @@ ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643234"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:  
   
--   Za pomocą [wpisz Importer biblioteki (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczone przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Za pomocą [wpisz Importer biblioteki (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) dostarczone przez [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
      Najprostszy sposób do tworzenia podstawowych zestawów międzyoperacyjnych polega na użyciu [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe zawiera następujące mechanizmy:  
   
-    -   Sprawdza, czy inne zarejestrowanych podstawowych zestawach międzyoperacyjnych, przed utworzeniem nowego zestawy międzyoperacyjne dla żadnych odwołań do biblioteki typu zagnieżdżonego.  
+    - Sprawdza, czy inne zarejestrowanych podstawowych zestawach międzyoperacyjnych, przed utworzeniem nowego zestawy międzyoperacyjne dla żadnych odwołań do biblioteki typu zagnieżdżonego.  
   
-    -   Nie Emituj podstawowego zestawu międzyoperacyjnego, jeśli nie określisz kontenera lub nazwę pliku, aby zapewnić podstawowy zestaw międzyoperacyjny silnej nazwy.  
+    - Nie Emituj podstawowego zestawu międzyoperacyjnego, jeśli nie określisz kontenera lub nazwę pliku, aby zapewnić podstawowy zestaw międzyoperacyjny silnej nazwy.  
   
-    -   Nie można wyemitować podstawowy zestaw międzyoperacyjny, jeśli pominięto odwołania do zestawów zależnych.  
+    - Nie można wyemitować podstawowy zestaw międzyoperacyjny, jeśli pominięto odwołania do zestawów zależnych.  
   
-    -   Nie Emituj podstawowy zestaw międzyoperacyjny, po dodaniu odwołania do zestawów zależnych, które nie są podstawowe zestawy międzyoperacyjne.  
+    - Nie Emituj podstawowy zestaw międzyoperacyjny, po dodaniu odwołania do zestawów zależnych, które nie są podstawowe zestawy międzyoperacyjne.  
   
--   Ręczne tworzenie podstawowych zestawów międzyoperacyjnych w kodzie źródłowym przy użyciu języka, który jest zgodny z Common Language Specification (CLS), takich jak C#. Takie podejście jest przydatne, gdy biblioteki typów jest niedostępny.  
+- Ręczne tworzenie podstawowych zestawów międzyoperacyjnych w kodzie źródłowym przy użyciu języka, który jest zgodny z Common Language Specification (CLS), takich jak C#. Takie podejście jest przydatne, gdy biblioteki typów jest niedostępny.  
   
  Musisz mieć parę kluczy kryptograficznych, aby podpisać zestaw silną nazwą. Aby uzyskać więcej informacji, zobacz [tworzenia pary klucz](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
 ms.openlocfilehash: d87ea1ff18c4697a2c04f22cbf67720f21cbf459
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662156"
 ---
 # <a name="access-modifiers-c-reference"></a>Modyfikatory dostępu (odwołanie w C#)
 Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowaną dostępność składowej lub typu. Ta sekcja wprowadza modyfikatory dostępu cztery:  
   
--   `public`
--   `protected`
--   `internal`
--   `private`
+- `public`
+- `protected`
+- `internal`
+- `private`
   
  Następujące sześć poziomów ułatwień dostępu, można określić za pomocą modyfikatorów dostępu:  
   
@@ -36,11 +36,11 @@ Modyfikatory dostępu są słowami kluczowymi, używany do określenia deklarowa
   
  Ta sekcja wprowadza również następujące czynności:  
   
--   [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): Za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.  
+- [Poziomy ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md): Za pomocą modyfikatorów dostępu cztery do deklarowania sześciu poziomów ułatwień dostępu.  
   
--   [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md): Określa, gdzie, w sekcjach program członka mogą być przywoływane.  
+- [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md): Określa, gdzie, w sekcjach program członka mogą być przywoływane.  
   
--   [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.  
+- [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): Podsumowanie ograniczenia dotyczące używania zadeklarowany poziomów ułatwień dostępu.  
   
 ## <a name="see-also"></a>Zobacz także
 

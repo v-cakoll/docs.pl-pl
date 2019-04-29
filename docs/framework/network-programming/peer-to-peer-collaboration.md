@@ -3,11 +3,11 @@ title: Współpraca równorzędna
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
 ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642038"
 ---
 # <a name="peer-to-peer-collaboration"></a>Peer-to-peer współpracy
 
@@ -19,21 +19,21 @@ Infrastruktura współpracy Peer-to-Peer jest uproszczone wdrożenia infrastrukt
 
  Aplikacja typowych współpracy peer-to-peer składa się z następujących czynności:  
   
--   Elementu równorzędnego określa tożsamość elementu równorzędnego, kto jest zainteresowany hostingu sesji współpracy  
+- Elementu równorzędnego określa tożsamość elementu równorzędnego, kto jest zainteresowany hostingu sesji współpracy  
   
--   Do obsługi sesji zostaje wysłane żądanie licencjonowania, jakiś sposób, i elementu równorzędnego hosta wyraża zgodę na zarządzanie działania współpracy.  
+- Do obsługi sesji zostaje wysłane żądanie licencjonowania, jakiś sposób, i elementu równorzędnego hosta wyraża zgodę na zarządzanie działania współpracy.  
   
--   Host zaprasza kontaktów w podsieci (w tym obiekt żądający) do sesji.  
+- Host zaprasza kontaktów w podsieci (w tym obiekt żądający) do sesji.  
   
--   Wszystkich elementów równorzędnych, którzy chcą współpracy może dodać hosta do ich menedżerów skontaktuj się z pomocą.  
+- Wszystkich elementów równorzędnych, którzy chcą współpracy może dodać hosta do ich menedżerów skontaktuj się z pomocą.  
   
--   Większość elementów równorzędnych będzie wysyłać odpowiedzi na zaproszenie zaakceptowane lub odrzucone, powrót do elementu równorzędnego hosta w odpowiednim czasie.  
+- Większość elementów równorzędnych będzie wysyłać odpowiedzi na zaproszenie zaakceptowane lub odrzucone, powrót do elementu równorzędnego hosta w odpowiednim czasie.  
   
--   Wszystkie elementy równorzędne, którzy będą współpracować spowoduje subskrypcji na węźle równorzędnym hosta.  
+- Wszystkie elementy równorzędne, którzy będą współpracować spowoduje subskrypcji na węźle równorzędnym hosta.  
   
--   Podczas elementów równorzędnych wykonują czynności ich początkową współpracy, peer hosta mogą dodawać zdalnych elementów równorzędnych do swojego menedżera kontaktu. Również przetwarza wszystkie odpowiedzi zaproszenia, aby określić, kto zaakceptował, który została odrzucona, a który nie ma odpowiedzi.  Może spowodować anulowanie zaproszeń do tych, którzy nie ma odpowiedzi lub wykonywanie niektórych innych działań.  
+- Podczas elementów równorzędnych wykonują czynności ich początkową współpracy, peer hosta mogą dodawać zdalnych elementów równorzędnych do swojego menedżera kontaktu. Również przetwarza wszystkie odpowiedzi zaproszenia, aby określić, kto zaakceptował, który została odrzucona, a który nie ma odpowiedzi.  Może spowodować anulowanie zaproszeń do tych, którzy nie ma odpowiedzi lub wykonywanie niektórych innych działań.  
   
--   W tym momencie równorzędnej hosta można uruchomić sesję współpracy z wszystkich elementów równorzędnych zaproszonego lub zarejestrować aplikację za pomocą infrastruktury współpracy.  P2p aplikacje korzystają z infrastruktury współpracy Peer-to-Peer i <xref:System.Net.PeerToPeer.Collaboration> przestrzeni nazw na potrzeby koordynowania komunikacji dla gier, biuletyny, konferencje i inne aplikacje bezserwerowe obecności.  
+- W tym momencie równorzędnej hosta można uruchomić sesję współpracy z wszystkich elementów równorzędnych zaproszonego lub zarejestrować aplikację za pomocą infrastruktury współpracy.  P2p aplikacje korzystają z infrastruktury współpracy Peer-to-Peer i <xref:System.Net.PeerToPeer.Collaboration> przestrzeni nazw na potrzeby koordynowania komunikacji dla gier, biuletyny, konferencje i inne aplikacje bezserwerowe obecności.  
   
 ## <a name="peer-to-peer-networking-security"></a>Zabezpieczenia sieci peer-to-peer  
 

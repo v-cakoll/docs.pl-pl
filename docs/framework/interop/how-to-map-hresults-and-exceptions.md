@@ -14,11 +14,11 @@ ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643052"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Instrukcje: Mapowanie wyników HRESULT i wyjątków
 Metody modelu COM, raportowanie błędów przez zwrócenie wartości HRESULT; metod .NET zgłoszenie ich przez zgłaszanie wyjątków. Środowisko wykonawcze obsługuje przejścia między nimi. Każda klasa wyjątków w programie .NET Framework jest mapowany na HRESULT.  

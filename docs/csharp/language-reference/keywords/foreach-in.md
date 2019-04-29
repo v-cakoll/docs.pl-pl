@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
 ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661639"
 ---
 # <a name="foreach-in-c-reference"></a>Instrukcja foreach w (odwołanie w C#)
 

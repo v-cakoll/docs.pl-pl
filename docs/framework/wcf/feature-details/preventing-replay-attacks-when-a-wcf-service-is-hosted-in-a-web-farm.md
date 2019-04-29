@@ -3,11 +3,11 @@ title: Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hos
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
 ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641596"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hostowana na farmie sieci Web
 Jeśli korzystanie z zabezpieczeń komunikatów WCF zapobiega atakom metodą powtórzeń, tworząc JEDNORAZOWEGO poza komunikatu przychodzącego i sprawdzanie wewnętrzny `InMemoryNonceCache` czy wygenerowany identyfikator JEDNORAZOWY jest obecny. Jeśli tak jest, komunikat zostanie odrzucony jako powtarzania. Po usługi WCF jest hostowana na farmie sieci web ponieważ `InMemoryNonceCache` nie jest udostępniany między węzłami w farmie sieci web, usługa jest narażony na ataki.  Aby uniknąć tego scenariusza WCF 4.5 zapewnia punkt rozszerzalności, która pozwala na implementowanie własnych udostępnionej pamięci podręcznej JEDNORAZOWEGO przez wyprowadzanie klasy z klasy abstrakcyjnej <xref:System.ServiceModel.Security.NonceCache>.  

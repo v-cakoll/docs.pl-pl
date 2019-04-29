@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: fcfaa05d4efec43a49e3f485b74cadadbabd9236
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661766"
 ---
 # <a name="event-c-reference"></a>event (odwołanie w C#)
 `event` — Słowo kluczowe jest używane do deklarowania zdarzenie w klasie wydawcy.  

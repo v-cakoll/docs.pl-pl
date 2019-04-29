@@ -5,11 +5,11 @@ helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 ms.openlocfilehash: d945f03077a863d9e1baa6b59fe8a908566aba5a
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642883"
 ---
 # <a name="ftp"></a>FTP
 

@@ -5,11 +5,11 @@ author: rprouse
 ms.date: 08/31/2018
 ms.custom: seodec18
 ms.openlocfilehash: 7d3daa344b2a6fb8694a255fdc26b5ba31e2d82a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665458"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Jednostki testowania C# za pomocą NUnit i .NET Core
 

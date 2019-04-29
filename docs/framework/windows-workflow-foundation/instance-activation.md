@@ -3,11 +3,11 @@ title: Aktywacja wystąpienia
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641677"
 ---
 # <a name="instance-activation"></a>Aktywacja wystąpienia
 Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo budzi się i wykrywa wystąpienia przepływu pracy możliwy do uruchomienia lub aktywowalnej w bazie danych trwałości. Jeśli zostaną znalezione wystąpienia możliwy do uruchomienia przepływu pracy, powiadamia hosta przepływu pracy, który jest w stanie aktywacji wystąpienia. Jeśli Magazyn wystąpienia wykryje wystąpienia przepływu pracy aktywowalnej, powiadamia ogólnego hosta, który aktywuje hosta przepływu pracy, który z kolei uruchamia wystąpienie przepływu pracy. W poniższych sekcjach w tym temacie opisano proces aktywacji wystąpienia szczegółowo.  
@@ -15,11 +15,11 @@ Store wystąpienia przepływu pracy SQL uruchamia zadania wewnętrzne, okresowo 
 ## <a name="RunnableSection"></a> Wykrywanie i aktywowanie wystąpienia możliwy do uruchomienia przepływu pracy  
  Store wystąpienia przepływu pracy SQL traktuje wystąpienie przepływu pracy *możliwy do uruchomienia* Jeśli wystąpienie nie jest w stanie wstrzymania lub stanu ukończenia, a także spełnia następujące warunki:  
   
--   Wystąpienie jest odblokowana i ma oczekujące czasomierza, który wygasł.  
+- Wystąpienie jest odblokowana i ma oczekujące czasomierza, który wygasł.  
   
--   Wystąpienie ma blokadę wygasła.  
+- Wystąpienie ma blokadę wygasła.  
   
--   Wystąpienie jest odblokowana i jego stan to **Executing**.  
+- Wystąpienie jest odblokowana i jego stan to **Executing**.  
   
  Wywołuje Store wystąpienia przepływu pracy SQL <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> gdy znajdzie możliwe do uruchomienia wystąpienia. Po tym SqlWorkflowInstanceStore Zatrzymuje monitorowanie aż do momentu <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> jest wywoływana jeden raz w sklepie.  
   

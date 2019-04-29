@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 ms.openlocfilehash: d038991da4048e3279ae974cbf4d3e53691349af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645776"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implementacja wzorca formantu przekształcania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59088566"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki przekształcania, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Obsługa tego wzorca kontrolki nie jest ograniczona do obiektów na pulpicie. Ten wzorzec kontroli muszą być obsługiwane przez element podrzędny obiektu kontenera, jeśli elementy podrzędne mogą być przeniesione, rozmiaru lub obracać za darmo w granicach kontenera.  
+- Obsługa tego wzorca kontrolki nie jest ograniczona do obiektów na pulpicie. Ten wzorzec kontroli muszą być obsługiwane przez element podrzędny obiektu kontenera, jeśli elementy podrzędne mogą być przeniesione, rozmiaru lub obracać za darmo w granicach kontenera.  
   
--   Obiekt nie można przenosić, ze zmienionym rozmiarem ani obrócone w taki sposób, że jej lokalizacja wynikowa ekranu będzie całkowicie przekraczających współrzędne jego kontenera i w związku z tym niedostępne do klawiatury lub myszy (na przykład w przypadku, gdy okno jest przesuwany ekranem lub w obiekt podrzędny zostanie przeniesiona poza granice kontenera okienka ekranu). W takich przypadkach obiekt jest umieszczany była jak najbliżej współrzędne ekranu żądanego możliwie z góry lub lewej współrzędne zastąpiona w granicach kontenera.  
+- Obiekt nie można przenosić, ze zmienionym rozmiarem ani obrócone w taki sposób, że jej lokalizacja wynikowa ekranu będzie całkowicie przekraczających współrzędne jego kontenera i w związku z tym niedostępne do klawiatury lub myszy (na przykład w przypadku, gdy okno jest przesuwany ekranem lub w obiekt podrzędny zostanie przeniesiona poza granice kontenera okienka ekranu). W takich przypadkach obiekt jest umieszczany była jak najbliżej współrzędne ekranu żądanego możliwie z góry lub lewej współrzędne zastąpiona w granicach kontenera.  
   
--   Systemów wielu monitorów Jeśli obiekt zostanie przeniesiony, o zmienionym rozmiarze lub obrócony całkowicie poza współrzędne ekranu pulpitu połączonego obiektu jest umieszczony na podstawowy monitor była jak najbliżej żądanego współrzędne, jak to możliwe.  
+- Systemów wielu monitorów Jeśli obiekt zostanie przeniesiony, o zmienionym rozmiarze lub obrócony całkowicie poza współrzędne ekranu pulpitu połączonego obiektu jest umieszczony na podstawowy monitor była jak najbliżej żądanego współrzędne, jak to możliwe.  
   
--   Wszystkie parametry i wartości właściwości są bezwzględne i niezależne od ustawień regionalnych.  
+- Wszystkie parametry i wartości właściwości są bezwzględne i niezależne od ustawień regionalnych.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-itransformprovider"></a>Wymagane elementy ITransformProvider  

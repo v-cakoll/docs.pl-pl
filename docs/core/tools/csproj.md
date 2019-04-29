@@ -3,11 +3,11 @@ title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejące i pliki csproj .NET Core
 ms.date: 04/08/2019
 ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665432"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 

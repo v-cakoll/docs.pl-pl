@@ -3,11 +3,11 @@ title: Operacje agregacji (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
 ms.openlocfilehash: 151332964b4efd495acff5d8763dfab5f380ee6c
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668477"
 ---
 # <a name="aggregation-operations-c"></a>Operacje agregacji (C#)
 Operacja agregacji oblicza pojedynczą wartość z kolekcji wartości. Przykładem operacji agregacji obliczania średniej temperatury codzienne z miesięcznej codzienne wartości temperatury.  
@@ -24,7 +24,7 @@ Operacja agregacji oblicza pojedynczą wartość z kolekcji wartości. Przykład
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Agregowanie|Wykonuje operację agregacji niestandardowej na podstawie wartości w kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Aggregate%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Aggregate%2A?displayProperty=nameWithType>|  
 |Średnia|Oblicza średnią wartość zbiór wartości.|Nie dotyczy.|<xref:System.Linq.Enumerable.Average%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Average%2A?displayProperty=nameWithType>|  
-|Licznik|Liczba elementów w kolekcji, opcjonalnie tylko te elementy, które spełniają wymagania funkcji predykatu.|Nie dotyczy.|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
+|Count|Liczba elementów w kolekcji, opcjonalnie tylko te elementy, które spełniają wymagania funkcji predykatu.|Nie dotyczy.|<xref:System.Linq.Enumerable.Count%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Count%2A?displayProperty=nameWithType>|  
 |LongCount|Liczba elementów w dużych kolekcji, opcjonalnie tylko te elementy, które spełniają wymagania funkcji predykatu.|Nie dotyczy.|<xref:System.Linq.Enumerable.LongCount%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LongCount%2A?displayProperty=nameWithType>|  
 |Maks.|Określa maksymalną wartość w kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Max%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Max%2A?displayProperty=nameWithType>|  
 |Min.|Określa minimalną wartość w kolekcji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Min%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Min%2A?displayProperty=nameWithType>|  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Window control pattern
 ms.assetid: a28cb286-296e-4a62-b4cb-55ad636ebccc
 ms.openlocfilehash: 4f11f82b628ac020cbda70d65adf7813291c60a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645763"
 ---
 # <a name="implementing-the-ui-automation-window-control-pattern"></a>Implementacja wzorca kontrolki okna automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,15 +25,15 @@ ms.locfileid: "59168041"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki okna, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Aby zapewnić obsługę możliwość modyfikowania zarówno rozmiaru okna i ekranu pozycję przy użyciu automatyzacji interfejsu użytkownika, musi implementować kontrolki <xref:System.Windows.Automation.Provider.ITransformProvider> oprócz <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Aby zapewnić obsługę możliwość modyfikowania zarówno rozmiaru okna i ekranu pozycję przy użyciu automatyzacji interfejsu użytkownika, musi implementować kontrolki <xref:System.Windows.Automation.Provider.ITransformProvider> oprócz <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Formanty, które zawierają paski tytułu i tytuł paska elementów, które umożliwiają formant, który ma zostać przeniesiona, rozmiar, zmaksymalizowane, zminimalizowane lub zamknięciu są zwykle wymagane do wdrożenia <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Formanty, które zawierają paski tytułu i tytuł paska elementów, które umożliwiają formant, który ma zostać przeniesiona, rozmiar, zmaksymalizowane, zminimalizowane lub zamknięciu są zwykle wymagane do wdrożenia <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Formanty, takie jak wyskakujących okienek etykietki narzędzi i pole kombi pola lub menu rozwijanych, zazwyczaj nie implementują <xref:System.Windows.Automation.Provider.IWindowProvider>.  
+- Formanty, takie jak wyskakujących okienek etykietki narzędzi i pole kombi pola lub menu rozwijanych, zazwyczaj nie implementują <xref:System.Windows.Automation.Provider.IWindowProvider>.  
   
--   Windows pomocy w dymku różnią się od wyskakujące okienka basic etykietka narzędzia poprzez dostarczanie podobne okno przycisk Zamknij.  
+- Windows pomocy w dymku różnią się od wyskakujące okienka basic etykietka narzędzia poprzez dostarczanie podobne okno przycisk Zamknij.  
   
--   Tryb pełnoekranowy nie jest obsługiwana przez IWindowProvider, ponieważ jest specyficzne dla funkcji do aplikacji i nie jest zachowanie typowe okna.  
+- Tryb pełnoekranowy nie jest obsługiwana przez IWindowProvider, ponieważ jest specyficzne dla funkcji do aplikacji i nie jest zachowanie typowe okna.  
   
 <a name="Required_Members_for_IWindowProvider"></a>   
 ## <a name="required-members-for-iwindowprovider"></a>Wymagane elementy IWindowProvider  

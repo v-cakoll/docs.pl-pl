@@ -3,11 +3,11 @@ title: Zaawansowane LINQ to XML programowania (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e012d40-532b-49ea-b1fc-152e616bdfa3
 ms.openlocfilehash: f921bf6e560f6b8286340ec80ab12e60cf248720
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668630"
 ---
 # <a name="advanced-linq-to-xml-programming-c"></a>Zaawansowane LINQ to XML programowania (C#)
 Ta sekcja zawiera informacje, która będzie mogła być stosowana tylko dla zaawansowanych deweloperów w niektórych [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] scenariuszy.  

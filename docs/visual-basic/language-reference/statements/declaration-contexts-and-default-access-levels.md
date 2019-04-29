@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638190"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Kontekst deklaracji i domyślne poziomy dostępu (Visual Basic)
 W tym temacie opisano, które typy danych Visual Basic mogą być deklarowane w ramach których innych typów, a także jakie są ich domyślne poziomy dostępu, jeśli nie zostały określone.  
@@ -24,11 +24,11 @@ W tym temacie opisano, które typy danych Visual Basic mogą być deklarowane w 
   
  Poziomy kontekst deklaracji są następujące:  
   
--   *Poziom Namespace* — w pliku źródłowym lub przestrzeni nazw, ale nie w obrębie klasy, struktury, modułu lub interfejsu  
+- *Poziom Namespace* — w pliku źródłowym lub przestrzeni nazw, ale nie w obrębie klasy, struktury, modułu lub interfejsu  
   
--   *Poziom modułu* — w ramach klasy, struktury, modułu lub interfejs, ale nie w obrębie procedurą lub blokiem  
+- *Poziom modułu* — w ramach klasy, struktury, modułu lub interfejs, ale nie w obrębie procedurą lub blokiem  
   
--   *Poziom procedury* — w ramach procedurą lub blokiem (takie jak `If` lub `For`)  
+- *Poziom procedury* — w ramach procedurą lub blokiem (takie jak `If` lub `For`)  
   
  W poniższej tabeli przedstawiono domyślne poziomy dostępu dla różnych zadeklarowany element programistyczny, w zależności od ich kontekst deklaracji.  
   

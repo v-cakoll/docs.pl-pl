@@ -8,11 +8,11 @@ helpviewer_keywords:
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
 ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646156"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Użycie przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 W języku C# metody w klasie pochodnej może mieć taką samą nazwę jak metody w klasie bazowej. Można określić sposób interakcji metody przy użyciu [nowe](../../../csharp/language-reference/keywords/new.md) i [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych. `override` Modyfikator *rozszerza* metody klasy bazowej i `new` modyfikator *ukrywa* go. Różnica jest przedstawionych w przykładach w tym temacie.  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  W `Main` metody deklarować zmienne `bc`, `dc`, i `bcdc`.  
   
--   `bc` Typ jest `BaseClass`, a jej wartość jest typu `BaseClass`.  
+- `bc` Typ jest `BaseClass`, a jej wartość jest typu `BaseClass`.  
   
--   `dc` Typ jest `DerivedClass`, a jej wartość jest typu `DerivedClass`.  
+- `dc` Typ jest `DerivedClass`, a jej wartość jest typu `DerivedClass`.  
   
--   `bcdc` Typ jest `BaseClass`, a jej wartość jest typu `DerivedClass`. Jest to zmienna, na które należy zwrócić uwagę.  
+- `bcdc` Typ jest `BaseClass`, a jej wartość jest typu `DerivedClass`. Jest to zmienna, na które należy zwrócić uwagę.  
   
  Ponieważ `bc` i `bcdc` typ `BaseClass`, tylko bezpośrednio uzyskać dostęp do `Method1`, chyba że używasz rzutowania. Zmienna `dc` dostęp zarówno do `Method1` i `Method2`. Te relacje są wyświetlane w poniższym kodzie.  
   

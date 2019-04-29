@@ -5,11 +5,11 @@ author: guardrex
 ms.date: 08/12/2017
 ms.custom: seodec18
 ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647403"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642701"
 ---
 # <a name="how-to-configure-network-tracing"></a>Instrukcje: konfigurowanie funkcji śledzenia sieci
 Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [Enabling Network Tracing](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -27,7 +27,7 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
   
 ### <a name="to-configure-network-tracing"></a>Aby skonfigurować funkcję śledzenia sieci  
   
--   Dodaj następujące wiersze do odpowiedniego pliku konfiguracyjnego. Wartości i opcje ustawień opisano w tabelach poniżej.  
+- Dodaj następujące wiersze do odpowiedniego pliku konfiguracyjnego. Wartości i opcje ustawień opisano w tabelach poniżej.  
   
     ```xml  
     <configuration>  

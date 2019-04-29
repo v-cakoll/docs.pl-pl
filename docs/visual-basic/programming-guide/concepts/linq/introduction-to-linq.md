@@ -3,11 +3,11 @@ title: Wprowadzenie do LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
 ms.openlocfilehash: 2900cade8bc4166cccb62baf4381cb926cdff5f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614550"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Wprowadzenie do LINQ (Visual Basic)
 Language-Integrated Query (LINQ) jest innowacje wprowadzone w programie .NET Framework w wersji 3.5 tego mostków lukę między obiektami w świecie, a światem danych.  
@@ -25,13 +25,13 @@ Language-Integrated Query (LINQ) jest innowacje wprowadzone w programie .NET Fra
 ## <a name="next-steps"></a>Następne kroki  
  Aby dowiedzieć się więcej na temat LINQ, należy rozpocząć od staje się poznać niektóre podstawowe pojęcia związane z sekcji wprowadzenie [wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), a następnie zapoznaj się z dokumentacją dla technologii LINQ, w którym są Czy chcesz:  
   
--   Bazy danych programu SQL Server: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
+- Bazy danych programu SQL Server: [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
--   Dokumenty XML: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+- Dokumenty XML: [LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET Datasets: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- ADO.NET Datasets: [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
--   Kolekcje .NET, plików, parametry i tak dalej: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- Kolekcje .NET, plików, parametry i tak dalej: [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640197"
 ---
-# <a name="architecture-approaches"></a>Metody dotyczące architektury
+# <a name="architecture-approaches"></a>Podejścia do architektury
 
 Informacje o istniejących podejścia do projektowania aplikacji dla przedsiębiorstw pomaga wyjaśnienia roli bez użycia serwera. Istnieje wiele metod i wzorce, które ewoluował za pośrednictwem dekad Wytwarzanie oprogramowania i mieć własne zalety i wady. W wielu przypadkach ostatecznego rozwiązania nie może obejmować podejmowania decyzji na temat podejścia do jednego, ale mogą integrować kilka metod. Scenariusze migracji często oznaczać między innymi przesunięcie z architektury jednej metody do drugiej za pomocą podejście hybrydowe.
 
@@ -77,7 +77,7 @@ Aplikacje niewymagające użycia serwera może służyć do zaimplementować jed
 
 Mikrousługi nie muszą być wzajemnie wykluczających się do innych metod architektury. Na przykład architektury N-warstwowej, może używać mikrousług dla warstwy środkowej. Istnieje również możliwość mikrousługi w na różne sposoby, z katalogów wirtualnych na hostach usług IIS do kontenerów. Cechy mikrousług były szczególnie idealne rozwiązanie w przypadku implementacji bez użycia serwera.
 
-![Architektura Mikrousług](./media/microservices-architecture.png)
+![Architektura mikrousług](./media/microservices-architecture.png)
 
 Zalety architektury mikrousług obejmują:
 

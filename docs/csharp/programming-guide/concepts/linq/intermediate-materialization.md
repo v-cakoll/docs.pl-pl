@@ -3,11 +3,11 @@ title: Materializacja pośrednia (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
 ms.openlocfilehash: 065a7e0ffadaa48d400d4f4e3e045014b3658213
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667434"
 ---
 # <a name="intermediate-materialization-c"></a>Materializacja pośrednia (C#)
 Jeśli nie jesteś zachować ostrożność, w niektórych sytuacjach można znacząco zmienić profil pamięć i wydajność aplikacji, powodując przedwczesne materializacja kolekcji w zapytaniach. Niektóre standardowe operatory zapytań spowodować materializacja ich kolekcji źródłowej przed reaguje pojedynczy element. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> najpierw wykonuje iterację przez jego kolekcja całą źródłową, a następnie sortuje wszystkie elementy i wreszcie zwraca pierwszy element. To oznacza, że jest kosztowne uzyskać pierwszy element uporządkowaną kolekcję; Każdy element nie jest później kosztowne. Jest to logiczne: Nie można wysyłać dla tego operatora zapytania robić.  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  Standardowe operatory zapytań można również łączyć w łańcuch. Ostatnim temacie w tym samouczku przedstawiono to.  
   
--   [Łańcucha standardowych operatorów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+- [Łańcucha standardowych operatorów zapytań razem (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

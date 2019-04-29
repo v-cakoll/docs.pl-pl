@@ -3,28 +3,28 @@ title: Obsługa zapytań
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641518"
 ---
 # <a name="support-for-queries"></a>Obsługa zapytań
 Store wystąpienia przepływu pracy SQL rejestruje zestaw właściwości dobrze znane w magazynie. Użytkownicy mogą wyszukiwać wystąpień na podstawie tych właściwości. Poniższa lista zawiera niektóre z tych znanych właściwości:  
   
--   **Nazwa witryny.** Nazwa witryny sieci Web, które zawiera tę usługę.  
+- **Nazwa witryny.** Nazwa witryny sieci Web, które zawiera tę usługę.  
   
--   **Ścieżka względna aplikacji.** Ścieżka aplikacji względem witryny sieci Web.  
+- **Ścieżka względna aplikacji.** Ścieżka aplikacji względem witryny sieci Web.  
   
--   **Relative Service Path.** Ścieżka usługi względem aplikacji.  
+- **Relative Service Path.** Ścieżka usługi względem aplikacji.  
   
--   **Nazwa usługi.** Nazwa usługi.  
+- **Nazwa usługi.** Nazwa usługi.  
   
--   **Usługa Namespace.** Nazwa przestrzeni nazw, używanymi przez usługę.  
+- **Usługa Namespace.** Nazwa przestrzeni nazw, używanymi przez usługę.  
   
--   **Bieżąca maszyna.**  
+- **Bieżąca maszyna.**  
   
--   **Ostatnie maszyny**. Komputer, na którym został uruchomiony ostatniego wystąpienia usługi przepływu pracy.  
+- **Ostatnie maszyny**. Komputer, na którym został uruchomiony ostatniego wystąpienia usługi przepływu pracy.  
   
 > [!NOTE]
 >  W przypadku scenariuszy samodzielnie hostowany przy użyciu hosta usługi przepływu pracy są wypełniane tylko cztery ostatnie właściwości. W przypadku scenariuszy aplikacji przepływu pracy jest wypełniana tylko ostatnie właściwości.  

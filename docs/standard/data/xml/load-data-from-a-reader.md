@@ -6,22 +6,22 @@ ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650209"
 ---
 # <a name="load-data-from-a-reader"></a>Ładowanie danych z czytnika
 Jeśli dokument XML jest ładowany za pomocą <xref:System.Xml.XmlDocument.Load%2A> metody i parametr <xref:System.Xml.XmlReader>, istnieją różnice w zachowaniu, który występuje w porównaniu do zachowania podczas ładowania danych z innych formatach. Jeśli czytnik jest w stanie początkowym <xref:System.Xml.XmlDocument.Load%2A> wykorzystuje całą zawartość z czytnika, a następnie tworzy XML modelu DOM (Document Object) wszystkie dane w czytniku.  
   
  Jeśli czytnik jest już umieszczony w węźle gdzieś w dokumencie i czytnik jest następnie przekazywany do <xref:System.Xml.XmlDocument.Load%2A> metody <xref:System.Xml.XmlDocument.Load%2A> podejmuje próbę odczytu z bieżącego węzła i wszystkich jego elementów równorzędnych do tagu końcowego, który zamyka bieżący głębokość do pamięci. Powodzenie próba dokonania <xref:System.Xml.XmlDocument.Load%2A> zależą od węzła, który proces czytający jest obciążenie zostanie podjęta, jako <xref:System.Xml.XmlDocument.Load%2A> sprawdza, czy poprawnie sformułowany plik XML z czytnika. Jeśli nie jest poprawnie sformułowany plik XML <xref:System.Xml.XmlDocument.Load%2A> zgłasza wyjątek. Na przykład następujący zestaw węzłów zawiera dwa elementy poziomu głównego, nie jest poprawnie sformułowany plik XML i <xref:System.Xml.XmlDocument.Load%2A> zgłasza wyjątek.  
   
--   Węzeł komentarzy, a następnie węzeł elementu, a następnie węzeł elementu, a następnie węzeł EndElement.  
+- Węzeł komentarzy, a następnie węzeł elementu, a następnie węzeł elementu, a następnie węzeł EndElement.  
   
  Następujący zestaw węzłów tworzy niekompletne modelu DOM, ponieważ nie ma żadnego elementu poziomu głównego.  
   
--   Następuje węzła ProcessingInstruction, a następnie węzeł komentarzy, a następnie węzeł EndElement węzeł komentarzy.  
+- Następuje węzła ProcessingInstruction, a następnie węzeł komentarzy, a następnie węzeł EndElement węzeł komentarzy.  
   
  To nie zgłasza wyjątku, a dane zostaną załadowane. Możesz dodać element główny na początku tych węzłów i utworzyć poprawnie sformułowany dokument XML, który może zostać zapisany bez błędów.  
   

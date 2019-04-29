@@ -6,8 +6,8 @@ ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642012"
 ---
 # <a name="pnrp-caches"></a>Pamięci podręczne PNRP
 Elementu równorzędnego protokołu PNRP (Name Resolution Protocol) w pamięci podręcznej są kolekcji lokalnych punktów końcowych algorithmically wybranego elementu równorzędnego w elementu równorzędnego.  
@@ -15,9 +15,9 @@ Elementu równorzędnego protokołu PNRP (Name Resolution Protocol) w pamięci p
 ## <a name="pnrp-cache-initialization"></a>PNRP Cache Initialization  
  Aby zainicjować pamięci podręcznej PNRP, czyli kolekcji rekordów nazwy elementów równorzędnych, podczas uruchamiania węzła równorzędnego, węzeł można użyć następujących metod:  
   
--   Wpisy trwała pamięć podręczna, jakie były dostępne, gdy węzeł został zamknięty, są ładowane z magazynu danych na dysku twardym.  
+- Wpisy trwała pamięć podręczna, jakie były dostępne, gdy węzeł został zamknięty, są ładowane z magazynu danych na dysku twardym.  
   
--   Jeśli aplikacja używa infrastruktury współpracy P2P, informacje o współpracy jest dostępna w Contact Manager dla tego węzła.  
+- Jeśli aplikacja używa infrastruktury współpracy P2P, informacje o współpracy jest dostępna w Contact Manager dla tego węzła.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Skalowanie rozpoznawania nazw równorzędnych z pamięcią podręczną wielopoziomowe  
  Aby zachować rozmiary pamięci podręczne PNRP małe, węzły równorzędne Użyj wielopoziomowe pamięci podręcznej, w której każdy poziom zawiera maksymalną liczbę wpisów. Każdy poziom w pamięci podręcznej reprezentuje mniejszy jedna dziesiąta część miejsca numer Identyfikator PNRP (2<sup>256</sup>). Najniższy poziom w pamięci podręcznej zawiera lokalnie zarejestrowany identyfikator PNRP i inne identyfikatory PNRP, który numerycznie znajdują się blisko go. Zgodnie z poziomu pamięci podręcznej jest wypełniany maksymalnie 20 wpisów, jest tworzony nowy niższego poziomu. Maksymalna liczba poziomów w pamięci podręcznej jest rzędu kilku log10 (całkowita liczba identyfikatory PNRP w chmurze). Na przykład w przypadku chmury globalnej z identyfikatorami PNRP 100 milionów istnieją nie więcej niż 8 (=log10(100,000,000)) poziomów w pamięci podręcznej i podobną liczbę przeskoków, aby rozwiązać Identyfikator PNRP podczas rozpoznawania nazw. Ten mechanizm pozwala uzyskać tabelę mieszania rozproszonej, dla którego dowolny identyfikator PNRP może zostać rozpoznana przez przekazywanie komunikatów żądania PNRP najbliższy elementów równorzędnych, aż do znalezienia elementu równorzędnego przy użyciu odpowiedniego CPA.  

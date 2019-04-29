@@ -17,18 +17,18 @@ ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643393"
 ---
 # <a name="deploying-an-interop-application"></a>Wdrażanie aplikacji międzyoperacyjnych
 Aplikacji międzyoperacyjnych zwykle zawiera zestaw klienta platformy .NET, jeden lub więcej zestawów międzyoperacyjnych reprezentująca różne COM wpisz biblioteki i co najmniej jeden zarejestrowany składników COM. Program Visual Studio i [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] oferuje narzędzia do importowania i Konwertowanie biblioteki typów na zestaw międzyoperacyjny, zgodnie z opisem w [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md). Istnieją dwa sposoby wdrażania aplikacji międzyoperacyjnych:  
   
--   Przy użyciu osadzone typy międzyoperacyjne: Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można nakazać kompilatorowi do osadzenia informacji o typie z zestawu międzyoperacyjnego, w programie wykonywalnym. Kompilator osadza tylko informacje o typie, używanych przez aplikację. Nie masz do wdrożenia zestawu międzyoperacyjnego z aplikacją. Jest to zalecana technika.  
+- Przy użyciu osadzone typy międzyoperacyjne: Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można nakazać kompilatorowi do osadzenia informacji o typie z zestawu międzyoperacyjnego, w programie wykonywalnym. Kompilator osadza tylko informacje o typie, używanych przez aplikację. Nie masz do wdrożenia zestawu międzyoperacyjnego z aplikacją. Jest to zalecana technika.  
   
--   Przez wdrożenie usług międzyoperacyjnych: Można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W tym przypadku zestaw międzyoperacyjny musi zostać wdrożony z aplikacją. Jeśli zostanie zastosowana ta technika, a nie jest używany prywatny składnika modelu COM, zawsze odwoływać się do podstawowego zestawu międzyoperacyjnego (PIA), opublikowana przez autora składnika modelu COM, który chcesz zastosować w kodzie zarządzanym. Aby uzyskać więcej informacji dotyczących tworzenia i używania podstawowych zestawów międzyoperacyjnych, zobacz [podstawowe zestawy międzyoperacyjne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Przez wdrożenie usług międzyoperacyjnych: Można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W tym przypadku zestaw międzyoperacyjny musi zostać wdrożony z aplikacją. Jeśli zostanie zastosowana ta technika, a nie jest używany prywatny składnika modelu COM, zawsze odwoływać się do podstawowego zestawu międzyoperacyjnego (PIA), opublikowana przez autora składnika modelu COM, który chcesz zastosować w kodzie zarządzanym. Aby uzyskać więcej informacji dotyczących tworzenia i używania podstawowych zestawów międzyoperacyjnych, zobacz [podstawowe zestawy międzyoperacyjne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Jeśli używasz osadzone typy międzyoperacyjne, wdrożenie jest niezwykle proste. Nie ma nic specjalnego, należy wykonać. W pozostałej części tego artykułu opisano scenariusze wdrażania usług międzyoperacyjnych z aplikacją.  
   

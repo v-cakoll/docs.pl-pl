@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642174"
 ---
 # <a name="managing-connections"></a>Zarządzanie połączeniami
 Aplikacje, które używają protokołu HTTP do łączenia z zasobami danych można używać programu .NET Framework <xref:System.Net.ServicePoint> i <xref:System.Net.ServicePointManager> klasy do zarządzania połączenia z Internetem i aby pomóc im osiągnięcia optymalnej skali i wydajności.  

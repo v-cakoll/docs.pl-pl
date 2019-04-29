@@ -5,11 +5,11 @@ author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
 ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647947"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Utworzyć narzędzie globalnej platformy .NET Core przy użyciu interfejsu wiersza polecenia platformy .NET Core
 

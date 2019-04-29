@@ -3,11 +3,11 @@ title: LINQ i ciągi (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
 ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663417"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ i ciągi (Visual Basic)
 LINQ mogą służyć do wykonywania zapytań i przekształcanie ciągów i zbiorów ciągów. Może być szczególnie przydatne w przypadku danych z częściową strukturą w plikach tekstowych. Zapytania LINQ można łączyć z funkcji tradycyjnego ciągów i wyrażeń regularnych. Na przykład, można użyć <xref:System.String.Split%2A> lub <xref:System.Text.RegularExpressions.Regex.Split%2A> metodę, aby utworzyć tablicę ciągów, które można zbadać lub zmodyfikować za pomocą LINQ. Możesz użyć <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> method in Class metoda `where` klauzula zapytania LINQ. I LINQ umożliwia zapytania lub zmodyfikować <xref:System.Text.RegularExpressions.MatchCollection> wyniki zwrócone przez wyrażenie regularne.  

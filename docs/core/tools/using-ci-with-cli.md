@@ -5,11 +5,11 @@ author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
 ms.openlocfilehash: c9fd9e359a22467cc8639109538522e4088df5ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647634"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Przy użyciu zestawu .NET Core SDK i narzędzi w ciągłej integracji (CI)
 
@@ -142,7 +142,7 @@ install:
   # See appveyor.yml example for install script
 ```
 
-### <a name="azure-devops-services"></a>Usługa Azure DevOps Services
+### <a name="azure-devops-services"></a>Azure DevOps Services
 
 Skonfiguruj usługom DevOps platformy Azure do kompilowania projektów .NET Core przy użyciu jednej z następujących podejść:
 

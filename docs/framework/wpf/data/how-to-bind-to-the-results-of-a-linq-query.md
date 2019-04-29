@@ -6,11 +6,11 @@ helpviewer_keywords:
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
 ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644420"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Instrukcje: Wiązanie z wynikami zapytania LINQ
 W tym przykładzie pokazano, jak uruchomić zapytanie LINQ, a następnie wiążą się z wynikami.  

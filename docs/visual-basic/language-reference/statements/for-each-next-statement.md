@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638080"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next — Instrukcja (Visual Basic)
 Powtarza grupę instrukcji dla każdego elementu w kolekcji.  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` jest często używana po dokonaniu oceny jakiś warunek, na przykład w `If`... `Then`... `Else` struktury. Możesz chcieć użyć `Exit For` następujące warunki:  
   
--   Iterowanie w dalszym ciągu jest niepotrzebne lub wręcz niemożliwe. Może to być spowodowane błędną wartość lub żądanie zakończenia działania.  
+- Iterowanie w dalszym ciągu jest niepotrzebne lub wręcz niemożliwe. Może to być spowodowane błędną wartość lub żądanie zakończenia działania.  
   
--   Wystąpił wyjątek `Try`... `Catch`... `Finally`. Można na przykład `Exit For` na końcu `Finally` bloku.  
+- Wystąpił wyjątek `Try`... `Catch`... `Finally`. Można na przykład `Exit For` na końcu `Finally` bloku.  
   
--   Tam nieskończonej pętli, czyli pętlę, która może działać dużych lub nawet nieskończona liczba prób. Jeśli zostaną wykryte tych warunków, można użyć `Exit For` jako znak ucieczki dla pętli. Aby uzyskać więcej informacji, zobacz [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Tam nieskończonej pętli, czyli pętlę, która może działać dużych lub nawet nieskończona liczba prób. Jeśli zostaną wykryte tych warunków, można użyć `Exit For` jako znak ucieczki dla pętli. Aby uzyskać więcej informacji, zobacz [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="iterators"></a>Iteratory  
  Możesz użyć *iteratora* do wykonywania niestandardowych iteracji przez kolekcję. Iterator może być funkcją lub `Get` metody dostępu. Używa ona `Yield` instrukcja zwraca każdy element kolekcji naraz.  

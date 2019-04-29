@@ -7,11 +7,11 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: da49c6f0b44ab0eefbd338963a744a11502f75da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662143"
 ---
 # <a name="accessibility-levels-c-reference"></a>Poziomy ułatwień dostępu (odwołanie w C#)
 

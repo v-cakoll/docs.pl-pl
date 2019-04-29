@@ -12,20 +12,20 @@ helpviewer_keywords:
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642753"
 ---
 # <a name="enabling-network-tracing"></a>Włączanie śledzenia sieci
 Śledzenie sieci zapewnia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację. Należy wykonać następujące zadania w celu włączenia funkcji śledzenia sieci w Twojej aplikacji:  
   
--   Kompiluj swój kod z włączonym śledzeniem. Zobacz [jak: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) Aby uzyskać więcej informacji na temat przełączniki kompilatora, wymagane, aby włączyć śledzenie.  
+- Kompiluj swój kod z włączonym śledzeniem. Zobacz [jak: Kompilowanie warunkowe ze śledzeniem i debugowaniem](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) Aby uzyskać więcej informacji na temat przełączniki kompilatora, wymagane, aby włączyć śledzenie.  
   
--   Określ miejsce docelowe danych wyjściowych śledzenia.  
+- Określ miejsce docelowe danych wyjściowych śledzenia.  
   
--   Skonfiguruj zachowanie funkcji śledzenia sieci. Zobacz [jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) Aby uzyskać szczegółowe informacje.  
+- Skonfiguruj zachowanie funkcji śledzenia sieci. Zobacz [jak: Konfigurowanie śledzenia sieci](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) Aby uzyskać szczegółowe informacje.  
   
  Najpopularniejsze miejsca docelowe śledzenia, nazywane również detektorów śledzenia są odbiornika domyślne, a plik dziennika.  
   

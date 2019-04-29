@@ -3,11 +3,11 @@ title: 'Instrukcje: Projektowanie typu anonimowego (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
 ms.openlocfilehash: cc8e59ac1037fc173cb44d8c8ff344374c5766ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644327"
 ---
 # <a name="how-to-project-an-anonymous-type-visual-basic"></a>Instrukcje: Projektowanie typu anonimowego (Visual Basic)
 W niektórych przypadkach możesz chcieć projektu zapytania do nowego typu, nawet jeśli wiesz, że tego typu będą używać tylko przez krótki czas. Jest dużo dodatkową pracę, aby utworzyć nowy typ tylko do użycia w projekcji. W tym przypadku jest bardziej wydajne podejście projektu do typu anonimowego. Typy anonimowe umożliwiają definiowanie klasy, a następnie zadeklarowania i zainicjowania obiektu tej klasy bez podawania nazwy klasy.  

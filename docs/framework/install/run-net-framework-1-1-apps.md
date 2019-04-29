@@ -1,5 +1,5 @@
 ---
-title: Uruchom z .NET Framework 1.1 aplikacji w systemie Windows 8, Windows 8.1 lub Windows 10
+title: Uruchamianie aplikacji programu .NET Framework 1.1 w systemie Windows 8, Windows 8.1 lub Windows 10
 ms.date: 05/26/2017
 helpviewer_keywords:
 - Windows 8, running .NET Framework 1.1 apps
@@ -8,13 +8,13 @@ ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7ceaa3ea9d9140c6b5df45f067558da2de80b8dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643835"
 ---
-# <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Uruchom z .NET Framework 1.1 aplikacji w systemie Windows 8, Windows 8.1 lub Windows 10
+# <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Uruchamianie aplikacji programu .NET Framework 1.1 w systemie Windows 8, Windows 8.1 lub Windows 10
 
 .NET Framework 1.1 nie jest obsługiwana w [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)], lub w systemach operacyjnych Windows 10. W niektórych przypadkach program .NET Framework 1.1 jest jednoznacznie identyfikowany zgodnie z wymaganiami dla aplikacji do uruchomienia. W takich przypadkach należy skontaktować się z niezależnym dostawcą oprogramowania (ISV), aby aplikacja uaktualnione do uruchamiania na [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] lub nowszej wersji. Aby uzyskać więcej informacji, zobacz [migracji z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
 

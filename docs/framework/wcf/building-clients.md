@@ -6,24 +6,24 @@ helpviewer_keywords:
 - clients [WCF]
 ms.assetid: 28dfff47-d95b-4cc2-9d5c-b3b9ba71fd50
 ms.openlocfilehash: b5661c5aaa08d91c3944c4c108b23b03b012439a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608869"
 ---
 # <a name="building-clients"></a>Kompilowanie klientów
 Tematy w tej sekcji przedstawiają sposób tworzenia i używania klienta usługi Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd klienta programu WCF](../../../docs/framework/wcf/wcf-client-overview.md)  
- Zawiera omówienie klienci WCF i jak działają.  
+ Zawiera omówienie klienci WCF i sposobie ich działania.  
   
  [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- Omówiono podstawowe metody tworzenia obiektu klienta WCF do użycia w aplikacji klienckiej.  
+ Opisano podstawowe metody tworzenia obiektu klienta programu WCF do użycia w aplikacji klienckiej.  
   
  [Zabezpieczanie klientów](../../../docs/framework/wcf/securing-clients.md)  
- Opisuje sposób konfigurowania zabezpieczeń dla klientów usługi WCF.  
+ W tym artykule opisano sposób konfigurowania zabezpieczeń dla klientów usługi WCF.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel.ClientBase%601>  

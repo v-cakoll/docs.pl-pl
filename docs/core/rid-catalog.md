@@ -3,11 +3,11 @@ title: Katalog platformy .NET core środowiska uruchomieniowego identyfikator (R
 description: Informacje o identyfikator środowiska uruchomieniowego (RID) i jak identyfikatorów RID są używane w programie .NET Core.
 ms.date: 02/22/2019
 ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663079"
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID katalogu
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 ms.openlocfilehash: 63d64acc0d0a1ed90a722db75b467bd3ce5f260e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663014"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (opcje kompilatora C#)
 Określa, że informacje o debugowaniu należy umieścić w pliku do późniejszej analizy.  
@@ -31,19 +31,19 @@ Określa, że informacje o debugowaniu należy umieścić w pliku do późniejsz
 ## <a name="remarks"></a>Uwagi  
  **- Bugreport** opcja określa, że następujące informacje powinny być umieszczone w `file`:  
   
--   Kopiowanie wszystkich plików kodu źródłowego w kompilacji.  
+- Kopiowanie wszystkich plików kodu źródłowego w kompilacji.  
   
--   Lista opcji kompilatora, używane w kompilacji.  
+- Lista opcji kompilatora, używane w kompilacji.  
   
--   Informacje o wersji dotyczące kompilatora, w czasie wykonywania i w systemie operacyjnym.  
+- Informacje o wersji dotyczące kompilatora, w czasie wykonywania i w systemie operacyjnym.  
   
--   Zestawy referencyjne i moduły, zapisane jako cyfra szesnastkowa, z wyjątkiem zestawów, które są dostarczane z .NET Framework i zestaw SDK.  
+- Zestawy referencyjne i moduły, zapisane jako cyfra szesnastkowa, z wyjątkiem zestawów, które są dostarczane z .NET Framework i zestaw SDK.  
   
--   Kompilator dane wyjściowe, jeśli istnieje.  
+- Kompilator dane wyjściowe, jeśli istnieje.  
   
--   Opis problemu, który zostanie wyświetlony monit dla.  
+- Opis problemu, który zostanie wyświetlony monit dla.  
   
--   Opis sposobu Twoim zdaniem ten problem należy ustalić, który zostanie wyświetlony monit dla.  
+- Opis sposobu Twoim zdaniem ten problem należy ustalić, który zostanie wyświetlony monit dla.  
   
  Jeśli ta opcja jest używana z **- errorreport: wiersz** lub **- errorreport: wysyłanie**, informacje w pliku będą wysyłane do firmy Microsoft Corporation.  
   

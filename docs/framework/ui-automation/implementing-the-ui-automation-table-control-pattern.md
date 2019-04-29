@@ -7,11 +7,11 @@ helpviewer_keywords:
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
 ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646038"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>Implementacja wzorca formantu tabeli automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59144654"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki tabeli, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Dostęp do zawartości poszczególnych komórek jest dwuwymiarowy współrzędnych logicznych lub tablicy, dostarczone przez wymagane wykonania współbieżnych <xref:System.Windows.Automation.Provider.IGridProvider>.  
+- Dostęp do zawartości poszczególnych komórek jest dwuwymiarowy współrzędnych logicznych lub tablicy, dostarczone przez wymagane wykonania współbieżnych <xref:System.Windows.Automation.Provider.IGridProvider>.  
   
--   Nagłówek kolumny lub wiersza mogą być zawarte w obiekcie tabeli lub być obiekt oddzielny nagłówek, który jest skojarzony z obiektem tabeli.  
+- Nagłówek kolumny lub wiersza mogą być zawarte w obiekcie tabeli lub być obiekt oddzielny nagłówek, który jest skojarzony z obiektem tabeli.  
   
--   Nagłówki kolumn i wierszy może obejmować zarówno podstawowego nagłówka, jak również wszelkie nagłówki pomocniczych.  
+- Nagłówki kolumn i wierszy może obejmować zarówno podstawowego nagłówka, jak również wszelkie nagłówki pomocniczych.  
   
 > [!NOTE]
 >  Takie podejście staje się widoczna w [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] arkusza kalkulacyjnego, gdzie został zdefiniowany przez użytkownika kolumny "Imię". Ta kolumna zawiera teraz dwa nagłówki — nagłówek "Imię" zdefiniowany przez użytkownika i oznaczenie alfanumeryczne dla tej kolumny przypisany przez aplikację.  
   
--   Zobacz [implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) siatki powiązanych funkcji.  
+- Zobacz [implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md) siatki powiązanych funkcji.  
   
  ![Tabela, z elementami complex — nagłówek. ](../../../docs/framework/ui-automation/media/uia-tablepattern-complex-column-headers.PNG "UIA_TablePattern_Complex_Column_Headers")  
 Przykład tabeli z nagłówkami kolumn złożonych  

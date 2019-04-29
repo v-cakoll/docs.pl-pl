@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665835"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Instrukcje: Zmień wartość argumentu procedury (Visual Basic)
 Po wywołaniu procedury, każdy argument, który podasz odnosi się do jednego z parametrów zdefiniowanych w procedurze. W niektórych przypadkach kod procedury można zmienić wartości bazowe argumentu w wywoływanym kodzie. W innych przypadkach procedura może zmienić tylko w swojej lokalnej kopii argumentu.  

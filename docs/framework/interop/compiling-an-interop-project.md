@@ -12,11 +12,11 @@ ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643546"
 ---
 # <a name="compiling-an-interop-project"></a>Kompilowanie projektu międzyoperacyjnego
 
@@ -24,9 +24,9 @@ COM projektów międzyoperacyjnych, które odwołują się jeden lub więcej zes
 
  Istnieją dwa sposoby, aby odwoływać się do zestawów międzyoperacyjnych:
 
--   Osadzone typy międzyoperacyjne: Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] i Visual Studio 2010, można nakazać kompilatorowi osadzanie informacji o typie z zestawu międzyoperacyjnego, w programie wykonywalnym. Jest to zalecana technika.
+- Osadzone typy międzyoperacyjne: Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] i Visual Studio 2010, można nakazać kompilatorowi osadzanie informacji o typie z zestawu międzyoperacyjnego, w programie wykonywalnym. Jest to zalecana technika.
 
--   Wdrażanie zestawów międzyoperacyjnych: Można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W tym przypadku zestaw międzyoperacyjny musi zostać wdrożony z aplikacją.
+- Wdrażanie zestawów międzyoperacyjnych: Można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W tym przypadku zestaw międzyoperacyjny musi zostać wdrożony z aplikacją.
 
  Różnice między te dwie metody zostały omówione bardziej szczegółowo w [przy użyciu typów modelu COM w kodzie zarządzany](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 

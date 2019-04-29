@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 ms.openlocfilehash: ac5fbf33564ed2dd1a030132a35b36164f777519
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638570"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Instrukcje: blokowanie kontrolek do formularzy systemu Windows
 Podczas projektowania interfejsu użytkownika (UI) w aplikacji Windows, można zablokować kontrolki po znajdują się one poprawnie, tak aby wątkami aby przypadkowo nie przenosić lub zmieniać ich rozmiar przy ustawianiu inne właściwości.  

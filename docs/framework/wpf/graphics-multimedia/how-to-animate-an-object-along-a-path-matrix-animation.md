@@ -9,11 +9,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
 ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651444"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Instrukcje: Animowanie obiektu na ścieżce (animacja Matrix)
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> klasy animowanie obiektu na ścieżce, który jest definiowany przez <xref:System.Windows.Media.PathGeometry>.  
@@ -21,11 +21,11 @@ W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.M
 ## <a name="example"></a>Przykład  
  Poniższy przykład animuje obiekt na ścieżce, wykonując następujące czynności:  
   
--   Stosuje <xref:System.Windows.Media.MatrixTransform> do obiektu, aby go przenieść.  
+- Stosuje <xref:System.Windows.Media.MatrixTransform> do obiektu, aby go przenieść.  
   
--   Określa ścieżkę przy użyciu <xref:System.Windows.Media.PathGeometry>.  
+- Określa ścieżkę przy użyciu <xref:System.Windows.Media.PathGeometry>.  
   
--   Tworzy <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> i używa go, animować <xref:System.Windows.Media.Matrix> właściwość <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Przyjmuje <xref:System.Windows.Media.PathGeometry> i używa ich do generowania <xref:System.Windows.Media.Matrix> wartości.  
+- Tworzy <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> i używa go, animować <xref:System.Windows.Media.Matrix> właściwość <xref:System.Windows.Media.MatrixTransform>. <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Przyjmuje <xref:System.Windows.Media.PathGeometry> i używa ich do generowania <xref:System.Windows.Media.Matrix> wartości.  
   
  [!code-xaml[PathAnimationGallery_snippet#MatrixAnimationUsingPathWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/PathAnimationGallery_snippet/CS/matrixanimationusingpathexample.xaml#matrixanimationusingpathwholepage)]  
   

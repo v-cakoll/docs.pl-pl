@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyświetlanie zawartości katalogu przy użyciu protokołu FTP'
+title: 'Instrukcje: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP'
 description: W tym artykule przedstawiono przykładowy sposób wyświetlenia listy zawartości katalogu serwera FTP.
 ms.date: 06/26/2018
 dev_langs:
@@ -7,13 +7,13 @@ dev_langs:
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
 ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642623"
 ---
-# <a name="how-to-list-directory-contents-with-ftp"></a>Porady: wyświetlanie zawartości katalogu przy użyciu protokołu FTP
+# <a name="how-to-list-directory-contents-with-ftp"></a>Instrukcje: Wyświetlanie zawartości katalogu przy użyciu protokołu FTP
 
 Ten przykład ilustruje sposób wyświetlenia listy zawartości katalogu serwera FTP.
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
 ms.openlocfilehash: ddc4717c873e65311a8502e66f3edaf39dd89ff9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642805"
 ---
 # <a name="configuring-internet-applications"></a>Konfigurowanie aplikacji internetowych
 [ \<Przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element konfiguracji zawiera informacje o konfiguracji sieci dla aplikacji. Przy użyciu [ \<przestrzeni nazw system.Net >, Element (ustawienia sieci)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) elementu, ustaw serwerów proxy, Ustaw połączenie z parametrami zarządzania i obejmują moduły niestandardowe uwierzytelnianie i żądanie w aplikacji.  

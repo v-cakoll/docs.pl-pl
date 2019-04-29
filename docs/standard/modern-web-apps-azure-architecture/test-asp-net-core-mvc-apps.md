@@ -5,11 +5,11 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628264"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie platformy ASP.NET Core MVC aplikacji
 

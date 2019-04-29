@@ -3,11 +3,11 @@ title: <localServiceSettings>, element
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614573"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings> element
 Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania.  
@@ -76,13 +76,13 @@ Określa ustawienia zabezpieczenia lokalnej usługi dla tego powiązania.
   
  Następujące atrybuty `localServiceSecuritySettings` element mogą pomóc ograniczyć atak typu "odmowa usługi" (DOS) zabezpieczeń:  
   
--   `maxCachedCookies`: Określa maksymalną liczbę SecurityContextTokens ograniczone czasowo, które są buforowane przez serwer po wykonaniu tej negocjacji SPNEGO lub SSL.  
+- `maxCachedCookies`: Określa maksymalną liczbę SecurityContextTokens ograniczone czasowo, które są buforowane przez serwer po wykonaniu tej negocjacji SPNEGO lub SSL.  
   
--   `issuedCookieLifetime`: Określa okres istnienia SecurityContextTokens, które są wydawane przez serwer po negocjacji SPNEGO lub SSL. Serwer buforuje SecurityContextTokens przez ten czas.  
+- `issuedCookieLifetime`: Określa okres istnienia SecurityContextTokens, które są wydawane przez serwer po negocjacji SPNEGO lub SSL. Serwer buforuje SecurityContextTokens przez ten czas.  
   
--   `maxPendingSessions`: Określa maksymalną liczbę bezpiecznych konwersacji, które są ustalane na serwerze, ale żadne komunikaty aplikacji przetworzonych. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem dla każdego klienta, ale nigdy z nich korzystać.  
+- `maxPendingSessions`: Określa maksymalną liczbę bezpiecznych konwersacji, które są ustalane na serwerze, ale żadne komunikaty aplikacji przetworzonych. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem dla każdego klienta, ale nigdy z nich korzystać.  
   
--   `inactivityTimeout`: Określa maksymalny czas, usługa utrzymuje bezpiecznej konwersacji aktywność bez otrzymania kiedykolwiek komunikatu aplikacji na nim. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem dla każdego klienta, ale nigdy z nich korzystać.  
+- `inactivityTimeout`: Określa maksymalny czas, usługa utrzymuje bezpiecznej konwersacji aktywność bez otrzymania kiedykolwiek komunikatu aplikacji na nim. Ten limit przydziału uniemożliwia klientom po ustanawianie bezpiecznej konwersacji na usługę, co powoduje usługi do zarządzania stanem dla każdego klienta, ale nigdy z nich korzystać.  
   
  W sesji bezpiecznej konwersacji, należy pamiętać, że oba `inactivityTimeout` i `receiveTimeout` atrybutów w powiązaniu wpływa na limit czasu sesji. Im krótsze dwa Określa, kiedy występują przekroczenia limitu czasu.  
   

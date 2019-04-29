@@ -6,94 +6,94 @@ dev_langs:
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
 ms.openlocfilehash: f152146e7483c6b3c162fd81f20f359e6c82123a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614963"
 ---
 # <a name="query-execution"></a>Wykonywanie zapytania
-Po utworzeniu zapytania LINQ przez użytkownika, zostanie przekonwertowane na drzewo poleceń. Drzewo poleceń jest reprezentację kwerendę, która jest zgodna z programu Entity Framework. Drzewo poleceń jest następnie wykonywane względem źródła danych. Podczas wykonywania zapytania wszystkie wyrażenia zapytania (to znaczy, że wszystkie składniki zapytania) są oceniane pod tym tych wyrażeń, które są używane w wyniku materialization.  
+Po utworzeniu zapytania LINQ przez użytkownika jest konwertowany na drzewo poleceń. Drzewo poleceń jest reprezentacją kwerendę, która jest zgodna z platformą Entity Framework. Drzewo poleceń jest następnie wykonywane względem źródła danych. W czasie wykonywania zapytań wszystkie wyrażenia zapytań (oznacza to, że wszystkie składniki zapytanie) są oceniane, tych wyrażeń, które są używane w tym w wyniku materializacja.  
   
- Na jakie punktu wyrażenia zapytania są wykonywane może się różnić. Zapytania LINQ są zawsze wykonywane, gdy zmienną zapytania jest iterowane, nie, po utworzeniu zmiennej zapytania. Ta metoda jest wywoływana *odroczonego wykonania*. Możesz też wymusić zapytanie w celu wykonania natychmiast, który jest przydatny do buforowania wyników zapytania. Jest to opisane w dalszej części tego tematu.  
+ W jakich wyrażenia kwerendy punktu są wykonywane mogą się różnić. Zapytania LINQ są wykonywane zawsze, gdy zmienna zapytania jest powtarzana, nie wtedy, gdy zmienna zapytania jest tworzona. Jest to nazywane *wykonanie odroczone*. Możesz też wymusić zapytanie w celu wykonania od razu, co jest przydatne do buforowania wyników zapytania. Jest to opisane w dalszej części tego tematu.  
   
- Podczas wykonywania zapytania składnika LINQ to Entities, niektóre wyrażenia w zapytaniu może być wykonywane na serwerze, a niektóre elementy mogą wykonać lokalnie na komputerze klienckim. Obliczenie wyrażenia po stronie klienta odbywa się przed wykonaniem zapytania na serwerze. Jeśli wyrażenie jest obliczane na kliencie, zastępuje wynik tej oceny wyrażenia w zapytaniu, a następnie wykonać zapytania na serwerze. Konfiguracja źródła danych, ponieważ zapytania są wykonywane w źródle danych, zastępowanie zachowanie określone w kliencie. Na przykład Obsługa wartości null i dokładność wartości liczbowych są zależne od ustawień serwera. Wszelkie wyjątki zgłaszane podczas wykonywania zapytania na serwerze są przekazywane bezpośrednio do klienta.  
+ Po wykonaniu zapytaniu składnika LINQ to Entities niektóre wyrażenia w zapytaniu mogą być wykonywane na serwerze, a niektóre części może być wykonywane lokalnie na komputerze klienckim. Po stronie klienta wyniku obliczenia wyrażenia odbywa się przed wykonaniem kwerendy na serwerze. Jeśli wyrażenie jest obliczane na komputerze klienckim, zostanie zastąpiony wynikiem tej oceny wyrażenia w zapytaniu, a następnie wykonywania zapytania na serwerze. Ponieważ zapytania są wykonywane w źródle danych, konfigurację źródła danych zastępuje nieaktywności klienta. Na przykład Obsługa wartości null i wartości liczbowych dokładności zależą od ustawień serwera. Wszelkie wyjątki zgłoszone podczas wykonywania zapytania na serwerze są przekazywane bezpośrednio do klienta.  
  
 > [!TIP]
-> Podsumowanie wygodny operatorów zapytań w formacie tabeli, która pozwala na szybkie identyfikowanie sposób wykonywania operatora, zobacz [klasyfikacji z standardowych operatorów zapytań w czasie wykonywania (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
+> Podsumowanie wygodne operatorów zapytań w formacie tabeli, która pozwala na szybkie identyfikowanie zachowanie wykonania operatora, zobacz [klasyfikacji dla standardowych operatorów zapytań przez sposób wykonywania (C#)](../../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md).
 
-## <a name="deferred-query-execution"></a>Wykonywanie zapytań odroczonych  
- W zapytaniu, która zwraca sekwencję wartości samej zmiennej zapytanie nigdy nie zawiera wyników zapytania i przechowuje dane tylko w poleceniach zapytań. Wykonanie kwerendy jest odłożona do zmiennej zapytania jest powtórzyć za pośrednictwem w `foreach` lub `For Each` pętli. Jest to nazywane *odroczonego wykonania*; oznacza to, że zapytania pewien czas po zapytaniu jest tworzony jest wykonywany. Oznacza to, że można wykonać zapytania często chcesz. Jest to przydatne, gdy na przykład istnieć bazy danych, która jest aktualizowana przez inne aplikacje. W aplikacji można utworzyć kwerendę, aby pobrać najnowsze informacje i wielokrotnie wykonać zapytanie, zwracając zaktualizowane informacje zawsze.  
+## <a name="deferred-query-execution"></a>Wykonanie odroczone zapytanie  
+ W zapytaniu, która zwraca sekwencję liczb sama zmienna kwerendy nigdy nie przechowuje wyników kwerendy i przechowuje tylko polecenia kwerendy. Wykonanie zapytania jest odroczone do czasu zmienna zapytania jest powtarzana w `foreach` lub `For Each` pętli. Jest to nazywane *wykonanie odroczone*; oznacza to, że zapytanie trochę czasu, po kwerendy jest tworzony jest wykonywany. Oznacza to, można wykonać zapytania tak często, jak chcesz. Jest to przydatne, gdy na przykład masz bazę danych, która jest aktualizowana przez inne aplikacje. W aplikacji można utworzyć zapytanie, aby pobrać najnowsze informacje, a następnie wielokrotnie wykonywania zapytania, zwracając zaktualizowane informacje o każdym.  
   
- Wykonanie odroczone umożliwia wielu zapytań, aby można było połączyć lub kwerendę, aby zostać rozszerzony. Po rozszerzeniu zapytania on jest modyfikowane w celu uwzględnienia nowych operacji, a wykonanie ostatecznego zostaną one zastosowane zmiany. W poniższym przykładzie pierwsze zapytanie zwraca wszystkie produkty. Drugiego zapytania rozszerza pierwszy przy użyciu `Where` do zwrócenia wszystkich produktów o rozmiarze "L":  
+ Wykonanie odroczone umożliwia wielu zapytań, które można połączyć lub zapytanie, aby zostać rozszerzony. Podczas rozszerzania zapytania zostanie zmodyfikowany w celu uwzględnienia nowych operacji i ostateczną wykonywania odzwierciedlają zmiany. W poniższym przykładzie pierwsze zapytanie zwraca wszystkie produkty. Drugie zapytanie rozszerza pierwszy przy użyciu `Where` do zwrócenia wszystkich produktów o rozmiarze "L":  
   
  [!code-csharp[DP L2E Conceptual Examples#Composing1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#composing1)]
  [!code-vb[DP L2E Conceptual Examples#Composing1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#composing1)]  
   
- Po wykonaniu kwerendy wszystkie kolejne kwerendy będą używać operatorów LINQ w pamięci. Iterowanie po zmienną zapytania przy użyciu `foreach` lub `For Each` instrukcji lub wywołując jedną konwersję LINQ operatory spowoduje natychmiastowe wykonywania. Te operatory konwersji są następujące: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A>, i <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ Po wykonaniu kwerendy wszystkie kolejne kwerendy użyje operatorów LINQ w pamięci. Iterowanie za pomocą instrukcji nad zmienną kwerendy `foreach` lub `For Each` instrukcji lub wywołując jedną konwersję LINQ operatory spowoduje natychmiastowe wykonanie. Te operatory konwersji obejmują następujące elementy: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A>, i <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
 ## <a name="immediate-query-execution"></a>Wykonywanie zapytania bezpośredniego  
- W przeciwieństwie do odroczonego wykonania zapytania, które powodują powstanie sekwencja wartości zapytań zwracających wartości pojedynczego wystąpienia są wykonywane natychmiast. Oto kilka przykładów pojedynczych zapytań <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A>, i <xref:System.Linq.Enumerable.Max%2A>. Natychmiast je wykonać operacji, ponieważ zapytanie musi mieć sekwencji do obliczania wyniku pojedynczą. Możesz też wymusić natychmiastowe wykonywania. Jest to przydatne, gdy chcesz buforować wyniki zapytania. Aby wymusić natychmiastowe wykonywania zapytania, które nie tworzy wartości pojedynczego wystąpienia, należy wywołać <xref:System.Linq.Enumerable.ToList%2A> metody <xref:System.Linq.Enumerable.ToDictionary%2A> metody, lub <xref:System.Linq.Enumerable.ToArray%2A> metoda zapytania lub zmienną zapytania. W poniższym przykładzie użyto <xref:System.Linq.Enumerable.ToArray%2A> metodę, aby natychmiast ocenić sekwencji do tablicy.  
+ W przeciwieństwie do odroczonego wykonania zapytania, które tworzą sekwencję wartości zapytania, które zwracają wartości pojedynczego wystąpienia są wykonywane natychmiast. Oto kilka przykładów pojedynczych zapytań <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.First%2A>, i <xref:System.Linq.Enumerable.Max%2A>. Działają one od razu, ponieważ zapytanie musi wygenerować sekwencji do obliczenia pojedynczego wyniku. Możesz też wymusić natychmiastowe wykonanie. Jest to przydatne, gdy chcesz buforować wyniki zapytania. Aby wymusić natychmiastowe wykonanie zapytania, który nie generuje wartości pojedynczego wystąpienia, możesz wywołać <xref:System.Linq.Enumerable.ToList%2A> metody <xref:System.Linq.Enumerable.ToDictionary%2A> metody lub <xref:System.Linq.Enumerable.ToArray%2A> metody zapytania lub zmienna zapytania. W poniższym przykładzie użyto <xref:System.Linq.Enumerable.ToArray%2A> metodę, aby od razu oceny sekwencji do tablicy.  
   
  [!code-csharp[DP L2E Examples#ToArray](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#toarray)]
  [!code-vb[DP L2E Examples#ToArray](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#toarray)]  
   
- Wykonanie można również wymusić, ustawiając `foreach` lub `For Each` pętli natychmiast po wyrażeniu kwerendy, ale przez wywołanie metody <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> buforowania wszystkie dane w obiekcie jednej kolekcji.  
+ Można również wymusić wykonanie przez umieszczenie `foreach` lub `For Each` pętli natychmiast po wyrażeniu zapytania, ale przez wywołanie metody <xref:System.Linq.Enumerable.ToList%2A> lub <xref:System.Linq.Enumerable.ToArray%2A> buforować wszystkie dane w jednym obiekcie kolekcji.  
   
-## <a name="store-execution"></a>Wykonanie magazynu  
- Ogólnie rzecz biorąc wyrażenia w składniku LINQ to Entities są oceniane na serwerze i nie można się spodziewać zachowanie wyrażenia do wykonania typowych semantykę języka wspólnego (CLR), ale te źródła danych. Istnieją jednak wyjątki od tej reguły, takie jak kiedy wyrażenie jest wykonywane na kliencie. Może to spowodować nieoczekiwane wyniki, na przykład gdy serwera i klienta znajdują się w różnych strefach czasowych.  
+## <a name="store-execution"></a>Wykonanie Store  
+ Ogólnie rzecz biorąc wyrażenia w składniku LINQ to Entities są oceniane na serwerze i nie można się spodziewać zachowanie wyrażenia do wykonania typowych semantykę środowiska uruchomieniowego (języka wspólnego CLR) języka, ale te źródła danych. Istnieją jednak wyjątki, np. gdy wyrażenie jest wykonywane na komputerze klienckim. Może to spowodować nieoczekiwane wyniki, na przykład w przypadku serwera i klienta w różnych strefach czasowych.  
   
- Niektóre wyrażenia w zapytaniu może być wykonywane na kliencie. Ogólnie rzecz biorąc wykonywanie większości zapytania powinien wystąpić na serwerze. Jako uzupełnienie metod wykonywane zapytania elementy mapowane do źródła danych są często wyrażenia w zapytaniu, które mogą być wykonywane lokalnie. Wykonanie lokalne wyrażenia zapytania daje wartość, która może służyć wykonywania zapytania lub konstrukcji wynik.  
+ Niektóre wyrażenia w zapytaniu może być wykonywane na komputerze klienckim. Ogólnie rzecz biorąc większość wykonywania zapytania są spodziewane na serwerze. Oprócz metod wykonywane względem elementy zapytania mapowane na źródło danych są często wyrażeń zapytania, które mogą być wykonywane lokalnie. Wykonanie lokalne wyrażenia zapytania daje wartość, która może służyć w wykonywania zapytań lub konstrukcji wynik.  
   
- Niektóre operacje są zawsze wykonywane po stronie klienta, takich jak powiązania wartości, a element sub wyrażenia, sub zapytania z zamknięć i materialization obiektów do wyników zapytania. Net to powoduje, że te elementy (na przykład wartości parametrów) nie można zaktualizować podczas wykonywania. Typy anonimowe mogą być zbudowane wbudowany w źródle danych, ale nie należy przyjąć, że to zrobić. W źródle danych, a także można skonstruować grupowania tekście, ale to nie należy przyjąć, że w każdym wystąpieniu. Ogólnie rzecz biorąc najlepiej nie przyjmuje żadnych założeń dotyczących co to jest tworzony na serwerze.  
+ Niektóre operacje są wykonywane zawsze na kliencie, takich jak powiązania wartości sub wyrażeń, sub zapytania od zamknięcia, a materializacja obiektów do wyników zapytania. Net to powoduje, że nie można zaktualizować te elementy (na przykład wartości parametrów), podczas wykonywania. Typy anonimowe może być skonstruowany wbudowane w źródle danych, ale nie można zakładać, aby to zrobić. Wbudowane grupy można skonstruować w źródle danych, jak również, ale to nie należy przyjąć, że w każdym wystąpieniu. Ogólnie rzecz biorąc najlepiej nie należy czynić żadnych założeń dotyczących co to jest tworzony na serwerze.  
   
- W tej sekcji opisano scenariusze, w których wykonywany jest kod lokalnie na komputerze klienckim. Aby uzyskać więcej informacji o tym, które typy wyrażeń są wykonywane lokalnie, zobacz [wyrażenia w składniku LINQ to Entities zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
+ W tej sekcji opisano scenariusze, w których wykonywany jest kod lokalnie na komputerze klienckim. Aby uzyskać więcej informacji na temat tego, jakie typy wyrażeń są wykonywane lokalnie, zobacz [wyrażenia w zapytaniach jednostek składnika LINQ to](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md).  
   
 ### <a name="literals-and-parameters"></a>Literały i parametry  
- Zmienne lokalne, takie jak `orderID` zmiennej w poniższym przykładzie są oceniane na kliencie.  
+ Zmienne lokalne, takie jak `orderID` zmiennej w poniższym przykładzie są obliczane na komputerze klienckim.  
   
  [!code-csharp[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#literalparameter1)]
  [!code-vb[DP L2E Conceptual Examples#LiteralParameter1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#literalparameter1)]  
   
- Parametry metody również są oceniane na kliencie. `orderID` Przekazany parametr `MethodParameterExample` metody poniżej, znajduje się przykład.  
+ Parametry metody również są obliczane na komputerze klienckim. `orderID` Parametr przekazywany do `MethodParameterExample` metody poniżej znajduje się przykład.  
   
  [!code-csharp[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#methodparameterexample)]
  [!code-vb[DP L2E Conceptual Examples#MethodParameterExample](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#methodparameterexample)]  
   
-### <a name="casting-literals-on-the-client"></a>Literały Rzutowanie na kliencie  
- Rzutowanie z `null` do CLR typu jest wykonywane na komputerze klienckim:  
+### <a name="casting-literals-on-the-client"></a>Literały rzutowania na komputerze klienckim  
+ Rzutowanie z `null` do CLR typu jest wykonywany na komputerze klienckim:  
   
  [!code-csharp[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#nullcasttostring)]
  [!code-vb[DP L2E Conceptual Examples#NullCastToString](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#nullcasttostring)]  
   
- Rzutowanie na typ, takie jak wartości null <xref:System.Decimal>, jest wykonywane na komputerze klienckim:  
+ Rzutowanie na typ, takich jak dopuszczający wartości null <xref:System.Decimal>, jest wykonywany na komputerze klienckim:  
   
  [!code-csharp[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#casttonullable)]
  [!code-vb[DP L2E Conceptual Examples#CastToNullable](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#casttonullable)]  
   
-### <a name="constructors-for-literals"></a>Konstruktory literałów  
- Nowe typy CLR, które mogą być mapowane na typach modelu koncepcyjnego są wykonywane na komputerze klienckim:  
+### <a name="constructors-for-literals"></a>Konstruktory dla literałów  
+ Nowe typy CLR, które mogą być mapowane na typy modelu koncepcyjnego są wykonywane na komputerze klienckim:  
   
  [!code-csharp[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#constructorforliteral)]
  [!code-vb[DP L2E Conceptual Examples#ConstructorForLiteral](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#constructorforliteral)]  
   
- Nowe tablice są również wykonywane na kliencie.  
+ Nowych tablic są również wykonywane na komputerze klienckim.  
   
-## <a name="store-exceptions"></a>Wyjątki magazynu  
- Magazyn błędów napotkanych podczas wykonywania zapytania są przekazywane do klienta i są nie mapowany lub obsługi.  
+## <a name="store-exceptions"></a>Wyjątki Store  
+ Wszelkie błędy magazynu, które zostaną napotkane podczas wykonywania zapytania są przekazywane do klienta i są nie mapowane lub obsługi.  
   
-## <a name="store-configuration"></a>Konfiguracja magazynu  
- Po wykonaniu zapytania w magazynie, konfiguracja magazynu zastępuje wszystkie zachowania klienta i semantyki magazynu są wyrażane dla wszystkich operacji i wyrażenia. Może to spowodować różnice w zachowaniu między CLR i przechowywać wykonywania w obszarach, takich jak porównania wartości null, kolejność identyfikator GUID, dokładność i dokładność operacji dotyczących typów danych ścisłym (takich jak zmiennoprzecinkową typy punktów lub <xref:System.DateTime>), a ciąg operacje. Należy pamiętać, to podczas sprawdzania wyników zapytania.  
+## <a name="store-configuration"></a>Konfiguracja Store  
+ Podczas wykonywania zapytania w sklepie, konfiguracja magazynu zastępuje wszystkie zachowania klienta, a semantyka magazynu są wyrażone dla wszystkich działań i wyrażeń. Może to spowodować różnicy w zachowaniu CLR i przechowywać wykonywania w obszarach, takich jak porównania wartości null, porządkowanie identyfikator GUID, dokładność i dokładność operacje dotyczące typów danych dokładne (takie jak punktu zmiennoprzecinkowego lub <xref:System.DateTime>), a ciąg operacje. Należy mieć to na uwadze, podczas sprawdzania wyników zapytania.  
   
- Na przykład poniżej przedstawiono niektóre różnice w zachowaniu między CLR i SQL Server:  
+ Na przykład poniżej przedstawiono niektóre różnice w zachowaniu między CLR i programu SQL Server:  
   
--   SQL Server zamówień identyfikatorów GUID inaczej niż środowiska CLR.  
+- Program SQL Server zamówień identyfikatorów GUID inaczej niż środowiska CLR.  
   
--   Można także różnice w wyniku dokładności podczas pracy z typem Decimal na serwerze SQL. Jest to spowodowane wymagania dokładności stałej typu dziesiętnego programu SQL Server. Na przykład średnia <xref:System.Decimal> wartości 0.0, 0.0 i 1.0 jest 0.3333333333333333333333333333 w pamięci na komputerze klienckim, ale 0.333333 w magazynie (na podstawie domyślna dokładność dla typu decimal programu SQL Server).  
+- Można także różnice w wyniku dokładności podczas pracy z typu dziesiętnego w programie SQL Server. Jest to ze względu na wymagania dokładności stałych typu dziesiętnego programu SQL Server. Na przykład średnia <xref:System.Decimal> wartości 0.0, od 0,0 do 1,0 jest 0.3333333333333333333333333333 w pamięci na komputerze klienckim, ale 0.333333 w magazynie (oparte na domyślną precyzję typu dziesiętnego programu SQL Server).  
   
--   Niektóre operacje na ciągach porównania są również obsługiwane inaczej w programie SQL Server niż w środowisku CLR. Zachowanie porównanie ciągu zależy od ustawienia sortowania na serwerze.  
+- Niektóre operacje porównania ciągów są również obsługiwane inaczej w programie SQL Server niż w CLR. Zachowanie porównania ciągu zależy od ustawienia sortowania na serwerze.  
   
--   Funkcja lub metoda wywołania, gdy uwzględnione w zapytaniu składnika LINQ to Entities, są mapowane na kanonicznej funkcji programu Entity Framework, które są następnie przetłumaczony na język Transact-SQL i wykonać w bazie danych programu SQL Server. Istnieją przypadki, jeśli zachowanie tych funkcji mapowanej wykazują może się różnić od implementacji w bibliotekach klasy podstawowej. Na przykład wywołanie elementu <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, i <xref:System.String.EndsWith%2A> zwróci metody za pomocą ciągu pustego jako parametr `true` gdy wykonywane w środowisku CLR, ale zwraca `false` podczas wykonywania w programie SQL Server. <xref:System.String.EndsWith%2A> Metoda może zwracać również różne wyniki, ponieważ program SQL Server uwzględnia dwa ciągi jako takie same, jeśli tylko różnią się one w końcu spację, CLR uważa je, aby nie może być taki sam. Jest to zilustrowane na poniższym przykładzie:  
+- Wywołania funkcji lub metody, gdy uwzględniona w zapytaniu składnika LINQ to Entities, są mapowane na funkcje canonical platformy Entity Framework, które są następnie przetłumaczony na język Transact-SQL i wykonywane w bazie danych programu SQL Server. Istnieją przypadki, gdy zachowanie tych funkcji zamapowanego następującej liczby etapów stwierdzono mogą się różnić od implementacji w bibliotek klas bazowych. Na przykład, wywołanie <xref:System.String.Contains%2A>, <xref:System.String.StartsWith%2A>, i <xref:System.String.EndsWith%2A> zwróci metody z pustym ciągiem jako parametr `true` gdy wykonywane w CLR, ale zwróci `false` podczas wykonywania w programie SQL Server. <xref:System.String.EndsWith%2A> Metoda może również zwracać różne wyniki, ponieważ program SQL Server uwzględnia dwa ciągi jako równe, jeśli różnią się odstępu, środowisko CLR uważa musiały być równe. Jest to zilustrowane na poniższym przykładzie:  
   
  [!code-csharp[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#canonicalfuncvsclrbasetype)]
  [!code-vb[DP L2E Conceptual Examples#CanonicalFuncVsCLRBaseType](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#canonicalfuncvsclrbasetype)]

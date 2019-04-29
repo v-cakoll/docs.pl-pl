@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
 ms.openlocfilehash: 663356ec3dc39aa3eb7e858f028fc9a8f7d27db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644471"
 ---
 # <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a>Przykłady składni wyrażeń zapytania: Operatory elementu (LINQ to DataSet)
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.First%2A> i <xref:System.Linq.Enumerable.ElementAt%2A> metody w celu uzyskania <xref:System.Data.DataRow> elementy z <xref:System.Data.DataSet> przy użyciu składni wyrażeń zapytania.  

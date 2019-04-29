@@ -23,11 +23,11 @@ helpviewer_keywords:
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 ms.openlocfilehash: 25d7b0e8b8b98d68a0fb4a3cadab3d9f3e8747bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642298"
 ---
 # <a name="introducing-pluggable-protocols"></a>Wprowadzenie protokołów podłączanych
 Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można zintegrować szybkie i łatwe w swoich aplikacjach. Dostęp do Internetu klas w <xref:System.Net> i <xref:System.Net.Sockets> przestrzeni nazw może służyć do wdrożenia aplikacji opartych na sieci Web i oparty na Internecie.  

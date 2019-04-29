@@ -14,18 +14,18 @@ ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642961"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identyfikowanie funkcji w bibliotekach DLL
 Tożsamość funkcji DLL składa się z następujących elementów:  
   
--   Nazwa funkcji lub liczbę porządkową  
+- Nazwa funkcji lub liczbę porządkową  
   
--   Nazwa pliku DLL, w którym można znaleźć implementacji  
+- Nazwa pliku DLL, w którym można znaleźć implementacji  
   
  Na przykład określenie **MessageBox** funkcji w bibliotece User32.dll identyfikuje funkcję (**MessageBox**) i jego lokalizacji (User32.dll, User32 lub user32). Interfejs (Windows API) programu Microsoft Windows może zawierać dwie wersje każdej funkcji, który obsługuje znaków i ciągów: 1-bajtowych wartości znakowych wersji ANSI i wersji 2-bajtowych wartości znakowych Unicode. Jeśli nie zostanie podany, zestaw znaków, reprezentowane przez <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> pola i wartość domyślna to ANSI. Niektóre funkcje mogą mieć więcej niż dwie wersje.  
   

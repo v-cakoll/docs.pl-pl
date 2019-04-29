@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.custom: seodec18
 ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663329"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapakiety i struktury
 

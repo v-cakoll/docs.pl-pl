@@ -8,26 +8,26 @@ helpviewer_keywords:
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
 ms.openlocfilehash: 19c1f754aaef66197b033a68bc215255511cd618
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646530"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizatory (C# Programming Guide)
 Finalizatory (są one również nazywane **destruktory**) są używane do wykonywania wszelkich niezbędnych końcowego oczyszczania, gdy wystąpienie klasy są gromadzone przez moduł odśmiecania pamięci.  
   
 ## <a name="remarks"></a>Uwagi  
   
--   Nie można zdefiniować finalizatory w strukturach. Są one używane tylko z klasami.  
+- Nie można zdefiniować finalizatory w strukturach. Są one używane tylko z klasami.  
   
--   Klasa może mieć tylko jedną finalizatora.  
+- Klasa może mieć tylko jedną finalizatora.  
   
--   Finalizatory nie może być dziedziczona ani przeciążone.  
+- Finalizatory nie może być dziedziczona ani przeciążone.  
   
--   Nie można wywołać finalizatorów. Są one wywoływane automatycznie.  
+- Nie można wywołać finalizatorów. Są one wywoływane automatycznie.  
   
--   Finalizator zająć Modyfikatory lub nie mieć parametrów.  
+- Finalizator zająć Modyfikatory lub nie mieć parametrów.  
   
  Na przykład Oto deklaracja finalizatora dla `Car` klasy.
   
@@ -72,11 +72,11 @@ protected override void Finalize()
   
  Aby uzyskać więcej informacji na temat Oczyszczanie zasobów zobacz następujące tematy:  
   
--   [Oczyszczanie zasobów niezarządzanych](../../../standard/garbage-collection/unmanaged.md)  
+- [Oczyszczanie zasobów niezarządzanych](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Implementacja metody Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Implementacja metody Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using, instrukcja](../../../csharp/language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy trzy klasy, które w łańcuchu dziedziczenia. Klasa `First` jest klasą bazową `Second` jest tworzony na podstawie `First`, i `Third` jest tworzony na podstawie `Second`. Wszystkie trzy mają finalizatory. W `Main`, tworzone jest wystąpienie klasy najbardziej pochodnego. Po uruchomieniu program, zwróć uwagę, że finalizatory dla trzech klas są wywoływane automatycznie i w kolejności, z najbardziej pochodnego do najmniej pochodnego.  

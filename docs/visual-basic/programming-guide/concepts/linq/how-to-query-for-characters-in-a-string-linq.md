@@ -3,17 +3,17 @@ title: 'Instrukcje: Zapytanie o znaki w ciągu (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
 ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644389"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="1ca0d-102">Instrukcje: Zapytanie o znaki w ciągu (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1ca0d-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="1ca0d-103">Ponieważ <xref:System.String> klasa implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dowolny ciąg może być odpytywany za pomocą sekwencji znaków.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="1ca0d-104">Jednak to nie jest typowym zastosowaniem LINQ.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="1ca0d-105">Złożone celu dopasowania do wzorca operacji, należy użyć <xref:System.Text.RegularExpressions.Regex> klasy.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
+# <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a><span data-ttu-id="ae40c-102">Instrukcje: Zapytanie o znaki w ciągu (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae40c-102">How to: Query for Characters in a String (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="ae40c-103">Ponieważ <xref:System.String> klasa implementuje ogólnego <xref:System.Collections.Generic.IEnumerable%601> interfejsu, dowolny ciąg może być odpytywany za pomocą sekwencji znaków.</span><span class="sxs-lookup"><span data-stu-id="ae40c-103">Because the <xref:System.String> class implements the generic <xref:System.Collections.Generic.IEnumerable%601> interface, any string can be queried as a sequence of characters.</span></span> <span data-ttu-id="ae40c-104">Jednak to nie jest typowym zastosowaniem LINQ.</span><span class="sxs-lookup"><span data-stu-id="ae40c-104">However, this is not a common use of LINQ.</span></span> <span data-ttu-id="ae40c-105">Złożone celu dopasowania do wzorca operacji, należy użyć <xref:System.Text.RegularExpressions.Regex> klasy.</span><span class="sxs-lookup"><span data-stu-id="ae40c-105">For complex pattern matching operations, use the <xref:System.Text.RegularExpressions.Regex> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1ca0d-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="1ca0d-106">Example</span></span>  
- <span data-ttu-id="1ca0d-107">Poniższy przykład wykonuje kwerendę ciągu, aby określić liczbę cyfr, które zawiera.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="1ca0d-108">Należy pamiętać, że zapytanie jest "ponownie" po wykonaniu po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="1ca0d-109">Jest to możliwe, ponieważ samo zapytanie nie zapisuje żadnych rzeczywistych wyników.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-109">This is possible because the query itself does not store any actual results.</span></span>  
+## <a name="example"></a><span data-ttu-id="ae40c-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="ae40c-106">Example</span></span>  
+ <span data-ttu-id="ae40c-107">Poniższy przykład wykonuje kwerendę ciągu, aby określić liczbę cyfr, które zawiera.</span><span class="sxs-lookup"><span data-stu-id="ae40c-107">The following example queries a string to determine the number of numeric digits it contains.</span></span> <span data-ttu-id="ae40c-108">Należy pamiętać, że zapytanie jest "ponownie" po wykonaniu po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="ae40c-108">Note that the query is "reused" after it is executed the first time.</span></span> <span data-ttu-id="ae40c-109">Jest to możliwe, ponieważ samo zapytanie nie zapisuje żadnych rzeczywistych wyników.</span><span class="sxs-lookup"><span data-stu-id="ae40c-109">This is possible because the query itself does not store any actual results.</span></span>  
   
 ```vb  
 Class QueryAString  
@@ -54,10 +54,10 @@ End Class
 ' ABCDE99F  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="1ca0d-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="1ca0d-110">Compiling the Code</span></span>  
- <span data-ttu-id="1ca0d-111">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.</span><span class="sxs-lookup"><span data-stu-id="1ca0d-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ae40c-110">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="ae40c-110">Compiling the Code</span></span>  
+ <span data-ttu-id="ae40c-111">Utwórz projekt, który jest przeznaczony dla .NET Framework w wersji 3.5 lub nowszego z odwołania do System.Core.dll i `Imports` instrukcji dla przestrzeni nazw System.Linq.</span><span class="sxs-lookup"><span data-stu-id="ae40c-111">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1ca0d-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1ca0d-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae40c-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ae40c-112">See also</span></span>
 
-- [<span data-ttu-id="1ca0d-113">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1ca0d-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [<span data-ttu-id="1ca0d-114">Instrukcje: Łączenie zapytań LINQ z wyrażeniami regularnymi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1ca0d-114">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [<span data-ttu-id="ae40c-113">LINQ i ciągi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae40c-113">LINQ and Strings (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [<span data-ttu-id="ae40c-114">Instrukcje: Łączenie zapytań LINQ z wyrażeniami regularnymi (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae40c-114">How to: Combine LINQ Queries with Regular Expressions (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

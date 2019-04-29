@@ -8,29 +8,29 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
 ms.openlocfilehash: 2f46a548f28cffb1824ffbdc51f8d4d79c4c9d02
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650456"
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="5d2ba-102">Audio i wideo Tematy porad</span><span class="sxs-lookup"><span data-stu-id="5d2ba-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="5d2ba-103">W poniższych tematach pokazano sposób użycia <xref:System.Windows.Controls.MediaElement> zintegrować zawartości audio i wideo w aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="5d2ba-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="4088e-102">Audio i wideo Tematy porad</span><span class="sxs-lookup"><span data-stu-id="4088e-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="4088e-103">W poniższych tematach pokazano sposób użycia <xref:System.Windows.Controls.MediaElement> zintegrować zawartości audio i wideo w aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="4088e-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="5d2ba-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="5d2ba-104">In This Section</span></span>  
- [<span data-ttu-id="5d2ba-105">Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)</span><span class="sxs-lookup"><span data-stu-id="5d2ba-105">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="5d2ba-106">Sterowanie elementem MediaElement z użyciem scenorysu</span><span class="sxs-lookup"><span data-stu-id="5d2ba-106">Control a MediaElement by Using a Storyboard</span></span>](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="5d2ba-107">Wyzwalanie odtwarzania multimediów za pomocą zdarzenia użytkownika</span><span class="sxs-lookup"><span data-stu-id="5d2ba-107">Trigger Media Playback with a User Event</span></span>](how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="5d2ba-108">Powtarzanie odtwarzania multimediów</span><span class="sxs-lookup"><span data-stu-id="5d2ba-108">Repeat Media Playback</span></span>](how-to-repeat-media-playback.md)  
- [<span data-ttu-id="5d2ba-109">Odtwarzanie multimediów z animacjami</span><span class="sxs-lookup"><span data-stu-id="5d2ba-109">Play Media with Animations</span></span>](how-to-play-media-with-animations.md)  
- [<span data-ttu-id="5d2ba-110">Używanie przekształceń w elemencie MediaElement</span><span class="sxs-lookup"><span data-stu-id="5d2ba-110">Use Transforms on a MediaElement</span></span>](how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4088e-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4088e-104">In This Section</span></span>  
+ [<span data-ttu-id="4088e-105">Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)</span><span class="sxs-lookup"><span data-stu-id="4088e-105">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="4088e-106">Sterowanie elementem MediaElement z użyciem scenorysu</span><span class="sxs-lookup"><span data-stu-id="4088e-106">Control a MediaElement by Using a Storyboard</span></span>](how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="4088e-107">Wyzwalanie odtwarzania multimediów za pomocą zdarzenia użytkownika</span><span class="sxs-lookup"><span data-stu-id="4088e-107">Trigger Media Playback with a User Event</span></span>](how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="4088e-108">Powtarzanie odtwarzania multimediów</span><span class="sxs-lookup"><span data-stu-id="4088e-108">Repeat Media Playback</span></span>](how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="4088e-109">Odtwarzanie multimediów z animacjami</span><span class="sxs-lookup"><span data-stu-id="4088e-109">Play Media with Animations</span></span>](how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="4088e-110">Używanie przekształceń w elemencie MediaElement</span><span class="sxs-lookup"><span data-stu-id="4088e-110">Use Transforms on a MediaElement</span></span>](how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="5d2ba-111">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="5d2ba-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4088e-111">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="4088e-111">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="5d2ba-112">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="5d2ba-112">Related Sections</span></span>  
- [<span data-ttu-id="5d2ba-113">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="5d2ba-113">Graphics and Multimedia</span></span>](index.md)
+## <a name="related-sections"></a><span data-ttu-id="4088e-112">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="4088e-112">Related Sections</span></span>  
+ [<span data-ttu-id="4088e-113">Grafika i multimedia</span><span class="sxs-lookup"><span data-stu-id="4088e-113">Graphics and Multimedia</span></span>](index.md)

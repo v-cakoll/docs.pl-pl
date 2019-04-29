@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 315d6dd522f3c6be2d36b1eb411d9f471350df60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59182926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651757"
 ---
-# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="a0c88-102">CorDebugGCType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="a0c88-102">CorDebugGCType Enumeration</span></span>
-<span data-ttu-id="a0c88-103">Wskazuje, czy moduł garbage collector jest uruchomiona na serwerze lub stacji roboczej.</span><span class="sxs-lookup"><span data-stu-id="a0c88-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
+# <a name="cordebuggctype-enumeration"></a><span data-ttu-id="0d98c-102">CorDebugGCType — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="0d98c-102">CorDebugGCType Enumeration</span></span>
+<span data-ttu-id="0d98c-103">Wskazuje, czy moduł garbage collector jest uruchomiona na serwerze lub stacji roboczej.</span><span class="sxs-lookup"><span data-stu-id="0d98c-103">Indicates whether the garbage collector is running on a workstation or a server.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0c88-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a0c88-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d98c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0d98c-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugGCType {  
@@ -35,26 +35,26 @@ typedef enum CorDebugGCType {
 } CorDebugGCType;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a0c88-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="a0c88-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d98c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0d98c-105">Parameters</span></span>  
   
-## <a name="members"></a><span data-ttu-id="a0c88-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="a0c88-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="0d98c-106">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="0d98c-106">Members</span></span>  
   
-|<span data-ttu-id="a0c88-107">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="a0c88-107">Member name</span></span>|<span data-ttu-id="a0c88-108">Opis</span><span class="sxs-lookup"><span data-stu-id="a0c88-108">Description</span></span>|  
+|<span data-ttu-id="0d98c-107">Nazwa elementu członkowskiego</span><span class="sxs-lookup"><span data-stu-id="0d98c-107">Member name</span></span>|<span data-ttu-id="0d98c-108">Opis</span><span class="sxs-lookup"><span data-stu-id="0d98c-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|<span data-ttu-id="a0c88-109">Moduł garbage collector jest uruchomiona na stacji roboczej.</span><span class="sxs-lookup"><span data-stu-id="a0c88-109">The garbage collector is running on a workstation.</span></span>|  
-|`CorDebugServerGC`|<span data-ttu-id="a0c88-110">Moduł garbage collector jest uruchomiona na serwerze.</span><span class="sxs-lookup"><span data-stu-id="a0c88-110">The garbage collector is running on a server.</span></span>|  
+|`CorDebugWorkstationGC`|<span data-ttu-id="0d98c-109">Moduł garbage collector jest uruchomiona na stacji roboczej.</span><span class="sxs-lookup"><span data-stu-id="0d98c-109">The garbage collector is running on a workstation.</span></span>|  
+|`CorDebugServerGC`|<span data-ttu-id="0d98c-110">Moduł garbage collector jest uruchomiona na serwerze.</span><span class="sxs-lookup"><span data-stu-id="0d98c-110">The garbage collector is running on a server.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a0c88-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="a0c88-111">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0d98c-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0d98c-111">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0c88-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a0c88-112">Requirements</span></span>  
- <span data-ttu-id="a0c88-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0c88-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d98c-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0d98c-112">Requirements</span></span>  
+ <span data-ttu-id="0d98c-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0d98c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0c88-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0c88-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0d98c-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0d98c-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a0c88-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0c88-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0d98c-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0d98c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a0c88-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a0c88-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="0d98c-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d98c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0c88-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a0c88-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d98c-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0d98c-117">See also</span></span>
 
-- [<span data-ttu-id="a0c88-118">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="a0c88-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="0d98c-118">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="0d98c-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

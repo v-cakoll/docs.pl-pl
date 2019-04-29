@@ -17,19 +17,19 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598873"
 ---
-# <a name="functionleave-function"></a><span data-ttu-id="d7864-102">FunctionLeave — Funkcja</span><span class="sxs-lookup"><span data-stu-id="d7864-102">FunctionLeave Function</span></span>
-<span data-ttu-id="d7864-103">Powiadamia program profilujący, że funkcja jest około, aby powrócić do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="d7864-103">Notifies the profiler that a function is about to return to the caller.</span></span>  
+# <a name="functionleave-function"></a><span data-ttu-id="3b6a8-102">FunctionLeave — Funkcja</span><span class="sxs-lookup"><span data-stu-id="3b6a8-102">FunctionLeave Function</span></span>
+<span data-ttu-id="3b6a8-103">Powiadamia program profilujący, że funkcja jest około, aby powrócić do obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-103">Notifies the profiler that a function is about to return to the caller.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d7864-104">`FunctionLeave` Funkcja jest przestarzała w programie .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="d7864-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span></span> <span data-ttu-id="d7864-105">Nadal będzie działać, ale spowoduje naliczenie opłaty za spadek wydajności.</span><span class="sxs-lookup"><span data-stu-id="d7864-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="d7864-106">Użyj [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) zamiast tego funkcji.</span><span class="sxs-lookup"><span data-stu-id="d7864-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span></span>  
+>  <span data-ttu-id="3b6a8-104">`FunctionLeave` Funkcja jest przestarzała w programie .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-104">The `FunctionLeave` function is deprecated in the .NET Framework 2.0.</span></span> <span data-ttu-id="3b6a8-105">Nadal będzie działać, ale spowoduje naliczenie opłaty za spadek wydajności.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-105">It will continue to work, but will incur a performance penalty.</span></span> <span data-ttu-id="3b6a8-106">Użyj [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) zamiast tego funkcji.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-106">Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7864-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="d7864-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3b6a8-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="3b6a8-107">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionLeave (  
@@ -37,36 +37,36 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d7864-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="d7864-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3b6a8-108">Parametry</span><span class="sxs-lookup"><span data-stu-id="3b6a8-108">Parameters</span></span>  
  `funcID`  
- <span data-ttu-id="d7864-109">[in] Identyfikator funkcji, która zwraca.</span><span class="sxs-lookup"><span data-stu-id="d7864-109">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="3b6a8-109">[in] Identyfikator funkcji, która zwraca.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-109">[in] The identifier of the function that is returning.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d7864-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d7864-110">Remarks</span></span>  
- <span data-ttu-id="d7864-111">`FunctionLeave` Funkcji jest wywołanie zwrotne; należy go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="d7864-111">The `FunctionLeave` function is a callback; you must implement it.</span></span> <span data-ttu-id="d7864-112">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="d7864-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3b6a8-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3b6a8-110">Remarks</span></span>  
+ <span data-ttu-id="3b6a8-111">`FunctionLeave` Funkcji jest wywołanie zwrotne; należy go zaimplementować.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-111">The `FunctionLeave` function is a callback; you must implement it.</span></span> <span data-ttu-id="3b6a8-112">Należy użyć implementacji `__declspec`(`naked`) atrybuty klasy magazynu.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-112">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="d7864-113">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="d7864-113">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="3b6a8-113">Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-113">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="d7864-114">Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="d7864-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="3b6a8-114">Przy uruchamianiu musisz najpierw zapisać wszystkich rejestrów, z których korzysta Licencjobiorca, łącznie z programami znajdującymi się na jednostki zmiennoprzecinkowej (FPU).</span><span class="sxs-lookup"><span data-stu-id="3b6a8-114">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="d7864-115">Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.</span><span class="sxs-lookup"><span data-stu-id="d7864-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="3b6a8-115">Na zakończenie możesz przywrócić stosu, usuwanie, wyłączanie wszystkich parametrów, które zostały wypchnięte przez wywołującego.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-115">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="d7864-116">Implementacja `FunctionLeave` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="d7864-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="d7864-117">Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="d7864-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="d7864-118">Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionLeave` zwraca.</span><span class="sxs-lookup"><span data-stu-id="d7864-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span></span>  
+ <span data-ttu-id="3b6a8-116">Implementacja `FunctionLeave` nie powinny blokować, ponieważ zostanie opóźnione, wyrzucanie elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-116">The implementation of `FunctionLeave` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="3b6a8-117">Implementacja nie powinien podejmować wyrzucania elementów bezużytecznych, ponieważ stos może nie być w stanie przyjaznego dla kolekcji wyrzucania elementów.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-117">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="3b6a8-118">Jeśli próba zostanie podjęta wyrzucania elementów bezużytecznych, środowisko uruchomieniowe spowoduje zablokowanie aż do `FunctionLeave` zwraca.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-118">If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.</span></span>  
   
- <span data-ttu-id="d7864-119">Ponadto `FunctionLeave` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="d7864-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="3b6a8-119">Ponadto `FunctionLeave` funkcji nie mogą wywoływać kodu zarządzanego lub w dowolnym Przyczyna sposób alokacji pamięci zarządzanej.</span><span class="sxs-lookup"><span data-stu-id="3b6a8-119">Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7864-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d7864-120">Requirements</span></span>  
- <span data-ttu-id="d7864-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7864-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3b6a8-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3b6a8-120">Requirements</span></span>  
+ <span data-ttu-id="3b6a8-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3b6a8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7864-122">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="d7864-122">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="3b6a8-122">**Nagłówek:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="3b6a8-122">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="d7864-123">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7864-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="3b6a8-123">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3b6a8-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d7864-124">**Wersje programu .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="d7864-124">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="3b6a8-124">**Wersje programu .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="3b6a8-124">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7864-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d7864-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3b6a8-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3b6a8-125">See also</span></span>
 
-- [<span data-ttu-id="d7864-126">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="d7864-126">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="d7864-127">FunctionLeave2, funkcja</span><span class="sxs-lookup"><span data-stu-id="d7864-127">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [<span data-ttu-id="d7864-128">FunctionTailcall2, funkcja</span><span class="sxs-lookup"><span data-stu-id="d7864-128">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="d7864-129">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="d7864-129">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="d7864-130">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="d7864-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="3b6a8-126">FunctionEnter2, funkcja</span><span class="sxs-lookup"><span data-stu-id="3b6a8-126">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="3b6a8-127">FunctionLeave2, funkcja</span><span class="sxs-lookup"><span data-stu-id="3b6a8-127">FunctionLeave2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
+- [<span data-ttu-id="3b6a8-128">FunctionTailcall2, funkcja</span><span class="sxs-lookup"><span data-stu-id="3b6a8-128">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="3b6a8-129">SetEnterLeaveFunctionHooks2, metoda</span><span class="sxs-lookup"><span data-stu-id="3b6a8-129">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="3b6a8-130">Profilowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="3b6a8-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

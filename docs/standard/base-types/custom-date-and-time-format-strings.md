@@ -17,11 +17,11 @@ ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650381"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowa data i godzina ciągi formatujące
 
@@ -348,11 +348,11 @@ W poniższym przykładzie specyfikator formatu niestandardowego „HH” jest u�
 
 Specyfikator formatu niestandardowego „K” przedstawia informacje o strefie czasowej z wartości daty i godziny. Gdy ten specyfikator formatu jest używany z <xref:System.DateTime> wartości, ciąg wynikowy jest definiowany przez wartość <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości:
 
--   Dla lokalnej strefy czasowej ( <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartość właściwości <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), ten specyfikator jest równoważny specyfikatorowi "zzz" i daje ciąg wynikowy zawierający lokalne przesunięcie względem uniwersalnego czasu koordynowanego (UTC), na przykład, "-07:00".
+- Dla lokalnej strefy czasowej ( <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartość właściwości <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), ten specyfikator jest równoważny specyfikatorowi "zzz" i daje ciąg wynikowy zawierający lokalne przesunięcie względem uniwersalnego czasu koordynowanego (UTC), na przykład, "-07:00".
 
--   Czas UTC ( <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartość właściwości <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), ciąg wynikowy zawiera znak "Z" reprezentującą datę w formacie UTC.
+- Czas UTC ( <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartość właściwości <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), ciąg wynikowy zawiera znak "Z" reprezentującą datę w formacie UTC.
 
--   Przypadku nieokreślonej strefy czasowej (czas którego <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości jest równa <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), wynik jest równoważny <xref:System.String.Empty?displayProperty=nameWithType>.
+- Przypadku nieokreślonej strefy czasowej (czas którego <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> właściwości jest równa <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), wynik jest równoważny <xref:System.String.Empty?displayProperty=nameWithType>.
 
 Aby uzyskać <xref:System.DateTimeOffset> wartości, specyfikator formatu "K" jest równoważny specyfikatorowi formatu "zzz" i tworzy ciąg wyniku zawierający <xref:System.DateTimeOffset> wartość przesunięcie względem czasu UTC.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5'
+title: 'Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5'
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -10,13 +10,13 @@ ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646075"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Instrukcje: pobieranie danych o postępie z Instalatora .NET Framework 4.5
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest redystrybucyjnego środowiska uruchomieniowego. W przypadku tworzenia aplikacji dla tej wersji programu .NET Framework, można dołączyć (łańcuch) [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator w ramach wymagań wstępnych instalacji aplikacji. Obecne środowisko dostosowany lub ujednoliconego Instalatora, może chcesz uruchomić w trybie dyskretnym [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] instalacji i śledzić postęp podczas wyświetlania postępu instalacji aplikacji. Aby włączyć śledzenie dyskretnej [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora (mogą być odtwarzane) definiuje protokół, za pomocą mapowanych na pamięć segment operacji We/Wy (rozwiązanie MMIO) do komunikowania się z ustawień (obserwatora lub chainer). Protokół ten definiuje sposób chainer uzyskać informacje o postępie, Uzyskaj szczegółowe wyniki, odpowiadanie na wiadomości i anulować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora.
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355639"
 
 - **Kody zakończenia**. Następujące kody zakończenia z polecenia do wywołania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] program do dystrybucji wskazuje, czy Instalator ma zakończonych powodzeniem lub niepowodzeniem:
 
-    - 0 — instalacja została ukończona pomyślnie.
+  - 0 — instalacja została ukończona pomyślnie.
 
-    - 3010 — instalacja została ukończona pomyślnie; wymagane jest ponowne uruchomienie systemu.
+  - 3010 — instalacja została ukończona pomyślnie; wymagane jest ponowne uruchomienie systemu.
 
-    - 1602 — Instalatora zostało anulowane.
+  - 1602 — Instalatora zostało anulowane.
 
-    - Wszystkie pozostałe kody — Instalator napotkał błędy; Sprawdź pliki dziennika utworzone w % temp %, aby uzyskać szczegółowe informacje.
+  - Wszystkie pozostałe kody — Instalator napotkał błędy; Sprawdź pliki dziennika utworzone w % temp %, aby uzyskać szczegółowe informacje.
 
 - **Trwa anulowanie instalacji**. Ustawienia można anulować w dowolnym momencie za pomocą `Abort` metodę, aby ustawić `m_downloadAbort` i `m_ installAbort` flagi w sekcji Rozwiązanie MMIO.
 

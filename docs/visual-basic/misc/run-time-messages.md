@@ -6,11 +6,11 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 ms.openlocfilehash: 11d35774b489d36c32e5d3f58a5bc25b005ff12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61595429"
 ---
 # <a name="visual-basic-run-time-messages"></a>Komunikaty środowiska wykonawczego języka Visual Basic
 Ta sekcja zawiera komunikaty o błędach języka Visual Basic, które występują w czasie wykonywania.  

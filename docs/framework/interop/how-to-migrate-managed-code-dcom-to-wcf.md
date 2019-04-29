@@ -5,20 +5,20 @@ ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74acea566e4b0e407e86cb67d3f521f18c2d68af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643065"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF
 Windows Communication Foundation (WCF) jest rozwiązaniem zalecane i bezpieczne za pośrednictwem rozproszonych Component Object Model (DCOM) dla kodu zarządzanego wywołań między serwerami i klientami w środowisku rozproszonym. W tym artykule pokazano, jak można przeprowadzić migrację kodu z modelu DCOM do WCF w następujących scenariuszach.  
   
--   Usługa zdalna zwraca obiekt przez wartość do klienta  
+- Usługa zdalna zwraca obiekt przez wartość do klienta  
   
--   Klient wysyła przez wartość obiektu do usługi zdalnej  
+- Klient wysyła przez wartość obiektu do usługi zdalnej  
   
--   Usługa zdalna zwraca obiekt przez odwołanie do klienta  
+- Usługa zdalna zwraca obiekt przez odwołanie do klienta  
   
  Ze względów bezpieczeństwa wysyłanie przez — odwołanie do obiektu z klienta do usługi jest niedozwolone w programie WCF. Scenariusz, który wymaga konwersacji i z powrotem między klientem i serwerem można osiągnąć programu WCF za pomocą usługi duplex.  Aby uzyskać więcej informacji na temat usługi dwukierunkowe, zobacz [usługi dwukierunkowe](../../../docs/framework/wcf/feature-details/duplex-services.md).  
   

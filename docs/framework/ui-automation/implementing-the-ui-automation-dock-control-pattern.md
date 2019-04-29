@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609938"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementacja wzorca formantu dokowania automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -28,13 +28,13 @@ Dokowanie przykładu z programu Visual Studio, gdy okno "W widoku klas" jest Doc
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki dokowania, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> nie ujawnia żadnych właściwości dokowania kontenera ani właściwości elementów sterujących, które są zadokowane przylegające do bieżącego formantu w kontenerze dokowania.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> nie ujawnia żadnych właściwości dokowania kontenera ani właściwości elementów sterujących, które są zadokowane przylegające do bieżącego formantu w kontenerze dokowania.  
   
--   Formanty są zadokowane względem siebie oparte na ich bieżącego porządek; wyższe ich kolejności z umieszczania, wskazujemy są oni umieszczani od określonej granicy dokowania kontenera.  
+- Formanty są zadokowane względem siebie oparte na ich bieżącego porządek; wyższe ich kolejności z umieszczania, wskazujemy są oni umieszczani od określonej granicy dokowania kontenera.  
   
--   Jeśli rozmiar będzie dokowania kontenera, wszelkie zadokowanych kontrolek w kontenerze będzie przeniesiony opróżnić do tej samej granicy, do której zostały pierwotnie zadokowany. Zadokowanych formantów również zmienić rozmiar, aby wypełnić miejsce w kontenerze zgodnie z zachowaniem dokowania ich <xref:System.Windows.Automation.DockPosition>. Na przykład jeśli <xref:System.Windows.Automation.DockPosition.Top> jest określony, lewej i prawej stronie formantu zostanie rozwinięte, aby wypełnić dostępne miejsce. Jeśli <xref:System.Windows.Automation.DockPosition.Fill> określono wszystkich czterech krawędzi kontrolki zostanie rozwinięte, aby wypełnić dostępne miejsce.  
+- Jeśli rozmiar będzie dokowania kontenera, wszelkie zadokowanych kontrolek w kontenerze będzie przeniesiony opróżnić do tej samej granicy, do której zostały pierwotnie zadokowany. Zadokowanych formantów również zmienić rozmiar, aby wypełnić miejsce w kontenerze zgodnie z zachowaniem dokowania ich <xref:System.Windows.Automation.DockPosition>. Na przykład jeśli <xref:System.Windows.Automation.DockPosition.Top> jest określony, lewej i prawej stronie formantu zostanie rozwinięte, aby wypełnić dostępne miejsce. Jeśli <xref:System.Windows.Automation.DockPosition.Fill> określono wszystkich czterech krawędzi kontrolki zostanie rozwinięte, aby wypełnić dostępne miejsce.  
   
--   W systemie wielu monitorów kontrolki powinien zadokować do lewej lub prawej strony bieżącego monitora. Jeśli nie jest to możliwe, powinny one zadokować się po lewej stronie monitor skrajnej lewej lub prawej krawędzi monitor po prawej stronie.  
+- W systemie wielu monitorów kontrolki powinien zadokować do lewej lub prawej strony bieżącego monitora. Jeśli nie jest to możliwe, powinny one zadokować się po lewej stronie monitor skrajnej lewej lub prawej krawędzi monitor po prawej stronie.  
   
 <a name="Required_Members_for_IDockProvider"></a>   
 ## <a name="required-members-for-idockprovider"></a>Wymagane elementy IDockProvider  

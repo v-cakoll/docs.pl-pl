@@ -5,10 +5,10 @@ ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
 ms.openlocfilehash: 84e8bf8a03bd529d9c06ad049530c19daa380065
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646699"
 ---
 # <a name="introduction-to-delegates"></a>Wprowadzenie do delegatów
 

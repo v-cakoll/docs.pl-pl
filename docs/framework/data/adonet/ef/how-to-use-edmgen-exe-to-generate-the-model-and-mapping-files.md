@@ -3,24 +3,24 @@ title: 'Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605993"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Instrukcje: Generowanie modelu i mapowania plików za pomocą EdmGen.exe
 W tym temacie przedstawiono sposób użycia narzędzia Generator EDM (EdmGen.exe), aby wygenerować następujących plików, w oparciu o bazę danych School:  
   
--   Model koncepcyjny (plik .csdl).  
+- Model koncepcyjny (plik .csdl).  
   
--   Model magazynu (ssdl pliku).  
+- Model magazynu (ssdl pliku).  
   
--   Mapowanie między modelami koncepcyjne i magazynu (pliku MSL albo identyfikatorem).  
+- Mapowanie między modelami koncepcyjne i magazynu (pliku MSL albo identyfikatorem).  
   
--   Kod warstwy obiektu w języku Visual Basic lub C#.  
+- Kod warstwy obiektu w języku Visual Basic lub C#.  
   
--   Wyświetl pliki.  
+- Wyświetl pliki.  
   
  Narzędzie EdmGen.exe używa /mode:FullGeneration do generowania plików wymienionych powyżej. Aby uzyskać więcej informacji na temat poleceń EdmGen.exe zobacz [Generator EDM (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md).  
   

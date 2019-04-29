@@ -3,11 +3,11 @@ title: 'Instrukcje: Stream fragmentów kodu XML z elementu XmlReader (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: f67ce598-4a12-4dcb-9a07-24deca02a111
 ms.openlocfilehash: 8c5aa1afff983f3763bbf7c74268eba622df7751
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614899"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-visual-basic"></a>Instrukcje: Stream fragmentów kodu XML z elementu XmlReader (Visual Basic)
 W przypadku przetwarzania dużych plików XML, może nie być możliwe do załadowania całego drzewa XML do pamięci. W tym temacie pokazano, jak przesyłać strumieniowo fragmentów przy użyciu <xref:System.Xml.XmlReader>.  

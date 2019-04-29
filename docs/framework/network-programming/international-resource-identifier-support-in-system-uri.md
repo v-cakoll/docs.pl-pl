@@ -3,11 +3,11 @@ title: Obsługa identyfikatorów zasobów międzynarodowych w System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
 ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642363"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Obsługa identyfikatorów zasobów międzynarodowych w System.Uri
 <xref:System.Uri?displayProperty=nameWithType> Klasa została rozszerzona z obsługą międzynarodowych nazw domen (IDN) i międzynarodowych identyfikatorów zasobów (IRI). Te rozszerzenia są dostępne w programie .NET Framework 3.5, 3.0 z dodatkiem SP1 i 2.0 z dodatkiem SP1.  
@@ -15,11 +15,11 @@ ms.locfileid: "59769115"
 ## <a name="iri-and-idn-support"></a>IRI i obsługi IDN  
  Adresy sieci Web zwykle są wyrażone za pomocą identyfikatorów URI (Uniform Resource) który składa się z bardzo ograniczony zestaw znaków:  
   
--   Wielkich i małych liter ASCII litery z alfabetu angielskiego.  
+- Wielkich i małych liter ASCII litery z alfabetu angielskiego.  
   
--   Cyfry od 0 do 9.  
+- Cyfry od 0 do 9.  
   
--   Niewielka liczba innych symboli ASCII.  
+- Niewielka liczba innych symboli ASCII.  
   
  Specyfikacje dotyczące identyfikatorów URI są opisane w dokumencie RFC 2396 i opublikowane przez Internet Engineering Task Force (IETF) ze standardem RFC 3986.  
   

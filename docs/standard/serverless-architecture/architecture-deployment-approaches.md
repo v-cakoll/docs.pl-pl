@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 5477b8c4531780fdebf194e4f798564e59cd2953
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640287"
 ---
-# <a name="architecture-deployment-approaches"></a>Metody wdrażania dotyczące architektury
+# <a name="architecture-deployment-approaches"></a>Podejścia do wdrażania architektury
 
 Niezależnie od architektury podejście do projektowania aplikacji biznesowej, wykonania lub wdrożenia tych aplikacji może się różnić. Firmom udostępnić aplikacjom bezserwerowym na wszystko — od sprzętu fizycznego.
 
@@ -156,7 +156,7 @@ Następny rozdział skupić się na architekturze bezserwerowej, przypadki użyc
 
 * [Przewodnik dotyczący architektury aplikacji platformy Azure](https://docs.microsoft.com/azure/architecture/guide/)
 * [Usługi Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [Usługi Azure SQL](https://docs.microsoft.com/azure/sql-database)
+* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 * [Wzorzec architektury N-warstwowej](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 * [Kubernetes na platformie Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 * [Mikrousługi](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)

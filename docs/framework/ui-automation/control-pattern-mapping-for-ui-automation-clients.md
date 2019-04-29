@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609896"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Mapowanie wzorców kontrolek dla klientów automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101136"
   
  Poniższa tabela służy do organizowania wzorców kontrolek na następujące kategorie:  
   
--   Obsługiwane. Kontrolka musi obsługiwać tego wzorca kontrolki.  
+- Obsługiwane. Kontrolka musi obsługiwać tego wzorca kontrolki.  
   
--   Obsługa warunkowe. Formant może obsługiwać tego wzorca kontrolki, w zależności od stanu kontrolki.  
+- Obsługa warunkowe. Formant może obsługiwać tego wzorca kontrolki, w zależności od stanu kontrolki.  
   
--   Nieobsługiwane. Kontrolka nie obsługuje tego wzorca kontrolki; Kontrolki niestandardowe mogą obsługiwać tego wzorca kontrolki.  
+- Nieobsługiwane. Kontrolka nie obsługuje tego wzorca kontrolki; Kontrolki niestandardowe mogą obsługiwać tego wzorca kontrolki.  
   
 > [!NOTE]
 >  Niektóre kontrolki zostały warunkowego obsługę kilku wzorców kontrolek, w zależności od funkcji kontroli. Na przykład, kontrolki elementu menu ma warunkowego obsługę <xref:System.Windows.Automation.InvokePattern>, <xref:System.Windows.Automation.ExpandCollapsePattern>, <xref:System.Windows.Automation.TogglePattern>, lub <xref:System.Windows.Automation.SelectionItemPattern> — wzorzec kontrolki, w zależności od jego funkcji w kontrolce menu.  

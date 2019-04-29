@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646015"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statystyki dostawcy dla programu SQL Server
 Począwszy od programu .NET Framework w wersji 2.0, .NET Framework Data Provider for SQL Server obsługuje statystyki czasu wykonywania. Należy włączyć statystyki, ustawiając <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> obiekt `True` po poprawnego obiektu połączenia utworzone. Po statystyki są włączone, można przejrzeć je jako "migawki w czasie" pobierając <xref:System.Collections.IDictionary> odwoływać się za pośrednictwem <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu. Wyliczanie za pośrednictwem listy jako zbiór wpisy słownika par nazwa/wartość. Tych par nazwa/wartość są nieuporządkowane. W dowolnym momencie możesz wywołać <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiekt, aby zresetować liczniki. Jeśli zbieranie wartości licznika statystyka nie została włączona, wyjątek nie zostanie wygenerowany. Ponadto jeśli <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> jest wywoływana bez <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> o najpierw wywołuje, są wartościami pobranymi początkowe wartości dla każdego wpisu. Jeśli włączysz statystyki, uruchomienie aplikacji przez jakiś czas i następnie wyłącz statystyki, wartościami pobranymi będą odzwierciedlać wartości, które są zbierane aż do momentu, gdy statystyki zostały wyłączone. Wszystkie wartości statystyczne zebrane znajdują się na poszczególnych połączeń.  

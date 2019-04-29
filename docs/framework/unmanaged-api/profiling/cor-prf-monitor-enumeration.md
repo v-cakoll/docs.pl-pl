@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599055"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR — Wyliczenie
 Zawiera wartości, które są używane do określania zachowania, funkcji lub zdarzeń do których program profilujący chce subskrypcji.  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>Elementy członkowskie  
  Na poniższej liście sekcje `COR_PRF_MONITOR` elementów członkowskich wyliczenia według kategorii. Dostępne są następujące kategorie:  
   
--   [Nie ustawiono flagi](#None)  
+- [Nie ustawiono flagi](#None)  
   
--   [Flagi wywołania zwrotnego](#Callback)  
+- [Flagi wywołania zwrotnego](#Callback)  
   
--   [Włączanie funkcji flagi](#Feature)  
+- [Włączanie funkcji flagi](#Feature)  
   
--   [Flagi konfiguracji](#Config)  
+- [Flagi konfiguracji](#Config)  
   
--   [Flagi złożone](#Composite)  
+- [Flagi złożone](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Nie ustawiono flagi  

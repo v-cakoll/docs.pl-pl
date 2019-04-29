@@ -16,11 +16,11 @@ ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643676"
 ---
 # <a name="applying-interop-attributes"></a>Stosowanie atrybutów międzyoperacyjności
 <xref:System.Runtime.InteropServices> Przestrzeń nazw zawiera trzy kategorie atrybuty specyficzne dla współdziałania: stosowane przez użytkownika w czasie projektowania, stosowane przez narzędzia międzyoperacyjności modelu COM i interfejsów API w procesie konwersji i stosowane przez współdziałania z modelem COM.  

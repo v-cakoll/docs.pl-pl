@@ -4,11 +4,11 @@ ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 090baae7fe0e49289059e060d5dcba7b037ae47a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660921"
 ---
 # <a name="protected-internal-c-reference"></a>chronionych wewnętrznych (odwołanie w C#)
 

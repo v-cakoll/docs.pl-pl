@@ -7,11 +7,11 @@ ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644634"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Wykonywanie równoczesne w programie .NET Framework
 Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacji lub składnika na jednym komputerze. Można mieć wiele wersji środowiska uruchomieniowego języka wspólnego i wiele wersji aplikacji oraz składników, które używają wersji środowiska uruchomieniowego na jednym komputerze w tym samym czasie.  
@@ -33,15 +33,15 @@ Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacj
   
  Wykonywanie równoczesne i program .NET Framework dostarczają następujące funkcje służące do eliminowania konfliktów bibliotek DLL:  
   
--   Zestawy o silnych nazwach.  
+- Zestawy o silnych nazwach.  
   
      Funkcja wykonywania równoczesnego używa zestawów o silnych nazwach w celu powiązania informacji o typie z określoną wersją zestawu. Zapobiega to powiązaniu aplikacji lub składnika z nieprawidłową wersją zestawu. Zestawy o silnych nazwach umożliwiają również istnienie wielu wersji pliku na jednym komputerze i używanie ich przez aplikacje. Aby uzyskać więcej informacji, zobacz [zestawy Strong-Named](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Magazyn kodu rozpoznający wersje.  
+- Magazyn kodu rozpoznający wersje.  
   
      Program .NET Framework dostarcza magazyn kodu rozpoznający wersje w globalnej pamięci podręcznej zestawów. Globalna pamięć podręczna zestawów to pamięć podręczna kodu dla całego komputera, która znajduje się na każdym komputerze z zainstalowanym programem .NET Framework. Zestawy są przechowywane na podstawie wersji, kultury i informacjach o wydawcy, a ponadto jest obsługiwanych wiele wersji składników i aplikacji. Aby uzyskać więcej informacji, zobacz [Global Assembly Cache](../../../docs/framework/app-domains/gac.md).  
   
--   Izolacja.  
+- Izolacja.  
   
      Używając programu .NET Framework, można tworzyć aplikacje i składniki, które są wykonywane w izolacji. Izolacja jest istotnym składnikiem funkcji wykonywania równoczesnego. Działanie izolacji obejmuje rozpoznawanie używanych zasobów oraz współużytkowanie zasobów przez wiele wersji aplikacji lub składnika. Izolacja obejmuje również przechowywanie plików w sposób specyficzny dla wersji. Aby uzyskać więcej informacji dotyczących izolacji, zobacz [wytyczne dotyczące tworzenia składników Side-by-Side Execution](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md).  
   
@@ -66,9 +66,9 @@ Wykonywanie równoczesne stwarza możliwość uruchamiania wielu wersji aplikacj
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Określanie wersji środowiska uruchomieniowego do załadowania  
  Środowisko uruchomieniowe języka wspólnego używa następujących informacji, aby określić, która wersja środowiska uruchomieniowego do załadowania dla aplikacji:  
   
--   Wersje środowiska uruchomieniowego, które są dostępne.  
+- Wersje środowiska uruchomieniowego, które są dostępne.  
   
--   Wersje środowiska uruchomieniowego, obsługiwanych przez aplikację.  
+- Wersje środowiska uruchomieniowego, obsługiwanych przez aplikację.  
   
 ### <a name="supported-runtime-versions"></a>Obsługiwane wersje środowiska uruchomieniowego  
  Środowisko wykonawcze używa pliku konfiguracji aplikacji i przenośnych nagłówka pliku wykonywalnego (PE), aby określić, która wersja środowiska uruchomieniowego aplikacji obsługuje. Jeśli plik konfiguracji aplikacji, nie jest obecny, środowisko uruchomieniowe ładuje wersji środowiska uruchomieniowego, określony w nagłówku pliku PE aplikacji, jeśli ta wersja jest dostępna.  

@@ -3,11 +3,11 @@ title: Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642389"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną
 Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream>, i pokrewne klasy w <xref:System.Net> i pokrewnych przestrzeniach nazw. Dodano obsługę ochrony rozszerzonej zwiększyć poziom bezpieczeństwa.  
@@ -39,21 +39,21 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
   
  Powiązania usługi informacji jest wskazanie celem klienta do uwierzytelniania punktu końcowego określonej usługi. Jest przekazywane z klienta do serwera z następującymi właściwościami:  
   
--   Wartość SPN musi być dostępny serwer uwierzytelniania klienta w postaci zwykłego tekstu.  
+- Wartość SPN musi być dostępny serwer uwierzytelniania klienta w postaci zwykłego tekstu.  
   
--   Wartość nazwy SPN jest publiczny.  
+- Wartość nazwy SPN jest publiczny.  
   
--   Główna nazwa usługi musi być kryptograficznie chroniona przesyłania taki sposób, że atak typu man-in--middle nie może wstawić, usunąć lub zmodyfikować jego wartość.  
+- Główna nazwa usługi musi być kryptograficznie chroniona przesyłania taki sposób, że atak typu man-in--middle nie może wstawić, usunąć lub zmodyfikować jego wartość.  
   
  CBT jest właściwością zewnętrznym bezpiecznego kanału (np. TLS) umożliwia powiązanie (bind) do konwersacji za pośrednictwem kanału wewnętrznej, uwierzytelniane przez klienta. CBT musi mieć następujące właściwości (także definicją IETF RFC 5056):  
   
--   Jeśli kanał zewnętrznego istnieje, wartość CBT musi być właściwością identyfikowania zewnętrzne kanału lub punkt końcowy serwera, niezależnie od siebie dotarły przez klienta i serwera strony w konwersacji.  
+- Jeśli kanał zewnętrznego istnieje, wartość CBT musi być właściwością identyfikowania zewnętrzne kanału lub punkt końcowy serwera, niezależnie od siebie dotarły przez klienta i serwera strony w konwersacji.  
   
--   Wartość CBT wysłane przez klienta nie może być coś, co osoba atakująca może mieć wpływ.  
+- Wartość CBT wysłane przez klienta nie może być coś, co osoba atakująca może mieć wpływ.  
   
--   O tajemnicy wartość CBT stają się żadnych gwarancji. Nie jednak oznacza to, że wartość powiązania usługi, a także informacje o powiązaniu kanału zawsze można sprawdzić przez każdy inny, ale serwer uwierzytelniania, jako protokół wykonywania CBT może zaszyfrowanie go.  
+- O tajemnicy wartość CBT stają się żadnych gwarancji. Nie jednak oznacza to, że wartość powiązania usługi, a także informacje o powiązaniu kanału zawsze można sprawdzić przez każdy inny, ale serwer uwierzytelniania, jako protokół wykonywania CBT może zaszyfrowanie go.  
   
--   CBT musi być kryptograficznie integralności chronionych podczas przesyłania w taki sposób, że osoba atakująca nie może wstawić, usunąć lub zmodyfikować jego wartość.  
+- CBT musi być kryptograficznie integralności chronionych podczas przesyłania w taki sposób, że osoba atakująca nie może wstawić, usunąć lub zmodyfikować jego wartość.  
   
  Powiązania kanału odbywa się przez klienta, przesłanie główną nazwę usługi i CBT serwera w sposób tamperproof. Serwer sprawdza informacje o powiązaniu kanału zgodnie z ich zasadami i odrzuca próby uwierzytelnienia, dla których ona nie uważa się zostały zamierzonym obiektem docelowym. W ten sposób dwa kanały kryptograficznie stają się ze sobą powiązane.  
   
@@ -72,37 +72,37 @@ Wprowadzono ulepszenia, które wpływają na Windows jak zintegrowane uwierzytel
   
  Element <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> zawierający następujące elementy:  
   
--   <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> Właściwość, która wskazuje, czy system operacyjny obsługuje zintegrowane uwierzytelnianie systemu windows przy użyciu mechanizmu rozszerzonej ochrony.  
+- <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> Właściwość, która wskazuje, czy system operacyjny obsługuje zintegrowane uwierzytelnianie systemu windows przy użyciu mechanizmu rozszerzonej ochrony.  
   
--   A <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> wartość, która wskazuje, kiedy należy wymusić zasady ochrony rozszerzonej.  
+- A <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> wartość, która wskazuje, kiedy należy wymusić zasady ochrony rozszerzonej.  
   
--   A <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> wartość, która wskazuje scenariusza wdrażania. Wpływ na sposób Rozszerzona ochrona jest zaznaczone.  
+- A <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> wartość, która wskazuje scenariusza wdrażania. Wpływ na sposób Rozszerzona ochrona jest zaznaczone.  
   
--   Opcjonalny <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> zawierający listy niestandardowej nazwy SPN, który jest używany do dopasowywania główną nazwę usługi udostępniane przez klienta jako docelową uwierzytelniania.  
+- Opcjonalny <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> zawierający listy niestandardowej nazwy SPN, który jest używany do dopasowywania główną nazwę usługi udostępniane przez klienta jako docelową uwierzytelniania.  
   
--   Opcjonalny <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> zawierający powiązanie niestandardowy kanał do użycia w celu weryfikacji. Ten scenariusz nie jest często zdarza  
+- Opcjonalny <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> zawierający powiązanie niestandardowy kanał do użycia w celu weryfikacji. Ten scenariusz nie jest często zdarza  
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration> Przestrzeń nazw zapewnia obsługę dla konfiguracji uwierzytelniania przy użyciu mechanizmu rozszerzonej ochrony aplikacji.  
   
  Wprowadzono szereg zmian funkcji do obsługi ochrony rozszerzonej w istniejącym <xref:System.Net> przestrzeni nazw. Te zmiany są następujące:  
   
--   Nowy <xref:System.Net.TransportContext> dodawane do klasy <xref:System.Net> przestrzeni nazw, który reprezentuje kontekst transportu.  
+- Nowy <xref:System.Net.TransportContext> dodawane do klasy <xref:System.Net> przestrzeni nazw, który reprezentuje kontekst transportu.  
   
--   Nowe <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> i <xref:System.Net.HttpWebRequest.GetRequestStream%2A> przeciążenia metody <xref:System.Net.HttpWebRequest> klasę, która umożliwia pobieranie <xref:System.Net.TransportContext> do obsługi ochrony rozszerzonej dla aplikacji klienckich.  
+- Nowe <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> i <xref:System.Net.HttpWebRequest.GetRequestStream%2A> przeciążenia metody <xref:System.Net.HttpWebRequest> klasę, która umożliwia pobieranie <xref:System.Net.TransportContext> do obsługi ochrony rozszerzonej dla aplikacji klienckich.  
   
--   Dodatki do <xref:System.Net.HttpListener> i <xref:System.Net.HttpListenerRequest> klasy, aby umożliwić obsługę aplikacji serwera.  
+- Dodatki do <xref:System.Net.HttpListener> i <xref:System.Net.HttpListenerRequest> klasy, aby umożliwić obsługę aplikacji serwera.  
   
  Funkcja zmiany do obsługi ochrony rozszerzonej dla aplikacji klienckich SMTP w istniejącym <xref:System.Net.Mail> przestrzeni nazw:  
   
--   A <xref:System.Net.Mail.SmtpClient.TargetName%2A> właściwość <xref:System.Net.Mail.SmtpClient> klasa, która reprezentuje nazwę SPN można używać do uwierzytelniania w przypadku korzystania z rozszerzonej ochrony klienta SMTP aplikacji.  
+- A <xref:System.Net.Mail.SmtpClient.TargetName%2A> właściwość <xref:System.Net.Mail.SmtpClient> klasa, która reprezentuje nazwę SPN można używać do uwierzytelniania w przypadku korzystania z rozszerzonej ochrony klienta SMTP aplikacji.  
   
  Wprowadzono szereg zmian funkcji do obsługi ochrony rozszerzonej w istniejącym <xref:System.Net.Security> przestrzeni nazw. Te zmiany są następujące:  
   
--   Nowe <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> i <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> przeciążenia metody <xref:System.Net.Security.NegotiateStream> klasę, która będzie zezwalać na przekazywanie CBT do obsługi ochrony rozszerzonej dla aplikacji klienckich.  
+- Nowe <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> i <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> przeciążenia metody <xref:System.Net.Security.NegotiateStream> klasę, która będzie zezwalać na przekazywanie CBT do obsługi ochrony rozszerzonej dla aplikacji klienckich.  
   
--   Nowe <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> i <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> przeciążenia metody <xref:System.Net.Security.NegotiateStream> klasę, która zezwalanie na przekazywanie <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> do obsługi ochrony rozszerzonej dla aplikacji serwerowych.  
+- Nowe <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> i <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> przeciążenia metody <xref:System.Net.Security.NegotiateStream> klasę, która zezwalanie na przekazywanie <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> do obsługi ochrony rozszerzonej dla aplikacji serwerowych.  
   
--   Nowy <xref:System.Net.Security.SslStream.TransportContext%2A> właściwość <xref:System.Net.Security.SslStream> klasy do obsługi ochrony rozszerzonej dla klienta i serwera aplikacji.  
+- Nowy <xref:System.Net.Security.SslStream.TransportContext%2A> właściwość <xref:System.Net.Security.SslStream> klasy do obsługi ochrony rozszerzonej dla klienta i serwera aplikacji.  
   
  A <xref:System.Net.Configuration.SmtpNetworkElement> właściwość została dodana do obsługi konfiguracji ochrony rozszerzonej dla klientów SMTP w <xref:System.Net.Security> przestrzeni nazw.  
   

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fab5225225d4e4a4e07961b0f967cff2c1b07321
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599321"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister — Wyliczenie
 Określa rejestrów związane z architekturą procesora w danym.  
@@ -194,9 +194,9 @@ typedef enum CorDebugRegister {
 ## <a name="remarks"></a>Uwagi  
  Brak rejestrów 128 danych ogólnego przeznaczenia i 128 rejestrów zmiennoprzecinkowych danych na procesorach IA-64 procesora, ale tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0` są dostarczane. Inne wartości mogą być określane w następujący sposób:  
   
--   Dodaj numer rejestru w celu `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pośrednictwem `REGISTER_IA64_R127`, które odpowiadają rejestru #1 danych za pośrednictwem rejestru #127 danych w procesorze IA-64.  
+- Dodaj numer rejestru w celu `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pośrednictwem `REGISTER_IA64_R127`, które odpowiadają rejestru #1 danych za pośrednictwem rejestru #127 danych w procesorze IA-64.  
   
--   Dodaj numer rejestru w celu `REGISTER_IA64_F0` wartości `REGISTER_IA64_F1` za pośrednictwem `REGISTER_IA64_F127`, które są zgodne Rejestr danych FP #1 do #127 Rejestr danych FP na procesorze IA-64.  
+- Dodaj numer rejestru w celu `REGISTER_IA64_F0` wartości `REGISTER_IA64_F1` za pośrednictwem `REGISTER_IA64_F127`, które są zgodne Rejestr danych FP #1 do #127 Rejestr danych FP na procesorze IA-64.  
   
  Na przykład, jeśli zachodzi potrzeba Określ rejestr #83 danych w procesorze IA-64, użyj `REGISTER_IA64_R0` + 83.  
   

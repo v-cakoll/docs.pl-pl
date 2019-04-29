@@ -13,11 +13,11 @@ ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643585"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Tworzenie klasy utrzymującej funkcje DLL
 Zawijanie często używanych funkcji DLL w klasie zarządzanej jest efektywne podejście do hermetyzacji funkcje platformy. Chociaż nie jest wymagane, aby to zrobić w każdym przypadku, zapewniając otoka klasy jest wygodne, ponieważ Definiowanie funkcji DLL może być skomplikowane i podatne na błędy. Jeśli programujesz w języku Visual Basic lub C#, należy zadeklarować funkcji DLL w obrębie klasy lub w module języka Visual Basic.  
@@ -28,11 +28,11 @@ Zawijanie często używanych funkcji DLL w klasie zarządzanej jest efektywne po
   
  Podczas projektowania klas zarządzanych dla platformy wywołać, należy wziąć pod uwagę relacji między klasami i funkcji DLL. Możesz na przykład:  
   
--   Deklarowanie funkcji DLL w ramach istniejącej klasy.  
+- Deklarowanie funkcji DLL w ramach istniejącej klasy.  
   
--   Utwórz klasę poszczególnych dla każdej funkcji DLL, utrzymywanie funkcji w izolowanej i łatwe do znalezienia.  
+- Utwórz klasę poszczególnych dla każdej funkcji DLL, utrzymywanie funkcji w izolowanej i łatwe do znalezienia.  
   
--   Utwórz jedną klasę zbiór powiązanych funkcji DLL, które tworzą logiczne grupowanie i zmniejszyć obciążenie.  
+- Utwórz jedną klasę zbiór powiązanych funkcji DLL, które tworzą logiczne grupowanie i zmniejszyć obciążenie.  
   
  Możesz nazwać klasy i jego metod, jak należy. Aby uzyskać przykłady pokazujące, jak utworzyć. Na podstawie NET deklaracje do użycia z platformą wywołania, zobacz [Marshaling danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   

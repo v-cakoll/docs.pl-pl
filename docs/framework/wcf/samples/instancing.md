@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596810"
 ---
 # <a name="instancing"></a>Tworzenie wystąpienia
 Przykład Instancing pokazuje ustawienie zachowania wystąpień, które kontroluje sposób tworzenia wystąpienia klasy usługi w odpowiedzi na żądania klientów. Przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. Ta przykładowa aplikacja definiuje kontrakt nowe `ICalculatorInstance`, który dziedziczy z `ICalculator`. Kontrakt określony przez `ICalculatorInstance` zawiera trzy dodatkowych operacji sprawdzania stanu wystąpienia usługi. Zmieniając ustawienie wystąpień, można obserwować zmiany w zachowaniu przez uruchomienie klienta.  
@@ -22,11 +22,11 @@ Przykład Instancing pokazuje ustawienie zachowania wystąpień, które kontrolu
   
  Dostępne są następujące tryby wystąpień:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Nowe wystąpienie usługi jest tworzona dla każdego żądania klienta.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Nowe wystąpienie usługi jest tworzona dla każdego żądania klienta.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowe wystąpienie jest tworzone dla każdej nowej sesji klienta i utrzymywana ze względu na okres istnienia sesji (wymaga powiązanie, które obsługuje sesji).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowe wystąpienie jest tworzone dla każdej nowej sesji klienta i utrzymywana ze względu na okres istnienia sesji (wymaga powiązanie, które obsługuje sesji).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedyncze wystąpienie klasy usługi obsługuje wszystkie żądania klienta przez okres istnienia aplikacji.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedyncze wystąpienie klasy usługi obsługuje wszystkie żądania klienta przez okres istnienia aplikacji.  
   
  Klasa usługi określa zachowanie wystąpień z `[ServiceBehavior(InstanceContextMode=<setting>)]` atrybutu, jak pokazano w poniższym przykładzie kodu. Zmieniając wierszy, które są oznaczone jako komentarz, możesz przyjrzeć się zachowaniu trybach wystąpienia. Pamiętaj, aby odbudować usługi po zmianie trybu wystąpień. Nie istnieją żadne ustawienia związane z wystąpień, aby określić na komputerze klienckim.  
   

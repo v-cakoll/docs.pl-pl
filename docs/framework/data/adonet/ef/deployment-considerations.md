@@ -3,11 +3,11 @@ title: Deployment Considerations (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 3a847a22-4eb8-4565-b18b-453bbca070db
 ms.openlocfilehash: 7ab3827a9f2072f6f4b0c34f3801ee5dff2821d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606631"
 ---
 # <a name="deployment-considerations-entity-framework"></a>Deployment Considerations (Entity Framework)
 Ten temat zawiera informacje dotyczące wdrażania aplikacji, które używają ADO.NET Entity Framework, aby uzyskać dostęp do danych. Aby uzyskać więcej informacji na temat programu Entity Framework, zobacz [wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
@@ -18,15 +18,15 @@ Ten temat zawiera informacje dotyczące wdrażania aplikacji, które używają A
   
  W przypadku wdrażania aplikacji, która używa programu Entity Framework, obowiązują następujące zastrzeżenia:  
   
--   Entity Framework jest składnikiem programu .NET Framework, począwszy od .NET Framework 3.5 Service Pack 1 (SP1). Należy upewnić się, że .NET Framework 3.5 z dodatkiem SP1 lub nowszej jest zainstalowane, podczas wdrażania aplikacji na podstawie platformy Entity Framework.  
+- Entity Framework jest składnikiem programu .NET Framework, począwszy od .NET Framework 3.5 Service Pack 1 (SP1). Należy upewnić się, że .NET Framework 3.5 z dodatkiem SP1 lub nowszej jest zainstalowane, podczas wdrażania aplikacji na podstawie platformy Entity Framework.  
   
--   Gdy model koncepcyjny jest generowany przez Kreator modelu Entity Data Model, ciąg połączenia jest tworzony w pliku konfiguracji aplikacji. Modelu i mapowania plików można osadzić jako zasobów aplikacji lub mogą być kopiowane do katalogu wyjściowego. Domyślnie są one wdrażane jako zasoby osadzonej aplikacji. Użyj `Metadata Artifact Processing` właściwość pliku Projektanta obiektów do wybrania jednej z tych opcji. Aby uzyskać więcej informacji, zobacz [jak: Kopiowanie modelu i mapowania plików do katalogu wyjściowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716709(v=vs.100)).  
+- Gdy model koncepcyjny jest generowany przez Kreator modelu Entity Data Model, ciąg połączenia jest tworzony w pliku konfiguracji aplikacji. Modelu i mapowania plików można osadzić jako zasobów aplikacji lub mogą być kopiowane do katalogu wyjściowego. Domyślnie są one wdrażane jako zasoby osadzonej aplikacji. Użyj `Metadata Artifact Processing` właściwość pliku Projektanta obiektów do wybrania jednej z tych opcji. Aby uzyskać więcej informacji, zobacz [jak: Kopiowanie modelu i mapowania plików do katalogu wyjściowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716709(v=vs.100)).  
   
--   Upewnij się, że modelu i mapowania informacji (wyrażony w język definicji schematu koncepcyjnego (CSDL), język definicji schematu magazynu (SSDL) i mapowania specyfikacji języka (MSL)) jest wdrażany wraz z aplikacją, jak i w lokalizacji określona przez ciąg połączenia. Aby uzyskać więcej informacji, zobacz [parametry połączenia](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
+- Upewnij się, że modelu i mapowania informacji (wyrażony w język definicji schematu koncepcyjnego (CSDL), język definicji schematu magazynu (SSDL) i mapowania specyfikacji języka (MSL)) jest wdrażany wraz z aplikacją, jak i w lokalizacji określona przez ciąg połączenia. Aby uzyskać więcej informacji, zobacz [parametry połączenia](../../../../../docs/framework/data/adonet/ef/connection-strings.md).  
   
--   Osadzenie modelu i mapowania informacji jako zasobów aplikacji, należy ponownie skompilować i ponowne wdrażanie aplikacji za każdym razem, gdy model koncepcyjny jest aktualizowana.  
+- Osadzenie modelu i mapowania informacji jako zasobów aplikacji, należy ponownie skompilować i ponowne wdrażanie aplikacji za każdym razem, gdy model koncepcyjny jest aktualizowana.  
   
--   Ponieważ platforma Entity Framework jest składnikiem programu .NET Framework, można redystrybuować z aplikacją, zgodnie z umową licencyjną .NET Framework.  
+- Ponieważ platforma Entity Framework jest składnikiem programu .NET Framework, można redystrybuować z aplikacją, zgodnie z umową licencyjną .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
 

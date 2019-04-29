@@ -11,8 +11,8 @@ ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608856"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
 Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEditor.exe) umożliwia administratorów i deweloperów, tworzenie i modyfikowanie ustawień konfiguracji dla usług WCF za pomocą graficznego interfejsu użytkownika. Za pomocą tego narzędzia można zarządzać ustawieniami dla wiązania WCF, zachowań, usług i diagnostyki, bez konieczności bezpośredniego edytowania pliki konfiguracji XML.  
@@ -50,11 +50,11 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
   
  Interfejs użytkownika edytora konfiguracji usługi jest podzielona na następujące obszary:  
   
--   Okienka widoku drzewa, który zawiera elementy konfiguracji w strukturze drzewa po lewej stronie. Aby wykonywać operacje w drzewie, kliknij prawym przyciskiem myszy węzły.  
+- Okienka widoku drzewa, który zawiera elementy konfiguracji w strukturze drzewa po lewej stronie. Aby wykonywać operacje w drzewie, kliknij prawym przyciskiem myszy węzły.  
   
--   Okienka zadań, która wyświetla typowe zadania związane z bieżącym elementów w lewym dolnym rogu okna  
+- Okienka zadań, która wyświetla typowe zadania związane z bieżącym elementów w lewym dolnym rogu okna  
   
--   Okienko Szczegóły są wyświetlane szczegółowe ustawienia konfiguracji węzła wybranego w widoku drzewa po prawej stronie.  
+- Okienko Szczegóły są wyświetlane szczegółowe ustawienia konfiguracji węzła wybranego w widoku drzewa po prawej stronie.  
   
 ### <a name="opening-a-configuration-file"></a>Otwieranie pliku konfiguracji  
   
@@ -77,16 +77,16 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 #### <a name="creating-a-new-service-configuration"></a>Tworząc nową konfigurację usługi  
  Można utworzyć nową konfigurację usługi w następujący sposób:  
   
--   Przy użyciu kreatora: Kliknij łącze **Utwórz nową usługę...** Okienko zadań lub strony Podsumowanie, które można uruchomić kreatora. Można również wykonać dlatego w **pliku** menu -> **Dodaj nowy element**.  
+- Przy użyciu kreatora: Kliknij łącze **Utwórz nową usługę...** Okienko zadań lub strony Podsumowanie, które można uruchomić kreatora. Można również wykonać dlatego w **pliku** menu -> **Dodaj nowy element**.  
   
--   Ręczne tworzenie: Możesz kliknąć prawym przyciskiem myszy **usług** węzeł i wybierz polecenie **nową usługę**.  
+- Ręczne tworzenie: Możesz kliknąć prawym przyciskiem myszy **usług** węzeł i wybierz polecenie **nową usługę**.  
   
 #### <a name="creating-a-new-service-endpoint-configuration"></a>Tworzenie nowej konfiguracji punktu końcowego usługi  
  Można utworzyć nową konfigurację punktu końcowego usługi, w następujący sposób:  
   
--   Tworzenie przy użyciu kreatora: kliknij link **utworzyć nowy punkt końcowy usługi...** Okienko zadań lub strony Podsumowanie, które można uruchomić kreatora. Można również wykonać dlatego w **pliku** menu -> **Dodaj nowy element**.  
+- Tworzenie przy użyciu kreatora: kliknij link **utworzyć nowy punkt końcowy usługi...** Okienko zadań lub strony Podsumowanie, które można uruchomić kreatora. Można również wykonać dlatego w **pliku** menu -> **Dodaj nowy element**.  
   
--   Ręczne tworzenie: Po utworzeniu usługi, możesz kliknąć prawym przyciskiem myszy **punktów końcowych** węzeł i wybierz polecenie "**nowy punkt końcowy usługi**".  
+- Ręczne tworzenie: Po utworzeniu usługi, możesz kliknąć prawym przyciskiem myszy **punktów końcowych** węzeł i wybierz polecenie "**nowy punkt końcowy usługi**".  
   
 #### <a name="editing-a-service-configuration"></a>Edytowanie konfiguracji usługi  
   
@@ -121,9 +121,9 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 #### <a name="creating-a-new-client-endpoint-configuration"></a>Tworzenie nowej konfiguracji punktu końcowego klienta  
  Można utworzyć nowej konfiguracji punktu końcowego klienta, w następujący sposób:  
   
--   Tworzenie za pomocą kreatora: Kliknij łącze **tworzenia nowego klienta...** na **okienka zadań** w lewym dolnym rogu okna, lub **strony Podsumowanie** Aby uruchomić kreatora. Można również wykonać dlatego w **pliku** menu -> **Dodaj nowy element**. Kreator monituje wskaż lokalizację konfiguracji usługi, z którego jest generowany konfiguracji klienta. Następnie można połączyć się z punktem końcowym usługi.  
+- Tworzenie za pomocą kreatora: Kliknij łącze **tworzenia nowego klienta...** na **okienka zadań** w lewym dolnym rogu okna, lub **strony Podsumowanie** Aby uruchomić kreatora. Można również wykonać dlatego w **pliku** menu -> **Dodaj nowy element**. Kreator monituje wskaż lokalizację konfiguracji usługi, z którego jest generowany konfiguracji klienta. Następnie można połączyć się z punktem końcowym usługi.  
   
--   Ręczne tworzenie: Kliknij prawym przyciskiem myszy **punktów końcowych** węźle **klienta**i wybierz polecenie **nowy punkt końcowy klienta**.  
+- Ręczne tworzenie: Kliknij prawym przyciskiem myszy **punktów końcowych** węźle **klienta**i wybierz polecenie **nowy punkt końcowy klienta**.  
   
 #### <a name="editing-a-client-endpoint-configuration"></a>Edytowanie konfiguracji punktu końcowego klienta  
   
@@ -141,27 +141,27 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 #### <a name="creating-a-new-standard-endpoint-configuration"></a>Tworzenie nowej konfiguracji standardowy punkt końcowy  
  Nowa konfiguracja standardowego punktu końcowego można utworzyć w następujący sposób:  
   
--   Kliknij prawym przyciskiem myszy **standardowy punkt końcowy** a następnie wybierz węzeł **nowe standardowej konfiguracji punktu końcowego...** Wybierz typ powiązania w oknie dialogowym i kliknij **OK**.  
+- Kliknij prawym przyciskiem myszy **standardowy punkt końcowy** a następnie wybierz węzeł **nowe standardowej konfiguracji punktu końcowego...** Wybierz typ powiązania w oknie dialogowym i kliknij **OK**.  
   
--   Wybierz **standardowy punkt końcowy** węzła i kliknij przycisk **nowe standardowej konfiguracji punktu końcowego...** w **okienka zadań** w lewym dolnym rogu okna.  
+- Wybierz **standardowy punkt końcowy** węzła i kliknij przycisk **nowe standardowej konfiguracji punktu końcowego...** w **okienka zadań** w lewym dolnym rogu okna.  
   
  **Tworzenie Nowy standardowy punkt końcowy** Wyświetla okno dialogowe i wyświetla listę wszystkich zarejestrowanych typów standardowy punkt końcowy.  
   
 #### <a name="viewing-and-editing-a-standard-endpoint-configuration"></a>Wyświetlanie i edytowanie konfiguracji standardowy punkt końcowy  
  Można otworzyć konfiguracji standardowy punkt końcowy do wyświetlania i edytowania w następujący sposób:  
   
--   Kliknij, aby rozwinąć **standardowy punkt końcowy** węzła i kliknij węzeł podrzędny odpowiednich punktu końcowego.  
+- Kliknij, aby rozwinąć **standardowy punkt końcowy** węzła i kliknij węzeł podrzędny odpowiednich punktu końcowego.  
   
--   Kliknij przycisk **standardowy punkt końcowy** węzła i kliknij odpowiedni punkt końcowy, w okienku szczegółów.  
+- Kliknij przycisk **standardowy punkt końcowy** węzła i kliknij odpowiedni punkt końcowy, w okienku szczegółów.  
   
  Atrybuty dla punktu końcowego są wyświetlane w okienku po prawej stronie do edycji.  
   
 #### <a name="deleting-a-standard-endpoint-configuration"></a>Usuwanie konfiguracji standardowy punkt końcowy  
  Usuń z konfiguracji standardowy punkt końcowy, w następujący sposób:  
   
--   Kliknij, aby rozwinąć **standardowy punkt końcowy** węzła i kliknij prawym przyciskiem myszy węzeł podrzędny odpowiednich punktu końcowego. Użyć polecenia kontekstowego **Usuń standardowej konfiguracji punktu końcowego** można usunąć punktu końcowego.  
+- Kliknij, aby rozwinąć **standardowy punkt końcowy** węzła i kliknij prawym przyciskiem myszy węzeł podrzędny odpowiednich punktu końcowego. Użyć polecenia kontekstowego **Usuń standardowej konfiguracji punktu końcowego** można usunąć punktu końcowego.  
   
--   Kliknij przycisk **standardowy punkt końcowy** węzła. W **zadań** okienku kliknij **Usuń standardowej konfiguracji punktu końcowego**.  
+- Kliknij przycisk **standardowy punkt końcowy** węzła. W **zadań** okienku kliknij **Usuń standardowej konfiguracji punktu końcowego**.  
   
  Jeżeli standardowy punkt końcowy w zastosowano, podczas próby usunięcia go jest wyświetlany komunikat ostrzegawczy: **Standardowy punkt końcowy jest używany. Jeśli usuniesz je teraz, należy koniecznie Usuń wszystkie odniesienia w innych częściach elementów konfiguracji (na przykład w punkt końcowy usługi lub punkt końcowy klienta). W przeciwnym razie konfiguracja jest nieprawidłowy i nie można otworzyć następnym razem. Czy na pewno chcesz usunąć standardowy punkt końcowy?"**  
   
@@ -175,11 +175,11 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 #### <a name="creating-a-new-binding-configuration"></a>Tworzenie nowej konfiguracji powiązania  
  Można utworzyć nową konfigurację powiązania w następujący sposób.  
   
--   Kliknij prawym przyciskiem myszy **powiązania** a następnie wybierz węzeł **nowej konfiguracji powiązania**... Wybierz typ powiązania w oknie dialogowym i kliknij **OK**.  
+- Kliknij prawym przyciskiem myszy **powiązania** a następnie wybierz węzeł **nowej konfiguracji powiązania**... Wybierz typ powiązania w oknie dialogowym i kliknij **OK**.  
   
--   Wybierz **powiązania** węzła i kliknij przycisk **nowej konfiguracji powiązania**... w **okienka zadań** w lewym dolnym rogu okna.  
+- Wybierz **powiązania** węzła i kliknij przycisk **nowej konfiguracji powiązania**... w **okienka zadań** w lewym dolnym rogu okna.  
   
--   Na stronie podsumowania usługi lub klienta kliknij **kliknij, aby tworzenie** w **Konfiguracja powiązania** pola, aby utworzyć konfigurację powiązania dla odpowiedniego punktu końcowego.  
+- Na stronie podsumowania usługi lub klienta kliknij **kliknij, aby tworzenie** w **Konfiguracja powiązania** pola, aby utworzyć konfigurację powiązania dla odpowiedniego punktu końcowego.  
   
 #### <a name="adding-binding-element-extensions-to-a-custom-binding"></a>Dodawanie powiązania rozszerzeń elementów do niestandardowego powiązania  
   
@@ -278,9 +278,9 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 ##### <a name="creating-a-new-behavior-configuration"></a>Tworzenie nowej konfiguracji zachowanie  
  Można utworzyć nową konfigurację zachowania na dwa sposoby.  
   
--   Kliknij prawym przyciskiem myszy jeden z węzłów zachowania, a następnie wybierz pozycję "**nowej konfiguracji zachowanie...**  
+- Kliknij prawym przyciskiem myszy jeden z węzłów zachowania, a następnie wybierz pozycję "**nowej konfiguracji zachowanie...**  
   
--   Wybierz jeden z węzłów zachowania, a następnie kliknij przycisk **nowej konfiguracji zachowanie**... w **okienka zadań** w lewym dolnym rogu okna.  
+- Wybierz jeden z węzłów zachowania, a następnie kliknij przycisk **nowej konfiguracji zachowanie**... w **okienka zadań** w lewym dolnym rogu okna.  
   
 ##### <a name="adding-behavior-element-extensions-to-a-behavior"></a>Dodawanie zachowania rozszerzeń elementów do zachowania  
   
@@ -319,13 +319,13 @@ Edytor konfiguracji usługi Windows Communication Foundation (WCF) (SvcConfigEdi
 #### <a name="extensions"></a>Rozszerzenia  
  Nowe rozszerzenia powiązania, rozszerzeń element powiązania, rozszerzenia standardowy punkt końcowy i rozszerzenia zachowania można zarejestrować do użytku w konfiguracji usługi WCF. Rozszerzenia są pary nazwa/typu. Nazwa definiuje nazwę rozszerzenia w konfiguracji, natomiast typ implementuje rozszerzenie. Istnieją cztery typy rozszerzeń:  
   
--   Rozszerzeń powiązania zdefiniować typ całej powiązania. Przykład: `basicHttpBinding`.  
+- Rozszerzeń powiązania zdefiniować typ całej powiązania. Przykład: `basicHttpBinding`.  
   
--   Rozszerzenia elementu powiązania zdefiniować element powiązania. Przykład: `textMessageEncoding`.  
+- Rozszerzenia elementu powiązania zdefiniować element powiązania. Przykład: `textMessageEncoding`.  
   
--   Standardowy punkt końcowy rozszerzenia definiować całej standardowy punkt końcowy. Przykład: `discoveryEndpoint`.  
+- Standardowy punkt końcowy rozszerzenia definiować całej standardowy punkt końcowy. Przykład: `discoveryEndpoint`.  
   
--   Zachowanie elementu rozszerzenia zdefiniować element zachowanie. Przykład: `clientVia`.  
+- Zachowanie elementu rozszerzenia zdefiniować element zachowanie. Przykład: `clientVia`.  
   
  Rozszerzenia, które zostały zarejestrowane w konfiguracji mogą być używane jak jakikolwiek inny składnik WCF tego samego typu.  
   

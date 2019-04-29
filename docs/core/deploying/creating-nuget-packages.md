@@ -6,11 +6,11 @@ ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
 ms.openlocfilehash: 1add3470799b75ebb92c67eed3509523e510ab6c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650898"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Jak utworzyć pakiet NuGet za pomocą narzędzia interfejsu wiersza polecenia (CLI) platformy .NET Core
 

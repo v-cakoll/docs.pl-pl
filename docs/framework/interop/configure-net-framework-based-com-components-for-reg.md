@@ -11,18 +11,18 @@ ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643403"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
 Aktywacji bez rejestracji dla składników opartych na programie .NET Framework jest tylko nieco bardziej skomplikowane niż jest dla składników COM. Instalator wymaga dwóch manifesty:  
   
--   Aplikacje COM musi mieć Win32 stylu manifest aplikacji, aby zidentyfikować zarządzanego składnika.  
+- Aplikacje COM musi mieć Win32 stylu manifest aplikacji, aby zidentyfikować zarządzanego składnika.  
   
--   Składniki .NET framework, musi mieć manifestu składnika, aby uzyskać informacje o aktywacji potrzebnych w czasie wykonywania.  
+- Składniki .NET framework, musi mieć manifestu składnika, aby uzyskać informacje o aktywacji potrzebnych w czasie wykonywania.  
   
  W tym temacie opisano, jak skojarzyć manifest aplikacji za pomocą aplikacji; Kojarzenie manifestu składnika za pomocą składnika; i osadzanie manifestu składnika w zestawie.  
   
@@ -107,7 +107,7 @@ Aktywacji bez rejestracji dla składników opartych na programie .NET Framework 
   
     |Atrybut|Opis|Wymagane|  
     |---------------|-----------------|--------------|  
-    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Tak|  
+    |`clsid`|Identyfikator, który określa klasę do aktywacji.|Yes|  
     |`description`|Ciąg, który informuje użytkownika o informacje o składniku. Pusty ciąg jest ustawieniem domyślnym.|Nie|  
     |`name`|Ciąg, który reprezentuje klasy zarządzanej.|Tak|  
     |`progid`|Identyfikator, który ma być używany do aktywacji z późnym wiązaniem.|Nie|  

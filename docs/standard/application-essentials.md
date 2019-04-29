@@ -8,11 +8,11 @@ ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627895"
 ---
 # <a name="net-framework-application-essentials"></a>Podstawy aplikacji .NET Framework
 Ta część dokumentacji środowiska .NET Framework zawiera informacje dotyczące podstawowych zadań tworzenia aplikacji w tym środowisku.  
@@ -37,7 +37,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  Opisu obsług błędów w środowisku .NET Framework oraz podstaw obsługi wyjątków.  
   
  [We/Wy plików i strumieni](../../docs/standard/io/index.md)  
- Wyjaśniono, jak można wykonać pliku synchroniczne i asynchroniczne i dostęp do strumienia danych i sposobu korzystania z izolowanych magazynów.  
+ Wyjaśnia, jak można wykonać pliku synchroniczne i asynchroniczne i dostęp do strumienia danych oraz sposób używania wydzielonej pamięci masowej.  
   
  [Daty, godziny i strefy czasowe](../../docs/standard/datetime/index.md)  
  Opis pracy ze strefami czasowymi oraz konwersjami stref czasowych w aplikacjach uwzględniających strefy czasowe.  

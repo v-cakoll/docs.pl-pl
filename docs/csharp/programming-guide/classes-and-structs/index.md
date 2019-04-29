@@ -12,11 +12,11 @@ helpviewer_keywords:
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
 ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646335"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Klasy i struktury (Przewodnik programowania w języku C#)
 Klasy i struktury są dwoma podstawowymi konstrukcjami wspólnego systemu typu W.NET Framework. Każdy jest zasadniczo strukturą danych, która hermetyzuje zestaw danych i zachowania, które należą ze sobą jako jednostki logicznej. Dane i zachowania są *członków* klasy lub struktury, i obejmują one metody, właściwości i zdarzenia i tak dalej, zgodnie z opisem w dalszej części tego tematu.  
@@ -44,25 +44,25 @@ Klasy i struktury są dwoma podstawowymi konstrukcjami wspólnego systemu typu W
 ### <a name="members"></a>Elementy członkowskie  
  Wszystkie metody, pola, stałe, właściwości i zdarzenia musi być zadeklarowana w ramach danego typu; są to tak zwane *członków* tego typu. W języku C# nie ma żadnych zmiennych globalnych ani metod w przeciwieństwie do innych języków. Nawet punktu wejścia programu `Main` metody musi być zadeklarowana w klasie lub strukturze. Poniższa lista zawiera wszystkie różne rodzaje elementów członkowskich, które może być zadeklarowana w klasie lub strukturze.  
   
--   [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Pola](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [Stałe](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
+- [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
   
--   [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
+- [Indeksatory](../../../csharp/programming-guide/indexers/index.md)  
   
--   [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Zagnieżdżone typy](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>Ułatwienia dostępu  
  Niektóre metody i właściwości mają być nazywane lub dostępne z kodu spoza klasy lub struktury, znanego jako *kod klienta*. Inne metody i właściwości mogą być tylko do użytku w samej klasie lub strukturze. Należy ograniczyć dostępność kodu, tak aby tylko kod zamierzonego klienta mógł go osiągnąć. Należy określić, jak przystępna typów i ich elementów członkowskich mają kod klienta za pomocą modyfikatorów dostępu [publicznych](../../../csharp/language-reference/keywords/public.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), [ chronionych wewnętrznych](../../../csharp/language-reference/keywords/protected-internal.md), [prywatnej](../../../csharp/language-reference/keywords/private.md) i [prywatny chroniony](../../../csharp/language-reference/keywords/private-protected.md). Wartość domyślna dostępu `private`. Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).   

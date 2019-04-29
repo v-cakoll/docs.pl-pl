@@ -9,24 +9,24 @@ ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643273"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
 Typ architektury .NET do zapisywania i używania tego typu z niezarządzanego kodu są różne działania, dla deweloperów. W tej sekcji opisano kilka porad dotyczących pisaniu kodu zarządzanego, który współdziała z klientami COM:  
   
--   [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
   
      Wszystkie zarządzane typy, metody, właściwości, pola i zdarzenia, które chcesz udostępnić w COM muszą być publiczne. Typy muszą mieć publicznego konstruktora domyślnego, który jest tylko konstruktorem, który może być wywoływany za pomocą modelu COM.  
   
--   [Stosowanie atrybutów międzyoperacyjności](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Stosowanie atrybutów międzyoperacyjności](../../../docs/framework/interop/applying-interop-attributes.md).  
   
      Niestandardowe atrybuty w kodzie zarządzanym może zwiększyć współdziałanie składnika.  
   
--   [Pakowanie zestawu dla modelu COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+- [Pakowanie zestawu dla modelu COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
      Deweloperzy COM może wymagać podsumowania etapy odwołujące się do i wdrażaniu zestawów.  
   

@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627801"
 ---
 # <a name="weak-references"></a>Słabe odwołania
 Moduł odśmiecania pamięci nie można zebrać obiekt używany przez aplikację, gdy kod aplikacji może osiągnąć tego obiektu. Aplikacja jest nazywany ma silne odwołanie do obiektu.  
@@ -33,11 +33,11 @@ Moduł odśmiecania pamięci nie można zebrać obiekt używany przez aplikację
 ## <a name="short-and-long-weak-references"></a>Krótko- i długo słabe odwołania  
  Można utworzyć krótkiej słabe odwołanie lub długo słabe odwołanie:  
   
--   Krótka  
+- Krótkie  
   
      Staje się celem krótki słabe odwołanie `null` gdy obiekt jest odzyskiwane przez wyrzucanie elementów bezużytecznych. Słabe odwołanie jest sam obiekt zarządzany i podlega wyrzucania elementów bezużytecznych, podobnie jak inne zarządzanego obiektu.  Krótkie słabe odwołanie jest domyślny konstruktor dla <xref:System.WeakReference>.  
   
--   długi  
+- Długie  
   
      Długi słabe odwołanie jest zachowywane po obiektu <xref:System.Object.Finalize%2A> została wywołana metoda. Dzięki temu obiekt do odtworzenia, ale stan obiektu jest nieprzewidywalne. Aby użyć długie odwołania, określ `true` w <xref:System.WeakReference> konstruktora.  
   

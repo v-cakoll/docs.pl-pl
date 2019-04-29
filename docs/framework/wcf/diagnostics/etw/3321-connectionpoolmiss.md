@@ -3,26 +3,26 @@ title: 3321 — ConnectionPoolMiss
 ms.date: 03/30/2017
 ms.assetid: d889fe16-2224-4770-9917-09f1805397ed
 ms.openlocfilehash: 418f98f9112d4c528d6dc0ceeed62976483dd1da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596651"
 ---
 # <a name="3321---connectionpoolmiss"></a>3321 — ConnectionPoolMiss
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3321|  
-|Słowa kluczowe|Kanał|  
+|Identyfikator|3321|  
+|słowa kluczowe|Kanał|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany, gdy pula nie ma dostępnych połączeń.  
+ To zdarzenie jest emitowane, gdy pula nie ma dostępnych połączeń.  
   
 ## <a name="message"></a>Komunikat  
- Pula dla %1 nie ma dostępnych połączeń i %2 zajętych połączeń.  
+ Puli dla %1 nie ma dostępnego połączenia i %2 zajęty połączeń.  
   
 ## <a name="details"></a>Szczegóły

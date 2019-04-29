@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
 ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607777"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>Wielotabelowe (LINQ to DataSet)
 Oprócz wykonywania zapytań pojedynczej tabeli, można również wykonać wielotabelowe w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Jest to wykonywane przy użyciu *sprzężenia*. Sprzężenie jest skojarzenie obiektów w jednym źródle danych z obiektami, które udostępniać wspólny atrybut w innym źródle danych, takie jak produkt lub skontaktuj się z identyfikatora. W programowanie zorientowane obiektowo relacje między obiektami są stosunkowo łatwo można przejść, ponieważ każdy obiekt ma element członkowski, który odwołuje się do innego obiektu. W tabelach zewnętrznej bazy danych jednak nawigowanie po relacjach nie jest tak proste. Tabele bazy danych nie zawierają wbudowane relacji. W takich przypadkach operacja join może służyć do dopasowania elementy z każdego źródła. Na przykład biorąc pod uwagę dwie tabele, które zawierają informacje o produkcie i informacji o sprzedaży, można użyć operacji tworzenia sprzężenia do dopasowania informacji o sprzedaży i produkty do tego samego zamówienia sprzedaży.  

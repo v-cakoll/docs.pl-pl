@@ -1,48 +1,48 @@
 ---
 title: Async — omówienie
-description: Dowiedz się, jak programowania asynchronicznego to technika klucza, która umożliwia proste do obsługi jednoczesnych operacji na wiele rdzeni i blokowania We/Wy.
+description: Dowiedz się, jak programowanie async technika sprawia, że prosta do obsługi blokowania We/Wy i jednoczesnych operacji na wiele rdzeni.
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.openlocfilehash: b9084da80ff400bf99fc8641c69bc38c805d039a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627908"
 ---
 # <a name="async-overview"></a>Async — omówienie
 
-Nie tak dawno temu aplikacje otrzymano szybciej po prostu przy zakupie nowszej komputerze lub serwerze, a następnie tego trendu zatrzymana. W rzeczywistości wycofać. Telefony komórkowe pojawił się z 1ghz pojedynczego rdzenia ARM mikroukłady i obciążenia serwera są przenoszone do maszyn wirtualnych. Użytkownicy nadal mają reakcje interfejsu użytkownika, a właściciele firm serwerów, które firmy. Przejście do przenośnych i chmury i podłączonej do Internetu populacji > Użytkownicy 3B spowodowało nowy zestaw wzorców oprogramowania. 
+Nie tak dawno temu aplikacje szybciej po prostu kupując nowszej komputer lub serwer, a następnie ten trend zatrzymano usługę. W rzeczywistości odwrócona. Telefony komórkowe pojawiły się o 1ghz jednordzeniowy ARM mikroukładami i obciążenia serwera są przenoszone do maszyn wirtualnych. Użytkownicy nadal mają dynamicznym interfejsie użytkownika i właściciele firm ma serwerów, które można skalować z działalności. Przejścia dla urządzeń przenośnych i chmury i podłączonej do Internetu populacji > Użytkownicy 3B spowodowało nowy zestaw wzorców oprogramowania. 
 
-* Aplikacje klienckie powinny być zawsze włączone, zawsze połączone i stale reakcji do interakcji z użytkownikiem (na przykład touch) z klasyfikacji magazynu wysoka!
-* Usługi powinny obsługiwać największego ruchu przez bezpiecznie skalowanie w górę i w dół. 
+* Aplikacje klienckie powinny być zawsze włączone zawsze połączone i stale elastyczna na interakcję z użytkownikiem (na przykład touch) przy użyciu klasyfikacji magazynu wysoka!
+* Usługi powinny obsługiwać skokami ruchu, bez problemu zmieniała skalując w górę i w dół. 
 
-Programowanie asynchroniczne to technika klucza, która umożliwia proste do obsługi jednoczesnych operacji na wiele rdzeni i blokowania We/Wy. .NET oferuje możliwość reakcji i elastycznych z łatwy w użyciu, poziom języka asynchroniczne modele programowania w języku C#, VB i F # dla aplikacji i usług.
+Programowanie asynchroniczne to technika sprawia, że prosta do obsługi blokowania We/Wy i jednoczesnych operacji na wiele rdzeni. .NET zapewnia możliwość dynamicznego i elastyczne z łatwe w użyciu, poziom języka programowania modelami asynchronicznymi w dla aplikacji i usług C#, VB i F#.
 
-## <a name="why-write-async-code"></a>Dlaczego należy pisać kod Async?
+## <a name="why-write-async-code"></a>Dlaczego należy pisać kod asynchroniczny?
 
-Nowoczesne aplikacje należy zwiększone użycie operacji We/Wy plików i sieci. W efekcie niską użytkowników oraz wykorzystanie sprzętu, chyba że chcesz nauczenia i używania trudne wzorce API we/wy tradycyjnie bloku domyślnie. Oparty na zadaniach asynchronicznej interfejsów API i model programowania asynchronicznego poziom języka Odwróć tego modelu, co wykonanie asynchroniczne domyślnej z kilku nowych pojęć, aby dowiedzieć się więcej.
+Nowoczesne aplikacje należy zwiększone użycie operacji We/Wy plików i sieci. Interfejsów API we/wy tradycyjnie Blokuj domyślnie powodujące niską użytkowej oraz wykorzystania zasobów sprzętowych, chyba że chcesz do nauczenia i używania pokonywania wyzwań wynikających ze wzorców. Oparta na zadaniach asynchronicznej interfejsów API i model programowania asynchronicznego poziomu języka Odwróć ten model, dzięki czemu wykonanie asynchroniczne domyślnej z kilku nowych pojęć, aby dowiedzieć się więcej.
 
-Kod Async ma następującą charakterystykę:
+Kod asynchroniczny ma następującą charakterystykę:
 
-* Obsługuje więcej żądań serwera według reaguje wątków do obsługi żądań więcej podczas oczekiwania na żądań We/Wy do zwrócenia.
-* Umożliwia UI być bardziej elastyczny przez reaguje wątków interakcja interfejsu użytkownika podczas oczekiwania na we/wy żądań i przechodzenia długotrwałe pracy innych rdzeni Procesora.
-* Wiele nowszej interfejsów API architektury .NET jest asynchroniczne.
-* Jest łatwy do pisania kodu asynchronicznych w .NET!
+* Obsługuje więcej żądań serwera według reaguje wątków może obsługiwać więcej żądania podczas oczekiwania na żądań We/Wy do zwrócenia.
+* Umożliwia UI większą responsywność reaguje wątków interakcja interfejsu użytkownika podczas oczekiwania na We/Wy i przechodzenie długotrwała praca, inne rdzeni procesora CPU.
+* Wiele z nowszych interfejsów API platformy .NET są asynchroniczne.
+* To ułatwia pisanie kodu asynchronicznego w .NET!
 
-## <a name="whats-next"></a>Co to jest dalej?
+## <a name="whats-next"></a>Co dalej?
 
 Aby uzyskać więcej informacji, zobacz [Async szczegółowo](async-in-depth.md) tematu.
 
-[Wzorce programowania asynchronicznego](asynchronous-programming-patterns/index.md) temat zawiera omówienie trzy wzorce programowania asynchronicznego obsługiwane w środowisku .NET:  
+[Asynchronous Programming Patterns](asynchronous-programming-patterns/index.md) temat zawiera omówienie trzech asynchronicznych wzorcach programowania, obsługiwane na platformie .NET:  
   
--   [Asynchroniczne programowania modelu (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (starsze)  
+- [Modelu programowania asynchronicznego (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (starsza wersja)  
   
--   [Oparty na zdarzeniach asynchroniczny wzorzec (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (starsze)  
+- [Oparte na zdarzeniach asynchroniczny wzorzec (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (starsza wersja)  
   
--   [Oparty na zadaniach asynchronicznej wzorca (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (zalecane w przypadku nowych wdrożeń)  
+- [Oparta na zadaniach asynchronicznej wzorca (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (zalecane w przypadku nowych wdrożeń)  
 
-Aby uzyskać więcej informacji na temat zalecanych model programowania opartego na zadaniach, zobacz [programowania asynchronicznego opartego na zadaniach](parallel-programming/task-based-asynchronous-programming.md) tematu.
+Aby uzyskać więcej informacji na temat zalecanych modelu programowania opartego na zadaniach, zobacz [programowania asynchronicznego opartego na zadaniach](parallel-programming/task-based-asynchronous-programming.md) tematu.

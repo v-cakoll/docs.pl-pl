@@ -3,11 +3,11 @@ title: Składnia parametrów połączenia
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608024"
 ---
 # <a name="connection-string-syntax"></a>Składnia parametrów połączenia
 Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy z <xref:System.Data.Common.DbConnection> oraz specyficzne dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia określone dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które są zawarte w .NET Framework.  
@@ -22,13 +22,13 @@ Każdy dostawca danych .NET Framework ma `Connection` obiektu, który dziedziczy
 ## <a name="connection-string-builders"></a>Konstruktorzy parametrów połączeń  
  ADO.NET w wersji 2.0 wprowadzono następujące Konstruktorzy parametrów połączenia dla dostawcy danych .NET Framework.  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Konstruktorzy parametrów połączeń pozwalają utworzyć parametry połączenia nieprawidłową składnię w czasie wykonywania, dzięki czemu nie trzeba ręcznie połączyć wartości ciągu połączenia w kodzie. Aby uzyskać więcej informacji, zobacz [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md).  
 
@@ -113,11 +113,11 @@ Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder
 |----------------------------------------------|---------------------------------------------|-------------------------------------------------------------------|-----------------------------------------------------------|------------|  
 |Nie|Brak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie nie występuje.|  
 |Nie|Brak|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy możliwe do zweryfikowania certyfikatu serwera, w przeciwnym razie próba połączenia nie powiedzie się.|  
-|Nie|Brak|Tak|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Tak|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Yes|Tak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
-|Tak|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
-|Tak|Yes|Yes|Yes|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Nie|Brak|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Yes|Nie|Ignorowane|Ignorowane|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
+|Tak|Tak|Nie (ustawienie domyślne)|Ignorowane|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
+|Yes|Yes|Tak|Nie (ustawienie domyślne)|Szyfrowanie występuje tylko wtedy, gdy znajduje się certyfikat serwera weryfikowalny; w przeciwnym razie próba połączenia kończy się niepowodzeniem.|  
+|Tak|Yes|Yes|Tak|Szyfrowanie zawsze występuje, ale może być używany certyfikat serwera z podpisem własnym.|  
   
  Aby uzyskać więcej informacji, zobacz [przy użyciu szyfrowania bez sprawdzania poprawności](/sql/relational-databases/native-client/features/using-encryption-without-validation).
   

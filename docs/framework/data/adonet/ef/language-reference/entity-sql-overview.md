@@ -3,11 +3,11 @@ title: Przegląd języka Entity SQL
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 100d616462cd76e1dde8fc855787ec3118842fc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606180"
 ---
 # <a name="entity-sql-overview"></a>Przegląd języka Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to język przypominający SQL, który oferuje możliwość zapytań modeli koncepcyjnych w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Modeli koncepcyjnych reprezentacja danych jako jednostek i relacji, a [!INCLUDE[esql](../../../../../../includes/esql-md.md)] służy do wykonywania zapytań dotyczących tych jednostek i relacji w formacie, który jest znany do tych, którzy korzystali z programu SQL.  

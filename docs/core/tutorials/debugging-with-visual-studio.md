@@ -4,11 +4,11 @@ description: Dowiedz się, jak debugować aplikację Hello World w języku C# lu
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
 ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648174"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debugowanie usługi C# lub Visual Basic .NET Core aplikacji Hello World przy użyciu programu Visual Studio 2017
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607904"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Wykonywanie zapytania XPath w elemencie DataSet
 Relacja między zsynchronizowany <xref:System.Data.DataSet> i <xref:System.Xml.XmlDataDocument> pozwala korzystać z XML usług, takich jak zapytania XML Path Language (XPath), do których dostęp **XmlDataDocument** i mogą wykonywać niektóre funkcje bardzo ułatwia niż dostęp do **DataSet** bezpośrednio. Na przykład, zamiast używać **wybierz** metody <xref:System.Data.DataTable> do nawigowanie po relacjach z innymi tabelami w **zestawu danych**, można wykonać zapytania XPath na **XmlDataDocument**  , jest zsynchronizowany z **DataSet**, aby uzyskać listę elementów XML w formie <xref:System.Xml.XmlNodeList>. Węzły w **XmlNodeList**, rzutowania jako <xref:System.Xml.XmlElement> węzłów, może być następnie przekazywany do **GetRowFromElement** metody **XmlDataDocument**, aby zwrócić dopasowania <xref:System.Data.DataRow> odwołania do wierszy w tabeli zsynchronizowane **zestawu danych**.  

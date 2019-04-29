@@ -3,11 +3,11 @@ title: Relacje i ograniczenia schematu XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606986"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Relacje i ograniczenia schematu XML
 W schemacie języka (XSD) definicji schematu XML można określić ograniczenia (unikatowe, klucza i ograniczeń keyref) i relacji (przy użyciu **msdata:Relationship** adnotacji). W tym temacie wyjaśniono, jak interpretować ograniczenia i relacji określony w schemacie XML do generowania <xref:System.Data.DataSet>.  

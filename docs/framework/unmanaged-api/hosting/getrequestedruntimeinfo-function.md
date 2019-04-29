@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627995"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo — Funkcja
 Pobiera informacje wersji i katalogu o środowisko uruchomieniowe języka wspólnego (CLR) żądane przez aplikację.  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  W .NET Framework w wersji 2.0, można uzyskać informacji na temat najnowszej zainstalowanej wersji za pomocą `GetRequestedRuntimeInfo` metody w następujący sposób:  
   
--   Określ `pExe`, `pwszVersion`, i `pConfigurationFile` parametry o wartości null.  
+- Określ `pExe`, `pwszVersion`, i `pConfigurationFile` parametry o wartości null.  
   
--   Określ flagę RUNTIME_INFO_UPGRADE_VERSION `RUNTIME_INFO_FLAGS` wyliczenia dla `runtimeInfoFlags` parametru.  
+- Określ flagę RUNTIME_INFO_UPGRADE_VERSION `RUNTIME_INFO_FLAGS` wyliczenia dla `runtimeInfoFlags` parametru.  
   
  `GetRequestedRuntimeInfo` Metoda nie zwraca najnowszą wersję środowiska CLR w następujących okolicznościach:  
   
--   Istnieje plik konfiguracji aplikacji, określający, ładowanie określonej wersji środowiska CLR. Pamiętaj, że nawet w przypadku określenia wartości null dla programu .NET Framework będą używać pliku konfiguracji `pConfigurationFile` parametru.  
+- Istnieje plik konfiguracji aplikacji, określający, ładowanie określonej wersji środowiska CLR. Pamiętaj, że nawet w przypadku określenia wartości null dla programu .NET Framework będą używać pliku konfiguracji `pConfigurationFile` parametru.  
   
--   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) wywołano metodę określania starszej wersji środowiska CLR.  
+- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) wywołano metodę określania starszej wersji środowiska CLR.  
   
--   Aplikacji skompilowanej dla starszej wersji środowiska CLR jest obecnie uruchomiony.  
+- Aplikacji skompilowanej dla starszej wersji środowiska CLR jest obecnie uruchomiony.  
   
  Dla `runtimeInfoFlags` parametru, można określić tylko jeden stałe architektury `RUNTIME_INFO_FLAGS` wyliczenia w czasie:  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

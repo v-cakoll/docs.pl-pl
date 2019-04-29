@@ -3,26 +3,26 @@ title: 3312 — MessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: cdcc8e3d-e2aa-4c5e-a580-bdf581a66709
 ms.openlocfilehash: c68170d127dbcb914539211be9ff2417ea20517e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596691"
 ---
 # <a name="3312---messagereadbyencoder"></a>3312 — MessageReadByEncoder
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3312|  
-|Słowa kluczowe|Kanał|  
+|Identyfikator|3312|  
+|słowa kluczowe|Kanał|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany, gdy komunikat odczytał encorder.  
+ To zdarzenie jest emitowane, gdy komunikat został odczytany przez encorder.  
   
 ## <a name="message"></a>Komunikat  
- Koder odczytał komunikat o rozmiar w bajtach "%1".  
+ Wiadomość z bajtów "%1" została odczytana przez koder.  
   
 ## <a name="details"></a>Szczegóły

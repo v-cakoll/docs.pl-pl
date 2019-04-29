@@ -15,11 +15,11 @@ ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650313"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Kompilacja i ponowne użycie w wyrażeniach regularnych
 Można zoptymalizować wydajność aplikacji, które zwiększone użycie wyrażeń regularnych zrozumienie, jak aparat wyrażeń regularnych kompiluje wyrażeń i zrozumienie, jak regularne wyrażenia są buforowane. W tym temacie omówiono kompilacji i buforowania.  
@@ -40,9 +40,9 @@ Jednak wygenerowane MSIL nie może być zwolniony. Jedynym sposobem, aby zwolni�
   
  Aplikację można korzystać ze wstępnie skompilowanych wyrażeń regularnych w jednym z dwóch sposobów:  
   
--   Za pomocą metody statycznej <xref:System.Text.RegularExpressions.Regex> obiekt do definiowania wyrażeń regularnych. Jeśli korzystasz z wzorcem wyrażenia regularnego, który został już zdefiniowany w innym wywołaniu metody statyczne, aparat wyrażeń regularnych pobierze go z pamięci podręcznej. Jeśli nie, aparat będzie kompilowania wyrażeń regularnych i dodaj go do pamięci podręcznej.  
+- Za pomocą metody statycznej <xref:System.Text.RegularExpressions.Regex> obiekt do definiowania wyrażeń regularnych. Jeśli korzystasz z wzorcem wyrażenia regularnego, który został już zdefiniowany w innym wywołaniu metody statyczne, aparat wyrażeń regularnych pobierze go z pamięci podręcznej. Jeśli nie, aparat będzie kompilowania wyrażeń regularnych i dodaj go do pamięci podręcznej.  
   
--   Dzięki ponownemu wykorzystaniu istniejące <xref:System.Text.RegularExpressions.Regex> obiektu tak długo, jak jej wzorca wyrażenia regularnego jest wymagana.  
+- Dzięki ponownemu wykorzystaniu istniejące <xref:System.Text.RegularExpressions.Regex> obiektu tak długo, jak jej wzorca wyrażenia regularnego jest wymagana.  
   
  Ze względu na obciążenie podczas tworzenia wystąpienia obiektu i kompilowania wyrażeń regularnych, tworzenie i szybko niszczenie liczne <xref:System.Text.RegularExpressions.Regex> obiektów jest procesem bardzo kosztowna. W przypadku aplikacji korzystających z dużej liczby różnych wyrażeń regularnych można zoptymalizować wydajność przy użyciu wywołania statycznej `Regex` metody i prawdopodobnie przez zwiększenie rozmiaru pamięci podręcznej wyrażenia regularnego.  
   

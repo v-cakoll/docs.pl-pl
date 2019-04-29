@@ -1,15 +1,15 @@
 ---
-title: Metody mapowania kanonicznej funkcji CLR
+title: Metody mapowania funkcji Canonical CLR
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605720"
 ---
-# <a name="clr-method-to-canonical-function-mapping"></a>Metody mapowania kanonicznej funkcji CLR
+# <a name="clr-method-to-canonical-function-mapping"></a>Metody mapowania funkcji Canonical CLR
 
 Entity Framework zawiera zestaw funkcje canonical, które implementują funkcjonalność, obejmującą wiele systemów baz danych, takie jak manipulowanie ciągami i funkcji matematycznych. Dzięki temu deweloperzy pod kątem szerokiego zakresu systemów baz danych. Gdy wywoływana z zapytań technologii, takich jak składnik LINQ to Entities, te canonical funkcji są tłumaczone do odpowiedniej funkcji magazynu odpowiednich dla używanego dostawcy. Dzięki temu wywołania funkcji wyrażane w formie wspólnych źródeł danych, zapewniając zapytania spójne środowisko dla źródeł danych. Bitowe AND, OR, NOT, i operatorów XOR również są mapowane na funkcje canonical, gdy argument jest typu liczbowego. Logiczna operandy bitowe AND, OR, NOT, aby uzyskać i operatory XOR logiczne AND, OR, obliczenia i operacje XOR swojego operandu. Aby uzyskać więcej informacji, zobacz [funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).
 
@@ -66,11 +66,11 @@ W przypadku scenariuszy LINQ zapytań względem programu Entity Framework obejmu
 |System.DateTime.Now|CurrentDateTime()||
 |System.DateTime.UtcNow|CurrentUtcDateTime()||
 |Op_equality — wartość logiczna (daty/godziny `d1`, daty/godziny `d2`)|= — Operator||
-|Op_greaterthan — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|> — Operator||
-|Op_greaterthanorequal — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|>= — Operator||
+|Op_greaterthan — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|> operator||
+|Op_greaterthanorequal — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|> = — operator||
 |Op_inequality — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|!= - Operator||
-|Op_lessthan — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|< — Operator||
-|Op_lessthanorequal — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|<= — Operator||
+|Op_lessthan — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|< — operator||
+|Op_lessthanorequal — wartość logiczna (daty/godziny `t1`, daty/godziny `t2`)|< = — operator||
 |Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` jako DateInterval, \_<br /><br /> ByVal `DateValue` jako wartość DateTime, \_<br /><br /> Opcjonalne ByVal `FirstDayOfWeekValue` jako FirstDayOfWeek = stałej VbSunday, \_<br /><br /> Opcjonalne ByVal `FirstWeekOfYearValue` jako FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) Jako liczba całkowita||Zobacz sekcję Funkcja DatePart, aby uzyskać więcej informacji.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||

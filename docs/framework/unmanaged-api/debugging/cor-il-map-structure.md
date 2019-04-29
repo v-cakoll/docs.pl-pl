@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6d8023c7ac6d917c9df40fb18316ddc12df5ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609431"
 ---
 # <a name="corilmap-structure"></a>COR_IL_MAP — Struktura
 Określa przesunięcie względne funkcji zmiany.  
@@ -49,37 +49,37 @@ typedef struct _COR_IL_MAP {
   
  Przechodzenie krok po kroku, aby zapewnić prawidłowe działanie, aby uzyskać być spełnione następujące wymagania:  
   
--   Mapa powinny być sortowane w kolejności rosnącej.  
+- Mapa powinny być sortowane w kolejności rosnącej.  
   
--   Instrumentowane kod MSIL nie wymagają zmiany kolejności.  
+- Instrumentowane kod MSIL nie wymagają zmiany kolejności.  
   
--   Oryginalny kod MSIL nie powinny być usuwane.  
+- Oryginalny kod MSIL nie powinny być usuwane.  
   
--   Mapa powinny zawierać wpisy, aby zamapować wszystkie punkty sekwencji z plik bazy danych (PDB) programu.  
+- Mapa powinny zawierać wpisy, aby zamapować wszystkie punkty sekwencji z plik bazy danych (PDB) programu.  
   
  Mapa nie interpolacji Brak wpisów. Poniższy przykład pokazuje, mapy i jego wyniki.  
   
  Mapy:  
   
--   Przesunięcie stare 0, 0 nowe przesunięcie  
+- Przesunięcie stare 0, 0 nowe przesunięcie  
   
--   Przesunięcie stare 5, 10 nowych przesunięcie  
+- Przesunięcie stare 5, 10 nowych przesunięcie  
   
--   Przesunięcie stare 9, 20 nowych przesunięcie  
+- Przesunięcie stare 9, 20 nowych przesunięcie  
   
  Liczba wyników:  
   
--   Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięcia 0.  
+- Stary przesunięcia 0, 1, 2, 3 lub 4 zostanie zamapowane do nowego przesunięcia 0.  
   
--   Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.  
+- Przesunięcie stare 5, 6, 7 lub 8 zostaną odwzorowane na nowe przesunięcie 10.  
   
--   Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.  
+- Stary przesunięcie 9 lub nowszą zostaną odwzorowane na nowe przesunięcie 20.  
   
--   Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.  
+- Nowe przesunięcie 0, 1, 2, 3, 4, 5, 6, 7, 8 lub 9 zostaną zmapowane do starego przesunięciu 0.  
   
--   Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.  
+- Nowe przesunięcie 10, 11, 12, 13, 14, 15, 16, 17, 18 lub 19 zostanie zamapowane do starego przesunięcia 5.  
   
--   Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.  
+- Nowe przesunięcie 20 lub nowszej zostanie zamapowane do starego przesunięcia 9.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

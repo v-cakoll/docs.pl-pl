@@ -11,11 +11,11 @@ ms.assetid: a73eafa2-1f49-4106-a19e-997186029b58
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa95eccfa39073bb8ccb3cb9c49e099ac1f90ab1
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638947"
 ---
 # <a name="how-to-create-pre-computed-tasks"></a>Instrukcje: Tworzenie wstępnie obliczonych zadań
 W tym dokumencie opisano, jak używać <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metody do pobierania wyników asynchronicznych operacji pobrania, które są przechowywane w pamięci podręcznej. <xref:System.Threading.Tasks.Task.FromResult%2A> Metoda zwraca Zakończono <xref:System.Threading.Tasks.Task%601> obiekt, który przechowuje, podana jest wartość jako jego <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. Ta metoda jest przydatna, gdy wykonujesz operację asynchroniczną, która zwraca <xref:System.Threading.Tasks.Task%601> obiektu, a wynik tego obiektu <xref:System.Threading.Tasks.Task%601> obiektu jest już obliczony.  
@@ -33,7 +33,7 @@ W tym dokumencie opisano, jak używać <xref:System.Threading.Tasks.Task.FromRes
   
  Visual C#  
   
- **CSC.exe CachedDownloads.cs**  
+ **csc.exe CachedDownloads.cs**  
   
  Visual Basic  
   

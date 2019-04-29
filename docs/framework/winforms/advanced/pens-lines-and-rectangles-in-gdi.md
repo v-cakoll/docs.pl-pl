@@ -18,11 +18,11 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
 ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641404"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Pióra, linie i prostokąty w GDI+
 Rysowanie linii za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] , musisz utworzyć <xref:System.Drawing.Graphics> obiektu i <xref:System.Drawing.Pen> obiektu. <xref:System.Drawing.Graphics> Obiektu zawiera metody, które w rzeczywistości korzystają rysowania, i <xref:System.Drawing.Pen> obiekt przechowuje atrybutów, takich jak kolor linii, szerokość i stylu.  

@@ -3,11 +3,11 @@ title: Planu zapytania z pamięci podręcznej (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613667"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Planu zapytania z pamięci podręcznej (jednostka SQL)
 Zawsze, gdy podejmowana jest próba, aby wykonać zapytanie, potok zapytanie wyszukuje pamięci podręcznej planu zapytania Czy dokładne zapytanie jest już skompilowane i dostępne. Jeśli tak, używa buforowanego planu zamiast tworzenia nowej. Jeśli dopasowanie nie zostanie znaleziony w pamięci podręcznej planu zapytania, kwerenda jest skompilowany i pamięci podręcznej. Zapytanie jest identyfikowane za pomocą jego [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kolekcji tekstu i parametrów (nazw i typy). Wszystkie porównania tekstu jest rozróżniana wielkość liter.  
@@ -34,19 +34,19 @@ Zawsze, gdy podejmowana jest próba, aby wykonać zapytanie, potok zapytanie wys
   
  Dla zapytań, które mają być dopasowywane prawidłowo o pamięci podręcznej planu zapytania mogą spełniać następujące wymagania:  
   
--   Tekst zapytania należy wzór stałej, najlepiej stałym ciągiem lub zasobu.  
+- Tekst zapytania należy wzór stałej, najlepiej stałym ciągiem lub zasobu.  
   
--   <xref:System.Data.EntityClient.EntityParameter> lub <xref:System.Data.Objects.ObjectParameter> powinny być używane wszędzie tam, gdzie muszą być przekazywane wartości dostarczone przez użytkownika.  
+- <xref:System.Data.EntityClient.EntityParameter> lub <xref:System.Data.Objects.ObjectParameter> powinny być używane wszędzie tam, gdzie muszą być przekazywane wartości dostarczone przez użytkownika.  
   
  Należy unikać następujące wzorce zapytań, które zużywają niepotrzebnego miejsca w pamięci podręcznej planu zapytania:  
   
--   Zmiany do rozróżniania wielkości liter w tekście.  
+- Zmiany do rozróżniania wielkości liter w tekście.  
   
--   Zmiany biały znak.  
+- Zmiany biały znak.  
   
--   Zmiany wartości literału.  
+- Zmiany wartości literału.  
   
--   Zmiany tekstu w komentarzach.  
+- Zmiany tekstu w komentarzach.  
   
 ## <a name="see-also"></a>Zobacz także
 

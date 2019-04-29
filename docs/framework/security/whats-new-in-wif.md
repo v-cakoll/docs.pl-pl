@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645886"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Co nowego w programie Windows Identity Foundation 4.5
 Pierwsza wersja środowiska Windows Identity Foundation (WIF) była dostarczana jako autonomiczny pakiet do pobrania. Jest znana pod nazwą WIF 3.5, ponieważ została wprowadzona mniej więcej w tym samym czasie co platforma .NET 3.5 z dodatkiem SP1. Począwszy od wersji .NET 4.5 środowisko WIF jest częścią oprogramowania .NET Framework. Klasy programu WIF bezpośrednio dostępne w ramach pozwala na znacznie głębszą integrację tożsamości opartej na oświadczeniach na platformie .NET, ułatwiając korzystanie z oświadczeń. Aplikacje napisane dla środowiska WIF 3.5 należy można zmodyfikować, aby można było korzystać z zalet nowego modelu; Aby uzyskać informacje, zobacz [Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -23,29 +23,29 @@ Pierwsza wersja środowiska Windows Identity Foundation (WIF) była dostarczana 
   
 ## <a name="changes-to-the-wif-45-visual-studio-experience"></a>Zmiany funkcjonalności programu Visual Studio w środowisku WIF 4.5  
   
--   **Dodaj odwołanie do usługi STS...** Visual Studio funkcji (narzędzie wiersza polecenia fedutil) już nie istnieje; Zamiast tego można użyć nowego rozszerzenia programu Visual Studio **narzędzie tożsamości i dostępu dla programu Visual Studio 2012**. Dzięki niemu w celu przetestowania rozwiązania można utworzyć federację z istniejącą usługą STS albo skorzystać z usługi LocalSTS. Po zainstalowaniu rozszerzenia można kliknąć prawym przyciskiem myszy nad projektem i poszukaj **tożsamościami i dostępem** w menu kontekstowym.  
+- **Dodaj odwołanie do usługi STS...** Visual Studio funkcji (narzędzie wiersza polecenia fedutil) już nie istnieje; Zamiast tego można użyć nowego rozszerzenia programu Visual Studio **narzędzie tożsamości i dostępu dla programu Visual Studio 2012**. Dzięki niemu w celu przetestowania rozwiązania można utworzyć federację z istniejącą usługą STS albo skorzystać z usługi LocalSTS. Po zainstalowaniu rozszerzenia można kliknąć prawym przyciskiem myszy nad projektem i poszukaj **tożsamościami i dostępem** w menu kontekstowym.  
   
--   Nie ma już szablonów środowiska ASP.NET ani usługi STS, ponieważ oświadczeń można obecnie używać bezpośrednio w istniejących szablonach projektów środowiska ASP.Net, witryn internetowych i środowiska WCF.  
+- Nie ma już szablonów środowiska ASP.NET ani usługi STS, ponieważ oświadczeń można obecnie używać bezpośrednio w istniejących szablonach projektów środowiska ASP.Net, witryn internetowych i środowiska WCF.  
   
--   Formanty w `Microsoft.IdentityModel.Web.Controls` przestrzeni nazw (`SignInControl`, `FederatedPassiveSignInControl`, i `FederatedPassiveSignInStatus`) nie są przenoszone do programu WIF 4.5.  
+- Formanty w `Microsoft.IdentityModel.Web.Controls` przestrzeni nazw (`SignInControl`, `FederatedPassiveSignInControl`, i `FederatedPassiveSignInStatus`) nie są przenoszone do programu WIF 4.5.  
   
 ## <a name="changes-to-the-wif-45-api"></a>Zmiany w interfejsie API programu WIF 4.5  
   
--   Ogólnie rzecz biorąc, klasy pokrewne oświadczeń znajdują się w <xref:System.Security.Claims?displayProperty=nameWithType> przestrzeni nazw; WCF pokrewne klasy — — kontraktów usług, kanały, fabryki kanałów i hosty usług, które są używane na potrzeby scenariuszy, WS-Trust znajdują się w <xref:System.ServiceModel.Security?displayProperty=nameWithType>; i wszystkie pozostałe klasy środowiska WIF są rozproszone między różne [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) przestrzenie nazw — obejmują one, na przykład klas, które reprezentują WS-* i artefaktów SAML, programy obsługi tokenów i powiązanych klas i klasy używane w scenariuszach WS-Federation. Aby uzyskać więcej informacji, zobacz [Namespace mapowanie między WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) i [WIF API Reference](../../../docs/framework/security/wif-api-reference.md).  
+- Ogólnie rzecz biorąc, klasy pokrewne oświadczeń znajdują się w <xref:System.Security.Claims?displayProperty=nameWithType> przestrzeni nazw; WCF pokrewne klasy — — kontraktów usług, kanały, fabryki kanałów i hosty usług, które są używane na potrzeby scenariuszy, WS-Trust znajdują się w <xref:System.ServiceModel.Security?displayProperty=nameWithType>; i wszystkie pozostałe klasy środowiska WIF są rozproszone między różne [System.IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) przestrzenie nazw — obejmują one, na przykład klas, które reprezentują WS-* i artefaktów SAML, programy obsługi tokenów i powiązanych klas i klasy używane w scenariuszach WS-Federation. Aby uzyskać więcej informacji, zobacz [Namespace mapowanie między WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md) i [WIF API Reference](../../../docs/framework/security/wif-api-reference.md).  
   
--   W scenariuszach z farmami internetowymi można w plikach cookie sesji używać klucza komputera. Aby uzyskać więcej informacji, zobacz [programu WIF i farmy serwerów sieci Web](../../../docs/framework/security/wif-and-web-farms.md).  
+- W scenariuszach z farmami internetowymi można w plikach cookie sesji używać klucza komputera. Aby uzyskać więcej informacji, zobacz [programu WIF i farmy serwerów sieci Web](../../../docs/framework/security/wif-and-web-farms.md).  
   
--   Możesz teraz sposób deklaratywny można skonfigurować środowisko WIF [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) i [ \<system.identityModel.services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) elementów. Aby uzyskać więcej informacji na temat konfiguracji programu WIF, zobacz [WIF Configuration Reference](../../../docs/framework/security/wif-configuration-reference.md).  
+- Możesz teraz sposób deklaratywny można skonfigurować środowisko WIF [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) i [ \<system.identityModel.services >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) elementów. Aby uzyskać więcej informacji na temat konfiguracji programu WIF, zobacz [WIF Configuration Reference](../../../docs/framework/security/wif-configuration-reference.md).  
   
 ## <a name="other-notable-net-changes-or-features-that-are-caused-by-the-integration-of-wif-into-net"></a>Inne znaczące zmiany lub funkcje w środowisku .NET spowodowane zintegrowaniem z nim środowiska WIF  
   
--   Funkcjonalność wykonywania autoryzacji opartej na oświadczeniach (CBAC) jest teraz zintegrowana w środowisku .NET. Można skonfigurować <xref:System.Security.Claims.ClaimsAuthorizationManager> obiektu, a następnie użyj <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> i <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy do wykonywania kontroli dostępu imperatywną lub deklaratywną w kodzie. Autoryzacja CBAC zapewnia większą elastyczność i szczegółowość tradycyjna kontrola dostępu oparta na rolach (RBAC). Umożliwia również mocniej zasady autoryzacji od logiki biznesowej, ponieważ logika biznesowa może opierać kontrolę dostępu na określonych oświadczenia lub zestaw oświadczeń i zasady autoryzacji tych oświadczeń można skonfigurować deklaratywnie w obszarze [ \<składnika claimsAuthorizationManager >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elementu.  
+- Funkcjonalność wykonywania autoryzacji opartej na oświadczeniach (CBAC) jest teraz zintegrowana w środowisku .NET. Można skonfigurować <xref:System.Security.Claims.ClaimsAuthorizationManager> obiektu, a następnie użyj <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> i <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> klasy do wykonywania kontroli dostępu imperatywną lub deklaratywną w kodzie. Autoryzacja CBAC zapewnia większą elastyczność i szczegółowość tradycyjna kontrola dostępu oparta na rolach (RBAC). Umożliwia również mocniej zasady autoryzacji od logiki biznesowej, ponieważ logika biznesowa może opierać kontrolę dostępu na określonych oświadczenia lub zestaw oświadczeń i zasady autoryzacji tych oświadczeń można skonfigurować deklaratywnie w obszarze [ \<składnika claimsAuthorizationManager >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) elementu.  
   
 ## <a name="wcf-changes-as-a-result-of-wif-integration"></a>Zmiany w środowisku WCF wskutek zintegrowania środowiska WIF:  
   
--   Model zarządzania tożsamościami oparty na oświadczeniach stosowany w środowisku WCF jest zastąpiony modelem ze środowiska WIF. Oznacza to, że klasy w <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, i <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> przestrzenie nazw powinny być odrzucane na rzecz klas środowiska WIF.  
+- Model zarządzania tożsamościami oparty na oświadczeniach stosowany w środowisku WCF jest zastąpiony modelem ze środowiska WIF. Oznacza to, że klasy w <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>, i <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> przestrzenie nazw powinny być odrzucane na rzecz klas środowiska WIF.  
   
--   Program WIF jest teraz włączony w usłudze WCF poprzez określenie `useIdentityConfiguration` atrybutu na `<system.serviceModel>` / `<behaviors>` / `<serviceBehaviors>` / `<serviceCredentials>` elementu, tak jak następujący kod XML:  
+- Program WIF jest teraz włączony w usłudze WCF poprzez określenie `useIdentityConfiguration` atrybutu na `<system.serviceModel>` / `<behaviors>` / `<serviceBehaviors>` / `<serviceCredentials>` elementu, tak jak następujący kod XML:  
   
     ```xml  
     <serviceCredentials useIdentityConfiguration="true">  

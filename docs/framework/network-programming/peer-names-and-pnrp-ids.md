@@ -3,11 +3,11 @@ title: Nazwy elementów równorzędnych i identyfikatory PNRP
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642132"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Nazwy elementów równorzędnych i identyfikatory PNRP
 Nazwa elementu równorzędnego reprezentuje punkt końcowy do komunikacji, który może być komputera, użytkownika, grupy, usługi lub jakikolwiek skojarzone z węzłem równorzędnym, która może zostać rozpoznana jako adres IPv6. Rozpoznawanie protokołu PNRP (Peer Name) zajmuje statystycznie unikatowy nazwa elementu równorzędnego dla tworzenia identyfikatora PNRP, który jest używany do identyfikowania elementów członkowskich w chmurze.  
@@ -24,9 +24,9 @@ Nazwa elementu równorzędnego reprezentuje punkt końcowy do komunikacji, któr
   
  Identyfikatory PNRP składają się z następujących czynności:  
   
--   Wyższego rzędu 128 bitów — znane jako identyfikator (P2P) peer-to-peer, to skrót nazwy elementu równorzędnego przypisana do punktu końcowego. Nazwa elementu równorzędnego ma następujący format: *Authority.Classifier*. Zabezpieczone nazw *urząd* jest skrótu Secure Hash Algorithm 1 (SHA1) klucza publicznego o nazwie elementu równorzędnego w znaków szesnastkowych. Niezabezpieczony nazw *urząd* jest pojedynczy znak "0". *Klasyfikator* jest ciągiem, który identyfikuje aplikację. Nie klasyfikatora nazwy elementów równorzędnych może być większa niż 149 znaków, łącznie z `null` terminator.  
+- Wyższego rzędu 128 bitów — znane jako identyfikator (P2P) peer-to-peer, to skrót nazwy elementu równorzędnego przypisana do punktu końcowego. Nazwa elementu równorzędnego ma następujący format: *Authority.Classifier*. Zabezpieczone nazw *urząd* jest skrótu Secure Hash Algorithm 1 (SHA1) klucza publicznego o nazwie elementu równorzędnego w znaków szesnastkowych. Niezabezpieczony nazw *urząd* jest pojedynczy znak "0". *Klasyfikator* jest ciągiem, który identyfikuje aplikację. Nie klasyfikatora nazwy elementów równorzędnych może być większa niż 149 znaków, łącznie z `null` terminator.  
   
--   128 bitów niskiego rzędu są używane do znalezienia usługi, która jest wygenerowany numer, który identyfikuje różnymi wystąpieniami tego samego Identyfikatora P2P w tej samej chmurze.  
+- 128 bitów niskiego rzędu są używane do znalezienia usługi, która jest wygenerowany numer, który identyfikuje różnymi wystąpieniami tego samego Identyfikatora P2P w tej samej chmurze.  
   
  Ta kombinacja Identyfikatora P2P i lokalizacji usługi umożliwia wielu identyfikatory PNRP do zarejestrowania się z jednego komputera.  
   

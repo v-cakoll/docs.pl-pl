@@ -11,11 +11,11 @@ ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643442"
 ---
 # <a name="default-marshaling-for-arrays"></a>Organizowanie domyślne dotyczące tablic
 W aplikacji składających się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów. Z kolei Organizator międzyoperacyjny przekazuje tablicę, tak jak parametry domyślne.  
@@ -146,7 +146,7 @@ void New3(ref String ar);
   
  Możesz zapewnić Organizator rozmiar tablicy generowany kod intermediate language (MSIL) firmy Microsoft przez Tlbimp.exe do edycji, a następnie ponownego kompilowania. Aby uzyskać szczegółowe informacje dotyczące sposobu modyfikowania kodu MSIL, zobacz [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Wskaż liczbę elementów w tablicy, zastosuj <xref:System.Runtime.InteropServices.MarshalAsAttribute> typ parametru tablicy definicji metody zarządzanego w jednym z następujących sposobów:  
   
--   Określ inny parametr, który zawiera liczbę elementów w tablicy. Parametry są identyfikowane według położenia, rozpoczynając od pierwszego parametru jako numer 0.     
+- Określ inny parametr, który zawiera liczbę elementów w tablicy. Parametry są identyfikowane według położenia, rozpoczynając od pierwszego parametru jako numer 0.     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -160,7 +160,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   Zdefiniować rozmiar tablicy jako stała. Na przykład:  
+- Zdefiniować rozmiar tablicy jako stała. Na przykład:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  

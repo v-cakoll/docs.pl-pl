@@ -7,11 +7,11 @@ helpviewer_keywords:
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
 ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646374"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalne (C# Programming Guide)
 

@@ -3,11 +3,11 @@ title: Funkcje agregujące (SqlClient programu Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
 ms.openlocfilehash: f2f2b557cd9f126ddd513a0f42d3ac95114c3822
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606783"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funkcje agregujące (SqlClient programu Entity Framework)
 .NET Framework Data Provider for SQL Server (SqlClient) zapewnia funkcje agregujące. Funkcje agregujące wykonywanie obliczeń na zestaw wartości wejściowych i zwracają wartość. Te funkcje są w przestrzeni nazw SqlServer, który jest dostępny, gdy używasz SqlClient. Właściwość przestrzeni nazw dostawcy umożliwia programu Entity Framework dowiedzieć się, który prefiks jest używany przez tego dostawcę dla określonego konstrukcji, takich jak typy i funkcje.  

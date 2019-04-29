@@ -10,11 +10,11 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 224e4f3db31e4818833eb8411f44f547538534fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650248"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Wstawianie danych XML przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod, które służy do wstawiania element równorzędny, podrzędne i węzłów atrybutu w dokumencie XML. Aby można było używać tych metod <xref:System.Xml.XPath.XPathNavigator> obiekt musi być niemożliwa, czyli jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi być `true`.  
@@ -29,13 +29,13 @@ ms.locfileid: "54517256"
 ### <a name="inserting-sibling-nodes"></a>Wstawianie węzłów elementów równorzędnych  
  <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia następujące metody, aby wstawić węzłów elementów równorzędnych.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  Te metody insert węzłów elementów równorzędnych, przed i po węźle <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "54517256"
 ### <a name="inserting-child-nodes"></a>Wstawianie węzłów podrzędnych  
  <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia następujące metody, aby wstawić węzłów podrzędnych.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  Te metody dołączyć i Dodaj węzły podrzędne końca i początku listy węzłów podrzędnych węzła <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "54517256"
 ### <a name="inserting-attribute-nodes"></a>Wstawianie węzłów atrybutu  
  <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia następujące metody, aby wstawić węzłów atrybutu.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  Te metody insert węzłów atrybutu w węźle element <xref:System.Xml.XPath.XPathNavigator> obiektu jest obecnie ustawiony na. <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> Metoda tworzy węzeł atrybutu na węzeł elementu <xref:System.Xml.XPath.XPathNavigator> obiekt znajduje się obecnie na temat korzystania z prefiks przestrzeni nazw, lokalna nazwa, identyfikator URI przestrzeni nazw i wartości określonej jako parametry. <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> Metoda zwraca <xref:System.Xml.XmlWriter> obiekt używany do wstawienia węzłów atrybutu.  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  Poniżej przedstawiono możliwe przestrzeń nazw powoduje konflikt.  
   
--   W przypadku przestrzeni nazw w zakresie w ramach <xref:System.Xml.XmlReader> obiektu kontekstu, w którym długości prefiksu do mapowania identyfikatora URI przestrzeni nazw nie znajduje się w <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, nowe deklaracji przestrzeni nazw jest dodawany do nowo wstawionej węzła.  
+- W przypadku przestrzeni nazw w zakresie w ramach <xref:System.Xml.XmlReader> obiektu kontekstu, w którym długości prefiksu do mapowania identyfikatora URI przestrzeni nazw nie znajduje się w <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, nowe deklaracji przestrzeni nazw jest dodawany do nowo wstawionej węzła.  
   
--   Jeśli ten sam identyfikator URI przestrzeni nazw jest w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> obiektu kontekstu, ale ma inny prefiks mapowane w obu kontekstach, nowe deklaracji przestrzeni nazw jest dodawany do nowo wstawionej węzła, z prefiksem i pobierane z identyfikatora URI obszaru nazw <xref:System.Xml.XmlReader> obiektu.  
+- Jeśli ten sam identyfikator URI przestrzeni nazw jest w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> obiektu kontekstu, ale ma inny prefiks mapowane w obu kontekstach, nowe deklaracji przestrzeni nazw jest dodawany do nowo wstawionej węzła, z prefiksem i pobierane z identyfikatora URI obszaru nazw <xref:System.Xml.XmlReader> obiektu.  
   
--   Jeśli ten sam prefiks przestrzeni nazw jest w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale ma inny identyfikator URI przestrzeni nazw jest mapowany do niego w obu kontekstów, deklarację przestrzeni nazw nowych zostaje dodany do węzła nowo wstawionej który ponownie deklaruje tego prefiksu z przestrzenią nazw identyfikatora URI z <xref:System.Xml.XmlReader> obiektu.  
+- Jeśli ten sam prefiks przestrzeni nazw jest w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale ma inny identyfikator URI przestrzeni nazw jest mapowany do niego w obu kontekstów, deklarację przestrzeni nazw nowych zostaje dodany do węzła nowo wstawionej który ponownie deklaruje tego prefiksu z przestrzenią nazw identyfikatora URI z <xref:System.Xml.XmlReader> obiektu.  
   
--   Jeśli prefiks, a także identyfikator URI przestrzeni nazw w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> obiektu kontekstu jest taka sama, nie nowe deklaracja przestrzeni nazw jest dodawana do nowo wstawionej węzła.  
+- Jeśli prefiks, a także identyfikator URI przestrzeni nazw w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> obiektu kontekstu jest taka sama, nie nowe deklaracja przestrzeni nazw jest dodawana do nowo wstawionej węzła.  
   
 > [!NOTE]
 >  Powyższy opis dotyczy także deklaracje przestrzeni nazw z pustym `string` jako prefiksu (na przykład deklarację domyślnej przestrzeni nazw).  
   
  Poniżej przedstawiono możliwe `xml:lang` konflikty.  
   
--   W przypadku `xml:lang` atrybutu w zakresie w <xref:System.Xml.XmlReader> kontekst obiektu, ale nie <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiekt jest dodawany do nowo wstawionej węzła.  
+- W przypadku `xml:lang` atrybutu w zakresie w <xref:System.Xml.XmlReader> kontekst obiektu, ale nie <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiekt jest dodawany do nowo wstawionej węzła.  
   
--   W przypadku `xml:lang` atrybutu w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale każdy ma inną wartość `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiekt jest dodawany do węzeł nowo wstawione.  
+- W przypadku `xml:lang` atrybutu w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale każdy ma inną wartość `xml:lang` atrybut, którego wartość jest pobierana z <xref:System.Xml.XmlReader> obiekt jest dodawany do węzeł nowo wstawione.  
   
--   W przypadku `xml:lang` atrybutu w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale każdy z taką samą wartość żadnego nowego `xml:lang` na nowo wstawionej węzła jest dodawany atrybut.  
+- W przypadku `xml:lang` atrybutu w zakresie w obu <xref:System.Xml.XmlReader> obiektu kontekstu i <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale każdy z taką samą wartość żadnego nowego `xml:lang` na nowo wstawionej węzła jest dodawany atrybut.  
   
--   W przypadku `xml:lang` atrybutu w zakresie w <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale nie istnieje w <xref:System.Xml.XmlReader> obiektu kontekstu, nie `xml:lang` atrybutu jest dodawany do nowo wstawionej węzła.  
+- W przypadku `xml:lang` atrybutu w zakresie w <xref:System.Xml.XPath.XPathNavigator> kontekst obiektu, ale nie istnieje w <xref:System.Xml.XmlReader> obiektu kontekstu, nie `xml:lang` atrybutu jest dodawany do nowo wstawionej węzła.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>Wstawianie węzłów za pomocą XmlWriter  
  Są przeciążone metody używane do wstawiania węzłów podrzędnych i atrybutów rodzeństwa opisane w sekcji "Wstawianie węzłów i Values". <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>, <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> i <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> metody <xref:System.Xml.XPath.XPathNavigator> klasy zwrócenia <xref:System.Xml.XmlWriter> obiektu służy do wstawiania węzłów.  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  Poniżej przedstawiono ważne uwagi, które należy wziąć pod uwagę przy użyciu wielu <xref:System.Xml.XmlWriter> obiektów.  
   
--   Fragmenty XML, napisane przez <xref:System.Xml.XmlWriter> obiekty są dodawane do pliku XML dokumentu, gdy <xref:System.Xml.XmlWriter.Close%2A> metoda każdego <xref:System.Xml.XmlWriter> nosi nazwę obiektu. Do tego momentu <xref:System.Xml.XmlWriter> obiekt zapisuje odłączonego fragmentu. Jeśli operacja jest wykonywana na dokumencie XML, wszystkie fragmenty są zapisywane przez <xref:System.Xml.XmlWriter> obiekt przed <xref:System.Xml.XmlWriter.Close%2A> została wywołana, nie ulegają zmianom.  
+- Fragmenty XML, napisane przez <xref:System.Xml.XmlWriter> obiekty są dodawane do pliku XML dokumentu, gdy <xref:System.Xml.XmlWriter.Close%2A> metoda każdego <xref:System.Xml.XmlWriter> nosi nazwę obiektu. Do tego momentu <xref:System.Xml.XmlWriter> obiekt zapisuje odłączonego fragmentu. Jeśli operacja jest wykonywana na dokumencie XML, wszystkie fragmenty są zapisywane przez <xref:System.Xml.XmlWriter> obiekt przed <xref:System.Xml.XmlWriter.Close%2A> została wywołana, nie ulegają zmianom.  
   
--   W przypadku otwartą <xref:System.Xml.XmlWriter> obiektu w określonej poddrzewo XML i że poddrzewo zostanie usunięty, <xref:System.Xml.XmlWriter> obiekt nadal może dodawać do poddrzewa. Poddrzewo staje się po prostu usuniętych fragmentu.  
+- W przypadku otwartą <xref:System.Xml.XmlWriter> obiektu w określonej poddrzewo XML i że poddrzewo zostanie usunięty, <xref:System.Xml.XmlWriter> obiekt nadal może dodawać do poddrzewa. Poddrzewo staje się po prostu usuniętych fragmentu.  
   
--   Jeśli wiele <xref:System.Xml.XmlWriter> obiektów są otwarte w tym samym punkcie w dokumencie XML, są dodawane do dokumentu XML w kolejności, w którym <xref:System.Xml.XmlWriter> obiekty zostały zamknięte, nie w kolejności, w jakiej zostały otwarte.  
+- Jeśli wiele <xref:System.Xml.XmlWriter> obiektów są otwarte w tym samym punkcie w dokumencie XML, są dodawane do dokumentu XML w kolejności, w którym <xref:System.Xml.XmlWriter> obiekty zostały zamknięte, nie w kolejności, w jakiej zostały otwarte.  
   
  Poniższy przykład tworzy <xref:System.Xml.XmlDocument> obiekt, tworzy <xref:System.Xml.XPath.XPathNavigator> obiektu, a następnie używa <xref:System.Xml.XmlWriter> obiektu zwróconego przez <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> metodą tworzenia struktury pierwszej książki w `books.xml` pliku. Przykład następnie zapisuje ją jako `book.xml` pliku.  
   

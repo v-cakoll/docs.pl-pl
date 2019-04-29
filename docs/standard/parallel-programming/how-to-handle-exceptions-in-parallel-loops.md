@@ -11,11 +11,11 @@ ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ef883f37587948871b222ca03a4032bea2109bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638301"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>Instrukcje: Obsługa wyjątków w pętlach równoległych
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> przeciążenia nie mają żadnych specjalnych mechanizm obsługi wyjątków, które może zostać wygenerowany. W związku z tym przypominają zwykłe `for` i `foreach` pętli (`For` i `For Each` w języku Visual Basic); wystąpił nieobsługiwany wyjątek powoduje pętlę, można od razu zakończyć.  

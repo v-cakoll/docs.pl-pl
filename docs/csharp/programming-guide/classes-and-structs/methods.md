@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646195"
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blokiem kodu, który zawiera szereg instrukcji. Program powoduje, że instrukcji do wykonania przez wywołanie metody i określenie argumentów wymaganej metody. W języku C# co instrukcja wykonanych odbywa się w kontekście metody. Metoda główna jest punktem wejścia dla każdej aplikacji C# i jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program zostanie uruchomiony.  

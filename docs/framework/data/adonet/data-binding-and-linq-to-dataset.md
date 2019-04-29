@@ -3,11 +3,11 @@ title: Powiązanie danych i LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607404"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>Powiązanie danych i LINQ to DataSet
 *Powiązanie danych* to proces, który nawiązuje połączenie między aplikacją w interfejsie użytkownika i logikę biznesową. Jeśli wiązanie ma prawidłowych ustawień i danych udostępnia odpowiednie powiadomienia po zmianie danych jego wartości, elementy, które są powiązane z danymi automatycznie odzwierciedlają zmiany. <xref:System.Data.DataSet> To reprezentacja danych, który zapewnia spójne relacyjne modelu programowania, niezależnie od źródła danych, zawiera on w pamięci. ADO.NET w wersji 2.0 <xref:System.Data.DataView> pozwala na filtrowanie i sortowanie danych przechowywanych w <xref:System.Data.DataTable>. Ta funkcja jest często używany w aplikacjach powiązanie danych. Za pomocą <xref:System.Data.DataView>, może uwidaczniać dane w tabeli z zamówieniami sortowania i dane można filtrować według wierszy, stanu lub w zależności od wyrażenia filtru. Aby uzyskać więcej informacji na temat <xref:System.Data.DataView> obiektu, zobacz [DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md).  

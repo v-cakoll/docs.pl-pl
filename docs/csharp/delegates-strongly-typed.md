@@ -1,28 +1,28 @@
 ---
-title: Jednoznacznie delegatów
-description: Dowiedz się, jak użycie ogólnych typów delegata w celu zadeklarowania typów niestandardowych podczas tworzenia funkcji wymagających delegatów.
+title: Silnie Typizowanych obiektów delegowanych
+description: Dowiedz się, jak korzystać z ogólnymi typami delegatów do deklarowania typów niestandardowych podczas tworzenia funkcji wymagających delegatów.
 ms.date: 06/20/2016
 ms.assetid: 564a683d-352b-4e57-8bac-b466529daf6b
 ms.openlocfilehash: 2e4cc1c7bfa0aaa90f3aaefa0da64c5486a9d10f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646663"
 ---
-# <a name="strongly-typed-delegates"></a>Jednoznacznie delegatów
+# <a name="strongly-typed-delegates"></a>Silnie Typizowanych obiektów delegowanych
 
 [Poprzednie](delegate-class.md)
 
-W poprzednim artykule widać, utworzyć delegata określonych typów za pomocą `delegate` — słowo kluczowe. 
+W poprzednim artykule pokazano, Utwórz delegata określonych typów przy użyciu `delegate` — słowo kluczowe. 
 
-Abstrakcyjna klasa delegata zapewnia infrastrukturę luźne powiązanie i wywołania. Konkretne typy delegata staną się bardziej użyteczne obejmującego i wymuszanie bezpieczeństwa typu dla metody, które są dodawane do listy wywołania obiektu delegowanego. Jeśli używasz `delegate` — słowo kluczowe i typ delegata konkretnych, kompilator generuje tych metod.
+Klasa abstrakcyjna delegata zapewnienia infrastruktury dla luźne powiązania i wywołania. Konkretne typy delegatów stać się bardziej użyteczne założeń i wymuszanie bezpieczeństwa typu dla metody, które są dodawane do listy wywołań obiektu delegowanego. Kiedy używasz `delegate` — słowo kluczowe i określić typ delegata konkretnych, kompilator generuje tych metod.
 
-W praktyce może to prowadzić do tworzenia nowego obiektu delegowanego typów przy każdym podpisu innej metody. Tę pracę można pobrać niewygodny po pewnym czasie. Co nowa funkcja wymaga nowych typów delegata.
+W praktyce może to prowadzić do tworzenie typów nowe delegowanie, zawsze, gdy potrzebujesz podpisu inną metodę. Tej pracy można pobrać tedious po pewnym czasie. Każdej nowej funkcji wymaga nowych typów obiektów delegowanych.
 
-Thankfully nie jest to konieczne. Framework .NET Core zawiera kilka typów, które można wykorzystać w każdym przypadku, gdy należy przekazać typów. Są to [ogólnego](programming-guide/generics/index.md) definicje, mogą zadeklarować dostosowań, gdy będziesz potrzebować nowej deklaracje metody. 
+Na szczęście nie jest to konieczne. Framework .NET Core zawiera kilka typów, które można wykorzystać w każdym przypadku, gdy potrzebujesz przekazać typów. Są to [ogólny](programming-guide/generics/index.md) definicji, dzięki czemu można zadeklarować dostosowań, gdy będziesz potrzebować nowego deklaracje metody. 
 
-Pierwsza z tych typów jest <xref:System.Action> typu i kilka zmian:
+Jest to pierwsza z tych typów <xref:System.Action> typu i kilka zmian:
 
 ```csharp
 public delegate void Action();
@@ -31,14 +31,14 @@ public delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
 // Other variations removed for brevity.
 ```
 
-`in` Modyfikator na argumentu typu ogólnego zostało opisane w artykule na KOWARIANCJA.
+`in` Modyfikator na argument typu ogólnego zostało omówione w artykule na KOWARIANCJA.
 
-Brak zmian `Action` delegata, który będzie zawierać do 16 argumenty, takich jak <xref:System.Action%6016>.
-Należy pamiętać, że te definicje używać różnych argumentów ogólnych dla każdego z argumentami delegata: który zapewnia elastyczność maksymalna. Argumenty metody nie muszą być, ale może być tego samego typu.
+Brak odmian `Action` delegata, które zawierają argumenty do 16, takie jak <xref:System.Action%6016>.
+Jest ważne, że te definicje używać różnych argumenty ogólne dla każdego z podanych argumentów delegata: Który zapewnia maksymalną elastyczność. Argumenty metody nie muszą być jednak może być tego samego typu.
 
-Użyj jednej z `Action` typy dla dowolnego typu delegata, który został zwrócony typ void.
+Użyj jednej z `Action` typów dla dowolnego typu delegata, który ma zwracać typ void.
 
-Struktura obejmuje również kilka ogólnych typów delegata używane dla typów delegowanych, które zwracają wartości:
+Środowisko zawiera także kilka ogólnymi typami delegatów, które umożliwiają typami delegatów, które zwracają wartości:
 
 ```csharp
 public delegate TResult Func<out TResult>();
@@ -47,33 +47,34 @@ public delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
 // Other variations removed for brevity
 ```
 
-`out` Modyfikatora w wyniku argumentu typu ogólnego zostało opisane w artykule na KOWARIANCJA.
+`out` Modyfikatora w wyniku argument typu ogólnego zostało omówione w artykule na KOWARIANCJA.
 
-Brak zmian `Func` delegować z maksymalnie 16 argumenty wejściowe, takie jak <xref:System.Func%6017>.
-Typ wyniku jest zawsze ostatniego parametru typu we wszystkich `Func` deklaracje przez Konwencję.
+Brak odmian `Func` delegowanie z maksymalnie 16 argumenty wejściowe, takie jak <xref:System.Func%6017>.
+Typ wyniku jest zawsze ostatnim parametrze typu we wszystkich `Func` deklaracji, zgodnie z Konwencją.
 
-Użyj jednej z `Func` typy dla dowolnego typu delegata, która zwraca wartość.
+Użyj jednej z `Func` typów dla dowolnego typu delegata, która nie zwraca wartości.
 
-Istnieje również specjalne <xref:System.Predicate%601> typ delegata, która zwraca pojedynczą wartość testu:
+Istnieje również specjalne <xref:System.Predicate%601> 
+Typ dla pełnomocnika, który zwraca wartość typu single testu:
 
 ```csharp
 public delegate bool Predicate<in T>(T obj);
 ```
 
-Należy zauważyć, że dla każdego `Predicate` typu, strukturę równoważne `Func` typ istnieje na przykład:
+Należy zauważyć, że dla każdego `Predicate` typ, strukturalnie równoważne `Func` typ istnieje na przykład:
 
 ```csharp
 Func<string, bool> TestForString;
 Predicate<string> AnotherTestForString;
 ```
 
-Wydaje się, że te dwa typy są równoważne. Nie są one.
-Te dwie zmienne nie może być używane zamiennie. Zmienna typu nie można przypisać innego typu. System typów języka C# korzysta z nazw określonych typów nie struktury.
+Myślisz, że te dwa typy są równoważne. Nie są one.
+Te dwie zmienne nie mogą być używane zamiennie. Zmienna typu nie można przypisać innego typu. C# Typu system używa nazwy zdefiniowanych typów, nie struktury.
 
-Wszystkie te typu delegata, który definicje w bibliotece programu .NET Core oznacza, że nie trzeba zdefiniować nowy typ delegata żadnych nowych funkcji tworzenia wymaganych obiektów delegowanych. Te definicje ogólnego powinien zawierać wszystkie delegata typy, które są potrzebne w większości sytuacji. Można po prostu utworzyć wystąpienie jednego z następujących typów z parametrami typu wymagane. W przypadku algorytmy, które można podjąć ogólnego te obiekty delegowane może służyć jako typów ogólnych. 
+Wszystkie te typ delegata, który definicje w bibliotece programu .NET Core oznacza, że nie musisz zdefiniować nowy typ delegata dla żadnych nowych funkcji możesz utworzyć, których wymaga delegatów. Te definicje ogólny powinien zapewnić wszystkich delegata typów, które są potrzebne w większości sytuacji. Można po prostu utworzyć wystąpienie jednego z następujących typów z parametrami typu wymagane. W przypadku algorytmów, które mogą być wykonane na ogólny te delegaty może służyć jako typów ogólnych. 
 
-To powinno zaoszczędzić czas i zminimalizować liczbę nowych typów, które należy utworzyć w celu zapewnienia ich współdziałania z obiektów delegowanych.
+To powinno zaoszczędzić czas i zminimalizować liczbę nowych typów, które należy utworzyć, aby pracować z delegatów.
 
-W artykule pojawi się kilka typowych wzorców do pracy z delegatów w praktyce.
+W następnym artykule przedstawimy kilka typowych wzorców do pracy z delegatów w praktyce.
 
 [Next](delegates-patterns.md)

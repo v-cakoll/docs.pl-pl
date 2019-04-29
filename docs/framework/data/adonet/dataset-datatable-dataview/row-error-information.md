@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
 ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607569"
 ---
 # <a name="row-error-information"></a>Informacje o błędzie wiersza
 Aby uniknąć konieczności reagować na błędy wierszy podczas edycji wartości <xref:System.Data.DataTable>, można dodać informacje o błędzie do wiersza w celu późniejszego użycia. <xref:System.Data.DataRow> Obiektu <xref:System.Data.DataRow.RowError%2A> właściwość w każdym wierszu, w tym celu. Dodawanie danych do **RowError** właściwość **DataRow** ustawia <xref:System.Data.DataRow.HasErrors%2A> właściwość **DataRow** do **true**. Jeśli **DataRow** jest częścią **DataTable**, i **DataRow.HasErrors** jest **true**, **DataTable.HasErrors** właściwość jest również **true**. Dotyczy to także do **DataSet** do której **DataTable** należy. Testowanie pod kątem błędów, można sprawdzić **HasErrors** właściwości w celu określenia, jeśli dodano informacje o błędzie do wszystkich wierszy. Jeśli **HasErrors** jest **true**, możesz użyć <xref:System.Data.DataTable.GetErrors%2A> metody **DataTable** powrócić do zbadania tylko wiersze z błędami, jak pokazano w poniższym przykładzie.  

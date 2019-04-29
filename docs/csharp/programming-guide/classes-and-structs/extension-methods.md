@@ -8,11 +8,11 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: 35ab91279c9ed8703f29d8cbb8df3d7d4bf2a6b8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646517"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla kodu klienta napisanego w C#, F# i Visual Basic nie ma żadnej widocznej różnicy między wywołanie metody rozszerzenia i metod, które faktycznie są zdefiniowane w typie.  
@@ -73,9 +73,9 @@ using System.Linq;
   
  W przypadku zastosowania metody rozszerzenia dla danego typu, należy pamiętać o następujące kwestie:  
   
--   Metoda rozszerzenia nigdy nie zostanie wywołana, jeśli ma taki sam podpis, jak metoda zdefiniowana w typie.  
+- Metoda rozszerzenia nigdy nie zostanie wywołana, jeśli ma taki sam podpis, jak metoda zdefiniowana w typie.  
   
--   Metody rozszerzenia są włączane do zakresu na poziomie przestrzeni nazw. Na przykład, jeśli masz wiele klas statycznych, które zawierają metody rozszerzające w pojedynczej przestrzeni nazw o nazwie `Extensions`, ich zostaną wszystkie włączone do zakresu `using Extensions;` dyrektywy.  
+- Metody rozszerzenia są włączane do zakresu na poziomie przestrzeni nazw. Na przykład, jeśli masz wiele klas statycznych, które zawierają metody rozszerzające w pojedynczej przestrzeni nazw o nazwie `Extensions`, ich zostaną wszystkie włączone do zakresu `using Extensions;` dyrektywy.  
   
  Dla zaimplementowanej biblioteki klas nie należy używać metod rozszerzenia, aby uniknąć zwiększenia numeru wersji zestawu. W przypadku dodawania znaczącej funkcjonalności do biblioteki, której kod źródłowy jest własnością użytkownika, należy przestrzegać standardowych wytycznych programu .NET Framework dotyczących wersji zestawów. Aby uzyskać więcej informacji, zobacz [przechowywanie wersji zestawu](../../../../docs/framework/app-domains/assembly-versioning.md).  
   

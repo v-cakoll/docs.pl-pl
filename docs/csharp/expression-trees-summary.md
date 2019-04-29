@@ -4,11 +4,11 @@ description: Podsumowania, jak można użyć drzew wyrażeń do tworzenia dynami
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
 ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646569"
 ---
 # <a name="expression-trees-summary"></a>Podsumowanie drzew wyrażeń
 

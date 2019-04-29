@@ -3,20 +3,20 @@ title: Architektura i projekt
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606859"
 ---
 # <a name="architecture-and-design"></a>Architektura i projekt
 Moduł generowania SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) jest implementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażeń.  
   
  Węzły drzewa są przetwarzane od dołu w górę. Po pierwsze jest generowany strukturę pośredniego: SqlSelectStatement lub SqlBuilder, zarówno ISqlFragment implementującej. Następnie ciąg instrukcja SQL jest generowany z tej struktury. Istnieją dwa powody, dla struktury pośredniego:  
   
--   Logicznie instrukcję SQL SELECT jest wypełniana poza kolejnością. Węzły, które uczestniczą w klauzuli FROM są odwiedzi przed tymi, które uczestniczą w WHERE, GROUP BY i ORDER BY — klauzula.  
+- Logicznie instrukcję SQL SELECT jest wypełniana poza kolejnością. Węzły, które uczestniczą w klauzuli FROM są odwiedzi przed tymi, które uczestniczą w WHERE, GROUP BY i ORDER BY — klauzula.  
   
--   Aby zmienić nazwę aliasy, należy zidentyfikować aliasy wszystkie używane w celu uniknięcia konfliktów podczas zmiany nazwy. Mają być odroczone możliwości zmiany nazw w SqlBuilder, należy użyć symbolu obiektów do reprezentowania kolumn, które są kandydatami do zmiany nazwy.  
+- Aby zmienić nazwę aliasy, należy zidentyfikować aliasy wszystkie używane w celu uniknięcia konfliktów podczas zmiany nazwy. Mają być odroczone możliwości zmiany nazw w SqlBuilder, należy użyć symbolu obiektów do reprezentowania kolumn, które są kandydatami do zmiany nazwy.  
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ Moduł generowania SQL w [dostawcy próbki](https://code.msdn.microsoft.com/wind
 ### <a name="isqlfragment"></a>ISqlFragment  
  W tej sekcji omówiono klasy, które implementują interfejs ISqlFragment, który służy do dwóch celów:  
   
--   Typowe typ zwracany dla wszystkich metod obiektu odwiedzającego.  
+- Typowe typ zwracany dla wszystkich metod obiektu odwiedzającego.  
   
--   Zapewnia metodę, aby zapisać ciąg końcowy SQL.  
+- Zapewnia metodę, aby zapisać ciąg końcowy SQL.  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  Zazwyczaj klauzule instrukcji SQL są oceniane po klauzulach, gdzie węzły są traktowane jako scalania nie są puste, nie można dodać do bieżącej instrukcji węzła. Na przykład jeśli kolejnego węzła jest filtrem, tego węzła można zintegrować bieżącego SqlSelectStatement tylko wtedy, gdy są spełnione następujące warunki:  
   
--   Wybierz pozycję Lista jest pusta. Jeśli lista wyboru nie jest pusty, listy wyboru został wyprodukowany przez węzła poprzedzającej filtr i predykatu może odwoływać się do kolumny zwracane przez tej listy wyboru.  
+- Wybierz pozycję Lista jest pusta. Jeśli lista wyboru nie jest pusty, listy wyboru został wyprodukowany przez węzła poprzedzającej filtr i predykatu może odwoływać się do kolumny zwracane przez tej listy wyboru.  
   
--   GROUPBY jest pusty. Jeśli GRUPOWANIA nie jest pusty, dodając filtr będzie oznaczać filtrowanie przed grupowania, który nie jest prawidłowy.  
+- GROUPBY jest pusty. Jeśli GRUPOWANIA nie jest pusty, dodając filtr będzie oznaczać filtrowanie przed grupowania, który nie jest prawidłowy.  
   
--   Klauzula TOP jest pusty. Jeśli klauzuli TOP nie jest pusty, dodając filtr będzie oznaczać filtrowanie przed wykonaniem GÓRNEJ, który nie jest prawidłowy.  
+- Klauzula TOP jest pusty. Jeśli klauzuli TOP nie jest pusty, dodając filtr będzie oznaczać filtrowanie przed wykonaniem GÓRNEJ, który nie jest prawidłowy.  
   
  To nie ma zastosowania do węzłów nierelacyjnych, takich jak DbConstantExpression lub wyrażeniach arytmetycznych ponieważ te są zawsze dołączane jako część istniejącej SqlSelectStatement.  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>Relacyjne węzłów (bez połączenie)  
  Następujące typy wyrażeń obsługują bez łączenia węzłów:  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  Odwiedzenie tych węzłów jest zgodny ze wzorcem następujące:  
   
 1. Odwiedź stronę relacyjnych danych wejściowych i pobieranie wynikowy SqlSelectStatement. Dane wejściowe do relacyjnych węzła może być jedną z następujących czynności:  
   
-    -   Relacyjne węzła, w tym zakresie (przykład DbScanExpression). Odwiedzający takim węzłem zwraca SqlSelectStatement.  
+    - Relacyjne węzła, w tym zakresie (przykład DbScanExpression). Odwiedzający takim węzłem zwraca SqlSelectStatement.  
   
-    -   Operacja wyrażenie (UNION ALL, na przykład). Wynik zawiera opakowane w nawiasach kwadratowych i umieścić w klauzuli FROM SqlSelectStatement nowe.  
+    - Operacja wyrażenie (UNION ALL, na przykład). Wynik zawiera opakowane w nawiasach kwadratowych i umieścić w klauzuli FROM SqlSelectStatement nowe.  
   
 2. Sprawdź, czy bieżący węzeł może być dodany do SqlSelectStatement produkowane przez danych wejściowych. Sekcji wyrażenia grupowania na instrukcje w tym artykule opisano to. W przeciwnym razie  
   
-    -   POP bieżący obiekt SqlSelectStatement.  
+    - POP bieżący obiekt SqlSelectStatement.  
   
-    -   Utwórz nowy obiekt SqlSelectStatement i Dodaj popped SqlSelectStatement jako FROM nowego obiektu SqlSelectStatement.  
+    - Utwórz nowy obiekt SqlSelectStatement i Dodaj popped SqlSelectStatement jako FROM nowego obiektu SqlSelectStatement.  
   
-    -   Umieścić nowy obiekt na górze stosu.  
+    - Umieścić nowy obiekt na górze stosu.  
   
 3. Przekierowanie powiązania wyrażenia wejściowego do poprawne symboli z danych wejściowych. Te informacje są przechowywane w obiekcie SqlSelectStatement.  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>Dołącz do wyrażeń  
  Poniżej są traktowane jako wyrażeniach sprzężenia, a następnie są przetwarzane przez metodę VisitJoinExpression w typowy sposób:  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  Poniżej przedstawiono kroki odwiedź stronę:  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. Proces wpis wynik odwiedzający danych wejściowych, wywołując ProcessJoinInputResult, który jest odpowiedzialny za prowadzenie tabeli symboli po odwiedzający element podrzędny w wyrażeniu join i prawdopodobnie zakończeniem SqlSelectStatement produkowane przez dziecko. Wynik elementu podrzędnego, może być jedną z następujących czynności:  
   
-    -   SqlSelectStatement niż ten, do którego zostanie dodany element nadrzędny. W takim przypadku może musi on zostać wykonane przez dodanie kolumn domyślnych. Jeśli dane wejściowe sprzężenia, musisz utworzyć nowy symbol sprzężenia. W przeciwnym razie Utwórz symbol normalny.  
+    - SqlSelectStatement niż ten, do którego zostanie dodany element nadrzędny. W takim przypadku może musi on zostać wykonane przez dodanie kolumn domyślnych. Jeśli dane wejściowe sprzężenia, musisz utworzyć nowy symbol sprzężenia. W przeciwnym razie Utwórz symbol normalny.  
   
-    -   Zakres (DbScanExpression, na przykład), w którego przypadku, gdy po prostu zostanie dodany do listy danych wejściowych elementu nadrzędnego użytkownika SqlSelectStatement.  
+    - Zakres (DbScanExpression, na przykład), w którego przypadku, gdy po prostu zostanie dodany do listy danych wejściowych elementu nadrzędnego użytkownika SqlSelectStatement.  
   
-    -   Nie SqlSelectStatement, w których przypadku, gdy jest jest ujęte w nawiasy kwadratowe.  
+    - Nie SqlSelectStatement, w których przypadku, gdy jest jest ujęte w nawiasy kwadratowe.  
   
-    -   Tym samym SqlSelectStatement, do którego zostanie dodany element nadrzędny. W takim przypadku symboli na liście FromExtents konieczne można zastąpić za pomocą pojedynczego JoinSymbol nowe reprezentujący je wszystkie.  
+    - Tym samym SqlSelectStatement, do którego zostanie dodany element nadrzędny. W takim przypadku symboli na liście FromExtents konieczne można zastąpić za pomocą pojedynczego JoinSymbol nowe reprezentujący je wszystkie.  
   
-    -   W pierwszych trzech przypadkach AddFromSymbol jest wywoływana, aby dodać klauzulę AS i aktualizowanie tabeli symboli.  
+    - W pierwszych trzech przypadkach AddFromSymbol jest wywoływana, aby dodać klauzulę AS i aktualizowanie tabeli symboli.  
   
  Po trzecie warunek sprzężenia (jeśli istnieje) jest odwiedzany.  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  Najpierw odwiedzeniu Właściwość wystąpienia, a wynik jest Symbol, JoinSymbol lub SymbolPair. Poniżej przedstawiono sposób obsługi tych trzech przypadkach:  
   
--   Jeśli zwracana jest JoinSymbol, niż jego NameToExtent właściwość zawiera symbol dla wymaganych właściwości. Jeśli symbol sprzężenia reprezentuje zagnieżdżonego sprzężenia, nową parę Symbol jest zwracany za pomocą symbolu sprzężenia do śledzenia symbol, który będzie służyć jako alias wystąpienia i symbol reprezentujące właściwość dalsze rozwiązywanie.  
+- Jeśli zwracana jest JoinSymbol, niż jego NameToExtent właściwość zawiera symbol dla wymaganych właściwości. Jeśli symbol sprzężenia reprezentuje zagnieżdżonego sprzężenia, nową parę Symbol jest zwracany za pomocą symbolu sprzężenia do śledzenia symbol, który będzie służyć jako alias wystąpienia i symbol reprezentujące właściwość dalsze rozwiązywanie.  
   
--   Jeśli część kolumny to symbol sprzężenia SymbolPair jest zwracany, zwracany jest ponownie symbol sprzężenia, ale teraz jako wartość właściwości column zostanie zaktualizowany w celu wskaż właściwość reprezentowana przez wyrażenie właściwości bieżącego. W przeciwnym razie SqlBuilder jest zwracany ze źródłem SymbolPair jako alias i symboli dla bieżącej właściwości jako kolumnę.  
+- Jeśli część kolumny to symbol sprzężenia SymbolPair jest zwracany, zwracany jest ponownie symbol sprzężenia, ale teraz jako wartość właściwości column zostanie zaktualizowany w celu wskaż właściwość reprezentowana przez wyrażenie właściwości bieżącego. W przeciwnym razie SqlBuilder jest zwracany ze źródłem SymbolPair jako alias i symboli dla bieżącej właściwości jako kolumnę.  
   
--   Jeśli Symbol jest zwracana, metoda odwiedziny zwraca metoda SqlBuilder z tego wystąpienia jako alias i nazwę właściwości jako nazwa kolumny.  
+- Jeśli Symbol jest zwracana, metoda odwiedziny zwraca metoda SqlBuilder z tego wystąpienia jako alias i nazwę właściwości jako nazwa kolumny.  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Gdy jest używana jako właściwość projekcji DbProjectExpression, obiekt DbNewInstanceExpression tworzy przecinkami lista argumentów do reprezentowania przewidywany kolumn.  
   
  Gdy obiekt DbNewInstanceExpression ma typ zwracany kolekcji definiuje nową kolekcję wyrażeń dostarczone jako argumenty, są obsługiwane osobno trzech następujących przypadkach:  
   
--   Jeśli obiekt DbNewInstanceExpression DbElementExpression jako jedynego argumentu, jest tłumaczony w następujący sposób:  
+- Jeśli obiekt DbNewInstanceExpression DbElementExpression jako jedynego argumentu, jest tłumaczony w następujący sposób:  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

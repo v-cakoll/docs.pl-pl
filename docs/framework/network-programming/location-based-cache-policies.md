@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
 ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642207"
 ---
 # <a name="location-based-cache-policies"></a>Zasady pamięci podręcznej oparte na lokalizacji
 Zasady pamięci podręcznej na podstawie lokalizacji definiuje aktualność prawidłowe pamięci podręcznej wpisy podstawę, z którego można pobrać żądanego zasobu. Zasób pamięci podręcznej jest nieprawidłowa w przypadku korzystania z niego nie naruszają określony serwer ponownego sprawdzania poprawności wymagań. Zasady oparte na lokalizacji pamięci podręcznej jest tworzona programowo przy użyciu <xref:System.Net.Cache.RequestCachePolicy> lub <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora klasy. Typ zasad na podstawie lokalizacji jest przekazywana do konstruktora przy użyciu <xref:System.Net.Cache.RequestCacheLevel> lub <xref:System.Net.Cache.HttpRequestCacheLevel> wartość wyliczenia. Aby uzyskać przykłady kodu, które utworzyć zasady oparte na lokalizacji pamięci podręcznej, zobacz [jak: Określanie zasad pamięci podręcznej na podstawie lokalizacji dla aplikacji](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). W poniższych sekcjach opisano każdego typu zasad na podstawie lokalizacji pamięci podręcznej dla zasobów Hypertext Transfer Protocol (protokół http i https).  

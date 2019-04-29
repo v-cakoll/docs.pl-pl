@@ -3,11 +3,11 @@ title: Znane problemy klienta SQL dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
 ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607751"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy klienta SQL dla programu Entity Framework
 W tej sekcji opisano znane problemy związane z .NET Framework Data Provider for SQL Server (SqlClient).  
@@ -25,15 +25,15 @@ W tej sekcji opisano znane problemy związane z .NET Framework Data Provider for
   
  Poniżej przedstawiono niektóre typowe scenariusze, które mogą prowadzić do występowania CROSS APPLY i/lub operatora OUTER APPLY operatory w zapytaniu dane wyjściowe:  
   
--   Skorelowane podzapytanie za pomocą stronicowania.  
+- Skorelowane podzapytanie za pomocą stronicowania.  
   
--   `AnyElement` Na skorelowane podzapytanie lub generowane przez nawigacji kolekcji.  
+- `AnyElement` Na skorelowane podzapytanie lub generowane przez nawigacji kolekcji.  
   
--   LINQ zapytania używające grupowanie metod, które akceptują selektor elementu.  
+- LINQ zapytania używające grupowanie metod, które akceptują selektor elementu.  
   
--   Zapytanie, w którym CROSS APPLY lub operatora OUTER APPLY jest jawnie określona  
+- Zapytanie, w którym CROSS APPLY lub operatora OUTER APPLY jest jawnie określona  
   
--   Zapytanie, które ma DEREF skonstruować za pośrednictwem konstrukcję REF.  
+- Zapytanie, które ma DEREF skonstruować za pośrednictwem konstrukcję REF.  
   
 ## <a name="skip-operator"></a>SKIP — Operator  
  Jeśli używasz [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)], za pomocą POMIŃ z listą ORDER BY-key kolumn może zwracać nieprawidłowe wyniki. Więcej niż określoną liczbę wierszy może zostać pominięta, jeżeli kolumnę niebędącą kolumną klucza zawiera zduplikowane dane. Jest to spowodowane jak SKIP jest tłumaczony na [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]. Na przykład, w następującym zapytaniu więcej niż pięć wierszy może zostać pominięta, jeżeli `E.NonKeyColumn` zawiera zduplikowane wartości:  

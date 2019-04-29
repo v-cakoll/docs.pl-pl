@@ -1,15 +1,15 @@
 ---
-title: Charakterystyka nowoczesnych aplikacji sieci web
+title: Charakterystyka nowoczesnych aplikacji internetowych
 description: Projektowania nowoczesnych aplikacji sieci Web za pomocą platformy ASP.NET Core i platformy Azure | Charakterystyka nowoczesnych aplikacji sieci web
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: eacc66ff5d2c4bfb8d8645bc6bd319eab52437a3
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627937"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Charakterystyka nowoczesnych aplikacji sieci Web
 

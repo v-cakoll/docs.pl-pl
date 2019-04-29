@@ -7,11 +7,11 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 ms.openlocfilehash: 722e913403276cad48cf35a2d1923f74270feada
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651873"
 ---
 # <a name="constants-c-programming-guide"></a>Stałe (Przewodnik programowania w języku C#)
 Stałe są niezmienne wartości, które są znane w czasie kompilacji i nie zmieniają się przez cały okres istnienia programu. Stałe są uznane za pomocą [const](../../../csharp/language-reference/keywords/const.md) modyfikator. Tylko C# wbudowanych typów (z wyłączeniem <xref:System.Object?displayProperty=nameWithType>) mogą być deklarowane jako `const`. Aby uzyskać listę wbudowanych typów, zobacz [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md). Typy zdefiniowane przez użytkownika, w tym klasy, struktury i tablic, nie może być `const`. Użyj [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) modyfikator, aby utworzyć klasy, struktury lub tablica, która jest inicjowany jeden raz w czasie wykonywania (na przykład w konstruktorze), a następnie nie można jej zmienić.  

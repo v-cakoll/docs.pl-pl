@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642948"
 ---
 # <a name="deriving-from-webresponse"></a>Wyprowadzanie z elementu WebResponse
 <xref:System.Net.WebResponse> Klasa jest abstrakcyjna klasa bazowa, który udostępnia podstawowe metody i właściwości, do tworzenia odpowiedzi związane z protokołem, który pasuje do modelu podłączanego protokołu .NET Framework. Aplikacje, które używają <xref:System.Net.WebRequest> klasy, żeby dane żądania z zasobów otrzymywać odpowiedzi w **elementu WebResponse**. Oparte na protokole **elementu WebResponse** elementy podrzędne muszą implementować członków abstrakcyjnych z **elementu WebResponse** klasy.  

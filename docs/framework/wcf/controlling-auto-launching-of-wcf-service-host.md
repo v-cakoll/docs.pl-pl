@@ -5,11 +5,11 @@ f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
 ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608453"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Kontrolowanie automatycznego uruchamiania hosta programu WCF
 Podczas debugowania innego projektu w tym samym rozwiązaniu Visual Studio zawierającą wiele projektów, można kontrolować możliwości automatycznego uruchamiania hosta usługi Windows Communication Foundation (WCF) (WcfSvcHost.exe) w projekcie biblioteki usługi WCF.  
@@ -20,13 +20,13 @@ Podczas debugowania innego projektu w tym samym rozwiązaniu Visual Studio zawie
   
  Ta opcja jest dostępna w następujących projektach:  
   
--   Projekt biblioteki usługi WCF.  
+- Projekt biblioteki usługi WCF.  
   
--   Projekt Biblioteka usługi sekwencyjnego przepływu pracy.  
+- Projekt Biblioteka usługi sekwencyjnego przepływu pracy.  
   
--   Projekt biblioteki usługi przepływu pracy automatu stanów.  
+- Projekt biblioteki usługi przepływu pracy automatu stanów.  
   
--   Projekt Biblioteka usługi syndykacji.  
+- Projekt Biblioteka usługi syndykacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

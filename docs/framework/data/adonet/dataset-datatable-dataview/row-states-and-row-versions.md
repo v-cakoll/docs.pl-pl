@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 83147c3f9d70434f5c8dd34e2e56f44f71adc53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607881"
 ---
 # <a name="row-states-and-row-versions"></a>Stany wiersza i wersje wiersza
 ADO.NET zarządza wierszy w tabelach przy użyciu stany wiersza i wersje. Stan wiersz wskazuje stan wiersza; wersje wiersza Obsługa wartości przechowywane w wierszu, zgodnie z jego modyfikacji, tym bieżące, oryginalne i wartości domyślne. Na przykład, po dokonaniu modyfikacji z kolumną w wierszu wiersza będzie mają stan wiersza `Modified`, i dwie wersje wierszy: `Current`, zawierającą bieżące wartości wiersza i `Original`, zawierającą wartości wiersza przed kolumny zmodyfikowane.  

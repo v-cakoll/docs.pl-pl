@@ -11,11 +11,11 @@ ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642852"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Organizowanie różnych typów tablic
 Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej jeden element tego samego typu. Mimo że tablice są typami odwołań, są one przekazywane tak jak parametry z funkcjami niezarządzanymi. To zachowanie jest niespójny z sposób zarządzanych tablic są przekazywane do obiektów zarządzanych, jak we/wy parametrów. Aby uzyskać więcej informacji, zobacz [kopiowanie i przypinanie](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Tablica jest typem odwołania w kodzie zarządzanym, który zawiera co najmniej 
 ## <a name="example"></a>Przykład  
  W tym przykładzie pokazano, jak przekazać następujące typy tablic:  
   
--   Tablica liczb całkowitych przez wartość.  
+- Tablica liczb całkowitych przez wartość.  
   
--   Tablica liczb całkowitych według odwołania, którego rozmiar można zmieniać.  
+- Tablica liczb całkowitych według odwołania, którego rozmiar można zmieniać.  
   
--   Tablica wielowymiarowa (macierzy) liczb całkowitych przez wartość.  
+- Tablica wielowymiarowa (macierzy) liczb całkowitych przez wartość.  
   
--   Tablica ciągów według wartości.  
+- Tablica ciągów według wartości.  
   
--   Tablica struktury z liczbami całkowitymi.  
+- Tablica struktury z liczbami całkowitymi.  
   
--   Tablica struktury z ciągami.  
+- Tablica struktury z ciągami.  
   
  Jeśli tablica jest jawnie organizowane przez odwołanie, domyślne zachowanie kieruje tablicę jako parametr w. Można zmienić to zachowanie, stosując <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> jawnie atrybutów.  
   
  Przykłady tablic używa następujących funkcji niezarządzanych, wyświetlane wraz z ich oryginalną deklaracją funkcji:  
   
--   **TestArrayOfInts** eksportowany z PinvokeLib.dll.  
+- **TestArrayOfInts** eksportowany z PinvokeLib.dll.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** eksportowany z PinvokeLib.dll.  
+- **TestRefArrayOfInts** eksportowany z PinvokeLib.dll.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** eksportowany z PinvokeLib.dll.  
+- **TestMatrixOfInts** eksportowany z PinvokeLib.dll.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** exported from PinvokeLib.dll.  
+- **TestArrayOfStrings** exported from PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** eksportowany z PinvokeLib.dll.  
+- **TestArrayOfStructs** eksportowany z PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** eksportowany z PinvokeLib.dll.  
+- **TestArrayOfStructs2** eksportowany z PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

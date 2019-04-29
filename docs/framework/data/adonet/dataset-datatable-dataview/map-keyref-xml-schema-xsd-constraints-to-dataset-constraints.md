@@ -3,11 +3,11 @@ title: Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu 
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607503"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
 **Keyref** element umożliwia ustanowienie łączy między elementami w dokumencie. Jest to podobne do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa **keyref** elementu, element jest konwertowany podczas procesu mapowania schematu do odpowiedniego ograniczenia klucza obcego dla kolumn w tabelach <xref:System.Data.DataSet>. Domyślnie **keyref** element generuje również relacji z **ParentTable**, **ChildTable**, **ParentColumn**i  **ChildColumn** właściwości określone w relacji.  
@@ -75,7 +75,7 @@ Order(OrderNumber, EmpNumber)
   
  Ponadto **DataSet** definiuje następujące ograniczenia:  
   
--   Ograniczenia unique wobec **kolejności** tabeli.  
+- Ograniczenia unique wobec **kolejności** tabeli.  
   
     ```  
               Table: Order  
@@ -85,7 +85,7 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
--   Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** właściwość jest ustawiona na **False** ponieważ dwa elementy nie są zagnieżdżone w schemacie.  
+- Relacja między **kolejności** i **OrderDetail** tabel. **Zagnieżdżone** właściwość jest ustawiona na **False** ponieważ dwa elementy nie są zagnieżdżone w schemacie.  
   
     ```  
               ParentTable: Order  
@@ -98,7 +98,7 @@ Order(OrderNumber, EmpNumber)
     Nested: False  
     ```  
   
--   Ograniczenie klucza obcego w **OrderDetail** tabeli.  
+- Ograniczenie klucza obcego w **OrderDetail** tabeli.  
   
     ```  
               ConstraintName: OrderNoRef  

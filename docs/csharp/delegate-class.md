@@ -4,11 +4,11 @@ description: Więcej informacji na temat klas .NET Framework, które obsługują
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
 ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646712"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate i `delegate` — słowo kluczowe
 

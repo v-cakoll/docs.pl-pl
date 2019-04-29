@@ -3,11 +3,11 @@ title: Parametry połączenia w programie ADO.NET Entity Framework
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606788"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>Parametry połączenia w programie ADO.NET Entity Framework
 
@@ -17,7 +17,7 @@ Ciąg połączenia jest używany dostawca EntityClient podczas uzyskiwania dost�
 
 [Narzędzia modelu Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) wygenerować parametry połączenia, które są przechowywane w pliku konfiguracji aplikacji. <xref:System.Data.Objects.ObjectContext> pobiera informacje o połączeniu automatycznie podczas tworzenia zapytań dotyczących obiektów. <xref:System.Data.EntityClient.EntityConnection> Posługują się <xref:System.Data.Objects.ObjectContext> wystąpienia jest możliwy z <xref:System.Data.Objects.ObjectContext.Connection%2A> właściwości. Aby uzyskać więcej informacji, zobacz [zarządzania połączeniami i transakcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100)).
 
-## <a name="connection-string-syntax"></a>Składnia ciągu połączenia
+## <a name="connection-string-syntax"></a>Składnia parametrów połączenia
 
 Aby uzyskać informacje dotyczące składni ogólnej dla parametrów połączenia, zobacz [składnia ciągu połączenia | Parametry połączenia w ADO.NET](../connection-strings.md#connection-string-syntax).
 

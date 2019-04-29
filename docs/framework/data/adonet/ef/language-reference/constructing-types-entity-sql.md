@@ -3,11 +3,11 @@ title: Konstruowanie typów (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605841"
 ---
 # <a name="constructing-types-entity-sql"></a>Konstruowanie typów (jednostka SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera trzy rodzaje konstruktorów: wiersz konstruktorów, typu nazwanego konstruktorów i konstruktorów kolekcji.  
@@ -21,9 +21,9 @@ ms.locfileid: "59073783"
   
  Następujące reguły stosuje się do wyrażenia aliasów w Konstruktorze wierszy:  
   
--   Wyrażenia w Konstruktorze row nie może odwoływać się do innych aliasów w tej samej konstruktora.  
+- Wyrażenia w Konstruktorze row nie może odwoływać się do innych aliasów w tej samej konstruktora.  
   
--   Dwóch wyrażeń w tym samym Konstruktor row nie może mieć takiego samego aliasu.  
+- Dwóch wyrażeń w tym samym Konstruktor row nie może mieć takiego samego aliasu.  
   
  Aby uzyskać więcej informacji na temat konstruktory wiersz zobacz [wiersza](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
   

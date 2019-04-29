@@ -15,11 +15,11 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
 ms.openlocfilehash: f709c2e0780b89e072c43e9acaf722e6851d4cbe
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641895"
 ---
 # <a name="socket-code-examples"></a>Przykłady kodu gniazd
 Poniższe przykłady kodu przedstawiają sposoby użycia <xref:System.Net.Sockets.Socket> klasy jako klienta, aby połączyć się z usługami sieci zdalnej, a serwer do nasłuchiwania połączeń z klientami zdalnymi.  

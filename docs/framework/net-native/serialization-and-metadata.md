@@ -5,18 +5,18 @@ ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c82d32fe5b1e62a19ff5e2920c5943f1303b2d64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599487"
 ---
 # <a name="serialization-and-metadata"></a>Serializacja i metadane
 Jeśli Twoja aplikacja serializuje i deserializuje obiektów, konieczne może być dodawanie wpisów do Twojej dyrektywy środowiska uruchomieniowego (. rd.xml) plik, aby upewnić się, że metadane potrzebne znajduje się w czasie wykonywania. Istnieją dwie kategorie serializatory, a każdy z nich wymaga innej obsługi w pliku dyrektyw środowiska uruchomieniowego:  
   
--   Oparty na odbiciu serializatory innych firm. Te wymagają modyfikacji pliku dyrektyw środowiska uruchomieniowego i zostały omówione w następnej sekcji.  
+- Oparty na odbiciu serializatory innych firm. Te wymagają modyfikacji pliku dyrektyw środowiska uruchomieniowego i zostały omówione w następnej sekcji.  
   
--   Odbicie inne niż oparte serializatory znalezione w bibliotece klas programu .NET Framework. Te mogą wymagać modyfikacji pliku dyrektyw środowiska uruchomieniowego, zostały one omówione w [serializatory Microsoft](#Microsoft) sekcji.  
+- Odbicie inne niż oparte serializatory znalezione w bibliotece klas programu .NET Framework. Te mogą wymagać modyfikacji pliku dyrektyw środowiska uruchomieniowego, zostały one omówione w [serializatory Microsoft](#Microsoft) sekcji.  
   
 <a name="ThirdParty"></a>   
 ## <a name="third-party-serializers"></a>Serializatory innych firm  

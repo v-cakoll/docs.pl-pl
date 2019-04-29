@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
 ms.openlocfilehash: 94789bcc007056a26d206903dc554ffe35999823
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607959"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>Instrukcje: Nawigowanie po relacjach za pomocą operatora nawigowania
 W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego przy użyciu <xref:System.Data.EntityClient.EntityCommand> obiektu oraz jak pobierać <xref:System.Data.Metadata.Edm.RefType> wyniki za pomocą <xref:System.Data.EntityClient.EntityDataReader>.  

@@ -3,11 +3,11 @@ title: 'Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Vis
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
 ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614473"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (Visual Basic)
 Ten przykład przedstawia sposób Scalanie zawartości dwóch plików, a następnie utwórz zestaw nowych plików, które organizują dane w nowy sposób.  

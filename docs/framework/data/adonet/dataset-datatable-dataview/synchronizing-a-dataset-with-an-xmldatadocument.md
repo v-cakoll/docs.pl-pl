@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607498"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronizowanie elementu DataSet z elementem XmlDataDocument
 W tej sekcji przedstawiono jeden krok w procesie przetwarzania zamówienia zakupu, za pomocą silnie typizowanej <xref:System.Data.DataSet> synchronizowane z <xref:System.Xml.XmlDataDocument>. Tworzenie przykładów, które należy wykonać **DataSet** ze schematem w trybie zminimalizowanym, który jest zgodny tylko część dokumencie źródłowym XML. W przykładach użyto **XmlDataDocument** Aby zachować wierność dokumencie źródłowym XML Włączanie **DataSet** ma być używany do udostępnienia podzbiór dokumentu XML.  

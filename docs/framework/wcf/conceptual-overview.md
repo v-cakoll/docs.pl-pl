@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
 ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608668"
 ---
 # <a name="conceptual-overview"></a>Omówienie pojęć
-Ten temat zawiera podsumowanie informacji o systemie Windows Communication Foundation (WCF) systemu i klasy, które obsługuje jej użycia do obsługi komunikatów.  
+Ten temat zawiera podsumowanie informacji na temat Windows Communication Foundation (WCF) komunikatów systemu i klas, które obsługują jego użycia.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- Krótki przegląd WCF.  
+ Krótkie omówienie usługi WCF.  
   
  [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)  
- Omówienie głównych założeniach modelu programowania usług WCF.  
+ Zarys główne pojęcia związane z modelu programowania usługi WCF.  
   
  [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)  
  Graficzna reprezentacja architektury usługi WCF.  

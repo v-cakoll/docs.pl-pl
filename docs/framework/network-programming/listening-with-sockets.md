@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 ms.openlocfilehash: c3d5a7d6040038eb6d768815b1ae9e8ad45c5810
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642220"
 ---
 # <a name="listening-with-sockets"></a>Nasłuchiwanie przy użyciu gniazd
 Gniazda odbiornika lub serwera Otwórz port w sieci, a następnie poczekaj klienta połączyć się z tym portem. Mimo że istnieją inne rodziny adresów sieciowych i protokołów, w tym przykładzie pokazano, jak utworzyć usługi zdalnej sieci TCP/IP.  

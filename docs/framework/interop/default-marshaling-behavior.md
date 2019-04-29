@@ -12,11 +12,11 @@ ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643559"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Marshaling międzyoperacyjny działa w regułach tego dyktować, jak dane skojarzone z parametrami metody zachowuje się jak przekazuje między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolować takie kierowania działań jako przekształcenia typu danych, / / wywoływany można zmienić danych przekazanych do niego i zwracają te zmiany do obiektu wywołującego, a w ramach której okolicznościach Organizator udostępnia optymalizację wydajności.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  Na przykład Organizator Określa, że klasy otoki powinien być używany do opakowywania interfejsu, który został przekazany do kodu zarządzanego. Po interfejsie najpierw jest przekazywany za pomocą organizatora, organizator sprawdza, czy interfejs pochodzi z znany obiekt. To sprawdzanie jest wykonywane w dwóch sytuacjach:  
   
--   Interfejs jest jest implementowany przez inny obiekt zarządzany, który został przekazany do modelu COM, gdzie indziej. Organizator można łatwo zidentyfikować interfejsów udostępnianych przez zarządzane obiekty i jest możliwość dopasowania interfejs z zarządzanego obiektu, który dostarcza implementację. Zarządzany obiekt jest następnie przekazywany do metody i nie otoki jest wymagana.  
+- Interfejs jest jest implementowany przez inny obiekt zarządzany, który został przekazany do modelu COM, gdzie indziej. Organizator można łatwo zidentyfikować interfejsów udostępnianych przez zarządzane obiekty i jest możliwość dopasowania interfejs z zarządzanego obiektu, który dostarcza implementację. Zarządzany obiekt jest następnie przekazywany do metody i nie otoki jest wymagana.  
   
--   Obiekt, który jest już opakowana implementuje interfejs. Aby ustalić, czy jest to możliwe, organizator zapytania obiektu dla jego **IUnknown** interfejs i porównuje zwrócony interfejs służący do interfejsów inne obiekty, które są już opakowana. Jeśli interfejs jest taki sam jak inny otoki, obiekty mają taką samą tożsamość i istniejące otoki jest przekazywany do metody.  
+- Obiekt, który jest już opakowana implementuje interfejs. Aby ustalić, czy jest to możliwe, organizator zapytania obiektu dla jego **IUnknown** interfejs i porównuje zwrócony interfejs służący do interfejsów inne obiekty, które są już opakowana. Jeśli interfejs jest taki sam jak inny otoki, obiekty mają taką samą tożsamość i istniejące otoki jest przekazywany do metody.  
   
  Jeśli interfejs nie jest od znanych obiektu, organizator wykonuje następujące czynności:  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Organizowanie domyślne dotyczące delegatów  
  Zarządzane delegata jest organizowana jako interfejsem COM lub wskaźnika funkcji jest oparte na mechanizmie wywołania:  
   
--   Dla platformy, należy wywołać, obiekt delegowany jest organizowana jako wskaźnik funkcji niezarządzanej domyślnie.  
+- Dla platformy, należy wywołać, obiekt delegowany jest organizowana jako wskaźnik funkcji niezarządzanej domyślnie.  
   
--   Dla współdziałania z modelem COM, obiekt delegowany jest organizowana jako interfejsu COM typu **_Delegate** domyślnie. **_Delegate** interfejsu jest zdefiniowany w bibliotece typów Mscorlib.tlb i zawiera <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> metody, która umożliwia wywoływanie metody, która odwołuje się do obiektu delegowanego.  
+- Dla współdziałania z modelem COM, obiekt delegowany jest organizowana jako interfejsu COM typu **_Delegate** domyślnie. **_Delegate** interfejsu jest zdefiniowany w bibliotece typów Mscorlib.tlb i zawiera <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> metody, która umożliwia wywoływanie metody, która odwołuje się do obiektu delegowanego.  
   
  W poniższej tabeli przedstawiono organizowania opcji dla typu danych zarządzanych delegata. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybut udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> delegatów marshal wartości wyliczenia.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  Ta sekcja zawiera informacje na następujących typach sformatowaną wartość:  
   
--   [Typy wartości używane na platformie wywołania](#value-types-used-in-platform-invoke)  
+- [Typy wartości używane na platformie wywołania](#value-types-used-in-platform-invoke)  
   
--   [Typy wartości używane w modelu COM](#value-types-used-in-com-interop)  
+- [Typy wartości używane w modelu COM](#value-types-used-in-com-interop)  
   
  Oprócz zawierająca opis typów sformatowane, ten temat zawiera informacje o [System typów wartości](#system-value-types) , które mają nietypowe zachowanie organizowania.  
   
  Sformatowana typ to typ złożony, który zawiera informacje, które jawnie kontroluje układ składowych w pamięci. Informacje o układzie składowej jest realizowane przy użyciu <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutu. Układ może być jedną z następujących <xref:System.Runtime.InteropServices.LayoutKind> wartości wyliczenia:  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Wskazuje, że środowisko uruchomieniowe języka wspólnego jest bezpłatna zmienić kolejność elementów członkowskich typu w celu zwiększenia wydajności. Jednak gdy typ wartości jest przekazywany do kodu niezarządzanego, układ elementów członkowskich jest przewidywalne. Podjęto próbę automatycznie kierować takie struktury, powoduje wyjątek.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Wskazuje, że elementy członkowskie tego typu mają być rozmieszczone w niezarządzanej pamięci w tej samej kolejności, w jakiej są wyświetlane w definicji typu zarządzanego.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Wskazuje, czy członkowie są ułożone zgodnie z opisem w <xref:System.Runtime.InteropServices.FieldOffsetAttribute> dostarczony z każdym polem.  
   

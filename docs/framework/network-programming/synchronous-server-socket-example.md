@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641869"
 ---
 # <a name="synchronous-server-socket-example"></a>Przykład synchronicznego gniazda serwera
 Poniższy przykład program tworzy serwer, który odbiera żądania połączenia od klientów. Serwer jest tworzone za pomocą synchronicznego gniazda, więc zawiesza wykonywanie aplikacji serwera podczas oczekiwania na połączenie z klientem. Aplikacja odbiera ciąg od klienta, wyświetla ciąg w konsoli i następnie zwraca ciąg do klienta. Ciąg z klienta może zawierać ciąg "\<EOF >" celu sygnalizowania, że koniec komunikatu.  

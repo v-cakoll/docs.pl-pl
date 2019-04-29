@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645840"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementacja wzorca formantu wartości automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,23 +25,23 @@ ms.locfileid: "59174957"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki wartości, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Określa, takich jak <xref:System.Windows.Automation.ControlType.ListItem> i <xref:System.Windows.Automation.ControlType.TreeItem> musi obsługiwać <xref:System.Windows.Automation.ValuePattern> w przypadku edycji wartości dowolnych elementów, niezależnie od bieżącego trybu edycji kontrolki. Kontrolki nadrzędnej również musi obsługiwać <xref:System.Windows.Automation.ValuePattern> Jeśli elementy podrzędne są edytowalne.  
+- Określa, takich jak <xref:System.Windows.Automation.ControlType.ListItem> i <xref:System.Windows.Automation.ControlType.TreeItem> musi obsługiwać <xref:System.Windows.Automation.ValuePattern> w przypadku edycji wartości dowolnych elementów, niezależnie od bieżącego trybu edycji kontrolki. Kontrolki nadrzędnej również musi obsługiwać <xref:System.Windows.Automation.ValuePattern> Jeśli elementy podrzędne są edytowalne.  
   
  ![Element edytowalnej listy. ](../../../docs/framework/ui-automation/media/uia-valuepattern-editable-listitem.PNG "UIA_ValuePattern_Editable_ListItem")  
 Przykład elementu edytowalnej listy  
   
--   Formanty edycji jednowierszowego obsługuje programowy dostęp do ich zawartości poprzez implementację <xref:System.Windows.Automation.Provider.IValueProvider>. Jednak nie należy implementować formantów edycji wielowierszowe <xref:System.Windows.Automation.Provider.IValueProvider>; zamiast tego zapewniają dostęp do swojej zawartości poprzez implementację <xref:System.Windows.Automation.Provider.ITextProvider>.  
+- Formanty edycji jednowierszowego obsługuje programowy dostęp do ich zawartości poprzez implementację <xref:System.Windows.Automation.Provider.IValueProvider>. Jednak nie należy implementować formantów edycji wielowierszowe <xref:System.Windows.Automation.Provider.IValueProvider>; zamiast tego zapewniają dostęp do swojej zawartości poprzez implementację <xref:System.Windows.Automation.Provider.ITextProvider>.  
   
--   Aby pobrać zawartość tekstową kontrolki edycji wielowierszowego, należy zaimplementować formant <xref:System.Windows.Automation.Provider.ITextProvider>. Jednak <xref:System.Windows.Automation.Provider.ITextProvider> nie obsługuje ustawiania wartości formantu.  
+- Aby pobrać zawartość tekstową kontrolki edycji wielowierszowego, należy zaimplementować formant <xref:System.Windows.Automation.Provider.ITextProvider>. Jednak <xref:System.Windows.Automation.Provider.ITextProvider> nie obsługuje ustawiania wartości formantu.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> nie obsługuje pobierania formatowania informacji lub podciągu wartości. Implementowanie <xref:System.Windows.Automation.Provider.ITextProvider> w tych scenariuszach.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> nie obsługuje pobierania formatowania informacji lub podciągu wartości. Implementowanie <xref:System.Windows.Automation.Provider.ITextProvider> w tych scenariuszach.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> należy zaimplementować formantów takich jak **selektor kolorów** kontrolki wyboru z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (przedstawiono poniżej), obsługującą ciąg mapowania między wartość koloru (na przykład "żółty") i równoważne wewnętrzny[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]struktury.  
+- <xref:System.Windows.Automation.Provider.IValueProvider> należy zaimplementować formantów takich jak **selektor kolorów** kontrolki wyboru z [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (przedstawiono poniżej), obsługującą ciąg mapowania między wartość koloru (na przykład "żółty") i równoważne wewnętrzny[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]struktury.  
   
  ![Selektor kolorów z żółtym wyróżnione. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Przykładowe mapowanie parametrów próbników kolorów  
   
--   Kontrolki powinny mieć jego <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> równa `true` i jego <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> równa `false` przed zezwoleniem na wywołanie <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
+- Kontrolki powinny mieć jego <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> równa `true` i jego <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> równa `false` przed zezwoleniem na wywołanie <xref:System.Windows.Automation.Provider.IValueProvider.SetValue%2A>.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-ivalueprovider"></a>Wymagane elementy IValueProvider  

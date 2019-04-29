@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 7b9017c30deebf6762b60d70e2be0b68ab5e27fc
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627882"
 ---
 # <a name="async-in-depth"></a>Asynchroniczne szczegółowo
 
@@ -82,7 +82,7 @@ Po wywołaniu interfejsu API w systemu żądanie teraz obszaru jądra osiągną�
 
 Na przykład w system operacyjny Windows wątek nawiązuje połączenie ze sterownikiem urządzenia sieci i prosi można wykonać operacji sieci za pośrednictwem przerwań żądania pakietu (IRP), które reprezentuje operację.  Sterownik urządzenia otrzymuje MPP, sprawia, że połączenie z siecią, oznacza MPP jako "pending" i zwraca z powrotem do systemu operacyjnego.  Ponieważ teraz wątku systemu operacyjnego wie, że MPP jest "pending", nie ma żadnych więcej działań w celu dla tego zadania i "zwraca wartość" tak, aby może służyć do wykonywania innych zadań.
 
-Gdy żądanie jest spełniony, a danych wróci za pośrednictwem sterownika urządzenia, powiadamia Procesora nowych danych odebranych za pośrednictwem przerwania.  Pobiera obsługi przerwań to różnią się w zależności od systemu operacyjnego, ale ostatecznie dane zostaną przekazane za pośrednictwem systemu operacyjnego aż do napotkania międzyoperacyjny wywołania systemowego (na przykład w systemie Linux obsługi przerwania będą planować dolnej połowie przerwania do danych za pośrednictwem systemu operacyjnego  asynchronicznie).  Uwaga że *również* się asynchronicznie stanie!  Wynik jest umieszczane w kolejce do czasu następnego dostępny wątek jest w stanie Wykonywanie metody asynchronicznej i "Odkodowywanie" wyniki ukończonego zadania.
+Gdy żądanie jest spełniony, a danych wróci za pośrednictwem sterownika urządzenia, powiadamia Procesora nowych danych odebranych za pośrednictwem przerwania.  Pobiera obsługi przerwań to różnią się w zależności od systemu operacyjnego, ale ostatecznie dane zostaną przekazane za pośrednictwem systemu operacyjnego aż do napotkania międzyoperacyjny wywołania systemowego (na przykład w systemie Linux obsługi przerwania będą planować dolnej połowie przerwania do danych za pośrednictwem systemu operacyjnego  asynchronicznie).  Uwaga że *również* się asynchronicznie stanie!  Wynik jest umieszczone w kolejce, dopóki następny dostępny wątek jest w stanie Wykonywanie metody asynchronicznej i "Odkodowywanie" wyniki ukończonego zadania.
 
 W trakcie tego procesu całego kluczowym wnioskiem jest to, że **żaden wątek nie jest przeznaczony do obsługi zadania**.  Mimo że praca jest wykonywana w kontekście niektóre (oznacza to, system operacyjny musi przekazać dane do sterownika urządzenia i reagować na przerwania), żaden wątek nie jest dedykowany do *oczekiwania* dla danych z żądania, aby wrócić do tego.  Dzięki temu system do obsługi znacznie większa ilość pracy, zamiast czekać, aż niektóre wywołania operacji We/Wy zakończyć.
 

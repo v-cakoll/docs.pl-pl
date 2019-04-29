@@ -5,11 +5,11 @@ author: bleroy
 ms.date: 05/29/2018
 ms.custom: seodec18
 ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648610"
 ---
 # <a name="dotnet-store"></a>Magazyn DotNet
 

@@ -16,11 +16,11 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650261"
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 
@@ -126,11 +126,11 @@ Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:
   
 3. Jeśli wartość implementuje <xref:System.IFormattable> interfejsu, interfejs <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> metoda jest wywoływana. Metoda jest przekazywana *formatString* wartość, jeśli jest obecna w elemencie formatu lub `null` Jeśli tak nie jest. <xref:System.IFormatProvider> Argument jest określany w następujący sposób:  
   
-    -   Wartość numeryczna, jeśli metoda formatowania złożonego z inną niż null <xref:System.IFormatProvider> argument jest wywoływana, środowisko uruchomieniowe zażąda <xref:System.Globalization.NumberFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można jej dostarczyć, jeśli wartość argumentu jest `null`, lub jeśli nie ma metody formatowania złożonego <xref:System.IFormatProvider> parametru <xref:System.Globalization.NumberFormatInfo> obiekt jest używany przez bieżącą kulturę wątku.  
+    - Wartość numeryczna, jeśli metoda formatowania złożonego z inną niż null <xref:System.IFormatProvider> argument jest wywoływana, środowisko uruchomieniowe zażąda <xref:System.Globalization.NumberFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można jej dostarczyć, jeśli wartość argumentu jest `null`, lub jeśli nie ma metody formatowania złożonego <xref:System.IFormatProvider> parametru <xref:System.Globalization.NumberFormatInfo> obiekt jest używany przez bieżącą kulturę wątku.  
   
-    -   Dla wartości daty i godziny, jeśli metoda formatowania złożonego z inną niż null <xref:System.IFormatProvider> argument jest wywoływana, środowisko uruchomieniowe zażąda <xref:System.Globalization.DateTimeFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można jej dostarczyć, jeśli wartość argumentu jest `null`, lub jeśli nie ma metody formatowania złożonego <xref:System.IFormatProvider> parametru <xref:System.Globalization.DateTimeFormatInfo> obiekt jest używany przez bieżącą kulturę wątku.  
+    - Dla wartości daty i godziny, jeśli metoda formatowania złożonego z inną niż null <xref:System.IFormatProvider> argument jest wywoływana, środowisko uruchomieniowe zażąda <xref:System.Globalization.DateTimeFormatInfo> obiekt z jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. Jeśli nie można jej dostarczyć, jeśli wartość argumentu jest `null`, lub jeśli nie ma metody formatowania złożonego <xref:System.IFormatProvider> parametru <xref:System.Globalization.DateTimeFormatInfo> obiekt jest używany przez bieżącą kulturę wątku.  
   
-    -   W przypadku obiektów innych typów, jeśli formatowanie złożone metoda jest wywoływana z <xref:System.IFormatProvider> argument, jego wartość jest przekazywana bezpośrednio do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji. W przeciwnym razie `null` jest przekazywany do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  
+    - W przypadku obiektów innych typów, jeśli formatowanie złożone metoda jest wywoływana z <xref:System.IFormatProvider> argument, jego wartość jest przekazywana bezpośrednio do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji. W przeciwnym razie `null` jest przekazywany do <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> implementacji.  
   
 4. Bez parametrów danego typu `ToString` metody, która zastępuje <xref:System.Object.ToString?displayProperty=nameWithType> lub dziedziczy zachowanie jej klasy bazowej, jest wywoływana. W tym przypadku ciąg formatu określony przez *formatString* składnika w elemencie formatu, jeśli jest obecny, jest ignorowany.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
 ms.openlocfilehash: fc3e29ad606cf8a60318a320e8ebc65b0d7f6e48
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651860"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Klasy abstrakcyjne i zapieczętowane oraz członkowie klas (Przewodnik programowania w języku C#)
 [Abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md) — słowo kluczowe pozwala na tworzenie klas i [klasy](../../../csharp/language-reference/keywords/class.md) elementów członkowskich, które są niekompletne i muszą być zaimplementowane w klasie pochodnej.  

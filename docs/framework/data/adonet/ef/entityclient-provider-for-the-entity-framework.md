@@ -3,11 +3,11 @@ title: Dostawca EntityClient dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
 ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607077"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Dostawca EntityClient dla programu Entity Framework
 Dostawca EntityClient jest dostawcy danych używanych przez aplikacje platformy Entity Framework na dostęp do danych opisanych w modelu koncepcyjnym. Aby uzyskać informacje o modelach koncepcyjnych, zobacz [modelowanie i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). Dostawca EntityClient używa innego dostawcy danych .NET Framework, dostępu do źródła danych. Na przykład dostawca EntityClient używa dostawcy danych .NET Framework dla programu SQL Server (SqlClient) podczas uzyskiwania dostępu do bazy danych programu SQL Server. Aby uzyskać informacje o dostawcy SqlClient, zobacz [SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Dostawca EntityClient jest zaimplementowana w <xref:System.Data.EntityClient> przestrzeni nazw.  

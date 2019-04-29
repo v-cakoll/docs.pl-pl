@@ -18,11 +18,11 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641843"
 ---
 # <a name="time-based-cache-policies"></a>Zasady pamięci podręcznej oparte na czasie
 Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z pamięci podręcznej przy użyciu czas pobrania zasobu nagłówki zwrócony z zasobem, a bieżąca godzina. Podczas ustawiania zasad pamięci podręcznej na podstawie czasu, można użyć <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oparte na czasie zasady lub tworzenie niestandardowych zasad opartych na czasie. W przypadku używania zasad na podstawie czasu domyślnego dla zasobów pobranych przy użyciu protokołu HTTP (Hypertext Transfer), zachowanie dokładnie pamięci podręcznej jest określana przez nagłówki dołączone w odpowiedzi z pamięci podręcznej i zachowań określonych w sekcjach 13 i 14 dokumencie RFC 2616 dostępne pod adresem [Internet Engineering Task Force (IETF)](https://www.ietf.org/) witryny sieci Web. Aby uzyskać przykładowy kod, który demonstruje, ustawiania zasad na podstawie czasu domyślnego dla zasobów HTTP, zobacz [jak: Określanie zasad pamięci podręcznej na podstawie czasu domyślnego dla aplikacji](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Aby uzyskać przykłady kodu, które pokazują tworzenie i używanie zasad buforowania, zobacz [Konfigurowanie buforowanie w aplikacjach sieci](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -30,13 +30,13 @@ Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z 
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Kryteria, aby określić świeżości pozycji z pamięci podręcznej  
  Dostosowywanie zasad pamięci podręcznej na podstawie czasu, można określić, że co najmniej jeden z następujących kryteriów umożliwiają określenia aktualność pozycji z pamięci podręcznej:  
   
--   Maksymalny wiek  
+- Maksymalny wiek  
   
--   Maksymalna nieaktualność  
+- Maksymalna nieaktualność  
   
--   Minimalna świeżość  
+- Minimalna świeżość  
   
--   Data synchronizacji pamięci podręcznej  
+- Data synchronizacji pamięci podręcznej  
   
 > [!NOTE]
 >  Za pomocą zasad pamięci podręcznej na podstawie czasu domyślnego nie należy mylić z ustawienie domyślnych zasad pamięci podręcznej dla aplikacji. Domyślne zasady oparte na czasie jest określonych zasad, które mogą być używane na poziomie żądania lub aplikacji. Domyślne zasady pamięci podręcznej dla aplikacji jest zasady (na podstawie lokalizacji lub na podstawie czasu), które działa, gdy żądania są ustawione żadne zasady. Aby uzyskać więcej informacji na temat ustawiania domyślnych zasad pamięci podręcznej dla aplikacji, zobacz <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
@@ -57,9 +57,9 @@ Zasady pamięci podręcznej na podstawie czasu definiuje aktualność pozycji z 
   
  Informacje o skutkach łączenia kryteriów zasad pamięci podręcznej na podstawie czasu można znaleźć w następujących tematach:  
   
--   [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i maksymalna nieaktualność](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i maksymalna nieaktualność](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

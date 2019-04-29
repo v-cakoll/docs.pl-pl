@@ -14,18 +14,18 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
 ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640410"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)
 Można utworzyć pochodnej węzeł w formularzach Windows <xref:System.Windows.Forms.TreeView> formantu lub pochodny element w <xref:System.Windows.Forms.ListView> kontroli. Tworzenie wartości pochodnych umożliwia Dodaj dowolne pola, które są wymagane, a także niestandardowych metod i konstruktorów do ich obsługi. Jest jedno użycie tej funkcji można dołączyć obiektu klienta do każdego elementu węzła lub listy drzewa. Podane tutaj przykłady dotyczą <xref:System.Windows.Forms.TreeView> kontroli, ale to samo podejście pozwala <xref:System.Windows.Forms.ListView> kontroli.  
   
 ### <a name="to-derive-a-tree-node"></a>Aby uzyskać pochodny węzeł drzewa  
   
--   Utwórz nową klasę węzła pochodną <xref:System.Windows.Forms.TreeNode> klasy, która zawiera pole niestandardowe do rejestrowania ścieżki do pliku.  
+- Utwórz nową klasę węzła pochodną <xref:System.Windows.Forms.TreeNode> klasy, która zawiera pole niestandardowe do rejestrowania ścieżki do pliku.  
   
     ```vb  
     Class myTreeNode  

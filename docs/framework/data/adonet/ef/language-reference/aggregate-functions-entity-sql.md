@@ -3,18 +3,18 @@ title: Aggregate Functions (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607222"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Aggregate Functions (Entity SQL)
 Wartość zagregowana jest konstrukcją języka, która zmniejsza objętość kolekcji do skalaru jako część operacji grupy. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] agregacje są dostępne w dwóch formach:  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Funkcje kolekcji, które mogą być używane w dowolnym miejscu w wyrażeniu. W tym za pomocą funkcji agregujących w projekcji oraz predykatów, które działają w kolekcjach. Kolekcja funkcji jest preferowany tryb, określania wartości zagregowanych umieszczonych w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Funkcje kolekcji, które mogą być używane w dowolnym miejscu w wyrażeniu. W tym za pomocą funkcji agregujących w projekcji oraz predykatów, które działają w kolekcjach. Kolekcja funkcji jest preferowany tryb, określania wartości zagregowanych umieszczonych w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
--   Grupy agregacje w wyrażeniach zapytań, które zawierać klauzuli GROUP BY. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregacje grupy Zaakceptuj DISTINCT, a wszystkie jako modyfikatory do agregacji danych wejściowych.  
+- Grupy agregacje w wyrażeniach zapytań, które zawierać klauzuli GROUP BY. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], agregacje grupy Zaakceptuj DISTINCT, a wszystkie jako modyfikatory do agregacji danych wejściowych.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] po raz pierwszy próbuje można zinterpretować wyrażenia w funkcji kolekcji i jeśli wyrażenie ma w kontekście wyrażenia wybierz je zinterpretuje ją jako agregację grupy.  
   

@@ -1,11 +1,16 @@
 ---
 title: Kompilacja platformy .NET Core ze źródła
-description: 'Dowiedz się, jak tworzyć oprogramowanie .NET Core i .NET Core interfejsu wiersza polecenia z kodu źródłowego.'
+description: Dowiedz się, jak tworzyć oprogramowanie .NET Core i .NET Core interfejsu wiersza polecenia z kodu źródłowego.
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
+ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650885"
 ---
-
 # <a name="build-net-core-from-source"></a>Kompilacja platformy .NET Core ze źródła
 
 Kompilacja platformy .NET Core z jego kod źródłowy jest ważne na wiele sposobów: ułatwia port platformy .NET Core do nowych platform, umożliwia wkładu i poprawek dotyczących produktu, i umożliwia tworzenie niestandardowych wersji platformy .NET.

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Get statements
 ms.assetid: 56b05cdc-bd64-4dfd-bb12-824eacec6f94
 ms.openlocfilehash: 245d2cc36abde76a8f8bd73bae5d7ede183d4d03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638033"
 ---
 # <a name="get-statement"></a>Get — Instrukcja
 Deklaruje `Get` procedury właściwości używane do pobierania wartości właściwości.  
@@ -49,23 +49,23 @@ End Get
   
 ## <a name="rules"></a>reguły  
   
--   **Mieszanymi poziomami dostępu.** Jeśli zamierzasz zdefiniować właściwości odczytu / zapisu, można opcjonalnie określić poziom dostępu do różnych dla dowolnego `Get` lub `Set` procedury, ale nie oba. Jeśli to zrobisz, procedura poziom dostępu musi być bardziej restrykcyjny niż poziom dostępu do właściwości. Na przykład, jeśli właściwość jest zadeklarowana `Friend`, można zadeklarować `Get` procedury `Private`, ale nie `Public`.  
+- **Mieszanymi poziomami dostępu.** Jeśli zamierzasz zdefiniować właściwości odczytu / zapisu, można opcjonalnie określić poziom dostępu do różnych dla dowolnego `Get` lub `Set` procedury, ale nie oba. Jeśli to zrobisz, procedura poziom dostępu musi być bardziej restrykcyjny niż poziom dostępu do właściwości. Na przykład, jeśli właściwość jest zadeklarowana `Friend`, można zadeklarować `Get` procedury `Private`, ale nie `Public`.  
   
      Jeśli definiujesz `ReadOnly` właściwości `Get` procedury reprezentuje cały właściwość. Nie można zadeklarować dostęp inny poziom `Get`, ponieważ, ustawić dwa poziomy dostępu dla właściwości.  
   
--   **Typ zwracany.** [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md) można zadeklarować typ danych zwracanych wartości. `Get` Procedury automatycznie zwraca typ danych. Można określić dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu.  
+- **Typ zwracany.** [Property — instrukcja](../../../visual-basic/language-reference/statements/property-statement.md) można zadeklarować typ danych zwracanych wartości. `Get` Procedury automatycznie zwraca typ danych. Można określić dowolny typ danych lub nazwa wyliczenia, struktury, klasy lub interfejsu.  
   
      Jeśli `Property` instrukcji nie określa `returntype`, zwraca procedury `Object`.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Zwracanie z procedury.** Gdy `Get` procedury zwraca do kodu wywołującego, wykonywanie jest kontynuowane wewnątrz instrukcji, który zażądał wartości właściwości.  
+- **Zwracanie z procedury.** Gdy `Get` procedury zwraca do kodu wywołującego, wykonywanie jest kontynuowane wewnątrz instrukcji, który zażądał wartości właściwości.  
   
      `Get` procedury własności może zwracać wartość za pomocą [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md) lub przypisując wartość zwracaną do danej nazwy właściwości. Aby uzyskać więcej informacji, zobacz "Zwraca wartość" w [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md).  
   
      `Exit Property` i `Return` instrukcji powodują natychmiastowego wyjścia z procedury właściwości. Dowolną liczbę `Exit Property` i `Return` instrukcji może występować w dowolnym miejscu w ramach procedury i możesz mieszać `Exit Property` i `Return` instrukcji.  
   
--   **Zwraca wartość.** Aby zwrócić wartość z zakresu od `Get` procedury, można przypisać wartości do danej nazwy właściwości lub uwzględnić go w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md). `Return` Instrukcja jednocześnie przypisuje `Get` procedury zwracać wartości i kończy procedurę.  
+- **Zwraca wartość.** Aby zwrócić wartość z zakresu od `Get` procedury, można przypisać wartości do danej nazwy właściwości lub uwzględnić go w [instrukcji Return](../../../visual-basic/language-reference/statements/return-statement.md). `Return` Instrukcja jednocześnie przypisuje `Get` procedury zwracać wartości i kończy procedurę.  
   
      Jeśli używasz `Exit Property` bez przypisywania wartości do nazwy właściwości `Get` procedura zwraca wartość domyślna dla typu danych właściwości. Aby uzyskać więcej informacji, zobacz "Zwraca wartość" w [Function — instrukcja](../../../visual-basic/language-reference/statements/function-statement.md).  
   

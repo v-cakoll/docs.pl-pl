@@ -3,13 +3,13 @@ title: polecenie msbuild DotNet
 description: Polecenie msbuild dotnet zapewnia dostęp do wiersza polecenia programu MSBuild.
 ms.date: 12/03/2018
 ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648701"
 ---
-# <a name="dotnet-msbuild"></a>Program msbuild DotNet
+# <a name="dotnet-msbuild"></a>dotnet msbuild
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 

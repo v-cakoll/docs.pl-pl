@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
 ms.openlocfilehash: 291240bade84bcdd3d64dac24c8c91da5ff72d4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649832"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Klauzula Handles wymaga zmiennej WithEvents zdefiniowanej w zawierającym ją typie lub jednym z jej typów podstawowych
 Nie dostarczył `WithEvents` zmienną swoje `Handles` klauzuli. `Handles` — Słowo kluczowe na końcu deklaracja procedury powoduje, że do obsługi zdarzeń wywołanych przez zmienną obiektu zadeklarowane za pomocą `WithEvents` — słowo kluczowe.  
@@ -21,7 +21,7 @@ Nie dostarczył `WithEvents` zmienną swoje `Handles` klauzuli. `Handles` — S�
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Podaj niezbędne `WithEvents` zmiennej.  
+- Podaj niezbędne `WithEvents` zmiennej.  
   
 ## <a name="see-also"></a>Zobacz także
 

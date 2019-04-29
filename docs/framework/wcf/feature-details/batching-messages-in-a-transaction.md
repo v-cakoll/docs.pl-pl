@@ -5,11 +5,11 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596781"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Tworzenie partii komunikatów w ramach transakcji
 Umieszczonych w kolejce aplikacji używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie wiadomości. Transakcje, jednak są kosztownych operacji i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów, aby zwiększyć przepływność komunikatów jest korzystać z aplikacji, Odczyt i przetwarzanie wielu komunikatów w ramach jednej transakcji. Jest to kompromis między wydajnością i odzyskiwanie: w miarę zwiększania liczby wiadomości w partii to samo dotyczy ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesji. A *sesji* to grupa pokrewne wiadomości, które są przetwarzane przez jedną aplikację i zadeklarowane jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy pokrewne wiadomości, które muszą być przetwarzane razem. Na przykład jest online zakupów witryna sieci Web. *Partie* będą używani do przetwarzania wielu, niepowiązanych komunikatów w taki sposób, że wzrost komunikatu przepływności. Aby uzyskać więcej informacji o sesjach, zobacz [grupowanie komunikatów w kolejce w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez jedną aplikację i zadeklarowane jako pojedynczą jednostkę, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposobu uruchamiania aplikacji.  
@@ -20,13 +20,13 @@ Umieszczonych w kolejce aplikacji używać transakcji, aby zapewnić poprawnoś�
 ## <a name="committing-a-transaction"></a>Zatwierdzanie transakcji  
  Wsadowa transakcja została zatwierdzona, w oparciu o następujące czynności:  
   
--   `MaxBatchSize`. Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowanie. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w zadaniu wsadowym. Po osiągnięciu tej liczby partii jest zatwierdzona. Jest to wartość nie jest ścisłe ograniczenie, istnieje możliwość zatwierdzić partii przed otrzymaniem tej liczby komunikatów.  
+- `MaxBatchSize`. Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowanie. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w zadaniu wsadowym. Po osiągnięciu tej liczby partii jest zatwierdzona. Jest to wartość nie jest ścisłe ograniczenie, istnieje możliwość zatwierdzić partii przed otrzymaniem tej liczby komunikatów.  
   
--   `Transaction Timeout`. Po upływie limitu czasu transakcji 80 procent, dba partii i utworzono nową partię. Oznacza to, że jeśli 20 procent lub mniej czasu, biorąc pod uwagę dla transakcji ukończyć pozostaje, dba partii.  
+- `Transaction Timeout`. Po upływie limitu czasu transakcji 80 procent, dba partii i utworzono nową partię. Oznacza to, że jeśli 20 procent lub mniej czasu, biorąc pod uwagę dla transakcji ukończyć pozostaje, dba partii.  
   
--   `TransactionScopeRequired`. Podczas przetwarzania partię komunikatów, jeśli WCF znajdzie taki, który ma `TransactionScopeRequired`  =  `false`, zatwierdzeń usługi batch i ponownie otwiera nową partię po otrzymaniu pierwszej wiadomości z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  = `true`.  
+- `TransactionScopeRequired`. Podczas przetwarzania partię komunikatów, jeśli WCF znajdzie taki, który ma `TransactionScopeRequired`  =  `false`, zatwierdzeń usługi batch i ponownie otwiera nową partię po otrzymaniu pierwszej wiadomości z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete`  = `true`.  
   
--   Jeśli istnieją nie więcej wiadomości w kolejce, a następnie dba bieżącej partii nawet wtedy, gdy `MaxBatchSize` nie został osiągnięty lub nie upłynął limit czasu transakcji 80 procent.  
+- Jeśli istnieją nie więcej wiadomości w kolejce, a następnie dba bieżącej partii nawet wtedy, gdy `MaxBatchSize` nie został osiągnięty lub nie upłynął limit czasu transakcji 80 procent.  
   
 ## <a name="leaving-batching-mode"></a>Pozostawienie tryb dzielenia na partie  
  Jeśli wiadomość w usłudze batch spowoduje przerwanie transakcji, wykonywane są następujące kroki:  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
 ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640446"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ComboBox, ListBox lub CheckedListBox formularzy systemu Windows
 Elementy mogą być dodawane do pola kombi Windows Forms, pole listy lub sprawdzić pola listy w na różne sposoby, ponieważ te kontrolki mogą być powiązane z różnymi źródłami danych. Jednak w tym temacie przedstawiono najprostszą metodą i wymaga żadne wiązanie danych. Elementy wyświetlane są zwykle ciągów; Jednak każdy obiekt może być używany. Tekst, który jest wyświetlany w kontrolce jest wartość zwrócona przez obiekt `ToString` metody.  

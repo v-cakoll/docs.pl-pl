@@ -19,11 +19,11 @@ helpviewer_keywords:
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
 ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642077"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Śledzenie sieci w .NET Framework
 Mechanizm śledzenia sieci w środowisku .NET Framework umożliwia dostęp do informacji o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację. Funkcja ułatwia debugowanie aplikacji na etapie ich tworzenia oraz analizowanie już wdrożonych aplikacji. Dane wyjściowe funkcji śledzenia sieci można adaptować, dostosowując je do różnych scenariuszy fazy programowania i środowiska produkcyjnego.  

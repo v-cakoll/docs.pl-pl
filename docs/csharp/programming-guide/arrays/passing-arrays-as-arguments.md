@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
 ms.openlocfilehash: 1538988c1145a19055074b440f04cbaac4ef7aa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651990"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Przekazywanie tablic jako argumenty (C# Programming Guide)
 

@@ -4,11 +4,11 @@ description: Dowiedz się, jak dokumentowanie kodu za pomocą komentarzy dokumen
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
 ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646764"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu przy użyciu komentarzy XML
 

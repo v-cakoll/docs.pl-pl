@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7534d760f902f80d42c6c20c57a34d52012997a7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608999"
 ---
-# <a name="get-function"></a>Get — funkcja
+# <a name="get-function"></a>Get, funkcja
 
 Pobiera wartość określonej właściwości, jeśli taki istnieje.
 

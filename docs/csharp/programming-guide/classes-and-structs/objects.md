@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
 ms.openlocfilehash: c4122237cccc154d9dc9034ea047f5f44a4b1134
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646088"
 ---
 # <a name="objects-c-programming-guide"></a>Obiekty (Przewodnik programowania w języku C#)
 Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić, typ. Obiekt jest zasadniczo bloku pamięci, która została przydzielona i skonfigurowane zgodnie z planu. Program może tworzyć wiele obiektów w tej samej klasy. Obiekty są również nazywane wystąpieniami i mogą być przechowywane w nazwanej zmiennej lub w tablicy lub kolekcji. Kod klienta jest kodem, który używa tych zmiennych w celu wywołania metod i uzyskiwać dostęp do właściwości publiczne obiektu. W języku zorientowane obiektowo takich jak C# typowego programu składa się z wielu obiektów interakcji dynamicznie.  
@@ -38,28 +38,28 @@ Definicja klasy lub struktury jest podobna do planu, który określa, co zrobić
 ## <a name="object-identity-vs-value-equality"></a>Vs tożsamości obiektu. Równość wartości  
  Podczas porównywania dwóch obiektów pod kątem równości, należy najpierw odróżnić czy chcesz wiedzieć, czy dwie zmienne reprezentują tego samego obiektu w pamięci, lub czy są równoważne wartości co najmniej jednego pola. Jeśli mają zamiar porównać wartości, należy rozważyć, czy obiekty są wystąpień typów wartości (struktury) lub typów referencyjnych (klas, obiektów delegowanych, tablice).  
   
--   Aby ustalić, czy dwa wystąpienia klasy odnoszą się do tej samej lokalizacji w pamięci (co oznacza, że mają tę samą *tożsamości*), używa się statycznej <xref:System.Object.Equals%2A> metody. (<xref:System.Object?displayProperty=nameWithType> jest niejawne klasą bazową dla wszystkich typów wartości i typy odwołania, w tym klasy i struktury zdefiniowany przez użytkownika.)  
+- Aby ustalić, czy dwa wystąpienia klasy odnoszą się do tej samej lokalizacji w pamięci (co oznacza, że mają tę samą *tożsamości*), używa się statycznej <xref:System.Object.Equals%2A> metody. (<xref:System.Object?displayProperty=nameWithType> jest niejawne klasą bazową dla wszystkich typów wartości i typy odwołania, w tym klasy i struktury zdefiniowany przez użytkownika.)  
   
--   Aby określić, czy pola wystąpienia w dwa wystąpienia struktury mają te same wartości, należy użyć <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody. Ponieważ wszystkie struktury niejawnie dziedziczą z <xref:System.ValueType?displayProperty=nameWithType>, wywołać metodę bezpośrednio na obiekcie, jak pokazano w poniższym przykładzie:  
+- Aby określić, czy pola wystąpienia w dwa wystąpienia struktury mają te same wartości, należy użyć <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody. Ponieważ wszystkie struktury niejawnie dziedziczą z <xref:System.ValueType?displayProperty=nameWithType>, wywołać metodę bezpośrednio na obiekcie, jak pokazano w poniższym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  <xref:System.ValueType?displayProperty=nameWithType> Implementacji `Equals` używa odbicia, ponieważ muszą być możliwe ustalenie, jakie pola znajdują się w dowolnej struktury. Podczas tworzenia własnych struktur, Zastąp `Equals` metodę, aby zapewnić efektywne równości algorytm, który jest specyficzne dla danego typu.  
   
--   Aby ustalić, czy wartości pól w dwóch wystąpień klasy są takie same, można używać <xref:System.Object.Equals%2A> metody lub [== — operator](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Jednak je stosować wyłącznie wtedy jeśli klasa ma przesłonięcia lub przeciążone je do dostarczania niestandardowych definicji jakie "równości" oznacza dla obiektów tego typu. Klasa może być także implementować <xref:System.IEquatable%601> interfejsu lub <xref:System.Collections.Generic.IEqualityComparer%601> interfejsu. Oba interfejsy zawierają metody, które mogą służyć do testowania równość wartości. Podczas projektowania własnych klas zastąpienie `Equals`, upewnij się, że zgodnie z wytycznymi dotyczącymi określonych w [jak: Definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
+- Aby ustalić, czy wartości pól w dwóch wystąpień klasy są takie same, można używać <xref:System.Object.Equals%2A> metody lub [== — operator](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-). Jednak je stosować wyłącznie wtedy jeśli klasa ma przesłonięcia lub przeciążone je do dostarczania niestandardowych definicji jakie "równości" oznacza dla obiektów tego typu. Klasa może być także implementować <xref:System.IEquatable%601> interfejsu lub <xref:System.Collections.Generic.IEqualityComparer%601> interfejsu. Oba interfejsy zawierają metody, które mogą służyć do testowania równość wartości. Podczas projektowania własnych klas zastąpienie `Equals`, upewnij się, że zgodnie z wytycznymi dotyczącymi określonych w [jak: Definiowanie równości wartości dla typu](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md) i <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  
   
--   [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Konstruktory](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Finalizatory](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
+- [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

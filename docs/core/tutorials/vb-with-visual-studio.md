@@ -8,11 +8,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
 ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647130"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie aplikacji Visual Basic Witaj, świecie przy użyciu zestawu .NET Core SDK w programie Visual Studio 2017
 

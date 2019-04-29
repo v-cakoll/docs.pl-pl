@@ -3,11 +3,11 @@ title: Zadanie 2. Hostowanie projektanta przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641576"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Zadanie 2. Hostowanie projektanta przepływu pracy
 W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] w aplikacji Windows Presentation Foundation (WPF).  
@@ -42,7 +42,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
   
 8. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy pliku MainWindow.xaml i wybierz **Wyświetl kod**. Należy zmodyfikować kod, wykonując następujące czynności:  
   
-    1.  Dodaj następujące przestrzenie nazw:  
+    1. Dodaj następujące przestrzenie nazw:  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
         using System.ComponentModel;  
         ```  
   
-    2.  Aby zadeklarować pola prywatnego elementu członkowskiego, aby pomieścić wystąpienie <xref:System.Activities.Presentation.WorkflowDesigner>, Dodaj następujący kod do `MainWindow` klasy.  
+    2. Aby zadeklarować pola prywatnego elementu członkowskiego, aby pomieścić wystąpienie <xref:System.Activities.Presentation.WorkflowDesigner>, Dodaj następujący kod do `MainWindow` klasy.  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
         }  
         ```  
   
-    3.  Dodaj następujący kod `AddDesigner` metody `MainWindow` klasy. Implementacja tworzy wystąpienie <xref:System.Activities.Presentation.WorkflowDesigner>, dodaje <xref:System.Activities.Statements.Sequence> działania i umieszcza je w środkowej kolumnie grid1 **siatki**.  
+    3. Dodaj następujący kod `AddDesigner` metody `MainWindow` klasy. Implementacja tworzy wystąpienie <xref:System.Activities.Presentation.WorkflowDesigner>, dodaje <xref:System.Activities.Statements.Sequence> działania i umieszcza je w środkowej kolumnie grid1 **siatki**.  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
         }  
         ```  
   
-    4.  Zarejestruj metadane projektanta do projektanta obsługę wbudowanych działań. Dzięki temu można upuszczać działania z przybornika do oryginalnego <xref:System.Activities.Statements.Sequence> działania w [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Aby to zrobić, Dodaj `RegisterMetadata` metody `MainWindow` klasy.  
+    4. Zarejestruj metadane projektanta do projektanta obsługę wbudowanych działań. Dzięki temu można upuszczać działania z przybornika do oryginalnego <xref:System.Activities.Statements.Sequence> działania w [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Aby to zrobić, Dodaj `RegisterMetadata` metody `MainWindow` klasy.  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ W tym temacie opisano procedurę do hostowania wystąpienia [!INCLUDE[wfd1](../.
   
          Aby uzyskać więcej informacji na temat rejestrowania Projektanci działań, zobacz [jak: Tworzenie niestandardowego projektanta działań](how-to-create-a-custom-activity-designer.md).  
   
-    5.  W `MainWindow` konstruktora klasy, Dodaj wywołania metod uprzednio zadeklarowany, zarejestruj metadane projektanta pomocy technicznej i utworzyć <xref:System.Activities.Presentation.WorkflowDesigner>.  
+    5. W `MainWindow` konstruktora klasy, Dodaj wywołania metod uprzednio zadeklarowany, zarejestruj metadane projektanta pomocy technicznej i utworzyć <xref:System.Activities.Presentation.WorkflowDesigner>.  
   
         ```csharp  
         public MainWindow()  

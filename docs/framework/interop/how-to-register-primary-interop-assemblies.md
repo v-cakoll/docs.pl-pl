@@ -8,11 +8,11 @@ ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643013"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych
 
@@ -28,9 +28,9 @@ Klasy mogą być organizowane wyłącznie przez współdziałania z modelem COM 
 
  Chociaż nie jest to konieczne zarejestrować podstawowe zestawy międzyoperacyjne, chyba że zamierzasz używać programu Visual Studio, rejestracji ma dwie zalety:
 
--   Zarejestrowanego podstawowego zestawu międzyoperacyjnego jest jednoznacznie oznaczony w kluczu rejestru oryginalnej biblioteki typów. Rejestracja jest najlepszym sposobem lokalizowania podstawowego zestawu międzyoperacyjnego na tym komputerze.
+- Zarejestrowanego podstawowego zestawu międzyoperacyjnego jest jednoznacznie oznaczony w kluczu rejestru oryginalnej biblioteki typów. Rejestracja jest najlepszym sposobem lokalizowania podstawowego zestawu międzyoperacyjnego na tym komputerze.
 
--   Możesz uniknąć przypadkowego generowania i za pomocą nowego zestawu międzyoperacyjnego, jeśli w czasie w przyszłości, należy używać programu Visual Studio, aby odwołać się do typu, dla którego ma się wyrejestrować podstawowy zestaw międzyoperacyjny.
+- Możesz uniknąć przypadkowego generowania i za pomocą nowego zestawu międzyoperacyjnego, jeśli w czasie w przyszłości, należy używać programu Visual Studio, aby odwołać się do typu, dla którego ma się wyrejestrować podstawowy zestaw międzyoperacyjny.
 
 Użyj [narzędzie rejestracji zestawów (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) zarejestrować podstawowy zestaw międzyoperacyjny.
 

@@ -5,11 +5,11 @@ ms.assetid: 17fc5d76-75a9-4933-83f0-594de7f973f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eecb135e034c3565e805ea776115579488b2a4d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645464"
 ---
 # <a name="icordebugassembly3-interface"></a>Interfejs ICorDebugAssembly3
 Rozszerza logicznie icordebugassembly — interfejs w celu zapewnienia obsługi kontenerów zestawów i ich zestawy zawarte.  

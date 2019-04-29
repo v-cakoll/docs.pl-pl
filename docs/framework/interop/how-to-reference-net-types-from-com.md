@@ -15,11 +15,11 @@ ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643026"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>Instrukcje: Odwołania do typów .NET z modelu COM
 Z punktu widzenia kodu klienta i serwera różnice w modelu COM i .NET Framework są niewidoczne w dużej mierze. Klienci programu Microsoft Visual Basic można wyświetlić obiektu platformy .NET w przeglądarce obiektów, który udostępnia metody obiektu i składnię, właściwości i pola, dokładnie tak jak w przypadku dowolnego obiektu COM.  
@@ -28,7 +28,7 @@ Z punktu widzenia kodu klienta i serwera różnice w modelu COM i .NET Framework
   
 ### <a name="to-import-a-library"></a>Aby zaimportować bibliotekę  
   
--   Określ **raw_interfaces_only —** opcji **#import** dyrektywy. Na przykład:  
+- Określ **raw_interfaces_only —** opcji **#import** dyrektywy. Na przykład:  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ Z punktu widzenia kodu klienta i serwera różnice w modelu COM i .NET Framework
   
      —lub—  
   
--   #Import — dyrektywa zawierają Mscorlib.tlb. Na przykład:  
+- #Import — dyrektywa zawierają Mscorlib.tlb. Na przykład:  
   
     ```cpp  
     #import "mscorlib.tlb"  

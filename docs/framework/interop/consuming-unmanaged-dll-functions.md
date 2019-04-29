@@ -16,11 +16,11 @@ ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643484"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Wykorzystywanie niezarządzanych funkcji DLL
 Wywołanie platformy jest usługą, że umożliwia zarządzanemu kodowi wywoływanie funkcji niezarządzanych zaimplementowane w biblioteki dołączanej dynamicznie (dll), takich jak te w interfejsie API Windows. Lokalizuje i wywołuje eksportowanych funkcji i kieruje argumentów (liczby całkowite, ciągi, tablice, struktur i tak dalej) wewnątrz międzyoperacyjnej granicy, zgodnie z potrzebami.  

@@ -3,22 +3,22 @@ title: Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607903"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet
 Język definicji schematu XML (XSD) umożliwia ograniczenie zezwalające na można określić elementów i atrybutów, które definiuje. Podczas mapowania schematu XML na schemat relacyjny w <xref:System.Data.DataSet>, ograniczenia schematu XML są mapowane na odpowiednie ograniczenia relacyjnych tabel i kolumn w obrębie **zestawu danych**.  
   
  W tej sekcji omówiono mapowanie następujące ograniczenia schematu XML:  
   
--   Ograniczenie unikatowości określony za pomocą **unikatowy** elementu.  
+- Ograniczenie unikatowości określony za pomocą **unikatowy** elementu.  
   
--   Ograniczenie klucza określony za pomocą **klucz** elementu.  
+- Ograniczenie klucza określony za pomocą **klucz** elementu.  
   
--   Ograniczenie keyref określony za pomocą **keyref** elementu.  
+- Ograniczenie keyref określony za pomocą **keyref** elementu.  
   
  Za pomocą ograniczenia na element lub atrybut, można określić pewne ograniczenia na podstawie wartości elementu w żadnym wystąpieniu klasy dokumentu. Na przykład: ograniczenie klucza w **CustomerID** element podrzędny elementu **klienta** elementu w schemacie wskazuje, że wartości **CustomerID** musi mieć element podrzędny Unikatowy w żadnym wystąpieniu dokumentów i wartości null są niedozwolone.  
   

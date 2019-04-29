@@ -3,11 +3,11 @@ title: Ulepszenia wydajności gniazda w wersji 3.5
 ms.date: 03/30/2017
 ms.assetid: 225aa5f9-c54b-4620-ab64-5cd100cfd54c
 ms.openlocfilehash: 28f2543d1f8c81efd32ffbb644265fb5709a9bb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641921"
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Ulepszenia wydajności gniazda w wersji 3.5
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje, które używają sieci asynchronicznych operacji We/Wy, aby osiągnąć najwyższą wydajność. Szereg nowych klas zostały dodane jako część zbioru ulepszeń klasy <xref:System.Net.Sockets.Socket> klasy, która zapewnia alternatywny wzorzec asynchroniczny, które mogą być używane przez aplikacje specjalistyczne gniazda o wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla sieci serwer aplikacji, które wymagają wysokiej wydajności. Aplikację można użyć wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowej gorąca obszarów aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  

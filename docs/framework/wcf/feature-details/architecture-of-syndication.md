@@ -3,24 +3,24 @@ title: Architektura syndykacji
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
 ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596365"
 ---
 # <a name="architecture-of-syndication"></a>Architektura syndykacji
 Syndykacja interfejs API umożliwiający niezależny od formatu model programowania, który umożliwia syndykowany zawartość do zapisania się do sieci w różnych formatach. Abstrakcyjny model danych zawiera następujące klasy:  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  W ramach tych zajęć mapować ściśle konstrukcje specyfikacją Atom 1.0, mimo że niektóre nazwy są różne.  
   
@@ -75,7 +75,7 @@ Syndykacja interfejs API umożliwiający niezależny od formatu model programowa
   
 ## <a name="extensibility"></a>Rozszerzalność  
   
--   Kluczową cechą protokołów syndykacji jest rozszerzalności. RSS 2.0 i Atom 1.0 umożliwiają dodawanie atrybuty i elementy do zespolone kanały informacyjne, które nie są zdefiniowane w specyfikacji. Model programowania syndykacji programu WCF zapewnia dwa sposoby pracy z atrybutami niestandardowymi i rozszerzenia: wyprowadzanie nową klasę i typowaniem luźnym dostępu. Aby uzyskać więcej informacji, zobacz [rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
+- Kluczową cechą protokołów syndykacji jest rozszerzalności. RSS 2.0 i Atom 1.0 umożliwiają dodawanie atrybuty i elementy do zespolone kanały informacyjne, które nie są zdefiniowane w specyfikacji. Model programowania syndykacji programu WCF zapewnia dwa sposoby pracy z atrybutami niestandardowymi i rozszerzenia: wyprowadzanie nową klasę i typowaniem luźnym dostępu. Aby uzyskać więcej informacji, zobacz [rozszerzalność syndykacji](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

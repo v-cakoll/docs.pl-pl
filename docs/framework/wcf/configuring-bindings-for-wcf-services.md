@@ -5,11 +5,11 @@ helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
 ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608745"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurowanie wiązań dla usług WCF (Windows Communication Foundation)
 Podczas tworzenia aplikacji, często zachodzi potrzeba Odrocz decyzji dla administratora po wdrożeniu aplikacji. Na przykład często nie ma możliwości informacji z wyprzedzeniem o tym, jaki jest adres usługi lub identyfikator (URI), będzie. Zamiast kodować adresu, jest bardziej pożądane, aby umożliwić administratorowi to zrobić po utworzeniu usługi. Ta elastyczność odbywa się za pośrednictwem konfiguracji.  

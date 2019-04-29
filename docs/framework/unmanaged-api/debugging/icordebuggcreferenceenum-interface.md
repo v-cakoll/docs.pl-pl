@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651626"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum — Interfejs
 Dostarcza moduł wyliczający dla obiektów, które zostaną usunięte jako elementy bezużyteczne.  
@@ -39,11 +39,11 @@ Dostarcza moduł wyliczający dla obiektów, które zostaną usunięte jako elem
   
  [Cor_gc_reference —](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md) obiektów kolekcji wypełnione przez tę metodę reprezentowania trzy rodzaje obiektów:  
   
--   Obiekty z wszystkie stosy zarządzane. Obejmuje to odwołań na żywo w kodzie zarządzanym, a także obiekty utworzone przez środowisko uruchomieniowe języka wspólnego.  
+- Obiekty z wszystkie stosy zarządzane. Obejmuje to odwołań na żywo w kodzie zarządzanym, a także obiekty utworzone przez środowisko uruchomieniowe języka wspólnego.  
   
--   Obiekty z tabeli dojście. Obejmuje to odwołań do silnych (`HNDTYPE_STRONG` i `HNDTYPE_REFCOUNT`) i zmiennych statycznych w module.  
+- Obiekty z tabeli dojście. Obejmuje to odwołań do silnych (`HNDTYPE_STRONG` i `HNDTYPE_REFCOUNT`) i zmiennych statycznych w module.  
   
--   Obiekty z; kolejka finalizatorów. Elementy główne obiektów; kolejka finalizatorów, aż finalizator zostało uruchomione.  
+- Obiekty z; kolejka finalizatorów. Elementy główne obiektów; kolejka finalizatorów, aż finalizator zostało uruchomione.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

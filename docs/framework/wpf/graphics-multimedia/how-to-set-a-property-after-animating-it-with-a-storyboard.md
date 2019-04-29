@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651106"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Instrukcje: Ustawianie właściwości po zanimowaniu jej za pomocą scenorysu
 W niektórych przypadkach może pojawić się, nie można zmienić wartości właściwości po ma zostać animowany.  
@@ -30,11 +30,11 @@ W niektórych przypadkach może pojawić się, nie można zmienić wartości wł
   
  Powyższy kod nie wydaje się podejmować żadnych działań: żółty, pozostaje pędzla, czyli wartość dostarczonych przez <xref:System.Windows.Media.Animation.ColorAnimation> , animowane pędzla. Wartość właściwości podstawowej (wartości bazowej) faktycznie jest zmieniany na niebieski. Jednak pozostanie żółty wartość skuteczne lub bieżące, ponieważ <xref:System.Windows.Media.Animation.ColorAnimation> nadal zastępują wartości bazowej. Jeśli chcesz, aby wartości bazowej zostać wartość efektywna, należy zatrzymać animacji od wywieranie wpływu na właściwości. Istnieją trzy sposoby, w tym celu z animacjami scenorysu:  
   
--   Ustawienie animacji <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> właściwości <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- Ustawienie animacji <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> właściwości <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   Usuń całą scenorysu.  
+- Usuń całą scenorysu.  
   
--   Usuń animację z pojedynczej właściwości.  
+- Usuń animację z pojedynczej właściwości.  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Ustaw właściwość FillBehavior animacji Stop  
  Ustawiając <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> do <xref:System.Windows.Media.Animation.FillBehavior.Stop>, wskazujemy animacji, aby zatrzymać wpływu na jego właściwość docelowa, po osiągnięciu końca jego okresu aktywności.  

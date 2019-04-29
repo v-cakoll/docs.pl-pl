@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb8919e8760616676ea5ff99069e2d2ceb5f7451
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608921"
 ---
-# <a name="getmethod-function"></a>Funkcja GetMethod
+# <a name="getmethod-function"></a>GetMethod, funkcja
 
 Pobiera informacje o określonej metody.
 

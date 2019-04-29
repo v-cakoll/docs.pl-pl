@@ -3,11 +3,11 @@ title: Elementy DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607816"
 ---
 # <a name="diffgrams"></a>Elementy DiffGram
 Format DiffGram jest w formacie XML, który identyfikuje bieżąca i oryginalna wersja elementów danych. <xref:System.Data.DataSet> Używa formatu w formacie DiffGram do ładowania i utrzymują się jego zawartość i do wykonywania serializacji jego zawartość dla transportu połączenia sieciowego. Gdy <xref:System.Data.DataSet> są zapisywane jako element w formacie DiffGram, wypełnia ją w formacie DiffGram wszystkie niezbędne informacje dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, w tym wartości kolumn z obu **oryginalnego** i **bieżącego** wersji wierszy, informacje o błędzie wiersza i kolejności wierszy.  

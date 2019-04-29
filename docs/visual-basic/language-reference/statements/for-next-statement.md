@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638065"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next — Instrukcja (Visual Basic)
 Powtarza grupę instrukcji określoną liczbę razy.  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` jest często używana, po przeprowadzeniu oceny jakiś warunek (na przykład w `If`... `Then`... `Else` struktury). Możesz chcieć użyć `Exit For` następujące warunki:  
   
--   Iterowanie w dalszym ciągu jest niepotrzebne lub wręcz niemożliwe. Błędna wartość lub żądania przerwania może utworzyć ten warunek.  
+- Iterowanie w dalszym ciągu jest niepotrzebne lub wręcz niemożliwe. Błędna wartość lub żądania przerwania może utworzyć ten warunek.  
   
--   A `Try`... `Catch`... `Finally` instrukcji przechwytuje wyjątek. Można na przykład `Exit For` na końcu `Finally` bloku.  
+- A `Try`... `Catch`... `Finally` instrukcji przechwytuje wyjątek. Można na przykład `Exit For` na końcu `Finally` bloku.  
   
--   Masz nieskończonej pętli, czyli pętlę, która może działać dużych lub nawet nieskończona liczba prób. Jeśli zostaną wykryte tych warunków, można użyć `Exit For` jako znak ucieczki dla pętli. Aby uzyskać więcej informacji, zobacz [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+- Masz nieskończonej pętli, czyli pętlę, która może działać dużych lub nawet nieskończona liczba prób. Jeśli zostaną wykryte tych warunków, można użyć `Exit For` jako znak ucieczki dla pętli. Aby uzyskać więcej informacji, zobacz [zrobić... Instrukcja pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
 ## <a name="technical-implementation"></a>Realizacja techniczna  
  Gdy `For`... `Next` rozpoczyna pętli, Visual Basic ocenia `start`, `end`, i `step`. Visual Basic ocenia te wartości tylko w tym czasie, a następnie przypisuje `start` do `counter`. Przed instrukcją bloku jest uruchomiony, Visual Basic porównuje `counter` do `end`. Jeśli `counter` już jest większy niż `end` wartość (lub w przypadku mniejszych `step` ma wartość ujemną), `For` zakończeniu pętli i kontrola przechodzi do instrukcji następującej `Next` instrukcji. W przeciwnym razie działa blok instrukcji.  
@@ -130,20 +130,20 @@ Next [ counter ]
   
 |Jest `datatype` obecne?|Jest `counter` już zdefiniowane?|Wynik (czy `counter` definiuje Nowa zmienna lokalna, które są ograniczone do całej `For...Next` pętli)|  
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|  
-|Nie|Yes|Nie, ponieważ `counter` jest już zdefiniowany. Jeśli zakres `counter` nie jest lokalnym do procedury występuje ostrzeżenie kompilacji.|  
+|Nie|Tak|Nie, ponieważ `counter` jest już zdefiniowany. Jeśli zakres `counter` nie jest lokalnym do procedury występuje ostrzeżenie kompilacji.|  
 |Nie|Nie|Tak. Typ danych jest wnioskowany z `start`, `end`, i `step` wyrażenia. Aby uzyskać informacji na temat wnioskowanie o typie, zobacz [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md) i [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|  
-|Yes|Tak|Tak, ale tylko wtedy, gdy istniejące `counter` zmienna jest zdefiniowana poza procedury. Tej zmiennej pozostaje oddzielnym. Jeśli zakres istniejącego `counter` zmienna jest lokalny dla procedury, wystąpi błąd kompilacji.|  
+|Tak|Tak|Tak, ale tylko wtedy, gdy istniejące `counter` zmienna jest zdefiniowana poza procedury. Tej zmiennej pozostaje oddzielnym. Jeśli zakres istniejącego `counter` zmienna jest lokalny dla procedury, wystąpi błąd kompilacji.|  
 |Tak|Nie|Tak.|  
   
  Typ danych `counter` Określa typ iteracji, która musi być jednym z następujących typów:  
   
--   A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, lub `Double`.  
+- A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, lub `Double`.  
   
--   Wyliczenie, które można zadeklarować przy użyciu [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
+- Wyliczenie, które można zadeklarować przy użyciu [Enum — instrukcja](../../../visual-basic/language-reference/statements/enum-statement.md).  
   
--   `Object`.  
+- `Object`.  
   
--   Typ `T` ma następujące operatory, gdzie `B` to typ, który może być używana w `Boolean` wyrażenia.  
+- Typ `T` ma następujące operatory, gdzie `B` to typ, który może być używana w `Boolean` wyrażenia.  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

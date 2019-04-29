@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0793f3688f1f6ca66d92c5a22e158aa85e5470ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: ee433c91a4fdc78c1b24d2aa232f61ab7d4cb5cf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58133340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650373"
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 
 Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jednego lub większej liczby niestandardowych specyfikatorów liczbowych, aby zdefiniować sposób formatowania danych liczbowych. Ciąg niestandardowego formatu liczb jest dowolnym ciągiem formatu, który nie jest [standardowy Ciąg formatujący](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
-  
 
  Ciągi niestandardowego formatu liczb są obsługiwane przez niektóre przeciążenia `ToString` metoda wszystkich typów liczbowych. Na przykład można podać ciąg w formacie liczbowym do <xref:System.Int32.ToString%28System.String%29> i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> metody <xref:System.Int32> typu. Ciągi niestandardowego formatu liczb są również obsługiwane przez .NET [funkcję formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md), która jest używana przez niektóre `Write` i `WriteLine` metody <xref:System.Console> i <xref:System.IO.StreamWriter> klasy <xref:System.String.Format%2A?displayProperty=nameWithType>metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metody. [Interpolacja ciągów](../../csharp/language-reference/tokens/interpolated.md) funkcja obsługuje również ciągi niestandardowego formatu liczb.  
   
@@ -109,11 +108,11 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
 ## <a name="the--custom-specifier"></a>Specyfikator niestandardowy ""  
  Znak „,” jest używany zarówno jako separator grup, jak i specyfikator skalowania liczb.  
   
--   Separator grup: Jeśli jeden lub więcej przecinków jest określonych między dwoma symbolami zastępczymi cyfr (0 lub #) które formatują całkowite cyfry danej liczby, znak separatora grupy jest wstawiany między poszczególne grupy liczby w całkowitej części wyniku.  
+- Separator grup: Jeśli jeden lub więcej przecinków jest określonych między dwoma symbolami zastępczymi cyfr (0 lub #) które formatują całkowite cyfry danej liczby, znak separatora grupy jest wstawiany między poszczególne grupy liczby w całkowitej części wyniku.  
   
      <xref:System.Globalization.NumberFormatInfo.NumberGroupSeparator%2A> i <xref:System.Globalization.NumberFormatInfo.NumberGroupSizes%2A> właściwości bieżącego <xref:System.Globalization.NumberFormatInfo> obiektu określają znak używany jako separator grup liczby oraz rozmiar każdej grupy liczby. Na przykład jeśli ciąg „#,#” i niezmienna kultura są użyte do formatowania liczby 1000, wynikiem będzie „1 000”.  
   
--   Specyfikator skalowania liczb: Jeśli jeden lub więcej przecinków jest określonych natychmiast z lewej strony jawnego lub niejawnego punktu dziesiętnego, formatowana liczba jest dzielona przez 1000 dla każdego przecinka. Na przykład jeśli ciąg „0,,” jest używany do formatowania liczby 100 milionów, wynikiem jest „100”.  
+- Specyfikator skalowania liczb: Jeśli jeden lub więcej przecinków jest określonych natychmiast z lewej strony jawnego lub niejawnego punktu dziesiętnego, formatowana liczba jest dzielona przez 1000 dla każdego przecinka. Na przykład jeśli ciąg „0,,” jest używany do formatowania liczby 100 milionów, wynikiem jest „100”.  
   
  Specyfikatorów skalowania liczb i separatorów grup można użyć w tym samym ciągu formatu. Na przykład jeśli ciąg „#,0,,” i niezmienna kultura są używane do formatowania liczby jeden miliard, wynikiem jest „1 000”.  
   

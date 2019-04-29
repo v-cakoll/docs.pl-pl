@@ -5,11 +5,11 @@ helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
 ms.openlocfilehash: 144d2b6732ea319ba920317601eff2ebd7b58322
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608573"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfiguracyjnym zapewnia elastyczność związanych z udostępnianiem punktu końcowego i danych zachowanie usługi na miejscu wdrożenia, a nie w czasie projektowania. W tym temacie opisano dostępne metody podstawowej.  
@@ -74,24 +74,24 @@ Konfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigur
 ### <a name="the-service-element"></a>\<Usługi > — Element  
  Każda usługa ma następujące atrybuty:  
   
--   `name`. Określa typ, który dostarcza implementację kontraktu usługi. Jest to w pełni kwalifikowanej nazwy, która składa się z przestrzeni nazw, kropkę oraz nazwę typu. Na przykład `"MyNameSpace.myServiceType"`.  
+- `name`. Określa typ, który dostarcza implementację kontraktu usługi. Jest to w pełni kwalifikowanej nazwy, która składa się z przestrzeni nazw, kropkę oraz nazwę typu. Na przykład `"MyNameSpace.myServiceType"`.  
   
--   `behaviorConfiguration`. Określa nazwę jednej z `behavior` elementy znalezione w `behaviors` elementu. Określonego zachowania Określa akcje, takie jak czy umożliwia personifikacji. Gdy jego wartość jest pusta nazwa lub nie `behaviorConfiguration` znajduje się na wybranie domyślnego zestawu zachowania usług jest dodawana do usługi.  
+- `behaviorConfiguration`. Określa nazwę jednej z `behavior` elementy znalezione w `behaviors` elementu. Określonego zachowania Określa akcje, takie jak czy umożliwia personifikacji. Gdy jego wartość jest pusta nazwa lub nie `behaviorConfiguration` znajduje się na wybranie domyślnego zestawu zachowania usług jest dodawana do usługi.  
   
--   [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+- [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<Punktu końcowego > Element  
  Każdy punkt końcowy wymaga adresu, powiązanie i umowy, które są reprezentowane przez następujące atrybuty:  
   
--   `address`. Określa usługę identyfikator (URI), który może być adresem bezwzględnym lub taki, który otrzymuje względem podstawowego adresu usługi. Jeśli ustawiony na pusty ciąg, informuje, że punkt końcowy jest dostępny pod podstawowym adresem, który jest określony podczas tworzenia <xref:System.ServiceModel.ServiceHost> dla usługi.  
+- `address`. Określa usługę identyfikator (URI), który może być adresem bezwzględnym lub taki, który otrzymuje względem podstawowego adresu usługi. Jeśli ustawiony na pusty ciąg, informuje, że punkt końcowy jest dostępny pod podstawowym adresem, który jest określony podczas tworzenia <xref:System.ServiceModel.ServiceHost> dla usługi.  
   
--   `binding`. Zazwyczaj określa powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.WSHttpBinding>, ale można również określić powiązanie zdefiniowanych przez użytkownika. Określone powiązanie Określa typ transportu, zabezpieczeń i kodowanie używane i sesje niezawodne, transakcji lub przesyłania strumieniowego obsługiwany czy jest włączone.  
+- `binding`. Zazwyczaj określa powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.WSHttpBinding>, ale można również określić powiązanie zdefiniowanych przez użytkownika. Określone powiązanie Określa typ transportu, zabezpieczeń i kodowanie używane i sesje niezawodne, transakcji lub przesyłania strumieniowego obsługiwany czy jest włączone.  
   
--   `bindingConfiguration`. Jeśli wartości domyślne powiązania, muszą zostać zmodyfikowane, można to zrobić, konfigurując odpowiednie `binding` element `bindings` elementu. Ten atrybut powinien być podawany taką samą wartość jak `name` atrybutu `binding` element, który służy do zmiany ustawień domyślnych. Jeśli nazwa nie jest określony, lub nie `bindingConfiguration` określono powiązanie, a następnie powiązanie domyślny typ powiązania jest używany w punkcie końcowym.  
+- `bindingConfiguration`. Jeśli wartości domyślne powiązania, muszą zostać zmodyfikowane, można to zrobić, konfigurując odpowiednie `binding` element `bindings` elementu. Ten atrybut powinien być podawany taką samą wartość jak `name` atrybutu `binding` element, który służy do zmiany ustawień domyślnych. Jeśli nazwa nie jest określony, lub nie `bindingConfiguration` określono powiązanie, a następnie powiązanie domyślny typ powiązania jest używany w punkcie końcowym.  
   
--   `contract`. Określa interfejs, który definiuje kontrakt. Jest to interfejs zaimplementowane w typ języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) określonej przez `name` atrybutu `service` elementu.  
+- `contract`. Określa interfejs, który definiuje kontrakt. Jest to interfejs zaimplementowane w typ języka wspólnego środowiska uruchomieniowego (języka wspólnego CLR) określonej przez `name` atrybutu `service` elementu.  
   
--   [\<punkt końcowy >](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [\<punkt końcowy >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ### <a name="the-bindings-element"></a>\<Powiązania > Element  
  `bindings` Element zawiera specyfikacje dotyczące wszystkich powiązań, które mogą być używane przez dowolnego punktu końcowego zdefiniowana w każdej usługi.  

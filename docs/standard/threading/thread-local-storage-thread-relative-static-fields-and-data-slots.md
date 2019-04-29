@@ -1,5 +1,5 @@
 ---
-title: 'Lokalny magazyn wątków: Względne wątkom pola statyczne i gniazda danych'
+title: 'Pamięć lokalna wątku: Powiązane z wątkiem pola statyczne i gniazda danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,18 +11,18 @@ ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651096"
 ---
-# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Lokalny magazyn wątków: Względne wątkom pola statyczne i gniazda danych
+# <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Pamięć lokalna wątku: Powiązane z wątkiem pola statyczne i gniazda danych
 Można użyć lokalnego magazynu zarządzanych wątków (TLS) do przechowywania danych, która jest unikatowa w domenie aplikacji i wątku. Program .NET Framework oferuje dwa sposoby użycia zarządzanego protokołu TLS: względne wątkom statycznego miejsca pól i danych.  
   
--   Użyj względne wątkom pola statyczne (względne wątkom `Shared` pól w języku Visual Basic) jeżeli można przewidzieć potrzeby użytkowników w czasie kompilacji. Względne wątkom pola statyczne zapewniają najlepszą wydajność. Również zapewniają korzyści wynikające z kontrola typów w czasie kompilacji.  
+- Użyj względne wątkom pola statyczne (względne wątkom `Shared` pól w języku Visual Basic) jeżeli można przewidzieć potrzeby użytkowników w czasie kompilacji. Względne wątkom pola statyczne zapewniają najlepszą wydajność. Również zapewniają korzyści wynikające z kontrola typów w czasie kompilacji.  
   
--   Użyj miejsc danych, gdy Twoje rzeczywiste wymagania mogą zostać odnalezione tylko w czasie wykonywania. Gniazda danych są wolniejszy i bardziej niewygodna w użyciu niż względne wątkom pola statyczne, a dane są przechowywane jako typ <xref:System.Object>, więc należy rzutować go do poprawnego typu przed jego użyciem.  
+- Użyj miejsc danych, gdy Twoje rzeczywiste wymagania mogą zostać odnalezione tylko w czasie wykonywania. Gniazda danych są wolniejszy i bardziej niewygodna w użyciu niż względne wątkom pola statyczne, a dane są przechowywane jako typ <xref:System.Object>, więc należy rzutować go do poprawnego typu przed jego użyciem.  
   
  W języku C++ niezarządzane, użyj `TlsAlloc` można dynamicznie przydzielić miejsca i `__declspec(thread)` Aby zadeklarować, że zmienna powinna zostać przydzielona w magazynie względne wątkom. Względne wątkom statyczne pola i dane umożliwiają zarządzanej wersji to zachowanie.  
   
@@ -31,9 +31,9 @@ Można użyć lokalnego magazynu zarządzanych wątków (TLS) do przechowywania 
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unikatowość danych w zarządzany protokół TLS  
  Czy używasz względne wątkom pola statyczne i gniazda danych w zarządzany protokół TLS jest unikatowa kombinacja domeny aplikacji i wątku.  
   
--   W domenie aplikacji jeden wątek nie można zmodyfikować danych z innego wątku, nawet w przypadku obu wątków za pomocą tego samego pola lub gniazda.  
+- W domenie aplikacji jeden wątek nie można zmodyfikować danych z innego wątku, nawet w przypadku obu wątków za pomocą tego samego pola lub gniazda.  
   
--   Gdy wątek uzyskuje dostęp do tego samego pola lub gniazda z wielu domen aplikacji, oddzielne wartość jest zachowywana w każdej domenie aplikacji.  
+- Gdy wątek uzyskuje dostęp do tego samego pola lub gniazda z wielu domen aplikacji, oddzielne wartość jest zachowywana w każdej domenie aplikacji.  
   
  Na przykład jeśli wątek ustawia wartości względne wątkom pola statyczne, przechodzi w innej domenie aplikacji, a następnie pobiera wartość pola, pobraną w drugiej domenie aplikacji różni się od wartości w pierwszej domeny aplikacji. Ustawianie nową wartość dla pola w drugiej domenie aplikacji nie wpływa na wartość pola w pierwszej domeny aplikacji.  
   
@@ -49,9 +49,9 @@ Można użyć lokalnego magazynu zarządzanych wątków (TLS) do przechowywania 
 ## <a name="data-slots"></a>Gniazda danych  
  .NET Framework zapewnia miejsc danych dynamicznych, które są unikatowe dla wątku i domeny aplikacji. Istnieją dwa typy danych miejsc: o nazwie gniazda i nienazwane gniazda. Oba są implementowane przy użyciu <xref:System.LocalDataStoreSlot> struktury.  
   
--   Aby utworzyć miejsce danych o podanej nazwie, użyj <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> metody. Aby uzyskać odwołanie do istniejącego o nazwie miejsca, przekazać jego nazwę na <xref:System.Threading.Thread.GetNamedDataSlot%2A> metody.  
+- Aby utworzyć miejsce danych o podanej nazwie, użyj <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> lub <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> metody. Aby uzyskać odwołanie do istniejącego o nazwie miejsca, przekazać jego nazwę na <xref:System.Threading.Thread.GetNamedDataSlot%2A> metody.  
   
--   Aby utworzyć miejsce nienazwane danych, użyj <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> metody.  
+- Aby utworzyć miejsce nienazwane danych, użyj <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> metody.  
   
  Zarówno nazwę i nienazwane miejsc, użyj <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> metody do ustawiania i pobierania informacji w miejscu. Są to metody statyczne, które zawsze działają w danych dla wątku, który aktualnie wykonuje je.  
   

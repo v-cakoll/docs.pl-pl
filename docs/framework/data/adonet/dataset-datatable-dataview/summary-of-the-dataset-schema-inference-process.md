@@ -3,32 +3,32 @@ title: Podsumowanie procesu wnioskowania schematu elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
 ms.openlocfilehash: 272e5762b7afd9f3ab24cbdec5f31bb120364815
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607300"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Podsumowanie procesu wnioskowania schematu elementu DataSet
 Procesu wnioskowania najpierw określi, z dokumentu XML, które elementy zostanie wywnioskowany, jako tabele. Z pozostałych pliku XML procesu wnioskowania Określa kolumny dla tych tabel. W przypadku zagnieżdżonych tabel generuje procesu wnioskowania zagnieżdżonych <xref:System.Data.DataRelation> i <xref:System.Data.ForeignKeyConstraint> obiektów.  
   
  Poniżej przedstawiono krótkie podsumowanie reguły wnioskowania:  
   
--   Elementy, które mają atrybuty są wnioskowane jako tabele.  
+- Elementy, które mają atrybuty są wnioskowane jako tabele.  
   
--   Elementy, które mają elementy podrzędne są wnioskowane jako tabele.  
+- Elementy, które mają elementy podrzędne są wnioskowane jako tabele.  
   
--   Elementy, które powtarzają się wywnioskować jako pojedynczą tabelę.  
+- Elementy, które powtarzają się wywnioskować jako pojedynczą tabelę.  
   
--   Jeśli element dokumentu lub katalogu głównego, ma żadnych atrybutów i nie elementy podrzędne, które będzie można wywnioskować jako kolumny, jest wnioskowany jako <xref:System.Data.DataSet>. W przeciwnym razie element dokumentu jest wnioskowany w postaci tabeli.  
+- Jeśli element dokumentu lub katalogu głównego, ma żadnych atrybutów i nie elementy podrzędne, które będzie można wywnioskować jako kolumny, jest wnioskowany jako <xref:System.Data.DataSet>. W przeciwnym razie element dokumentu jest wnioskowany w postaci tabeli.  
   
--   Atrybuty są wnioskowane jako kolumny.  
+- Atrybuty są wnioskowane jako kolumny.  
   
--   Elementów, które mają nie atrybutów lub elementów podrzędnych i nie powtórzyć, są wnioskowane jako kolumny.  
+- Elementów, które mają nie atrybutów lub elementów podrzędnych i nie powtórzyć, są wnioskowane jako kolumny.  
   
--   Dla elementów, które są wnioskowane jako zagnieżdżoną tabelę w obrębie innych elementów, które również są wnioskowane jako tabele, zagnieżdżoną **DataRelation** utworzeniu między dwiema tabelami. Nowy, podstawowej kolumny klucza o nazwie **TableName_Id** jest dodawane do obu tabel i używana przez **DataRelation**. A **ForeignKeyConstraint** jest tworzony między dwiema tabelami, za pomocą **TableName_Id** kolumny.  
+- Dla elementów, które są wnioskowane jako zagnieżdżoną tabelę w obrębie innych elementów, które również są wnioskowane jako tabele, zagnieżdżoną **DataRelation** utworzeniu między dwiema tabelami. Nowy, podstawowej kolumny klucza o nazwie **TableName_Id** jest dodawane do obu tabel i używana przez **DataRelation**. A **ForeignKeyConstraint** jest tworzony między dwiema tabelami, za pomocą **TableName_Id** kolumny.  
   
--   Dla elementów, które są wnioskowane jako tabele i który zawiera tekst, ale mieć żadnych elementów podrzędnych, nową kolumnę o nazwie **TableName_Text** jest tworzona dla poszczególnych elementów tekstu. Jeśli element jest wnioskowany w postaci tabeli i zawiera tekst, ale ma również elementy podrzędne, tekst zostanie zignorowany.  
+- Dla elementów, które są wnioskowane jako tabele i który zawiera tekst, ale mieć żadnych elementów podrzędnych, nową kolumnę o nazwie **TableName_Text** jest tworzona dla poszczególnych elementów tekstu. Jeśli element jest wnioskowany w postaci tabeli i zawiera tekst, ale ma również elementy podrzędne, tekst zostanie zignorowany.  
   
 ## <a name="see-also"></a>Zobacz także
 

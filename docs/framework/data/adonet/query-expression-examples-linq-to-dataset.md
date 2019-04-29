@@ -3,11 +3,11 @@ title: Przykłady wyrażeń zapytania (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
 ms.openlocfilehash: f15e397c711bd01d5770e59c4f2c8227ee2ac7ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637664"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Przykłady wyrażeń zapytania (LINQ to DataSet)
 Ta sekcja zawiera LINQ do DataSet przykłady programowania w składni wyrażeń zapytania, które używają standardowych operatorów zapytań. <xref:System.Data.DataSet> Używanego w tych przykładach jest wypełniana przy użyciu `FillDataSet` metody, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — Przegląd (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) lub [standardowe operatory zapytań — Przegląd (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  

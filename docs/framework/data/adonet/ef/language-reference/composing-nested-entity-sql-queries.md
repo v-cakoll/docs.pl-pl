@@ -3,11 +3,11 @@ title: Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606228"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest bogaty język funkcjonalności. Elementem składowym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażeniem. W przeciwieństwie do poziomu konwencjonalnego SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczona do zestawu wyniku tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartości w wyrażeniu można ustawiać parametry lub składa się z niektóre inne wyrażenie.  

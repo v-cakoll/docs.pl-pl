@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
 ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609769"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementacja wzorca kontrolki siatki automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -25,22 +25,22 @@ ms.locfileid: "59100577"
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne dotyczące implementacji i konwencje  
  Jeśli implementacja wzorca kontrolki siatki, należy zwrócić uwagę następujących wytycznych i konwencje:  
   
--   Współrzędne siatki są oparte na zerze z lewym górnym rogu (lub górną prawa komórka w zależności od ustawień regionalnych), o współrzędnych (0, 0).  
+- Współrzędne siatki są oparte na zerze z lewym górnym rogu (lub górną prawa komórka w zależności od ustawień regionalnych), o współrzędnych (0, 0).  
   
--   Jeśli komórka jest pusta, element automatyzacji interfejsu użytkownika nadal musi zostać zwrócony w celu obsługi <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> właściwości dla tej komórki. Jest to możliwe, gdy układu elementów podrzędnych siatki jest podobna do niewyrównanych tablicy (zobacz poniższy przykład).  
+- Jeśli komórka jest pusta, element automatyzacji interfejsu użytkownika nadal musi zostać zwrócony w celu obsługi <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> właściwości dla tej komórki. Jest to możliwe, gdy układu elementów podrzędnych siatki jest podobna do niewyrównanych tablicy (zobacz poniższy przykład).  
   
  ![Eksplorator Windows umożliwia wyświetlanie niewyrównanym układem. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Przykład formantu siatki z pustym służy do koordynowania  
   
--   Siatka zawierająca pojedynczy element jest nadal wymagane, aby zaimplementować <xref:System.Windows.Automation.Provider.IGridProvider> Jeśli logicznie jest uważana za siatki. Liczba elementów podrzędnych siatki jest bez znaczenia.  
+- Siatka zawierająca pojedynczy element jest nadal wymagane, aby zaimplementować <xref:System.Windows.Automation.Provider.IGridProvider> Jeśli logicznie jest uważana za siatki. Liczba elementów podrzędnych siatki jest bez znaczenia.  
   
--   Ukryte wierszy i kolumn, w zależności od implementacji dostawcy może zostać załadowany w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa i w związku z tym zostaną odzwierciedlone w <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> i <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> właściwości. Jeśli ukryte wiersze i kolumny nie zostały jeszcze zostały załadowane, nie należy ich liczony.  
+- Ukryte wierszy i kolumn, w zależności od implementacji dostawcy może zostać załadowany w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa i w związku z tym zostaną odzwierciedlone w <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> i <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> właściwości. Jeśli ukryte wiersze i kolumny nie zostały jeszcze zostały załadowane, nie należy ich liczony.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> nie obsługuje aktywnego manipulowania siatki; <xref:System.Windows.Automation.Provider.ITransformProvider> musi zaimplementować tak, aby włączyć tę funkcję.  
+- <xref:System.Windows.Automation.Provider.IGridProvider> nie obsługuje aktywnego manipulowania siatki; <xref:System.Windows.Automation.Provider.ITransformProvider> musi zaimplementować tak, aby włączyć tę funkcję.  
   
--   Użyj <xref:System.Windows.Automation.StructureChangedEventHandler> do nasłuchiwania zmian strukturalnych, ani układu siatki, takich jak komórki, które zostały dodane, usunięte lub scalony.  
+- Użyj <xref:System.Windows.Automation.StructureChangedEventHandler> do nasłuchiwania zmian strukturalnych, ani układu siatki, takich jak komórki, które zostały dodane, usunięte lub scalony.  
   
--   Użyj <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> do śledzenia przechodzenie przez elementy lub komórki siatki.  
+- Użyj <xref:System.Windows.Automation.AutomationFocusChangedEventHandler> do śledzenia przechodzenie przez elementy lub komórki siatki.  
   
 <a name="Required_Members_for_IGridProvider"></a>   
 ## <a name="required-members-for-igridprovider"></a>Wymagane elementy IGridProvider  

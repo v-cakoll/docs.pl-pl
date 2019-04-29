@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
 ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663001"
 ---
 # <a name="-checked-c-compiler-options"></a>-zaznaczone (opcje kompilatora C#)
 **-Zaznaczone** opcja określa, czy instrukcję arytmetyczne liczba całkowita, która wynikiem jest wartość, która jest poza zakresem typu danych, a nie jest w zakresie [zaznaczone](../../../csharp/language-reference/keywords/checked.md) lub [ unchecked](../../../csharp/language-reference/keywords/unchecked.md) — słowo kluczowe, powoduje wyjątek czasu wykonywania.  

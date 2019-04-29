@@ -1,5 +1,5 @@
 ---
-title: 'Porady: pobieranie plików przy użyciu FTP'
+title: 'Instrukcje: Pobieranie plików przy użyciu protokołu FTP'
 description: W tym artykule przedstawiono przykład sposobu pobierania pliku z serwera FTP.
 ms.date: 06/26/2018
 dev_langs:
@@ -7,15 +7,15 @@ dev_langs:
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 ms.openlocfilehash: 4e000aa149a9a02e6f12e9b184d9c43a065b673f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642649"
 ---
-# <a name="how-to-download-files-with-ftp"></a>Porady: pobieranie plików przy użyciu FTP
+# <a name="how-to-download-files-with-ftp"></a>Instrukcje: Pobieranie plików przy użyciu protokołu FTP
 
-Ten przykład przedstawia sposób pobierania pliku z serwera FTP.
+Ten przykład pokazuje, jak pobrać plik z serwera FTP.
 
 ## <a name="example"></a>Przykład
 

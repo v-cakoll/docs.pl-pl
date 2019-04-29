@@ -3,11 +3,11 @@ title: Obsługa pary nazwa wartość (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
 ms.openlocfilehash: 67bde0954b74b7e5145dd2d930e16feb3371a881
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650953"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Obsługa pary nazwa/wartość (Visual Basic)
 Masz wiele aplikacji do zarządzania danymi, który jest najlepiej pozostawić w postaci par nazwa/wartość. Te informacje mogą być informacje o konfiguracji lub ustawień globalnych. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera niektóre metody, które ułatwiają zapewnienie zestaw par nazwa/wartość. Możesz zachować informacje jako atrybuty lub zbiór podrzędnych elementów.  
@@ -19,19 +19,19 @@ Masz wiele aplikacji do zarządzania danymi, który jest najlepiej pozostawić w
   
  <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> można dodać, modyfikowanie lub usuwanie atrybutów elementu.  
   
--   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> nazwą atrybutu, który nie istnieje metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> nazwą atrybutu, który nie istnieje metoda tworzy nowy atrybut i dodaje go do określonego elementu.  
   
--   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu i niektórych określonych zawartości, zawartość atrybutu są zastępowane określonej zawartości.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu i niektórych określonych zawartości, zawartość atrybutu są zastępowane określonej zawartości.  
   
--   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu, a następnie określ wartość null dla zawartości, ten atrybut jest usuwany z jego elementu nadrzędnego.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> z nazwą istniejącego atrybutu, a następnie określ wartość null dla zawartości, ten atrybut jest usuwany z jego elementu nadrzędnego.  
   
  <xref:System.Xml.Linq.XElement.SetElementValue%2A> dodać, zmodyfikować lub usunąć elementy podrzędne elementu.  
   
--   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> nazwą elementu podrzędnego, który nie istnieje metoda tworzy nowy element i dodaje go do określonego elementu.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> nazwą elementu podrzędnego, który nie istnieje metoda tworzy nowy element i dodaje go do określonego elementu.  
   
--   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i niektórych określonych zawartości, zawartość elementu są zastępowane określonej zawartości.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i niektórych określonych zawartości, zawartość elementu są zastępowane określonej zawartości.  
   
--   Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i określ wartość null w przypadku zawartości, element zostanie usunięty z jego elementu nadrzędnego.  
+- Jeśli wywołasz <xref:System.Xml.Linq.XElement.SetElementValue%2A> z nazwą istniejącego elementu i określ wartość null w przypadku zawartości, element zostanie usunięty z jego elementu nadrzędnego.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy element bez atrybutów. Następnie używa <xref:System.Xml.Linq.XElement.SetAttributeValue%2A> metodę, aby utworzyć i utrzymywać listę par nazwa/wartość.  

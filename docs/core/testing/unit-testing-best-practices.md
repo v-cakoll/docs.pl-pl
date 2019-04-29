@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
 ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648662"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Najlepsze rozwiązania przy użyciu platformy .NET Core i .NET Standard testy jednostkowe
 

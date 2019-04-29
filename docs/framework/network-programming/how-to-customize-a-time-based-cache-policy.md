@@ -10,18 +10,18 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 ms.openlocfilehash: d4a35882d99a87ca5bf22fb386a87158e3c2d664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642662"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu
 Podczas tworzenia zasad pamięci podręcznej na podstawie czasu, można dostosować zachowanie buforowania, określając wartości maksymalny wiek, minimalna świeżość, maksymalna nieaktualność lub Data synchronizacji pamięci podręcznej. <xref:System.Net.Cache.HttpRequestCachePolicy> Obiekt zawiera kilka konstruktorów, które pozwalają na określenie prawidłowe kombinacje tych wartości.  
   
 ### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>Aby utworzyć zasady na podstawie czasu pamięci podręcznej, który używa Data synchronizacji pamięci podręcznej  
   
--   Utwórz zasadę pamięci podręcznej na podstawie czasu, która używa Data synchronizacji pamięci podręcznej, przekazując <xref:System.DateTime> obiekt <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora.  
+- Utwórz zasadę pamięci podręcznej na podstawie czasu, która używa Data synchronizacji pamięci podręcznej, przekazując <xref:System.DateTime> obiekt <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -52,7 +52,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
   
 ### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>Aby utworzyć zasady na podstawie czasu pamięci podręcznej, które opiera się na minimalna świeżość  
   
--   Tworzenie zasad pamięci podręcznej na podstawie czasu, który opiera się na minimalna świeżość, określając <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> jako `cacheAgeControl` wartość parametru i przekazywanie <xref:System.TimeSpan> obiekt <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora.  
+- Tworzenie zasad pamięci podręcznej na podstawie czasu, który opiera się na minimalna świeżość, określając <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> jako `cacheAgeControl` wartość parametru i przekazywanie <xref:System.TimeSpan> obiekt <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -84,7 +84,7 @@ Level:Default MinFresh:3600
   
 ### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>Aby utworzyć zasady na podstawie czasu pamięci podręcznej, które jest na podstawie świeżości minimalny i maksymalny wiek  
   
--   Utwórz zasadę pamięci podręcznej na podstawie czasu, która opiera się na świeżości minimalny i maksymalny wiek, określając <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> jako `cacheAgeControl` wartość parametru i przekazywanie dwóch <xref:System.TimeSpan> obiekty do <xref:System.Net.Cache.HttpRequestCachePolicy> Konstruktor, aby określić maksymalny wiek zasoby i chwilę, aby określić minimalna świeżość dozwolony dla obiektu zwróconego z pamięci podręcznej.  
+- Utwórz zasadę pamięci podręcznej na podstawie czasu, która opiera się na świeżości minimalny i maksymalny wiek, określając <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> jako `cacheAgeControl` wartość parametru i przekazywanie dwóch <xref:System.TimeSpan> obiekty do <xref:System.Net.Cache.HttpRequestCachePolicy> Konstruktor, aby określić maksymalny wiek zasoby i chwilę, aby określić minimalna świeżość dozwolony dla obiektu zwróconego z pamięci podręcznej.  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  

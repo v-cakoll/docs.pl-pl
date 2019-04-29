@@ -3,11 +3,11 @@ title: Wybieranie kodera komunikatów
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608388"
 ---
 # <a name="choosing-a-message-encoder"></a>Wybieranie kodera komunikatów
 W tym temacie omówiono kryteria wybierania koderów wiadomości, które znajdują się w Windows Communication Foundation (WCF): plik binarny, tekst i komunikat transmisji optymalizacji mechanizm (MTOM).  
@@ -21,11 +21,11 @@ W tym temacie omówiono kryteria wybierania koderów wiadomości, które znajduj
 ## <a name="system-provided-encoders"></a>Kodery dostarczane przez system  
  Usługi WCF zawiera trzy koderów wiadomości, które są reprezentowane przez następujące trzy klasy:  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, tekst koder komunikatów, obsługuje zarówno zwykłe Kodowanie XML i kodowaniem SOAP. Zwykły tryb kodowania XML koder komunikatu tekstowego nosi nazwę "zwykłe stare XML" (POX), w odróżnieniu od kodowania SOAP opartego na tekst. Aby włączyć POX, ustaw <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> właściwość <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Użyj koder komunikatów tekstu pod kątem współdziałania z punktami końcowymi WCF nie.  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>, tekst koder komunikatów, obsługuje zarówno zwykłe Kodowanie XML i kodowaniem SOAP. Zwykły tryb kodowania XML koder komunikatu tekstowego nosi nazwę "zwykłe stare XML" (POX), w odróżnieniu od kodowania SOAP opartego na tekst. Aby włączyć POX, ustaw <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> właściwość <xref:System.ServiceModel.Channels.MessageVersion.None%2A>. Użyj koder komunikatów tekstu pod kątem współdziałania z punktami końcowymi WCF nie.  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, koder komunikatu binarnego używa compact format binarny jest zoptymalizowany pod kątem usługi WCF do komunikacji WCF i dlatego nie jest międzyoperacyjnych. Dotyczy to również większość kodera wydajne wszystkich koderów udostępnia usługi WCF.  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>, koder komunikatu binarnego używa compact format binarny jest zoptymalizowany pod kątem usługi WCF do komunikacji WCF i dlatego nie jest międzyoperacyjnych. Dotyczy to również większość kodera wydajne wszystkich koderów udostępnia usługi WCF.  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, element powiązania określa znak kodowanie i wersjonowanie wiadomości dla wiadomości przy użyciu kodowanie MTOM. MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM podejmuje próbę utworzenia równowagi między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst. Pod względem wydajności między koderów, który udostępnia usługi WCF MTOM jest wewnętrzne tekstu (najwolniejsze) i plik binarny (najszybciej).  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, element powiązania określa znak kodowanie i wersjonowanie wiadomości dla wiadomości przy użyciu kodowanie MTOM. MTOM to technologia wydajne przekazywania danych binarnych w wiadomościach WCF. Koder MTOM podejmuje próbę utworzenia równowagi między współdziałania i wydajność. Kodowanie MTOM przesyła większość kodu XML w postaci tekstowej, ale optymalizuje dużych bloków danych binarnych, przekazywania ich jako — jest bez konwersji na tekst. Pod względem wydajności między koderów, który udostępnia usługi WCF MTOM jest wewnętrzne tekstu (najwolniejsze) i plik binarny (najszybciej).  
   
 ## <a name="how-to-choose-a-message-encoder"></a>Wybieranie kodera komunikatów  
  W poniższej tabeli opisano typowe czynniki, które umożliwiają wybieranie kodera komunikatów. Ustaw priorytet czynników, które są ważne w przypadku aplikacji, a następnie najlepiej wybierz koderów komunikat współpracujące z tych czynników. Należy wziąć pod uwagę czynników dodatkowe niewymienionych w tej tabeli oraz wszelkie koderów niestandardowy komunikat, które mogą być wymagane w aplikacji.  

@@ -3,11 +3,11 @@ title: Własność i oddzielenie schematu użytkownika w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646062"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Własność i oddzielenie schematu użytkownika w programie SQL Server
 Podstawowa koncepcja zabezpieczeń programu SQL Server jest właściciele obiektów uprawnień do administrowania nimi. Nie można usunąć uprawnień od właściciela obiektu, a nie można usunąć użytkowników z bazy danych, jeśli ich właścicielem obiektów w nim.  
@@ -29,13 +29,13 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="built-in-schemas"></a>Wbudowane schematów  
  Program SQL Server jest dostarczany z dziesięciu wstępnie zdefiniowanych schematów, które mają takie same nazwy użytkowników wbudowaną bazą danych i ról. Istnieją one głównie dla zgodności z poprzednimi wersjami. Mogą porzucić schematów, które mają takie same nazwy ról stałej bazy danych, jeśli nie potrzebujesz. Nie można usunąć następujących schematów:  
   
--   `dbo`  
+- `dbo`  
   
--   `guest`  
+- `guest`  
   
--   `sys`  
+- `sys`  
   
--   `INFORMATION_SCHEMA`  
+- `INFORMATION_SCHEMA`  
   
  Jeśli usuniesz je z modelu bazy danych, nie pojawią się one w nowych baz danych.  
   

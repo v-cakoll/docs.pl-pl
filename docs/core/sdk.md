@@ -4,11 +4,11 @@ description: Dowiedz się o .NET Core SDK, która stanowi zestaw bibliotek i nar
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.openlocfilehash: f23140166ada0c39d4267a4fd2ba5187b6c13c83
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648727"
 ---
 # <a name="net-core-sdk-overview"></a>Omówienie zestawu SDK programu .NET core
 

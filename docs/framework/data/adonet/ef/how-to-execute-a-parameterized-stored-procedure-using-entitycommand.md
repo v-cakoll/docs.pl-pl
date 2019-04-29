@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
 ms.openlocfilehash: deb1877397053ceab8c284a537a861ba56ffb729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606159"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>Instrukcje: Wykonywanie zapytania SQL do sparametryzowanej procedury składowanej przy użyciu EntityCommand
 W tym temacie pokazano, jak wykonać procedurę składowaną z parametrami przy użyciu <xref:System.Data.EntityClient.EntityCommand> klasy.  

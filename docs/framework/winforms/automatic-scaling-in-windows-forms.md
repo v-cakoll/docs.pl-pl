@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640511"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Automatyczne skalowanie w formularzach Windows Forms
 
 Automatycznego skalowania umożliwia formularza i jego formantów, przeznaczone na jednym komputerze przy użyciu określonych wyświetlania systemu lub rozpoznawanie czcionki, mają być wyświetlane odpowiednio na innym komputerze przy użyciu czcionki systemu lub rozpoznawanie innego ekranu. Gwarantuje on, że formularz i jego formantów inteligentnie spowoduje zmianę rozmiaru, aby były zgodne z macierzystego systemu windows i innych aplikacji na komputerach z innymi deweloperami i użytkownika. Wsparcie [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] automatycznego skalowania i stylów wizualnych umożliwia [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji, aby utrzymać spójny wygląd i zachowanie w porównaniu do natywnych aplikacji Windows na komputerach poszczególnych użytkowników.
 
-W większości przypadków, automatyczne skalowanie działa zgodnie z oczekiwaniami w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wersji 2.0 lub nowszej. Jednak zmiany schematu czcionek, może być problematyczne. Na przykład jak rozwiązać ten problem, zobacz [porady: odpowiadanie na zmiany schematu czcionek w aplikacji Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+W większości przypadków, automatyczne skalowanie działa zgodnie z oczekiwaniami w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wersji 2.0 lub nowszej. Jednak zmiany schematu czcionek, może być problematyczne. Na przykład jak rozwiązać ten problem, zobacz [jak: Reagowanie na zmiany schematu czcionek w aplikacji Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
 
 ## <a name="need-for-automatic-scaling"></a>Potrzeby automatycznego skalowania
 
@@ -105,4 +105,4 @@ Formularze Windows używa teraz Poniższa logika automatycznego skalowania, form
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [Renderowanie kontrolek przy użyciu stylów wizualnych](./controls/rendering-controls-with-visual-styles.md)
-- [Instrukcje: poprawianie wydajności dzięki unikaniu automatycznego skalowania](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [Instrukcje: Poprawianie wydajności dzięki unikaniu automatycznego skalowania](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

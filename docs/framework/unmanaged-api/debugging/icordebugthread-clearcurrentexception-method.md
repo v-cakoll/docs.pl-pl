@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1875badfb27b005d63c5b5104c17b87ec7fd51d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609155"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a>ICorDebugThread::ClearCurrentException — Metoda
 Ta metoda nie jest zaimplementowana. Nie używaj go.  
@@ -34,7 +34,7 @@ HRESULT ClearCurrentException();
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CorDebug.idl, CorDebug.h  
   

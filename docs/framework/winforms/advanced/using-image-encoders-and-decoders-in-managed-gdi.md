@@ -6,34 +6,34 @@ helpviewer_keywords:
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
 ms.openlocfilehash: bf0d3a64ce8860d67f0dcfd37c780f03fbd7471a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650521"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Używanie kodeków obrazu w zarządzanym GDI+
 <xref:System.Drawing> Przestrzeń nazw zawiera <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowania obrazami. Za pomocą kodeków obrazu w [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], można napisać obrazów z pamięci na dysk. Za pomocą dekodery obrazów w [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], możesz załadować obrazy z dysku do pamięci. Koder przekształca dane w <xref:System.Drawing.Image> lub <xref:System.Drawing.Bitmap> obiekt do formatu pliku wyznaczonym dysku. Dekoder przekształca dane w pliku dysku do formatu wymaganego przez <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> obiektów.  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera wbudowane kodeków, które obsługują następujące typy plików:  
   
--   BMP  
+- BMP  
   
--   GIF  
+- GIF  
   
--   JPEG  
+- JPEG  
   
--   PNG  
+- PNG  
   
--   TIFF  
+- TIFF  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ma również wbudowane dekoderów, które obsługują następujące typy plików:  
   
--   WMF  
+- WMF  
   
--   EMF  
+- EMF  
   
--   ICON  
+- ICON  
   
  W poniższych tematach omówiono kodeków bardziej szczegółowo:  
   

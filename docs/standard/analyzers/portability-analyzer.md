@@ -5,11 +5,11 @@ ms.date: 07/26/2017
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628163"
 ---
 # <a name="the-net-portability-analyzer"></a>Narzędzia .NET Portability Analyzer
 
@@ -39,8 +39,8 @@ Po uruchomieniu analizy, zobaczą raport przenośność .NET. Tylko typy, które
 
 Nie chcesz używać programu Visual Studio? Można również użyć analizator przenośności w wierszu polecenia. Wystarczy pobrać [analizator przenośności interfejsu API](https://www.microsoft.com/download/details.aspx?id=42678).
 
-*   Wpisz następujące polecenie, aby analizować bieżący katalog: `\...\ApiPort.exe analyze -f .`
-*   Aby analizować określonych listą plików .dll, wpisz następujące polecenie: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+* Wpisz następujące polecenie, aby analizować bieżący katalog: `\...\ApiPort.exe analyze -f .`
+* Aby analizować określonych listą plików .dll, wpisz następujące polecenie: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 .NET Portability raport jest zapisywany jako plik programu Excel (*xlsx*) w bieżącym katalogu. **Szczegóły** karta w skoroszycie programu Excel zawiera więcej informacji.
 

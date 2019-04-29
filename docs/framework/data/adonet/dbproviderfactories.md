@@ -3,11 +3,11 @@ title: DbProviderFactories
 ms.date: 03/30/2017
 ms.assetid: 2a8e2640-3a49-42a1-a3a9-b43026907ae1
 ms.openlocfilehash: 2376cf39228cb5e8208112333ba06bb80070de84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606999"
 ---
 # <a name="dbproviderfactories"></a>DbProviderFactories
 <xref:System.Data.Common> Nazw zawiera klasy do tworzenia <xref:System.Data.Common.DbProviderFactory> wystąpień do pracy z konkretnych źródeł danych. Po utworzeniu <xref:System.Data.Common.DbProviderFactory> wystąpienia i przekazać go informacje o dostawcy danych `DbProviderFactory` można określić obiekt połączenia poprawny, silnie typizowaną do zwrócenia na podstawie informacji został dostarczony.  

@@ -3,11 +3,11 @@ title: Publikowanie i rozwiązywanie nazw elementów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642103"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publikowanie i rozwiązywanie nazw elementów równorzędnych
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769492"
 
  Aby opublikować nowy identyfikator PNRP, peer wykonuje następujące działania:  
   
--   Wysyła komunikaty publikacji PNRP dla swoich sąsiadów pamięci podręcznej (elementów równorzędnych, które zostały zarejestrowane identyfikatory PNRP na najniższym poziomie pamięci podręcznej) w celu umieszczenia ich w pamięci podręcznej.  
+- Wysyła komunikaty publikacji PNRP dla swoich sąsiadów pamięci podręcznej (elementów równorzędnych, które zostały zarejestrowane identyfikatory PNRP na najniższym poziomie pamięci podręcznej) w celu umieszczenia ich w pamięci podręcznej.  
   
--   Wybiera losową węzły w chmurze, które nie są jego sąsiadami, a następnie wysyła je żądań rozpoznawania nazw PNRP dla własnego identyfikatora P2P. Wynikowy procesu określania punktu końcowego inicjowania inicjuje pamięci podręcznych losowe węzłów w chmurze o identyfikatorze PNRP publikowania elementów równorzędnych.  
+- Wybiera losową węzły w chmurze, które nie są jego sąsiadami, a następnie wysyła je żądań rozpoznawania nazw PNRP dla własnego identyfikatora P2P. Wynikowy procesu określania punktu końcowego inicjowania inicjuje pamięci podręcznych losowe węzłów w chmurze o identyfikatorze PNRP publikowania elementów równorzędnych.  
   
 PNRP w wersji 2 węzłów nie opublikowano identyfikatory PNRP, jeśli tylko są one rozpoznawanie innych identyfikatorów P2P. HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly = 1 wartość rejestru (typu REG_DWORD) określa, że elementy równorzędne tylko używać PNRP do rozpoznawania nazw, nigdy nie dla nazwy publikacji. Ta wartość rejestru można również skonfigurować za pomocą zasad grupy.  
   
@@ -37,11 +37,11 @@ PNRP w wersji 2 węzłów nie opublikowano identyfikatory PNRP, jeśli tylko są
   
  Aby wykonać rozpoznawanie nazw w PNRP, element równorzędny sprawdza, czy wpisy w jego własnej pamięci podręcznej wpisu, który jest zgodna z docelowym Identyfikator PNRP. Jeśli znaleziono element równorzędny wysyła komunikat żądania PNRP dla elementu równorzędnego i czeka na odpowiedź. Jeśli nie znaleziono wpisu dla Identyfikatora PNRP, elementu równorzędnego wysyła komunikat żądania PNRP na węźle równorzędnym, która odpowiada wpis, który ma identyfikator PNRP, który najlepiej pasuje do docelowego identyfikatora PNRP. Węzeł, który odbiera komunikat żądania PNRP sprawdza jego własnej pamięci podręcznej i wykonuje następujące czynności:  
   
--   Jeśli zostanie znaleziony Identyfikator PNRP, peer żądany punkt końcowy odpowiada bezpośrednio na żądanie elementu równorzędnego.  
+- Jeśli zostanie znaleziony Identyfikator PNRP, peer żądany punkt końcowy odpowiada bezpośrednio na żądanie elementu równorzędnego.  
   
--   Jeśli nie znaleziono Identyfikatora PNRP i Identyfikatorem PNRP w pamięci podręcznej znajduje się bliżej docelowy identyfikator PNRP, żądanego elementu równorzędnego wysyła odpowiedź na żądanie elementu równorzędnego zawierające adres IPv6 elementów równorzędnych, reprezentujący zapis identyfikatorem PNRP ściślej zgodna z docelowym Identyfikator PNRP. W odpowiedzi, korzystając z adresu IP, żądanie węzeł wysyła kolejną wiadomość PNRP żądania na adres IPv6 do odpowiedzi lub sprawdzić jego pamięci podręcznej.  
+- Jeśli nie znaleziono Identyfikatora PNRP i Identyfikatorem PNRP w pamięci podręcznej znajduje się bliżej docelowy identyfikator PNRP, żądanego elementu równorzędnego wysyła odpowiedź na żądanie elementu równorzędnego zawierające adres IPv6 elementów równorzędnych, reprezentujący zapis identyfikatorem PNRP ściślej zgodna z docelowym Identyfikator PNRP. W odpowiedzi, korzystając z adresu IP, żądanie węzeł wysyła kolejną wiadomość PNRP żądania na adres IPv6 do odpowiedzi lub sprawdzić jego pamięci podręcznej.  
   
--   Nie znaleziono Identyfikatora PNRP, jeśli nie ma żadnego Identyfikatora PNRP w jego pamięci podręcznej, które znajduje się bliżej docelowy identyfikator PNRP, żądanego elementu równorzędnego wysyła żądanie elementu równorzędnego odpowiedź, która wskazuje na taki stan. Żądanie elementu równorzędnego następnie wybiera najbliższy Identyfikator PNRP.  
+- Nie znaleziono Identyfikatora PNRP, jeśli nie ma żadnego Identyfikatora PNRP w jego pamięci podręcznej, które znajduje się bliżej docelowy identyfikator PNRP, żądanego elementu równorzędnego wysyła żądanie elementu równorzędnego odpowiedź, która wskazuje na taki stan. Żądanie elementu równorzędnego następnie wybiera najbliższy Identyfikator PNRP.  
   
 Żądanie elementu równorzędnego kontynuuje ten proces w z kolejnymi iteracjami ostatecznie lokalizowanie węzeł, który jest zarejestrowany identyfikator PNRP.  
   

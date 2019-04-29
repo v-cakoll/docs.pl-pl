@@ -15,11 +15,11 @@ helpviewer_keywords:
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 ms.openlocfilehash: 751f8a0745322e7e8573d392a504ea02cb18572e
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646285"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumentów nazwanych i opcjonalnych. *Argumenty nazwane* umożliwiają określenie argumentu dla parametru określonego argumentu można skojarzyć z nazwą parametru, a nie za pomocą parametru pozycji na liście parametrów. *Argumenty opcjonalne* umożliwia pominięcie argumentów dla niektórych parametrów. Obu tych technik może służyć za pomocą metod, indeksatorów, konstruktorów i delegatów.  
@@ -68,11 +68,11 @@ ms.locfileid: "58654032"
   
  Każdy parametr opcjonalny ma wartość domyślną, jako część jego definicji. Jeśli żaden argument nie zostanie wysłany dla tego parametru, wartością domyślną jest używany. Wartość domyślna musi być jedną z następujących typów wyrażeń:  
   
--   wyrażenie stałe;  
+- wyrażenie stałe;  
   
--   wyrażenie w formie `new ValType()`, gdzie `ValType` jest typem wartości, takich jak [wyliczenia](../../../csharp/language-reference/keywords/enum.md) lub [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+- wyrażenie w formie `new ValType()`, gdzie `ValType` jest typem wartości, takich jak [wyliczenia](../../../csharp/language-reference/keywords/enum.md) lub [struktury](../../../csharp/programming-guide/classes-and-structs/structs.md);  
   
--   wyrażenie w formie [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), gdzie `ValType` jest typem wartości.  
+- wyrażenie w formie [default(ValType)](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md), gdzie `ValType` jest typem wartości.  
   
  Opcjonalne parametry są definiowane na końcu listy parametrów po wszelkie wymagane parametry. Obiekt wywołujący dostarcza argumentu jednego z kolejnych następujące parametry opcjonalne, wymagają podania dla wszystkich poprzednich parametry opcjonalne argumenty. Rozdzielana przecinkami przerwy na liście argumentów nie są obsługiwane. Na przykład w poniższym kodzie metodę wystąpienia `ExampleMethod` jest zdefiniowana za pomocą jednego wymagany i dwa parametry opcjonalne.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "58654032"
 ## <a name="overload-resolution"></a>Rozpoznanie przeciążenia  
  Użycie argumentów nazwanych i opcjonalnych wpływa na rozpoznanie przeciążenia w następujący sposób:  
   
--   Metoda, indeksator lub Konstruktor jest kandydatem do wykonywania w przypadku każdego z jego parametrów jest opcjonalny albo odpowiada według nazwy lub pozycji, aby jeden argument w instrukcji wywołujące, i że argument można przekonwertować na typ parametru.  
+- Metoda, indeksator lub Konstruktor jest kandydatem do wykonywania w przypadku każdego z jego parametrów jest opcjonalny albo odpowiada według nazwy lub pozycji, aby jeden argument w instrukcji wywołujące, i że argument można przekonwertować na typ parametru.  
   
--   Jeśli zostanie znalezione więcej niż jeden Release candidate, zasady rozpoznawania przeciążenia preferowanych konwersje są stosowane do argumentów, które są jawnie określone. Pominięty Argumenty opcjonalne parametry są ignorowane.  
+- Jeśli zostanie znalezione więcej niż jeden Release candidate, zasady rozpoznawania przeciążenia preferowanych konwersje są stosowane do argumentów, które są jawnie określone. Pominięty Argumenty opcjonalne parametry są ignorowane.  
   
--   Jeśli dwa kandydatów zostaną ocenione one równie dobrze, preferencji jest przesyłany do Release candidate, który nie ma parametrów opcjonalnych, które zostały pominięte argumentów w wywołaniu. Jest to konsekwencją Ogólne preferencji w przeciążeniu rozdzielczości dla kandydatów, które mają mniej parametrów.  
+- Jeśli dwa kandydatów zostaną ocenione one równie dobrze, preferencji jest przesyłany do Release candidate, który nie ma parametrów opcjonalnych, które zostały pominięte argumentów w wywołaniu. Jest to konsekwencją Ogólne preferencji w przeciążeniu rozdzielczości dla kandydatów, które mają mniej parametrów.  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

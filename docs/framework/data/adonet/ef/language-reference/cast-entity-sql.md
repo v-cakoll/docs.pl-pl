@@ -3,11 +3,11 @@ title: RZUTOWANIE (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
 ms.openlocfilehash: 51de041a4b06d5da31071ea2b3cb31c86feff137
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606134"
 ---
 # <a name="cast-entity-sql"></a>RZUTOWANIE (jednostka SQL)
 Konwertuje wyrażenie jednego typu danych do innego.  
@@ -39,11 +39,11 @@ CAST( e as T )
   
  Opcjonalnie można podać aspektami dokładności i skali, gdy Rzutowanie na wartości `Edm.Decimal`. Jeśli nie zostały jawnie, wartości domyślne dla dokładności i skali są 18 i 0. W szczególności następujące przeciążenia są obsługiwane w przypadku `Decimal`:  
   
--   `CAST( d as Edm.Decimal );`  
+- `CAST( d as Edm.Decimal );`  
   
--   `CAST( d as Edm.Decimal(precision) );`  
+- `CAST( d as Edm.Decimal(precision) );`  
   
--   `CAST( d as Edm.Decimal(precision, scale) );`  
+- `CAST( d as Edm.Decimal(precision, scale) );`  
   
  Użyj wyrażenia rzutującego jest uważany za jawnej konwersji. Konwersje jawne mogą obcięcia danych lub utratę precyzji.  
   

@@ -11,11 +11,11 @@ ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638333"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Instrukcje: Obsługa wyjątków w zapytaniu PLINQ
 Pierwszy przykład w tym temacie przedstawiono sposób obsługi <xref:System.AggregateException?displayProperty=nameWithType> , mogą być generowane w wyniku zapytania PLINQ, podczas wykonywania. Drugi przykład pokazuje, jak umieścić bloków try-catch w obrębie delegatów, w jak najbardziej zbliżony do której zostanie zgłoszony wyjątek. W ten sposób możesz przechwytywać je jak najszybciej występują i ewentualnie kontynuować wykonywanie zapytania. Kiedy wyjątki mogą się pojawiać z powrotem w sąsiednim wątku, jest możliwe, że zapytanie może w dalszym ciągu przetwarzać niektóre elementy po wyjątku jest zgłaszany.  
@@ -43,7 +43,7 @@ Pierwszy przykład w tym temacie przedstawiono sposób obsługi <xref:System.Agg
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Aby skompilować i uruchomić te przykłady, skopiuj je do przykładu próbka danych PLINQ i wywołać metodę z Main.  
+- Aby skompilować i uruchomić te przykłady, skopiuj je do przykładu próbka danych PLINQ i wywołać metodę z Main.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Nie przechwytuj wyjątek, chyba że wiesz, jak je obsłużyć, dzięki czemu nie spowodują uszkodzenia stanu programu.  

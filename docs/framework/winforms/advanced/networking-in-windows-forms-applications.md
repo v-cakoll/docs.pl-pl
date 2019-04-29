@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
 ms.openlocfilehash: 2432fbd0a2c769efb126e4b9c1dc19e35fbe4c31
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641505"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Sieć w aplikacjach formularzy systemu Windows
 .NET Framework zawiera klasy służące do wyświetlania stron sieci Web, pobierania zawartości sieci Web, interakcji z pliku transfer protocol (FTP) witryn i korzystanie z usług internetowych, co ułatwia tworzenie funkcjonalności sieci w aplikacji. Następujące zasoby pomoże zrozumieć technologii sieciowych w .NET Framework i jak można zintegrować je Windows Forms.  

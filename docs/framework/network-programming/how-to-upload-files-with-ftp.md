@@ -1,23 +1,23 @@
 ---
-title: 'Porady: przekazywanie plików przy użyciu FTP'
-description: W tym artykule przedstawiono przykład sposobu przekazania pliku do serwera FTP.
+title: 'Instrukcje: Przekazywanie plików za pomocą protokołu FTP'
+description: W tym artykule przedstawiono przykładowy sposób przekazywania pliku do serwera FTP.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
 ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642402"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="9659f-103">Porady: przekazywanie plików przy użyciu FTP</span><span class="sxs-lookup"><span data-stu-id="9659f-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="26543-103">Instrukcje: Przekazywanie plików za pomocą protokołu FTP</span><span class="sxs-lookup"><span data-stu-id="26543-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="9659f-104">W tym przykładzie pokazano, jak można przekazać pliku do serwera FTP.</span><span class="sxs-lookup"><span data-stu-id="9659f-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="26543-104">Ten przykład przedstawia sposób przekazania pliku do serwera FTP.</span><span class="sxs-lookup"><span data-stu-id="26543-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="9659f-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="9659f-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="26543-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="26543-105">Example</span></span>
 
 ```csharp
 using System;

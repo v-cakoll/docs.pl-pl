@@ -3,11 +3,11 @@ title: LINQ to XML — przegląd programowania (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
 ms.openlocfilehash: c5510733197ad63b4d3e2ce1134425e1954fdc2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667421"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>LINQ to XML — przegląd programowania (C#)
 Te tematy zawierają szczegółowe omówienie informacji o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klasy, a także szczegółowe informacje o trzech najważniejszych klasy.  

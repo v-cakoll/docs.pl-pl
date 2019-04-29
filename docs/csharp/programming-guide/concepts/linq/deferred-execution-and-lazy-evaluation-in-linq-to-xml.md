@@ -3,11 +3,11 @@ title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
 ms.openlocfilehash: 83fdc73b583a2c8aba5383f4a5b3af11a1f6f9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668539"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (C#)
 Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone i kilka kwestii dotyczących wdrażania.  
@@ -22,16 +22,16 @@ Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. 
 ## <a name="eager-vs-lazy-evaluation"></a>Zapoznamy programu vs. Obliczanie z opóźnieniem  
  Podczas pisania metody, która implementuje odroczonym należy zdecydować, czy zaimplementować metodę, przy użyciu opóźnieniem lub eager oceny.  
   
--   W *opóźnieniem*, jeden element z kolekcji źródłowej jest przetwarzany w każdym wywołaniu iteratora. Jest to typowy sposób, w którym są implementowane Iteratory.  
+- W *opóźnieniem*, jeden element z kolekcji źródłowej jest przetwarzany w każdym wywołaniu iteratora. Jest to typowy sposób, w którym są implementowane Iteratory.  
   
--   W *eager oceny*, pierwsze wywołanie funkcji iteratora spowoduje całą kolekcję przetwarzany. Tymczasową kopię kolekcji źródłowej, mogą być także wymagane. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A> metoda ma sortowania całą kolekcję przed zwróceniem pierwszego elementu.  
+- W *eager oceny*, pierwsze wywołanie funkcji iteratora spowoduje całą kolekcję przetwarzany. Tymczasową kopię kolekcji źródłowej, mogą być także wymagane. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A> metoda ma sortowania całą kolekcję przed zwróceniem pierwszego elementu.  
   
  Obliczanie leniwe zwykle daje lepszą wydajność, ponieważ dystrybuuje obciążenie przetwarzania równomiernie w całej oceny kolekcji, a minimalizuje wykorzystanie danych tymczasowych. Oczywiście w przypadku niektórych operacji nie ma innych opcji niż celu zmaterializowania wyników pośrednich.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Następny temat w tym samouczku przedstawiono odroczonego wykonania:  
   
--   [Przykład wykonania odroczonego (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Przykład wykonania odroczonego (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

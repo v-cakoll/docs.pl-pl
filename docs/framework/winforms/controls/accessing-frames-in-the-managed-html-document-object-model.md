@@ -10,22 +10,22 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640545"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do ramek w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Niektóre dokumenty HTML składają się z *ramek*, lub windows, które mogą pomieścić własnych unikatowych dokumentów HTML. Przy użyciu klatek można łatwo tworzyć strony HTML, w których statyczne, takie jak pasek nawigacyjny pozostały jedną lub kilka części strony, podczas gdy inne ramki stale zmienić jego zawartość.  
   
  Autorzy utworzyć ramki w jeden z dwóch sposobów:  
   
--   Za pomocą `FRAMESET` i `FRAME` tagi, które tworzą stały systemu windows.  
+- Za pomocą `FRAMESET` i `FRAME` tagi, które tworzą stały systemu windows.  
   
  —lub—  
   
--   Za pomocą `IFRAME` znacznik, który tworzy okno przestawne, które może być przeniesiony w czasie wykonywania.  
+- Za pomocą `IFRAME` znacznik, który tworzy okno przestawne, które może być przeniesiony w czasie wykonywania.  
   
 1. Ponieważ ramki zawierają dokumentów HTML, są one reprezentowane w modelu DOM (Document Object) jako elementy okna i elementy ramki.  
   

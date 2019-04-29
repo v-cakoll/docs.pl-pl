@@ -3,11 +3,11 @@ title: polecenie odwołania remove DotNet
 description: Polecenia dotnet Usuń odwołanie zapewnia wygodny sposób, aby usunąć odwołania projekt-projekt.
 ms.date: 05/29/2018
 ms.openlocfilehash: bfac4721743babcf48fd8e86a50c8df136e1bfce
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648597"
 ---
 # <a name="dotnet-remove-reference"></a>polecenia DotNet Usuń odwołanie
 

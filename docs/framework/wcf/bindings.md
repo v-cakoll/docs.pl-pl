@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608882"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Wiązania WCF (Windows Communication Foundation)
 Powiązania Określ, jak punkt końcowy usługi Windows Communication Foundation (WCF) komunikuje się z innych punktów końcowych. W jego najbardziej podstawowym powiązanie należy określić transportu (na przykład HTTP lub TCP) do użycia. Można również ustawić inne właściwości, takich jak obsługa transakcji i zabezpieczeń, za pośrednictwem powiązania.  

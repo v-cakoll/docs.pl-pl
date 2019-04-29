@@ -9,11 +9,11 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 102ed3977d56ace0dab63b1f066cc10a6fc5dfbf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663066"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (opcje kompilatora C#)
 **- Appconfig** — opcja kompilatora umożliwia określanie lokalizacji zestawu pliku konfiguracji aplikacji (app.config) do środowisko uruchomieniowe języka wspólnego (CLR) w czasie powiązania zestawu aplikacji C#.  

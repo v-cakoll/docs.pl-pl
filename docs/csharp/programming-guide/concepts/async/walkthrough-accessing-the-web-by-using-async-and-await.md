@@ -3,11 +3,11 @@ title: 'Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą async i await (
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668656"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)
 
@@ -46,19 +46,19 @@ Jeśli nie chcesz samodzielnie tworzyć aplikacje, możesz pobrać [próbka asyn
 
 4. Wyróżnij **TextBox** sterowania i w **właściwości** okna, ustaw następujące wartości:
 
-    -   Ustaw **nazwa** właściwość `resultsTextBox`.
+    - Ustaw **nazwa** właściwość `resultsTextBox`.
 
-    -   Ustaw **wysokość** właściwości do 250.
+    - Ustaw **wysokość** właściwości do 250.
 
-    -   Ustaw **szerokość** właściwości do 500.
+    - Ustaw **szerokość** właściwości do 500.
 
-    -   Na **tekstu** Określ czcionki o stałej szerokości, takich jak konsola New lub globalnego o stałej szerokości.
+    - Na **tekstu** Określ czcionki o stałej szerokości, takich jak konsola New lub globalnego o stałej szerokości.
 
 5. Wyróżnij **przycisk** sterowania i w **właściwości** okna, ustaw następujące wartości:
 
-    -   Ustaw **nazwa** właściwość `startButton`.
+    - Ustaw **nazwa** właściwość `startButton`.
 
-    -   Zmień wartość właściwości **zawartości** właściwość **przycisk** do **Start**.
+    - Zmień wartość właściwości **zawartości** właściwość **przycisk** do **Start**.
 
 6. Położenie pola tekstowego i przycisku Tak, aby znajdować się w **MainWindow** okna.
 
@@ -108,13 +108,13 @@ Jeśli nie chcesz samodzielnie tworzyć aplikacje, możesz pobrać [próbka asyn
 
 3. Kod używany w rozwiązaniu synchronicznym zawiera poniższe cztery metody:
 
-    -   `SumPageSizes`, która pobiera listę adresów URL strony sieci Web, z `SetUpURLList` , a następnie wywołuje `GetURLContents` i `DisplayResults` do przetworzenia każdego adresu URL.
+    - `SumPageSizes`, która pobiera listę adresów URL strony sieci Web, z `SetUpURLList` , a następnie wywołuje `GetURLContents` i `DisplayResults` do przetworzenia każdego adresu URL.
 
-    -   `SetUpURLList`, która tworzy i zwraca listę adresów internetowych.
+    - `SetUpURLList`, która tworzy i zwraca listę adresów internetowych.
 
-    -   `GetURLContents`, która pobiera zawartość każdej witryny sieci Web i zwraca zawartość w postaci tablicy bajtów.
+    - `GetURLContents`, która pobiera zawartość każdej witryny sieci Web i zwraca zawartość w postaci tablicy bajtów.
 
-    -   `DisplayResults`, który wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL.
+    - `DisplayResults`, który wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL.
 
     Skopiuj poniższe cztery metody, a następnie wklej je w obszarze `startButton_Click` programu obsługi zdarzeń w MainWindow.xaml.cs:
 
@@ -258,9 +258,9 @@ Należy zauważyć, że zajmuje kilka sekund, aby wyświetlić liczby elementów
 
 3. Ponieważ dodałeś `await` występuje błąd kompilatora operatora w poprzednim kroku. Operator może służyć tylko w przypadku metod, które są oznaczone [async](../../../../csharp/language-reference/keywords/async.md) modyfikator. Ignorowanie błędu podczas Powtórz procedurę konwersji, Zastąp wywołanie `CopyTo` wywołaniem `CopyToAsync`.
 
-    -   Zmień nazwę metody, która jest wywoływana w celu <xref:System.IO.Stream.CopyToAsync%2A>.
+    - Zmień nazwę metody, która jest wywoływana w celu <xref:System.IO.Stream.CopyToAsync%2A>.
 
-    -   `CopyTo` Lub `CopyToAsync` metoda kopiuje bajtów do jej argument `content`i nie zwraca zrozumiałą wartość. W wersji synchroniczne wywołanie `CopyTo` jest prostą instrukcję, która nie zwraca wartości. Wersja asynchroniczna `CopyToAsync`, zwraca <xref:System.Threading.Tasks.Task>. Zadanie funkcje takie jak "Task(void)" i włącza metodę oczekiwanie. Zastosuj `Await` lub `await` do wywołania `CopyToAsync`, jak pokazano w poniższym kodzie.
+    - `CopyTo` Lub `CopyToAsync` metoda kopiuje bajtów do jej argument `content`i nie zwraca zrozumiałą wartość. W wersji synchroniczne wywołanie `CopyTo` jest prostą instrukcję, która nie zwraca wartości. Wersja asynchroniczna `CopyToAsync`, zwraca <xref:System.Threading.Tasks.Task>. Zadanie funkcje takie jak "Task(void)" i włącza metodę oczekiwanie. Zastosuj `Await` lub `await` do wywołania `CopyToAsync`, jak pokazano w poniższym kodzie.
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Należy zauważyć, że zajmuje kilka sekund, aby wyświetlić liczby elementów
 
      Metoda `GetURLContents` zawiera instrukcję return, a instrukcja zwraca tablicę bajtów. W związku z tym zwracany typ wersji asynchronicznej jest Task(T), gdzie T jest tablicą bajtów. W podpisie metody, należy wprowadzić następujące zmiany:
 
-    -   Zmień typ zwracany `Task<byte[]>`.
+    - Zmień typ zwracany `Task<byte[]>`.
 
-    -   Zgodnie z Konwencją metod asynchronicznych mają nazwy, które kończą się na "Async", więc Zmień nazwę metody `GetURLContentsAsync`.
+    - Zgodnie z Konwencją metod asynchronicznych mają nazwy, które kończą się na "Async", więc Zmień nazwę metody `GetURLContentsAsync`.
 
      Poniższy kod przedstawia te zmiany.
 
@@ -305,9 +305,9 @@ Należy zauważyć, że zajmuje kilka sekund, aby wyświetlić liczby elementów
 
 1. Powtórz kroki z poprzedniej procedury, aby uzyskać `SumPageSizes`. Najpierw należy zmienić wywołanie `GetURLContents` do wywołania asynchronicznego.
 
-    -   Zmień nazwę metody, która jest wywoływana z `GetURLContents` do `GetURLContentsAsync`, jeśli jeszcze tego nie zrobiłeś.
+    - Zmień nazwę metody, która jest wywoływana z `GetURLContents` do `GetURLContentsAsync`, jeśli jeszcze tego nie zrobiłeś.
 
-    -   Zastosuj `await` do zadania, `GetURLContentsAsync` zwraca uzyskać bajt tablica wartości.
+    - Zastosuj `await` do zadania, `GetURLContentsAsync` zwraca uzyskać bajt tablica wartości.
 
      Poniższy kod przedstawia te zmiany.
 
@@ -326,11 +326,11 @@ Należy zauważyć, że zajmuje kilka sekund, aby wyświetlić liczby elementów
 
 2. W podpisie metody, należy wprowadzić następujące zmiany:
 
-    -   Oznacz metodę z `async` modyfikator.
+    - Oznacz metodę z `async` modyfikator.
 
-    -   Dodaj "Async" w nazwie metody.
+    - Dodaj "Async" w nazwie metody.
 
-    -   Nie jest zmienną zwracany nie zadań, T, tym razem, ponieważ `SumPageSizesAsync` nie zwraca wartości na T. (Nie ma metody `return` instrukcja.) Jednak metoda musi zwracać `Task` jako oczekujący. W związku z tym, zmień zwracany typ metody z `void` do `Task`.
+    - Nie jest zmienną zwracany nie zadań, T, tym razem, ponieważ `SumPageSizesAsync` nie zwraca wartości na T. (Nie ma metody `return` instrukcja.) Jednak metoda musi zwracać `Task` jako oczekujący. W związku z tym, zmień zwracany typ metody z `void` do `Task`.
 
     Poniższy kod przedstawia te zmiany.
 
@@ -391,9 +391,9 @@ Należy zauważyć, że zajmuje kilka sekund, aby wyświetlić liczby elementów
 
 2. Dane wyjściowe podobne dane wyjściowe w rozwiązaniu synchronicznym powinna zostać wyświetlona. Jednak zauważyć następujące różnice.
 
-    -   Wyniki nie występują w tym samym czasie, po zakończeniu przetwarzania. Na przykład oba programy zawiera wiersz w `startButton_Click` , czyści pole tekstowe. Celem jest czyścić pole tekstowe między działa, jeśli wybierzesz **Start** przycisk, aby po raz drugi, po pojawieniu się jeden zestaw wyników. W to wersja synchroniczna pole tekstowe jest wyczyszczone przed zliczeń pojawiają się po raz drugi, gdy odbywa się pliki do pobrania i jest bezpłatna wykonywanie innych zadań w wątku interfejsu użytkownika. W wersjach asynchronicznych, pola tekstowego czyści natychmiast, po dokonaniu wyboru **Start** przycisku.
+    - Wyniki nie występują w tym samym czasie, po zakończeniu przetwarzania. Na przykład oba programy zawiera wiersz w `startButton_Click` , czyści pole tekstowe. Celem jest czyścić pole tekstowe między działa, jeśli wybierzesz **Start** przycisk, aby po raz drugi, po pojawieniu się jeden zestaw wyników. W to wersja synchroniczna pole tekstowe jest wyczyszczone przed zliczeń pojawiają się po raz drugi, gdy odbywa się pliki do pobrania i jest bezpłatna wykonywanie innych zadań w wątku interfejsu użytkownika. W wersjach asynchronicznych, pola tekstowego czyści natychmiast, po dokonaniu wyboru **Start** przycisku.
 
-    -   Co najważniejsze wątek interfejsu użytkownika nie jest zablokowane podczas jej pliki do pobrania. Możesz przenieść lub zmienić rozmiar okna podczas pobierania zasobów sieci web liczone, a wyświetlane. Jeśli jeden z witryn sieci Web działa wolno lub nie odpowiada, możesz anulować operację, wybierając **Zamknij** przycisku (x czerwone pola w prawym górnym rogu).
+    - Co najważniejsze wątek interfejsu użytkownika nie jest zablokowane podczas jej pliki do pobrania. Możesz przenieść lub zmienić rozmiar okna podczas pobierania zasobów sieci web liczone, a wyświetlane. Jeśli jeden z witryn sieci Web działa wolno lub nie odpowiada, możesz anulować operację, wybierając **Zamknij** przycisku (x czerwone pola w prawym górnym rogu).
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>Replace — metoda GetURLContentsAsync za pomocą metody .NET Framework
 

@@ -3,24 +3,24 @@ title: ograniczenie integralności referencyjnej
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
 ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665305"
 ---
 # <a name="referential-integrity-constraint"></a>ograniczenie integralności referencyjnej
 A *ograniczenia integralności referencyjnej* w Entity Data Model (EDM) jest podobny do ograniczenia integralności referencyjnej w relacyjnej bazie danych. W ten sam sposób, w kolumnie (lub kolumny) z tabeli bazy danych odwołać się do klucza podstawowego z innej tabeli [właściwość](../../../../docs/framework/data/adonet/property.md) (lub właściwości) z [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) może odwoływać się [klucza jednostki ](../../../../docs/framework/data/adonet/entity-key.md) innego typu jednostki. Typ jednostki, do którego istnieje odwołanie jest wywoływana *jednostki zakończenia* ograniczenia. Typ jednostki, który odwołuje się do zakończenia podmiotu zabezpieczeń jest wywoływana *zależne zakończenia* ograniczenia.  
   
  Ograniczenie integralności referencyjnej jest zdefiniowany jako część [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) między dwoma typami encji. Definicja dla ograniczenia integralności referencyjnej określa następujące informacje:  
   
--   Główny koniec tego ograniczenia. (Typ jednostki którego klucz jednostki odwołuje się do zakończenia zależnego.)  
+- Główny koniec tego ograniczenia. (Typ jednostki którego klucz jednostki odwołuje się do zakończenia zależnego.)  
   
--   Klucz elementu end podmiotu zabezpieczeń.  
+- Klucz elementu end podmiotu zabezpieczeń.  
   
--   Zależne zakończenia tego ograniczenia. (Typ jednostki obsługiwanej przez właściwość lub właściwości odwołujące się do klucza jednostki głównej zakończenia.)  
+- Zależne zakończenia tego ograniczenia. (Typ jednostki obsługiwanej przez właściwość lub właściwości odwołujące się do klucza jednostki głównej zakończenia.)  
   
--   Odwołujący się właściwości lub właściwości końca zależnych.  
+- Odwołujący się właściwości lub właściwości końca zależnych.  
   
  Celem ograniczenia integralności referencyjnej w EDM jest zapewnienie, prawidłowy skojarzenia zawsze istnieje. Aby uzyskać więcej informacji, zobacz [właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md).  
   

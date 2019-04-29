@@ -12,30 +12,30 @@ ms.assetid: 113646de-7ea0-4f0e-8df0-c46dab3e8733
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 98d363b6c0838ff1211d969391f04ce8ccddd003
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643572"
 ---
 # <a name="calling-a-dll-function"></a>Wywołanie funkcji DLL
-Wywoływanie niezarządzanych funkcji DLL jest niemal identyczny jak wywołanie innego kodu zarządzanego, istnieją różnice, które mogą ułatwić funkcji DLL wydaje się być mylące na początku. W tej sekcji przedstawiono tematach opisano niektóre z nietypowych problemów związanych z wywołaniem.  
+Wywoływanie niezarządzanych funkcji DLL jest niemal identyczne do wywoływania innego kodu zarządzanego, istnieją różnice, które mogą ułatwić funkcji DLL wydawać się niejasne na początku. Ta sekcja wprowadza tematach opisano niektóre nietypowe problemy związane z wywołaniem.  
   
- Struktury, które są zwracane z platformy wywołania wywołania musi być typów danych, które mają taką samą reprezentację w kodzie zarządzane i niezarządzane. Takie typy są nazywane *typy kopiowalne* , ponieważ nie wymaga konwersji (zobacz [Kopiowalne i typy Kopiowalne inne niż](../../../docs/framework/interop/blittable-and-non-blittable-types.md)). Aby wywołać funkcję, która ma strukturę niekopiowalne jako jej typu zwracanego, można zdefiniować typu pomocnika kopiowalne ten sam rozmiar jako typ niekopiowalne i Konwertuj dane po funkcja zwraca wartość.  
+ Wywołania struktury, które są zwracane z platformy musi być typy danych, które mają tę samą reprezentację w kodzie zarządzanym i niezarządzanym. Typy takie są nazywane *kopiowalnymi* , ponieważ nie wymaga konwersji (zobacz [Kopiowalne i typy danych Kopiowalnych inne niż](../../../docs/framework/interop/blittable-and-non-blittable-types.md)). Aby wywołać funkcję, która ma strukturę niekopiowalnych jako jego typem zwracanym, może definiowaniu typu Pomocnika danych kopiowalnych taki sam rozmiar jak typ niekopiowalnych i konwersji danych, po powrocie funkcji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przekazywanie struktur](../../../docs/framework/interop/passing-structures.md)  
- Identyfikuje problemy przekazywanie struktur danych z układem wstępnie zdefiniowane.  
+ Identyfikuje problemy dotyczące przekazywania struktur danych przy użyciu wstępnie zdefiniowanego układu.  
   
  [Funkcje wywołania zwrotnego](../../../docs/framework/interop/callback-functions.md)  
- Zawiera podstawowe informacje o funkcji wywołania zwrotnego.  
+ Zawiera podstawowe informacje o funkcjach wywołania zwrotnego.  
   
  [Instrukcje: Implementowanie funkcji wywołania zwrotnego](../../../docs/framework/interop/how-to-implement-callback-functions.md)  
- Opisuje sposób Implementowanie funkcji wywołania zwrotnego w kodzie zarządzanym.  
+ Opisuje sposób implementacji funkcji wywołania zwrotnego w kodzie zarządzanym.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- Opisuje sposób wywoływania niezarządzanego wywołanie funkcji DLL przy użyciu platformy.  
+ W tym artykule opisano sposób wywoływania niezarządzanego wywoływanie funkcji DLL za pomocą platformy.  
   
  [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- Opisuje sposób deklarowanie parametrów metod i przekazywanie argumentów do funkcji wyeksportowane przez niezarządzanych bibliotek.
+ W tym artykule opisano, jak deklarować parametrów metod i przekazywać argumenty do funkcji eksportowanych przez niezarządzanych bibliotek.

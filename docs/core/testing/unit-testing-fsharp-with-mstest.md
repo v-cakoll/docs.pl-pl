@@ -8,11 +8,11 @@ dev_langs:
 - fsharp
 ms.custom: seodec18
 ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665678"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Testy jednostkowe F# bibliotek w programie .NET Core za pomocą polecenia dotnet test i struktury MSTest
 

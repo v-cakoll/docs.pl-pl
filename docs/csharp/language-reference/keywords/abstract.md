@@ -9,11 +9,11 @@ helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 ms.openlocfilehash: a85cf00a8dd1b406c7e5185fd332a507a3ca7c83
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662234"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
 `abstract` Modyfikator oznacza, że rzecz modyfikowanego ma implementacji brakujące lub niekompletne. Abstrakcyjna modyfikatora można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona do użycia wyłącznie jako klasa bazowa innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub zawarte w klasie abstrakcyjnej, muszą być zaimplementowane przez klasy, które pochodzą z klasy abstrakcyjnej.  
@@ -25,23 +25,23 @@ ms.locfileid: "57203525"
   
  Klasy abstrakcyjne oferują następujące funkcje:  
   
--   Nie można utworzyć wystąpienia klasy abstrakcyjnej.  
+- Nie można utworzyć wystąpienia klasy abstrakcyjnej.  
   
--   Klasa abstrakcyjna może zawierać metody abstrakcyjne i metod dostępu.  
+- Klasa abstrakcyjna może zawierać metody abstrakcyjne i metod dostępu.  
   
--   Nie można modyfikować klasy abstrakcyjnej jest [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) modyfikator ponieważ modyfikatorów mają znaczenie odwrotną. `sealed` Modyfikator zapobiega są dziedziczone przez klasy i `abstract` modyfikator wymaga klasy dziedziczone.  
+- Nie można modyfikować klasy abstrakcyjnej jest [zapieczętowanego](../../../csharp/language-reference/keywords/sealed.md) modyfikator ponieważ modyfikatorów mają znaczenie odwrotną. `sealed` Modyfikator zapobiega są dziedziczone przez klasy i `abstract` modyfikator wymaga klasy dziedziczone.  
   
--   Nieabstrakcyjnej klasy pochodnej z klasy abstrakcyjnej muszą zawierać rzeczywistej implementacji wszystkie odziedziczone metody abstrakcyjne i metod dostępu.  
+- Nieabstrakcyjnej klasy pochodnej z klasy abstrakcyjnej muszą zawierać rzeczywistej implementacji wszystkie odziedziczone metody abstrakcyjne i metod dostępu.  
   
  Użyj `abstract` modyfikatora w deklaracji metody lub właściwości w celu wskazania, że metoda lub właściwość nie zawiera implementacji.  
   
  Metody abstrakcyjne oferują następujące funkcje:  
   
--   Metoda abstrakcyjna jest niejawnie metodę wirtualną.  
+- Metoda abstrakcyjna jest niejawnie metodę wirtualną.  
   
--   Deklaracje metody abstrakcyjne są dozwolone tylko w klas abstrakcyjnych.  
+- Deklaracje metody abstrakcyjne są dozwolone tylko w klas abstrakcyjnych.  
   
--   Ponieważ deklaracja metody abstrakcyjnej zapewnia nie rzeczywiste wdrożenie, jest nie treści metody; Deklaracja metody po prostu kończy się średnikiem wiąże się nie nawiasów klamrowych ({}) po podpis. Na przykład:  
+- Ponieważ deklaracja metody abstrakcyjnej zapewnia nie rzeczywiste wdrożenie, jest nie treści metody; Deklaracja metody po prostu kończy się średnikiem wiąże się nie nawiasów klamrowych ({}) po podpis. Na przykład:  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -49,13 +49,13 @@ ms.locfileid: "57203525"
   
      Implementacja znajduje się za pomocą metody [zastąpienia](../../../csharp/language-reference/keywords/override.md), który jest członkiem klasy nieabstrakcyjnej.  
   
--   Jest to błąd, aby użyć [statyczne](../../../csharp/language-reference/keywords/static.md) lub [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) Modyfikatory w deklaracji metody abstrakcyjnej.  
+- Jest to błąd, aby użyć [statyczne](../../../csharp/language-reference/keywords/static.md) lub [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) Modyfikatory w deklaracji metody abstrakcyjnej.  
   
  Właściwości abstrakcyjne zachowują się jak metody abstrakcyjne, z wyjątkiem różnic w składni deklaracji i wywoływania.  
   
--   Jest to błąd, aby użyć `abstract` modyfikator na właściwość statyczna.  
+- Jest to błąd, aby użyć `abstract` modyfikator na właściwość statyczna.  
   
--   To właściwość dziedziczona abstrakcyjna może zostać przesłonięta w klasie pochodnej przez tym deklaracja właściwości, która używa [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator.  
+- To właściwość dziedziczona abstrakcyjna może zostać przesłonięta w klasie pochodnej przez tym deklaracja właściwości, która używa [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator.  
   
  Aby uzyskać więcej informacji na temat klasy abstrakcyjne, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   

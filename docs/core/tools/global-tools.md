@@ -5,11 +5,11 @@ author: KathleenDollard
 ms.date: 05/29/2018
 ms.custom: seodec18
 ms.openlocfilehash: 3bbf1e7953482dc07f05570443cf640a9fab6258
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61647755"
 ---
 # <a name="net-core-global-tools-overview"></a>Omówienie narzędzia globalnej platformy .NET core
 

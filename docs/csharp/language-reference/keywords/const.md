@@ -9,11 +9,11 @@ helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
 ms.openlocfilehash: 7cf4fc52691565a850b4f34574828ad4e043998e
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661987"
 ---
 # <a name="const-c-reference"></a>const (odwołanie w C#)
 

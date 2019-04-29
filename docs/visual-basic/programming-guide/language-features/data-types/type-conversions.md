@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
 ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663287"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Konwersje plików w Visual Basic
 Proces zmiany wartości z jednego typu danych na inny typ jest nazywany *konwersji*. Konwersje są albo *rozszerzanie* lub *zawężanie*, w zależności od pojemności danych typów, które są zaangażowani. Są one również *niejawne* lub *jawne*, w zależności od składni w kodzie źródłowym.  
@@ -30,7 +30,7 @@ Proces zmiany wartości z jednego typu danych na inny typ jest nazywany *konwers
  [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  Ilustruje Konwertowanie pomiędzy ciągami a numeryczne, `Boolean`, lub wartości daty/godziny.  
   
- [Porady: konwertowanie obiektu na inny typ w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Instrukcje: Konwertowanie obiektu na inny typ w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  Pokazuje sposób konwertowania `Object` zmiennej do jakichkolwiek innych typów danych.  
   
  [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  

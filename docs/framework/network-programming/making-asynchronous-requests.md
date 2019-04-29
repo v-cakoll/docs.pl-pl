@@ -12,11 +12,11 @@ helpviewer_keywords:
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642194"
 ---
 # <a name="making-asynchronous-requests"></a>Tworzenie żądań asynchronicznych
 <xref:System.Net> Klasy na użytek programu .NET Framework standardowa asynchronicznego modelu programowania asynchronicznego dostępu do zasobów w Internecie. <xref:System.Net.WebRequest.BeginGetResponse%2A> i <xref:System.Net.WebRequest.EndGetResponse%2A> metody <xref:System.Net.WebRequest> klasy rozpoczęcie i zakończenie żądań asynchronicznych do zasobu internetowego.  
@@ -32,15 +32,15 @@ ms.locfileid: "59208569"
   
  **ClientGetAsync** klasa implementuje asynchroniczne żądanie do zasobu internetowego i zapisuje wynikowy odpowiedzi do konsoli. Zawiera metody i właściwości opisane w poniższej liście.  
   
--   `allDone` Właściwość zawiera wystąpienie <xref:System.Threading.ManualResetEvent> klasę, która sygnalizuje zakończenie żądania.  
+- `allDone` Właściwość zawiera wystąpienie <xref:System.Threading.ManualResetEvent> klasę, która sygnalizuje zakończenie żądania.  
   
--   `Main()` Metoda odczytuje wiersz polecenia i rozpoczyna się żądanie dla określonego zasobu internetowego. Tworzy **WebRequest** `wreq` i **RequestState** `rs`, wywołania **BeginGetResponse w czasie** rozpoczęcie przetwarzania żądania, a następnie wywołania `allDone.WaitOne()`metody, aby aplikacja nie zostanie zakończona, do czasu ukończenia wywołania zwrotnego. Po odpowiedzi są odczytywane z zasobu internetowego `Main()` zapisuje je do konsoli i zakończenia aplikacji.  
+- `Main()` Metoda odczytuje wiersz polecenia i rozpoczyna się żądanie dla określonego zasobu internetowego. Tworzy **WebRequest** `wreq` i **RequestState** `rs`, wywołania **BeginGetResponse w czasie** rozpoczęcie przetwarzania żądania, a następnie wywołania `allDone.WaitOne()`metody, aby aplikacja nie zostanie zakończona, do czasu ukończenia wywołania zwrotnego. Po odpowiedzi są odczytywane z zasobu internetowego `Main()` zapisuje je do konsoli i zakończenia aplikacji.  
   
--   `showusage()` Metoda zapisuje się przykładowy wiersz polecenia w konsoli. Jest ona wywoływana przez `Main()` gdy nie identyfikatora URI znajduje się w wierszu polecenia.  
+- `showusage()` Metoda zapisuje się przykładowy wiersz polecenia w konsoli. Jest ona wywoływana przez `Main()` gdy nie identyfikatora URI znajduje się w wierszu polecenia.  
   
--   `RespCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne dla żądania internetowe. Tworzy **elementu WebResponse** zawierające odpowiedzi z zasobu internetowego pobiera w strumieniu odpowiedzi, a następnie rozpoczyna, asynchronicznego odczytywania danych ze strumienia.  
+- `RespCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne dla żądania internetowe. Tworzy **elementu WebResponse** zawierające odpowiedzi z zasobu internetowego pobiera w strumieniu odpowiedzi, a następnie rozpoczyna, asynchronicznego odczytywania danych ze strumienia.  
   
--   `ReadCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne do odczytywania strumienia odpowiedzi. Transferuje dane otrzymane z zasobem internetowym do **ResponseData** właściwość **RequestState** wystąpienia, a następnie rozpoczyna się innym asynchronicznego odczytu strumienia odpowiedzi do czasu nie ma więcej danych zwracane. Po przeczytaniu wszystkie dane `ReadCallBack()` zamyka strumienia odpowiedzi i wywołania `allDone.Set()` metodę w celu wskazania, że całej odpowiedzi znajduje się w **ResponseData**.  
+- `ReadCallBack()` Metoda implementuje metody asynchroniczne wywołanie zwrotne do odczytywania strumienia odpowiedzi. Transferuje dane otrzymane z zasobem internetowym do **ResponseData** właściwość **RequestState** wystąpienia, a następnie rozpoczyna się innym asynchronicznego odczytu strumienia odpowiedzi do czasu nie ma więcej danych zwracane. Po przeczytaniu wszystkie dane `ReadCallBack()` zamyka strumienia odpowiedzi i wywołania `allDone.Set()` metodę w celu wskazania, że całej odpowiedzi znajduje się w **ResponseData**.  
   
     > [!NOTE]
     >  Jest niezwykle, że wszystkie strumienie sieci, są zamknięte. Jeśli nie zamkniesz każdego strumienia żądania i odpowiedzi, aplikacja zabraknie połączenia z serwerem i mógł przetwarzać dodatkowych żądań.  

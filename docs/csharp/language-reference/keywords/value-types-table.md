@@ -8,11 +8,11 @@ helpviewer_keywords:
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
 ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660310"
 ---
 # <a name="value-types-table-c-reference"></a>Tabela typów wartości (odwołanie w C#)
 

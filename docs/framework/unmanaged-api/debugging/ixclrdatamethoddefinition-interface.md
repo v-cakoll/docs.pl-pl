@@ -1,5 +1,5 @@
 ---
-title: Interfejs IXCLRDataMethodDefinition
+title: IXCLRDataMethodDefinition, interfejs
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition Interface
@@ -16,13 +16,13 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 4b1e8cb1cf34bb1c5ade1353351aab953e2b734a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670108"
 ---
-# <a name="ixclrdatamethoddefinition-interface"></a>Interfejs IXCLRDataMethodDefinition
+# <a name="ixclrdatamethoddefinition-interface"></a>IXCLRDataMethodDefinition, interfejs
 
 Udostępnia metody do wykonywania zapytań o definicję metody.
 

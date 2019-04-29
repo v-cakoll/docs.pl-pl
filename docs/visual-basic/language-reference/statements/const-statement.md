@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
 ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638317"
 ---
 # <a name="const-statement-visual-basic"></a>Const — Instrukcja (Visual Basic)
 Deklaruje i definiuje co najmniej jedną stałą.  
@@ -57,35 +57,35 @@ Const constantlist
   
 ## <a name="rules"></a>reguły  
   
--   **Kontekst deklaracji.** Stałą zadeklarowane na poziomie modułu, poza każda procedura jest *członek stałej*; jest członkiem klasy, struktury lub modułu, deklaruje ją.  
+- **Kontekst deklaracji.** Stałą zadeklarowane na poziomie modułu, poza każda procedura jest *członek stałej*; jest członkiem klasy, struktury lub modułu, deklaruje ją.  
   
      Stałe zadeklarowane na poziomie procedury są *stała lokalna*; jest ono kontem lokalnym procedurę lub blok, który deklaruje ją.  
   
--   **Atrybuty.** Atrybuty można zastosować tylko do elementu członkowskiego stałych, a nie do lokalnego stałe. Atrybut przyczynia się informacji metadanych zestawu, które nie są istotne dla magazynów tymczasowych, takich jak lokalne stałe.  
+- **Atrybuty.** Atrybuty można zastosować tylko do elementu członkowskiego stałych, a nie do lokalnego stałe. Atrybut przyczynia się informacji metadanych zestawu, które nie są istotne dla magazynów tymczasowych, takich jak lokalne stałe.  
   
--   **Modyfikatory.** Domyślnie są stałymi `Shared`, `Static`, i `ReadOnly`. Nie można użyć dowolnego z tych słów kluczowych, podczas deklarowania stałą.  
+- **Modyfikatory.** Domyślnie są stałymi `Shared`, `Static`, i `ReadOnly`. Nie można użyć dowolnego z tych słów kluczowych, podczas deklarowania stałą.  
   
      Na poziomie procedury nie można użyć `Shadows` lub dowolne dostępu Modyfikatory do deklarowania lokalnym stałymi.  
   
--   **Kilka stałych.** Możesz zadeklarować kilka stałych w tej samej instrukcji deklaracji, określając `constantname` wchodzi w skład dla każdej z nich. Kilka stałych są oddzielone przecinkami.  
+- **Kilka stałych.** Możesz zadeklarować kilka stałych w tej samej instrukcji deklaracji, określając `constantname` wchodzi w skład dla każdej z nich. Kilka stałych są oddzielone przecinkami.  
   
 ## <a name="data-type-rules"></a>Zasady dla typu danych  
   
--   **Typy danych.** `Const` Instrukcji może zadeklarować zmienną typu danych. Można określić dowolny typ danych lub nazwę wyliczenia.  
+- **Typy danych.** `Const` Instrukcji może zadeklarować zmienną typu danych. Można określić dowolny typ danych lub nazwę wyliczenia.  
   
--   **Domyślny typ.** Jeśli nie określisz `datatype`, stałej ma typ danych `initializer`. Jeśli określisz zarówno `datatype` i `initializer`, typ danych `initializer` musi być konwertowany na `datatype`. Jeśli żadna `datatype` ani `initializer` jest obecny, wartość domyślna to typ danych `Object`.  
+- **Domyślny typ.** Jeśli nie określisz `datatype`, stałej ma typ danych `initializer`. Jeśli określisz zarówno `datatype` i `initializer`, typ danych `initializer` musi być konwertowany na `datatype`. Jeśli żadna `datatype` ani `initializer` jest obecny, wartość domyślna to typ danych `Object`.  
   
--   **Różne typy.** Można określić różne typy danych dla różnych stałych przy użyciu oddzielnego `As` klauzula dla każdej zmiennej można zadeklarować. Jednak nie można zadeklarować kilka stałych do tego samego typu przy użyciu wspólnego `As` klauzuli.  
+- **Różne typy.** Można określić różne typy danych dla różnych stałych przy użyciu oddzielnego `As` klauzula dla każdej zmiennej można zadeklarować. Jednak nie można zadeklarować kilka stałych do tego samego typu przy użyciu wspólnego `As` klauzuli.  
   
--   **Inicjowanie.** Należy zainicjować wartość każdego stała `constantlist`. Możesz użyć `initializer` dostarczyć wyrażenie ma być przypisany do stałej. Wyrażenie może być dowolną kombinacją literały, inne stałe, które są już zdefiniowane i elementów członkowskich wyliczenia, które są już zdefiniowane. Za pomocą operatorów arytmetycznych i logicznych połączyć takie elementy.  
+- **Inicjowanie.** Należy zainicjować wartość każdego stała `constantlist`. Możesz użyć `initializer` dostarczyć wyrażenie ma być przypisany do stałej. Wyrażenie może być dowolną kombinacją literały, inne stałe, które są już zdefiniowane i elementów członkowskich wyliczenia, które są już zdefiniowane. Za pomocą operatorów arytmetycznych i logicznych połączyć takie elementy.  
   
      Nie można używać zmiennych lub funkcji w `initializer`. Jednak można użyć słowa kluczowe konwersji takich jak `CByte` i `CShort`. Można również użyć `AscW` Jeśli wywołasz ze stałą `String` lub `Char` argumentu, ponieważ mogą być obliczane w czasie kompilacji.  
   
 ## <a name="behavior"></a>Zachowanie  
   
--   **Zakres.** Lokalnym stałymi jest dostępny tylko w obrębie ich procedurą lub blokiem. Element członkowski stałe będą dostępne w dowolnym miejscu ich klasy, struktury lub modułu.  
+- **Zakres.** Lokalnym stałymi jest dostępny tylko w obrębie ich procedurą lub blokiem. Element członkowski stałe będą dostępne w dowolnym miejscu ich klasy, struktury lub modułu.  
   
--   **Kwalifikacja.** Kod poza klasą, struktury lub modułu musi kwalifikować nazwy stałą element członkowski o nazwie tej klasy, struktury lub modułu. Kod poza terenem procedurą lub blokiem nie może odwoływać się do dowolnego lokalnego stałych w ramach tej procedury lub bloku.  
+- **Kwalifikacja.** Kod poza klasą, struktury lub modułu musi kwalifikować nazwy stałą element członkowski o nazwie tej klasy, struktury lub modułu. Kod poza terenem procedurą lub blokiem nie może odwoływać się do dowolnego lokalnego stałych w ramach tej procedury lub bloku.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Const` instrukcję, aby zadeklarować stałych do użycia zamiast wartości literału.  

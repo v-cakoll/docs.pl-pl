@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
 ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660882"
 ---
 # <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytania (odwołanie w C#)
 
@@ -23,7 +23,7 @@ Ta sekcja zawiera kontekstowymi słowami kluczowymi, używać w wyrażeniach zap
 |------------|-----------------|
 |[Z](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak zmienna iteracji).|
 |[gdzie](where-clause.md)|Filtry źródła elementy oparte na co najmniej jednego wyrażenia logiczne, rozdzielone i operatory logiczne AND ( `&&` lub <code>&#124;&#124;</code> ).|
-|[Wybierz pozycję](select-clause.md)|Określa typ i kształt, który będzie mieć elementy w zwracanej sekwencji, gdy zapytanie jest wykonywane.|
+|[select](select-clause.md)|Określa typ i kształt, który będzie mieć elementy w zwracanej sekwencji, gdy zapytanie jest wykonywane.|
 |[Grupy](group-clause.md)|Wyniki zapytania grupy zgodnie z określoną wartością klucza.|
 |[into](into.md)|Zawiera identyfikator, który może służyć jako odwołanie do wyników sprzężenia, grupy lub klauzuli select.|
 |[orderby](orderby-clause.md)|Sortuje wyniki zapytania w kolejności rosnącej lub malejącej w oparciu o domyślny moduł porównujący dla typu elementu.|

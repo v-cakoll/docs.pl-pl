@@ -6,11 +6,11 @@ helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
 ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661012"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out — Modyfikator parametrów (odwołanie w C#)
 `out` — Słowo kluczowe powoduje, że argumenty przekazywane przez odwołanie. To sprawia, że parametr formalny alias dla argumentu, który musi być zmienną. Innymi słowy żadnych operacji na parametr składa się od argumentu. Jest on podobny do [ref](ref.md) — słowo kluczowe, chyba że `ref` wymaga zainicjowanej zmiennej przed przekazaniem jej. Jest również, jak [w](in-parameter-modifier.md) — słowo kluczowe, chyba że `in` nie zezwala na o nazwie metody zmodyfikować wartość argumentu. Aby użyć `out` jawnie użyć parametru, zarówno definicję metody, jak i wywoływania metody `out` — słowo kluczowe. Na przykład:  
@@ -44,9 +44,9 @@ Właściwości nie są zmienne i nie można przekazać jako `out` parametrów.
   
 Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodzajów metod:  
   
--   Metody asynchroniczne, które można zdefiniować przy użyciu [async](../../../csharp/language-reference/keywords/async.md) modyfikator.  
+- Metody asynchroniczne, które można zdefiniować przy użyciu [async](../../../csharp/language-reference/keywords/async.md) modyfikator.  
   
--   Metody iteratora, które obejmują [yield return](../../../csharp/language-reference/keywords/yield.md) lub `yield break` instrukcji.  
+- Metody iteratora, które obejmują [yield return](../../../csharp/language-reference/keywords/yield.md) lub `yield break` instrukcji.  
 
 ## <a name="declaring-out-parameters"></a>Deklarowanie `out` parametrów   
 

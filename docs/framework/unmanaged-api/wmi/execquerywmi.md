@@ -17,13 +17,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 402bbcb9ad5e462a55c5ec2716417f512f03ee19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609064"
 ---
-# <a name="execquerywmi-function"></a>Funkcja ExecQueryWmi
+# <a name="execquerywmi-function"></a>ExecQueryWmi, funkcja
 
 Wykonuje zapytanie, aby pobrać obiekty.
 

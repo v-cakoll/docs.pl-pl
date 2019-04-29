@@ -8,10 +8,10 @@ helpviewer_keywords:
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
 ms.openlocfilehash: 389fc46e0293823fa859859b7a32ef3730ca8051
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646244"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Konstruktory wystąpień (Przewodnik programowania w języku C#)
 Konstruktory wystąpień są używane do Utwórz i zainicjuj wszystkie zmienne elementu członkowskiego wystąpienia, gdy używasz [nowe](../../../csharp/language-reference/keywords/new.md) wyrażenie do utworzenia obiektu [klasy](../../../csharp/language-reference/keywords/class.md). Można zainicjować [statyczne](../../../csharp/language-reference/keywords/static.md) klasy lub statycznych zmiennych w niestatycznych klas, należy zdefiniować Konstruktor statyczny. Aby uzyskać więcej informacji, zobacz [konstruktorów statycznych](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

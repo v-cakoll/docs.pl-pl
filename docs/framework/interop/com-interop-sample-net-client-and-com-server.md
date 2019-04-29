@@ -12,11 +12,11 @@ ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddbb7581ab254b428af621bc4412f60aa70bfb08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61643455"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer COM
 Niniejszy przykład pokazuje, jak [klient modelu .NET](#cpconcominteropsamplenetclientcomserveranchor1), opracowana z myślą o dostęp [serwer COM](#cpconcominteropsamplenetclientcomserveranchor2), tworzy wystąpienie klasy coclass COM i wywołuje składowych klasy do wykonywania obliczeń hipoteczny.  

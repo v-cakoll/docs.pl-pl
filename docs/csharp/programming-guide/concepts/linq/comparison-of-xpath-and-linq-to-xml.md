@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
 ms.openlocfilehash: afd8701c6a37fd981d9fc23b57904da80eabf86e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668396"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Porównanie metody XPath i LINQ to XML
 Wyrażenie XPath i LINQ to XML oferuje kilka podobne funkcje. Jednocześnie może służyć do kwerendy drzewa XML, zwracaniu takich wyników jako kolekcja elementów, Kolekcja atrybutów, kolekcja węzłów lub wartość elementu lub atrybutu. Istnieją również pewne różnice.  

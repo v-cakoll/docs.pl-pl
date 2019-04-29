@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
 ms.openlocfilehash: f241a8fcb971cfcd94cb32f0b3c0273552954349
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672838"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Porady: Odczyt z plików tekstowych rozdzielonych przecinkami, w języku Visual Basic
 `TextFieldParser` Obiekt umożliwia łatwe oraz efektywne analizowanie strukturyzowanych plików tekstowych, takie jak dzienniki. `TextFieldType` Właściwość definiuje, czy jest rozdzielonym pliku lub jednego z polami o stałej szerokości tekstu.  
@@ -43,15 +43,15 @@ ms.locfileid: "59314207"
 ## <a name="robust-programming"></a>Skuteczne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nie można przeanalizować wiersz w określonym formacie (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku Określa wiersz, powoduje wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> właściwość jest przypisany tekst zawarty w wierszu.  
+- Nie można przeanalizować wiersz w określonym formacie (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>). Komunikat o wyjątku Określa wiersz, powoduje wyjątek, podczas gdy <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> właściwość jest przypisany tekst zawarty w wierszu.  
   
--   Określony plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
+- Określony plik nie istnieje (<xref:System.IO.FileNotFoundException>).  
   
--   Sytuacja częściowego zaufania, użytkownik nie ma wystarczających uprawnień dostępu do tego pliku. (<xref:System.Security.SecurityException>).  
+- Sytuacja częściowego zaufania, użytkownik nie ma wystarczających uprawnień dostępu do tego pliku. (<xref:System.Security.SecurityException>).  
   
--   Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
+- Ścieżka jest zbyt długa (<xref:System.IO.PathTooLongException>).  
   
--   Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.UnauthorizedAccessException>).  
+- Użytkownik nie ma wystarczających uprawnień dostępu do pliku (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Zobacz także
 

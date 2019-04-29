@@ -3,11 +3,11 @@ title: polecenia DotNet
 description: Więcej informacji na temat polecenia dotnet (ogólny sterownik dla narzędzi interfejsu wiersza polecenia platformy .NET Core) i sposób jej użycia.
 ms.date: 06/04/2018
 ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61648532"
 ---
 # <a name="dotnet-command"></a>polecenia DotNet
 

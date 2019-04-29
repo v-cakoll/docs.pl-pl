@@ -9,11 +9,11 @@ ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 525c8332d2884415ccf883dae03866776510f354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650170"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>Dopasowywanie węzłów przy użyciu klasy XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia <xref:System.Xml.XPath.XPathNavigator.Matches%2A> metodę pozwala ustalić, czy węzeł odpowiada wyrażenie XPath. <xref:System.Xml.XPath.XPathNavigator.Matches%2A> Metoda przyjmuje wyrażenia XPath jako dane wejściowe i zwraca <xref:System.Boolean> oznacza to, czy bieżący węzeł odpowiada danemu wyrażeniu XPath lub podane skompilowanych <xref:System.Xml.XPath.XPathExpression> obiektu.  

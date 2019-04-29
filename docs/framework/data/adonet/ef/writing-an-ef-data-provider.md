@@ -3,11 +3,11 @@ title: Pisanie dostawcy danych programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667307"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Pisanie dostawcy danych programu Entity Framework
 W tej sekcji omówiono sposób pisania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dostawcy w celu obsługi źródła danych inne niż SQL Server. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje dostawcę, który obsługuje program SQL Server.  
@@ -17,17 +17,17 @@ W tej sekcji omówiono sposób pisania [!INCLUDE[adonet_ef](../../../../../inclu
   
  Dostawca danych programu Entity Framework (utworzone przy użyciu modelu dostawcy danych ADO.NET) wykonuje następujące funkcje:  
   
--   Mapuje typy dostawców typów pierwotnych modelu Entity Data Model (EDM).  
+- Mapuje typy dostawców typów pierwotnych modelu Entity Data Model (EDM).  
   
--   Uwidacznia funkcje właściwe dla dostawcy.  
+- Uwidacznia funkcje właściwe dla dostawcy.  
   
--   Generuje polecenia specyficzne dla dostawcy dla danego DbQueryCommandTree do obsługi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zapytania.  
+- Generuje polecenia specyficzne dla dostawcy dla danego DbQueryCommandTree do obsługi [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zapytania.  
   
--   Generuje polecenia aktualizacji specyficzne dla dostawcy dla danego DbModificationCommandTree do obsługi aktualizacji za pośrednictwem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+- Generuje polecenia aktualizacji specyficzne dla dostawcy dla danego DbModificationCommandTree do obsługi aktualizacji za pośrednictwem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
--   Udostępnia mapowanie plików dla definicji schematu magazynu do obsługi generowania modelu, w oparciu o bazę danych.  
+- Udostępnia mapowanie plików dla definicji schematu magazynu do obsługi generowania modelu, w oparciu o bazę danych.  
   
--   Udostępnia metadane (tabele i widoki, na przykład) za pośrednictwem modelu koncepcyjnego.  
+- Udostępnia metadane (tabele i widoki, na przykład) za pośrednictwem modelu koncepcyjnego.  
   
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   

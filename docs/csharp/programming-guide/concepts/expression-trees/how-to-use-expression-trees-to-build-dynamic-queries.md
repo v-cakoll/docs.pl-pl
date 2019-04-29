@@ -3,11 +3,11 @@ title: 'Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamiczn
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
 ms.openlocfilehash: dec9d84f7fa37f859e307f2a653464608684bc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668526"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Instrukcje: Używanie drzew wyrażeń do kompilowania zapytań dynamicznych (C#)
 W programie LINQ, drzew wyrażeń są używane do reprezentowania strukturyzowanych zapytań, których platformą docelową źródeł danych, który implementuje <xref:System.Linq.IQueryable%601>. Na przykład implementuje dostawcę LINQ <xref:System.Linq.IQueryable%601> interfejs do wykonywania zapytań magazynów danych relacyjnych. Kompilator języka C# kompiluje zapytań przeznaczonych dla tych źródeł danych do kodu, który kompiluje do drzewa wyrażenie w czasie wykonywania. Dostawca kwerend można przechodzić przez strukturę danych drzewa wyrażeń i tłumaczenie język zapytań, odpowiednie dla źródła danych.  
@@ -100,13 +100,13 @@ foreach (string company in results)
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Utwórz nową **aplikację Konsolową** projektu.  
+- Utwórz nową **aplikację Konsolową** projektu.  
   
--   Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
+- Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
   
--   Obejmują System.Linq.Expressions przestrzeni nazw.  
+- Obejmują System.Linq.Expressions przestrzeni nazw.  
   
--   Skopiuj kod z przykładu i wklej go w `Main` metody.  
+- Skopiuj kod z przykładu i wklej go w `Main` metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

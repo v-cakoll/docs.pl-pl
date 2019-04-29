@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665796"
 ---
 # <a name="lambda-expressions-visual-basic"></a>Lambda — Wyrażenia (Visual Basic)
 A *wyrażenia lambda* jest funkcji lub podprocedury bez nazwy, który może służyć wszędzie tam, gdzie obiekt delegowany jest prawidłowy. Wyrażenia lambda może być funkcji lub podprocedury i może być w jednym lub wielu linii. Wyrażenie lambda można przekazać wartości z bieżącego zakresu.  
@@ -43,27 +43,27 @@ A *wyrażenia lambda* jest funkcji lub podprocedury bez nazwy, który może słu
 ## <a name="lambda-expression-syntax"></a>Składnia wyrażenia lambda  
  Składnia wyrażenia lambda przypomina standardowej funkcji lub podprocedury. Różnice są następujące:  
   
--   Wyrażenie lambda nie ma nazwy.  
+- Wyrażenie lambda nie ma nazwy.  
   
--   Wyrażenia lambda nie może mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
+- Wyrażenia lambda nie może mieć modyfikatorów, takich jak `Overloads` lub `Overrides`.  
   
--   Nie należy używać funkcji lambda jednowierszowego `As` klauzuli, aby określić typ zwracany. Zamiast tego typ jest wnioskowany z wartości, która daje w wyniku treść wyrażenia lambda. Na przykład, jeśli treść wyrażenia lambda jest `cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
+- Nie należy używać funkcji lambda jednowierszowego `As` klauzuli, aby określić typ zwracany. Zamiast tego typ jest wnioskowany z wartości, która daje w wyniku treść wyrażenia lambda. Na przykład, jeśli treść wyrażenia lambda jest `cust.City = "London"`, jego typem zwracanym jest `Boolean`.  
   
--   W przypadku funkcji lambda wielowierszowe można określić typ zwracany za pomocą `As` klauzuli lub Pomiń `As` klauzuli tak, aby zwracany typ jest wnioskowany. Gdy `As` klauzuli zostanie pominięty dla funkcji lambda wielowierszowego, zwracany typ jest wnioskowany jako typ dominujący ze wszystkich `Return` instrukcji w funkcji lambda wiele wierszy. *Typ dominujący* to unikatowy typ, który poszerzyć do innych typów. Jeżeli nie można ustalić tego typu unikatowego, Typ dominujący to unikatowy typ, który można zawęzić wszystkie typy w tablicy. Jeśli żadna z tych typów unikatowych nie można ustalić, typem dominującym jest `Object`. W takim przypadku `Option Strict` ustawiono `On`, występuje błąd kompilatora.  
+- W przypadku funkcji lambda wielowierszowe można określić typ zwracany za pomocą `As` klauzuli lub Pomiń `As` klauzuli tak, aby zwracany typ jest wnioskowany. Gdy `As` klauzuli zostanie pominięty dla funkcji lambda wielowierszowego, zwracany typ jest wnioskowany jako typ dominujący ze wszystkich `Return` instrukcji w funkcji lambda wiele wierszy. *Typ dominujący* to unikatowy typ, który poszerzyć do innych typów. Jeżeli nie można ustalić tego typu unikatowego, Typ dominujący to unikatowy typ, który można zawęzić wszystkie typy w tablicy. Jeśli żadna z tych typów unikatowych nie można ustalić, typem dominującym jest `Object`. W takim przypadku `Option Strict` ustawiono `On`, występuje błąd kompilatora.  
   
      Na przykład, jeśli wyrażenie dostarczone do `Return` instrukcji zawierają wartości typu `Integer`, `Long`, i `Double`, tablica wynikowa jest typu `Double`. Zarówno `Integer` i `Long` mogą zostać poszerzone do `Double` i tylko `Double`. W związku z tym `Double` jest typem dominującym. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
--   Treść funkcji pojedynczej linii musi być wyrażenie zwracające wartość nie instrukcję. Istnieje nie `Return` poufności informacji dla funkcji pojedynczej linii. Wartość zwrócona przez funkcję jednowierszowego jest wartość wyrażenia w treści funkcji.  
+- Treść funkcji pojedynczej linii musi być wyrażenie zwracające wartość nie instrukcję. Istnieje nie `Return` poufności informacji dla funkcji pojedynczej linii. Wartość zwrócona przez funkcję jednowierszowego jest wartość wyrażenia w treści funkcji.  
   
--   Treść procedury jeden wiersz musi być instrukcją jeden wiersz.  
+- Treść procedury jeden wiersz musi być instrukcją jeden wiersz.  
   
--   Nie dołączaj jednowierszowego, funkcje i procedur `End Function` lub `End Sub` instrukcji.  
+- Nie dołączaj jednowierszowego, funkcje i procedur `End Function` lub `End Sub` instrukcji.  
   
--   Typ danych parametru wyrażenia lambda można określić za pomocą `As` można wywnioskować — słowo kluczowe lub typ danych parametru. Musi mieć określony albo wszystkie parametry można wywnioskować typów danych lub wszystkich.  
+- Typ danych parametru wyrażenia lambda można określić za pomocą `As` można wywnioskować — słowo kluczowe lub typ danych parametru. Musi mieć określony albo wszystkie parametry można wywnioskować typów danych lub wszystkich.  
   
--   `Optional` i `Paramarray` parametry nie są dozwolone.  
+- `Optional` i `Paramarray` parametry nie są dozwolone.  
   
--   Parametry ogólne nie są dozwolone.  
+- Parametry ogólne nie są dozwolone.  
   
 ## <a name="async-lambdas"></a>Lambdy asynchroniczne  
  Możesz łatwo tworzyć wyrażenia lambda i instrukcje, które zawierają Przetwarzanie asynchroniczne przy użyciu [Async](../../../../visual-basic/language-reference/modifiers/async.md) i [operatora Await](../../../../visual-basic/language-reference/operators/await-operator.md) słów kluczowych. Na przykład, poniższy przykład Windows Forms zawiera program obsługi zdarzeń, który wywołuje i czeka na metodę asynchroniczną `ExampleMethodAsync`.  
@@ -118,15 +118,15 @@ End Class
   
  W poniższym przykładzie pokazano szeroką gamę prawa dostępu zagnieżdżonym wyrażeniem lambda. Gdy wyrażenie lambda zwracany jest wykonywany z `Main` jako `aDel`, uzyskuje dostęp do tych elementów:  
   
--   Pole klasy, w którym jest zdefiniowany: `aField`  
+- Pole klasy, w którym jest zdefiniowany: `aField`  
   
--   Właściwość klasy, w którym jest zdefiniowany: `aProp`  
+- Właściwość klasy, w którym jest zdefiniowany: `aProp`  
   
--   Parametr metody `functionWithNestedLambda`, w którym jest zdefiniowana: `level1`  
+- Parametr metody `functionWithNestedLambda`, w którym jest zdefiniowana: `level1`  
   
--   Zmienna lokalna o `functionWithNestedLambda`: `localVar`  
+- Zmienna lokalna o `functionWithNestedLambda`: `localVar`  
   
--   Parametr wyrażenia lambda, w którym jest zagnieżdżona: `level2`  
+- Parametr wyrażenia lambda, w którym jest zagnieżdżona: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>Przykłady  
   
--   W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca `True` Jeśli przypisaną wartością argumentu dopuszcza wartości null i `False` gdy jego wartość jest `Nothing`.  
+- W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca `True` Jeśli przypisaną wartością argumentu dopuszcza wartości null i `False` gdy jego wartość jest `Nothing`.  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca indeks ostatniego elementu w tablicy.  
+- W poniższym przykładzie zdefiniowano Wyrażenie lambda, które zwraca indeks ostatniego elementu w tablicy.  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

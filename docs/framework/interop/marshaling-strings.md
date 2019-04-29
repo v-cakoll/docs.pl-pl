@@ -15,10 +15,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ab192f086e3e86a879d3478f2bf0d7084ae411b0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642855"
 ---
 # <a name="marshaling-strings"></a>Organizowanie ciągów
 Wywołanie platformy parametry ciągu kopii, konwersję z formatu .NET Framework (Unicode) do formatu niezarządzane (ANSI), jeśli to konieczne. Ponieważ ciągi zarządzane są niezmienne, wywołanie platformy nie kopiuje ich powrót po awarii z niezarządzanej pamięci do pamięci zarządzanej, gdy funkcja zwraca.  

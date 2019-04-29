@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609663"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION — Struktura
 Zawiera informacje na temat funkcji, które są aktualnie aktywne w ramkach w wątku. Ta struktura jest używany przez [ICorDebugThread2::GetActiveFunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) metody.  

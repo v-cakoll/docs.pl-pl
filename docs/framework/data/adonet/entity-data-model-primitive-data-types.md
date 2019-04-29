@@ -3,11 +3,11 @@ title: 'Model danych jednostki: Typy danych pierwotnych'
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667135"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Model danych jednostki: Typy danych pierwotnych
 Entity Data Model (EDM) obsługuje zestaw abstrakcyjne pierwotne typy danych (na przykład ciąg, wartość logiczna, Int32 i tak dalej), które są używane do definiowania [właściwości](../../../../docs/framework/data/adonet/property.md) w modelu koncepcyjnym. Te typy danych pierwotnych są serwery proxy dla rzeczywistego pierwotne typy danych, które są obsługiwane w magazynie, czy środowisko hostingu, takich jak bazy danych programu SQL Server lub środowisko uruchomieniowe języka wspólnego (CLR). EDM nie definiuje semantykę operacji lub przeliczeń za pośrednictwem pierwotne typy danych; Semantyka te są definiowane przez Magazyn lub środowisko hostingu. Zazwyczaj pierwotne typy danych w EDM są mapowane do odpowiedniego pierwotne typy danych w pamięci masowej lub środowisko hostingu. Aby dowiedzieć się, jak sposób Entity Framework mapowania typów pierwotnych w EDM do typów danych programu SQL Server, zobacz [SqlClient dla typów programu Entity Framework](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
 ms.openlocfilehash: 15b86920736f1220553b462d103841ac98d88b7c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660869"
 ---
 # <a name="public-c-reference"></a>public (odwołanie w C#)
 

@@ -3,16 +3,16 @@ title: Kowariancja i Kontrawariancja (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
 ms.openlocfilehash: bfd78b1a32b9d4fe11b1dce129c24ceb5aca6754
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668565"
 ---
 # <a name="covariance-and-contravariance-c"></a>Kowariancja i Kontrawariancja (C#)
-Kowariancja i kontrawariancja w języku C#, Włącz niejawnej konwersji odwołania dla tablic, typów delegowanych i argumentów typu ogólnego. Kowariancja zachowuje zgodność przypisania i kontrawariancja odwraca go.  
+W C#, kowariancji i kontrawariancji Włącz niejawna konwersja odwołania dla typów tablicy, typy delegatów i argumenty typu ogólnego. Kowariancja zachowuje zgodność przypisania i kontrawariancja odwraca go.  
   
- Poniższy kod przedstawia różnicę między zgodności przypisania, Kowariancja i kontrawariancja.  
+ Poniższy kod ilustruje różnicę między zgodności przypisania, kowariancji i kontrawariancji.  
   
 ```csharp  
 // Assignment compatibility.   
@@ -37,7 +37,7 @@ Action<object> actObject = SetObject;
 Action<string> actString = actObject;  
 ```  
   
- Kowariancja dla tablic umożliwia niejawna konwersja tablicy typu bardziej pochodnego do tablicy typu mniej pochodnego. Jednak ta operacja nie jest typem bezpieczne, jak pokazano w poniższym przykładzie kodu.  
+ Kowariancja dla tablic umożliwia niejawną konwersję tablicę typu bardziej pochodnego do tablicy typu mniej pochodnego. Jednak ta operacja nie jest typem bezpiecznym, jak pokazano w poniższym przykładzie kodu.  
   
 ```csharp  
 object[] array = new String[10];  
@@ -45,9 +45,9 @@ object[] array = new String[10];
 // array[0] = 10;  
 ```  
   
- Kowariancja i kontrawariancja obsługę grupy metod umożliwia dopasowywanie podpisy metod typów delegatów. Ta umożliwia można przypisać do delegatów nie tylko tych metod, które pasują do podpisów, ale również metody, które zwracają się, że więcej pochodnych typów (kowariancja) lub że akceptujesz parametrów, które mają mniej typów pochodnych (kontrawariancja) od określonej przez typ delegata. Aby uzyskać więcej informacji, zobacz [wariancji w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [przy użyciu wariancji w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
+ Kowariancja i kontrawariancja obsługę grupy metod umożliwia podpisów metod dopasowania z typów obiektów delegowanych. Dzięki temu można przypisać do delegatów nie tylko tych metod, które pasują do sygnatur, ale także metody, które zwracają czy pochodne więcej typów (korelacja) lub że akceptujesz parametry, które mają mniej pochodne typy (kontrawariancja) niż określona przez typ delegata. Aby uzyskać więcej informacji, zobacz [wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [przy użyciu wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
- Poniższy przykład kodu pokazuje Kowariancja i kontrawariancja obsługę dla grupy metod.  
+ Poniższy przykład kodu pokazuje obsługę kowariancji i kontrawariancji dla grupy metod.  
   
 ```csharp  
 static object GetObject() { return null; }  
@@ -68,24 +68,24 @@ static void Test()
 }  
 ```  
   
- W programie .NET Framework 4 lub nowszej C# obsługuje Kowariancja i kontrawariancja w interfejsach i delegatów i umożliwia niejawnej konwersji wartości parametrów typu ogólnego. Aby uzyskać więcej informacji, zobacz [wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) i [wariancji w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ W programie .NET Framework 4 lub nowszej C# obsługuje Kowariancja i kontrawariancja w interfejsach ogólnych i delegatach i umożliwia niejawną konwersję parametrów typu genetycznego. Aby uzyskać więcej informacji, zobacz [wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) i [wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
- Poniższy przykład kodu pokazuje niejawnej konwersji odwołania dla ogólnych interfejsów.  
+ Poniższy przykład kodu pokazuje niejawna konwersja odwołania dla interfejsów ogólnych.  
   
 ```csharp  
 IEnumerable<String> strings = new List<String>();  
 IEnumerable<Object> objects = strings;  
 ```  
   
- Ogólny interfejs lub delegat jest nazywany *variant* jeśli jego parametrów ogólnych są deklarowane jako kowariantnego lub kontrawariantnego. C# umożliwia tworzenie własnych interfejsów typu variant i delegatów. Aby uzyskać więcej informacji, zobacz [Tworzenie interfejsów ogólnych typu Variant (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) i [wariancji w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Ogólny interfejs lub delegat jest nazywany *wariant* jeśli jego parametrów ogólnych są deklarowane jako kowariantny lub kontrawariantny. C#pozwala na tworzenie własnych wariantów interfejsów i delegatów. Aby uzyskać więcej informacji, zobacz [Tworzenie interfejsów ogólnych typu Variant (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md) i [wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Zawiera omówienie Kowariancja i kontrawariancja w interfejsach, a także listę interfejsów ogólnych typu variant w programie .NET Framework.|  
-|[Tworzenie interfejsów ogólnych typu Variant (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Przedstawia sposób tworzenia niestandardowych interfejsów typu variant.|  
-|[Korzystanie z wariancji w interfejsach dla kolekcji (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|Pokazuje, jak obsługują Kowariancja i kontrawariancja w <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IComparable%601> interfejsy ułatwia ponowne użycie kodu.|  
-|[Wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|Zawiera omówienie Kowariancja i kontrawariancja w delegatach ogólne i inny niż ogólny, a także listę variant delegatów w programie .NET Framework.|  
-|[Korzystanie z wariancji w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|Pokazano, jak korzystać z obsługi Kowariancja i kontrawariancja w delegatach nieogólnego odpowiadać podpisy metod typów delegatów.|  
-|[Korzystanie z wariancji dla Func i akcji Delegaty ogólne (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|Pokazuje, jak obsługują Kowariancja i kontrawariancja w `Func` i `Action` delegatów ułatwia ponowne użycie kodu.|
+|[Wariancje w interfejsach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|W tym artykule omówiono Kowariancja i kontrawariancja w interfejsach ogólnych i zawiera listę interfejsów ogólnych typu variant w programie .NET Framework.|  
+|[Tworzenie interfejsów typu Variant (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Przedstawia sposób tworzenia niestandardowych interfejsów typu variant.|  
+|[Korzystanie z wariancji w interfejsach dla kolekcji ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)|Pokazuje, jak obsługiwać kowariancji i kontrawariancji w <xref:System.Collections.Generic.IEnumerable%601> i <xref:System.IComparable%601> interfejsy mogą pomóc ponowne użycie kodu.|  
+|[Wariancje w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)|Omówiono kowariancji i kontrawariancji w delegatach ogólnych i nieogólnych i lista wariantów ogólnych delegatów w programie .NET Framework.|  
+|[Korzystanie z wariancji w Delegatach (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)|Pokazuje, jak korzystać z pomocy technicznej kowariancji i kontrawariancji w delegatach nieogólnego do pasowania podpisy metod typy delegatów.|  
+|[Korzystanie z wariancji dla Func i akcji delegatów ogólnych (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)|Pokazuje, jak obsługiwać kowariancji i kontrawariancji w `Func` i `Action` delegatów mogą pomóc ponowne użycie kodu.|

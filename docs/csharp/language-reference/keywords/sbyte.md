@@ -9,11 +9,11 @@ helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
 ms.openlocfilehash: 124ff282fc354699c68e0a17c64f911db2e25869
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660739"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (odwołanie w C#)
 

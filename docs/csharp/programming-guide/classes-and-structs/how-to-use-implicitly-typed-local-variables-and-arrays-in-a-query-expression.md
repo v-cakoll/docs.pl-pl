@@ -6,11 +6,11 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
 ms.openlocfilehash: 8e3534abf961ba7b8a41eed592455962e5b551e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646348"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Instrukcje: Użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania (C# Programming Guide)
 Niejawnie wpisane zmienne lokalne można użyć w każdym przypadku, gdy chcesz, aby kompilator, aby określić typ zmiennej lokalnej. Niejawnie wpisane zmienne lokalne musi być przechowywanie anonimowych typów, które są często używane w wyrażeniach zapytań. Poniższe przykłady ilustrują wymagane i opcjonalne zastosowań niejawnie wpisane zmienne lokalne w zapytaniach.  

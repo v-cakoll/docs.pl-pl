@@ -3,11 +3,11 @@ title: skrypty instalacji DotNet
 description: Więcej informacji na temat skryptów instalacji dotnet do zainstalowania narzędzi interfejsu wiersza polecenia platformy .NET Core i udostępnionego środowiska uruchomieniowego.
 ms.date: 01/16/2019
 ms.openlocfilehash: 6404a8332a7196f0e6fdfe649c2c180970390775
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665107"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Dokumentacja skryptów instalacji DotNet
 

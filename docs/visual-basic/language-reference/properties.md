@@ -5,11 +5,11 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
 ms.openlocfilehash: b7c0040a45da34d6b7c7123b585b0d6e5463278c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663534"
 ---
 # <a name="properties-visual-basic"></a>Właściwości (Visual Basic)
 Ta strona zawiera listę właściwości, które są elementami członkowskimi moduły języka Visual Basic. Inne właściwości, które są członkami określonych obiektów języka Visual Basic są wymienione w [obiektów](../../visual-basic/language-reference/objects/index.md).  

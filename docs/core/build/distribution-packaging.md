@@ -5,11 +5,11 @@ author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
 ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650872"
 ---
 # <a name="net-core-distribution-packaging"></a>Tworzenie pakietów dystrybucji platformy .NET core
 
@@ -78,8 +78,8 @@ Poniższych tabelach przedstawiono zalecane pakiety.
 | Nazwa                                    | Przykład                | Przypadek użycia: Zainstaluj...           | Zawiera           | Zależności                                   | Wersja            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | Najnowszy zestaw sdk dla środowiska uruchomieniowego główne    |                    | dotnet-sdk-[major].[latestminor]               | \<Wersja zestawu SDK >     |
-| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Najnowszy zestaw sdk dla określonego środowiska uruchomieniowego |                    | DotNet - sdk-[główna]. [pomocnicza]. [najnowszy zestaw sdk feat] xx | \<Wersja zestawu SDK >     |
-| DotNet - sdk-[główna]. [pomocnicza]. xx [sdk feat] | dotnet-sdk-2.1.3xx     | Wydawanie funkcji określonego zestawu sdk    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<Wersja zestawu SDK >     |
+| dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Najnowszy zestaw sdk dla określonego środowiska uruchomieniowego |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<Wersja zestawu SDK >     |
+| dotnet-sdk-[major].[minor].[sdk feat]xx | dotnet-sdk-2.1.3xx     | Wydawanie funkcji określonego zestawu sdk    | (3),(4)            | aspnetcore-runtime-[major].[minor]             | \<Wersja zestawu SDK >     |
 | aspnetcore-runtime-[major].[minor]      | aspnetcore-runtime-2.1 | Określonego środowiska uruchomieniowego platformy ASP.NET Core   | (6),[(7)]          | dotnet-runtime-[major].[minor]                 | \<wersja środowiska uruchomieniowego > |
 | dotnet-runtime-[major].[minor]          | dotnet-runtime-2.1     | Określonego środowiska uruchomieniowego                | (5)                | host-fxr:\<runtime version>+                   | \<wersja środowiska uruchomieniowego > |
 | dotnet-host-fxr                         | dotnet-host-fxr        | _Zależności_                    | (2)                | Host:\<wersji środowiska uruchomieniowego > +                       | \<wersja środowiska uruchomieniowego > |
@@ -105,9 +105,9 @@ W poniższej tabeli przedstawiono zalecane pakiety i **patch pakietów**.
 
 | Nazwa                                           | Przykład                  | Zawiera         | Zależności                                              |
 |------------------------------------------------|--------------------------|------------------|-----------------------------------------------------------|
-| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | DotNet - sdk-[główna]. [najnowszy zestaw sdk pomocnicza]                     |
-| dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | DotNet - sdk-[główna]. [pomocnicza]. [najnowszy zestaw sdk feat] xx            |
-| DotNet - sdk-[główna]. [pomocnicza]. xx [sdk feat]        | dotnet-sdk-2.1.3xx       |                  | DotNet - sdk-[główna]. [pomocnicza]. [najnowszą poprawkę sdk]             |
+| dotnet-sdk-[major]                             | dotnet-sdk-2             |                  | dotnet-sdk-[major].[latest sdk minor]                     |
+| dotnet-sdk-[major].[minor]                     | dotnet-sdk-2.1           |                  | dotnet-sdk-[major].[minor].[latest sdk feat]xx            |
+| dotnet-sdk-[major].[minor].[sdk feat]xx        | dotnet-sdk-2.1.3xx       |                  | dotnet-sdk-[major].[minor].[latest sdk patch]             |
 | **dotnet-sdk-[major].[minor].[patch]**         | dotnet-sdk-2.1.300       | (3),(4)          | aspnetcore — środowisko uruchomieniowe — [główna]. [pomocnicza]. [poprawki zestawu sdk środowiska wykonawczego]    |
 | aspnetcore-runtime-[major].[minor]             | aspnetcore-runtime-2.1   |                  | aspnetcore — środowisko uruchomieniowe — [główna]. [pomocnicza]. [najnowszą poprawkę środowiska wykonawczego] |
 | **aspnetcore-runtime-[major].[minor].[patch]** | aspnetcore-runtime-2.1.0 | (6),[(7)]        | dotnet-runtime-[major].[minor].[patch]                    |

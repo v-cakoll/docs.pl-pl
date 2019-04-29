@@ -9,11 +9,11 @@ helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
 ms.openlocfilehash: 8c38a4158f627f41d1667eb96478cd499de78772
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660661"
 ---
 # <a name="short-c-reference"></a>short (odwołanie w C#)
 

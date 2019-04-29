@@ -3,11 +3,11 @@ title: Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 ms.openlocfilehash: 72d35230820e8466cd9c63a76b26c7a23bdfe024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663716"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problemy dotyczące zabezpieczeń i przydatne porady na temat śledzenia
 W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym, a także przydatne porady, korzystając z hostem sieci Web.  
@@ -22,11 +22,11 @@ W tym temacie opisano, jak możesz chronić poufne informacje przed przypadkowym
   
  Poniższe porady mogą pomóc aby zawartość pliku śledzenia przed przypadkowym ujawnieniem:  
   
--   Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) zarówno w hosta samodzielnego scenariuszy i hostem sieci Web.  
+- Upewnij się, że dziennika, które pliki są chronione przez kontroli dostępu zawiera listę (ACL) zarówno w hosta samodzielnego scenariuszy i hostem sieci Web.  
   
--   Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Można sprawdzić w podręczniku administratora usług IIS, aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
+- Wybierz rozszerzenie pliku, który nie może być łatwo przekazywane za pomocą żądania sieci Web. Na przykład rozszerzenie pliku XML nie jest bezpiecznym wyborem. Można sprawdzić w podręczniku administratora usług IIS, aby wyświetlić listę rozszerzeń, które mogą być przekazywane.  
   
--   Określ ścieżki bezwzględnej do lokalizacji pliku dziennika, która powinna być poza katalogiem WebHost publiczny głównego katalogu wirtualnego, aby uniemożliwić dostęp do innych firm za pomocą przeglądarki sieci Web.  
+- Określ ścieżki bezwzględnej do lokalizacji pliku dziennika, która powinna być poza katalogiem WebHost publiczny głównego katalogu wirtualnego, aby uniemożliwić dostęp do innych firm za pomocą przeglądarki sieci Web.  
   
  Domyślnie klucze identyfikowalne dane osobowe (PII), takie jak nazwa użytkownika i hasło nie są rejestrowane w śladach i rejestrowane komunikaty. Administrator komputera, jednak można użyć `enableLoggingKnownPII` atrybutu w `machineSettings` elementu w pliku Machine.config, aby zezwolić aplikacji na maszynie się znane identyfikowalne dane osobowe (PII) w następujący sposób:  
   

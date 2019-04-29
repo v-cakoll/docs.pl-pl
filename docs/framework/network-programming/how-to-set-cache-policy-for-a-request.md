@@ -8,11 +8,11 @@ helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642467"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Instrukcje: ustawianie zasad pamięci podręcznej dla żądania
 W poniższym przykładzie pokazano, ustawianie zasad pamięci podręcznej dla żądania. Przykładowe dane wejściowe to identyfikator URI, taki jak `http://www.contoso.com/`.  

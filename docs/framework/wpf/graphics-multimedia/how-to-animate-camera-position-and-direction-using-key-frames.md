@@ -10,11 +10,11 @@ helpviewer_keywords:
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
 ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651340"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>Instrukcje: Animowanie położenia kamery i kierunku z użyciem klatek kluczowych
 W poniższym przykładzie <xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames> służy do animowanie położenia <xref:System.Windows.Media.Media3D.PerspectiveCamera> w scenie 3D. Ponadto <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> służy do animowanie kierunku kamery wskazuje w scenie 3D. Oba te animacji użyć kilku klatek kluczowych, które tworzą szereg efektów animacji:  

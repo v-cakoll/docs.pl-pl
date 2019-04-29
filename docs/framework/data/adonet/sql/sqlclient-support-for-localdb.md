@@ -3,11 +3,11 @@ title: Obsługa SqlClient w bazie danych LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670056"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient w bazie danych LocalDB
 Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja programu SQL Server, o nazwie LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączeń z bazą danych LocalDB.  
@@ -17,13 +17,13 @@ Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja pro
   
  Aby podsumować, co można zrobić z bazą danych LocalDB:  
   
--   Tworzenie i uruchamianie wystąpienia LocalDB sqllocaldb.exe lub pliku app.config.  
+- Tworzenie i uruchamianie wystąpienia LocalDB sqllocaldb.exe lub pliku app.config.  
   
--   Użyj programu sqlcmd.exe, aby dodawać i modyfikować baz danych w wystąpieniu LocalDB. Na przykład `sqlcmd -S (localdb)\myinst`.  
+- Użyj programu sqlcmd.exe, aby dodawać i modyfikować baz danych w wystąpieniu LocalDB. Na przykład `sqlcmd -S (localdb)\myinst`.  
   
--   Użyj `AttachDBFilename` słowo kluczowe parametrów połączenia, aby dodać bazę danych do wystąpienia LocalDB. Korzystając z `AttachDBFilename`, jeśli nie określisz nazwę bazy danych za pomocą `Database` słowo kluczowe parametrów połączenia bazy danych zostaną usunięte z wystąpienia LocalDB po zamknięciu aplikacji.  
+- Użyj `AttachDBFilename` słowo kluczowe parametrów połączenia, aby dodać bazę danych do wystąpienia LocalDB. Korzystając z `AttachDBFilename`, jeśli nie określisz nazwę bazy danych za pomocą `Database` słowo kluczowe parametrów połączenia bazy danych zostaną usunięte z wystąpienia LocalDB po zamknięciu aplikacji.  
   
--   Określ wystąpienie programu LocalDB w ciągu połączenia. Na przykład, Twoja nazwa wystąpienia jest `myInstance`, obejmują parametry połączenia:  
+- Określ wystąpienie programu LocalDB w ciągu połączenia. Na przykład, Twoja nazwa wystąpienia jest `myInstance`, obejmują parametry połączenia:  
   
     ```  
     server=(localdb)\\myInstance  
@@ -36,7 +36,7 @@ Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja pro
 ## <a name="programmatically-create-a-named-instance"></a>Programowe tworzenie nazwanego wystąpienia  
  Aplikację można utworzenia nazwanego wystąpienia i Określ bazę danych, w następujący sposób:  
   
--   Określ wystąpienia LocalDB do tworzenia w pliku app.config, w następujący sposób.  Numer wersji wystąpienia powinien być taki sam jak numer wersji instalacji programu LocalDB.  
+- Określ wystąpienia LocalDB do tworzenia w pliku app.config, w następujący sposób.  Numer wersji wystąpienia powinien być taki sam jak numer wersji instalacji programu LocalDB.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -54,9 +54,9 @@ Począwszy od programu SQL Server o nazwie kodowej Denali Uproszczona wersja pro
     </configuration>  
     ```  
   
--   Określ nazwę wystąpienia przy użyciu `server` słowo kluczowe parametrów połączenia.  Nazwa wystąpienia określonego w `server` słowo kluczowe parametrów połączenia musi pasować do nazwy określonej w pliku app.config.  
+- Określ nazwę wystąpienia przy użyciu `server` słowo kluczowe parametrów połączenia.  Nazwa wystąpienia określonego w `server` słowo kluczowe parametrów połączenia musi pasować do nazwy określonej w pliku app.config.  
   
--   Użyj `AttachDBFilename` słowo kluczowe parametrów połączenia, aby określić. Plik MDF.  
+- Użyj `AttachDBFilename` słowo kluczowe parametrów połączenia, aby określić. Plik MDF.  
   
 ## <a name="see-also"></a>Zobacz także
 

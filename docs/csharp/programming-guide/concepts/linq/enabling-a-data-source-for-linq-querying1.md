@@ -3,22 +3,22 @@ title: Włączanie źródła danych dla LINQ Querying1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
 ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668422"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Włączanie źródła danych do zapytań LINQ
 Istnieją różne sposoby rozszerzania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] umożliwiające dowolnego źródła danych można wykonać zapytania w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wzorca. Źródłem danych może być między innymi struktura danych, usługi sieci Web, system plików lub baza danych. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Wzorzec ułatwia klientom badanie źródła danych, dla którego [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań jest włączony, ponieważ składnia i wzorzec kwerendy nie zmienia się. W ten sposób [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można rozszerzyć do tych danych źródeł obejmują następujące elementy:  
   
--   Implementowanie <xref:System.Collections.Generic.IEnumerable%601> interfejsu w typie, aby umożliwić [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] badanie obiektów tego typu.  
+- Implementowanie <xref:System.Collections.Generic.IEnumerable%601> interfejsu w typie, aby umożliwić [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] badanie obiektów tego typu.  
   
--   Tworzenie metod operatorów standardowej kwerendy takich jak <xref:System.Linq.Enumerable.Where%2A> i <xref:System.Linq.Enumerable.Select%2A> rozszerzających typu, aby umożliwić niestandardowe [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tego typu.  
+- Tworzenie metod operatorów standardowej kwerendy takich jak <xref:System.Linq.Enumerable.Where%2A> i <xref:System.Linq.Enumerable.Select%2A> rozszerzających typu, aby umożliwić niestandardowe [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] tego typu.  
   
--   Tworzenie dostawcy dla źródła danych, który implementuje <xref:System.Linq.IQueryable%601> interfejsu. Dostawca, który implementuje ten interfejs otrzymuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy w postaci drzew wyrażeń, które może wykonać w niestandardowy sposób, na przykład zdalnie.  
+- Tworzenie dostawcy dla źródła danych, który implementuje <xref:System.Linq.IQueryable%601> interfejsu. Dostawca, który implementuje ten interfejs otrzymuje [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] kwerendy w postaci drzew wyrażeń, które może wykonać w niestandardowy sposób, na przykład zdalnie.  
   
--   Tworzenie dostawcy dla źródła danych, który wykorzystuje istniejące [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technologii. Taki dostawcy umożliwiłby nie tylko badanie, ale także wstawianie, aktualizowanie i usuwanie, a także mapowanie dla typów zdefiniowanych przez użytkownika.  
+- Tworzenie dostawcy dla źródła danych, który wykorzystuje istniejące [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] technologii. Taki dostawcy umożliwiłby nie tylko badanie, ale także wstawianie, aktualizowanie i usuwanie, a także mapowanie dla typów zdefiniowanych przez użytkownika.  
   
  W tym temacie omówiono te opcje.  
   

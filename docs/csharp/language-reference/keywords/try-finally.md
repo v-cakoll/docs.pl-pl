@@ -10,11 +10,11 @@ helpviewer_keywords:
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
 ms.openlocfilehash: 15111a185f73f60e77139d3a7faef7f32f4bf613
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660492"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (odwołanie w C#)
 

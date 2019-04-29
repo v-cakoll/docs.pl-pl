@@ -6,11 +6,11 @@ helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
 ms.openlocfilehash: bce8901b4fec4386462ebaa85436b52aedc3f3bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661896"
 ---
 # <a name="contextual-keywords-c-reference"></a>Kontekstowe słowa kluczowe (odwołanie w C#)
 Kontekstowe słowo kluczowe służy do zapewnienia określone znaczenie w kodzie, ale nie jest wyrazem zastrzeżonym w języku C#. W tej sekcji wprowadzono następujące kontekstowymi słowami kluczowymi:  

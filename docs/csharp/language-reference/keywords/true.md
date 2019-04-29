@@ -9,11 +9,11 @@ helpviewer_keywords:
 - true keyword [C#]
 ms.assetid: 7d0adcdb-02e9-478c-8c84-2e671d4acef3
 ms.openlocfilehash: 823d245b00cc2fb57872af9871d83ad6a2c25b72
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660505"
 ---
 # <a name="true-c-reference"></a>true (odwołanie w C#)
 

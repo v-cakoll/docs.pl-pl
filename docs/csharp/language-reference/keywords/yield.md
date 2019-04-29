@@ -9,11 +9,11 @@ helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
 ms.openlocfilehash: cfeef1d84a443163f4bbeda863682335d9cd1fcd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660206"
 ---
 # <a name="yield-c-reference"></a>yield (odwołanie w C#)
 

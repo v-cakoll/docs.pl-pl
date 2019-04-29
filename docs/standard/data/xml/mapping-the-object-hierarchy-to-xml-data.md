@@ -9,11 +9,11 @@ ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650290"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapowanie hierarchii obiektów na dane XML
 Po dokumentu XML w pamięci koncepcyjny reprezentacja jest drzewa. Dla programowania, możesz mieć hierarchię obiektów uzyskać dostęp do węzłów w drzewie. Poniższy przykład pokazuje, jak zawartość XML staje się węzły.  
@@ -193,20 +193,20 @@ public class Sample
 |\<! Elementy DOCTYPE [\<! Numer jednostki "123" >] >|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >]|XmlNodeType.DocumentType|  
 |\<Elementy >|\<Elementy >|XmlNodeType.Element|  
 |\<Element >|\<Element >|XmlNodeType.Element|  
-|Testowanie za pomocą jednostki: &number;|Test z jednostką: 123|XmlNodeType.Text|  
+|Testowanie za pomocą jednostki: &number;|Testowanie za pomocą jednostki: 123|XmlNodeType.Text|  
 |\</ Element >|\</ Element >|XmlNodeType.EndElement|  
 |\<Element >|\<Element >|XmNodeType.Element|  
 |Testowanie za pomocą elementu podrzędnego|Testowanie za pomocą elementu podrzędnego|XmlNodeType.Text|  
-|\<więcej >|\<więcej >|XmlNodeType.Element|  
+|\<more>|\<more>|XmlNodeType.Element|  
 |rzeczy|rzeczy|XmlNodeType.Text|  
 |\</ Element >|\</ Element >|XmlNodeType.EndElement|  
 |\<Element >|\<Element >|XmlNodeType.Element|  
 |Testowanie za pomocą sekcji CDATA|Testowanie za pomocą sekcji CDATA|XmlTest.Text|  
-|&LT;! [CDATA [\<456 &GT;]]\>|&LT;! [CDATA [\<456 &GT;]]\>|XmlTest.CDATA|  
+|<![CDATA[\<456>]]\>|<![CDATA[\<456>]]\>|XmlTest.CDATA|  
 |DEF|DEF|XmlNodeType.Text|  
 |\</ Element >|\</ Element >|XmlNodeType.EndElement|  
 |\<Element >|\<Element >|XmlNodeType.Element|  
-|Test z jednostką char: &\#65;|Test z jednostką char: A|XmlNodeType.Text|  
+|Test z jednostką char: &\#65;|Test z jednostką char: ELEMENT|XmlNodeType.Text|  
 |\</ Element >|\</ Element >|XmlNodeType.EndElement|  
 |\<!----> Czternastu znaków w tym elemencie.|\<----> Czternastu znaków w tym elemencie.|XmlNodeType.Comment|  
 |\<Element >|\<Element >|XmlNodeType.Element|  

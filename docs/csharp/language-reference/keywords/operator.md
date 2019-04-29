@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
 ms.openlocfilehash: cdc052da4457a59cc66848780e944ccf203acf39
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661077"
 ---
 # <a name="operator-c-reference"></a>operator (odwołanie w C#)
 

@@ -3,11 +3,11 @@ title: Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
 ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663482"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)
 Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonalnych. Przekształcanie funkcjonalne podejście do przekształcania danych daje kod, który jest zwykle łatwiejsze do programu, bardziej ekspresyjnego i prostsze do debugowania i Obsługa programowania bardziej tradycyjny, imperatywnego.  
@@ -17,9 +17,9 @@ Ten temat wprowadza pojęcia i terminologia czystych przekształceń funkcjonaln
 ## <a name="what-is-pure-functional-transformation"></a>Czyste Przekształcanie funkcjonalne co to jest?  
  W *czyste Przekształcanie funkcjonalne*, zestaw funkcji, o nazwie *czystych funkcji*, zdefiniuj jak przekształcić zestaw danych ze strukturą w ich oryginalnej formie w innej formy. Słowo "czysta" wskazuje, że funkcje *konfigurowalna*, które wymagają, że są one:  
   
--   *Niezależna*, dzięki czemu mogą być swobodnie uporządkowane i nieco inaczej rozmieszczone bez zaplątywanie i współzależności z pozostałej części programu. Czysty przekształcenia mają nie znajomości lub wpływ na ich środowiska. Oznacza to, że nie mają funkcji używany podczas przekształcania *efekty uboczne*.  
+- *Niezależna*, dzięki czemu mogą być swobodnie uporządkowane i nieco inaczej rozmieszczone bez zaplątywanie i współzależności z pozostałej części programu. Czysty przekształcenia mają nie znajomości lub wpływ na ich środowiska. Oznacza to, że nie mają funkcji używany podczas przekształcania *efekty uboczne*.  
   
--   *Bezstanowe*, dzięki czemu wykonanie tej samej funkcji lub określony zestaw funkcji na to samo wejście zawsze spowoduje ten sam wynik. Czystych przekształceń jest nie pamięci ich wcześniejszego użycia.  
+- *Bezstanowe*, dzięki czemu wykonanie tej samej funkcji lub określony zestaw funkcji na to samo wejście zawsze spowoduje ten sam wynik. Czystych przekształceń jest nie pamięci ich wcześniejszego użycia.  
   
 > [!IMPORTANT]
 >  W pozostałej części tego samouczka termin "czystą funkcję" jest używana w ogólnym sensie wskazujący strategii programowania, a nie funkcji określonego języka.  

@@ -9,11 +9,11 @@ ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675019"
 ---
 # <a name="shadow-copying-assemblies"></a>Kopiowanie zestawów w tle
 Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należy zaktualizować bez rozładowywania domeny aplikacji w tle. Jest to szczególnie przydatne w przypadku aplikacji, które muszą być dostępne w sposób ciągły, takich jak witryny programu ASP.NET.  
@@ -30,21 +30,21 @@ Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należ
   
  Ten artykuł zawiera następujące sekcje:  
   
--   [Włączanie i kopiowania w tle za pomocą](#EnablingAndUsing) w tym artykule opisano podstawowe zastosowanie i opcje, które są dostępne dla kopiowania w tle.  
+- [Włączanie i kopiowania w tle za pomocą](#EnablingAndUsing) w tym artykule opisano podstawowe zastosowanie i opcje, które są dostępne dla kopiowania w tle.  
   
--   [Startowa wydajność](#StartupPerformance) w tym artykule opisano zmiany wprowadzone do kopiowania w tle [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Aby zwiększyć wydajność uruchamiania i jak przywrócić działanie wcześniejszych wersji.  
+- [Startowa wydajność](#StartupPerformance) w tym artykule opisano zmiany wprowadzone do kopiowania w tle [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] Aby zwiększyć wydajność uruchamiania i jak przywrócić działanie wcześniejszych wersji.  
   
--   [Metody przestarzałe](#ObsoleteMethods) w tym artykule opisano zmiany, które zostały wprowadzone do właściwości i metod tego formantu kopiowanie w tle w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- [Metody przestarzałe](#ObsoleteMethods) w tym artykule opisano zmiany, które zostały wprowadzone do właściwości i metod tego formantu kopiowanie w tle w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Włączanie i korzystanie z kopiowania w tle  
  Można użyć właściwości <xref:System.AppDomainSetup> klasy w następujący sposób, aby skonfigurować domenę aplikacji do kopiowania w tle:  
   
--   Kopiowanie, ustawiając w tle Włącz <xref:System.AppDomainSetup.ShadowCopyFiles%2A> właściwości do wartości ciągu `"true"`.  
+- Kopiowanie, ustawiając w tle Włącz <xref:System.AppDomainSetup.ShadowCopyFiles%2A> właściwości do wartości ciągu `"true"`.  
   
      Domyślnie to ustawienie powoduje, że wszystkie zestawy ścieżka aplikacji, które mają być kopiowane do pamięci podręcznej pobierania, przed załadowaniem. Jest tej samej pamięci podręcznej, obsługiwane przez środowisko uruchomieniowe języka wspólnego do przechowywania plików pobranych z innych komputerów i środowiska uruchomieniowego języka wspólnego automatycznie usuwa pliki, gdy nie są już potrzebne.  
   
--   Opcjonalnie ustaw niestandardową lokalizację plików kopie w tle za pomocą <xref:System.AppDomainSetup.CachePath%2A> właściwości i <xref:System.AppDomainSetup.ApplicationName%2A> właściwości.  
+- Opcjonalnie ustaw niestandardową lokalizację plików kopie w tle za pomocą <xref:System.AppDomainSetup.CachePath%2A> właściwości i <xref:System.AppDomainSetup.ApplicationName%2A> właściwości.  
   
      Podstawowa ścieżka lokalizacji jest tworzona przez złączenie <xref:System.AppDomainSetup.ApplicationName%2A> właściwość <xref:System.AppDomainSetup.CachePath%2A> właściwość jako podkatalogu. Zestawy są kopiowane do podkatalogów tej ścieżki, aby sama ścieżka podstawowa nie w tle.  
   
@@ -55,7 +55,7 @@ Kopiowanie zestawów umożliwia, które są używane w domenie aplikacji, należ
   
      Istnieje kilka powodów dlaczego warto ustawić niestandardową lokalizację plików kopie w tle. Można ustawić niestandardową lokalizację plików kopie w tle, jeśli aplikacja generuje dużą liczbę kopii. Pamięć podręczna pobierania jest ograniczona przez rozmiar, a nie przez okres istnienia, więc jest możliwe, że środowisko uruchomieniowe języka wspólnego podejmie próbę usunięcia pliku, który jest używany. Kolejny powód, aby ustawić niestandardową lokalizację jest, gdy użytkownicy korzystający z aplikacji nie mieć dostęp do zapisu na lokalizację katalogu, w której środowisko uruchomieniowe języka wspólnego używa pamięci podręcznej pobierania.  
   
--   Opcjonalnie ogranicz zestawy, które są kopie w tle woluminów przy użyciu <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości.  
+- Opcjonalnie ogranicz zestawy, które są kopie w tle woluminów przy użyciu <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości.  
   
      Po włączeniu kopiowania w tle dla domeny aplikacji, wartość domyślna to do skopiowania wszystkich zestawów w ścieżce aplikacji — czyli w katalogi określone przez <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> właściwości. Można ograniczyć kopiowanie do wybranych katalogów, tworząc ciąg, który zawiera tylko te katalogi, które chcesz umieścić w kopii w tle i przypisywanie ciąg <xref:System.AppDomainSetup.ShadowCopyDirectories%2A> właściwości. Katalogi należy oddzielić średnikami. Tylko zestawy, które są kopiowane w tle są pokazane w wybranych katalogów.  
   

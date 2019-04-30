@@ -11,10 +11,10 @@ helpviewer_keywords:
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
 ms.openlocfilehash: dc093def716a624162cb695d1151d8a722807094
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661376"
 ---
 # <a name="integral-types-table-c-reference"></a>Tabela typów całkowitych (odwołanie w C#)
 

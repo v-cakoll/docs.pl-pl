@@ -11,11 +11,11 @@ helpviewer_keywords:
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
 ms.openlocfilehash: c15b4939306b79f843b22dc808d88bf3d20ed555
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703416"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ograniczanie dostępności metody dostępu (Przewodnik programowania w języku C#)
 [Uzyskać](../../../csharp/language-reference/keywords/get.md) i [ustaw](../../../csharp/language-reference/keywords/set.md) noszą nazwę porcjach właściwości lub indeksatora *Akcesory*. Domyślnie te metody dostępu mają ten sam poziom widoczności lub dostęp do właściwości lub indeksatora, do której należą. Aby uzyskać więcej informacji, zobacz [poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/accessibility-levels.md). Jednak czasami jest przydatne ograniczyć dostęp do jednej z tych metod dostępu. Zwykle wymaga to, ograniczenie dostępności `set` akcesor przy zachowaniu `get` publicznie dostępne metody dostępu. Na przykład:  
@@ -27,13 +27,13 @@ ms.locfileid: "57203707"
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>Ograniczenia dotyczące modyfikatorów dostępu  
  Za pomocą modyfikatorów dostępu na właściwości i indeksatorów podlega tych warunków:  
   
--   Nie można używać modyfikatorów dostępu na interfejs lub jawnie [interfejsu](../../../csharp/language-reference/keywords/interface.md) implementacji elementu członkowskiego.  
+- Nie można używać modyfikatorów dostępu na interfejs lub jawnie [interfejsu](../../../csharp/language-reference/keywords/interface.md) implementacji elementu członkowskiego.  
   
--   Modyfikatory dostępu można użyć tylko wtedy, gdy właściwość lub indeksator zarówno `set` i `get` metod dostępu. W tym przypadku modyfikator jest dozwolona tylko na jednym z dwóch metod dostępu.  
+- Modyfikatory dostępu można użyć tylko wtedy, gdy właściwość lub indeksator zarówno `set` i `get` metod dostępu. W tym przypadku modyfikator jest dozwolona tylko na jednym z dwóch metod dostępu.  
   
--   Jeśli właściwość lub indeksator ma [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator, modyfikator dostępu muszą być zgodne dostępu przesłonięte metody dostępu, jeśli istnieje.  
+- Jeśli właściwość lub indeksator ma [zastąpienia](../../../csharp/language-reference/keywords/override.md) modyfikator, modyfikator dostępu muszą być zgodne dostępu przesłonięte metody dostępu, jeśli istnieje.  
   
--   Poziom dostępności metody dostępu musi być bardziej restrykcyjny niż poziom dostępności na właściwość lub indeksator sam.  
+- Poziom dostępności metody dostępu musi być bardziej restrykcyjny niż poziom dostępności na właściwość lub indeksator sam.  
   
 ## <a name="access-modifiers-on-overriding-accessors"></a>Modyfikatory dostępu w przypadku przesłaniania metody dostępu  
  Gdy zastąpisz właściwość lub indeksator przesłoniętych metod dostępu muszą być dostępne dla kodu nadrzędnych. Ponadto dostępność właściwości/indeksatora i jego metod dostępu muszą być zgodne, odpowiedni zastąpione właściwości/indeksatora i jego metod dostępu. Na przykład:  

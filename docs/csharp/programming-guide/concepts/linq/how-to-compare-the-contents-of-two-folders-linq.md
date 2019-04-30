@@ -3,20 +3,20 @@ title: 'Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
 ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702142"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>Instrukcje: Porównywanie zawartości dwóch folderów (LINQ) (C#)
 W tym przykładzie przedstawiono trzy sposoby, aby porównać dwa listach plików:  
   
--   Przy użyciu zapytań dotyczących wartość logiczna określająca, czy plik dwóch list są identyczne.  
+- Przy użyciu zapytań dotyczących wartość logiczna określająca, czy plik dwóch list są identyczne.  
   
--   Przy użyciu zapytań dotyczących wspólną do pobierania plików, które znajdują się w obu folderów.  
+- Przy użyciu zapytań dotyczących wspólną do pobierania plików, które znajdują się w obu folderów.  
   
--   Przy użyciu zapytań dotyczących różnicy do pobierania plików, które znajdują się w jednym folderze, ale nie drugiej.  
+- Przy użyciu zapytań dotyczących różnicy do pobierania plików, które znajdują się w jednym folderze, ale nie drugiej.  
   
     > [!NOTE]
     >  Techniki przedstawione w tym miejscu mogą być dostosowane do porównania sekwencje obiekty dowolnego typu.  

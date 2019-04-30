@@ -4,11 +4,11 @@ description: W tym omówieniu przedstawiono tła, będzie potrzebne wydajnie pra
 ms.date: 10/10/2017
 ms.custom: mvc
 ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706704"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Informacje o modelu zestawu SDK platformy kompilatora .NET
 

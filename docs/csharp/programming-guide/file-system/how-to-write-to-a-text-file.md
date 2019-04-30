@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
 ms.openlocfilehash: da1526afe48a0d4bda63274380dcf59ee30c480e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710787"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Instrukcje: Zapis do pliku tekstowego (C# Programming Guide)
 W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku. Pierwszych dwóch przykładach użyto metody statycznej wygody na <xref:System.IO.File?displayProperty=nameWithType> klasę umożliwiającą zapisanie każdy element dowolnego `IEnumerable<string>` i ciąg do pliku tekstowego. Przykład 3 pokazuje, jak dodać tekst do pliku, gdy trzeba osobno przetworzyć każdy wiersz zapisać do pliku. W przykładach 1 – 3 zastępowana cała istniejąca zawartość w pliku, ale w przykładzie 4 pokazano, jak dołączyć tekst do istniejącego pliku.  
@@ -27,11 +27,11 @@ W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku. 
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Plik istnieje i jest tylko do odczytu.  
+- Plik istnieje i jest tylko do odczytu.  
   
--   Nazwa ścieżki może być za długa.  
+- Nazwa ścieżki może być za długa.  
   
--   Dysk może być zapełniony.  
+- Dysk może być zapełniony.  
   
 ## <a name="see-also"></a>Zobacz także
 

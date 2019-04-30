@@ -1,15 +1,15 @@
 ---
-title: Obsługa wielu powiązań witryny usług IIS
+title: Obsługa wielu wiązań witryny usług IIS
 ms.date: 03/30/2017
 ms.assetid: 40440495-254d-45c8-a8c6-b29f364892ba
 ms.openlocfilehash: 5a8b06d86b505452f9ded808f727343b1453e592
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696109"
 ---
-# <a name="supporting-multiple-iis-site-bindings"></a>Obsługa wielu powiązań witryny usług IIS
+# <a name="supporting-multiple-iis-site-bindings"></a>Obsługa wielu wiązań witryny usług IIS
 W przypadku hostowania usługi Windows Communication Foundation (WCF) w obszarze Internetowe usługi informacji (IIS) 7.0, można podać wiele podstawowych adresów, które używają tego samego protokołu w tej samej lokacji. Dzięki temu tę samą usługę odpowiedzieć na szereg różnych identyfikatorów URI. Jest to przydatne, gdy chcesz umieścić to usługa, która nasłuchuje na `http://www.contoso.com` i `http://contoso.com`. Jest to również przydatne utworzyć usługę, która ma adres podstawowy dla użytkowników wewnętrznych i oddzielnych adres podstawowy dla użytkowników zewnętrznych. Na przykład: `http://internal.contoso.com` i `http://www.contoso.com`.  
   
 > [!NOTE]

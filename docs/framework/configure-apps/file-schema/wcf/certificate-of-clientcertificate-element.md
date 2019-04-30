@@ -3,11 +3,11 @@ title: <certificate> z <clientCertificate> — Element
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
 ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704352"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<certyfikat > z \<clientCertificate > Element
 Określa X.509 certyfikatu używanego do podpisywania i szyfrowania wiadomości.  

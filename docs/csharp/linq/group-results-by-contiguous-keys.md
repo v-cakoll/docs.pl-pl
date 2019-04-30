@@ -4,11 +4,11 @@ description: Jak grupowanie wyników według ciągłych kluczy za pomocą LINQ w
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659907"
 ---
 # <a name="group-results-by-contiguous-keys"></a>Grupowanie wyników według ciągłych kluczy
 
@@ -19,7 +19,7 @@ Poniższy przykład pokazuje, jak należy zgrupować elementy na fragmenty, któ
 |ELEMENT|Firma Microsoft|
 |ELEMENT|namysłu|
 |ELEMENT|który|
-|B|LINQ|
+|B|Linq|
 |C|is|
 |ELEMENT|tak naprawdę|
 |B|chłodna|
@@ -29,7 +29,7 @@ Następujące grupy zostaną utworzone w następującej kolejności:
 
 1. Uważamy, że
 
-2. LINQ
+2. Linq
 
 3. is
 

@@ -3,16 +3,16 @@ title: Programowanie funkcjonalne a Programowanie imperatywne (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: 42c80146a091bfdcff2bbf3ebe1f4ed9a9510e29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668246"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Programowanie funkcjonalne a Programowanie imperatywne (C#)
 W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, przy użyciu bardziej tradycyjny imperatywnego (proceduralne).  
   
-## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a Programowanie imperatywne  
+## <a name="functional-programming-vs-imperative-programming"></a>Programowanie funkcjonalne a programowanie imperatywne  
  *Programowania funkcjonalnego* paradygmat jawnie został utworzony w celu obsługi czystego funkcjonalności służące do rozwiązywania problemów. Programowanie funkcjonalne jest formą *programowanie deklaratywne*. Z kolei większość mainstream języków, w tym zorientowane obiektowo (Obiektowo) języków programowania, takich jak C#, Visual Basic, C++ i Java, zostały zaprojektowane do obsługi przede wszystkim *imperatywne* (proceduralne).  
   
  Przy użyciu podejścia imperatywnego Deweloper pisze kod, który opisano w ponoszenia szczegółowo czynności, które należy wykonać komputera w celu osiągnięcia tego celu. To jest czasami określane jako *konsolidatorze* programowania. Z kolei funkcjonalności podejścia polega na tworzenie problemu jako zbiór funkcji do wykonania. Należy zdefiniować dokładnie dane wejściowe do każdej funkcji i jakie każda funkcja zwraca. W poniższej tabeli opisano niektóre ogólne różnice między dwóm metodom.  
@@ -35,11 +35,11 @@ W tym temacie porównano i przeciwstawiono sobie programowania funkcjonalnego, p
 ## <a name="advantages-of-pure-functions"></a>Korzyści wynikające z czystych funkcji  
  Głównym powodem zaimplementować przekształceń funkcjonalnych jako czystych funkcji jest konfigurowalna czy czystych funkcji: oznacza to, niezależna i bezstanowe. Te cechy Przenieś szereg korzyści, w tym następujące czynności:  
   
--   Zwiększenia czytelności i łatwości utrzymania. To ponieważ każda funkcja zaprojektowano w celu wykonania określonego zadania znajduje się jego argumenty. Funkcja nie zależą od dowolnego stanu zewnętrznego.  
+- Zwiększenia czytelności i łatwości utrzymania. To ponieważ każda funkcja zaprojektowano w celu wykonania określonego zadania znajduje się jego argumenty. Funkcja nie zależą od dowolnego stanu zewnętrznego.  
   
--   Łatwiejsze opracowywanie reiterative. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany projektu są często łatwiejsze do wdrożenia. Na przykład załóżmy, że skomplikowaną transformację zapisu, a następnie należy pamiętać, że jakiś kod jest powtarzany kilka razy w transformacji. Jeśli zrefaktoryzujesz przy użyciu czystej metody można wywołać czystego metodę momencie bez martwienia się o efekty uboczne.  
+- Łatwiejsze opracowywanie reiterative. Ponieważ kod jest łatwiejszy do refaktoryzacji, zmiany projektu są często łatwiejsze do wdrożenia. Na przykład załóżmy, że skomplikowaną transformację zapisu, a następnie należy pamiętać, że jakiś kod jest powtarzany kilka razy w transformacji. Jeśli zrefaktoryzujesz przy użyciu czystej metody można wywołać czystego metodę momencie bez martwienia się o efekty uboczne.  
   
--   Łatwiejsze testowanie i debugowanie. Ponieważ łatwiej można było przetestować czystych funkcji izolacji, można napisać kod testu, który wywołuje czystą funkcję typowe wartości, przypadki brzegowe prawidłowe i przypadki brzegowe nieprawidłowy.  
+- Łatwiejsze testowanie i debugowanie. Ponieważ łatwiej można było przetestować czystych funkcji izolacji, można napisać kod testu, który wywołuje czystą funkcję typowe wartości, przypadki brzegowe prawidłowe i przypadki brzegowe nieprawidłowy.  
   
 ## <a name="transitioning-for-oop-developers"></a>Przejście dla deweloperów Obiektowo  
  W tradycyjnym zorientowanym obiektowo (Obiektowo), większość programistów są przyzwyczajeni do programowania w stylu imperatywne/procedur. Aby przełączyć się do rozwoju w stylu funkcjonalności czystego, muszą oni wprowadzić przejścia w ich myślenia i ich podejście do programowania.  

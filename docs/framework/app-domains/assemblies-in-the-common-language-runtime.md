@@ -15,50 +15,50 @@ ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675588"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
-Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnienia zabezpieczeń. Zestaw jest kolekcją typów i zasobów, które są przeznaczone do współpracują ze sobą i utworzenia jednostki logicznej funkcji. Zestaw zawiera środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Do środowiska wykonawczego typ nie istnieje poza kontekstem zestawu.  
+Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; tworzą one podstawową jednostką wdrażania, kontroli wersji, ponownego użycia, określania zakresu aktywacji i uprawnień zabezpieczeń. Zestaw jest kolekcją typów i zasobów, które zostały opracowane w celu współpracują ze sobą i tworzą jednostkę logiczną funkcji. Zestaw zawiera środowisko uruchomieniowe języka wspólnego informacje potrzebne do należy pamiętać o implementacji typu. Do środowiska uruchomieniowego typem nie istnieje poza kontekstem zestawu.  
   
- Zestaw wykonuje następujące funkcje:  
+ Zespół wykonuje następujące funkcje:  
   
--   Zawiera kod, który wykonuje środowisko uruchomieniowe języka wspólnego. Kod języka pośredniego (MSIL) firmy Microsoft w pliku przenośny plik wykonywalny (PE) nie zostaną wykonane, jeśli nie ma manifestu zestawu skojarzone. Należy pamiętać, że każdy zestaw może mieć tylko jeden wpis punktu (to znaczy `DllMain`, `WinMain`, lub `Main`).  
+- Zawiera kod, który jest wykonywany przez środowisko uruchomieniowe języka wspólnego. Kod języka intermediate language (MSIL) firmy Microsoft w pliku wykonalnego (PE) pliku nie zostaną wykonane, jeśli nie ma skojarzonego manifestu dla aplikacji. Należy pamiętać, że każdy zestaw może mieć tylko jeden wpis punktu (czyli `DllMain`, `WinMain`, lub `Main`).  
   
--   Wchodzi w skład granicy zabezpieczeń. Zestaw jest jednostka, jaką żądanie i przyznane uprawnienia. Aby uzyskać więcej informacji o zabezpieczeniach granic dotyczą one zestawy, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md).  
+- Stanowi on granicy zabezpieczeń. Zestaw to jednostka, jaką żądane oraz udzielili uprawnień. Aby uzyskać więcej informacji o zabezpieczeniach granice odnoszących się do zestawów, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md).  
   
--   Wchodzi w skład typu granicy. Każdy typ tożsamości zawiera nazwę zestawu, w której znajduje się. Typ o nazwie `MyType` czyli załadowany w zakresie jednego zestawu nie jest równocześnie jako typ o nazwie `MyType` który został załadowany w zakresie innego zestawu.  
+- Stanowi on granicy typu. Każdy typ tożsamości zawiera nazwę zestawu, w której znajduje się. Typ o nazwie `MyType` czyli jest załadowany w zakresie jednego zestawu, nie taka sama, jak typ o nazwie `MyType` który jest ładowany w zakresie innego zestawu.  
   
--   Wchodzi w skład granice zakresu odwołania. Manifest zestawu zawiera metadane zestawu jest używany do rozpoznawania typów i spełniające żądania zasobów. Określa typy i zasobów, które są udostępniane poza zestaw. Manifest wylicza również innych zestawów, od których zależy.  
+- Wchodzi w skład granice zakresu odwołań. Manifest zestawu zawiera metadane zestawu jest używana do rozpoznawania typów i spełniającej żądania zasobu. Określa typy i zasoby, które są udostępniane poza zestawem. Manifest również wylicza inne zestawy, od których zależy.  
   
--   Wchodzi w skład wersji granicy. Zestaw jest znalezienie najmniejszego w środowisku uruchomieniowym języka; wszystkie typy i zasobów w tym samym zestawie są numerów wersji jako jednostka. Manifest zestawu opisano zależności wersji wybrane wszystkie zależne zestawy. Aby uzyskać więcej informacji o wersji, zobacz [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md).  
+- Stanowi on granicy wersji. Zestaw jest najmniejszego obsługą wersji środowiska uruchomieniowego języka wspólnego; wszystkie typy i zasoby z tego samego zestawu są wersjonowane jako jednostka. Manifest zestawu zawiera opis wersji zależności, o których należy określić wszystkie zależne zestawy. Aby uzyskać więcej informacji dotyczących wersjonowania, zobacz [przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md).  
   
--   Wchodzi w skład jednostki wdrożenia. Po uruchomieniu aplikacji tylko zestawy, których aplikacja początkowo wywołuje musi być obecny. Inne zestawy, takich jak zasoby lokalizacyjne lub zestawów zawierających klasy narzędzie można pobrać na żądanie. Dzięki temu aplikacje mają być przechowywane w prosty i alokowania, gdy najpierw pobrać. Aby uzyskać więcej informacji na temat wdrażania zestawów, zobacz [wdrażanie aplikacji](../../../docs/framework/deployment/index.md).  
+- Wchodzi w skład jednostki wdrożenia. Po uruchomieniu aplikacji tylko zestawy, które początkowo wywołuje aplikacji musi być obecny. Inne zestawy, takie jak zasoby lokalizacyjne lub zestawów zawierających klasy narzędzi mogą być pobierane na żądanie. Dzięki temu aplikacje były proste i alokowania elastycznego, gdy pobrane po raz pierwszy. Aby uzyskać więcej informacji o wdrażaniu zestawów, zobacz [wdrażanie aplikacji](../../../docs/framework/deployment/index.md).  
   
--   Jest to jednostka, jaką wykonywanie side-by-side jest obsługiwane. Aby uzyskać więcej informacji na temat uruchamiania wielu wersji zestawu, zobacz [zestawy i wykonywanie Side-by-Side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
+- Jest to jednostka, jaką wykonywanie side-by-side jest obsługiwane. Aby uzyskać więcej informacji dotyczących uruchamiania wielu wersji zestawu, zobacz [zestawy i wykonywanie Side-by-Side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
   
- Zestawy mogą być statyczne lub dynamiczne. Zestawy statyczne mogą obejmować typów .NET Framework (klasy i interfejsy), oraz zasobów dla zestawu (mapy bitowe, JPEG pliki plików zasobów i tak dalej). Zestawy statyczne są przechowywane na dysku w przenośne pliki wykonywalne (PE). .NET Framework również służy do tworzenia dynamicznych zestawów, które są uruchamiane bezpośrednio z pamięci i nie są zapisywane na dysku przed realizacją. Możesz zapisać zestawów dynamicznych na dysku po ich wykonaniu.  
+ Zespoły mogą być statyczne lub dynamiczne. Statyczne zestawy mogą obejmować typów programu .NET Framework (klasy i interfejsy), a także zasoby dla zestawu (mapy bitowe, JPEG pliki, pliki zasobów i tak dalej). Statyczne zestawy są przechowywane na dysku w przenośnych plików wykonywalnych (PE). Umożliwia także programu .NET Framework do tworzenia dynamicznych zestawów, które są uruchamiane bezpośrednio z pamięci i nie są zapisywane na dysku przed wykonaniem. Możesz zapisać dynamicznych zestawów na dysku, po ich wykonaniu.  
   
- Istnieje kilka sposobów, aby utworzyć zestawy. Korzystając z narzędziami programistycznymi, takimi jak Visual Studio, które zostały użyte w przeszłości, aby utworzyć pliki .dll lub .exe. Korzystając z narzędzi dostępnych w [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] utworzyć zestawy z modułów utworzonych w innych środowiskach programistycznych. Umożliwia także aparat plików wykonywalnych języka wspólnego interfejsów API, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>, aby utworzyć zestawów dynamicznych.  
+ Istnieje kilka sposobów tworzenia zestawów. Można użyć narzędzi deweloperskich, takich jak Visual Studio, użytego w przeszłości do tworzenia plików .dll lub .exe. Można użyć narzędzi dostępnych w [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] tworzenia zestawów z modułów utworzonych w innych środowiskach programistycznych. Umożliwia także środowiska uruchomieniowego języka wspólnego interfejsów API, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>, aby utworzyć zestawów dynamicznych.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)|W tym artykule opisano elementy wchodzące w skład zestawu.|  
-|[Manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md)|W tym artykule opisano w manifeście zestawu i sposób przechowywania w zestawach danych.|  
-|[Global Assembly Cache](../../../docs/framework/app-domains/gac.md)|Opis pamięci podręcznej GAC i sposobu korzystania z zestawami.|  
-|[Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)|Opisuje właściwości zestawy o silnych nazwach.|  
-|[Zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md)|W tym artykule omówiono, jak działają zabezpieczenia z zestawami.|  
+|[Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)|W tym artykule opisano elementy, które tworzą zestaw.|  
+|[Manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md)|W tym artykule opisano je w manifeście zestawu i jak są przechowywane w zestawach.|  
+|[Global Assembly Cache](../../../docs/framework/app-domains/gac.md)|Opis globalnej pamięci podręcznej i sposobie ich użycia za pomocą zestawów.|  
+|[Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)|Opisuje charakterystykę zestawy o silnych nazwach.|  
+|[Zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md)|W tym artykule omówiono, jak działają zabezpieczenia za pomocą zestawów.|  
 |[Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)|Omówienie zasad przechowywania wersji .NET Framework.|  
 |[Umieszczanie zestawu](../../../docs/framework/app-domains/assembly-placement.md)|W tym artykule omówiono, gdzie umieścić zestawy.|  
-|[Zestawy i wykonywanie równoczesne](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|Zawiera omówienie sposobu użycia wielu wersji środowiska uruchomieniowego lub zestawu jednocześnie.|  
-|[Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)|Opisuje sposób tworzenia, zaloguj się i ustawić atrybuty zestawów.|  
-|[Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Opisuje sposób tworzenia zestawów dynamicznych.|  
-|[Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|W tym artykule opisano, jak programu .NET Framework jest rozpoznawany jako odwołania do zestawów w czasie wykonywania.|  
+|[Zestawy i wykonywanie równoczesne](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|Zawiera omówienie sposobu użycia wielu wersji środowiska uruchomieniowego lub zestawie jednocześnie.|  
+|[Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)|W tym artykule opisano sposób tworzenia, zaloguj się i ustawianie atrybutów zestawów.|  
+|[Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|W tym artykule opisano sposób tworzenia zestawów dynamicznych.|  
+|[Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|W tym artykule opisano, jak .NET Framework jest rozpoznawana jako odwołania do zestawów w czasie wykonywania.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
 ms.openlocfilehash: a22cb939370b38780881eca0d9585a14002c8250
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683720"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Używanie instrukcji foreach z tablicami (C# Programming Guide)
 

@@ -3,11 +3,11 @@ title: Typy dopuszczające wartości null odwołań
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczającego wartość null, dodane w C# 8. Dowiesz się, jak ta funkcja zapewnia zabezpieczenie przed wyjątków odwołanie o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
 ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61684045"
 ---
 # <a name="nullable-reference-types"></a>Typy dopuszczające wartości null odwołań
 

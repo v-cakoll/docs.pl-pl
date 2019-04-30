@@ -3,11 +3,11 @@ title: Używanie rozszerzeń działania
 ms.date: 03/30/2017
 ms.assetid: 500eb96a-c009-4247-b6b5-b36faffdf715
 ms.openlocfilehash: e524f7e7127eb215be85b0c317474eee70830c2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669514"
 ---
 # <a name="using-activity-extensions"></a>Używanie rozszerzeń działania
 Działania mogą wchodzić w interakcje z rozszerzeniami aplikacji przepływu pracy, które zezwala na hostów w celu zapewnienia dodatkowych funkcji, która nie jest jawnie modelowane w przepływie pracy.  W tym temacie opisano sposób tworzenia i liczbę przypadków, gdy działanie wykonuje za pomocą rozszerzenia.

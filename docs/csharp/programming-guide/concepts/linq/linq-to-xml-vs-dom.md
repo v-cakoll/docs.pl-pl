@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML a. MODELU DOM (C#)
+title: LINQ to XML a MODELU DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
 ms.openlocfilehash: 44e5a4d00705d1cd7aff66e0a9be387d5c6c633a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701622"
 ---
-# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a. MODELU DOM (C#)
+# <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML a MODELU DOM (C#)
 W tej sekcji opisano niektóre podstawowe różnice między [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] i bieżącej dominujący XML programowania interfejsu API, W3C Document Object Model (DOM).  
   
 ## <a name="new-ways-to-construct-xml-trees"></a>Nowe sposoby tworzenia drzew XML  
@@ -80,11 +80,11 @@ XElement contacts =
 ## <a name="working-directly-with-xml-elements"></a>Praca bezpośrednio z elementów XML  
  Gdy program za pomocą XML zespół podstawowego jest zazwyczaj na elementy XML, a być może w atrybutach. W [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można pracować bezpośrednio z elementów XML oraz atrybuty. Można na przykład, wykonaj następujące czynności:  
   
--   Tworzenie elementów XML bez przy użyciu obiektu dokumentu w ogóle. Upraszcza to programowania, gdy trzeba pracować przy użyciu fragmentów drzew XML.  
+- Tworzenie elementów XML bez przy użyciu obiektu dokumentu w ogóle. Upraszcza to programowania, gdy trzeba pracować przy użyciu fragmentów drzew XML.  
   
--   Obciążenia `T:System.Xml.Linq.XElement` obiektów bezpośrednio z pliku XML.  
+- Obciążenia `T:System.Xml.Linq.XElement` obiektów bezpośrednio z pliku XML.  
   
--   Serializowanie `T:System.Xml.Linq.XElement` obiektów do pliku lub strumienia.  
+- Serializowanie `T:System.Xml.Linq.XElement` obiektów do pliku lub strumienia.  
   
  To porównać do modelu DOM W3C, w którym dokument XML jest używany jako kontener logiczny dla drzewa XML. W modelu DOM węzłów XML, w tym elementów i atrybutów, należy utworzyć w kontekście dokumentu XML. Poniżej przedstawiono fragment kodu, aby utworzyć element nazwy w modelu DOM:  
   

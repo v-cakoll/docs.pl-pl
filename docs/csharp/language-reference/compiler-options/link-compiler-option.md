@@ -12,11 +12,11 @@ helpviewer_keywords:
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
 ms.openlocfilehash: 9dcb79a3310c4c814879501e2723560a84c9b48c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662783"
 ---
 # <a name="-link-c-compiler-options"></a>-link (opcje kompilatora C#)
 Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonych zestawach do projektu, który obecnie kompilacja.  
@@ -47,9 +47,9 @@ Powoduje, że kompilator udostępnia informacje o typie modelu COM w określonyc
   
  Jeśli łączysz się do zestawu COM (Assembly A) która sama odwołuje się do innego zestawu modelu COM (Assembly B), musisz również link do zestawu B, jeśli jest spełniony jeden z następujących czynności:  
   
--   Typ z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
+- Typ z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
   
--   Pola, właściwości, zdarzenia lub metody, która ma typ lub parametr typu zwracanego z zestawu B zostanie wywołana.  
+- Pola, właściwości, zdarzenia lub metody, która ma typ lub parametr typu zwracanego z zestawu B zostanie wywołana.  
   
  Podobnie jak [— odwołanie](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) — opcja kompilatora, `-link` — opcja kompilatora korzysta z pliku odpowiedzi Csc.rsp odwołania często używane [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zestawów. Użyj [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) opcji kompilatora, jeśli nie chcesz, aby kompilator, aby użyć pliku Csc.rsp.  
   

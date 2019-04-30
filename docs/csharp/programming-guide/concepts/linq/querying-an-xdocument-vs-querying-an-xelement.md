@@ -1,15 +1,15 @@
 ---
-title: Podczas badania elementu XDocument a. Podczas badania XElement (C#)
+title: Tworzenie zapytań dotyczących elementu XDocument a Podczas badania XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
 ms.openlocfilehash: 125b0811296695a0909f804931e0caca81f63df6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680782"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Podczas badania elementu XDocument a. Podczas badania XElement (C#)
+# <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>Tworzenie zapytań dotyczących elementu XDocument a Podczas badania XElement (C#)
 Podczas ładowania dokumentu za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, zauważysz, trzeba nieco inaczej niż podczas ładowania za pośrednictwem pisać zapytania <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>Porównanie XDocument.Load i XElement.Load  

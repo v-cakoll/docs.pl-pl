@@ -14,11 +14,11 @@ ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683135"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Globalizacja i lokalizacja aplikacji .NET
 
@@ -38,9 +38,9 @@ Ten krok obejmuje dostosowywanie aplikacji do określonych kultur lub regionów.
 
 Wykonanie tych trzech kroków ma dwie zalety:
 
--   Uwalnia użytkownika od konieczności przeprojektować aplikację, która umożliwia obsługę jednej kultury, takie jak Stany Zjednoczone W języku angielskim, do obsługi dodatkowych kultur.
+- Uwalnia użytkownika od konieczności przeprojektować aplikację, która umożliwia obsługę jednej kultury, takie jak Stany Zjednoczone W języku angielskim, do obsługi dodatkowych kultur.
 
--   Skutkuje zlokalizowanymi aplikacjami, które są stabilniejsze i zawierają mniej błędów.
+- Skutkuje zlokalizowanymi aplikacjami, które są stabilniejsze i zawierają mniej błędów.
 
 .NET oferuje zaawansowaną obsługę dla opracowywania aplikacji gotowej dla całego świata i zlokalizowanych. W szczególności wiele składowych typów w .NET klasy biblioteki wspiera globalizację, zwracając wartości, które odzwierciedlają konwencje kultury bieżącego użytkownika lub określonej kultury. .NET obsługuje także zestawy satelickie, które ułatwiają proces lokalizowania aplikacji.
 

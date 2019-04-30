@@ -1,5 +1,5 @@
 ---
-title: Odczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument
+title: Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,13 +9,13 @@ ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 68d19784bab8a5d5a1994ea139b5631f56c7c680
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698740"
 ---
-# <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Odczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument
+# <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument
 Istnieją dwa sposoby, które można odczytać dokumentu XML w <xref:System.Xml.XPath?displayProperty=nameWithType> przestrzeni nazw. Jeden jest do odczytu dokumentu XML przy użyciu tylko do odczytu <xref:System.Xml.XPath.XPathDocument> klasy, a drugi jest do odczytu dokumentu XML przy użyciu edytowalne <xref:System.Xml.XmlDocument> klasy w <xref:System.Xml?displayProperty=nameWithType> przestrzeni nazw.  
   
 ## <a name="reading-xml-documents-using-the-xpathdocument-class"></a>Odczytywanie dokumentów XML przy użyciu klas XPathDocument klasy  

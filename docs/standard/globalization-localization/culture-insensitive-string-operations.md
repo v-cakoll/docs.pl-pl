@@ -15,13 +15,13 @@ ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ca35f73590f8a7c58a0044136c05f341796dfc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683122"
 ---
-# <a name="culture-insensitive-string-operations"></a>Operacje na ciągach niezależnych od kultury
+# <a name="culture-insensitive-string-operations"></a>Niezależne od kultury operacje na ciągach
 
 Operacje na ciągach, w których jest uwzględniana kultura, mogą okazać się przydatne w przypadku tworzenia aplikacji, które mają wyświetlać wyniki użytkownikom na podstawie kultury. Domyślnie wrażliwość na ustawienia kulturowe metody uwzględniające kulturę do użycia z <xref:System.Globalization.CultureInfo.CurrentCulture%2A> właściwości dla bieżącego wątku.
 

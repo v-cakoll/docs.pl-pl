@@ -3,11 +3,11 @@ title: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
 ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689401"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak produkcji XAML, który korzysta z określonego słownika XAML współdziała z obiektu zapisywania zachowania, w tym sposób mapowania typów rozwiązuje, jak zespoły są ładowane, jak w przypadku niektórych czytników i składników zapisywania ustawienia są interpretowane. W tym temacie opisano funkcje usług .NET Framework XAML i kontekst schematu XAML skojarzoną domyślną, który jest oparty na systemie typu CLR. W tym temacie opisano kontekst schematu XAML, który służy do WPF.  
@@ -50,11 +50,11 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
   
 2. W przeciwnym razie jedną z następujących technik oparte na CLR <xref:System.Reflection.Assembly> interfejsu API są używane do załadowania zestawu:  
   
-    -   Jeśli nazwa kwalifikuje się do mapowania, wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
+    - Jeśli nazwa kwalifikuje się do mapowania, wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
   
-    -   Jeśli w poprzednim kroku nie powiedzie się, użyj krótkiej nazwy (i token klucza publicznego Jeśli jest obecna) do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Jeśli w poprzednim kroku nie powiedzie się, użyj krótkiej nazwy (i token klucza publicznego Jeśli jest obecna) do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-    -   Jeśli nazwa jest niekwalifikowana w mapowaniu, wywołaj <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+    - Jeśli nazwa jest niekwalifikowana w mapowaniu, wywołaj <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
  `XamlBuildTask` jest używany dla usług Windows Communication Foundation (WCF) i Windows Workflow Foundation.  
@@ -82,11 +82,11 @@ Kontekst schematu XAML jest koncepcyjnymi encji, który kwalifikuje się, jak pr
   
 2. W przeciwnym razie jest jedną z następujących technik służy do załadowania zestawu:  
   
-    -   Wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
+    - Wywołaj <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> kwalifikowanej nazwy.  
   
-    -   Krótka nazwa + publicznego tokenu kombinacja były zgodne z zestawem, który BAML został załadowany z, należy użyć tego zestawu.  
+    - Krótka nazwa + publicznego tokenu kombinacja były zgodne z zestawem, który BAML został załadowany z, należy użyć tego zestawu.  
   
-    -   Użyj krótkiej nazwy i token klucza publicznego do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+    - Użyj krótkiej nazwy i token klucza publicznego do wywołania <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

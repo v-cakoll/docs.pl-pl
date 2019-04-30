@@ -7,11 +7,11 @@ helpviewer_keywords:
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
 ms.openlocfilehash: 0c9d8c33715b4baf11bfac05cd4881d1475f8844
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57847001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703520"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Przekazywanie parametrów typu wartość (Przewodnik programowania w języku C#)
 A [typ wartości](../../../csharp/language-reference/keywords/value-types.md) zmienna zawiera swoje dane bezpośrednio w przeciwieństwie do [Typ referencyjny](../../../csharp/language-reference/keywords/reference-types.md) zmienną, która zawiera odwołanie do jego danych. Przekazywanie zmiennej typu wartości do metody poprzez wartość oznacza, że przekazywanie kopię zmiennej do metody. Wszelkie zmiany do parametru, które odbywają się wewnątrz metody mają nie będzie miała wpływu na oryginalne dane przechowywane w zmiennej argumentu. Jeśli ma metodę o nazwie, aby zmienić wartość argumentu, należy przekazać jej przez odwołanie, za pomocą [ref](../../../csharp/language-reference/keywords/ref.md) lub [się](../../../csharp/language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można także użyć [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe do przekazywania parametru wartości przez odwołanie, aby uniknąć kopii przy jednoczesnym zagwarantowaniu, że wartości nie zostaną zmienione. Dla uproszczenia w poniższych przykładach używane `ref`.  

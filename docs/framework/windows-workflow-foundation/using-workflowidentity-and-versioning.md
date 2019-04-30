@@ -3,24 +3,24 @@ title: Używanie obiektu WorkflowIdentity i wersjonowanie
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
 ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669660"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Używanie obiektu WorkflowIdentity i wersjonowanie
 <xref:System.Activities.WorkflowIdentity> Umożliwia dla przepływu pracy deweloperów aplikacji, aby skojarzyć nazwę i <xref:System.Version> przy użyciu definicji przepływu pracy i te informacje, które ma zostać skojarzony z istniejącym wystąpieniem przepływu pracy. Informacje o tożsamości może służyć przez deweloperów aplikacji przepływu pracy można obsługiwać scenariusze takie jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i zapewnia podstawę dla innych funkcji, takich jak aktualizacja dynamiczna. W tym temacie przedstawiono jako omówienie sposobu użycia <xref:System.Activities.WorkflowIdentity> z <xref:System.Activities.WorkflowApplication> hostingu. Aby uzyskać informacji na temat wykonywania side-by-side definicji przepływu pracy w usłudze przepływu pracy, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Aby uzyskać informacji na temat aktualizacji dynamicznej, zobacz [aktualizacji dynamicznej](dynamic-update.md).  
   
 ## <a name="in-this-topic"></a>W tym temacie:  
   
--   [Za pomocą obiektu WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+- [Za pomocą obiektu WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [Wykonanie Side-by-side przy użyciu obiektu WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
+    - [Wykonanie Side-by-side przy użyciu obiektu WorkflowIdentity](using-workflowidentity-and-versioning.md#SxS)  
   
--   [Uaktualnianie platformy .NET Framework 4 trwałości baz danych w celu obsługi wersji przepływu pracy](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+- [Uaktualnianie platformy .NET Framework 4 trwałości baz danych w celu obsługi wersji przepływu pracy](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [Aby uaktualnić schemat bazy danych](using-workflowidentity-and-versioning.md#ToUpgrade)  
+    - [Aby uaktualnić schemat bazy danych](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> Za pomocą obiektu WorkflowIdentity  
  Aby użyć <xref:System.Activities.WorkflowIdentity>, Utwórz wystąpienie, jest skonfigurowana i skojarz ją z <xref:System.Activities.WorkflowApplication> wystąpienia. A <xref:System.Activities.WorkflowIdentity> wystąpienie zawiera trzy identyfikujące informacje. <xref:System.Activities.WorkflowIdentity.Name%2A> i <xref:System.Activities.WorkflowIdentity.Version%2A> zawiera nazwy i <xref:System.Version> i są wymagane, i <xref:System.Activities.WorkflowIdentity.Package%2A> jest opcjonalna i może służyć do określenia dodatkowych ciąg zawierający informacje, takie jak nazwa zestawu lub inne żądane informacje. A <xref:System.Activities.WorkflowIdentity> są unikatowe, jeśli dowolny z jego trzy właściwości różnią się od innego <xref:System.Activities.WorkflowIdentity>.  

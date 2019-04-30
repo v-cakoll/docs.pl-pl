@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [C#], storing instances in a Dictionary
 ms.assetid: 9512c64d-5aaf-40cd-b941-ca2a592f0064
 ms.openlocfilehash: f8522e499887398402f63c7788bbc6c6c4f57782
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710780"
 ---
 # <a name="how-to-use-a-dictionary-to-store-event-instances-c-programming-guide"></a>Porady: użycie słownika do przechowywania wystąpień zdarzeń (C# Programming Guide)
 

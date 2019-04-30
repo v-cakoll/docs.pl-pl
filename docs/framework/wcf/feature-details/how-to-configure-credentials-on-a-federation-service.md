@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699841"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Instrukcje: konfigurowanie poświadczeń usługi federacyjnej
 W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa się z następujących procedur głównego:  
@@ -63,11 +63,11 @@ W Windows Communication Foundation (WCF), tworzenia usługi federacyjnej składa
   
  Aby usługi federacyjnej do uwierzytelnienia klienta, wymaga spełnienia następujących warunków dotyczących wystawiony token:  
   
--   Jeśli podpis cyfrowy wystawiony token używa identyfikatora klucza zabezpieczeń RSA, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> właściwość musi być `true`.  
+- Jeśli podpis cyfrowy wystawiony token używa identyfikatora klucza zabezpieczeń RSA, <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> właściwość musi być `true`.  
   
--   Jeśli podpis wystawiony token używa numeru seryjnego wystawcy X.509, identyfikator klucza podmiotu X.509 lub identyfikator zabezpieczeń odcisk palca X.509, wystawiony token musi być podpisany przy użyciu certyfikatu w kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwość <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>klasy.  
+- Jeśli podpis wystawiony token używa numeru seryjnego wystawcy X.509, identyfikator klucza podmiotu X.509 lub identyfikator zabezpieczeń odcisk palca X.509, wystawiony token musi być podpisany przy użyciu certyfikatu w kolekcji zwróconej przez <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwość <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>klasy.  
   
--   Gdy wystawiony token jest podpisany przy użyciu certyfikatu X.509, certyfikat musi go zweryfikować na semantykę określony przez wartość <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwość, niezależnie od tego, czy certyfikat został wysłany do jednostki uzależnionej jako <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> lub zostały pobrane z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwości. Aby uzyskać więcej informacji dotyczących walidacji certyfikatu X.509, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+- Gdy wystawiony token jest podpisany przy użyciu certyfikatu X.509, certyfikat musi go zweryfikować na semantykę określony przez wartość <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> właściwość, niezależnie od tego, czy certyfikat został wysłany do jednostki uzależnionej jako <xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> lub zostały pobrane z <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> właściwości. Aby uzyskać więcej informacji dotyczących walidacji certyfikatu X.509, zobacz [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  Na przykład ustawienie <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> do <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> będzie uwierzytelnienia wszelkich wystawiony token, którego certyfikat podpisywania jest `TrustedPeople` magazynu certyfikatów. W takim przypadku należy ustawić <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> właściwości albo <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> lub <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine>. Możesz wybrać inne tryby, w tym <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>. Gdy `Custom` jest zaznaczone, należy przypisać wystąpienie <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> właściwości. Niestandardowego modułu weryfikacji można sprawdzić poprawność certyfikatów przy użyciu dowolnego kryterium, które potrzeby. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie usługi korzystającej z niestandardowego modułu weryfikacji certyfikatów](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md).  
   

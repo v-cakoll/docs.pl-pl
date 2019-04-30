@@ -6,10 +6,10 @@ ms.date: 06/12/2017
 ms.custom: seodec18
 ms.openlocfilehash: d99cabf15be63593b272474867359324a5892b04
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664796"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 

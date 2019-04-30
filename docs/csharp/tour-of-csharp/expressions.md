@@ -4,11 +4,11 @@ description: bloki konstrukcyjne są wyrażenia, argumenty operacji i operatory 
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
 ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706341"
 ---
 # <a name="expressions"></a>Wyrażenia
 

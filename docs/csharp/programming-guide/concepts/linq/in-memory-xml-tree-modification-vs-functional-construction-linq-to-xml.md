@@ -1,15 +1,15 @@
 ---
-title: Modyfikowanie drzewa XML w pamięci programu vs. Konstrukcja funkcjonalna (LINQ to XML) (C#)
+title: Modyfikowanie drzewa XML w pamięci a Konstrukcja funkcjonalna (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b5afc31d-a325-4ec6-bf17-0ff90a20ffca
 ms.openlocfilehash: 1dea6a687f041c3464f582d3339f76713828f244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667608"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modyfikowanie drzewa XML w pamięci programu vs. Konstrukcja funkcjonalna (LINQ to XML) (C#)
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a>Modyfikowanie drzewa XML w pamięci a Konstrukcja funkcjonalna (LINQ to XML) (C#)
 Modyfikowanie drzewa XML w miejscu jest tradycyjne podejście na zmieniające się kształt dokumentu XML. Typowa aplikacja ładuje dokumentu do magazynu danych, takich jak modelu DOM lub [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; używa interfejsu programowania wstawić węzłów, usuń węzły lub zmienić zawartość węzłów; a następnie zapisuje w pliku XML lub przesyła je za pośrednictwem sieci.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia innym rozwiązaniem, które są przydatne w wielu scenariuszach: *konstrukcja funkcjonalna*. Konstrukcja funkcjonalna modyfikowania dane są traktowane jako problem transformacji, a nie jako szczegółowe manipulowania magazynu danych. Jeśli możesz wykonać reprezentację danych i przekształcić je wydajnie z jednego formularza do innego, wynik jest taki sam, tak, jakby miały jeden magazyn danych i modyfikować je w jakiś sposób, aby móc innego kształtu. Klucz podejścia konstrukcja funkcjonalna służy do przekazywania wyniki zapytania w celu <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> konstruktorów.  

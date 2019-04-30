@@ -16,38 +16,38 @@ helpviewer_keywords:
 - animations [WPF], applying
 ms.assetid: 075b9c2b-82c4-43fa-b3cd-de0b6236eb38
 ms.openlocfilehash: 456308e37bddc1df86b49085139a3810c4959a58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763145"
 ---
 # <a name="easing-functions"></a>Zwalnianie funkcji
 Funkcji easingu umożliwiają zastosowanie niestandardowych wzory matematyczne do animacji. Na przykład może być obiekt realistycznie Odbijanie lub zachowują się tak, jakby był na platformy spring. Można użyć kluczowych klatek lub nawet od/do/przez animacji, które znajdują się obliczyć przybliżoną te skutki, ale zająć znaczną ilość pracy, a następnie animacji będzie mniej dokładnie niż przy użyciu formuły matematyczne.  
   
  Oprócz tworzenia własnych niestandardowych funkcji sterowania tempem zmian przez dziedziczenie z <xref:System.Windows.Media.Animation.EasingFunctionBase>, używasz jednej z kilku funkcji sterowania tempem zmian dostarczane przez środowisko uruchomieniowe do tworzenia efektów wspólnej.  
   
--   <xref:System.Windows.Media.Animation.BackEase>: Wycofuje nieco ruchu animacji, zanim rozpocznie się animować w wskazanej ścieżce.  
+- <xref:System.Windows.Media.Animation.BackEase>: Wycofuje nieco ruchu animacji, zanim rozpocznie się animować w wskazanej ścieżce.  
   
--   <xref:System.Windows.Media.Animation.BounceEase>: Tworzy efekt odbijania.  
+- <xref:System.Windows.Media.Animation.BounceEase>: Tworzy efekt odbijania.  
   
--   <xref:System.Windows.Media.Animation.CircleEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu funkcji cykliczne.  
+- <xref:System.Windows.Media.Animation.CircleEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu funkcji cykliczne.  
   
--   <xref:System.Windows.Media.Animation.CubicEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>3</sup>.  
+- <xref:System.Windows.Media.Animation.CubicEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>3</sup>.  
   
--   <xref:System.Windows.Media.Animation.ElasticEase>: Tworzy animacji podobny platformy spring Densytometr i z powrotem do momentu zakończenia rest.  
+- <xref:System.Windows.Media.Animation.ElasticEase>: Tworzy animacji podobny platformy spring Densytometr i z powrotem do momentu zakończenia rest.  
   
--   <xref:System.Windows.Media.Animation.ExponentialEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu wykładniczego formuły.  
+- <xref:System.Windows.Media.Animation.ExponentialEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu wykładniczego formuły.  
   
--   <xref:System.Windows.Media.Animation.PowerEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>p</sup> gdzie p jest równa <xref:System.Windows.Media.Animation.PowerEase.Power%2A>właściwości.  
+- <xref:System.Windows.Media.Animation.PowerEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>p</sup> gdzie p jest równa <xref:System.Windows.Media.Animation.PowerEase.Power%2A>właściwości.  
   
--   <xref:System.Windows.Media.Animation.QuadraticEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>2</sup>.  
+- <xref:System.Windows.Media.Animation.QuadraticEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>2</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuarticEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>4</sup>.  
+- <xref:System.Windows.Media.Animation.QuarticEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>4</sup>.  
   
--   <xref:System.Windows.Media.Animation.QuinticEase>: Utworzyć animację, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>5</sup>.  
+- <xref:System.Windows.Media.Animation.QuinticEase>: Utworzyć animację, które przyspieszają i/lub zwalnia przy użyciu formuły *f*(*t*) = *t*<sup>5</sup>.  
   
--   <xref:System.Windows.Media.Animation.SineEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły sinus.  
+- <xref:System.Windows.Media.Animation.SineEase>: Tworzy animacji, które przyspieszają i/lub zwalnia przy użyciu formuły sinus.  
   
  Aby zastosować funkcję przyspieszania do animacji, należy użyć `EasingFunction` właściwość animacji określać funkcję przyspieszania do zastosowania do animacji. Następujący przykład dotyczy <xref:System.Windows.Media.Animation.BounceEase> funkcja do przyspieszania <xref:System.Windows.Media.Animation.DoubleAnimation> utworzyć efekt odbijania.  
   
@@ -59,11 +59,11 @@ Funkcji easingu umożliwiają zastosowanie niestandardowych wzory matematyczne d
   
  Możesz użyć <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> właściwości do zmiany funkcji sterowania tempem zmian zachowania, oznacza to zmienić, jak interpolacji animacji. Istnieją trzy możliwe wartości, możesz nadać dla <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A>:  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolacja następuje formuły matematyczne skojarzone z funkcji sterowania tempem zmian.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseIn>: Interpolacja następuje formuły matematyczne skojarzone z funkcji sterowania tempem zmian.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolacja poniżej 100% interpolacji minus dane wyjściowe formuły skojarzone z funkcji sterowania tempem zmian.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseOut>: Interpolacja poniżej 100% interpolacji minus dane wyjściowe formuły skojarzone z funkcji sterowania tempem zmian.  
   
--   <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Zastosowań interpolacji <xref:System.Windows.Media.Animation.EasingMode.EaseIn> w pierwszej połowie animacji i <xref:System.Windows.Media.Animation.EasingMode.EaseOut> przez drugą połowę.  
+- <xref:System.Windows.Media.Animation.EasingMode.EaseInOut>: Zastosowań interpolacji <xref:System.Windows.Media.Animation.EasingMode.EaseIn> w pierwszej połowie animacji i <xref:System.Windows.Media.Animation.EasingMode.EaseOut> przez drugą połowę.  
   
  Poniższe wykresy pokazują różne wartości <xref:System.Windows.Media.Animation.EasingFunctionBase.EasingMode%2A> gdzie *f*(*x*) reprezentuje postęp animacji i *t* reprezentuje czas.  
   

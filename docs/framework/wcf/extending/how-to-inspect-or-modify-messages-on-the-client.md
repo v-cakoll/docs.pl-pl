@@ -3,11 +3,11 @@ title: 'Instrukcje: sprawdzanie lub modyfikowanie komunikatów na kliencie'
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766847"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Instrukcje: sprawdzanie lub modyfikowanie komunikatów na kliencie
 Można sprawdzić lub modyfikowanie komunikatów przychodzących lub wychodzących przez klienta programu WCF poprzez implementację <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> oraz wstawieniu ich do środowiska uruchomieniowego klienta. Aby uzyskać więcej informacji, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md). Jest równoważna funkcji w usłudze <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Aby uzyskać pełny przykład kodu zobacz [inspektorzy komunikatów](../../../../docs/framework/wcf/samples/message-inspectors.md) próbki.  
@@ -23,13 +23,13 @@ Można sprawdzić lub modyfikowanie komunikatów przychodzących lub wychodzący
 ## <a name="example"></a>Przykład  
  Pokaż w poniższych przykładach kodu w kolejności:  
   
--   Implementacji Inspektor klienta.  
+- Implementacji Inspektor klienta.  
   
--   Zachowanie punktu końcowego, który wstawia Inspektor.  
+- Zachowanie punktu końcowego, który wstawia Inspektor.  
   
--   A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-klasy, która pozwala na dodanie zachowania w pliku konfiguracji.  
+- A <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-klasy, która pozwala na dodanie zachowania w pliku konfiguracji.  
   
--   Plik konfiguracji, który dodaje zachowanie punktu końcowego, który wstawia Inspektor komunikat klienta do środowiska uruchomieniowego klienta.  
+- Plik konfiguracji, który dodaje zachowanie punktu końcowego, który wstawia Inspektor komunikat klienta do środowiska uruchomieniowego klienta.  
   
 ```csharp  
 // Client message inspector  

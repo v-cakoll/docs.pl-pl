@@ -6,11 +6,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
 ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723007"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip — Formant (Formularze systemu Windows)
 Ta aplikacja grup kontroli poleceń i sprawia, że są je łatwo dostępne.  
@@ -55,19 +55,19 @@ Ta aplikacja grup kontroli poleceń i sprawia, że są je łatwo dostępne.
  [Instrukcje: Konfigurowanie automatycznego scalania Menu dla aplikacji MDI](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  W tym artykule opisano sposób automatycznego scalania elementów menu w czasie wykonywania.  
   
--   [MenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip — Edytor kolekcji elementów](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [Instrukcje: Kopiowanie kontrolki ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
+- [Instrukcje: Kopiowanie kontrolki ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Instrukcje: Ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-hide-toolstripmenuitems-using-the-designer.md)  
+- [Instrukcje: Ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Instrukcje: Wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-disable-toolstripmenuitems-using-the-designer.md)  
+- [Instrukcje: Wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Instrukcje: Przenoszenie kontrolki ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
+- [Instrukcje: Przenoszenie kontrolki ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Przewodnik: Zapewnianie elementów Menu standardowego dla formularza](walkthrough-providing-standard-menu-items-to-a-form.md)  
+- [Przewodnik: Zapewnianie elementów Menu standardowego dla formularza](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [MenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [MenuStrip — okno dialogowe zadań](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.MenuStrip>  

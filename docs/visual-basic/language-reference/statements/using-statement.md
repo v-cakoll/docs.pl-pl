@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698658"
 ---
 # <a name="using-statement-visual-basic"></a>Using — Instrukcja (Visual Basic)
 Deklaruje początku `Using` zablokować, a także opcjonalnie uzyskuje zasobów systemowych, które kontroluje bloku.  
@@ -61,11 +61,11 @@ End Using
   
  A `Using` bloku ma trzy części: pozyskiwanie, użycia i usuwania.  
   
--   *Pozyskiwanie* oznacza, że utworzenie zmiennej i inicjując go do odwoływania się do zasobów systemu. `Using` Poufności informacji mogą nabyć jeden lub więcej zasobów lub uzyskiwanie dokładnie jeden zasób przed wejściem bloku i dostarczenia go do `Using` instrukcji. Jeśli podasz `resourceexpression`, należy uzyskać zasobu przed przekazaniem kontrolki `Using` instrukcji.  
+- *Pozyskiwanie* oznacza, że utworzenie zmiennej i inicjując go do odwoływania się do zasobów systemu. `Using` Poufności informacji mogą nabyć jeden lub więcej zasobów lub uzyskiwanie dokładnie jeden zasób przed wejściem bloku i dostarczenia go do `Using` instrukcji. Jeśli podasz `resourceexpression`, należy uzyskać zasobu przed przekazaniem kontrolki `Using` instrukcji.  
   
--   *Użycie* oznacza, że dostęp do zasobów i wykonywania związanych z nimi czynności. Instrukcje między `Using` i `End Using` reprezentują użycie zasobów.  
+- *Użycie* oznacza, że dostęp do zasobów i wykonywania związanych z nimi czynności. Instrukcje między `Using` i `End Using` reprezentują użycie zasobów.  
   
--   *Usuwanie* oznacza, że wywołanie <xref:System.IDisposable.Dispose%2A> metody dla obiektu w `resourcename`. Dzięki temu obiekt, aby prawidłowo zakończyć jego zasobów. `End Using` Instrukcji usuwa zasobów w ramach `Using` bloku sterowania.  
+- *Usuwanie* oznacza, że wywołanie <xref:System.IDisposable.Dispose%2A> metody dla obiektu w `resourcename`. Dzięki temu obiekt, aby prawidłowo zakończyć jego zasobów. `End Using` Instrukcji usuwa zasobów w ramach `Using` bloku sterowania.  
   
 ## <a name="behavior"></a>Zachowanie  
  A `Using` blok, który zachowuje się jak `Try`... `Finally` konstrukcji, w którym `Try` bloku używa zasobów i `Finally` bloku usuwa z nich. W związku z tym `Using` bloku gwarantuje likwidacji zasobów, niezależnie od tego, jak zamknąć blok. Ta zasada obowiązuje nawet w przypadku nieobsługiwany wyjątek, z wyjątkiem <xref:System.StackOverflowException>.  

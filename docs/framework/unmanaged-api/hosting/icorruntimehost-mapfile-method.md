@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8a979e86dbe52577d0b58089015338e4a87750d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700179"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile — Metoda
 Mapuje określony plik do pamięci. Ta metoda jest przestarzała.  

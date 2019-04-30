@@ -1,15 +1,15 @@
 ---
-title: What's New in Windows Workflow Foundation na platformie .NET 4.5
+title: Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61671421"
 ---
-# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>What's New in Windows Workflow Foundation na platformie .NET 4.5
+# <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Co nowego w programie Windows Workflow Foundation na platformie .NET 4.5
 
 Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie dla wszystkich nowych funkcji przepływu pracy, wprowadzona w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. Aby uzyskać więcej informacji na temat nowych funkcji, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Rehostowanym projektancie przepływu pracy](wf-features-in-the-rehosted-workflow-designer.md). Aby uzyskać więcej informacji na temat migrowania aplikacji .NET 3.0 i .NET 3.5 przepływu pracy można korzystać z najnowszej wersji, zobacz [wskazówek dotyczących migracji](migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzonych w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
 

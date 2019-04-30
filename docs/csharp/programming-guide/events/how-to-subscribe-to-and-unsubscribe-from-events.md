@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680431"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Instrukcje: Subskrybowanie i anulowanie subskrypcji zdarzeń (C# Programming Guide)
 Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać kod niestandardowy, który jest wywoływana, gdy zdarzenie jest zgłaszane. Na przykład może subskrybować przycisku `click` zdarzeń, aby zapewnić aplikacji zrobić coś, co jest przydatne, gdy użytkownik kliknie przycisk.  
@@ -74,7 +74,7 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Aby subskrybować zdarzenia przy użyciu metody anonimowej  
   
--   Jeśli nie trzeba będzie później anulować subskrypcję zdarzenia, można użyć operator przypisania dodawania (`+=`) można dołączyć metodę anonimową na zdarzenie. W poniższym przykładzie przyjęto założenie, że obiekt o nazwie `publisher` posiada zdarzenie o nazwie `RaiseCustomEvent` i `CustomEventArgs` klasy została zdefiniowana również przeprowadzenie pewnego rodzaju informacji o zdarzeniach specjalne. Należy pamiętać, że klasa subskrybenta wymaga odwołania do `publisher` Aby subskrybować ze zdarzeniami.  
+- Jeśli nie trzeba będzie później anulować subskrypcję zdarzenia, można użyć operator przypisania dodawania (`+=`) można dołączyć metodę anonimową na zdarzenie. W poniższym przykładzie przyjęto założenie, że obiekt o nazwie `publisher` posiada zdarzenie o nazwie `RaiseCustomEvent` i `CustomEventArgs` klasy została zdefiniowana również przeprowadzenie pewnego rodzaju informacji o zdarzeniach specjalne. Należy pamiętać, że klasa subskrybenta wymaga odwołania do `publisher` Aby subskrybować ze zdarzeniami.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ Subskrybowanie zdarzenia, które jest opublikowane przez inną klasę napisać k
   
 #### <a name="to-unsubscribe-from-an-event"></a>Aby anulować subskrypcję zdarzenia  
   
--   Użyj operator przypisania odejmowania (`-=`), aby anulować subskrypcję zdarzenia:  
+- Użyj operator przypisania odejmowania (`-=`), aby anulować subskrypcję zdarzenia:  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

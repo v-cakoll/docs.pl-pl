@@ -3,11 +3,11 @@ title: Wybieranie typu poświadczeń
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748810"
 ---
 # <a name="selecting-a-credential-type"></a>Wybieranie typu poświadczeń
 *Poświadczenia* jest Windows Communication Foundation (WCF) używanych do ustalenia tożsamości lub możliwości danych. Na przykład usługi passport jest poświadczeń, przez Rząd potwierdzenie zaawansowanych możliwości dostępnych w kraju lub regionie. W programie WCF poświadczenia mogą mieć wiele form, takich jak tokeny nazwy użytkownika i certyfikaty X.509. W tym temacie omówiono poświadczenia, jak są używane w programie WCF i jak wybierać odpowiednie poświadczenia dla aplikacji.  
@@ -85,9 +85,9 @@ ms.locfileid: "59167846"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Sposób używania poświadczeń klienta do uwierzytelniania klienta do usługi  
  Wymagany do komunikowania się z usługą informacji o poświadczeniach klienta znajduje się za pomocą <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> właściwości lub <xref:System.ServiceModel.ChannelFactory.Credentials%2A> właściwości. Kanał zabezpieczeń używa tych informacji do uwierzytelniania klienta do usługi. Uwierzytelnianie odbywa się za pomocą jednego z dwóch trybów:  
   
--   Poświadczenia klienta są używane raz przed wysłaniem pierwszy komunikat przy użyciu wystąpienia klienta programu WCF do ustanawiania kontekstu zabezpieczeń. Wszystkie komunikaty aplikacji są następnie zabezpieczone za pomocą kontekstu zabezpieczeń.  
+- Poświadczenia klienta są używane raz przed wysłaniem pierwszy komunikat przy użyciu wystąpienia klienta programu WCF do ustanawiania kontekstu zabezpieczeń. Wszystkie komunikaty aplikacji są następnie zabezpieczone za pomocą kontekstu zabezpieczeń.  
   
--   Poświadczenia klienta są używane do uwierzytelniania każdego komunikatu aplikacji wysyłane do usługi. W tym przypadku kontekst nie zostanie nawiązane między klientem a usługą.  
+- Poświadczenia klienta są używane do uwierzytelniania każdego komunikatu aplikacji wysyłane do usługi. W tym przypadku kontekst nie zostanie nawiązane między klientem a usługą.  
   
 ### <a name="established-identities-cannot-be-changed"></a>Nie można zmienić tożsamości ustalonych  
  W przypadku pierwszej metody ustanowionych kontekst jest stałe skojarzone z tożsamością klienta. Oznacza to, że po ustanowieniu kontekstu zabezpieczeń, nie można zmienić na tożsamość skojarzoną z klienta.  
@@ -108,7 +108,6 @@ ms.locfileid: "59167846"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)

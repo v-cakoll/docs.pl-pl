@@ -3,48 +3,48 @@ title: Protokoły zabezpieczeń wersja 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 ms.openlocfilehash: 684ab50b6dab4b97577acf7673ed14c53e5af13e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183948"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748580"
 ---
 # <a name="security-protocols-version-10"></a>Protokoły zabezpieczeń wersja 1.0
 Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usług sieci Web, które obejmują wszystkie istniejące enterprise komunikatów wymagań dotyczących zabezpieczeń. W tej sekcji opisano szczegóły Windows Communication Foundation (WCF) w wersji 1.0 (zaimplementowany w <xref:System.ServiceModel.Channels.SecurityBindingElement>) dla następujących sieci Web usług protokołów zabezpieczeń.  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-|-|  
-|Programu WSS: Zabezpieczenia komunikatów SOAP 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|Grupie WSS: Token nazwy użytkownika profilu 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|Grupie WSS: X509 tokenu profilu 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|Grupie WSS: SAML 1.1 tokenu profilu 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|Programu WSS: Zabezpieczenia komunikatów w ramach SOAP 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|WSS: SOAP Message Security 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|WSS: Token nazwy użytkownika profilu 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|WSS: X509 Token Profile 1.0|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|WSS: SAML 1.1 Token Profile 1.0|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|WSS: Zabezpieczenia komunikatów SOAP 1.1|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
 |1.1 tokenu profilu programu WSS nazwy użytkownika|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|Programu WSS: 1.1 tokenu profilu X.509|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|Programu WSS: 1.1 profilu tokenu protokołu Kerberos|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|Grupie WSS: SAML 1.1 Token 1.1 profilu|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|WSS: X.509 Token Profile 1.1|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|WSS: 1.1 profilu tokenu protokołu Kerberos|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|WSS: SAML 1.1 Token 1.1 profilu|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
 |Zabezpieczenia WS konwersacji|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
 |WS-Trust|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
-|Uwaga aplikacji:<br /><br /> Za pomocą protokołu WS-Trust dla uzgadniania TLS|Do opublikowania|  
-|Uwaga aplikacji:<br /><br /> Za pomocą protokołu WS-Trust dla SPNEGO|Do opublikowania|  
-|Uwaga aplikacji:<br /><br /> Usługi sieci Web, odnoszący się odwołania do punktu końcowego i tożsamości|Do opublikowania|  
+|Application Note:<br /><br /> Za pomocą protokołu WS-Trust dla uzgadniania TLS|Do opublikowania|  
+|Application Note:<br /><br /> Za pomocą protokołu WS-Trust dla SPNEGO|Do opublikowania|  
+|Application Note:<br /><br /> Usługi sieci Web, odnoszący się odwołania do punktu końcowego i tożsamości|Do opublikowania|  
 |WS-SecurityPolicy 1.1<br /><br /> (2005/07)|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> ostatnio zmienione przez [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) przesłane do Komitet Techniczny usługi WS-SX OASIS |  
   
  Usługi WCF, wersja 1, zapewnia 17 tryby uwierzytelniania, które mogą służyć jako podstawa dla konfiguracji zabezpieczeń usług sieci Web. Każdego trybu została zoptymalizowana pod kątem wspólny zbiór wymagania dotyczące wdrażania, takich jak:  
   
--   Poświadczenia używane do uwierzytelniania klienta i usługi.  
+- Poświadczenia używane do uwierzytelniania klienta i usługi.  
   
--   Mechanizmy ochrony zabezpieczeń wiadomości lub transportu.  
+- Mechanizmy ochrony zabezpieczeń wiadomości lub transportu.  
   
--   Wzorce wymiany komunikatów.  
+- Wzorce wymiany komunikatów.  
   
 |Tryb uwierzytelniania|Uwierzytelnianie klienta|Uwierzytelnianie serwera|Tryb|  
 |-------------------------|---------------------------|---------------------------|----------|  
-|UserNameOverTransport|Nazwa użytkownika/hasło|X509|Transportu|  
-|CertificateOverTransport|X509|X509|Transportu|  
-|KerberosOverTransport|Windows|X509|Transportu|  
-|IssuedTokenOverTransport|Federacyjna|X509|Transportu|  
-|SspiNegotiatedOverTransport|Interfejs Sspi Windows negocjowane|Interfejs Sspi Windows negocjowane|Transportu|  
+|UserNameOverTransport|Nazwa użytkownika/hasło|X509|Transport|  
+|CertificateOverTransport|X509|X509|Transport|  
+|KerberosOverTransport|Windows|X509|Transport|  
+|IssuedTokenOverTransport|Federacyjna|X509|Transport|  
+|SspiNegotiatedOverTransport|Interfejs Sspi Windows negocjowane|Interfejs Sspi Windows negocjowane|Transport|  
 |AnonymousForCertificate|Brak|X509|Komunikat|  
 |UserNameForCertificate|Nazwa użytkownika/hasło|X509|Komunikat|  
 |MutualCertificate|X509|X509|Komunikat|  
@@ -53,10 +53,10 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
 |Kerberos|Windows|Windows|Komunikat|  
 |IssuedToken|Federacyjna|Federacyjna|Komunikat|  
 |SspiNegotiated|Interfejs Sspi Windows negocjowane|Interfejs Sspi Windows negocjowane|Komunikat|  
-|AnonymousForSslNegotiated|Brak|X509, Nego protokołu TLS|Komunikat|  
-|UserNameForSslNegotiated|Nazwa użytkownika/hasło|X509, Nego protokołu TLS|Komunikat|  
-|MutualSslNegotiated|X509|X509, Nego protokołu TLS|Komunikat|  
-|IssuedTokenForSslNegotiated|Federacyjna|X509, Nego protokołu TLS|Komunikat|  
+|AnonymousForSslNegotiated|Brak|X509, TLS-Nego|Komunikat|  
+|UserNameForSslNegotiated|Nazwa użytkownika/hasło|X509, TLS-Nego|Komunikat|  
+|MutualSslNegotiated|X509|X509, TLS-Nego|Komunikat|  
+|IssuedTokenForSslNegotiated|Federacyjna|X509, TLS-Nego|Komunikat|  
   
  Punktów końcowych przy użyciu tych trybów uwierzytelniania można wyrazić swoje wymagania dotyczące zabezpieczeń przy użyciu usługi WS-SecurityPolicy (WS-SP). W tym dokumencie opisano strukturę nagłówka zabezpieczeń i infrastruktury komunikatów dla każdego trybu uwierzytelniania i zawiera przykłady zasad i wiadomości.  
   
@@ -75,11 +75,11 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
 |wsse11|TBD — IDENTYFIKATOR URI PROGRAMU WSS 1.1 OASIS|  
 |wsu|TBD — narzędzie do identyfikatora URI języka OASIS WSS 1.0|  
 |ds|TBD — identyfikator URI XMLDSig W3C|  
-|Wst|TBD — identyfikator URI protokołu WS-Trust 2005/02|  
-|wssc|TBD — identyfikator URI usługi WS-SecureConversation 2005/02|  
+|wst|TBD — identyfikator URI protokołu WS-Trust 2005/02|  
+|wssc|TBD – WS-SecureConversation 2005/02 URI|  
 |wsaw|TBD — przestrzeń nazw usługi WS-Addressing zasad|  
 |WSP|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
-|Mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
+|mssp|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
 ## <a name="1-token-profiles"></a>1. Profile tokenu  
  Specyfikacje zabezpieczenia usług sieci Web reprezentują poświadczeń jako tokenów zabezpieczających. Usługi WCF obsługuje następujące typy tokenów:  
@@ -116,7 +116,7 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
   
  R1204 X509TokenProfile1.1 Jeśli jest używany, odwołanie zewnętrzne do X509 zabezpieczeń tokenu należy używać odcisku palca, wynikające z 1.1 WS-Security.  
   
- Usługi WCF obsługuje X509IssuerSerial. Istnieją jednak zagadnienia dotyczące współdziałania z X509IssuerSerial: WCF używa parametrów, aby porównać dwie wartości X509IssuerSerial. W związku z tym jeśli jeden zmienia kolejność elementów w nazwie podmiotu i wysyła do usługi WCF z odwołaniem do certyfikatu, jego mogą nie być odnajdowane.  
+ Usługi WCF obsługuje X509IssuerSerial. Istnieją jednak zagadnienia dotyczące współdziałania z X509IssuerSerial: Usługi WCF używa parametrów, aby porównać dwie wartości X509IssuerSerial. W związku z tym jeśli jeden zmienia kolejność elementów w nazwie podmiotu i wysyła do usługi WCF z odwołaniem do certyfikatu, jego mogą nie być odnajdowane.  
   
 ### <a name="13-kerberos-token"></a>1.3 Token protokołu Kerberos  
  Usługi WCF obsługuje KerberosTokenProfile1.1 na potrzeby uwierzytelniania Windows z następującymi ograniczeniami:  
@@ -157,7 +157,7 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
 |||  
 |-|-|  
 |Strict|Elementy są dodawane do następujących nagłówka zabezpieczeń, że reguły numerowane układ opisanego w zasady zabezpieczeń w sekcji 7.7.1 zgodnie z ogólną zasadą "zadeklarować przed użyciem".|  
-|Łagodnymi|Elementy są dodawane do nagłówka zabezpieczeń w dowolnej kolejności, który jest zgodny z programu WSS: Zabezpieczanie komunikatów protokołu SOAP.|  
+|Łagodnymi|Elementy są dodawane do nagłówka zabezpieczeń w dowolnej kolejności, który jest zgodny z programu WSS: SOAP Message Security.|  
 |LaxTimestampFirst|Tym samym Lax z tą różnicą, że pierwszy element w nagłówku zabezpieczeń muszą być wsse:Timestamp|  
 |LaxTimestampLast|Takie same jak łagodnymi, z tą różnicą, że ostatni element w nagłówku zabezpieczeń musi być wsse:Timestamp|  
   
@@ -179,7 +179,7 @@ Protokoły zabezpieczeń usług sieci Web zapewnia mechanizmy zabezpieczeń usł
   
  Układ nagłówka zabezpieczeń: Strict  
   
- Pakiet algorytmów: Basic256  
+ Algorithm Suite: Basic256  
   
 #### <a name="611-usernameovertransport"></a>6.1.1 UsernameOverTransport  
  W tym trybie uwierzytelniania klient uwierzytelnia się za pomocą Token nazwy użytkownika, który jest wyświetlany w warstwie SOAP jako podpisany token pomocniczy, które zawsze są wysyłane do adresata inicjatora. Usługa jest uwierzytelniany przy użyciu certyfikatu X.509 w warstwie transportowej. Wiązanie używane jest powiązania transportu.  
@@ -243,7 +243,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Układ nagłówka zabezpieczeń  
   
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -333,7 +333,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Układ nagłówka zabezpieczeń  
   
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -430,7 +430,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Układ nagłówka zabezpieczeń  
   
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -522,7 +522,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Układ nagłówka zabezpieczeń  
   
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -613,7 +613,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ### <a name="security-header-examples"></a>Przykłady nagłówka zabezpieczeń  
  Gdy Token kontekstu zabezpieczeń zostanie nawiązane za pośrednictwem uzgadnianie SPNEGO przy użyciu protokołu WS-Trust negocjacji binarnej, komunikatów aplikacji ma nagłówki zabezpieczeń o następującej strukturze.  
   
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -640,7 +640,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 ```  
   
 ### <a name="62-using-x509-certificates-for-service-authentication"></a>6.2 przy użyciu certyfikatów X.509 dla usługi uwierzytelniania  
- W tej sekcji opisano następujące tryby uwierzytelniania: MutualCertificate WSS1.0, wzajemne CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate UserNameForCertificate i IssuedTokenForCertificate.  
+ W tej sekcji opisano następujące tryby uwierzytelniania: MutualCertificate WSS1.0, wzajemne CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate i IssuedTokenForCertificate.  
   
 #### <a name="621-mutualcertificate-wss10"></a>6.2.1 MutualCertificate WSS1.0  
  W tym trybie uwierzytelniania, który klient jest uwierzytelniany przy użyciu X.509 certyfikatu, która jest wyświetlana jako token inicjatora w warstwie protokołu SOAP. Usługa jest również uwierzytelniany przy użyciu certyfikatu X.509.  
@@ -649,15 +649,15 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   
  Token inicjatora: klienta certyfikat X.509 z trybem włączenia równa .../IncludeToken/AlwaysToRecipient  
   
- Odbiorcy tokenu: Serwer certyfikat X.509, dostępne w trybie dołączania ustawiono .../IncludeToken/Never  
+ Odbiorcy tokenu: Certyfikat X.509 serwera w trybie dołączania ustawiono .../IncludeToken/Never  
   
- Token ochrony: False  
+ Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
  Zasady  
   
@@ -722,7 +722,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -765,7 +765,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
   
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -811,17 +811,17 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Powiązania używanego to asymetryczny powiązania z następującymi wartościami właściwości:  
   
- Token inicjatora: Klienta X509 certyfikatu, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToRecipient  
+ Token inicjatora: X509 klienta certyfikatu, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToRecipient  
   
- Odbiorcy tokenu: Serwera X509 certyfikatu, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToInitiator  
+ Odbiorcy tokenu: X509 serwera certyfikatów, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToInitiator  
   
- Token ochrony: False  
+ Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
  Zasady  
   
@@ -938,14 +938,14 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   
  Tryby uwierzytelniania AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 i IssuedTokenForCertificate wszystkie za pomocą podobne wystąpienie sp:SymmetricBinding następujące wartości właściwości:  
   
- Token ochrony: Serwera X509 certyfikatu, tryb dołączania jest ustawiony na .../IncludeToken/Never  
-Token ochrony: False  
+ Token ochrony: X509 serwera certyfikatów, tryb dołączania jest ustawiony na .../IncludeToken/Never  
+Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
  Powyższe tryby uwierzytelniania różnią się tylko tokenów pomocniczych, których używają. AnonymousForCertificate, nie ma żadnych tokenów pomocniczych, MutualCertificate WSS 1.1 ma klienta X509 certyfikatu jako potwierdzających Obsługa tokenów, UserNameForCertificate ma Token nazwy użytkownika jako podpisany token pomocniczy i IssuedTokenForCertificate jest wystawiony token tokenu pomocniczego.  
   
@@ -1018,7 +1018,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
  Aby uzyskać szczegóły powiązania, zobacz "Policy" w powyższej 6.2.3  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1069,7 +1069,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1139,7 +1139,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1190,7 +1190,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1263,7 +1263,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1326,7 +1326,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1412,7 +1412,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1475,7 +1475,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1536,14 +1536,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ## <a name="63-kerberos"></a>6.3 protokołu Kerberos  
  W tym trybie uwierzytelniania klient uwierzytelnia się w usłudze przy użyciu biletu protokołu Kerberos. Korzystając z tego samego biletu zapewnia również uwierzytelnianie serwera. Wiązanie używane jest symetryczne powiązania z następującymi właściwościami;  
   
- Token ochrony: Bilet protokołu Kerberos dołączania jest tryb .../IncludeToken/Once  
-Token ochrony: False  
+ Token ochrony: Bilet protokołu Kerberos, tryb dołączania jest ustawiony na .../IncludeToken/Once  
+Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
  Zasady  
   
@@ -1600,7 +1600,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1648,7 +1648,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1668,13 +1668,13 @@ TBD
  W tym trybie uwierzytelniania, których klient nie uwierzytelnia się do usługi jako takie, zamiast Klient przedstawia token wystawiony przez usługę STS i upoważnienie wiedzę na temat klucza współużytkowanego. Usługa nie jest uwierzytelniony do klienta jako takie, zamiast tego Usługa STS szyfruje klucz współużytkowany jako część wystawiony token taki sposób, że tylko usługi może odszyfrować klucz. Wiązanie używane jest w powiązaniu symetrycznego z następującymi właściwościami;  
   
  Token ochrony: Wystawiony Token, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToRecipient  
-Token ochrony: False  
+Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
  Zasady  
   
@@ -1736,7 +1736,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1784,7 +1784,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -1836,14 +1836,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
   
  Wiązanie używane jest symetryczne powiązania z następującymi właściwościami;  
   
- Token ochrony: SslContextToken, włączenia tryb jest ustawiony na .../IncludeToken/Never  
-Token ochrony: False  
+ Token ochrony: SslContextToken, tryb dołączania jest ustawiony na .../IncludeToken/Never  
+Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
 #### <a name="651-policy-for-sslnegotiated-service-authentication"></a>6.5.1 zasady SslNegotiated usługi uwierzytelniania  
  Zasady dla wszystkich metod uwierzytelniania w tej sekcji są podobne i różnią się tylko określonego podpisanego obsługi lub potwierdzania tokeny używane.  
@@ -1909,7 +1909,7 @@ Token ochrony: False
  Zobacz zasady w 6.5.1 powyżej, aby uzyskać szczegółowe informacje powiązania.  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1957,7 +1957,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -2026,7 +2026,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2077,7 +2077,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -2155,7 +2155,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2218,7 +2218,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -2299,7 +2299,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2347,7 +2347,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -2397,14 +2397,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 ### <a name="66-sspinegotiated"></a>6.6 SspiNegotiated  
  W tym trybie uwierzytelniania protokół negocjacji służy do uwierzytelniania klienta i serwera. Protokół Kerberos jest używany, jeśli jest to możliwe, w przeciwnym razie uwierzytelnianie NTLM. Wiązanie używane jest symetryczne powiązania z następującymi właściwościami;  
   
- Token ochrony: SpnegoContextToken, włączenia tryb jest ustawiony na .../IncludeToken/AlwaysToRecipient  
-Token ochrony: False  
+ Token ochrony: SpnegoContextToken, tryb dołączania jest ustawiony na .../IncludeToken/AlwaysToRecipient  
+Ochrona tokenu: False  
   
- Cały nagłówek i treść podpisy: True  
+ Cały nagłówek i treść podpisów: Prawda  
   
  Kolejność ochrony: SignBeforeEncrypt  
   
- Szyfrowanie podpisów: True  
+ Szyfruj podpisu: Prawda  
   
  Zasady  
   
@@ -2460,7 +2460,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2508,7 +2508,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  
@@ -2670,7 +2670,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a>Przykłady nagłówka zabezpieczeń: SignBeforeEncrypt, EncryptSignature  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2718,7 +2718,7 @@ Token ochrony: False
 ```  
   
 ### <a name="security-header-examples-encryptbeforesign"></a>Przykłady nagłówka zabezpieczeń: EncryptBeforeSign  
- Żądanie  
+ Request  
   
 ```xml  
 <wsse:Security>  

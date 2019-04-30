@@ -3,11 +3,11 @@ title: XDocument, klasa — Przegląd (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
 ms.openlocfilehash: e3ef7d66cb9759bd71e69c1a0db3614a02f785b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680641"
 ---
 # <a name="xdocument-class-overview-c"></a>XDocument, klasa — Przegląd (C#)
 W tym temacie przedstawiono <xref:System.Xml.Linq.XDocument> klasy.  
@@ -22,15 +22,15 @@ W tym temacie przedstawiono <xref:System.Xml.Linq.XDocument> klasy.
 ## <a name="components-of-xdocument"></a>Składniki XDocument  
  <xref:System.Xml.Linq.XDocument> Może zawierać następujące elementy:  
   
--   Jeden <xref:System.Xml.Linq.XDeclaration> obiektu. <xref:System.Xml.Linq.XDeclaration> można określić odpowiednie części deklaracji XML: Wersja XML, kodowania dokumentu, oraz czy dokument XML jest autonomicznym.  
+- Jeden <xref:System.Xml.Linq.XDeclaration> obiektu. <xref:System.Xml.Linq.XDeclaration> można określić odpowiednie części deklaracji XML: Wersja XML, kodowania dokumentu, oraz czy dokument XML jest autonomicznym.  
   
--   Jeden <xref:System.Xml.Linq.XElement> obiektu. Jest to węzeł główny dokumentu XML.  
+- Jeden <xref:System.Xml.Linq.XElement> obiektu. Jest to węzeł główny dokumentu XML.  
   
--   Dowolną liczbę <xref:System.Xml.Linq.XProcessingInstruction> obiektów. Instrukcja przetwarzania komunikuje się informacji do aplikacji, która przetwarza dane XML.  
+- Dowolną liczbę <xref:System.Xml.Linq.XProcessingInstruction> obiektów. Instrukcja przetwarzania komunikuje się informacji do aplikacji, która przetwarza dane XML.  
   
--   Dowolną liczbę <xref:System.Xml.Linq.XComment> obiektów. Komentarze będą powiązane z elementem głównym. <xref:System.Xml.Linq.XComment> Obiekt nie może być pierwszy argument na liście, ponieważ nie jest prawidłowy dla dokumentu XML, można uruchomić z komentarzem.  
+- Dowolną liczbę <xref:System.Xml.Linq.XComment> obiektów. Komentarze będą powiązane z elementem głównym. <xref:System.Xml.Linq.XComment> Obiekt nie może być pierwszy argument na liście, ponieważ nie jest prawidłowy dla dokumentu XML, można uruchomić z komentarzem.  
   
--   Jeden <xref:System.Xml.Linq.XDocumentType> DTD.  
+- Jeden <xref:System.Xml.Linq.XDocumentType> DTD.  
   
  Podczas serializacji <xref:System.Xml.Linq.XDocument>, nawet jeśli `XDocument.Declaration` jest `null`, dane wyjściowe będą mieć deklaracji XML, jeśli moduł zapisujący `Writer.Settings.OmitXmlDeclaration` równa `false` (ustawienie domyślne).  
   

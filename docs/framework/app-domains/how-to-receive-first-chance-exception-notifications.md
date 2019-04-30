@@ -11,11 +11,11 @@ ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705639"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy
 <xref:System.AppDomain.FirstChanceException> Zdarzenia <xref:System.AppDomain> klasa umożliwia otrzymywanie powiadomień, który jest zwracany wyjątek, przed języka wspólnego środowiska uruchomieniowego została rozpoczęta, wyszukując obsługi wyjątków.
@@ -100,7 +100,7 @@ ms.locfileid: "59770493"
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
--   W tym przykładzie jest aplikacją wiersza polecenia. Aby skompilować i uruchomić ten kod w programie Visual Studio, należy dodać kod C# `Console.ReadLine();` (w języku Visual Basic `Console.ReadLine()`) na końcu `Main()`, aby uniemożliwić zamknięcie, zanim może odczytywać dane wyjściowe z okna poleceń.
+- W tym przykładzie jest aplikacją wiersza polecenia. Aby skompilować i uruchomić ten kod w programie Visual Studio, należy dodać kod C# `Console.ReadLine();` (w języku Visual Basic `Console.ReadLine()`) na końcu `Main()`, aby uniemożliwić zamknięcie, zanim może odczytywać dane wyjściowe z okna poleceń.
 
 ## <a name="see-also"></a>Zobacz także
 

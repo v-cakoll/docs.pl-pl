@@ -3,11 +3,11 @@ title: 'Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
 ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701895"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Instrukcje: Modyfikowanie dokumentu Office Open XML (C#)
 W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, modyfikuje je i zapisuje go.  

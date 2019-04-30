@@ -9,11 +9,11 @@ helpviewer_keywords:
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
 ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662676"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname — (opcją kompilatora C#)
 Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do zestawu.  
@@ -31,11 +31,11 @@ Określa, których typy bez publicznego .netmodule mogą uzyskiwać dostęp do z
 ## <a name="remarks"></a>Uwagi  
  **-moduleassemblyname** należy używać podczas tworzenia modułu .netmodule, a w przypadku, gdy są spełnione następujące warunki:  
   
--   .netmodule musi mieć dostęp do typów niepublicznych w istniejącego zestawu.  
+- .netmodule musi mieć dostęp do typów niepublicznych w istniejącego zestawu.  
   
--   Znasz nazwę zestawu, do którego zostanie utworzona .netmodule.  
+- Znasz nazwę zestawu, do którego zostanie utworzona .netmodule.  
   
--   Istniejący zestaw przyznał prawa dostępu do zestawu friend do zestawu, do którego zostanie utworzona .netmodule.  
+- Istniejący zestaw przyznał prawa dostępu do zestawu friend do zestawu, do którego zostanie utworzona .netmodule.  
   
  Aby uzyskać więcej informacji na temat budowania .netmodule zobacz [-target: module (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

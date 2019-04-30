@@ -10,11 +10,11 @@ ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675133"
 ---
 # <a name="creating-assemblies"></a>Tworzenie zestawów
 
@@ -24,23 +24,23 @@ Możesz utworzyć zestaw wieloplikowy z kilku modułów kodu i pliki zasobów. M
 
 Istnieje kilka opcji, gdy grupowanie modułów kodu i zasoby do zestawów, w zależności od następujących czynników:
 
--   Obsługa wersji
+- Przechowywanie wersji
 
      Moduły grupy, które powinny mieć te same informacje o wersji.
 
--   wdrażania
+- wdrażania
 
      Moduły kodu grupy i zasobów, które obsługują model wdrożenia.
 
--   Ponowne użycie
+- Ponowne użycie
 
      Grupy modułów, jeśli one logicznie można ze sobą w celu niektóre. Na przykład zestaw składający się z typów i klas, rzadko używane dla programu obsługi można umieścić w tym samym zestawie. Ponadto typy, które ma być współużytkowany z wieloma aplikacjami powinny zostać utworzone do zestawu i zestawu powinna być podpisany silną nazwą.
 
--   Zabezpieczenia
+- Zabezpieczenia
 
      Grupy modułów zawierających typy, które wymagają tych samych uprawnień zabezpieczeń.
 
--   Wyznaczanie zakresu
+- Wyznaczanie zakresu
 
      Grupy modułów zawierających typy, których widoczność powinno zostać ograniczone do tego samego zestawu.
 

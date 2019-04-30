@@ -4,13 +4,13 @@ description: Dowiedz się, jak wykonanie sprzężeń wewnętrznych za pomocą LI
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659842"
 ---
-# <a name="perform-inner-joins"></a>Wykonanie sprzężeń wewnętrznych
+# <a name="perform-inner-joins"></a>Wykonywanie sprzężeń wewnętrznych
 
 W warunkach relacyjnej bazy danych *sprzężenia wewnętrznego* tworzy zestaw wyników, w której każdy element pierwszej kolekcji pojawia się jeden raz dla każdego pasującego elementu w drugim zbiorze. Jeśli element z pierwszej kolekcji nie ma pasujących elementów, nie ma w zestawie wyników. <xref:System.Linq.Enumerable.Join%2A> Metody, która jest wywoływana przez `join` klauzuli w języku C#, implementuje sprzężenia wewnętrznego.
 

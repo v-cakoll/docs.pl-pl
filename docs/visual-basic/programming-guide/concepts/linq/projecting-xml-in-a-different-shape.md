@@ -3,11 +3,11 @@ title: Projektowanie kodu XML w innym kształcie (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766595"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projektowanie kodu XML w innym kształcie (Visual Basic)
 W tym temacie przedstawiono przykład przewidywania XML, który jest w innym kształcie niż źródła XML.  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>Następne kroki  
  W następnym przykładzie będzie zapytania, aby znaleźć cały tekst w dokumencie programu Word:  
   
--   [Wyszukiwanie tekstu w dokumentach programu Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Wyszukiwanie tekstu w dokumentach programu Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

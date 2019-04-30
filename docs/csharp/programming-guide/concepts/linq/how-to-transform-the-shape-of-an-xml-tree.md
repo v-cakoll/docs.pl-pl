@@ -3,11 +3,11 @@ title: 'Instrukcje: Przekształcanie kształtu drzewa XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 93c5d426-dea2-4709-a991-60204de42e8f
 ms.openlocfilehash: 535f528d347e0c72ddaaab74ea78b47993a873a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701713"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-c"></a>Instrukcje: Przekształcanie kształtu drzewa XML (C#)
 *Kształt* XML dokumentu odwołuje się do jego nazwy elementów, nazwy atrybutów i cechy jej hierarchii.  

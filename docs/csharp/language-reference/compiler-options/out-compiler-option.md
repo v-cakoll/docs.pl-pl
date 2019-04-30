@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662637"
 ---
 # <a name="-out-c-compiler-options"></a>-out (opcje kompilatora C#)
 **-Out** opcja określa nazwę pliku wyjściowego.  
@@ -35,9 +35,9 @@ ms.locfileid: "59331302"
   
  Jeśli nie określisz nazwy pliku wyjściowego:  
   
--   .Exe zajmie się jego nazwy w pliku kodu źródłowego, który zawiera **Main** metody.  
+- .Exe zajmie się jego nazwy w pliku kodu źródłowego, który zawiera **Main** metody.  
   
--   Plik .dll lub moduł .netmodule potrwa nazwy z pierwszego pliku kodu źródłowego.  
+- Plik .dll lub moduł .netmodule potrwa nazwy z pierwszego pliku kodu źródłowego.  
   
  Plik kodu źródłowego, używana do kompilowania jednego pliku danych wyjściowych nie można użyć w tej samej kompilacji dla kompilacji inny plik danych wyjściowych.  
   

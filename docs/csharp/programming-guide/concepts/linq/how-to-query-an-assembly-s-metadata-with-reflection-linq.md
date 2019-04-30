@@ -3,11 +3,11 @@ title: 'Instrukcje: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
 ms.openlocfilehash: 849244f1345966dbe198686f4f9024fc321b6ded
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667824"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Instrukcje: Zapytanie dotyczące metadanych zestawu z odbiciem (LINQ) (C#)
 Poniższy przykład pokazuje, jak LINQ może służyć za pomocą odbicia do pobierania metadanych określone informacje o metodach, spełniających określone kryteria wyszukiwania. W tym przypadku zapytanie znajdzie nazwy wszystkie metody w zestawie, który zwraca wyliczalny typów, takich jak tablice.  

@@ -15,11 +15,11 @@ ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705730"
 ---
 # <a name="delay-signing-an-assembly"></a>Opóźnione podpisywanie zestawu
 Organizacja może mieć ściśle chronionej parę kluczy, że deweloperzy nie mają dostępu do codziennie. Klucz publiczny jest często dostępne, ale dostęp do klucza prywatnego jest ograniczony do tylko kilka osób. Podczas tworzenia zestawów o silnych nazwach, każdy zestaw ten zestaw docelowy o silnej nazwie odwołania zawiera token klucza publicznego, używać, aby zapewnić silnej nazwy zestawu docelowego. Wymaga to, czy klucz publiczny będą dostępne podczas procesu projektowania.  
@@ -32,9 +32,9 @@ Organizacja może mieć ściśle chronionej parę kluczy, że deweloperzy nie ma
   
 2. Dodawanie adnotacji do kodu źródłowego dla zestawu za pomocą dwóch atrybutów niestandardowych z <xref:System.Reflection>:  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, która przekazuje nazwę pliku zawierającego klucz publiczny jako parametr do jej konstruktora.  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, która przekazuje nazwę pliku zawierającego klucz publiczny jako parametr do jej konstruktora.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, co oznacza, że opóźnienie podpisywania jest używany przez przekazanie **true** jako parametr do jej konstruktora. Na przykład:  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, co oznacza, że opóźnienie podpisywania jest używany przez przekazanie **true** jako parametr do jej konstruktora. Na przykład:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

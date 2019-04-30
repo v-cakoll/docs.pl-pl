@@ -1,5 +1,5 @@
 ---
-title: <startup> — element
+title: <startup>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/startup
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 ms.openlocfilehash: 5047cb0ab1c8206abd88dc795e50272d69f1fd3f
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701453"
 ---
 # <a name="startup-element"></a>\<Uruchamianie > element
 

@@ -6,11 +6,11 @@ ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698723"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Usuwanie atrybutów z węzła elementu w ramach modelu DOM
 Istnieje wiele sposobów, aby usunąć atrybuty. Jedna z technik jest je usunąć z kolekcji atrybutów. Aby to zrobić, wykonywane są następujące czynności:  
@@ -19,19 +19,19 @@ Istnieje wiele sposobów, aby usunąć atrybuty. Jedna z technik jest je usuną�
   
 2. Usuń atrybut z kolekcji atrybutów przy użyciu jednej z trzech metod:  
   
-    -   Użyj <xref:System.Xml.XmlAttributeCollection.Remove%2A> Aby usunąć określony atrybut.  
+    - Użyj <xref:System.Xml.XmlAttributeCollection.Remove%2A> Aby usunąć określony atrybut.  
   
-    -   Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> usunąć wszystkie atrybuty z kolekcji i pozostaw elementu żadnych atrybutów.  
+    - Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> usunąć wszystkie atrybuty z kolekcji i pozostaw elementu żadnych atrybutów.  
   
-    -   Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> Aby usunąć atrybut z kolekcji atrybutów przy użyciu jego numer indeksu.  
+    - Użyj <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> Aby usunąć atrybut z kolekcji atrybutów przy użyciu jego numer indeksu.  
   
  Następujące metody usuwanie atrybutów z węzła elementu.  
   
--   Użyj <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> do usunięcia z kolekcji atrybutów.  
+- Użyj <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> do usunięcia z kolekcji atrybutów.  
   
--   Użyj <xref:System.Xml.XmlElement.RemoveAttribute%2A> usunąć jeden atrybut według nazwy z kolekcji.  
+- Użyj <xref:System.Xml.XmlElement.RemoveAttribute%2A> usunąć jeden atrybut według nazwy z kolekcji.  
   
--   Użyj <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> usunąć jeden atrybut przez numer indeksu z kolekcji.  
+- Użyj <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> usunąć jeden atrybut przez numer indeksu z kolekcji.  
   
  Co więcej alternatywą jest pobieranie elementu, Pobierz atrybut z kolekcji atrybutów i Usuń węzeł atrybutu bezpośrednio. Aby uzyskać ten atrybut z kolekcji atrybutów, można użyć nazwy `XmlAttribute attr = attrs["attr_name"];`, indeks `XmlAttribute attr = attrs[0];`, lub w pełni kwalifikując nazwę z przestrzenią nazw `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   

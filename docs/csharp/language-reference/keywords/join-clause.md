@@ -10,11 +10,11 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61661327"
 ---
 # <a name="join-clause-c-reference"></a>Klauzula join (odwołanie w C#)
 
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji, zobacz [wykonaj Lewe sprzężenia zewnętrzne](
 
 A `join` klauzuli wykonuje sprzężenie. Innymi słowy możesz to zrobić tylko podstawowy dopasowań na równość dwa klucze. Innych rodzajów porównań, takie jak "większe niż" lub "nie równa się" nie są obsługiwane. Aby wyjaśnić, czy wszystkie sprzężeń equijoins, `join` używa klauzuli `equals` słowa kluczowego zamiast `==` operatora. `equals` — Słowo kluczowe można używać tylko w `join` klauzuli i różni się od `==` operatora w jednym ze sposobów ważne. Za pomocą `equals`Strzałka w lewo zużywa sekwencji źródło zewnętrzne i Strzałka w prawo zużywa typu inner source. Źródło zewnętrzne jest tylko do zakresu po lewej stronie `equals` i sekwencji źródłowej wewnętrzny jest tylko w zakresie po prawej stronie.
 
-## <a name="non-equijoins"></a>Inne niż equijoins
+## <a name="non-equijoins"></a>Non-equijoins
 
 Można wykonać innych niż equijoins, sprzężeń i innych niestandardowych operacji łączenia za pomocą wielu `from` klauzul, aby wprowadzić nowy sekwencje niezależnie do zapytania. Aby uzyskać więcej informacji, zobacz [wykonywanie niestandardowych operacji łączenia](../../linq/perform-custom-join-operations.md).
 

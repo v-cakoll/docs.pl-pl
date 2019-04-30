@@ -3,11 +3,11 @@ title: 'Instrukcje: Tworzenie zapytań dotyczących LINQ to XML przy użyciu XPa
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
 ms.openlocfilehash: a3e9cb29b9ba027cfc70eeb0cd163b24834dff83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701830"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Instrukcje: Tworzenie zapytań dotyczących LINQ to XML przy użyciu XPath (C#)
 W tym temacie przedstawiono metody rozszerzenia, które pozwalają na wykonywanie zapytań drzewa XML przy użyciu wyrażenie XPath. Aby uzyskać szczegółowe informacje o używaniu tych metod rozszerzenia, zobacz <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  

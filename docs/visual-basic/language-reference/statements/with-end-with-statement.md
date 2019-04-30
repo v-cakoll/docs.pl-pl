@@ -16,11 +16,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
 ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698645"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With — Instrukcja (Visual Basic)
 Wykonuje szereg instrukcji, które wielokrotnie odwołują się do pojedynczego obiektu lub struktury, dzięki czemu instrukcje mogą używać uproszczonej składni podczas uzyskiwania dostępu do członków obiektu lub struktury.  Korzystając ze struktury możesz jedynie odczytać wartości członków lub wywoływać metody i wystąpi błąd, jeśli zostanie podjęta próba przypisania wartości do członków struktury używanych w `With...End With` instrukcji.  
@@ -48,9 +48,9 @@ End With
   
  Jeśli kod uzyskuje dostęp do tego samego obiektu w wielu instrukcjach, uzyskasz następujące korzyści za pomocą `With` instrukcji:  
   
--   Nie musisz szacować złożonego wyrażenia wiele razy ani przypisywać wyniku do zmiennej tymczasowej, aby odwołać się do jego członków wiele razy.  
+- Nie musisz szacować złożonego wyrażenia wiele razy ani przypisywać wyniku do zmiennej tymczasowej, aby odwołać się do jego członków wiele razy.  
   
--   Kod staje się bardziej czytelny dzięki eliminacji powtarzających się wyrażeń kwalifikujących.  
+- Kod staje się bardziej czytelny dzięki eliminacji powtarzających się wyrażeń kwalifikujących.  
   
  Typ danych `objectExpression` może być dowolną klasę lub typ struktury lub nawet typ podstawowy języka Visual Basic taką jak `Integer`.  Jeśli `objectExpression` wyniki coś innego niż obiekt można tylko odczytać wartości jego członków lub wywoływać metody i wystąpi błąd, jeśli zostanie podjęta próba przypisania wartości do członków struktury używanych w `With...End With` instrukcji.  Jest to ten sam błąd, jeśli wywołano metodę, która zwróciła strukturę i natychmiast uzyskać dostęp i przypisać wartość do członka wyniku funkcji, takich jak `GetAPoint().x = 1`.  Problem w obu przypadkach jest taki, że struktura istnieje tylko na stosie wywołań i nie ma żadnego sposobu, aby członek zmodyfikowanej struktury w takich sytuacjach mógł pisać do takich lokalizacji, żeby inny kod w programie mógł obserwować zmiany.  
   

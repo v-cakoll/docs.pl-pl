@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 133aa22f16285f94f58722cb18c83b96f1ff885c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662715"
 ---
 # <a name="-main-c-compiler-options"></a>-main (opcje kompilatora C#)
 Ta opcja określa klasę, która zawiera wpis punktu programu, jeśli zawiera więcej niż jednej klasy **Main** metody.  

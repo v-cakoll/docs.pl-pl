@@ -3,11 +3,11 @@ title: Refaktoryzacja do czystych funkcji (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680444"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refaktoryzacja do czystych funkcji (C#)
 
@@ -18,9 +18,9 @@ Ważnym aspektem czystych przekształceń funkcjonalnych jest nauki refaktoryzac
   
  Jak wspomniano wcześniej w tej sekcji, czystej funkcji ma dwie właściwości przydatne:  
   
--   Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych lub danych dowolnego typu spoza tej funkcji.  
+- Nie ma żadnych efektów ubocznych. Funkcja nie zmienia żadnych zmiennych lub danych dowolnego typu spoza tej funkcji.  
   
--   Jest ona zgodna. Biorąc pod uwagę ten sam zestaw danych wejściowych, która zawsze zwraca tę samą wartość w danych wyjściowych.  
+- Jest ona zgodna. Biorąc pod uwagę ten sam zestaw danych wejściowych, która zawsze zwraca tę samą wartość w danych wyjściowych.  
   
  Jednym ze sposobów przechodzenia do programowania funkcyjnego jest Przeprowadź refaktoryzację istniejącego kodu, aby wyeliminować niepotrzebne efekty uboczne i zależności zewnętrznych. W ten sposób można utworzyć wersji czystą funkcję istniejącego kodu.  
   

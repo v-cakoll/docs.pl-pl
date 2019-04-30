@@ -17,11 +17,11 @@ ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765937"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory Określ, ile wystąpień znak, grupa lub Klasa znaków musi znajdować się w danych wejściowych, aby dopasowanie zakończyło się można znaleźć.  W poniższej tabeli wymieniono kwantyfikatorów poparte .NET.  
@@ -228,11 +228,11 @@ Kwantyfikatory Określ, ile wystąpień znak, grupa lub Klasa znaków musi znajd
 ## <a name="greedy-and-lazy-quantifiers"></a>Kwantyfikatory zachłanne i z opóźnieniem  
  Liczba Kwantyfikatory są dwie wersje:  
   
--   Zachłanne wersji.  
+- Zachłanne wersji.  
   
      Zachłanne kwantyfikator próbuje dopasować element dowolną liczbę razy.  
   
--   Wersja niezachłanne (lub z opóźnieniem).  
+- Wersja niezachłanne (lub z opóźnieniem).  
   
      Niezachłanne kwantyfikator próbuje dopasować element tyle razy, jak to możliwe. Można przekształcić w zachłanne kwantyfikator kwantyfikatorem opóźniającym, po prostu dodając `?`.  
   

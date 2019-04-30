@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768384"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg jest w prawidłowym formacie adresu e-mail.  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  Przy założeniu, że utworzono biblioteki klas o nazwie RegexUtilities.dll, który zawiera wyrażenie regularne sprawdzanie poprawności poczty e-mail, można kompilować ten przykład w jeden z następujących sposobów:  
   
--   W programie Visual Studio, tworząc aplikację Konsolową w języku i dodanie odwołania do RegexUtilities.dll do projektu.  
+- W programie Visual Studio, tworząc aplikację Konsolową w języku i dodanie odwołania do RegexUtilities.dll do projektu.  
   
--   W wierszu polecenia przez kopiowanie i wklejanie kodu źródłowego do pliku tekstowego i kompilowania go za pomocą polecenia podobnego do poniższego (przy założeniu, że nazwa pliku źródła kodu jest Example.cs lub Example.vb:  
+- W wierszu polecenia przez kopiowanie i wklejanie kodu źródłowego do pliku tekstowego i kompilowania go za pomocą polecenia podobnego do poniższego (przy założeniu, że nazwa pliku źródła kodu jest Example.cs lub Example.vb:  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

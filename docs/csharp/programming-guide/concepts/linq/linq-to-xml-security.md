@@ -3,11 +3,11 @@ title: Zabezpieczenia LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
 ms.openlocfilehash: e13a1db6a02ac2990624e93480e973284a0784e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664353"
 ---
 # <a name="linq-to-xml-security-c"></a>Zabezpieczenia LINQ to XML (C#)
 W tym temacie opisano problemy dotyczące zabezpieczeń skojarzonych z LINQ to XML. Ponadto zawiera pewne wskazówki łagodzenia zagrożenie bezpieczeństwa.  
@@ -26,25 +26,25 @@ W tym temacie opisano problemy dotyczące zabezpieczeń skojarzonych z LINQ to X
   
  Jeśli pracujesz w środowisku mniej bezpieczna opcja, istnieje szereg problemów z zabezpieczeniami, które są skojarzone z danymi XML i korzystanie z klas w <xref:System.Xml?displayProperty=nameWithType>, <xref:System.Xml.Schema?displayProperty=nameWithType>, <xref:System.Xml.XPath?displayProperty=nameWithType>, i <xref:System.Xml.Xsl?displayProperty=nameWithType>. Te problemy obejmują, ale nie są ograniczone do następujących:  
   
--   XSD, XPath i XSLT są oparte na ciągach języków, w których można określić operacji, które to zajmować dużo czasu i pamięci. Jest odpowiedzialny za programistów aplikacji, którzy pobierają ciągi XSD, XPath lub XSLT ze źródeł niezaufanych, aby sprawdzić, czy ciągi nie są złośliwe, lub do monitorowania i ograniczyć możliwość, że ocena te ciągi doprowadzi do nadmiernego systemu użycie zasobów.  
+- XSD, XPath i XSLT są oparte na ciągach języków, w których można określić operacji, które to zajmować dużo czasu i pamięci. Jest odpowiedzialny za programistów aplikacji, którzy pobierają ciągi XSD, XPath lub XSLT ze źródeł niezaufanych, aby sprawdzić, czy ciągi nie są złośliwe, lub do monitorowania i ograniczyć możliwość, że ocena te ciągi doprowadzi do nadmiernego systemu użycie zasobów.  
   
--   Schematy XSD (w tym wbudowane schematy) są założenia podatne na ataki; nie należy zaakceptować schematów z niezaufanego źródła.  
+- Schematy XSD (w tym wbudowane schematy) są założenia podatne na ataki; nie należy zaakceptować schematów z niezaufanego źródła.  
   
--   XSD i XSLT może zawierać odwołania do innych plików, a tych odwołań może spowodować ataków międzystrefowego i między domenami.  
+- XSD i XSLT może zawierać odwołania do innych plików, a tych odwołań może spowodować ataków międzystrefowego i między domenami.  
   
--   Podmiotów zewnętrznych w definicji DTD może spowodować ataków międzystrefowego i między domenami.  
+- Podmiotów zewnętrznych w definicji DTD może spowodować ataków międzystrefowego i między domenami.  
   
--   Pliki DTD są narażone na ataki.  
+- Pliki DTD są narażone na ataki.  
   
--   Wyjątkowo głębokiego dokumentów XML może stwarzać typu "odmowa" problemy z usługą; Możesz chcieć ograniczyć głębię dokumentów XML.  
+- Wyjątkowo głębokiego dokumentów XML może stwarzać typu "odmowa" problemy z usługą; Możesz chcieć ograniczyć głębię dokumentów XML.  
   
--   Nie są akceptowane składniki pomocnicze, takie jak <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, i <xref:System.Xml.XmlResolver> obiektów z niezaufanych zestawów.  
+- Nie są akceptowane składniki pomocnicze, takie jak <xref:System.Xml.NameTable>, <xref:System.Xml.XmlNamespaceManager>, i <xref:System.Xml.XmlResolver> obiektów z niezaufanych zestawów.  
   
--   Dane odczytu we fragmentach, aby uniknąć dużych dokumentów ataków.  
+- Dane odczytu we fragmentach, aby uniknąć dużych dokumentów ataków.  
   
--   Bloki skryptów w arkuszy stylów XSLT może narazić liczby ataków.  
+- Bloki skryptów w arkuszy stylów XSLT może narazić liczby ataków.  
   
--   Sprawdź dokładnie, przed konstruowanie dynamiczne wyrażenia XPath.  
+- Sprawdź dokładnie, przed konstruowanie dynamiczne wyrażenia XPath.  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ do XML-problemy dotyczące zabezpieczeń  
  Problemy z zabezpieczeniami, w tym temacie nie są prezentowane w określonej kolejności. Wszystkie problemy są ważne i powinny być kierowane odpowiednio.  

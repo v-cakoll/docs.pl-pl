@@ -3,11 +3,11 @@ title: polecenia DotNet migracji polecenia
 description: Migrowanie dotnet polecenia migrowana projekt i wszystkie jego zależności.
 ms.date: 05/25/2018
 ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665029"
 ---
 # <a name="dotnet-migrate"></a>Migrowanie DotNet
 

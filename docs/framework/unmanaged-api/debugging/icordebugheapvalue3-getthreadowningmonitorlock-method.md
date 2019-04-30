@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1678f1de7c23387f028348dadbc7b61e2cdc035c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701024"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock — Metoda
 Zwraca wątków zarządzanych, który jest właścicielem blokady monitora dla tego obiektu.  
@@ -56,9 +56,9 @@ HRESULT GetThreadOwningMonitorLock (
 ## <a name="remarks"></a>Uwagi  
  Jeśli wątek jest właścicielem blokady monitora dla tego obiektu:  
   
--   Metoda zwraca wartość S_OK.  
+- Metoda zwraca wartość S_OK.  
   
--   Obiekt wątku jest prawidłowy, aż wątek kończy działanie.  
+- Obiekt wątku jest prawidłowy, aż wątek kończy działanie.  
   
  Jeśli nie wątków zarządzanych jest właścicielem blokady monitora dla tego obiektu `ppThread` i `pAcquisitionCount` ulegną zmianie, a metoda zwraca wartość S_FALSE.  
   

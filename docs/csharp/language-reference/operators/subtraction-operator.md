@@ -9,11 +9,11 @@ helpviewer_keywords:
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
 ms.openlocfilehash: 8cf6e8871a88e2b37b9531ecbd616289523473c7
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688803"
 ---
 # <a name="--operator-c-reference"></a>-— operator (C# odwołania)
 
@@ -37,4 +37,4 @@ Typy zdefiniowane przez użytkownika może doprowadzić do przeciążenia jednoa
 
 - [Dokumentacja języka C#](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [C#Operatory](index.md)
+- [Operatory języka C#](index.md)

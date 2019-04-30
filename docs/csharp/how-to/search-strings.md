@@ -7,11 +7,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672071"
 ---
 # <a name="how-to-search-strings"></a>Porady: wyszukiwanie ciągów
 
@@ -43,7 +43,7 @@ Poniższy przykładowy kod wyszukuje słowo "" lub "ich" w zdaniu, bez uwzględn
 
 Wzorzec wyszukiwania w tym artykule opisano tekst, który możesz wyszukać. W poniższej tabeli opisano każdy element wzorzec wyszukiwania. (W poniższej tabeli używa pojedynczego `\` muszą być wyjściowym jako `\\` w ciągu języka C#).
 
-| wzorzec  | Znaczenie     |
+| Wzorzec  | Znaczenie     |
 | -------- |-------------|
 | W      | tekst "" |
 | (eir)?   | dopasowania 0 lub 1 wystąpienie "eir" |
@@ -58,7 +58,7 @@ Wzorzec wyszukiwania w tym artykule opisano tekst, który możesz wyszukać. W p
 
 W poniższym kodzie użyto wyrażenia regularne, aby sprawdzić poprawność format każdego ciągu w tablicy. Weryfikacja wymaga każdego ciągu formularza numer telefonu, w którym trzy grupy cyfry są oddzielone kreskami, pierwsze dwie grupy zawierać trzy cyfry, a trzecia grupa zawiera cztery cyfry. Wzorzec wyszukiwania używa wyrażenia regularnego `^\\d{3}-\\d{3}-\\d{4}$`. Aby uzyskać więcej informacji, zobacz [język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| wzorzec  | Znaczenie                             |
+| Wzorzec  | Znaczenie                             |
 | -------- |-------------------------------------|
 | ^        | pasuje do początku ciągu |
 | \d{3}    | Dopasowuje dokładnie 3 znaki cyfr  |

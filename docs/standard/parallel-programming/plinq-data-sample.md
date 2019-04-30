@@ -11,11 +11,11 @@ ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666628"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
 W tym przykładzie zawiera przykładowe dane w formacie CSV, wraz z metod, które przetwarzają je do kolekcji w pamięci dla klientów, produkty, zamówień i szczegóły zamówienia. Do dalszych eksperymentów z PLINQ, Wklej przykłady kodu z niektórych innych tematów, jak kod w tym temacie i wywołać go z `Main` metody. Umożliwia także te dane za pomocą zapytań PLINQ.  

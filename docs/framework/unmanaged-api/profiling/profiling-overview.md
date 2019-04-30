@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757556"
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 <a name="top"></a> Program profilujący to narzędzie, które monitoruje wykonanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej dynamicznie (DLL), która składa się z funkcji, które odbierają wiadomości ze i wysyłanie komunikatów do środowiska CLR przy użyciu profilowania interfejsu API. Program profilujący DLL jest ładowany przez środowisko CLR w czasie wykonywania.  
@@ -47,25 +47,25 @@ ms.locfileid: "58654097"
   
  To omówienie składa się z następujących sekcji:  
   
--   [API profilowania](#profiling_api)  
+- [API profilowania](#profiling_api)  
   
--   [Obsługiwane funkcje](#support)  
+- [Obsługiwane funkcje](#support)  
   
--   [Wątki powiadomień](#notification_threads)  
+- [Wątki powiadomień](#notification_threads)  
   
--   [Zabezpieczenia](#security)  
+- [Zabezpieczenia](#security)  
   
--   [Łączenie kodu zarządzanego i niezarządzanego w Profiler kodu](#combining_managed_unmanaged)  
+- [Łączenie kodu zarządzanego i niezarządzanego w Profiler kodu](#combining_managed_unmanaged)  
   
--   [Profilowanie niezarządzanego kodu](#unmanaged)  
+- [Profilowanie niezarządzanego kodu](#unmanaged)  
   
--   [Korzystając z modelu COM](#com)  
+- [Korzystając z modelu COM](#com)  
   
--   [Stosy wywołań](#call_stacks)  
+- [Stosy wywołań](#call_stacks)  
   
--   [Wywołania zwrotne i głębokość stosu](#callbacks)  
+- [Wywołania zwrotne i głębokość stosu](#callbacks)  
   
--   [Tematy pokrewne](#related_topics)  
+- [Tematy pokrewne](#related_topics)  
   
 <a name="profiling_api"></a>   
 ## <a name="the-profiling-api"></a>API profilowania  
@@ -96,33 +96,33 @@ ms.locfileid: "58654097"
   
  API profilowania pobiera informacje o następujących działaniach i zdarzeniach, które wystąpiły w CLR:  
   
--   Zdarzenia uruchamiania i zamykania CLR.  
+- Zdarzenia uruchamiania i zamykania CLR.  
   
--   Zdarzenia tworzenia i zamykania aplikacji domeny.  
+- Zdarzenia tworzenia i zamykania aplikacji domeny.  
   
--   Ładowanie zestawów i wyładowywanie zdarzeń.  
+- Ładowanie zestawów i wyładowywanie zdarzeń.  
   
--   Ładowanie modułów i wyładowywanie zdarzeń.  
+- Ładowanie modułów i wyładowywanie zdarzeń.  
   
--   Zdarzenia tworzenia i niszczenia COM vtable.  
+- Zdarzenia tworzenia i niszczenia COM vtable.  
   
--   Just-in-time (JIT) kompilacja i zdarzenia poziomowania kodu.  
+- Just-in-time (JIT) kompilacja i zdarzenia poziomowania kodu.  
   
--   Klasa ładowania i wyładowywanie zdarzeń.  
+- Klasa ładowania i wyładowywanie zdarzeń.  
   
--   Wątek zdarzenia tworzenia i niszczenia.  
+- Wątek zdarzenia tworzenia i niszczenia.  
   
--   Zdarzenia wejścia i wyjścia funkcji.  
+- Zdarzenia wejścia i wyjścia funkcji.  
   
--   Liczba wyjątków.  
+- Liczba wyjątków.  
   
--   Przejścia między wykonywaniem kodu zarządzanego i niezarządzanego.  
+- Przejścia między wykonywaniem kodu zarządzanego i niezarządzanego.  
   
--   Przejścia między środowiskiem uruchomieniowym w różnych kontekstach.  
+- Przejścia między środowiskiem uruchomieniowym w różnych kontekstach.  
   
--   Informacje o zawieszeniach środowiska uruchomieniowego.  
+- Informacje o zawieszeniach środowiska uruchomieniowego.  
   
--   Informacje na temat środowiska uruchomieniowego pamięci sterty i wyrzucania elementów kolekcji działania.  
+- Informacje na temat środowiska uruchomieniowego pamięci sterty i wyrzucania elementów kolekcji działania.  
   
  Profilowania API można wywołać z dowolnego języka zgodnego z COM. (niezarządzany).  
   
@@ -133,19 +133,19 @@ ms.locfileid: "58654097"
 ### <a name="unsupported-functionality"></a>Nieobsługiwana funkcja  
  Profilowanie API nie obsługuje następujące funkcje:  
   
--   Niezarządzany kod, który musi być profilowany za pomocą konwencjonalnych metod Win32. Jednakże program profilujący CLR zawiera zdarzenia przejścia do określenia granic między kodem zarządzanym i niezarządzanym.  
+- Niezarządzany kod, który musi być profilowany za pomocą konwencjonalnych metod Win32. Jednakże program profilujący CLR zawiera zdarzenia przejścia do określenia granic między kodem zarządzanym i niezarządzanym.  
   
--   Własne modyfikowanie aplikacji, które modyfikują swój własny kod do celów takich jak programowanie zorientowanego na aspekt.  
+- Własne modyfikowanie aplikacji, które modyfikują swój własny kod do celów takich jak programowanie zorientowanego na aspekt.  
   
--   Sprawdzanie granic, ponieważ profilowanie API nie dostarcza tych informacji. Środowisko CLR zapewnia wsparcie wewnętrznej sprawdzanie wszystkich zarządzanych kodów granic.  
+- Sprawdzanie granic, ponieważ profilowanie API nie dostarcza tych informacji. Środowisko CLR zapewnia wsparcie wewnętrznej sprawdzanie wszystkich zarządzanych kodów granic.  
   
--   Zdalne profilowanie, który nie jest obsługiwany w następujących sytuacjach:  
+- Zdalne profilowanie, który nie jest obsługiwany w następujących sytuacjach:  
   
-    -   Zdalne profilowanie rozszerza czas wykonania. Korzystając z interfejsów profilowania, można zminimalizować czas wykonywania, aby wyniki profilowania nie będą nadmiernie zmieniane. Jest to szczególnie istotne w przypadku, gdy wykonanie wydajności jest monitorowane. Jednakże, zdalne profilowanie nie jest to ograniczenie, gdy interfejsy profilujące są używane do monitorowania wykorzystania pamięci lub uzyskać informacje czasu wykonywania ramki stosu, obiektów i tak dalej.  
+    - Zdalne profilowanie rozszerza czas wykonania. Korzystając z interfejsów profilowania, można zminimalizować czas wykonywania, aby wyniki profilowania nie będą nadmiernie zmieniane. Jest to szczególnie istotne w przypadku, gdy wykonanie wydajności jest monitorowane. Jednakże, zdalne profilowanie nie jest to ograniczenie, gdy interfejsy profilujące są używane do monitorowania wykorzystania pamięci lub uzyskać informacje czasu wykonywania ramki stosu, obiektów i tak dalej.  
   
-    -   Profiler kodu CLR musi zarejestrować jeden lub więcej interfejsów wywołania zwrotnego do aparatu plików wykonywalnych na komputerze lokalnym, na którym jest uruchomiona profilowana aplikacja. Ogranicza to możliwość tworzenia profilerów kodu zdalnego.  
+    - Profiler kodu CLR musi zarejestrować jeden lub więcej interfejsów wywołania zwrotnego do aparatu plików wykonywalnych na komputerze lokalnym, na którym jest uruchomiona profilowana aplikacja. Ogranicza to możliwość tworzenia profilerów kodu zdalnego.  
   
--   Profilowanie w środowiskach produkcyjnych z wymogami wysokiej dostępności. API profilowania zostało utworzone do obsługi rozwoju diagnostycznego. Nie przeszedł rygorystycznych testów wymaganych do obsługi środowisk produkcyjnych.  
+- Profilowanie w środowiskach produkcyjnych z wymogami wysokiej dostępności. API profilowania zostało utworzone do obsługi rozwoju diagnostycznego. Nie przeszedł rygorystycznych testów wymaganych do obsługi środowisk produkcyjnych.  
   
  [Powrót do początku](#top)  
   
@@ -185,9 +185,9 @@ ms.locfileid: "58654097"
 ## <a name="profiling-unmanaged-code"></a>Profilowanie niezarządzanego kodu  
  Środowisko uruchomieniowe języka wspólnego (CLR) profilowania API zapewnia minimalną obsługę dla profilowania kodu niezarządzanego. Następująca funkcjonalność została zapewniona:  
   
--   Wyliczenie łańcuchów stosu. Ta funkcja umożliwia programowi profilującemu kodu określenie granic między kodem zarządzanym i niezarządzanym kodzie.  
+- Wyliczenie łańcuchów stosu. Ta funkcja umożliwia programowi profilującemu kodu określenie granic między kodem zarządzanym i niezarządzanym kodzie.  
   
--   Określenie tego, czy łańcuch stosu odnosi się do kodu zarządzanego lub kodu natywnego.  
+- Określenie tego, czy łańcuch stosu odnosi się do kodu zarządzanego lub kodu natywnego.  
   
  W wersjach programu .NET Framework 1.0 i 1.1 metody te są dostępne poprzez wewnątrzprocesowy podzbiór debugowania CLR interfejsu API. Są one zdefiniowane w pliku CorDebug.idl.  
   

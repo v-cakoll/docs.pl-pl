@@ -3,11 +3,11 @@ title: Co nowego w języku C# 7.3
 description: Omówienie nowych funkcji w języku C# 7.3
 ms.date: 05/16/2018
 ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58028675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675549"
 ---
 # <a name="whats-new-in-c-73"></a>Co nowego w języku C# 7.3
 
@@ -187,7 +187,7 @@ public class D : B
 }
 ```
 
-### <a name="improved-overload-candidates"></a>Kandydujące dla przeciążenia ulepszone
+### <a name="improved-overload-candidates"></a>Ulepszone kandydujące metody rozwiązywania przeciążenia
 
 W każdej wersji reguł rozwiązywania przeciążenia zaktualizowani adres sytuacjom, w których niejednoznacznego wywołania metod mają "oczywistym" wyborem. W tej wersji dodano trzy nowe reguły, aby ułatwić kompilatora wybierz oczywistym wyborem:
 

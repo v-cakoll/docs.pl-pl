@@ -3,11 +3,11 @@ title: 'Instrukcje: Wykonywanie drzew wyrażeń (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
 ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61668929"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Instrukcje: Wykonywanie drzew wyrażeń (C#)
 W tym temacie przedstawiono sposób wykonywania drzewo wyrażenia. Wykonywanie drzewa wyrażenie może zwrócić wartość lub go, że po prostu wykonać akcja, taka jak wywołanie metody.  
@@ -44,9 +44,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
+- Dodaj odwołanie do biblioteki System.Core.dll, jeśli nie jest wywoływany.  
   
--   Obejmują System.Linq.Expressions przestrzeni nazw.  
+- Obejmują System.Linq.Expressions przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz także
 

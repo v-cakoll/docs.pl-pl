@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756276"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aktualizowanie źródeł danych za pomocą elementów DataAdapter
 `Update` Metody <xref:System.Data.Common.DataAdapter> jest wywoływana, aby rozwiązać zmian z <xref:System.Data.DataSet> wstecz do źródła danych. `Update` Metody, takiej jak `Fill` metoda, przyjmuje jako argumenty wystąpienie `DataSet`oraz opcjonalny <xref:System.Data.DataTable> obiektu lub `DataTable` nazwy. `DataSet` Wystąpienie jest `DataSet` zawiera zmiany, które zostały wprowadzone, a `DataTable` Określa tabelę, z którego można pobrać zmiany. Jeśli nie `DataTable` jest określony, pierwszy `DataTable` w `DataSet` jest używany.  
@@ -98,13 +98,13 @@ adapter.Update(table.Select(null, null, DataViewRowState.Added));
 ## <a name="use-a-dataadapter-to-retrieve-and-update-data"></a>Użyj elementu DataAdapter pobierania i aktualizowania danych  
  Element DataAdapter służy do pobierania i aktualizowania danych.  
   
--   W przykładzie użyto DataAdapter.AcceptChangesDuringFill się klonowanie danych w bazie danych. Jeśli właściwość została ustawiona jako wartość false, metoda AcceptChanges nie jest wywoływana, gdy wypełnianie tabeli, a nowo dodane wiersze są traktowane jako wstawione wiersze. Tak w przykładzie użyto tych wierszy, aby wstawić nowe wiersze do bazy danych.  
+- W przykładzie użyto DataAdapter.AcceptChangesDuringFill się klonowanie danych w bazie danych. Jeśli właściwość została ustawiona jako wartość false, metoda AcceptChanges nie jest wywoływana, gdy wypełnianie tabeli, a nowo dodane wiersze są traktowane jako wstawione wiersze. Tak w przykładzie użyto tych wierszy, aby wstawić nowe wiersze do bazy danych.  
   
--   Przykłady używa DataAdapter.TableMappings do definiowania mapowanie między tabelą źródłową i DataTable.  
+- Przykłady używa DataAdapter.TableMappings do definiowania mapowanie między tabelą źródłową i DataTable.  
   
--   W przykładzie użyto DataAdapter.FillLoadOption, aby określić sposobu wypełniania elementu DataTable z obiekt DbDataReader. Podczas tworzenia elementu DataTable możesz tylko zapisywać dane z bazy danych bieżącej wersji lub wersji oryginalnej, ustawiając właściwość jako LoadOption.Upsert lub LoadOption.PreserveChanges.  
+- W przykładzie użyto DataAdapter.FillLoadOption, aby określić sposobu wypełniania elementu DataTable z obiekt DbDataReader. Podczas tworzenia elementu DataTable możesz tylko zapisywać dane z bazy danych bieżącej wersji lub wersji oryginalnej, ustawiając właściwość jako LoadOption.Upsert lub LoadOption.PreserveChanges.  
   
--   Próbka będzie również zaktualizować tabeli przy użyciu DbDataAdapter.UpdateBatchSize do wykonywania operacji wsadowych.  
+- Próbka będzie również zaktualizować tabeli przy użyciu DbDataAdapter.UpdateBatchSize do wykonywania operacji wsadowych.  
   
  Aby skompilować i uruchomić przykład, musisz utworzyć przykładowej bazy danych:  
   

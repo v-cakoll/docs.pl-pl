@@ -3,11 +3,11 @@ title: Operacje generowania (C#)
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
 ms.openlocfilehash: eb30fd9a354c7482ebe84cae764f362585aa87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702246"
 ---
 # <a name="generation-operations-c"></a>Operacje generowania (C#)
 Generowanie odnosi się do tworzenia nowej sekwencji wartości.  

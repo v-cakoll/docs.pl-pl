@@ -3,11 +3,11 @@ title: 'Instrukcje: Ładowanie kodu XML z pliku (C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
 ms.openlocfilehash: f97e99a3d5fb2dd5628e1dc00909b6608255a967
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667915"
 ---
 # <a name="how-to-load-xml-from-a-file-c"></a>Instrukcje: Ładowanie kodu XML z pliku (C#)
 W tym temacie pokazano, jak załadować XML z identyfikatora URI przy użyciu <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> metody.  

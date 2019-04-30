@@ -3,26 +3,26 @@ title: 3415 — WebSocketConnectionRequestSendStart
 ms.date: 03/30/2017
 ms.assetid: 2fdf39ec-3aad-45bf-ba80-759e6e10fe37
 ms.openlocfilehash: d6d51f2dfcd043ea78de288d88227218ec71ca6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749231"
 ---
 # <a name="3415---websocketconnectionrequestsendstart"></a>3415 — WebSocketConnectionRequestSendStart
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3415|  
-|Słowa kluczowe|HTTP|  
+|Identyfikator|3415|  
+|słowa kluczowe|HTTP|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany Rozpoczęcie żądania połączenia obiektu WebSocket do wysłania.  
+ To zdarzenie jest emitowane uruchamianiu żądanie połączenia protokołu WebSocket do wysłania.  
   
 ## <a name="message"></a>Komunikat  
- Rozpoczęto wysyłanie żądania połączenia obiektu WebSocket do "%1".  
+ Żądanie połączenia protokołu WebSocket do "%1" Wyślij rozpoczęcia.  
   
 ## <a name="details"></a>Szczegóły

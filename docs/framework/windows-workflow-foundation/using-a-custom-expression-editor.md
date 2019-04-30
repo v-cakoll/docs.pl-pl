@@ -3,18 +3,18 @@ title: Używanie edytora wyrażeń niestandardowych
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669605"
 ---
 # <a name="using-a-custom-expression-editor"></a>Używanie edytora wyrażeń niestandardowych
 Podaj wyrażenie bogatsze lub prostsze środowisko edytowania plików mogą zostać wdrożone edytora wyrażeń niestandardowych. Istnieje kilka scenariuszy, w których możesz chcieć użyć edytora wyrażeń niestandardowych:  
   
--   Aby zapewnić obsługę technologii IntelliSense i inne zaawansowane funkcje w rehostowanym projektancie przepływu pracy do edycji. Ta funkcja musi być podany, ponieważ domyślny edytor wyrażeń Visual Studio nie można używać w rehostowanym aplikacji.  
+- Aby zapewnić obsługę technologii IntelliSense i inne zaawansowane funkcje w rehostowanym projektancie przepływu pracy do edycji. Ta funkcja musi być podany, ponieważ domyślny edytor wyrażeń Visual Studio nie można używać w rehostowanym aplikacji.  
   
--   Aby uprościć wyrażenia środowisko dla użytkowników analityków biznesowych, edytowania, aby nie, na przykład, są wymagane do Naucz się Visual Basic lub przeciwdziałania wyrażeń języka Visual Basic.  
+- Aby uprościć wyrażenia środowisko dla użytkowników analityków biznesowych, edytowania, aby nie, na przykład, są wymagane do Naucz się Visual Basic lub przeciwdziałania wyrażeń języka Visual Basic.  
   
  Trzy podstawowe kroki są niezbędne do zaimplementowania edytora wyrażeń niestandardowych:  
   

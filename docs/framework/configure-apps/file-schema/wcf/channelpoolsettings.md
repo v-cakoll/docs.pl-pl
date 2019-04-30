@@ -3,11 +3,11 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673332"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 Określa ustawienia puli kanału dla niestandardowego powiązania.  
@@ -52,11 +52,11 @@ Określa ustawienia puli kanału dla niestandardowego powiązania.
   
  `ChannelPoolSettings` Określa trzy przydziały:  
   
--   `idleTimeout` Przydziału służy do ograniczenie liczby ataków typu odmowa usługi (DOS) na serwerze, które zależą od zajmowania zasobów przez dłuższy czas. Na komputerze klienckim ustawienie poprawną wartość może zwiększyć niezawodność nawiązywania połączenia z usługą. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów. Nadaje się do środowiska deweloperskiego i scenariusze małych instalacji. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
+- `idleTimeout` Przydziału służy do ograniczenie liczby ataków typu odmowa usługi (DOS) na serwerze, które zależą od zajmowania zasobów przez dłuższy czas. Na komputerze klienckim ustawienie poprawną wartość może zwiększyć niezawodność nawiązywania połączenia z usługą. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów. Nadaje się do środowiska deweloperskiego i scenariusze małych instalacji. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
   
--   `leaseTimeout` Przydziału służy do integracji z modułami równoważenia obciążenia i zwiększając niezawodność. Wartość domyślna jest oparta na zachowawcze alokacji zasobów. Nadaje się do środowiska deweloperskiego i scenariusze małych instalacji. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
+- `leaseTimeout` Przydziału służy do integracji z modułami równoważenia obciążenia i zwiększając niezawodność. Wartość domyślna jest oparta na zachowawcze alokacji zasobów. Nadaje się do środowiska deweloperskiego i scenariusze małych instalacji. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
   
--   `maxOutboundChannelsPerEndpoint` Przydziału Ustawia limity pamięci podręcznej serwera i klienta i jest używana w celu zwiększenia niezawodności. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów, który nadaje się do środowiska deweloperskiego i scenariusze instalacji małych. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
+- `maxOutboundChannelsPerEndpoint` Przydziału Ustawia limity pamięci podręcznej serwera i klienta i jest używana w celu zwiększenia niezawodności. Wartość domyślna jest oparta na konserwatywnie skromną alokacji zasobów, który nadaje się do środowiska deweloperskiego i scenariusze instalacji małych. Administratorzy usług należy przejrzeć wartość, czy instalacja zaczyna brakować zasobów, czy połączenia są ograniczeni pomimo dostępność dodatkowych zasobów.  
   
 ## <a name="see-also"></a>Zobacz także
 

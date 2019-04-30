@@ -1,21 +1,21 @@
 ---
-title: Rozpoznawanie zewnętrznych zasobów
+title: Rozpoznawanie zasobów zewnętrznych
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703247"
 ---
-# <a name="resolving-external-resources"></a>Rozpoznawanie zewnętrznych zasobów
+# <a name="resolving-external-resources"></a>Rozpoznawanie zasobów zewnętrznych
 **Element XmlResolver** właściwość **XmlDocument** jest używany przez **XmlDocument** klasy do lokalizowania zasobów, które nie są wbudowane w danych XML, takie jak typ dokumentu zewnętrznego definicje (pliki DTD), jednostki i schematów. Te elementy można znaleźć w sieci lub na dysku lokalnym i są oznaczone przez jednolite zasobów identyfikator (URI). Dzięki temu **XmlDocument** rozpoznać **EntityReference** węzły, które znajdują się w dokumencie i sprawdź poprawność dokumentu zgodnie z zewnętrzna definicja DTD lub schematu.  
   
-## <a name="fully-trusted-xmldocument"></a>W pełni zaufane XmlDocument  
+## <a name="fully-trusted-xmldocument"></a>Fully-Trusted XmlDocument  
  **Element XmlResolver** właściwość ma wpływ na funkcjonalność **XmlDocument.Load** metody. Poniższa tabela pokazuje sposób, w jaki **XmlDocument.XmlResolver** właściwości działa, kiedy **XmlDocument** obiekt jest w pełni zaufany. W poniższej tabeli przedstawiono **XmlDocument.Load** metody, gdy dane wejściowe do obciążenia **TextReader**, **ciąg**, **Stream**, lub  **Identyfikator URI**. Ta tabela nie ma zastosowania do **obciążenia** metoda Jeśli **XmlDocument** jest ładowany z **XmlReader**.  
   
 |Element XmlResolver właściwości|Funkcja|Uwagi|  

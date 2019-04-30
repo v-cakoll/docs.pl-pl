@@ -3,13 +3,13 @@ title: 'Przykładowy plik XML: Konfiguracja testu w {1 & gt'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
 ms.openlocfilehash: 975e0bdfe22758b968dde4e97cf5b302579a7ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711710"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: Konfiguracja testu w Namespace
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Przykładowy plik XML: konfiguracja testowa w przestrzeni nazw
 Następujący plik XML jest używany w różne przykłady w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] dokumentacji. Jest to plik konfiguracji testu. Kod XML jest w przestrzeni nazw.  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  

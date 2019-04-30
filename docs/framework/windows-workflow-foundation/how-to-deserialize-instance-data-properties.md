@@ -1,32 +1,32 @@
 ---
-title: 'Porady: deserializacja właściwości obiektu danych'
+title: 'Instrukcje: Deserializacja właściwości danych wystąpienia'
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
 ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761445"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a>Porady: deserializacja właściwości obiektu danych
-Mogą wystąpić sytuacje, gdy użytkownik lub administrator przepływu pracy może być ręcznie sprawdzić stan wystąpienia przepływu pracy utrwalonych. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> zapewnia widok na tabeli wystąpień, który udostępnia następujące cztery kolumny:  
+# <a name="how-to-deserialize-instance-data-properties"></a>Instrukcje: Deserializacja właściwości danych wystąpienia
+Mogą wystąpić sytuacje, gdy użytkownik lub administrator przepływu pracy mogą chcieć ręcznie sprawdzić stanu utrwalonego wystąpienia przepływu pracy. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> zapewnia wgląd w tabeli wystąpień, który udostępnia następujące cztery kolumny:  
   
--   ReadWritePrimitiveDataProperties  
+- ReadWritePrimitiveDataProperties  
   
--   WriteOnlyPrimitiveDataProperties  
+- WriteOnlyPrimitiveDataProperties  
   
--   ReadWriteComplexDataProperties  
+- ReadWriteComplexDataProperties  
   
--   WriteOnlyComplexDataProperties  
+- WriteOnlyComplexDataProperties  
   
- Właściwości danych pierwotnych odwoływać się do właściwości, których typy .NET Framework są traktowane jako "typowych" (na przykład Int32 i ciągu), gdy właściwości złożonych danych odwołuje się do wszystkich pozostałych typów. Dokładne wyliczenie typów pierwotnych znajduje się w dalszej części w tym przykładzie kodu.  
+ Właściwości danych pierwotnych odnoszą się do właściwości, do których typów programu .NET Framework są traktowane jako "typowych" (na przykład, Int32 i ciągu), natomiast właściwości złożonych danych odnoszą się do wszystkich pozostałych typów. Dokładne wyliczenie typów pierwotnych znajduje się w dalszej części w tym przykładzie kodu.  
   
- Właściwości odczytu/zapisu odwoływać się do właściwości, które są przywracane do środowiska uruchomieniowego przepływu pracy po załadowaniu wystąpienia. Właściwości WriteOnly są zapisane w bazie danych i nigdy nie odczytać ponownie.  
+ Właściwości odczytu/zapisu odnoszą się do właściwości, które są zwracane do środowiska wykonawczego przepływów pracy, gdy wystąpienie jest ładowany. Właściwości WriteOnly są zapisywane w bazie danych i nigdy odczytywana ponownie.  
   
- W poniższym przykładzie przedstawiono kod, który umożliwia użytkownikowi deserializacji właściwości pierwotnych danych. Podana tablica bajtów do odczytu z kolumny ReadWritePrimitiveDataProperties albo WriteOnlyPrimitiveDataProperties, ten kod będzie konwertować dużego obiektu binarnego (BLOB) <xref:System.Collections.Generic.Dictionary%602> typu \<XName, obiekt > gdzie wartości klucza para reprezentuje nazwę właściwości i jego wartość.  
+ W poniższym przykładzie przedstawiono kod, który umożliwia użytkownikowi deserializacji właściwości danych pierwotnych. Biorąc pod uwagę odczytu z kolumny ReadWritePrimitiveDataProperties albo WriteOnlyPrimitiveDataProperties tablicy typu byte, ten kod przekonwertuje duży obiekt binarny (BLOB) na <xref:System.Collections.Generic.Dictionary%602> typu \<XName, object > gdzie każda wartość klucza para reprezentuje nazwę właściwości i jego wartość.  
   
- W tym przykładzie nie pokazują, jak deserializować właściwości złożonych danych, ponieważ obecnie nie jest obsługiwaną operacją.  
+ W tym przykładzie nie przedstawiono tu sposób deserializacji właściwości złożonych danych, ponieważ obecnie nie jest obsługiwaną operacją.  
   
 ```  
 using System;  

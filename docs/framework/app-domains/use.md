@@ -9,61 +9,61 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674896"
 ---
 # <a name="using-application-domains"></a>Używanie domeny aplikacji
-Domeny aplikacji Podaj jednostkę izolacji dla środowiska CLR. Są one tworzone i uruchamiane wewnątrz procesu. Domeny aplikacji są zwykle tworzone przez host czasu wykonywania, który jest odpowiedzialny za ładowanie środowiska uruchomieniowego do procesu i wykonywanie kodu użytkownika w domenie aplikacji aplikacji. Host czasu wykonywania tworzy proces i domyślnej domeny aplikacji i uruchamia kod zarządzany wewnątrz niej. Hosty środowiska uruchomieniowego obejmują ASP.NET, programu Microsoft Internet Explorer i powłoki systemu Windows.  
+Domen aplikacji zapewniają jednostkę izolacji dla środowiska uruchomieniowego języka wspólnego. Są one tworzone i uruchamiane wewnątrz procesu. Domeny aplikacji są zwykle tworzone przez hosta środowiska uruchomieniowego, czyli aplikacji, które są odpowiedzialne za ładowanie środowiska uruchomieniowego do procesu i wykonywanie kodu użytkownika w domenie aplikacji. Host środowiska uruchomieniowego tworzy proces i domyślnej domeny aplikacji i uruchamia kodu zarządzanego wewnątrz niego. Hosty środowiska uruchomieniowego obejmują usługę ASP.NET, Microsoft Internet Explorer oraz powłoki Windows.  
   
- Dla większości aplikacji nie trzeba tworzyć własne domenę aplikacji. host czasu wykonywania utworzy wszystkie domeny aplikacji to konieczne. Można jednak utworzyć i skonfigurować domeny dodatkowych aplikacji, jeśli aplikacja musi izolowanie kodu lub użycia i zwolnić biblioteki dll.  
+ W przypadku większości aplikacji nie trzeba tworzyć własną domenę aplikacji. host środowiska uruchomieniowego tworzy wszystkie domeny aplikacji konieczne. Można jednak utworzyć i skonfigurować domeny dodatkowych aplikacji, jeśli Twoja aplikacja potrzebuje do izolowania kodu lub do użycia i zwalnianie bibliotek DLL.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: tworzenie domeny aplikacji](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
- Opisuje sposób programowego tworzenia domeny aplikacji.  
+ [Instrukcje: Tworzenie domeny aplikacji](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ W tym artykule opisano, jak programowo utworzyć domenę aplikacji.  
   
- [Instrukcje: zwolnienie domeny aplikacji](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
- Opisuje sposób programowego wyładować domeny aplikacji.  
+ [Instrukcje: Zwolnienie domeny aplikacji](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ W tym artykule opisano, jak programowo zwolnienie domeny aplikacji.  
   
- [Instrukcje: konfigurowanie domeny aplikacji](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ [Instrukcje: Konfigurowanie domeny aplikacji](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
  Wprowadzenie do konfigurowania domeny aplikacji.  
   
  [Pobieranie informacji o instalacji z domeny aplikacji](../../../docs/framework/app-domains/retrieve-setup-information.md)  
- Opisuje sposób pobrać informacji o instalacji z domeny aplikacji.  
+ W tym artykule opisano sposób pobierania informacji o instalacji z domeny aplikacji.  
   
- [Instrukcje: ładowanie zestawów do domeny aplikacji](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
- Opisuje sposób załadować zestawu do domeny aplikacji.  
+ [Instrukcje: Ładowanie zestawów do domeny aplikacji](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
+ W tym artykule opisano sposób ładowania zestawu do domeny aplikacji.  
   
- [Instrukcje: uzyskiwanie informacji dotyczących typów i elementów członkowskich z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
- Zawiera opis sposobu pobierania informacji o zestawie.  
+ [Instrukcje: Uzyskiwanie informacji dotyczących elementu członkowskiego typów i z zestawu](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ W tym artykule opisano, jak pobrać informacje o zestawie.  
   
  [Kopiowanie zestawów w tle](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
- W tym artykule opisano, jak kopiowanie w tle umożliwia aktualizacji do zestawów, gdy są one używane i sposobie konfigurowania kopiowanie w tle.  
+ Opisuje sposób kopiowania w tle zezwala na aktualizacje do zestawów, gdy są one używane oraz skonfigurować kopiowania w tle.  
   
- [Instrukcje: odbieranie powiadomień o wyjątkach pierwszej szansy](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
- W tym artykule wyjaśniono, jak możesz otrzymywać powiadomienia, który zgłosił wyjątek, zanim środowisko uruchomieniowe języka wspólnego rozpoczął wyszukiwanie programy obsługi wyjątków.  
+ [Instrukcje: Odbieranie powiadomień o wyjątkach pierwszej szansy](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ W tym artykule wyjaśniono, jak otrzymasz powiadomienie, że wygenerowany został wyjątek, zanim środowiska uruchomieniowego języka wspólnego została rozpoczęta, wyszukując obsługi wyjątków.  
   
  [Rozwiązywanie załadowań zestawów](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
- Ten artykuł zawiera wskazówki dotyczące używania <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby naprawić błędy ładowania zestawu.  
+ Ten artykuł zawiera wskazówki na temat korzystania z <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenie, aby rozwiązać błędy ładowania zestawu.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.AppDomain>  
- Reprezentuje domeny aplikacji. Udostępnia metody tworzenia i kontrolowania domen aplikacji.  
+ Reprezentuje domenę aplikacji. Zawiera metody służące do tworzenia i kontrolowania domen aplikacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- Zawiera omówienie funkcji wykonywane przez zestawy.  
+ Zawiera omówienie funkcji, wykonywane przez zestawy.  
   
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- Opisuje sposób tworzenia, zaloguj się i ustawić atrybuty zestawów.  
+ W tym artykule opisano sposób tworzenia, zaloguj się i ustawianie atrybutów zestawów.  
   
  [Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- Opisuje sposób tworzenia zestawów dynamicznych.  
+ W tym artykule opisano sposób tworzenia zestawów dynamicznych.  
   
  [Domeny aplikacji](../../../docs/framework/app-domains/application-domains.md)  
  Omówienie koncepcyjne domen aplikacji.  
   
- [Odbicie — omówienie](../../../docs/framework/reflection-and-codedom/reflection.md)  
- Informacje dotyczące używania **odbicia** klasę, aby uzyskać informacje o zestawie.
+ [Omówienie odbicia](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ Opisuje sposób używania **odbicia** klasy, aby uzyskać informacje o zestawie.

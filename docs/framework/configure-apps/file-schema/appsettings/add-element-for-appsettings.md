@@ -1,5 +1,5 @@
 ---
-title: <add> — element do <appSettings>
+title: <add>, element dla <appSettings>
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -10,11 +10,11 @@ ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: dde773dc722cf75da9d922ccf28af4bf4a09636c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674873"
 ---
 # <a name="add-element-for-appsettings"></a>\<Dodaj >, element dla \<appSettings >
 

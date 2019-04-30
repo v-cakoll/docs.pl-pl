@@ -3,11 +3,11 @@ title: Wprowadzenie do C# -zapoznanie się z poziomu narzędzi deweloperskich
 description: Ten artykuł zawiera podstawowe wprowadzenie do narzędzi, będziesz używać do tworzenia C# i aplikacje platformy .NET na maszynie.
 ms.date: 10/23/2018
 ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706237"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Zapoznanie się z poziomu narzędzi deweloperskich platformy .NET
 

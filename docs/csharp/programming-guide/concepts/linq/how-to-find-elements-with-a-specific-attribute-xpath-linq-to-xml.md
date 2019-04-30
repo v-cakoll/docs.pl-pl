@@ -3,11 +3,11 @@ title: 'Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ t
 ms.date: 07/20/2015
 ms.assetid: daed00dd-923a-43be-8a90-eee406f6f574
 ms.openlocfilehash: c5b8ae9a41c5b05438d14f2717c8edfb151d47c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701986"
 ---
 # <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-c"></a>Instrukcje: Znajdowanie elementów o określonym atrybucie (XPath-LINQ to XML) (C#)
 Czasami chcesz znaleźć wszystkie elementy, które mają określony atrybut. Nie masz zajmującym się ochroną zawartości atrybutu. Zamiast tego chcesz wybrać na podstawie istnienia atrybutu.  

@@ -15,11 +15,11 @@ ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675120"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 
@@ -41,18 +41,18 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
   
  Izolacja świadczona przez domeny aplikacji ma następujące zalety:  
   
--   Błędy w jednej aplikacji nie może mieć wpływ na inne aplikacje. Ponieważ kod bezpiecznego typu nie może powodować błędów pamięci, korzystanie z domen aplikacji zapewnia, że kod uruchomiony w jednej domenie nie może wpływać na inne aplikacje w procesie.  
+- Błędy w jednej aplikacji nie może mieć wpływ na inne aplikacje. Ponieważ kod bezpiecznego typu nie może powodować błędów pamięci, korzystanie z domen aplikacji zapewnia, że kod uruchomiony w jednej domenie nie może wpływać na inne aplikacje w procesie.  
   
--   Poszczególne aplikacje mogą zostać zatrzymane bez zatrzymywania całego procesu. Używanie domen aplikacji pozwala zwolnić kod uruchomiony w jednej aplikacji.  
+- Poszczególne aplikacje mogą zostać zatrzymane bez zatrzymywania całego procesu. Używanie domen aplikacji pozwala zwolnić kod uruchomiony w jednej aplikacji.  
   
     > [!NOTE]
     >  Nie można rozładować poszczególnych zespołów lub typów. Tylko kompletna domena może być zwolniony.  
   
--   Kod uruchomiony w jednej aplikacji nie może mieć bezpośredniego dostępu do kodu lub zasobów z innej aplikacji. Środowisko uruchomieniowe języka wspólnego wymusza tę izolację poprzez zapobieganie bezpośrednim wywołaniom między obiektami w różnych domenach aplikacji. Obiekty, które przechodzą między domenami, są kopiowane lub używane przez serwery proxy. Jeśli obiekt jest kopiowany, wywołanie do obiektu jest lokalne. Oznacza to, że zarówno obiekt wywołujący i obiekt, do którego nastąpiło odwołanie znajdują się w tej samej domenie aplikacji. Jeśli obiekt jest dostępny za pośrednictwem serwera proxy, wywołanie do obiektu jest zdalne. W tym przypadku obiekt wywołujący i obiekt, do którego nastąpiło odwołanie znajdują się w różnych domenach aplikacji. Wywołania między domenami korzystać z tej samej infrastruktury zdalnego wywołania jako wywołania między dwoma procesami lub między dwoma komputerami. Jako takie metadane dla obiektu, do którego nastąpiło odwołanie, muszą być dostępne dla obu domen aplikacji, aby zezwolić na wywołania metody, które ma być kompilowany dokładnie na czas poprawnie. Jeśli domena wywołujący nie ma dostępu do metadanych dla wywoływanego obiektu, może się nie powieść kompilacja ze zgłoszeniem wyjątku typu <xref:System.IO.FileNotFoundException>. Aby uzyskać więcej informacji, zobacz [obiekty zdalne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Mechanizm ustalania, jak obiekty są dostępne między domenami jest określany przez obiekt. Aby uzyskać więcej informacji, zobacz <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- Kod uruchomiony w jednej aplikacji nie może mieć bezpośredniego dostępu do kodu lub zasobów z innej aplikacji. Środowisko uruchomieniowe języka wspólnego wymusza tę izolację poprzez zapobieganie bezpośrednim wywołaniom między obiektami w różnych domenach aplikacji. Obiekty, które przechodzą między domenami, są kopiowane lub używane przez serwery proxy. Jeśli obiekt jest kopiowany, wywołanie do obiektu jest lokalne. Oznacza to, że zarówno obiekt wywołujący i obiekt, do którego nastąpiło odwołanie znajdują się w tej samej domenie aplikacji. Jeśli obiekt jest dostępny za pośrednictwem serwera proxy, wywołanie do obiektu jest zdalne. W tym przypadku obiekt wywołujący i obiekt, do którego nastąpiło odwołanie znajdują się w różnych domenach aplikacji. Wywołania między domenami korzystać z tej samej infrastruktury zdalnego wywołania jako wywołania między dwoma procesami lub między dwoma komputerami. Jako takie metadane dla obiektu, do którego nastąpiło odwołanie, muszą być dostępne dla obu domen aplikacji, aby zezwolić na wywołania metody, które ma być kompilowany dokładnie na czas poprawnie. Jeśli domena wywołujący nie ma dostępu do metadanych dla wywoływanego obiektu, może się nie powieść kompilacja ze zgłoszeniem wyjątku typu <xref:System.IO.FileNotFoundException>. Aby uzyskać więcej informacji, zobacz [obiekty zdalne](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). Mechanizm ustalania, jak obiekty są dostępne między domenami jest określany przez obiekt. Aby uzyskać więcej informacji, zobacz <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   Zachowanie kodu jest objęte zakresem aplikacji, w której jest uruchamiany. Innymi słowy domena aplikacji zawiera ustawienia konfiguracji, takie jak zasady wersji aplikacji, lokalizacja wszelkich zestawów zdalnych, do których uzyskuje dostęp, oraz informacje o tym, gdzie umieścić zestawy, które są ładowane do domeny.  
+- Zachowanie kodu jest objęte zakresem aplikacji, w której jest uruchamiany. Innymi słowy domena aplikacji zawiera ustawienia konfiguracji, takie jak zasady wersji aplikacji, lokalizacja wszelkich zestawów zdalnych, do których uzyskuje dostęp, oraz informacje o tym, gdzie umieścić zestawy, które są ładowane do domeny.  
   
--   Uprawnienia udzielone do kodu mogą być kontrolowane przez domenę aplikacji, w którym wykonywany jest kod.  
+- Uprawnienia udzielone do kodu mogą być kontrolowane przez domenę aplikacji, w którym wykonywany jest kod.  
   
 ## <a name="application-domains-and-assemblies"></a>Domeny aplikacji i zestawy
 
@@ -60,9 +60,9 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
   
  Sposób ładowania zestawu określa, czy jego kod kompilowany dokładnie na czas (JIT) kod może być współużytkowany przez wiele domen aplikacji uczestniczących w procesie oraz czy zestaw można zwolnić z pamięci procesu.  
   
--   Jeśli zestaw został załadowany jako neutralny dla domen, wszystkie domeny aplikacji mające ten sam zestaw uprawnień zabezpieczeń mogą współużytkować ten sam kod skompilowany dokładnie na czas, co zmniejsza zapotrzebowanie aplikacji na pamięć. Jednak zestawu nigdy nie można zwolnić z pamięci procesu.  
+- Jeśli zestaw został załadowany jako neutralny dla domen, wszystkie domeny aplikacji mające ten sam zestaw uprawnień zabezpieczeń mogą współużytkować ten sam kod skompilowany dokładnie na czas, co zmniejsza zapotrzebowanie aplikacji na pamięć. Jednak zestawu nigdy nie można zwolnić z pamięci procesu.  
   
--   Jeśli zestaw nie jest wczytywany jako neutralny dla domen, musi być kompilowany dokładnie na czas w każdej domenie aplikacji, do której jest ładowany. Zestaw można jednak zwolnić z pamięci procesu poprzez zwolnienie wszystkich domen aplikacji, w których został załadowany.  
+- Jeśli zestaw nie jest wczytywany jako neutralny dla domen, musi być kompilowany dokładnie na czas w każdej domenie aplikacji, do której jest ładowany. Zestaw można jednak zwolnić z pamięci procesu poprzez zwolnienie wszystkich domen aplikacji, w których został załadowany.  
   
  Host środowiska uruchomieniowego określa, czy podczas ładowania środowiska uruchomieniowego do procesu ma ładować zestawy jako neutralne dla domen. W przypadku zarządzanych aplikacji należy zastosować atrybut <xref:System.LoaderOptimizationAttribute> do metody punktu wejścia procesu oraz określić wartość z powiązanego wyliczenia <xref:System.LoaderOptimization>. Dla niezarządzanych aplikacji, które hostują środowisko uruchomieniowe języka wspólnego, należy określić odpowiednią flagę podczas wywoływania [corbindtoruntimeex — funkcja](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) metody.  
   
@@ -84,9 +84,9 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
   
  Decydując, czy zestawy mają być wczytywane jako neutralne dla domen, należy wziąć pod uwagę kompromis między ograniczeniem użycia pamięci a innymi czynnikami wydajnościowymi.  
   
--   Zestawy neutralne dla domen mają wolniejszy dostęp do statycznych danych i metod, ponieważ zestawy trzeba izolować. Każda domena aplikacji uzyskująca dostęp do zestawu musi mieć oddzielną kopię danych statycznych, aby uniemożliwić odwołaniom w statycznych polach przekraczanie granic domeny. W rezultacie środowisko uruchomieniowe zawiera dodatkową logikę, która przekierowuje obiekt wywołujący do odpowiedniej kopii statycznych danych lub metody. Ta dodatkowa logika spowalnia wywołanie.  
+- Zestawy neutralne dla domen mają wolniejszy dostęp do statycznych danych i metod, ponieważ zestawy trzeba izolować. Każda domena aplikacji uzyskująca dostęp do zestawu musi mieć oddzielną kopię danych statycznych, aby uniemożliwić odwołaniom w statycznych polach przekraczanie granic domeny. W rezultacie środowisko uruchomieniowe zawiera dodatkową logikę, która przekierowuje obiekt wywołujący do odpowiedniej kopii statycznych danych lub metody. Ta dodatkowa logika spowalnia wywołanie.  
   
--   Gdy zestaw jest wczytywany jako niezależny od domen, muszą być odnajdowane i ładowane jego wszystkie zależności, ponieważ zależność, której nie można wczytać jako neutralnej dla domen, uniemożliwia wczytanie w ten sposób całego zestawu.  
+- Gdy zestaw jest wczytywany jako niezależny od domen, muszą być odnajdowane i ładowane jego wszystkie zależności, ponieważ zależność, której nie można wczytać jako neutralnej dla domen, uniemożliwia wczytanie w ten sposób całego zestawu.  
   
 ## <a name="application-domains-and-threads"></a>Domeny aplikacji i wątków
 
@@ -100,9 +100,9 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną formę
 
  Kultury, która jest reprezentowana przez <xref:System.Globalization.CultureInfo> obiektu, jest skojarzona z wątków. Możesz uzyskać kultury, który jest skojarzony z aktualnie wykonywany wątek przy użyciu <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości, na które można uzyskać lub ustawić kulturę, który jest skojarzony z aktualnie wykonywany wątek przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Jeśli jawnie ustawiono kultury, który jest skojarzony z wątkiem, za pomocą <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości go w dalszym ciągu być skojarzone z tym wątkiem, gdy wątek przekracza granice domen aplikacji. W przeciwnym razie kultury, który jest skojarzony z wątkiem w danym momencie jest określana przez wartość <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> właściwości w domenie aplikacji, w którym wykonywany jest wątek:  
   
--   Jeśli wartość właściwości nie jest `null`, kultury, który jest zwracany przez właściwość jest skojarzony z wątkiem (i w związku z tym zwrócone przez <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości).  
+- Jeśli wartość właściwości nie jest `null`, kultury, który jest zwracany przez właściwość jest skojarzony z wątkiem (i w związku z tym zwrócone przez <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości).  
   
--   Jeśli wartość właściwości jest `null`, bieżącą kulturą systemu jest skojarzony z wątkiem.  
+- Jeśli wartość właściwości jest `null`, bieżącą kulturą systemu jest skojarzony z wątkiem.  
   
 ## <a name="programming-with-application-domains"></a>Programowanie z domenami aplikacji
 
@@ -138,9 +138,9 @@ COMPLUS_LoaderOptimization = 1
   
  Sposób zestaw jest ładowany Określa, czy kod skompilowany jego just-in-time (JIT) może być współużytkowany przez wiele domen aplikacji w procesie.  
   
--   Jeśli zestaw jest załadowany jako neutralny, wszystkie domeny aplikacji, które współużytkują ten sam przyznany zestaw zabezpieczeń mogą udostępniać tego samego kodu kompilowanego dokładnie na czas. Zmniejsza to ilość pamięci wymaganej przez aplikację.  
+- Jeśli zestaw jest załadowany jako neutralny, wszystkie domeny aplikacji, które współużytkują ten sam przyznany zestaw zabezpieczeń mogą udostępniać tego samego kodu kompilowanego dokładnie na czas. Zmniejsza to ilość pamięci wymaganej przez aplikację.  
   
--   Jeśli zestaw nie jest załadowany jako neutralny, musi być kompilowany dokładnie na czas w każdej domenie aplikacji, w której jest załadowany, a moduł ładujący nie może współużytkować zasobów wewnętrznych w domenach aplikacji.  
+- Jeśli zestaw nie jest załadowany jako neutralny, musi być kompilowany dokładnie na czas w każdej domenie aplikacji, w której jest załadowany, a moduł ładujący nie może współużytkować zasobów wewnętrznych w domenach aplikacji.  
   
  Ustawiona na wartość 1, Flaga środowiska COMPLUS_LoaderOptimization wymusza od hosta czasu wykonywania ładowanie wszystkich zestawów w sposób nie-niezależne od domeny, znany również jako SingleDomain. SingleDomain nie ładuje zespołów jako domena Neutralna, z wyjątkiem Mscorlib, który jest zawsze ładowany jako neutralny. To ustawienie jest nazywane pojedynczą domeną, ponieważ jest często używane, gdy host jest uruchomiona tylko jedną aplikację w procesie.  
   

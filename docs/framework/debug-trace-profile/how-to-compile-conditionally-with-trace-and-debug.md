@@ -13,11 +13,11 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754560"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Instrukcje: Kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjściowe debugowania przejdź do okna danych wyjściowych w programie Visual Studio. Jednak aby włączyć funkcje śledzenia do wdrożonej aplikacji, należy skompilować instrumentowanej aplikacji przy użyciu **śledzenia** dyrektywy kompilatora włączone. Dzięki temu kod śledzenia jest kompilowana do wersji aplikacji. Jeśli nie włączysz **śledzenia** dyrektywy, cały kod śledzenia jest ignorowany podczas kompilacji, a nie znajduje się w kodzie pliku wykonywalnego, który zostanie wdrożony.  
@@ -28,11 +28,11 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
   
  Można określić ustawienia kompilatora dla aplikacji na kilka sposobów:  
   
--   Strony właściwości  
+- Strony właściwości  
   
--   W wierszu polecenia  
+- W wierszu polecenia  
   
--   **#CONST** (dla języka Visual Basic) i **#define** (dla C#)  
+- **#CONST** (dla języka Visual Basic) i **#define** (dla C#)  
   
 ### <a name="to-change-compile-settings-from-the-property-pages-dialog-box"></a>Aby zmienić ustawienia kompilacji z okna dialogowego strony właściwości  
   
@@ -40,9 +40,9 @@ Podczas debugowania aplikacji podczas tworzenia usługi śledzenia i dane wyjśc
   
 2. Wybierz **właściwości** z menu skrótów.  
   
-    -   W języku Visual Basic, kliknij przycisk **skompilować** w lewym okienku na stronie właściwości, a następnie kliknij **zaawansowane opcje kompilacji** przycisk, aby wyświetlić **Zaawansowane ustawienia kompilatora**okno dialogowe. Zaznacz pole wyboru, jeśli dla ustawienia kompilatora, który chcesz włączyć. Wyczyść pola wyboru dla ustawień, które chcesz wyłączyć.  
+    - W języku Visual Basic, kliknij przycisk **skompilować** w lewym okienku na stronie właściwości, a następnie kliknij **zaawansowane opcje kompilacji** przycisk, aby wyświetlić **Zaawansowane ustawienia kompilatora**okno dialogowe. Zaznacz pole wyboru, jeśli dla ustawienia kompilatora, który chcesz włączyć. Wyczyść pola wyboru dla ustawień, które chcesz wyłączyć.  
   
-    -   W C#, kliknij przycisk **kompilacji** tabulator w lewym okienku na stronie właściwości, a następnie zaznacz pole wyboru, aby włączyć ustawienia kompilatora. Wyczyść pola wyboru dla ustawień, które chcesz wyłączyć.  
+    - W C#, kliknij przycisk **kompilacji** tabulator w lewym okienku na stronie właściwości, a następnie zaznacz pole wyboru, aby włączyć ustawienia kompilatora. Wyczyść pola wyboru dla ustawień, które chcesz wyłączyć.  
   
 ### <a name="to-compile-instrumented-code-using-the-command-line"></a>Aby skompilować kod instrumentowanych przy użyciu wiersza polecenia  
   

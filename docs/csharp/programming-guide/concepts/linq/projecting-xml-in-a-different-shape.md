@@ -3,11 +3,11 @@ title: Projektowanie kodu XML w innym kształcie (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
 ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681692"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>Projektowanie kodu XML w innym kształcie (C#)
 W tym temacie przedstawiono przykład przewidywania XML, który jest w innym kształcie niż źródła XML.  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>Następne kroki  
  W następnym przykładzie będzie zapytania, aby znaleźć cały tekst w dokumencie programu Word:  
   
--   [Wyszukiwanie tekstu w dokumentach programu Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Wyszukiwanie tekstu w dokumentach programu Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

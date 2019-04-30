@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
 ms.openlocfilehash: d8529929870b14611c136221f1eefe3eb4ba3d42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767263"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Instrukcje: tworzenie niestandardowego weryfikatora tożsamości klienta
 *Tożsamości* funkcji Windows Communication Foundation (WCF) umożliwia klientowi określenie z wyprzedzeniem oczekiwaną tożsamość usługi. Zawsze, gdy serwer uwierzytelnia klienta, tożsamość jest sprawdzana względem oczekiwaną tożsamość. (Objaśnienia dotyczące tożsamości i jak to działa, zobacz [uwierzytelnianie i tożsamość usług](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

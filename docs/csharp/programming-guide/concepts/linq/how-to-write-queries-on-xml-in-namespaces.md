@@ -3,11 +3,11 @@ title: 'Instrukcje: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
 ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667473"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Instrukcje: Pisanie zapytań dotyczących kodu XML w przestrzeniach nazw (C#)
 Aby napisać zapytanie na języku XML, który znajduje się w przestrzeni nazw, należy użyć <xref:System.Xml.Linq.XName> obiektów, które mają poprawną przestrzeń nazw.  

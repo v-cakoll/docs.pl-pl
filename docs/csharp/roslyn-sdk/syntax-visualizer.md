@@ -4,11 +4,11 @@ description: Wizualizatora składni obejmuje narzędzia wizualne Eksplorowanie m
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
 ms.openlocfilehash: 2d1c6d0b9f65324ee2eadafaa7f98360f37e7bb7
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706952"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Eksplorowanie kodu za pomocą wizualizatora składni Roslyn w programie Visual Studio
 

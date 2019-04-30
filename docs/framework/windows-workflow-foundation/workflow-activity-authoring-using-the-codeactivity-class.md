@@ -3,11 +3,11 @@ title: Tworzenie działań przepływu pracy przy użyciu klasy CodeActivity
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669449"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>Tworzenie działań przepływu pracy przy użyciu klasy CodeActivity
 Działania utworzone przez dziedziczenie z <xref:System.Activities.CodeActivity> można zaimplementować podstawowe zachowanie imperatywne przez zastąpienie <xref:System.Activities.CodeActivity.Execute%2A> metody.
@@ -15,11 +15,11 @@ Działania utworzone przez dziedziczenie z <xref:System.Activities.CodeActivity>
 ## <a name="using-codeactivitycontext"></a>Za pomocą CodeActivityContext
  Funkcje środowiska wykonawczego przepływów pracy są dostępne z poziomu <xref:System.Activities.CodeActivity.Execute%2A> metody za pomocą elementów członkowskich `context` parametr typu <xref:System.Activities.CodeActivityContext>. Funkcje dostępne za pośrednictwem <xref:System.Activities.CodeActivityContext> obejmują następujące elementy:
 
--   Pobieranie i ustawianie wartości zmiennych i argumentów.
+- Pobieranie i ustawianie wartości zmiennych i argumentów.
 
--   Niestandardowe śledzenia funkcji przy użyciu <xref:System.Activities.CodeActivityContext.Track%2A>.
+- Niestandardowe śledzenia funkcji przy użyciu <xref:System.Activities.CodeActivityContext.Track%2A>.
 
--   Dostęp do właściwości wykonania działania przy użyciu <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
+- Dostęp do właściwości wykonania działania przy użyciu <xref:System.Activities.CodeActivityContext.GetProperty%2A>.
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>Aby utworzyć niestandardowe działanie, która dziedziczy z elementu CodeActivity
 

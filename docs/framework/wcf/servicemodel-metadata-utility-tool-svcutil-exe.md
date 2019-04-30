@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
 ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669699"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)
 
@@ -94,7 +94,7 @@ Usługi za pomocą punktu końcowego Obiekt BasicHttpContextBinding *Svcutil.exe
 |/excludeType:\<type>|Określa nazwę typu w pełni kwalifikowaną lub kwalifikowaną dla zestawu, które mają być wykluczone z typów kontraktu odwołania.<br /><br /> Korzystając z tego przełącznika, wraz z `/r` z oddzielnych bibliotek DLL, mowa Pełna nazwa klasy XSD.<br /><br /> Krótka: `/et`|
 |/importXmlTypes|Konfiguruje serializatora kontraktu danych do importowania typów kontraktu danych jako typów IXmlSerializable.|
 |/ wewnętrzny|Generuje klasy, które są oznaczone jako wewnętrzne. Wartość domyślna: Generuj klasy publiczne tylko.<br /><br /> Krótka: `/i`|
-|/Language:\<języka >|Określa język programowania na potrzeby generowania kodu. Należy podać nazwę języka zarejestrowanych w pliku Machine.config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Wartości: C#, cs, csharp, vb, języka Visual Basic, c ++, cpp<br /><br /> Domyślne: csharp<br /><br /> Krótka: `/l`|
+|/Language:\<języka >|Określa język programowania na potrzeby generowania kodu. Należy podać nazwę języka zarejestrowanych w pliku Machine.config lub w pełni kwalifikowaną nazwę klasy, która dziedziczy <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Wartości: c#, cs, csharp, vb, języka Visual Basic, c ++, cpp<br /><br /> Domyślne: csharp<br /><br /> Krótka: `/l`|
 |/mergeConfig|Scala wygenerowaną konfigurację istniejącego pliku, zamiast nadpisywać istniejący plik.|
 |/messageContract|Generuje typy kontraktu komunikatu.<br /><br /> Krótka: `/mc`|
 |/ NAMESPACE:\<string, string >|Określa mapowanie targetNamespace schematu WSDL lub XML do przestrzeni nazw CLR. Za pomocą "\*" dla elementu targetNamespace spowoduje mapowanie wszystkich elementów targetNamespace bez jawnego mapowania na przestrzeń nazw CLR.<br /><br /> Aby upewnić się, że nazwa kontraktu komunikatu nie kolidujący operacji o nazwie, należy albo kwalifikujesz się do typu odwołanie z `::`, lub upewnij się, że nazwy są unikatowe.<br /><br /> Wartość domyślna: Tworzony na podstawie docelowego obszaru nazw dokumentu schematu dla kontraktów danych. Domyślny obszar nazw jest używana dla wszystkich innych wygenerowanych typów.<br /><br /> Krótka: `/n` **Uwaga:**  Podczas generowania typów za pomocą elementu XmlSerializer, mapowanie jednej przestrzeni nazw jest obsługiwane. Wszystkich typów wygenerowanego będzie domyślny obszar nazw lub przestrzeni nazw określonej przez ' *'.|

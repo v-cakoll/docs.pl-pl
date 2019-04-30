@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
 ms.openlocfilehash: a5a8d4d0d41efb7a255080994c8e18302d302447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669241"
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
 Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i Windows Communication Foundation (WCF). Interakcja z tych technologii może powodować problemy z zabezpieczeniami w Twój przepływ pracy, jeśli będą wykonywane niepoprawnie.
@@ -28,21 +28,21 @@ Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii,
 
 ## <a name="sql-server-security-concerns"></a>SQL Server Security Concerns
 
--   Podczas korzystania z dużą liczbą działania podrzędne, lokalizacji, zakładek, rozszerzenia hosta lub zakresów lub stosowania zakładek z ładunkami bardzo duże, może dojść do wyczerpania pamięci lub nadmiernej ilości miejsca w bazie danych mogą być przydzielone w trwałości. Można to zminimalizować przy użyciu zabezpieczeń na poziomie bazy danych i na poziomie obiektu.
+- Podczas korzystania z dużą liczbą działania podrzędne, lokalizacji, zakładek, rozszerzenia hosta lub zakresów lub stosowania zakładek z ładunkami bardzo duże, może dojść do wyczerpania pamięci lub nadmiernej ilości miejsca w bazie danych mogą być przydzielone w trwałości. Można to zminimalizować przy użyciu zabezpieczeń na poziomie bazy danych i na poziomie obiektu.
 
--   Korzystając z <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, musi zostać zabezpieczony magazyn wystąpienia. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania dotyczące serwera SQL](https://go.microsoft.com/fwlink/?LinkId=164972).
+- Korzystając z <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, musi zostać zabezpieczony magazyn wystąpienia. Aby uzyskać więcej informacji, zobacz [najlepsze rozwiązania dotyczące serwera SQL](https://go.microsoft.com/fwlink/?LinkId=164972).
 
--   Należy można zaszyfrować poufnych danych w magazynie wystąpienia. Aby uzyskać więcej informacji, zobacz [szyfrowania zabezpieczeń SQL](https://go.microsoft.com/fwlink/?LinkId=164976).
+- Należy można zaszyfrować poufnych danych w magazynie wystąpienia. Aby uzyskać więcej informacji, zobacz [szyfrowania zabezpieczeń SQL](https://go.microsoft.com/fwlink/?LinkId=164976).
 
--   Ponieważ parametry połączenia bazy danych, często znajduje się w pliku konfiguracji, zabezpieczenia na poziomie systemu windows (ACL) powinien być używany do zapewnienia, że plik konfiguracyjny (zwykle w pliku Web.Config) jest bezpieczna i informacje logowania i hasła nie są objęte Parametry połączenia. Uwierzytelnianie Windows należy użyć między bazy danych i serwera sieci web.
+- Ponieważ parametry połączenia bazy danych, często znajduje się w pliku konfiguracji, zabezpieczenia na poziomie systemu windows (ACL) powinien być używany do zapewnienia, że plik konfiguracyjny (zwykle w pliku Web.Config) jest bezpieczna i informacje logowania i hasła nie są objęte Parametry połączenia. Uwierzytelnianie Windows należy użyć między bazy danych i serwera sieci web.
 
 ## <a name="considerations-for-workflowservicehost"></a>Considerations for WorkflowServiceHost
 
--   Powinny być zabezpieczone punkty końcowe usług Windows Communication Foundation (WCF) używane w przepływach pracy. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń programu WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
+- Powinny być zabezpieczone punkty końcowe usług Windows Communication Foundation (WCF) używane w przepływach pracy. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń programu WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   Uwierzytelnianie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [jak: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](https://go.microsoft.com/fwlink/?LinkId=192228) Aby uzyskać szczegółowe informacje.
+- Uwierzytelnianie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [jak: Tworzenie Menedżera autoryzacji niestandardowej dla usługi](https://go.microsoft.com/fwlink/?LinkId=192228) Aby uzyskać szczegółowe informacje.
 
--   ServiceSecurityContext komunikatu przychodzącego jest również dostępne z poziomu przepływów pracy, uzyskując dostęp do elementu OperationContext.
+- ServiceSecurityContext komunikatu przychodzącego jest również dostępne z poziomu przepływów pracy, uzyskując dostęp do elementu OperationContext.
 
 ## <a name="wf-security-pack-ctp"></a>Pakiet zabezpieczeń WF CTP
  Microsoft WF zabezpieczeń pakietu CTP 1 jest pierwsza wersja zapoznawcza (CTP) technologii społeczności zestawu działań i ich wdrażania w oparciu o [Windows Workflow Foundation](index.md) w [.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF (4) i [Windows Identity Foundation (WIF)](../security/index.md).  Microsoft WF zabezpieczeń Pack CTP 1 zawiera zarówno działań, jak i ich projektantów, które pokazują, jak łatwo automatyzować różne scenariusze związane z zabezpieczeniami, za pomocą przepływu pracy, w tym:

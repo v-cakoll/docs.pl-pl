@@ -9,11 +9,11 @@ helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
 ms.openlocfilehash: 539a554da2ea2f785a54bd7e5ff81d09b908c9e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678611"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Operatory konwersji (C# Programming Guide)
 
@@ -25,27 +25,27 @@ C# umożliwia programistom deklarowania konwersje na klasy lub struktury, tak ab
 
  Operatory konwersji mają następujące właściwości:  
   
--   Konwersje zadeklarowane jako `implicit` wykonywane automatycznie, gdy jest to wymagane.  
+- Konwersje zadeklarowane jako `implicit` wykonywane automatycznie, gdy jest to wymagane.  
   
--   Konwersje zadeklarowane jako `explicit` wymaga rzutowania do wywołania.  
+- Konwersje zadeklarowane jako `explicit` wymaga rzutowania do wywołania.  
   
--   Wszystkie konwersje musi być zadeklarowany jako `static`.  
+- Wszystkie konwersje musi być zadeklarowany jako `static`.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne
 
  Informacje dodatkowe:  
   
--   [Używanie operatorów konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+- [Używanie operatorów konwersji](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
--   [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Instrukcje: Implementowanie zdefiniowanych przez użytkownika konwersji struktur](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [static](../../../csharp/language-reference/keywords/static.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

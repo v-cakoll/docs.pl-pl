@@ -3,11 +3,11 @@ title: Dostawca członkostwa i ról
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: b5cb743fb3533d2f3a8016c9357d6ead498a5878
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756120"
 ---
 # <a name="membership-and-role-provider"></a>Dostawca członkostwa i ról
 Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawców członkostwa i ról w celu uwierzytelniania i autoryzowania klientów.  
@@ -19,15 +19,15 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
   
  W przykładzie pokazano sposób:  
   
--   Klienta można uwierzytelniać za pomocą kombinacji nazwy użytkownika i hasła.  
+- Klienta można uwierzytelniać za pomocą kombinacji nazwy użytkownika i hasła.  
   
--   Serwer można sprawdzić poprawności poświadczeń klienta względem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa.  
+- Serwer można sprawdzić poprawności poświadczeń klienta względem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa.  
   
--   Serwer mogą być uwierzytelniane przy użyciu certyfikatu X.509 serwera.  
+- Serwer mogą być uwierzytelniane przy użyciu certyfikatu X.509 serwera.  
   
--   Serwer można mapować uwierzytelnionego klienta do roli przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról.  
+- Serwer można mapować uwierzytelnionego klienta do roli przy użyciu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy ról.  
   
--   Serwer może używać `PrincipalPermissionAttribute` możesz kontrolować dostęp do niektórych metod, które są udostępniane przez usługę.  
+- Serwer może używać `PrincipalPermissionAttribute` możesz kontrolować dostęp do niektórych metod, które są udostępniane przez usługę.  
   
  Dostawców członkostwa i ról są skonfigurowane do używania w magazynie kopii przez program SQL Server. Różne opcje i parametry połączenia są określone w pliku konfiguracji usługi. Dostawca członkostwa jest nadawana nazwa `SqlMembershipProvider` podczas dostawcy ról jest nadawana nazwa `SqlRoleProvider`.  
   
@@ -164,7 +164,7 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
   
 ### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić zasoby po próbki  
   
--   Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
+- Uruchom Cleanup.bat w folderze samples, po zakończeniu działa aplikacja przykładowa.  
   
 > [!NOTE]
 >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania tego przykładu na komputerach. Po uruchomieniu przykładów Windows Communication Foundation (WCF), które używają certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
@@ -174,7 +174,7 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
   
  Poniżej zawiera krótkie omówienie różne sekcje w plikach wsadowych, dzięki czemu można modyfikować do uruchomienia w odpowiedniej konfiguracji.  
   
--   Tworzenie certyfikatu serwera.  
+- Tworzenie certyfikatu serwera.  
   
      Następujące wiersze z pliku wsadowego Setup.bat jest utworzenie certyfikatu serwera, który ma być używany. % Zmienna % nazwa_serwera Określa nazwę serwera. Zmieniać tej zmiennej do określenia nazwy serwera. Ten plik wsadowy ustawi dla niej domyślnie localhost.  
   
@@ -190,7 +190,7 @@ Dostawca członkostwa i ról w przykładzie pokazano, jak używać usługi [!INC
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
--   Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.  
+- Instalowanie certyfikatu serwera do magazynu zaufanych certyfikatów klienta.  
   
      Przechowywać następujące wiersze w Setup.bat jest kopia pliku wsadowego certyfikatu serwera do klienta zaufanych osób. Ten krok jest wymagany, ponieważ generowaną przez Makecert.exe certyfikaty nie są niejawnie zaufany przez system klienta. Jeśli masz już certyfikat, który jest ścieżką w klienta zaufanego certyfikatu głównego — na przykład certyfikat wystawiony przez Microsoft — w tym kroku zapełnianie magazynu certyfikatów klienta z certyfikatu serwera nie jest wymagane.  
   

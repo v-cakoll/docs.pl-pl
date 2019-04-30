@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
 ms.openlocfilehash: 70c3cee8c5fd1e63f2ff869f49b1fb02ab8f59dd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689573"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
@@ -57,7 +57,7 @@ Ponadto gdy kontenerów platformy Docker są zarządzane przez program orchestra
 
 **Zdalnych źródeł danych i pamięć podręczna** aplikacji kontenerowych nimi narzędzi, takich jak Azure SQL Database, Azure Cosmos DB lub zdalnego pamięci podręcznej, takich jak Redis można używać w taki sam sposób, są one używane podczas tworzenia bez kontenerów. To jest sprawdzonym sposobem przechowywania danych aplikacji biznesowych.
 
-**Usługa Azure Storage.** Dane biznesowe zwykle należy można umieścić w zasoby zewnętrzne lub baz danych, takich jak Azure Storage. Usługa Azure Storage w konkretny, udostępnia następujące usługi w chmurze:
+**Azure Storage.** Dane biznesowe zwykle należy można umieścić w zasoby zewnętrzne lub baz danych, takich jak Azure Storage. Usługa Azure Storage w konkretny, udostępnia następujące usługi w chmurze:
 
 - Magazyn obiektów blob przechowuje dane obiektów bez struktury. Obiekt blob może być dowolnego typu dane tekstowe lub binarne, takie jak dokument lub nośnik pliki (obrazy, audio i wideo). Magazyn obiektów blob jest również określany jako magazyn obiektów.
 

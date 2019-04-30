@@ -8,11 +8,11 @@ helpviewer_keywords:
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
 ms.openlocfilehash: f10f9aa17adf9a03b9b8905245983bdd9d865e39
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703078"
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Właściwość wydaje się być pola, uzyskanie dostępu do właściwości wymaga takiej samej składni. Właściwość implementujący klasę, jest co najmniej dwóch bloków kodu, reprezentujący [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu i/lub [ustaw](../../../csharp/language-reference/keywords/set.md) metody dostępu. Blok kodu dla `get` metody dostępu jest wykonywany, gdy właściwość jest do odczytu; kod zablokować na `set` metody dostępu jest wykonywany, gdy właściwość jest przypisywana nowa wartość. Właściwość bez `set` metody dostępu jest traktowane jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowane jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu i zapisu.  
@@ -85,11 +85,11 @@ Właściwości łączenia aspektów pola i metody. Do użytkownika obiektu Wła�
   
  Poniżej przedstawiono ważne punkty w poprzednim przykładzie:  
   
--   Właściwość `Name` w klasie pochodnej ukrywa właściwość `Name` w klasie bazowej. W takim przypadku `new` modyfikator jest używany w deklaracji właściwości w klasie pochodnej:  
+- Właściwość `Name` w klasie pochodnej ukrywa właściwość `Name` w klasie bazowej. W takim przypadku `new` modyfikator jest używany w deklaracji właściwości w klasie pochodnej:  
   
      [!code-csharp[csProgGuideProperties#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#4)]  
   
--   Rzutowanie `(Employee)` służy do dostępu do ukrytych właściwości w klasie bazowej:  
+- Rzutowanie `(Employee)` służy do dostępu do ukrytych właściwości w klasie bazowej:  
   
      [!code-csharp[csProgGuideProperties#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#5)]  
   

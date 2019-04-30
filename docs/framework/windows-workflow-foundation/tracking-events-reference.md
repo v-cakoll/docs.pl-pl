@@ -3,18 +3,18 @@ title: Dokumentacja zdarzeń śledzenia
 ms.date: 03/30/2017
 ms.assetid: c1c1ee87-f80a-449b-acd0-50d81eef116e
 ms.openlocfilehash: 5b3bba83b3c6c7ab27c9470213b7675f7e107c7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699880"
 ---
 # <a name="tracking-events-reference"></a>Dokumentacja zdarzeń śledzenia
 Podczas wykonywania przepływu pracy w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wywołuje zdarzenia śledzenia, kiedy przesuwa się on za pośrednictwem różnych etapów w okresie swojego istnienia. Host może subskrybować te zdarzenia i aktualizować stan postęp przepływu pracy jego okres istnienia. Zdarzenia śledzenia, zgłaszane są omówione w tej sekcji.  
   
 ## <a name="event-reference"></a>Odwołanie do zdarzenia  
   
-|Identyfikator zdarzenia|Poziom zdarzenia|Komunikat zdarzenia|Słowa kluczowe|  
+|Identyfikator zdarzenia|Poziom zdarzenia|Komunikat zdarzenia|słowa kluczowe|  
 |--------------|-----------------|-------------------|--------------|  
 |[100 — WorkflowInstanceRecord](100-workflowinstancerecord.md)|Informacje|TrackRecord = WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, stan = %5, adnotacje = %6, ProfileName = %7|EndToEndMonitoring, rozwiązywania problemów, HealthMonitoring, WFTracking|  
 |[101 — WorkflowInstanceUnhandledExceptionRecord](101-workflowinstanceunhandledexceptionrecord.md)|Błąd|TrackRecord = WorkflowInstanceUnhandledExceptionRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, SourceName = %5, identyfikator = %6, SourceInstanceId = %7, SourceTypeName = %8, wyjątek = %9, adnotacje = % 10, ProfileName = % 11|EndToEndMonitoring, rozwiązywania problemów, HealthMonitoring, WFTracking|  

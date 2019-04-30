@@ -9,11 +9,11 @@ helpviewer_keywords:
 - => operator [C#]
 - lambda expressions [C#], => operator
 ms.openlocfilehash: 0cded9d23d67e6afc8b01d6711e42759b4b51fab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689154"
 ---
 # <a name="-operator-c-reference"></a>= > — operator (C# odwołania)
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 ms.openlocfilehash: 34f7b62c0d9a14c52dde0ddd4ac0d5c29a3b5b75
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662468"
 ---
 # <a name="-refout-c-compiler-options"></a>-opcji refout (opcje kompilatora C#)
 

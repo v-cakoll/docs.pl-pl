@@ -3,11 +3,11 @@ title: polecenie odwołania list DotNet
 description: Polecenia dotnet list odwołania zapewnia wygodny sposób do listy odwołania projekt-projekt.
 ms.date: 12/03/2018
 ms.openlocfilehash: d22ea27f8e8f6b94d763e44a6d8644f814663797
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665055"
 ---
 # <a name="dotnet-list-reference"></a>Odwołanie do listy DotNet
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678403"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Używanie przestrzeni nazw (Przewodnik programowania w języku C#)
 Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposoby. Po pierwsze klas .NET Framework umożliwia organizowanie jego wiele klas przestrzenie nazw. Po drugie deklarowania własne przestrzenie nazw może kontrolować zakres klasy i metody nazwy w dużych projektach programowania.  
@@ -52,13 +52,13 @@ Przestrzenie nazw są intensywnie używane w programach języka C# na dwa sposob
   
  W poprzednim segment kodu:  
   
--   Przestrzeń nazw `N1` jest elementem członkowskim globalnej przestrzeni nazw. Jego w pełni kwalifikowana nazwa to `N1`.  
+- Przestrzeń nazw `N1` jest elementem członkowskim globalnej przestrzeni nazw. Jego w pełni kwalifikowana nazwa to `N1`.  
   
--   Przestrzeń nazw `N2` jest elementem członkowskim `N1`. Jego w pełni kwalifikowana nazwa to `N1.N2`.  
+- Przestrzeń nazw `N2` jest elementem członkowskim `N1`. Jego w pełni kwalifikowana nazwa to `N1.N2`.  
   
--   Klasa `C1` jest elementem członkowskim `N1`. Jego w pełni kwalifikowana nazwa to `N1.C1`.  
+- Klasa `C1` jest elementem członkowskim `N1`. Jego w pełni kwalifikowana nazwa to `N1.C1`.  
   
--   Nazwa klasy `C2` jest używany na dwa razy, w tym kodzie. Jednak w pełni kwalifikowane nazwy są unikatowe. Pierwsze wystąpienie `C2` jest zadeklarowana wewnątrz `C1`; w związku z tym, jego w pełni kwalifikowana nazwa to: `N1.C1.C2`. Drugie wystąpienie `C2` jest zadeklarowany wewnątrz przestrzeni nazw `N2`; w związku z tym, jego w pełni kwalifikowana nazwa to `N1.N2.C2`.  
+- Nazwa klasy `C2` jest używany na dwa razy, w tym kodzie. Jednak w pełni kwalifikowane nazwy są unikatowe. Pierwsze wystąpienie `C2` jest zadeklarowana wewnątrz `C1`; w związku z tym, jego w pełni kwalifikowana nazwa to: `N1.C1.C2`. Drugie wystąpienie `C2` jest zadeklarowany wewnątrz przestrzeni nazw `N2`; w związku z tym, jego w pełni kwalifikowana nazwa to `N1.N2.C2`.  
   
  Korzystając z poprzedniego segmentu kodu, można dodać nowy element członkowski klasy `C3`, do przestrzeni nazw `N1.N2` w następujący sposób:  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Usuwanie magazynów w wydzielonej pamięci masowej'
+title: 'Instrukcje: Usuwanie danych z izolowanego magazynu'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,18 +18,18 @@ ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19a671cac609e79088956ecb4324ebb0a25fb941
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751868"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>Instrukcje: Usuwanie magazynów w wydzielonej pamięci masowej
+# <a name="how-to-delete-stores-in-isolated-storage"></a>Instrukcje: Usuwanie danych z izolowanego magazynu
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia dwie metody usuwania plików wydzielonej pamięci masowej:  
   
--   Metoda wystąpienia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> nie przyjmuje żadnych argumentów, a następnie usuwa magazynu, który ją wywołuje. Nie uprawnienia są wymagane do wykonania tej operacji. Wszelki kod, który można uzyskać dostępu do magazynu można usunąć dowolnych lub wszystkich danych wewnątrz niego.  
+- Metoda wystąpienia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> nie przyjmuje żadnych argumentów, a następnie usuwa magazynu, który ją wywołuje. Nie uprawnienia są wymagane do wykonania tej operacji. Wszelki kod, który można uzyskać dostępu do magazynu można usunąć dowolnych lub wszystkich danych wewnątrz niego.  
   
--   Metoda statyczna <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> przyjmuje <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> wartość wyliczenia i usuwa wszystkie magazyny dla użytkownika, który jest uruchomiony kod. Ta operacja wymaga <xref:System.Security.Permissions.IsolatedStorageFilePermission> uprawnienia dla <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> wartość.  
+- Metoda statyczna <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> przyjmuje <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> wartość wyliczenia i usuwa wszystkie magazyny dla użytkownika, który jest uruchomiony kod. Ta operacja wymaga <xref:System.Security.Permissions.IsolatedStorageFilePermission> uprawnienia dla <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> wartość.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu demonstruje użycie statycznych i wystąpienia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> metody. Klasa uzyskuje dwóch magazynów; jeden jest izolowane dla użytkownika i zestawu, a drugi to izolowane i użytkownika, domeny i zestawu. Magazyn użytkownika, domeny i zestawu jest usuwany przez wywołanie metody <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> metoda pliku wydzielonej pamięci masowej `isoStore1`. Następnie wszystkie pozostałe magazyny użytkownika są usuwane przez wywołanie metody statycznej <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>.  

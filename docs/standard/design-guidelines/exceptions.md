@@ -1,5 +1,5 @@
 ---
-title: Wytyczne dotyczące projektowania dla wyjątków
+title: Wyjątki — zalecenia dotyczące projektowania
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: KrzysztofCwalina
 ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669059"
 ---
-# <a name="design-guidelines-for-exceptions"></a>Wytyczne dotyczące projektowania dla wyjątków
+# <a name="design-guidelines-for-exceptions"></a>Wyjątki — zalecenia dotyczące projektowania
 Obsługa wyjątków ma wiele zalet za pośrednictwem raportowania błędów na podstawie wartości powrotu. Dobre framework projektu pomaga Deweloper aplikacji korzystać z zalet wyjątków. W tej sekcji omówiono korzyści wynikające z wyjątków i przedstawiono wskazówki dotyczące skutecznego korzystania z nich.  
   
 ## <a name="in-this-section"></a>W tej sekcji  

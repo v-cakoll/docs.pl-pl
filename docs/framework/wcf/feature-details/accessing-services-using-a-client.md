@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696226"
 ---
 # <a name="accessing-services-using-a-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta
 Aplikacje klienckie należy utworzyć, konfigurowanie i komunikować się z usługami za pomocą obiektów klienta lub kanału WCF. [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md) temat zawiera omówienie obiektów i kroki związane z tworzeniem podstawowych obiektów klienta i kanału i korzystanie z nich.  
@@ -20,13 +20,13 @@ Aplikacje klienckie należy utworzyć, konfigurowanie i komunikować się z usł
 ## <a name="overview"></a>Omówienie  
  W tym temacie opisano zachowanie oraz zagadnienia odnoszące się do:  
   
--   Okresy istnienia kanału i sesji.  
+- Okresy istnienia kanału i sesji.  
   
--   Obsługa wyjątków.  
+- Obsługa wyjątków.  
   
--   Problemy z blokowaniem opis.  
+- Problemy z blokowaniem opis.  
   
--   Inicjowanie kanałów interaktywnie.  
+- Inicjowanie kanałów interaktywnie.  
   
 ### <a name="channel-and-session-lifetimes"></a>Kanał i okresy istnienia sesji  
  Aplikacje Windows Communication Foundation (WCF) zawiera dwie kategorie kanałów, datagram i sessionful.  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669374"
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączone do źródła zdarzeń, nie jest niszczony w połączeniu z obiekt odbiornik, który jest dołączony program obsługi do źródła. Taka sytuacja może prowadzić do przecieków pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadzono szablon projektu, który może służyć do rozwiązania tego problemu, przesyłając klasy Menedżera dedykowane dla określonych zdarzeń i implementowania interfejsu na odbiorniki dla tego zdarzenia. Ten wzorzec projektowy jest znany jako *słaby wzorzec zdarzeń*.  
@@ -40,13 +40,13 @@ W przypadku aplikacji jest możliwe, że programy obsługi, które są dołączo
 
  Poniżej opisano sposób implementacji słaby wzorzec zdarzeń.  Dla celów tej dyskusji zdarzenia, aby zasubskrybować ma następujące cechy.  
   
--   Nazwa zdarzenia jest `SomeEvent`.  
+- Nazwa zdarzenia jest `SomeEvent`.  
   
--   Zdarzenie jest wywoływane przez `EventSource` klasy.  
+- Zdarzenie jest wywoływane przez `EventSource` klasy.  
   
--   Program obsługi zdarzeń ma typ: `SomeEventEventHandler` (lub `EventHandler<SomeEventEventArgs>`).  
+- Program obsługi zdarzeń ma typ: `SomeEventEventHandler` (lub `EventHandler<SomeEventEventArgs>`).  
   
--   Zdarzenie przekazuje parametr typu `SomeEventEventArgs` do obsługi zdarzeń.  
+- Zdarzenie przekazuje parametr typu `SomeEventEventArgs` do obsługi zdarzeń.  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Przy użyciu istniejącej klasy Menedżer zdarzeń słabych  
   

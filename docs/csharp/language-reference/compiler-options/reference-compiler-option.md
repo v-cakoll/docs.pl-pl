@@ -14,11 +14,11 @@ helpviewer_keywords:
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
 ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662507"
 ---
 # <a name="-reference-c-compiler-options"></a>— Odwołanie (opcje kompilatora C#)
 **— Dokumentacja** opcja powoduje, że kompilator, aby zaimportować [publicznych](../../../csharp/language-reference/keywords/public.md) wpisz informacje w określonym pliku do bieżącego projektu, dzięki czemu można odwoływać się do metadanych z określonych plików zestawów.  
@@ -48,9 +48,9 @@ ms.locfileid: "54679438"
   
  Jeśli odwołujesz się zestaw (Assembly A), który odwołuje się do innego zestawu (Assembly B), konieczne będzie odwołanie do zestawu B jeśli:  
   
--   Typ używanej z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
+- Typ używanej z zestawu A dziedziczy z typu lub implementuje interfejs z zestawu B.  
   
--   Wywołuje się, pola, właściwości, zdarzenia lub metody, która ma typ zwracany lub typu parametru z zestawu B.  
+- Wywołuje się, pola, właściwości, zdarzenia lub metody, która ma typ zwracany lub typu parametru z zestawu B.  
   
  Użyj [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) określić katalog, w którym znajduje się co najmniej jeden z odwołania do zestawów. **-Lib** temacie omówiono również katalogi, w których kompilator wyszukuje zestawy.  
   

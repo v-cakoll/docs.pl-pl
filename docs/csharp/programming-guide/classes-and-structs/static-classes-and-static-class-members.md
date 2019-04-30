@@ -10,11 +10,11 @@ helpviewer_keywords:
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703117"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 A [statyczne](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam jak niestatycznych klas, ale ma jedną różnicą: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnej zmiennej wystąpienia, uzyskujesz dostęp do członków klasy statycznej za pomocą sama nazwa klasy. Na przykład jeśli masz statyczna klasy, która jest o nazwie `UtilityClass` zawierający publicznej statycznej metody o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Poniższa lista zawiera główne funkcje klasy statycznej:  
   
--   Zawiera tylko statyczne elementy członkowskie.  
+- Zawiera tylko statyczne elementy członkowskie.  
   
--   Nie można utworzyć wystąpienia.  
+- Nie można utworzyć wystąpienia.  
   
--   Jest zapieczętowany.  
+- Jest zapieczętowany.  
   
--   Nie może zawierać [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- Nie może zawierać [konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
  Tworzenie klasy statycznej jest więc zasadniczo takie same, jak podczas tworzenia klasy, która zawiera tylko statyczne elementy członkowskie i Konstruktor prywatny. Konstruktor prywatny zapobiega uruchamianiu klasy. Zaletą używania klasy statycznej jest, że kompilator można sprawdzić, aby upewnić się, że nie składowych wystąpienia przypadkowo są dodawane. Kompilator gwarantuje, że nie można utworzyć wystąpienia tej klasy.  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672604"
 ---
 # <a name="how-to-read-image-metadata"></a>Instrukcje: Odczytywanie metadanych obrazu
 Niektóre pliki obrazu zawierają metadane, które mogą odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, które mogą odczytać w celu określenia producenta i modelu aparatu używane do przechwytywania obrazu. Za pomocą [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], mogą odczytywać metadane istniejącego i można także zapisać nowe metadane do plików obrazu.  

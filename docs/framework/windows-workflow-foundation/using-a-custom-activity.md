@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669579"
 ---
 # <a name="using-a-custom-activity"></a>Używanie niestandardowego działania
 Działania, które wynikają z <xref:System.Activities.Activity> lub jej podklasach mogą być składające się na większe przepływów pracy i utworzonych bezpośrednio w kodzie. W tym temacie opisano sposób używania działań niestandardowych w przepływach pracy utworzone w kodzie lub w projektancie.  

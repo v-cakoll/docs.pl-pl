@@ -11,11 +11,11 @@ ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ff85f5737babb73d87f4918ca0f4981263f7dadc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705717"
 ---
 # <a name="how-to-create-an-application-domain"></a>Instrukcje: Tworzenie domeny aplikacji
 Typowe host środowiska uruchomieniowego języka automatycznie tworzy domen aplikacji, gdy są potrzebne. Można jednak tworzenie domen aplikacji i ładowania ich te zestawy, które mają być zarządzane osobiście. Można również utworzyć domen aplikacji, z których wykonywanie kodu.  

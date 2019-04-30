@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
 ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663951"
 ---
 # <a name="types-of-bitmaps"></a>Typy map bitowych
 Mapy bitowej jest tablicą bitów, które określają kolor każdego piksela prostokątny tablicy pikseli. Liczba bitów przeznaczone danego piksela określa liczbę kolorów, które mogą być przypisane do tego pikseli. Na przykład, jeśli każdego piksela jest reprezentowany przez 4 bity, następnie piksela podanego można przypisać jedną 16 różnych kolorach (2 ^ 4 = 16). W poniższej tabeli przedstawiono kilka przykładów liczbę kolorów, które mogą zostać przypisani do piksela, reprezentowane przez daną liczbę bitów.  

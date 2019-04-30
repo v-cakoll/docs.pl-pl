@@ -3,11 +3,11 @@ title: 'Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)'
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
 ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711100"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Instrukcje: Odczytywanie danych o obiektach z pliku XML (C#)
 W tym przykładzie odczytuje dane obiektów, które zostały wcześniej zapisane do pliku XML przy użyciu <xref:System.Xml.Serialization.XmlSerializer> klasy.  
@@ -52,11 +52,11 @@ public void ReadXML()
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
+- Klasa jest serializowana, nie ma publiczny konstruktor bez parametrów.  
   
--   Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.  
+- Dane w pliku nie reprezentuje dane z klasy, która ma zostać przeprowadzona.  
   
--   Plik nie istnieje (<xref:System.IO.IOException>).  
+- Plik nie istnieje (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Zawsze sprawdzić dane wejściowe i nigdy nie deserializowanie danych z niezaufanego źródła. Ponownie utworzyć obiekt działa na komputerze lokalnym z uprawnieniami kod, który deserializacji go. Sprawdź wszystkie dane wejściowe, zanim użyjesz danych w aplikacji.  

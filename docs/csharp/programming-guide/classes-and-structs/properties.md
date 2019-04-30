@@ -12,8 +12,8 @@ ms.openlocfilehash: 260c9e362281ba7996dc834ab47d7beb2755b636
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703494"
 ---
 # <a name="properties-c-programming-guide"></a>Właściwości (Przewodnik programowania w języku C#)
 
@@ -60,15 +60,15 @@ Jeśli właściwość ma jednocześnie `get` i `set` dostępu, obie wartości mu
 
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
--   [Używanie właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Używanie właściwości](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Właściwości interfejsu](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Porównanie właściwości i indeksatorów](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Porównanie właściwości i indeksatorów](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Ograniczanie dostępności metody dostępu](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Ograniczanie dostępności metody dostępu](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Właściwości zaimplementowane automatycznie](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Właściwości zaimplementowane automatycznie](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 

@@ -3,11 +3,11 @@ title: nowe polecenia DotNet
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core, na podstawie określonego szablonu.
 ms.date: 10/24/2018
 ms.openlocfilehash: 5177c920fee6fa946d2bf5d96644f26309ed0a99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665016"
 ---
 # <a name="dotnet-new"></a>nowe polecenia DotNet
 

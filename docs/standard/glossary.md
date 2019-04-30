@@ -4,11 +4,11 @@ description: Dowiedz się, znaczenie wybranych terminów używanych w dokumentac
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683096"
 ---
 # <a name="net-glossary"></a>Słownik platformy .NET
 

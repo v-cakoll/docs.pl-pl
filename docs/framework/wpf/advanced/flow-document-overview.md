@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703990"
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast jest ustawiona na jeden układ wstępnie zdefiniowanych, dokumenty przepływu dynamicznie Dostosuj i przepełnieniem ich zawartości na podstawie zmiennych czasu wykonywania, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto dokumenty przepływu oferują funkcje zaawansowane dokumentu, takie jak podział na strony i kolumn. Ten temat zawiera omówienie dokumenty przepływu i jak je utworzyć.  
@@ -42,13 +42,13 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
  Jak podkreślono na ilustracji powyżej istnieje kilka funkcji wbudowanych w dokumentach przepływu:
   
--   Wyszukiwanie: Zezwala użytkownikowi na wyszukiwanie pełnotekstowe całego dokumentu.  
+- Wyszukiwanie: Zezwala użytkownikowi na wyszukiwanie pełnotekstowe całego dokumentu.  
   
--   Tryb wyświetlania: Użytkownik może wybrać tryb wyświetlanego w tym trybie jednej strony, przeglądania (strona na a-time), dwie strony na pojedynczych (w formacie czytania książki) wyświetlanie trybu i trybie przewijania ciągłego wyświetlania (nieograniczony).  Aby uzyskać więcej informacji dotyczących tych trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
+- Tryb wyświetlania: Użytkownik może wybrać tryb wyświetlanego w tym trybie jednej strony, przeglądania (strona na a-time), dwie strony na pojedynczych (w formacie czytania książki) wyświetlanie trybu i trybie przewijania ciągłego wyświetlania (nieograniczony).  Aby uzyskać więcej informacji dotyczących tych trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  
   
--   Formanty nawigacji na stronie: Jeśli tryb wyświetlania dokumentu używa stron, formanty nawigacji na stronie obejmują przycisk, aby przejść do następnej strony (strzałkę w dół) lub poprzedniej strony (strzałkę w górę), a także wskaźniki numer bieżącej strony i łączna liczba stron. Przerzucanie kolejnych stron może być również wykonywane za pomocą klawiszy strzałek.  
+- Formanty nawigacji na stronie: Jeśli tryb wyświetlania dokumentu używa stron, formanty nawigacji na stronie obejmują przycisk, aby przejść do następnej strony (strzałkę w dół) lub poprzedniej strony (strzałkę w górę), a także wskaźniki numer bieżącej strony i łączna liczba stron. Przerzucanie kolejnych stron może być również wykonywane za pomocą klawiszy strzałek.  
   
--   Powiększenie: Kontrolki powiększenia Włącz użytkownika zwiększyć lub zmniejszyć poziom powiększenia, klikając znak plus lub minus przyciski, odpowiednio. Kontrolki powiększenia także suwaka dostosowania poziomu powiększenia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
+- Powiększenie: Kontrolki powiększenia Włącz użytkownika zwiększyć lub zmniejszyć poziom powiększenia, klikając znak plus lub minus przyciski, odpowiednio. Kontrolki powiększenia także suwaka dostosowania poziomu powiększenia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.FlowDocumentReader.Zoom%2A>.  
   
  Te funkcje mogą być modyfikowane na podstawie kontroli używane do hostowania zawartości przepływu. W następnej sekcji opisano różne formanty.  
   
@@ -75,9 +75,9 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
 ## <a name="creating-flow-content"></a>Tworzenie zawartości przepływu  
  Zawartość przepływu, może być skomplikowane, składający się z różnych elementów, w tym tekst, obrazy, tabele, a nawet <xref:System.Windows.UIElement> klasy, takie jak formanty pochodne. Aby zrozumieć sposób tworzenia złożonych dowolnej zawartości, krytyczne są następujące kwestie:  
   
--   **Klasy związane z przepływem**: Każda klasa używana w dowolnej zawartości ma określonego celu. Ponadto hierarchicznych relacji między klasami przepływ pomaga zrozumieć, jak są one używane. Na przykład klasy pochodne <xref:System.Windows.Documents.Block> klasy są używane do zawierać inne obiekty, gdy klasy pochodne <xref:System.Windows.Documents.Inline> zawierają obiekty, które są wyświetlane.  
+- **Klasy związane z przepływem**: Każda klasa używana w dowolnej zawartości ma określonego celu. Ponadto hierarchicznych relacji między klasami przepływ pomaga zrozumieć, jak są one używane. Na przykład klasy pochodne <xref:System.Windows.Documents.Block> klasy są używane do zawierać inne obiekty, gdy klasy pochodne <xref:System.Windows.Documents.Inline> zawierają obiekty, które są wyświetlane.  
   
--   **Zawartość schematu**: Dokument przepływu może wymagać dużej liczby elementów zagnieżdżonych. Schemat zawartości określa relacje nadrzędne/podrzędne możliwe między elementami.  
+- **Zawartość schematu**: Dokument przepływu może wymagać dużej liczby elementów zagnieżdżonych. Schemat zawartości określa relacje nadrzędne/podrzędne możliwe między elementami.  
   
  Poniższe sekcje zaczną się nad każdym z tych obszarów, które bardziej szczegółowo.  
   
@@ -196,19 +196,19 @@ Dokumenty przepływu są przeznaczone do optymalizacji wyświetlania i czytelno�
   
  **Rysunek:**  
   
--   Może zostać umieszczony: Można ustawić jego poziome i pionowe kotwic go zadokować względem strony, zawartość, kolumny lub akapitu. Można również użyć jego <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> i <xref:System.Windows.Documents.Figure.VerticalOffset%2A> właściwości, aby określić dowolne przesunięcia.  
+- Może zostać umieszczony: Można ustawić jego poziome i pionowe kotwic go zadokować względem strony, zawartość, kolumny lub akapitu. Można również użyć jego <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> i <xref:System.Windows.Documents.Figure.VerticalOffset%2A> właściwości, aby określić dowolne przesunięcia.  
   
--   To może być zmieniany do więcej niż jednej kolumny: Możesz ustawić <xref:System.Windows.Documents.Figure> wysokością i szerokością wielokrotności strony, szerokość lub wysokość zawartości lub kolumny. Należy pamiętać, że w przypadku strony i zawartości wielokrotności większą niż 1 nie są dozwolone. Na przykład można ustawić szerokość <xref:System.Windows.Documents.Figure> "0,5 page" lub "0,25 treści" lub "2 kolumnę". Można również ustawić szerokość i wysokość, do wartości podane w pikselach.  
+- To może być zmieniany do więcej niż jednej kolumny: Możesz ustawić <xref:System.Windows.Documents.Figure> wysokością i szerokością wielokrotności strony, szerokość lub wysokość zawartości lub kolumny. Należy pamiętać, że w przypadku strony i zawartości wielokrotności większą niż 1 nie są dozwolone. Na przykład można ustawić szerokość <xref:System.Windows.Documents.Figure> "0,5 page" lub "0,25 treści" lub "2 kolumnę". Można również ustawić szerokość i wysokość, do wartości podane w pikselach.  
   
--   Nie podzielony na strony: Jeśli zawartość wewnątrz <xref:System.Windows.Documents.Figure> nie mieści się wewnątrz <xref:System.Windows.Documents.Figure>, renderowanie zostanie przeprowadzone dowolną zawartość mieści się, jak i pozostałej zawartości zostaną utracone  
+- Nie podzielony na strony: Jeśli zawartość wewnątrz <xref:System.Windows.Documents.Figure> nie mieści się wewnątrz <xref:System.Windows.Documents.Figure>, renderowanie zostanie przeprowadzone dowolną zawartość mieści się, jak i pozostałej zawartości zostaną utracone  
   
  **Floater:**  
   
--   Nie może znajdować się i będzie renderowany wszędzie tam, gdzie miejsca mogą być dostępne dla niego. Nie można ustawić przesunięcie lub kotwicy <xref:System.Windows.Documents.Floater>.  
+- Nie może znajdować się i będzie renderowany wszędzie tam, gdzie miejsca mogą być dostępne dla niego. Nie można ustawić przesunięcie lub kotwicy <xref:System.Windows.Documents.Floater>.  
   
--   Nie może zostać zwiększony do więcej niż jednej kolumny: Domyślnie <xref:System.Windows.Documents.Floater> rozmiary w jedną kolumnę. Ma ona <xref:System.Windows.Documents.Floater.Width%2A> właściwość, która może być ustawiona na wartość bezwzględna pikseli, ale jeśli ta wartość jest większa niż szerokość jedną kolumnę, jest ignorowany i floater ma rozmiar w jedną kolumnę. Rozmiarze mniejszym niż jedna kolumnę, ustawiając szerokość piksela poprawne, ale zmiany rozmiaru nie jest kolumny powiązane z wątkiem, dlatego "0.5Column" nie jest prawidłowym wyrażeniem dla <xref:System.Windows.Documents.Floater> szerokości. <xref:System.Windows.Documents.Floater> nie ma wysokość właściwości i jest wysokość nie może być ustawiona, jego wysokość jest zależna od zawartości  
+- Nie może zostać zwiększony do więcej niż jednej kolumny: Domyślnie <xref:System.Windows.Documents.Floater> rozmiary w jedną kolumnę. Ma ona <xref:System.Windows.Documents.Floater.Width%2A> właściwość, która może być ustawiona na wartość bezwzględna pikseli, ale jeśli ta wartość jest większa niż szerokość jedną kolumnę, jest ignorowany i floater ma rozmiar w jedną kolumnę. Rozmiarze mniejszym niż jedna kolumnę, ustawiając szerokość piksela poprawne, ale zmiany rozmiaru nie jest kolumny powiązane z wątkiem, dlatego "0.5Column" nie jest prawidłowym wyrażeniem dla <xref:System.Windows.Documents.Floater> szerokości. <xref:System.Windows.Documents.Floater> nie ma wysokość właściwości i jest wysokość nie może być ustawiona, jego wysokość jest zależna od zawartości  
   
--   <xref:System.Windows.Documents.Floater> identyczny: Jeśli jej zawartość w jego określona szerokość rozciąga się do więcej niż 1 wysokości kolumny, floater przerywa i identyczny z następnej kolumnie, Następna strona itp.  
+- <xref:System.Windows.Documents.Floater> identyczny: Jeśli jej zawartość w jego określona szerokość rozciąga się do więcej niż 1 wysokości kolumny, floater przerywa i identyczny z następnej kolumnie, Następna strona itp.  
   
  <xref:System.Windows.Documents.Figure> jest dobrym miejscem do umieszczenia zawartości autonomiczny potrzebne do kontrolowania rozmiaru i pozycjonowania i pewność, że zawartość zmieści się w określonym rozmiarem. <xref:System.Windows.Documents.Floater> jest dobrym miejscem, aby umieścić więcej zawartości wolny przepływający przepływy podobne do zawartości strony głównej, ale jest oddzielony od niego.  
   

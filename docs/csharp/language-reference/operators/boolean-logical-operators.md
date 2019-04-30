@@ -34,10 +34,10 @@ helpviewer_keywords:
 - '|| operator [C#]'
 ms.openlocfilehash: 1a53f2862727318112eae8e9723cabb794fb4f37
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660089"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Wartość logiczna operatorów logicznych (C# odwołania)
 

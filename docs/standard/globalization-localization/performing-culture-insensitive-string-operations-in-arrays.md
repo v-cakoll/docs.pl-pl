@@ -10,11 +10,11 @@ ms.assetid: f12922e1-6234-4165-8896-63f0653ab478
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ba02333aaafbadc85e4d3c547659f4ce4d2740c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683010"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-arrays"></a>Wykonywanie niezależnych od kultury operacji na ciągach w tablicach
 Przeciążenia <xref:System.Array.Sort%2A?displayProperty=nameWithType> i <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> metody wykonywania kultury sortowania przy użyciu domyślnego <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Wrażliwość na ustawienia kulturowe wyniki zwrócone przez te metody mogą się różnić kultury z powodu różnic w kolejności sortowania. Aby wyeliminować wrażliwość na ustawienia kulturowe zachowanie, użyj jednej z przeciążenia tej metody, która akceptuje `comparer` parametru. `comparer` Parametr określa <xref:System.Collections.IComparer> wdrożenia do użycia podczas porównywania elementów w tablicy. Dla parametru należy określić klasę niestandardowego modułu porównującego niezmiennej, która używa <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. Przykład klasy niestandardowej funkcji porównującej niezmiennej znajduje się w podrzędnym "Przy użyciu klasy SortedList —" tematu [wykonywanie niezależnych od kultury operacje na ciągach w kolekcjach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations-in-collections.md) tematu.  

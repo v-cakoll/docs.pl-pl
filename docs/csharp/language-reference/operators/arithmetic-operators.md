@@ -31,8 +31,8 @@ ms.openlocfilehash: dc817fdb9684f794efc6599444e80be1ef7f9654
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61660134"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operatory arytmetyczne (C# odwołania)
 

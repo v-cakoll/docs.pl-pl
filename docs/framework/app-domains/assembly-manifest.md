@@ -11,11 +11,11 @@ ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675071"
 ---
 # <a name="assembly-manifest"></a>Manifest zestawu
 Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują powiązania między elementami zawartymi w zestawie. Manifest zestawu zawiera metadane zestawu. W manifeście zestawu znajdują się wszystkie metadane potrzebne do określenia wymagań w zakresie wersji zestawu i tożsamości jego zabezpieczeń, a także wszystkie metadane niezbędne do definiowania zakresu zestawu oraz rozpoznawania odwołań do zasobów i klas. Manifest zestawu może być przechowywany w pliku PE (.exe lub .dll) mającym kod w języku Microsoft Intermediate Language (MSIL) lub w samodzielnym pliku PE, który zawiera tylko dane manifestu zestawu.  
@@ -28,15 +28,15 @@ Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują p
   
  Manifest każdego zestawu wykonuje następujące funkcje:  
   
--   Wylicza pliki tworzące zestaw.  
+- Wylicza pliki tworzące zestaw.  
   
--   Określa, w jaki sposób odwołania do typów i zasobów zestawów są mapowane na pliki zawierające ich deklaracje i implementacje.  
+- Określa, w jaki sposób odwołania do typów i zasobów zestawów są mapowane na pliki zawierające ich deklaracje i implementacje.  
   
--   Wylicza inne zestawy, od których zależy zestaw.  
+- Wylicza inne zestawy, od których zależy zestaw.  
   
--   Tworzy poziom pośredni między obiektami używającymi zestawu a szczegółami implementacji zestawu.  
+- Tworzy poziom pośredni między obiektami używającymi zestawu a szczegółami implementacji zestawu.  
   
--   Sprawia, że zestaw sam siebie opisuje.  
+- Sprawia, że zestaw sam siebie opisuje.  
   
 ## <a name="assembly-manifest-contents"></a>Zawartość manifestu zestawu  
  Poniższa tabela pokazuje informacje zawarte w manifeście zestawu. Pierwsze cztery elementy — nazwa zestawu, numer wersji, kultura i informacje o silnej nazwie — tworzą tożsamość zestawu.  

@@ -3,11 +3,11 @@ title: Omówienie operatorów standardowej kwerendy (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
 ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680509"
 ---
 # <a name="standard-query-operators-overview-c"></a>Omówienie operatorów standardowej kwerendy (C#)
 *Standardowych operatorów zapytań* metod, które tworzą wzorzec LINQ. Większość z tych metod działają na sekwencje, gdzie sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Standardowe operatory zapytań zapewniają możliwości zapytania, takie jak filtrowanie, projekcji, agregacji, sortowania i innych.  

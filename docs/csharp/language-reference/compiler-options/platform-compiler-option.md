@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662559"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (opcje kompilatora C#)
 Określa, która wersja środowiska uruchomieniowego języka w wspólnego (CLR) można uruchomić zestawu.  
@@ -30,29 +30,29 @@ Określa, która wersja środowiska uruchomieniowego języka w wspólnego (CLR) 
   
 ## <a name="remarks"></a>Uwagi  
   
--   **anycpu** (ustawienie domyślne), kompiluje swoim zestawie, można uruchomić na dowolnej platformie. Aplikacja działa jako proces 64-bitowych, jeśli to możliwe i powraca do 32-bitowych, gdy ten tryb jest dostępny tylko.  
+- **anycpu** (ustawienie domyślne), kompiluje swoim zestawie, można uruchomić na dowolnej platformie. Aplikacja działa jako proces 64-bitowych, jeśli to możliwe i powraca do 32-bitowych, gdy ten tryb jest dostępny tylko.  
   
--   **anycpu32bitpreferred** kompiluje swoim zestawie, można uruchomić na dowolnej platformie. Aplikacja działa w trybie 32-bitowych w systemach, które obsługują aplikacje 32-bitowych i 64-bitowych. Można określić tę opcję, tylko dla projektów, których platformą docelową .NET Framework 4.5.  
+- **anycpu32bitpreferred** kompiluje swoim zestawie, można uruchomić na dowolnej platformie. Aplikacja działa w trybie 32-bitowych w systemach, które obsługują aplikacje 32-bitowych i 64-bitowych. Można określić tę opcję, tylko dla projektów, których platformą docelową .NET Framework 4.5.  
   
--   **ARM** kompiluje zestaw do uruchomienia na komputerze, który ma procesor Advanced RISC Machine (ARM).  
+- **ARM** kompiluje zestaw do uruchomienia na komputerze, który ma procesor Advanced RISC Machine (ARM).  
   
--   **ARM64** kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze, który ma procesor Advanced RISC Machine (ARM), który obsługuje A64 — zestaw instrukcji.  
+- **ARM64** kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze, który ma procesor Advanced RISC Machine (ARM), który obsługuje A64 — zestaw instrukcji.  
 
--   **x64** kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.  
+- **x64** kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.  
   
--   **x86** kompiluje zestawu do uruchomienia przez środowisko CLR 32-bitowy, x86 zgodny.  
+- **x86** kompiluje zestawu do uruchomienia przez środowisko CLR 32-bitowy, x86 zgodny.  
   
--   **Itanium** kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze z procesorem Itanium.  
+- **Itanium** kompiluje zestaw do uruchomienia w 64-bitowym CLR na komputerze z procesorem Itanium.  
   
  W 64-bitowym systemie operacyjnym Windows:  
   
--   Zestawy skompilowane z **-platform: x 86** wykonania na 32-bitowe środowisko CLR, uruchamianie w emulatorze WOW64.  
+- Zestawy skompilowane z **-platform: x 86** wykonania na 32-bitowe środowisko CLR, uruchamianie w emulatorze WOW64.  
   
--   Biblioteki DLL są kompilowane przy użyciu **— platforma: anycpu** wykonuje na tej samej CLR jako proces, do którego jest ładowany.  
+- Biblioteki DLL są kompilowane przy użyciu **— platforma: anycpu** wykonuje na tej samej CLR jako proces, do którego jest ładowany.  
   
--   Pliki wykonywalne, które są kompilowane przy użyciu **— platforma: anycpu** wykonania na 64-bitowe środowisko CLR.  
+- Pliki wykonywalne, które są kompilowane przy użyciu **— platforma: anycpu** wykonania na 64-bitowe środowisko CLR.  
   
--   Pliki wykonywalne skompilowany przy użyciu **-platform: anycpu32bitpreferred** wykonania na 32-bitowe środowisko CLR.  
+- Pliki wykonywalne skompilowany przy użyciu **-platform: anycpu32bitpreferred** wykonania na 32-bitowe środowisko CLR.  
   
  **Anycpu32bitpreferred** ustawienie jest prawidłowy tylko w przypadku pliku wykonywalnego (. Pliki z rozszerzeniem EXE) która wymaga programu .NET Framework 4.5.  
   

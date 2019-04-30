@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
 ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755301"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o zdarzeniach występujących w aplikacji. W tym instruktażu przedstawiono sposób zastępują ustawienia domyślne i spowodować, że `Log` obiektu do zapisania do innych nasłuchujących dziennika.  
@@ -28,11 +28,11 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
   
      Jeśli nie ma żadnego pliku app.config:  
   
-    1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** okno dialogowe, wybierz opcję **pliku konfiguracji aplikacji**.  
+    2. Z **Dodaj nowy element** okno dialogowe, wybierz opcję **pliku konfiguracji aplikacji**.  
   
-    3.  Kliknij przycisk **Dodaj**.  
+    3. Kliknij przycisk **Dodaj**.  
   
 2. Znajdź `<listeners>` sekcji w obszarze `<source>` sekcji z `name` atrybutu "DefaultSource" w `<sources>` sekcji. `<sources>` Znajduje się w sekcji `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   
@@ -153,13 +153,13 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
   
      Niektóre typy, które są dostępne są:  
   
-    -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje je do pliku dziennika.  
+    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje je do pliku dziennika.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje informacje w dzienniku zdarzeń komputera, które są określone przez `initializeData` parametru.  
+    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje informacje w dzienniku zdarzeń komputera, które są określone przez `initializeData` parametru.  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników, które zapis do pliku określonego w `initializeData` parametru.  
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników, które zapis do pliku określonego w `initializeData` parametru.  
   
-    -   A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje je w wiersza polecenia konsoli.  
+    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> odbiornika, który zapisuje je w wiersza polecenia konsoli.  
   
      Uzyskać informacji o tym, gdzie innych rodzajów odbiorniki logu wpisać informacje zapoznaj się dokumentacją tego typu.  
   

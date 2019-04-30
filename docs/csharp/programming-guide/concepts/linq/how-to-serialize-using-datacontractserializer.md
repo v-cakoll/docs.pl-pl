@@ -3,11 +3,11 @@ title: 'Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer 
 ms.date: 07/20/2015
 ms.assetid: 3320ecbf-cdbe-480e-979c-2c14bbef9988
 ms.openlocfilehash: 75f805c2a954957519f2ebb9425ae7e2e2a967b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667681"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-c"></a>Instrukcje: Serializowanie przy użyciu elementu DataContractSerializer (C#)
 W tym temacie przedstawiono przykład, który serializuje i deserializuje przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer>.  

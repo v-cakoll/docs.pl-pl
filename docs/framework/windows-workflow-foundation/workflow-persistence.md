@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], persistence
 ms.assetid: 39e69d1f-b771-4c16-9e18-696fa43b65b2
 ms.openlocfilehash: db0e4acc76f758004948857fc0b23a9cbc62f244
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669348"
 ---
 # <a name="workflow-persistence"></a>Trwałość przepływu pracy
 Trwałość przepływu pracy jest trwały przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji proces lub komputer. Ma to na zapewnienie znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które nie wykonują aktywnie pracy lub przenieść stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  
@@ -27,30 +27,30 @@ Trwałość przepływu pracy jest trwały przechwytywania stanu wystąpienia prz
 ## <a name="implicit-persistence-points"></a>Niejawne punktów trwałości  
  Poniższa lista zawiera przykłady warunki, na których jest trwały przepływu pracy, gdy magazyn wystąpienia jest skojarzony z przepływem pracy.  
   
--   Gdy **TransactionScope** zakończy działanie lub **TransactedReceiveScope** zakończy działanie.  
+- Gdy **TransactionScope** zakończy działanie lub **TransactedReceiveScope** zakończy działanie.  
   
--   Gdy wystąpienie przepływu pracy staje się bezczynności i **WorkflowIdleBehavior** jest ustawiona na hosta przepływu pracy. Ten problem wystąpi, na przykład, gdy używasz działań dotyczących komunikatów lub w **opóźnienie** działania.  
+- Gdy wystąpienie przepływu pracy staje się bezczynności i **WorkflowIdleBehavior** jest ustawiona na hosta przepływu pracy. Ten problem wystąpi, na przykład, gdy używasz działań dotyczących komunikatów lub w **opóźnienie** działania.  
   
--   Gdy WorkflowApplication staje się bezczynności i **PersistableIdle** aplikacji zostaje ustalona **PersistableIdleAction.Persist**.  
+- Gdy WorkflowApplication staje się bezczynności i **PersistableIdle** aplikacji zostaje ustalona **PersistableIdleAction.Persist**.  
   
--   Gdy aplikacja hosta jest zobowiązany do utrwalenia lub zwolnij wystąpienia przepływu pracy.  
+- Gdy aplikacja hosta jest zobowiązany do utrwalenia lub zwolnij wystąpienia przepływu pracy.  
   
--   Gdy wystąpienie przepływu pracy zostanie zakończony, lub zakończy się.  
+- Gdy wystąpienie przepływu pracy zostanie zakończony, lub zakończy się.  
   
--   Gdy **utrwalanie** wykonuje działanie.  
+- Gdy **utrwalanie** wykonuje działanie.  
   
--   Gdy wystąpienie przepływu pracy opracowanych za pomocą poprzedniej wersji programu Windows Workflow Foundation napotyka punktu trwałości podczas wykonywania interoperacyjne.  
+- Gdy wystąpienie przepływu pracy opracowanych za pomocą poprzedniej wersji programu Windows Workflow Foundation napotyka punktu trwałości podczas wykonywania interoperacyjne.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Magazyn wystąpień przepływu pracy SQL](sql-workflow-instance-store.md)  
+- [Magazyn wystąpień przepływu pracy SQL](sql-workflow-instance-store.md)  
   
--   [Magazyny wystąpień](instance-stores.md)  
+- [Magazyny wystąpień](instance-stores.md)  
   
--   [Uczestnicy stanów trwałych](persistence-participants.md)  
+- [Uczestnicy stanów trwałych](persistence-participants.md)  
   
--   [Najlepsze rozwiązania w zakresie stanów trwałych](persistence-best-practices.md)  
+- [Najlepsze rozwiązania w zakresie stanów trwałych](persistence-best-practices.md)  
   
--   [Nietrwałe wystąpienia przepływu pracy](non-persisted-workflow-instances.md)  
+- [Nietrwałe wystąpienia przepływu pracy](non-persisted-workflow-instances.md)  
   
--   [Wstrzymywanie i wznawianie przepływu pracy](pausing-and-resuming-a-workflow.md)
+- [Wstrzymywanie i wznawianie przepływu pracy](pausing-and-resuming-a-workflow.md)

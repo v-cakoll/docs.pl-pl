@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765690"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] aby uwidocznić dane jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] obsługuje formaty Atom i JavaScript Object Notation (JSON) dla źródła danych. Gdy używasz źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zapewnia standardową metodę do serializowania danych, takich jak jednostek i relacji w formacie XML, które mogą być zawarte w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Definiuje mapowanie właściwości jednostki domyślne między danych, które znajduje się w jednostkach i elementów Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -83,12 +83,12 @@ ms.locfileid: "59517320"
 ## <a name="feed-customization-considerations"></a>Zagadnienia dotyczące dostosowywania kanału informacyjnego  
  Należy rozważyć następujące podczas definiowania niestandardowe mapowania źródła danych.  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Klienta traktuje zamapowane elementy w kanale informacyjnym puste zawierających tylko biały znak. W związku z tym zamapowane elementy, które zawiera białych znaków nie są zmaterializowanego na kliencie przy użyciu tego samego biały. Aby zachować ten biały na komputerze klienckim, należy ustawić wartość `KeepInContext` do `true` w atrybucie mapowania źródła danych.  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Klienta traktuje zamapowane elementy w kanale informacyjnym puste zawierających tylko biały znak. W związku z tym zamapowane elementy, które zawiera białych znaków nie są zmaterializowanego na kliencie przy użyciu tego samego biały. Aby zachować ten biały na komputerze klienckim, należy ustawić wartość `KeepInContext` do `true` w atrybucie mapowania źródła danych.  
   
 ## <a name="versioning-requirements"></a>Wymagania dotyczące przechowywania wersji  
  Dostosowywanie kanału informacyjnego ma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu wymagań dotyczących przechowywania wersji:  
   
--   Dostosowywanie kanału informacyjnego wymaga tego klienta i dane usługi pomocy technicznej wersji 2.0 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu i nowszych wersjach.  
+- Dostosowywanie kanału informacyjnego wymaga tego klienta i dane usługi pomocy technicznej wersji 2.0 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] protokołu i nowszych wersjach.  
   
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   

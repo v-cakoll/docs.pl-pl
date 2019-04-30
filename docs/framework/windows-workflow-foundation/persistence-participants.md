@@ -3,11 +3,11 @@ title: Uczestnicy stanów trwałych
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
 ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672656"
 ---
 # <a name="persistence-participants"></a>Uczestnicy stanów trwałych
 Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwolone przez aplikację hosta. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, którego można użyć do utworzenia uczestnika stanów trwałych. Uczestnika stanów trwałych pochodzi z jednej z tych klas, implementuje metody zainteresowań, a następnie dodaje wystąpienie klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może poszukaj takie rozszerzenia przepływu pracy po przechowywanie wystąpienia przepływu pracy i wywoływać właściwe metody na uczestnicy stanów trwałych we właściwym czasie.  
@@ -48,17 +48,17 @@ Uczestnika stanów trwałych mogą uczestniczyć w operacji trwałości (Zapisz 
   
  Podczas ładowania wystąpienia przepływu pracy dostawcy stanów trwałych tworzy blokady w tym wystąpieniu. Zapobiega to ładowany przez więcej niż jednego hosta w przypadku scenariusza z wieloma węzłami wystąpienia. Jeśli użytkownik podejmie próbę załadowania wystąpienia przepływu pracy, który został zablokowany pojawią się wyjątek, jak pokazano poniżej: Wyjątek "System.ServiceModel.Persistence.InstanceLockException: Nie można ukończyć żądanej operacji, ponieważ blokada na przykład "00000000-0000-0000-0000-000000000000" nie można uzyskać ". Ten błąd występuje, gdy wystąpi jedno z następujących czynności:  
   
--   W przypadku scenariusza z wieloma węzłami wystąpienie jest ładowany przez innego hosta.  Istnieje kilka różnych sposobów, aby rozwiązać tego rodzaju konfliktów: do przodu przetwarzania węzła, który posiada blokadę i spróbuj ponownie lub wymusić obciążona, co spowoduje, że innych hostów nie było możliwe zapisać swoją pracę.  
+- W przypadku scenariusza z wieloma węzłami wystąpienie jest ładowany przez innego hosta.  Istnieje kilka różnych sposobów, aby rozwiązać tego rodzaju konfliktów: do przodu przetwarzania węzła, który posiada blokadę i spróbuj ponownie lub wymusić obciążona, co spowoduje, że innych hostów nie było możliwe zapisać swoją pracę.  
   
--   W scenariuszu jednym węzłem i host wystąpiła awaria.  Podczas uruchamiania hosta ponownie (odtworzenia procesu lub tworzenie nowej fabryki dostawcy trwałości) nowy host próbuje załadować wystąpienia, która nadal jest zablokowany przez stary hosta, ponieważ jeszcze nie wygasła blokady.  
+- W scenariuszu jednym węzłem i host wystąpiła awaria.  Podczas uruchamiania hosta ponownie (odtworzenia procesu lub tworzenie nowej fabryki dostawcy trwałości) nowy host próbuje załadować wystąpienia, która nadal jest zablokowany przez stary hosta, ponieważ jeszcze nie wygasła blokady.  
   
--   W scenariuszu jednym węzłem, a wystąpienie danego zostało przerwane w pewnym momencie i tworzone jest nowe wystąpienie dostawcy stanów trwałych, która zawiera identyfikator innego hosta.  
+- W scenariuszu jednym węzłem, a wystąpienie danego zostało przerwane w pewnym momencie i tworzone jest nowe wystąpienie dostawcy stanów trwałych, która zawiera identyfikator innego hosta.  
   
  Wartość limitu czasu blokady ma wartość domyślną w ciągu 5 minut, można określić wartość limitu czasu różnych podczas wywoływania <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](how-to-create-a-custom-persistence-participant.md)  
+- [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

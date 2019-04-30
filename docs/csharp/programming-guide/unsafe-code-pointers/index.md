@@ -12,11 +12,11 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 3712e04d4496d13178843564b5d0753f62e28fa0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678106"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Niebezpieczny kod i wskaźniki (Przewodnik programowania w języku C#)
 Aby zachować bezpieczeństwo typów i zabezpieczeń, C# nie obsługuje arytmetyki wskaźnika domyślnie. Jednak przy użyciu [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) słów kluczowych, można zdefiniować niebezpieczny kontekst, w którym można użyć wskaźników. Aby uzyskać więcej informacji o wskaźnikach, zobacz temat [typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
@@ -27,26 +27,26 @@ Aby zachować bezpieczeństwo typów i zabezpieczeń, C# nie obsługuje arytmety
 ## <a name="unsafe-code-overview"></a>Niebezpieczne przegląd kodu  
  Niebezpieczny kod ma następujące właściwości:  
   
--   Metody, typy i bloków kodu mogą być definiowane jako niebezpieczny.  
+- Metody, typy i bloków kodu mogą być definiowane jako niebezpieczny.  
   
--   W niektórych przypadkach niebezpieczny kod może zwiększyć wydajność aplikacji, usuwając kontroli granice tablicy.  
+- W niektórych przypadkach niebezpieczny kod może zwiększyć wydajność aplikacji, usuwając kontroli granice tablicy.  
   
--   Niebezpieczny kod jest wymagany podczas wywoływania funkcji natywnych, które wymagają wskaźników.  
+- Niebezpieczny kod jest wymagany podczas wywoływania funkcji natywnych, które wymagają wskaźników.  
   
--   Za pomocą niebezpieczny kod wprowadza zagrożenia bezpieczeństwa i stabilności.  
+- Za pomocą niebezpieczny kod wprowadza zagrożenia bezpieczeństwa i stabilności.  
   
--   W kolejności dla języka C# skompilować kod niebezpieczny, aplikacja musi być skompilowana przy użyciu [/ unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
+- W kolejności dla języka C# skompilować kod niebezpieczny, aplikacja musi być skompilowana przy użyciu [/ unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
   
--   [Bufory o ustalonym rozmiarze](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
+- [Bufory o ustalonym rozmiarze](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [Instrukcje: Użycie wskaźników do kopiowania tablicy bajtów](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+- [Instrukcje: Użycie wskaźników do kopiowania tablicy bajtów](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
--   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -11,22 +11,22 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
 ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702441"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dotyczy nie tylko podczas pobierania danych. Należy również zaawansowane narzędzie do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, można użyć sekwencji źródłowej, jak dane wejściowe i zmodyfikuj go na wiele sposobów, aby utworzyć nową sekwencję danych wyjściowych. Można zmodyfikować sekwencji bez modyfikowania samych elementów, sortowania i grupowania. Ale być może z najbardziej zaawansowanych funkcji [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania jest możliwość tworzenia nowych typów. Jest to realizowane w [wybierz](../../../../csharp/language-reference/keywords/select-clause.md) klauzuli. Na przykład należy wykonać następujące zadania:  
   
--   Scala wiele sekwencji wejściowych sekwencja pojedynczego wyjścia, która ma nowego typu.  
+- Scala wiele sekwencji wejściowych sekwencja pojedynczego wyjścia, która ma nowego typu.  
   
--   Utwórz sekwencje danych wyjściowych, której elementy składają się z tylko jednego lub kilku właściwości każdego elementu w sekwencji źródłowej.  
+- Utwórz sekwencje danych wyjściowych, której elementy składają się z tylko jednego lub kilku właściwości każdego elementu w sekwencji źródłowej.  
   
--   Utwórz sekwencje danych wyjściowych, której elementy składają się z wyniki operacji wykonywanych na danych źródłowych.  
+- Utwórz sekwencje danych wyjściowych, której elementy składają się z wyniki operacji wykonywanych na danych źródłowych.  
   
--   Tworzenie sekwencji wyjścia w innym formacie. Na przykład można przekształcać dane z wierszy SQL lub pliki tekstowe, w formacie XML.  
+- Tworzenie sekwencji wyjścia w innym formacie. Na przykład można przekształcać dane z wierszy SQL lub pliki tekstowe, w formacie XML.  
   
  Są to tylko kilka przykładów. Oczywiście można połączyć te przekształcenia na różne sposoby, w tym samym zapytaniu. Ponadto sekwencja wyjścia jedno zapytanie może służyć jako sekwencji wejściowych dla nowego zapytania.  
   

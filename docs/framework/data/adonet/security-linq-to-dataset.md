@@ -3,11 +3,11 @@ title: Zabezpieczenia (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 6116b2b8-75f4-4d8b-aea6-c13e55cda50b
 ms.openlocfilehash: aa281cb4d6019ca2df85137eb505724e55b8060a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664184"
 ---
 # <a name="security-linq-to-dataset"></a>Zabezpieczenia (LINQ to DataSet)
 W tym temacie omówiono problemy z zabezpieczeniami w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  

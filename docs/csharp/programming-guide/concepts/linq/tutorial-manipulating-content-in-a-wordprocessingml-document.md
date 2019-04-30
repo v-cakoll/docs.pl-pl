@@ -3,11 +3,11 @@ title: 'Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
 ms.openlocfilehash: 2d972f53b30ccd8ba8e1ffdaecb40cf7f76e7b6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680717"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (C#)
 W tym samouczku przedstawiono sposób stosowania funkcjonalności innowacyjne podejście i LINQ do XML do manipulowania dokumentów XML. Przykłady języka C# zapytania i manipulować informacjami w dokumentach pakietu Office Open XML WordprocessingML, które są zapisywane przez program Microsoft Word.  

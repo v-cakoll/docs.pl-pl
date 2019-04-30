@@ -9,11 +9,11 @@ helpviewer_keywords:
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
 ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680743"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Instrukcje: Utworzenie pliku lub folderu (C# Programming Guide)
 Można programowo utworzyć folder na komputerze, utwórz podfolder, Utwórz plik w podfolderze i zapisać dane do pliku.  
@@ -25,7 +25,7 @@ Można programowo utworzyć folder na komputerze, utwórz podfolder, Utwórz pli
   
  Wprowadzając następujące zmiany w przykładzie, można określić różne wyniki oparte na tego, czy plik o określonej nazwie już istnieje. Jeśli taki plik nie istnieje, kod tworzy go. Jeśli taki plik istnieje, kod dołącza dane do tego pliku.  
   
--   Określ nielosową nazwę.  
+- Określ nielosową nazwę.  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ Można programowo utworzyć folder na komputerze, utwórz podfolder, Utwórz pli
     string fileName = "MyNewFile.txt";  
     ```  
   
--   Zastąp `if` - `else` instrukcję, określając `using` instrukcji w poniższym kodzie.  
+- Zastąp `if` - `else` instrukcję, określając `using` instrukcji w poniższym kodzie.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ Można programowo utworzyć folder na komputerze, utwórz podfolder, Utwórz pli
   
  Następujące warunki mogą spowodować wyjątek:  
   
--   Nazwa folderu jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException> klasy). Użyj <xref:System.IO.Path> klasy, aby utworzyć prawidłowe ścieżki nazw.  
+- Nazwa folderu jest nieprawidłowo sformułowany. Na przykład zawiera niedozwolone znaki lub jest tylko spacją (<xref:System.ArgumentException> klasy). Użyj <xref:System.IO.Path> klasy, aby utworzyć prawidłowe ścieżki nazw.  
   
--   Folderem nadrzędnym folderu, który ma zostać utworzony jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
+- Folderem nadrzędnym folderu, który ma zostać utworzony jest tylko do odczytu (<xref:System.IO.IOException> klasy).  
   
--   Nazwa folderu jest `null` (<xref:System.ArgumentNullException> klasy).  
+- Nazwa folderu jest `null` (<xref:System.ArgumentNullException> klasy).  
   
--   Nazwa folderu jest zbyt długa (<xref:System.IO.PathTooLongException> klasy).  
+- Nazwa folderu jest zbyt długa (<xref:System.IO.PathTooLongException> klasy).  
   
--   Nazwa folderu jest tylko dwukropek, ":" (<xref:System.IO.PathTooLongException> klasy).  
+- Nazwa folderu jest tylko dwukropek, ":" (<xref:System.IO.PathTooLongException> klasy).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Wystąpienie <xref:System.Security.SecurityException> klasy mogą być generowane w sytuacjach częściowego zaufania.  

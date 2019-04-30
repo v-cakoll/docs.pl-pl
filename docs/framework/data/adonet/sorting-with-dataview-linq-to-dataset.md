@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
 ms.openlocfilehash: 01fb70a7b37d6c9c119fff16a9d680d4139421cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664132"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Sortowanie za pomocą widoku danych (LINQ to DataSet)
 Możliwość sortowania danych w oparciu o określone kryteria, a następnie prezentować dane do klienta za pomocą kontrolki interfejsu użytkownika jest istotnym elementem powiązanie danych. <xref:System.Data.DataView> zapewnia kilka metod sortowania danych i zwraca wiersze danych uporządkowanych według określonych kryteriów porządkowania. Oprócz jego opartego na ciągach sortowanie możliwości <xref:System.Data.DataView> również pozwala na użycie [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] wyrażeń kryterium sortowania. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] wyrażenia pozwalają znacznie bardziej złożone i zaawansowane operacje sortowania niż sortowanie oparte na ciągach. W tym temacie opisano sortowanie, za pomocą obu metod <xref:System.Data.DataView>.  
@@ -65,9 +65,9 @@ Możliwość sortowania danych w oparciu o określone kryteria, a następnie pre
 ## <a name="clearing-the-sort"></a>Czyszczenie sortowania  
  Kryteria sortowania na <xref:System.Data.DataView> może być obsadzona po ustawieniu, za pomocą <xref:System.Data.DataView.Sort%2A> właściwości. Istnieją dwa sposoby, aby wyczyścić sortowania informacje przedstawione w <xref:System.Data.DataView>:  
   
--   Ustaw <xref:System.Data.DataView.Sort%2A> właściwość `null`.  
+- Ustaw <xref:System.Data.DataView.Sort%2A> właściwość `null`.  
   
--   Ustaw <xref:System.Data.DataView.Sort%2A> właściwości na pusty ciąg.  
+- Ustaw <xref:System.Data.DataView.Sort%2A> właściwości na pusty ciąg.  
   
 ### <a name="example"></a>Przykład  
  Poniższy przykład tworzy <xref:System.Data.DataView> w wyniku zapytania i czyści, sortowanie, ustawiając <xref:System.Data.DataView.Sort%2A> właściwości na pusty ciąg:  

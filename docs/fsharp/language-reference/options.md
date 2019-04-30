@@ -3,11 +3,11 @@ title: Opcje
 description: Dowiedz się, jak używać F# opcji typów, gdy rzeczywista wartość może nie istnieć dla nazwanej wartości lub zmiennej.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666485"
 ---
 # <a name="options"></a>Opcje
 

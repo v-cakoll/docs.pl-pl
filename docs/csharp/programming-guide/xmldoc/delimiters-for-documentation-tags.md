@@ -8,13 +8,13 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: ef1f6ceed49d728f6c9923204c0cb7e11aa3905a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61676017"
 ---
-# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki tagów dokumentacji (Przewodnik programowania w języku C#)
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Ograniczniki znaczników dokumentacji (Przewodnik programowania w języku C#)
 Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują kompilatora, gdzie rozpoczyna się i kończy w komentarzu dokumentacji. Za pomocą następujących rodzajów ograniczniki tagów dokumentacji XML:  
   
  `///`  
@@ -28,15 +28,15 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
   
  Istnieją pewne reguły formatowania do wykonania, gdy używasz `/** */` ograniczników.  
   
--   W wierszu, który zawiera `/**` ogranicznik, jeśli pozostałą część wiersza jest biały znak, wiersz nie został przetworzony komentarzy. Jeśli pierwszy znak po `/**` ogranicznik jest odstępu, że biały znak jest ignorowana, a pozostała część wiersza jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
+- W wierszu, który zawiera `/**` ogranicznik, jeśli pozostałą część wiersza jest biały znak, wiersz nie został przetworzony komentarzy. Jeśli pierwszy znak po `/**` ogranicznik jest odstępu, że biały znak jest ignorowana, a pozostała część wiersza jest przetwarzany. W przeciwnym razie cały tekst wiersza po `/**` ogranicznik jest przetwarzany jako część komentarza.  
   
--   W wierszu, który zawiera `*/` ogranicznik, jeśli występuje maksymalnie białych znaków `*/` ogranicznik, w tym wierszu jest ignorowany. W przeciwnym razie tekst w wierszu do `*/` ogranicznik jest przetwarzany jako część komentarza, zgodnie z regułami dopasowywania wzorca opisanego w następny.  
+- W wierszu, który zawiera `*/` ogranicznik, jeśli występuje maksymalnie białych znaków `*/` ogranicznik, w tym wierszu jest ignorowany. W przeciwnym razie tekst w wierszu do `*/` ogranicznik jest przetwarzany jako część komentarza, zgodnie z regułami dopasowywania wzorca opisanego w następny.  
   
--   Wiersze po ten, który rozpoczyna się od `/**` ogranicznik, kompilator szuka wspólny wzorzec na początku każdego wiersza. Wzorzec może zawierać opcjonalny odstęp i znak gwiazdki (`*`), a następnie więcej opcjonalny odstęp. Jeśli kompilator znajdzie wspólny wzorzec na początku każdego wiersza, który nie zaczyna się od `/**` ogranicznik lub `*/` ogranicznika ignoruje tego wzorca dla każdego wiersza.  
+- Wiersze po ten, który rozpoczyna się od `/**` ogranicznik, kompilator szuka wspólny wzorzec na początku każdego wiersza. Wzorzec może zawierać opcjonalny odstęp i znak gwiazdki (`*`), a następnie więcej opcjonalny odstęp. Jeśli kompilator znajdzie wspólny wzorzec na początku każdego wiersza, który nie zaczyna się od `/**` ogranicznik lub `*/` ogranicznika ignoruje tego wzorca dla każdego wiersza.  
   
  Poniższe przykłady ilustrują tych reguł.  
   
--   To jedyna część Poniższy komentarz, które będą przetwarzane jest wiersz, który rozpoczyna się od `<summary>`. Formaty trzech etykiet generuje ten sam komentarzy.  
+- To jedyna część Poniższy komentarz, które będą przetwarzane jest wiersz, który rozpoczyna się od `<summary>`. Formaty trzech etykiet generuje ten sam komentarzy.  
   
     ```csharp  
     /** <summary>text</summary> */   
@@ -50,7 +50,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
     */  
     ```  
   
--   Kompilator identyfikuje wspólny wzorzec "*" na początku linii drugiego i trzeciego. Wzorzec jest niedostępna w danych wyjściowych.  
+- Kompilator identyfikuje wspólny wzorzec "*" na początku linii drugiego i trzeciego. Wzorzec jest niedostępna w danych wyjściowych.  
   
     ```csharp  
     /**   
@@ -58,7 +58,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
      * text </summary>*/   
     ```  
   
--   Kompilator znajdzie nie wspólny wzorzec w poniższy komentarz, ponieważ drugim znakiem w trzecim wierszu nie jest znak gwiazdki. W związku z tym cały tekst w wierszach drugiej i trzeciej są przetwarzane w ramach komentarza.  
+- Kompilator znajdzie nie wspólny wzorzec w poniższy komentarz, ponieważ drugim znakiem w trzecim wierszu nie jest znak gwiazdki. W związku z tym cały tekst w wierszach drugiej i trzeciej są przetwarzane w ramach komentarza.  
   
     ```csharp  
     /**   
@@ -67,7 +67,7 @@ Użycie komentarze dokumentacji XML wymaga ograniczników, które wskazują komp
     */   
     ```  
   
--   Kompilator znajdzie nie wzorca w poniższy komentarz z dwóch przyczyn. Po pierwsze liczbę spacji przed gwiazdka nie jest spójna. Po drugie piąty wiersz rozpoczyna się od kartę, która jest niezgodna z miejsc do magazynowania. W związku z tym cały tekst z dwóch wierszy, za pośrednictwem pięciu osób są przetwarzane jako część komentarza.  
+- Kompilator znajdzie nie wzorca w poniższy komentarz z dwóch przyczyn. Po pierwsze liczbę spacji przed gwiazdka nie jest spójna. Po drugie piąty wiersz rozpoczyna się od kartę, która jest niezgodna z miejsc do magazynowania. W związku z tym cały tekst z dwóch wierszy, za pośrednictwem pięciu osób są przetwarzane jako część komentarza.  
   
     ```csharp  
     /**   

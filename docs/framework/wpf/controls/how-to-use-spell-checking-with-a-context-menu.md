@@ -10,11 +10,11 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699152"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Instrukcje: Używanie sprawdzania pisowni z menu kontekstowym
 Domyślnie po włączeniu pisowni w formancie edycji, takie jak <xref:System.Windows.Controls.TextBox> lub <xref:System.Windows.Controls.RichTextBox>, Pobierz możliwości sprawdzania pisowni z menu kontekstowego. Na przykład, gdy użytkownicy kliknij prawym przyciskiem myszy wyrazu, otrzymują zestaw sugestie dotyczące pisowni lub opcję, aby **Ignoruj wszystkich**. Jednak aby zastąpić domyślne menu kontekstowe z menu kontekstowego, ta funkcja jest utracone i trzeba napisać kod, aby ponownie włączyć funkcję sprawdzania pisowni z menu kontekstowego. Poniższy przykład pokazuje, jak ją włączyć dla <xref:System.Windows.Controls.TextBox>.  

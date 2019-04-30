@@ -4,11 +4,11 @@ description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wy
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
 ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664652"
 ---
 # <a name="interpreting-expressions"></a>Interpreting Expressions
 

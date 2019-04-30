@@ -3,11 +3,11 @@ title: Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757719"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server
 Iniekcja SQL to proces, za pomocą której złośliwy użytkownik wprowadza instrukcje języka Transact-SQL zamiast prawidłowych danych wejściowych. Jeśli dane wejściowe jest przekazywana bezpośrednio do serwera bez sprawdzania poprawności i aplikacja wykonuje przypadkowo wprowadzonego kodu ataku ma możliwość uszkodzenia lub zniszczenia danych.  
@@ -21,34 +21,34 @@ Iniekcja SQL to proces, za pomocą której złośliwy użytkownik wprowadza inst
   
  Poniżej przedstawiono kilka przydatnych wskazówek:  
   
--   Nigdy nie twórz instrukcji języka Transact-SQL bezpośrednio w danych wejściowych użytkownika; Używanie procedur składowanych, aby sprawdzić poprawność danych wejściowych użytkownika.  
+- Nigdy nie twórz instrukcji języka Transact-SQL bezpośrednio w danych wejściowych użytkownika; Używanie procedur składowanych, aby sprawdzić poprawność danych wejściowych użytkownika.  
   
--   Weryfikowanie danych wejściowych użytkownika, testując typu, długość, formatu i zakresu. Funkcja języka Transact-SQL QUOTENAME() jako znak ucieczki dla nazwy systemu lub funkcja REPLACE() jako znak ucieczki dla dowolnego znaku w ciągu.  
+- Weryfikowanie danych wejściowych użytkownika, testując typu, długość, formatu i zakresu. Funkcja języka Transact-SQL QUOTENAME() jako znak ucieczki dla nazwy systemu lub funkcja REPLACE() jako znak ucieczki dla dowolnego znaku w ciągu.  
   
--   W przypadku każdej warstwy aplikacji, należy zaimplementować wiele warstw sprawdzania poprawności.  
+- W przypadku każdej warstwy aplikacji, należy zaimplementować wiele warstw sprawdzania poprawności.  
   
--   Przetestuj rozmiar i typ danych wejściowych i wymuszanie limitów odpowiednie. Może to pomóc uniknąć przepełnienia buforu zamierzone.  
+- Przetestuj rozmiar i typ danych wejściowych i wymuszanie limitów odpowiednie. Może to pomóc uniknąć przepełnienia buforu zamierzone.  
   
--   Testowanie zawartości zmiennych ciągu i akceptuje tylko oczekiwanej wartości. Odrzuć wpisy, które zawierają dane binarne, sekwencje ucieczki i znaki komentarza.  
+- Testowanie zawartości zmiennych ciągu i akceptuje tylko oczekiwanej wartości. Odrzuć wpisy, które zawierają dane binarne, sekwencje ucieczki i znaki komentarza.  
   
--   Podczas pracy z dokumentami XML Sprawdź poprawność wszystkich danych ze schematem, zgodnie z ich wprowadzenia.  
+- Podczas pracy z dokumentami XML Sprawdź poprawność wszystkich danych ze schematem, zgodnie z ich wprowadzenia.  
   
--   W środowiskach wielopoziomowe wszystkie dane powinny zostać uwierzytelnionym i móc dopuszczenie do zaufanej strefy.  
+- W środowiskach wielopoziomowe wszystkie dane powinny zostać uwierzytelnionym i móc dopuszczenie do zaufanej strefy.  
   
--   Nie akceptuj następujących ciągów w polach, z których można skonstruować nazw plików: AUX, CLOCK$, COM1 do COM8, CON, konfiguracji$, LPT1 do LPT8, NUL i PRN.  
+- Nie akceptuj następujących ciągów w polach, z których można skonstruować nazw plików: AUX, CLOCK$, COM1 do COM8, CON, konfiguracji$, LPT1 do LPT8, NUL i PRN.  
   
--   Użyj <xref:System.Data.SqlClient.SqlParameter> obiektów za pomocą procedur składowanych i polecenia w celu udostępnienia weryfikacji typ sprawdzania i długości.  
+- Użyj <xref:System.Data.SqlClient.SqlParameter> obiektów za pomocą procedur składowanych i polecenia w celu udostępnienia weryfikacji typ sprawdzania i długości.  
   
--   Użyj <xref:System.Text.RegularExpressions.Regex> wyrażeń w kodzie klienta, aby filtrować nieprawidłowe znaki.  
+- Użyj <xref:System.Text.RegularExpressions.Regex> wyrażeń w kodzie klienta, aby filtrować nieprawidłowe znaki.  
   
 ## <a name="dynamic-sql-strategies"></a>Strategie dynamiczny język SQL  
  Wykonywanie dynamicznie utworzony instrukcji języka SQL w swojej podziały kod proceduralny łańcucha własności, powodując programu SQL Server w celu sprawdzenia uprawnień obiektu wywołującego względem obiektów, w której uzyskuje dostęp przez dynamiczny język SQL.  
   
  Program SQL Server ma metody do udzielania użytkownikom dostępu do danych przy użyciu procedury składowane i funkcje zdefiniowane przez użytkownika, które są wykonywane dynamiczny język SQL.  
   
--   Korzystanie z personifikacji z języka Transact-SQL AS wykonywanie klauzuli, zgodnie z opisem w [dostosowywanie uprawnień personifikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Korzystanie z personifikacji z języka Transact-SQL AS wykonywanie klauzuli, zgodnie z opisem w [dostosowywanie uprawnień personifikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
--   Podpisywanie za pomocą certyfikatów, procedury składowane, zgodnie z opisem w [podpisywania procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Podpisywanie za pomocą certyfikatów, procedury składowane, zgodnie z opisem w [podpisywania procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ### <a name="execute-as"></a>WYKONAJ AS  
  WYKONAJ jako zastępuje klauzuli uprawnień obiektu wywołującego za pomocą użytkownika określonego w EXECUTE AS klauzuli. Zagnieżdżone procedur składowanych i wyzwalaczy należy wykonać w kontekście zabezpieczeń użytkownika serwera proxy. Może to spowodować awarię aplikacji, które polegają na zabezpieczenia na poziomie wiersza lub wymagają przeprowadzania inspekcji. Niektóre funkcje, które zwracają tożsamości użytkownika zwracają użytkownika określonego w EXECUTE AS klauzuli, nie oryginalny obiekt wywołujący. Kontekst wykonywania zostanie przywrócona do oryginalnego obiektu wywołującego dopiero po wykonanie procedury lub po wygenerowaniu instrukcji REVERT.  

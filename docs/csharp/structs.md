@@ -7,8 +7,8 @@ ms.openlocfilehash: 6fcd30907880be9159b3cc2e3ab10659ddec248b
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706458"
 ---
 # <a name="structs"></a>Struktury
 A *struktury* jest typem wartości. Po utworzeniu struktury, zmienna, do którego jest przypisana struktura zawiera rzeczywiste dane struktury. Struktura jest przypisywana do nowej zmiennej, są kopiowane. Nowa zmienna i pierwotna zmienna zatem zawierają dwie oddzielne kopie tych samych danych. Zmiany wprowadzone w jednym egzemplarzu nie wpływają na drugi egzemplarz.
@@ -35,21 +35,21 @@ Aby uzyskać więcej informacji na temat typów wartości w programie .NET Frame
     
 Struktury udostępniać większość tej samej składni jak klasy, chociaż struktur są bardziej ograniczone niż klasy:  
   
--   W deklaracji struktury, pola nie można zainicjować, chyba że są one zadeklarowane jako `const` lub `static`.  
+- W deklaracji struktury, pola nie można zainicjować, chyba że są one zadeklarowane jako `const` lub `static`.  
   
--   Struktura nie można zadeklarować konstruktora bez parametrów (Konstruktor bez parametrów) lub finalizatora.  
+- Struktura nie można zadeklarować konstruktora bez parametrów (Konstruktor bez parametrów) lub finalizatora.  
   
--   Struktury są kopiowane w przydziale. Gdy struktura jest przypisywana nowej zmiennej, wszystkie dane są kopiowane, a wszelkie zmiany nowa kopia nie zmienia danych do oryginalnej kopii. Jest to ważne podczas pracy z kolekcjami typów wartości, takich jak Dictionary < string, myStruct >.  
+- Struktury są kopiowane w przydziale. Gdy struktura jest przypisywana nowej zmiennej, wszystkie dane są kopiowane, a wszelkie zmiany nowa kopia nie zmienia danych do oryginalnej kopii. Jest to ważne podczas pracy z kolekcjami typów wartości, takich jak Dictionary < string, myStruct >.  
   
--   Struktury są typami wartości i klasy są typami odwołań.  
+- Struktury są typami wartości i klasy są typami odwołań.  
   
--   W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora.  
+- W przeciwieństwie do klasy, struktury mogą być utworzone bez użycia `new` operatora.  
   
--   Struktury można zadeklarować konstruktorów, które mają parametry.  
+- Struktury można zadeklarować konstruktorów, które mają parametry.  
   
--   Struktura nie może dziedziczyć z innej struktury lub klasy, a nie może być podstawą klasy. Wszystkie struktury dziedziczyć bezpośrednio <xref:System.ValueType>, który dziedziczy z <xref:System.Object>.  
+- Struktura nie może dziedziczyć z innej struktury lub klasy, a nie może być podstawą klasy. Wszystkie struktury dziedziczyć bezpośrednio <xref:System.ValueType>, który dziedziczy z <xref:System.Object>.  
   
--   Struktura może zaimplementować interfejsów.
+- Struktura może zaimplementować interfejsów.
 
 ## <a name="literal-values"></a>Wartości literałów  
 W języku C# wartości literału otrzymują typ z kompilatora. Możesz określić jak literał liczbowy powinien wpisana przez dołączenie litery na końcu numeru. Na przykład aby określić, że wartość 4,56 powinny być traktowane jako zmiennoprzecinkowa, dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli żadna litera nie zostanie dołączony, kompilator wywnioskuje `double` typ dla literału. Aby uzyskać więcej informacji na temat tego, jakie typy można określić za pomocą literowych sufiksów, zobacz strony pomocy dla poszczególnych typów w [typów wartości](./language-reference/keywords/value-types.md).  

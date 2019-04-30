@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: KrzysztofCwalina
 ms.openlocfilehash: c0645ba1179c4c6fd961b871b3061cd51174f427
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669098"
 ---
 # <a name="enum-design"></a>Projekt wyliczeń
 Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje wyliczeń: prostych typów wyliczeniowych i flagi wyliczeń.  
@@ -48,17 +48,17 @@ Typy wyliczeniowe są specjalnym rodzajem typu wartości. Istnieją dwa rodzaje 
   
  **✓ CONSIDER** przy użyciu <xref:System.Int32> (ustawienie domyślne w większości języków programowania) jako typu bazowego typu wyliczeniowego, chyba że jest spełniony jeden z następujących czynności:  
   
--   Wyliczenia jest wyliczenie flag i masz więcej niż 32 flag lub chcą mieć w przyszłości.  
+- Wyliczenia jest wyliczenie flag i masz więcej niż 32 flag lub chcą mieć w przyszłości.  
   
--   Typ podstawowy musi być inna niż <xref:System.Int32> dla ułatwia współdziałanie z kodem niezarządzanym Oczekiwano innego rozmiaru wyliczenia.  
+- Typ podstawowy musi być inna niż <xref:System.Int32> dla ułatwia współdziałanie z kodem niezarządzanym Oczekiwano innego rozmiaru wyliczenia.  
   
--   Mniejsze bazowego typu spowoduje znaczne oszczędności miejsca. Jeśli oczekujesz, wyliczenia, które ma być używany przede wszystkim jako argument dla przepływu sterowania, rozmiar sprawia, że niewielkie różnice. Oszczędności rozmiaru wynikające mogą być znaczące, jeśli:  
+- Mniejsze bazowego typu spowoduje znaczne oszczędności miejsca. Jeśli oczekujesz, wyliczenia, które ma być używany przede wszystkim jako argument dla przepływu sterowania, rozmiar sprawia, że niewielkie różnice. Oszczędności rozmiaru wynikające mogą być znaczące, jeśli:  
   
-    -   Oczekujesz, że wyliczenie, które ma być używany jako pole w bardzo często skonkretyzowany struktury lub klasy.  
+    - Oczekujesz, że wyliczenie, które ma być używany jako pole w bardzo często skonkretyzowany struktury lub klasy.  
   
-    -   Oczekujesz, że użytkownicy, aby utworzyć duże tablice i kolekcje wystąpieniami enum.  
+    - Oczekujesz, że użytkownicy, aby utworzyć duże tablice i kolekcje wystąpieniami enum.  
   
-    -   Spodziewasz się dużej liczby wystąpień typu wyliczeniowego do zserializowania.  
+    - Spodziewasz się dużej liczby wystąpień typu wyliczeniowego do zserializowania.  
   
  Do użycia w pamięci należy pamiętać, że zarządzane obiekty są zawsze `DWORD`-wyrównane, więc należy skutecznie wiele typów wyliczeniowych lub innych struktur małe w wystąpieniu umieszczenie mniejszych wyliczenia z celu reagować, ponieważ rozmiar wystąpienia całkowita jest zawsze Zamierzasz zaokrąglone do `DWORD`.  
   

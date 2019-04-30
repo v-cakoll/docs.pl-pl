@@ -7,11 +7,11 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 5f898bf342c8596d9dd4cc0b03396aec4dcf545c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710761"
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych kolekcji, takich jak połączonej listy, tabele zbędnych danych, stosów, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadzie taki sam sposób niezależnie od rodzaju przechowywanych danych.  
@@ -20,19 +20,19 @@ Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określoneg
   
  Zazwyczaj tworzony klasy ogólne, począwszy od konkretnego istniejącej klasy, a zmiany typów w parametrach typu jeden do czasu osiągnięcia optymalną proporcję generalizacji i użyteczności tworzonych rozwiązań. Podczas tworzenia własnych klas ogólnych, istotne zagadnienia są następujące:  
   
--   Typy, które można uogólnić do parametrów typu.  
+- Typy, które można uogólnić do parametrów typu.  
   
      Jako regułę, większą liczbę typów, które można zdefiniować parametry, bardziej elastyczne i wielokrotnego użytku staje się kodu. Zbyt dużo Generalizacja można jednak utworzyć kod, który jest trudny innym deweloperom do odczytu lub zrozumieć.  
   
--   Jakie ograniczenia, jeśli istnieją, aby zastosować do parametrów typu (zobacz [ograniczenia dotyczące parametrów typu](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
+- Jakie ograniczenia, jeśli istnieją, aby zastosować do parametrów typu (zobacz [ograniczenia dotyczące parametrów typu](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)).  
   
      Rozsądną regułą polega na zastosowaniu maksymalna ograniczenia możliwości, które pozwoli obsługiwać typy, które muszą obsługiwać. Na przykład jeśli wiesz, że Twoje klasy generycznej jest przeznaczony do użytku tylko w przypadku typów referencyjnych, mają zastosowanie ograniczenia klasy. Uniemożliwi niezamierzone korzystanie z klasy z typami wartości i umożliwi przy użyciu `as` operatora na `T`i sprawdź, czy dla wartości null.  
   
--   Określa, czy uwzględnić ogólne zachowanie podstawowych klas i podklas.  
+- Określa, czy uwzględnić ogólne zachowanie podstawowych klas i podklas.  
   
      Ponieważ klas ogólnych może służyć jako klay bazowe, tym samym zagadnienia dotyczące projektowania zgłosić się tutaj podobnie jak w przypadku nieogólnej klasy. Zobacz reguły o dziedziczy z klasy bazowej ogólne w dalszej części tego tematu.  
   
--   Określa, czy zaimplementować jeden lub więcej interfejsów ogólnych.  
+- Określa, czy zaimplementować jeden lub więcej interfejsów ogólnych.  
   
      Na przykład w przypadku projektowania klasę, która będzie służyć do tworzenia elementów w kolekcji na podstawie typów ogólnych, może być konieczne takich jak implementować interfejsu <xref:System.IComparable%601> gdzie `T` jest typem klasy.  
   

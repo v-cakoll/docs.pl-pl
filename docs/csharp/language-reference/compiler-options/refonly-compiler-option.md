@@ -9,10 +9,10 @@ helpviewer_keywords:
 - refonly compiler option [C#]
 ms.openlocfilehash: 97245b50881d687572c1ae1df649651831822094
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662481"
 ---
 # <a name="-refonly-c-compiler-options"></a>-jest opcja SET refonly (opcje kompilatora C#)
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
 ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696174"
 ---
 # <a name="custom-bindings"></a>Powiązania niestandardowe
 Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedno z powiązań dostarczanych przez system nie spełnia wymagania dotyczące usługi. Wszystkie powiązania są konstruowane na podstawie uporządkowany zestaw elementów wiązania. Powiązania niestandardowe mogą być zbudowane z zestaw elementów powiązania dostarczane przez system lub może zawierać elementów zdefiniowanych przez użytkownika niestandardowego powiązania. Elementy powiązania niestandardowego, na przykład umożliwia korzystanie z nowego transportu lub koderów na punkt końcowy usługi. Przykłady pracy, zobacz [niestandardowe powiązanie przykłady](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Aby uzyskać więcej informacji, zobacz [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -18,47 +18,47 @@ Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedn
 ## <a name="construction-of-a-custom-binding"></a>Konstrukcja powiązania niestandardowego  
  Powiązanie niestandardowe jest tworzony przy użyciu <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> konstruktora z kolekcji elementów, które są "skumulowany" w określonej kolejności wiązania:  
   
--   U góry to opcjonalna <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> klasę, która umożliwia przepływu transakcji.  
+- U góry to opcjonalna <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> klasę, która umożliwia przepływu transakcji.  
   
--   Następnie to opcjonalna <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> klasę, która zapewnia sesji i kolejność mechanizmów, zgodnie z definicją w specyfikacji WS-ReliableMessaging. Sesja może krzyżowe pośredników SOAP i mechanizm transportu.  
+- Następnie to opcjonalna <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> klasę, która zapewnia sesji i kolejność mechanizmów, zgodnie z definicją w specyfikacji WS-ReliableMessaging. Sesja może krzyżowe pośredników SOAP i mechanizm transportu.  
   
--   Następnie to opcjonalna <xref:System.ServiceModel.Channels.SecurityBindingElement> klasę, która zapewnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufnością.  
+- Następnie to opcjonalna <xref:System.ServiceModel.Channels.SecurityBindingElement> klasę, która zapewnia funkcje zabezpieczeń, takich jak autoryzacja, uwierzytelnianie, ochrony i poufnością.  
   
--   Następnie to opcjonalna <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> klasę, która zapewnia możliwość mieć dwa sposób paradygmacie komunikacji przy użyciu protokołu transportu, która nie obsługuje komunikację dupleksową natywnie, takich jak HTTP.  
+- Następnie to opcjonalna <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement> klasę, która zapewnia możliwość mieć dwa sposób paradygmacie komunikacji przy użyciu protokołu transportu, która nie obsługuje komunikację dupleksową natywnie, takich jak HTTP.  
   
--   Następnie to opcjonalna <xref:System.ServiceModel.Channels.OneWayBindingElement>) klasę, która zapewnia komunikację jednokierunkową.  
+- Następnie to opcjonalna <xref:System.ServiceModel.Channels.OneWayBindingElement>) klasę, która zapewnia komunikację jednokierunkową.  
   
--   Następnym ekranem jest opcjonalny strumienia elementu powiązania zabezpieczeń, który może być jednym z następujących czynności.  
+- Następnym ekranem jest opcjonalny strumienia elementu powiązania zabezpieczeń, który może być jednym z następujących czynności.  
   
-    -   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+    - <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   Następnym ekranem jest element powiązania z kodowania komunikatu wymagane. Można użyć koder komunikatu lub jeden z trzech powiązania kodowania komunikatu:  
+- Następnym ekranem jest element powiązania z kodowania komunikatu wymagane. Można użyć koder komunikatu lub jeden z trzech powiązania kodowania komunikatu:  
   
-    -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-    -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
+    - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
  W dolnej części jest element wymagany transportu. Można użyć własnych transportu lub jedną z następujących elementy powiązania transportu, przez Windows Communication Foundation (WCF):  
   
--   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.MsmqTransportBindingElement>  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>  
   
--   <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
  Poniższa tabela podsumowuje opcje dla każdej warstwy.  
   
@@ -67,8 +67,8 @@ Możesz użyć <xref:System.ServiceModel.Channels.CustomBinding> klasy, gdy jedn
 |Transakcje|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Nie|  
 |Niezawodność|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Nie|  
 |Zabezpieczenia|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Nie|  
-|Kodowanie|Tekst, niestandardowe dane binarne, komunikat transmisji optymalizacji mechanizm (MTOM)|Yes|  
-|Transport|TCP, HTTP i HTTPS, nazwanych potoków (znany także jako IPC) między równorzędnych (P2P), Usługa kolejkowania komunikatów (MSMQ), niestandardowe|Tak|  
+|Kodowanie|Tekst, niestandardowe dane binarne, komunikat transmisji optymalizacji mechanizm (MTOM)|Tak|  
+|Transport|TCP, HTTP i HTTPS, nazwanych potoków (znany także jako IPC) między równorzędnych (P2P), Usługa kolejkowania komunikatów (MSMQ), niestandardowe|Yes|  
   
  Ponadto można zdefiniować własne elementy powiązania i wstawione między dowolnymi poprzedniej warstwy zdefiniowanej przez użytkownika.  
   

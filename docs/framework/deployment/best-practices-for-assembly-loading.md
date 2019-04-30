@@ -15,24 +15,24 @@ ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53397049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673046"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Najlepsze praktyki dotyczące ładowania zestawu
 W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, który może prowadzić do <xref:System.InvalidCastException>, <xref:System.MissingMethodException>i inne błędy. W tym artykule omówiono następujące zalecenia:  
   
--   [Zrozumieć zalety i wady konteksty ładowania](#load_contexts)  
+- [Zrozumieć zalety i wady konteksty ładowania](#load_contexts)  
   
--   [Należy unikać powiązaniu w elemencie nazwy zestawów częściowej](#avoid_partial_names)  
+- [Należy unikać powiązaniu w elemencie nazwy zestawów częściowej](#avoid_partial_names)  
   
--   [Unikaj podczas ładowania zestawu w wielu kontekstach](#avoid_loading_into_multiple_contexts)  
+- [Unikaj podczas ładowania zestawu w wielu kontekstach](#avoid_loading_into_multiple_contexts)  
   
--   [Unikaj podczas ładowania wielu wersji zestawu, w tym samym kontekście](#avoid_loading_multiple_versions)  
+- [Unikaj podczas ładowania wielu wersji zestawu, w tym samym kontekście](#avoid_loading_multiple_versions)  
   
--   [Rozważ przejście na domyślny kontekst ładowania](#switch_to_default)  
+- [Rozważ przejście na domyślny kontekst ładowania](#switch_to_default)  
   
  Pierwszego zalecenia [zrozumieć zalety i wady konteksty ładowania](#load_contexts), zawiera ogólne informacje dla innych zaleceń, ponieważ zależą one wszystkie znajomości konteksty ładowania.  
   
@@ -40,13 +40,13 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Zrozumieć zalety i wady konteksty ładowania  
  W ramach domeny aplikacji zestawów może być załadowany do jednej z trzech kontekstów, lub może być załadowany bez kontekstu:  
   
--   Domyślny kontekst ładowania zawiera zestawy znalezione przez sondowanie global assembly cache magazynu zestawów hosta, jeśli środowisko wykonawcze jest hostowana (na przykład w programie SQL Server), a <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> domeny aplikacji. Większość przeciążenia <xref:System.Reflection.Assembly.Load%2A> metoda Ładuj zestawy w tym kontekście.  
+- Domyślny kontekst ładowania zawiera zestawy znalezione przez sondowanie global assembly cache magazynu zestawów hosta, jeśli środowisko wykonawcze jest hostowana (na przykład w programie SQL Server), a <xref:System.AppDomainSetup.ApplicationBase%2A> i <xref:System.AppDomainSetup.PrivateBinPath%2A> domeny aplikacji. Większość przeciążenia <xref:System.Reflection.Assembly.Load%2A> metoda Ładuj zestawy w tym kontekście.  
   
--   Kontekst load-from zawiera zestawy, które są ładowane z lokalizacji, które nie są przeszukiwane przez moduł ładujący. Na przykład dodatków może być zainstalowane w katalogu, który nie znajduje się w ścieżce aplikacji. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>, i <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> przedstawiono przykładowe metody, które są ładowane przy użyciu ścieżki.  
+- Kontekst load-from zawiera zestawy, które są ładowane z lokalizacji, które nie są przeszukiwane przez moduł ładujący. Na przykład dodatków może być zainstalowane w katalogu, który nie znajduje się w ścieżce aplikacji. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType>, i <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> przedstawiono przykładowe metody, które są ładowane przy użyciu ścieżki.  
   
--   Kontekstu reflection-only zawiera zestawy, ładowane z <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody. Nie można wykonać kod w tym kontekście, więc nie jest tutaj omówiona. Aby uzyskać więcej informacji, zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- Kontekstu reflection-only zawiera zestawy, ładowane z <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody. Nie można wykonać kod w tym kontekście, więc nie jest tutaj omówiona. Aby uzyskać więcej informacji, zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
--   Jeśli przemijający zestaw dynamiczny jest generowany przy użyciu odbicia emisji, zestaw nie jest w jakimkolwiek kontekście. Ponadto większość zestawów, które są ładowane przy użyciu <xref:System.Reflection.Assembly.LoadFile%2A> metody zostały załadowane bez kontekstu i zestawy, które są ładowane z tablic bajtowych są załadowane bez kontekstu, chyba że tożsamości (po zastosowaniu zasad) określa, czy znajdują się w Globalna pamięć podręczna zestawów.  
+- Jeśli przemijający zestaw dynamiczny jest generowany przy użyciu odbicia emisji, zestaw nie jest w jakimkolwiek kontekście. Ponadto większość zestawów, które są ładowane przy użyciu <xref:System.Reflection.Assembly.LoadFile%2A> metody zostały załadowane bez kontekstu i zestawy, które są ładowane z tablic bajtowych są załadowane bez kontekstu, chyba że tożsamości (po zastosowaniu zasad) określa, czy znajdują się w Globalna pamięć podręczna zestawów.  
   
  Kontekstów wykonanie mają zalety i wady, zgodnie z opisem w poniższych sekcjach.  
   
@@ -55,28 +55,28 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
   
  Używając domyślnego kontekstu obciążenia ma następujące wady:  
   
--   Zależności, które są ładowane do innych kontekstach nie są dostępne.  
+- Zależności, które są ładowane do innych kontekstach nie są dostępne.  
   
--   Nie można załadować zestawów z lokalizacji poza ścieżką badania do domyślny kontekst ładowania.  
+- Nie można załadować zestawów z lokalizacji poza ścieżką badania do domyślny kontekst ładowania.  
   
 ### <a name="load-from-context"></a>Kontekst Load-From  
  Kontekst load-from umożliwia Ładuj zestaw ze ścieżki, nie znajduje się w ścieżce aplikacji, a w związku z tym nie są objęte sondowania. Umożliwia ona zależności zlokalizowanie i ładowane z tej ścieżki, ponieważ informacje o ścieżce są obsługiwane przez kontekst. Ponadto zestawów w tym kontekście użyć zależności, które są ładowane do domyślny kontekst ładowania.  
   
  Ładowanie zestawów przy użyciu <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metody lub jednej z metod, które są ładowane przy użyciu ścieżki, ma następujące wady:  
   
--   Jeśli zestaw o tej samej tożsamości jest już załadowany, <xref:System.Reflection.Assembly.LoadFrom%2A> zwraca załadowany zestaw, nawet jeśli określono inną ścieżkę.  
+- Jeśli zestaw o tej samej tożsamości jest już załadowany, <xref:System.Reflection.Assembly.LoadFrom%2A> zwraca załadowany zestaw, nawet jeśli określono inną ścieżkę.  
   
--   Jeśli zestaw jest ładowany z <xref:System.Reflection.Assembly.LoadFrom%2A>, a później próbuje załadować tego samego zestawu według nazwy wyświetlanej zestawu w domyślnym kontekście ładowania, próba załadowania kończy się niepowodzeniem. Taka sytuacja może wystąpić, gdy zestaw jest przeprowadzona.  
+- Jeśli zestaw jest ładowany z <xref:System.Reflection.Assembly.LoadFrom%2A>, a później próbuje załadować tego samego zestawu według nazwy wyświetlanej zestawu w domyślnym kontekście ładowania, próba załadowania kończy się niepowodzeniem. Taka sytuacja może wystąpić, gdy zestaw jest przeprowadzona.  
   
--   Jeśli zestaw jest ładowany z <xref:System.Reflection.Assembly.LoadFrom%2A>, i badania ścieżka zawiera zestaw o tej samej tożsamości, ale w innej lokalizacji, <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, lub inne nieoczekiwane zachowania mogą wystąpić.  
+- Jeśli zestaw jest ładowany z <xref:System.Reflection.Assembly.LoadFrom%2A>, i badania ścieżka zawiera zestaw o tej samej tożsamości, ale w innej lokalizacji, <xref:System.InvalidCastException>, <xref:System.MissingMethodException>, lub inne nieoczekiwane zachowania mogą wystąpić.  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> żądania <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> i <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, lub <xref:System.Net.WebPermission>, w określonej ścieżce.  
+- <xref:System.Reflection.Assembly.LoadFrom%2A> żądania <xref:System.Security.Permissions.FileIOPermissionAccess.Read?displayProperty=nameWithType> i <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery?displayProperty=nameWithType>, lub <xref:System.Net.WebPermission>, w określonej ścieżce.  
   
--   Jeśli istnieje obraz natywny dla zestawu, nie jest używany.  
+- Jeśli istnieje obraz natywny dla zestawu, nie jest używany.  
   
--   Nie można załadować zestawów jako neutralnych dla domen.  
+- Nie można załadować zestawów jako neutralnych dla domen.  
   
--   Zasady nie są stosowane w wersjach programu .NET Framework 1.0 i 1.1.  
+- Zasady nie są stosowane w wersjach programu .NET Framework 1.0 i 1.1.  
   
 ### <a name="no-context"></a>Brak kontekstu  
  Trwa ładowanie bez kontekstu jest jedyną opcją dla zestawów przejściowe, które są generowane przy użyciu odbicia emisji. Trwa ładowanie bez kontekstu jest jedynym sposobem, aby załadować wiele zestawów, które mają taką samą tożsamość w jednej aplikacji domeny. Koszt badania jest unikane.  
@@ -85,17 +85,17 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
   
  Ładowanie zestawów bez kontekstu ma następujące wady:  
   
--   Inne zestawy nie można powiązać zestawy, które zostały załadowane bez kontekstu, o ile nie można obsłużyć <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
+- Inne zestawy nie można powiązać zestawy, które zostały załadowane bez kontekstu, o ile nie można obsłużyć <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
   
--   Zależności nie są ładowane automatycznie. Wstępne ładowanie je bez kontekstu, wstępnego ładowania ich do domyślny kontekst ładowania lub załadować je obsługi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
+- Zależności nie są ładowane automatycznie. Wstępne ładowanie je bez kontekstu, wstępnego ładowania ich do domyślny kontekst ładowania lub załadować je obsługi <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzeń.  
   
--   Wiele zestawów o tej samej tożsamości bez kontekstu ładowania może powodować problemy tożsamości typu jest podobne do tych spowodowane ładowania zestawów z tą samą tożsamością w wielu kontekstach. Zobacz [uniknąć wczytywania zestawu w wielu kontekstach](#avoid_loading_into_multiple_contexts).  
+- Wiele zestawów o tej samej tożsamości bez kontekstu ładowania może powodować problemy tożsamości typu jest podobne do tych spowodowane ładowania zestawów z tą samą tożsamością w wielu kontekstach. Zobacz [uniknąć wczytywania zestawu w wielu kontekstach](#avoid_loading_into_multiple_contexts).  
   
--   Jeśli istnieje obraz natywny dla zestawu, nie jest używany.  
+- Jeśli istnieje obraz natywny dla zestawu, nie jest używany.  
   
--   Nie można załadować zestawów jako neutralnych dla domen.  
+- Nie można załadować zestawów jako neutralnych dla domen.  
   
--   Zasady nie są stosowane w wersjach programu .NET Framework 1.0 i 1.1.  
+- Zasady nie są stosowane w wersjach programu .NET Framework 1.0 i 1.1.  
   
 <a name="avoid_partial_names"></a>   
 ## <a name="avoid-binding-on-partial-assembly-names"></a>Należy unikać powiązanie dla nazwy zestawów częściowej  
@@ -103,15 +103,15 @@ W tym artykule omówiono sposób, aby uniknąć problemów tożsamości typu, kt
   
  Powiązania nazwy częściowej może spowodować wiele problemów, w tym następujące:  
   
--   <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> Metoda może załadować innego zestawu o tej samej prostej nazwie. Na przykład dwóch aplikacji może zainstalować dwie całkowicie różne zestawy czy obie pozycje mają prostą nazwę `GraphicsLibrary` w globalnej pamięci podręcznej.  
+- <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> Metoda może załadować innego zestawu o tej samej prostej nazwie. Na przykład dwóch aplikacji może zainstalować dwie całkowicie różne zestawy czy obie pozycje mają prostą nazwę `GraphicsLibrary` w globalnej pamięci podręcznej.  
   
--   Zestaw, który jest ładowany w rzeczywistości może nie być zgodne z poprzednimi wersjami. Na przykład nie został podany w wersji może spowodować załadowanie dużej ilości wersją nowszą niż wersja programu został początkowo zapisywane do użycia. Zmiany w nowszej wersji może spowodować błędy w aplikacji.  
+- Zestaw, który jest ładowany w rzeczywistości może nie być zgodne z poprzednimi wersjami. Na przykład nie został podany w wersji może spowodować załadowanie dużej ilości wersją nowszą niż wersja programu został początkowo zapisywane do użycia. Zmiany w nowszej wersji może spowodować błędy w aplikacji.  
   
--   Zestaw, który jest ładowany w rzeczywistości może nie być zgodne. Na przykład możesz może mieć tworzone i testowane na aplikację do najnowszej wersji zestawu, ale powiązanie częściowe może ładować znacznie starszą wersję, która nie ma funkcji używanych przez aplikację.  
+- Zestaw, który jest ładowany w rzeczywistości może nie być zgodne. Na przykład możesz może mieć tworzone i testowane na aplikację do najnowszej wersji zestawu, ale powiązanie częściowe może ładować znacznie starszą wersję, która nie ma funkcji używanych przez aplikację.  
   
--   Instalowanie nowych aplikacji może uszkodzić istniejące aplikacje. Aplikacja, która używa <xref:System.Reflection.Assembly.LoadWithPartialName%2A> metoda można zaburzyć przez zainstalowanie nowszej, niezgodnej wersji zestaw współużytkowany.  
+- Instalowanie nowych aplikacji może uszkodzić istniejące aplikacje. Aplikacja, która używa <xref:System.Reflection.Assembly.LoadWithPartialName%2A> metoda można zaburzyć przez zainstalowanie nowszej, niezgodnej wersji zestaw współużytkowany.  
   
--   Mogą wystąpić nieoczekiwane zależności ładowania. Załadować dwa zestawy tego udziału, zależności, ładowania ich z powiązaniem częściowe mogą wystąpić w jednym zestawie za pomocą składnika, który nie był skompilowany lub przetestowane za pomocą.  
+- Mogą wystąpić nieoczekiwane zależności ładowania. Załadować dwa zestawy tego udziału, zależności, ładowania ich z powiązaniem częściowe mogą wystąpić w jednym zestawie za pomocą składnika, który nie był skompilowany lub przetestowane za pomocą.  
   
  Z powodu problemów, może to spowodować <xref:System.Reflection.Assembly.LoadWithPartialName%2A> metoda ma został oznaczony jako przestarzały. Firma Microsoft zaleca użycie <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody zamiast tego i określić pełny zestaw nazw wyświetlanych. Zobacz [zrozumieć zalety i wady konteksty ładowania](#load_contexts) i [rozważ przejście na domyślny kontekst ładowania](#switch_to_default).  
   

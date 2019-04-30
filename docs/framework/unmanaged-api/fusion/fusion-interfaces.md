@@ -9,57 +9,57 @@ ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697670"
 ---
 # <a name="fusion-interfaces"></a>Interfejsy łączenia
-W tej sekcji opisano niezarządzane interfejsy, które fusion interfejsu API używane do dostępu do właściwości zasobów aplikacji i lokalizowania poprawne wersje tych zasobów dla aplikacji.  
+W tej sekcji opisano niezarządzane interfejsy, których używa fusion interfejsu API, uzyskiwania dostępu do właściwości zasobów aplikacji i w celu zlokalizowania poprawne wersje tych zasobów dla aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [IAppIdAuthority, interfejs](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)  
- Udostępnia metody, które Generowanie i klucze dla tożsamości aplikacji i odwołania do porównania.  
+ Udostępnia metody, generujących i klucze dla tożsamości aplikacji i odwołania do porównania.  
   
  [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
- Udostępnia reprezentację globalnej pamięci podręcznej zestawów.  
+ Udostępnia reprezentację globalnej pamięci podręcznej.  
   
  [IAssemblyCacheItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
- Reprezentuje pojedynczy zestawu w globalnej pamięci podręcznej zestawów.  
+ Reprezentuje pojedynczy zestaw w globalnej pamięci podręcznej.  
   
  [IAssemblyEnum, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
  Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.  
   
  [IAssemblyName, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- Udostępnia metody opisujące i pracy z unikatowych tożsamości zestawu.  
+ Udostępnia metody dla opisania i Praca z unikatową tożsamość zestawu.  
   
  [IDefinitionAppId, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)  
  Reprezentuje unikatowy identyfikator dla kodu, który definiuje aplikacji w bieżącym zakresie.  
   
  [IDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)  
- Reprezentuje podpis unikatowy kod, który definiuje aplikacji w bieżącym zakresie.  
+ Reprezentuje unikatowy podpis kodu, który definiuje aplikacji w bieżącym zakresie.  
   
  [IEnumDefinitionIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumdefinitionidentity-interface.md)  
- Pełni rolę modułu wyliczającego dla kolekcji `IDefinitionIdentity` obiektów.  
+ Służy jako modułu wyliczającego dla kolekcji `IDefinitionIdentity` obiektów.  
   
  [IEnumIDENTITY_ATTRIBUTE, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
  Służy jako moduł wyliczający dla atrybutów obiektu kodu w bieżącym zakresie.  
   
  [IEnumReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumreferenceidentity-interface.md)  
- Służy jako moduł wyliczający kolekcji `IReferenceIdentity` obiektów.  
+ Służy jako moduł wyliczający dla kolekcji `IReferenceIdentity` obiektów.  
   
  [IIdentityAuthority, interfejs](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md)  
- Zarządza tożsamości klucze obiekty kod.  
+ Zarządza kluczy tożsamości dla obiektów kodu.  
   
  [IInstallReferenceEnum, interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)  
- Reprezentuje moduł wyliczający dla zestawów występujących w odwołaniach zainstalowany w globalnej pamięci podręcznej zestawów.  
+ Reprezentuje moduł wyliczający przywoływanych zestawach zainstalowane w globalnej pamięci podręcznej.  
   
  [IInstallReferenceItem, interfejs](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- Reprezentuje element zainstalowany w globalnej pamięci podręcznej zestawów.  
+ Reprezentuje element, który został zainstalowany w globalnej pamięci podręcznej.  
   
  [IReferenceAppId, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md)  
- Reprezentuje odwołanie do Unikatowy identyfikator dla aplikacji w bieżącym zakresie.  
+ Reprezentuje odwołanie do Unikatowy identyfikator aplikacji w bieżącym zakresie.  
   
  [IReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
  Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.  

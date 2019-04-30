@@ -4,13 +4,13 @@ description: Dowiedz się, jak wykonanie lewych sprzężeń zewnętrznych za pom
 ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
 ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61688582"
 ---
-# <a name="perform-left-outer-joins"></a>Wykonanie lewych sprzężeń zewnętrznych
+# <a name="perform-left-outer-joins"></a>Wykonywanie lewych sprzężeń zewnętrznych
 
 Lewe sprzężenie zewnętrzne jest elementem sprzężenia, w której każdy element pierwsza kolekcja jest zwracana, niezależnie od tego, czy ma żadnych elementów skorelowane w drugiej kolekcji. LINQ umożliwia wykonywanie lewe sprzężenie zewnętrzne, wywołując <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> metody na wynikach sprzężenie grupy.
 

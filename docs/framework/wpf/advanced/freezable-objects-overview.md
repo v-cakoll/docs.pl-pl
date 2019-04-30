@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703328"
 ---
 # <a name="freezable-objects-overview"></a>Przegląd Obiekty Freezable
 W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Freezable> obiektów, które zapewniają funkcje specjalne, które mogą pomóc zwiększyć wydajność aplikacji. Przykładami obiektów freezable pędzle, pióra, przekształcenia, geometrii i animacji.  
@@ -63,11 +63,11 @@ W tym temacie opisano, jak skutecznie używać i Utwórz <xref:System.Windows.Fr
   
  Freezable **nie** nelze zmrazit w przypadku spełnienia dowolnego z następujących czynności:  
   
--   Ma ona animowane lub powiązania danych właściwości.  
+- Ma ona animowane lub powiązania danych właściwości.  
   
--   Zawiera właściwości ustawione przez zasób dynamiczny. (Zobacz [zasoby XAML](xaml-resources.md) Aby uzyskać więcej informacji o zasobach dynamicznych.)  
+- Zawiera właściwości ustawione przez zasób dynamiczny. (Zobacz [zasoby XAML](xaml-resources.md) Aby uzyskać więcej informacji o zasobach dynamicznych.)  
   
--   Zawiera on <xref:System.Windows.Freezable> obiekty podrzędne, które nie mogą być zablokowane.  
+- Zawiera on <xref:System.Windows.Freezable> obiekty podrzędne, które nie mogą być zablokowane.  
   
  Jeśli te warunki mają wartość false, a nie zamierzasz zmodyfikować <xref:System.Windows.Freezable>, wówczas powinien zablokowaniu, opisanych wcześniej korzyści wydajności.  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Tworzenie klasy Freezable  
  Klasa, która pochodzi od klasy <xref:System.Windows.Freezable> uzyskuje się następujące funkcje.  
   
--   Stany specjalne: tylko do odczytu (zamrożona) i stanie zapisywalnym.  
+- Stany specjalne: tylko do odczytu (zamrożona) i stanie zapisywalnym.  
   
--   Bezpieczeństwo wątków: zamrożone <xref:System.Windows.Freezable> udostępniona w wielu wątkach.  
+- Bezpieczeństwo wątków: zamrożone <xref:System.Windows.Freezable> udostępniona w wielu wątkach.  
   
--   Powiadomienie o zmianie szczegółowe: W odróżnieniu od innych <xref:System.Windows.DependencyObject>s, obiekty Freezable zapewniają powiadomienia o zmianie po zmianie wartości właściwości podrzędnych.  
+- Powiadomienie o zmianie szczegółowe: W odróżnieniu od innych <xref:System.Windows.DependencyObject>s, obiekty Freezable zapewniają powiadomienia o zmianie po zmianie wartości właściwości podrzędnych.  
   
--   Klonowanie proste: Freezable klasy zaimplementował już kilka metod, które tworzą klony głębokiego.  
+- Klonowanie proste: Freezable klasy zaimplementował już kilka metod, które tworzą klony głębokiego.  
   
  A <xref:System.Windows.Freezable> jest typem <xref:System.Windows.DependencyObject>i w związku z tym korzysta z systemu właściwości zależności. Właściwości klasy nie muszą być właściwościami zależności, ale przy użyciu właściwości zależności zmniejsza ilość kodu, który trzeba napisać, ponieważ <xref:System.Windows.Freezable> klasy został zaprojektowany przy użyciu właściwości zależności na uwadze. Aby uzyskać więcej informacji na temat systemu właściwość zależności zobacz [Przegląd właściwości zależności](dependency-properties-overview.md).  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  Jeśli klasa zawiera elementy członkowskie danych właściwości bez zależności, należy również zastąpić następujące metody:  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  Należy również zgodna z poniższymi regułami do uzyskiwania dostępu i zapisywanie do elementów członkowskich danych, które nie są właściwości zależności:  
   
--   Na początku dowolnego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , odczytuje elementy członkowskie danych właściwości bez zależności, wywołaj <xref:System.Windows.Freezable.ReadPreamble%2A> metody.  
+- Na początku dowolnego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] , odczytuje elementy członkowskie danych właściwości bez zależności, wywołaj <xref:System.Windows.Freezable.ReadPreamble%2A> metody.  
   
--   Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.WritePreamble%2A> metody. (Gdy została wywołana <xref:System.Windows.Freezable.WritePreamble%2A> w [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], nie potrzebujesz do wywoływania dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> Jeśli przeczytaj również elementy członkowskie danych właściwości innych zależności.)  
+- Na początku dowolnego interfejsu API, który zapisuje elementy członkowskie danych właściwości bez zależności, należy wywołać <xref:System.Windows.Freezable.WritePreamble%2A> metody. (Gdy została wywołana <xref:System.Windows.Freezable.WritePreamble%2A> w [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], nie potrzebujesz do wywoływania dodatkowych <xref:System.Windows.Freezable.ReadPreamble%2A> Jeśli przeczytaj również elementy członkowskie danych właściwości innych zależności.)  
   
--   Wywołaj <xref:System.Windows.Freezable.WritePostscript%2A> metoda przed wyjściem metody modyfikujące właściwość zależności innych składowych danych.  
+- Wywołaj <xref:System.Windows.Freezable.WritePostscript%2A> metoda przed wyjściem metody modyfikujące właściwość zależności innych składowych danych.  
   
  Jeśli klasa zawiera składowe danych inną niż właściwość zależności, które są <xref:System.Windows.DependencyObject> obiektów, musisz również wywołać <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> metody po każdej zmianie jedną z dostępnych wartości, nawet wtedy, gdy element członkowski jest ustawienie na `null`.  
   

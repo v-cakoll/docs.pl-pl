@@ -3,11 +3,11 @@ title: Partycjonowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
 ms.openlocfilehash: b857c8c6e6b56a7263e6725a747e98ccfe4ff4fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683294"
 ---
 # <a name="partitioning-data-c"></a>Partycjonowanie danych (C#)
 Partycjonowanie w składniku LINQ odnosi się do funkcjonowania dzielenie sekwencji wejściowych na dwie sekcje bez rozmieszczanie elementów, a następnie powrotu w sekcji.  

@@ -10,26 +10,26 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748255"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Rozmieszczanie zawartości WPF na formularzach systemu Windows w czasie projektowania
 W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularzy Windows, takich jak Zakotwiczanie i linii przyciągania, aby rozmieścić formanty Windows Presentation Foundation (WPF).
 
  W tym przewodniku należy wykonać następujące zadania:
 
--   Utwórz projekt.
+- Utwórz projekt.
 
--   Tworzenie formantu WPF.
+- Tworzenie formantu WPF.
 
--   Host formantów WPF w panelu układu.
+- Host formantów WPF w panelu układu.
 
--   Linii przyciągania użycia do wyrównania kontrolek WPF.
+- Linii przyciągania użycia do wyrównania kontrolek WPF.
 
--   Zakotwiczenie i dokowanie kontrolek WPF.
+- Zakotwiczenie i dokowanie kontrolek WPF.
 
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić swoje ustawienia, wybierz opcję **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -37,7 +37,7 @@ W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularz
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu Windows Forms.  
@@ -47,7 +47,7 @@ W tym instruktażu przedstawiono sposób korzystania z funkcji układu formularz
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
--   Tworzenie nowego projektu aplikacji formularzy Windows w języku Visual Basic lub Visual C# o nazwie `ArrangeElementHost`.  
+- Tworzenie nowego projektu aplikacji formularzy Windows w języku Visual Basic lub Visual C# o nazwie `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Tworzenie kontrolki WPF  
  Po dodaniu kontrolki WPF do projektu, można rozmieścić je na formularzu.  

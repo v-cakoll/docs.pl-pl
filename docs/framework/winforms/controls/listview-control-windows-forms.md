@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757868"
 ---
 # <a name="listview-control-windows-forms"></a>ListView — Formant (Formularze systemu Windows)
 Formularze Windows `ListView` kontrolka Wyświetla listę elementów z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takich jak okienku po prawej stronie Eksploratora Windows.  
@@ -58,15 +58,15 @@ Formularze Windows `ListView` kontrolka Wyświetla listę elementów z ikonami. 
  [Instrukcje: Dodawanie możliwości wyszukiwania do formantu ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
  Opisuje sposób programowo znaleźć elementu za pomocą współrzędnych albo tekst wyszukiwania lub ekranu.  
   
--   [Instrukcje: Włączanie widoku Tile w formancie ListView formularzy Windows przy użyciu narzędzia Projektant](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [Instrukcje: Włączanie widoku Tile w formancie ListView formularzy Windows przy użyciu narzędzia Projektant](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Instrukcje: Dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy Windows przy użyciu narzędzia Projektant](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [Instrukcje: Dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy Windows przy użyciu narzędzia Projektant](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows przy użyciu narzędzia Projektant](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [Instrukcje: Dodawanie kolumn do formantu ListView formularzy Windows przy użyciu narzędzia Projektant](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Instrukcje: Grupowanie elementów w formancie ListView formularzy Windows przy użyciu narzędzia Projektant](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [Instrukcje: Grupowanie elementów w formancie ListView formularzy Windows przy użyciu narzędzia Projektant](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Przewodnik: Tworzenie interfejsu w stylu Eksploratora Windows z ListView i kontrolki TreeView za pomocą projektanta](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [Przewodnik: Tworzenie interfejsu w stylu Eksploratora Windows z ListView i kontrolki TreeView za pomocą projektanta](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Forms.ListView> Klasa  

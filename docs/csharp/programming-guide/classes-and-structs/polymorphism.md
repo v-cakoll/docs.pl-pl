@@ -7,18 +7,18 @@ helpviewer_keywords:
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
 ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703104"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfizm (Przewodnik programowania w języku C#)
 Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektowo, po hermetyzacji i dziedziczenia. Polimorfizm jest wyrazem greckim, co oznacza "wiele kształcie" i ma dwa różne aspekty:  
   
--   W czasie wykonywania obiektów klasy pochodne mogą być traktowane jako obiekty klasy bazowej, w miejscach takich jak parametry metody i kolekcje lub tablic. W takiej sytuacji deklarowany typ obiektu nie jest już taka sama jak jego typu run-time.  
+- W czasie wykonywania obiektów klasy pochodne mogą być traktowane jako obiekty klasy bazowej, w miejscach takich jak parametry metody i kolekcje lub tablic. W takiej sytuacji deklarowany typ obiektu nie jest już taka sama jak jego typu run-time.  
   
--   Klasy bazowe mogą definiować ani implementować [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) *metody*, oraz klasy pochodne mogą [zastąpienia](../../../csharp/language-reference/keywords/override.md) je, co oznacza, że zapewniają one własne definicję i implementację. W czasie wykonywania gdy kod klienta wywołuje metodę, środowisko CLR odwołuje się do typu run-time obiektu, a wywołuje zastąpienie metod wirtualnych. Ten sposób w kodzie źródłowym wywołania metody w klasie bazowej i spowodować, że wersja klasy pochodnej metody do wykonania.  
+- Klasy bazowe mogą definiować ani implementować [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) *metody*, oraz klasy pochodne mogą [zastąpienia](../../../csharp/language-reference/keywords/override.md) je, co oznacza, że zapewniają one własne definicję i implementację. W czasie wykonywania gdy kod klienta wywołuje metodę, środowisko CLR odwołuje się do typu run-time obiektu, a wywołuje zastąpienie metod wirtualnych. Ten sposób w kodzie źródłowym wywołania metody w klasie bazowej i spowodować, że wersja klasy pochodnej metody do wykonania.  
   
  Metody wirtualne umożliwiają pracować z grupami powiązanych obiektów w jednolity sposób. Na przykład załóżmy, że masz rysunku aplikacji, która umożliwia użytkownikowi tworzenie różne rodzaje kształtów na powierzchnię rysunku. Nie wiesz, w czasie kompilacji które określonych rodzajów kształtów spowoduje utworzenie użytkownika. Jednak aplikacja ma do śledzenia różnych typów kształty, które są tworzone i ma je zaktualizować w odpowiedzi na akcje myszy użytkownika. Polimorfizm można użyć, aby rozwiązać ten problem w dwa podstawowe kroki:  
   
@@ -37,11 +37,11 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
 ### <a name="virtual-members"></a>Wirtualne składowe  
  Klasa pochodna dziedziczy z klasy bazowej, uzyskuje się wszystkie metody, pola, właściwości i zdarzeń klasy podstawowej. Projektant klasy pochodne mogą wybrać opcję  
   
--   Przesłoń składowe wirtualnego w klasie bazowej  
+- Przesłoń składowe wirtualnego w klasie bazowej  
   
--   dziedziczenie najbliższego metody klasy bazowej nie przesłanianie go  
+- dziedziczenie najbliższego metody klasy bazowej nie przesłanianie go  
   
--   Zdefiniuj nową metodę niewirtualną implementacji tych członków, którzy Ukryj implementacji klasy podstawowej  
+- Zdefiniuj nową metodę niewirtualną implementacji tych członków, którzy Ukryj implementacji klasy podstawowej  
   
  Klasa pochodna można zastąpić składowej klasy bazowej, tylko wtedy, gdy składowej klasy bazowej jest zadeklarowany jako [wirtualnego](../../../csharp/language-reference/keywords/virtual.md) lub [abstrakcyjne](../../../csharp/language-reference/keywords/abstract.md). Należy użyć pochodnej elementu członkowskiego [zastąpienia](../../../csharp/language-reference/keywords/override.md) — słowo kluczowe, aby jawnie wskazać, że metoda jest przeznaczona do wzięcia udziału w wywołaniu wirtualnego. Poniższy kod stanowi przykład:  
   
@@ -89,11 +89,11 @@ Polimorfizm często nazywa się trzeci filar programowanie zorientowane obiektow
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Instrukcje: Przesłanianie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Instrukcje: Przesłanianie metody ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

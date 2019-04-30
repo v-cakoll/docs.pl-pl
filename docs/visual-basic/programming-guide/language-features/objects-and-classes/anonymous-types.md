@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758499"
 ---
 # <a name="anonymous-types-visual-basic"></a>Typy anonimowe (Visual Basic)
 Visual Basic obsługuje typy anonimowe, które pozwalają na tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych. Zamiast tego kompilator generuje klasę dla Ciebie. Klasa nie ma użytecznych nazw, dziedziczy bezpośrednio z <xref:System.Object>i zawiera właściwości określone w odwołaniu do obiektu. Ponieważ nazwa typu danych nie jest określona, nazywa się *typu anonimowego*.  
@@ -53,22 +53,22 @@ Visual Basic obsługuje typy anonimowe, które pozwalają na tworzenie obiektów
 ## <a name="key-properties"></a>Właściwości klucza  
  Właściwości klucza różnią się od niekluczowych właściwości na kilka sposobów podstawowe:  
   
--   Tylko wartości właściwości klucza są porównywane w celu ustalenia, czy dwa wystąpienia są takie same.  
+- Tylko wartości właściwości klucza są porównywane w celu ustalenia, czy dwa wystąpienia są takie same.  
   
--   Wartości właściwości klucza są przeznaczone tylko do odczytu i nie można jej zmienić.  
+- Wartości właściwości klucza są przeznaczone tylko do odczytu i nie można jej zmienić.  
   
--   Tylko wartości kluczy właściwości znajdują się w algorytmie kod generowany przez kompilator wyznaczania wartości skrótu dla typu anonimowego.  
+- Tylko wartości kluczy właściwości znajdują się w algorytmie kod generowany przez kompilator wyznaczania wartości skrótu dla typu anonimowego.  
   
 ### <a name="equality"></a>Równości  
  Wystąpień typów anonimowych może być taki sam, tylko wtedy, gdy są one wystąpień tego samego typu anonimowego. Kompilator traktuje dwa wystąpienia jako wystąpień tego samego typu, jeśli są spełnione następujące warunki:  
   
--   Są one zadeklarowane w tym samym zestawie.  
+- Są one zadeklarowane w tym samym zestawie.  
   
--   Ich właściwości takich samych nazwach takich samych typach wykrywany i są deklarowane w tej samej kolejności. Nazwa porównania nie jest rozróżniana wielkość liter.  
+- Ich właściwości takich samych nazwach takich samych typach wykrywany i są deklarowane w tej samej kolejności. Nazwa porównania nie jest rozróżniana wielkość liter.  
   
--   Te same właściwości w każdym są oznaczone jako właściwości klucza.  
+- Te same właściwości w każdym są oznaczone jako właściwości klucza.  
   
--   Co najmniej jedna właściwość w każdej deklaracji jest właściwość klucza.  
+- Co najmniej jedna właściwość w każdej deklaracji jest właściwość klucza.  
   
  Wystąpienie anonimowe typy, które nie ma klucza właściwości jest taki sam, tylko do samego siebie.  
   
@@ -86,11 +86,11 @@ Visual Basic obsługuje typy anonimowe, które pozwalają na tworzenie obiektów
 ## <a name="anonymous-types-from-query-expressions"></a>Anonimowe typy w wyrażeniach zapytań  
  Wyrażenia zapytań nie zawsze należy wymagać utworzenia typy anonimowe. Jeśli to możliwe, używają istniejącego typu do przechowywania danych kolumny. Dzieje się tak, gdy kwerenda zwraca albo całego rekordy ze źródła danych lub tylko jedno pole z każdego rekordu. W poniższych przykładach kodu `customers` to zbiór obiektów `Customer` klasy. Klasa ma wiele właściwości i może zawierać co najmniej jeden z nich, które znajdują się w wyniku zapytania w dowolnej kolejności. W pierwszych dwóch przykładach nie typy anonimowe są wymagane, ponieważ zapytania wybierz elementy nazwane typy:  
   
--   `custs1` zawiera kolekcję parametrów, ponieważ `cust.Name` jest ciągiem.  
+- `custs1` zawiera kolekcję parametrów, ponieważ `cust.Name` jest ciągiem.  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` zawiera kolekcję `Customer` obiektów, ponieważ każdy element obiektu `customers` jest `Customer` obiektu, a cały element jest wybrany przez zapytanie.  
+- `custs2` zawiera kolekcję `Customer` obiektów, ponieważ każdy element obiektu `customers` jest `Customer` obiektu, a cały element jest wybrany przez zapytanie.  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

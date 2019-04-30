@@ -3,11 +3,11 @@ title: <security> dla <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670472"
 ---
 # <a name="security-of-nettcpbinding"></a>\<Zabezpieczenia > z \<netTcpBinding >
 Definiuje ustawienia zabezpieczeń dla powiązania.  

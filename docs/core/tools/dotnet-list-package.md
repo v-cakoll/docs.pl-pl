@@ -3,11 +3,11 @@ title: polecenie pakietu listy DotNet
 description: Polecenia dotnet wyświetlenia listy pakietów zapewnia wygodny sposób, aby wyświetlić listę odwołania do pakietu dla projektu lub rozwiązania.
 ms.date: 04/09/2019
 ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665084"
 ---
 # <a name="dotnet-list-package"></a>polecenia DotNet wyświetlenia listy pakietów
 

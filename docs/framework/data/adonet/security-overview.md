@@ -3,11 +3,11 @@ title: Overview2 zabezpieczeń
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
 ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664158"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w której deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje nowe technologie atakom w przyszłości nastąpi. Z drugiej strony po prostu, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub może istnieć. Należy Planowanie zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczenia zostaną zachowane w okresie istnienia aplikacji.  
@@ -46,19 +46,19 @@ Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w któ
 ## <a name="code-access-security-cas"></a>Zabezpieczenia dostępu kodu (CAS)  
  Zabezpieczenia dostępu kodu (CAS) to mechanizm, który pomaga ograniczać dostęp do tego kodu do chronionych zasobów i operacji. W .NET Framework urzędy certyfikacji pełni następujące funkcje:  
   
--   Definiuje uprawnienia i zestawów uprawnień, które reprezentuje prawo dostępu do różnych zasobów systemowych.  
+- Definiuje uprawnienia i zestawów uprawnień, które reprezentuje prawo dostępu do różnych zasobów systemowych.  
   
--   Umożliwia administratorom konfigurowanie zasad zabezpieczeń, kojarząc zestawy uprawnień przy użyciu grup kodu (grup kodu).  
+- Umożliwia administratorom konfigurowanie zasad zabezpieczeń, kojarząc zestawy uprawnień przy użyciu grup kodu (grup kodu).  
   
--   Umożliwia kodu zażądać uprawnień wymaga, aby można było uruchomić, a także uprawnienia, które będą mieć i określa kod nigdy nie musi mieć uprawnienia.  
+- Umożliwia kodu zażądać uprawnień wymaga, aby można było uruchomić, a także uprawnienia, które będą mieć i określa kod nigdy nie musi mieć uprawnienia.  
   
--   Przyznaje uprawnienia do każdego zestawu, który jest ładowany, na podstawie uprawnień żądany przez kod, a operacje dozwolone przez zasady zabezpieczeń.  
+- Przyznaje uprawnienia do każdego zestawu, który jest ładowany, na podstawie uprawnień żądany przez kod, a operacje dozwolone przez zasady zabezpieczeń.  
   
--   Umożliwia kodu zapotrzebowania, że elementy go wywołujące pod ma określone uprawnienia.  
+- Umożliwia kodu zapotrzebowania, że elementy go wywołujące pod ma określone uprawnienia.  
   
--   Umożliwia kodu zapotrzebowania, że elementy go wywołujące pod posiadają podpis cyfrowy, dzięki czemu tylko obiekty wywołujące z konkretnej organizacji lub witryny do wywołania chronionego kodu.  
+- Umożliwia kodu zapotrzebowania, że elementy go wywołujące pod posiadają podpis cyfrowy, dzięki czemu tylko obiekty wywołujące z konkretnej organizacji lub witryny do wywołania chronionego kodu.  
   
--   Wymusza ograniczenia dotyczące kodu w czasie wykonywania, porównując udzielone uprawnienia co obiekt wywołujący na stosie wywołań do uprawnień, które musi zawierać obiekty wywołujące.  
+- Wymusza ograniczenia dotyczące kodu w czasie wykonywania, porównując udzielone uprawnienia co obiekt wywołujący na stosie wywołań do uprawnień, które musi zawierać obiekty wywołujące.  
   
  Aby zminimalizować ilość uszkodzeń, które mogą wystąpić, jeśli udany atak, wybierz kontekst zabezpieczeń dla tego kodu, która udziela dostępu tylko do zasobów, serwer musi pobrać swoją pracę, gotowe i nie ma więcej.  
   
@@ -72,17 +72,17 @@ Zabezpieczanie aplikacji jest procesem stałym. Nigdy nie będzie punktu, w któ
 ## <a name="database-security"></a>Zabezpieczenia bazy danych  
  Zasadę najmniejszych uprawnień ma zastosowanie także do źródła danych. Ogólne wskazówki dotyczące zabezpieczeń bazy danych obejmują:  
   
--   Tworzenie kont przy najniższe możliwe uprawnienia.  
+- Tworzenie kont przy najniższe możliwe uprawnienia.  
   
--   Nie zezwalaj użytkownikom dostęp do konta z uprawnieniami administracyjnymi tak, aby rozpocząć pracę z kodem.  
+- Nie zezwalaj użytkownikom dostęp do konta z uprawnieniami administracyjnymi tak, aby rozpocząć pracę z kodem.  
   
--   Nie zwracają komunikatów o błędach po stronie serwera dla aplikacji klienckich.  
+- Nie zwracają komunikatów o błędach po stronie serwera dla aplikacji klienckich.  
   
--   Sprawdź wszystkie dane wejściowe zarówno klient, jak i serwera.  
+- Sprawdź wszystkie dane wejściowe zarówno klient, jak i serwera.  
   
--   Za pomocą sparametryzowanych poleceń i uniknąć dynamicznych instrukcji SQL.  
+- Za pomocą sparametryzowanych poleceń i uniknąć dynamicznych instrukcji SQL.  
   
--   Włącz zabezpieczenia inspekcji i rejestrowania dla bazy danych używane w tak, że alerty są wyzwalane na wszelkie naruszenia zabezpieczeń.  
+- Włącz zabezpieczenia inspekcji i rejestrowania dla bazy danych używane w tak, że alerty są wyzwalane na wszelkie naruszenia zabezpieczeń.  
   
  Aby uzyskać więcej informacji zobacz następujące zasoby.  
   

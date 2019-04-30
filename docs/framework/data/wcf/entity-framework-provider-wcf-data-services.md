@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
 ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765625"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Dostawcy programu Entity Framework (WCF Data Services)
 Podobnie jak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework jest oparta na modelu danych jednostki, który jest typem jednostki relacji modelu. Entity Framework tłumaczy operacji wykonywanych względem jego implementacja obiektu modelu danych jednostki, która jest wywoływana *modelu koncepcyjnego*, na równoważne operacje w odniesieniu do źródła danych. To sprawia, że platforma Entity Framework dostawcę idealne rozwiązanie dla usług danych, które są oparte na danych relacyjnych i wszelkie bazy danych, w której dostawcy danych, który obsługuje platformy Entity Framework może być używany z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać listę źródeł danych, które obecnie obsługuje platformy Entity Framework, zobacz [dostawców innych firm dla programu Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  

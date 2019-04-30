@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
 ms.openlocfilehash: 5ab0a5e524979110c355391cf800cc82e6d6244f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680165"
 ---
 # <a name="indexers-c-programming-guide"></a>Indeksatory (Przewodnik programowania w języku C#)
 
@@ -40,29 +40,29 @@ Począwszy od C# 7.0, zarówno get, jak i metody dostępu set mogą być impleme
   
 ## <a name="indexers-overview"></a>Omówienie indeksatorów  
   
--   Indeksatory Włącz obiekty, które mają być indeksowane w sposób podobny do tablic.  
+- Indeksatory Włącz obiekty, które mają być indeksowane w sposób podobny do tablic.  
   
--   A `get` akcesor zwraca wartość. A `set` akcesor przypisuje wartość.  
+- A `get` akcesor zwraca wartość. A `set` akcesor przypisuje wartość.  
   
--   [To](../../../csharp/language-reference/keywords/this.md) — słowo kluczowe jest używane do definiowania indeksatora.  
+- [To](../../../csharp/language-reference/keywords/this.md) — słowo kluczowe jest używane do definiowania indeksatora.  
   
--   [Wartość](../../../csharp/language-reference/keywords/value.md) — słowo kluczowe jest używane do definiowania wartości przypisywane przez `set` indeksatora.  
+- [Wartość](../../../csharp/language-reference/keywords/value.md) — słowo kluczowe jest używane do definiowania wartości przypisywane przez `set` indeksatora.  
   
--   Indeksatory nie muszą być indeksowane przez wartość całkowitą; jest do Ciebie sposób definiowania mechanizm określonych wyszukiwania.  
+- Indeksatory nie muszą być indeksowane przez wartość całkowitą; jest do Ciebie sposób definiowania mechanizm określonych wyszukiwania.  
   
--   Indeksatory mogą być przeciążone.  
+- Indeksatory mogą być przeciążone.  
   
--   Indeksatory może mieć więcej niż jeden parametr formalny, na przykład podczas uzyskiwania dostępu do tablicy dwuwymiarowej.  
+- Indeksatory może mieć więcej niż jeden parametr formalny, na przykład podczas uzyskiwania dostępu do tablicy dwuwymiarowej.  
   
 ## <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
   
--   [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)  
+- [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)  
   
--   [Indeksatory w interfejsach](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
+- [Indeksatory w interfejsach](../../../csharp/programming-guide/indexers/indexers-in-interfaces.md)  
   
--   [Porównanie właściwości i indeksatorów](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Porównanie właściwości i indeksatorów](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Ograniczanie dostępności metody dostępu](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Ograniczanie dostępności metody dostępu](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 

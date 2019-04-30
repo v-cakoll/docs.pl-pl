@@ -3,11 +3,11 @@ title: Klasyfikacja standardowych operatorów zapytań w oparciu o sposób dzia�
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
 ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702376"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Klasyfikacja standardowych operatorów zapytań w oparciu o sposób działania (C#)
 LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonania w jednym z dwa główne sposoby: odejścia. Operatory zapytań, które używają odroczonego wykonania można dodatkowo podzielić na dwie kategorie: przesyłanie strumieniowe i obsługiwane strumieniowo. Jeśli wiesz, jak wykonać operatory inne zapytanie, jego może ułatwić zrozumienie wyników, które otrzymasz od określonego zapytania. Jest to szczególnie istotne, jeśli zmienia się ze źródłem danych lub jeśli tworzysz kwerendy na podstawie innego zapytania. W tym temacie klasyfikuje standardowych operatorów zapytań zgodnie z ich sposób działania.  
@@ -34,7 +34,7 @@ LINQ do obiektów implementacje metod standardowych operatorów zapytań wykonan
 > [!NOTE]
 >  Jeśli operator jest oznaczony w dwóch kolumnach, dwóch sekwencji wejściowych biorących udział w operacji, a każda sekwencja jest obliczane inaczej. W takich przypadkach jest zawsze pierwszej sekwencji na liście parametrów, które jest obliczane w odroczonego, przesyłanie strumieniowe sposób.  
   
-|Standardowego operatora zapytania|Zwracany typ|Natychmiastowe wykonanie|Wykonanie odroczone przesyłania strumieniowego|Odroczone obsługiwane strumieniowo wykonywania|  
+|Standardowego operatora zapytania|Typ zwracany|Natychmiastowe wykonanie|Wykonanie odroczone przesyłania strumieniowego|Odroczone obsługiwane strumieniowo wykonywania|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  

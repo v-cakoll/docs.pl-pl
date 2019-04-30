@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
 ms.openlocfilehash: a676f03b4e6f9dd210b843a6f3bf00c735889500
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699607"
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Instrukcje: konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost
 Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi być wznowione przez niektóre bodziec zewnętrznych, na przykład gdy wystąpienie przepływu pracy oczekuje na być dostarczane za pomocą wiadomości <xref:System.ServiceModel.Activities.Receive> działania. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> jest to zachowanie, która umożliwia określenie czasu między gdy wystąpienie usługi wprowadzona bezczynności i gdy wystąpienie jest utrwalona lub zwolnione. Zawiera ona dwie właściwości, które umożliwiają skonfigurowanie tych okresów. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> Określa przedział czasu między podczas bezczynności przechodzi wystąpienie usługi przepływu pracy, a gdy wystąpienie usługi przepływu pracy jest trwały. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> Określa przedział czasu między wystąpieniem usługi przepływu pracy przechodzi bezczynności i gdy wystąpienie usługi przepływu pracy jest zwalniana, gdzie zwolnienie oznacza, że utrwalanie wystąpienia magazyn wystąpienia i usunięcie go z pamięci. W tym temacie opisano sposób konfigurowania <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> w pliku konfiguracji.  
@@ -36,7 +36,7 @@ Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi by
   
 ### <a name="to-change-idle-behavior-in-code"></a>Aby zmienić zachowanie bezczynności w kodzie  
   
--   Poniższy przykład zmienia czas oczekiwania przed utrwaleniem i wyładowywanie programowo.  
+- Poniższy przykład zmienia czas oczekiwania przed utrwaleniem i wyładowywanie programowo.  
   
      [!code-csharp[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/wf_svchost_idle_persist/cs/source.cs#1)]
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  

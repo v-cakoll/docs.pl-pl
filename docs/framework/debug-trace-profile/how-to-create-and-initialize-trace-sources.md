@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754521"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Instrukcje: Tworzenie i inicjowanie źródeł śledzenia
 <xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śladów, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource> udostępnia metody śledzenia, które pozwalają na łatwe śledzenie zdarzeń, dane śledzenia i ślady informacyjne problemu. Dane wyjściowe śledzenia z <xref:System.Diagnostics.TraceSource> mogą być tworzone i inicjowane z użyciem lub bez korzystania z plików konfiguracji. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się używać plików konfiguracyjnych ułatwiających rekonfigurację śladów produkowanych przez źródła śledzenia w czasie wykonywania.  
@@ -73,7 +73,7 @@ ms.locfileid: "59339440"
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>Aby zainicjować źródła śledzenia, detektory i filtry bez pliku konfiguracji  
   
--   Użyj poniższy przykład kodu umożliwia śledzenie za pośrednictwem źródła śledzenia bez użycia pliku konfiguracji. Nie jest to zalecana praktyka, ale mogą zaistnieć okoliczności, w których nie chcesz zależało od plików konfiguracyjnych, aby upewnić się, śledzenia.  
+- Użyj poniższy przykład kodu umożliwia śledzenie za pośrednictwem źródła śledzenia bez użycia pliku konfiguracji. Nie jest to zalecana praktyka, ale mogą zaistnieć okoliczności, w których nie chcesz zależało od plików konfiguracyjnych, aby upewnić się, śledzenia.  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

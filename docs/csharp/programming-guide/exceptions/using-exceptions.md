@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
 ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681250"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Używanie wyjątków (Przewodnik programowania w języku C#)
 W języku C# błędów w programie w czasie wykonywania są propagowane przez program za pomocą mechanizmu o nazwie wyjątków. Wyjątki są zgłaszane przez kod, który wystąpi błąd i przechwycony przez kod, który można rozwiązać problem. Wyjątki mogą zostać wygenerowane przez .NET Framework środowisko uruchomieniowe języka wspólnego (CLR) lub kodu w programie. Gdy wyjątek jest generowany, rozprzestrzenia się górę stosu wywołań, dopóki `catch` znajduje się instrukcji, dla wyjątku. Nieobsłużone wyjątki są obsługiwane przez wyjątek ogólny program obsługi, dostarczone przez system, który wyświetla okno dialogowe.  
@@ -38,11 +38,11 @@ W języku C# błędów w programie w czasie wykonywania są propagowane przez pr
   
  Jeśli zgodnego `catch` bloku znajduje się w stosie wywołań po wyjątek wystąpi jedno z trzech zdarzeń:  
   
--   Jeśli wyjątek znajduje się w finalizator, finalizator został przerwany, a podstawowy finalizator, nosi nazwę.  
+- Jeśli wyjątek znajduje się w finalizator, finalizator został przerwany, a podstawowy finalizator, nosi nazwę.  
   
--   Jeśli zawiera stos wywołań w konstruktorze statycznym lub inicjatorze pola statycznego <xref:System.TypeInitializationException> jest generowany przy użyciu oryginalnego wyjątku, które są przypisane do <xref:System.Exception.InnerException%2A> właściwość nowy wyjątek.  
+- Jeśli zawiera stos wywołań w konstruktorze statycznym lub inicjatorze pola statycznego <xref:System.TypeInitializationException> jest generowany przy użyciu oryginalnego wyjątku, które są przypisane do <xref:System.Exception.InnerException%2A> właściwość nowy wyjątek.  
   
--   Po osiągnięciu początek wątek, wątek jest zakończony.  
+- Po osiągnięciu początek wątek, wątek jest zakończony.  
   
 ## <a name="see-also"></a>Zobacz także
 

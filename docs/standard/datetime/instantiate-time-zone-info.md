@@ -1,5 +1,5 @@
 ---
-title: 'Porady: Tworzenie wystąpień obiektów TimeZoneInfo'
+title: 'Instrukcje: Tworzenie wystąpień obiektów TimeZoneInfo'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8c8ff38325e26dd1bc946f6f12c365b6dea3e228
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669176"
 ---
-# <a name="how-to-instantiate-a-timezoneinfo-object"></a>Porady: Tworzenie wystąpień obiektów TimeZoneInfo
+# <a name="how-to-instantiate-a-timezoneinfo-object"></a>Instrukcje: Tworzenie wystąpień obiektów TimeZoneInfo
 
 Najczęstszym sposobem tworzenia wystąpienia <xref:System.TimeZoneInfo> obiekt jest można pobrać informacji o nim z rejestru. W tym temacie omówiono sposób tworzenia wystąpienia <xref:System.TimeZoneInfo> obiektu z rejestru systemu lokalnego.
 
@@ -37,7 +37,7 @@ Poniższy kod pobiera <xref:System.TimeZoneInfo> obiekt, który reprezentuje Eas
 [!code-csharp[System.TimeZone2.Concepts#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#5)]
 [!code-vb[System.TimeZone2.Concepts#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#5)]
 
-<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> Pojedynczy parametr metody jest identyfikator strefy czasowej, którą chcesz pobrać, która odnosi się do obiektu <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> właściwości. Identyfikator strefy czasowej to pole klucza, który unikatowo identyfikuje strefy czasowej. Mimo że większość klawiszy względnie krótkich, identyfikator strefy czasowej jest stosunkowo długo. W większości przypadków wartość odpowiada <xref:System.TimeZoneInfo.StandardName%2A> właściwość <xref:System.TimeZoneInfo> obiekt, który jest używany do określenia nazwy strefy czasowej (czas standardowy). Istnieją jednak wyjątki. Najlepszym sposobem, aby upewnić się, że możesz podać prawidłowy identyfikator jest wykazywanie stref czasowych dostępną w Twoim systemie i należy pamiętać, identyfikatory stref czasowych na nich. Ilustracja, znajduje się [porady: wykazywanie stref czasowych na komputerze](../../../docs/standard/datetime/enumerate-time-zones.md). [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) temat zawiera także listę identyfikatorów wybranej strefie czasowej.
+<xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A?displayProperty=nameWithType> Pojedynczy parametr metody jest identyfikator strefy czasowej, którą chcesz pobrać, która odnosi się do obiektu <xref:System.TimeZoneInfo.Id%2A?displayProperty=nameWithType> właściwości. Identyfikator strefy czasowej to pole klucza, który unikatowo identyfikuje strefy czasowej. Mimo że większość klawiszy względnie krótkich, identyfikator strefy czasowej jest stosunkowo długo. W większości przypadków wartość odpowiada <xref:System.TimeZoneInfo.StandardName%2A> właściwość <xref:System.TimeZoneInfo> obiekt, który jest używany do określenia nazwy strefy czasowej (czas standardowy). Istnieją jednak wyjątki. Najlepszym sposobem, aby upewnić się, że możesz podać prawidłowy identyfikator jest wykazywanie stref czasowych dostępną w Twoim systemie i należy pamiętać, identyfikatory stref czasowych na nich. Ilustracja, znajduje się [jak: Wykazywanie stref czasowych na komputerze](../../../docs/standard/datetime/enumerate-time-zones.md). [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md) temat zawiera także listę identyfikatorów wybranej strefie czasowej.
 
 Jeśli zostanie znaleziony strefę czasową, Metoda ta zwraca jego <xref:System.TimeZoneInfo> obiektu. Jeśli strefa czasowa nie zostanie znaleziony, metoda zgłasza <xref:System.TimeZoneNotFoundException>. Jeśli strefa czasowa zostanie znaleziony, ale jego dane są uszkodzone lub niekompletne, metoda zgłasza <xref:System.InvalidTimeZoneException>.
 
@@ -47,4 +47,4 @@ Jeśli aplikacja zależy od strefy czasowej, która musi być obecna, należy na
 
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
 - [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-- [Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów lokalnej strefy czasowej i strefy czasowej UTC](../../../docs/standard/datetime/access-utc-and-local.md)
+- [Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md)

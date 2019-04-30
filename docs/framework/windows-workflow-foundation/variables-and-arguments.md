@@ -3,11 +3,11 @@ title: Zmienne i argumenty
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669488"
 ---
 # <a name="variables-and-arguments"></a>Zmienne i argumenty
 W Windows Workflow Foundation (WF), zmienne reprezentują przechowywania danych i argumenty reprezentują przepływ danych do i z działania. Działanie ma zestawu argumentów i stanowią one podpis działania. Ponadto działanie może zachować listę zmiennych, do których Deweloper można dodawać i usuwać zmiennych podczas projektowania przepływu pracy. Argument jest powiązany za pomocą wyrażenia, która nie zwraca wartości.  

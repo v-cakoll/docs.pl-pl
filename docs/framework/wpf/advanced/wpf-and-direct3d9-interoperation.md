@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669218"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF i Direct3D9 — Współdziałanie
 Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF). W tym temacie opisano sposób tworzenia zawartości Direct3D9 tak, aby skutecznie współdziała również z WPF.  
@@ -32,9 +32,9 @@ Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundatio
   
  Utwórz urządzenie, wywołując jedną z następujących metod.  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  Windows Vista lub nowszym systemem operacyjnym, użyj `Direct3DCreate9Ex` metody za pomocą wyświetlacza, który jest skonfigurowany do używania modelu wyświetlić Driver Windows (WDDM). Użyj `Direct3DCreate9` metody w jakiejkolwiek innej platformie.  
   
@@ -97,11 +97,11 @@ Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundatio
   
  Istnieją trzy możliwe sposoby uchwyt zmiany rozmiaru.  
   
--   Uczestniczą w systemie układ i Utwórz nowe powierzchni, po zmianie rozmiaru. Nie twórz zbyt wielu powierzchniach, ponieważ może wyczerpać lub fragmentu pamięci wideo.  
+- Uczestniczą w systemie układ i Utwórz nowe powierzchni, po zmianie rozmiaru. Nie twórz zbyt wielu powierzchniach, ponieważ może wyczerpać lub fragmentu pamięci wideo.  
   
--   Poczekaj, aż nie przeprowadzono zdarzenie zmiany rozmiaru przez stały okres czasu, aby utworzyć nowy powierzchni.  
+- Poczekaj, aż nie przeprowadzono zdarzenie zmiany rozmiaru przez stały okres czasu, aby utworzyć nowy powierzchni.  
   
--   Utwórz <xref:System.Windows.Threading.DispatcherTimer> kontrole wymiary kontenera na sekundę.  
+- Utwórz <xref:System.Windows.Threading.DispatcherTimer> kontrole wymiary kontenera na sekundę.  
   
 ## <a name="multi-monitor-optimization"></a>Optymalizacja wielu monitorów  
  Znaczne zmniejszenie wydajności może spowodować, gdy system renderowania <xref:System.Windows.Interop.D3DImage> na inny monitor.  
@@ -132,11 +132,11 @@ Może zawierać zawartości Direct3D9 w aplikacji Windows Presentation Foundatio
 ## <a name="wpf-software-rendering"></a>Renderowanie oprogramowania WPF  
  WPF renderuje synchronicznie w wątku interfejsu użytkownika w oprogramowaniu w następujących sytuacjach.  
   
--   Drukowanie  
+- Drukowanie  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  Gdy wystąpi jedno z tych sytuacji, system renderowania wywołuje <xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A> metoda kopiowania buforu sprzętu do oprogramowania. Domyślna implementacja wywołuje `GetRenderTargetData` metody za pomocą usługi powierzchni. Ponieważ to wywołanie odbywa się poza wzorzec Zablokuj/Odblokuj, może nie. W tym przypadku `CopyBackBuffer` metoda zwraca `null` i obraz nie jest wyświetlany.  
   

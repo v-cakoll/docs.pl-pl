@@ -18,45 +18,45 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c59a0c5ef1e89c2853a566bd3b587d15a1ed80c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700738"
 ---
-# <a name="icorruntimehoststop-method"></a><span data-ttu-id="44b6f-102">ICorRuntimeHost::Stop — Metoda</span><span class="sxs-lookup"><span data-stu-id="44b6f-102">ICorRuntimeHost::Stop Method</span></span>
-<span data-ttu-id="44b6f-103">Zatrzymuje wykonywanie kodu w czasie wykonywania dla bieżącego procesu.</span><span class="sxs-lookup"><span data-stu-id="44b6f-103">Stops the execution of code in the runtime for the current process.</span></span>  
+# <a name="icorruntimehoststop-method"></a><span data-ttu-id="b2aa7-102">ICorRuntimeHost::Stop — Metoda</span><span class="sxs-lookup"><span data-stu-id="b2aa7-102">ICorRuntimeHost::Stop Method</span></span>
+<span data-ttu-id="b2aa7-103">Zatrzymuje wykonywanie kodu w czasie wykonywania dla bieżącego procesu.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-103">Stops the execution of code in the runtime for the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="44b6f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="44b6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2aa7-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b2aa7-104">Syntax</span></span>  
   
 ```  
 HRESULT Stop ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="44b6f-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="44b6f-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b2aa7-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="b2aa7-105">Return Value</span></span>  
   
-|<span data-ttu-id="44b6f-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="44b6f-106">HRESULT</span></span>|<span data-ttu-id="44b6f-107">Opis</span><span class="sxs-lookup"><span data-stu-id="44b6f-107">Description</span></span>|  
+|<span data-ttu-id="b2aa7-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b2aa7-106">HRESULT</span></span>|<span data-ttu-id="b2aa7-107">Opis</span><span class="sxs-lookup"><span data-stu-id="b2aa7-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="44b6f-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="44b6f-108">S_OK</span></span>|<span data-ttu-id="44b6f-109">Operacja zakończyła się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="44b6f-109">The operation was successful.</span></span>|  
-|<span data-ttu-id="44b6f-110">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="44b6f-110">S_FALSE</span></span>|<span data-ttu-id="44b6f-111">Nie można ukończyć operacji.</span><span class="sxs-lookup"><span data-stu-id="44b6f-111">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="44b6f-112">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="44b6f-112">E_FAIL</span></span>|<span data-ttu-id="44b6f-113">Wystąpił błąd nieznanego, krytycznego.</span><span class="sxs-lookup"><span data-stu-id="44b6f-113">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="44b6f-114">Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie.</span><span class="sxs-lookup"><span data-stu-id="44b6f-114">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="44b6f-115">Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="44b6f-115">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="44b6f-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="44b6f-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="44b6f-117">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="44b6f-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b2aa7-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="b2aa7-108">S_OK</span></span>|<span data-ttu-id="b2aa7-109">Operacja zakończyła się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-109">The operation was successful.</span></span>|  
+|<span data-ttu-id="b2aa7-110">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="b2aa7-110">S_FALSE</span></span>|<span data-ttu-id="b2aa7-111">Nie można ukończyć operacji.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-111">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="b2aa7-112">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b2aa7-112">E_FAIL</span></span>|<span data-ttu-id="b2aa7-113">Wystąpił błąd nieznanego, krytycznego.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-113">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="b2aa7-114">Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-114">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="b2aa7-115">Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-115">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b2aa7-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b2aa7-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b2aa7-117">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-117">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="44b6f-118">Uwagi</span><span class="sxs-lookup"><span data-stu-id="44b6f-118">Remarks</span></span>  
- <span data-ttu-id="44b6f-119">Nie jest to zazwyczaj konieczne do wywołania `Stop` metody, ponieważ kod zatrzymuje wykonywanie, gdy kończy proces.</span><span class="sxs-lookup"><span data-stu-id="44b6f-119">It is typically unnecessary to call the `Stop` method, because the code stops executing when the process exits.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2aa7-118">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b2aa7-118">Remarks</span></span>  
+ <span data-ttu-id="b2aa7-119">Nie jest to zazwyczaj konieczne do wywołania `Stop` metody, ponieważ kod zatrzymuje wykonywanie, gdy kończy proces.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-119">It is typically unnecessary to call the `Stop` method, because the code stops executing when the process exits.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="44b6f-120">Po wywołaniu `Stop`, środowisko CLR nie można ponownie zainicjować do tego samego procesu.</span><span class="sxs-lookup"><span data-stu-id="44b6f-120">After a call to `Stop`, the CLR cannot be reinitialized into the same process.</span></span>  
+>  <span data-ttu-id="b2aa7-120">Po wywołaniu `Stop`, środowisko CLR nie można ponownie zainicjować do tego samego procesu.</span><span class="sxs-lookup"><span data-stu-id="b2aa7-120">After a call to `Stop`, the CLR cannot be reinitialized into the same process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="44b6f-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="44b6f-121">Requirements</span></span>  
- <span data-ttu-id="44b6f-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="44b6f-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2aa7-121">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b2aa7-121">Requirements</span></span>  
+ <span data-ttu-id="b2aa7-122">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2aa7-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="44b6f-123">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="44b6f-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b2aa7-123">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b2aa7-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="44b6f-124">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="44b6f-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b2aa7-124">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b2aa7-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="44b6f-125">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="44b6f-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="b2aa7-125">**Wersje programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="b2aa7-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="44b6f-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="44b6f-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2aa7-126">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b2aa7-126">See also</span></span>
 
-- [<span data-ttu-id="44b6f-127">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="44b6f-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="b2aa7-127">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="b2aa7-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

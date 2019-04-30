@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ba15553d2e7dcd2090870eaab54b4c680631f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749348"
 ---
-# <a name="icordebugcontrollerenumeratethreads-method"></a><span data-ttu-id="13697-102">ICorDebugController::EnumerateThreads — Metoda</span><span class="sxs-lookup"><span data-stu-id="13697-102">ICorDebugController::EnumerateThreads Method</span></span>
-<span data-ttu-id="13697-103">Pobiera moduł wyliczający dla aktywnego zarządzane wątki w procesie.</span><span class="sxs-lookup"><span data-stu-id="13697-103">Gets an enumerator for the active managed threads in the process.</span></span>  
+# <a name="icordebugcontrollerenumeratethreads-method"></a><span data-ttu-id="6588d-102">ICorDebugController::EnumerateThreads — Metoda</span><span class="sxs-lookup"><span data-stu-id="6588d-102">ICorDebugController::EnumerateThreads Method</span></span>
+<span data-ttu-id="6588d-103">Pobiera moduł wyliczający dla aktywnego zarządzane wątki w procesie.</span><span class="sxs-lookup"><span data-stu-id="6588d-103">Gets an enumerator for the active managed threads in the process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13697-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="13697-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6588d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6588d-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateThreads (  
@@ -35,20 +35,20 @@ HRESULT EnumerateThreads (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="13697-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="13697-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6588d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6588d-105">Parameters</span></span>  
  `ppThreads`  
- <span data-ttu-id="13697-106">[out] Wskaźnik na adres obiektu "icordebugthreadenum —", który reprezentuje moduł wyliczający wszystkie zarządzane wątki, które są aktywne w procesie.</span><span class="sxs-lookup"><span data-stu-id="13697-106">[out] A pointer to the address of an "ICorDebugThreadEnum" object that represents an enumerator for all managed threads that are active in the process.</span></span>  
+ <span data-ttu-id="6588d-106">[out] Wskaźnik na adres obiektu "icordebugthreadenum —", który reprezentuje moduł wyliczający wszystkie zarządzane wątki, które są aktywne w procesie.</span><span class="sxs-lookup"><span data-stu-id="6588d-106">[out] A pointer to the address of an "ICorDebugThreadEnum" object that represents an enumerator for all managed threads that are active in the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="13697-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="13697-107">Remarks</span></span>  
- <span data-ttu-id="13697-108">Wątek jest uważany za aktywny po [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) wywołanie zwrotne zostało wysłane i przed [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) wywołanie zwrotne zostało wysłane .</span><span class="sxs-lookup"><span data-stu-id="13697-108">A thread is considered active after the [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) callback has been dispatched and before the [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) callback has been dispatched.</span></span> <span data-ttu-id="13697-109">Wątek nie może być muszą być ramek zarządzanych na swój stos.</span><span class="sxs-lookup"><span data-stu-id="13697-109">A managed thread may not necessarily have any managed frames on its stack.</span></span> <span data-ttu-id="13697-110">Wątki, które mogą być wyliczane nawet zanim [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="13697-110">Threads can be enumerated even before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="13697-111">Wyliczanie naturalnie będzie pusta.</span><span class="sxs-lookup"><span data-stu-id="13697-111">The enumeration will naturally be empty.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6588d-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6588d-107">Remarks</span></span>  
+ <span data-ttu-id="6588d-108">Wątek jest uważany za aktywny po [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) wywołanie zwrotne zostało wysłane i przed [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) wywołanie zwrotne zostało wysłane .</span><span class="sxs-lookup"><span data-stu-id="6588d-108">A thread is considered active after the [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) callback has been dispatched and before the [ICorDebugManagedCallback::ExitThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) callback has been dispatched.</span></span> <span data-ttu-id="6588d-109">Wątek nie może być muszą być ramek zarządzanych na swój stos.</span><span class="sxs-lookup"><span data-stu-id="6588d-109">A managed thread may not necessarily have any managed frames on its stack.</span></span> <span data-ttu-id="6588d-110">Wątki, które mogą być wyliczane nawet zanim [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) wywołania zwrotnego.</span><span class="sxs-lookup"><span data-stu-id="6588d-110">Threads can be enumerated even before the [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) callback.</span></span> <span data-ttu-id="6588d-111">Wyliczanie naturalnie będzie pusta.</span><span class="sxs-lookup"><span data-stu-id="6588d-111">The enumeration will naturally be empty.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="13697-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="13697-112">Requirements</span></span>  
- <span data-ttu-id="13697-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13697-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6588d-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6588d-112">Requirements</span></span>  
+ <span data-ttu-id="6588d-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6588d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="13697-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="13697-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6588d-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6588d-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="13697-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13697-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6588d-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6588d-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="13697-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13697-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6588d-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6588d-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="13697-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="13697-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6588d-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6588d-117">See also</span></span>

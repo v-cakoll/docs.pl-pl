@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746767"
 ---
 # <a name="user-defined-data-type"></a>User-Defined Data Type
 Przechowuje dane w postaci, jaką zdefiniujesz. `Structure` Instrukcja definiuje format.  
@@ -50,15 +50,15 @@ Przechowuje dane w postaci, jaką zdefiniujesz. `Structure` Instrukcja definiuje
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli musisz kontrolować układ magazynu struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.  
+- **Zużycie pamięci.** Podobnie jak w przypadku wszystkich złożonych typów danych, nie można bezpiecznie obliczyć łącznego zużycia pamięci przez strukturę, dodając do siebie nominalne alokacje magazynu jej składowych. Ponadto nie można bezpiecznie założyć, że kolejność magazynowania w pamięci jest taka sama jak kolejność deklaracji. Jeśli musisz kontrolować układ magazynu struktury, możesz zastosować atrybut <xref:System.Runtime.InteropServices.StructLayoutAttribute> w instrukcji `Structure`.  
   
--   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, że typy danych zdefiniowane przez użytkownika w innych środowiskach nie są zgodne z języka Visual Basic strukturę typów.  
+- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać, że typy danych zdefiniowane przez użytkownika w innych środowiskach nie są zgodne z języka Visual Basic strukturę typów.  
   
--   **Rozszerzanie.** Nie jest automatyczna konwersja do / z dowolnego typu danych struktury. Operatory konwersji można zdefiniować w sieci za pomocą struktury [operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md), i można zadeklarować każdego operatora konwersji `Widening` lub `Narrowing`.  
+- **Rozszerzanie.** Nie jest automatyczna konwersja do / z dowolnego typu danych struktury. Operatory konwersji można zdefiniować w sieci za pomocą struktury [operator — instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md), i można zadeklarować każdego operatora konwersji `Widening` lub `Narrowing`.  
   
--   **Znaki typu.** Typy danych struktury mieć znak literalny typu lub znak typu identyfikator.  
+- **Znaki typu.** Typy danych struktury mieć znak literalny typu lub znak typu identyfikator.  
   
--   **Typ Framework.** W .NET Framework, nie ma żadnego odpowiedniego typu. Wszystkie struktury dziedziczą z klasy .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ale nie struktury poszczególnych odnosi się do <xref:System.ValueType?displayProperty=nameWithType>.  
+- **Typ Framework.** W .NET Framework, nie ma żadnego odpowiedniego typu. Wszystkie struktury dziedziczą z klasy .NET Framework <xref:System.ValueType?displayProperty=nameWithType>, ale nie struktury poszczególnych odnosi się do <xref:System.ValueType?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Przykład  
  Następujące paradygmat przedstawia zarys deklaracji struktury.  

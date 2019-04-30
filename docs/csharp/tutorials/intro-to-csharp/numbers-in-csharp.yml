@@ -12,11 +12,11 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 1475941e0b0169566307f016d68ef3c3cb0b907c
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029739"
+  ms.lasthandoff: 04/23/2019
+  ms.locfileid: "61706211"
 items:
 - durationInMinutes: 1
   content: >
@@ -323,7 +323,7 @@ items:
     Należy pamiętać, że `0.3` powtarzanie nie jest dokładnie taka sama jak `1/3`.
 
 
-    ***Wyzwanie***
+    ***Challenge***
 
 
     Spróbuj innych obliczeń z dużą liczbą, małymi liczbami, mnożeniem i dzieleniem za pomocą `double` typu.  Spróbuj bardziej skomplikowanych obliczeń.
@@ -376,7 +376,7 @@ items:
     Należy zauważyć, że matematyczne liczbach typu dziesiętnego ma więcej cyfr po prawej stronie przecinka dziesiętnego.
 
 
-    ***Wyzwanie***
+    ***Challenge***
 
 
     Teraz, gdy różne typy liczbowe, należy napisać kod obliczający pole koła o promieniu jest kosztuje 2,50 cm. Należy pamiętać, że pole koła to promień pomnożony pomnożonej przez PI. Wskazówka: platforma .NET zawiera stałą dla liczby PI — <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości.

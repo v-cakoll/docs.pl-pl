@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765274"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion — Funkcja
 Umożliwia hostowi na określenie, która wersja środowiska uruchomieniowego języka wspólnego (CLR), będą używane w ramach procesu przed jawnym zainicjowaniem środowiska CLR.  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. Funkcji określonej przez `hostCallback` następnie sprawia, że następująca sekwencja wywołań:  
   
-    -   Funkcji określonej przez `pBeginHostSetup` parametru.  
+    - Funkcji określonej przez `pBeginHostSetup` parametru.  
   
-    -   `CorBindToRuntimeEx` (lub inną funkcję inicjowania środowiska uruchomieniowego).  
+    - `CorBindToRuntimeEx` (lub inną funkcję inicjowania środowiska uruchomieniowego).  
   
-    -   [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    -   [Iclrruntimehost::Start —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [Iclrruntimehost::Start —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    -   Funkcji określonej przez `pEndHostSetup` parametru.  
+    - Funkcji określonej przez `pEndHostSetup` parametru.  
   
  Wszystkie wywołania z `pBeginHostSetup` do `pEndHostSetup` musi przypadać na jednym wątku lub włókna, z tym samym stosie logiczne. Ten wątek może różnić się od wątku, na którym `hostCallback` jest wywoływana.  
   

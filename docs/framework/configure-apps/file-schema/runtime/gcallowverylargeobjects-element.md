@@ -8,11 +8,11 @@ ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19103b2ac6e6dbba930050074fcea3cfd5a97661
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704664"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
 Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabajty (GB) w łącznym rozmiarze.  
@@ -57,11 +57,11 @@ Na platformach 64-bitowych umożliwia tablic, które są większe niż 2 gigabaj
 ## <a name="remarks"></a>Uwagi  
  Przy użyciu tego elementu w pliku konfiguracyjnym aplikacji umożliwia tablic, które są większe niż 2 GB, rozmiar, ale nie zmienia się inne ograniczenia dotyczące rozmiaru obiektu lub rozmiar tablicy:  
   
--   Maksymalna liczba elementów w tablicy to <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
+- Maksymalna liczba elementów w tablicy to <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
--   Maksymalna wartość indeksu w dowolnym jeden wymiar jest 2,147,483,591 (0x7FFFFFC7) dla tablic bajtów i tablic struktur jednobajtowe i 2,146,435,071 (0X7FEFFFFF) w przypadku innych typów.  
+- Maksymalna wartość indeksu w dowolnym jeden wymiar jest 2,147,483,591 (0x7FFFFFC7) dla tablic bajtów i tablic struktur jednobajtowe i 2,146,435,071 (0X7FEFFFFF) w przypadku innych typów.  
   
--   Maksymalny rozmiar dla ciągów i innych obiektów inny niż tablica jest bez zmian.  
+- Maksymalny rozmiar dla ciągów i innych obiektów inny niż tablica jest bez zmian.  
   
 > [!CAUTION]
 >  Przed włączeniem tej funkcji, upewnij się, czy aplikacja nie zawiera niebezpieczny kod, który przyjęto założenie, że wszystkie tablice są mniejsze niż rozmiar 2 GB. Na przykład niebezpieczny kod, który używa tablic jako buforów może być podatny na przepełnienia buforu, zostanie zapisany na założeniu, że tablice nie przekroczy 2 GB.  

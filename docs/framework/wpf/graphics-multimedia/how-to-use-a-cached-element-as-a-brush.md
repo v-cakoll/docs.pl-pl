@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
 ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769260"
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>Instrukcje: Używanie zachowanego w pamięci podręcznej elementu jako pędzla
 Użyj <xref:System.Windows.Media.BitmapCacheBrush> klasy do ponownego użycia pamięci podręcznej elementu wydajnie. Aby element w pamięci podręcznej, należy utworzyć nowe wystąpienie klasy <xref:System.Windows.Media.BitmapCache> klasy i przypisz je do elementu <xref:System.Windows.UIElement.CacheMode%2A> właściwości.  

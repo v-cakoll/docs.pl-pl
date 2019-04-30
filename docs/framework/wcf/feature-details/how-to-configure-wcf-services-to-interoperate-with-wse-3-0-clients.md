@@ -3,11 +3,11 @@ title: 'Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z kli
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
 ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699789"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0
 Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy niskiego poziomu z rozszerzeń usługi sieci Web w wersji 3.0 dla klientów programu Microsoft .NET (WSE), gdy usług WCF są skonfigurowane do korzystania z sierpnia 2004 wersję specyfikacji WS-Addressing.  
@@ -18,11 +18,11 @@ Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy nis
   
      Aby określić, że wersja sierpnia 2004 specyfikacji WS-Addressing służy do kodowania wiadomości, można utworzyć niestandardowego powiązania.  
   
-    1.  Dodaj element podrzędny [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) do [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) pliku konfiguracji usługi.  
+    1. Dodaj element podrzędny [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) do [ \<powiązania >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) pliku konfiguracji usługi.  
   
-    2.  Określ nazwę powiązania, dodając [ \<powiązania >](../../../../docs/framework/misc/binding.md) do [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) i ustawienie `name` atrybutu.  
+    2. Określ nazwę powiązania, dodając [ \<powiązania >](../../../../docs/framework/misc/binding.md) do [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md) i ustawienie `name` atrybutu.  
   
-    3.  Określ tryb uwierzytelniania i wersję specyfikacji WS-Security, które są używane do zabezpieczenia wiadomości, które są zgodne z usługami WSE 3.0, dodając element podrzędny [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) do [ \<powiązanie >](../../../../docs/framework/misc/binding.md).  
+    3. Określ tryb uwierzytelniania i wersję specyfikacji WS-Security, które są używane do zabezpieczenia wiadomości, które są zgodne z usługami WSE 3.0, dodając element podrzędny [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) do [ \<powiązanie >](../../../../docs/framework/misc/binding.md).  
   
          Aby ustawić tryb uwierzytelniania, należy ustawić `authenicationMode` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Tryb uwierzytelniania jest w przybliżeniu do asercję gotowej do użycia zabezpieczeń programu WSE 3.0. Poniższa tabela zawiera mapowanie tryby uwierzytelniania w usłudze WCF do potwierdzenia zabezpieczeń gotowej do użycia w programu WSE 3.0.  
   
@@ -39,16 +39,16 @@ Usług Windows Communication Foundation (WCF) są zgodne protokół sieciowy nis
   
          Aby ustawić wersję specyfikacji WS-Security, która służy do zabezpieczania komunikaty protokołu SOAP, ustaw `messageSecurityVersion` atrybutu [ \<zabezpieczeń >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md). Pod kątem współdziałania z usługami WSE 3.0, należy ustawić wartość `messageSecurityVersion` atrybutu <xref:System.ServiceModel.MessageSecurityVersion.WSSecurity11WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10%2A>.  
   
-    4.  Określ, czy sierpnia 2004 wersję specyfikacji WS-Addressing jest używany przez usługę WCF, dodając [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) i ustaw `messageVersion` wartością w celu <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
+    4. Określ, czy sierpnia 2004 wersję specyfikacji WS-Addressing jest używany przez usługę WCF, dodając [ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md) i ustaw `messageVersion` wartością w celu <xref:System.ServiceModel.Channels.MessageVersion.Soap11WSAddressingAugust2004%2A>.  
   
         > [!NOTE]
         >  Korzystając z protokołu SOAP 1.2, należy ustawić `messageVersion` atrybutu <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>.  
   
 2. Określ, czy usługa korzysta z niestandardowego powiązania.  
   
-    1.  Ustaw `binding` atrybutu [ \<punktu końcowego >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elementu `customBinding`.  
+    1. Ustaw `binding` atrybutu [ \<punktu końcowego >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elementu `customBinding`.  
   
-    2.  Ustaw `bindingConfiguration` atrybutu [ \<punktu końcowego >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element na wartość określoną w `name` atrybutu [ \<powiązania >](../../../../docs/framework/misc/binding.md) niestandardowe wiązanie.  
+    2. Ustaw `bindingConfiguration` atrybutu [ \<punktu końcowego >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element na wartość określoną w `name` atrybutu [ \<powiązania >](../../../../docs/framework/misc/binding.md) niestandardowe wiązanie.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład kodu Określa, że `Service.HelloWorldService` używa niestandardowego powiązania pod kątem współdziałania z klientami programu WSE 3.0. Powiązania niestandardowego Określa wersję sierpnia 2004 WS-Addressing i zestaw 1.1 WS-Security specyfikacji służą do zakodowania wymiana wiadomości. Komunikaty są chronione przy użyciu <xref:System.ServiceModel.Configuration.AuthenticationMode.AnonymousForCertificate> tryb uwierzytelniania.  

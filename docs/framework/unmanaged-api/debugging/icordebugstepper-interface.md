@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763740"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper, interfejs
 Reprezentuje krok wykonaniu kodu, który jest realizowany przez debuger; służy jako identyfikator między wydaniem i zakończeniem polecenia i zapewnia sposób anulowania kroku.  
@@ -42,11 +42,11 @@ Reprezentuje krok wykonaniu kodu, który jest realizowany przez debuger; służy
 ## <a name="remarks"></a>Uwagi  
  `ICorDebugStepper` Interfejsu służy do następujących celów:  
   
--   Działa ona jako identyfikator między polecenie kroku, wydawanego i wykonania tego polecenia.  
+- Działa ona jako identyfikator między polecenie kroku, wydawanego i wykonania tego polecenia.  
   
--   Go udostępnia interfejs centralny do hermetyzacji wszystkich przechodzenie krok po kroku, które mogą być wykonywane.  
+- Go udostępnia interfejs centralny do hermetyzacji wszystkich przechodzenie krok po kroku, które mogą być wykonywane.  
   
--   Zapewnia sposób przedwcześnie anulowania operacji przechodzenia krok po kroku.  
+- Zapewnia sposób przedwcześnie anulowania operacji przechodzenia krok po kroku.  
   
  Może istnieć więcej niż jeden stepper na wątek. Na przykład może trafień punktu przerwania w wchodząc funkcji, a użytkownik może chcesz uruchomić nowej operacji przechodzenia krok po kroku wewnątrz tej funkcji. Jest debugera, aby określić sposób obsłużyć taką sytuację. Debuger może być zagnieździć dwóch operacji lub Anuluj operację przechodzenia krok po kroku. `ICorDebugStepper` Interfejs obsługuje obie te opcje.  
   

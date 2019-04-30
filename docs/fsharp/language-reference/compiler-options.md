@@ -3,11 +3,11 @@ title: Opcje kompilatora
 description: Użyj F# opcje wiersza polecenia kompilatora do kontrolowania kompilacji usługi F# aplikacji i bibliotek.
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766093"
 ---
 # <a name="compiler-options"></a>Opcje kompilatora
 

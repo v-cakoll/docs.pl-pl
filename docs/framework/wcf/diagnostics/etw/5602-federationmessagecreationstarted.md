@@ -3,26 +3,26 @@ title: 5602 — FederationMessageCreationStarted
 ms.date: 03/30/2017
 ms.assetid: a93a5057-86d8-4be9-a5a4-09ba935fef01
 ms.openlocfilehash: 12873b1fa96e2af4f65fa3733af0d13c74c851c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33468221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767400"
 ---
 # <a name="5602---federationmessagecreationstarted"></a>5602 — FederationMessageCreationStarted
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|5602|  
-|Słowa kluczowe|Zabezpieczenia|  
+|Identyfikator|5602|  
+|słowa kluczowe|Zabezpieczenia|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany, gdy rozpoczęto Tworzenie komunikatu federacyjnego z post formularza.  
+ To zdarzenie jest emitowane, po rozpoczęciu tworzenia komunikatu federacji z post formularza.  
   
 ## <a name="message"></a>Komunikat  
- Rozpoczęto tworzenie komunikatu federacyjnego na podstawie post formularza.  
+ Tworzenie komunikatu federacji z post formularza pracy.  
   
 ## <a name="details"></a>Szczegóły

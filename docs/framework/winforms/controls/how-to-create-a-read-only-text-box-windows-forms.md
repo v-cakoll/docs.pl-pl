@@ -7,11 +7,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
 ms.openlocfilehash: 72dc188993474ad4b39f0cfa74cadffdb99ff46f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746880"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Instrukcje: Tworzenie pola tekstowego tylko do odczytu (Windows Forms)
 Można edytować pole tekstowe Windows Forms można przekształcić do kontrolki tylko do odczytu. Na przykład pola tekstowego może wyświetlić wartość, która zwykle jest edytowany, ale nie może być aktualnie, ze względu na stan aplikacji.  

@@ -13,30 +13,30 @@ ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765976"
 ---
 # <a name="performing-formatting-operations"></a>Wykonywanie operacji formatowania
 Poniższe tematy zawierają szczegółowe instrukcje dotyczące wykonywania określonych operacji formatowania.  
   
--   [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
   
--   [Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
+- [Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
--   [Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika na liczby w kontrolkach internetowych](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
+- [Instrukcje: Konwertowanie liczbowych danych wejściowych użytkownika w kontrolkach internetowych na liczby](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
   
--   [Porady: wyodrębnianie dnia tygodnia z określonej daty](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
+- [Instrukcje: Wyodrębnianie dnia tygodnia z określonej daty](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md).  
   
--   [Instrukcje: Przekazywanie wartości daty i godziny](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
+- [Instrukcje: Wartości obustronne daty i godziny](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
   
--   [Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników Internetu](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
+- [Instrukcje: Wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
--   [Instrukcje: Wyświetlanie liczby milisekund w wartościach daty i godziny](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
+- [Instrukcje: Wyświetlanie liczby milisekund w wartości daty i godziny](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   
--   [Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
+- [Instrukcje: Wyświetlanie dat w kalendarzach innych niż gregoriański](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

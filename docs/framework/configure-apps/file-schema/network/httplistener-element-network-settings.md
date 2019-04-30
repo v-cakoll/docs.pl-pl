@@ -3,11 +3,11 @@ title: <httpListener>, element (ustawienia sieci)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705080"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener >, Element (ustawienia sieci)
 Dostosowuje parametrów używanych przez <xref:System.Net.HttpListener> klasy.  
@@ -52,9 +52,9 @@ Dostosowuje parametrów używanych przez <xref:System.Net.HttpListener> klasy.
   
  `http.sys` Service udostępnia dwa ciągi identyfikatora URI żądania:  
   
--   Identyfikator URI nieprzetworzone  
+- Identyfikator URI nieprzetworzone  
   
--   Przekonwertowana identyfikatora URI  
+- Przekonwertowana identyfikatora URI  
   
  Nieprzetworzone identyfikator URI jest <xref:System.Uri?displayProperty=nameWithType> podane w wierszu żądania żądania HTTP:  
   
@@ -72,11 +72,11 @@ Dostosowuje parametrów używanych przez <xref:System.Net.HttpListener> klasy.
   
  `http.sys` Usługi łączy w sobie <xref:System.Uri.Host%2A?displayProperty=nameWithType> wartości właściwości, a ciąg w wierszu żądania do utworzenia przekonwertowanego identyfikatora URI. Ponadto `http.sys` i <xref:System.Uri?displayProperty=nameWithType> klasy również wykonuje następujące czynności:  
   
--   ONZ anuluje wszystkie zakodowany wartość procentowa.  
+- ONZ anuluje wszystkie zakodowany wartość procentowa.  
   
--   Konwertuje kodowany w formacie procent znaki spoza zestawu ASCII w reprezentacji znaków UTF-16. Należy pamiętać, że UTF-8 i ANSI/DBCS są obsługiwane znaki oraz znaki Unicode (kodowanie Unicode przy użyciu formatu uXXXX %).  
+- Konwertuje kodowany w formacie procent znaki spoza zestawu ASCII w reprezentacji znaków UTF-16. Należy pamiętać, że UTF-8 i ANSI/DBCS są obsługiwane znaki oraz znaki Unicode (kodowanie Unicode przy użyciu formatu uXXXX %).  
   
--   Wykonuje inne czynności normalizacji, takie jak kompresja ścieżki.  
+- Wykonuje inne czynności normalizacji, takie jak kompresja ścieżki.  
   
  Ponieważ żądanie nie zawiera żadnych informacji o kodowanie używane do zakodowane w formacie procent wartości, nie może być określić poprawne kodowanie przez analizowanie zakodowane w formacie procent wartości.  
   

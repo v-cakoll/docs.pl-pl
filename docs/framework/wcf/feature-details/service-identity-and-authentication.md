@@ -8,11 +8,11 @@ helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
 ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748268"
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podstawie usługi sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po klient inicjuje komunikację do punktu końcowego i usługa uwierzytelnia klienta, klient porównuje wartości tożsamości punktu końcowego z procesu uwierzytelniania punktu końcowego, zwrócona wartość. Jeśli są zgodne, klient jest pewność, że skontaktuje się z punktem końcowym usługi oczekiwane. Ta opcja działa jako ochrony przed *wyłudzania informacji* poprzez uniemożliwienie nastąpi przekierowanie do punktu końcowego hostowanego przez usługę złośliwego klienta.  
@@ -26,9 +26,9 @@ Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podsta
   
  Przetwarzanie tożsamości składa się z następujących etapów:  
   
--   W czasie projektowania dewelopera klienta określa tożsamość usługi z punktu końcowego metadanych (dostępna za pośrednictwem WSDL).  
+- W czasie projektowania dewelopera klienta określa tożsamość usługi z punktu końcowego metadanych (dostępna za pośrednictwem WSDL).  
   
--   W czasie wykonywania aplikacja klienta sprawdza oświadczenia poświadczenia zabezpieczeń, przed wysłaniem komunikatów do usługi.  
+- W czasie wykonywania aplikacja klienta sprawdza oświadczenia poświadczenia zabezpieczeń, przed wysłaniem komunikatów do usługi.  
   
  Tożsamość przetwarzania na kliencie jest analogiczne do uwierzytelniania klienta w usłudze. Usługa bezpiecznego nie wykonuje kodu, dopóki nie zostały uwierzytelnione poświadczenia klienta. Podobnie klient nie wysyła komunikaty do usługi, dopóki nie zostały uwierzytelnione poświadczenia zależy od tego, co jest znane z wyprzedzeniem z metadanych usługi.  
   
@@ -78,21 +78,21 @@ Usługa *tożsamość punktu końcowego* jest wartością wygenerowany na podsta
   
  Jeśli kanał jest skonfigurowany do uwierzytelniania za pomocą komunikatów lub poziomie transportu Secure Sockets Layer (SSL) za pomocą certyfikatów X.509 do uwierzytelniania, następujące wartości tożsamości są prawidłowe:  
   
--   DNS. WCF zapewnia, że certyfikat oferowane w trakcie uzgadniania protokołu SSL zawiera DNS lub `CommonName` atrybutu (CN) jest równa wartości określonej w tożsamość DNS na komputerze klienckim. Należy pamiętać, że te testy są wykonywane tylko dodatkowo do określenia ważności certyfikatu serwera. Domyślnie WCF weryfikuje, czy certyfikat serwera jest wystawiony przez zaufanego głównego urzędu certyfikacji.  
+- DNS. WCF zapewnia, że certyfikat oferowane w trakcie uzgadniania protokołu SSL zawiera DNS lub `CommonName` atrybutu (CN) jest równa wartości określonej w tożsamość DNS na komputerze klienckim. Należy pamiętać, że te testy są wykonywane tylko dodatkowo do określenia ważności certyfikatu serwera. Domyślnie WCF weryfikuje, czy certyfikat serwera jest wystawiony przez zaufanego głównego urzędu certyfikacji.  
   
--   certyfikat. Podczas uzgadniania protokołu SSL WCF gwarantuje, że zdalnego punktu końcowego udostępnia wartość dokładnie certyfikat określony w tożsamości.  
+- certyfikat. Podczas uzgadniania protokołu SSL WCF gwarantuje, że zdalnego punktu końcowego udostępnia wartość dokładnie certyfikat określony w tożsamości.  
   
--   Odwołanie certyfikatu. Wartość taka sama jak certyfikatu.  
+- Odwołanie certyfikatu. Wartość taka sama jak certyfikatu.  
   
--   RSA. Podczas uzgadniania protokołu SSL WCF gwarantuje, że zdalnego punktu końcowego zawiera dokładnie klucza RSA, określone w tożsamości.  
+- RSA. Podczas uzgadniania protokołu SSL WCF gwarantuje, że zdalnego punktu końcowego zawiera dokładnie klucza RSA, określone w tożsamości.  
   
  Jeśli usługa jest uwierzytelniany przy użyciu protokołu SSL z poziomu komunikatu lub transportu przy użyciu poświadczeń Windows do uwierzytelniania i negocjuje poświadczenie, następujące wartości tożsamości są prawidłowe:  
   
--   DNS. Negocjacji przekazuje nazwę SPN usługi, dzięki czemu można sprawdzić nazwy DNS. Główna nazwa usługi jest w formie `host/<dns name>`.  
+- DNS. Negocjacji przekazuje nazwę SPN usługi, dzięki czemu można sprawdzić nazwy DNS. Główna nazwa usługi jest w formie `host/<dns name>`.  
   
--   SPN. Usługi jawne nazwy SPN jest zwracana, na przykład `host/myservice`.  
+- SPN. Usługi jawne nazwy SPN jest zwracana, na przykład `host/myservice`.  
   
--   UPN. Nazwa UPN konta usługi. Nazwa UPN jest w formie `username` @ `domain`. Na przykład, gdy usługa jest uruchomiona na koncie użytkownika, może być `username@contoso.com`.  
+- UPN. Nazwa UPN konta usługi. Nazwa UPN jest w formie `username` @ `domain`. Na przykład, gdy usługa jest uruchomiona na koncie użytkownika, może być `username@contoso.com`.  
   
  Programowe określanie tożsamości (przy użyciu <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość) jest opcjonalny. Jeśli nie określono żadnych tożsamości i typu poświadczeń klienta jest Windows, wartość domyślna to główna nazwa usługi z wartością ustawioną na część nazwy hosta z prefiksem adresu punktu końcowego usługi "hosta /" literału. Jeśli nie określono żadnych tożsamości i typu poświadczeń klienta jest certyfikatem, wartością domyślną jest `Certificate`. Dotyczy to zarówno zabezpieczenia na poziomie komunikatu i transportu.  
   

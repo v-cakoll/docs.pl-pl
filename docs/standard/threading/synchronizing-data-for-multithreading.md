@@ -10,24 +10,24 @@ ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769151"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 Gdy wiele wątków może wykonywać wywołania do właściwości i metody pojedynczy obiekt, ważne jest, można zsynchronizować te wywołania. W przeciwnym razie jeden wątek może spowodować zakłócenie działania innego wątku, a obiekt może pozostać w nieprawidłowym stanie. Klasy, której członkami są chronione przed przerw w zasilaniu nazywa się metodą o bezpiecznych wątkach.  
   
  Common Language Infrastructure udostępnia kilka strategii do synchronizowania dostępu do wystąpienia i statyczne elementy członkowskie:  
   
--   Regiony kodu zsynchronizowane. Możesz użyć <xref:System.Threading.Monitor> klasy lub kompilatora pomocy technicznej dla tej klasy zsynchronizować tylko Blokuj kod, który ich potrzebuje, poprawa wydajności.  
+- Regiony kodu zsynchronizowane. Możesz użyć <xref:System.Threading.Monitor> klasy lub kompilatora pomocy technicznej dla tej klasy zsynchronizować tylko Blokuj kod, który ich potrzebuje, poprawa wydajności.  
   
--   Ręcznej synchronizacji. Można użyć dla obiektów synchronizacji zawartym w bibliotece klas programu .NET Framework. Zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md), który zawiera omówienie <xref:System.Threading.Monitor> klasy.  
+- Ręcznej synchronizacji. Można użyć dla obiektów synchronizacji zawartym w bibliotece klas programu .NET Framework. Zobacz [Przegląd podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md), który zawiera omówienie <xref:System.Threading.Monitor> klasy.  
   
--   Konteksty zsynchronizowane. Możesz użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> Aby włączyć synchronizację prostego, automatyczne dla <xref:System.ContextBoundObject> obiektów.  
+- Konteksty zsynchronizowane. Możesz użyć <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> Aby włączyć synchronizację prostego, automatyczne dla <xref:System.ContextBoundObject> obiektów.  
   
--   Klasy kolekcji w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw. Te klasy oferują synchronizowane wbudowane Dodawanie i usuwanie operacji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md).  
+- Klasy kolekcji w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeni nazw. Te klasy oferują synchronizowane wbudowane Dodawanie i usuwanie operacji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md).  
   
  Środowisko uruchomieniowe języka wspólnego udostępnia model wątku, w którym klasy można podzielić na wiele kategorii, które mogą być synchronizowane na różne sposoby w zależności od wymagań. W poniższej tabeli przedstawiono, jakie pomoc techniczna synchronizacji jest dostępna dla pola i metody z kategorią danego synchronizacji.  
   

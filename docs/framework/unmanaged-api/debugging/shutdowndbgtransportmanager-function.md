@@ -19,14 +19,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765339"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager — Funkcja
-Zamknięcie menedżera transportu na połączenie komputera zdalnego docelowej.  
+Zamknie menedżera transportu dla połączenia do maszyny zdalnej docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,10 +35,10 @@ void InitDbgTransportManager ();
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
   
- **Biblioteka:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86.dll  
   
  **Wersje programu .NET framework:** 3.5 z dodatkiem SP1

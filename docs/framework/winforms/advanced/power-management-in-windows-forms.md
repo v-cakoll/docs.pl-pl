@@ -12,8 +12,8 @@ ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757654"
 ---
 # <a name="power-management-in-windows-forms"></a>Zarządzanie energią w formularzach systemu Windows
 Aplikacje Windows Forms korzystać z zalet funkcji zarządzania energią w systemie operacyjnym Windows. Aplikacje można monitorować stan zasilania komputera i podjąć działania w przypadku zmiany stanu. Na przykład jeśli aplikacja jest uruchomiona na komputerze przenośnym, możesz zechcieć wyłączenie pewnych funkcji w aplikacji, gdy poziom naładowania baterii komputera znajduje się w ramach określonego poziomu.  

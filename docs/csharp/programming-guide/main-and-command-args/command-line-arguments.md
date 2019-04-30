@@ -6,11 +6,11 @@ helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
 ms.openlocfilehash: 05978c5604e7aa359b016bd6e3f3196178f706ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709981"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumenty wiersza poleceń (Przewodnik programowania w języku C#)
 Możesz wysyłać argumenty do `Main` metoda definiując metodę na jeden z następujących sposobów:  

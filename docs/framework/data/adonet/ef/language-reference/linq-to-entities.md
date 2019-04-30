@@ -3,11 +3,11 @@ title: LINQ do Jednostek
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760717"
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), która umożliwia programistom pisanie kwerend modelu koncepcyjnego Entity Framework przy użyciu języka Visual Basic lub Visual C#. Zapytania dotyczące programu Entity Framework są reprezentowane przez zapytania w drzewie poleceń, których wykonanie względem kontekst. Składnik LINQ to Entities konwertuje zapytań Language-Integrated zapytania (LINQ) z poleceniem Drzewo zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty używane przez Entity Framework i LINQ. Poniżej przedstawiono proces tworzenia i wykonywanie w zapytaniu składnika LINQ to Entities:  
@@ -57,13 +57,13 @@ Składnik LINQ to Entities zapewnia obsługę Language-Integrated Query (LINQ), 
   
  Wyniki zapytania są zwykle zwracane jako jeden z następujących czynności:  
   
--   Kolekcja zero lub więcej obiektów typów jednostek lub projekcji złożonych typów zdefiniowanych w modelu koncepcyjnym.  
+- Kolekcja zero lub więcej obiektów typów jednostek lub projekcji złożonych typów zdefiniowanych w modelu koncepcyjnym.  
   
--   Typy CLR, które są obsługiwane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+- Typy CLR, które są obsługiwane przez [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
   
--   Kolekcje wbudowane.  
+- Kolekcje wbudowane.  
   
--   Typy anonimowe.  
+- Typy anonimowe.  
   
  Aby uzyskać więcej informacji, zobacz [wyników zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md).  
   

@@ -3,11 +3,11 @@ title: Importowanie niestandardowych metadanych dla rozszerzenia WCF
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766769"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importowanie niestandardowych metadanych dla rozszerzenia WCF
 W Windows Communication Foundation (WCF), importowanie metadanych jest proces generowania abstrakcyjną reprezentację usługi lub jej części składowe z jego metadanych. Na przykład, można zaimportować WCF <xref:System.ServiceModel.Description.ServiceEndpoint> przypadkach <xref:System.ServiceModel.Channels.Binding> wystąpień lub <xref:System.ServiceModel.Description.ContractDescription> wystąpień na podstawie pliku WSDL dokumentów dla usługi. Aby zaimportować metadane usługi w programie WCF, należy korzystać z implementacji <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> klasy abstrakcyjnej. Typy, które wynikają z <xref:System.ServiceModel.Description.MetadataImporter> klasa implementuje pomocy technicznej w przypadku importowania formaty metadanych, które korzystają z protokołu WS-Policy zaimportować logiki w programie WCF.  

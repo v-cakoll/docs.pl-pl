@@ -12,11 +12,11 @@ ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755795"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile jest podzbiorem .NET Framework, która została dostarczona z [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i wcześniejsze wersje i został zoptymalizowany dla aplikacji klienckich. .NET Framework to platforma deweloperska dla Windows, Windows Phone i platformą Microsoft Azure i zapewnia zarządzanie środowisko wykonywania aplikacji i biblioteki klas .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i jego wcześniejsze wersje oferowały dwie opcje wdrożenia: pełny program .NET Framework i Client Profile. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  

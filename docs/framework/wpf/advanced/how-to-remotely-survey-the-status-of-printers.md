@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768504"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Instrukcje: Zdalne badanie stanu drukarek
 W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek, które nie działa z powodu zakleszczenie papieru lub Brak papieru lub problematycznych sytuacji. Bogaty zestaw właściwości drukarki ujawnione w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework zapewniają środki do przeprowadzania szybkiej udział w ankiecie stanów drukarki.  
@@ -39,9 +39,9 @@ W dowolnym momencie w średnich i dużych firmach może istnieć wiele drukarek,
   
  Następnie w przykładzie <xref:System.Printing.PrintServer.GetPrintQueues%2A> Aby utworzyć kolekcję zawierającą wszystkie serwera zachowania umieszcza w kolejce i rozpoczyna się w pętli poprzez ich. Ta pętla wewnętrzny zawiera rozgałęziona struktura odpowiadający dwa sposoby sprawdzania stanu drukarki:  
   
--   Może odczytywać flagi o <xref:System.Printing.PrintQueue.QueueStatus%2A> właściwość, która jest typu <xref:System.Printing.PrintQueueStatus>.  
+- Może odczytywać flagi o <xref:System.Printing.PrintQueue.QueueStatus%2A> właściwość, która jest typu <xref:System.Printing.PrintQueueStatus>.  
   
--   Można znaleźć każdej odpowiednie właściwości, takie jak <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, i <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
+- Można znaleźć każdej odpowiednie właściwości, takie jak <xref:System.Printing.PrintQueue.IsOutOfPaper%2A>, i <xref:System.Printing.PrintQueue.IsPaperJammed%2A>.  
   
  W tym przykładzie przedstawiono obie metody, dzięki czemu użytkownik został wcześniej zostanie wyświetlony monit, aby metody i odpowiedziała, zgłaszając "y", jeśli użytkownik chce używać flagi o <xref:System.Printing.PrintQueue.QueueStatus%2A> właściwości. Poniżej znajdują się szczegółowe informacje o dwóch metod.  
   

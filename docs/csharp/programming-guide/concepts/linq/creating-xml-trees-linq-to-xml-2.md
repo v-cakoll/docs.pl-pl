@@ -3,11 +3,11 @@ title: Tworzenie drzew XML w języku C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
 ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702623"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Tworzenie drzew XML w języku C# (LINQ to XML)
 Ta sekcja zawiera informacje dotyczące tworzenia drzew XML w języku C#.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` Parametru jest niezwykle elastyczny. Obsługuje ona dowolnego typu obiektu, który jest prawidłowy element podrzędny <xref:System.Xml.Linq.XElement>. Następujące reguły stosuje się do różnych typów obiektów tego parametru:  
   
--   Ciąg jest dodawany jako zawartości tekstowej.  
+- Ciąg jest dodawany jako zawartości tekstowej.  
   
--   <xref:System.Xml.Linq.XElement> Jest dodawany jako element podrzędny.  
+- <xref:System.Xml.Linq.XElement> Jest dodawany jako element podrzędny.  
   
--   <xref:System.Xml.Linq.XAttribute> Jest dodawany jako atrybut.  
+- <xref:System.Xml.Linq.XAttribute> Jest dodawany jako atrybut.  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, Lub <xref:System.Xml.Linq.XText> jest dodawany jako zawartość elementu podrzędnego.  
+- <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment>, Lub <xref:System.Xml.Linq.XText> jest dodawany jako zawartość elementu podrzędnego.  
   
--   <xref:System.Collections.IEnumerable> Są wyliczane, a te zasady są stosowane cyklicznie z wynikami.  
+- <xref:System.Collections.IEnumerable> Są wyliczane, a te zasady są stosowane cyklicznie z wynikami.  
   
--   Dla dowolnego typu jego `ToString` wywoływana jest metoda, a wynik jest dodawany jako zawartości tekstowej.  
+- Dla dowolnego typu jego `ToString` wywoływana jest metoda, a wynik jest dodawany jako zawartości tekstowej.  
   
 ### <a name="creating-an-xelement-with-content"></a>Tworzenie XElement z zawartością  
  Możesz utworzyć <xref:System.Xml.Linq.XElement> zawierający prostej zawartości z pojedynczym wywołaniu metody. Aby to zrobić, należy określić zawartość jako drugi parametr w następujący sposób:  

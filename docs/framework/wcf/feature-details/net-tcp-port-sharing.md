@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762755"
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
 Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na protokole TCP (net.tcp://) komunikację o wysokiej wydajności. Usługi WCF wprowadza również nowy składnik systemu, usługi udostępniania portów Net.TCP, która umożliwia użycie portów net.tcp być współużytkowane przez wiele procesów użytkownika.  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) zapewnia nowy Protokół sieci oparte na 
 ## <a name="port-sharing-architecture"></a>Architektura współużytkowania portów  
  Architektura współużytkowanie portów w programie WCF ma trzy główne składniki:  
   
--   Proces roboczy: Żaden proces, komunikacji za pośrednictwem net.tcp:// przy użyciu udostępnionych portów.  
+- Proces roboczy: Żaden proces, komunikacji za pośrednictwem net.tcp:// przy użyciu udostępnionych portów.  
   
--   Transportu TCP usługi WCF: Implementuje protokół net.tcp://.  
+- Transportu TCP usługi WCF: Implementuje protokół net.tcp://.  
   
--   Usługa udostępniania portów Net.TCP: Umożliwia wielu procesów roboczych na udostępnianie tego samego portu TCP.  
+- Usługa udostępniania portów Net.TCP: Umożliwia wielu procesów roboczych na udostępnianie tego samego portu TCP.  
   
  Usługi udostępniania portów Net.TCP jest usługa Windows trybu użytkownika, która akceptuje połączenia net.tcp:// imieniu procesów roboczych, łączących się za jego pośrednictwem. Po odebraniu połączenia z gniazdem współużytkowania portów bada strumienia komunikatów przychodzących w celu uzyskania adresu docelowego. Oparte na ten adres, port udostępnianej usługi może kierować strumień danych do aplikacji, które ostatecznie przetwarza je.  
   

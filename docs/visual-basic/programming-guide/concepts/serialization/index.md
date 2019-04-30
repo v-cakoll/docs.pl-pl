@@ -3,11 +3,11 @@ title: Serializacja (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
 ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751107"
 ---
 # <a name="serialization-visual-basic"></a>Serializacja (Visual Basic)
 Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można było zapisać obiekt lub przekazuje je do pamięci, bazie danych lub pliku. Głównym celem jest zapisanie stanu obiektu, aby można było utworzyć ponownie w razie. Zwrotny proces jest nazywany deserializacji.  
@@ -50,7 +50,7 @@ Serializacja jest proces konwersji obiektu do strumienia bajtów, aby można by�
   
  Gdy używasz podstawowe serializacji, przechowywanie wersji obiektów może spowodować problemy, w którym to przypadku może być korzystniejsze niestandardowej serializacji. Serializacja podstawowa jest najprostszym sposobem wykonania serializacji, ale nie zapewnia poziom kontroli nad procesem.  
   
-### <a name="custom-serialization"></a>Niestandardowej serializacji  
+### <a name="custom-serialization"></a>Serializacja niestandardowa  
  W niestandardowej serializacji można określić dokładnie obiekty, które będą serializowane i jak to robi. Klasa musi być oznaczona <xref:System.SerializableAttribute> i zaimplementować <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
  Jeśli chcesz, aby obiekt mógł zostać przeprowadzona w niestandardowy sposób także, należy użyć konstruktora niestandardowego.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756757"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Rozwiązywanie problemów związanych ze zmiennymi w Visual Basic
 Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpić podczas pracy ze zmiennymi w Visual Basic.  
@@ -18,9 +18,9 @@ Ta strona zawiera listę niektórych typowych problemów, które mogą wystąpi�
 ## <a name="unable-to-access-members-of-an-object"></a>Nie można dostępu do elementów członkowskich obiektu  
  Jeśli kod próbuje uzyskać dostęp do właściwości lub metody na obiekt, istnieją dwie sytuacje możliwy błąd:  
   
--   Kompilator może wygenerować komunikat o błędzie, jeśli zadeklarujesz zmienną obiektu określonego typu i następnie odwoływać się do elementu członkowskiego nie jest zdefiniowany przez tego typu.  
+- Kompilator może wygenerować komunikat o błędzie, jeśli zadeklarujesz zmienną obiektu określonego typu i następnie odwoływać się do elementu członkowskiego nie jest zdefiniowany przez tego typu.  
   
--   Środowiska wykonawczego <xref:System.MemberAccessException> występuje, gdy obiekt, który został przypisany do zmiennej obiektu nie ujawnia kod próbuje uzyskać dostęp do elementu członkowskiego. W przypadku zmiennej [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md), można również uzyskać ten wyjątek, jeśli element członkowski nie jest `Public`. Jest to spowodowane późnym wiązaniu zezwala na dostęp tylko do `Public` elementów członkowskich.  
+- Środowiska wykonawczego <xref:System.MemberAccessException> występuje, gdy obiekt, który został przypisany do zmiennej obiektu nie ujawnia kod próbuje uzyskać dostęp do elementu członkowskiego. W przypadku zmiennej [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md), można również uzyskać ten wyjątek, jeśli element członkowski nie jest `Public`. Jest to spowodowane późnym wiązaniu zezwala na dostęp tylko do `Public` elementów członkowskich.  
   
  Gdy [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) kontrola typów zestawów `On`, zmienna obiektu dostęp do metod i właściwości klasy, z którym trzeba je zadeklarować. Ilustruje to poniższy przykład.  
 

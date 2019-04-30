@@ -3,11 +3,11 @@ title: Sesje, tworzenie wystąpień i współbieżność
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748021"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sesje, tworzenie wystąpień i współbieżność
 A *sesji* korelacja wszystkich komunikatów przesyłanych między dwoma punktami końcowymi. *Tworzenie wystąpienia* odwołuje się do kontrolowania okresu istnienia obiektów zdefiniowanych przez użytkownika usług i ich powiązane <xref:System.ServiceModel.InstanceContext> obiektów. *Współbieżność* termin do sterowania liczby wątków działających w <xref:System.ServiceModel.InstanceContext> w tym samym czasie.  
@@ -19,21 +19,21 @@ A *sesji* korelacja wszystkich komunikatów przesyłanych między dwoma punktami
   
  Sesje WCF oferują następujące funkcje koncepcyjny główne:  
   
--   Jawnie są inicjowane i został przerwany przez aplikacji wywołującej.  
+- Jawnie są inicjowane i został przerwany przez aplikacji wywołującej.  
   
--   Wiadomości dostarczone w trakcie sesji są przetwarzane w kolejności, w której zostały odebrane.  
+- Wiadomości dostarczone w trakcie sesji są przetwarzane w kolejności, w której zostały odebrane.  
   
--   Sesje skorelowania grupę wiadomości w konwersacji. Znaczenie tej korelacji jest klasą abstrakcyjną. Na przykład jeden kanał oparte na sesji mogą mieć związek komunikaty na podstawie sieci udostępnionego połączenia podczas inną drogą oparte na sesji mogą mieć związek wiadomości według znaczników udostępnionych w treści komunikatu. Funkcje, które mogą być uzyskane z sesji zależą od rodzaju korelacji.  
+- Sesje skorelowania grupę wiadomości w konwersacji. Znaczenie tej korelacji jest klasą abstrakcyjną. Na przykład jeden kanał oparte na sesji mogą mieć związek komunikaty na podstawie sieci udostępnionego połączenia podczas inną drogą oparte na sesji mogą mieć związek wiadomości według znaczników udostępnionych w treści komunikatu. Funkcje, które mogą być uzyskane z sesji zależą od rodzaju korelacji.  
   
--   Brak nie magazynu ogólnych danych skojarzonych z sesją usługi WCF.  
+- Brak nie magazynu ogólnych danych skojarzonych z sesją usługi WCF.  
   
  Jeśli znasz <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> klasy w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji i funkcji zawiera, można zauważyć następujące różnice między tego rodzaju sesji i sesje WCF:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są zawsze inicjowanych przez serwer.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są niejawnie nieuporządkowane.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje są niejawnie nieuporządkowane.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje udostępniają mechanizm magazynu danych ogólnych dla żądań.  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] sesje udostępniają mechanizm magazynu danych ogólnych dla żądań.  
   
  Aplikacje usługi i aplikacje klienckie wchodzić w interakcje z sesjami na różne sposoby. Aplikacje klienckie zainicjować sesji odbierać i przetwarzać komunikaty wysyłane w ramach sesji. Aplikacje usługi można użyć sesji jako punktu rozszerzalności, można dodać dodatkowe zachowanie. Jest to realizowane przez pracy bezpośrednio z <xref:System.ServiceModel.InstanceContext> lub implementacji dostawcy niestandardowego wystąpienia kontekstu.  
   
@@ -42,11 +42,11 @@ A *sesji* korelacja wszystkich komunikatów przesyłanych między dwoma punktami
   
  Dostępne są następujące tryby wystąpień:  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>: Nowy <xref:System.ServiceModel.InstanceContext> (i w związku z tym usługa obiektu) jest tworzony dla każdego żądania klienta.  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>: Nowy <xref:System.ServiceModel.InstanceContext> (i w związku z tym usługa obiektu) jest tworzony dla każdego żądania klienta.  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowy <xref:System.ServiceModel.InstanceContext> (i w związku z tym usługa obiektu) jest tworzone dla każdej nowej sesji klienta i utrzymywana ze względu na okres istnienia sesji (wymaga powiązanie, które obsługuje sesji).  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>: Nowy <xref:System.ServiceModel.InstanceContext> (i w związku z tym usługa obiektu) jest tworzone dla każdej nowej sesji klienta i utrzymywana ze względu na okres istnienia sesji (wymaga powiązanie, które obsługuje sesji).  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedynczy <xref:System.ServiceModel.InstanceContext> (i w związku z tym usługa obiektu) obsługuje wszystkie żądania klienta dla cyklu życia aplikacji.  
+- <xref:System.ServiceModel.InstanceContextMode.Single>: Pojedynczy <xref:System.ServiceModel.InstanceContext> (i w związku z tym usługa obiektu) obsługuje wszystkie żądania klienta dla cyklu życia aplikacji.  
   
  Poniższy przykład kodu pokazuje domyślną <xref:System.ServiceModel.InstanceContextMode> wartość <xref:System.ServiceModel.InstanceContextMode.PerSession> jest jawnie ustawione na klasę usługi.  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  Dostępne są następujące trzy tryby współbieżności:  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>: W każdym kontekście wystąpienie może mieć co najwyżej jeden wątek przetwarzanie komunikatów w kontekście wystąpienia w danym momencie. Inne wątki, które chcą korzystać z tym samym kontekście wystąpienia muszą blokować do momentu, oryginalnym wątek kończy działanie kontekstu wystąpienia.  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>: W każdym kontekście wystąpienie może mieć co najwyżej jeden wątek przetwarzanie komunikatów w kontekście wystąpienia w danym momencie. Inne wątki, które chcą korzystać z tym samym kontekście wystąpienia muszą blokować do momentu, oryginalnym wątek kończy działanie kontekstu wystąpienia.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Każde wystąpienie usługi może mieć wiele wątków jednocześnie przetwarzanie komunikatów. Implementacja usługi musi być wątków, aby użyć tego trybu współbieżności.  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>: Każde wystąpienie usługi może mieć wiele wątków jednocześnie przetwarzanie komunikatów. Implementacja usługi musi być wątków, aby użyć tego trybu współbieżności.  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania wielobieżnej operacji. Usługa akceptuje tylko te wywołania, gdy wywołuje za pośrednictwem obiektu klienta programu WCF.  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: Każde wystąpienie usługi przetwarza jeden komunikat w danym momencie, ale akceptuje wywołania wielobieżnej operacji. Usługa akceptuje tylko te wywołania, gdy wywołuje za pośrednictwem obiektu klienta programu WCF.  
   
 > [!NOTE]
 >  Opis i tworzenia kodu, która bezpiecznie używa więcej niż jeden wątek może być trudne do pisania pomyślnie. Przed rozpoczęciem korzystania z <xref:System.ServiceModel.ConcurrencyMode.Multiple> lub <xref:System.ServiceModel.ConcurrencyMode.Reentrant> wartości, upewnij się, że usługa prawidłowo jest przeznaczony dla tych trybów. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>.  

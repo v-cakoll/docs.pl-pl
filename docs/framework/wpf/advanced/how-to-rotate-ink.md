@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Obróć atrament'
+title: 'Instrukcje: Obracanie pisma odręcznego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - rotating ink [WPF]
 ms.assetid: fac36cc9-dd01-41ca-9bde-9d33e3790bbe
 ms.openlocfilehash: 31f5d0ffb6f0fdcdaef13bc44653f8c7938ac7f3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768462"
 ---
-# <a name="how-to-rotate-ink"></a>Instrukcje: Obróć atrament
+# <a name="how-to-rotate-ink"></a>Instrukcje: Obracanie pisma odręcznego
 ## <a name="example"></a>Przykład  
  Poniższy przykładowy kod kopiuje pisma odręcznego z <xref:System.Windows.Controls.InkCanvas> do <xref:System.Windows.Controls.Canvas> zawierający <xref:System.Windows.Controls.InkPresenter>.  Gdy aplikacja kopiuje pisma odręcznego, także o pisma odręcznego 90 stopni w prawo.  
   

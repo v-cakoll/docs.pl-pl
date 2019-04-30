@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Otwórz plik, który został upuszczony na formant RichTextBox'
+title: 'Instrukcje: Otwieranie pliku, który został upuszczony na kontrolkę RichTextBox'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768605"
 ---
-# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Instrukcje: Otwórz plik, który został upuszczony na formant RichTextBox
+# <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>Instrukcje: Otwieranie pliku, który został upuszczony na kontrolkę RichTextBox
 W [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Controls.TextBox>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Documents.FlowDocument> wszystkich kontrolek posiada wbudowanej funkcji przeciągania i upuszczania. Wbudowane funkcje umożliwia przeciąganie i upuszczanie tekstu wewnątrz i pomiędzy kontrolki. Jednak nie umożliwia otwarcie pliku przez usunięcie plików na formancie. Te kontrolki również oznaczyć zdarzenia przeciągania i upuszczania, jako obsługiwane. Co w efekcie domyślnie nie można dodać własne programy obsługi zdarzeń do zapewnienia funkcji do otwierania plików porzuconych.  
   
  Aby dodać dodatkowe Obsługa przeciągania i upuszczania w tych kontrolek, należy użyć <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29> metody w celu dodania usługi obsługi zdarzeń dla zdarzenia przeciągania i upuszczania. Ustaw `handledEventsToo` parametr `true` mieć określony program obsługi, można wywołać dla zdarzenia trasowanego, która już została oznaczona jako obsługiwane w innym elemencie wzdłuż trasy zdarzeń.  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762468"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test trafienia w warstwie Visual
 Ten temat zawiera omówienie funkcji testowania trafień, dostarczone przez warstwy visual. Obsługa testowania trafień pozwala określić, czy wartość geometrii lub punkt mieści się w renderowanym zawartość <xref:System.Windows.Media.Visual>, dzięki czemu można zaimplementować zachowania interfejsu użytkownika, takie jak prostokąta zaznaczenia na wybranie wielu obiektów.  
@@ -22,13 +22,13 @@ Ten temat zawiera omówienie funkcji testowania trafień, dostarczone przez wars
 ## <a name="hit-testing-scenarios"></a>Trafienia scenariuszy testowania  
  <xref:System.Windows.UIElement> Klasa udostępnia <xref:System.Windows.UIElement.InputHitTest%2A> metody, która pozwala na trafień Testuj pod względem elementu za pomocą podanej wartości współrzędnych. W wielu przypadkach <xref:System.Windows.UIElement.InputHitTest%2A> metoda zapewnia odpowiednich funkcji do testowania elementów wykonawczych trafień. Istnieje jednak kilka scenariuszy, w których użytkownik może być konieczne wdrożenie testowania trafień w warstwie visual.  
   
--   Test przed non - trafienia<xref:System.Windows.UIElement> obiektów: Ma to zastosowanie, jeśli napotkasz testowania non -<xref:System.Windows.UIElement> obiekty, takie jak <xref:System.Windows.Media.DrawingVisual> lub obiektów graficznych.  
+- Test przed non - trafienia<xref:System.Windows.UIElement> obiektów: Ma to zastosowanie, jeśli napotkasz testowania non -<xref:System.Windows.UIElement> obiekty, takie jak <xref:System.Windows.Media.DrawingVisual> lub obiektów graficznych.  
   
--   Test przy użyciu geometrii trafienia: Ma to zastosowanie, jeśli potrzebujesz test trafienia przy użyciu obiektów geometrii, a nie wartość współrzędnych punktu.  
+- Test przy użyciu geometrii trafienia: Ma to zastosowanie, jeśli potrzebujesz test trafienia przy użyciu obiektów geometrii, a nie wartość współrzędnych punktu.  
   
--   Trafienia testowanie wielu obiektów: Ma to zastosowanie, gdy trzeba trafień Testuj pod względem wielu obiektów, takich jak nakładających się obiektów. Aby uzyskać wyniki dla wszystkich wizualizacji przecinające się geometrię lub punktu, nie tylko pierwszy z nich.  
+- Trafienia testowanie wielu obiektów: Ma to zastosowanie, gdy trzeba trafień Testuj pod względem wielu obiektów, takich jak nakładających się obiektów. Aby uzyskać wyniki dla wszystkich wizualizacji przecinające się geometrię lub punktu, nie tylko pierwszy z nich.  
   
--   Ignorowanie <xref:System.Windows.UIElement> zasady testowania trafień: Ma to zastosowanie, gdy należy zignorować <xref:System.Windows.UIElement> trafień testowania zasad, które uwzględnia takie czynniki jak tego, czy element jest wyłączony lub niewidoczne.  
+- Ignorowanie <xref:System.Windows.UIElement> zasady testowania trafień: Ma to zastosowanie, gdy należy zignorować <xref:System.Windows.UIElement> trafień testowania zasad, które uwzględnia takie czynniki jak tego, czy element jest wyłączony lub niewidoczne.  
   
 > [!NOTE]
 >  Aby uzyskać kompletny kod przykładowy pokazujący test trafienia w warstwie wizualizacji, zobacz [trafień za pomocą DrawingVisuals próbkę](https://go.microsoft.com/fwlink/?LinkID=159994) i [trafień testu z Win32 — współdziałanie](https://go.microsoft.com/fwlink/?LinkID=159995).  

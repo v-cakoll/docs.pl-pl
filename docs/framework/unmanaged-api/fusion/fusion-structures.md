@@ -9,27 +9,27 @@ ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697735"
 ---
 # <a name="fusion-structures"></a>Łączenie — Struktury
-W tej sekcji opisano niezarządzane struktury, używane fusion interfejsu API.  
+W tej sekcji opisano niezarządzane struktury, używane do łączenia interfejsu API.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ASSEMBLY_INFO, struktura](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.  
+ Zawiera informacje o zestawie, który jest zarejestrowany w globalnej pamięci podręcznej.  
   
  [FUSION_INSTALL_REFERENCE, struktura](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- Reprezentuje odwołanie, które umożliwia aplikacji z zestawem aplikacji został zainstalowany w globalnej pamięci podręcznej zestawów.  
+ Reprezentuje odwołanie, który sprawia, że aplikacja do zestawu, który aplikacja została zainstalowana w globalnej pamięci podręcznej.  
   
  [IDENTITY_ATTRIBUTE, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- Zawiera informacje o atrybutach metadane dotyczące [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia.  
+ Zawiera informacje o atrybutach metadane dotyczące [idefinitionidentity —](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia.  
   
  [IDENTITY_ATTRIBUTE_BLOB, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- Zawiera dane przesunięcia skojarzony [identity_attribute —](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) struktury.  
+ Zawiera informacje dotyczące przesunięcia dla skojarzonego [identity_attribute —](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) struktury.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  

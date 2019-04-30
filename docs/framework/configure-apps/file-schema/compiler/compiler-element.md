@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705379"
 ---
 # <a name="compiler-element"></a>\<compiler> Element
 
@@ -45,7 +45,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 |---------------|-----------------|
 |`compilerOptions`|Atrybut opcjonalny.<br /><br /> Określa dodatkowe argumenty kompilatora specyficzne dla kompilacji. Wartości `compilerOptions` atrybut zwykle są wymienione w temacie opcje kompilatora dla kompilatora.|
 |`extension`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę rozszerzeń nazw plików używane przez pliki źródłowe dla dostawcy języka. Na przykład ".cs".|
-|`language`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę nazw języków obsługiwanych przez dostawcę języka. Na przykład "C#; cs; csharp".|
+|`language`|Atrybut wymagany.<br /><br /> Zawiera rozdzieloną średnikami listę nazw języków obsługiwanych przez dostawcę języka. Na przykład "c#; cs; csharp".|
 |`type`|Atrybut wymagany.<br /><br /> Określa nazwę typu dostawcy języka, łącznie z nazwą zestawu zawierającego implementację dostawcy. Nazwa typu musi spełniać wymagania zdefiniowane w [określanie w pełni kwalifikowanej nazwy typu](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Atrybut opcjonalny.<br /><br /> Określa domyślny poziom ostrzeżeń kompilatora; Określa poziom, który dostawca języka traktuje jako błędy ostrzeżenia kompilacji.|
 

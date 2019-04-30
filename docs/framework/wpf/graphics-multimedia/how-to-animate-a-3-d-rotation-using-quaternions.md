@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 3-D translations [WPF], animating [WPF], with quaternions
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
 ms.openlocfilehash: d994ac2ae67fd366f27f123d5bd15f14d5ac7abe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762127"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-quaternions"></a>Instrukcje: Animowanie obrotu 3D przy użyciu kwaternionów
 W tym przykładzie pokazano, jak animować rotację 3-D z wykorzystaniem kwaternionów obiektu.  

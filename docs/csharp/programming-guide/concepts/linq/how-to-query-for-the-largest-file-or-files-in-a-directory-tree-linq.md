@@ -3,24 +3,24 @@ title: 'Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (L
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
 ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702285"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Instrukcje: Zapytanie o największy plik lub pliki w drzewie katalogu (LINQ) (C#)
 Ten przykład przedstawia pięć zapytań dotyczących rozmiar pliku w bajtach:  
   
--   Jak pobrać rozmiar w bajtach największy plik.  
+- Jak pobrać rozmiar w bajtach największy plik.  
   
--   Jak pobrać rozmiar w bajtach najmniejszy plik.  
+- Jak pobrać rozmiar w bajtach najmniejszy plik.  
   
--   Jak pobrać <xref:System.IO.FileInfo> pliku największą lub najmniejszą z jednego lub więcej folderów w folderze głównym określonego obiektu.  
+- Jak pobrać <xref:System.IO.FileInfo> pliku największą lub najmniejszą z jednego lub więcej folderów w folderze głównym określonego obiektu.  
   
--   Jak pobrać sekwencji, np. 10 największych plików.  
+- Jak pobrać sekwencji, np. 10 największych plików.  
   
--   Jak kolejność plików do grup, w oparciu o ich rozmiar pliku w bajtach, pliki, których wartość jest mniejsza niż określony rozmiar zostaną zignorowane.  
+- Jak kolejność plików do grup, w oparciu o ich rozmiar pliku w bajtach, pliki, których wartość jest mniejsza niż określony rozmiar zostaną zignorowane.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład zawiera pięć oddzielne zapytania, które pokazują, jak wykonać zapytanie i grupy plików, w zależności od ich rozmiar pliku w bajtach. Można łatwo modyfikować te przykłady, aby utworzyć kwerendy na kilka innych właściwości <xref:System.IO.FileInfo> obiektu.  

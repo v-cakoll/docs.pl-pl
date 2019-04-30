@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Control class [WPF], TreeView
 ms.assetid: 62212512-5a5c-4864-949e-b6a6a3a52c02
 ms.openlocfilehash: c0967aa506b087120c776389c2891ec9e0b0b64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761406"
 ---
 # <a name="treeview-overview"></a>TreeView — Przegląd
 <xref:System.Windows.Controls.TreeView> Kontroli zapewnia sposób wyświetlania informacji w strukturze hierarchicznej przy użyciu zwijany węzłów. W tym temacie przedstawiono <xref:System.Windows.Controls.TreeView> i <xref:System.Windows.Controls.TreeViewItem> kontroluje i zawiera proste przykłady ich użycia.  

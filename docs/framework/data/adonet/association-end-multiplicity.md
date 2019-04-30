@@ -3,22 +3,22 @@ title: skojarzenie i liczebność
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769664"
 ---
 # <a name="association-end-multiplicity"></a>skojarzenie i liczebność
 *Skojarzenie i liczebność* definiuje liczbę [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) wystąpień, które mogą być na jednym końcu [skojarzenie](../../../../docs/framework/data/adonet/association-type.md).  
   
  Skojarzenie i liczebność może mieć jedną z następujących wartości:  
   
--   jeden (1): Wskazuje, że to wystąpienie typu dokładnie jednej jednostki znajduje się na końcu skojarzenia.  
+- jeden (1): Wskazuje, że to wystąpienie typu dokładnie jednej jednostki znajduje się na końcu skojarzenia.  
   
--   zero lub jeden (od 0 do 1): Oznacza, że na końcu skojarzenia zera lub jednego wystąpienia typu jednostki.  
+- zero lub jeden (od 0 do 1): Oznacza, że na końcu skojarzenia zera lub jednego wystąpienia typu jednostki.  
   
--   wiele (\*): oznacza, że wartość zero, jeden lub więcej wystąpień typu jednostki na końcu skojarzenia.  
+- wiele (\*): oznacza, że wartość zero, jeden lub więcej wystąpień typu jednostki na końcu skojarzenia.  
   
  Skojarzenie często jest określony przez jego liczebność punktów końcowych skojarzenia. Na przykład, jeśli Liczebność punktów jeden (1) i jest wiele końcach asocjacji (\*), skojarzenia nosi nazwę skojarzenia typu jeden do wielu. W poniższym przykładzie `PublishedBy` skojarzenie jest skojarzenia typu jeden do wielu (wydawca publikuje wiele książek i książki opublikowana przez jedną wydawcą). `WrittenBy` Skojarzenie jest skojarzenie wiele do wielu (książki może mieć wielu autorów i Autor może zapisywać wiele książek).  
   

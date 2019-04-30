@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706068"
 ---
 # <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_CoreResponse pola
 
-`HttpWebRequest._CoreResponse` obiekt (albo [CoreResponseData](coreresponsedata.md) lub <xref:System.Exception>) zawierający wynik analizy odpowiedzi HTTP.
+`HttpWebRequest._CoreResponse` jest to obiekt (albo [CoreResponseData](coreresponsedata.md) lub <xref:System.Exception>) zawierający wynik analizy odpowiedzi HTTP.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Ten interfejs API nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego należy używać <xref:System.Diagnostics.DiagnosticSource> na połączeniu sieci kodu. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Ten interfejs API nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego należy używać <xref:System.Diagnostics.DiagnosticSource> można dołączyć kod sieci. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft w aplikacji produkcyjnej, w żadnym przypadku nie obsługuje korzystanie z tej klasy.
+> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
 **Namespace:** <xref:System.Net>
 
-**Zestaw:** System (w System.dll)
+**Zestaw:** System (System.dll)
 
-**Wersje programu .NET framework:** dostępne od wersji 2.0.
+**Wersje programu .NET framework:** Dostępne od wersji 2.0.

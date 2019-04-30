@@ -3,11 +3,11 @@ title: Anulowanie zadania asynchronicznego lub listy zadań (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 01557bf80f40d4197d29ab05cfb4838f5d993a82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702753"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Anulowanie zadania asynchronicznego lub listy zadań (C#)
 
@@ -70,14 +70,14 @@ Można pobrać pełny projekt Windows Presentation Foundation (WPF) z [próbka a
 
 3. Utwórz następujące zmiany w zdarzeniu Obsługa **Start** przycisku `startButton_Click`.
 
-    -   Utwórz wystąpienie `CancellationTokenSource`, `cts`.
+    - Utwórz wystąpienie `CancellationTokenSource`, `cts`.
 
         ```csharp
         // ***Instantiate the CancellationTokenSource.
         cts = new CancellationTokenSource();
         ```
 
-    -   W wywołaniu `AccessTheWebAsync`, które pobiera zawartość określonej witryny sieci Web, wysyłanie <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> właściwość `cts` jako argument. `Token` Właściwość propaguje komunikat, czy zażądano anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik anuluje operację pobierania. Poniższy kod pokazuje zmiany.
+    - W wywołaniu `AccessTheWebAsync`, które pobiera zawartość określonej witryny sieci Web, wysyłanie <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> właściwość `cts` jako argument. `Token` Właściwość propaguje komunikat, czy zażądano anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik anuluje operację pobierania. Poniższy kod pokazuje zmiany.
 
         ```csharp
         try

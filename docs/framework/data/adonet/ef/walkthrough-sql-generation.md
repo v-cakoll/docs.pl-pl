@@ -3,11 +3,11 @@ title: 'Przewodnik: Generowanie kodu SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764326"
 ---
 # <a name="walkthrough-sql-generation"></a>Przewodnik: Generowanie kodu SQL
 W tym temacie przedstawiono, jak odbywa się generowanie kodu SQL w [dostawcy próbki](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Następujące zapytanie SQL jednostki używa modelu, który jest uwzględniona w dostawcy próbki:  

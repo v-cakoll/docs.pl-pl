@@ -3,11 +3,11 @@ title: 'Instrukcje: Stream strumieniowe fragmentów z dostępem do informacji o 
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
 ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701817"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Instrukcje: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (C#)
 Czasami trzeba przeczytać arbitralnie dużych plików XML i zapisu aplikacji, tak aby zużycie pamięci aplikacji jest przewidywalne. Jeśli użytkownik podejmie próbę wypełnianie drzewa XML przy użyciu dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku — oznacza to, że nadmierne. W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
 ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748151"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Określanie transferu danych w kontraktach usług
 Windows Communication Foundation (WCF) mogą być uważane za to infrastruktura obsługi komunikatów. Operacje usługi można odbierać komunikaty, przetwarzać je i wysyłania im komunikatów. Komunikaty są opisane za pomocą kontrakty operacji. Na przykład należy wziąć pod uwagę następujące umowy.  

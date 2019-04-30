@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761705"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nazwy deklarowanych elementów XML oraz atrybuty (Visual Basic)
 Ten temat zawiera wskazówki dotyczące języka Visual Basic nazewnictwa elementów XML oraz atrybuty w literałach XML.  W literał XML można określić nazwę lokalnego lub nazwą kwalifikowaną. Kwalifikowana nazwa składa się z prefiksu przestrzeni nazw XML, dwukropek i lokalna nazwa. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XML, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
@@ -21,17 +21,17 @@ Ten temat zawiera wskazówki dotyczące języka Visual Basic nazewnictwa element
 ## <a name="rules"></a>reguły  
  Lokalna nazwa elementu lub atrybutu w języku Visual Basic muszą spełniać następujące reguły.  
   
--   Można zaczyna się ona z przestrzenią nazw. Musi zaczynać się od znaku alfabetycznego lub znaku podkreślenia (`_`).  
+- Można zaczyna się ona z przestrzenią nazw. Musi zaczynać się od znaku alfabetycznego lub znaku podkreślenia (`_`).  
   
--   Musi zawierać tylko litery, cyfry dziesiętne, znaki podkreślenia, kropki (.) i łączniki (-).  
+- Musi zawierać tylko litery, cyfry dziesiętne, znaki podkreślenia, kropki (.) i łączniki (-).  
   
--   Nie może być więcej niż 1024 znaków.  
+- Nie może być więcej niż 1024 znaków.  
   
--   Dwukropki, które pojawiają się w nazwach wskazują odgraniczenie przestrzeni nazw. W związku z tym można użyć dwukropki tylko do określenia obszaru nazw XML dla określonej nazwy.  
+- Dwukropki, które pojawiają się w nazwach wskazują odgraniczenie przestrzeni nazw. W związku z tym można użyć dwukropki tylko do określenia obszaru nazw XML dla określonej nazwy.  
   
  Ponadto należy przestrzegać następujących wytycznych.  
   
--   Specyfikacja XML 1.0 zastrzega sobie wszystkie nazwy rozpoczynające się od ciągu "xml" jakiekolwiek zmiany wielkości liter. W związku z tym nie należy używać tych nazw w odniesieniu do danego elementu i nazwach atrybutów.  
+- Specyfikacja XML 1.0 zastrzega sobie wszystkie nazwy rozpoczynające się od ciągu "xml" jakiekolwiek zmiany wielkości liter. W związku z tym nie należy używać tych nazw w odniesieniu do danego elementu i nazwach atrybutów.  
   
 ### <a name="name-length-guidelines"></a>Wytyczne dotyczące długość nazwy  
  Jak to w praktyce nazwa powinna być możliwie krótkie podczas identyfikacji nadal wyraźnie rodzaj elementu. To zwiększa czytelność kodu i zmniejsza rozmiar wiersza długości i pliku źródłowego.  

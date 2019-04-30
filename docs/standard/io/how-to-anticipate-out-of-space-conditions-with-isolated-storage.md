@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przewidywanie warunków limit miejsca w wydzielonej pamięci masowej'
+title: 'Instrukcje: Przewidywanie warunków braku miejsca w izolowanym magazynie'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -25,13 +25,13 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf5144cb1abd3a916d2b5afc361c8c96a221d47e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752004"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Instrukcje: Przewidywanie warunków limit miejsca w wydzielonej pamięci masowej
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Instrukcje: Przewidywanie warunków braku miejsca w izolowanym magazynie
 
 Kod, który używa wydzielona pamięć masowa jest ograniczony przez [przydziału](../../../docs/standard/io/isolated-storage.md#quotas) , który określa maksymalny rozmiar przedział danych, w którym izolowany magazyn plików i katalogów istnieje. Limit przydziału jest definiowany przez zasady zabezpieczeń i jest konfigurowane przez administratorów. Gdy maksymalny dozwolony rozmiar zostanie przekroczony podczas próby zapisu danych, <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku i kończy się niepowodzeniem. Pozwala to zapobiec złośliwymi atakami typu "odmowa usługi", które może spowodować, że aplikacja odmowy żądania, ponieważ Magazyn danych jest wypełnione.
 

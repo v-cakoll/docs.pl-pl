@@ -9,11 +9,11 @@ ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759763"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Wczytywanie dokumentu XML do modelu DOM
 Informacje o XML jest do odczytu do pamięci z różnych formatów. Może być odczytany z ciągu, strumienia, adres URL, czytnika tekstu lub klasę pochodną <xref:System.Xml.XmlReader>.  
@@ -22,7 +22,7 @@ Informacje o XML jest do odczytu do pamięci z różnych formatów. Może być o
   
  Różne <xref:System.Xml.XmlDocument.Load%2A> metody wpływają na węzły, które są tworzone po załadowaniu XML Document Object Model (DOM). W poniższej tabeli przedstawiono różnice między część <xref:System.Xml.XmlDocument.Load%2A> metody i tematy, które ich dotyczą.  
   
-|Temat|Temat|  
+|Subject|Temat|  
 |-------------|-----------|  
 |Tworzenie węzły odstępów|Obiekt używany do załadowania modelu DOM ma to wpływu na biały i istotnych białych węzłów generowane w modelu DOM. Aby uzyskać więcej informacji, zobacz [biały znak i znaczące biały znak obsługi podczas ładowania modelu DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
 |Podczas ładowania XML, zaczynając od określonego węzła lub ładowania całego dokumentu XML|Za pomocą <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> danych metody mogą być ładowane z określonego węzła do modelu DOM. Aby uzyskać więcej informacji, zobacz [ładowanie danych z czytnika](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  

@@ -1,5 +1,5 @@
 ---
-title: Pole CoreResponseData.m_ResponseHeaders
+title: CoreResponseData.m_ResponseHeaders Field
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -11,15 +11,15 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705977"
 ---
-# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders pola
+# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders Field
 
-`CoreResponseData.m_ResponseHeaders` jest <xref:System.Net.WebHeaderCollection> z nagłówki skojarzone z odpowiedzi serwera.
+`CoreResponseData.m_ResponseHeaders` jest <xref:System.Net.WebHeaderCollection> nagłówki skojarzone z odpowiedzią serwera.
 
 ## <a name="syntax"></a>Składnia
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Ten interfejs API nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego należy używać <xref:System.Diagnostics.DiagnosticSource> na połączeniu sieci kodu. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Ten interfejs API nie jest przeznaczona do użycia bezpośrednio w kodzie. Zamiast tego należy używać <xref:System.Diagnostics.DiagnosticSource> można dołączyć kod sieci. Zobacz [Podręcznik użytkownika DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft w aplikacji produkcyjnej, w żadnym przypadku nie obsługuje korzystanie z tej klasy.
+> Firma Microsoft nie obsługuje użycia tej klasy w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
 **Namespace:** <xref:System.Net>
 
-**Zestaw:** System (w System.dll)
+**Zestaw:** System (System.dll)
 
-**Wersje programu .NET framework:** dostępne od wersji 2.0.
+**Wersje programu .NET framework:** Dostępne od wersji 2.0.

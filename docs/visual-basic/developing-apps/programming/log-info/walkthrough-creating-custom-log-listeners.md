@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755886"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Przewodnik: Tworzenie odbiorników logu niestandardowego (Visual Basic)
 W tym instruktażu pokazano, jak tworzenie odbiorników logu niestandardowego i jest skonfigurowana do nasłuchiwania z danymi wyjściowymi `My.Application.Log` obiektu.  
@@ -20,7 +20,7 @@ W tym instruktażu pokazano, jak tworzenie odbiorników logu niestandardowego i 
   
 #### <a name="to-create-the-listener"></a>Aby utworzyć odbiornik  
   
--   W aplikacji, należy utworzyć klasę o nazwie `SimpleListener` tej, która dziedziczy <xref:System.Diagnostics.TraceListener>.  
+- W aplikacji, należy utworzyć klasę o nazwie `SimpleListener` tej, która dziedziczy <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ W tym instruktażu pokazano, jak tworzenie odbiorników logu niestandardowego i 
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Aby określić silną nazwę odbiornika  
   
--   Poniższy kod przedstawia sposób określić nazwę typu o silnej nazwie `SimpleListener`.  
+- Poniższy kod przedstawia sposób określić nazwę typu o silnej nazwie `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ W tym instruktażu pokazano, jak tworzenie odbiorników logu niestandardowego i 
   
      W przypadku pliku app.config:  
   
-    1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    2. Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
-    3.  Kliknij przycisk **Dodaj**.  
+    3. Kliknij przycisk **Dodaj**.  
   
 2. Znajdź `<listeners>` sekcji w `<source>` sekcji z `name` atrybutu "DefaultSource" znajdujący się w `<sources>` sekcji. `<sources>` Sekcji znajduje się w `<system.diagnostics>` sekcji w najwyższego poziomu `<configuration>` sekcji.  
   

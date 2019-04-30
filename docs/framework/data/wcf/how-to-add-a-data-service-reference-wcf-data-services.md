@@ -1,17 +1,17 @@
 ---
-title: 'Porady: Dodawanie odwołania usługi danych (WCF Data Services)'
+title: 'Instrukcje: Dodawanie odwołania usługi danych (WCF Data Services)'
 ms.date: 08/24/2018
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 62c6f318-3ee1-433a-b7a3-efa234c3034c
 ms.openlocfilehash: fc1786e1c6102c702374989253cd3ce23e3f7b54
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765534"
 ---
-# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Porady: Dodawanie odwołania usługi danych (WCF Data Services)
+# <a name="how-to-add-a-data-service-reference-wcf-data-services"></a>Instrukcje: Dodawanie odwołania usługi danych (WCF Data Services)
 
 Możesz użyć **Dodaj odwołanie do usługi** okna dialogowego w programie Visual Studio, aby dodać odwołanie do usługi danych WCF. Dzięki temu można łatwiej uzyskać dostęp do danych usługi w aplikacji klienckiej, który da się opracować w programie Visual Studio. Po ukończeniu tej procedury klas danych są generowane na podstawie metadanych uzyskany z usługi danych. Aby uzyskać więcej informacji, zobacz [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).
 
@@ -27,7 +27,7 @@ Możesz użyć **Dodaj odwołanie do usługi** okna dialogowego w programie Visu
 
      W **adres** polu tekstowym wpisz podstawowy adres URL usługi danych, takich jak `http://localhost:1234/Northwind.svc`, a następnie kliknij przycisk **Przejdź**.
 
-4. Wybierz **OK**.
+4. Kliknij przycisk **OK**.
 
      Nowy plik kodu, który zawiera klasy danych, które mogą uzyskać dostęp i korzystać z zasobów usługi danych zostanie dodany do projektu.
 

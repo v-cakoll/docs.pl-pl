@@ -3,11 +3,11 @@ title: 'Optymistyczna współbieżność: Omówienie'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767497"
 ---
 # <a name="optimistic-concurrency-overview"></a>Optymistyczna współbieżność: Omówienie
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje mechanizmu kontroli optymistycznej współbieżności. W poniższej tabeli opisano terminy, które dotyczą optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji:  
@@ -22,9 +22,9 @@ ms.locfileid: "59106551"
   
  W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów *konflikt optymistycznej współbieżności* występuje, gdy są spełnione oba poniższe warunki:  
   
--   Klient próbuje przesłać zmiany w bazie danych.  
+- Klient próbuje przesłać zmiany w bazie danych.  
   
--   Co najmniej jednej wartości sprawdzania aktualizacji zostały zaktualizowane w bazie danych od klienta ostatniego odczytu je.  
+- Co najmniej jednej wartości sprawdzania aktualizacji zostały zaktualizowane w bazie danych od klienta ostatniego odczytu je.  
   
  Rozwiązanie tego konfliktu zawiera odnajdywanie, które elementy członkowskie obiektu są w konflikcie, a następnie decydując, co chcesz zrobić na jego temat.  
   
@@ -49,44 +49,44 @@ ms.locfileid: "59106551"
 ## <a name="conflict-detection-and-resolution-checklist"></a>Wykrywanie konfliktów i listę kontrolną rozwiązania  
  Można wykrywać i rozwiązywać konflikty na dowolnym poziomie szczegółowości. W skrajnej jeden, można rozwiązać wszystkie konflikty w jeden z trzech sposobów (zobacz <xref:System.Data.Linq.RefreshMode>) bez dodatkowego rozważenia. Y. można wyznaczyć określoną akcję dla każdego typu konfliktu na każdy element członkowski w konflikcie.  
   
--   Określ lub Popraw <xref:System.Data.Linq.Mapping.UpdateCheck> opcje w modelu obiektu.  
+- Określ lub Popraw <xref:System.Data.Linq.Mapping.UpdateCheck> opcje w modelu obiektu.  
   
      Aby uzyskać więcej informacji, zobacz [jak: Określ, które elementy członkowskie są sprawdzane pod kątem konfliktów współbieżności](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md).  
   
--   W bloku try/catch wywołania do <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, określić, w którym momencie wyjątki zostanie wygenerowany.  
+- W bloku try/catch wywołania do <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, określić, w którym momencie wyjątki zostanie wygenerowany.  
   
      Aby uzyskać więcej informacji, zobacz [jak: Określ są zgłaszane wyjątki współbieżności podczas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md).  
   
--   Określić ilość szczegółów konfliktu, które mają zostać pobrane i w związku z tym zawiera kod w swojej bloku try/catch.  
+- Określić ilość szczegółów konfliktu, które mają zostać pobrane i w związku z tym zawiera kod w swojej bloku try/catch.  
   
      Aby uzyskać więcej informacji, zobacz [jak: Pobieranie informacji o konflikcie jednostki](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-entity-conflict-information.md) i [jak: Pobieranie informacji o konflikcie elementu członkowskiego](../../../../../../docs/framework/data/adonet/sql/linq/how-to-retrieve-member-conflict-information.md).  
   
--   Uwzględnić w swojej `try` / `catch` kodu, jak chcesz rozwiązać konflikty różnych odkryjesz.  
+- Uwzględnić w swojej `try` / `catch` kodu, jak chcesz rozwiązać konflikty różnych odkryjesz.  
   
      Aby uzyskać więcej informacji, zobacz [jak: Rozwiązywanie konfliktów, zachowując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-retaining-database-values.md), [jak: Rozwiązywanie konfliktów, zastępując wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-overwriting-database-values.md), i [jak: Rozwiązywanie konfliktów, scalając wartości bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-resolve-conflicts-by-merging-with-database-values.md).  
   
 ## <a name="linq-to-sql-types-that-support-conflict-discovery-and-resolution"></a>LINQ do typów SQL, które obsługują wykrywania konfliktów i rozwiązania  
  Klasy i funkcje do obsługi Rozwiązywanie konfliktów w optymistycznej współbieżności w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obejmują następujące elementy:  
   
--   <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ObjectChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.MemberChangeConflict?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictCollection?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.ChangeConflictException?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.ChangeConflicts%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.DataContext.Refresh%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.Mapping.UpdateCheck?displayProperty=nameWithType>  
   
--   <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
+- <xref:System.Data.Linq.RefreshMode?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>Zobacz także
 

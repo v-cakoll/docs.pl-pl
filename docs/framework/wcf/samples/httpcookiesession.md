@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752740"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 W tym przykładzie przedstawiono sposób tworzenia kanału niestandardowego protokołu na używanie plików cookie protokołu HTTP do zarządzania sesjami. Ten kanał umożliwia komunikację między usług Windows Communication Foundation (WCF) i ASMX klientów lub między klientami programu WCF i usługami ASMX.  
   
  Kiedy klient wywołuje metody sieci Web w usłudze sieci Web ASMX, jest oparte na sesji [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aparatu wykonuje następujące czynności:  
   
--   Generuje unikatowy identyfikator (identyfikator sesji).  
+- Generuje unikatowy identyfikator (identyfikator sesji).  
   
--   Generuje obiekt sesji i kojarzy ją z unikatowego identyfikatora.  
+- Generuje obiekt sesji i kojarzy ją z unikatowego identyfikatora.  
   
--   Dodaje nagłówek odpowiedzi HTTP Set-Cookie Unikatowy identyfikator i wysyła go do klienta.  
+- Dodaje nagłówek odpowiedzi HTTP Set-Cookie Unikatowy identyfikator i wysyła go do klienta.  
   
--   Identyfikuje klienta w kolejnych wywołaniach na podstawie Identyfikatora sesji, że wysyła do niego.  
+- Identyfikuje klienta w kolejnych wywołaniach na podstawie Identyfikatora sesji, że wysyła do niego.  
   
  Klient dołącza ten identyfikator sesji, w jego kolejnych żądań do serwera. Serwer używa Identyfikatora sesji z klienta można załadować obiektu session odpowiednie dla bieżącego kontekstu HTTP.  
   
@@ -39,7 +39,7 @@ W tym przykładzie przedstawiono sposób tworzenia kanału niestandardowego prot
 ## <a name="service-channel"></a>Kanał usługi  
  Przykład zawiera kanału usługi na `HttpCookieReplySessionChannelListener` klasy. Ta klasa implementuje <xref:System.ServiceModel.Channels.IChannelListener> interfejsu i konwertuje <xref:System.ServiceModel.Channels.IReplyChannel> kanał z niższym stosie kanału do <xref:System.ServiceModel.Channels.IReplySessionChannel>. Ten proces można podzielić na następujące elementy:  
   
--   Po otwarciu odbiornika kanałów akceptuje kanał wewnętrzny z jego wewnętrznego odbiornika. Ponieważ wewnętrznego odbiornika jest odbiornika datagram i okresem istnienia kanał akceptowane rozdzielenie okres istnienia odbiornika, możesz zamknąć wewnętrznego odbiornika i przytrzymaj tylko do wewnętrznego kanału  
+- Po otwarciu odbiornika kanałów akceptuje kanał wewnętrzny z jego wewnętrznego odbiornika. Ponieważ wewnętrznego odbiornika jest odbiornika datagram i okresem istnienia kanał akceptowane rozdzielenie okres istnienia odbiornika, możesz zamknąć wewnętrznego odbiornika i przytrzymaj tylko do wewnętrznego kanału  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ W tym przykładzie przedstawiono sposób tworzenia kanału niestandardowego prot
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   Po ukończeniu procesu otwierania skonfigurujemy pętlę komunikatów do odbierania wiadomości z kanału wewnętrznego.  
+- Po ukończeniu procesu otwierania skonfigurujemy pętlę komunikatów do odbierania wiadomości z kanału wewnętrznego.  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ W tym przykładzie przedstawiono sposób tworzenia kanału niestandardowego prot
     }  
     ```  
   
--   Po umieszczeniu komunikatu, kanału usługi sprawdza, czy identyfikator sesji i demultipleksowanie do kanału sesji odpowiednie. Odbiornik kanału zachowuje słownik, który mapuje identyfikatory sesji z wystąpieniami kanału sesji.  
+- Po umieszczeniu komunikatu, kanału usługi sprawdza, czy identyfikator sesji i demultipleksowanie do kanału sesji odpowiednie. Odbiornik kanału zachowuje słownik, który mapuje identyfikatory sesji z wystąpieniami kanału sesji.  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

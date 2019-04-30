@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757374"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Instrukcje: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
 <xref:System.Windows.Forms.BindingNavigator> Formant jest specjalny <xref:System.Windows.Forms.ToolStrip> formant, który jest przeznaczony do nawigowania i manipulowanie nimi formantów w formularzu, które są powiązane z danymi.  
@@ -40,15 +40,15 @@ ms.locfileid: "59304782"
   
 7. W **Edytor kolekcji elementów**, wykonaj następujące czynności:  
   
-    1.  Dodaj <xref:System.Windows.Forms.ToolStripSeparator> i trzema <xref:System.Windows.Forms.ToolStripButton> elementów, wybierając odpowiedni typ <xref:System.Windows.Forms.ToolStripItem> i klikając **Dodaj** przycisku.  
+    1. Dodaj <xref:System.Windows.Forms.ToolStripSeparator> i trzema <xref:System.Windows.Forms.ToolStripButton> elementów, wybierając odpowiedni typ <xref:System.Windows.Forms.ToolStripItem> i klikając **Dodaj** przycisku.  
   
-    2.  Ustaw <xref:System.Windows.Forms.ToolStripItem.Name%2A> właściwość przyciski **LoadButton**, **SaveButton**, i **CancelButton**, odpowiednio.  
+    2. Ustaw <xref:System.Windows.Forms.ToolStripItem.Name%2A> właściwość przyciski **LoadButton**, **SaveButton**, i **CancelButton**, odpowiednio.  
   
-    3.  Ustaw <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość przyciski **obciążenia**, **Zapisz**, i **anulować**.  
+    3. Ustaw <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwość przyciski **obciążenia**, **Zapisz**, i **anulować**.  
   
-    4.  Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości dla każdego z przycisków, aby **tekstu**. Alternatywnie, można ustawić tę właściwość **obraz** lub **ImageAndText**i Ustaw obraz, który ma być wyświetlany w <xref:System.Windows.Forms.ToolStripItem.Image%2A> właściwości.  
+    4. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości dla każdego z przycisków, aby **tekstu**. Alternatywnie, można ustawić tę właściwość **obraz** lub **ImageAndText**i Ustaw obraz, który ma być wyświetlany w <xref:System.Windows.Forms.ToolStripItem.Image%2A> właściwości.  
   
-    5.  Kliknij przycisk **OK** aby zamknąć okno dialogowe. Przyciski są dodawane do <xref:System.Windows.Forms.ToolStrip>.  
+    5. Kliknij przycisk **OK** aby zamknąć okno dialogowe. Przyciski są dodawane do <xref:System.Windows.Forms.ToolStrip>.  
   
 8. Kliknij prawym przyciskiem myszy formularz, a następnie wybierz **Wyświetl kod**.  
   

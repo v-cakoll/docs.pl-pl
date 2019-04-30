@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapisywanie komunikatów i odczytywanie wiadomości z bloku przepływu danych'
+title: 'Instrukcje: Zapisywanie komunikatów w bloku przepływu danych i odczytywanie ich z tego bloku'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 638cd917bdb40fa5bbf1cb02857c71a0127d0e3f
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769170"
 ---
-# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Instrukcje: Zapisywanie komunikatów i odczytywanie wiadomości z bloku przepływu danych
+# <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Instrukcje: Zapisywanie komunikatów w bloku przepływu danych i odczytywanie ich z tego bloku
 W tym dokumencie opisano, jak przy użyciu biblioteki przepływu danych TPL pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych TPL zapewnia synchroniczne i asynchroniczne metody zapisywania wiadomości i odczytywać wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -56,7 +56,7 @@ W tym dokumencie opisano, jak przy użyciu biblioteki przepływu danych TPL pisa
   
  Visual C#  
   
- **CSC.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
+ **csc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReadWrite.cs**  
   
  Visual Basic  
   

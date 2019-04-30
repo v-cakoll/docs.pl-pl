@@ -8,11 +8,11 @@ helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
 ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747462"
 ---
 # <a name="why-transformation-order-is-significant"></a>Dlaczego kolejność przekształcania jest ważna
 Pojedynczy <xref:System.Drawing.Drawing2D.Matrix> obiektu można przechowywać w jednej transformacji lub sekwencja przekształceń. Drugim jest nazywany złożonych transformacji. Macierzy transformacji złożonego mnożąc macierzy transformacji indywidualnych.  

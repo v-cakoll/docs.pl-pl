@@ -6,24 +6,24 @@ helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
 ms.openlocfilehash: e2315f5bfdca05da79e5ee4d897cd06dba6f1ed1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681224"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Instrukcje: Pobierz informacje o plikach, folderach i dyskach (C# Programming Guide)
 W .NET Framework uzyskujesz dostęp do informacji o systemie plików, przy użyciu następujących klas:  
   
--   <xref:System.IO.FileInfo?displayProperty=nameWithType>  
+- <xref:System.IO.FileInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DirectoryInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
+- <xref:System.IO.DriveInfo?displayProperty=nameWithType>  
   
--   <xref:System.IO.Directory?displayProperty=nameWithType>  
+- <xref:System.IO.Directory?displayProperty=nameWithType>  
   
--   <xref:System.IO.File?displayProperty=nameWithType>  
+- <xref:System.IO.File?displayProperty=nameWithType>  
   
  <xref:System.IO.FileInfo> i <xref:System.IO.DirectoryInfo> klasy reprezentują pliku lub katalogu, a także zawierają właściwości, które udostępniają wiele atrybutów plików, które są obsługiwane przez system plików NTFS. Zawierają one również metody do otwierania, zamykanie, przenoszenie i usuwanie plików i folderów. Można utworzyć wystąpień tych klas, przekazując ciąg reprezentujący nazwę pliku, folderu lub dysku w Konstruktorze:  
   
@@ -43,13 +43,13 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Przetwarzanie ciągami ścieżki określonych przez użytkownika, należy również obsługiwać wyjątki dla następujących warunków:  
   
--   Nazwa pliku jest nieprawidłowo sformułowany. Na przykład zawiera nieprawidłowe znaki lub białych znaków.  
+- Nazwa pliku jest nieprawidłowo sformułowany. Na przykład zawiera nieprawidłowe znaki lub białych znaków.  
   
--   Nazwa pliku ma wartość null.  
+- Nazwa pliku ma wartość null.  
   
--   Nazwa pliku jest większa niż zdefiniowana w systemie długość maksymalna.  
+- Nazwa pliku jest większa niż zdefiniowana w systemie długość maksymalna.  
   
--   Nazwa pliku zawiera dwukropek (:).  
+- Nazwa pliku zawiera dwukropek (:).  
   
  Jeśli aplikacja nie ma wystarczających uprawnień do odczytu określonego pliku `Exists` metoda zwraca `false` niezależnie od tego, czy ścieżka istnieje; metody nie zgłasza wyjątku.  
   

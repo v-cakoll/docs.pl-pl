@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
 ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769073"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Instrukcje: Określanie, czy dwa obiekty są powiązane (Visual Basic)
 Możesz porównać dwa obiekty przeznaczone do określenia relacji między klasami, z których są tworzone. <xref:System.Type.IsInstanceOfType%2A> Metody <xref:System.Type?displayProperty=nameWithType> klasy zwraca `True` czy określona klasa dziedziczy z klasy, czy bieżący typ jest interfejsem obsługiwanych przez określonej klasy.  

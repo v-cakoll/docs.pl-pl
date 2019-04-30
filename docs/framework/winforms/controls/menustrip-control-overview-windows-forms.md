@@ -11,8 +11,8 @@ ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761374"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip — Informacje o formancie [Formularze systemu Windows]
 Menu ujawnienie funkcji przez użytkowników przez wstrzymywanie poleceń, które są pogrupowane według wspólnego motywu.  
@@ -26,11 +26,11 @@ Menu ujawnienie funkcji przez użytkowników przez wstrzymywanie poleceń, któr
 ## <a name="ways-to-use-the-menustrip-control"></a>Sposoby na wykorzystanie MenuStrip, kontrolka  
  Użyj <xref:System.Windows.Forms.MenuStrip> kontrolę:  
   
--   Utwórz łatwo dostosować, powszechnie wykorzystywane menu, które obsługują interfejs i układ funkcje, takie jak tekst i obraz porządkowanie i wyrównanie, operacji przeciągania i upuszczania, MDI, przepełnienie i alternatywne metody uzyskiwania dostępu do poleceń menu zaawansowanych użytkowników.  
+- Utwórz łatwo dostosować, powszechnie wykorzystywane menu, które obsługują interfejs i układ funkcje, takie jak tekst i obraz porządkowanie i wyrównanie, operacji przeciągania i upuszczania, MDI, przepełnienie i alternatywne metody uzyskiwania dostępu do poleceń menu zaawansowanych użytkowników.  
   
--   Obsługiwać typowego wyglądu i zachowania systemu operacyjnego.  
+- Obsługiwać typowego wyglądu i zachowania systemu operacyjnego.  
   
--   Obsługa zdarzeń spójne dla wszystkich kontenerów i zawartych w niej elementów, w taki sam sposób obsługi zdarzeń dla innych kontrolek.  
+- Obsługa zdarzeń spójne dla wszystkich kontenerów i zawartych w niej elementów, w taki sam sposób obsługi zdarzeń dla innych kontrolek.  
   
  W poniższej tabeli przedstawiono niektóre szczególnie ważne właściwości <xref:System.Windows.Forms.MenuStrip> i skojarzonych klas.  
   

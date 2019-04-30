@@ -7,11 +7,11 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746663"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Instrukcje: tworzenie interfejsu w stylu Eksploratora Windows na formularzu systemu Windows
 Eksplorator Windows jest wspólne wybór interfejsu użytkownika dla aplikacji ze względu na swoją znajomość gotowe.  
@@ -29,11 +29,11 @@ Eksplorator Windows jest wspólne wybór interfejsu użytkownika dla aplikacji z
   
 2. Z **przybornika**:  
   
-    1.  Przeciągnij <xref:System.Windows.Forms.SplitContainer> formantu do formularza.  
+    1. Przeciągnij <xref:System.Windows.Forms.SplitContainer> formantu do formularza.  
   
-    2.  Przeciągnij <xref:System.Windows.Forms.TreeView> sterowania do **SplitterPanel1** (z panelu <xref:System.Windows.Forms.SplitContainer> kontroli oznaczone **Panel1**).  
+    2. Przeciągnij <xref:System.Windows.Forms.TreeView> sterowania do **SplitterPanel1** (z panelu <xref:System.Windows.Forms.SplitContainer> kontroli oznaczone **Panel1**).  
   
-    3.  Przeciągnij <xref:System.Windows.Forms.ListView> sterowania do **SplitterPanel2** (z panelu <xref:System.Windows.Forms.SplitContainer> kontroli oznaczone **elementu Panel2**).  
+    3. Przeciągnij <xref:System.Windows.Forms.ListView> sterowania do **SplitterPanel2** (z panelu <xref:System.Windows.Forms.SplitContainer> kontroli oznaczone **elementu Panel2**).  
   
 3. Zaznacz wszystkie trzy, naciskając klawisz CTRL i klikając je z osobna. Po wybraniu <xref:System.Windows.Forms.SplitContainer> sterowania, kliknij pasek podziału, a nie paneli.  
   

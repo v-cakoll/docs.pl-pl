@@ -4,11 +4,11 @@ description: Dowiedz się, C# eksplorując kolekcji listy, w tym samouczku.
 ms.date: 10/13/2017
 ms.custom: mvc
 ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706367"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>Dowiedz się, jak zarządzać zbierania danych przy użyciu typu listy ogólnej
 

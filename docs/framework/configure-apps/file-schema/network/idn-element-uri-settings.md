@@ -3,11 +3,11 @@ title: <idn>, element (ustawienia identyfikatora URI)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705119"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN >, Element (ustawienia identyfikatora Uri)
 Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane do nazwy domeny.  
@@ -60,15 +60,15 @@ Określa, jeśli analizy Zinternacjonalizowanych nazw domen (IDN) są stosowane 
   
  Istnieją trzy możliwe wartości IDN w zależności od serwerów DNS, które są używane:  
   
--   IDN, włączone = All  
+- IDN, włączone = All  
   
      Ta wartość spowoduje przekonwertowanie wszystkie nazwy domen, Unicode na ich odpowiedniki Punycode (nazwy IDN).  
   
--   IDN, włączone = AllExceptIntranet  
+- IDN, włączone = AllExceptIntranet  
   
      Ta wartość będzie przekonwertować wszystkie nazwy domeny Unicode nie w lokalnej sieci Intranet w celu użyj odpowiedników Punycode (nazwy IDN). W tym przypadku do obsługi międzynarodowe nazwy w lokalnym intranecie, serwerów DNS, które są używane dla dostępu z intranetu powinien obsługiwać rozpoznawanie nazw Unicode.  
   
--   IDN, włączone = None  
+- IDN, włączone = None  
   
      Ta wartość nie zostanie przekonwertować wszystkie nazwy domen Unicode, aby użyć Punycode. Jest to wartość domyślna, która jest zgodna z zachowaniem .NET Framework 2.0.  
   

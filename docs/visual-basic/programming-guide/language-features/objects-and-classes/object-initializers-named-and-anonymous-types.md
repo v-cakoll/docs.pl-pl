@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760756"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicjatory obiektów: Typy nazwane i anonimowe (Visual Basic)
 Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złożonego za pomocą pojedynczego wyrażenia. One może służyć do tworzenia wystąpień nazwanych typów i typów anonimowych.  
@@ -63,11 +63,11 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złoż
   
 ### <a name="remarks-about-named-types"></a>Uwagi dotyczące typów o nazwie  
   
--   Nie można zainicjować składowej klasy więcej niż jeden raz na liście inicjatora obiektu. Deklaracja `cust7` powoduje błąd.  
+- Nie można zainicjować składowej klasy więcej niż jeden raz na liście inicjatora obiektu. Deklaracja `cust7` powoduje błąd.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   Element członkowski może służyć do zainicjowania samego lub innego pola. Jeśli członek jest dostępny, przed jego został zainicjowany, tak jak w następującej deklaracji `cust8`, zostanie użyta wartość domyślna. Pamiętaj, że po przetworzeniu deklaracji, która korzysta z inicjatora obiektów, pierwszą rzeczą, która ma wywoływaną odpowiedniego konstruktora. Po tym są inicjowane poszczególnych pól na liście inicjatora. W poniższych przykładach, wartość domyślna `Name` przypisano do `cust8`, a wartością zainicjowane jest przypisana w `cust9`.  
+- Element członkowski może służyć do zainicjowania samego lub innego pola. Jeśli członek jest dostępny, przed jego został zainicjowany, tak jak w następującej deklaracji `cust8`, zostanie użyta wartość domyślna. Pamiętaj, że po przetworzeniu deklaracji, która korzysta z inicjatora obiektów, pierwszą rzeczą, która ma wywoływaną odpowiedniego konstruktora. Po tym są inicjowane poszczególnych pól na liście inicjatora. W poniższych przykładach, wartość domyślna `Name` przypisano do `cust8`, a wartością zainicjowane jest przypisana w `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złoż
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   Inicjatory obiektów mogą być zagnieżdżone. W poniższym przykładzie `AddressClass` to klasa, która ma dwie właściwości `City` i `State`i `Customer` klasa ma `Address` właściwość, która jest wystąpieniem `AddressClass`.  
+- Inicjatory obiektów mogą być zagnieżdżone. W poniższym przykładzie `AddressClass` to klasa, która ma dwie właściwości `City` i `State`i `Customer` klasa ma `Address` właściwość, która jest wystąpieniem `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   Listy inicjowania, nie może być pusta.  
+- Listy inicjowania, nie może być pusta.  
   
--   Wystąpienie inicjowany nie może być typu Object.  
+- Wystąpienie inicjowany nie może być typu Object.  
   
--   Inicjowany elementów członkowskich klasy nie może być udostępniane elementy członkowskie, członków z prawami tylko do odczytu, stałe lub wywołania metody.  
+- Inicjowany elementów członkowskich klasy nie może być udostępniane elementy członkowskie, członków z prawami tylko do odczytu, stałe lub wywołania metody.  
   
--   Inicjowany elementów członkowskich klasy nie może być indeksowane ani kwalifikowana. Poniższe przykłady zgłaszać błędy kompilatora:  
+- Inicjowany elementów członkowskich klasy nie może być indeksowane ani kwalifikowana. Poniższe przykłady zgłaszać błędy kompilatora:  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ Inicjatory obiektów umożliwiają określenie właściwości dla obiektu złoż
   
 ### <a name="remarks-about-anonymous-types"></a>Uwagi dotyczące typów anonimowych  
   
--   Zazwyczaj wszystkich lub większości właściwości w deklaracji typu anonimowego będzie właściwości klucza, które są wskazane, wpisując słowa kluczowego `Key` przed nazwą właściwości.  
+- Zazwyczaj wszystkich lub większości właściwości w deklaracji typu anonimowego będzie właściwości klucza, które są wskazane, wpisując słowa kluczowego `Key` przed nazwą właściwości.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      Aby uzyskać więcej informacji na temat właściwości klucza, zobacz [klucz](../../../../visual-basic/language-reference/modifiers/key.md).  
   
--   Jak o nazwie typów, list inicjatorów dla definicji typu anonimowego należy zadeklarować co najmniej jedną właściwość.  
+- Jak o nazwie typów, list inicjatorów dla definicji typu anonimowego należy zadeklarować co najmniej jedną właściwość.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   Gdy wystąpienie typu anonimowego jest zadeklarowany, kompilator generuje pasującego definicja typu anonimowego. Nazwy i typy danych właściwości są pobierane z deklaracji wystąpienia i są uwzględniane przez kompilator w definicji. Właściwości są nie o nazwie i z wyprzedzeniem, jaki byłyby dla typu nazwanego. Typy są wnioskowane. Typy danych właściwości nie można określić za pomocą `As` klauzuli.  
+- Gdy wystąpienie typu anonimowego jest zadeklarowany, kompilator generuje pasującego definicja typu anonimowego. Nazwy i typy danych właściwości są pobierane z deklaracji wystąpienia i są uwzględniane przez kompilator w definicji. Właściwości są nie o nazwie i z wyprzedzeniem, jaki byłyby dla typu nazwanego. Typy są wnioskowane. Typy danych właściwości nie można określić za pomocą `As` klauzuli.  
   
--   Typy anonimowe można także udostępnić nazwy i wartości ich właściwości w inny sposób. Właściwości typu anonimowego może na przykład nazwę i wartość zmiennej, lub nazwę i wartość właściwości do innego obiektu.  
+- Typy anonimowe można także udostępnić nazwy i wartości ich właściwości w inny sposób. Właściwości typu anonimowego może na przykład nazwę i wartość zmiennej, lub nazwę i wartość właściwości do innego obiektu.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

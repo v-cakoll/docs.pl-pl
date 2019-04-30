@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754352"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Instrukcje: Tworzenie, inicjowanie i konfigurowanie przełączników śledzenia
 Przełączniki śledzenia umożliwiają włączać, wyłączać i filtrować dane wyjściowe śledzenia.  
@@ -75,11 +75,11 @@ Przełączniki śledzenia umożliwiają włączać, wyłączać i filtrować dan
   
 2. Jeśli projekt nie zawiera pliku konfiguracji (app.config lub Web.config), następnie z **projektu** menu, wybierz opcję **Dodaj nowy element**.  
   
-    -   **Visual Basic:** W **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    - **Visual Basic:** W **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
          Plik konfiguracji aplikacji zostanie utworzony i otwarty. To jest którego element główny dokumentu XML `<configuration>.`  
   
-    -   **Wizualne C#:** W **Dodaj nowy element** okna dialogowego wybierz **pliku XML**. Nazwij ten plik **app.config**. W edytorze XML, po deklaracji XML, Dodaj następujący kod XML:  
+    - **Wizualne C#:** W **Dodaj nowy element** okna dialogowego wybierz **pliku XML**. Nazwij ten plik **app.config**. W edytorze XML, po deklaracji XML, Dodaj następujący kod XML:  
   
         ```xml  
         <configuration>  

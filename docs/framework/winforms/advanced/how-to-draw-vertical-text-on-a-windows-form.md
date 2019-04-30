@@ -15,11 +15,11 @@ helpviewer_keywords:
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
 ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722916"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>Instrukcje: Rysowanie pionowego tekstu w formularzu systemu Windows
 Poniższy przykład kodu pokazuje, jak rysowanie pionowego tekstu w formularzu za pomocą <xref:System.Drawing.Graphics.DrawString%2A> metody <xref:System.Drawing.Graphics>.  
@@ -35,7 +35,7 @@ Poniższy przykład kodu pokazuje, jak rysowanie pionowego tekstu w formularzu z
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Czcionka Arial nie jest zainstalowany.  
+- Czcionka Arial nie jest zainstalowany.  
   
 ## <a name="see-also"></a>Zobacz także
 

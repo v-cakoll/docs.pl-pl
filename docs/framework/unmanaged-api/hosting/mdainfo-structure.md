@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765209"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo — Struktura
 Zawiera szczegółowe informacje na temat `Event_MDAFired` zdarzenia, co powoduje wyzwolenie tworzenia zarządzanego Asystenta debugowania (MDA).  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  Po wyzwoleniu zdarzenia wyzwalającego tworzenia MDA, środowisko uruchomieniowe wykonuje następujące czynności:  
   
--   Jeśli host nie został zarejestrowany [iactiononclrevent —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) wystąpienia, wywołując [iclroneventmanager::registeractiononevent —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) Aby otrzymywać powiadomienia o `Event_MDAFired` zdarzenia środowiska uruchomieniowego kontynuuje jego Domyślnie-hostowanej działania.  
+- Jeśli host nie został zarejestrowany [iactiononclrevent —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) wystąpienia, wywołując [iclroneventmanager::registeractiononevent —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) Aby otrzymywać powiadomienia o `Event_MDAFired` zdarzenia środowiska uruchomieniowego kontynuuje jego Domyślnie-hostowanej działania.  
   
--   Jeśli host został zarejestrowany program obsługi dla tego zdarzenia, środowisko uruchomieniowe sprawdza, czy debuger jest dołączony do procesu. Jeśli tak jest, środowisko uruchomieniowe przerywa debugowanie. Gdy debuger będzie nadal występował, wywoła hosta. Jeśli debuger nie jest dołączony, środowisko wykonawcze wywołuje `IActionOnCLREvent::OnEvent` i przekazuje wskaźnik do `MDAInfo` wystąpienia jako `data` parametru.  
+- Jeśli host został zarejestrowany program obsługi dla tego zdarzenia, środowisko uruchomieniowe sprawdza, czy debuger jest dołączony do procesu. Jeśli tak jest, środowisko uruchomieniowe przerywa debugowanie. Gdy debuger będzie nadal występował, wywoła hosta. Jeśli debuger nie jest dołączony, środowisko wykonawcze wywołuje `IActionOnCLREvent::OnEvent` i przekazuje wskaźnik do `MDAInfo` wystąpienia jako `data` parametru.  
   
  Hosta można wybrać, aby aktywować MDA oraz otrzymywać powiadomienia, gdy zdarzenie MDA jest aktywowane. Host daje szansę, aby zastąpić domyślne zachowanie i aby przerwać wątków zarządzanych, która wywołała zdarzenie, aby uniemożliwić uszkodzenia stan procesu. Aby uzyskać więcej informacji na temat używania mda zobacz [diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   

@@ -16,11 +16,11 @@ ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754703"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Udoskonalanie debugowania za pomocą atrybutów wyświetlania debugera
 
@@ -45,11 +45,11 @@ Na przykład, jeśli obiekt C# została zastąpiona `ToString()`, debuger wywoł
 ## <a name="using-the-debuggerbrowsableattribute"></a>Za pomocą debuggerbrowsableattribute —
  Zastosuj <xref:System.Diagnostics.DebuggerBrowsableAttribute> pola lub właściwości w celu określenia, jak pole lub właściwość ma być wyświetlana w oknie debugera. Konstruktor dla tego atrybutu ma jedną z <xref:System.Diagnostics.DebuggerBrowsableState> wartości wyliczenia, które określa jedno z następujących stanów:
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> Wskazuje, że element członkowski nie jest wyświetlany w oknie dane.  Na przykład za pomocą tej wartości dla <xref:System.Diagnostics.DebuggerBrowsableAttribute> na pole usuwa pole z hierarchii; pole nie jest wyświetlane po rozwinięciu typ otaczający, klikając znak plus (+) dla wystąpienia typu.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> Wskazuje, że element członkowski nie jest wyświetlany w oknie dane.  Na przykład za pomocą tej wartości dla <xref:System.Diagnostics.DebuggerBrowsableAttribute> na pole usuwa pole z hierarchii; pole nie jest wyświetlane po rozwinięciu typ otaczający, klikając znak plus (+) dla wystąpienia typu.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> Wskazuje, że element członkowski jest wyświetlane, ale nie jest domyślnie rozwinięte.  Jest to zachowanie domyślne.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> Wskazuje, że element członkowski jest wyświetlane, ale nie jest domyślnie rozwinięte.  Jest to zachowanie domyślne.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> Wskazuje, że ten element członkowski nie jest wyświetlana, ale obiekty składowe są wyświetlane w przypadku tablicy lub kolekcji.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> Wskazuje, że ten element członkowski nie jest wyświetlana, ale obiekty składowe są wyświetlane w przypadku tablicy lub kolekcji.
 
 > [!NOTE]
 >  <xref:System.Diagnostics.DebuggerBrowsableAttribute> Nie jest obsługiwana przez program Visual Basic w programie .NET Framework 2.0.

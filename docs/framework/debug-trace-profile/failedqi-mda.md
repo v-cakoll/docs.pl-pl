@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754729"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy środowisko wykonawcze wywołuje `QueryInterface` na wskaźnik interfejsu COM w imieniu wywoływana otoka środowiska uruchomieniowego (RCW), a `QueryInterface` wywołanie zakończy się niepowodzeniem.  
@@ -25,11 +25,11 @@ ms.locfileid: "59217630"
   
 ## <a name="cause"></a>Przyczyna  
   
--   Wykonano wywołanie z nieprawidłowym kontekście.  
+- Wykonano wywołanie z nieprawidłowym kontekście.  
   
--   Zarejestrowany serwer proxy, kończy się niepowodzeniem `QueryInterface` wywołania, ponieważ podjęto próbę wywołania w nieprawidłowym kontekście.  
+- Zarejestrowany serwer proxy, kończy się niepowodzeniem `QueryInterface` wywołania, ponieważ podjęto próbę wywołania w nieprawidłowym kontekście.  
   
--   Serwer proxy należące do OLE zwróciła błąd HRESULT.  
+- Serwer proxy należące do OLE zwróciła błąd HRESULT.  
   
 ## <a name="resolution"></a>Rozwiązanie  
  Na karcie reguły COM można znaleźć w dokumentacji MSDN.  

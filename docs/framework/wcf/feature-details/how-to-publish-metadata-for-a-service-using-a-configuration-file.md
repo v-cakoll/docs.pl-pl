@@ -3,11 +3,11 @@ title: 'Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfigu
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761458"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji
 Jest to jedna z dwóch tematy porad, które pokazują Publikowanie metadanych dla usługi Windows Communication Foundation (WCF). Istnieją dwa sposoby, aby określić, jak usługa powinna Publikowanie metadanych, przy użyciu pliku konfiguracji i przy użyciu kodu. W tym temacie przedstawiono sposób Publikowanie metadanych dla usługi przy użyciu pliku konfiguracji.  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. W przypadku punktów końcowych metadanych, dodane w poprzednim kroku, ustawić `binding` atrybut do jednego z następujących czynności:  
   
-    -   `mexHttpBinding` dla publikacji HTTP.  
+    - `mexHttpBinding` dla publikacji HTTP.  
   
-    -   `mexHttpsBinding` dla publikacji protokołu HTTPS.  
+    - `mexHttpsBinding` dla publikacji protokołu HTTPS.  
   
-    -   `mexNamedPipeBinding` dla publikacji nazwanego potoku.  
+    - `mexNamedPipeBinding` dla publikacji nazwanego potoku.  
   
-    -   `mexTcpBinding` dla publikacji TCP.  
+    - `mexTcpBinding` dla publikacji TCP.  
   
 8. Dla punktów końcowych metadanych, dodane w poprzednim kroku należy ustawić adres równe:  
   
-    -   Pusty ciąg do użycia jako punkt publikacji aplikacji hosta, adres podstawowy, jeśli podstawowy adres jest taki sam jak powiązanie metadanych.  
+    - Pusty ciąg do użycia jako punkt publikacji aplikacji hosta, adres podstawowy, jeśli podstawowy adres jest taki sam jak powiązanie metadanych.  
   
-    -   Adres względny Jeśli aplikacja hosta ma adres podstawowy.  
+    - Adres względny Jeśli aplikacja hosta ma adres podstawowy.  
   
-    -   Bezwzględny adres.  
+    - Bezwzględny adres.  
   
 9. Skompiluj i uruchom aplikację konsolową.  
   

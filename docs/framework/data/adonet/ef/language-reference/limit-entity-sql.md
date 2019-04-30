@@ -3,11 +3,11 @@ title: LIMIT (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c22ffede-0a52-44d1-99b9-4a91e651e1b9
 ms.openlocfilehash: b267e97860a2cb071b857224455f01b73115c72d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760678"
 ---
 # <a name="limit-entity-sql"></a>LIMIT (jednostka SQL)
 Stronicowanie fizycznych można wykonać przy użyciu Podklauzula LIMIT w klauzuli ORDER BY. OGRANICZENIE nie może służyć oddzielnie od klauzuli ORDER BY.  

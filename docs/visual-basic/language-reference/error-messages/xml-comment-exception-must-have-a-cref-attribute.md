@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
 ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766613"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>Wyjątek komentarza XML musi mieć atrybut „cref”
 \<Wyjątku > tag umożliwia dokumentowanie wyjątki, które mogą być generowane przez metodę. Wymagane `cref` atrybut określa nazwę elementu członkowskiego, która jest sprawdzana przez generator dokumentacji. Jeśli istnieje elementu członkowskiego, jest tłumaczony nazwy kanonicznej elementu w pliku dokumentacji.  
@@ -21,7 +21,7 @@ ms.locfileid: "58813291"
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Dodaj `cref` atrybutu wyjątku w następujący sposób:  
+- Dodaj `cref` atrybutu wyjątku w następujący sposób:  
   
     ```  
     '''<exception cref="member">description</exception>  

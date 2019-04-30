@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
 ms.openlocfilehash: b8c67c2390df91c6a4af66e020365544e6bf369b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751634"
 ---
 # <a name="addressof-operand-must-be-the-name-of-a-method-without-parentheses"></a>Operand „AddressOf" musi być nazwą metody (bez nawiasów)
 `AddressOf` Operator tworzy wystąpienie delegata procedury, która odwołuje się do określonej procedury. Składnia jest następująca.  

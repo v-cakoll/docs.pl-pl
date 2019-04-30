@@ -12,22 +12,22 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747520"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Przewodnik: Demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym instruktażu utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Będzie zaimportować tej biblioteki klas do innego projektu i utworzyć nowy formularz, który dziedziczy z formularza podstawowego. Z tego instruktażu dowiesz się jak:  
   
--   Utwórz projekt biblioteki klas zawierający formularz podstawowy.  
+- Utwórz projekt biblioteki klas zawierający formularz podstawowy.  
   
--   Dodaj przycisk z właściwościami, które pochodne klasy formularza podstawowego można modyfikować.  
+- Dodaj przycisk z właściwościami, które pochodne klasy formularza podstawowego można modyfikować.  
   
--   Dodaj przycisk, który nie może modyfikować obiektów dziedziczących z formularza podstawowego.  
+- Dodaj przycisk, który nie może modyfikować obiektów dziedziczących z formularza podstawowego.  
   
--   Utwórz projekt zawierający formularz, który dziedziczy z `BaseForm`.  
+- Utwórz projekt zawierający formularz, który dziedziczy z `BaseForm`.  
   
  Ostatecznie w tym instruktażu będą pokazują różnicę między prywatnych i chronionych formantów na odziedziczony formularz.  
   
@@ -76,11 +76,11 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 3. W oknie właściwości ustaw następujące właściwości przycisku:  
   
-    -   Ustaw **tekstu** właściwości **Say Hello**.  
+    - Ustaw **tekstu** właściwości **Say Hello**.  
   
-    -   Ustaw **(nazwa)** właściwości **btnProtected**.  
+    - Ustaw **(nazwa)** właściwości **btnProtected**.  
   
-    -   Ustaw **Modyfikatory** właściwości **chronione**. Dzięki temu możliwe formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnProtected**.  
+    - Ustaw **Modyfikatory** właściwości **chronione**. Dzięki temu możliwe formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnProtected**.  
   
 4. Kliknij dwukrotnie **Say Hello** przycisk, aby dodać moduł obsługi zdarzenia **kliknij** zdarzeń.  
   
@@ -100,11 +100,11 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 2. Dodaj drugi przycisk i ustaw jego właściwości w następujący sposób:  
   
-    -   Ustaw **tekstu** właściwości **Say Goodbye**.  
+    - Ustaw **tekstu** właściwości **Say Goodbye**.  
   
-    -   Ustaw **(nazwa)** właściwości **btnPrivate**.  
+    - Ustaw **(nazwa)** właściwości **btnPrivate**.  
   
-    -   Ustaw **Modyfikatory** właściwości **prywatnej**. Uniemożliwia jej formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnPrivate**.  
+    - Ustaw **Modyfikatory** właściwości **prywatnej**. Uniemożliwia jej formularzy, które dziedziczą z **Form1** można zmodyfikować właściwości **btnPrivate**.  
   
 3. Kliknij dwukrotnie **Say Goodbye** przycisk, aby dodać moduł obsługi zdarzenia **kliknij** zdarzeń. Umieść następujący wiersz kodu w procedurze zdarzenia:  
   
@@ -148,9 +148,9 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 8. Jeśli używasz Visual C#:  
   
-    1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1** w **InheritanceTest** projektu, a następnie wybierz **Usuń**. W wyświetlonym oknie komunikatu kliknij **OK** o potwierdzenie usunięcia.  
+    1. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1** w **InheritanceTest** projektu, a następnie wybierz **Usuń**. W wyświetlonym oknie komunikatu kliknij **OK** o potwierdzenie usunięcia.  
   
-    2.  Otwórz plik Program.cs i zmień wiersz `Application.Run(new Form1());` do `Application.Run(new Form2());`.  
+    2. Otwórz plik Program.cs i zmień wiersz `Application.Run(new Form1());` do `Application.Run(new Form2());`.  
   
 9. W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **InheritanceTest** projektu, a następnie wybierz **Ustaw jako projekt startowy**.  
   

@@ -3,11 +3,11 @@ title: Śledzenie danych analitycznych programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723358"
 ---
 # <a name="wcf-analytic-tracing"></a>Śledzenie danych analitycznych programu WCF
 W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia w strumieniu analityczne śladów, które zapisuje ETW w Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Śledzenie analityczne są przeznaczone do ułatwiają Uzyskaj wgląd w swoje usługi bez konieczności płacenia spadek wysokiej wydajności. Ten przykład ilustruje sposób używania <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> interfejsy API w celu zapisu zdarzenia, które integrują się z usługi WCF.  
@@ -22,11 +22,11 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
 ## <a name="self-hosting-vs-web-hosting"></a>Hostingu samodzielnego programu vs. Hosting sieci Web  
  W przypadku usług hostowanych w sieci Web śledzenia analitycznego usługi WCF w zapewniają polem o nazwie "HostReference", który jest używany do identyfikowania usługi, która jest emitowanie danych śledzenia. Ślady rozszerzonego użytkownika mogą uczestniczyć w tym modelu, a w tym przykładzie przedstawiono najlepsze rozwiązania, aby to zrobić. Format hosta sieci Web odwołać, kiedy potoku "&#124;" znaków nie są wyświetlane w wynikowym ciągu może być jednym z następujących czynności:  
   
--   Jeśli aplikacja nie znajduje się w katalogu głównym.  
+- Jeśli aplikacja nie znajduje się w katalogu głównym.  
   
      \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
--   Jeśli aplikacja znajduje się w katalogu głównym.  
+- Jeśli aplikacja znajduje się w katalogu głównym.  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ W tym przykładzie przedstawiono sposób dodawania własnych zdarzeń śledzenia
   
 10. Przetestuj usługę za pomocą klienta testowego WCF.  
   
-    1.  W kliencie testowym WCF, kliknij dwukrotnie **Add()** węźle ICalculator usługi.  
+    1. W kliencie testowym WCF, kliknij dwukrotnie **Add()** węźle ICalculator usługi.  
   
          **Add()** metoda pojawia się w okienku po prawej stronie, z dwoma parametrami.  
   
-    2.  Wpisz 2 jako pierwszy parametr i 3 dla drugiego parametru.  
+    2. Wpisz 2 jako pierwszy parametr i 3 dla drugiego parametru.  
   
-    3.  Kliknij przycisk **Invoke** było wywołanie metody.  
+    3. Kliknij przycisk **Invoke** było wywołanie metody.  
   
 11. Przejdź do **Podgląd zdarzeń** okna, w którym jest już otwarte. Przejdź do **Podgląd zdarzeń**, **Dzienniki aplikacji i usług**, **Microsoft**, **Windows**, **aplikacji Aplikacje serwera**.  
   

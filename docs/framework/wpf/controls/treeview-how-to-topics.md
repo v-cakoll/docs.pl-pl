@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
 ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761315"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView — Tematy porad
 Tematy w tej sekcji opisano sposób korzystania <xref:System.Windows.Controls.TreeView> sterowania do wyświetlania informacji w strukturze hierarchicznej.  

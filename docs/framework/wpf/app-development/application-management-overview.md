@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757352"
 ---
 # <a name="application-management-overview"></a>Przegląd Zarządzanie aplikacjami
 Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które mają zastosowanie do wdrożenia aplikacji i zarządzania. Ten temat zawiera omówienie funkcji w <xref:System.Windows.Application> klasa do tworzenia aplikacji i zarządzaniem nimi.  
@@ -20,17 +20,17 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ## <a name="the-application-class"></a>Klasa aplikacji  
  W środowisku WPF typowych funkcji o zakresie aplikacji jest hermetyzowany w <xref:System.Windows.Application> klasy. <xref:System.Windows.Application> Klasa zawiera następujące funkcje:  
   
--   Śledzenie i interakcji z okresem istnienia aplikacji.  
+- Śledzenie i interakcji z okresem istnienia aplikacji.  
   
--   Trwa pobieranie i przetwarzanie parametry wiersza polecenia.  
+- Trwa pobieranie i przetwarzanie parametry wiersza polecenia.  
   
--   Wykrywanie i reagowanie na nieobsługiwanych wyjątków.  
+- Wykrywanie i reagowanie na nieobsługiwanych wyjątków.  
   
--   Udostępnianie właściwości zakresu aplikacji i zasobów.  
+- Udostępnianie właściwości zakresu aplikacji i zasobów.  
   
--   Zarządzanie systemem windows w aplikacje autonomiczne.  
+- Zarządzanie systemem windows w aplikacje autonomiczne.  
   
--   Śledzenie i zarządzanie nimi nawigacji.  
+- Śledzenie i zarządzanie nimi nawigacji.  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>Jak wykonywać typowe zadania za pomocą klasy aplikacji  
@@ -71,7 +71,7 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
 - W znaczniku `Application` element musi zawierać `x:Class` atrybutu. Podczas kompilowania aplikacji, istnienie `x:Class` w znaczniku pliku powoduje, że program MSBuild utworzy `partial` klasę pochodzącą od <xref:System.Windows.Application> i ma nazwę, która jest określona przez `x:Class` atrybutu. Wymaga to dodawanie deklaracji przestrzeni nazw XML dla schematu XAML (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`).
   
--   Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w znacznikach i musi pochodzić od klasy <xref:System.Windows.Application>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
+- Związane z kodem, klasy musi być `partial` klasy o takiej samej nazwie, który jest określony przez `x:Class` atrybutu w znacznikach i musi pochodzić od klasy <xref:System.Windows.Application>. Dzięki temu pliku związanego z kodem, który ma zostać skojarzony z `partial` klasy, który jest generowany dla pliku znaczników Po skompilowaniu aplikację (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).  
   
 > [!NOTE]
 >  Podczas tworzenia nowego projektu aplikacji WPF lub projektu aplikacja przeglądarki środowiska WPF przy użyciu programu Visual Studio, definicji aplikacji jest domyślnie włączone i jest definiowana za pomocą znaczników i związane z kodem.  
@@ -195,17 +195,17 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ### <a name="application-activation-and-deactivation"></a>Aktywacja aplikacji i dezaktywacji  
  Windows umożliwia użytkownikom przełączania się między aplikacjami. Najczęstszym sposobem jest użyj kombinacji klawiszy ALT + TAB. Aplikacji mogą być przełączane do, tylko jeśli ma on widoczny <xref:System.Windows.Window> , użytkownik może wybrać. Obecnie wybranym parametrem <xref:System.Windows.Window> jest *aktywne okno* (znany także jako *okna pierwszoplanowego*) i jest <xref:System.Windows.Window> odbierająca dane wejściowe użytkownika. Aplikacja w aktywnym oknie *aktywnej aplikacji* (lub *pierwszoplanowych*). Aplikacja staje się aktywnej aplikacji w następujących okolicznościach:  
   
--   Zostanie uruchomiony i pokazuje <xref:System.Windows.Window>.  
+- Zostanie uruchomiony i pokazuje <xref:System.Windows.Window>.  
   
--   Użytkownik przełączy się z innej aplikacji, wybierając <xref:System.Windows.Window> w aplikacji.  
+- Użytkownik przełączy się z innej aplikacji, wybierając <xref:System.Windows.Window> w aplikacji.  
   
  Wykryć, kiedy aplikacja stanie się aktywny obsługi <xref:System.Windows.Application.Activated?displayProperty=nameWithType> zdarzeń.  
   
  Podobnie aplikacja może stać się nieaktywny w następujących okolicznościach:  
   
--   Użytkownik przełączy się do innej aplikacji z obecnym.  
+- Użytkownik przełączy się do innej aplikacji z obecnym.  
   
--   Kiedy aplikacja kończy pracę.  
+- Kiedy aplikacja kończy pracę.  
   
  Wykryć, kiedy aplikacja stanie się nieaktywny, obsługując <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> zdarzeń.  
   
@@ -225,13 +225,13 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 ### <a name="application-shutdown"></a>Zamykanie aplikacji  
  Cyklu życia aplikacji kończy się, gdy jest wyłączony, co może nastąpić z następujących powodów:  
   
--   Użytkownik zamknie co <xref:System.Windows.Window>.  
+- Użytkownik zamknie co <xref:System.Windows.Window>.  
   
--   Użytkownik zamknie głównym <xref:System.Windows.Window>.  
+- Użytkownik zamknie głównym <xref:System.Windows.Window>.  
   
--   Użytkownik kończy sesję Windows, wylogowania lub zamykania.  
+- Użytkownik kończy sesję Windows, wylogowania lub zamykania.  
   
--   Spełniono warunek specyficzne dla aplikacji.  
+- Spełniono warunek specyficzne dla aplikacji.  
   
  Aby ułatwić zarządzanie zamknięcia aplikacji <xref:System.Windows.Application> zapewnia <xref:System.Windows.Application.Shutdown%2A> metody, <xref:System.Windows.Application.ShutdownMode%2A> właściwości i <xref:System.Windows.Application.SessionEnding> i <xref:System.Windows.Application.Exit> zdarzenia.  
   
@@ -241,11 +241,11 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 #### <a name="shutdown-mode"></a>Tryb zamykania  
  Większość aplikacji Zakończ pracę po zamknięciu wszystkich okien albo po zamknięciu okna głównego. Czasami jednak inne warunki specyficzne dla aplikacji może ustalić zamknięcia aplikacji. Można określić warunki, w których aplikacja zostanie zamknięty, ustawiając <xref:System.Windows.Application.ShutdownMode%2A> przy użyciu jednego z następujących <xref:System.Windows.ShutdownMode> wartości wyliczenia:  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  Wartość domyślna <xref:System.Windows.Application.ShutdownMode%2A> jest <xref:System.Windows.ShutdownMode.OnLastWindowClose>, co oznacza, że aplikacja zostaje automatycznie zamknięty po zamknięciu ostatniego okna w aplikacji przez użytkownika. Jednak jeśli aplikacja powinna zamknięty, po zamknięciu okna głównego, WPF automatycznie wykonuje, jeśli ustawisz <xref:System.Windows.Application.ShutdownMode%2A> do <xref:System.Windows.ShutdownMode.OnMainWindowClose>. Jest to pokazane w poniższym przykładzie.  
   
@@ -259,13 +259,13 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
 #### <a name="session-ending"></a>Trwa kończenie sesji  
  Warunki zamykania, które są opisane przez <xref:System.Windows.Application.ShutdownMode%2A> właściwości są specyficzne dla aplikacji. W niektórych przypadkach jednak aplikacji może zostać wyłączony w wyniku warunek zewnętrznych. Najbardziej typowe zewnętrznych warunek występuje, gdy użytkownik kończy sesję Windows przez następujące akcje:  
   
--   Trwa wylogowywanie  
+- Trwa wylogowywanie  
   
--   Zamykanie  
+- Zamykanie  
   
--   Ponowne uruchamianie  
+- Ponowne uruchamianie  
   
--   Hibernacji  
+- Hibernacji  
   
  Aby wykryć, po zakończeniu sesji programu Windows, można obsługiwać <xref:System.Windows.Application.SessionEnding> zdarzeń, jak pokazano w poniższym przykładzie.  
   
@@ -291,11 +291,11 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  <xref:System.Windows.Application.Exit> mogą być obsługiwane przez aplikacje autonomiczne i aplikacji XBAP. Dla aplikacji XBAP <xref:System.Windows.Application.Exit> jest wywoływane, gdy komputer znajduje się w następujących okolicznościach:  
   
--   XBAP jest opuszczeniu.  
+- XBAP jest opuszczeniu.  
   
--   W [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], gdy karta, która jest hostem XBAP jest zamknięty.  
+- W [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], gdy karta, która jest hostem XBAP jest zamknięty.  
   
--   Po zamknięciu przeglądarki.  
+- Po zamknięciu przeglądarki.  
   
 #### <a name="exit-code"></a>Kod zakończenia  
  Przede wszystkim na rynek aplikacji przez system operacyjny w odpowiedzi na żądanie użytkownika. Jednak można uruchamiać aplikacji przez inną aplikację do wykonywania określonych zadań. Podczas zamykania uruchomionej aplikacji, uruchamiania aplikacji może być ustalenie warunek określający zamknięcia uruchomionej aplikacji. W takich sytuacjach Windows umożliwia aplikacji zwróci kod zakończenia aplikacji podczas zamykania. Domyślnie aplikacje WPF zwracają wartość kodu zakończenia 0.  
@@ -325,11 +325,11 @@ Wszystkie aplikacje zwykle korzystają ze wspólnego zestawu funkcji, które maj
   
  Z punktu widzenia środowisko użytkownika jest lepszym rozwiązaniem dla aplikacji uniknąć tego zachowania domyślnego, wykonując niektóre lub wszystkie z następujących czynności:  
   
--   Wyświetlanie informacji przyjazny dla użytkownika.  
+- Wyświetlanie informacji przyjazny dla użytkownika.  
   
--   Podjęto próbę utrzymują działanie aplikacji.  
+- Podjęto próbę utrzymują działanie aplikacji.  
   
--   Rejestrowanie szczegółowe, informacje o wyjątku przyjazne dla deweloperów w dzienniku zdarzeń Windows.  
+- Rejestrowanie szczegółowe, informacje o wyjątku przyjazne dla deweloperów w dzienniku zdarzeń Windows.  
   
  Implementacja tej obsługi zależy możliwość wykrywania nieobsłużone wyjątki, to znaczy elementy <xref:System.Windows.Application.DispatcherUnhandledException> zdarzenie jest wywoływane dla.  
   

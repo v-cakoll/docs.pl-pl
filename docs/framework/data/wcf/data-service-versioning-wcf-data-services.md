@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
 ms.openlocfilehash: 818495cd2f7100f416280ce019321fed3f26aee8
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765750"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Pozwala na tworzenie usług danych, dzięki czemu klienci mają dostęp do danych jako zasoby przy użyciu identyfikatorów URI, które są oparte na modelu danych. OData obsługuje również definicji operacji usługi. Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia te usługi danych może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniających się potrzeb biznesowych, wymagań dotyczących technologii informacji, lub aby rozwiązać inne problemy. Po wprowadzeniu zmian do istniejącej usługi danych należy rozważyć czy należy zdefiniować nową wersję usługi danych usługi i najlepszy sposób zminimalizować wpływ na istniejące aplikacje klienckie. W tym temacie znajdują się wskazówki dotyczące kiedy i jak utworzyć nową wersję usługi danych. Opisano również, jak usługi danych WCF obsługuje wymiany między klientami i usług danych, które obsługują różne wersje protokołu OData.
@@ -22,9 +22,9 @@ ms.locfileid: "56092920"
 ### <a name="data-model-changes-that-recommend-a-new-data-service-version"></a>Zmiany modelu danych, które zaleca się nowej wersji usługi danych
  Rozważając opublikować nową wersję usługi danych, ważne jest zrozumienie, jak różne rodzaje zmian, może mieć wpływ na aplikacje klienckie. Zmiany do usługi danych, która może być konieczna utworzyć nową wersję usługi danych można podzielić na dwie następujące kategorie:
 
--   Zmienia się na kontrakt usługi, które obejmują aktualizacje do operacji usługi, zmiany w dostępności zestawy jednostek (źródła), zmiany wersji i inne zmiany zachowania usługi.
+- Zmienia się na kontrakt usługi, które obejmują aktualizacje do operacji usługi, zmiany w dostępności zestawy jednostek (źródła), zmiany wersji i inne zmiany zachowania usługi.
 
--   Zmienia się na kontrakt danych, który zawiera zmiany w modelu danych, kanału informacyjnego w formatach lub źródła danych dostosowań.
+- Zmienia się na kontrakt danych, który zawiera zmiany w modelu danych, kanału informacyjnego w formatach lub źródła danych dostosowań.
 
  Poniższe szczegóły tabeli, dla których rodzaje zmian, należy rozważyć publikowanie nową wersję usługi danych:
 
@@ -44,9 +44,9 @@ ms.locfileid: "56092920"
 ### <a name="how-to-version-a-data-service"></a>Jak kontrolować wersję usługi danych
  Gdy jest to wymagane, nowa wersja usługi danych jest definiowany przez tworzenie nowego wystąpienia usługi przy użyciu modelu danych lub kontrakt zaktualizowany. Ta nowa usługa jest następnie udostępniany przy użyciu nowego identyfikatora URI punktu końcowego, które odróżnia go od poprzedniej wersji. Na przykład:
 
--   Stara wersja: `http://services.odata.org/Northwind/v1/Northwind.svc/`
+- Stara wersja: `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
--   Nowa wersja: `http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Nowa wersja: `http://services.odata.org/Northwind/v2/Northwind.svc/`
 
  Podczas uaktualniania usługi danych, klienci muszą również zostać zaktualizowane na podstawie nowych metadanych usługi danych i używać nowego katalogu głównego identyfikatora URI. Jeśli to możliwe, należy zachować poprzednią wersję usługi danych do obsługi klientów, które nie zostały jeszcze uaktualnione do nowej wersji. Gdy nie są już potrzebne, można usunąć starszych wersji usługi danych. Należy rozważyć, utrzymywanie identyfikatora URI w pliku konfiguracji zewnętrzny punkt końcowy usługi danych.
 

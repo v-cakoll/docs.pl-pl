@@ -3,26 +3,26 @@ title: 3398 — PipeSharedMemoryCreated
 ms.date: 03/30/2017
 ms.assetid: d68ec947-a174-4425-9c12-de56dd3a7f7a
 ms.openlocfilehash: e2800972417824b3d92deb980664f669d426004b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33464341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765079"
 ---
 # <a name="3398---pipesharedmemorycreated"></a>3398 — PipeSharedMemoryCreated
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3398|  
-|Słowa kluczowe|Kanał|  
+|Identyfikator|3398|  
+|słowa kluczowe|Kanał|  
 |Poziom|Pełny|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany podczas tworzenia pamięci potoku udostępnionych.  
+ To zdarzenie jest emitowane tworzeniu pamięci potoku udostępnione.  
   
 ## <a name="message"></a>Komunikat  
- Przekaż w potoku pamięci współużytkowanej utworzony w '%1'.  
+ Przekazać pamięci współdzielonej, utworzone w "%1".  
   
 ## <a name="details"></a>Szczegóły

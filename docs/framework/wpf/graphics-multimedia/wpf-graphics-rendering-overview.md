@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765066"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Przegląd Renderowanie grafiki WPF
 Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual. Dotyczy on rolę <xref:System.Windows.Media.Visual> klasy renderowania pomocy technicznej w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelu.  
@@ -24,27 +24,27 @@ Ten temat zawiera omówienie [!INCLUDE[TLA2#tla_winclient](../../../../includes/
   
  <xref:System.Windows.Media.Visual> Obiekt jest podstawowa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu, którego podstawową rolą jest zapewnia obsługę renderowania. Kontrolki interfejsu użytkownika, takie jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TextBox>, pochodzi od <xref:System.Windows.Media.Visual> klasy, a następnie użyć jej do utrwalania danych ich renderowania. <xref:System.Windows.Media.Visual> Obiektu zapewnia obsługę:  
   
--   Wyświetlanie danych wyjściowych: Renderowanie utrwalonych serializacji zawartość rysowania visual.  
+- Wyświetlanie danych wyjściowych: Renderowanie utrwalonych serializacji zawartość rysowania visual.  
   
--   Przekształcenia: Wykonywanie przekształceń na wizualizacji.  
+- Przekształcenia: Wykonywanie przekształceń na wizualizacji.  
   
--   Wycinek: Wspieranie wycinka region dla wizualizacji.  
+- Wycinek: Wspieranie wycinka region dla wizualizacji.  
   
--   Test trafienia: Określanie, czy współrzędne lub geometrii znajduje się w granicach wizualizacji.  
+- Test trafienia: Określanie, czy współrzędne lub geometrii znajduje się w granicach wizualizacji.  
   
--   Otaczający obliczenia pola: Określanie prostokąt otaczający wizualizacji.  
+- Otaczający obliczenia pola: Określanie prostokąt otaczający wizualizacji.  
   
  Jednak <xref:System.Windows.Media.Visual> obiektu nie obejmują obsługę-rendering funkcji, takich jak:  
   
--   Obsługa zdarzeń  
+- Obsługa zdarzeń  
   
--   Układ  
+- Układ  
   
--   Style  
+- Style  
   
--   Powiązanie danych  
+- Powiązanie danych  
   
--   Globalizacja  
+- Globalizacja  
   
  <xref:System.Windows.Media.Visual> jest udostępniany jako publiczny klasa abstrakcyjna, z których mogą pochodzić klasy podrzędne. Poniższa ilustracja pokazuje hierarchię obiektów wizualnych, które są widoczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
@@ -127,13 +127,13 @@ Kolejność operacji DrawingGroup
   
  Istnieje kilka punktów, należy pamiętać o hierarchii obiektów wizualnych i listy instrukcji grafiki wektorowej:  
   
--   Kolejność w hierarchii reprezentuje kolejność renderowania pobieranie informacji. Z głównego elementu wizualnego jest przesunięta elementów podrzędnych, od lewej do prawej i od góry do dołu. Jeśli element ma elementy podrzędne wizualnych, są one przechodni przed elementy równorzędne.  
+- Kolejność w hierarchii reprezentuje kolejność renderowania pobieranie informacji. Z głównego elementu wizualnego jest przesunięta elementów podrzędnych, od lewej do prawej i od góry do dołu. Jeśli element ma elementy podrzędne wizualnych, są one przechodni przed elementy równorzędne.  
   
--   Elementy innego niż liść węzła w hierarchii, takie jak <xref:System.Windows.Controls.ContentPresenter>, są używane do zawierać elementy podrzędne — nie zawierają listy instrukcji.  
+- Elementy innego niż liść węzła w hierarchii, takie jak <xref:System.Windows.Controls.ContentPresenter>, są używane do zawierać elementy podrzędne — nie zawierają listy instrukcji.  
   
--   Jeśli element graficzny zawiera listę instrukcji grafiki wektorowej i wizualne elementy podrzędne, listy instrukcji w nadrzędnego elementu wizualnego jest renderowany przed rysunków w jednym z obiektów wizualnych podrzędnych.  
+- Jeśli element graficzny zawiera listę instrukcji grafiki wektorowej i wizualne elementy podrzędne, listy instrukcji w nadrzędnego elementu wizualnego jest renderowany przed rysunków w jednym z obiektów wizualnych podrzędnych.  
   
--   Elementy na liście instrukcji grafiki wektorowej są renderowane od lewej do prawej.  
+- Elementy na liście instrukcji grafiki wektorowej są renderowane od lewej do prawej.  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>Drzewo wizualne  

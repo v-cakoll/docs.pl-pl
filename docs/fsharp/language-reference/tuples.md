@@ -3,11 +3,11 @@ title: Krotki
 description: Dowiedz się więcej o F# krotki, grupowanie bez nazwy, ale uporządkowane wartości, prawdopodobnie różnych typów.
 ms.date: 05/16/2016
 ms.openlocfilehash: a1fc31d4dc97c0921545e53b91dcde0547002006
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755340"
 ---
 # <a name="tuples"></a>Krotki
 

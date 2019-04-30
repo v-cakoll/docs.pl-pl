@@ -9,44 +9,44 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722942"
 ---
 # <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
 <a name="top"></a> Te zdarzenia zbierać informacje dotyczące wyrzucania elementów bezużytecznych. Pomagają w diagnostyce i debugowania, w tym określanie, ile razy wyrzucania elementów bezużytecznych zostało wykonane, ile pamięci została zwolniona podczas wyrzucania elementów bezużytecznych i tak dalej.  
   
  Ta kategoria obejmuje następujące zdarzenia:  
   
--   [Zdarzenie GCStart_V1](#gcstart_v1_event)  
+- [Zdarzenie GCStart_V1](#gcstart_v1_event)  
   
--   [Zdarzenie GCEnd_V1](#gcend_v1_event)  
+- [Zdarzenie GCEnd_V1](#gcend_v1_event)  
   
--   [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
   
--   [Zdarzenie GCCreateSegment_V1](#gccreatesegment_v1_event)  
+- [Zdarzenie GCCreateSegment_V1](#gccreatesegment_v1_event)  
   
--   [Zdarzenie GCFreeSegment_V1](#gcfreesegment_v1_event)  
+- [Zdarzenie GCFreeSegment_V1](#gcfreesegment_v1_event)  
   
--   [Zdarzenie GCRestartEEBegin_V1](#gcrestarteebegin_v1_event)  
+- [Zdarzenie GCRestartEEBegin_V1](#gcrestarteebegin_v1_event)  
   
--   [Zdarzenie GCRestartEEEnd_V1](#gcrestarteeend_v1_event)  
+- [Zdarzenie GCRestartEEEnd_V1](#gcrestarteeend_v1_event)  
   
--   [Zdarzenie GCSuspendEE_V1](#gcsuspendee_v1_event)  
+- [Zdarzenie GCSuspendEE_V1](#gcsuspendee_v1_event)  
   
--   [Zdarzenie GCSuspendEEEnd_V1](#gcsuspendeeend_v1_event)  
+- [Zdarzenie GCSuspendEEEnd_V1](#gcsuspendeeend_v1_event)  
   
--   [Zdarzenie GCAllocationTick_V2](#gcallocationtick_v2_event)  
+- [Zdarzenie GCAllocationTick_V2](#gcallocationtick_v2_event)  
   
--   [Zdarzenie GCFinalizersBegin_V1](#gcfinalizersbegin_v1_event)  
+- [Zdarzenie GCFinalizersBegin_V1](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
   
--   [Zdarzenie GCTerminateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
+- [Zdarzenie GCTerminateConcurrentThread_V1](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>Zdarzenie GCStart_V1  
@@ -66,7 +66,7 @@ ms.locfileid: "59149737"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win: UInt32.|*n*th wyrzucania elementów bezużytecznych.|  
+|Count|win: UInt32.|*n*th wyrzucania elementów bezużytecznych.|  
 |Głębokość|win: UInt32.|Generowanie, które są zbierane.|  
 |Przyczyna|win: UInt32.|Dlaczego wyrzucania elementów bezużytecznych zostało wyzwolone:<br /><br /> 0x0 - Alokacja sterty dla małego obiektu.<br /><br /> 0x1 — wywołane.<br /><br /> 0x2 — małej ilości pamięci.<br /><br /> 0x3 — pusta.<br /><br /> 0x4 - Alokacja sterty dla dużego obiektu.<br /><br /> 0x5 — Brak miejsca (dla sterty małego obiektu).<br /><br /> 0x6 — Brak miejsca (dla sterty dużego obiektu).<br /><br /> 0x7 — wywołane, ale nie wymuszono jako blokowania.|  
 |Typ|win: UInt32.|0x0 — blokowanie wyrzucania elementów bezużytecznych wystąpiło poza wyrzucania elementów bezużytecznych w tle.<br /><br /> 0x1 — wyrzucania elementów bezużytecznych w tle.<br /><br /> 0x2 — blokowanie wyrzucania elementów bezużytecznych wystąpił podczas wyrzucania elementów bezużytecznych w tle.|  
@@ -92,7 +92,7 @@ ms.locfileid: "59149737"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win: UInt32.|*n*th wyrzucania elementów bezużytecznych.|  
+|Count|win: UInt32.|*n*th wyrzucania elementów bezużytecznych.|  
 |Głębokość|win: UInt32.|Generowanie, które zostały zebrane.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59149737"
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
 |Przyczyna|win: UInt16.|0x0 — inne.<br /><br /> 0x1 — wyrzucania elementów bezużytecznych.<br /><br /> 0x2 — zamykania domeny aplikacji.<br /><br /> 0x3 - pitching kodu.<br /><br /> 0x4 - shutdown.<br /><br /> 0x5 - debugera.<br /><br /> 0x6 — przygotowanie do wyrzucania elementów bezużytecznych.|  
-|Licznik|win: UInt32.|Liczba operacji odzyskiwania pamięci w czasie. Zwykle po to zobaczysz kolejnych zdarzeń początek odzyskiwania pamięci, a licznik będzie wskazywać ta liczba + 1, jak możemy zwiększyć indeksu GC podczas wyrzucania elementów bezużytecznych.|  
+|Count|win: UInt32.|Liczba operacji odzyskiwania pamięci w czasie. Zwykle po to zobaczysz kolejnych zdarzeń początek odzyskiwania pamięci, a licznik będzie wskazywać ta liczba + 1, jak możemy zwiększyć indeksu GC podczas wyrzucania elementów bezużytecznych.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  
@@ -325,7 +325,7 @@ ms.locfileid: "59149737"
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Licznik|win: UInt32.|Liczba finalizatorów, które zostały uruchomione.|  
+|Count|win: UInt32.|Liczba finalizatorów, które zostały uruchomione.|  
 |ClrInstanceID|win: UInt16.|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
   
  [Powrót do początku](#top)  

@@ -1,43 +1,43 @@
 ---
-title: Praca z zestawu SDK platformy kompilatora .NET modelu obszaru roboczego
-description: Ten przegląd zawiera opis używanego do wykonywania zapytań i modyfikowania obszaru roboczego i projekty dla kodu typu.
+title: Praca z modelem obszaru roboczego zestawu SDK platformy kompilatora .NET
+description: W tym omówieniu przedstawiono opis tego typu, którego używasz do wykonywania zapytań i manipulowania obszar roboczy i projekty kodu.
 ms.date: 10/15/2017
 ms.custom: mvc
 ms.openlocfilehash: 7d450b31cbf2c83c79552d1ace3a1ae692bfdd88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706513"
 ---
-# <a name="work-with-a-workspace"></a>Praca z obszaru roboczego
+# <a name="work-with-a-workspace"></a>Korzystanie z obszaru roboczego
 
-**Obszarów roboczych** warstwa jest punkt początkowy podczas analizy kodu i refaktoryzacji za pośrednictwem całego rozwiązania. W tej warstwie API obszaru roboczego pomaga w organizowanie wszystkie informacje dotyczące projektów w rozwiązaniu do pojedynczego obiektu modelu, oferty można bezpośredni dostęp do modeli obiektów warstwy kompilatora tekst źródłowy, drzewa składni, semantycznych modeli i kompilacje, bez konieczności analizy plików, skonfiguruj opcje lub zarządzać współzależności między projektami. 
+**Obszary robocze** warstwa jest punktem wyjścia do wykonywania analizy kodu i refaktoryzacji za pośrednictwem całego rozwiązania. W tej warstwie API obszaru roboczego pomaga w organizowania wszystkie informacje dotyczące projektów w rozwiązaniu do pojedynczego obiektu modelu, umożliwiamy Ci bezpośredni dostęp do modeli obiektów warstwy kompilatora, takich jak tekst źródłowy, drzewa składni semantycznych modeli i kompilacje, bez konieczności przeanalizować plików, skonfiguruj opcje lub Zarządzaj współzależności między projektami. 
 
-Host środowiskach, takich jak IDE, podaj obszaru roboczego dla Ciebie odpowiadający otwartego rozwiązania. Jest również możliwe po prostu podczas ładowania pliku rozwiązania za pomocą tego modelu poza IDE.
+Środowiska hosta, takich jak środowisko IDE zapewniają obszaru roboczego dla Ciebie odpowiadający otwartego rozwiązania. Istnieje również możliwość użycia tego modelu poza środowisko IDE, po prostu ładowanie pliku rozwiązania.
 
 ## <a name="workspace"></a>Obszar roboczy
 
-Obszar roboczy jest active reprezentacja rozwiązania jako kolekcja projektów, każda z kolekcji dokumentów. Obszar roboczy jest zwykle powiązany środowisku hosta, który jest ciągle zmieniana jako typy użytkownika lub zmienia właściwości. 
+Obszar roboczy jest aktywny reprezentację w postaci rozwiązania jako kolekcja projektów, każda grupa zawiera kolekcję dokumentów. Obszar roboczy jest zazwyczaj powiązane środowisko hosta, która nieustannie jako typy użytkowników, lub zmienia właściwości. 
 
-<xref:Microsoft.CodeAnalysis.Workspace> Zapewnia dostęp do bieżącego modelu rozwiązania. W przypadku zmiany w środowisku hosta obszaru roboczego generowane odpowiednie zdarzenia i <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> właściwość jest aktualizowana. Na przykład gdy typy użytkownika w edytorze tekstów odpowiadającego dokumentów źródłowych, obszaru roboczego używa zdarzenia sygnalizują, zmiana modelu ogólnego rozwiązania, który dokument został zmodyfikowany. Można następnie reagują tych zmian, analizowanie nowy model pod kątem poprawności, wyróżnianie obszarów istotności lub czyniąc sugestię zmiany kodu. 
+<xref:Microsoft.CodeAnalysis.Workspace> Zapewnia dostęp do bieżącego modelu rozwiązania. W przypadku zmiany w środowisku hosta obszaru roboczego generowane pokrewnych zdarzeń oraz <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> zaktualizować właściwości. Na przykład po użytkownik wpisze w edytorze tekstów, odpowiadające dokumentów źródłowych, obszar roboczy używa zdarzenia do sygnalizowania, że zmienił się ogólnym modelu rozwiązania i który dokument został zmodyfikowany. Te zmiany mogą reagować następnie przez analizowanie nowego modelu pod kątem poprawności, w celu wyróżnienia obszarów o znaczeniu lub dokonywania sugestię dotyczącą zmiany w kodzie. 
 
-Można również utworzyć autonomiczny obszarów roboczych, które są odłączone od środowiska hosta lub w aplikacji, która ma nie środowisku hosta.
+Można również utworzyć autonomiczny obszary robocze, które są odłączone od środowiska hosta lub używane w aplikacji, która ma żadnego środowiska hosta.
 
 ## <a name="solutions-projects-documents"></a>Rozwiązania, projekty, dokumentów
 
-Obszar roboczy może zmienić za każdym razem, gdy zostanie naciśnięty klawisz, ale można pracować z modelem rozwiązania osobno. 
+Za każdym razem, gdy zostanie naciśnięty, może zmienić obszar roboczy, ale możesz pracować z modelem rozwiązania w izolacji. 
 
-Rozwiązanie jest niezmienialny modelu projektów i dokumentów. Oznacza to, że modelu mogą być współużytkowane bez blokowania lub dublowania. Po uzyskaniu wystąpieniem rozwiązania z <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> właściwości, to wystąpienie zostanie nigdy nie ulegną zmianie. Jednak takie jak z drzewa składni i kompilacji, można zmodyfikować rozwiązania, tworząc nowe wystąpienia na podstawie istniejących rozwiązań i określonych zmian. Aby uzyskać obszar roboczy, aby odzwierciedlić zmiany, należy jawnie zastosować zmienione rozwiązania powrót do obszaru roboczego.
+Rozwiązanie to niezmienne model projektów i dokumentów. Oznacza to, że modelu mogą być udostępniane bez blokowania lub dublowania. Po uzyskaniu wystąpienia rozwiązania <xref:Microsoft.CodeAnalysis.Workspace.CurrentSolution?displayProperty=nameWithType> właściwości tego wystąpienia nigdy nie ulegnie zmianie. Jednak takie jak przy użyciu drzewa składni i kompilacji, można zmodyfikować rozwiązania tworząc nowe wystąpienia na podstawie istniejących rozwiązań i określonych zmian. Aby uzyskać obszar, aby odzwierciedlać wprowadzone zmiany, że wyraźnie zastosujesz zmienionego rozwiązania do obszaru roboczego.
 
-Projekt jest częścią modelu ogólne niezmienne rozwiązania. Reprezentuje wszystkie dokumenty kodu źródłowego, analizy i kompilacja opcji oraz zarówno zestawu i odwołania projektu do projektu. Z projektem można uzyskać dostępu do odpowiedniego kompilacji bez konieczności określania zależności projektu lub analizy plików źródłowych.
+Projekt jest częścią modelu rozwiązania ogólną niezmienne. Reprezentuje wszystkie dokumenty kodu źródłowego, opcje analizy i kompilacja i zarówno zestaw i odwołania projekt projekt. Z poziomu projektu możesz uzyskać dostęp odpowiednich kompilacji, bez konieczności określenia zależności projektu lub przeanalizować plików źródłowych.
 
-Dokument jest również częścią modelu ogólne niezmienne rozwiązania. Dokument reprezentuje plik jednego źródła, z którego można uzyskać dostępu do tekstu pliku, drzewa składni i modelu semantycznego.
+Dokument jest również częścią modelu rozwiązania ogólną niezmienne. Dokument reprezentuje plik pojedyncze źródło, z którego można uzyskać dostęp tekst pliku, w drzewie składni i semantycznego modelu.
 
-Poniższy diagram to reprezentacja powiązań obszaru roboczego do hosta środowiska, narzędzia i jak zostały wprowadzone zmiany.
+Poniższy diagram jest reprezentacją jak obszar roboczy odnosi się do hosta, środowisko, narzędzia i jak zostały wprowadzone zmiany.
 
-![relacje między różnych elementów obszaru roboczego zawierające projekty i plików źródłowych](media/work-with-workspace/workspace-obj-relations.png)
+![relacje między różne elementy obszaru roboczego zawierającego projektów i plików źródłowych](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Podsumowanie
 
-Roslyn udostępnia zestaw kompilatora interfejsów API i interfejsów API obszarów roboczych, zapewniający zaawansowanych informacji na temat kodu źródłowego, na którym jest pełną zgodność z C# i Visual Basic języków.  Zestaw SDK platformy .NET kompilatora znacznie zmniejsza barierę tworzenia fokus kodu narzędzi i aplikacji. Tworzy wiele możliwości innowacji w obszarach, takich jak meta-programowania, generowanie kodu i przekształcenie interakcyjne używają w językach C# i VB i osadzania C# i VB w określonych języków domeny.  
+Roslyn ujawnia zestaw kompilatora interfejsów API i interfejsów API obszarów roboczych, która zapewnia bogate informacje o kodzie źródłowym i ma pełną zgodność z C# i języków Visual Basic.  Zestaw SDK platformy kompilatora .NET znacznie zmniejsza barierę dla tworzenia skoncentrowane na kodzie narzędzi i aplikacji. Tworzy wiele możliwości do innowacji w obszarach, takich jak meta-programowania, generowanie kodu i transformacji, interaktywne korzystanie z języków C# i VB i osadzanie języka C# i VB w języki specyficzne dla domeny.  

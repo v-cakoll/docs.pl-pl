@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758083"
 ---
 # <a name="table-valued-parameters"></a>Parametry o wartościach tabelowych
 Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób organizowania wielu wierszy danych z aplikacji klienckiej programu SQL Server, bez konieczności wielu wystąpień komunikacji dwustronnej lub specjalne logiki po stronie serwera związane z przetwarzaniem danych. Parametry z wartościami przechowywanymi w tabeli można użyć do hermetyzacji wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowanych. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która może być eksploatowana przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -30,13 +30,13 @@ Parametry z wartościami przechowywanymi w tabeli zawierają łatwy sposób orga
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Przekazywanie wielu wierszy w poprzednich wersjach programu SQL Server  
  Zanim parametry z wartościami przechowywanymi w tabeli zostały wprowadzone do programu SQL Server 2008, opcji przekazywania wielu wierszy danych do procedury składowanej lub sparametryzowanego polecenia SQL były ograniczone. Deweloper może wybrać spośród następujących opcji przekazywania wiele wierszy do serwera:  
   
--   Użyj szereg poszczególne parametry do reprezentowania wartości w wielu kolumn i wierszy danych. Ilość danych, który może być przekazywany przy użyciu tej metody jest ograniczona przez liczbę parametry są niedozwolone. Procedury programu SQL Server może mieć co najwyżej 2100 parametrów. Logiki po stronie serwera jest wymagany do budowania tych poszczególne wartości do zmiennej tabeli lub tabeli tymczasowej do przetworzenia.  
+- Użyj szereg poszczególne parametry do reprezentowania wartości w wielu kolumn i wierszy danych. Ilość danych, który może być przekazywany przy użyciu tej metody jest ograniczona przez liczbę parametry są niedozwolone. Procedury programu SQL Server może mieć co najwyżej 2100 parametrów. Logiki po stronie serwera jest wymagany do budowania tych poszczególne wartości do zmiennej tabeli lub tabeli tymczasowej do przetworzenia.  
   
--   Pakietu wiele wartości danych do ciągów rozdzielanych lub dokumentów XML, a następnie przekazać te wartości tekstowych do procedury lub instrukcji. Wymaga to procedury lub instrukcję, aby uwzględnić logikę niezbędną do zweryfikowania struktur danych oraz wydzielenie wartości.  
+- Pakietu wiele wartości danych do ciągów rozdzielanych lub dokumentów XML, a następnie przekazać te wartości tekstowych do procedury lub instrukcji. Wymaga to procedury lub instrukcję, aby uwzględnić logikę niezbędną do zweryfikowania struktur danych oraz wydzielenie wartości.  
   
--   Utwórz serie pojedyncze instrukcje SQL dla modyfikacji danych, które wpływają na wiele wierszy, takich jak te utworzone przez wywołanie metody `Update` metody <xref:System.Data.SqlClient.SqlDataAdapter>. Zmiany można przesłać na serwer indywidualnie lub partii w grupy. Jednak nawet wtedy, gdy przesyłany w partiach, które zawierają wiele instrukcji, każda instrukcja jest wykonywana oddzielnie na serwerze.  
+- Utwórz serie pojedyncze instrukcje SQL dla modyfikacji danych, które wpływają na wiele wierszy, takich jak te utworzone przez wywołanie metody `Update` metody <xref:System.Data.SqlClient.SqlDataAdapter>. Zmiany można przesłać na serwer indywidualnie lub partii w grupy. Jednak nawet wtedy, gdy przesyłany w partiach, które zawierają wiele instrukcji, każda instrukcja jest wykonywana oddzielnie na serwerze.  
   
--   Użyj `bcp` programu narzędziowego lub <xref:System.Data.SqlClient.SqlBulkCopy> obiekt, aby załadować wiele wierszy danych do tabeli. Chociaż ta technika jest bardzo wydajny, nie obsługuje przetwarzania po stronie serwera, chyba, że dane są ładowane do tabeli tymczasowej lub zmiennej tabeli.  
+- Użyj `bcp` programu narzędziowego lub <xref:System.Data.SqlClient.SqlBulkCopy> obiekt, aby załadować wiele wierszy danych do tabeli. Chociaż ta technika jest bardzo wydajny, nie obsługuje przetwarzania po stronie serwera, chyba, że dane są ładowane do tabeli tymczasowej lub zmiennej tabeli.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Tworzenie typów parametru z wartościami przechowywanymi w tabeli  
  Parametry z wartościami przechowywanymi w tabeli zależą od struktury silnie typizowane tabel, które są zdefiniowane przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji CREATE TYPE. Masz typ tabeli na utworzenie i zdefiniowanie struktury w programie SQL Server, zanim użyjesz parametry z wartościami przechowywanymi w tabeli w aplikacjach klienckich. Aby uzyskać więcej informacji na temat tworzenia użytkownika, typach tabel zobacz [typy tabel zdefiniowane przez użytkownika](https://go.microsoft.com/fwlink/?LinkID=98364) w dokumentacji SQL Server — książki Online.  
@@ -77,13 +77,13 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Ograniczenia dotyczące parametrów z wartościami przechowywanymi w tabeli  
  Istnieje również kilka ograniczeń do parametrów z wartościami przechowywanymi w tabeli:  
   
--   Nie można przekazać parametry wartościami przechowywanymi w tabeli [funkcje zdefiniowane przez użytkownika CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
+- Nie można przekazać parametry wartościami przechowywanymi w tabeli [funkcje zdefiniowane przez użytkownika CLR](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
--   Parametry z wartościami przechowywanymi w tabeli mogą być indeksowane tylko do obsługi ograniczenia UNIQUE i PRIMARY KEY. Program SQL Server nie są zachowywane dane statystyczne dotyczące parametrów z wartościami przechowywanymi w tabeli.  
+- Parametry z wartościami przechowywanymi w tabeli mogą być indeksowane tylko do obsługi ograniczenia UNIQUE i PRIMARY KEY. Program SQL Server nie są zachowywane dane statystyczne dotyczące parametrów z wartościami przechowywanymi w tabeli.  
   
--   Parametry z wartościami przechowywanymi w tabeli są tylko do odczytu w [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kodu. Nie można zaktualizować wartości w kolumnach w wierszach parametr z wartościami przechowywanymi w tabeli i nie można wstawić lub usuwania wierszy. Aby zmodyfikować danych, który jest przekazywany do procedury składowanej lub sparametryzowanych instrukcji w parametr z wartościami przechowywanymi w tabeli, należy wstawić dane do tabeli tymczasowej lub zmiennej tabeli.  
+- Parametry z wartościami przechowywanymi w tabeli są tylko do odczytu w [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] kodu. Nie można zaktualizować wartości w kolumnach w wierszach parametr z wartościami przechowywanymi w tabeli i nie można wstawić lub usuwania wierszy. Aby zmodyfikować danych, który jest przekazywany do procedury składowanej lub sparametryzowanych instrukcji w parametr z wartościami przechowywanymi w tabeli, należy wstawić dane do tabeli tymczasowej lub zmiennej tabeli.  
   
--   Nie można użyć instrukcji ALTER TABLE, aby zmodyfikować projekt parametrów z wartościami przechowywanymi w tabeli.  
+- Nie można użyć instrukcji ALTER TABLE, aby zmodyfikować projekt parametrów z wartościami przechowywanymi w tabeli.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Konfigurowanie przykładzie parametr SqlParameter  
  <xref:System.Data.SqlClient> obsługuje wypełniania wartościami przechowywanymi w tabeli Parametry z <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> lub <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> obiektów. Należy określić nazwę typu dla parametru z wartościami przechowywanymi w tabeli, używając <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Musi pasować do nazwy zgodne z typem wcześniej utworzony na serwerze. Poniższy fragment kodu pokazuje, jak skonfigurować <xref:System.Data.SqlClient.SqlParameter> wstawiania danych.  

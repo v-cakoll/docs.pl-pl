@@ -1,14 +1,20 @@
 ---
-title: 'Dyrektywy preprocesora C#'
+title: Dyrektywy preprocesora języka C#
 ms.date: 07/20/2015
 f1_keywords:
-  - cs.preprocessor
+- cs.preprocessor
 helpviewer_keywords:
-  - 'preprocessor directives [C#]'
-  - 'keywords [C#], preprocessor directives'
+- preprocessor directives [C#]
+- keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
+ms.openlocfilehash: 54067777ed2e92eea263b17cce0d4cdf13ed731d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689323"
 ---
-# <a name="c-preprocessor-directives"></a>Dyrektywy preprocesora C#
+# <a name="c-preprocessor-directives"></a>Dyrektywy preprocesora języka C#
 Ta sekcja zawiera informacje o następujących dyrektywy preprocesora C#:
 
 - [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)

@@ -3,11 +3,11 @@ title: Co nowego w języku C# 7.2
 description: Omówienie nowych funkcji w języku C# 7.2.
 ms.date: 08/16/2017
 ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706094"
 ---
 # <a name="whats-new-in-c-72"></a>Co nowego w języku C# 7.2
 
@@ -42,7 +42,7 @@ Funkcje językowe, które wprowadzono w 7.2 pozwalają pracować z typami warto�
 
 Możesz przeczytać więcej na temat wszystkich tych zmian w [pisanie kodu efektywne bezpieczne](../write-safe-efficient-code.md).
 
-## <a name="non-trailing-named-arguments"></a>Inne niż końcowe argumenty nazwane
+## <a name="non-trailing-named-arguments"></a>Argumenty nazwane inne niż końcowe
 
 Wywołania metody mogą teraz używać argumentów nazwanych, które poprzedzają argumenty pozycyjne, gdy te argumenty nazwane są właściwe pozycje. Aby uzyskać więcej informacji, zobacz [nazwane i opcjonalne argumenty](../programming-guide/classes-and-structs/named-and-optional-arguments.md).
 

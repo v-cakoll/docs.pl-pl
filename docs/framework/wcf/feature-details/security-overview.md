@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748541"
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozproszonej platformy programowania i zabezpieczanie komunikatów między klientami i usługami jest podstawą ochrony danych. Usługi WCF zapewnia platformę wszechstronne i interoperacyjne wymiany zabezpieczonych wiadomości na podstawie istniejącej infrastruktury zabezpieczeń i standardy zabezpieczeń rozpoznawanym komunikaty protokołu SOAP.  
@@ -25,27 +25,27 @@ Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozprosz
 ## <a name="windows-communication-foundation-security-benefits"></a>Windows Communication Foundation zabezpieczeń zapewnianych  
  Usługi WCF jest to rozproszona platforma programowania oparte na komunikaty protokołu SOAP. Przy użyciu usługi WCF, można utworzyć aplikacje tej funkcji jako usługi oraz obsługi klientów, tworzenia i przetwarzania komunikatów z nieograniczonej liczby innych usług i klientów. W takich aplikacji rozproszonej wiadomości może przepływać z węzła do węzła, za pośrednictwem zapory do Internetu oraz liczne pośredników SOAP. Wprowadza szereg zagrożenia bezpieczeństwa komunikatu. W poniższych przykładach pokazano niektóre typowe zagrożenia, które zabezpieczeń programu WCF można ograniczyć podczas wymiany komunikatów między obiektami:  
   
--   Obserwowanie ruchu sieciowego w celu uzyskania informacji poufnych. Na przykład w scenariuszu bankowość online, klient zażąda transferu środków z jednego konta na inny. Złośliwy użytkownik przechwytuje wiadomości, a później numer konta i hasła, wykonuje transferu środków z konta którego bezpieczeństwo zostało naruszone.  
+- Obserwowanie ruchu sieciowego w celu uzyskania informacji poufnych. Na przykład w scenariuszu bankowość online, klient zażąda transferu środków z jednego konta na inny. Złośliwy użytkownik przechwytuje wiadomości, a później numer konta i hasła, wykonuje transferu środków z konta którego bezpieczeństwo zostało naruszone.  
   
--   Jednostki wydawaniem pełniący funkcję usług bez świadomości klienta. W tym scenariuszu złośliwy użytkownik (nieautoryzowany) działa jako usługa online i przechwytuje wiadomości od klienta do uzyskania informacji poufnych. Następnie nieautoryzowany używa kradzieży danych do transferu środków z konta którego bezpieczeństwo zostało naruszone. Ten rodzaj ataku jest również znane *ataku*.  
+- Jednostki wydawaniem pełniący funkcję usług bez świadomości klienta. W tym scenariuszu złośliwy użytkownik (nieautoryzowany) działa jako usługa online i przechwytuje wiadomości od klienta do uzyskania informacji poufnych. Następnie nieautoryzowany używa kradzieży danych do transferu środków z konta którego bezpieczeństwo zostało naruszone. Ten rodzaj ataku jest również znane *ataku*.  
   
--   Zmiana komunikaty, aby uzyskać różne wyniki niż obiekt wywołujący przeznaczone. Na przykład zmieniając numer konta, do którego ma zostać depozytu umożliwia środków przejść do nieautoryzowanego konta.  
+- Zmiana komunikaty, aby uzyskać różne wyniki niż obiekt wywołujący przeznaczone. Na przykład zmieniając numer konta, do którego ma zostać depozytu umożliwia środków przejść do nieautoryzowanego konta.  
   
--   Odtworzenie haker, w których haker uciążliwy powoduje ponowne uruchomienie tego samego zamówienia zakupu. Na przykład księgarni online odbiera setki zamówień i wysyła książki do klienta, który nie ma ich uporządkowane.  
+- Odtworzenie haker, w których haker uciążliwy powoduje ponowne uruchomienie tego samego zamówienia zakupu. Na przykład księgarni online odbiera setki zamówień i wysyła książki do klienta, który nie ma ich uporządkowane.  
   
--   Niezdolność usługi do uwierzytelniania klienta. W tym przypadku usługa nie dają pewność, że odpowiednie osoby wykonywane transakcji.  
+- Niezdolność usługi do uwierzytelniania klienta. W tym przypadku usługa nie dają pewność, że odpowiednie osoby wykonywane transakcji.  
   
  Podsumowując bezpieczeństwie transferu zapewnia następujące gwarancje:  
   
--   Usługa uwierzytelniania punktu końcowego (respondenta).  
+- Usługa uwierzytelniania punktu końcowego (respondenta).  
   
--   Uwierzytelnianie jednostki (Inicjator) klienta.  
+- Uwierzytelnianie jednostki (Inicjator) klienta.  
   
--   Integralność wiadomości.  
+- Integralność wiadomości.  
   
--   Poufność komunikatów.  
+- Poufność komunikatów.  
   
--   Wykrywanie powtarzania.  
+- Wykrywanie powtarzania.  
   
 ### <a name="integration-with-existing-security-infrastructures"></a>Integracja z istniejącymi infrastrukturami zabezpieczeń  
  Często wdrożeń usług internetowych dysponować istniejących rozwiązań zabezpieczeń, na przykład protokołu Secure Sockets Layer (SSL) lub protokołu Kerberos. Niektóre z zalet infrastruktura zabezpieczeń, która została już wdrożona, takich jak Windows domen usługi Active Directory. Często zachodzi zintegrować z istniejącymi technologiami, te podczas oceniania i przyjęcie nowszej z nich.  
@@ -57,13 +57,13 @@ Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozprosz
   
  W związku z tym na całym świecie usług sieci Web, gdzie tej samej usługi mogą być ujawniane także co partnerom zewnętrznym wewnętrznych klientów firmowych lub klientów internetowych, ważne jest, że infrastruktura przewiduje integrację z tych istniejących zabezpieczeń modele uwierzytelniania. Zabezpieczenia WCF obsługuje wiele typów poświadczeń (modele uwierzytelniania) w tym:  
   
--   Anonimowy obiekt wywołujący.  
+- Anonimowy obiekt wywołujący.  
   
--   Poświadczenia klienta nazwy użytkownika.  
+- Poświadczenia klienta nazwy użytkownika.  
   
--   Certyfikat poświadczeń klienta.  
+- Certyfikat poświadczeń klienta.  
   
--   Windows (protokół Kerberos i LanMan NT [NTLM]).  
+- Windows (protokół Kerberos i LanMan NT [NTLM]).  
   
 ### <a name="standards-and-interoperability"></a>Standardy i współdziałanie  
  W świecie przy użyciu istniejących wdrożeń w dużych zasady jednolitości jest rzadkie. Platformy obliczeniowej/komunikacji rozproszonej muszą współpracować przy użyciu technologii, oferowanych przez różnych dostawców. Podobnie zabezpieczeń, musi być międzyoperacyjnych.  
@@ -81,9 +81,9 @@ Windows Communication Foundation (WCF) jest SOAP oparta na komunikatach rozprosz
 #### <a name="transport-and-message-security-modes"></a>Transport i tryby zabezpieczeń komunikatów  
  Dwa główne mechanizmy są używane do implementowania bezpieczeństwie transferu programu WCF: *transportu* trybu zabezpieczeń i *komunikat* tryb zabezpieczeń.  
   
--   *Tryb zabezpieczeń Transport* korzysta protokół poziomu transportu, taki jak HTTPS, aby osiągnąć bezpieczeństwie transferu. Tryb transportu zaletą jest szeroko stosowanych, dostępna na wielu platformach i mniejsze wymagania złożonego. Ma jednak wadą Zabezpieczanie komunikatów tylko z typu punkt-punkt.  
+- *Tryb zabezpieczeń Transport* korzysta protokół poziomu transportu, taki jak HTTPS, aby osiągnąć bezpieczeństwie transferu. Tryb transportu zaletą jest szeroko stosowanych, dostępna na wielu platformach i mniejsze wymagania złożonego. Ma jednak wadą Zabezpieczanie komunikatów tylko z typu punkt-punkt.  
   
--   *Tryb zabezpieczeń wiadomości*, a na drugiej strony, używa WS-Security (i inne specyfikacje) Aby zaimplementować zabezpieczenia transferu. Ponieważ zabezpieczeń wiadomości jest stosowane bezpośrednio do komunikaty protokołu SOAP i znajduje się wewnątrz koperty protokołu SOAP, wraz z danymi aplikacji ma prowadzoną zabezpieczeń transportu niezależne od protokołu, bardziej rozszerzalny i zapewnianie end-to-end (w przeciwieństwie do point-to-point); ma ona wadą jest kilka razy wolniej niż tryb zabezpieczeń transport, ponieważ ma ona do czynienia z charakterem XML protokołu SOAP wiadomości.  
+- *Tryb zabezpieczeń wiadomości*, a na drugiej strony, używa WS-Security (i inne specyfikacje) Aby zaimplementować zabezpieczenia transferu. Ponieważ zabezpieczeń wiadomości jest stosowane bezpośrednio do komunikaty protokołu SOAP i znajduje się wewnątrz koperty protokołu SOAP, wraz z danymi aplikacji ma prowadzoną zabezpieczeń transportu niezależne od protokołu, bardziej rozszerzalny i zapewnianie end-to-end (w przeciwieństwie do point-to-point); ma ona wadą jest kilka razy wolniej niż tryb zabezpieczeń transport, ponieważ ma ona do czynienia z charakterem XML protokołu SOAP wiadomości.  
   
  Aby uzyskać więcej informacji dotyczących tych różnic, zobacz [zabezpieczania usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   

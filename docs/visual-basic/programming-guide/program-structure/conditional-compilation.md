@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758460"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Kompilacja warunkowa w Visual Basic
 W *kompilacji warunkowej*, określonych bloków kodu w programie są kompilowane selektywnie, podczas gdy inne są ignorowane.  
@@ -29,11 +29,11 @@ W *kompilacji warunkowej*, określonych bloków kodu w programie są kompilowane
 ## <a name="declaring-conditional-compilation-constants"></a>Deklarowanie stałych kompilacji warunkowej  
  Stałe kompilacji warunkowej można ustawić w jeden z trzech sposobów:  
   
--   W **Projektant projektu**  
+- W **Projektant projektu**  
   
--   W wierszu polecenia, korzystając z wiersza polecenia kompilatora  
+- W wierszu polecenia, korzystając z wiersza polecenia kompilatora  
   
--   W kodzie  
+- W kodzie  
   
  Stałe kompilacji warunkowej mają specjalne zakres i nie są dostępne od standardowego kodu. Zakres Stała kompilacji warunkowej jest zależna od sposób, który jest ustawiony. W poniższej tabeli wymieniono zakres stałe zadeklarowane za pomocą każdego z trzech sposobów wymienionych powyżej.  
   

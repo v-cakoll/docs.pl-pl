@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762388"
 ---
 # <a name="transforms-overview"></a>Przegląd Przekształcenia
 W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> klasy, aby obrócić, skalowanie, Przenieś (tłumaczenia) i pochylanie <xref:System.Windows.FrameworkElement> obiektów.  
@@ -101,9 +101,9 @@ Element prostokąt obrócony o 45 stopni, o punkt (25, 25)
 ## <a name="transforming-a-frameworkelement"></a>Przekształcanie FrameworkElement  
  Aby zastosować przekształceń w celu <xref:System.Windows.FrameworkElement>, Utwórz <xref:System.Windows.Media.Transform> i zastosować je do jednej z dwóch właściwości, <xref:System.Windows.FrameworkElement> klasa oferuje:  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Przekształcenie, który zostanie zastosowany przed przekazanie układu. Po zastosowaniu przekształcenia system układu przetwarza przekształcone rozmiar i położenie elementu.  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> Przekształcenie, który zostanie zastosowany przed przekazanie układu. Po zastosowaniu przekształcenia system układu przetwarza przekształcone rozmiar i położenie elementu.  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> — Przekształcenia modyfikuje wygląd elementu, które są stosowane po zakończeniu przebiegu układu. Za pomocą <xref:System.Windows.UIElement.RenderTransform%2A> właściwości zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A> właściwości, można uzyskać korzyści wydajności.  
+- <xref:System.Windows.UIElement.RenderTransform%2A> — Przekształcenia modyfikuje wygląd elementu, które są stosowane po zakończeniu przebiegu układu. Za pomocą <xref:System.Windows.UIElement.RenderTransform%2A> właściwości zamiast <xref:System.Windows.FrameworkElement.LayoutTransform%2A> właściwości, można uzyskać korzyści wydajności.  
   
  Które właściwości należy użyć? Ze względu na korzyści w zakresie wydajności, które zawiera, użyj <xref:System.Windows.UIElement.RenderTransform%2A> właściwość zawsze wtedy, gdy to możliwe, szczególnie w przypadku, gdy używasz animowane <xref:System.Windows.Media.Transform> obiektów. Użyj <xref:System.Windows.FrameworkElement.LayoutTransform%2A> właściwości podczas skalowania, rotacji lub pochylania, jeśli jest konieczne element nadrzędny elementu, aby dopasować rozmiar po przekształceniu elementu. Należy zauważyć, że gdy są one używane z <xref:System.Windows.FrameworkElement.LayoutTransform%2A> właściwości <xref:System.Windows.Media.TranslateTransform> obiekty wydają się nie mają wpływu na elementy. To, ponieważ system układu zwraca element przetłumaczone do swojego pierwotnego położenia w ramach jego przetwarzania.  
   

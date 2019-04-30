@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762491"
 ---
 # <a name="one-way-services"></a>Usługi jednokierunkowe
 Domyślnym zachowaniem operacji usługi jest wzorzec "żądanie-odpowiedź". We wzorcu "żądanie-odpowiedź" klient czeka na komunikat odpowiedzi, nawet, jeśli operacja usługi jest reprezentowana w kodzie jako `void` metody. Za pomocą operacji jednokierunkowych są przesyłane tylko jeden komunikat. Odbiornik nie wysyła komunikat odpowiedzi nie jest nadawca oczekiwany jeden.  
   
  Użyj wzorca projektowego jednokierunkowe:  
   
--   Gdy klient musi wywoływanie operacji i nie występuje w wyniku operacji na poziomie operacji.  
+- Gdy klient musi wywoływanie operacji i nie występuje w wyniku operacji na poziomie operacji.  
   
--   Korzystając z <xref:System.ServiceModel.NetMsmqBinding> lub <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy. (Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
+- Korzystając z <xref:System.ServiceModel.NetMsmqBinding> lub <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> klasy. (Aby uzyskać więcej informacji na temat tego scenariusza, zobacz [kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).)  
   
  Gdy operacja jest jednokierunkowa, nie ma odpowiedzi do przenoszenia informacji o błędzie do klienta. Warunki błędów może wykryć, korzystając z funkcji podstawowych powiązania, takich jak niezawodnej sesji lub Projektując kontrakt usługi dwustronnej, które używa dwóch operacji jednokierunkowych — kontraktu jednokierunkowego od klienta do usługi do wywołania operacji usługi, a drugi jednokierunkowa Umowę między usługą i klienta, aby usługa może wysyłać błędy wstecz do klienta przy użyciu wywołania zwrotnego, który implementuje klienta.  
   

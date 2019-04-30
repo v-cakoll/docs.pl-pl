@@ -3,11 +3,11 @@ title: 'Transport: Przykład niestandardowych transakcji przeprowadzanych za po�
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760047"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Przykład niestandardowych transakcji przeprowadzanych za pośrednictwem protokołu UDP
 Ten przykład jest oparty na [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) próbki w Windows Communication Foundation (WCF)[rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md). Rozszerza przykładowe transportu UDP do obsługi przepływu transakcji niestandardowe i zademonstrowano użycie <xref:System.ServiceModel.Channels.TransactionMessageProperty> właściwości.  
@@ -50,9 +50,9 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  Transportu przepływu transakcji niestandardowych implementacji klienta musisz wiedzieć, jakie operacje usługi wymagają przepływu transakcji i przekazać te informacje do usługi WCF. Należy również mechanizmem przekazywania transakcja użytkownika do warstwy transportowej. W tym przykładzie użyto "Inspektorzy komunikatów WCF" Aby uzyskać te informacje. Klienta wiadomości Inspektor zaimplementowane w tym miejscu, które jest wywoływane `TransactionFlowInspector`, wykonuje następujące zadania:  
   
--   Określa, czy transakcji musi przepływać do działania danej komunikatów (to ma miejsce w `IsTxFlowRequiredForThisOperation()`).  
+- Określa, czy transakcji musi przepływać do działania danej komunikatów (to ma miejsce w `IsTxFlowRequiredForThisOperation()`).  
   
--   Dołącza bieżącej transakcji otoczenia do wiadomości przy użyciu `TransactionFlowProperty`, jeśli transakcja jest wymagany do przepływu (jest to realizowane w `BeforeSendRequest()`).  
+- Dołącza bieżącej transakcji otoczenia do wiadomości przy użyciu `TransactionFlowProperty`, jeśli transakcja jest wymagany do przepływu (jest to realizowane w `BeforeSendRequest()`).  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  

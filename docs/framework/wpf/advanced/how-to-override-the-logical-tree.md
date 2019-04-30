@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Zastąp drzewo logiczne'
+title: 'Instrukcje: Przesłanianie drzewa logicznego'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding the logical tree [WPF]
 - logical tree [WPF], overriding
 ms.assetid: 0ae4d074-8113-4b06-b4fa-e0f39d4967a6
 ms.openlocfilehash: bf3459fff1a90326794d6713dd39c73596b0e960
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768449"
 ---
-# <a name="how-to-override-the-logical-tree"></a>Instrukcje: Zastąp drzewo logiczne
+# <a name="how-to-override-the-logical-tree"></a>Instrukcje: Przesłanianie drzewa logicznego
 Chociaż nie jest wymagane w większości przypadków, autorzy zaawansowanych kontroli ma możliwość przesłanianie drzewa logicznego.  
   
 ## <a name="example"></a>Przykład  

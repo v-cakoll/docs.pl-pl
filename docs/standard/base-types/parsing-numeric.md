@@ -14,11 +14,11 @@ ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765950"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizowanie ciągów liczbowych w sieci
 Wszystkie typy numeryczne mają dwie metody analizy statycznej, `Parse` i `TryParse`, której można przekonwertować ciąg reprezentujący liczbę na typ liczbowy. Te metody umożliwiają analizowanie ciągów, które zostały utworzone za pomocą ciągów formatu w [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md) i [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md). Domyślnie `Parse` i `TryParse` może pomyślnie konwertują ciągi, które zawierają całkowite cyfry dziesiętne tylko dla wartości całkowitych. Można pomyślnie konwertują ciągi zawierające zaokrągleń cyfry dziesiętne, separatory grup i separator dziesiętny na wartości zmiennoprzecinkowe. `Parse` Metoda zgłasza wyjątek, jeśli operacja zakończy się niepowodzeniem, natomiast `TryParse` metoda zwraca `false`.  
@@ -28,9 +28,9 @@ Wszystkie typy numeryczne mają dwie metody analizy statycznej, `Parse` i `TryPa
   
  Dostawca formatu jest reprezentowany przez <xref:System.IFormatProvider> implementacji. Ten interfejs ma jeden element członkowski <xref:System.IFormatProvider.GetFormat%2A> metody, w której jeden parametr jest <xref:System.Type> obiekt, który reprezentuje typ do sformatowania. Ta metoda zwraca obiekt, który dostarcza informacje o formatowaniu. .NET wspomaga następujące dwa <xref:System.IFormatProvider> niedotyczące analizowanie ciągów numerycznych:  
   
--   A <xref:System.Globalization.CultureInfo> którego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> metoda zwraca <xref:System.Globalization.NumberFormatInfo> obiekt, który dostarcza informacje o formatowaniu specyficzne dla kultury.  
+- A <xref:System.Globalization.CultureInfo> którego <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> metoda zwraca <xref:System.Globalization.NumberFormatInfo> obiekt, który dostarcza informacje o formatowaniu specyficzne dla kultury.  
   
--   A <xref:System.Globalization.NumberFormatInfo> którego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> metoda zwraca samą siebie.  
+- A <xref:System.Globalization.NumberFormatInfo> którego <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> metoda zwraca samą siebie.  
   
  Poniższy przykład podejmuje próbę przekonwertowania każdego ciągu w tablicy <xref:System.Double> wartość. Próbuje najpierw przeanalizować składni ciągu przy użyciu dostawcy formatu, który odzwierciedla Konwencji kultury angielski (Stany Zjednoczone). Jeśli operacja zgłosi <xref:System.FormatException>, próbuje przeanalizować składni ciągu przy użyciu dostawcy formatu, który odzwierciedla konwencje kultury francuski (Francja).  
   

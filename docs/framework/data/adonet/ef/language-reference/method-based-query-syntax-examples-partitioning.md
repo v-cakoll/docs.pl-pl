@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
 ms.openlocfilehash: eaf98dc21499817446efca2f10edf7faea15761c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760522"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Przykłady składni zapytania oparte na metodzie: Partycjonowanie
 Przykłady w tym temacie prezentują sposób użycia <xref:System.Linq.Enumerable.Skip%2A>, i <xref:System.Linq.Enumerable.Take%2A> metod do wykonywania zapytań [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples) przy użyciu składni wyrażeń zapytania. Model sprzedaży AdventureWorks, używany w tych przykładach składa się z kontaktu, adres, produktu, SalesOrderHeader i szczegóły zamówienia sprzedaży tabele w przykładowej bazy danych AdventureWorks.  

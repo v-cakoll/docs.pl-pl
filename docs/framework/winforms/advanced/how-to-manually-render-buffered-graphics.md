@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
 ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756588"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Instrukcje: Ręczne renderowanie buforowanej grafiki
 Jeśli zarządzasz buforowanej grafiki, należy mieć możliwość tworzenia i bufory grafiki typu renderowania. Można utworzyć wystąpienia elementu <xref:System.Drawing.BufferedGraphics> klasę, która jest skojarzona z rysunku powierzchnie na ekranie, wywołując <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A> metody. Ta metoda tworzy <xref:System.Drawing.BufferedGraphics> wystąpienia, który jest skojarzony z powierzchnię renderowania określonego, takie jak formularz lub formant. Po utworzeniu <xref:System.Drawing.BufferedGraphics> wypadku grafiki można narysować w buforze, czyli przedstawia liczbę za pomocą <xref:System.Drawing.BufferedGraphics.Graphics%2A> właściwości. Po wykonaniu wszystkich operacji graficznych, wywołując można skopiować zawartość buforu ekranu <xref:System.Drawing.BufferedGraphics.Render%2A> metody.  

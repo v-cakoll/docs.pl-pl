@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
 ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768722"
 ---
 # <a name="extending-wcf"></a>Rozszerzanie architektury WCF
-Windows Communication Foundation (WCF) służy do modyfikowania i rozszerzania składników dokładnie określić czas wykonywania, a rozszerzenie aplikacji usługi. Przejdź w tematach w tej sekcji szczegółowo o architekturze rozszerzalności. Aby uzyskać więcej informacji na temat podstawy programowania, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) umożliwia modyfikowanie i Rozszerz składniki czasu wykonywania może precyzyjnie kontrolować i rozszerzanie aplikacji opartych na usługach. Przejdź w tematach w tej sekcji szczegółowo o architekturze rozszerzalności. Aby uzyskać więcej informacji na temat podstawy programowania zobacz [programowanie WCF Basic](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Rozszerzanie elementu ServiceHost i warstwy modelu usług](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
- Warstwy modelu usług jest odpowiedzialny za ściąganie wiadomości przychodzących poza podstawowej kanały, tłumaczenia je do wywołania metody w kodzie aplikacji i wysłaniem wyniki z powrotem do wywołującego.  Rozszerzenia modelu usługi zmodyfikować, lub zaimplementuj wykonywania lub zachowanie komunikacji i funkcje dotyczące funkcji dyspozytora, niestandardowe zachowania, wiadomości i przechwytywaniu parametru i innych funkcji rozszerzalności.  
+ Warstwy modelu usług jest odpowiedzialny za ściąganie komunikaty przychodzące poza podstawowym kanały, tłumaczenie je na wywołania metody w kodzie aplikacji i wyniki są wysyłane do obiektu wywołującego.  Rozszerzenia modelu usługi modyfikować ani implementować wykonywania lub zachowanie komunikacji i funkcje, obejmujące funkcje dyspozytora, niestandardowe zachowania, wiadomości i przejmowanie parametru i innych funkcji rozszerzalności.  
   
  [Rozszerzanie powiązań](../../../../docs/framework/wcf/extending/extending-bindings.md)  
- Powiązania są obiekty, które opisują szczegóły komunikacji wymagane do połączenia z punktem końcowym. Powiązania niestandardowe lub rozszerzenia powiązania implementowania niestandardowych komunikacji wymagane do obsługi funkcji aplikacji.  
+ Powiązania to obiekty, które opisują szczegółów komunikacji wymagane do połączenia z punktem końcowym. Powiązanie rozszerzenia lub powiązań niestandardowych implementacji komunikacji niestandardowe funkcje wymagane do obsługi funkcji aplikacji.  
   
  [Rozszerzanie warstwy kanału](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
- Warstwie kanału znajduje się poniżej warstwy modelu usług i jest odpowiedzialny za wymiana wiadomości między klientami i usługami. Rozszerzenia kanału można zaimplementować nowych funkcji protokołu, takie jak zabezpieczeń. Rozszerzenia kanał transportu również funkcje, takie jak wdrażanie nowego transportu sieciowego do przenoszenia wiadomości SOAP.  
+ Warstwy kanału znajduje się poniżej warstwy modelu usług i jest odpowiedzialny za wymiana wiadomości między klientami i usługami. Rozszerzenia kanału można zaimplementować nowych funkcji protokołu, takie jak zabezpieczenia. Rozszerzenia kanał transportu również funkcji, takich jak zaimplementowanie nowy transport do sieci, żeby komunikaty protokołu SOAP.  
   
  [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)  
- Zabezpieczenia w programie WCF składa się z przesunięcia zabezpieczeń (integralność, poufność i uwierzytelnianie), kontrola dostępu (autoryzacja) i inspekcji. Znaleziono klas w `IdentityModel` przestrzeni nazw są używane przez usługi WCF do kontroli dostępu. Omówienie architektury zabezpieczeń służy do tworzenia niestandardowych oświadczenia, aby pomieścić systemów kontroli dostępu niestandardowych.  
+ Zabezpieczenia w programie WCF składa się z przeniesienia zabezpieczeń (integralności, poufności i uwierzytelnianie), kontrola dostępu (autoryzacja) i inspekcji. Klasy znalezione w `IdentityModel` przestrzeni nazw są używane przez architekturę WCF dla kontroli dostępu. Omówienie architektury zabezpieczeń pozwala na tworzenie niestandardowe typy oświadczeń do obsługi systemów kontroli dostępu niestandardowych.  
   
  [Rozszerzanie systemu metadanych](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- System metadanych WCF jest grupą klasy i interfejsy, które reprezentują metadane wymagane do wdrożenia aplikacji usługi. Modyfikowanie lub rozszerzyć klasy lub wdrożenia i skonfigurować interfejsów, aby wyeksportować i zaimportować niestandardowy metadane, takie jak rozszerzenia usługi sieci Web Services Description Language (WSDL) lub niestandardowych asercji WS PolicyAttachments.  
+ System metadanych WCF jest grupą klas i interfejsów, które reprezentują metadane wymagane do wdrożenia aplikacji opartych na usługach. Modyfikowanie lub rozszerzyć klasy lub wdrożyć i skonfigurować interfejsy, eksportowanie i importowanie niestandardowych metadanych, takich jak rozszerzenia usługi sieci Web Services Description Language (WSDL) lub niestandardowych asercji WS PolicyAttachments.  
   
  [Rozszerzanie koderów i serializatorów](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
- Koderów i serializatorów tłumaczenie danych z jednego formularza. Tematy w tej sekcji omówiono sposób rozszerzyć klasy dostarczony, aby spełnić te wymagania.  
+ Koderów i serializatorów wykonuje translację elementu danych z jednego formularza. Tematy w tej sekcji omówiono sposób rozszerzyć podanej klasy, aby spełnić te wymagania.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  

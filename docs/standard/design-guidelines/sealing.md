@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: cc42267f-bb7a-427a-845e-df97408528d4
 author: KrzysztofCwalina
 ms.openlocfilehash: c8aeb5ce3d93755f30bf68732592a08d7af54957
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762067"
 ---
 # <a name="sealing"></a>Pieczętowanie
 Jest jedną z funkcji struktury zorientowane obiektowo, deweloperzy mogą rozszerzać i dostosowywać je w sposób nieoczekiwany przez projektantów framework. Jest to, możliwości i zagrożenia extensible projektu. Podczas projektowania preferowanej struktury, dlatego też jest bardzo ważne, uważnie projektować pod kątem rozszerzalności, jeśli pożądane jest i ograniczyć rozszerzalności, gdy jest niebezpieczne.  
@@ -27,13 +27,13 @@ Jest jedną z funkcji struktury zorientowane obiektowo, deweloperzy mogą rozsze
   
  Powody do zamykania klasy są następujące:  
   
--   Klasa jest klasą statyczną. Zobacz [projekt klasy statycznej](../../../docs/standard/design-guidelines/static-class.md).  
+- Klasa jest klasą statyczną. Zobacz [projekt klasy statycznej](../../../docs/standard/design-guidelines/static-class.md).  
   
--   Klasa przechowuje wpisy tajne z istotnymi dla zabezpieczeń w elementy chronione dziedziczone.  
+- Klasa przechowuje wpisy tajne z istotnymi dla zabezpieczeń w elementy chronione dziedziczone.  
   
--   Klasa dziedziczy wielu wirtualnych elementów członkowskich, a koszt pieczętowania je pojedynczo może przeważyć zalety opuszczania klasy niezapieczętowane.  
+- Klasa dziedziczy wielu wirtualnych elementów członkowskich, a koszt pieczętowania je pojedynczo może przeważyć zalety opuszczania klasy niezapieczętowane.  
   
--   Klasa jest atrybut, który wymaga bardzo szybkie środowiska uruchomieniowego wyszukiwania. Zapieczętowane atrybuty mają nieznacznie wyższe poziomy wydajności niż te niezapieczętowany. zobacz [atrybuty](../../../docs/standard/design-guidelines/attributes.md).  
+- Klasa jest atrybut, który wymaga bardzo szybkie środowiska uruchomieniowego wyszukiwania. Zapieczętowane atrybuty mają nieznacznie wyższe poziomy wydajności niż te niezapieczętowany. zobacz [atrybuty](../../../docs/standard/design-guidelines/attributes.md).  
   
  **X DO NOT** deklaruj chronionych i wirtualnych elementów członkowskich w typach zapieczętowanych.  
   

@@ -8,11 +8,11 @@ ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723020"
 ---
 # <a name="exception-thrownv1-etw-event"></a>Zdarzenia wyjątku ETW Thrown_V1
 To zdarzenie znajdują się informacje dotyczące wyjątków, które są generowane.  

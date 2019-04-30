@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Animuj właściwości przy użyciu scenorysu'
+title: 'Instrukcje: Animowanie właściwości przy użyciu scenorysu'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761211"
 ---
-# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Instrukcje: Animuj właściwości przy użyciu scenorysu
+# <a name="how-to-animate-a-property-by-using-a-storyboard"></a>Instrukcje: Animowanie właściwości przy użyciu scenorysu
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Animation.Storyboard> animować właściwości. Aby animować właściwość przy użyciu <xref:System.Windows.Media.Animation.Storyboard>, utworzyć animację dla każdej właściwości, który chcesz animować, a także utworzyć <xref:System.Windows.Media.Animation.Storyboard> zawierać animacji.  
   
  Typ właściwości określa typ animacji do użycia. Na przykład, aby animować właściwości, która przyjmuje <xref:System.Double> wartości, należy użyć <xref:System.Windows.Media.Animation.DoubleAnimation>. <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> i <xref:System.Windows.Media.Animation.Storyboard.TargetProperty> dołączonych właściwości określają obiektu i właściwości, do którego zastosowano animacji.  

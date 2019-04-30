@@ -3,20 +3,20 @@ title: Strumieniowy transfer komunikatów
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
 ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747579"
 ---
 # <a name="streaming-message-transfer"></a>Strumieniowy transfer komunikatów
 Transportów Windows Communication Foundation (WCF) obsługuje dwa tryby do przesyłania komunikatów:  
   
--   Transfery buforowanego przytrzymaj cały komunikat w buforze pamięci, do czasu ukończenia transferu. Buforowane wiadomości musi być całkowicie dostarczana, zanim odbiorca może go odczytać.  
+- Transfery buforowanego przytrzymaj cały komunikat w buforze pamięci, do czasu ukończenia transferu. Buforowane wiadomości musi być całkowicie dostarczana, zanim odbiorca może go odczytać.  
   
--   Transfery przesyłane strumieniowo uwidocznić komunikatu jako strumień. Odbiornik uruchamia przetwarzania komunikatu, aby całkowicie został dostarczony.  
+- Transfery przesyłane strumieniowo uwidocznić komunikatu jako strumień. Odbiornik uruchamia przetwarzania komunikatu, aby całkowicie został dostarczony.  
   
--   Transfery przesyłane strumieniowo można poprawić skalowalność usługi, eliminując potrzebę dużej ilości pamięci, buforów. Czy zmiana trybu transferu zwiększa skalowalność, zależy od rozmiaru wiadomości przesyłane. Rozmiary dużych bloków komunikatów Preferuj przy użyciu transferu przesyłane strumieniowo.  
+- Transfery przesyłane strumieniowo można poprawić skalowalność usługi, eliminując potrzebę dużej ilości pamięci, buforów. Czy zmiana trybu transferu zwiększa skalowalność, zależy od rozmiaru wiadomości przesyłane. Rozmiary dużych bloków komunikatów Preferuj przy użyciu transferu przesyłane strumieniowo.  
   
  Domyślnie HTTP, protokół TCP/IP i transportu nazwanego potoku używać buforowanego transferu. W tym dokumencie opisano, jak przełączyć te transportu z buforowanego tryb transferu przesyłane strumieniowo i konsekwencje tej czynności.  
   

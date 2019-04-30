@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ccfdf9ffab35f076b85c067c2b412020a5f541b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765170"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW — Funkcja
 Wykonuje określone polecenie.  

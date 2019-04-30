@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
 ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762140"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Instrukcje: Kontrolować Scenorys po uruchomieniu
 W tym przykładzie pokazano, jak używać kodu do kontroli <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu. Aby kontrolować scenorys w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj <xref:System.Windows.Trigger> i <xref:System.Windows.TriggerAction> obiektów; Aby uzyskać przykład, zobacz [użyć wyzwalaczy zdarzeń, aby kontrolować Scenorys po uruchomieniu](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  
@@ -21,19 +21,19 @@ W tym przykładzie pokazano, jak używać kodu do kontroli <xref:System.Windows.
   
  Aby scenorysu sterowane, użyj <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> metody i określ **true** jako drugi parametr. Następnie można metod interakcyjnych scenorysu wstrzymać, wznowić, wyszukiwanie, Zatrzymaj, przyspieszyć, lub spowolnić scenorysu lub przejdź go do okresu wypełnienia. Oto lista metod interakcyjnych scenorysu:  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Wstrzymuje scenorysu.  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>: Wstrzymuje scenorysu.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Wznawia działanie wstrzymanej scenorysu.  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>: Wznawia działanie wstrzymanej scenorysu.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Ustawia szybkość interaktywne scenorysu.  
+- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>: Ustawia szybkość interaktywne scenorysu.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Szuka scenorysu określonej lokalizacji.  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>: Szuka scenorysu określonej lokalizacji.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Szuka scenorysu do określonej lokalizacji. W odróżnieniu od <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody, ta operacja jest przetwarzana przed następnym znaczników.  
+- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>: Szuka scenorysu do określonej lokalizacji. W odróżnieniu od <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> metody, ta operacja jest przetwarzana przed następnym znaczników.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Przesuwa scenorysu do okresu wypełnienia, jeśli taki istnieje.  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>: Przesuwa scenorysu do okresu wypełnienia, jeśli taki istnieje.  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Zatrzymuje scenorysu.  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>: Zatrzymuje scenorysu.  
   
  W poniższym przykładzie kilka metod scenorysu są używane do interaktywnie kontrolować scenorys.  
   

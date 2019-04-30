@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747943"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Równoległe przechowywanie wersji w klasie WorkflowServiceHost
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Versioning side-by-side wprowadzona w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] umożliwia hostowanie wielu wersji usługi przepływu pracy w jednym punkcie końcowym. Side-by-side funkcjonalność umożliwia usługi przepływu pracy, należy skonfigurować tak, aby nowe wystąpienia usługi przepływu pracy są tworzone przy użyciu nową definicję przepływu pracy podczas uruchamiania wystąpienia pełną, przy użyciu istniejącą definicję. Ten temat zawiera omówienie przepływu pracy usługi wykonywania side-by-side przy użyciu <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
@@ -27,21 +27,21 @@ ms.locfileid: "58465870"
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>Reguły hostowania wielu wersji usługi przepływu pracy  
  Gdy użytkownik doda dodatkowe wersji, aby <xref:System.ServiceModel.Activities.WorkflowServiceHost>, istnieje kilka warunków, które muszą zostać spełnione, aby być obsługiwana za pomocą tego samego zestawu punktów końcowych i opis usługi przepływu pracy. Jeśli dowolne dodatkowe wersje nie spełniają te warunki <xref:System.ServiceModel.Activities.WorkflowServiceHost> zgłasza wyjątek, gdy `Open` jest wywoływana. Każda definicja przepływu pracy do hosta jako dodatkowe wersji musi spełniać następujące wymagania (gdzie wersji podstawowy jest definicji usługi przepływu pracy, który został dostarczony do konstruktora hosta). Wersja dodatkowe przepływu pracy musi:  
   
--   Mają taką samą <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> jako głównej wersji usługi przepływu pracy.  
+- Mają taką samą <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> jako głównej wersji usługi przepływu pracy.  
   
--   Nie może mieć dowolny <xref:System.ServiceModel.Activities.Receive> lub <xref:System.ServiceModel.Activities.SendReply> działania w jego <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> nie znajdują się w wersji podstawowej i muszą one odpowiadać kontrakt operacji.  
+- Nie może mieć dowolny <xref:System.ServiceModel.Activities.Receive> lub <xref:System.ServiceModel.Activities.SendReply> działania w jego <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> nie znajdują się w wersji podstawowej i muszą one odpowiadać kontrakt operacji.  
   
--   Mieć unikatowy <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Może mieć tylko jedną definicję przepływu pracy `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+- Mieć unikatowy <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Może mieć tylko jedną definicję przepływu pracy `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
  Niektóre zmiany nie są dozwolone. Poniższe elementy może różnić się między wersjami:  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> Mogą mieć różne nazwy i pakietu od wersji głównej.  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> Mogą mieć różne nazwy i pakietu od wersji głównej.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> Wartość może być inny niż w wersji podstawowej.  
+- <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> Wartość może być inny niż w wersji podstawowej.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> Może różnić się od wersji głównej.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> Może różnić się od wersji głównej.  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> Może różnić się od wersji głównej.  
+- <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> Może różnić się od wersji głównej.  
   
 ### <a name="configuring-the-definitionidentity"></a>Konfigurowanie DefinitionIdentity  
  Podczas tworzenia usługi przepływu pracy za pomocą projektanta przepływów pracy <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> można ustawić przy użyciu **właściwości** okna. Kliknij poza działania głównego usługi w projektancie, aby wybrać usługi przepływu pracy, a następnie wybierz **okno właściwości** z **widoku** menu. Wybierz **obiektu WorkflowIdentity** z listy rozwijanej, która pojawia się obok **DefinitionIdentity** właściwości, a następnie rozwiń węzeł i określ żądany <xref:System.Activities.WorkflowIdentity> właściwości. W poniższym przykładzie <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> skonfigurowano <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` i <xref:System.Activities.WorkflowIdentity.Version%2A> z `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> jest opcjonalny, a w tym przykładzie jest `null`.  

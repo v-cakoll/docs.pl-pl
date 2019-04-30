@@ -3,11 +3,11 @@ title: Profile śledzenia
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699688"
 ---
 # <a name="tracking-profiles"></a>Profile śledzenia
 
@@ -110,8 +110,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 Profile śledzenia mają strukturę jako deklaratywne subskrypcji dla śledzenia rekordy, które umożliwiają zapytania dla rekordów śledzenie wersję wykonawczą przepływu pracy. Istnieje kilka typów zapytania, które umożliwiają subskrybować różnymi klasami <xref:System.Activities.Tracking.TrackingRecord> obiektów. Śledzenie profile można określić w konfiguracji lub za pomocą kodu. Poniżej przedstawiono najbardziej typowych zapytań:
 
-- <xref:System.Activities.Tracking.WorkflowInstanceQuery> — Umożliwia śledzenie zmian cyklu życia wystąpienia przepływu pracy, takich jak wcześniej — pokazano `Started` i `Completed`. 
-  <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery> — Umożliwia śledzenie zmian cyklu życia wystąpienia przepływu pracy, takich jak wcześniej — pokazano `Started` i `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:
 
     - <xref:System.Activities.Tracking.WorkflowInstanceRecord>
 

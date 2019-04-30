@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762400"
 ---
 # <a name="fromtoby-animations-overview"></a>Przegląd Cechy animacji od/do/przez
 W tym temacie opisano sposób użycia animacji od/do/przez animować właściwości zależności. Od/do/przez animację tworzy przejście między dwiema wartościami.  
@@ -65,15 +65,15 @@ W tym temacie opisano sposób użycia animacji od/do/przez animować właściwo�
 ## <a name="target-values"></a>Wartości docelowe  
  Od/do/przez animację tworzy przejście między dwiema wartościami docelowego. Jest powszechne, aby określić wartość początkową (ustaw ją za pomocą <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości) i wartość końcową (ustaw ją za pomocą <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości). Jednak również można określić tylko wartości początkowej, wartości docelowej lub wartość przesunięcia. W takich przypadkach animacji uzyskuje brakuje wartości docelowej z właściwość, która jest jest animowany. Na poniższej liście opisano różne sposoby określania wartości docelowych animacji.  
   
--   **Wartość początkowa**  
+- **Wartość początkowa**  
   
      Użyj <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość, jeśli chcesz jawnie określić wartości początkowej animacji. Możesz użyć <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości samodzielnie lub z <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> lub <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości. Jeśli określisz tylko <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość, przejścia animacji z tę wartość do wartości bazowej właściwości animowany.  
   
--   **Wartość końcowa**  
+- **Wartość końcowa**  
   
      Aby określić wartość końcową animacji, użyj jej <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości. Jeśli używasz <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwość samodzielnie, animacji uzyskuje wartość początkową, właściwość, która jest jest animowany lub z danych wyjściowych inną animację, która jest stosowana do tej samej właściwości. Możesz użyć <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> właściwości wraz z <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwość, aby jawnie określić początkową i końcową wartością dla animacji.  
   
--   **Wartość przesunięcia**  
+- **Wartość przesunięcia**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Właściwość pozwala określić przesunięcie zamiast jawnego uruchamia się lub kończy wartości animacji. <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> Właściwości animacji Określa, ile animacji zmienia wartość w czasie jego trwania. Możesz użyć <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości samodzielnie lub z <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> właściwości. Jeśli określisz tylko <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> właściwości animacji dodaje wartość przesunięcia do podstawowej wartości właściwości lub z danymi wyjściowymi inną animację.  
   
@@ -134,9 +134,9 @@ W tym temacie opisano sposób użycia animacji od/do/przez animować właściwo�
 ## <a name="other-animation-types"></a>Inne typy animacji  
  Animacje od/do/przez nie są jedynym typem animacji, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia: zapewnia również animacjach kluczowych ramek i animacje ścieżki.  
   
--   Animacja kluczowych klatek animuje wzdłuż dowolną liczbę wartości docelowej, oznaczone przy użyciu klatek kluczowych. Aby uzyskać więcej informacji, zobacz [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md).  
+- Animacja kluczowych klatek animuje wzdłuż dowolną liczbę wartości docelowej, oznaczone przy użyciu klatek kluczowych. Aby uzyskać więcej informacji, zobacz [Przegląd Animacja kluczowych klatek](key-frame-animations-overview.md).  
   
--   Animacja ścieżki generuje wartości wyjściowe z <xref:System.Windows.Media.PathGeometry>. Aby uzyskać więcej informacji, zobacz [animacje ścieżki — Przegląd](path-animations-overview.md).  
+- Animacja ścieżki generuje wartości wyjściowe z <xref:System.Windows.Media.PathGeometry>. Aby uzyskać więcej informacji, zobacz [animacje ścieżki — Przegląd](path-animations-overview.md).  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Umożliwia również tworzenie własnych typów animacji niestandardowej. Aby uzyskać więcej informacji, zobacz [niestandardowe animacje — Przegląd](custom-animations-overview.md).  
   

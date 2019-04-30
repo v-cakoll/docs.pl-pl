@@ -3,27 +3,27 @@ title: punkt końcowy skojarzenia
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769612"
 ---
 # <a name="association-end"></a>punkt końcowy skojarzenia
 *End skojarzenia* identyfikuje [typu jednostki](../../../../docs/framework/data/adonet/entity-type.md) na jednym końcu [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) i liczby jednostek typu wystąpienia, które może znajdować się na końcu tego skojarzenia. Skojarzenia są zdefiniowane jako część skojarzenia; Skojarzenie musi mieć dokładnie dwa punkty końcowe skojarzenia. [Właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) umożliwiają nawigacji z elementu end skojarzenia jednego do drugiego.  
   
  Definicja end skojarzenia zawiera następujące informacje:  
   
--   Jeden z typów jednostek zaangażowanych w skojarzeniu. (Wymagane)  
+- Jeden z typów jednostek zaangażowanych w skojarzeniu. (Wymagane)  
   
     > [!NOTE]
     >  Dla danego skojarzenia typu jednostki, określony dla wszystkich punktów końcowych skojarzenia może być taki sam. Spowoduje to utworzenie skojarzenia samooceny.  
   
--   [Skojarzenie i liczebność](../../../../docs/framework/data/adonet/association-end-multiplicity.md) , wskazuje liczbę wystąpień typów jednostek, które mogą być na jednym końcu skojarzenia. Skojarzenie i liczebność może mieć wartość równą jeden (1), zero lub jeden (od 0 do 1) lub wielu (\*).  
+- [Skojarzenie i liczebność](../../../../docs/framework/data/adonet/association-end-multiplicity.md) , wskazuje liczbę wystąpień typów jednostek, które mogą być na jednym końcu skojarzenia. Skojarzenie i liczebność może mieć wartość równą jeden (1), zero lub jeden (od 0 do 1) lub wielu (\*).  
   
--   Nazwa dla elementu end skojarzenia. (opcjonalnie)  
+- Nazwa dla elementu end skojarzenia. (opcjonalnie)  
   
--   Informacje o operacjach wykonywanych na punkt końcowy skojarzenia, np. kaskadowe podczas usuwania. (opcjonalnie)  
+- Informacje o operacjach wykonywanych na punkt końcowy skojarzenia, np. kaskadowe podczas usuwania. (opcjonalnie)  
   
 ## <a name="example"></a>Przykład  
  Poniższy diagram przedstawia modelu koncepcyjnego z dwóch skojarzeń: `PublishedBy` i `WrittenBy`. Punkty końcowe dla skojarzenia `PublishedBy` to skojarzenie `Book` i `Publisher` typów jednostek. Liczebność `Publisher` end jest jeden (1), a liczebność `Book` end jest wiele (\*), informujący, że wydawca publikuje wiele książek i książki opublikowana przez jedną wydawcą.  

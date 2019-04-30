@@ -14,30 +14,30 @@ ms.assetid: e56fb9df-5286-4be7-b313-540c4d876cd7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c201ab51c1af8a86fc1c2c4f80738007152b3bd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754508"
 ---
 # <a name="invalidapartmentstatechange-mda"></a>invalidApartmentStateChange MDA
 `invalidApartmentStateChange` Zarządzanego Asystenta debugowania (MDS) została aktywowana przy użyciu jednej z dwa problemy:  
   
--   Aby zmienić stan apartamentu COM wątku, który został już zainicjowany przez model COM do stanu różnych apartamentu zostanie podjęta próba.  
+- Aby zmienić stan apartamentu COM wątku, który został już zainicjowany przez model COM do stanu różnych apartamentu zostanie podjęta próba.  
   
--   Stan apartamentu COM wątek nieoczekiwanie ulega zmianie.  
+- Stan apartamentu COM wątek nieoczekiwanie ulega zmianie.  
   
 ## <a name="symptoms"></a>Symptomy  
   
--   Stan apartamentu COM wątku jest nie żądano. Może to spowodować, że serwery proxy ma być używany dla składników modelu COM, które mają inny niż bieżący model wątkowości. To z kolei może spowodować, że <xref:System.InvalidCastException> zostanie wygenerowany podczas wywoływania obiektu COM za pomocą interfejsów, które nie są skonfigurowane do szeregowanie między apartamentu.  
+- Stan apartamentu COM wątku jest nie żądano. Może to spowodować, że serwery proxy ma być używany dla składników modelu COM, które mają inny niż bieżący model wątkowości. To z kolei może spowodować, że <xref:System.InvalidCastException> zostanie wygenerowany podczas wywoływania obiektu COM za pomocą interfejsów, które nie są skonfigurowane do szeregowanie między apartamentu.  
   
--   Stan apartamentu COM wątku jest inny niż oczekiwano. Może to spowodować <xref:System.Runtime.InteropServices.COMException> z HRESULT RPC_E_WRONG_THREAD, a także <xref:System.InvalidCastException> podczas wprowadzania wzywa [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Może to również spowodować niektóre jednowątkowe składniki COM można uzyskać dostęp przez wiele wątków, w tym samym czasie, co może prowadzić do uszkodzenia lub utraty danych.  
+- Stan apartamentu COM wątku jest inny niż oczekiwano. Może to spowodować <xref:System.Runtime.InteropServices.COMException> z HRESULT RPC_E_WRONG_THREAD, a także <xref:System.InvalidCastException> podczas wprowadzania wzywa [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW). Może to również spowodować niektóre jednowątkowe składniki COM można uzyskać dostęp przez wiele wątków, w tym samym czasie, co może prowadzić do uszkodzenia lub utraty danych.  
   
 ## <a name="cause"></a>Przyczyna  
   
--   Wątek był poprzednio inicjowany do innego stanu apartamentu COM. Należy pamiętać, że stan apartamentu wątku można ustawić jawnie lub niejawnie. Jawne operacje obejmują <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> właściwości i <xref:System.Threading.Thread.SetApartmentState%2A> i <xref:System.Threading.Thread.TrySetApartmentState%2A> metody. Wątek utworzone za pomocą <xref:System.Threading.Thread.Start%2A> niejawnie ustawiono metodę <xref:System.Threading.ApartmentState.MTA> chyba że <xref:System.Threading.Thread.SetApartmentState%2A> jest wywoływana przed wątek jest uruchomiony. Dodatkowo niejawnie zainicjowaniu wątku głównego aplikacji <xref:System.Threading.ApartmentState.MTA> chyba że <xref:System.STAThreadAttribute> atrybut jest określony w metodzie głównej.  
+- Wątek był poprzednio inicjowany do innego stanu apartamentu COM. Należy pamiętać, że stan apartamentu wątku można ustawić jawnie lub niejawnie. Jawne operacje obejmują <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> właściwości i <xref:System.Threading.Thread.SetApartmentState%2A> i <xref:System.Threading.Thread.TrySetApartmentState%2A> metody. Wątek utworzone za pomocą <xref:System.Threading.Thread.Start%2A> niejawnie ustawiono metodę <xref:System.Threading.ApartmentState.MTA> chyba że <xref:System.Threading.Thread.SetApartmentState%2A> jest wywoływana przed wątek jest uruchomiony. Dodatkowo niejawnie zainicjowaniu wątku głównego aplikacji <xref:System.Threading.ApartmentState.MTA> chyba że <xref:System.STAThreadAttribute> atrybut jest określony w metodzie głównej.  
   
--   `CoUninitialize` — Metoda (lub `CoInitializeEx` metoda) ze współbieżnością inny model jest wywoływana w wątku.  
+- `CoUninitialize` — Metoda (lub `CoInitializeEx` metoda) ze współbieżnością inny model jest wywoływana w wątku.  
   
 ## <a name="resolution"></a>Rozwiązanie  
  Ustaw stan apartamentu wątku, przed rozpoczęciem, wykonania lub zastosować jedną <xref:System.STAThreadAttribute> atrybutu lub <xref:System.MTAThreadAttribute> atrybutu do metody głównej aplikacji.  

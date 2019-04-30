@@ -11,11 +11,11 @@ helpviewer_keywords:
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
 ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709665"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Konwersja boxing i konwersja unboxing (Przewodnik programowania w języku C#)
 OPAKOWYWANIE to proces konwersji [typu wartości](../../../csharp/language-reference/keywords/value-types.md) typowi `object` lub dowolny typ interfejsu implementowany przez ten typ wartości. Gdy środowisko CLR opakowuje typ wartości, otacza wartość wewnątrz elementu System.Object i zapisuje go w zarządzanym stosie. Rozpakowywanie wyodrębnia typ wartości z obiektu. OPAKOWYWANIE jest niejawne; Rozpakowywanie jest jawne. Pojęcie pakowania i rozpakowywania źródłową C# postrzega system typów, w którym wartość dowolnego typu może być traktowana jako obiekt.  
@@ -63,9 +63,9 @@ OPAKOWYWANIE to proces konwersji [typu wartości](../../../csharp/language-refer
 ## <a name="unboxing"></a>Rozpakowywanie  
  Rozpakowywanie to konwersja jawna z typu `object` do [typu wartości](../../../csharp/language-reference/keywords/value-types.md) lub z typu interfejsu na typ wartości, która implementuje interfejs. Operacja rozpakowania składa się z:  
   
--   Sprawdzanie wystąpienie obiektu, aby upewnić się, że jest zapakowaną wartością danego typu wartości.  
+- Sprawdzanie wystąpienie obiektu, aby upewnić się, że jest zapakowaną wartością danego typu wartości.  
   
--   Kopiowanie wartości z instancji do zmiennej typu wartości.  
+- Kopiowanie wartości z instancji do zmiennej typu wartości.  
   
  Następujące instrukcje pokazują zarówno pakowania, jak i rozpakowania operacje:  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Informacje dodatkowe:  
   
--   [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Typy odwołań](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)  
+- [Typy wartości](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

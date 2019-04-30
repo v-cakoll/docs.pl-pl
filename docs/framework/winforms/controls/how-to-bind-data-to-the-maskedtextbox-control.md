@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761380"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Instrukcje: powiązanie danych z kontrolką MaskedTextBox
 Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować, jak dowolną inną kontrolką Windows Forms. Jednak jeśli format danych w bazie danych nie jest zgodny z formatu oczekiwanego przez definicję maska sieci, należy ponownie sformatować dane. Poniższa procedura demonstruje, jak to zrobić za pomocą <xref:System.Windows.Forms.Binding.Format> i <xref:System.Windows.Forms.Binding.Parse> zdarzenia <xref:System.Windows.Forms.Binding> klasy, aby wyświetlić numer telefonu oddzielne i telefonów rozszerzenie pola bazy danych jako pojedyncze pole można edytować.  
@@ -239,15 +239,15 @@ Można powiązać danych <xref:System.Windows.Forms.MaskedTextBox> kontrolować,
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
   
--   Tworzenie wizualizacji C# lub projekcie Visual Basic.  
+- Tworzenie wizualizacji C# lub projekcie Visual Basic.  
   
--   Dodaj <xref:System.Windows.Forms.TextBox> i <xref:System.Windows.Forms.MaskedTextBox> formantów do formularza, zgodnie z opisem w poprzedniej procedurze.  
+- Dodaj <xref:System.Windows.Forms.TextBox> i <xref:System.Windows.Forms.MaskedTextBox> formantów do formularza, zgodnie z opisem w poprzedniej procedurze.  
   
--   Otwórz plik kodu źródłowego dla projektu domyślnego formularza.  
+- Otwórz plik kodu źródłowego dla projektu domyślnego formularza.  
   
--   Zastąp kod źródłowy, w tym pliku z kodem, wymienione w poprzedniej sekcji "Kod".  
+- Zastąp kod źródłowy, w tym pliku z kodem, wymienione w poprzedniej sekcji "Kod".  
   
--   Kompilowanie aplikacji.  
+- Kompilowanie aplikacji.  
   
 ## <a name="see-also"></a>Zobacz także
 

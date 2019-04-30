@@ -6,28 +6,28 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747644"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Instrukcje: Określanie łańcucha certyfikatu urzędu certyfikacji służącego do weryfikowania podpisów (WCF)
 Gdy Windows Communication Foundation (WCF) odbiera wiadomości SOAP podpisany przy użyciu certyfikatu X.509, domyślnie ją sprawdza, czy certyfikat X.509 został wystawiony przez zaufany urząd certyfikacji. Odbywa się przez wyszukiwanie w magazynie certyfikatów i określenia, jeśli certyfikat dla tego urzędu certyfikacji został wyznaczony jako zaufane. Aby WCF określić to łańcuch certyfikatów urzędu certyfikacji musi być zainstalowany w magazynie certyfikatów poprawny.  
   
 ### <a name="to-install-a-certification-authority-certificate-chain"></a>Aby zainstalować łańcuch certyfikatów urzędu certyfikacji  
   
--   Dla każdego urzędu certyfikacji, że odbiorca wiadomości SOAP zamierza zaufania certyfikatów X.509 wystawionych, zainstaluj łańcuch certyfikatów urzędu certyfikacji do magazynu certyfikatów, czy WCF jest skonfigurowany do pobierania certyfikatu x.509 z.  
+- Dla każdego urzędu certyfikacji, że odbiorca wiadomości SOAP zamierza zaufania certyfikatów X.509 wystawionych, zainstaluj łańcuch certyfikatów urzędu certyfikacji do magazynu certyfikatów, czy WCF jest skonfigurowany do pobierania certyfikatu x.509 z.  
   
      Na przykład jeśli adresat wiadomości SOAP zamierza zaufania certyfikatów X.509 wystawionych przez firmę Microsoft, łańcuch certyfikatów urzędu certyfikacji firmy Microsoft należy zainstalować w magazynie certyfikatów ustawionej WCF do wyszukania certyfikatów X.509 z. Magazyn certyfikatów, w którym WCF wyszukuje certyfikatów X.509 można określić w kodzie lub konfiguracji. Na przykład, można wybrać w kodzie za pomocą <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody lub w konfiguracji na kilka sposobów, w tym [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md) .  
   
      Ponieważ Windows jest dostarczany z zestawem domyślne łańcuchów certyfikatu dla zaufanych urzędów certyfikacji, nie może być konieczne zainstalowanie wszystkich urzędów certyfikacji w łańcuchu certyfikatów.  
   
-    1.  Wyeksportuj łańcuch certyfikatów urzędu certyfikacji.  
+    1. Wyeksportuj łańcuch certyfikatów urzędu certyfikacji.  
   
          Dokładnie tak jak to zrobić zależy od urzędu certyfikacji. Jeśli urząd certyfikacji działa usług certyfikatów firmy Microsoft, wybierz opcję **Pobierz certyfikat urzędu certyfikacji, łańcuch certyfikatów lub listę CRL**, a następnie wybierz **Pobierz certyfikat urzędu certyfikacji**.  
   
-    2.  Importować łańcuch certyfikatów urzędu certyfikacji.  
+    2. Importować łańcuch certyfikatów urzędu certyfikacji.  
   
          W programie Microsoft Management Console (MMC), otwórz przystawkę Certyfikaty. Magazynu certyfikatów tej usługi WCF jest skonfigurowany do pobierania certyfikatu x.509 z wybierz opcję **zaufanego certyfikatu głównego** **urzędów certyfikacji** folderu. W obszarze **zaufane główne urzędy certyfikacji** folderu, kliknij prawym przyciskiem myszy **certyfikaty** folderu, wskaż **wszystkie zadania**, a następnie kliknij przycisk **importu** . Określ plik wyeksportowany w kroku.  
   

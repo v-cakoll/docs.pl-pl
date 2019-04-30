@@ -1,5 +1,5 @@
 ---
-title: 'Porady: usuwanie nieprawidłowych znaków z ciągów'
+title: 'Instrukcje: Usuwanie nieprawidłowych znaków z ciągu'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,13 +19,13 @@ ms.assetid: b4319c8a-9032-4129-a9d5-6f6fc28e7f32
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3bbd25e40607bd316f1bbab974174fe5433770f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768410"
 ---
-# <a name="how-to-strip-invalid-characters-from-a-string"></a>Porady: usuwanie nieprawidłowych znaków z ciągów
+# <a name="how-to-strip-invalid-characters-from-a-string"></a>Instrukcje: Usuwanie nieprawidłowych znaków z ciągu
 W poniższym przykładzie użyto statycznego <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metody usuwanie nieprawidłowych znaków z ciągu.  
   
 ## <a name="example"></a>Przykład  

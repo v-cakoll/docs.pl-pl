@@ -8,11 +8,11 @@ ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705665"
 ---
 # <a name="enhanced-strong-naming"></a>Poprawa silnego nazywania
 Podpis silnej nazwy to mechanizm tożsamości w programie .NET Framework do identyfikowania zestawów. Jest podpis cyfrowy klucz publiczny, który jest zazwyczaj używany do sprawdzenia integralności danych przekazywanych od inicjatora (osoby podpisującej) do adresata (weryfikatora). Ta sygnatura jest używana jako unikatowa tożsamość dla zestawu i zapewnia, że odwołania do zestawu są jednoznaczne. Zestaw jest podpisywany jako część procesu kompilacji, a następnie weryfikowany po jego załadowaniu.  
@@ -22,16 +22,16 @@ Podpis silnej nazwy to mechanizm tożsamości w programie .NET Framework do iden
 ## <a name="limitations-of-conventional-strong-names"></a>Ograniczenia konwencjonalnych silnych nazw  
  Technologia silnego nazewnictwa wykorzystywana w wersjach przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ma następujące braki:  
   
--   Klucze są stale atakowane i techniki i sprzęt ułatwiają wywnioskować klucza prywatnego z klucza publicznego. Aby zabezpieczyć się przed atakami, kluczy są niezbędne. Wersje programu .NET framework przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zapewniają możliwość podpisywania z dowolnym rozmiarem klucza (rozmiar domyślny wynosi 1024 bity), ale podpisywanie zestawu z nowym kluczem przerywa wszystkie pliki binarne, które odwołują się do starszych tożsamości zestawu. W związku z tym, bardzo trudno jest uaktualnianie rozmiaru klucza podpisywania, jeśli chcesz zachować zgodność.  
+- Klucze są stale atakowane i techniki i sprzęt ułatwiają wywnioskować klucza prywatnego z klucza publicznego. Aby zabezpieczyć się przed atakami, kluczy są niezbędne. Wersje programu .NET framework przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] zapewniają możliwość podpisywania z dowolnym rozmiarem klucza (rozmiar domyślny wynosi 1024 bity), ale podpisywanie zestawu z nowym kluczem przerywa wszystkie pliki binarne, które odwołują się do starszych tożsamości zestawu. W związku z tym, bardzo trudno jest uaktualnianie rozmiaru klucza podpisywania, jeśli chcesz zachować zgodność.  
   
--   Podpis silnej nazwy obsługuje tylko algorytm SHA-1. Ostatnio odnaleziono SHA-1 jako niewystarczający dla bezpiecznych aplikacji mieszania. Dlatego jest mocniejszy algorytm (SHA-256 lub większy) jest niezbędne. Istnieje możliwość, że algorytm SHA-1 spowoduje utratę stałego zgodne ze standardem FIPS, co przedstawiałoby problemy dla tych, którzy wolą używać tylko zgodne ze standardem FIPS oprogramowanie i algorytmów.  
+- Podpis silnej nazwy obsługuje tylko algorytm SHA-1. Ostatnio odnaleziono SHA-1 jako niewystarczający dla bezpiecznych aplikacji mieszania. Dlatego jest mocniejszy algorytm (SHA-256 lub większy) jest niezbędne. Istnieje możliwość, że algorytm SHA-1 spowoduje utratę stałego zgodne ze standardem FIPS, co przedstawiałoby problemy dla tych, którzy wolą używać tylko zgodne ze standardem FIPS oprogramowanie i algorytmów.  
   
 ## <a name="advantages-of-enhanced-strong-names"></a>Zalety rozszerzonych silnych nazw  
  Głównymi zaletami rozszerzonych silnych nazw są zgodność z istniejącym silnymi nazwami i możliwość stwierdzenia, że jedna tożsamość jest równoważna z inną:  
   
--   Deweloperzy, którzy mają istniejące zestawy podpisane, mogą migrować swoją tożsamość do algorytmów SHA-2 przy zachowaniu zgodności z zestawy odwołujące się do starych tożsamości.  
+- Deweloperzy, którzy mają istniejące zestawy podpisane, mogą migrować swoją tożsamość do algorytmów SHA-2 przy zachowaniu zgodności z zestawy odwołujące się do starych tożsamości.  
   
--   Deweloperzy, którzy tworzą nowe zestawy i nie są związani z istniejącym podpisem silnej nazwy można użyć bardziej bezpieczne algorytmów SHA-2 i podpisywać zestawy tak jak dotychczas.  
+- Deweloperzy, którzy tworzą nowe zestawy i nie są związani z istniejącym podpisem silnej nazwy można użyć bardziej bezpieczne algorytmów SHA-2 i podpisywać zestawy tak jak dotychczas.  
   
 ## <a name="using-enhanced-strong-names"></a>Używanie rozszerzonych silnych nazw  
  Klucze silnej nazwy składają się z klucza podpisu i klucza tożsamości. Zestaw jest podpisany za pomocą klucza podpisu i jest identyfikowany przez klucz tożsamości. Przed [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], te dwa klucze były identyczne. Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], klucz tożsamości pozostaje taki sam jak w starszych wersjach .NET Framework, ale klucz podpisu jest rozszerzony o mocniejszy algorytm wyznaczania wartości skrótu. Ponadto klucz podpisu jest podpisany przy użyciu klucza tożsamości do utworzenia kontrsygnatury.  

@@ -13,11 +13,11 @@ ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704794"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures> Element
 Określa, czy należy wyłączyć buforowanie powiązania błędy, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie.  
@@ -63,11 +63,11 @@ Określa, czy należy wyłączyć buforowanie powiązania błędy, które wystę
   
  Niektóre wiązania błędów ładowania nie dotyczy tego elementu i zawsze są buforowane. Te błędy występują, ponieważ zestaw został znaleziony, ale nie można go załadować. Rzuć <xref:System.BadImageFormatException> lub <xref:System.IO.FileLoadException>. Poniższa lista zawiera kilka przykładów tych błędów.  
   
--   Jeśli użytkownik podejmie próbę załadowania pliku nie jest prawidłowym zestawem, kolejne próby załadowania zestawu zakończy się niepowodzeniem, nawet wtedy, gdy nieprawidłowego pliku zostaje zastąpiona opcją poprawny zestaw.  
+- Jeśli użytkownik podejmie próbę załadowania pliku nie jest prawidłowym zestawem, kolejne próby załadowania zestawu zakończy się niepowodzeniem, nawet wtedy, gdy nieprawidłowego pliku zostaje zastąpiona opcją poprawny zestaw.  
   
--   Jeśli użytkownik podejmie próbę załadowania zestawu, który jest zablokowany przez system plików, kolejne próby załadowania zestawu zakończy się niepowodzeniem nawet po opublikowaniu zestawu w systemie plików.  
+- Jeśli użytkownik podejmie próbę załadowania zestawu, który jest zablokowany przez system plików, kolejne próby załadowania zestawu zakończy się niepowodzeniem nawet po opublikowaniu zestawu w systemie plików.  
   
--   Co najmniej wersji zestawu, który próbujesz załadować znajduje się w ścieżce badania, ale określonej wersji, którego zażądano nie znajduje się wśród nich, kolejne próby załadowania tej wersji zakończy się niepowodzeniem nawet wtedy, gdy poprawnej wersji jest przenoszony do badania ścieżki.  
+- Co najmniej wersji zestawu, który próbujesz załadować znajduje się w ścieżce badania, ale określonej wersji, którego zażądano nie znajduje się wśród nich, kolejne próby załadowania tej wersji zakończy się niepowodzeniem nawet wtedy, gdy poprawnej wersji jest przenoszony do badania ścieżki.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak wyłączyć buforowanie niepowodzenia powiązań zestawów, które występują, ponieważ zestaw nie został odnaleziony przez sondowanie.  

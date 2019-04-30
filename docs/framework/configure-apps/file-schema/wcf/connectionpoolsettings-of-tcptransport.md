@@ -3,11 +3,11 @@ title: <connectionPoolSettings> dla <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
 ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673241"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings> of \<tcpTransport>
 Określa ustawienia puli dodatkowego połączenia dla transportu TCP.  

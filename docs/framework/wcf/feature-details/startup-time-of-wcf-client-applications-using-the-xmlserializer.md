@@ -3,11 +3,11 @@ title: 'Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu W
 ms.date: 03/30/2017
 ms.assetid: 21093451-0bc3-4b1a-9a9d-05f7f71fa7d0
 ms.openlocfilehash: b6f010cb5edc3111f05c78f5d27cf178bd501ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747631"
 ---
 # <a name="how-to-improve-the-startup-time-of-wcf-client-applications-using-the-xmlserializer"></a>Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer
 Usługi i aplikacje klienckie, które używają typów danych, które są możliwe do serializacji przy użyciu <xref:System.Xml.Serialization.XmlSerializer> Generowanie i kompilowanie kodu serializacji dla tych typów danych w czasie wykonywania, co może skutkować wydajności uruchamiania powolne.  
@@ -37,11 +37,11 @@ Usługi i aplikacje klienckie, które używają typów danych, które są możli
   
 4. Udostępnij kodu wygenerowanego serializacji do aplikacji przy użyciu jednej z następujących opcji:  
   
-    1.  Kompilowanie kodu wygenerowanego serializacji w osobnym zestawie o nazwie [*oryginalny zestaw*]. XmlSerializers.dll (na przykład MyApp.XmlSerializers.dll). Aplikacja musi umożliwiać można załadować zestawu, który musi być podpisany przy użyciu tego samego klucza jako oryginalnego zestawu. Jeśli oryginalny zestaw zostanie ponownie skompilowany, należy ponownie wygenerować zestawu serializacji.  
+    1. Kompilowanie kodu wygenerowanego serializacji w osobnym zestawie o nazwie [*oryginalny zestaw*]. XmlSerializers.dll (na przykład MyApp.XmlSerializers.dll). Aplikacja musi umożliwiać można załadować zestawu, który musi być podpisany przy użyciu tego samego klucza jako oryginalnego zestawu. Jeśli oryginalny zestaw zostanie ponownie skompilowany, należy ponownie wygenerować zestawu serializacji.  
   
-    2.  Kompilowanie kodu wygenerowanego serializacji w osobnym zestawie i użyj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> na kontrakt usługi, która używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ustaw <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości, aby wskazywał zestawu skompilowanego serializacji.  
+    2. Kompilowanie kodu wygenerowanego serializacji w osobnym zestawie i użyj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> na kontrakt usługi, która używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Ustaw <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości, aby wskazywał zestawu skompilowanego serializacji.  
   
-    3.  Kompilowanie kodu wygenerowanego serializacji do swojego zestawu aplikacji i Dodaj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> umową serwisową, który używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Nie należy ustawiać <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości. Domyślny zestaw serializacji zakłada się, że bieżący zestaw.  
+    3. Kompilowanie kodu wygenerowanego serializacji do swojego zestawu aplikacji i Dodaj <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute> umową serwisową, który używa <xref:System.ServiceModel.XmlSerializerFormatAttribute>. Nie należy ustawiać <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.AssemblyName%2A> lub <xref:System.Xml.Serialization.XmlSerializerAssemblyAttribute.CodeBase%2A> właściwości. Domyślny zestaw serializacji zakłada się, że bieżący zestaw.  
   
 ### <a name="to-generate-xmlserializer-serialization-code-in-visual-studio"></a>Do generowania kodu serializacji elementu XmlSerializer w programie Visual Studio  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
 ms.openlocfilehash: 55c2294496800fb8692d3c8215c1c13f7dac9b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746985"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>Instrukcje: tworzenie formularza MDI za pomocą kontrolek ToolStripPanel
 Można utworzyć wiele formularz interfejsu (MDI) dokumentu, który ma <xref:System.Windows.Forms.ToolStrip> formantów ramek go na wszystkich czterech stron.  
@@ -35,7 +35,7 @@ Można utworzyć wiele formularz interfejsu (MDI) dokumentu, który ma <xref:Sys
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
--   Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
+- Odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.  
   
  Aby dowiedzieć się, jak tworzyć aplikacje w tym przykładzie z wiersza polecenia dla języka Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [wiersza polecenia tworzenia przy użyciu csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tego przykładu w programie Visual Studio, wklejając kod do nowego projektu.  
   

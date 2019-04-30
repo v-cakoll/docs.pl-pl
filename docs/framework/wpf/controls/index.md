@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696372"
 ---
 # <a name="controls"></a>Formanty
 <a name="introduction"></a>
@@ -33,11 +33,11 @@ ms.locfileid: "59154417"
 ## <a name="changing-the-appearance-of-a-control"></a>Zmienianie wyglądu formantu  
  Są często zmieniać wygląd kontrolki, aby dopasować wygląd i działanie aplikacji. Możesz zmienić wygląd formantu, wykonując jedną z poniższych pozycji w zależności od tego, co chcesz osiągnąć:  
   
--   Zmień wartość właściwości formantu.  
+- Zmień wartość właściwości formantu.  
   
--   Utwórz <xref:System.Windows.Style> dla formantu.  
+- Utwórz <xref:System.Windows.Style> dla formantu.  
   
--   Utwórz nową <xref:System.Windows.Controls.ControlTemplate> dla formantu.  
+- Utwórz nową <xref:System.Windows.Controls.ControlTemplate> dla formantu.  
   
 ### <a name="changing-a-controls-property-value"></a>Zmiana wartości właściwości kontrolki  
  Wiele kontrolki mają właściwości, które pozwalają zmienić sposób wyświetlania kontrolki, takie jak <xref:System.Windows.Controls.Control.Background%2A> z <xref:System.Windows.Controls.Button>. Można ustawić właściwości wartość w obu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kod. Poniższy przykład ustawia <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, i <xref:System.Windows.Controls.Control.FontWeight%2A> właściwości <xref:System.Windows.Controls.Button> w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -87,13 +87,13 @@ ms.locfileid: "59154417"
 ## <a name="rich-content-in-controls"></a>Sformatowana zawartość w formantach  
  Większość klas, które dziedziczą z <xref:System.Windows.Controls.Control> klasa ma pojemność, aby pomieścić sformatowanej zawartości. Na przykład <xref:System.Windows.Controls.Label> może zawierać dowolnego obiektu, na przykład ciąg, <xref:System.Windows.Controls.Image>, lub <xref:System.Windows.Controls.Panel>.  Następujące klasy obsługuje bogatą zawartość i działa jako klay bazowe dla większości kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
   
--   <xref:System.Windows.Controls.ContentControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, i <xref:System.Windows.Controls.ToolTip>.  
+- <xref:System.Windows.Controls.ContentControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.Button>, i <xref:System.Windows.Controls.ToolTip>.  
   
--   <xref:System.Windows.Controls.ItemsControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, i <xref:System.Windows.Controls.Primitives.StatusBar>.  
+- <xref:System.Windows.Controls.ItemsControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, i <xref:System.Windows.Controls.Primitives.StatusBar>.  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, i <xref:System.Windows.Controls.Expander>.  
+- <xref:System.Windows.Controls.HeaderedContentControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.TabItem>, <xref:System.Windows.Controls.GroupBox>, i <xref:System.Windows.Controls.Expander>.  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, i <xref:System.Windows.Controls.ToolBar>.  
+- <xref:System.Windows.Controls.HeaderedItemsControl>--Kilka przykładów klas, które dziedziczą z tej klasy są <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, i <xref:System.Windows.Controls.ToolBar>.  
 
  Aby uzyskać więcej informacji na temat tych klas bazowych, zobacz [Model zawartości WPF](wpf-content-model.md).  
   

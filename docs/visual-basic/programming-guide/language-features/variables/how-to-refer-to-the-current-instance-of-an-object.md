@@ -9,11 +9,11 @@ helpviewer_keywords:
 - object variables [Visual Basic]
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
 ms.openlocfilehash: 3c44748798d5ed554fc9fbded9c3a4d981a66d2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769034"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>Instrukcje: Odwoływanie się do bieżącego wystąpienia obiektu (Visual Basic)
 *Bieżącego wystąpienia* obiektu zasady jest wystąpienie, w którym aktualnie wykonuje kod.  
@@ -22,7 +22,7 @@ ms.locfileid: "58823366"
   
 ### <a name="to-refer-to-the-current-instance"></a>Aby odwołać się do bieżącego wystąpienia  
   
--   Użyj `Me` — słowo kluczowe, których nazwa zmiennej obiektu zwykle są używane.  
+- Użyj `Me` — słowo kluczowe, których nazwa zmiennej obiektu zwykle są używane.  
   
     ```  
     Me.ForeColor = System.Drawing.Color.Crimson  

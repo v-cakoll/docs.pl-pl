@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748447"
 ---
 # <a name="vector-graphics-overview"></a>Przegląd grafiki wektorowej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Rysuje linie, prostokąty i inne kształty w układzie współrzędnych. Można wybrać spośród różnych systemów współrzędnych, ale w układzie współrzędnych domyślna ma pochodzenia w lewym górnym rogu z osi x, wskazując i prawej osi y skierowany w dół. Jednostka miary w układzie współrzędnych domyślny jest piksela.  
@@ -32,19 +32,19 @@ ms.locfileid: "59087966"
   
  Wraz z upływem czasu niektórych podstawowych bloków konstrukcyjnych okazały się być najbardziej przydatne do tworzenia obrazów dwuwymiarową. Te bloki konstrukcyjne, w których są obsługiwane przez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], są podane w poniższej liście:  
   
--   wiersze  
+- wiersze  
   
--   Prostokąty  
+- Prostokąty  
   
--   Wielokropek  
+- Wielokropek  
   
--   Łuki  
+- Łuki  
   
--   Wielokąty  
+- Wielokąty  
   
--   Krzywe kardynalne  
+- Krzywe kardynalne  
   
--   krzywe Beziera  
+- krzywe Beziera  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>Metody Rysowanie obiektów grafiki  
  <xref:System.Drawing.Graphics> Klasy w [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] udostępnia następujące metody rysowania elementów na poprzedniej liście: <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawRectangle%2A>, <xref:System.Drawing.Graphics.DrawEllipse%2A>, <xref:System.Drawing.Graphics.DrawPolygon%2A>, <xref:System.Drawing.Graphics.DrawArc%2A>, <xref:System.Drawing.Graphics.DrawCurve%2A> (na krzywe kardynalne), a <xref:System.Drawing.Graphics.DrawBezier%2A>. Każda z tych metod jest przeciążona; oznacza to, że każda metoda obsługuje kilka list różnych parametrów. Na przykład jeden odmianą <xref:System.Drawing.Graphics.DrawLine%2A> metoda otrzymuje <xref:System.Drawing.Pen> obiektu i czterech liczb całkowitych, podczas inna wersja <xref:System.Drawing.Graphics.DrawLine%2A> metoda otrzymuje <xref:System.Drawing.Pen> obiektu a dwa <xref:System.Drawing.Point> obiektów.  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748763"
 ---
 # <a name="ushort-data-type-visual-basic"></a>Ushort — typ danych (Visual Basic)
 
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
   
--   **Liczby ujemne.** Ponieważ `UShort` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `UShort`, Visual Basic konwertuje wyrażenie które ma `Integer` pierwszy.  
+- **Liczby ujemne.** Ponieważ `UShort` jest typ bez znaku, go nie może reprezentować wartość ujemną. Jeśli używasz jednoargumentowego znaku minusa (`-`) operatora na wyrażenie obliczane do typu `UShort`, Visual Basic konwertuje wyrażenie które ma `Integer` pierwszy.  
   
--   **CLS Compliance.** `UShort` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
+- **CLS Compliance.** `UShort` Typem danych nie jest częścią [specyfikacja Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), dzięki czemu kod zgodny ze specyfikacją CLS nie mogą korzystać z składnik, który korzysta z niego.
   
--   **Rozszerzanie.** `UShort` — Typ danych rozszerza się na `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, i `Double`. Oznacza to, że możesz przekonwertować `UShort` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** `UShort` — Typ danych rozszerza się na `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, i `Double`. Oznacza to, że możesz przekonwertować `UShort` do dowolnego z tych typów, nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
--   **Znaki typu.** Dołącza znaki literalne `US` do literału wymusza `UShort` typu danych. `UShort` nie ma identyfikatora typ znaku.  
+- **Znaki typu.** Dołącza znaki literalne `US` do literału wymusza `UShort` typu danych. `UShort` nie ma identyfikatora typ znaku.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.UInt16?displayProperty=nameWithType> struktury.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.UInt16?displayProperty=nameWithType> struktury.  
   
 ## <a name="see-also"></a>Zobacz także
 

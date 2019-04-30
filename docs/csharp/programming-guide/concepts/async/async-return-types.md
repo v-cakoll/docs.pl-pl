@@ -3,18 +3,18 @@ title: Asynchroniczne typy zwracane (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
 ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702772"
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne mogą być zwracane typy:
 
 - <xref:System.Threading.Tasks.Task%601>, w metodzie asynchronicznej, która nie zwraca wartości. 
  
--  <xref:System.Threading.Tasks.Task>, w metodzie asynchronicznej, która wykonuje operację, ale nie zwraca żadnej wartości.
+- <xref:System.Threading.Tasks.Task>, w metodzie asynchronicznej, która wykonuje operację, ale nie zwraca żadnej wartości.
 
 - `void`, procedury obsługi zdarzeń. 
 

@@ -1,24 +1,24 @@
 ---
-title: 'Instrukcje: Przechwytywanie wyjątku typu non - CLS'
+title: 'Instrukcje: Przechwytywanie wyjątku typu non-CLS'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
 ms.openlocfilehash: f64a5de3c09b2f270d49a46ed4170c27483e17d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61710865"
 ---
-# <a name="how-to-catch-a-non-cls-exception"></a>Instrukcje: Przechwytywanie wyjątku typu non - CLS
-Niektórych języków .NET, w tym C + +/ CLI, dopuszcza się użycia obiektów zgłaszają wyjątki, które nie pochodzą z <xref:System.Exception>. Takie wyjątki są nazywane *wyjątki niezgodnych ze specyfikacją CLS* lub *niebędące wyjątkami*. W języku C# nie generują wyjątki niezgodnych ze specyfikacją CLS, ale można przechwytywać na dwa sposoby:  
+# <a name="how-to-catch-a-non-cls-exception"></a>Instrukcje: Przechwytywanie wyjątku typu non-CLS
+Niektórych języków .NET, w tym C++sposób niezamierzony, dopuszcza się użycia obiektów zgłaszają wyjątki, które nie pochodzą z <xref:System.Exception>. Takie wyjątki są nazywane *wyjątki niezgodnych ze specyfikacją CLS* lub *niebędące wyjątkami*. W języku C# nie generują wyjątki niezgodnych ze specyfikacją CLS, ale można przechwytywać na dwa sposoby:  
   
--   W ramach `catch (RuntimeWrappedException e)` bloku.
+- W ramach `catch (RuntimeWrappedException e)` bloku.
   
      Domyślnie zestaw Visual C# przechwytuje wyjątki niezgodnych ze specyfikacją CLS, jako wyjątki opakowana. Użyj tej metody, jeśli potrzebny jest dostęp do oryginalnego wyjątku, który jest możliwy za pośrednictwem <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości. Procedury w dalszej części tego tematu opisano sposób przechwytywanie wyjątków w ten sposób.  
   
--   W ramach ogólnego bloku catch (catch blok bez określony typ wyjątku), który jest umieszczany po wszystkich innych `catch` bloków.
+- W ramach ogólnego bloku catch (catch blok bez określony typ wyjątku), który jest umieszczany po wszystkich innych `catch` bloków.
   
      Metoda ta jest używana, gdy chcesz wykonać pewne działania (na przykład zapis do pliku dziennika) w odpowiedzi na wyjątki niezgodnych ze specyfikacją CLS i nie potrzebujesz dostępu do informacji o wyjątku. Domyślnie środowisko uruchomieniowe języka wspólnego opakowuje wszystkie wyjątki. Aby wyłączyć to zachowanie, należy dodać ten atrybut na poziomie zestawu w kodzie, zwykle w pliku AssemblyInfo.cs: `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
   
@@ -27,7 +27,7 @@ Niektórych języków .NET, w tym C + +/ CLI, dopuszcza się użycia obiektów z
 W ramach `catch(RuntimeWrappedException e)` blokowania, dostęp do oryginalnego wyjątku za pośrednictwem <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak przechwycić wyjątek niezgodny ze specyfikacją, który został zgłoszony z biblioteki klas, napisany w języku C + +/ interfejsu wiersza polecenia. Należy pamiętać, że w tym przykładzie kodu klienta języka C# wie, z wyprzedzeniem to typ wyjątku jest zgłaszana <xref:System.String?displayProperty=nameWithType>. Można rzutować <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości kopii jego typ oryginalny, tak długo, jak ten typ jest dostępny z poziomu kodu.  
+ Poniższy przykład pokazuje, jak przechwycić wyjątek niezgodny ze specyfikacją, który został zgłoszony z biblioteki klas, napisany w C++sposób niezamierzony. Należy pamiętać, że w tym przykładzie kodu klienta języka C# wie, z wyprzedzeniem to typ wyjątku jest zgłaszana <xref:System.String?displayProperty=nameWithType>. Można rzutować <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> właściwości kopii jego typ oryginalny, tak długo, jak ten typ jest dostępny z poziomu kodu.  
   
 ```csharp
 // Class library written in C++/CLI.

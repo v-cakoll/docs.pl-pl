@@ -10,11 +10,11 @@ ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b2cf06a5ab921f5ae89da4856e8164b6f57db5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754261"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 `loadFromContext` Zarządzanego Asystenta debugowania (MDA) jest włączone, jeśli zestaw jest ładowany do `LoadFrom` kontekstu. Taka sytuacja może wystąpić w wyniku wywołania <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> lub inne podobne metody.  
@@ -28,11 +28,11 @@ ms.locfileid: "59098614"
 ## <a name="resolution"></a>Rozwiązanie  
  Skonfigurowanie aplikacji tak, aby <xref:System.Reflection.Assembly.LoadFrom%2A> wywołania nie są już potrzebne. Aby to zrobić, można użyć następujących technik:  
   
--   Instalowanie zestawów w globalnej pamięci podręcznej.  
+- Instalowanie zestawów w globalnej pamięci podręcznej.  
   
--   Umieść zestawów w <xref:System.AppDomainSetup.ApplicationBase%2A> katalog dla <xref:System.AppDomain>. W przypadku domyślnej domeny <xref:System.AppDomainSetup.ApplicationBase%2A> katalog jest ten, który zawiera plik wykonywalny, który uruchomił proces. Może to również wymagać utworzenie nowego <xref:System.AppDomain> Jeśli nie jest wygodne przenieść zestawu.  
+- Umieść zestawów w <xref:System.AppDomainSetup.ApplicationBase%2A> katalog dla <xref:System.AppDomain>. W przypadku domyślnej domeny <xref:System.AppDomainSetup.ApplicationBase%2A> katalog jest ten, który zawiera plik wykonywalny, który uruchomił proces. Może to również wymagać utworzenie nowego <xref:System.AppDomain> Jeśli nie jest wygodne przenieść zestawu.  
   
--   Dodaj badania ścieżki do pliku konfiguracji (.config) aplikacji lub do domen aplikacji dodatkowych zestawów zależnych znajdują się w katalogach podrzędnych względem pliku wykonywalnego.  
+- Dodaj badania ścieżki do pliku konfiguracji (.config) aplikacji lub do domen aplikacji dodatkowych zestawów zależnych znajdują się w katalogach podrzędnych względem pliku wykonywalnego.  
   
  W każdym przypadku można zmienić kod do użycia <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> metody.  
   

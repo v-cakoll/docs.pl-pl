@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
 ms.openlocfilehash: fa5842040876754d5f0d358258f1eab7d09d79c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769320"
 ---
 # <a name="how-to-use-a-bitmapimage"></a>Instrukcje: Używanie elementu BitmapImage
 W tym przykładzie pokazano, jak używać <xref:System.Windows.Media.Imaging.BitmapImage> jako źródło <xref:System.Windows.Controls.Image> w kontrolce [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  

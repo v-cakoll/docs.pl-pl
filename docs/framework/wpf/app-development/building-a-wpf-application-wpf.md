@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757615"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), biblioteki (.dll) lub jako kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki w procesie kompilacji.  
@@ -21,11 +21,11 @@ Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!IN
 ## <a name="building-a-wpf-application"></a>Kompilowanie aplikacji WPF  
  Aplikacja WPF można kompilować w następujący sposób:  
   
--   Wiersza polecenia. Aplikacja musi zawierać tylko kod (nie XAML) i plik definicji aplikacji. Aby uzyskać więcej informacji, zobacz [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [tworzenie z wiersza polecenia (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
+- Wiersza polecenia. Aplikacja musi zawierać tylko kod (nie XAML) i plik definicji aplikacji. Aby uzyskać więcej informacji, zobacz [wiersza polecenia tworzenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) lub [tworzenie z wiersza polecenia (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
--   Microsoft Build Engine (MSBuild). Oprócz kodu i pliki XAML aplikacja musi zawierać plik projektu programu MSBuild. Aby uzyskać więcej informacji zobacz "MSBuild".  
+- Microsoft Build Engine (MSBuild). Oprócz kodu i pliki XAML aplikacja musi zawierać plik projektu programu MSBuild. Aby uzyskać więcej informacji zobacz "MSBuild".  
   
--   Program Visual Studio. Visual Studio to zintegrowane środowisko deweloperskie kompiluje aplikacje WPF za pomocą narzędzia MSBuild, która zawiera projektanta wizualnego do tworzenia interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [pisanie kodu i zarządzanie nim przy użyciu programu Visual Studio](/visualstudio/ide/index-writing-code) i [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
+- Program Visual Studio. Visual Studio to zintegrowane środowisko deweloperskie kompiluje aplikacje WPF za pomocą narzędzia MSBuild, która zawiera projektanta wizualnego do tworzenia interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [pisanie kodu i zarządzanie nim przy użyciu programu Visual Studio](/visualstudio/ide/index-writing-code) i [projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>Potok kompilacji WPF  
@@ -37,13 +37,13 @@ Aplikacje Windows Presentation Foundation (WPF) może być kompilowany jako [!IN
 ### <a name="pre-build-initializations"></a>Inicjalizacje sprzed kompilacji  
  Przed kompilacją, [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Określa lokalizację ważne narzędzia i biblioteki, w tym następujące:  
   
--   .NET Framework.  
+- .NET Framework.  
   
--   [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Katalogów.  
+- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Katalogów.  
   
--   Lokalizacja [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawów odwołań.  
+- Lokalizacja [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawów odwołań.  
   
--   Właściwość dla ścieżki wyszukiwania zestawów.  
+- Właściwość dla ścieżki wyszukiwania zestawów.  
   
  Pierwszą lokalizację gdzie [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] wyszukuje zestawy to katalog zestawów odwołania (%ProgramFiles%\Reference Assemblies\Microsoft\Framework\v3.0\\). W tym kroku procesu kompilacji inicjuje różnych właściwości i grup elementów i wykonuje wszelkie prace wymagane oczyszczania.  
   
@@ -129,41 +129,41 @@ End Sub
 ## <a name="incremental-build-support"></a>Kompilacja przyrostowa pomocy technicznej  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] System kompilacji obsługuje kompilacje przyrostowe. Jest dość inteligentnie wykrywanie zmian wprowadzonych do znaczników lub innego kodu, a następnie kompiluje tylko te artefakty, które dotyczy zmiana. Mechanizm kompilacja przyrostowa używa następujących plików:  
   
--   $(*AssemblyName*) _MarkupCompiler.Cache plik, aby zachować bieżący stan kompilatora.  
+- $(*AssemblyName*) _MarkupCompiler.Cache plik, aby zachować bieżący stan kompilatora.  
   
--   $(*AssemblyName*) _MarkupCompiler.lref plik do pamięci podręcznej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików za pomocą odwołania do typów zdefiniowane lokalnie.  
+- $(*AssemblyName*) _MarkupCompiler.lref plik do pamięci podręcznej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plików za pomocą odwołania do typów zdefiniowane lokalnie.  
   
  Oto zbiór zasad regulujących kompilacja przyrostowa:  
   
--   Plik jest najmniejsza jednostka, w którym system kompilacji wykryje zmianę. Tak dla pliku z kodem, system kompilacji nie wiadomo, czy typ został zmieniony, czy kod został dodany. To samo dla plików projektu.  
+- Plik jest najmniejsza jednostka, w którym system kompilacji wykryje zmianę. Tak dla pliku z kodem, system kompilacji nie wiadomo, czy typ został zmieniony, czy kod został dodany. To samo dla plików projektu.  
   
--   Mechanizm kompilacja przyrostowa muszą być świadome, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony definiuje klasę lub korzysta z innych klas.  
+- Mechanizm kompilacja przyrostowa muszą być świadome, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony definiuje klasę lub korzysta z innych klas.  
   
--   Jeśli `Reference` wpisy zmienić, a następnie ponownie skompilować wszystkich stron.  
+- Jeśli `Reference` wpisy zmienić, a następnie ponownie skompilować wszystkich stron.  
   
--   Jeśli zmieni się plik kodu, należy ponownie skompilować wszystkich stron z odwołań do typu zdefiniowane lokalnie.  
+- Jeśli zmieni się plik kodu, należy ponownie skompilować wszystkich stron z odwołań do typu zdefiniowane lokalnie.  
   
--   Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zmiany plików:  
+- Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zmiany plików:  
   
-    -   Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest zadeklarowany jako `Page` w projekcie: Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie istnieją lokalnie zdefiniowanego typu odwołania, ponownie skompilować, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oraz wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron przy użyciu lokalnego odwołania; Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ma lokalne odwołania, należy ponownie skompilować wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron przy użyciu lokalnego odwołania.  
+    - Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest zadeklarowany jako `Page` w projekcie: Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie istnieją lokalnie zdefiniowanego typu odwołania, ponownie skompilować, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] oraz wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron przy użyciu lokalnego odwołania; Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ma lokalne odwołania, należy ponownie skompilować wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron przy użyciu lokalnego odwołania.  
   
-    -   Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest zadeklarowany jako `ApplicationDefinition` w projekcie: Skompiluj ponownie wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron (Przyczyna: każda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] odwołuje się do <xref:System.Windows.Application> typ, który mógł ulec zmianie).  
+    - Jeśli [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest zadeklarowany jako `ApplicationDefinition` w projekcie: Skompiluj ponownie wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron (Przyczyna: każda [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] odwołuje się do <xref:System.Windows.Application> typ, który mógł ulec zmianie).  
   
--   Jeśli plik projektu deklaruje pliku z kodem jako definicji aplikacji zamiast [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku:  
+- Jeśli plik projektu deklaruje pliku z kodem jako definicji aplikacji zamiast [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku:  
   
-    -   Sprawdź, czy `ApplicationClassName` zmianie wartości w pliku projektu (jest to nowy typ aplikacji?). Jeśli tak, należy ponownie skompilować całej aplikacji.  
+    - Sprawdź, czy `ApplicationClassName` zmianie wartości w pliku projektu (jest to nowy typ aplikacji?). Jeśli tak, należy ponownie skompilować całej aplikacji.  
   
-    -   W przeciwnym razie ponownie skompilować wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron przy użyciu lokalnego odwołania.  
+    - W przeciwnym razie ponownie skompilować wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron przy użyciu lokalnego odwołania.  
   
--   Jeśli zmiany w pliku projektu: stosowanie wszystkich powyższych zasad i zobacz, co musi być ponownie kompilowane. Zmienia się na następujących wyzwalacza właściwości zakończenie ponownej kompilacji: `AssemblyName`, `IntermediateOutputPath`, `RootNamespace`, i `HostInBrowser`.  
+- Jeśli zmiany w pliku projektu: stosowanie wszystkich powyższych zasad i zobacz, co musi być ponownie kompilowane. Zmienia się na następujących wyzwalacza właściwości zakończenie ponownej kompilacji: `AssemblyName`, `IntermediateOutputPath`, `RootNamespace`, i `HostInBrowser`.  
   
  Możliwe są następujące scenariusze ponownej kompilacji:  
   
--   Cała aplikacja jest ponownie kompilowana.  
+- Cała aplikacja jest ponownie kompilowana.  
   
--   Tylko te [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, które lokalnie zdefiniowane odwołań do typu są ponownie kompilowane.  
+- Tylko te [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, które lokalnie zdefiniowane odwołań do typu są ponownie kompilowane.  
   
--   Nic nie jest ponownie kompilowany, (Jeśli w projekcie nic się nie zmieniło).  
+- Nic nie jest ponownie kompilowany, (Jeśli w projekcie nic się nie zmieniło).  
   
 ## <a name="see-also"></a>Zobacz także
 

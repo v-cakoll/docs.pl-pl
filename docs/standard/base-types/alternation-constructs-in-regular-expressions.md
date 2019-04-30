@@ -19,20 +19,20 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 6d9761d2e9904e865e7f6a17526327e1b04a1597
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53142934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698879"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
 <a name="top"></a> Konstrukcje zmiany modyfikują wyrażenie regularne, aby włączyć opcję / lub lub dopasowanie warunkowe. .NET obsługuje trzy konstrukcje zmiany:  
   
--   [Dopasowywanie wzorca z&#124;](#Either_Or)  
+- [Dopasowywanie wzorca z&#124;](#Either_Or)  
   
--   [Dopasowanie warunkowe z (? () wyrażenie) tak&#124;nie)](#Conditional_Expr)  
+- [Dopasowanie warunkowe z (? () wyrażenie) tak&#124;nie)](#Conditional_Expr)  
   
--   [Dopasowanie warunkowe oparte na prawidłowo przechwyconych grupach](#Conditional_Group)  
+- [Dopasowanie warunkowe oparte na prawidłowo przechwyconych grupach](#Conditional_Group)  
   
 <a name="Either_Or"></a>   
 ## <a name="pattern-matching-with-124"></a>Dopasowywanie wzorca z&#124;  

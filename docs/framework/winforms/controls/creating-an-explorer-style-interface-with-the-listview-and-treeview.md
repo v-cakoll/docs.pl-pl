@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768592"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Przewodnik: tworzenie interfejsu w stylu Eksploratora Windows z kontrolkami ListView i TreeView za pomocą narzędzia Projektant
 Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnych aplikacji Windows Forms w krótki czas. Typowym scenariuszem jest tworzenie interfejsu użytkownika (UI) za pomocą <xref:System.Windows.Forms.ListView> i <xref:System.Windows.Forms.TreeView> formantów, które przypomina funkcji Eksploratora Windows, systemów operacyjnych Windows. Eksplorator Windows wyświetla hierarchiczną strukturę plików i folderów na komputerze użytkownika.  
@@ -32,9 +32,9 @@ Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnyc
   
 2. W **nowy projekt** okna dialogowego pole, wykonaj następujące czynności:  
   
-    1.  Do kategorii wybierz **języka Visual Basic** lub **Visual C#**.  
+    1. Do kategorii wybierz **języka Visual Basic** lub **Visual C#**.  
   
-    2.  Z listy szablonów wybierz **aplikacja interfejsu Windows Forms**.  
+    2. Z listy szablonów wybierz **aplikacja interfejsu Windows Forms**.  
   
 3. Kliknij przycisk **OK**. Utworzono nowy projekt Windows Forms.  
   
@@ -44,19 +44,19 @@ Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnyc
   
 6. Dodaj <xref:System.Windows.Forms.TreeView> formantu o nazwie `treeview1` do formularza i umieść ją w lewej części <xref:System.Windows.Forms.SplitContainer> kontroli. W oknie dialogowym właściwości `treeView1` wykonaj następujące czynności:  
   
-    1.  Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.  
+    1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Ustaw <xref:System.Windows.Forms.TreeView.ImageList%2A> właściwości `imagelist1.`  
+    2. Ustaw <xref:System.Windows.Forms.TreeView.ImageList%2A> właściwości `imagelist1.`  
   
 7. Dodaj <xref:System.Windows.Forms.ListView> formantu o nazwie `listView1` do formularza i umieść ją na prawej krawędzi <xref:System.Windows.Forms.SplitContainer> kontroli. W oknie dialogowym właściwości `listview1` wykonaj następujące czynności:  
   
-    1.  Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.  
+    1. Ustaw <xref:System.Windows.Forms.Control.Dock%2A> właściwość <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-    2.  Ustaw <xref:System.Windows.Forms.ListView.View%2A> właściwość <xref:System.Windows.Forms.View.Details>.  
+    2. Ustaw <xref:System.Windows.Forms.ListView.View%2A> właściwość <xref:System.Windows.Forms.View.Details>.  
   
-    3.  Otwórz ColumnHeader — Edytor kolekcji, klikając przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) w <xref:System.Windows.Forms.ListView.Columns%2A> właściwość **.** Dodaj trzy kolumny i ustaw ich <xref:System.Windows.Forms.ColumnHeader.Text%2A> właściwości `Name`, `Type`, i `Last Modified`, odpowiednio. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
+    3. Otwórz ColumnHeader — Edytor kolekcji, klikając przycisk wielokropka (![VisualStudioEllipsesButton — zrzut ekranu](../media/vbellipsesbutton.png "vbEllipsesButton")) w <xref:System.Windows.Forms.ListView.Columns%2A> właściwość **.** Dodaj trzy kolumny i ustaw ich <xref:System.Windows.Forms.ColumnHeader.Text%2A> właściwości `Name`, `Type`, i `Last Modified`, odpowiednio. Kliknij przycisk **OK** , aby zamknąć okno dialogowe.  
   
-    4.  Ustaw <xref:System.Windows.Forms.ListView.SmallImageList%2A> właściwości `imageList1.`  
+    4. Ustaw <xref:System.Windows.Forms.ListView.SmallImageList%2A> właściwości `imageList1.`  
   
 8. Implementowania kodu służącego do wypełnienia <xref:System.Windows.Forms.TreeView> z węzłów i węzłów podrzędnych. Dodaj następujący kod do `Form1` klasy.  
   
@@ -87,18 +87,18 @@ Jedną z zalet programu Visual Studio jest możliwość tworzenia profesjonalnyc
   
 #### <a name="to-test-the-form"></a>Aby przetestować formularz  
   
--   Naciśnij klawisz F5, aby uruchomić aplikację.  
+- Naciśnij klawisz F5, aby uruchomić aplikację.  
   
      Zostanie wyświetlony, zawierający formularz podziału <xref:System.Windows.Forms.TreeView> formant, który wyświetla katalogu projektu po lewej stronie i <xref:System.Windows.Forms.ListView> kontroli po prawej stronie przy użyciu trzech kolumnach. Mogą przechodzić <xref:System.Windows.Forms.TreeView> , wybierając węzłów katalogu i <xref:System.Windows.Forms.ListView> jest wypełniana przy użyciu zawartość wybranego katalogu.  
   
 ## <a name="next-steps"></a>Następne kroki  
  Ta aplikacja zawiera przykładowy sposób korzystania <xref:System.Windows.Forms.TreeView> i <xref:System.Windows.Forms.ListView> kontroluje ze sobą. Aby uzyskać więcej informacji na temat tych kontrolek zobacz następujące tematy:  
   
--   [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+- [Instrukcje: Dodawanie niestandardowych informacji do TreeView lub ListView — formant (formularze Windows)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [Instrukcje: Dodawanie możliwości wyszukiwania do formantu ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
+- [Instrukcje: Dodawanie możliwości wyszukiwania do formantu ListView](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [Instrukcje: Dołączanie ShortCut Menu do węzła TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+- [Instrukcje: Dołączanie ShortCut Menu do węzła TreeView](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

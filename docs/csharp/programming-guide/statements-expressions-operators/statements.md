@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
 ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61709292"
 ---
 # <a name="statements-c-programming-guide"></a>Instrukcje (Przewodnik programowania w języku C#)
 Akcje, które przyjmuje programu są wyrażane w instrukcjach. Typowe akcje obejmują zadeklarowania zmiennych, przypisywania wartości, wywoływanie metod, zapętlenie przez kolekcje i gałęzi do jednej lub drugiej bloku kodu, w zależności od danego warunku. Kolejność, w którym wykonywane są instrukcje w programie nosi nazwę przepływu sterowania lub przepływem wykonania. Przepływ sterowania, mogą się różnić w każdym uruchomieniu programu, w zależności od tego, jak program reaguje na dane wejściowe, że będzie ona otrzymywać w czasie wykonywania.  
@@ -83,11 +83,11 @@ W poniższych przykładach pokazano dwa zastosowania pustą instrukcję:
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
--   [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Słowa kluczowe instrukcji](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [Wyrażenia](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [Wyrażenia](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Operatory](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

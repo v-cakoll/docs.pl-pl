@@ -3,11 +3,11 @@ title: <certificateReference> Aby uzyskać <identity>
 ms.date: 03/30/2017
 ms.assetid: ac359c65-c22d-42d2-97de-db53b77cebdb
 ms.openlocfilehash: 3b7779ac00c2fca6300c12ac18ff2d5f6b868424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704339"
 ---
 # <a name="certificatereference-for-identity"></a>\<certificateReference > dla \<identity >
 Określa ustawienia dla walidacji certyfikatu X.509. Bezpieczne klienta Windows Communication Foundation (WCF), który nawiązuje połączenie z punktem końcowym o tej tożsamości weryfikuje czy wnioski przedstawione przez serwer zawierają roszczenia tożsamość użyta do skonstruowania tej tożsamości.  

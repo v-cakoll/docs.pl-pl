@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696729"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS — Struktura
 Zawiera statystyki wątku odnoszących się do wyrzucania elementów bezużytecznych.  

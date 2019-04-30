@@ -15,11 +15,11 @@ ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705785"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnych nazwach
 
@@ -36,9 +36,9 @@ Poniższy scenariusz przedstawia proces podpisywanie zestawu silną nazwą, a p�
 
 1. Zestaw A jest tworzony za pomocą silnej nazwy przy użyciu jednej z następujących metod:
 
-    -   Przy użyciu środowiska programowania, który obsługuje tworzenie silnej nazwy, takie jak Visual Studio.
+    - Przy użyciu środowiska programowania, który obsługuje tworzenie silnej nazwy, takie jak Visual Studio.
 
-    -   Tworzenie pary kluczy kryptograficznych za pomocą [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) i przypisywanie tej pary kluczy do zestawu przy użyciu wiersza polecenia kompilatora lub [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Zestaw Windows Software Development Kit (SDK) zawiera zarówno Sn.exe, jak i Al.exe.
+    - Tworzenie pary kluczy kryptograficznych za pomocą [narzędzie silnych nazw (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) i przypisywanie tej pary kluczy do zestawu przy użyciu wiersza polecenia kompilatora lub [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Zestaw Windows Software Development Kit (SDK) zawiera zarówno Sn.exe, jak i Al.exe.
 
 2. Środowisko projektowe i narzędzia podpisuje skrót pliku zawierającego manifest zestawu przy użyciu klucza prywatnego dla deweloperów. Podpis cyfrowy jest przechowywany w przenośny plik wykonywalny (PE), który zawiera manifest zestawu A.
 
@@ -55,13 +55,13 @@ Począwszy od [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md
 
 Funkcja pomijania ma zastosowanie do dowolnego złożenia, który jest podpisany silną nazwą i ma następujące cechy:
 
--   W pełni zaufany, bez <xref:System.Security.Policy.StrongName> dowodów (na przykład `MyComputer` strefa dowód).
+- W pełni zaufany, bez <xref:System.Security.Policy.StrongName> dowodów (na przykład `MyComputer` strefa dowód).
 
--   Ładowany do w pełni zaufany <xref:System.AppDomain>.
+- Ładowany do w pełni zaufany <xref:System.AppDomain>.
 
--   Ładowane z lokalizacji w obszarze <xref:System.AppDomainSetup.ApplicationBase%2A> właściwość, która <xref:System.AppDomain>.
+- Ładowane z lokalizacji w obszarze <xref:System.AppDomainSetup.ApplicationBase%2A> właściwość, która <xref:System.AppDomain>.
 
--   Nie podpisywane z opóźnieniem.
+- Nie podpisywane z opóźnieniem.
 
 Tę funkcję można wyłączyć dla poszczególnych aplikacji lub komputera. Zobacz [jak: Wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 

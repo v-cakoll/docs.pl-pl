@@ -8,11 +8,11 @@ ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704911"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager> Element
 Określa, czy należy wyłączyć zachowanie domyślne, które jest, aby zezwolić na host środowiska uruchomieniowego w celu zastąpienia ustawień konfiguracji domeny aplikacji.  

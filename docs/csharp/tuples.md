@@ -4,11 +4,11 @@ description: Dowiedz się więcej o krotki nazwane i nienazwane typy w języku C
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
 ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706432"
 ---
 # <a name="c-tuple-types"></a>Typy krotek języka C#
 

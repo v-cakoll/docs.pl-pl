@@ -14,28 +14,28 @@ ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683395"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a> Kowariancja i kontrawariancja to terminy odwołujące się do możliwość używania typu bardziej pochodnego (bardziej szczegółowe) lub mniej pochodnego typu (specyficzne dla języka less) niż oryginalnie określony. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. W przykładach założono, klasa bazowa o nazwie `Base` i Klasa pochodna o nazwie `Derived`.  
   
--   `Covariance`  
+- `Covariance`  
   
      Umożliwia użycie typu bardziej pochodnego niż oryginalnie określony.  
   
      Możesz przypisać wystąpienie `IEnumerable<Derived>` (`IEnumerable(Of Derived)` w języku Visual Basic) do zmiennej typu `IEnumerable<Base>`.  
   
--   `Contravariance`  
+- `Contravariance`  
   
      Umożliwia użycie bardziej ogólnego (mniej pochodnego) typu niż oryginalnie określony.  
   
      Możesz przypisać wystąpienie `Action<Base>` (`Action(Of Base)` w języku Visual Basic) do zmiennej typu `Action<Derived>`.  
   
--   `Invariance`  
+- `Invariance`  
   
      Oznacza, że można użyć tylko oryginalnie określonego typu, więc inwariantny parametr typu ogólnego nie jest ani kowariantny, ani kontrawariantny.  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836425"
   
  Kowariancja i kontrawariancja są nazywane zbiorczo *wariancji*. Parametr typu ogólnego, który nie jest oznaczony jako kowariantny lub kontrawariantny nazywa się *niezmiennej*. Krótkie podsumowanie faktów na temat wariancji w środowisku uruchomieniowym języka wspólnego:  
   
--   W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wariantne parametry typu są ograniczone do typów ogólnych interfejsów i delegatów ogólnych.  
+- W [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], wariantne parametry typu są ograniczone do typów ogólnych interfejsów i delegatów ogólnych.  
   
--   Ogólny typ interfejsu lub delegata może mieć kowariantne i kontrawariantne parametry typu.  
+- Ogólny typ interfejsu lub delegata może mieć kowariantne i kontrawariantne parametry typu.  
   
--   Wariancja dotyczy tylko typów referencyjnych; określenie typu wartości dla wariantnego parametru typu spowoduje, że parametr typu będzie inwariantny dla wynikowego skonstruowanego typu.  
+- Wariancja dotyczy tylko typów referencyjnych; określenie typu wartości dla wariantnego parametru typu spowoduje, że parametr typu będzie inwariantny dla wynikowego skonstruowanego typu.  
   
--   Wariancja nie dotyczy kombinacji delegatów. Oznacza to, jeśli istnieją dwa delegaty typu `Action<Derived>` i `Action<Base>` (`Action(Of Derived)` i `Action(Of Base)` w języku Visual Basic), nie można połączyć drugiego delegata z pierwszym, mimo że wynik byłby bezpieczny typ. Wariancja umożliwia drugiego delegata do przypisania do zmiennej typu `Action<Derived>`, ale delegaty można łączyć tylko wtedy, gdy jest to dokładnie takie same ich typy.  
+- Wariancja nie dotyczy kombinacji delegatów. Oznacza to, jeśli istnieją dwa delegaty typu `Action<Derived>` i `Action<Base>` (`Action(Of Derived)` i `Action(Of Base)` w języku Visual Basic), nie można połączyć drugiego delegata z pierwszym, mimo że wynik byłby bezpieczny typ. Wariancja umożliwia drugiego delegata do przypisania do zmiennej typu `Action<Derived>`, ale delegaty można łączyć tylko wtedy, gdy jest to dokładnie takie same ich typy.  
   
  Kowariantne i kontrawariantne parametry typu szczegółowo opisano w następujących sekcjach:  
   
--   [Interfejsy ogólne z Kowariantnymi parametrami typu](#InterfaceCovariantTypeParameters)  
+- [Interfejsy ogólne z Kowariantnymi parametrami typu](#InterfaceCovariantTypeParameters)  
   
--   [Interfejsy ogólne z Kontrawariantnymi parametrami typu](#InterfaceCovariantTypeParameters)  
+- [Interfejsy ogólne z Kontrawariantnymi parametrami typu](#InterfaceCovariantTypeParameters)  
   
--   [Delegaty ogólne z Wariantnymi parametry typu](#DelegateVariantTypeParameters)  
+- [Delegaty ogólne z Wariantnymi parametry typu](#DelegateVariantTypeParameters)  
   
--   [Definiowanie interfejsów ogólnych typu Variant i delegatów](#DefiningVariantTypeParameters)  
+- [Definiowanie interfejsów ogólnych typu Variant i delegatów](#DefiningVariantTypeParameters)  
   
--   [Lista typów Variant ogólnego interfejsów i delegatów](#VariantList)  
+- [Lista typów Variant ogólnego interfejsów i delegatów](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>Interfejsy ogólne z kowariantnymi parametrami typu  
@@ -175,8 +175,8 @@ ms.locfileid: "56836425"
 |<xref:System.Action%601> Aby <xref:System.Action%6016>||Tak|  
 |<xref:System.Comparison%601>||Yes|  
 |<xref:System.Converter%602>|Yes|Yes|  
-|<xref:System.Func%601>|Tak||  
-|<xref:System.Func%602> Aby <xref:System.Func%6017>|Tak|Yes|  
+|<xref:System.Func%601>|Yes||  
+|<xref:System.Func%602> Aby <xref:System.Func%6017>|Yes|Yes|  
 |<xref:System.IComparable%601>||Yes|  
 |<xref:System.Predicate%601>||Yes|  
 |<xref:System.Collections.Generic.IComparer%601>||Yes|  

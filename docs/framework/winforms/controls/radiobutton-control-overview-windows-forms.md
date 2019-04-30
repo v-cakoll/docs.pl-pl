@@ -10,11 +10,11 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755951"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton — Informacje o formancie [Formularze systemu Windows]
 Windows Forms <xref:System.Windows.Forms.RadioButton> formanty wyświetlania zestawu co najmniej dwóch wzajemnie wykluczających się opcji do użytkownika. Chociaż pola wyboru i przyciski opcji może wydawać się działają podobnie, ma jedną istotną różnicą: gdy użytkownik wybierze przycisk radiowy, inne przyciski radiowe w tej samej grupy nie można również wybrać. Z kolei można wybrać dowolną liczbę pól wyboru. Definiowanie Grupa przycisków radiowych informuje użytkownika, "W tym miejscu jest zestaw opcji, z których można wybrać jeden i tylko jeden."  

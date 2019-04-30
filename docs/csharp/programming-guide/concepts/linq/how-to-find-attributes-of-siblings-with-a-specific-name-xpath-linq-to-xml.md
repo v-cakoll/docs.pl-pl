@@ -3,11 +3,11 @@ title: 'Instrukcje: Znajdowanie atrybutów elementów równorzędnych o określo
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
 ms.openlocfilehash: 562f3a40e1670a76778a64570f980326d946a4c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702181"
 ---
 # <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Instrukcje: Znajdowanie atrybutów elementów równorzędnych o określonej nazwie (XPath-LINQ to XML) (C#)
 W tym temacie pokazano, jak można znaleźć wszystkie atrybuty elementów równorzędnych węzła kontekstu. W kolekcji, zwracane są tylko atrybuty o określonej nazwie.  

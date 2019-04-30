@@ -9,11 +9,11 @@ ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675643"
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, że powinna działać w systemie operacyjnym Windows 64-bitowych jako natywną aplikację lub w emulatorze WOW64 (Windows 32-bit na Windows 64-bitowych). WOW64 jest środowiskiem zgodności, które umożliwia aplikacji 32-bitowy, do uruchomienia w systemie 64-bitowych. Emulator WOW64 znajduje się we wszystkich 64-bitowych wersjach systemu operacyjnego Windows.  
@@ -30,26 +30,26 @@ Podczas kompilowania aplikacji można określić, że powinna działać w system
   
  Wiele zestawów identycznie uruchomić zarówno 32-bitowe środowisko CLR, jak i 64-bitowe środowisko CLR. Jednak niektóre programy mogą zachowywać się różnie w zależności od środowiska CLR, jeśli zawierają one co najmniej jeden z następujących czynności:  
   
--   Struktury, które zawierają składowe, które zmiany rozmiaru, w zależności od platformy (na przykład dowolny typ wskaźnika).  
+- Struktury, które zawierają składowe, które zmiany rozmiaru, w zależności od platformy (na przykład dowolny typ wskaźnika).  
   
--   Arytmetyczny wskaźnik, obejmującą stałych rozmiarach.  
+- Arytmetyczny wskaźnik, obejmującą stałych rozmiarach.  
   
--   Nieprawidłowa platforma wywołania lub deklaracji COM, które używają `Int32` dla dojścia, zamiast `IntPtr`.  
+- Nieprawidłowa platforma wywołania lub deklaracji COM, które używają `Int32` dla dojścia, zamiast `IntPtr`.  
   
--   Kod, który rzutuje `IntPtr` do `Int32`.  
+- Kod, który rzutuje `IntPtr` do `Int32`.  
   
  Aby uzyskać więcej informacji na temat portów 32-bitowej aplikacji do uruchomienia w 64-bitowe środowisko CLR, zobacz [Migrowanie 32-bitowego kodu zarządzanego do 64-bitowej](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10)).  
   
 ## <a name="general-64-bit-programming-information"></a>Ogólne informacje nt. programowania 64-bitowego  
  Ogólne informacje o programowaniu 64-bitowego na ten temat można znaleźć w następujących dokumentach:  
   
--   Aby uzyskać więcej informacji na temat 64-bitowej wersji środowiska CLR na 64-bitowym komputerze Windows zobacz [Centrum deweloperów .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) w witrynie MSDN.  
+- Aby uzyskać więcej informacji na temat 64-bitowej wersji środowiska CLR na 64-bitowym komputerze Windows zobacz [Centrum deweloperów .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) w witrynie MSDN.  
   
--   W [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] dokumentacji, zobacz [przewodnik programowania w Windows 64-bitowych](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
+- W [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] dokumentacji, zobacz [przewodnik programowania w Windows 64-bitowych](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
--   Aby uzyskać informacji dotyczących sposobu pobierania 64-bitowej wersji środowiska CLR, zobacz [.NET Framework Developer Center pobiera](https://go.microsoft.com/fwlink/?LinkId=50953) w witrynie MSDN.  
+- Aby uzyskać informacji dotyczących sposobu pobierania 64-bitowej wersji środowiska CLR, zobacz [.NET Framework Developer Center pobiera](https://go.microsoft.com/fwlink/?LinkId=50953) w witrynie MSDN.  
   
--   Aby uzyskać informacji na temat obsługi programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [obsługi programu Visual Studio IDE 64-bitowych](/visualstudio/ide/visual-studio-ide-64-bit-support).  
+- Aby uzyskać informacji na temat obsługi programu Visual Studio do tworzenia aplikacji 64-bitowych, zobacz [obsługi programu Visual Studio IDE 64-bitowych](/visualstudio/ide/visual-studio-ide-64-bit-support).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>Obsługa kompilatora do tworzenia aplikacji 64-bitowych  
  Domyślnie, gdy używasz programu .NET Framework do tworzenia aplikacji na 32-bitowy lub 64-bitowy komputer, aplikacja zostanie uruchomiona na komputerze 64-bitowych, co aplikacja natywna (czyli nie w emulatorze WOW64). Poniższa tabela zawiera listę dokumentów, które wyjaśniają jak używać kompilatory programu Visual Studio do tworzenia aplikacji 64-bitowych, które będą uruchamiane jako natywny przez środowisko WOW64 lub obie.  

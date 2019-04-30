@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
 ms.openlocfilehash: 9b8b18f6c66fdb8f2446d3ddc5c584c5bad44ef3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767276"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>Instrukcje: tworzenie niestandardowej tożsamości podmiotu zabezpieczeń
 <xref:System.Security.Permissions.PrincipalPermissionAttribute> To deklaratywne sposób kontrolowania dostępu do metody usługi. Korzystając z tego atrybutu <xref:System.ServiceModel.Description.PrincipalPermissionMode> wyliczenie Określa tryb wykonywania sprawdzeń autoryzacji. Jeśli ten tryb jest równa <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom>, umożliwia użytkownikowi określenie niestandardowej <xref:System.Security.Principal.IPrincipal> zwrócony przez klasę <xref:System.Threading.Thread.CurrentPrincipal%2A> właściwości. W tym temacie przedstawiono scenariusz przypadku <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> jest używana w połączeniu z niestandardowych zasad autoryzacji i niestandardowy podmiot zabezpieczeń.  
@@ -29,29 +29,28 @@ ms.locfileid: "59158798"
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Odwołania do następujących przestrzeni nazw są potrzebne, aby skompilować kod:  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.Collections.Generic>  
+- <xref:System.Collections.Generic>  
   
--   <xref:System.Security.Permissions>  
+- <xref:System.Security.Permissions>  
   
--   <xref:System.Security.Principal>  
+- <xref:System.Security.Principal>  
   
--   <xref:System.Threading>  
+- <xref:System.Threading>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.ServiceModel.Description>  
+- <xref:System.ServiceModel.Description>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
 ## <a name="see-also"></a>Zobacz także
 
-- <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

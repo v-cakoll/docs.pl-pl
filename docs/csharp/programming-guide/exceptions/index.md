@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: dfbdcf29e0fc003f9478e6f691957b67574d5233
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680666"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
 Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątkowych sytuacji, które występują, gdy program jest uruchomiony. Używa obsługi wyjątków `try`, `catch`, i `finally` słów kluczowych obsługi błędów w przypadku podjęcia decyzji, że jest uzasadnione, aby to zrobić, a potem wyczyścić zasoby, aby spróbować akcje, które mogą się nie powieść. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) .NET Framework lub żadnych bibliotek innych firm lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  
@@ -26,40 +26,40 @@ Obsługa funkcji pomocy wyjątków języka C# zajmuje nieoczekiwane lub wyjątko
 ## <a name="exceptions-overview"></a>Wyjątki — omówienie  
  Wyjątki mają następujące właściwości:  
   
--   Wyjątki są typy, które wszystkie ostatecznie pochodzą z `System.Exception`.  
+- Wyjątki są typy, które wszystkie ostatecznie pochodzą z `System.Exception`.  
   
--   Użyj `try` bloku wokół instrukcji, które może zgłaszać wyjątki.  
+- Użyj `try` bloku wokół instrukcji, które może zgłaszać wyjątki.  
   
--   Gdy wystąpi wyjątek w `try` zablokować, przepływu sterowania przechodzi do pierwszego programu obsługi wyjątków skojarzone, który znajduje się w dowolnym miejscu w stosie wywołań. W języku C# `catch` — słowo kluczowe jest używane do definiowania obsługi wyjątków.  
+- Gdy wystąpi wyjątek w `try` zablokować, przepływu sterowania przechodzi do pierwszego programu obsługi wyjątków skojarzone, który znajduje się w dowolnym miejscu w stosie wywołań. W języku C# `catch` — słowo kluczowe jest używane do definiowania obsługi wyjątków.  
   
--   Jeśli ma nie aparatu obsługi wyjątków dany wyjątek, program zatrzymuje wykonywanie komunikatu o błędzie.  
+- Jeśli ma nie aparatu obsługi wyjątków dany wyjątek, program zatrzymuje wykonywanie komunikatu o błędzie.  
   
--   Nie przechwytuj wyjątek, chyba że można go obsłużyć i pozostawić ją w znanym stanie. Jeśli przechwytujesz `System.Exception`, zgłoś ponownie go za pomocą `throw` — słowo kluczowe na końcu `catch` bloku.  
+- Nie przechwytuj wyjątek, chyba że można go obsłużyć i pozostawić ją w znanym stanie. Jeśli przechwytujesz `System.Exception`, zgłoś ponownie go za pomocą `throw` — słowo kluczowe na końcu `catch` bloku.  
   
--   Jeśli `catch` bloku definiuje zmienną wyjątek, służy do uzyskania dalszych informacji o typ wyjątku, który wystąpił.  
+- Jeśli `catch` bloku definiuje zmienną wyjątek, służy do uzyskania dalszych informacji o typ wyjątku, który wystąpił.  
   
--   Wyjątki mogą jawnie generowane przez program przy użyciu `throw` — słowo kluczowe.  
+- Wyjątki mogą jawnie generowane przez program przy użyciu `throw` — słowo kluczowe.  
   
--   Obiekty wyjątków zawierają szczegółowe informacje o błędzie, takie jak stan stos wywołań i tekst opisu błędu.  
+- Obiekty wyjątków zawierają szczegółowe informacje o błędzie, takie jak stan stos wywołań i tekst opisu błędu.  
   
--   Możesz pisać kod w `finally` blok jest wykonywany, nawet wtedy, gdy zostanie zgłoszony wyjątek. Użyj `finally` bloku, aby zwolnić zasoby, na przykład zamknąć wszystkie strumienie lub pliki, które zostały otwarte w `try` bloku.  
+- Możesz pisać kod w `finally` blok jest wykonywany, nawet wtedy, gdy zostanie zgłoszony wyjątek. Użyj `finally` bloku, aby zwolnić zasoby, na przykład zamknąć wszystkie strumienie lub pliki, które zostały otwarte w `try` bloku.  
   
--   Zarządzane wyjątki w programie .NET Framework są wdrażane na podstawie mechanizm obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [obsługi wyjątków strukturalnych, (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) i [awarii kurs w głębi systemu Win32 ze strukturą wyjątków](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
+- Zarządzane wyjątki w programie .NET Framework są wdrażane na podstawie mechanizm obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [obsługi wyjątków strukturalnych, (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) i [awarii kurs w głębi systemu Win32 ze strukturą wyjątków](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Zobacz następujące tematy, aby uzyskać więcej informacji dotyczących wyjątków i wyjątków:  
   
--   [Używanie wyjątków](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
+- [Używanie wyjątków](../../../csharp/programming-guide/exceptions/using-exceptions.md)  
   
--   [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [Obsługa wyjątków](../../../csharp/programming-guide/exceptions/exception-handling.md)  
   
--   [Tworzenie i zgłaszanie wyjątków](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
+- [Tworzenie i zgłaszanie wyjątków](../../../csharp/programming-guide/exceptions/creating-and-throwing-exceptions.md)  
   
--   [Wyjątki generowane przez kompilator](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
+- [Wyjątki generowane przez kompilator](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Instrukcje: Obsługa wyjątków za pomocą bloku try/catch (C# Programming Guide)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+- [Instrukcje: Obsługa wyjątków za pomocą bloku try/catch (C# Programming Guide)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Instrukcje: Wykonywanie czyszczenia kodu za pomocą instrukcji finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+- [Instrukcje: Wykonywanie czyszczenia kodu za pomocą instrukcji finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
 

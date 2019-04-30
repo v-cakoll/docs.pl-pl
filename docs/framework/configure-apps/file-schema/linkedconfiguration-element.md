@@ -1,5 +1,5 @@
 ---
-title: <linkedConfiguration> — element
+title: <linkedConfiguration>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding/linkedConfiguration
@@ -12,11 +12,11 @@ helpviewer_keywords:
 - linkedConfiguration Element
 ms.assetid: 8eb34f3b-427e-4288-a7ff-c73f489deb45
 ms.openlocfilehash: 909ee7cbb7cd31cf213f305b23237cb69e295882
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674652"
 ---
 # <a name="linkedconfiguration-element"></a>\<linkedConfiguration> element
 

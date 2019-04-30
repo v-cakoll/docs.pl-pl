@@ -3,11 +3,11 @@ title: Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5e19b74a-7773-4b58-b110-953ffd364c55
 ms.openlocfilehash: 48149faba1c41583ab4e50c539d52e4caf90592a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766457"
 ---
 # <a name="pure-functional-transformations-of-xml-visual-basic"></a>Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)
 Ta sekcja zawiera samouczek Przekształcanie funkcjonalne dla formatu XML. W tym wyjaśnienia główne pojęcia i konstrukcji językowych należy poznać przekształceń funkcjonalnych i przykłady użycia przekształceń funkcjonalnych do manipulowania dokumentu XML. Chociaż ten samouczek zawiera LINQ do XML przykłady kodu, wszystkie podstawowe pojęcia mają zastosowanie również do innych technologii LINQ.  

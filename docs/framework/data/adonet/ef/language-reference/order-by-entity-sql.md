@@ -3,11 +3,11 @@ title: ORDER BY (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760301"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (jednostka SQL)
 Określa porządek sortowania na obiekty zwrócone w instrukcji SELECT.  
@@ -79,23 +79,23 @@ ORDER BY ...
 ## <a name="restricted-keywords"></a>Ograniczone słów kluczowych  
  Następujące słowa kluczowe muszą być ujęte w znaki cudzysłowu, gdy są używane w `ORDER BY` klauzuli:  
   
--   CROSS  
+- CROSS  
   
--   FULL  
+- FULL  
   
--   KEY  
+- KEY  
   
--   PO LEWEJ STRONIE  
+- PO LEWEJ STRONIE  
   
--   KOLEJNOŚĆ  
+- KOLEJNOŚĆ  
   
--   ZEWNĘTRZNE  
+- ZEWNĘTRZNE  
   
--   PO PRAWEJ STRONIE  
+- PO PRAWEJ STRONIE  
   
--   ROW  
+- ROW  
   
--   WARTOŚĆ  
+- WARTOŚĆ  
   
 ## <a name="ordering-nested-queries"></a>Określanie kolejności zapytań zagnieżdżonej  
  Platformy Entity Framework zagnieżdżone wyrażenie można umieścić w dowolnym miejscu w zapytania. kolejność zapytanie zagnieżdżone nie są zachowywane.  

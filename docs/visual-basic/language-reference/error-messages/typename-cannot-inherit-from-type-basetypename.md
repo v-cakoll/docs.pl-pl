@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
 ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764364"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>"\<typename >' nie może dziedziczyć z \<typu >"\<basetypename > ", ponieważ rozszerza on dostęp podstawowego \<typ > spoza zestawu
 Klasa lub interfejs dziedziczy z klasy bazowej lub interfejsu, lecz jest mniej restrykcyjny poziom dostępu.  
@@ -23,11 +23,11 @@ Klasa lub interfejs dziedziczy z klasy bazowej lub interfejsu, lecz jest mniej r
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Zmień poziom dostępu pochodne klasy lub interfejsu restrykcyjną co najmniej tak jak w przypadku klasy bazowej lub interfejsu.  
+- Zmień poziom dostępu pochodne klasy lub interfejsu restrykcyjną co najmniej tak jak w przypadku klasy bazowej lub interfejsu.  
   
      —lub—  
   
--   Jeśli potrzebujesz mniej restrykcyjny poziom dostępu, Usuń `Inherits` instrukcji. Nie można dziedziczyć bardziej ograniczony klasy bazowej lub interfejsu.  
+- Jeśli potrzebujesz mniej restrykcyjny poziom dostępu, Usuń `Inherits` instrukcji. Nie można dziedziczyć bardziej ograniczony klasy bazowej lub interfejsu.  
   
 ## <a name="see-also"></a>Zobacz także
 

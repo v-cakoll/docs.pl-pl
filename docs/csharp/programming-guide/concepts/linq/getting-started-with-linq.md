@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queries [LINQ], LINQ in C#
 ms.assetid: b8700c1f-05c9-4380-b6eb-e34c4da38e54
 ms.openlocfilehash: 585bbd9a9fbc78029911dac8af4c1ad3eebe35b0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702350"
 ---
 # <a name="getting-started-with-linq-in-c"></a>Wprowadzenie do LINQ w C\#
 Ta sekcja zawiera informacje ogólne, który pomoże Ci zrozumieć rest LINQ dokumentacji i przykładów.  

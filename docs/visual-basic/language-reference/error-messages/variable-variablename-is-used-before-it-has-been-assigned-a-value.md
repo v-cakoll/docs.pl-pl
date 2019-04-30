@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766730"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość
 Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wartość. W czasie wykonywania może wystąpić wyjątek pustej referencji.  
@@ -27,9 +27,9 @@ Zmienna "\<nazwa_zmiennej >" jest używana, zanim została do niej przypisana wa
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Sprawdź logikę przepływu sterowania i upewnij się, że zmienna ma prawidłową wartość przed kontrola przechodzi do żadnej instrukcji, który odczyta go.  
+- Sprawdź logikę przepływu sterowania i upewnij się, że zmienna ma prawidłową wartość przed kontrola przechodzi do żadnej instrukcji, który odczyta go.  
   
--   Jest jednym ze sposobów, aby zagwarantować, że zmienna zawsze ma prawidłową wartość zainicjować go jako części swojej deklaracji. Zobacz sekcję "Inicjowanie" w [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md).  
+- Jest jednym ze sposobów, aby zagwarantować, że zmienna zawsze ma prawidłową wartość zainicjować go jako części swojej deklaracji. Zobacz sekcję "Inicjowanie" w [Dim — instrukcja](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

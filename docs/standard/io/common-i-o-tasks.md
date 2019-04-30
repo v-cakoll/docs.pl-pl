@@ -8,11 +8,11 @@ ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ac2b0eafa64b809d2b40ac6471806dc9ab3c8c53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752324"
 ---
 # <a name="common-io-tasks"></a>Typowe zadania We/Wy
 <xref:System.IO> Przestrzeni nazw dostarcza kilka klas, które umożliwiają wykonywanie różnych akcji, takich jak odczytywanie i zapisywanie w plikach, katalogach i strumieniach. Aby uzyskać więcej informacji, zobacz [plików i we/wy Stream](../../../docs/standard/io/index.md).  
@@ -22,7 +22,7 @@ ms.locfileid: "54609632"
 |Aby to zrobić...|Zobacz przykład w tym temacie...|  
 |-------------------|--------------------------------------|  
 |Tworzenie pliku tekstowego|<xref:System.IO.File.CreateText%2A?displayProperty=nameWithType> — Metoda<br /><br /> <xref:System.IO.FileInfo.CreateText%2A?displayProperty=nameWithType> — Metoda<br /><br /> <xref:System.IO.File.Create%2A?displayProperty=nameWithType> — Metoda<br /><br /> <xref:System.IO.FileInfo.Create%2A?displayProperty=nameWithType> — Metoda|  
-|Zapis w pliku tekstowym|[Instrukcje: Zapisywanie tekstu do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Instrukcje: Wpisywanie tekstu do pliku tekstowego (C + +/ CLI)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
+|Zapis w pliku tekstowym|[Instrukcje: Zapisywanie tekstu do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md)<br /><br /> [Instrukcje: Wpisywanie tekstu do pliku (C++sposób niezamierzony)](/cpp/dotnet/how-to-write-a-text-file-cpp-cli)|  
 |Odczyt z pliku tekstowego|[Instrukcje: Odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
 |Dołączanie tekstu do pliku|[Instrukcje: Otwieranie i dołączanie do pliku dziennika](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)<br /><br /> <xref:System.IO.File.AppendText%2A?displayProperty=nameWithType> — Metoda<br /><br /> <xref:System.IO.FileInfo.AppendText%2A?displayProperty=nameWithType> — Metoda|  
 |Zmienianie nazwy lub przenoszenie pliku|<xref:System.IO.File.Move%2A?displayProperty=nameWithType> — Metoda<br /><br /> <xref:System.IO.FileInfo.MoveTo%2A?displayProperty=nameWithType> — Metoda|  

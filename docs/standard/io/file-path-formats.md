@@ -1,5 +1,5 @@
 ---
-title: Formaty ścieżki plików w systemach Windows
+title: Formaty ścieżek plików w systemie Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752298"
 ---
-# <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżki plików w systemach Windows
+# <a name="file-path-formats-on-windows-systems"></a>Formaty ścieżek plików w systemie Windows
 
 Wiele typów elementów członkowskich <xref:System.IO> obejmują przestrzeni nazw `path` parametr, który pozwala określić ścieżkę bezwzględną lub względną do zasobu systemu plików. Ta ścieżka jest następnie przekazywany do [Windows plik interfejsów API systemu](/windows/desktop/fileio/file-systems). W tym temacie opisano formaty ścieżki plików, których można użyć w systemach Windows.
 

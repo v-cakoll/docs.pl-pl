@@ -3,11 +3,11 @@ title: 'Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie konte
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: 93bfd77ce6bb7be1d305f20f56da67e8fb9c22f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701973"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie kontekstu (C#)
 Czasami może być napisać zapytanie wybierające elementy na podstawie ich kontekstu. Można filtrować na podstawie poprzedzające lub następujące elementów równorzędnych. Można filtrować na podstawie podrzędnej lub elementów nadrzędnych.  

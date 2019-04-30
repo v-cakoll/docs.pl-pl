@@ -1,5 +1,5 @@
 ---
-title: Pole HttpWebRequest._HttpResponse
+title: HttpWebRequest._HttpResponse Field
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -13,15 +13,15 @@ ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675497"
 ---
 # <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse pola
 
-`HttpWebRequest._HttpResponse` jest <xref:System.Net.HttpWebResponse> zawierający szczegółowe informacje o odpowiedzi HTTP z żądania HTTP. Można ją `null` do momentu otrzymania odpowiedzi HTTP.
+`HttpWebRequest._HttpResponse` jest <xref:System.Net.HttpWebResponse> zawierającego szczegółowe informacje o odpowiedzi HTTP z żądania HTTP. Może być `null` do momentu otrzymania odpowiedzi HTTP.
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` Pole jest wewnętrzna i nie są one przeznaczone do użycia bezpośrednio w kodzie.
+> `HttpWebRequest._HttpResponse` Pole jest wewnętrzny i nie są one przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje Użyj tego pola w aplikacji produkcyjnej, w żadnym przypadku.
+> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
 
 ## <a name="requirements"></a>Wymagania
 
 **Namespace:** <xref:System.Net>
 
-**Zestaw:** System (w System.dll)
+**Zestaw:** System (System.dll)
 
-**Wersje programu .NET framework:** dostępne od wersji 2.0.
+**Wersje programu .NET framework:** Dostępne od wersji 2.0.

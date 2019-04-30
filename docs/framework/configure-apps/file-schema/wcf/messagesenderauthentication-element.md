@@ -3,11 +3,11 @@ title: <messageSenderAuthentication>, element
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
 ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764091"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > element
 Określa opcje uwierzytelnienia dla nadawców wiadomości peer-to-peer.  

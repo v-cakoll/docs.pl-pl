@@ -3,11 +3,11 @@ title: 'Instrukcje: Wyświetlanie błędów walidacji w rehostowanym projektanci
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
 ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761477"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Instrukcje: Wyświetlanie błędów walidacji w rehostowanym projektancie
 W tym temacie opisano sposób pobierania i publikowanie błędów walidacji w rehostowanym [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]. Zapewnia to nam za pomocą procedury, aby upewnić się, że w rehostowanym projektancie przepływu pracy jest nieprawidłowa.  

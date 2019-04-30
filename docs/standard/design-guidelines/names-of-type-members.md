@@ -1,5 +1,5 @@
 ---
-title: Nazwy elementów członkowskich typu
+title: Nazwy składowych typu
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: KrzysztofCwalina
 ms.openlocfilehash: 7cf98b8ed1957352f357c7a9d580b4fd567a1634
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757498"
 ---
-# <a name="names-of-type-members"></a>Nazwy elementów członkowskich typu
+# <a name="names-of-type-members"></a>Nazwy składowych typu
 Typy składają się z elementów członkowskich: metody, właściwości, zdarzenia, konstruktory i pola. W poniższych sekcjach opisano zasady nazewnictwa elementów członkowskich typu.  
   
 ## <a name="names-of-methods"></a>Nazwy metody  

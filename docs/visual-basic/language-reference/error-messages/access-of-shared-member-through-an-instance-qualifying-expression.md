@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751608"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Dostęp członka udostępnionego, przez wystąpienie; wyrażenie kwalifikujące nie zostanie oszacowane
 Zmienna wystąpienia klasy lub struktury jest używana, aby uzyskać dostęp do `Shared` zmiennej, właściwość, procedura lub zdarzenia, zdefiniowany w tej klasy lub struktury. To ostrzeżenie może również wystąpić, jeśli zmienną instance umożliwia dostęp do niejawnie udostępnionego elementu członkowskiego klasy lub struktury, takiej jak stała wyliczenia, lub zagnieżdżona klasa lub Struktura.  
@@ -29,7 +29,7 @@ Zmienna wystąpienia klasy lub struktury jest używana, aby uzyskać dostęp do 
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Użyj nazwy klasy lub struktury, która definiuje `Shared` członka do niego dostęp, jak pokazano w poniższym przykładzie.  
+- Użyj nazwy klasy lub struktury, która definiuje `Shared` członka do niego dostęp, jak pokazano w poniższym przykładzie.  
   
 ```vb  
 Public Class testClass  

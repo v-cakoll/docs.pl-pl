@@ -3,11 +3,11 @@ title: Zapytanie o języku zintegrowanym (LINQ) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
 ms.openlocfilehash: c7dbe1bdef85de6028d37f8005dc5edea6c07925
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701908"
 ---
 # <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
@@ -21,30 +21,30 @@ Poniższy przykład przedstawia pełną operację zapytania. Zakończyć operacj
 
 ## <a name="query-expression-overview"></a>Omówienie zapytań w wyrażeniu
 
--   Wyrażenia zapytań może służyć do wykonywania zapytań i przekształcania danych z dowolnego źródła danych z obsługą zapytań LINQ. Na przykład jednego zapytania można pobierać dane z bazy danych SQL i generuje strumień XML jako dane wyjściowe.  
+- Wyrażenia zapytań może służyć do wykonywania zapytań i przekształcania danych z dowolnego źródła danych z obsługą zapytań LINQ. Na przykład jednego zapytania można pobierać dane z bazy danych SQL i generuje strumień XML jako dane wyjściowe.  
   
--   Wyrażenia zapytań są łatwe do gałęzi głównej, ponieważ używają one wiele dobrze znanych konstrukcji języka C#.  
+- Wyrażenia zapytań są łatwe do gałęzi głównej, ponieważ używają one wiele dobrze znanych konstrukcji języka C#.  
   
--   Zmienne w wyrażeniu zapytania są wszystkie silnie typizowane, chociaż w wielu przypadkach nie trzeba jawnie udostępniają typ, ponieważ kompilator może wywnioskować go. Aby uzyskać więcej informacji, zobacz [relacje typów w składniku LINQ zapytania operacje](type-relationships-in-linq-query-operations.md).  
+- Zmienne w wyrażeniu zapytania są wszystkie silnie typizowane, chociaż w wielu przypadkach nie trzeba jawnie udostępniają typ, ponieważ kompilator może wywnioskować go. Aby uzyskać więcej informacji, zobacz [relacje typów w składniku LINQ zapytania operacje](type-relationships-in-linq-query-operations.md).  
   
--   Zapytanie nie jest wykonywana do czasu iteracji nad zmienną kwerendy, na przykład w `foreach` instrukcji. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ](introduction-to-linq-queries.md).  
+- Zapytanie nie jest wykonywana do czasu iteracji nad zmienną kwerendy, na przykład w `foreach` instrukcji. Aby uzyskać więcej informacji, zobacz [wprowadzenie do zapytań LINQ](introduction-to-linq-queries.md).  
   
--   W czasie kompilacji wyrażeń zapytania są konwertowane na wywołania metody standardowej kwerendy operatora zgodnie z regułami określonymi w specyfikacji języka C#. Każde zapytanie, które mogą być wyrażone za pomocą składni zapytania można również wyrazić za pomocą składni metody. Jednak w większości przypadków Składnia kwerendy jest bardziej czytelne i zwięzłe. Aby uzyskać więcej informacji, zobacz [specyfikacji języka C#](~/_csharplang/spec/expressions.md#query-expressions) i [omówienie operatorów standardowej kwerendy](standard-query-operators-overview.md).  
+- W czasie kompilacji wyrażeń zapytania są konwertowane na wywołania metody standardowej kwerendy operatora zgodnie z regułami określonymi w specyfikacji języka C#. Każde zapytanie, które mogą być wyrażone za pomocą składni zapytania można również wyrazić za pomocą składni metody. Jednak w większości przypadków Składnia kwerendy jest bardziej czytelne i zwięzłe. Aby uzyskać więcej informacji, zobacz [specyfikacji języka C#](~/_csharplang/spec/expressions.md#query-expressions) i [omówienie operatorów standardowej kwerendy](standard-query-operators-overview.md).  
   
--   Zgodnie z zasadą podczas pisania zapytań LINQ, firma Microsoft zaleca użycie składni zapytań, jeśli to możliwe, a składnia metody, jeśli zajdzie taka potrzeba. Brak nie semantycznego lub wydajność różnica między dwoma formami różne. Wyrażenia zapytań są często bardziej czytelne niż równoważne wyrażenia napisane przy użyciu składni metody.  
+- Zgodnie z zasadą podczas pisania zapytań LINQ, firma Microsoft zaleca użycie składni zapytań, jeśli to możliwe, a składnia metody, jeśli zajdzie taka potrzeba. Brak nie semantycznego lub wydajność różnica między dwoma formami różne. Wyrażenia zapytań są często bardziej czytelne niż równoważne wyrażenia napisane przy użyciu składni metody.  
   
--   Zapytanie niektóre operacje, takie jak <xref:System.Linq.Enumerable.Count%2A> lub <xref:System.Linq.Enumerable.Max%2A>, mieć żadnej klauzuli wyrażenia kwerendy równoważne i dlatego musi być wyrażona jako wywołania metody. Składnia metody można łączyć za pomocą składni zapytań na różne sposoby. Aby uzyskać więcej informacji, zobacz [składnia zapytania i metody w technologii LINQ](query-syntax-and-method-syntax-in-linq.md).  
+- Zapytanie niektóre operacje, takie jak <xref:System.Linq.Enumerable.Count%2A> lub <xref:System.Linq.Enumerable.Max%2A>, mieć żadnej klauzuli wyrażenia kwerendy równoważne i dlatego musi być wyrażona jako wywołania metody. Składnia metody można łączyć za pomocą składni zapytań na różne sposoby. Aby uzyskać więcej informacji, zobacz [składnia zapytania i metody w technologii LINQ](query-syntax-and-method-syntax-in-linq.md).  
   
--   Wyrażenia zapytań może być kompilowane, drzew wyrażeń lub delegatów, w zależności od typu, który dotyczy zapytanie. <xref:System.Collections.Generic.IEnumerable%601> zapytania są kompilowane do delegatów. <xref:System.Linq.IQueryable> i <xref:System.Linq.IQueryable%601> kwerendy są kompilowane w drzewach wyrażeń. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](../../../expression-trees.md).  
+- Wyrażenia zapytań może być kompilowane, drzew wyrażeń lub delegatów, w zależności od typu, który dotyczy zapytanie. <xref:System.Collections.Generic.IEnumerable%601> zapytania są kompilowane do delegatów. <xref:System.Linq.IQueryable> i <xref:System.Linq.IQueryable%601> kwerendy są kompilowane w drzewach wyrażeń. Aby uzyskać więcej informacji, zobacz [drzew wyrażeń](../../../expression-trees.md).  
 
 ## <a name="next-steps"></a>Następne kroki
 
 Aby dowiedzieć się więcej na temat LINQ, należy rozpocząć od staje się poznać niektóre podstawowe pojęcia związane z [podstawowe informacje o wyrażeniach zapytań](../../../linq/query-expression-basics.md), a następnie zapoznaj się z dokumentacją dla technologii LINQ, w którym interesuje Cię:   
--   Dokumenty XML: [LINQ to XML](linq-to-xml.md)  
+- Dokumenty XML: [LINQ to XML](linq-to-xml.md)  
   
--   ADO.NET Entity Framework: [Składnik LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+- ADO.NET Entity Framework: [Składnik LINQ to entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)  
   
--   Kolekcje .NET, plików, parametry i tak dalej: [LINQ do obiektów](linq-to-objects.md)
+- Kolekcje .NET, plików, parametry i tak dalej: [LINQ do obiektów](linq-to-objects.md)
 
 Aby uzyskać lepszy opis LINQ ogólnie rzecz biorąc, zobacz [LINQ w C#](../../../linq/linq-in-csharp.md).
 

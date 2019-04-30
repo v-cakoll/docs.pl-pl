@@ -11,11 +11,11 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752974"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Instrukcje: Uruchamianie częściowo zaufanego kodu w piaskownicy
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      Informacje dodatkowe:  
   
-    -   Jest to jedyna przeciążenia <xref:System.AppDomain.CreateDomain%2A> metody, która przyjmuje <xref:System.Security.PermissionSet> jako parametr, a zatem jedynym przeciążenia, które umożliwia ładowanie aplikacji w środowisku częściowego zaufania.  
+    - Jest to jedyna przeciążenia <xref:System.AppDomain.CreateDomain%2A> metody, która przyjmuje <xref:System.Security.PermissionSet> jako parametr, a zatem jedynym przeciążenia, które umożliwia ładowanie aplikacji w środowisku częściowego zaufania.  
   
-    -   `evidence` Parametr nie jest używany do obliczania zestawu uprawnień; jest używany do identyfikacji przez inne funkcje programu .NET Framework.  
+    - `evidence` Parametr nie jest używany do obliczania zestawu uprawnień; jest używany do identyfikacji przez inne funkcje programu .NET Framework.  
   
-    -   Ustawienie <xref:System.AppDomainSetup.ApplicationBase%2A> właściwość `info` parametr jest obowiązkowy w przypadku tego przeciążenia.  
+    - Ustawienie <xref:System.AppDomainSetup.ApplicationBase%2A> właściwość `info` parametr jest obowiązkowy w przypadku tego przeciążenia.  
   
-    -   `fullTrustAssemblies` Parametr ma `params` — słowo kluczowe, co oznacza, że nie jest niezbędne do utworzenia <xref:System.Security.Policy.StrongName> tablicy. Przekazywanie jako parametrów 0, 1 lub więcej silnych nazw jest dozwolona.  
+    - `fullTrustAssemblies` Parametr ma `params` — słowo kluczowe, co oznacza, że nie jest niezbędne do utworzenia <xref:System.Security.Policy.StrongName> tablicy. Przekazywanie jako parametrów 0, 1 lub więcej silnych nazw jest dozwolona.  
   
-    -   Kod, aby utworzyć domenę aplikacji to:  
+    - Kod, aby utworzyć domenę aplikacji to:  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. Ładowanie kodu do piaskownicy <xref:System.AppDomain> utworzony. Można to zrobić na dwa sposoby:  
   
-    -   Wywołaj <xref:System.AppDomain.ExecuteAssembly%2A> metody dla zestawu.  
+    - Wywołaj <xref:System.AppDomain.ExecuteAssembly%2A> metody dla zestawu.  
   
-    -   Użyj <xref:System.Activator.CreateInstanceFrom%2A> metodę, aby utworzyć wystąpienie klasy pochodne <xref:System.MarshalByRefObject> w nowym <xref:System.AppDomain>.  
+    - Użyj <xref:System.Activator.CreateInstanceFrom%2A> metodę, aby utworzyć wystąpienie klasy pochodne <xref:System.MarshalByRefObject> w nowym <xref:System.AppDomain>.  
   
      Druga metoda jest preferowana, ponieważ ułatwia do przekazania parametrów do nowego <xref:System.AppDomain> wystąpienia. <xref:System.Activator.CreateInstanceFrom%2A> Metoda zapewnia dwie ważne funkcje:  
   
-    -   Możesz użyć bazy kodu, który wskazuje na lokalizację, która nie zawiera zestawu.  
+    - Możesz użyć bazy kodu, który wskazuje na lokalizację, która nie zawiera zestawu.  
   
-    -   Masz możliwości tworzenia w obszarze <xref:System.Security.CodeAccessPermission.Assert%2A> dla pełnego zaufania (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), która pozwala na tworzenie wystąpienia klasy krytycznych. (Jest to wykonywane zawsze, gdy zestaw ma oznaczenia nie przezroczystości, a także jest ładowany jako w pełni zaufany.) W związku z tym musisz być ostrożnym, aby utworzyć kod, którym ufasz, że za pomocą tej funkcji i zaleca się utworzenie tylko wystąpienia klasy w pełni zaufany w nowej domenie aplikacji.  
+    - Masz możliwości tworzenia w obszarze <xref:System.Security.CodeAccessPermission.Assert%2A> dla pełnego zaufania (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), która pozwala na tworzenie wystąpienia klasy krytycznych. (Jest to wykonywane zawsze, gdy zestaw ma oznaczenia nie przezroczystości, a także jest ładowany jako w pełni zaufany.) W związku z tym musisz być ostrożnym, aby utworzyć kod, którym ufasz, że za pomocą tej funkcji i zaleca się utworzenie tylko wystąpienia klasy w pełni zaufany w nowej domenie aplikacji.  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

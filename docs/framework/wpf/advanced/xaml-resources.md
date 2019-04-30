@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757082"
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiektem, który może być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i stylów. W tym omówieniu opisano, jak użyć zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodem i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasoby i kod](resources-and-code.md).  
@@ -44,28 +44,28 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
  Gdy odwołujesz się zasób następujące zagadnienia dotyczące mogą mieć wpływ, niezależnie od użycia odwołania zasób statyczny lub odwołanie do zasobu dynamicznego:  
   
--   Ogólny projekt tworzenia zasobów dla aplikacji (na stronę w aplikacji, w luźno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], w zestawie tylko zasobów).  
+- Ogólny projekt tworzenia zasobów dla aplikacji (na stronę w aplikacji, w luźno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], w zestawie tylko zasobów).  
   
--   Funkcjonalność aplikacji: Trwa aktualizowanie zasobów w czasie rzeczywistym część wymagań aplikacji?  
+- Funkcjonalność aplikacji: Trwa aktualizowanie zasobów w czasie rzeczywistym część wymagań aplikacji?  
   
--   Zachowanie wyszukiwania odpowiednich tego typu odwołanie do zasobu.  
+- Zachowanie wyszukiwania odpowiednich tego typu odwołanie do zasobu.  
   
--   Przez określoną właściwość lub typ zasobu i natywnych zachowanie tych typów.  
+- Przez określoną właściwość lub typ zasobu i natywnych zachowanie tych typów.  
   
 ### <a name="static-resources"></a>Zasoby statyczne  
  Zasób statyczny odwołuje się do pracy najlepiej w następujących sytuacjach:  
   
--   Projekt aplikacji koncentruje się przede wszystkim jej zasobów na stronie lub zasobów na poziomie aplikacji słowników. Odwołania do zasobów statycznych nie są ponownie oceniane oparte na środowisko uruchomieniowe zachowań, takich jak ponowne załadowanie strony i dlatego może być pewne korzyści wydajności do uniknięcia dużej liczby odwołań zasób dynamiczny, gdy nie są niezbędne dla zasobu i Projekt aplikacji.  
+- Projekt aplikacji koncentruje się przede wszystkim jej zasobów na stronie lub zasobów na poziomie aplikacji słowników. Odwołania do zasobów statycznych nie są ponownie oceniane oparte na środowisko uruchomieniowe zachowań, takich jak ponowne załadowanie strony i dlatego może być pewne korzyści wydajności do uniknięcia dużej liczby odwołań zasób dynamiczny, gdy nie są niezbędne dla zasobu i Projekt aplikacji.  
   
--   Ustawiono wartość właściwości, który nie jest włączony <xref:System.Windows.DependencyObject> lub <xref:System.Windows.Freezable>.  
+- Ustawiono wartość właściwości, który nie jest włączony <xref:System.Windows.DependencyObject> lub <xref:System.Windows.Freezable>.  
   
--   Tworzysz słownika zasobów, który będzie kompilowana do biblioteki DLL i spakowany jako część aplikacji lub udostępniane między aplikacjami.  
+- Tworzysz słownika zasobów, który będzie kompilowana do biblioteki DLL i spakowany jako część aplikacji lub udostępniane między aplikacjami.  
   
--   Tworzysz motywu dla formantu niestandardowego i są definiowane zasoby, które są używane w ramach tematów. Dla tego przypadku zwykle nie chcesz zachowania wyszukiwania odwołanie do zasobu dynamicznego, zamiast tego chcesz, aby zachowanie odwołań statycznych zasobów, aby wyszukiwanie jest przewidywalne, niezależna do motywu. Zasób dynamiczny odwołania, nawet pozostanie odwołania w motywie nieznanym aż do czasu, a istnieje ryzyko, że po motyw zastosowane, niektóre lokalny element będzie ponownie zdefiniować, Twój wybrany motyw chcesz odwołać klucz i elementu lokalnego spadną wcześniejsze do motywu sam w wyszukiwania. Jeśli tak się stanie, Twój wybrany motyw nie będzie działać w oczekiwany sposób.  
+- Tworzysz motywu dla formantu niestandardowego i są definiowane zasoby, które są używane w ramach tematów. Dla tego przypadku zwykle nie chcesz zachowania wyszukiwania odwołanie do zasobu dynamicznego, zamiast tego chcesz, aby zachowanie odwołań statycznych zasobów, aby wyszukiwanie jest przewidywalne, niezależna do motywu. Zasób dynamiczny odwołania, nawet pozostanie odwołania w motywie nieznanym aż do czasu, a istnieje ryzyko, że po motyw zastosowane, niektóre lokalny element będzie ponownie zdefiniować, Twój wybrany motyw chcesz odwołać klucz i elementu lokalnego spadną wcześniejsze do motywu sam w wyszukiwania. Jeśli tak się stanie, Twój wybrany motyw nie będzie działać w oczekiwany sposób.  
   
--   Używasz zasobów można ustawić dużą liczbę właściwości zależności. Właściwości zależności mają wartość efektywna buforowania obsługiwanej przez system właściwości, więc jeśli podasz wartość dla właściwości zależności, które mogą być obliczane w czasie ładowania właściwości zależności nie ma pod kątem reevaluated wyrażenia i może zwrócić Ostatnia wartość skuteczne. Ta technika może być korzyści wydajności.  
+- Używasz zasobów można ustawić dużą liczbę właściwości zależności. Właściwości zależności mają wartość efektywna buforowania obsługiwanej przez system właściwości, więc jeśli podasz wartość dla właściwości zależności, które mogą być obliczane w czasie ładowania właściwości zależności nie ma pod kątem reevaluated wyrażenia i może zwrócić Ostatnia wartość skuteczne. Ta technika może być korzyści wydajności.  
   
--   Aby zmienić bazowego zasobu dla wszystkich użytkowników lub chcesz utrzymywać osobnych wystąpień do zapisu dla każdego użytkownika przy użyciu [x: atrybut udostępnione](../../xaml-services/x-shared-attribute.md).  
+- Aby zmienić bazowego zasobu dla wszystkich użytkowników lub chcesz utrzymywać osobnych wystąpień do zapisu dla każdego użytkownika przy użyciu [x: atrybut udostępnione](../../xaml-services/x-shared-attribute.md).  
   
 #### <a name="static-resource-lookup-behavior"></a>Zachowanie Wyszukaj zasób statyczny  
   
@@ -84,28 +84,28 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
 ### <a name="dynamic-resources"></a>Dynamiczne zasobów  
  Zasoby dynamicznej najlepiej działać dla następujących okolicznościach:  
   
--   Wartości zasobu zależy od warunków, które nie są znane aż do czasu. Obejmuje to zasobów systemowych lub zasobów, które są w przeciwnym razie użytkownik do ustawienia. Na przykład można utworzyć wartości metody ustawiającej, które odwołują się do właściwości systemu, zgodnie z udostępnianych przez <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, lub <xref:System.Windows.SystemParameters>. Te wartości są naprawdę dynamiczne, ponieważ ostatecznie pochodzą one z środowisko uruchomieniowe, użytkownika i systemu operacyjnego. Można również zainstalować motywów dodatku poziomu aplikacji, które mogą ulec zmianie, gdy dostęp do zasobów na poziomie strony musi również przechwytywania zmiany.  
+- Wartości zasobu zależy od warunków, które nie są znane aż do czasu. Obejmuje to zasobów systemowych lub zasobów, które są w przeciwnym razie użytkownik do ustawienia. Na przykład można utworzyć wartości metody ustawiającej, które odwołują się do właściwości systemu, zgodnie z udostępnianych przez <xref:System.Windows.SystemColors>, <xref:System.Windows.SystemFonts>, lub <xref:System.Windows.SystemParameters>. Te wartości są naprawdę dynamiczne, ponieważ ostatecznie pochodzą one z środowisko uruchomieniowe, użytkownika i systemu operacyjnego. Można również zainstalować motywów dodatku poziomu aplikacji, które mogą ulec zmianie, gdy dostęp do zasobów na poziomie strony musi również przechwytywania zmiany.  
   
--   Tworzysz lub odwołuje się do stylów motywu dla formantu niestandardowego.  
+- Tworzysz lub odwołuje się do stylów motywu dla formantu niestandardowego.  
   
--   Zamierzasz dostosować zawartość <xref:System.Windows.ResourceDictionary> w okresie istnienia aplikacji.  
+- Zamierzasz dostosować zawartość <xref:System.Windows.ResourceDictionary> w okresie istnienia aplikacji.  
   
--   Masz strukturę skomplikowane zasobów, która ma współzależności, gdzie mogą być wymagane odwołanie do przodu. Odwołania do zasobów statycznych nie obsługują odwołania w przód, ale odwołania do zasobów dynamicznej obsługuje je, ponieważ zasób nie musi przyjąć aż do czasu, a odwołania w przód w związku z tym nie są istotne pojęcia.  
+- Masz strukturę skomplikowane zasobów, która ma współzależności, gdzie mogą być wymagane odwołanie do przodu. Odwołania do zasobów statycznych nie obsługują odwołania w przód, ale odwołania do zasobów dynamicznej obsługuje je, ponieważ zasób nie musi przyjąć aż do czasu, a odwołania w przód w związku z tym nie są istotne pojęcia.  
   
--   Utworzono odwołanie do zasobu, który jest szczególnie duże z punktu widzenia kompilacji lub zestaw roboczy i zasobu nie mogą być używane, natychmiast, gdy strona ładuje się. Odwołania do zasobów statycznych zawsze Ładuj z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] po załadowaniu strony; jednak odwołanie do zasobu dynamicznego nie ładuje się dopóki nie będzie faktycznie używana.  
+- Utworzono odwołanie do zasobu, który jest szczególnie duże z punktu widzenia kompilacji lub zestaw roboczy i zasobu nie mogą być używane, natychmiast, gdy strona ładuje się. Odwołania do zasobów statycznych zawsze Ładuj z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] po załadowaniu strony; jednak odwołanie do zasobu dynamicznego nie ładuje się dopóki nie będzie faktycznie używana.  
   
--   Tworzysz styl, w którym wartości metody ustawiającej mogą pochodzić od innych wartości, które mają wpływ, motywy lub inne ustawienia użytkownika.  
+- Tworzysz styl, w którym wartości metody ustawiającej mogą pochodzić od innych wartości, które mają wpływ, motywy lub inne ustawienia użytkownika.  
   
--   Zasoby są stosowane do elementów, które mogą być pokrewnym w drzewie logicznym okresie istnienia aplikacji. Zmiana nadrzędnej również potencjalnie zmienia zakres wyszukiwania zasobów, a więc chcąc zasobów dla elementu reparented go obliczyć ponownie na podstawie nowego zakresu, zawsze odwołanie do zasobu dynamicznego.  
+- Zasoby są stosowane do elementów, które mogą być pokrewnym w drzewie logicznym okresie istnienia aplikacji. Zmiana nadrzędnej również potencjalnie zmienia zakres wyszukiwania zasobów, a więc chcąc zasobów dla elementu reparented go obliczyć ponownie na podstawie nowego zakresu, zawsze odwołanie do zasobu dynamicznego.  
   
 #### <a name="dynamic-resource-lookup-behavior"></a>Zachowanie Wyszukaj zasób dynamiczny  
  Zachowanie wyszukiwania zasobów dla odwołania do zasobu dynamicznego równoleżnikami zachowania wyszukiwania w kodzie, jeśli wywołasz <xref:System.Windows.FrameworkElement.FindResource%2A> lub <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
 1. Proces wyszukiwania sprawdza, czy żądany klucz w słowniku zasobów, zdefiniowany przez element, który ustawia właściwość.  
   
-    -   Jeśli element definiuje <xref:System.Windows.FrameworkElement.Style%2A> właściwości <xref:System.Windows.Style.Resources%2A> słownika w ramach <xref:System.Windows.Style> jest zaznaczone.  
+    - Jeśli element definiuje <xref:System.Windows.FrameworkElement.Style%2A> właściwości <xref:System.Windows.Style.Resources%2A> słownika w ramach <xref:System.Windows.Style> jest zaznaczone.  
   
-    -   Jeśli element definiuje <xref:System.Windows.Controls.Control.Template%2A> właściwości <xref:System.Windows.FrameworkTemplate.Resources%2A> słownika w ramach <xref:System.Windows.FrameworkTemplate> jest zaznaczone.  
+    - Jeśli element definiuje <xref:System.Windows.Controls.Control.Template%2A> właściwości <xref:System.Windows.FrameworkTemplate.Resources%2A> słownika w ramach <xref:System.Windows.FrameworkTemplate> jest zaznaczone.  
   
 2. Proces wyszukiwania jest przesyłany w górę, drzewo logiczne do elementu nadrzędnego i jego słownika zasobów. Ten proces jest kontynuowany aż do osiągnięcia elementu głównego.  
   
@@ -117,20 +117,20 @@ Zasób jest obiektem, który może być ponownie używane w różnych miejscach 
   
  Zachowanie wyjątku (jeśli istnieje) różni się od:  
   
--   Jeśli zasób żądanej <xref:System.Windows.FrameworkElement.FindResource%2A> wywołać, a nie został znaleziony, zgłaszany jest wyjątek.  
+- Jeśli zasób żądanej <xref:System.Windows.FrameworkElement.FindResource%2A> wywołać, a nie został znaleziony, zgłaszany jest wyjątek.  
   
--   Jeśli zasób żądanej <xref:System.Windows.FrameworkElement.TryFindResource%2A> wywołać, a nie został znaleziony, jest zgłaszany żaden wyjątek, ale jest zwracana wartość `null`. Jeśli właściwością nie akceptuje `null`, a następnie jest nadal możliwe, zostanie wygenerowany wyjątek bardziej (jest zależna od poszczególnych właściwości ustawiany).  
+- Jeśli zasób żądanej <xref:System.Windows.FrameworkElement.TryFindResource%2A> wywołać, a nie został znaleziony, jest zgłaszany żaden wyjątek, ale jest zwracana wartość `null`. Jeśli właściwością nie akceptuje `null`, a następnie jest nadal możliwe, zostanie wygenerowany wyjątek bardziej (jest zależna od poszczególnych właściwości ustawiany).  
   
--   Jeśli zasób zażądano przez odwołanie zasób dynamiczny w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]i nie został znaleziony, a następnie zachowanie zależy od systemu ogólne właściwości, ale ogólne działanie tak, jakby żadna operacja ustawienie właściwości wystąpił na poziomie, w której istnieje zasób. Na przykład Jeśli spróbujesz ustawić tła dla elementu poszczególnych przycisk za pomocą zasobu, którego nie można obliczyć, następnie ustawiona żadna wartość wyników, ale wartość efektywna nadal mogą pochodzić z innych uczestników pierwszeństwo systemu i wartości właściwości. Na przykład wartość tła nadal mogą pochodzić z styl przycisku zdefiniowane lokalnie lub stylów kompozycji. Dla właściwości, które nie są zdefiniowane przez style motyw efektywną wartość po ocenie zasobu nie powiodło się mogą pochodzić z wartością domyślną w metadanych właściwości modelu.  
+- Jeśli zasób zażądano przez odwołanie zasób dynamiczny w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]i nie został znaleziony, a następnie zachowanie zależy od systemu ogólne właściwości, ale ogólne działanie tak, jakby żadna operacja ustawienie właściwości wystąpił na poziomie, w której istnieje zasób. Na przykład Jeśli spróbujesz ustawić tła dla elementu poszczególnych przycisk za pomocą zasobu, którego nie można obliczyć, następnie ustawiona żadna wartość wyników, ale wartość efektywna nadal mogą pochodzić z innych uczestników pierwszeństwo systemu i wartości właściwości. Na przykład wartość tła nadal mogą pochodzić z styl przycisku zdefiniowane lokalnie lub stylów kompozycji. Dla właściwości, które nie są zdefiniowane przez style motyw efektywną wartość po ocenie zasobu nie powiodło się mogą pochodzić z wartością domyślną w metadanych właściwości modelu.  
   
 #### <a name="restrictions"></a>Ograniczenia  
  Zasób dynamiczny odwołania mają pewne ograniczenia istotne. Wymaga spełnienia co najmniej jedną z następujących warunków:  
   
--   Ustawienia właściwości musi być właściwością na <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>. Czy właściwości muszą być chronione przez <xref:System.Windows.DependencyProperty>.  
+- Ustawienia właściwości musi być właściwością na <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>. Czy właściwości muszą być chronione przez <xref:System.Windows.DependencyProperty>.  
   
--   Odwołanie jest podanie wartości w ramach <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+- Odwołanie jest podanie wartości w ramach <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
   
--   Ustawienia właściwości musi być właściwością na <xref:System.Windows.Freezable> dostarczanym w wartości <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> właściwości lub <xref:System.Windows.Setter> wartość.  
+- Ustawienia właściwości musi być właściwością na <xref:System.Windows.Freezable> dostarczanym w wartości <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> właściwości lub <xref:System.Windows.Setter> wartość.  
   
  Ponieważ musi być właściwością <xref:System.Windows.DependencyProperty> lub <xref:System.Windows.Freezable> właściwości większość zmian właściwości możesz propagować do interfejsu użytkownika, ponieważ zmiana właściwości (wartość zmienione zasób dynamiczny) zostało potwierdzone przez system właściwości. Większość formantów obejmują logikę, która wymusi inny układ formantu, jeśli <xref:System.Windows.DependencyProperty> zmiany i czy właściwość może mieć wpływ na układ. Jednak nie wszystkie właściwości, ma [dynamicresource — rozszerzenie znaczników](dynamicresource-markup-extension.md) jako ich wartość jest gwarantowane Podaj wartość w taki sposób, że one aktualizowane w czasie rzeczywistym w interfejsie użytkownika. Te funkcje wciąż mogą się różnić w zależności od właściwości, a także w zależności od typu, który jest właścicielem właściwości lub nawet logicznej struktury aplikacji.  
   

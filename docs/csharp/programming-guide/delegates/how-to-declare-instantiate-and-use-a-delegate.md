@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 ms.openlocfilehash: 7166c27a946fb76c9351647ac6465c151866a2ad
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61681211"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Instrukcje: Deklarowanie, tworzenie wystąpień i użycie delegowania (C# Programming Guide)
 W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poniższym przykładzie.  
@@ -42,7 +42,7 @@ W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poni
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   
--   Deklarowanie delegata.  
+- Deklarowanie delegata.  
   
      Poniższa instrukcja deklaruje nowy typ delegata.  
   
@@ -50,7 +50,7 @@ W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poni
   
      Każdy typ delegata opisuje liczbę i typy argumentów oraz typ wartość zwracaną metody, które można hermetyzacji. Zawsze, gdy będzie potrzebny nowy zestaw typów argumentów lub typ zwracanej wartości, musi być zadeklarowany nowy typ delegata.  
   
--   Utworzenie wystąpienia delegata.  
+- Utworzenie wystąpienia delegata.  
   
      Po zadeklarowany typ delegata obiektu delegowanego muszą być tworzone i skojarzonych z konkretną metodę. W poprzednim przykładzie, możesz to zrobić, przekazując `PrintTitle` metody `ProcessPaperbackBooks` metodę jak w poniższym przykładzie:  
   
@@ -64,7 +64,7 @@ W języku C# 1.0 lub nowszy można zadeklarować delegatów, jak pokazano w poni
   
      Po utworzeniu delegata, metoda jest skojarzony z nigdy nie zmiany. Delegat obiekty są niezmienne.  
   
--   Podczas wywoływania delegata.  
+- Podczas wywoływania delegata.  
   
      Po utworzeniu obiektu delegowanego, obiektu delegowanego jest zazwyczaj przekazywany do innego kodu, który wywoła delegata. Obiekt delegowany jest wywoływany przez przy użyciu nazwy obiektu delegowanego, następuje argumenty ujęty w nawiasy, które zostaną przekazane do delegata. Poniżej znajduje się przykład wywołania delegata:  
   

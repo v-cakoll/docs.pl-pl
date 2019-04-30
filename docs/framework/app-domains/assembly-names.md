@@ -8,11 +8,11 @@ ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675081"
 ---
 # <a name="assembly-names"></a>Nazwy zestawów
 Nazwa zestawu jest przechowywany w metadanych i ma znaczny wpływ na zakres zestawu i użycia przez aplikację. Zestawu z silną nazwą ma w pełni kwalifikowana nazwa, która zawiera nazwę zestawu, kultury, klucz publiczny i numer wersji. Jest to często określane jako wyświetlaną nazwę i dla zestawów załadowanych można uzyskać za pomocą <xref:System.Reflection.Assembly.FullName%2A> właściwości.  

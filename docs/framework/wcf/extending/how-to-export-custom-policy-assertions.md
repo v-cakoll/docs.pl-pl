@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767172"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: eksportowanie niestandardowych asercji zasad
 Asercji zasad opisano możliwości i wymagania dotyczące punktu końcowego usługi. Aplikacje usługi można użyć niestandardowych asercji zasad w metadanych usługi do komunikacji z punktu końcowego, binding lub umowy informacje o dostosowaniu do aplikacji klienckiej. Windows Communication Foundation (WCF) umożliwia eksportowanie asercji w wyrażeniach zasad dołączone w powiązaniach WSDL na punkt końcowy, operacji lub tematów wiadomości, w zależności od możliwości i wymagania, które komunikują się.  

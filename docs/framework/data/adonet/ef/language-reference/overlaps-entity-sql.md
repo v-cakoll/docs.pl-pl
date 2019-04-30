@@ -3,11 +3,11 @@ title: Nakładania się (jednostka SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760275"
 ---
 # <a name="overlaps-entity-sql"></a>Nakładania się (jednostka SQL)
 Określa, czy dwie kolekcje mają wspólne elementy.  

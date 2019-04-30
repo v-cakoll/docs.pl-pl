@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765576"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting usługi danych (WCF Data Services)
 Korzystając z usług danych WCF, można utworzyć usługę, która udostępnia dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta usługa danych jest zdefiniowany jako klasę, która dziedziczy z <xref:System.Data.Services.DataService%601>. Ta klasa udostępnia funkcje wymagane do przetwarzania komunikatów żądań, przeprowadzania aktualizacji względem źródła danych i generowanie wiadomości odpowiedzi, zgodnie z wymaganiami protokołu OData. Jednak usługa danych nie można powiązać i nasłuchiwanie przychodzących żądań HTTP na gnieździe sieci. Dla tej funkcji wymagane usługi danych opiera się na składniku hostingowych.
 
  Host usługi danych wykonuje następujące zadania w imieniu usługi danych:
 
--   Nasłuchuje żądań i kieruje żądania do usługi danych.
+- Nasłuchuje żądań i kieruje żądania do usługi danych.
 
--   Tworzy wystąpienie usługi danych dla każdego żądania.
+- Tworzy wystąpienie usługi danych dla każdego żądania.
 
--   Czy usługa danych przetwarzać żądania przychodzącego żądania.
+- Czy usługa danych przetwarzać żądania przychodzącego żądania.
 
--   Wysyła odpowiedź w imieniu usługi danych.
+- Wysyła odpowiedź w imieniu usługi danych.
 
  Aby uprościć hostująca usługę danych, usługi danych WCF został zaprojektowany do integrowania za pomocą programu Windows Communication Foundation (WCF). Usługi danych udostępnia domyślną implementację WCF, która służy jako hosta usługi danych w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. W związku z tym można hostować usługi danych w jednym z następujących sposobów:
 
--   W [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.
+- W [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji.
 
--   W aplikacji zarządzanej, który obsługuje samodzielnie hostowanej usługi WCF.
+- W aplikacji zarządzanej, który obsługuje samodzielnie hostowanej usługi WCF.
 
--   W niektórych innych niestandardowych danych hosta usługi.
+- W niektórych innych niestandardowych danych hosta usługi.
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hosting usługi danych w aplikacji ASP.NET
 
@@ -65,13 +65,13 @@ Kiedy używasz **Dodaj nowy element** okna dialogowego w programie Visual Studio
 ## <a name="defining-a-custom-data-service-host"></a>Definiowanie hosta usługi danych niestandardowych
  W przypadkach, w których implementacja hosta usługi WCF jest zbyt restrykcyjne można również zdefiniować niestandardowy host usługi danych. Każda klasa implementująca <xref:System.Data.Services.IDataServiceHost> interfejs może służyć jako hosta sieci usługi danych. Niestandardowy host musi implementować <xref:System.Data.Services.IDataServiceHost> interfejs i obsługiwać następujące obowiązki podstawowe dane hosta usługi:
 
--   Usługi danych należy udostępnić ścieżkę katalogu głównego usługi.
+- Usługi danych należy udostępnić ścieżkę katalogu głównego usługi.
 
--   Przetwarzania żądań i odpowiedzi informacji nagłówki do odpowiedniego <xref:System.Data.Services.IDataServiceHost> implementacji elementu członkowskiego.
+- Przetwarzania żądań i odpowiedzi informacji nagłówki do odpowiedniego <xref:System.Data.Services.IDataServiceHost> implementacji elementu członkowskiego.
 
--   Obsługa wyjątków zgłaszanych przez usługę danych.
+- Obsługa wyjątków zgłaszanych przez usługę danych.
 
--   Sprawdza poprawność parametrów ciągu zapytania.
+- Sprawdza poprawność parametrów ciągu zapytania.
 
 ## <a name="see-also"></a>Zobacz także
 

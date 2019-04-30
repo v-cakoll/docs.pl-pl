@@ -3,32 +3,32 @@ title: Siatki elementów równorzędnych
 ms.date: 03/30/2017
 ms.assetid: d93e312e-ac04-40f8-baea-5da1cacb546e
 ms.openlocfilehash: afd9eae36f28c28b33b74c4456feb4ba8c91314d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766795"
 ---
 # <a name="peer-meshes"></a>Siatki elementów równorzędnych
-A *siatki* jest w nazwanej kolekcji (wykres połączonych) węzły równorzędne, który może komunikować się między sobą i które są identyfikowane przez identyfikator unikatowy siatki. Każdy węzeł jest podłączony do wielu innych węzłów. W dobrze połączonych sieci jest ścieżką żadnych dwóch węzłów z małej liczbie przeskoków między węzłami w ostatniej krawędzi siatkę, i siatkę pozostanie połączonych, nawet jeśli niektóre węzły lub połączeń porzucić. Aktywnych węzłów w siatce publikowanie informacji o ich punktu końcowego z odpowiedni identyfikator sieci, dzięki czemu można je znaleźć innych elementów równorzędnych.  
+A *siatki* jest nazywany kolekcją (wykres wzajemnie połączonych) węzłów równorzędnych, który może komunikować się między sobą i które są identyfikowane przez identyfikator unikatowy siatki Każdy węzeł jest połączony z wielu innych węzłów. W dobrze połączonych siatki istnieje ścieżka między dwoma węzłami, przy użyciu stosunkowo kilka przeskoków między węzłami na krawędziach najdalszego siatki, i siatkę pozostanie połączony, nawet jeśli niektóre węzły lub połączenia z nich ją. Aktywnych węzłów w siatce publikuje swoje informacje o punkcie końcowym z odpowiedni identyfikator siatki tak, aby je znaleźć innych elementów równorzędnych.  
   
 ## <a name="characteristics-of-a-mesh-created-using-peer-channel"></a>Właściwości siatki utworzone za pomocą kanału równorzędnego  
   
-#### <a name="uniquely-identified"></a>Unikatowa identyfikacja  
+#### <a name="uniquely-identified"></a>Jednoznacznie zidentyfikować  
   
--   Unikatowy identyfikator identyfikuje każdego siatki. Nazwa sieci (lub identyfikator sieci) jest w tym samym formacie co nazwa hosta systemu nazw domen (DNS, Domain Name System). W efekcie tego Identyfikatora sieci musi być unikatowa dla danego klienta aplikacji w zakresie rozpoznawania używany. Nazwa pospolita, takie jak "MyFamilysPeers" lub "KevinsPokerTable", łatwo może dojść do kolizji z innymi nazwami użytkowników i niezamierzone elementów równorzędnych może zwrócić informacje o punkcie końcowym, który może spowodować problemy z prywatności lub zwiększyć opóźnienie połączenia. Jednym ze sposobów uniknąć tych problemów może być mają zostać dodane Unikatowy identyfikator jako przyrostek pseudonimu dla sieci (na przykład "KevinsPokerTable90210").  
+- Unikatowy identyfikator identyfikuje każdy siatki. Nazwa siatki (lub identyfikator siatki) jest w tym samym formacie co nazwa hosta systemu nazw domen (DNS, Domain Name System). Jako takie ten identyfikator siatki, musi być unikatowa dla właściwego klienta w zakresie stosowania mechanizmu rozpoznawania używany. Nazwa pospolita, takie jak "MyFamilysPeers" lub "KevinsPokerTable," łatwo może dojść do kolizji z nazwami innych użytkowników i niezamierzone elementów równorzędnych może zwrócić informacje o punkcie końcowym, który może spowodować problemy z zachowania lub zwiększyć czas oczekiwania na połączenie. Jednym ze sposobów, aby uniknąć tych problemów może być Dodaj Unikatowy identyfikator jako przyrostkowe do pseudonimu dla siatki (na przykład "KevinsPokerTable90210").  
   
-#### <a name="message-flooding"></a>Zalewania wiadomości  
+#### <a name="message-flooding"></a>Komunikat o przepełnieniu  
   
--   Sieci umożliwia propagowane do innych węzłów równorzędnych w tej samej sieci z co najmniej jednego nadawcy wiadomości. Komunikaty w sposób przez węzły równorzędne Użyj nagłówków określone w przestrzeni nazw na `http://schemas.microsoft.com/net/2006/05/peer`.  
+- Siatka umożliwia propagowane do innych węzłów elementów równorzędnych w tej samej siatki z co najmniej jeden nadawców wiadomości. Komunikaty nadmiernej ilości danych przez węzły równorzędne Użyj nagłówków określone w przestrzeni nazw na `http://schemas.microsoft.com/net/2006/05/peer`.  
   
 #### <a name="optimized-connections"></a>Zoptymalizowane połączeń  
   
--   Siatka kanału równorzędnego automatycznie dostosowuje podczas węzłów join i pozostawić, zapewniając, że wszystkie węzły mają dobrej łączności z małego ryzyko tworzenie partycji (grupy węzłów odizolowane od siebie). W siatce są również dynamicznie optymalizowane na podstawie bieżącego wzorce ruchu, aby możliwie najmniejsze opóźnienia wiadomość od nadawcy do odbiornika.  
+- Siatki kanał elementu równorzędnego są automatycznie dostosowuje, gdy węzły Dołącz wyjść, zapewniając, że wszystkie węzły mają dobrej łączności z niewielkie prawdopodobieństwo tworzenie partycji (grupy węzłów odizolowane od siebie). Połączenia w siatce również dynamiczne są optymalizowane w oparciu o bieżące wzorce ruchu, aby możliwie najmniejsze opóźnienie wiadomości od nadawcy do odbiorcy.  
   
-#### <a name="popular-network-features-that-peer-channel-does-not-provide"></a>Popularne sieci funkcje, które nie ma kanału równorzędnego  
- Należy mieć świadomość sieci popularnych funkcji zapewniających kanał elementu równorzędnego nie. Te funkcje, które mogą wszystkie być zbudowane w oparciu kanału równorzędnego, są następujące:  
+#### <a name="popular-network-features-that-peer-channel-does-not-provide"></a>Sieć popularnych funkcji zapewniających kanał elementu równorzędnego nie  
+ Należy mieć świadomość sieci popularnych funkcji zapewniających kanał elementu równorzędnego nie. Te funkcje, które mogą wszystkie zostać posiadanych kanał elementu równorzędnego, są następujące:  
   
--   **Porządkowanie wiadomości:** wiadomości pochodzących z jednego źródła nie może pojawić na wszystkich innych stron w tej samej kolejności lub w kolejności wysłania źródła. Aplikacje, które wymagają wiadomości były dostarczane w określonej kolejności należy utworzyć ją w swoich aplikacjach (na przykład, umieszczając w niej monotonicznie rosnący identyfikator o wszystkie komunikaty).  
+- **Kolejność komunikatów:** Komunikatów pochodzących z jednego źródła nie może pojawić się na wszystkich innych stron w tej samej kolejności lub w kolejności wysyłane źródła. Aplikacje, które wymagają komunikaty były dostarczane w określonej kolejności wbudować go w swoich aplikacjach (na przykład w wyniku umieszczenia monotonicznie rosnący identyfikator przy użyciu wszystkich komunikatów).  
   
--   **Niezawodna obsługa komunikatów:** kanał elementu równorzędnego nie ma mechanizmu zapewnić odbiór wiadomości przez wszystkie elementy równorzędne. Aby zagwarantować dostarczanie komunikatów, musi być zapisana niezawodności warstwą kanał elementu równorzędnego.
+- **Niezawodna obsługa komunikatów:** Kanał elementu równorzędnego nie obejmuje mechanizmu, aby zapewnić odbiór wiadomości przez wszystkich elementów równorzędnych. Aby zagwarantować dostarczanie komunikatów, należy napisać warstwę niezawodności na podstawie kanał elementu równorzędnego.

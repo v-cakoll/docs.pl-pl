@@ -12,27 +12,27 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705652"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Instrukcje: Ładowanie zestawów do domeny aplikacji
 Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną metodą jest użycie `static` (`Shared` w języku Visual Basic) <xref:System.Reflection.Assembly.Load%2A> metody <xref:System.Reflection.Assembly?displayProperty=nameWithType> klasy. Inne sposoby, które zestawy można załadować obejmują:  
   
--   <xref:System.Reflection.Assembly.LoadFrom%2A> Metody <xref:System.Reflection.Assembly> klasy ładuje zestaw podanej lokalizacji pliku. Ładowanie zestawów przy użyciu tej metody używa kontekstu różne obciążenia.  
+- <xref:System.Reflection.Assembly.LoadFrom%2A> Metody <xref:System.Reflection.Assembly> klasy ładuje zestaw podanej lokalizacji pliku. Ładowanie zestawów przy użyciu tej metody używa kontekstu różne obciążenia.  
   
--   <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody ładowania zestawu do kontekstu reflection-only. Zestawy ładowane w tym kontekście można zbadać, ale nie jest to wykonywane, dzięki czemu badania zestawów, przeznaczonych dla innych platform. Zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> i <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A> metody ładowania zestawu do kontekstu reflection-only. Zestawy ładowane w tym kontekście można zbadać, ale nie jest to wykonywane, dzięki czemu badania zestawów, przeznaczonych dla innych platform. Zobacz [jak: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 > [!NOTE]
 >  Kontekstu reflection-only jest nowa w .NET Framework w wersji 2.0.  
   
--   Metody takie jak <xref:System.AppDomain.CreateInstance%2A> i <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> z <xref:System.AppDomain> klasy można ładować zestawy do domeny aplikacji.  
+- Metody takie jak <xref:System.AppDomain.CreateInstance%2A> i <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> z <xref:System.AppDomain> klasy można ładować zestawy do domeny aplikacji.  
   
--   <xref:System.Type.GetType%2A> Metody <xref:System.Type> klasy można ładować zestawy.  
+- <xref:System.Type.GetType%2A> Metody <xref:System.Type> klasy można ładować zestawy.  
   
--   <xref:System.AppDomain.Load%2A> Metody <xref:System.AppDomain?displayProperty=nameWithType> klasy można ładować zestawy, ale jest używany głównie dla współdziałania COM. Nie można stosować ładować zestawy do domeny aplikacji innej niż ta, z którego jest wywoływana.  
+- <xref:System.AppDomain.Load%2A> Metody <xref:System.AppDomain?displayProperty=nameWithType> klasy można ładować zestawy, ale jest używany głównie dla współdziałania COM. Nie można stosować ładować zestawy do domeny aplikacji innej niż ta, z którego jest wywoływana.  
   
 > [!NOTE]
 >  Począwszy od programu .NET Framework w wersji 2.0 środowisko uruchomieniowe nie załaduje zestawu, który został skompilowany przy użyciu wersji programu .NET Framework, który ma wyższy numer wersji niż obecnie załadowanym środowiskiem uruchomieniowym. Dotyczy to kombinacja składniki główny i pomocniczy numer wersji.  

@@ -3,11 +3,11 @@ title: 'Instrukcje: Zapytanie w ArrayList za pomocą LINQ (C#)'
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
 ms.openlocfilehash: 9276ebe02858d7a7e295430b0125c590b9c2f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702051"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>Instrukcje: Zapytanie w ArrayList za pomocą LINQ (C#)
 Gdy za pomocą LINQ do kwerendy nieogólnego <xref:System.Collections.IEnumerable> kolekcji, takie jak <xref:System.Collections.ArrayList>, należy jawnie zadeklarować rodzaj zmiennej zakresu w celu odzwierciedlenia określonego typu obiektów w kolekcji. Na przykład, jeśli masz <xref:System.Collections.ArrayList> z `Student` obiektów, Twoje [klauzuli from](../../../../csharp/language-reference/keywords/from-clause.md) powinien wyglądać następująco:  

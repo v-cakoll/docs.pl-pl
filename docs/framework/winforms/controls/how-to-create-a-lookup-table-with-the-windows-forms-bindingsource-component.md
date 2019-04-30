@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747060"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Instrukcje: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows
 Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która wyświetla dane z rekordów w powiązanej tabeli. W poniższych procedurach <xref:System.Windows.Forms.ComboBox> formantu służy do wyświetlania pól z relacji klucza obcego z obiektu nadrzędnego do tabeli podrzędnej.  
@@ -37,13 +37,13 @@ Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która
   
  Cztery ważne właściwości są ustawione na [ComboBox, kontrolka](combobox-control-windows-forms.md) kontroli można utworzyć tabeli odnośników.  
   
--   <xref:System.Windows.Forms.ComboBox.DataSource%2A> Właściwość zawiera nazwę tabeli.  
+- <xref:System.Windows.Forms.ComboBox.DataSource%2A> Właściwość zawiera nazwę tabeli.  
   
--   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Właściwość zawiera kolumny danych tej tabeli, którą chcesz wyświetlić tekst formantu (nazwy klienta).  
+- <xref:System.Windows.Forms.ListControl.DisplayMember%2A> Właściwość zawiera kolumny danych tej tabeli, którą chcesz wyświetlić tekst formantu (nazwy klienta).  
   
--   <xref:System.Windows.Forms.ListControl.ValueMember%2A> Właściwość zawiera kolumny danych tej tabeli przy użyciu przechowywanych informacji (identyfikator tabeli nadrzędnej).  
+- <xref:System.Windows.Forms.ListControl.ValueMember%2A> Właściwość zawiera kolumny danych tej tabeli przy użyciu przechowywanych informacji (identyfikator tabeli nadrzędnej).  
   
--   <xref:System.Windows.Forms.ListControl.SelectedValue%2A> Właściwość zawiera wartość wyszukiwania dla tabeli podrzędnej na podstawie <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
+- <xref:System.Windows.Forms.ListControl.SelectedValue%2A> Właściwość zawiera wartość wyszukiwania dla tabeli podrzędnej na podstawie <xref:System.Windows.Forms.ListControl.ValueMember%2A>.  
   
  Poniższe procedury pokazują, jak określić układ formularza jako tabela odnośnika i powiązać dane z formantów na nim. Aby pomyślnie wykonać procedury, musi mieć źródło danych o tabele nadrzędne i podrzędne, które mają relacji klucza obcego, jak wspomniano wcześniej.  
   
@@ -65,21 +65,21 @@ Tabela odnośników znajduje się tabela danych, która zawiera kolumnę, która
   
 3. Kliknij strzałkę obok pozycji **źródła danych** pole listy rozwijanej. Jeśli wcześniej skonfigurowano źródła danych dla projektu lub formularza, pojawi się; w przeciwnym razie wykonaj następujące czynności (w tym przykładzie używa tabele Customers i Orders z przykładowej bazy danych Northwind i odwołuje się do nich w nawiasach).  
   
-    1.  Kliknij przycisk **Dodaj źródło danych projektu** do nawiązywania połączeń z danymi i Utwórz źródło danych.  
+    1. Kliknij przycisk **Dodaj źródło danych projektu** do nawiązywania połączeń z danymi i Utwórz źródło danych.  
   
-    2.  Na **Kreatora konfiguracji źródła danych** strona powitalna, kliknij przycisk **dalej**.  
+    2. Na **Kreatora konfiguracji źródła danych** strona powitalna, kliknij przycisk **dalej**.  
   
-    3.  Wybierz **bazy danych** na **wybierz typ źródła danych** strony.  
+    3. Wybierz **bazy danych** na **wybierz typ źródła danych** strony.  
   
-    4.  Wybierz połączenie danych z listy dostępnych połączeń na **wybierz połączenie danych** strony. Jeśli żądane połączenie danych nie jest dostępna, wybierz **nowe połączenie** Aby utworzyć nowe połączenie danych.  
+    4. Wybierz połączenie danych z listy dostępnych połączeń na **wybierz połączenie danych** strony. Jeśli żądane połączenie danych nie jest dostępna, wybierz **nowe połączenie** Aby utworzyć nowe połączenie danych.  
   
-    5.  Kliknij przycisk **tak, Zapisz połączenie** można zapisać parametry połączenia w pliku konfiguracyjnym aplikacji.  
+    5. Kliknij przycisk **tak, Zapisz połączenie** można zapisać parametry połączenia w pliku konfiguracyjnym aplikacji.  
   
-    6.  Wybierz obiekty bazy danych w celu dostosowania do aplikacji. W takim przypadku wybierz tabelę nadrzędną i tabeli podrzędnej (na przykład klienci i zamówienia) z relacji klucza obcego.  
+    6. Wybierz obiekty bazy danych w celu dostosowania do aplikacji. W takim przypadku wybierz tabelę nadrzędną i tabeli podrzędnej (na przykład klienci i zamówienia) z relacji klucza obcego.  
   
-    7.  Zastąp domyślną nazwę zestawu danych, jeśli chcesz.  
+    7. Zastąp domyślną nazwę zestawu danych, jeśli chcesz.  
   
-    8.  Kliknij przycisk **Zakończ**.  
+    8. Kliknij przycisk **Zakończ**.  
   
 4. W **członkiem wyświetlania** listy rozwijanej wybierz pozycję Nazwa kolumny (na przykład nazwa kontaktu) mają być wyświetlane w polu kombi.  
   

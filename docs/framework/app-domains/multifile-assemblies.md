@@ -13,11 +13,11 @@ ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705483"
 ---
 # <a name="multifile-assemblies"></a>Zestawy wieloplikowe
 
@@ -30,14 +30,14 @@ Na przykład załóżmy, że gdy masz już aplikację, która zawiera dwa moduł
 
 Istnieje kilka powodów, warto utworzyć zestaw wieloplikowy:
 
--   Aby połączyć modułów napisanych w różnych językach. Jest to najbardziej typowe przyczyny tworzenia zestawu wieloplikowego.
+- Aby połączyć modułów napisanych w różnych językach. Jest to najbardziej typowe przyczyny tworzenia zestawu wieloplikowego.
 
--   Aby zoptymalizować, pobierania aplikacji poprzez umieszczenie rzadko używanych typów w module, który jest pobierany tylko wtedy, gdy jest to wymagane.
+- Aby zoptymalizować, pobierania aplikacji poprzez umieszczenie rzadko używanych typów w module, który jest pobierany tylko wtedy, gdy jest to wymagane.
 
     > [!NOTE]
     > Jeśli tworzysz aplikacje, które będą pobierane przy użyciu `<object>` tagu za pomocą programu Microsoft Internet Explorer jest ważne, aby utworzyć zestawy wieloplikowe. W tym scenariuszu utworzysz plik oddzielnie od moduły kodu, które zawiera jedynie manifestu zestawu. Program Internet Explorer pliki do pobrania manifestu zestawu, a następnie tworzy wątków do pobierania dodatkowych modułów ani zestawów wymaganych. Podczas pobierania pliku zawierającego manifest zestawu Internet Explorer będzie odpowiadać na dane wejściowe użytkownika. Mniejszy plik zawierający manifest zestawu, tym krótszy czas programu Internet Explorer będzie odpowiadać.
 
--   Aby połączyć modułów kodu, napisanych przez wielu deweloperów. Mimo że każdy deweloper może skompilować poszczególnych modułów kodu do zestawu, to wymuszenie pewnych typów publicznie narażonych, które nie są widoczne, jeśli wszystkie moduły są umieszczane w zestawu wieloplikowego.
+- Aby połączyć modułów kodu, napisanych przez wielu deweloperów. Mimo że każdy deweloper może skompilować poszczególnych modułów kodu do zestawu, to wymuszenie pewnych typów publicznie narażonych, które nie są widoczne, jeśli wszystkie moduły są umieszczane w zestawu wieloplikowego.
 
 Po utworzeniu zestawu, możesz utworzyć plik, który zawiera manifest zestawu (i tym samym zestawie), lub możesz nadać silnej nazwy pliku (i zestawu) i umieścić go w globalnej pamięci podręcznej.
 

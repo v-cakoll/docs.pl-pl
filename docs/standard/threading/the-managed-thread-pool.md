@@ -1,5 +1,5 @@
 ---
-title: Zarządzana Pula wątków
+title: Zarządzana pula wątków
 description: Dowiedz się więcej o pulę wątków .NET, która zapewnia tła wątków roboczych
 ms.date: 08/02/2018
 ms.technology: dotnet-standard
@@ -12,13 +12,13 @@ ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769138"
 ---
-# <a name="the-managed-thread-pool"></a>Zarządzana Pula wątków
+# <a name="the-managed-thread-pool"></a>Zarządzana pula wątków
 
 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> Klasa udostępnia aplikację z pulą wątków roboczych, które są zarządzane przez system, dzięki czemu możesz skupić się na zadania aplikacji, a nie wątku zarządzania. W przypadku krótkich zadania, które wymagają przetwarzania w tle zarządzana Pula wątków jest łatwy sposób korzystać z wielu wątków. Korzystanie z puli wątków jest znacznie łatwiejsze w Framework 4 lub nowszym, ponieważ tworzysz <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty, które wykonują zadania asynchroniczne na wątek puli wątków.  
   

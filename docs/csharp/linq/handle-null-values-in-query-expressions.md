@@ -4,13 +4,13 @@ description: Dowiedz się, jak Obsługa wartości zerowych w wyrażeniach zapyta
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
 ms.openlocfilehash: 14609aee2bbd1fbb487589bb41683a1f3cad1362
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61659894"
 ---
-# <a name="handle-null-values-in-query-expressions"></a>Obsługa wartości zerowych w wyrażeniach zapytań
+# <a name="handle-null-values-in-query-expressions"></a>Obsługa wartości null w wyrażeniach zapytań
 
 Ten przykład przedstawia sposób obsługi możliwych wartości null w kolekcji źródłowej. Kolekcja obiektów, takich jak <xref:System.Collections.Generic.IEnumerable%601> może zawierać elementy, których wartość jest [null](../language-reference/keywords/null.md). Jeśli kolekcja źródłowa jest pusta lub zawiera element, którego wartość jest równa null, a zapytanie nie obsługuje wartości null, <xref:System.NullReferenceException> zostanie zgłoszony podczas wykonywania zapytania.
 

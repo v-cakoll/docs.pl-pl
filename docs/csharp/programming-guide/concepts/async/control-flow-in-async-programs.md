@@ -3,11 +3,11 @@ title: Przepływ sterowania w programach Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702871"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Przepływ sterowania w programach async (C#)
 
@@ -17,9 +17,9 @@ Ogólnie rzecz biorąc Oznacz metody, które zawierają kod asynchroniczny [asyn
 
 W poniższym przykładzie użyto metody asynchronicznej, aby pobrać zawartość określonej witryny sieci Web jako ciąg i wyświetlić długość ciągu. Przykład zawiera następujących dwóch metod.
 
--   `startButton_Click`, która wywołuje metodę `AccessTheWebAsync` i wyświetla wynik.
+- `startButton_Click`, która wywołuje metodę `AccessTheWebAsync` i wyświetla wynik.
 
--   `AccessTheWebAsync`, który pobiera zawartość witryny sieci Web jako ciąg i zwraca długość ciągu. `AccessTheWebAsync` używa asynchronicznej <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, aby pobrać zawartość.
+- `AccessTheWebAsync`, który pobiera zawartość witryny sieci Web jako ciąg i zwraca długość ciągu. `AccessTheWebAsync` używa asynchronicznej <xref:System.Net.Http.HttpClient> metody <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>, aby pobrać zawartość.
 
 Ponumerowane wyświetlanych wierszy pojawiających się w strategiczny punktach w całym programie, aby lepiej zrozumieć, jak działa program i wyjaśnić, co się dzieje w każdym punkcie, który jest oznaczony. Wyświetlane wiersze są oznaczone etykietami od "ONE"do "sześć." Etykiety reprezentują kolejność, w jakiej program osiąga te wiersze kodu.
 

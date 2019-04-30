@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759937"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] struktury obsługuje możliwość definiowania niestandardowej klasy lub struktury w dowolnym [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] języka, a następnie dostęp przy użyciu znaczników XAML. Możesz użyć kombinacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]— określone typy i swoje niestandardowe w ramach tego samego pliku znaczników, zwykle przez mapowanie typów niestandardowych do prefiksu przestrzeni nazw XAML. W tym temacie omówiono wymagania które muszą spełniać klasę niestandardową, może być używany jako XAML element.  
@@ -20,19 +20,19 @@ XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptl
 ## <a name="custom-classes-in-applications-or-assemblies"></a>Klasy niestandardowe w aplikacji lub zespołów  
  Klasy niestandardowe, które są używane w XAML można zdefiniować na dwa różne sposoby: w związanym z kodem lub innego kodu, który tworzy podstawowy [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji lub jako klasy w oddzielnych zestawu, na przykład pliku wykonywalnego lub biblioteki DLL używane jako bibliotekę klas. Każda z tych metod ma określoną zalety i wady.  
   
--   Zaletą tworzenia biblioteki klas jest, że niestandardowych klas mogą być współużytkowane przez wiele aplikacji możliwe. Odrębnych bibliotek również sprawia, że problemy z wersjonowaniem aplikacji jest łatwiejsze do kontroli i upraszcza tworzenie klasy, gdzie jest użycie klasy zamierzony jako element główny strony XAML.  
+- Zaletą tworzenia biblioteki klas jest, że niestandardowych klas mogą być współużytkowane przez wiele aplikacji możliwe. Odrębnych bibliotek również sprawia, że problemy z wersjonowaniem aplikacji jest łatwiejsze do kontroli i upraszcza tworzenie klasy, gdzie jest użycie klasy zamierzony jako element główny strony XAML.  
   
--   Zaletą definiowania niestandardowych klas w aplikacji jest, że ta technika jest stosunkowo lekkie i minimalizuje wdrażania i testowania problemy występujące podczas wprowadzania oddzielne zestawy poza głównym plik wykonywalny aplikacji.  
+- Zaletą definiowania niestandardowych klas w aplikacji jest, że ta technika jest stosunkowo lekkie i minimalizuje wdrażania i testowania problemy występujące podczas wprowadzania oddzielne zestawy poza głównym plik wykonywalny aplikacji.  
   
--   Czy zdefiniowane w tej samej lub różnych zestawów, niestandardowych klas należy zamapować między przestrzeń nazw środowiska CLR i przestrzeni nazw XML aby możliwe było użycie w XAML jako elementy. Zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+- Czy zdefiniowane w tej samej lub różnych zestawów, niestandardowych klas należy zamapować między przestrzeń nazw środowiska CLR i przestrzeni nazw XML aby możliwe było użycie w XAML jako elementy. Zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>Wymagania dotyczące niestandardowych klas jako XAML Element  
  Aby móc można utworzyć wystąpienia jako elementu obiektu klasy musi spełniać następujące wymagania:  
   
--   Klasę niestandardową muszą być publiczne i obsługuje domyślnego (bezparametrowego) konstruktora publicznego. (Zobacz następujące sekcji uwag dotyczących struktury).  
+- Klasę niestandardową muszą być publiczne i obsługuje domyślnego (bezparametrowego) konstruktora publicznego. (Zobacz następujące sekcji uwag dotyczących struktury).  
   
--   Niestandardowe klasy nie może być klasą zagnieżdżoną. Zagnieżdżonych klasach i "dot" w ich ogólne składni CLR kolidują z innymi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i/lub XAML funkcje, takie jak dołączone właściwości.  
+- Niestandardowe klasy nie może być klasą zagnieżdżoną. Zagnieżdżonych klasach i "dot" w ich ogólne składni CLR kolidują z innymi [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i/lub XAML funkcje, takie jak dołączone właściwości.  
   
  Oprócz włączenia składnia elementu obiektu, definicji obiektu umożliwia także składni elementu właściwości dla innych publicznych właściwości, które przyjmują tego obiektu jako typ wartości. Jest to spowodowane teraz można tworzyć wystąpienia jako elementu obiektu i wpisać wartość elementu właściwości takiej właściwości obiektu.  
   
@@ -75,19 +75,19 @@ XAML zaimplementowanego w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptl
 ## <a name="writing-collection-properties"></a>Zapisywanie właściwości kolekcji  
  Właściwości, które przyjmują typ kolekcji mają składnia XAML, która pozwala na określenie obiektów, które są dodawane do kolekcji. Ta składnia ma dwie ważne funkcje.  
   
--   Obiekt, który jest obiektem kolekcji nie musi być określona w składni obiektów. Obecności tego typu kolekcji jest niejawne, gdy właściwość zostanie określona w XAML, która przyjmuje typ kolekcji.  
+- Obiekt, który jest obiektem kolekcji nie musi być określona w składni obiektów. Obecności tego typu kolekcji jest niejawne, gdy właściwość zostanie określona w XAML, która przyjmuje typ kolekcji.  
   
--   Elementy podrzędne kolekcji właściwości kod znaczników, są przetwarzane stawali się członkami kolekcji. Normalnie, kodu dostępu do elementów członkowskich kolekcji odbywa się za pośrednictwem listy/słownik metody takie jak `Add`, lub za pośrednictwem indeksatora. Ale składnia XAML nie obsługuje metody lub indeksatorów (wyjątek: XAML 2009 może obsługiwać metody, ale przy użyciu XAML 2009 ogranicza możliwości użycia WPF; zobacz [XAML 2009 — funkcje językowe](../../xaml-services/xaml-2009-language-features.md)). Kolekcje oczywiście są bardzo typowym wymogiem dla tworzenia drzewa elementów i potrzebujesz jakiś sposób, aby wypełnić te kolekcje w programie XAML deklaratywnego. W związku z tym elementy podrzędne elementu właściwości kolekcji są przetwarzane przez dodanie ich do kolekcji, która jest wartością typu właściwości kolekcji.  
+- Elementy podrzędne kolekcji właściwości kod znaczników, są przetwarzane stawali się członkami kolekcji. Normalnie, kodu dostępu do elementów członkowskich kolekcji odbywa się za pośrednictwem listy/słownik metody takie jak `Add`, lub za pośrednictwem indeksatora. Ale składnia XAML nie obsługuje metody lub indeksatorów (wyjątek: XAML 2009 może obsługiwać metody, ale przy użyciu XAML 2009 ogranicza możliwości użycia WPF; zobacz [XAML 2009 — funkcje językowe](../../xaml-services/xaml-2009-language-features.md)). Kolekcje oczywiście są bardzo typowym wymogiem dla tworzenia drzewa elementów i potrzebujesz jakiś sposób, aby wypełnić te kolekcje w programie XAML deklaratywnego. W związku z tym elementy podrzędne elementu właściwości kolekcji są przetwarzane przez dodanie ich do kolekcji, która jest wartością typu właściwości kolekcji.  
   
  Implementacji .NET Framework XAML Services, a tym samym procesora WPF XAML używa następującej definicji dla co stanowi właściwości kolekcji. Właściwość typu właściwości musi implementować jeden z następujących czynności:  
   
--   Implementuje <xref:System.Collections.IList>.  
+- Implementuje <xref:System.Collections.IList>.  
   
--   Implementuje <xref:System.Collections.IDictionary> lub odpowiednika rodzajowego (<xref:System.Collections.Generic.IDictionary%602>).  
+- Implementuje <xref:System.Collections.IDictionary> lub odpowiednika rodzajowego (<xref:System.Collections.Generic.IDictionary%602>).  
   
--   Pochodzi od klasy <xref:System.Array> (Aby uzyskać więcej informacji na temat tablic w XAML, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).)  
+- Pochodzi od klasy <xref:System.Array> (Aby uzyskać więcej informacji na temat tablic w XAML, zobacz [x: Array — rozszerzenie znaczników](../../xaml-services/x-array-markup-extension.md).)  
   
--   Implementuje <xref:System.Windows.Markup.IAddChild> (interfejs zdefiniowany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
+- Implementuje <xref:System.Windows.Markup.IAddChild> (interfejs zdefiniowany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]).  
   
  Każdy z tych typów w środowisku CLR ma `Add` metody, która jest używana przez procesor XAML do dodawania elementów do kolekcji źródłowej, podczas tworzenia wykresu obiektu.  
   

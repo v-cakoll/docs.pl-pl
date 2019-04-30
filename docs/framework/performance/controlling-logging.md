@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723670"
 ---
 # <a name="controlling-net-framework-logging"></a>Kontrolowanie logowania w programie .NET Framework
 Śledzenia zdarzeń systemu Windows (ETW) można użyć do rejestrowania zdarzeń środowiska uruchomieniowego języka wspólnego (CLR). Można tworzyć i przeglądać ślady za pomocą następujących narzędzi:  
   
--   [Logman](/windows-server/administration/windows-commands/logman) i [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) narzędzi wiersza polecenia, które są zawarte w systemie operacyjnym Windows.  
+- [Logman](/windows-server/administration/windows-commands/logman) i [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) narzędzi wiersza polecenia, które są zawarte w systemie operacyjnym Windows.  
   
--   [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) narzędzi w [narzędzi wydajności Windows](/windows-hardware/test/wpt/). Aby uzyskać więcej informacji dotyczących narzędzia Xperf, zobacz [blog poświęcony wydajności Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
+- [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) narzędzi w [narzędzi wydajności Windows](/windows-hardware/test/wpt/). Aby uzyskać więcej informacji dotyczących narzędzia Xperf, zobacz [blog poświęcony wydajności Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Aby można było przechwytywać informacje o zdarzeniu CLR, dostawca CLR musi być zainstalowany na komputerze. Aby upewnić się, że dostawca jest zainstalowany, wpisz `logman query providers` w wierszu polecenia. Zostanie wyświetlona lista dostawców. Ta lista powinna zawierać następujący wpis dla dostawcy CLR.  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  Aby włączyć rejestrowanie, użytkownik musi określić trzy rzeczy:  
   
--   Dostawca do komunikacji.  
+- Dostawca do komunikacji.  
   
--   64-bitowa liczba, która reprezentuje zestaw słów kluczowych. Każde słowo kluczowe reprezentuje zestaw zdarzeń, które dostawca może włączyć. Ta liczba przedstawia połączony zestaw słów kluczowych do włączenia.  
+- 64-bitowa liczba, która reprezentuje zestaw słów kluczowych. Każde słowo kluczowe reprezentuje zestaw zdarzeń, które dostawca może włączyć. Ta liczba przedstawia połączony zestaw słów kluczowych do włączenia.  
   
--   Mała liczba reprezentująca poziom (szczegółowości) rejestrowania. Poziom 1 jest najmniej szczegółowy, a poziom 5 jest najbardziej szczegółowy. Poziom 0 jest domyślny, a jego znaczenie jest specyficzne dla dostawcy.  
+- Mała liczba reprezentująca poziom (szczegółowości) rejestrowania. Poziom 1 jest najmniej szczegółowy, a poziom 5 jest najbardziej szczegółowy. Poziom 0 jest domyślny, a jego znaczenie jest specyficzne dla dostawcy.  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Aby przechwytywać zdarzenia CLR ETW przy użyciu narzędzia Logman  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      gdzie:  
   
-    -   `-p` Parametr identyfikuje identyfikator GUID dostawcy.  
+    - `-p` Parametr identyfikuje identyfikator GUID dostawcy.  
   
-    -   `0x1CCBD` Określa kategorie zdarzeń, które będą zgłaszane.  
+    - `0x1CCBD` Określa kategorie zdarzeń, które będą zgłaszane.  
   
-    -   `0x5` Ustawia poziom rejestrowania (w tym przypadku pełne [5]).  
+    - `0x5` Ustawia poziom rejestrowania (w tym przypadku pełne [5]).  
   
-    -   `-ets` Parametr nakazuje narzędziu Logman wysyłanie poleceń do sesji śledzenia zdarzeń.  
+    - `-ets` Parametr nakazuje narzędziu Logman wysyłanie poleceń do sesji śledzenia zdarzeń.  
   
-    -   `-ct perf` Parametr określa, że `QueryPerformanceCounter` funkcja będzie służyć do rejestrowania znacznika czasu dla każdego zdarzenia.  
+    - `-ct perf` Parametr określa, że `QueryPerformanceCounter` funkcja będzie służyć do rejestrowania znacznika czasu dla każdego zdarzenia.  
   
 2. Aby zatrzymać rejestrowanie zdarzeń, wpisz polecenie:  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Tracerpt  
   
--   W wierszu polecenia wpisz polecenie:  
+- W wierszu polecenia wpisz polecenie:  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Aby wyświetlić zdarzenia CLR ETW przy użyciu narzędzia Xperf  
   
--   W wierszu polecenia wpisz polecenie:  
+- W wierszu polecenia wpisz polecenie:  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>Aby przekonwertować plik etl na plik z wartościami rozdzielanymi przecinkami  
   
--   W wierszu polecenia wpisz polecenie:  
+- W wierszu polecenia wpisz polecenie:  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

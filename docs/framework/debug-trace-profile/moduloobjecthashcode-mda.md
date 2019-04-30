@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753816"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Zarządzanego Asystenta debugowania (MDA) zmienia zachowanie <xref:System.Object> klasy w celu wykonania modulo operacja zwracane przez wartość skrótu <xref:System.Object.GetHashCode%2A> metody. Modulo domyślny dla to zdarzenie MDA wynosi 1, co powoduje, że <xref:System.Object.GetHashCode%2A> do zwrócenia 0 dla wszystkich obiektów.  
@@ -25,13 +25,13 @@ ms.locfileid: "59170784"
 ## <a name="symptoms"></a>Symptomy  
  Po przeniesieniu do nowej wersji środowiska uruchomieniowego języka wspólnego (CLR), program nie jest już działa prawidłowo:  
   
--   Program będzie niedługo niewłaściwym obiektem z <xref:System.Collections.Hashtable>.  
+- Program będzie niedługo niewłaściwym obiektem z <xref:System.Collections.Hashtable>.  
   
--   Kolejność wyliczania z <xref:System.Collections.Hashtable> zmieniło przerwanie wykonywania programu.  
+- Kolejność wyliczania z <xref:System.Collections.Hashtable> zmieniło przerwanie wykonywania programu.  
   
--   Dwa obiekty, które umożliwiają równe już nie są równe.  
+- Dwa obiekty, które umożliwiają równe już nie są równe.  
   
--   Dwa obiekty, które są używane, nie są równe, teraz są równe.  
+- Dwa obiekty, które są używane, nie są równe, teraz są równe.  
   
 ## <a name="cause"></a>Przyczyna  
  Program może być wprowadzenie niewłaściwym obiektem z <xref:System.Collections.Hashtable> ponieważ implementacja <xref:System.Object.Equals%2A> metodę w klasie klucz do <xref:System.Collections.Hashtable> testuje pod kątem równości obiektów przez porównanie wyników wywołanie <xref:System.Object.GetHashCode%2A> — metoda . Kody skrótów nie powinien umożliwia testowanie dla równości obiektu, ponieważ dwa obiekty mogą mieć tę samą wartość skrótu, nawet jeśli ich odpowiednich pól mają różne wartości. Te konflikty kod skrótu, występować sporadycznie w praktyce. Efekt ten ma na <xref:System.Collections.Hashtable> wyszukiwania jest wyświetlane dwa klucze, które nie są takie same, równe i nieprawidłowy obiekt jest zwracany z <xref:System.Collections.Hashtable>. Ze względu na wydajność wdrożenia <xref:System.Object.GetHashCode%2A> może się zmieniać między wersjami środowiska uruchomieniowego, więc mogą wystąpić konflikty, które nie mogą wystąpić w jednej wersji, w kolejnych wersjach. Włącz to zdarzenie MDA sprawdzić, czy kod ma błędy, gdy kolizji kodów wartości skrótu. Po włączeniu to zdarzenie MDA powoduje, że <xref:System.Object.GetHashCode%2A> metody zwracają 0, co wszystkie kody skrótów kolizji. Jedynie wpływ Włączanie to zdarzenie MDA powinien już z programu jest spowolnienie działania Twojego programu.  

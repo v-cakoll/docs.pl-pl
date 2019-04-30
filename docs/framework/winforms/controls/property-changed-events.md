@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
 ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755431"
 ---
 # <a name="property-changed-events"></a>Zdarzenia zmiany właściwości
 Jeśli chcesz, aby Twoją kontrolą w celu wysyłania powiadomień, gdy właściwość o nazwie *PropertyName* zmiany, zdefiniować określone zdarzenie o nazwie *PropertyName* `Changed` i metodę o nazwie `On` *PropertyName* `Changed` który wywołuje zdarzenie. Konwencja nazewnictwa w formularzach Windows Forms to dołączenie wyraz *zmieniono* na nazwę właściwości. Typ delegata skojarzonego zdarzenia dla zdarzenia zmiany właściwości to <xref:System.EventHandler>, a typ danych zdarzenia jest <xref:System.EventArgs>. Klasa bazowa <xref:System.Windows.Forms.Control> definiuje wiele zdarzeń zmiany właściwości, takie jak <xref:System.Windows.Forms.Control.BackColorChanged>, <xref:System.Windows.Forms.Control.BackgroundImageChanged>, <xref:System.Windows.Forms.Control.FontChanged>, <xref:System.Windows.Forms.Control.LocationChanged>i innym osobom. Aby uzyskać ogólne informacje o zdarzeniach zobacz [zdarzenia](../../../standard/events/index.md) i [zdarzenia w kontrolkach formularzy Windows Forms](events-in-windows-forms-controls.md).  

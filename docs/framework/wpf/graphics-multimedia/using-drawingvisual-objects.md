@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762114"
 ---
 # <a name="using-drawingvisual-objects"></a>Użycie obiektów DrawingVisual
 Ten temat zawiera omówienie sposobu użycia <xref:System.Windows.Media.DrawingVisual> obiekty w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] warstwy visual.  
@@ -51,9 +51,9 @@ Ten temat zawiera omówienie sposobu użycia <xref:System.Windows.Media.DrawingV
   
  Na poniższej liście opisano dwa elementy członkowskie, których konieczne jest przesłonięcie:  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Zwraca kolekcję elementów podrzędnych elementu podrzędnego wskazywanego przez określony indeks.  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>: Zwraca kolekcję elementów podrzędnych elementu podrzędnego wskazywanego przez określony indeks.  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Pobiera liczbę elementów podrzędnych visual w ramach tego elementu.  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>: Pobiera liczbę elementów podrzędnych visual w ramach tego elementu.  
   
  W poniższym przykładzie wartości zastąpień dla dwóch <xref:System.Windows.FrameworkElement> elementy członkowskie są implementowane.  
   

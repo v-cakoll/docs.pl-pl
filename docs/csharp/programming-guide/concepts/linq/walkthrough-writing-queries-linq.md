@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61680379"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Przewodnik: Pisanie zapytań w języku C# (LINQ)
 W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywania wyrażenia zapytań LINQ.  
@@ -41,17 +41,17 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
 ## <a name="create-an-in-memory-data-source"></a>Utwórz źródło danych w pamięci  
  Źródło danych dla zapytania jest prostą listę `Student` obiektów. Każdy `Student` rekord zawiera imię, nazwisko i tablicy liczb całkowitych, reprezentujący ich wyniki testów w klasie. Skopiuj ten kod do projektu. Należy zwrócić uwagę następujących właściwości:  
   
--   `Student` Klasy składa się z właściwości zaimplementowane automatycznie.  
+- `Student` Klasy składa się z właściwości zaimplementowane automatycznie.  
   
--   Każdy uczeń, na liście jest inicjowany za pomocą inicjatora obiektów.  
+- Każdy uczeń, na liście jest inicjowany za pomocą inicjatora obiektów.  
   
--   Samej listy jest inicjowany za pomocą inicjatora kolekcji.  
+- Samej listy jest inicjowany za pomocą inicjatora kolekcji.  
   
  Tej struktury danych całego zostanie zainicjowana i tworzone bez jawnego wywołania konstruktora lub jawny element członkowski dostępu. Aby uzyskać więcej informacji o tych nowych funkcjach, zobacz [implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) i [inicjatory obiektów i kolekcji](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Aby dodać źródło danych  
   
--   Dodaj `Student` klasy i zainicjowany listę uczniów `Program` klasy w projekcie.  
+- Dodaj `Student` klasy i zainicjowany listę uczniów `Program` klasy w projekcie.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 #### <a name="to-create-a-simple-query"></a>Aby utworzyć proste zapytanie  
   
--   Przy stosowaniu `Main` metody tworzenia prostego zapytania, które, gdy jest wykonywany, generuje listę wszystkich uczniów, którego wynik pierwszego testu była większa niż 90. Należy pamiętać, że ponieważ cały `Student` obiekt jest wybrany, jest typ zapytania `IEnumerable<Student>`. Mimo że kod można również użyć niejawnego wpisywania, za pomocą [var](../../../../csharp/language-reference/keywords/var.md) — słowo kluczowe, jawnych typowań służy do wyraźnie przedstawiają wyniki. (Aby uzyskać więcej informacji na temat `var`, zobacz [niejawnie wpisane zmienne lokalne](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
+- Przy stosowaniu `Main` metody tworzenia prostego zapytania, które, gdy jest wykonywany, generuje listę wszystkich uczniów, którego wynik pierwszego testu była większa niż 90. Należy pamiętać, że ponieważ cały `Student` obiekt jest wybrany, jest typ zapytania `IEnumerable<Student>`. Mimo że kod można również użyć niejawnego wpisywania, za pomocą [var](../../../../csharp/language-reference/keywords/var.md) — słowo kluczowe, jawnych typowań służy do wyraźnie przedstawiają wyniki. (Aby uzyskać więcej informacji na temat `var`, zobacz [niejawnie wpisane zmienne lokalne](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).)  
   
      Należy zauważyć, że zapytania zmienna zakresu `student`, służy jako punkt odniesienia do każdego `Student` w źródle, zapewniając dostęp do elementu członkowskiego dla każdego obiektu.  
   
@@ -75,9 +75,9 @@ W tym instruktażu przedstawiono funkcji języka C#, które służy do zapisywan
   
 1. Teraz zapisać `foreach` pętli, która spowoduje, że kwerenda do wykonania. Należy pamiętać o następujących o kodzie:  
   
-    -   Każdy element w zwracanej sekwencji jest dostępny za pośrednictwem zmiennej iteracji w `foreach` pętli.  
+    - Każdy element w zwracanej sekwencji jest dostępny za pośrednictwem zmiennej iteracji w `foreach` pętli.  
   
-    -   Typ tej zmiennej jest `Student`, a typ zmiennej zapytania jest zgodny, `IEnumerable<Student>`.  
+    - Typ tej zmiennej jest `Student`, a typ zmiennej zapytania jest zgodny, `IEnumerable<Student>`.  
   
 2. Po dodaniu tego kodu, skompilować i uruchomić aplikację, aby zobaczyć wyniki w parametrze **konsoli** okna.  
   

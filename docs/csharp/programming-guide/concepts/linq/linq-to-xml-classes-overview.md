@@ -3,11 +3,11 @@ title: LINQ to XML — Przegląd klas (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
 ms.openlocfilehash: a50b58ad3e8f375d80701f454e74fef00e4d2203
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667453"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML — Przegląd klas (C#)
 Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] klas w <xref:System.Xml.Linq> przestrzeni nazw oraz krótki opis każdego z nich.  
@@ -26,9 +26,9 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
 ### <a name="xcontainer-class"></a>Klasa XContainer  
  <xref:System.Xml.Linq.XContainer> jest abstrakcyjna klasa bazowa dla wszystkich węzłów, które mogą mieć węzłów podrzędnych. Następujące klasy pochodzić od <xref:System.Xml.Linq.XContainer> klasy:  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>Klasa XDeclaration  
  <xref:System.Xml.Linq.XDeclaration> reprezentuje deklaracji XML. Deklaracja XML jest używane do deklarowania wersji XML i kodowania dokumentu. Ponadto deklaracja XML określa, czy dokument XML jest autonomiczny. Dokument jest autonomiczna, czy nie deklaracje zewnętrzne znaczników w zewnętrznej definicji DTD lub w jednostce parametru zewnętrznych przywoływany w podzestawie wewnętrznym.  
@@ -55,15 +55,15 @@ Ten temat zawiera listę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] k
 ### <a name="xnode-class"></a>Klasa XNode  
  <xref:System.Xml.Linq.XNode> jest klasą abstrakcyjną, która reprezentuje węzły drzewa XML. Następujące klasy pochodzić od <xref:System.Xml.Linq.XNode> klasy:  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer Class  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> oferuje funkcje, aby porównać węzłów w celu ich kolejności dokumentu.  

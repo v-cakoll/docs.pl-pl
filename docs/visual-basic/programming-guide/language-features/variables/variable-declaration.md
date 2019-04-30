@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757004"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Deklaracja zmiennej w Visual Basic
 Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Jej lokalizacja i zawartości należy określić charakterystyki zmiennej.  
@@ -42,15 +42,15 @@ Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcji 
 ## <a name="declaring-data-type"></a>Deklarowanie typu danych  
  [Jako](../../../../visual-basic/language-reference/statements/as-clause.md) klauzuli w instrukcji deklaracji pozwala na zdefiniowanie typu danych lub typ obiektu są deklarowanie zmiennej. Można określić jedną z następujących typów dla zmiennej:  
   
--   Typ danych podstawowych, takich jak `Boolean`, `Long`, lub `Decimal`  
+- Typ danych podstawowych, takich jak `Boolean`, `Long`, lub `Decimal`  
   
--   Złożony typ danych, takich jak tablica lub struktury  
+- Złożony typ danych, takich jak tablica lub struktury  
   
--   Typ obiektu lub klasy, zdefiniowanej w aplikacji lub w innej aplikacji  
+- Typ obiektu lub klasy, zdefiniowanej w aplikacji lub w innej aplikacji  
   
--   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy, takie jak <xref:System.Windows.Forms.Label> lub <xref:System.Windows.Forms.TextBox>  
+- A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy, takie jak <xref:System.Windows.Forms.Label> lub <xref:System.Windows.Forms.TextBox>  
   
--   Typ interfejsu, takich jak <xref:System.IComparable> lub <xref:System.IDisposable>  
+- Typ interfejsu, takich jak <xref:System.IComparable> lub <xref:System.IDisposable>  
   
  Bez konieczności powtarzania typu danych, można zadeklarować kilku zmiennych w jednej instrukcji. W następujących instrukcjach zmienne `i`, `j`, i `k` są deklarowane jako typ `Integer`, `l` i `m` jako `Long`, i `x` i `y` jako `Single`:  
   

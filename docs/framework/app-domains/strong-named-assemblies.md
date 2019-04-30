@@ -8,11 +8,11 @@ ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 72e9e698e510153073515aa891f1ed3b4d7b9886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705522"
 ---
 # <a name="strong-named-assemblies"></a>Zestawy o silnych nazwach
 Nazewnictwo silne zestawu tworzy unikatową tożsamość dla zestawu i może zapobiec konfliktom zestawu.  
@@ -32,13 +32,13 @@ Nazewnictwo silne zestawu tworzy unikatową tożsamość dla zestawu i może zap
   
  Zestawy o silnych nazwach są przydatne w następujących scenariuszach:  
   
--   Aby włączyć swoje zestawy odwoływać się zestawów o silnych nazwach lub chcesz nadać `friend` dostęp do Twoich zestawów od innych zestawów o silnych nazwach.  
+- Aby włączyć swoje zestawy odwoływać się zestawów o silnych nazwach lub chcesz nadać `friend` dostęp do Twoich zestawów od innych zestawów o silnych nazwach.  
   
--   Aplikacja potrzebuje dostępu do różnych wersji tego samego zestawu. Oznacza to, że potrzebujesz różnych wersji zestawu do załadowania obok siebie w tej samej domenie aplikacji, bez powodowania konfliktów. Na przykład jeśli istnieją inne rozszerzenia interfejsu API w zestawach, które mają tej samej prostej nazwie, silne nazwy zapewnia unikatową tożsamość dla każdej wersji zestawu.  
+- Aplikacja potrzebuje dostępu do różnych wersji tego samego zestawu. Oznacza to, że potrzebujesz różnych wersji zestawu do załadowania obok siebie w tej samej domenie aplikacji, bez powodowania konfliktów. Na przykład jeśli istnieją inne rozszerzenia interfejsu API w zestawach, które mają tej samej prostej nazwie, silne nazwy zapewnia unikatową tożsamość dla każdej wersji zestawu.  
   
--   Czy chcesz mieć negatywny wpływ na wydajność aplikacji przy użyciu swoim zestawie, więc chcesz zestawie, który ma być niezależne od domeny. Wymaga to silne nazwy, ponieważ zestaw niezależne od domeny musi być zainstalowany w globalnej pamięci podręcznej.  
+- Czy chcesz mieć negatywny wpływ na wydajność aplikacji przy użyciu swoim zestawie, więc chcesz zestawie, który ma być niezależne od domeny. Wymaga to silne nazwy, ponieważ zestaw niezależne od domeny musi być zainstalowany w globalnej pamięci podręcznej.  
   
--   Jeśli chcesz scentralizować obsługi dla aplikacji, stosując zasady wydawcy, oznacza to zestaw musi być zainstalowany w globalnej pamięci podręcznej.  
+- Jeśli chcesz scentralizować obsługi dla aplikacji, stosując zasady wydawcy, oznacza to zestaw musi być zainstalowany w globalnej pamięci podręcznej.  
   
  Jeśli jesteś deweloperem typu open source i korzystać z zalet tożsamości zestawu z silną nazwą, należy wziąć pod uwagę ewidencjonowanie klucz prywatny skojarzone z zestawem w systemie kontroli źródła.  
   

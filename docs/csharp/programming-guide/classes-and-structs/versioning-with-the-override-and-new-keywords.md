@@ -7,28 +7,28 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702974"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Przechowywanie wersji przesłonięć i nowych słów kluczowych (Przewodnik programowania w języku C#)
 Zaprojektowano w języku C#, aby versioning między [podstawowy](../../../csharp/language-reference/keywords/base.md) i klasy pochodne w różnych bibliotek mogą ewoluować i zachować zgodność z poprzednimi wersjami. Oznacza to, na przykład, że wprowadzenie nowego członka w podstawowym [klasy](../../../csharp/language-reference/keywords/class.md) z taką samą nazwę jak element członkowski w klasie pochodnej jest w pełni obsługiwane w języku C# i nie prowadzi do nieoczekiwanego zachowania. Oznacza to również, że klasy musi jawnie określać, czy metoda jest przeznaczona do zastępowania metody dziedziczonej, lub czy metoda jest nowa metoda, która ukrywa o podobnej nazwie dziedziczone metody.  
   
  W języku C# klasy pochodne mogą zawierać metody o nazwie identycznej z nazwą metody klasy bazowej.  
   
--   Należy zdefiniować metodę klasy bazowej [wirtualnego](../../../csharp/language-reference/keywords/virtual.md).  
+- Należy zdefiniować metodę klasy bazowej [wirtualnego](../../../csharp/language-reference/keywords/virtual.md).  
   
--   Jeśli metoda w klasie pochodnej nie jest poprzedzony przez [nowe](../../../csharp/language-reference/keywords/new.md) lub [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych, kompilator zgłosi ostrzeżenie i metody będą zachowywać się tak, jakby `new` — słowo kluczowe były obecne.  
+- Jeśli metoda w klasie pochodnej nie jest poprzedzony przez [nowe](../../../csharp/language-reference/keywords/new.md) lub [zastąpienia](../../../csharp/language-reference/keywords/override.md) słów kluczowych, kompilator zgłosi ostrzeżenie i metody będą zachowywać się tak, jakby `new` — słowo kluczowe były obecne.  
   
--   Jeśli metoda w klasie pochodnej jest poprzedzony znakiem `new` — słowo kluczowe, metoda jest zdefiniowana jako będące niezależnymi metody w klasie bazowej.  
+- Jeśli metoda w klasie pochodnej jest poprzedzony znakiem `new` — słowo kluczowe, metoda jest zdefiniowana jako będące niezależnymi metody w klasie bazowej.  
   
--   Jeśli metoda w klasie pochodnej jest poprzedzony znakiem `override` — słowo kluczowe, obiekty klasy pochodnej wywoła tę metodę, zamiast metody klasy bazowej.  
+- Jeśli metoda w klasie pochodnej jest poprzedzony znakiem `override` — słowo kluczowe, obiekty klasy pochodnej wywoła tę metodę, zamiast metody klasy bazowej.  
   
--   Metody klasy bazowej można wywołać z w obrębie klasy pochodnej, za pomocą `base` — słowo kluczowe.  
+- Metody klasy bazowej można wywołać z w obrębie klasy pochodnej, za pomocą `base` — słowo kluczowe.  
   
--   `override`, `virtual`, I `new` słów kluczowych, można również będą stosowane do właściwości, indeksatory i zdarzenia.  
+- `override`, `virtual`, I `new` słów kluczowych, można również będą stosowane do właściwości, indeksatory i zdarzenia.  
   
  Domyślnie metody języka C# nie są wirtualne. Jeśli metoda jest zadeklarowana jako wirtualna, każdej klasy dziedziczącej metody można zaimplementować własną wersję. Zapewnienie metody wirtualne, `virtual` modyfikator jest używany w deklaracji metody klasy bazowej. Klasa pochodna następnie można zastąpić metody wirtualnej podstawowej za pomocą `override` — słowo kluczowe lub ukryć metodę wirtualną w klasie bazowej, przy użyciu `new` — słowo kluczowe. Jeśli żadna `override` — słowo kluczowe ani `new` — słowo kluczowe jest określony, kompilator zgłosi ostrzeżenie i metody w klasie pochodnej ukrywa metodę w klasie bazowej.  
   

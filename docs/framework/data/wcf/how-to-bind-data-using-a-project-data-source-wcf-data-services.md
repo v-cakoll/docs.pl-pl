@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765508"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Instrukcje: Wiązanie danych przy użyciu źródła danych projektu (WCF Data Services)
 
@@ -31,19 +31,19 @@ Można utworzyć źródła danych, które są oparte na obiektach wygenerowane d
 
      Spowoduje to utworzenie następujących elementów obiektu w pliku XAML dla okna:
 
-    -   A <xref:System.Windows.Data.CollectionViewSource> elementu o nazwie `customersViewSource`. <xref:System.Windows.FrameworkElement.DataContext%2A> Właściwości najwyższego poziomu <xref:System.Windows.Controls.Grid> element obiektu jest ustawiona na tym nowy <xref:System.Windows.Data.CollectionViewSource>.
+    - A <xref:System.Windows.Data.CollectionViewSource> elementu o nazwie `customersViewSource`. <xref:System.Windows.FrameworkElement.DataContext%2A> Właściwości najwyższego poziomu <xref:System.Windows.Controls.Grid> element obiektu jest ustawiona na tym nowy <xref:System.Windows.Data.CollectionViewSource>.
 
-    -   Powiązane z danymi <xref:System.Windows.Controls.ComboBox> o nazwie `CustomerID`.
+    - Powiązane z danymi <xref:System.Windows.Controls.ComboBox> o nazwie `CustomerID`.
 
-    -   A <xref:System.Windows.Controls.Label>.
+    - A <xref:System.Windows.Controls.Label>.
 
 4. Przeciągnij **zamówienia** właściwość nawigacji do projektanta.
 
      Spowoduje to utworzenie następujących elementów dodatkowych obiektu w pliku XAML dla okna:
 
-    -   Sekundy <xref:System.Windows.Data.CollectionViewSource> elementu o nazwie `customersOrdersViewSource`, której źródłem jest `customerViewSource`.
+    - Sekundy <xref:System.Windows.Data.CollectionViewSource> elementu o nazwie `customersOrdersViewSource`, której źródłem jest `customerViewSource`.
 
-    -   Powiązane z danymi <xref:System.Windows.Controls.DataGrid> formantu o nazwie `ordersDataGrid`.
+    - Powiązane z danymi <xref:System.Windows.Controls.DataGrid> formantu o nazwie `ordersDataGrid`.
 
 5. (Opcjonalnie) Przeciągnij dodatkowe elementy z **klientów** węzła do projektanta.
 
@@ -82,13 +82,13 @@ Można utworzyć źródła danych, które są oparte na obiektach wygenerowane d
 
      Spowoduje to utworzenie następujących formantów na formularzu:
 
-    -   Wystąpienie <xref:System.Windows.Forms.BindingSource> o nazwie `customersBindingSource`.
+    - Wystąpienie <xref:System.Windows.Forms.BindingSource> o nazwie `customersBindingSource`.
 
-    -   Wystąpienie <xref:System.Windows.Forms.BindingNavigator> o nazwie `customersBindingNavigator`. Można usunąć tej kontrolki, ponieważ nie będą potrzebne.
+    - Wystąpienie <xref:System.Windows.Forms.BindingNavigator> o nazwie `customersBindingNavigator`. Można usunąć tej kontrolki, ponieważ nie będą potrzebne.
 
-    -   Powiązane z danymi <xref:System.Windows.Forms.ComboBox> o nazwie `CustomerID`.
+    - Powiązane z danymi <xref:System.Windows.Forms.ComboBox> o nazwie `CustomerID`.
 
-    -   A <xref:System.Windows.Forms.Label>.
+    - A <xref:System.Windows.Forms.Label>.
 
 3. Przeciągnij **zamówienia** właściwość nawigacji do formularza.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
 ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61724076"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Instrukcje: Poprawianie wydajności dzięki unikaniu automatycznego skalowania
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] może skalować automatycznie obrazu podczas rysowania, które mogłoby obniżyć wydajność. Alternatywnie, można kontrolować, skalowanie obrazu, przekazując wymiary prostokąta docelowego, aby <xref:System.Drawing.Graphics.DrawImage%2A> metody.  

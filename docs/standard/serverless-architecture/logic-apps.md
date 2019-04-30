@@ -5,13 +5,13 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712801"
 ---
-# <a name="azure-logic-apps"></a>Usługi Azure Logic Apps
+# <a name="azure-logic-apps"></a>Azure Logic Apps
 
 [Usługa Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps) zapewnia bezserwerowe aparatu tworzyć zautomatyzowane przepływy pracy, aby zintegrować aplikacje i dane między usługami w chmurze i systemach lokalnych. Możesz tworzyć przepływy pracy za pomocą projektanta wizualnego. Można wyzwalają przepływy pracy na podstawie zdarzeń lub czasomierze i wykorzystaj łączniki do integracji aplikacji i ułatwiają komunikację business-to-business (B2B). Usługa Logic Apps bezproblemowo integruje się z usługą Azure Functions.
 

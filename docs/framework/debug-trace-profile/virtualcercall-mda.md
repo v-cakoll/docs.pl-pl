@@ -12,11 +12,11 @@ ms.assetid: 1eb18c7a-f5e0-443f-80fb-67bfbb047da2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e2c8712837dab17f70be32617711c1bad9349508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766314"
 ---
 # <a name="virtualcercall-mda"></a>virtualCERCall MDA
 `virtualCERCall` Zarządzanego Asystenta debugowania (MDA) jest uaktywniony jako ostrzeżenie informujące, że witryny wywołania, w ramach wykresu wywołań ograniczonego wykonania region (CER) odwołuje się do docelowego wirtualnego, oznacza to, wywołanie wirtualne metodą wirtualną innego niż końcowa lub za pomocą wywołania interfejs. Środowisko uruchomieniowe języka wspólnego (CLR) nie można przewidzieć metoda przeznaczenia tych wywołań z pośrednich analizy języka i metadanych, które są wyłącznie. W rezultacie drzewo wywołań nie można przygotować jako część wykresu CER i przerwań wątku, w tym poddrzewie nie mogą zostać automatycznie zablokowane. To zdarzenie MDA ostrzega o przypadkach, gdzie CER może być konieczne można rozszerzyć za pomocą jawnych wywołań <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A> metoda po dodatkowe informacje wymagane do obliczenia cel wywołania jest znany w czasie wykonywania.  

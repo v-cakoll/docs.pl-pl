@@ -18,26 +18,26 @@ ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705704"
 ---
 # <a name="assembly-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń zestawów
 <a name="top"></a> Podczas kompilowania zestawu można określić zestaw uprawnień, które będą wymagane do uruchomienia. To, czy określone uprawnienia są przyznane do zestawu, czy nie, zależy od dowodów.  
   
  Istnieją dwa wyraźnie różniące się sposoby używania dowodów:  
   
--   Dowód wejściowy jest scalany z dowodami zebranymi przez moduł ładujący w celu utworzenia ostatecznego zestawu dowodów stosowanego do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load**, **Assembly.LoadFrom**, i **Activator.CreateInstance**.  
+- Dowód wejściowy jest scalany z dowodami zebranymi przez moduł ładujący w celu utworzenia ostatecznego zestawu dowodów stosowanego do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load**, **Assembly.LoadFrom**, i **Activator.CreateInstance**.  
   
--   Dowód wejściowy jest używany w niezmienionej formie jako ostateczny zestaw dowodów stosowanych do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load(byte[])** i **AppDomain.DefineDynamicAssembly()**.  
+- Dowód wejściowy jest używany w niezmienionej formie jako ostateczny zestaw dowodów stosowanych do rozpoznawania zasad. Metody używające tej semantyki obejmować **Assembly.Load(byte[])** i **AppDomain.DefineDynamicAssembly()**.  
   
  Opcjonalne uprawnienia mogą być przyznawane przez [zasady zabezpieczeń](../../../docs/framework/misc/code-access-security-basics.md) ustawił na komputerze, gdzie zestaw będzie działał. Jeśli kod ma obsługiwać wszystkie potencjalne wyjątki zabezpieczeń, można wykonać jedną z następujących czynności:  
   
--   Wstawić żądania o uprawnienia dla wszystkich uprawnień, których wymaga kod, oraz obsługiwać z wyprzedzeniem niepowodzenia w czasie ładowania, które występują w razie nieprzyznania uprawnień.  
+- Wstawić żądania o uprawnienia dla wszystkich uprawnień, których wymaga kod, oraz obsługiwać z wyprzedzeniem niepowodzenia w czasie ładowania, które występują w razie nieprzyznania uprawnień.  
   
--   W celu uzyskania uprawnień wymaganych przez kod nie używać żądań o uprawnienia, ale przygotować się na obsługę wyjątków zabezpieczeń w razie nieprzyznania uprawnień.  
+- W celu uzyskania uprawnień wymaganych przez kod nie używać żądań o uprawnienia, ale przygotować się na obsługę wyjątków zabezpieczeń w razie nieprzyznania uprawnień.  
   
     > [!NOTE]
     >  Zabezpieczenia to skomplikowana dziedzina, w której istnieje wiele opcji do wyboru. Aby uzyskać więcej informacji, zobacz [podstawowe pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md).  

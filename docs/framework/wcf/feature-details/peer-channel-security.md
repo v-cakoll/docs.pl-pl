@@ -3,11 +3,11 @@ title: Zabezpieczenia kanału równorzędnego
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769398"
 ---
 # <a name="peer-channel-security"></a>Zabezpieczenia kanału równorzędnego
 Kanał elementu równorzędnego umożliwia różne typy aplikacji rozproszonych, które są zależne od wielostronnej komunikatów. Niektóre przykłady skali Internetu dystrybucji zawartości, gdzie zaufanego źródła dystrybuuje zawartość (np. aktualizacji oprogramowania lub nośników), grupa znajomych programu exchange, muzyka czy zdjęcia lub zespół współpracowników zespołowe przeprowadzanie edytowania dokumentu. Każdy z tych scenariuszy wymaga modelu zabezpieczeń unikatowy. Kanał elementu równorzędnego model zabezpieczeń jest przeznaczona dla tych scenariuszy i oferuje model zabezpieczeń dźwięk dla indywidualnych potrzeb różnych modeli tożsamości, uwierzytelniania i autoryzacji.  

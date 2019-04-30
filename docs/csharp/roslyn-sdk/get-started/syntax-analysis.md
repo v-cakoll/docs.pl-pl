@@ -4,11 +4,11 @@ description: Wprowadzenie do przechodzenie przez wykonywanie zapytań i zalet dr
 ms.date: 02/05/2018
 ms.custom: mvc
 ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706630"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Rozpoczynanie pracy z usługą analiza składni
 
@@ -58,7 +58,7 @@ Są cztery podstawowe bloki konstrukcyjne drzewa składni:
 
 Elementy towarzyszące składni, tokenów i węzłów składają się hierarchicznie w celu utworzenia drzewa, który całkowicie reprezentuje wszystkie elementy fragment kodu języka Visual Basic lub C#. Możesz zobaczyć ten przy użyciu struktury **Syntax Visualizer** okna. W programie Visual Studio, wybierz **widoku** > **Windows inne** > **Syntax Visualizer**. Na przykład poprzedni plik źródłowy C# bada się **Syntax Visualizer** wygląda podobnie do poniższej ilustracji:
 
-**SyntaxNode**: niebieski | **SyntaxToken**: zielony | **SyntaxTrivia**: czerwony ![plik kodu C#](media/walkthrough-csharp-syntax-figure1.png)
+**SyntaxNode**: Blue | **SyntaxToken**: Green | **SyntaxTrivia**: Czerwony ![ C# plik kodu](media/walkthrough-csharp-syntax-figure1.png)
 
 Przechodząc ta struktura drzewa, można znaleźć w pliku kodu instrukcji, wyrażenie, token lub bitowego biały znak.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674392"
 ---
 # <a name="socket-element-network-settings"></a>\<gniazda >, Element (ustawienia sieci)
 Określa, czy operacje gniazda używają portów.  
@@ -64,9 +64,9 @@ Określa, czy operacje gniazda używają portów.
   
  To `ipProtectionLevel` ustawienie atrybutu ma wpływ tylko na początkowy ruch przychodzący:  
   
--   Serwer protokołu TCP nasłuchuje połączeń przychodzących na gniazdo.  
+- Serwer protokołu TCP nasłuchuje połączeń przychodzących na gniazdo.  
   
--   Aplikacja UDP, odbierania pakietów dla gniazda.  
+- Aplikacja UDP, odbierania pakietów dla gniazda.  
   
  To ustawienie konfiguracji nie wpływa na nawiązano już połączenie połączenia protokołu TCP (ruch jest nieograniczony w obu kierunkach) i nie ma wpływu na aplikację, wysyłanie pakietów UDP.  
   

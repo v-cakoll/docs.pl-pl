@@ -4,11 +4,11 @@ description: Najnowsze ulepszenia C# języka umożliwiają pisanie weryfikowalny
 ms.date: 10/23/2018
 ms.custom: mvc
 ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706042"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Zapis w bezpieczny i skuteczny C# kodu
 

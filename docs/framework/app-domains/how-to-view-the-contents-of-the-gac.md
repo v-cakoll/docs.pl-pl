@@ -1,5 +1,5 @@
 ---
-title: 'Porady: wyświetlanie zawartości globalnej pamięci podręcznej zestawów'
+title: 'Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -14,13 +14,13 @@ ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0375c835dea8984db34d3d1e24b2876fb9af8337
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705600"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Porady: wyświetlanie zawartości globalnej pamięci podręcznej
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej
 
 Użyj [narzędzie global assembly cache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) do wyświetlania zawartości globalnej pamięci podręcznej zestawów (GAC).
 

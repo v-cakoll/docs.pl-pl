@@ -14,11 +14,11 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752350"
 ---
 # <a name="handling-io-errors-in-net"></a>Obsługa błędów operacji We/Wy na platformie .NET
 
@@ -49,7 +49,7 @@ Ze względu na to sposób nie zależy od systemu operacyjnego identyczne wyjątk
 
 | Typ wyjątku | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | Tak | Yes |
+| <xref:System.IO.IOException> | Yes | Yes |
 | <xref:System.IO.FileNotFoundException> | Yes | Yes |
 | <xref:System.IO.DirectoryNotFoundException> | Yes | Yes |
 | <xref:System.IO.DriveNotFoundException?> | Yes | Yes |

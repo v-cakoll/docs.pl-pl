@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759924"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Przewodnik: rozmieszczanie kontrolek w formularzach systemu Windows za pomocą linii przyciągania
 Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji. Windows Forms Designer udostępnia wiele narzędzi układu, w tym celu. Jednym z najważniejszych jest <xref:System.Windows.Forms.Design.Behavior.SnapLine> funkcji.  
@@ -23,27 +23,27 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
  Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu Windows Forms  
+- Tworzenie projektu Windows Forms  
   
--   Odstępy i wyrównywanie formantów, za pomocą linii przyciągania  
+- Odstępy i wyrównywanie formantów, za pomocą linii przyciągania  
   
--   Dopasowanie do formularza i marginesów kontenera  
+- Dopasowanie do formularza i marginesów kontenera  
   
--   Wyrównywanie kontrolek zgrupowanych  
+- Wyrównywanie kontrolek zgrupowanych  
   
--   Za pomocą linii przyciągania, aby umieścić kontrolkę zwijanie jej rozmiaru  
+- Za pomocą linii przyciągania, aby umieścić kontrolkę zwijanie jej rozmiaru  
   
--   Za pomocą linii przyciągania podczas przeciągania kontrolki z przybornika  
+- Za pomocą linii przyciągania podczas przeciągania kontrolki z przybornika  
   
--   Zmiana rozmiaru formantów, za pomocą linii przyciągania  
+- Zmiana rozmiaru formantów, za pomocą linii przyciągania  
   
--   Wyrównanie etykiety do formantu tekstu  
+- Wyrównanie etykiety do formantu tekstu  
   
--   Za pomocą linii przyciągania z klawiatury  
+- Za pomocą linii przyciągania z klawiatury  
   
--   Liniami przyciągania oraz panele układów  
+- Liniami przyciągania oraz panele układów  
   
--   Wyłączanie linii przyciągania  
+- Wyłączanie linii przyciągania  
   
  Gdy skończysz, masz zrozumienia układ roli za pomocą linii przyciągania funkcji.  
   
@@ -216,7 +216,7 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
   
 #### <a name="to-selectively-disable-snaplines"></a>Aby wyłączyć linii przyciągania  
   
--   Naciśnij klawisz ALT i podczas przenoszenia kontrolki na formularzu.  
+- Naciśnij klawisz ALT i podczas przenoszenia kontrolki na formularzu.  
   
      Pamiętaj, że są wyświetlane nie linii przyciągania formantu nie przyciąganie do wszelkich potencjalnych pozycji wyrównania.  
   
@@ -233,9 +233,9 @@ Rozmieszczenie kontrolek w formularzu jest wysoki priorytet dla wielu aplikacji.
 ## <a name="next-steps"></a>Następne kroki  
  Linii przyciągania oferują intuicyjne środki wyrównywanie formantów na formularzu. Sugestie dotyczące więcej eksploracji obejmują:  
   
--   Spróbuj zagnieżdżanie <xref:System.Windows.Forms.GroupBox> kontroli w ramach innego <xref:System.Windows.Forms.GroupBox> kontroli. Miejsce <xref:System.Windows.Forms.Button> kontrolki podrzędne <xref:System.Windows.Forms.GroupBox> kontroli, a druga nadrzędnym <xref:System.Windows.Forms.GroupBox> kontroli. Przenieś <xref:System.Windows.Forms.Button> około kontrolki i zobacz, jak linii przyciągania cross granice kontenera.  
+- Spróbuj zagnieżdżanie <xref:System.Windows.Forms.GroupBox> kontroli w ramach innego <xref:System.Windows.Forms.GroupBox> kontroli. Miejsce <xref:System.Windows.Forms.Button> kontrolki podrzędne <xref:System.Windows.Forms.GroupBox> kontroli, a druga nadrzędnym <xref:System.Windows.Forms.GroupBox> kontroli. Przenieś <xref:System.Windows.Forms.Button> około kontrolki i zobacz, jak linii przyciągania cross granice kontenera.  
   
--   Tworzenie kolumny <xref:System.Windows.Forms.TextBox> kontrolek i odpowiednią kolumnę <xref:System.Windows.Forms.Label> kontrolki. Ustaw wartość <xref:System.Windows.Forms.Label> kontrolek <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`. Przenoszenie za pomocą linii przyciągania <xref:System.Windows.Forms.Label> kontroluje, dzięki czemu ich wyświetlany tekst będzie wyrównany z tekstem w <xref:System.Windows.Forms.TextBox> kontrolki.  
+- Tworzenie kolumny <xref:System.Windows.Forms.TextBox> kontrolek i odpowiednią kolumnę <xref:System.Windows.Forms.Label> kontrolki. Ustaw wartość <xref:System.Windows.Forms.Label> kontrolek <xref:System.Windows.Forms.Control.AutoSize%2A> właściwość `true`. Przenoszenie za pomocą linii przyciągania <xref:System.Windows.Forms.Label> kontroluje, dzięki czemu ich wyświetlany tekst będzie wyrównany z tekstem w <xref:System.Windows.Forms.TextBox> kontrolki.  
   
  Aby uzyskać informacji na temat projektowania interfejsu użytkownika Windows, zobacz podręcznik *środowisko użytkownika systemu Microsoft Windows, oficjalne wskazówki dla deweloperów interfejsu użytkownika i projektantów* Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   

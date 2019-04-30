@@ -9,24 +9,24 @@ helpviewer_keywords:
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
 ms.openlocfilehash: ed943948888110b76df9c9ce22b4e9b6f4bb679f
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61678546"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Instrukcje: Konwertowanie ciągów szesnastkowych, które typy liczbowe (C# Programming Guide)
 Te przykłady pokazują, jak wykonywać następujące zadania:  
   
--   Uzyskaj wartość szesnastkowa każdego znaku w [ciąg](../../../csharp/language-reference/keywords/string.md).  
+- Uzyskaj wartość szesnastkowa każdego znaku w [ciąg](../../../csharp/language-reference/keywords/string.md).  
   
--   Uzyskaj [char](../../../csharp/language-reference/keywords/char.md) odpowiadający każdej wartości w ciągu szesnastkowego.  
+- Uzyskaj [char](../../../csharp/language-reference/keywords/char.md) odpowiadający każdej wartości w ciągu szesnastkowego.  
   
--   Konwertuj szesnastkowego `string` do [int](../../../csharp/language-reference/keywords/int.md).  
+- Konwertuj szesnastkowego `string` do [int](../../../csharp/language-reference/keywords/int.md).  
   
--   Konwertuj szesnastkowego `string` do [float](../../../csharp/language-reference/keywords/float.md).  
+- Konwertuj szesnastkowego `string` do [float](../../../csharp/language-reference/keywords/float.md).  
   
--   Konwertuj [bajtów](../../../csharp/language-reference/keywords/byte.md) tablicy na wartość szesnastkową `string`.  
+- Konwertuj [bajtów](../../../csharp/language-reference/keywords/byte.md) tablicy na wartość szesnastkową `string`.  
   
 ## <a name="example"></a>Przykład  
  W tym przykładzie generuje wartość szesnastkowa każdego znaku w `string`. Najpierw analizuje `string` do tablicy znaków. Następnie wywołuje <xref:System.Convert.ToInt32%28System.Char%29> przy każdym znaku, aby uzyskać jego wartości numerycznej. Na koniec formatuje liczbę jako jej reprezentacji szesnastkowej w `string`.  

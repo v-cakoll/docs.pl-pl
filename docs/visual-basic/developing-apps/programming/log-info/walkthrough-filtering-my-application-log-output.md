@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61712620"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Przewodnik: Filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
 W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.Application.Log` obiektu, aby kontrolować, jakie informacje są przekazywane z `Log` obiekt do odbiorników i jakie informacje są zapisywane przez odbiorniki. Możesz zmienić sposób rejestrowania, nawet po zakończeniu tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
@@ -77,11 +77,11 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
      Jeśli nie ma żadnego pliku app.config:  
   
-    1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    2. Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
-    3.  Kliknij przycisk **Dodaj**.  
+    3. Kliknij przycisk **Dodaj**.  
   
 2. Znajdź `<switches>` sekcji, która znajduje się w `<system.diagnostics>` sekcji, która znajduje się w najwyższego poziomu `<configuration>` sekcji.  
   
@@ -152,11 +152,11 @@ W tym instruktażu pokazano, jak zmienić domyślny dziennik filtrowanie `My.App
   
      Jeśli nie ma żadnego pliku app.config:  
   
-    1.  Na **projektu** menu, wybierz **Dodaj nowy element**.  
+    1. Na **projektu** menu, wybierz **Dodaj nowy element**.  
   
-    2.  Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
+    2. Z **Dodaj nowy element** okna dialogowego wybierz **pliku konfiguracji aplikacji**.  
   
-    3.  Kliknij przycisk **Dodaj**.  
+    3. Kliknij przycisk **Dodaj**.  
   
 2. Kliknij prawym przyciskiem myszy pliku app.config w **Eksploratora rozwiązań**. Wybierz **Otwórz**.  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 325db05cc322d85e836ca9ba62b6a169e8965241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766366"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset — Metoda
 Pobiera końcowy przesunięcie tej zmiennej w ramach jego elementu nadrzędnego. Jeśli jest to zmienna lokalna w zakresie, przesunięcia końcowego będą wchodzić w przesunięcia zdefiniowana dla zakresu.  

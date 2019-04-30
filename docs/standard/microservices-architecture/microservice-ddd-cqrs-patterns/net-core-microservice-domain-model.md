@@ -1,17 +1,17 @@
 ---
-title: Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core
+title: Implementowanie modelu domeny mikrousługi za pomocą platformy .NET Core
 description: Architektura Mikrousług .NET konteneryzowanych aplikacji .NET | Pobierz szczegóły implementacji modelu zorientowanej na wzorzec DDD domeny.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
 ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761003"
 ---
-# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core 
+# <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi za pomocą programu .NET Core
 
 W poprzedniej sekcji zostały wyjaśnione podstawowych projektowania i wzorce projektowania modelu domeny. Teraz nadszedł czas, aby poznać sposoby, aby wdrożyć model domeny przy użyciu platformy .NET Core (C zwykły\# kodu) i programem EF Core. Należy pamiętać, że modelu domeny będzie składać się z kodu. Tylko wymagania modelu platformy EF Core, ale w zależności nie rzeczywistych będzie miał na EF. W modelu domeny nie powinna mieć twarde zależności lub odwołania do programu EF Core lub innych ORM.
 
@@ -60,7 +60,7 @@ public class Order : Entity, IAggregateRoot
 
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
-  
+
     public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
             string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
@@ -74,8 +74,8 @@ public class Order : Entity, IAggregateRoot
         // ...Additional code ...
     }
 
-    public void AddOrderItem(int productId, string productName, 
-                            decimal unitPrice, decimal discount, 
+    public void AddOrderItem(int productId, string productName,
+                            decimal unitPrice, decimal discount,
                             string pictureUrl, int units = 1)
     {
         //...
@@ -83,9 +83,9 @@ public class Order : Entity, IAggregateRoot
         // ...
 
         var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
-        
+
         _orderItems.Add(orderItem);
-  
+
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -117,7 +117,7 @@ Na przykład, następujące wzorców DDD **należy *nie* wykonaj następujące c
 OrderItem myNewOrderItem = new OrderItem(orderId, productId, productName,
     pictureUrl, unitPrice, discount, units);
 
-//... (WRONG) Accessing the OrderItems colletion directly from the application layer // or command handlers
+//... (WRONG) Accessing the OrderItems collection directly from the application layer // or command handlers
 myOrder.OrderItems.Add(myNewOrderItem);
 //...
 ```
@@ -177,6 +177,6 @@ Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pola p
 - **Udi Dahan. Jak utworzyć w pełni hermetyzowane modeli domeny** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
->[!div class="step-by-step"]
->[Poprzednie](microservice-domain-model.md)
->[dalej](seedwork-domain-model-base-classes-interfaces.md)
+> [!div class="step-by-step"]
+> [Poprzednie](microservice-domain-model.md)
+> [dalej](seedwork-domain-model-base-classes-interfaces.md)

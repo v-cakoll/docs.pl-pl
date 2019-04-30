@@ -13,22 +13,22 @@ ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705457"
 ---
 # <a name="setting-assembly-attributes"></a>Ustawienie atrybutów zestawu
 Atrybuty zestawu są wartości, które dostarczają informacje o zestawie. Atrybuty są podzielone na następujące rodzaje informacji:  
   
--   Atrybuty tożsamości zestawu.  
+- Atrybuty tożsamości zestawu.  
   
--   Atrybuty informacyjne.  
+- Atrybuty informacyjne.  
   
--   Atrybuty manifestu zestawu.  
+- Atrybuty manifestu zestawu.  
   
--   Atrybuty silnej nazwy.  
+- Atrybuty silnej nazwy.  
   
 ## <a name="assembly-identity-attributes"></a>Atrybuty tożsamości zestawu  
  Trzy atrybuty, wraz z nazwą silną (jeśli dotyczy), określają tożsamość zestawu: nazwę, wersję i kulturę. Te atrybuty tworzą pełną nazwę zestawu i są wymagane, gdy odwołanie do zestawu w kodzie. Atrybuty można użyć, można ustawić wersję i kulturę zestawu. Kompilator lub [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) ustawia wartość nazwy, gdy zestaw jest tworzony na podstawie pliku zawierającego manifest zestawu.  

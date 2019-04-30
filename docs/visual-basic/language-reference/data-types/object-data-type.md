@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
 ms.openlocfilehash: 616110145db2796e05509094b1c023daacd68f03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751679"
 ---
 # <a name="object-data-type"></a>Object — typ danych
 Zawiera adresy, które odwołują się do obiektów. Dowolnego typu odwołania (ciąg, macierz, klasy lub interfejsu) można przypisać do `Object` zmiennej. `Object` Zmiennej może również odnosić się do danych o dowolnym typie wartości (numeryczne, `Boolean`, `Char`, `Date`, struktury lub wyliczenia).  
@@ -42,19 +42,19 @@ datTyp = Type.GetTypeCode(myObject.GetType())
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
--   **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać o tym, że typy wskaźników w innych środowiskach nie są zgodne z języka Visual Basic `Object` typu.  
+- **Uwagi dotyczące współdziałania.** Jeśli są komunikowanie się ze składnikami programu .NET Framework, na przykład obiektami automatyzacji lub COM, należy pamiętać o tym, że typy wskaźników w innych środowiskach nie są zgodne z języka Visual Basic `Object` typu.  
   
--   **Wydajność.** Zmienna deklarowana za pomocą `Object` typu jest na tyle elastyczna, aby zawierała odwołanie do dowolnego obiektu. Jednak gdy wywołujesz metodę lub właściwość takiej zmiennej zawsze wiąże się z *późnym wiązaniu* (w czasie wykonywania). Aby wymusić *wczesne powiązania* (w czasie kompilacji) i większą wydajność, Zadeklaruj zmienną o nazwie określonej klasy lub go rzutować na typ danych określonych.  
+- **Wydajność.** Zmienna deklarowana za pomocą `Object` typu jest na tyle elastyczna, aby zawierała odwołanie do dowolnego obiektu. Jednak gdy wywołujesz metodę lub właściwość takiej zmiennej zawsze wiąże się z *późnym wiązaniu* (w czasie wykonywania). Aby wymusić *wczesne powiązania* (w czasie kompilacji) i większą wydajność, Zadeklaruj zmienną o nazwie określonej klasy lub go rzutować na typ danych określonych.  
   
      Kiedy Deklarujesz zmienną obiektu, spróbuj użyć typu określonej klasy, na przykład <xref:System.OperatingSystem>, zamiast ogólnych `Object` typu. Należy również użyć najbardziej odpowiednią klasę dostępne, takich jak <xref:System.Windows.Forms.TextBox> zamiast <xref:System.Windows.Forms.Control>, dzięki czemu można uzyskać dostęp, jego właściwości i metod. Zazwyczaj można używać **klasy** listy w **przeglądarki obiektów** można znaleźć nazwy dostępnych klas.  
   
--   **Rozszerzanie.** Wszystkie typy danych i wszystkie typy referencyjne mogą zostać poszerzone do `Object` typu danych. Oznacza to, że można przekonwertować dowolnego typu do `Object` nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Rozszerzanie.** Wszystkie typy danych i wszystkie typy referencyjne mogą zostać poszerzone do `Object` typu danych. Oznacza to, że można przekonwertować dowolnego typu do `Object` nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
   
      Jednak po konwersji między typami wartości i `Object`, Visual Basic wykonuje operacje o nazwie *pakowania* i *Rozpakowywanie*, udostępniają wykonywania wolniej.  
   
--   **Znaki typu.** `Object` nie ma znak literalny typu lub znak typu identyfikator.  
+- **Znaki typu.** `Object` nie ma znak literalny typu lub znak typu identyfikator.  
   
--   **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Object?displayProperty=nameWithType> klasy.  
+- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Object?displayProperty=nameWithType> klasy.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano `Object` zmiennej wskazuje na wystąpienie obiektu.  

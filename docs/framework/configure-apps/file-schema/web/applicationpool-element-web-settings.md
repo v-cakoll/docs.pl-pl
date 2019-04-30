@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698580"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool >, Element (ustawienia sieci Web)
 Określa ustawienia konfiguracyjne, które są używane przez program ASP.NET do zarządzania zachowaniem całego procesu, gdy aplikacja ASP.NET działa w trybie zintegrowanym z [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] lub nowszej.  
@@ -66,11 +66,11 @@ Określa ustawienia konfiguracyjne, które są używane przez program ASP.NET do
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak skonfigurować zachowanie całego procesu ASP.NET w pliku konfigurację aspnet.config w następujących okolicznościach:  
   
--   Aplikacja jest obsługiwana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] puli aplikacji.  
+- Aplikacja jest obsługiwana w [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] puli aplikacji.  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] działa w trybie zintegrowanym.  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] działa w trybie zintegrowanym.  
   
--   Aplikacja używa [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] lub nowszej.  
+- Aplikacja używa [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] lub nowszej.  
   
  Wartości w przykładzie są wartości domyślne.  
   

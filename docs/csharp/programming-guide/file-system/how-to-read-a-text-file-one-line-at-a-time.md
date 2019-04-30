@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Odczyt pliku jednego wiersza tekstu w czasie (Visual C#)'
+title: 'Instrukcje: Odczytywanie pliku tekstowego po jednym wierszu (Visual C#)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ReadLine method [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
 ms.openlocfilehash: 831f306a19d926b70170c1a6ebc4ab670f1b9851
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61711008"
 ---
-# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Instrukcje: Odczyt pliku jednego wiersza tekstu w czasie (Visual C#)
+# <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Instrukcje: Odczytywanie pliku tekstowego po jednym wierszu (Visual C#)
 Ten przykład odczytuje zawartość pliku tekstowego, jeden wiersz w czasie, na ciąg za pośrednictwem `ReadLine` metody `StreamReader` klasy. Każdy wiersz tekstu jest przechowywany w ciągu `line` i wyświetlane na ekranie.  
   
 ## <a name="example"></a>Przykład  
@@ -45,7 +45,7 @@ System.Console.ReadLine();
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  
   
--   Plik nie istnieje.  
+- Plik nie istnieje.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik `myFile.cs` może nie być plik źródłowy C#.  

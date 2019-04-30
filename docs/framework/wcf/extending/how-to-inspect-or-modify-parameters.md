@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
 ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766867"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>Instrukcje: sprawdzanie lub modyfikowanie parametrów
 Można sprawdzić i modyfikować wiadomości przychodzących lub wychodzących dla jednej operacji na obiekt klienta usługi Windows Communication Foundation (WCF) lub usługi WCF poprzez implementację <xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType> interfejsu i wstawiania ich do środowiska uruchomieniowego klienta lub usługę. Zwykle to zachowanie operacja służy do dodawania inspektorzy parametr dla jednej operacji. innych zachowań może służyć do zapewnienia łatwy dostęp do środowiska uruchomieniowego w zakresie większa. Aby uzyskać więcej informacji, zobacz [rozszerzanie klientów](../../../../docs/framework/wcf/extending/extending-clients.md) i [rozszerzanie dyspozytorów](../../../../docs/framework/wcf/extending/extending-dispatchers.md).  
@@ -26,11 +26,11 @@ Można sprawdzić i modyfikować wiadomości przychodzących lub wychodzących d
 ## <a name="example"></a>Przykład  
  Pokaż w poniższych przykładach kodu w kolejności:  
   
--   Implementacja Inspektor parametru.  
+- Implementacja Inspektor parametru.  
   
--   Implementacja zachowanie, który wstawia Inspektor parametru za pomocą <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>i <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>.  
+- Implementacja zachowanie, który wstawia Inspektor parametru za pomocą <xref:System.ServiceModel.Description.IOperationBehavior?displayProperty=nameWithType>, <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>i <xref:System.ServiceModel.Description.IServiceBehavior?displayProperty=nameWithType>.  
   
--   Plik konfiguracji, który ładuje i uruchamia zachowanie punktu końcowego w aplikacji klienckiej, aby wstawić Inspektor parametru na komputerze klienckim.  
+- Plik konfiguracji, który ładuje i uruchamia zachowanie punktu końcowego w aplikacji klienckiej, aby wstawić Inspektor parametru na komputerze klienckim.  
   
  [!code-csharp[Interceptors#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#4)]
  [!code-vb[Interceptors#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#4)]  

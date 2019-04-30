@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Uzyskiwanie magazynów dla wydzielonej pamięci masowej'
+title: 'Instrukcje: Uzyskiwanie magazynów dla izolowanego magazynu'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,22 +16,22 @@ ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751751"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Instrukcje: Uzyskiwanie magazynów dla wydzielonej pamięci masowej
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Instrukcje: Uzyskiwanie magazynów dla izolowanego magazynu
 Izolowanym magazynie udostępnia wirtualny system plików w ramach przedziału danych. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia szereg metod do interakcji z izolowanym magazynie. Tworzenie i pobieranie magazynów, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> udostępnia trzy metody statyczne:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Zwraca magazynu, który jest izolowany dla konkretnego użytkownika i zestawu.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> Zwraca magazynu, który jest izolowany dla konkretnego użytkownika i zestawu.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> Zwraca magazynu, która jest odizolowana, domeny i zestawu.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> Zwraca magazynu, która jest odizolowana, domeny i zestawu.  
   
      Obie metody pobierania sklepu, która należy do kodu, z którego są wywoływane.  
   
--   Metoda statyczna <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> zwraca izolowanym magazynie, który jest określony, przekazując kombinacji parametrów zakresu.  
+- Metoda statyczna <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> zwraca izolowanym magazynie, który jest określony, przekazując kombinacji parametrów zakresu.  
   
  Poniższy kod zwraca magazynu, który jest izolowany dla konkretnego użytkownika, zestawu i domeny.  
   

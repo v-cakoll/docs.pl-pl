@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768533"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji Windows Forms, które działają lokalnie na komputerach użytkowników. Visual Studio umożliwia tworzenie aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasy z <xref:System.Windows.Forms> przestrzeni nazw.  
@@ -18,11 +18,11 @@ Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji W
 ## <a name="designing-windows-forms-applications"></a>Aplikacje projektowania Windows Forms  
  Windows Forms i aplikacji usług Windows można utworzyć za pomocą programu Visual Studio. Więcej informacji znajduje się w następujących tematach:  
   
--   [Wprowadzenie do formularzy Windows](../../../framework/winforms/getting-started-with-windows-forms.md). Zawiera informacje dotyczące sposobu tworzenia i programu Windows Forms.  
+- [Wprowadzenie do formularzy Windows](../../../framework/winforms/getting-started-with-windows-forms.md). Zawiera informacje dotyczące sposobu tworzenia i programu Windows Forms.  
    
--   [Kontrolki formularzy Windows Forms](../../../framework/winforms/controls/index.md). Kolekcja tematów szczegółowych informacji na temat użytkowania kontrolek formularzy Windows Forms.  
+- [Kontrolki formularzy Windows Forms](../../../framework/winforms/controls/index.md). Kolekcja tematów szczegółowych informacji na temat użytkowania kontrolek formularzy Windows Forms.  
   
--   [Windows, usługi aplikacji](../../../framework/windows-services/index.md). Wyświetla listę tematów, które opisują sposób tworzenia usług Windows.  
+- [Windows, usługi aplikacji](../../../framework/windows-services/index.md). Wyświetla listę tematów, które opisują sposób tworzenia usług Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Interfejsy użytkownika bogate, interaktywne tworzenie  
  Formularze Windows to składnik klienta inteligentnych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], zbiór bibliotek zarządzanych, które umożliwiają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Używanie środowiska programistycznego, takimi jak Visual Studio, możesz tworzyć aplikacje Windows Forms, do wyświetlania informacji, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  

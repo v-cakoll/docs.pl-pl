@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759911"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi
 Jeśli składniki są zdefiniowane w projekcie w aktualnie otwarte rozwiązanie, zostanie automatycznie wyświetlona w **przybornika**, za pomocą trzeba wykonywać żadnych czynności przez użytkownika. Możesz również ręcznie wypełnić **przybornika** za pomocą składników niestandardowych za pomocą [wybierz przybornika dialogowego elementy (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100)), ale **przybornika** uwzględnia elementy w Twoim rozwiązaniu kompilacji danych wyjściowych o następującej charakterystyce:  
   
--   Implementuje <xref:System.ComponentModel.IComponent>;  
+- Implementuje <xref:System.ComponentModel.IComponent>;  
   
--   Nie ma <xref:System.ComponentModel.ToolboxItemAttribute> równa `false`;  
+- Nie ma <xref:System.ComponentModel.ToolboxItemAttribute> równa `false`;  
   
--   Nie ma <xref:System.ComponentModel.DesignTimeVisibleAttribute> równa `false`.  
+- Nie ma <xref:System.ComponentModel.DesignTimeVisibleAttribute> równa `false`.  
   
 > [!NOTE]
 >  **Przybornika** nie jest zgodna z łańcuchów odwołania, dzięki czemu nie będą wyświetlane elementy, które nie są kompilowane przez projekt w rozwiązaniu.  
   
  W tym instruktażu pokazano, jak niestandardowy składnik jest automatycznie odzwierciedlana w **przybornika** Po skompilowaniu składnika. Zadania zilustrowane w tym przewodniku obejmują:  
   
--   Tworzenie projektu Windows Forms.  
+- Tworzenie projektu Windows Forms.  
   
--   Tworzenie niestandardowych składników.  
+- Tworzenie niestandardowych składników.  
   
--   Tworzenie wystąpienia składnika niestandardowego.  
+- Tworzenie wystąpienia składnika niestandardowego.  
   
--   Zwalnianie i ponowne załadowanie niestandardowych składników.  
+- Zwalnianie i ponowne załadowanie niestandardowych składników.  
   
  Gdy to zrobisz, zostanie wyświetlony **przybornika** jest wypełniana przy użyciu składnika, który został utworzony.  
   

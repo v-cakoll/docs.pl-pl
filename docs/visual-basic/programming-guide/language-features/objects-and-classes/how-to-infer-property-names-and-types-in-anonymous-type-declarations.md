@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
 ms.openlocfilehash: be3c74e8f8c69eb9f0a1d0dda4d6c90dfd7e567a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760743"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego (Visual Basic)
 Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać typy danych właściwości. Typy wszystkich właściwości są wnioskowane. W poniższym przykładzie typy `Name` i `Price` są dedukowane bezpośrednio z wartości, które są używane do ich inicjowania.  
@@ -24,11 +24,11 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Typy anonimowe można wnioskowanie nazw właściwości i typów z następujących źródeł:  
   
--   W nazwach zmiennych. Typ anonimowy `anonProduct` będzie mieć dwie właściwości `productName` i `productPrice`. Typy danych będą identyczne ze zmiennych oryginalnego `String` i `Double`, odpowiednio.  
+- W nazwach zmiennych. Typ anonimowy `anonProduct` będzie mieć dwie właściwości `productName` i `productPrice`. Typy danych będą identyczne ze zmiennych oryginalnego `String` i `Double`, odpowiednio.  
   
      [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
--   Właściwość lub pole nazw innych obiektów. Na przykład, rozważmy `car` obiektu `CarClass` typ, który zawiera `Name` i `ID` właściwości. Aby utworzyć nowe wystąpienie typu anonimowego `car1`, za pomocą `Name` i `ID` właściwości, które są inicjowane z wartościami z `car` obiektu, można napisać następujące czynności:  
+- Właściwość lub pole nazw innych obiektów. Na przykład, rozważmy `car` obiektu `CarClass` typ, który zawiera `Name` i `ID` właściwości. Aby utworzyć nowe wystąpienie typu anonimowego `car1`, za pomocą `Name` i `ID` właściwości, które są inicjowane z wartościami z `car` obiektu, można napisać następujące czynności:  
   
      [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
@@ -36,13 +36,13 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
--   Od nazw składowych XML.  
+- Od nazw składowych XML.  
   
      [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      Wynikowy typ `anon` miałby jedną właściwość `Book`, typu <xref:System.Collections.IEnumerable>(z XElement).  
   
--   Z funkcji, która nie ma parametrów, takich jak `SomeFunction` w poniższym przykładzie.  
+- Z funkcji, która nie ma parametrów, takich jak `SomeFunction` w poniższym przykładzie.  
   
      `Dim sc As New SomeClass`  
   
@@ -56,7 +56,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Wnioskowanie o nazwie zakończy się niepowodzeniem w wielu sytuacjach, w tym następujące:  
   
--   Wnioskowanie pochodzi z wywołania metody, Konstruktor lub właściwości sparametryzowane, która wymaga argumentów. Poprzednia deklaracja elementu `anon1` zakończy się niepowodzeniem, jeśli `someFunction` ma jeden lub więcej argumentów.  
+- Wnioskowanie pochodzi z wywołania metody, Konstruktor lub właściwości sparametryzowane, która wymaga argumentów. Poprzednia deklaracja elementu `anon1` zakończy się niepowodzeniem, jeśli `someFunction` ma jeden lub więcej argumentów.  
   
      `' Not valid.`  
   
@@ -68,7 +68,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
   
--   Wnioskowanie pochodzi ze złożonego wyrażenia.  
+- Wnioskowanie pochodzi ze złożonego wyrażenia.  
   
     ```  
     Dim aString As String = "Act "  
@@ -80,7 +80,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
--   Wnioskowanie o wiele właściwości tworzy dwa lub więcej właściwości, które mają taką samą nazwę. Przywołujący deklaracji w wcześniejszych przykładów, nie możesz wyświetlać listy zarówno `product.Name` i `car1.Name` jako właściwości tego samego typu anonimowego. Jest to spowodowane wywnioskowane identyfikator dla każdego z nich będzie `Name`.  
+- Wnioskowanie o wiele właściwości tworzy dwa lub więcej właściwości, które mają taką samą nazwę. Przywołujący deklaracji w wcześniejszych przykładów, nie możesz wyświetlać listy zarówno `product.Name` i `car1.Name` jako właściwości tego samego typu anonimowego. Jest to spowodowane wywnioskowane identyfikator dla każdego z nich będzie `Name`.  
   
      `' Not valid.`  
   
@@ -98,7 +98,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      `' Dim anon7 = New With {Key product.Price, Key price}`  
   
--   Początkowa typu i wartości jedną właściwość zależy od innej właściwości, która nie jest jeszcze nawiązane. Na przykład `.IDName = .LastName` nie jest prawidłowy w deklaracji typu anonimowego, chyba że `.LastName` jest już zainicjowany.  
+- Początkowa typu i wartości jedną właściwość zależy od innej właściwości, która nie jest jeszcze nawiązane. Na przykład `.IDName = .LastName` nie jest prawidłowy w deklaracji typu anonimowego, chyba że `.LastName` jest już zainicjowany.  
   
      `' Not valid.`  
   
@@ -108,7 +108,7 @@ Typy anonimowe zapewniają żaden mechanizm służący bezpośrednio określać 
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
--   Nazwa właściwości typu anonimowego jest taka sama jak nazwa składowej <xref:System.Object>. Na przykład następująca deklaracja nie powiedzie się, ponieważ `Equals` to metoda <xref:System.Object>.  
+- Nazwa właściwości typu anonimowego jest taka sama jak nazwa składowej <xref:System.Object>. Na przykład następująca deklaracja nie powiedzie się, ponieważ `Equals` to metoda <xref:System.Object>.  
   
      `' Not valid.`  
   

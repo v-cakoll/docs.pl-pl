@@ -12,11 +12,11 @@ ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754431"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 `invalidCERCall` Zarządzanego Asystenta debugowania (MDA) jest aktywowany, gdy jest połączenie w ramach ograniczonego wykonania wykres region (CER) do metody, która ma umowy niezawodność lub kontrakt zbyt słabe. Słabe kontrakt jest kontraktu, który oświadcza, że najgorszy uszkodzenie stan przypadku zakresu większą niż wystąpienie podawaną do wywołania, czyli <xref:System.AppDomain> lub stan procesu może ulec uszkodzeniu lub jego wynik nie jest zawsze obliczana w sposób deterministyczny gdy jest wywoływany w CER.  

@@ -3,26 +3,26 @@ title: 3393 — StreamedMessageReadByEncoder
 ms.date: 03/30/2017
 ms.assetid: 70ebde45-9e46-4adb-9020-c17e9c6786e4
 ms.openlocfilehash: 1840fa38c641529d2a3bd3d6ca865236e8599cd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33465627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753358"
 ---
 # <a name="3393---streamedmessagereadbyencoder"></a>3393 — StreamedMessageReadByEncoder
 ## <a name="properties"></a>Właściwości  
   
 |||  
 |-|-|  
-|ID|3393|  
-|Słowa kluczowe|Kanał|  
+|Identyfikator|3393|  
+|słowa kluczowe|Kanał|  
 |Poziom|Informacje|  
-|Kanał|Microsoft-Windows aplikacji debugowania serwera — aplikacje|  
+|Kanał|Microsoft-Windows-Application Server-Applications/Debug|  
   
 ## <a name="description"></a>Opis  
- To zdarzenie jest emitowany została przeczytana komunikat przesyłany strumieniowo przez koder.  
+ To zdarzenie jest emitowane po przesyłane strumieniowo komunikat został odczytany przez koder.  
   
 ## <a name="message"></a>Komunikat  
- Koder odczytał przesyłanej strumieniowo komunikat.  
+ Strumieniowa wiadomość została przeczytana przez koder.  
   
 ## <a name="details"></a>Szczegóły

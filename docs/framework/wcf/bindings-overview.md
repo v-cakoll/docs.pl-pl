@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703689"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  
@@ -32,13 +32,13 @@ Powiązania to obiekty, które są używane do określania szczegółów komunik
 ## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
  Informacje przedstawione w powiązaniu może być złożonym procesem, a niektóre ustawienia mogą nie być zgodne z innymi osobami. Z tego powodu WCF zawiera zestaw powiązań dostarczanych przez system. Te powiązania są przeznaczone do obejmuje większość wymagań aplikacji. Następujące klasy reprezentują kilka przykładów powiązania dostarczane przez system:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>: Protokół HTTP powiązanie odpowiednie do łączenia się z usługami sieci Web, który jest zgodny z WS-I specyfikacja profilu podstawowego (na przykład, sieci Web platformy ASP.NET opartego na usługach usługi).  
+- <xref:System.ServiceModel.BasicHttpBinding>: Protokół HTTP powiązanie odpowiednie do łączenia się z usługami sieci Web, który jest zgodny z WS-I specyfikacja profilu podstawowego (na przykład, sieci Web platformy ASP.NET opartego na usługach usługi).  
   
--   <xref:System.ServiceModel.WSHttpBinding>: Interoperacyjne powiązanie odpowiednie do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* protokołów.  
+- <xref:System.ServiceModel.WSHttpBinding>: Interoperacyjne powiązanie odpowiednie do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* protokołów.  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>: Używa [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] połączyć się z innymi punktami końcowymi programu WCF na tym samym komputerze.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Używa [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] połączyć się z innymi punktami końcowymi programu WCF na tym samym komputerze.  
   
--   <xref:System.ServiceModel.NetMsmqBinding>: Używa [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] do tworzenia komunikatu w kolejce połączeń z innymi punktami końcowymi WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Używa [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] do tworzenia komunikatu w kolejce połączeń z innymi punktami końcowymi WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: To powiązanie oferuje wyższą wydajność niż powiązania protokołu HTTP i stanowi idealne rozwiązanie w sieci lokalnej.
   

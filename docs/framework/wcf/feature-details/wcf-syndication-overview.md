@@ -3,11 +3,11 @@ title: Omówienie syndykacji WCF
 ms.date: 03/30/2017
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 ms.openlocfilehash: ef62c4460ff5dd4890de174afda671facee97f2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768566"
 ---
 # <a name="wcf-syndication-overview"></a>Omówienie syndykacji WCF
 Windows Communication Foundation (WCF) obsługuje udostępnianie zespolone kanały informacyjne usługi WCF. Syndykacja jest mechanizm integracji aplikacji, w którym serwer udostępnia dane aplikacji w formie międzyoperacyjnych, znane jako źródła danych. Źródło danych to zbiór danych aplikacji, która zawiera trochę metadanych źródła danych na poziomie (tytuł, autor, adres URL i inne metadane) i szereg elementów kanału informacyjnego. Źródła wiadomości program elementów kanału informacyjnego są zazwyczaj uporządkowanej w czasie w odwrotnej kolejności chronologicznej. Element kanału informacyjnego zawiera standardowy zestaw metadanych poziomie elementu (tytuł, adres URL, Data utworzenia, kategorii i inne metadane na poziomie elementu) oraz dowolnej liczby dane specyficzne dla aplikacji. Dwa najbardziej powszechne typy zespolone kanały informacyjne są naprawdę proste syndykacji (RSS) w wersji 2.0 i Atom 1.0, które są obsługiwane przez architekturę WCF.  

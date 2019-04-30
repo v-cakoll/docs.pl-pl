@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764650"
 ---
 # <a name="wpf-xaml-namescopes"></a>Zakresy nazw WPF XAML
 Zakresy nazw XAML to pojęcie, który identyfikuje obiekty, które są definiowane w XAML. Nazwy w XAML namescope może służyć do ustanawiania relacji między nazwami zdefiniowane XAML, obiektów i ich odpowiedniki wystąpienia drzewem obiektu. Zazwyczaj zakresy XAML nazw w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zarządzanego kodu są tworzone podczas ładowania strony XAML poszczególnych obiektów głównych dla aplikacji XAML. Zakresy nazw XAML, co obiekt programowania są definiowane przez <xref:System.Windows.Markup.INameScope> interfejsu, a także są implementowane przez klasy praktyczne <xref:System.Windows.NameScope>.  
@@ -76,13 +76,13 @@ Zakresy nazw XAML to pojęcie, który identyfikuje obiekty, które są definiowa
 ### <a name="xaml-namescope-implementations"></a>Implementacje Namescope XAML  
  Następujące klasy implementacji <xref:System.Windows.Markup.INameScope> bezpośrednio:  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> nie korzysta z nazw XAML lub zakresy nazw; korzysta z kluczy zamiast tego, ponieważ jest on implementacji słownika. Tylko przyczyny <xref:System.Windows.ResourceDictionary> implementuje <xref:System.Windows.Markup.INameScope> jest, dzięki czemu można podnieść, wyjątki, aby kod użytkownika, które pomóc w wyjaśnianiu rozróżnienie między true XAML namescope oraz w jaki sposób <xref:System.Windows.ResourceDictionary> obsługuje kluczy, a także po to, aby mieć pewność, że zakresy nazw XAML nie są stosowane do <xref:System.Windows.ResourceDictionary> przez elementy nadrzędne.  
   
@@ -90,9 +90,9 @@ Zakresy nazw XAML to pojęcie, który identyfikuje obiekty, które są definiowa
   
  Poniższe klasy definiują własne namescope XAML przy użyciu <xref:System.Windows.NameScope?displayProperty=nameWithType> klasy pomocnika oraz połączenie z jego implementacja namescope XAML za pośrednictwem <xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType> dołączona właściwość:  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Zobacz także
 

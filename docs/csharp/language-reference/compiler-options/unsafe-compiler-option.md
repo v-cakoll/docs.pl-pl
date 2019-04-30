@@ -8,11 +8,11 @@ helpviewer_keywords:
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
 ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662325"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opcje kompilatora C#)
 **-Unsafe** — opcja kompilatora umożliwia kod, który używa [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe, aby skompilować.  

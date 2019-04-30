@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756601"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Instrukcje: Przenoszenie danych do i z zmiennej (Visual Basic)
 Wartość jest przechowywana w zmiennej, umieszczając nazwę zmiennej po lewej stronie instrukcji przypisania.  
@@ -19,7 +19,7 @@ Wartość jest przechowywana w zmiennej, umieszczając nazwę zmiennej po lewej 
   
 #### <a name="to-store-a-value-in-a-variable"></a>Do przechowywania wartości w zmiennej  
   
--   Użyj nazwy zmiennej po lewej stronie instrukcji przypisania.  
+- Użyj nazwy zmiennej po lewej stronie instrukcji przypisania.  
   
      W poniższym przykładzie ustawiono wartość zmiennej `alpha`.  
   
@@ -34,11 +34,11 @@ Wartość jest przechowywana w zmiennej, umieszczając nazwę zmiennej po lewej 
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>Aby pobrać wartość ze zmiennej  
   
--   Użyj nazwy zmiennej w wyrażeniu. Można użyć zmiennej dowolnego miejsca umożliwia stałą lub literałem, z wyjątkiem w wyrażeniu, który definiuje wartość stałą.  
+- Użyj nazwy zmiennej w wyrażeniu. Można użyć zmiennej dowolnego miejsca umożliwia stałą lub literałem, z wyjątkiem w wyrażeniu, który definiuje wartość stałą.  
   
      —lub—  
   
--   Użyj nazwy zmiennej po równości (`=`) Zaloguj się w instrukcji przypisania.  
+- Użyj nazwy zmiennej po równości (`=`) Zaloguj się w instrukcji przypisania.  
   
      Poniższy przykład odczytuje wartość zmiennej `startValue` , a następnie używa wartości zmiennej `counter` w wyrażeniu.  
   

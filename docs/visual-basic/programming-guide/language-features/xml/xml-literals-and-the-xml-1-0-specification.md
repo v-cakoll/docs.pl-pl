@@ -5,28 +5,28 @@ helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
 ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761718"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>Literały XML i specyfikacja XML 1.0 (Visual Basic)
 Składnia literał XML w Visual Basic obsługuje większość specyfikacji języka XML (Extensible Markup) 1.0. Aby uzyskać szczegółowe informacje o Specyfikacja XML 1.0, zobacz [języka XML (Extensible Markup) 1.0](https://www.w3.org/TR/xml) w witrynie internetowej W3C.  
   
 ## <a name="what-visual-basic-does-not-support"></a>Co to Visual Basic nie obsługuje  
   
--   Literał XML nie może zawierać definicji typu dokumentu (DTD).  
+- Literał XML nie może zawierać definicji typu dokumentu (DTD).  
   
--   Literał dokumentu XML musi zaczynać się od deklaracji dokumentu XML.  
+- Literał dokumentu XML musi zaczynać się od deklaracji dokumentu XML.  
   
--   Literał XML nie może zawierać więcej niż 65535 znaków w jednym wierszu.  
+- Literał XML nie może zawierać więcej niż 65535 znaków w jednym wierszu.  
   
--   Prefiksy przestrzeni nazw XML, nazwy elementu i nazwach atrybutów nie może zawierać więcej niż 1024 znaków.  
+- Prefiksy przestrzeni nazw XML, nazwy elementu i nazwach atrybutów nie może zawierać więcej niż 1024 znaków.  
   
 ## <a name="extra-features-that-visual-basic-supports"></a>Dodatkowe funkcje, które obsługuje Visual Basic  
   
--   Składnia wyrażenia osadzone, dozwolone w literałach dokument i element nie jest prawidłowym kodem XML.  
+- Składnia wyrażenia osadzone, dozwolone w literałach dokument i element nie jest prawidłowym kodem XML.  
   
 ## <a name="see-also"></a>Zobacz także
 

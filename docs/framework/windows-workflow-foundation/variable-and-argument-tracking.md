@@ -3,11 +3,11 @@ title: Śledzenie argumentów i zmiennych
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755522"
 ---
 # <a name="variable-and-argument-tracking"></a>Śledzenie argumentów i zmiennych
 Podczas śledzenia wykonywania przepływu pracy, jest często przydatne w celu wyodrębnienia danych. Umożliwia to dodatkowy kontekst podczas uzyskiwania dostępu do śledzenia rekordów post wykonywania. W [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], można wyodrębnić wszystkie widoczne zmiennej lub argumentu w zakresie wszelkie działania w przepływie pracy przy użyciu śledzenia. Profile śledzenia ułatwiają do wyodrębniania danych.  
@@ -15,9 +15,9 @@ Podczas śledzenia wykonywania przepływu pracy, jest często przydatne w celu w
 ## <a name="variables-and-arguments"></a>Zmienne i argumenty  
  Zmienne i argumenty są wyodrębniane, gdy działanie wyemituje ActivityStateRecord.  Zmienna jest dostępna do wyodrębnienia, tylko wtedy, gdy jest w zakresie działania. Zmienna ma zostać wyodrębniony w ramach działania jest określony w następujący sposób:  
   
--   Jeśli zmienna jest określona przez nazwę zmiennej, śledzenie wygląda zmiennej w ramach bieżącego działania, które są śledzone i działania nadrzędnego. Zmienna jest przeszukiwany w bieżącym zakresie działania, a także w zakresie nadrzędnym.  
+- Jeśli zmienna jest określona przez nazwę zmiennej, śledzenie wygląda zmiennej w ramach bieżącego działania, które są śledzone i działania nadrzędnego. Zmienna jest przeszukiwany w bieżącym zakresie działania, a także w zakresie nadrzędnym.  
   
--   Jeśli określono za pomocą nazwy zmiennych, które ma zostać wyodrębniony = "*", a następnie są wyodrębniane wszystkie zmienne w obrębie bieżącego działania, które są śledzone. W tym przypadku zmienne znajdują się w zakresie ale zdefiniowany w elemencie nadrzędnym, które nie zostały wyodrębnione działań.  
+- Jeśli określono za pomocą nazwy zmiennych, które ma zostać wyodrębniony = "*", a następnie są wyodrębniane wszystkie zmienne w obrębie bieżącego działania, które są śledzone. W tym przypadku zmienne znajdują się w zakresie ale zdefiniowany w elemencie nadrzędnym, które nie zostały wyodrębnione działań.  
   
  Podczas wyodrębniania argumentów, argumenty wyodrębnione zależą od stanu działania. Jeśli stan działania jest wykonywanie, następnie tylko `InArguments` są dostępne do wyodrębnienia. Dla dowolnego innego działania stanu (zamknięte, Faulted anulowane) wszystkie argumenty InArguments i OutArguments, są dostępne do wyodrębnienia.  
   

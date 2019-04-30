@@ -3,11 +3,11 @@ title: Rekordy śledzenia
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699854"
 ---
 # <a name="tracking-records"></a>Rekordy śledzenia
 Środowisko wykonawcze przepływów pracy został zinstrumentowany aby emitować rekordów śledzenia z wykonywania wystąpienia przepływu pracy.  
@@ -26,27 +26,27 @@ ms.locfileid: "59298360"
   
  Następujące rodzaje <xref:System.Activities.Tracking.TrackingRecord> obiekty są emitowane przez środowisko wykonawcze przepływów pracy:  
   
--   **WorkflowInstanceRecord** — to <xref:System.Activities.Tracking.TrackingRecord> opisuje cyklu życia wystąpienia przepływu pracy. Na przykład rekord jest emitowane przepływu pracy rozpoczyna się lub kończy, gdy zawiera stan wystąpienia przepływu pracy. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
+- **WorkflowInstanceRecord** — to <xref:System.Activities.Tracking.TrackingRecord> opisuje cyklu życia wystąpienia przepływu pracy. Na przykład rekord jest emitowane przepływu pracy rozpoczyna się lub kończy, gdy zawiera stan wystąpienia przepływu pracy. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
   
--   **WorkflowInstanceAbortedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> są emitowane po przerywa wystąpienia przepływu pracy. Rekord zawiera powód wystąpienia przepływu pracy, Trwa przerywanie. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
+- **WorkflowInstanceAbortedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> są emitowane po przerywa wystąpienia przepływu pracy. Rekord zawiera powód wystąpienia przepływu pracy, Trwa przerywanie. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane, jeśli wyjątek występuje w wystąpieniu przepływu pracy i nie jest obsługiwany przez wszystkie działania. Rekord zawiera szczegóły wyjątku. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+- **WorkflowInstanceUnhandledExceptionRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane, jeśli wyjątek występuje w wystąpieniu przepływu pracy i nie jest obsługiwany przez wszystkie działania. Rekord zawiera szczegóły wyjątku. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
--   **WorkflowInstanceSuspendedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane zawsze wtedy, gdy wystąpienie przepływu pracy jest zawieszone. Rekord zawiera powód wystąpienia przepływu pracy jest zawieszone. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
+- **WorkflowInstanceSuspendedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane zawsze wtedy, gdy wystąpienie przepływu pracy jest zawieszone. Rekord zawiera powód wystąpienia przepływu pracy jest zawieszone. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
--   **WorkflowInstanceTerminatedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane zawsze wtedy, gdy wystąpienie przepływu pracy zostanie zakończony. Rekord zawiera powód wystąpienia przepływu pracy zostanie zakończone. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
+- **WorkflowInstanceTerminatedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane zawsze wtedy, gdy wystąpienie przepływu pracy zostanie zakończony. Rekord zawiera powód wystąpienia przepływu pracy zostanie zakończone. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
--   **ActivityStateRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane, gdy wykonuje działania w przepływie pracy. Te informacje wskazują stan działania w ramach wystąpienie przepływu pracy. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.ActivityStateRecord>.  
+- **ActivityStateRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane, gdy wykonuje działania w przepływie pracy. Te informacje wskazują stan działania w ramach wystąpienie przepływu pracy. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.ActivityStateRecord>.  
   
--   **ActivityScheduledRecord** — to <xref:System.Activities.Tracking.TrackingRecord> są emitowane po działaniu planuje działanie podrzędne. Ten rekord zawiera szczegóły dotyczące działania nadrzędnego (Planowanie działań) i działania podrzędnego zaplanowane. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
+- **ActivityScheduledRecord** — to <xref:System.Activities.Tracking.TrackingRecord> są emitowane po działaniu planuje działanie podrzędne. Ten rekord zawiera szczegóły dotyczące działania nadrzędnego (Planowanie działań) i działania podrzędnego zaplanowane. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane na każdy program obsługi, który patrzy na rekord, dopóki nie zostanie obsłużony. Służy do określenia ścieżki, którą awarii weszło w ramach wystąpienie przepływu pracy. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+- **FaultPropagationRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane na każdy program obsługi, który patrzy na rekord, dopóki nie zostanie obsłużony. Służy do określenia ścieżki, którą awarii weszło w ramach wystąpienie przepływu pracy. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
--   **CancelRequestedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane zawsze wtedy, gdy próbuje anulować działanie podrzędne przez działanie. Ten rekord zawiera szczegóły dotyczące działania nadrzędnego i działania podrzędnego, który jest anulowane. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.CancelRequestedRecord>.  
+- **CancelRequestedRecord** — to <xref:System.Activities.Tracking.TrackingRecord> jest emitowane zawsze wtedy, gdy próbuje anulować działanie podrzędne przez działanie. Ten rekord zawiera szczegóły dotyczące działania nadrzędnego i działania podrzędnego, który jest anulowane. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
--   **BookmarkResumptionRecord** — to <xref:System.Activities.Tracking.TrackingRecord> śledzi wszystkie zakładki, która jest wznowione. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
+- **BookmarkResumptionRecord** — to <xref:System.Activities.Tracking.TrackingRecord> śledzi wszystkie zakładki, która jest wznowione. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
   
--   **CustomTrackingRecord** — to <xref:System.Activities.Tracking.TrackingRecord> zostanie utworzony i wyemitowane przez autora przepływu pracy, wewnątrz działania elementu pracy. Niestandardowe rekordy śledzenia można wypełnić przy użyciu danych maszynowych wraz z rekordów. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+- **CustomTrackingRecord** — to <xref:System.Activities.Tracking.TrackingRecord> zostanie utworzony i wyemitowane przez autora przepływu pracy, wewnątrz działania elementu pracy. Niestandardowe rekordy śledzenia można wypełnić przy użyciu danych maszynowych wraz z rekordów. Szczegóły dotyczące tego rekordu, można znaleźć w folderze <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
  Na przykład może być prosty <xref:System.Activities.Statements.Sequence> działania, który zawiera <xref:System.Activities.Statements.WriteLine> operacji śledzenia rekordów emitowane w następującej kolejności:  
   

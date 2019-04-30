@@ -15,16 +15,17 @@ helpviewer_keywords:
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
 ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764546"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom ujednolicony model programowania do tworzenia aplikacji klasycznych biznesowych — w systemie Windows.  
+Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom jednolity model programowania do tworzenia aplikacji klasycznych line-of-business na Windows.  
   
- [Utwórz aplikacje klasyczne z technologii Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Twórz aplikacje pulpitu za pomocą programu Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [Projektowanie XAML w programie Visual Studio i Blend for Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Projektowanie XAML w programach Visual Studio i Blend for Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [Pobierz program Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
